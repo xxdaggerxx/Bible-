@@ -50,6 +50,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.biblestudy.app.model.SideButton
 import com.biblestudy.app.model.Tool
 
 @Composable
@@ -95,6 +96,7 @@ fun StudyToolbar(
                     )
                 }
                 Tool.ERASER -> Text("Erases whole strokes and highlights", style = MaterialTheme.typography.bodySmall)
+                Tool.LASSO -> Text("Draw a loop around ink to select it, then drag it or use the bar", style = MaterialTheme.typography.bodySmall)
                 Tool.SELECT -> Text("Drag an image to move it, its corner dot to resize", style = MaterialTheme.typography.bodySmall)
             }
             Divider()
@@ -136,6 +138,12 @@ fun StudyToolbar(
                         text = { Text("Draw with finger" + if (vm.fingerDraw) "  \u2713" else "") },
                         onClick = { vm.fingerDraw = !vm.fingerDraw; menu = false },
                     )
+                    for (b in SideButton.entries) {
+                        DropdownMenuItem(
+                            text = { Text("Pen button: ${b.label}" + if (vm.sideButton == b) "  \u2713" else "") },
+                            onClick = { vm.sideButton = b; menu = false },
+                        )
+                    }
                     HorizontalDivider()
                     DropdownMenuItem(text = { Text("Back up my notes\u2026") }, onClick = { menu = false; onBackup() })
                     DropdownMenuItem(text = { Text("Restore from backup\u2026") }, onClick = { menu = false; onRestore() })

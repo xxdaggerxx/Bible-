@@ -1,4 +1,4 @@
-# Bible Study — version 0.1
+# Bible Study — version 0.2
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -66,6 +66,18 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 0.2
+
+- **Continuous scrolling.** Keep scrolling past the end of a chapter into the next one (or back into the previous one). The chapter name at the top follows along. A flick keeps the page gliding. The arrows and the book picker still jump straight to the start of a chapter.
+- **Lasso.** Pick *Lasso* and draw a loop around ink, highlights or images to select them. Then:
+  - drag inside the dashed box with the pen to move the selection;
+  - use the bar at the top of the page to recolour, *Copy*, *Move to layer* or *Delete*;
+  - tap *Done* or touch the pen outside the box to finish.
+  Highlights can be recoloured, moved to a layer or deleted, but they stay on their words. Everything can be undone.
+- **S Pen side button.** Hold the button while the pen touches the screen to erase, whatever tool is picked. In *⋮ → Pen button* you can make it the lasso instead, or turn it off.
+- **Resizable margins.** Drag the small grip on the line between the text and a margin to make the margin wider or narrower. Widths are remembered separately for landscape and portrait.
+- **Smoother pen.** The stroke you are drawing is drawn on its own layer, so each new pen point no longer redraws the whole chapter underneath.
+
 ## What's in version 0.1
 
 **Bible and navigation**
@@ -110,19 +122,16 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
 - Light, sepia and dark page themes.
 - Back up everything (ink, highlights, images, notes, layers, bookmarks) to a single .zip file, and restore it on this tablet or a new one.
 
-## Known limits in 0.1
+## Known limits in 0.2
 
 - Only the KJV is included. NIV and NLT are waiting on licensing.
-- Chapters are shown one at a time; there is no continuous scrolling between chapters yet.
 - The eraser removes whole strokes; there is no partial erasing.
-- There is no lasso selection for ink yet.
-- The S Pen side button isn't used yet.
-- Pen rendering is standard Android drawing, not the low-latency ink engine. It should feel good, but it isn't yet as instant as Samsung Notes.
+- The lasso moves and recolours but can't resize or rotate a selection yet.
+- Pen rendering still uses standard Android drawing rather than the front-buffered ink engine Samsung Notes uses, so it can lag the pen tip slightly.
 
 ## Next milestones
 
-- **0.2:** Low-latency ink (Jetpack Ink), a lasso to move and recolour ink, the S Pen side button as an eraser, continuous scrolling, and drag-to-resize margins.
-- **0.3:** Import NIV and NLT once licensing is sorted, and link the scrolling of split panels.
+- **0.3:** Import NIV and NLT once licensing is sorted, link the scrolling of split panels, front-buffered (lowest-latency) ink, and lasso resize.
 - **0.4:** Strong's numbers and a lexicon (STEPBible data), handwriting search, and sketch pages.
 
 ## Credits

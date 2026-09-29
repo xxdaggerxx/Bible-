@@ -10,7 +10,12 @@ enum class Region(val code: Int) {
 }
 
 enum class Tool(val label: String) {
-    PEN("Pen"), HIGHLIGHTER("Highlighter"), ERASER("Eraser"), SELECT("Select")
+    PEN("Pen"), HIGHLIGHTER("Highlighter"), ERASER("Eraser"), LASSO("Lasso"), SELECT("Select")
+}
+
+/** What holding the stylus side button does while the pen touches the screen. */
+enum class SideButton(val label: String, val tool: Tool?) {
+    ERASER("Eraser", Tool.ERASER), LASSO("Lasso", Tool.LASSO), OFF("Nothing", null)
 }
 
 /** Anything the user adds to a chapter. Everything belongs to exactly one (global) layer. */
@@ -42,7 +47,27 @@ class InkStroke(
     val color: Int,
     val width: Float,
     val points: FloatArray,
-) : Annotation
+) : Annotation {
+    fun copyAs(
+        id: Long = this.id,
+        points: FloatArray = this.points,
+        color: Int = this.color,
+        layerId: Long = this.layerId,
+    ) = InkStroke(id, layerId, version, book, chapter, region, verse, highlighter, color, width, points)
+
+    fun withPoints(p: FloatArray) = copyAs(points = p)
+    fun withColor(c: Int) = copyAs(color = c)
+    fun withLayer(l: Long) = copyAs(layerId = l)
+}
+
+/** A copy of (x, y, pressure) triples shifted by (dx, dy). */
+fun FloatArray.translated(dx: Float, dy: Float): FloatArray = FloatArray(size) { i ->
+    when (i % 3) {
+        0 -> this[i] + dx
+        1 -> this[i] + dy
+        else -> this[i]
+    }
+}
 
 /** A clean, snapped highlight covering a character range of one version's chapter text. */
 data class Highlight(

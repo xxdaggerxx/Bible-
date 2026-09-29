@@ -26,7 +26,9 @@ object Page {
     const val COL_PAD = 56f
     const val TEXT_W = 640f
     const val COL_W = TEXT_W + COL_PAD * 2
-    const val MARGIN_W = 440f
+    const val MARGIN_W = 440f // default margin width
+    const val MARGIN_MIN = 220f
+    const val MARGIN_MAX = 1000f
     const val TITLE_TOP = 36f
     const val TEXT_TOP = 130f
     const val BOTTOM = 260f
@@ -77,12 +79,13 @@ class ChapterLayout(
     }
 }
 
-/** Page geometry for a chapter with the current margin settings. */
-class PageGeometry(val layout: ChapterLayout, val left: Boolean, val right: Boolean) {
-    val leftW = if (left) Page.MARGIN_W else 0f
+/** Page geometry for a chapter with the current margin widths (0 = margin hidden). */
+class PageGeometry(val layout: ChapterLayout, val leftW: Float, val rightW: Float) {
+    val left = leftW > 0f
+    val right = rightW > 0f
     val textLeft = leftW + Page.COL_PAD
     val colRight = leftW + Page.COL_W
-    val width = colRight + if (right) Page.MARGIN_W else 0f
+    val width = colRight + rightW
     val height = Page.TEXT_TOP + layout.text.size.height + Page.BOTTOM
 
     fun regionAt(x: Float): Region = when {
@@ -104,6 +107,12 @@ class PageGeometry(val layout: ChapterLayout, val left: Boolean, val right: Bool
     }
 
     fun originY(r: Region, verse: Int) = if (r == Region.TEXT) Page.TEXT_TOP else layout.verseTop(verse)
+}
+
+/** A chapter page placed in a panel's continuous strip; [top] is in strip units. */
+class PlacedPage(val geo: PageGeometry, val top: Float) {
+    val bottom get() = top + geo.height
+    val layout get() = geo.layout
 }
 
 private val PAGE_DENSITY = Density(1f, 1f)

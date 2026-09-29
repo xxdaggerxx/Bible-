@@ -1,13 +1,19 @@
 package com.biblestudy.app.ui
 
+import androidx.compose.animation.core.AnimationState
+import androidx.compose.animation.core.animateDecay
+import androidx.compose.animation.splineBasedDecay
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.calculateCentroid
 import androidx.compose.foundation.gestures.calculatePan
 import androidx.compose.foundation.gestures.calculateZoom
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,31 +21,45 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.produceState
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.geometry.isSpecified
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.FilterQuality
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.translate
@@ -50,7 +70,10 @@ import androidx.compose.ui.input.pointer.PointerInputScope
 import androidx.compose.ui.input.pointer.PointerType
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.input.pointer.positionChanged
+import androidx.compose.ui.input.pointer.util.VelocityTracker
 import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalFontFamilyResolver
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.drawText
@@ -64,9 +87,14 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.biblestudy.app.R
 import com.biblestudy.app.model.ChapterData
-import com.biblestudy.app.model.Region
+import com.biblestudy.app.model.InkStroke
+import com.biblestudy.app.model.Tool
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlin.math.abs
 import kotlin.math.roundToInt
 
 private val bibleFont = FontFamily(
@@ -74,51 +102,65 @@ private val bibleFont = FontFamily(
     Font(R.font.gentium_book_plus_bold, FontWeight.Bold),
 )
 
+/** Laid-out chapters kept per panel: the current one, its neighbours and a few recent ones. */
+private const val MAX_LAYOUTS = 7
+
 @Composable
 fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifier: Modifier = Modifier) {
     val panel = vm.panels[index]
     val ctl = remember(panel) { ReaderController(vm, panel) }
     val resolver = LocalFontFamilyResolver.current
     val measurer = remember(resolver) { TextMeasurer(resolver, Density(1f, 1f), LayoutDirection.Ltr) }
+    val density = LocalDensity.current.density
     val theme = vm.theme
 
-    val data by produceState<ChapterData?>(null, panel.version, panel.book, panel.chapter) {
-        val v = panel.version; val b = panel.book; val c = panel.chapter
-        value = withContext(Dispatchers.IO) { ChapterData(v, b, c, vm.bible.chapter(b, c)) }
-    }
-    val layout = remember(data) {
-        data?.let { buildChapterLayout(measurer, bibleFont, vm.bible.book(it.book).name, it) }
-    }
-    val geo = remember(layout, vm.marginLeft, vm.marginRight) {
-        layout?.let { PageGeometry(it, vm.marginLeft, vm.marginRight) }
-    }
-    SideEffect {
-        ctl.geo = geo
-        ctl.panelIndex = index
+    // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration) {
+        val v = panel.version
+        val wanted = listOfNotNull(
+            panel.book to panel.chapter,
+            vm.neighbor(panel.book, panel.chapter, 1),
+            vm.neighbor(panel.book, panel.chapter, -1),
+        )
+        for ((b, c) in wanted) {
+            val key = ctl.layoutKey(v, b, c)
+            if (ctl.layouts[key] == null) {
+                val verses = withContext(Dispatchers.IO) { vm.bible.chapter(b, c) }
+                ctl.layouts[key] = buildChapterLayout(measurer, bibleFont, vm.bible.book(b).name, ChapterData(v, b, c, verses))
+            }
+            vm.ensureLoaded(v, b, c)
+        }
+        if (ctl.layouts.size > MAX_LAYOUTS) {
+            val keep = wanted.mapTo(HashSet()) { ctl.layoutKey(v, it.first, it.second) }
+            ctl.layouts.keys.filter { it !in keep }.take(ctl.layouts.size - MAX_LAYOUTS).forEach { ctl.layouts.remove(it) }
+            ctl.dropUnused()
+        }
     }
 
-    // Fit / scroll whenever the chapter, margins or panel size change.
-    LaunchedEffect(geo, panel.viewW, panel.viewH, panel.pendingVerse) {
-        val g = geo ?: return@LaunchedEffect
+    val geo = ctl.geo
+    SideEffect {
+        ctl.panelIndex = index
+        ctl.density = density
+    }
+
+    // Fit to width when the page or panel size changes; handle jumps (picker, search, arrows).
+    LaunchedEffect(geo, panel.viewW, panel.viewH, panel.pendingVerse, panel.navGen) {
+        val g = ctl.geo ?: return@LaunchedEffect
         if (panel.viewW <= 0f) return@LaunchedEffect
-        if (ctl.lastPageW != g.width || ctl.lastViewW != panel.viewW) {
+        if (ctl.resizing == null && (ctl.lastPageW != g.width || ctl.lastViewW != panel.viewW)) {
             ctl.fitWidth()
             ctl.lastPageW = g.width
             ctl.lastViewW = panel.viewW
         }
-        val pending = panel.pendingVerse
-        val sameChapter = g.layout.book == panel.book && g.layout.chapter == panel.chapter
-        if (pending != null && sameChapter) {
-            panel.panY = -(g.layout.verseTop(pending) - 40f) * panel.zoom
-            panel.pendingVerse = null
-        } else if (ctl.lastLayout !== g.layout && ctl.lastLayout != null) {
+        if (panel.navGen != ctl.lastNavGen) {
             panel.panY = 0f
+            ctl.lastNavGen = panel.navGen
         }
-        ctl.lastLayout = g.layout
+        panel.pendingVerse?.let { v ->
+            ctl.scrollToVerse(v)
+            panel.pendingVerse = null
+        }
         ctl.clamp()
-    }
-    LaunchedEffect(layout, vm.dataGeneration) {
-        layout?.let { vm.ensureLoaded(it.version, it.book, it.chapter) }
     }
 
     val active = vm.activePanel == index && vm.panels.size > 1
@@ -128,29 +170,53 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         )
     ) {
         PanelHeader(vm, index, ctl, onOpenPicker)
-        Box(Modifier.weight(1f).fillMaxWidth()) {
-            Canvas(
-                Modifier
-                    .fillMaxSize()
-                    .onSizeChanged {
-                        panel.viewW = it.width.toFloat()
-                        panel.viewH = it.height.toFloat()
-                    }
-                    .pointerInput(ctl) { readerGestures(ctl) { vm.fingerDraw } }
-            ) {
+        Box(
+            Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .testTag("reader$index")
+                .clipToBounds() // pages above and below the view must not paint over the header
+                .onSizeChanged {
+                    panel.viewW = it.width.toFloat()
+                    panel.viewH = it.height.toFloat()
+                }
+                .pointerInput(ctl) { readerGestures(ctl) { vm.fingerDraw } }
+        ) {
+            // The page: text, highlights, saved ink and images. Redrawn when any of those change.
+            Canvas(Modifier.fillMaxSize()) {
                 drawRect(theme.surround)
-                val g = geo ?: return@Canvas
-                drawPage(vm, ctl, g, theme)
+                val pages = ctl.pages()
+                if (pages.isEmpty()) return@Canvas
+                val view = ctl.visibleRect()
+                withTransform({
+                    translate(panel.panX, panel.panY)
+                    scale(panel.zoom, panel.zoom, pivot = Offset.Zero)
+                }) {
+                    for (page in pages) {
+                        if (page.bottom < view.top || page.top > view.bottom) continue
+                        translate(0f, page.top) {
+                            drawPage(vm, ctl, page, theme, view.translate(0f, -page.top))
+                        }
+                    }
+                }
             }
-            if (layout == null) {
+            // Live layer: the stroke or lasso being drawn, selection outlines and margin grips.
+            // Kept separate so each new pen point redraws only this, not the whole chapter.
+            Canvas(Modifier.fillMaxSize()) { drawLiveLayer(vm, ctl, theme) }
+
+            if (geo == null) {
                 CircularProgressIndicator(Modifier.align(Alignment.Center))
             }
             val selected = ctl.selectedImage()
-            if (selected != null && vm.tool == com.biblestudy.app.model.Tool.SELECT) {
+            if (selected != null && vm.tool == Tool.SELECT) {
                 FilledTonalButton(
-                    onClick = { vm.deleteImage(selected); ctl.selectedImageId = null },
+                    onClick = { vm.deleteImage(selected.second); ctl.selectedImageId = null },
                     modifier = Modifier.align(Alignment.TopEnd).padding(12.dp),
                 ) { Text("Delete image") }
+            }
+            val sel = vm.selection
+            if (sel != null && ctl.pages().any { sel.isOn(it.layout) } && (vm.activePanel == index || vm.panels.size == 1)) {
+                SelectionBar(vm, Modifier.align(Alignment.TopCenter).padding(top = 8.dp, start = 8.dp, end = 8.dp))
             }
         }
     }
@@ -187,15 +253,56 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
     }
 }
 
+/** Actions for the lasso selection: recolour, copy, move to a layer, delete. */
+@Composable
+private fun SelectionBar(vm: StudyViewModel, modifier: Modifier = Modifier) {
+    Surface(modifier, shape = RoundedCornerShape(28.dp), tonalElevation = 6.dp, shadowElevation = 6.dp) {
+        Row(
+            Modifier.horizontalScroll(rememberScrollState()).padding(horizontal = 12.dp, vertical = 6.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            val count = vm.selectedItems().size
+            Text("$count selected", style = MaterialTheme.typography.labelLarge)
+            Spacer(Modifier.size(4.dp))
+            for (c in PEN_COLORS + HIGHLIGHT_COLORS) {
+                Box(
+                    Modifier
+                        .size(26.dp)
+                        .clip(CircleShape)
+                        .background(Color(c))
+                        .border(1.dp, MaterialTheme.colorScheme.outline, CircleShape)
+                        .clickable { vm.recolorSelection(c) }
+                )
+            }
+            TextButton(onClick = vm::copySelection) { Text("Copy") }
+            var layerMenu by remember { mutableStateOf(false) }
+            Box {
+                TextButton(onClick = { layerMenu = true }) { Text("Move to layer") }
+                DropdownMenu(expanded = layerMenu, onDismissRequest = { layerMenu = false }) {
+                    for (l in vm.layers) {
+                        DropdownMenuItem(
+                            text = { Text(l.name + if (l.locked) " (locked)" else "") },
+                            enabled = !l.locked,
+                            onClick = { layerMenu = false; vm.moveSelectionToLayer(l.id) },
+                        )
+                    }
+                }
+            }
+            TextButton(onClick = vm::deleteSelection) { Text("Delete") }
+            TextButton(onClick = vm::clearSelection) { Text("Done") }
+        }
+    }
+}
+
 // ---------------------------------------------------------------------------------------------
 // Drawing
 // ---------------------------------------------------------------------------------------------
 
-private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, g: PageGeometry, theme: PageTheme) {
-    val panel = ctl.panel
+/** Draws one chapter page in its own page coordinates. [view] is the visible area in page units. */
+private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: PlacedPage, theme: PageTheme, view: Rect) {
+    val g = page.geo
     val layout = g.layout
-    val zoom = panel.zoom
-    val view = ctl.visibleRect()
 
     // Layer order: later layers draw on top. Hidden layers are skipped entirely.
     val order = vm.layers.filter { it.visible }.map { it.id }
@@ -206,103 +313,96 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, g: Pag
     val images = vm.imagesFor(layout.book, layout.chapter)
     val notes = vm.notesFor(layout.book, layout.chapter)
 
-    withTransform({
-        translate(panel.panX, panel.panY)
-        scale(zoom, zoom, pivot = Offset.Zero)
-    }) {
-        // Paper and margins
-        drawRect(theme.page, size = Size(g.width, g.height))
-        if (g.left) {
-            drawRect(theme.margin, topLeft = Offset.Zero, size = Size(g.leftW, g.height))
-            drawLine(theme.rule, Offset(g.leftW, 0f), Offset(g.leftW, g.height), strokeWidth = 1.5f)
-        }
-        if (g.right) {
-            drawRect(theme.margin, topLeft = Offset(g.colRight, 0f), size = Size(Page.MARGIN_W, g.height))
-            drawLine(theme.rule, Offset(g.colRight, 0f), Offset(g.colRight, g.height), strokeWidth = 1.5f)
-        }
+    // Items being dragged with the lasso are drawn shifted by the drag.
+    val sel = vm.selection
+    val moving = if (sel != null && sel.isOn(layout) && ctl.moveOffset != Offset.Zero) sel.ids else emptySet()
+    val shift = ctl.moveOffset
 
-        // Highlights sit beneath the text.
-        for (layerId in order) {
-            translate(g.textLeft, Page.TEXT_TOP) {
-                for (h in highlights) {
-                    if (h.layerId == layerId) drawPath(ctl.highlightPath(h, layout), Color(h.color).copy(alpha = HIGHLIGHT_ALPHA))
-                }
-            }
-            drawStrokes(vm, g, view, textStrokes, marginStrokes, layerId, highlighter = true)
-        }
+    // Paper and margins
+    drawRect(theme.page, size = Size(g.width, g.height))
+    if (g.left) {
+        drawRect(theme.margin, topLeft = Offset.Zero, size = Size(g.leftW, g.height))
+        drawLine(theme.rule, Offset(g.leftW, 0f), Offset(g.leftW, g.height), strokeWidth = 1.5f)
+    }
+    if (g.right) {
+        drawRect(theme.margin, topLeft = Offset(g.colRight, 0f), size = Size(g.rightW, g.height))
+        drawLine(theme.rule, Offset(g.colRight, 0f), Offset(g.colRight, g.height), strokeWidth = 1.5f)
+    }
+    // Faint line between chapters in the continuous strip
+    drawLine(theme.rule, Offset(0f, g.height), Offset(g.width, g.height), strokeWidth = 3f)
 
-        // Scripture text
-        drawText(layout.title, color = theme.text, topLeft = Offset(g.textLeft, Page.TITLE_TOP))
-        drawText(layout.text, color = theme.text, topLeft = Offset(g.textLeft, Page.TEXT_TOP))
-
-        // Verse markers: typed note (dot) and bookmark (ribbon)
-        for (v in notes.keys) {
-            drawCircle(Color(0xFFA07B45), radius = 6f, center = Offset(g.textLeft - 24f, layout.verseTop(v) + 22f))
-        }
-        for (b in vm.bookmarks) {
-            if (b.book == layout.book && b.chapter == layout.chapter) {
-                val y = layout.verseTop(b.verse) + 8f
-                drawRect(Color(0xFFC62828), topLeft = Offset(g.textLeft - 44f, y), size = Size(8f, 26f))
+    // Highlights sit beneath the text.
+    for (layerId in order) {
+        translate(g.textLeft, Page.TEXT_TOP) {
+            for (h in highlights) {
+                if (h.layerId == layerId) drawPath(ctl.highlightPath(h, layout), Color(h.color).copy(alpha = HIGHLIGHT_ALPHA))
             }
         }
+        drawStrokes(vm, g, view, textStrokes, marginStrokes, layerId, highlighter = true, moving, shift)
+    }
 
-        // Margin images, then pen ink, layer by layer.
-        for (layerId in order) {
-            for (img in images) {
-                if (img.layerId != layerId || !g.visible(img.region)) continue
-                val r = ctl.imageRect(g, img)
-                if (!ReaderController.overlaps(r, view)) continue
-                val bmp = vm.bitmap(img.file)
-                if (bmp == null) {
-                    drawRect(theme.rule, topLeft = r.topLeft, size = r.size)
-                } else {
-                    drawImage(
-                        bmp,
-                        dstOffset = IntOffset(r.left.roundToInt(), r.top.roundToInt()),
-                        dstSize = IntSize(r.width.roundToInt(), r.height.roundToInt()),
-                        filterQuality = FilterQuality.Medium,
-                    )
-                }
+    // Scripture text
+    drawText(layout.title, color = theme.text, topLeft = Offset(g.textLeft, Page.TITLE_TOP))
+    drawText(layout.text, color = theme.text, topLeft = Offset(g.textLeft, Page.TEXT_TOP))
+
+    // Verse markers: typed note (dot) and bookmark (ribbon)
+    for (v in notes.keys) {
+        drawCircle(Color(0xFFA07B45), radius = 6f, center = Offset(g.textLeft - 24f, layout.verseTop(v) + 22f))
+    }
+    for (b in vm.bookmarks) {
+        if (b.book == layout.book && b.chapter == layout.chapter) {
+            val y = layout.verseTop(b.verse) + 8f
+            drawRect(Color(0xFFC62828), topLeft = Offset(g.textLeft - 44f, y), size = Size(8f, 26f))
+        }
+    }
+
+    // Margin images, then pen ink, layer by layer.
+    for (layerId in order) {
+        for (img in images) {
+            if (img.layerId != layerId || !g.visible(img.region)) continue
+            val r = ctl.imageRect(g, img).let { if (img.id in moving) it.translate(shift) else it }
+            if (!ReaderController.overlaps(r, view)) continue
+            val bmp = vm.bitmap(img.file)
+            if (bmp == null) {
+                drawRect(theme.rule, topLeft = r.topLeft, size = r.size)
+            } else {
+                drawImage(
+                    bmp,
+                    dstOffset = IntOffset(r.left.roundToInt(), r.top.roundToInt()),
+                    dstSize = IntSize(r.width.roundToInt(), r.height.roundToInt()),
+                    filterQuality = FilterQuality.Medium,
+                )
             }
-            drawStrokes(vm, g, view, textStrokes, marginStrokes, layerId, highlighter = false)
         }
-
-        // Stroke in progress
-        ctl.live?.let { ink ->
-            ink.tick // redraw on every new point
-            val r = buildRender(ink.toArray(), ink.width, ink.highlighter)
-            val c = Color(ink.color).let { if (ink.highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
-            drawStrokeRender(r, c, ink.ox, ink.oy)
-        }
-
-        // Selection outline and resize handle
-        ctl.selectedImage()?.let { img ->
-            val r = ctl.imageRect(g, img)
-            drawRect(Color(0xFF1E88E5), topLeft = r.topLeft, size = r.size, style = Stroke(width = 2.5f / zoom))
-            drawCircle(Color(0xFF1E88E5), radius = 12f / zoom, center = r.bottomRight)
-        }
+        drawStrokes(vm, g, view, textStrokes, marginStrokes, layerId, highlighter = false, moving, shift)
     }
 }
 
 private fun DrawScope.drawStrokes(
     vm: StudyViewModel,
     g: PageGeometry,
-    view: androidx.compose.ui.geometry.Rect,
-    textStrokes: List<com.biblestudy.app.model.InkStroke>,
-    marginStrokes: List<com.biblestudy.app.model.InkStroke>,
+    view: Rect,
+    textStrokes: List<InkStroke>,
+    marginStrokes: List<InkStroke>,
     layerId: Long,
     highlighter: Boolean,
+    moving: Set<Long>,
+    shift: Offset,
 ) {
     for (s in textStrokes) {
         if (s.layerId != layerId || s.highlighter != highlighter) continue
+        val d = if (s.id in moving) shift else Offset.Zero
+        val ox = g.textLeft + d.x
+        val oy = Page.TEXT_TOP + d.y
         val r = vm.render(s)
-        if (!ReaderController.overlaps(r.bounds.translate(g.textLeft, Page.TEXT_TOP), view)) continue
-        drawStrokeRender(r, strokeColor(s.color, highlighter), g.textLeft, Page.TEXT_TOP)
+        if (!ReaderController.overlaps(r.bounds.translate(ox, oy), view)) continue
+        drawStrokeRender(r, strokeColor(s.color, highlighter), ox, oy)
     }
     for (s in marginStrokes) {
         if (s.layerId != layerId || s.highlighter != highlighter || !g.visible(s.region)) continue
-        val ox = g.originX(s.region)
-        val oy = g.originY(s.region, s.verse)
+        val d = if (s.id in moving) shift else Offset.Zero
+        val ox = g.originX(s.region) + d.x
+        val oy = g.originY(s.region, s.verse) + d.y
         val r = vm.render(s)
         if (!ReaderController.overlaps(r.bounds.translate(ox, oy), view)) continue
         drawStrokeRender(r, strokeColor(s.color, highlighter), ox, oy)
@@ -312,6 +412,75 @@ private fun DrawScope.drawStrokes(
 private fun strokeColor(c: Int, highlighter: Boolean) =
     Color(c).let { if (highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
 
+private val SELECT_BLUE = Color(0xFF1E88E5)
+
+/** The stroke or lasso in progress, selection outlines and margin grips. */
+private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, theme: PageTheme) {
+    val panel = ctl.panel
+    val zoom = panel.zoom
+    withTransform({
+        translate(panel.panX, panel.panY)
+        scale(zoom, zoom, pivot = Offset.Zero)
+    }) {
+        ctl.live?.let { ink ->
+            ink.tick // redraw on every new point
+            val r = buildRender(ink.toArray(), ink.width, ink.highlighter)
+            val c = Color(ink.color).let { if (ink.highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
+            drawStrokeRender(r, c, ink.ox, ink.page.top + ink.oy)
+        }
+
+        ctl.lasso?.let { l ->
+            l.tick
+            if (l.points.size > 1) {
+                val path = Path()
+                path.moveTo(l.points[0].x, l.points[0].y + l.page.top)
+                for (i in 1 until l.points.size) path.lineTo(l.points[i].x, l.points[i].y + l.page.top)
+                drawPath(
+                    path, SELECT_BLUE,
+                    style = Stroke(width = 2.5f / zoom, pathEffect = PathEffect.dashPathEffect(floatArrayOf(14f / zoom, 10f / zoom))),
+                )
+            }
+        }
+
+        val sel = vm.selection
+        if (sel != null) {
+            for (page in ctl.pages()) {
+                if (!sel.isOn(page.layout)) continue
+                val b = ctl.selectionBounds(page) ?: continue
+                val r = b.inflate(10f / zoom).translate(ctl.moveOffset.x, ctl.moveOffset.y + page.top)
+                drawRect(SELECT_BLUE.copy(alpha = 0.06f), topLeft = r.topLeft, size = r.size)
+                drawRect(
+                    SELECT_BLUE, topLeft = r.topLeft, size = r.size,
+                    style = Stroke(width = 2f / zoom, pathEffect = PathEffect.dashPathEffect(floatArrayOf(12f / zoom, 8f / zoom))),
+                )
+            }
+        }
+
+        ctl.selectedImage()?.let { (page, img) ->
+            val r = ctl.imageRect(page.geo, img).translate(0f, page.top)
+            drawRect(SELECT_BLUE, topLeft = r.topLeft, size = r.size, style = Stroke(width = 2.5f / zoom))
+            drawCircle(SELECT_BLUE, radius = 12f / zoom, center = r.bottomRight)
+        }
+    }
+
+    // Margin grips (screen coordinates): drag to resize a margin.
+    val gripW = 10f * ctl.density
+    val gripH = 56f * ctl.density
+    val active = ctl.resizing
+    for (left in listOf(true, false)) {
+        val x = ctl.marginEdgeX(left) ?: continue
+        val color = if (active == left) SELECT_BLUE else theme.rule.copy(alpha = 1f)
+        val top = size.height / 2f - gripH / 2f
+        drawRoundRect(
+            color, topLeft = Offset(x - gripW / 2f, top), size = Size(gripW, gripH),
+            cornerRadius = CornerRadius(gripW / 2f),
+        )
+        for (k in -1..1) {
+            drawCircle(theme.page, radius = 1.6f * ctl.density, center = Offset(x, size.height / 2f + k * 8f * ctl.density))
+        }
+    }
+}
+
 // ---------------------------------------------------------------------------------------------
 // Input: pen draws, fingers scroll/zoom/tap. Touches right after pen use are treated as palm.
 // ---------------------------------------------------------------------------------------------
@@ -319,10 +488,20 @@ private fun strokeColor(c: Int, highlighter: Boolean) =
 private fun PointerInputChange.isPen() =
     type == PointerType.Stylus || type == PointerType.Eraser || type == PointerType.Mouse
 
-private suspend fun PointerInputScope.readerGestures(ctl: ReaderController, fingerDraw: () -> Boolean) {
+private suspend fun PointerInputScope.readerGestures(ctl: ReaderController, fingerDraw: () -> Boolean) = coroutineScope {
+    var fling: Job? = null
     awaitEachGesture {
         val down = awaitFirstDown(requireUnconsumed = false)
+        fling?.cancel()
         ctl.touched()
+
+        if (!down.isPen() && !ctl.recentlyPenned()) {
+            val left = ctl.marginGripAt(down.position)
+            if (left != null) {
+                trackResize(down, left, ctl)
+                return@awaitEachGesture
+            }
+        }
         if (down.isPen() || (down.type == PointerType.Touch && fingerDraw())) {
             trackPen(down, ctl)
             return@awaitEachGesture
@@ -334,12 +513,15 @@ private suspend fun PointerInputScope.readerGestures(ctl: ReaderController, fing
         var travelled = 0f
         var multiTouch = false
         var penDown: PointerInputChange? = null
+        val velocity = VelocityTracker()
+        velocity.addPosition(down.uptimeMillis, down.position)
         while (true) {
             val event = awaitPointerEvent()
             penDown = event.changes.firstOrNull { it.pressed && !it.previousPressed && it.isPen() }
             if (penDown != null) break
             if (event.changes.none { it.pressed }) break
             if (event.changes.count { it.pressed } > 1) multiTouch = true
+            event.changes.firstOrNull { it.id == down.id }?.let { velocity.addPosition(it.uptimeMillis, it.position) }
             val zoom = event.calculateZoom()
             val pan = event.calculatePan()
             val centroid = event.calculateCentroid(useCurrent = true)
@@ -352,6 +534,19 @@ private suspend fun PointerInputScope.readerGestures(ctl: ReaderController, fing
             trackPen(pen, ctl) // pen touched down while palm/finger was resting
         } else if (!multiTouch && travelled < viewConfiguration.touchSlop) {
             ctl.onTap(down.position)
+        } else if (!multiTouch) {
+            // Keep scrolling after a flick, slowing down naturally.
+            val v = velocity.calculateVelocity()
+            if (abs(v.y) > 300f) {
+                val decay = splineBasedDecay<Float>(this@readerGestures)
+                fling = launch {
+                    var last = 0f
+                    AnimationState(initialValue = 0f, initialVelocity = v.y).animateDecay(decay) {
+                        ctl.transform(Offset.Zero, Offset(0f, value - last), 1f)
+                        last = value
+                    }
+                }
+            }
         }
     }
 }
@@ -363,9 +558,32 @@ private suspend fun AwaitPointerEventScope.consumeUntilUp() {
     } while (event.changes.any { it.pressed })
 }
 
+private suspend fun AwaitPointerEventScope.trackResize(first: PointerInputChange, left: Boolean, ctl: ReaderController) {
+    ctl.startResize(left)
+    first.consume()
+    try {
+        while (true) {
+            val event = awaitPointerEvent()
+            val c = event.changes.firstOrNull { it.id == first.id }
+            if (c == null || !c.pressed) break
+            ctl.resizeTo(c.position.x)
+            event.changes.forEach { it.consume() }
+        }
+    } finally {
+        ctl.endResize()
+    }
+}
+
+/** The eraser end of the pen always erases; the side button does what the user chose. */
+private fun penToolOverride(first: PointerInputChange, ctl: ReaderController): Tool? = when {
+    first.type == PointerType.Eraser -> Tool.ERASER
+    first.type == PointerType.Stylus && StylusState.sideButtonHeld -> ctl.sideButtonTool()
+    else -> null
+}
+
 @OptIn(ExperimentalComposeUiApi::class)
 private suspend fun AwaitPointerEventScope.trackPen(first: PointerInputChange, ctl: ReaderController) {
-    ctl.penStart(first.position, first.pressure, first.type == PointerType.Eraser)
+    ctl.penStart(first.position, first.pressure, penToolOverride(first, ctl))
     first.consume()
     try {
         while (true) {

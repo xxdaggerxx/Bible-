@@ -16,6 +16,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.snapshots.SnapshotStateMap
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.core.content.edit
@@ -31,9 +32,11 @@ import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.Layer
 import com.biblestudy.app.model.MarginImage
 import com.biblestudy.app.model.Region
+import com.biblestudy.app.model.SideButton
 import com.biblestudy.app.model.Tool
 import com.biblestudy.app.model.VerseId
 import com.biblestudy.app.model.VerseTarget
+import com.biblestudy.app.model.translated
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.launch
@@ -45,6 +48,11 @@ import java.util.zip.ZipInputStream
 import java.util.zip.ZipOutputStream
 import kotlin.math.max
 import kotlin.math.roundToInt
+
+/** Items picked with the lasso, all on one chapter of one version. */
+data class Selection(val version: String, val book: Int, val chapter: Int, val ids: Set<Long>) {
+    fun isOn(layout: ChapterLayout) = layout.version == version && layout.book == book && layout.chapter == chapter
+}
 
 /** One reading panel (the screen can show one or two side by side). */
 class PanelState(book: Int, chapter: Int) {
@@ -58,6 +66,8 @@ class PanelState(book: Int, chapter: Int) {
     var viewW by mutableFloatStateOf(0f)
     var viewH by mutableFloatStateOf(0f)
     var topVerse = 1
+    /** Bumped on every explicit jump (picker, search, arrows) so the panel scrolls to the top. */
+    var navGen by mutableIntStateOf(0)
 }
 
 class StudyViewModel(app: Application) : AndroidViewModel(app) {
@@ -77,10 +87,29 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var highlightSize by mutableIntStateOf(prefs.getInt("hlSize", 1))
     var snapHighlights by mutableStateOf(prefs.getBoolean("snap", true))
     var fingerDraw by mutableStateOf(prefs.getBoolean("fingerDraw", false))
+    var sideButton by mutableStateOf(
+        runCatching { SideButton.valueOf(prefs.getString("sideButton", "ERASER")!!) }.getOrDefault(SideButton.ERASER)
+    )
     var marginLeft by mutableStateOf(prefs.getBoolean("marginLeft", false))
     var marginRight by mutableStateOf(prefs.getBoolean("marginRight", true))
     var theme by mutableStateOf(runCatching { PageTheme.valueOf(prefs.getString("theme", "LIGHT")!!) }.getOrDefault(PageTheme.LIGHT))
     var splitFraction by mutableFloatStateOf(prefs.getFloat("split", 0.5f))
+
+    /** Set by the UI; margin widths are remembered separately for landscape and portrait. */
+    var landscape by mutableStateOf(true)
+    private val marginWidths = mutableStateMapOf<String, Float>()
+
+    private fun marginKey(left: Boolean) = "mw_" + (if (left) "L" else "R") + if (landscape) "_land" else "_port"
+
+    /** Current width of a margin in page units, or 0 if it is switched off. */
+    fun marginWidth(left: Boolean): Float {
+        if (!(if (left) marginLeft else marginRight)) return 0f
+        return marginWidths[marginKey(left)] ?: Page.MARGIN_W
+    }
+
+    fun setMarginWidth(left: Boolean, width: Float) {
+        marginWidths[marginKey(left)] = width.coerceIn(Page.MARGIN_MIN, Page.MARGIN_MAX)
+    }
 
     // ---------- panels ----------
     val panels = mutableStateListOf<PanelState>()
@@ -97,6 +126,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** Bumped after a restore so panels reload their data. */
     var dataGeneration by mutableIntStateOf(0)
     val bookmarks = mutableStateListOf<Bookmark>()
+    var selection by mutableStateOf<Selection?>(null)
+        private set
 
     // ---------- undo ----------
     private val undoStack = ArrayDeque<Edit>()
@@ -131,6 +162,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
         if (layers.none { it.id == activeLayerId }) activeLayerId = layers.first().id
         bookmarks.addAll(user.bookmarks())
+        for (k in listOf("mw_L_land", "mw_R_land", "mw_L_port", "mw_R_port")) {
+            if (prefs.contains(k)) marginWidths[k] = prefs.getFloat(k, Page.MARGIN_W)
+        }
     }
 
     fun newId(): Long {
@@ -145,10 +179,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putInt("penColor", penColor); putInt("hlColor", highlightColor)
             putInt("penSize", penSize); putInt("hlSize", highlightSize)
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
+            putString("sideButton", sideButton.name)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
             putInt("panels", panels.size)
+            marginWidths.forEach { (k, v) -> putFloat(k, v) }
             panels.forEachIndexed { i, p -> putInt("p${i}b", p.book); putInt("p${i}c", p.chapter) }
         }
     }
@@ -164,18 +200,33 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         p.book = b
         p.chapter = chapter.coerceIn(1, bible.book(b).chapters)
         p.pendingVerse = verse
+        p.navGen++
+    }
+
+    /** The chapter before (dir = -1) or after (dir = 1), or null at either end of the Bible. */
+    fun neighbor(book: Int, chapter: Int, dir: Int): Pair<Int, Int>? = when {
+        dir > 0 && chapter < bible.book(book).chapters -> book to chapter + 1
+        dir > 0 && book < 66 -> book + 1 to 1
+        dir < 0 && chapter > 1 -> book to chapter - 1
+        dir < 0 && book > 1 -> (book - 1) to bible.book(book - 1).chapters
+        else -> null
+    }
+
+    /** Continuous scrolling moved into the next/previous chapter; keep the scroll position. */
+    fun shiftChapter(p: PanelState, dir: Int) {
+        val (b, c) = neighbor(p.book, p.chapter, dir) ?: return
+        p.book = b
+        p.chapter = c
     }
 
     fun nextChapter(index: Int) {
         val p = panels.getOrNull(index) ?: return
-        if (p.chapter < bible.book(p.book).chapters) goTo(index, p.book, p.chapter + 1)
-        else if (p.book < 66) goTo(index, p.book + 1, 1)
+        neighbor(p.book, p.chapter, 1)?.let { (b, c) -> goTo(index, b, c) }
     }
 
     fun prevChapter(index: Int) {
         val p = panels.getOrNull(index) ?: return
-        if (p.chapter > 1) goTo(index, p.book, p.chapter - 1)
-        else if (p.book > 1) goTo(index, p.book - 1, bible.book(p.book - 1).chapters)
+        neighbor(p.book, p.chapter, -1)?.let { (b, c) -> goTo(index, b, c) }
     }
 
     fun toggleSplit() {
@@ -269,6 +320,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         marginStrokes.values.forEach { l -> l.removeAll { it.layerId == id } }
         images.values.forEach { l -> l.removeAll { it.layerId == id } }
         undoStack.clear(); redoStack.clear(); editVersion++
+        selection = null
         io {
             val files = user.deleteLayer(id)
             files.forEach { File(imagesDir, it).delete() }
@@ -328,7 +380,29 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         list.clear(); list.addAll(fromDb); list.addAll(extra)
     }
 
-    fun render(s: InkStroke): StrokeRender = renders.getOrPut(s.id) { buildRender(s.points, s.width, s.highlighter) }
+    /** Cached drawing paths for a stroke; rebuilt if the stroke's points change (e.g. moved with the lasso). */
+    fun render(s: InkStroke): StrokeRender {
+        renders[s.id]?.let { if (it.source === s.points) return it }
+        return buildRender(s.points, s.width, s.highlighter).also { renders[s.id] = it }
+    }
+
+    fun usableLayerIds(): Set<Long> = layers.filter { it.visible && !it.locked }.mapTo(HashSet()) { it.id }
+
+    /** Swaps an item for a changed copy with the same id, keeping its place in the drawing order. */
+    private fun replaceItem(after: Annotation) {
+        fun <T : Annotation> SnapshotStateList<T>.swap(item: T) {
+            val i = indexOfFirst { it.id == item.id }
+            if (i >= 0) this[i] = item else add(item)
+        }
+        when (after) {
+            is InkStroke ->
+                if (after.region == Region.TEXT) textStrokesFor(after.version ?: bible.code, after.book, after.chapter).swap(after)
+                else marginStrokesFor(after.book, after.chapter).swap(after)
+            is Highlight -> highlightsFor(after.version, after.book, after.chapter).swap(after)
+            is MarginImage -> imagesFor(after.book, after.chapter).swap(after)
+        }
+        io { user.insert(after) }
+    }
 
     fun addItem(a: Annotation) {
         when (a) {
@@ -362,6 +436,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun undo() {
         val e = undoStack.removeLastOrNull() ?: return
+        selection = null
         e.added.forEach { removeItem(it) }
         e.removed.forEach { addItem(it) }
         redoStack.addLast(e)
@@ -370,10 +445,94 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun redo() {
         val e = redoStack.removeLastOrNull() ?: return
+        selection = null
         e.removed.forEach { removeItem(it) }
         e.added.forEach { addItem(it) }
         undoStack.addLast(e)
         editVersion++
+    }
+
+    // ---------- lasso selection ----------
+
+    fun select(s: Selection) { selection = s }
+
+    fun clearSelection() { selection = null }
+
+    fun selectedItems(): List<Annotation> = selection?.let { selectedItems(it) } ?: emptyList()
+
+    fun selectedItems(sel: Selection): List<Annotation> = buildList {
+        textStrokesFor(sel.version, sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
+        marginStrokesFor(sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
+        highlightsFor(sel.version, sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
+        imagesFor(sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
+    }
+
+    private fun changeSelection(change: (Annotation) -> Annotation?) {
+        val before = selectedItems()
+        val pairs = before.mapNotNull { a -> change(a)?.let { a to it } }
+        if (pairs.isEmpty()) return
+        pairs.forEach { replaceItem(it.second) }
+        record(Edit(pairs.map { it.second }, pairs.map { it.first }))
+    }
+
+    /** Moves selected ink and images by [off] page units. Highlights stay on their words. */
+    fun moveSelection(off: Offset) {
+        val items = selectedItems()
+        if (items.isNotEmpty() && items.all { it is Highlight }) {
+            message = "Highlights stay on their words; only ink and images can be moved."
+            return
+        }
+        changeSelection { a ->
+            when (a) {
+                is InkStroke -> a.withPoints(a.points.translated(off.x, off.y))
+                is MarginImage -> a.copy(x = a.x + off.x, y = a.y + off.y)
+                is Highlight -> null
+            }
+        }
+    }
+
+    fun recolorSelection(color: Int) = changeSelection { a ->
+        when (a) {
+            is InkStroke -> a.withColor(color)
+            is Highlight -> a.copy(color = color)
+            is MarginImage -> null
+        }
+    }
+
+    fun moveSelectionToLayer(layerId: Long) {
+        val layer = layers.firstOrNull { it.id == layerId } ?: return
+        if (!layer.visible) setLayerVisible(layerId, true)
+        changeSelection { a ->
+            if (a.layerId == layerId) null else when (a) {
+                is InkStroke -> a.withLayer(layerId)
+                is Highlight -> a.copy(layerId = layerId)
+                is MarginImage -> a.copy(layerId = layerId)
+            }
+        }
+        message = "Moved to “${layer.name}”."
+    }
+
+    fun deleteSelection() {
+        val items = selectedItems()
+        items.forEach { removeItem(it) }
+        record(Edit(emptyList(), items))
+        selection = null
+    }
+
+    /** Duplicates the selected ink and images a little below and to the right, and selects the copies. */
+    fun copySelection() {
+        val sel = selection ?: return
+        val copies = selectedItems().mapNotNull { a ->
+            when (a) {
+                is InkStroke -> a.copyAs(newId(), a.points.translated(COPY_SHIFT, COPY_SHIFT))
+                is MarginImage -> a.copy(id = newId(), x = a.x + COPY_SHIFT, y = a.y + COPY_SHIFT)
+                is Highlight -> null
+            }
+        }
+        if (copies.isEmpty()) return
+        copies.forEach { addItem(it) }
+        record(Edit(copies, emptyList()))
+        selection = sel.copy(ids = copies.mapTo(HashSet()) { it.id })
     }
 
     // ---------- images ----------
@@ -407,13 +566,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             marginLeft -> Region.LEFT
             else -> { marginRight = true; Region.RIGHT }
         }
+        val marginW = marginWidth(region == Region.LEFT)
         val book = p.book; val chapter = p.chapter; val verse = p.topVerse
         viewModelScope.launch {
             val id = newId()
             val saved = withContext(Dispatchers.IO) { importImage(uri, id) }
             if (saved == null) { message = "Couldn't open that image."; return@launch }
             val (file, aspect) = saved
-            val w = Page.MARGIN_W - 48f
+            val w = marginW - 48f
             val img = MarginImage(id, layer.id, book, chapter, region, verse, 24f, 8f, w, w * aspect, file)
             addItem(img)
             record(Edit(listOf(img), emptyList()))
@@ -560,6 +720,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             images.values.forEach { it.clear() }
             notes.values.forEach { it.clear() }
             loaded.clear(); renders.clear(); bitmaps.clear(); requestedBitmaps.clear()
+            selection = null
             undoStack.clear(); redoStack.clear(); editVersion++
             layers.clear(); layers.addAll(result.first)
             if (layers.none { it.id == activeLayerId }) activeLayerId = layers.firstOrNull()?.id ?: 1L
@@ -567,6 +728,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             dataGeneration++
             message = "Notes restored."
         }
+    }
+
+    companion object {
+        private const val COPY_SHIFT = 30f
     }
 
     private fun io(block: () -> Unit) {

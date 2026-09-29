@@ -30,6 +30,7 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
@@ -101,6 +102,8 @@ fun StudyApp(vm: StudyViewModel) {
                     .fillMaxSize()
                     .background(vm.theme.surround)
             ) {
+                val landscape = maxWidth >= maxHeight
+                SideEffect { vm.landscape = landscape }
                 val openPicker = { dialog = DialogKind.PICKER }
                 if (vm.panels.size == 1) {
                     key(vm.panels[0]) {
