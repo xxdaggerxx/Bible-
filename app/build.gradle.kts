@@ -18,7 +18,11 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            // R8 strips unused code (mostly the extended icon set), shrinking the APK
+            // from ~47 MB to about a third of that.
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
             // Personal install: sign release builds with the debug key.
             signingConfig = signingConfigs.getByName("debug")
         }
