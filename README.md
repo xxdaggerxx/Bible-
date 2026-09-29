@@ -14,15 +14,57 @@ A personal, fully offline Bible study app for Android tablets, designed around t
 
 **Build an APK file instead.** Use *Build → Build App Bundle(s) / APK(s) → Build APK(s)*. The file appears in `app/build/outputs/apk/debug/`. Copy it to the tablet and open it; Android will ask you to allow installing from that source.
 
-## Signing key (keep it safe)
+## Building and updating the app (signing key)
 
-Android only installs an update over the app if it is signed with the same key as the installed copy. Otherwise you have to uninstall first, which deletes your notes. Release builds (`./gradlew assembleRelease`, output in `app/build/outputs/apk/release/`) are signed with your permanent key, `biblestudy-release.jks`. The key is never committed to git.
+Android only installs an update over an installed app if both are signed with the **same key**. This project ships a test signing key in the repository, so every build from any computer or cloud session is signed the same way and installs over the previous one, keeping your notes.
 
-- **On a computer:** put `biblestudy-release.jks` in a `signing/` folder in the project, and `keystore.properties` in the project root. Both are git-ignored.
-- **In a cloud session:** set the environment variable `BIBLESTUDY_KEYSTORE_BASE64` to the base64 text of the `.jks` file, and set `BIBLESTUDY_KEYSTORE_PASSWORD` to the password from `keystore.properties`.
-- **Without either:** release builds fall back to the debug key and print a warning. Don't install those over your real copy.
+| File | What it is |
+| --- | --- |
+| `signing/biblestudy-release.jks` | The signing key (alias `biblestudy`) |
+| `keystore.properties` | Its location and password, read automatically by the build |
 
-Keep a copy of the `.jks` file and its password somewhere safe, such as a password manager. If you lose them, you can't update the installed app without uninstalling it.
+> **This key is public.** It is committed to a public repository on purpose, because the app is only for testing. Anyone could sign an app that Android accepts as an update to yours. Don't use this key for anything you rely on. Before real use, make a new private key (see the last section) and reinstall once.
+
+### Build a signed APK
+
+On a computer with Android Studio or the Android SDK and JDK 17+:
+
+```
+./gradlew assembleRelease
+```
+
+The signed file appears at `app/build/outputs/apk/release/app-release.apk`. Nothing else to set up: Gradle finds `keystore.properties` on its own. If the build prints "No release signing key found", that file is missing and the APK is signed with a throwaway debug key instead. Don't install that one over your real copy.
+
+In Android Studio you can also use *Build → Generate Signed App Bundle / APK → APK*, choose *Choose existing…*, and pick `signing/biblestudy-release.jks` with the password from `keystore.properties`.
+
+### Install or update on the tablet
+
+1. Copy `app-release.apk` to the tablet (USB cable, cloud drive or email) and tap it in *My Files*.
+2. If Android warns about unknown sources, allow it for the app you opened the file from, go back, and tap **Install**.
+3. To update, build a new APK the same way, with a higher `versionCode` in `app/build.gradle.kts`, and install it over the old one. Your notes stay.
+
+If Android says the app conflicts with an existing package, the installed copy was signed with a different key. Back up first (*⋮ → Back up my notes…*), uninstall, install the new APK, then restore.
+
+### Check which key an APK uses
+
+```
+apksigner verify --print-certs app-release.apk
+```
+
+For this key the line should read `CN=Bible Study, O=Personal`, with SHA-256 `70f5af93762f26149c355e7a39cd61f653afa5c17a2f7405ad475fea749efc32`. `CN=Android Debug` means the wrong key was used.
+
+### Cloud builds without the files
+
+If you ever remove the key files from the repository, set these environment variables instead: `BIBLESTUDY_KEYSTORE_BASE64` (the `.jks` file as base64, from `base64 -w0 signing/biblestudy-release.jks`), `BIBLESTUDY_KEYSTORE_PASSWORD`, and optionally `BIBLESTUDY_KEY_ALIAS` (default `biblestudy`).
+
+### Switching to a private key later
+
+```
+keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
+  -alias biblestudy -keyalg RSA -keysize 4096 -validity 36500
+```
+
+Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
 ## What's in version 0.1
 

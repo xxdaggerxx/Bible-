@@ -4,7 +4,3 @@ local.properties
 .idea/
 *.iml
 *.apk
-keystore.properties
-signing/
-*.jks
-*.keystore
