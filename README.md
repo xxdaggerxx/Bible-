@@ -14,6 +14,16 @@ A personal, fully offline Bible study app for Android tablets, designed around t
 
 **Build an APK file instead.** Use *Build → Build App Bundle(s) / APK(s) → Build APK(s)*. The file appears in `app/build/outputs/apk/debug/`. Copy it to the tablet and open it; Android will ask you to allow installing from that source.
 
+## Signing key (keep it safe)
+
+Android only installs an update over the app if it is signed with the same key as the installed copy. Otherwise you have to uninstall first, which deletes your notes. Release builds (`./gradlew assembleRelease`, output in `app/build/outputs/apk/release/`) are signed with your permanent key, `biblestudy-release.jks`. The key is never committed to git.
+
+- **On a computer:** put `biblestudy-release.jks` in a `signing/` folder in the project, and `keystore.properties` in the project root. Both are git-ignored.
+- **In a cloud session:** set the environment variable `BIBLESTUDY_KEYSTORE_BASE64` to the base64 text of the `.jks` file, and set `BIBLESTUDY_KEYSTORE_PASSWORD` to the password from `keystore.properties`.
+- **Without either:** release builds fall back to the debug key and print a warning. Don't install those over your real copy.
+
+Keep a copy of the `.jks` file and its password somewhere safe, such as a password manager. If you lose them, you can't update the installed app without uninstalling it.
+
 ## What's in version 0.1
 
 **Bible and navigation**
