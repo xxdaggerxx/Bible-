@@ -1,0 +1,143 @@
+package com.biblestudy.app.ui
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLayoutResult
+import androidx.compose.ui.text.TextMeasurer
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.BaselineShift
+import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.Constraints
+import androidx.compose.ui.unit.Density
+import androidx.compose.ui.unit.sp
+import com.biblestudy.app.model.ChapterData
+import com.biblestudy.app.model.Region
+
+/**
+ * Study Layout constants, in fixed "page units".
+ *
+ * Text is always laid out at the same width and size, so line breaks never change on any
+ * device. Screens only zoom the page; that is what keeps ink on the words.
+ */
+object Page {
+    const val COL_PAD = 56f
+    const val TEXT_W = 640f
+    const val COL_W = TEXT_W + COL_PAD * 2
+    const val MARGIN_W = 440f
+    const val TITLE_TOP = 36f
+    const val TEXT_TOP = 130f
+    const val BOTTOM = 260f
+    const val FONT = 22f
+    const val LINE = 42f // generous line spacing leaves room to write between lines
+}
+
+/** The fixed layout of one chapter of one version. */
+class ChapterLayout(
+    val version: String,
+    val book: Int,
+    val chapter: Int,
+    val title: TextLayoutResult,
+    val text: TextLayoutResult,
+    private val verseStarts: IntArray,
+    private val verseNumbers: IntArray,
+) {
+    val textLength = text.layoutInput.text.length
+    private val verseTops = FloatArray(verseStarts.size) { i ->
+        Page.TEXT_TOP + text.getLineTop(text.getLineForOffset(verseStarts[i]))
+    }
+
+    val verses: IntArray get() = verseNumbers
+
+    fun verseTop(verse: Int): Float {
+        val i = verseNumbers.indexOf(verse)
+        return if (i >= 0) verseTops[i] else if (verseTops.isEmpty()) Page.TEXT_TOP else verseTops.last()
+    }
+
+    /** The verse whose first line starts at or above page y. */
+    fun verseAtY(y: Float): Int {
+        var result = verseNumbers.firstOrNull() ?: 1
+        for (i in verseTops.indices) {
+            if (verseTops[i] <= y + 1f) result = verseNumbers[i] else break
+        }
+        return result
+    }
+
+    fun verseAtOffset(offset: Int): Int {
+        var lo = 0
+        var hi = verseStarts.lastIndex
+        var ans = 0
+        while (lo <= hi) {
+            val mid = (lo + hi) / 2
+            if (verseStarts[mid] <= offset) { ans = mid; lo = mid + 1 } else hi = mid - 1
+        }
+        return verseNumbers.getOrElse(ans) { 1 }
+    }
+}
+
+/** Page geometry for a chapter with the current margin settings. */
+class PageGeometry(val layout: ChapterLayout, val left: Boolean, val right: Boolean) {
+    val leftW = if (left) Page.MARGIN_W else 0f
+    val textLeft = leftW + Page.COL_PAD
+    val colRight = leftW + Page.COL_W
+    val width = colRight + if (right) Page.MARGIN_W else 0f
+    val height = Page.TEXT_TOP + layout.text.size.height + Page.BOTTOM
+
+    fun regionAt(x: Float): Region = when {
+        left && x < leftW -> Region.LEFT
+        right && x >= colRight -> Region.RIGHT
+        else -> Region.TEXT
+    }
+
+    fun visible(r: Region) = when (r) {
+        Region.TEXT -> true
+        Region.LEFT -> left
+        Region.RIGHT -> right
+    }
+
+    fun originX(r: Region) = when (r) {
+        Region.TEXT -> textLeft
+        Region.LEFT -> 0f
+        Region.RIGHT -> colRight
+    }
+
+    fun originY(r: Region, verse: Int) = if (r == Region.TEXT) Page.TEXT_TOP else layout.verseTop(verse)
+}
+
+private val PAGE_DENSITY = Density(1f, 1f)
+
+fun buildChapterLayout(measurer: TextMeasurer, font: FontFamily, bookName: String, data: ChapterData): ChapterLayout {
+    val builder = AnnotatedString.Builder()
+    val starts = IntArray(data.verses.size)
+    val numbers = IntArray(data.verses.size)
+    val numberStyle = SpanStyle(
+        fontSize = 13.sp,
+        fontWeight = FontWeight.Bold,
+        color = Color(0xFFA07B45),
+        baselineShift = BaselineShift(0.4f),
+    )
+    data.verses.forEachIndexed { i, v ->
+        starts[i] = builder.length
+        numbers[i] = v.verse
+        builder.withStyle(numberStyle) { append(v.verse.toString()) }
+        builder.append("\u2009")
+        builder.append(v.text)
+        if (i < data.verses.lastIndex) builder.append("\n")
+    }
+    val textStyle = TextStyle(fontFamily = font, fontSize = Page.FONT.sp, lineHeight = Page.LINE.sp)
+    val text = measurer.measure(
+        text = builder.toAnnotatedString(),
+        style = textStyle,
+        constraints = Constraints(maxWidth = Page.TEXT_W.toInt()),
+        density = PAGE_DENSITY,
+    )
+    val title = measurer.measure(
+        text = AnnotatedString("$bookName ${data.chapter}"),
+        style = TextStyle(fontFamily = font, fontSize = 40.sp, fontWeight = FontWeight.Bold),
+        constraints = Constraints(maxWidth = Page.TEXT_W.toInt()),
+        density = PAGE_DENSITY,
+    )
+    return ChapterLayout(data.version, data.book, data.chapter, title, text, starts, numbers)
+}

@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.BibleStudy" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#FFE6E6E6</item>
+    </style>
+</resources>
