@@ -316,6 +316,18 @@ class ChapterLayout(
         return start until end
     }
 
+    /**
+     * Character range covering verses [from]..[to] whole (with their numbers), or null if this
+     * version has none of them. Used to show another translation's highlight here (HL-10).
+     */
+    fun versesRange(from: Int, to: Int): IntRange? {
+        val first = verseNumbers.indexOfFirst { it in from..to }
+        if (first < 0) return null
+        val last = verseNumbers.indexOfLast { it in from..to }
+        val end = if (last + 1 < verseStarts.size) verseStarts[last + 1] - 1 else textLength
+        return verseStarts[first] until end
+    }
+
     fun textOf(start: Int, end: Int): String =
         text.layoutInput.text.text.substring(start.coerceIn(0, textLength), end.coerceIn(0, textLength))
 }

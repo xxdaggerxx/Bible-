@@ -12,6 +12,7 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.doubleClick
 import androidx.compose.ui.test.longClick
@@ -87,6 +88,8 @@ class FeatureTest {
             vm.setVersion(0, "KJV")
             vm.goTo(0, 43, 3, remember = false)
             vm.partialEraser = false
+            vm.highlightsAllVersions = true
+            vm.compareVersions = false
             vm.panels[0].back.clear()
             vm.panels[0].forward.clear()
             vm.panels[0].zoomRel.keys.forEach { vm.panels[0].zoomRel[it] = 1f }
@@ -518,5 +521,100 @@ class FeatureTest {
         compose.onNodeWithText("Copy").assertExists()
         compose.onNodeWithText("Share").assertExists()
         compose.onNodeWithText("Note").assertExists()
+    }
+
+    /** Highlights a word with a long press and returns the new highlight. */
+    private fun highlightWordAt(at: Offset): com.biblestudy.app.model.Highlight {
+        compose.onNodeWithTag("reader0").performTouchInput { longClick(at) }
+        compose.onNodeWithText("Highlight").performClick()
+        compose.waitForIdle()
+        return vm.highlightsFor(vm.panels[0].version, 43, 3).last()
+    }
+
+    @Test
+    fun longPressOnAHighlightRecoloursOrRemovesIt() {
+        val at = Offset((Page.COL_PAD + 250f) * zoom(), 600f)
+        val h = highlightWordAt(at)
+        compose.onNodeWithTag("reader0").performTouchInput { longClick(at) }
+        compose.waitForIdle()
+        compose.onNodeWithText("Remove highlight").assertExists()
+        compose.onNodeWithText("Highlight").assertDoesNotExist()
+        snap("40-highlight-edit")
+
+        // Pick another colour: the same highlight changes colour, and undo changes it back.
+        val colours = compose.onAllNodesWithContentDescription("Highlight colour")
+        colours[1].performClick()
+        compose.waitForIdle()
+        val recoloured = vm.highlightsFor("KJV", 43, 3).single()
+        assertEquals(h.id, recoloured.id)
+        assertTrue(recoloured.color != h.color)
+        compose.runOnUiThread { vm.undo() }
+        compose.waitForIdle()
+        assertEquals(h.color, vm.highlightsFor("KJV", 43, 3).single().color)
+
+        compose.onNodeWithText("Remove highlight").performClick()
+        compose.waitForIdle()
+        assertEquals(0, vm.highlightsFor("KJV", 43, 3).size)
+        compose.runOnUiThread { vm.undo() }
+        compose.waitForIdle()
+        assertEquals(1, vm.highlightsFor("KJV", 43, 3).size)
+    }
+
+    @Test
+    fun highlightsShowAsWholeVersesInOtherVersions() {
+        val at = Offset((Page.COL_PAD + 250f) * zoom(), 600f)
+        val h = highlightWordAt(at)
+        compose.runOnUiThread { vm.setVersion(0, "BSB") }
+        waitForLoaded()
+        val cross = vm.crossHighlights("BSB", 43, 3)
+        assertEquals(1, cross.size)
+        assertEquals(h.id, cross[0].source.id)
+        assertEquals(cross[0].fromVerse, cross[0].toVerse)
+        snap("41-highlight-in-bsb")
+
+        // Holding a finger on it in the BSB selects the whole verse and can change the KJV highlight.
+        // (The BSB's heading pushes verse 1 down to about y = 130.)
+        compose.onNodeWithTag("reader0").performTouchInput { longClick(Offset(at.x, 130f)) }
+        compose.waitForIdle()
+        compose.onNodeWithText("Remove highlight").performClick()
+        compose.waitForIdle()
+        assertEquals(0, vm.highlightsFor("KJV", 43, 3).size)
+        compose.runOnUiThread { vm.undo() }
+        compose.waitForIdle()
+
+        // The setting turns it off.
+        compose.runOnUiThread { vm.highlightsAllVersions = false }
+        assertTrue(vm.crossHighlights("BSB", 43, 3).isEmpty())
+    }
+
+    @Test
+    fun highlightsListShowsEveryHighlightAndGoesThere() {
+        val h = highlightWordAt(Offset((Page.COL_PAD + 250f) * zoom(), 600f))
+        compose.runOnUiThread { vm.goTo(0, 1, 1, remember = false) }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("Bookmarks").performScrollTo().performClick()
+        compose.waitForIdle()
+        compose.onNodeWithText("Highlights").performClick()
+        compose.waitUntil(5_000) { compose.onAllNodesWithText("John 3:", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        snap("42-highlights-list")
+        compose.onAllNodesWithText("John 3:", substring = true)[0].performClick()
+        waitForLoaded()
+        assertEquals(43, vm.panels[0].book)
+        assertEquals(3, vm.panels[0].chapter)
+        assertEquals(h.version, vm.panels[0].version)
+    }
+
+    @Test
+    fun verseWindowComparesEveryVersion() {
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.onNodeWithText("Compare versions").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithText("one and only Son", substring = true).assertExists()
+        compose.onNodeWithText("only born Son", substring = true).assertExists()
+        assertTrue(compose.onAllNodesWithText("only begotten Son", substring = true).fetchSemanticsNodes().isNotEmpty())
+        snap("43-compare-versions")
+        compose.onNodeWithText("WEB").performClick()
+        waitForLoaded()
+        assertEquals("WEB", vm.panels[0].version)
     }
 }

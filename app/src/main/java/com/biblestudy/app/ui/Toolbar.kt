@@ -141,6 +141,10 @@ fun StudyToolbar(
                         text = { Text("Section headings" + if (vm.showHeadings) "  \u2713" else "") },
                         onClick = { vm.showHeadings = !vm.showHeadings; menu = false },
                     )
+                    DropdownMenuItem(
+                        text = { Text("Highlights in every version" + if (vm.highlightsAllVersions) "  \u2713" else "") },
+                        onClick = { vm.highlightsAllVersions = !vm.highlightsAllVersions; menu = false },
+                    )
                     for (sp in LineSpacing.entries) {
                         DropdownMenuItem(
                             text = { Text("Line spacing: ${sp.label}" + if (vm.lineSpacing == sp) "  \u2713" else "") },

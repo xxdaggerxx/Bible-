@@ -27,6 +27,8 @@ import com.biblestudy.app.data.Passage
 import com.biblestudy.app.data.UserDb
 import com.biblestudy.app.model.Annotation
 import com.biblestudy.app.model.Bookmark
+import com.biblestudy.app.model.CrossHighlight
+import com.biblestudy.app.model.HighlightEntry
 import com.biblestudy.app.model.Edit
 import com.biblestudy.app.model.Heading
 import com.biblestudy.app.model.Highlight
@@ -135,6 +137,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
     /** Eraser removes only what it touches (INK-7), instead of whole strokes. */
     var partialEraser by mutableStateOf(prefs.getBoolean("partialEraser", false))
+    /** Show highlights from other translations over whole verses (HL-10). */
+    var highlightsAllVersions by mutableStateOf(prefs.getBoolean("hlAllVersions", true))
+    /** The verse window shows the verse in every version, stacked (SPLIT-4). */
+    var compareVersions by mutableStateOf(prefs.getBoolean("compareVersions", false))
     var lineSpacing by mutableStateOf(
         runCatching { LineSpacing.valueOf(prefs.getString("lineSpacing", "NORMAL")!!) }.getOrDefault(LineSpacing.NORMAL)
     )
@@ -187,6 +193,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private val undoStack = ArrayDeque<Edit>()
     private val redoStack = ArrayDeque<Edit>()
     private var editVersion by mutableIntStateOf(0)
+    /** Changes whenever an annotation is added, removed or changed through undoable edits. */
+    val editCount: Int get() = editVersion
     val canUndo: Boolean get() = editVersion >= 0 && undoStack.isNotEmpty()
     val canRedo: Boolean get() = editVersion >= 0 && redoStack.isNotEmpty()
 
@@ -239,7 +247,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -497,6 +505,26 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             }
         }
         val m = mk(book, chapter)
+        if (loaded.add("h$m")) {
+            // Highlights made in the other translations, shown here over whole verses (HL-10).
+            pendingLoads++
+            viewModelScope.launch {
+                try {
+                    val all = withContext(dbDispatcher) {
+                        user.chapterHighlights(book, chapter).filter { it.version != version }
+                            .groupBy { it.version }
+                            .onEach { (v, _) -> verseStarts(v, book, chapter) }
+                    }
+                    for ((v, list) in all) {
+                        val target = highlightsFor(v, book, chapter)
+                        val have = target.mapTo(HashSet()) { it.id }
+                        target.addAll(list.filter { it.id !in have })
+                    }
+                } finally {
+                    pendingLoads--
+                }
+            }
+        }
         if (loaded.add("m$m")) {
             pendingLoads++
             viewModelScope.launch {
@@ -508,6 +536,58 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                     pendingLoads--
                 }
             }
+        }
+    }
+
+    /** Verse start offsets and numbers of a chapter in [version] (cached). */
+    private val verseStartCache = HashMap<String, Pair<IntArray, IntArray>>()
+
+    private fun verseStarts(version: String, book: Int, chapter: Int): Pair<IntArray, IntArray> {
+        val key = tk(version, book, chapter)
+        synchronized(verseStartCache) { verseStartCache[key]?.let { return it } }
+        val verses = text(version).chapter(book, chapter)
+        val v = verseStartOffsets(verses) to IntArray(verses.size) { verses[it].verse }
+        synchronized(verseStartCache) { verseStartCache[key] = v }
+        return v
+    }
+
+    /** The verse holding character [offset] of a chapter's text in [version]. */
+    private fun verseOf(version: String, book: Int, chapter: Int, offset: Int): Int {
+        val (starts, numbers) = verseStarts(version, book, chapter)
+        if (numbers.isEmpty()) return 1
+        var i = 0
+        while (i + 1 < starts.size && starts[i + 1] <= offset) i++
+        return numbers[i]
+    }
+
+    /**
+     * Highlights made in the other translations of a chapter, as the whole verses they cover
+     * (HL-10). Empty when the setting is off.
+     */
+    fun crossHighlights(version: String, book: Int, chapter: Int): List<CrossHighlight> {
+        if (!highlightsAllVersions) return emptyList()
+        val out = ArrayList<CrossHighlight>()
+        for (v in BibleRepository.ALL) {
+            if (v.code == version) continue
+            for (h in highlightsFor(v.code, book, chapter)) {
+                val from = verseOf(v.code, book, chapter, h.start)
+                val to = verseOf(v.code, book, chapter, maxOf(h.start, h.end - 1))
+                out += CrossHighlight(h, from, to)
+            }
+        }
+        return out
+    }
+
+    /** Every highlight with its words, in Bible order, for the Highlights list (HL-8). */
+    suspend fun highlightEntries(): List<HighlightEntry> = withContext(dbDispatcher) {
+        val chapters = HashMap<String, String>()
+        user.allHighlights().map { h ->
+            val text = chapters.getOrPut(tk(h.version, h.book, h.chapter)) {
+                text(h.version).chapter(h.book, h.chapter).joinToString("") { "${it.verse}\u2009${it.text}\n" }
+            }
+            val words = text.substring(h.start.coerceIn(0, text.length), h.end.coerceIn(0, text.length))
+                .replace(Regex("\\n\\d+\u2009"), " ").replace(Regex("^\\d+\u2009"), "").trim()
+            HighlightEntry(h, verseOf(h.version, h.book, h.chapter, h.start), words)
         }
     }
 
@@ -600,6 +680,24 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val h = Highlight(newId(), layer.id, layout.version, layout.book, layout.chapter, start, end, highlightColor)
         addItem(h)
         record(Edit(listOf(h), emptyList()))
+    }
+
+    /** Changes a highlight's colour (undoable). Returns the changed highlight, or null if its layer is locked. */
+    fun recolorHighlight(h: Highlight, color: Int): Highlight? {
+        if (layers.firstOrNull { it.id == h.layerId }?.locked == true) { message = "That highlight's layer is locked."; return null }
+        if (h.color == color) return h
+        val after = h.copy(color = color)
+        replaceItem(after)
+        record(Edit(listOf(after), listOf(h)))
+        return after
+    }
+
+    /** Removes a highlight (undoable). */
+    fun removeHighlight(h: Highlight) {
+        if (layers.firstOrNull { it.id == h.layerId }?.locked == true) { message = "That highlight's layer is locked."; return }
+        removeItem(h)
+        record(Edit(emptyList(), listOf(h)))
+        message = "Highlight removed."
     }
 
     // ---------- lasso selection ----------

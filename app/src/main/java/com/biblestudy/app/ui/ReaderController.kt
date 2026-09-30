@@ -68,7 +68,14 @@ class LiveLasso(val page: PlacedPage) {
 }
 
 /** Text chosen with a long press: a character range of one laid-out chapter. [anchor] is the first word. */
-data class TextSel(val layout: ChapterLayout, val anchor: IntRange, val start: Int, val end: Int)
+data class TextSel(
+    val layout: ChapterLayout,
+    val anchor: IntRange,
+    val start: Int,
+    val end: Int,
+    /** Set when the long press landed on a highlight: the selection is that highlight. */
+    val highlight: Highlight? = null,
+)
 
 private class ImageDrag(val page: PlacedPage, val original: MarginImage, val resize: Boolean, val start: Offset) {
     var current: MarginImage = original
@@ -330,7 +337,25 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val (page, local) = textPoint(pos) ?: return false
         val layout = page.layout
         if (page.geo.regionAt(local.x + page.geo.textLeft) != Region.TEXT || !layout.isOnText(local.y)) return false
-        val w = layout.text.getWordBoundary(layout.offsetAt(local.x, local.y))
+        val offset = layout.offsetAt(local.x, local.y)
+        // On a highlight (on a visible layer), select the whole highlight so it can be changed or removed.
+        val visible = vm.layers.filter { it.visible }.mapTo(HashSet()) { it.id }
+        val h = vm.highlightsFor(layout.version, layout.book, layout.chapter)
+            .lastOrNull { it.layerId in visible && offset >= it.start && offset <= it.end }
+        if (h != null) {
+            textSel = TextSel(layout, h.start until h.end, h.start, h.end, h)
+            return true
+        }
+        // A highlight from another translation covers whole verses here (HL-10); it can be changed too.
+        for (x in vm.crossHighlights(layout.version, layout.book, layout.chapter).asReversed()) {
+            if (x.source.layerId !in visible) continue
+            val r = layout.versesRange(x.fromVerse, x.toVerse) ?: continue
+            if (offset in r) {
+                textSel = TextSel(layout, r, r.first, r.last + 1, x.source)
+                return true
+            }
+        }
+        val w = layout.text.getWordBoundary(offset)
         if (w.end <= w.start) return false
         textSel = TextSel(layout, w.start until w.end, w.start, w.end)
         return true
@@ -342,7 +367,16 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val (page, local) = textPoint(pos) ?: return
         if (page.layout !== ts.layout) return // selections stay within one chapter
         val w = ts.layout.text.getWordBoundary(ts.layout.offsetAt(local.x, local.y.coerceIn(0f, ts.layout.displayHeight)))
-        textSel = ts.copy(start = minOf(ts.anchor.first, w.start), end = maxOf(ts.anchor.last + 1, w.end))
+        val start = minOf(ts.anchor.first, w.start)
+        val end = maxOf(ts.anchor.last + 1, w.end)
+        // Dragging past a highlight turns it into an ordinary selection of more words.
+        val h = ts.highlight?.takeIf { start == ts.anchor.first && end == ts.anchor.last + 1 }
+        textSel = ts.copy(start = start, end = end, highlight = h)
+    }
+
+    /** Keeps the selection pointing at a highlight after it was recoloured. */
+    fun updateSelectedHighlight(h: Highlight) {
+        textSel = textSel?.copy(highlight = h)
     }
 
     fun clearTextSelect() { textSel = null }

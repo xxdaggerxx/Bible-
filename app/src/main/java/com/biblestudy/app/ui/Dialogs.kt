@@ -1,6 +1,7 @@
 package com.biblestudy.app.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
@@ -11,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -90,6 +92,7 @@ import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.data.Passage
 import com.biblestudy.app.data.RefLinks
 import com.biblestudy.app.data.RefParser
+import com.biblestudy.app.model.HighlightEntry
 import com.biblestudy.app.model.CrossRef
 import com.biblestudy.app.model.SearchHit
 import com.biblestudy.app.model.SearchScope
@@ -440,14 +443,51 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
     BigDialog(::close) {
         Column {
             DialogTitle("${vm.refLabel(id)} ($version)", ::close)
-            Text(verseText, style = MaterialTheme.typography.bodyLarge)
-            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 8.dp)) {
+            if (vm.compareVersions) {
+                // Parallel view: the verse in every version, stacked (SPLIT-4). Tap one to read it.
+                Column(Modifier.heightIn(max = 320.dp).verticalScroll(rememberScrollState())) {
+                    for (v in BibleRepository.ALL) {
+                        val text = remember(t, v) { vm.text(v.code).verseText(id) }
+                        Column(
+                            Modifier.fillMaxWidth().clickable {
+                                if (note != original) vm.setNote(t, note)
+                                vm.setVersion(panelIndex, v.code)
+                                vm.goTo(panelIndex, t.book, t.chapter, t.verse, remember = false)
+                                onDismiss()
+                            }.padding(vertical = 4.dp)
+                        ) {
+                            Text(
+                                v.code + if (v.code == version) "  (reading)" else "",
+                                style = MaterialTheme.typography.labelLarge,
+                                color = MaterialTheme.colorScheme.primary,
+                            )
+                            Text(
+                                text ?: "Not in this version (see its footnotes).",
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = if (text == null) MaterialTheme.colorScheme.outline else Color.Unspecified,
+                            )
+                        }
+                    }
+                }
+            } else {
+                Text(verseText, style = MaterialTheme.typography.bodyLarge)
+            }
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.padding(vertical = 8.dp),
+            ) {
                 val marked = vm.isBookmarked(t)
                 OutlinedButton(onClick = { vm.toggleBookmark(t) }) {
                     Icon(if (marked) Icons.Filled.Bookmark else Icons.Filled.BookmarkBorder, contentDescription = null)
                     Spacer(Modifier.width(6.dp))
                     Text(if (marked) "Bookmarked" else "Bookmark")
                 }
+                FilterChip(
+                    selected = vm.compareVersions,
+                    onClick = { vm.compareVersions = !vm.compareVersions },
+                    label = { Text("Compare versions") },
+                )
             }
             OutlinedTextField(
                 value = note,
@@ -625,28 +665,130 @@ fun LayersDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
 @Composable
 fun BookmarksDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
+    var tab by remember { mutableStateOf(0) }
     BigDialog(onDismiss) {
         Column {
-            DialogTitle("Bookmarks", onDismiss)
-            if (vm.bookmarks.isEmpty()) {
-                Text("No bookmarks yet. Tap a verse with your finger, then tap Bookmark.")
+            DialogTitle(if (tab == 0) "Bookmarks" else "Highlights", onDismiss)
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                FilterChip(selected = tab == 0, onClick = { tab = 0 }, label = { Text("Bookmarks") })
+                FilterChip(selected = tab == 1, onClick = { tab = 1 }, label = { Text("Highlights") })
             }
-            LazyColumn(Modifier.weight(1f)) {
-                items(vm.bookmarks.toList(), key = { it.id }) { b ->
-                    val id = VerseId.of(b.book, b.chapter, b.verse)
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Column(
-                            Modifier.weight(1f).clickable { vm.goTo(panelIndex, b.book, b.chapter, b.verse); onDismiss() }
-                                .padding(vertical = 8.dp)
-                        ) {
-                            Text(vm.refLabel(id), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                            Text(vm.text(vm.activeVersion).verseText(id) ?: "", maxLines = 2, overflow = TextOverflow.Ellipsis)
-                        }
-                        IconButton(onClick = { vm.deleteBookmark(b) }) { Icon(Icons.Filled.Delete, contentDescription = "Remove bookmark") }
-                    }
-                    HorizontalDivider()
+            Spacer(Modifier.height(8.dp))
+            if (tab == 0) {
+                if (vm.bookmarks.isEmpty()) {
+                    Text("No bookmarks yet. Tap a verse with your finger, then tap Bookmark.")
                 }
+                LazyColumn(Modifier.weight(1f)) {
+                    items(vm.bookmarks.toList(), key = { it.id }) { b ->
+                        val id = VerseId.of(b.book, b.chapter, b.verse)
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Column(
+                                Modifier.weight(1f).clickable { vm.goTo(panelIndex, b.book, b.chapter, b.verse); onDismiss() }
+                                    .padding(vertical = 8.dp)
+                            ) {
+                                Text(vm.refLabel(id), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                                Text(vm.text(vm.activeVersion).verseText(id) ?: "", maxLines = 2, overflow = TextOverflow.Ellipsis)
+                            }
+                            IconButton(onClick = { vm.deleteBookmark(b) }) { Icon(Icons.Filled.Delete, contentDescription = "Remove bookmark") }
+                        }
+                        HorizontalDivider()
+                    }
+                }
+            } else {
+                HighlightsList(vm, panelIndex, onDismiss, Modifier.weight(1f))
             }
+        }
+    }
+}
+
+/** Every highlight in Bible order, with its words in their colour; filter by colour or layer (HL-8). */
+@Composable
+private fun HighlightsList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
+    val entries by produceState<List<HighlightEntry>?>(null, vm.dataGeneration, vm.editCount) { value = vm.highlightEntries() }
+    var colorFilter by remember { mutableStateOf<Int?>(null) }
+    var layerFilter by remember { mutableStateOf<Long?>(null) }
+    val all = entries
+    if (all == null) {
+        Text("Loading\u2026")
+        return
+    }
+    if (all.isEmpty()) {
+        Text("No highlights yet. Hold a finger on a word, drag to choose the words, then tap Highlight.")
+        return
+    }
+    val colors = all.map { it.highlight.color }.distinct()
+    val layerIds = all.map { it.highlight.layerId }.toSet()
+    Row(
+        Modifier.horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        FilterChip(selected = colorFilter == null && layerFilter == null, onClick = { colorFilter = null; layerFilter = null }, label = { Text("All") })
+        for (c in colors) {
+            Box(
+                Modifier
+                    .size(28.dp)
+                    .clip(CircleShape)
+                    .background(Color(c))
+                    .border(
+                        if (colorFilter == c) 3.dp else 1.dp,
+                        if (colorFilter == c) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
+                        CircleShape,
+                    )
+                    .semantics { contentDescription = "Only this colour" }
+                    .clickable { colorFilter = if (colorFilter == c) null else c }
+            )
+        }
+        if (layerIds.size > 1) {
+            VerticalDivider(Modifier.height(24.dp))
+            for (l in vm.layers.filter { it.id in layerIds }) {
+                FilterChip(
+                    selected = layerFilter == l.id,
+                    onClick = { layerFilter = if (layerFilter == l.id) null else l.id },
+                    label = { Text(l.name) },
+                )
+            }
+        }
+    }
+    val shown = all.filter { e ->
+        (colorFilter == null || e.highlight.color == colorFilter) && (layerFilter == null || e.highlight.layerId == layerFilter)
+    }
+    Text(
+        "${shown.size} highlight" + (if (shown.size == 1) "" else "s"),
+        style = MaterialTheme.typography.bodySmall,
+        color = MaterialTheme.colorScheme.outline,
+        modifier = Modifier.padding(vertical = 4.dp),
+    )
+    LazyColumn(modifier) {
+        items(shown, key = { it.highlight.id }) { e ->
+            val h = e.highlight
+            val layerName = vm.layers.firstOrNull { it.id == h.layerId }?.name ?: ""
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Column(
+                    Modifier.weight(1f).clickable {
+                        vm.setVersion(panelIndex, h.version)
+                        vm.goTo(panelIndex, h.book, h.chapter, e.verse)
+                        onDismiss()
+                    }.padding(vertical = 8.dp)
+                ) {
+                    Text(
+                        vm.refLabel(VerseId.of(h.book, h.chapter, e.verse)) + "  \u00b7  ${h.version}  \u00b7  $layerName",
+                        style = MaterialTheme.typography.labelLarge,
+                        color = MaterialTheme.colorScheme.primary,
+                    )
+                    Text(
+                        buildAnnotatedString {
+                            pushStyle(SpanStyle(background = Color(h.color).copy(alpha = HIGHLIGHT_ALPHA)))
+                            append(e.words)
+                            pop()
+                        },
+                        maxLines = 3,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+                IconButton(onClick = { vm.removeHighlight(h) }) { Icon(Icons.Filled.Delete, contentDescription = "Remove highlight") }
+            }
+            HorizontalDivider()
         }
     }
 }

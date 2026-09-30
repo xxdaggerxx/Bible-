@@ -90,6 +90,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalFontFamilyResolver
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.drawText
@@ -387,7 +389,28 @@ private fun TextSelectionBar(vm: StudyViewModel, ctl: ReaderController, ts: Text
                 context.startActivity(Intent.createChooser(send, null))
                 ctl.clearTextSelect()
             }) { Text("Share") }
-            TextButton(onClick = { vm.addHighlight(ts.layout, ts.start, ts.end); ctl.clearTextSelect() }) { Text("Highlight") }
+            val h = ts.highlight
+            if (h == null) {
+                TextButton(onClick = { vm.addHighlight(ts.layout, ts.start, ts.end); ctl.clearTextSelect() }) { Text("Highlight") }
+            } else {
+                // A highlight was long-pressed: recolour or remove it.
+                for (c in HIGHLIGHT_COLORS) {
+                    Box(
+                        Modifier
+                            .size(26.dp)
+                            .clip(CircleShape)
+                            .background(Color(c))
+                            .border(
+                                if (c == h.color) 3.dp else 1.dp,
+                                if (c == h.color) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
+                                CircleShape,
+                            )
+                            .semantics { contentDescription = "Highlight colour" + if (c == h.color) " (current)" else "" }
+                            .clickable { vm.recolorHighlight(h, c)?.let { ctl.updateSelectedHighlight(it) } }
+                    )
+                }
+                TextButton(onClick = { vm.removeHighlight(h); ctl.clearTextSelect() }) { Text("Remove highlight") }
+            }
             TextButton(onClick = {
                 val l = ts.layout
                 vm.openVerse(l.book, l.chapter, l.verseAtOffset(ts.start))
@@ -458,6 +481,7 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     val textStrokes = vm.textStrokesFor(layout.version, layout.book, layout.chapter)
     val marginStrokes = vm.marginStrokesFor(layout.book, layout.chapter)
     val highlights = vm.highlightsFor(layout.version, layout.book, layout.chapter)
+    val crossHighlights = vm.crossHighlights(layout.version, layout.book, layout.chapter)
     val images = vm.imagesFor(layout.book, layout.chapter)
     val notes = vm.notesFor(layout.book, layout.chapter)
 
@@ -482,6 +506,12 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     // Highlights sit beneath the text.
     for (layerId in order) {
         translate(g.textLeft, Page.TEXT_TOP) {
+            // Highlights made in other translations cover whole verses, a shade lighter (HL-10).
+            for (x in crossHighlights) {
+                if (x.source.layerId != layerId) continue
+                val r = layout.versesRange(x.fromVerse, x.toVerse) ?: continue
+                drawPath(layout.highlightPath(-x.source.id, r.first, r.last + 1), Color(x.source.color).copy(alpha = CROSS_HIGHLIGHT_ALPHA))
+            }
             for (h in highlights) {
                 if (h.layerId == layerId) drawPath(ctl.highlightPath(h, layout), Color(h.color).copy(alpha = HIGHLIGHT_ALPHA))
             }

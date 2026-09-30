@@ -153,15 +153,25 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
             "SELECT id, layer_id, version, book, chapter, start_off, end_off, color FROM highlights " +
                 "WHERE version = ? AND book = ? AND chapter = ? ORDER BY id",
             args,
-        ).use { c ->
-            buildList {
-                while (c.moveToNext()) add(
-                    Highlight(c.getLong(0), c.getLong(1), c.getString(2), c.getInt(3), c.getInt(4), c.getInt(5), c.getInt(6), c.getInt(7))
-                )
-            }
-        }
+        ).use { c -> buildList { while (c.moveToNext()) add(c.toHighlight()) } }
         return strokes to highlights
     }
+
+    /** Highlights in every version of a chapter (HL-10 shows them across translations). */
+    fun chapterHighlights(book: Int, chapter: Int): List<Highlight> =
+        readableDatabase.rawQuery(
+            "SELECT id, layer_id, version, book, chapter, start_off, end_off, color FROM highlights " +
+                "WHERE book = ? AND chapter = ? ORDER BY id",
+            arrayOf(book.toString(), chapter.toString()),
+        ).use { c -> buildList { while (c.moveToNext()) add(c.toHighlight()) } }
+
+    /** Every highlight, in Bible order (HL-8). */
+    fun allHighlights(): List<Highlight> =
+        readableDatabase.rawQuery(
+            "SELECT id, layer_id, version, book, chapter, start_off, end_off, color FROM highlights " +
+                "ORDER BY book, chapter, start_off, id",
+            null,
+        ).use { c -> buildList { while (c.moveToNext()) add(c.toHighlight()) } }
 
     /** Margin ink and images for a chapter (shared across all versions). */
     fun loadMargin(book: Int, chapter: Int): Pair<List<InkStroke>, List<MarginImage>> {
@@ -281,6 +291,9 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
         const val DEFAULT_LAYER_COLOR = 0xFF7A5C2E.toInt()
         private const val STROKE_COLS =
             "id, layer_id, version, book, chapter, region, verse, highlighter, color, width, points, coords"
+
+        private fun Cursor.toHighlight() =
+            Highlight(getLong(0), getLong(1), getString(2), getInt(3), getInt(4), getInt(5), getInt(6), getInt(7))
 
         private fun Cursor.toStroke() = InkStroke(
             id = getLong(0), layerId = getLong(1), version = if (isNull(2)) null else getString(2),

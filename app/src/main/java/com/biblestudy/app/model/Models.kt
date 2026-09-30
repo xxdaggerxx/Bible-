@@ -86,6 +86,15 @@ data class Highlight(
     val color: Int,
 ) : Annotation
 
+/**
+ * A highlight made in another translation, shown here over whole verses (HL-10):
+ * [source] covers verses [fromVerse]..[toVerse] of its own version.
+ */
+data class CrossHighlight(val source: Highlight, val fromVerse: Int, val toVerse: Int)
+
+/** A highlight for the Highlights list (HL-8), with the words it covers. */
+data class HighlightEntry(val highlight: Highlight, val verse: Int, val words: String)
+
 /** A picture placed in a margin, anchored to a verse and shared across versions. */
 data class MarginImage(
     override val id: Long,
