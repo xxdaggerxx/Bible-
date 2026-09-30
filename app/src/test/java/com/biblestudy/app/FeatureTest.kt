@@ -66,6 +66,36 @@ class FeatureTest {
     @get:Rule
     val compose = createAndroidComposeRule<MainActivity>()
 
+    /** On failure, prints the state objects written most often during the test (to find update loops). */
+    @get:Rule
+    val writes = object : org.junit.rules.TestWatcher() {
+        val counts = java.util.concurrent.ConcurrentHashMap<String, Int>()
+        var handle: androidx.compose.runtime.snapshots.ObserverHandle? = null
+        override fun starting(d: org.junit.runner.Description) {
+            counts.clear()
+            handle = androidx.compose.runtime.snapshots.Snapshot.registerApplyObserver { changed, _ ->
+                for (c in changed) {
+                    val k = c.toString().take(160)
+                    counts.merge(k, 1, Int::plus)
+                }
+            }
+        }
+        override fun failed(e: Throwable, d: org.junit.runner.Description) {
+            val out = StringBuilder("STATE WRITES in ${d.methodName}:\n")
+            counts.entries.sortedByDescending { it.value }.take(12).forEach { out.append("  ${it.value}  ${it.key}\n") }
+            runCatching {
+                val global = Class.forName("android.view.WindowManagerGlobal")
+                val instance = global.getMethod("getInstance").invoke(null)
+                @Suppress("UNCHECKED_CAST")
+                val roots = global.getDeclaredField("mViews").apply { isAccessible = true }.get(instance) as List<android.view.View>
+                out.append("  windows: ${roots.size}\n")
+                for (r in roots) out.append("    ${r.javaClass.simpleName} attached=${r.isAttachedToWindow} shown=${r.isShown} ctx=${r.context}\n")
+            }
+            File("build/state-writes.txt").appendText(out.toString())
+        }
+        override fun finished(d: org.junit.runner.Description) { handle?.dispose() }
+    }
+
     private val vm: StudyViewModel get() = ViewModelProvider(compose.activity)[StudyViewModel::class.java]
 
     /**
@@ -581,9 +611,17 @@ class FeatureTest {
         snap("41-highlight-in-bsb")
 
         // Holding a finger on it in the BSB selects the whole verse and can change the KJV highlight.
-        // (The BSB's heading pushes verse 1 down to about y = 130.)
-        compose.onNodeWithTag("reader0").performTouchInput { longClick(Offset(at.x, 130f)) }
-        compose.waitForIdle()
+        // The BSB's heading pushes verse 1 down, so look for it: a long press elsewhere shows the
+        // ordinary bar, which Copy dismisses.
+        var y = 60f
+        while (true) {
+            compose.onNodeWithTag("reader0").performTouchInput { longClick(Offset(at.x, y)) }
+            compose.waitForIdle()
+            if (compose.onAllNodesWithText("Remove highlight").fetchSemanticsNodes().isNotEmpty()) break
+            if (compose.onAllNodesWithText("Copy").fetchSemanticsNodes().isNotEmpty()) compose.onNodeWithText("Copy").performClick()
+            y += 25f
+            assertTrue("no whole-verse highlight found", y < 700f)
+        }
         compose.onNodeWithText("Remove highlight").performClick()
         compose.waitForIdle()
         assertEquals(0, vm.highlightsFor("KJV", 43, 3).size)
