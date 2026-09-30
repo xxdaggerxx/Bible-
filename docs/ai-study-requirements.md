@@ -278,6 +278,34 @@ Every search is answered by the first step below that can handle it. All steps e
 | G20 | Character studies for major figures (e.g. "The life of Joseph"), with every event cited and in order. | Could |
 | G21 | Thematic reading plans (e.g. "30 days on grace") built from the topic index. | Could |
 
+### 8.4 Sermons
+
+Topic pages, passages and word studies show sermons on the same topic or text, with an AI summary of each and a link to the original. Sermons come from two kinds of source, handled differently.
+
+| | **Historical sermons** | **Modern pastors' sermons** |
+|---|---|---|
+| Examples | Spurgeon, Wesley, Edwards, Whitefield, Ryle, M'Cheyne, Moody; Luther and Calvin (19th-century translations); Augustine, Chrysostom | Living or recent pastors whose sermons are copyrighted |
+| Copyright | Public domain (verify each source edition) | Copyrighted |
+| Full text | May be shipped, or offered as an optional offline download | **Never stored or shipped.** Read only to write the summary |
+| Summary | AI summary, checked (SR4), shipped in `study.db` | Short AI summary in own words, checked (SR4) |
+| Quotes | 1–3 key quotes, word for word | At most one short quote (≤ 25 words), or none |
+| Link | To the full text (offline copy or source) | **Always** to the sermon on the ministry's own website or official channel |
+| Offline | Everything works offline | Summary shown offline; the link needs internet |
+
+| ID | Requirement | Priority |
+|---|---|---|
+| SR1 | Each sermon record holds: preacher, tradition, era, date, title, main Bible text, other verses cited, topics, summary, key quote(s), source link, source licence or permission status, and generation metadata (Q6). | Must |
+| SR2 | Sermons are linked to the Bible through their main text and the verses they cite, and to topics through their tags. They appear on topic pages (§5.3), in passage guides (§8.2) and from a verse tap ("Sermons on this passage"). | Must |
+| SR3 | On topic pages, sermons appear in a separate, labelled panel ("Sermons") below the Bible passages, never mixed into them. The panel can be hidden with the AI setting (Q1). | Must |
+| SR4 | **Accuracy about real people.** Summaries describe *what this sermon says*, never "what [pastor] believes". Every quote is checked word for word against the source at build time. Every summary is checked against the sermon (automatic check plus human spot check, Q5). A summary that can't be checked is not shipped. | Must |
+| SR5 | **Balance.** For a topic, the panel shows sermons from different traditions and eras where they exist, each labelled (e.g. "Methodist · 18th century"). It never presents one preacher's view as the answer. | Must |
+| SR6 | **Modern sermons: link, don't copy.** For copyrighted sermons, the app ships only metadata, a short summary in its own words, and the link. Transcripts and audio are not stored in the repo, the build output or the app. The card shows "Summary by AI · Listen/read the full sermon at [ministry]" with the link prominent. | Must |
+| SR7 | **Respect sources.** Sermons are collected only through official APIs, feeds or pages that the source's terms of use and robots.txt allow. No bulk scraping against terms. Each source's terms are recorded in `licenses/` before it is used. | Must |
+| SR8 | **Opt-out and permission.** Any ministry that asks is removed in the next data update. Where a ministry grants permission in writing, its sermons can move to fuller treatment (longer quotes, stored text) within the permission's terms. | Must |
+| SR9 | **Personal-use scope.** Summaries of copyrighted sermons are for the personal, non-commercial app. Distributing the app more widely or commercially requires permission from each ministry first. | Must |
+| SR10 | "Summarise this sermon now" (optional, online): for a sermon the user opens at its source, the online agent can write a summary on request for that user only, stored on the device. | Could |
+| SR11 | Offline, modern sermon cards show the summary and say "Full sermon available online". Missing sermon data never blocks search (§5.8). | Must |
+
 ## 9. Personal notes
 
 | ID | Requirement | Priority |
@@ -387,6 +415,8 @@ For open questions that have no ready-made page and that the parser can't handle
 | Louw–Nida | UBS | Copyrighted | Not used |
 | Septuagint alignment (W5) | Various | Varies | **To verify** |
 | People, places, events | Theographic Bible Metadata | CC BY-SA 4.0 | Share-alike applies to `study.db` |
+| Historical sermons | Public-domain editions (e.g. Spurgeon's *Metropolitan Tabernacle Pulpit*, Wesley's *Sermons on Several Occasions*, Edwards, NPNF translations of Chrysostom and Augustine) | Public domain | **Check each edition**; some hosting sites (e.g. CCEL) have terms on their own editions |
+| Modern sermons | Ministry websites, official feeds and APIs | Copyrighted | Summaries + links only (SR6); **terms checked per source** (SR7) |
 | Geocoding | OpenBible.info | CC BY 4.0 | OK |
 | Cross-references | OpenBible.info | CC BY 4.0 | Already used |
 | Topic list and key verses | Nave's Topical Bible | Public domain | OK |
@@ -406,6 +436,7 @@ For open questions that have no ready-made page and that the parser can't handle
 | E8 | **Search-shape acceptance set.** Each search must get the right shape, and its first screen must show the expected groups and key passages (table below). |
 | E9 | **Parser accuracy:** at least 90% of the evaluation queries get the correct shape. |
 | E10 | **Offline test:** the whole evaluation set runs in airplane mode with the agent off; the scores in E2–E9 must be met without it. |
+| E12 | **Sermon checks:** 100% of shipped quotes match their source word for word; at least 95% of spot-checked summaries are judged accurate; no transcript of a copyrighted sermon is found anywhere in the repo, build output or APK (automated scan). |
 | E11 | **Failure tests:** automated tests remove or damage each part in turn (network, API key, query encoder, `study.db`, `lexicon.db`) and check that search still returns results from the next step in the chain (F4), with no crash and no blank screen. |
 
 **E8 acceptance searches**
@@ -426,8 +457,8 @@ For open questions that have no ready-made page and that the parser can't handle
 | 1 | 0.5 | `lexicon.db`; tap-a-word; word study page (W1, W3, W8); lemma search; T1 | STEPBible data |
 | 2 | 0.6 | Sections; section records; concept layer; hybrid search; topic results with meanings and subtopics (S, T, C); query parser (QP); evaluation set | Phase 1 |
 | 3 | 0.7 | People, places, events; speakers; kinds of text; lists; outlines (I); all search shapes with timelines and maps (SH); build-time search agent and ready-made result pages (RP, B8) | Phase 2 records |
-| 4 | 0.8 | Topic guides, passage guides, study questions (G); notes in search (N) | Phases 2–3 |
-| 5 | later | Sense groups (W6), Septuagint links, character studies, reading plans, optional online search agent (A) | — |
+| 4 | 0.8 | Topic guides, passage guides, study questions (G); notes in search (N); historical sermon library (SR, public domain) | Phases 2–3 |
+| 5 | later | Modern sermon summaries and links (SR6–SR9), starting with ministries that have open sharing policies; sense groups (W6), Septuagint links, character studies, reading plans, optional online search agent (A) | — |
 
 **First prototype:** run the section-record pass on Micah (7 chapters) and Romans (16 chapters), build a small `study.db`, and run the "righteousness" acceptance query on the desktop before starting the Android work.
 
@@ -440,3 +471,5 @@ For open questions that have no ready-made page and that the parser can't handle
 5. Should topic guides be written for a general audience or configurable by study depth?
 6. Is a small on-device model needed for the query parser (QP3), or is vocabulary matching enough? Decide from E9.
 7. How are timelines shown where the order of events is disputed (e.g. Paul's visits to Jerusalem in Galatians vs Acts)?
+8. Which modern pastors and ministries to include first, and which have terms or sharing policies that allow summaries and links?
+9. Get legal advice before shipping summaries of copyrighted sermons beyond personal use (SR9)?
