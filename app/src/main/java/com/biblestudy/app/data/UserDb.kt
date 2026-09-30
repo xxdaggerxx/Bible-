@@ -33,7 +33,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
             "CREATE TABLE strokes(id INTEGER PRIMARY KEY, layer_id INTEGER NOT NULL, version TEXT, " +
                 "book INTEGER NOT NULL, chapter INTEGER NOT NULL, region INTEGER NOT NULL, verse INTEGER NOT NULL, " +
                 "highlighter INTEGER NOT NULL, color INTEGER NOT NULL, width REAL NOT NULL, points BLOB NOT NULL, " +
-                "coords INTEGER NOT NULL DEFAULT 1)"
+                "coords INTEGER NOT NULL DEFAULT 1, font TEXT NOT NULL DEFAULT 'BOOK')"
         )
         db.execSQL("CREATE INDEX strokes_bc ON strokes(book, chapter)")
         db.execSQL(
@@ -71,6 +71,8 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
             // bookmarks can be put in folders (NOTE-3).
             db.execSQL("ALTER TABLE notes ADD COLUMN end_verse INTEGER NOT NULL DEFAULT 0")
             db.execSQL("ALTER TABLE bookmarks ADD COLUMN folder TEXT NOT NULL DEFAULT ''")
+            // READ-3: the font ink on the words was drawn in (all earlier ink used Gentium Book).
+            db.execSQL("ALTER TABLE strokes ADD COLUMN font TEXT NOT NULL DEFAULT 'BOOK'")
         }
     }
 
@@ -124,6 +126,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
                 put("book", a.book); put("chapter", a.chapter); put("region", a.region.code); put("verse", a.verse)
                 put("highlighter", if (a.highlighter) 1 else 0); put("color", a.color); put("width", a.width)
                 put("points", a.points.toBlob()); put("coords", if (a.lineAnchored) 1 else 0)
+                put("font", a.font)
             }, SQLiteDatabase.CONFLICT_REPLACE)
 
             is Highlight -> db.insertWithOnConflict("highlights", null, ContentValues().apply {
@@ -314,7 +317,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
         const val NAME = "userdata.db"
         const val DEFAULT_LAYER_COLOR = 0xFF7A5C2E.toInt()
         private const val STROKE_COLS =
-            "id, layer_id, version, book, chapter, region, verse, highlighter, color, width, points, coords"
+            "id, layer_id, version, book, chapter, region, verse, highlighter, color, width, points, coords, font"
 
         private fun Cursor.toNote(): TypedNote {
             val v = getInt(0)
@@ -328,7 +331,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
             id = getLong(0), layerId = getLong(1), version = if (isNull(2)) null else getString(2),
             book = getInt(3), chapter = getInt(4), region = Region.of(getInt(5)), verse = getInt(6),
             highlighter = getInt(7) != 0, color = getInt(8), width = getFloat(9), points = getBlob(10).toFloats(),
-            lineAnchored = getInt(11) != 0,
+            lineAnchored = getInt(11) != 0, font = getString(12),
         )
 
         fun FloatArray.toBlob(): ByteArray {

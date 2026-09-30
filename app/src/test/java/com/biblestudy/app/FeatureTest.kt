@@ -96,6 +96,7 @@ class FeatureTest {
             vm.sidePane = null
             vm.paneVerse = null
             vm.compareVersions = false
+            vm.changeTextFont(com.biblestudy.app.model.TextFont.BOOK)
             vm.panels[0].back.clear()
             vm.panels[0].forward.clear()
             vm.panels[0].zoomRel.keys.forEach { vm.panels[0].zoomRel[it] = 1f }
@@ -807,4 +808,65 @@ class FeatureTest {
         assertEquals("content", uri.scheme)
         assertEquals(compose.activity.packageName + ".files", uri.authority)
     }
+
+    @Test
+    fun changingTheFontKeepsInkOnTheWords() {
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset((Page.COL_PAD + 200f) * z, 620f))
+            repeat(6) { moveBy(Offset(15f, 0f)) }
+            up()
+        }
+        compose.waitForIdle()
+        val before = vm.textStrokesFor("KJV", 43, 3).single()
+        assertEquals("BOOK", before.font)
+        compose.runOnUiThread { vm.fingerDraw = false; vm.changeTextFont(com.biblestudy.app.model.TextFont.SANS) }
+        waitForLoaded()
+        compose.waitUntil(5_000) { vm.textStrokesFor("KJV", 43, 3).isNotEmpty() }
+        val after = vm.textStrokesFor("KJV", 43, 3).single()
+        assertEquals(before.id, after.id)
+        assertEquals("SANS", after.font)
+        snap("55-sans-font")
+        // Back to the book font: the stroke comes back to (about) where it was drawn.
+        compose.runOnUiThread { vm.changeTextFont(com.biblestudy.app.model.TextFont.BOOK) }
+        waitForLoaded()
+        compose.waitUntil(5_000) { vm.textStrokesFor("KJV", 43, 3).isNotEmpty() }
+        val back = vm.textStrokesFor("KJV", 43, 3).single()
+        assertEquals(before.points[0], back.points[0], 6f)
+        assertEquals(before.points[1], back.points[1], 0.05f)
+    }
+
+    // ---------- screen sizes (ADP-6): small 8" and large 14.6" tablets, both ways round ----------
+
+    private fun checkScreen(name: String, widthClass: com.biblestudy.app.ui.WidthClass, maxPanels: Int) {
+        waitForLoaded()
+        assertEquals(widthClass, vm.widthClass)
+        assertEquals(maxPanels, vm.maxPanels)
+        compose.onNodeWithTag("reader0").assertExists()
+        compose.onNodeWithText("John 3").assertExists()
+        compose.onNodeWithContentDescription("Next chapter").assertExists()
+        snap("60-$name")
+        compose.runOnUiThread { vm.addPanel(); vm.sidePane = PaneKind.CROSSREFS }
+        waitForLoaded()
+        compose.onNodeWithTag("reader1").assertExists()
+        compose.onNodeWithTag("pane").assertExists()
+        snap("61-$name-split")
+    }
+
+    @Test
+    @Config(qualifiers = "w600dp-h960dp-port-hdpi")
+    fun small8InchTabletPortrait() = checkScreen("8in-portrait", com.biblestudy.app.ui.WidthClass.MEDIUM, 2)
+
+    @Test
+    @Config(qualifiers = "w960dp-h600dp-land-hdpi")
+    fun small8InchTabletLandscape() = checkScreen("8in-landscape", com.biblestudy.app.ui.WidthClass.EXPANDED, 2)
+
+    @Test
+    @Config(qualifiers = "w1232dp-h1848dp-port-xhdpi")
+    fun large14InchTabletPortrait() = checkScreen("14in-portrait", com.biblestudy.app.ui.WidthClass.EXPANDED, 2)
+
+    @Test
+    @Config(qualifiers = "w1848dp-h1232dp-land-xhdpi")
+    fun large14InchTabletLandscape() = checkScreen("14in-landscape", com.biblestudy.app.ui.WidthClass.EXPANDED, 3)
 }

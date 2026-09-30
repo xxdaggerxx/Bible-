@@ -35,6 +35,8 @@ sealed interface Annotation {
  *    spacing change. These strokes belong to one Bible version ([version] is set).
  *    Strokes saved before version 0.4 ([lineAnchored] = false) hold y in page units from the
  *    text's top at normal spacing; they are converted when first loaded.
+ *    Lines depend on the text font, so each stroke on the words records the [font] it was drawn
+ *    in; after a font change it is moved to the same character in the new layout (READ-3).
  *  - Region.LEFT / RIGHT: page units relative to (margin left edge, top of [verse]).
  *    Margin strokes are shared across versions ([version] is null).
  */
@@ -51,6 +53,7 @@ class InkStroke(
     val width: Float,
     val points: FloatArray,
     val lineAnchored: Boolean = true,
+    val font: String = TextFont.BOOK.name,
 ) : Annotation {
     fun copyAs(
         id: Long = this.id,
@@ -58,12 +61,16 @@ class InkStroke(
         color: Int = this.color,
         layerId: Long = this.layerId,
         lineAnchored: Boolean = this.lineAnchored,
-    ) = InkStroke(id, layerId, version, book, chapter, region, verse, highlighter, color, width, points, lineAnchored)
+        font: String = this.font,
+    ) = InkStroke(id, layerId, version, book, chapter, region, verse, highlighter, color, width, points, lineAnchored, font)
 
     fun withPoints(p: FloatArray) = copyAs(points = p)
     fun withColor(c: Int) = copyAs(color = c)
     fun withLayer(l: Long) = copyAs(layerId = l)
 }
+
+/** The typeface for the Bible text (READ-3). */
+enum class TextFont(val label: String) { BOOK("Gentium Book"), SERIF("Serif"), SANS("Sans-serif") }
 
 /** A copy of (x, y, pressure) triples shifted by (dx, dy). */
 fun FloatArray.translated(dx: Float, dy: Float): FloatArray = FloatArray(size) { i ->

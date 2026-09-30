@@ -124,8 +124,9 @@ fun StudyApp(vm: StudyViewModel) {
                 SideEffect { vm.landscape = landscape }
                 val openPicker = { dialog = DialogKind.PICKER }
                 // Three Bible panels fit on a large screen in landscape (ADP-3), otherwise two.
+                val widthClass = WidthClass.of(maxWidth.value)
                 val maxPanels = if (landscape && maxWidth >= 1200.dp) 3 else 2
-                SideEffect { vm.maxPanels = maxPanels }
+                SideEffect { vm.maxPanels = maxPanels; vm.widthClass = widthClass }
                 LaunchedEffect(maxPanels) { while (vm.panels.size > maxPanels) vm.closePanel(vm.panels.lastIndex) }
                 val sideBySide = landscape
                 val density = LocalDensity.current

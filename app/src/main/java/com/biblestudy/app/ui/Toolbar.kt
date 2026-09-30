@@ -51,6 +51,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.biblestudy.app.model.SideButton
+import com.biblestudy.app.model.TextFont
 import com.biblestudy.app.model.Tool
 
 @Composable
@@ -179,6 +180,12 @@ fun StudyToolbar(
                         text = { Text("Highlights in every version" + if (vm.highlightsAllVersions) "  \u2713" else "") },
                         onClick = { vm.highlightsAllVersions = !vm.highlightsAllVersions; menu = false },
                     )
+                    for (f in TextFont.entries) {
+                        DropdownMenuItem(
+                            text = { Text("Font: ${f.label}" + if (vm.textFont == f) "  \u2713" else "") },
+                            onClick = { vm.changeTextFont(f); menu = false },
+                        )
+                    }
                     for (sp in LineSpacing.entries) {
                         DropdownMenuItem(
                             text = { Text("Line spacing: ${sp.label}" + if (vm.lineSpacing == sp) "  \u2713" else "") },

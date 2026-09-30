@@ -30,6 +30,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import com.biblestudy.app.model.Region
+import com.biblestudy.app.model.TextFont
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.material3.FilledTonalIconButton
 import androidx.compose.ui.text.style.TextOverflow
@@ -130,6 +131,13 @@ private val bibleFont = FontFamily(
     Font(R.font.gentium_book_plus_bold, FontWeight.Bold),
 )
 
+/** The typeface for each text font choice (READ-3). */
+fun TextFont.family(): FontFamily = when (this) {
+    TextFont.BOOK -> bibleFont
+    TextFont.SERIF -> FontFamily.Serif
+    TextFont.SANS -> FontFamily.SansSerif
+}
+
 /** Laid-out chapters kept per panel: the current one, its neighbours and a few recent ones. */
 private const val MAX_LAYOUTS = 7
 
@@ -144,13 +152,14 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     val theme = vm.theme
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
-        val spec = "$headingsOn|$spacing"
+        val font = vm.textFont
+        val spec = "$headingsOn|$spacing|$font"
         if (ctl.layoutSpec != spec) {
-            // Headings or spacing changed: re-lay out every chapter, staying on the same verse.
+            // Headings, spacing or font changed: re-lay out every chapter, staying on the same verse.
             if (ctl.layoutSpec != null) panel.pendingVerse = panel.topVerse
             ctl.layoutSpec = spec
             ctl.layouts.clear()
@@ -168,13 +177,14 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                 val data = withContext(Dispatchers.IO) {
                     ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
                 }
-                ctl.layouts[key] = buildChapterLayout(measurer, bibleFont, name, data, spacing) {
+                ctl.layouts[key] = buildChapterLayout(measurer, font.family(), name, data, spacing) {
                     RefLinks.parseList(it, vm.bible.books)
                 }
             }
-            vm.ensureLoaded(v, b, c) {
-                // Only for ink saved before 0.4: its y was measured at normal spacing, without headings.
-                buildChapterLayout(measurer, bibleFont, name, ChapterData(v, b, c, vm.text(v).chapter(b, c)))
+            vm.ensureLoaded(v, b, c) { f ->
+                // For converting ink saved before 0.4 (y measured at normal spacing, without
+                // headings) or drawn in another font.
+                buildChapterLayout(measurer, f.family(), name, ChapterData(v, b, c, vm.text(v).chapter(b, c)))
             }
         }
         if (ctl.layouts.size > MAX_LAYOUTS) {

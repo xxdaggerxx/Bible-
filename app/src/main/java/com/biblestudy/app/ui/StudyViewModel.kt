@@ -37,6 +37,7 @@ import com.biblestudy.app.model.Layer
 import com.biblestudy.app.model.MarginImage
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SideButton
+import com.biblestudy.app.model.TextFont
 import com.biblestudy.app.model.TypedNote
 import com.biblestudy.app.model.Tool
 import com.biblestudy.app.model.VerseId
@@ -97,6 +98,23 @@ data class ScrollPos(val source: Int, val book: Int, val chapter: Int, val verse
 /** A passage pop-over open over panel [panel], pointing at [anchor] (pixels in that panel). */
 data class PassagePop(val panel: Int, val passage: Passage, val anchor: Offset)
 
+/**
+ * Window width classes (ADP-1), as in Material guidance: compact below 600dp (phones, small
+ * tablets in portrait), medium to 840dp, expanded above. The layout adapts to them:
+ *  - compact: margins become drawers in portrait (MRG-14), panel headers go compact;
+ *  - medium: two Bible panels, one above the other in portrait;
+ *  - expanded: two Bible panels side by side, three from 1200dp in landscape (ADP-3).
+ */
+enum class WidthClass { COMPACT, MEDIUM, EXPANDED;
+    companion object {
+        fun of(widthDp: Float) = when {
+            widthDp < 600f -> COMPACT
+            widthDp < 840f -> MEDIUM
+            else -> EXPANDED
+        }
+    }
+}
+
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
 enum class PaneKind(val label: String) { SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes") }
 
@@ -142,6 +160,21 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
     /** Eraser removes only what it touches (INK-7), instead of whole strokes. */
     var partialEraser by mutableStateOf(prefs.getBoolean("partialEraser", false))
+    /**
+     * The Bible text's typeface (READ-3). Changing it reflows the lines, so ink on the words is
+     * reloaded and moved to the same characters in the new layout.
+     */
+    var textFont by mutableStateOf(runCatching { TextFont.valueOf(prefs.getString("textFont", "BOOK")!!) }.getOrDefault(TextFont.BOOK))
+        private set
+
+    fun changeTextFont(f: TextFont) {
+        if (f == textFont) return
+        textFont = f
+        selection = null
+        undoStack.clear(); redoStack.clear(); editVersion++
+        loaded.removeAll { it.startsWith("t") }
+        textStrokes.values.forEach { it.clear() }
+    }
     /** Show highlights from other translations over whole verses (HL-10). */
     var highlightsAllVersions by mutableStateOf(prefs.getBoolean("hlAllVersions", true))
     /** The verse window shows the verse in every version, stacked (SPLIT-4). */
@@ -160,6 +193,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     val panelWeights = mutableStateListOf<Float>()
     /** How many Bible panels fit: 3 on large screens in landscape, otherwise 2 (ADP-3). */
     var maxPanels by mutableIntStateOf(2)
+    /** The window's width class (ADP-1). */
+    var widthClass by mutableStateOf(WidthClass.EXPANDED)
     /** The study pane beside the Bible panels, if open (SPLIT-2), and its share of the screen. */
     var sidePane by mutableStateOf(prefs.getString("sidePane", null)?.let { n -> PaneKind.entries.firstOrNull { it.name == n } })
     var paneFraction by mutableFloatStateOf(prefs.getFloat("paneFraction", 0.32f))
@@ -265,7 +300,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -533,11 +568,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         private set
 
     /**
-     * Loads a chapter's annotations. [legacyLayout] builds the chapter's layout at normal line
-     * spacing without headings; it is only called if ink saved before 0.4 needs converting to
-     * line coordinates.
+     * Loads a chapter's annotations. [plainLayout] builds the chapter's layout in a font at normal
+     * line spacing without headings; it is only called to convert ink saved before 0.4 to line
+     * coordinates, or ink drawn in another font (READ-3).
      */
-    fun ensureLoaded(version: String, book: Int, chapter: Int, legacyLayout: () -> ChapterLayout) {
+    fun ensureLoaded(version: String, book: Int, chapter: Int, plainLayout: (TextFont) -> ChapterLayout) {
         val t = tk(version, book, chapter)
         if (loaded.add("t$t")) {
             pendingLoads++
@@ -545,11 +580,22 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 try {
                     val (loadedStrokes, h) = withContext(dbDispatcher) { user.loadText(version, book, chapter) }
                     var s = loadedStrokes
-                    if (s.any { !it.lineAnchored }) {
-                        val base = legacyLayout()
+                    val font = textFont
+                    if (s.any { !it.lineAnchored || it.font != font.name }) {
+                        val layouts = HashMap<TextFont, ChapterLayout>()
+                        fun plain(f: TextFont) = layouts.getOrPut(f) { plainLayout(f) }
                         s = s.map { st ->
-                            if (st.lineAnchored) st
-                            else st.copyAs(points = base.linePoints(st.points), lineAnchored = true).also { c -> io { user.insert(c) } }
+                            var c = st
+                            if (!c.lineAnchored) {
+                                // Ink from before 0.4: page y at normal spacing in the book font.
+                                c = c.copyAs(points = plain(TextFont.BOOK).linePoints(c.points), lineAnchored = true, font = TextFont.BOOK.name)
+                            }
+                            if (c.font != font.name) {
+                                val from = runCatching { TextFont.valueOf(c.font) }.getOrDefault(TextFont.BOOK)
+                                c = c.copyAs(points = reflowPoints(c.points, plain(from), plain(font)), font = font.name)
+                            }
+                            if (c !== st) io { user.insert(c) }
+                            c
                         }
                     }
                     merge(textStrokesFor(version, book, chapter), s)

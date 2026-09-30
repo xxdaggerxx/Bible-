@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.sp
 import com.biblestudy.app.data.RefLink
+import com.biblestudy.app.model.translated
 import com.biblestudy.app.model.ChapterData
 import com.biblestudy.app.model.Heading
 import com.biblestudy.app.model.InkStroke
@@ -429,6 +430,23 @@ fun buildChapterLayout(
         HeadingBlock(line, lines, height, links)
     }
     return ChapterLayout(data.version, data.book, data.chapter, title, text, starts, numbers, blocks)
+}
+
+/**
+ * Moves a stroke drawn on the words of [from] (line coordinates) onto the same character in
+ * [to]: the character under the middle of the stroke keeps the same place relative to it.
+ */
+fun reflowPoints(points: FloatArray, from: ChapterLayout, to: ChapterLayout): FloatArray {
+    val shown = from.displayPoints(points)
+    var minX = Float.MAX_VALUE; var maxX = -Float.MAX_VALUE; var minY = Float.MAX_VALUE; var maxY = -Float.MAX_VALUE
+    for (i in shown.indices step 3) {
+        minX = minOf(minX, shown[i]); maxX = maxOf(maxX, shown[i])
+        minY = minOf(minY, shown[i + 1]); maxY = maxOf(maxY, shown[i + 1])
+    }
+    val offset = from.offsetAt((minX + maxX) / 2f, (minY + maxY) / 2f)
+    val a = from.charCenter(offset)
+    val b = to.charCenter(offset.coerceAtMost(to.textLength - 1).coerceAtLeast(0))
+    return to.linePoints(shown.translated(b.x - a.x, b.y - a.y))
 }
 
 /**

@@ -12,6 +12,7 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.test.core.app.ApplicationProvider
 import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.data.UserDb
+import com.biblestudy.app.ui.reflowPoints
 import com.biblestudy.app.data.UserDb.Companion.toBlob
 import com.biblestudy.app.model.ChapterData
 import com.biblestudy.app.ui.ChapterLayout
@@ -38,6 +39,25 @@ class LayoutAnchorTest {
     private fun layout(headings: Boolean, spacing: LineSpacing): ChapterLayout {
         val data = ChapterData("KJV", 43, 1, kjv.chapter(43, 1), if (headings) bsb.headings(43, 1) else emptyList())
         return buildChapterLayout(measurer, font, "John", data, spacing)
+    }
+
+    @Test
+    fun inkMovesWithItsWordWhenTheFontChanges() {
+        val book = layout(headings = false, spacing = LineSpacing.NORMAL)
+        val data = ChapterData("KJV", 43, 1, kjv.chapter(43, 1))
+        val sans = buildChapterLayout(measurer, FontFamily.SansSerif, "John", data)
+        val word = book.textOf(0, book.textLength).indexOf("was made flesh") + 9 // "flesh"
+        assertTrue(book.charCenter(word) != sans.charCenter(word)) // the fonts lay out differently
+        // An underline under "flesh", drawn in the book font.
+        val left = book.charCenter(word).x - 4f
+        val right = book.charCenter(word + 4).x + 4f
+        val y = book.charCenter(word).y + 14f
+        val drawn = floatArrayOf(left, y, 0.5f, (left + right) / 2f, y, 0.5f, right, y, 0.5f)
+        val moved = sans.displayPoints(reflowPoints(book.linePoints(drawn), book, sans))
+        // In the sans-serif layout it is still under "flesh".
+        val mid = sans.offsetAt(moved[3], moved[4] - 14f)
+        assertTrue("offset $mid", mid in word..word + 4)
+        assertEquals(sans.charCenter(word).y + 14f, moved[4], 3f)
     }
 
     @Test
@@ -100,6 +120,20 @@ class LayoutAnchorTest {
         file.delete()
         SQLiteDatabase.openOrCreateDatabase(file, null).use { db ->
             createNotesAndBookmarks(db)
+            db.execSQL(
+                "CREATE TABLE strokes(id INTEGER PRIMARY KEY, layer_id INTEGER NOT NULL, version TEXT, book INTEGER NOT NULL, " +
+                    "chapter INTEGER NOT NULL, region INTEGER NOT NULL, verse INTEGER NOT NULL, highlighter INTEGER NOT NULL, " +
+                    "color INTEGER NOT NULL, width REAL NOT NULL, points BLOB NOT NULL, coords INTEGER NOT NULL DEFAULT 1)"
+            )
+            db.insert("strokes", null, ContentValues().apply {
+                put("id", 5); put("layer_id", 1); put("version", "KJV"); put("book", 43); put("chapter", 3)
+                put("region", 0); put("verse", 16); put("highlighter", 0); put("color", 0); put("width", 3f)
+                put("points", floatArrayOf(10f, 3.5f, 0.5f).toBlob())
+            })
+            db.execSQL(
+                "CREATE TABLE highlights(id INTEGER PRIMARY KEY, layer_id INTEGER, version TEXT, book INTEGER, chapter INTEGER, " +
+                    "start_off INTEGER, end_off INTEGER, color INTEGER)"
+            )
             db.execSQL("INSERT INTO notes VALUES(43, 3, 16, 'For God so loved', 1)")
             db.execSQL("INSERT INTO bookmarks VALUES(7, 19, 23, 1, 2)")
             db.version = 2
@@ -109,6 +143,7 @@ class LayoutAnchorTest {
         assertEquals("For God so loved", n.text)
         assertEquals(16, n.endVerse)
         assertEquals(null, user.noteCovering(43, 3, 17))
+        assertEquals("BOOK", user.loadText("KJV", 43, 3).first.single().font) // 0.5 ink was drawn in Gentium Book
         val b = user.bookmarks().single()
         assertEquals(7L, b.id)
         assertEquals("", b.folder)
