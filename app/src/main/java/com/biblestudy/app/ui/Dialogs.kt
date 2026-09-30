@@ -38,6 +38,7 @@ import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Lock
@@ -76,7 +77,11 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.TextLinkStyles
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -89,6 +94,7 @@ import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupProperties
 import com.biblestudy.app.BuildConfig
 import com.biblestudy.app.data.BibleRepository
+import com.biblestudy.app.data.BookIntros
 import com.biblestudy.app.data.Passage
 import com.biblestudy.app.data.RefLinks
 import com.biblestudy.app.data.RefParser
@@ -159,7 +165,7 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                                 val m = markers?.let { idx ->
                                     marks(idx.layers(visible, bk.id), idx.hasNote(bk.id), vm.bookmarks.any { it.book == bk.id })
                                 }
-                                GridCell(bk.name, m) { book = bk.id; if (bk.chapters == 1) chapter = 1 }
+                                GridCell(bk.name, m, onInfo = { vm.introBook = bk.id }) { book = bk.id; if (bk.chapters == 1) chapter = 1 }
                             }
                         }
                     }
@@ -170,6 +176,11 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                         IconButton(onClick = { book = null }) {
                             Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back to books")
                         }
+                    }
+                    TextButton(onClick = { vm.introBook = b }) {
+                        Icon(Icons.Outlined.Info, contentDescription = null, modifier = Modifier.size(18.dp))
+                        Spacer(Modifier.width(6.dp))
+                        Text("About this book")
                     }
                     MarkerLegend()
                     LazyVerticalGrid(columns = GridCells.Adaptive(72.dp), modifier = Modifier.weight(1f)) {
@@ -267,19 +278,33 @@ private fun SectionLabel(text: String) {
 }
 
 @Composable
-private fun GridCell(text: String, marks: Marks? = null, label: String = text, onClick: () -> Unit) {
-    Column(
+private fun GridCell(text: String, marks: Marks? = null, label: String = text, onInfo: (() -> Unit)? = null, onClick: () -> Unit) {
+    Box(
         Modifier
             .padding(4.dp)
             .clip(RoundedCornerShape(10.dp))
             .background(MaterialTheme.colorScheme.surfaceContainerHigh)
-            .clickable(onClick = onClick)
-            .padding(horizontal = 10.dp, vertical = 8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(text, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        Spacer(Modifier.height(3.dp))
-        MarkerRow(marks, label)
+        Column(
+            Modifier
+                .fillMaxWidth()
+                .clickable(onClick = onClick)
+                .padding(horizontal = if (onInfo != null) 30.dp else 10.dp, vertical = 8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Text(text, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Spacer(Modifier.height(3.dp))
+            MarkerRow(marks, label)
+        }
+        if (onInfo != null) {
+            // Opens the book's introduction (STD-13).
+            Icon(
+                Icons.Outlined.Info,
+                contentDescription = "About $label",
+                tint = MaterialTheme.colorScheme.outline,
+                modifier = Modifier.align(Alignment.CenterEnd).clip(CircleShape).clickable(onClick = onInfo).padding(6.dp).size(18.dp),
+            )
+        }
     }
 }
 
@@ -845,4 +870,134 @@ fun AboutDialog(onDismiss: () -> Unit) {
             }
         },
     )
+}
+
+// ---------------------------------------------------------------------------------------------
+// Book introductions
+// ---------------------------------------------------------------------------------------------
+
+/**
+ * A study introduction to a book (STD-12): opened from the book picker and the chapter header
+ * (STD-13). The outline, key verses and references in the text open the passage.
+ */
+@Composable
+/** [onDismiss] is told whether the reader was sent to a passage (so the book picker can close too). */
+fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolean) -> Unit) {
+    val context = LocalContext.current
+    val intro = remember(book) { BookIntros.get(context, book) }
+    val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
+    val version = vm.activeVersion
+    val info = vm.bible.book(book)
+    var shown by remember(book) { mutableStateOf<Passage?>(null) }
+    val linkColor = LINK_COLOR
+
+    fun open(p: Passage) {
+        vm.goTo(panelIndex, p.book, p.chapter, p.verse)
+        onDismiss(true)
+    }
+
+    BigDialog({ onDismiss(false) }) {
+        Column {
+            DialogTitle("About ${info.name}", { onDismiss(false) })
+            if (intro == null) {
+                Text("No introduction for this book yet.")
+                return@Column
+            }
+            Column(Modifier.weight(1f).verticalScroll(rememberScrollState())) {
+                @Composable
+                fun Fact(label: String, text: String) {
+                    if (text.isBlank()) return
+                    Row(Modifier.padding(vertical = 3.dp)) {
+                        Text(label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary, modifier = Modifier.width(110.dp))
+                        Text(text, modifier = Modifier.weight(1f))
+                    }
+                }
+
+                @Composable
+                fun Heading(text: String) {
+                    Text(text, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(top = 16.dp, bottom = 4.dp))
+                }
+
+                /** Text with Bible references made into links (LINK-4 style). */
+                @Composable
+                fun Linked(text: String) {
+                    val links = remember(text) { RefLinks.find(text, vm.bible.books) }
+                    Text(buildAnnotatedString {
+                        append(text)
+                        for (l in links) {
+                            addLink(
+                                LinkAnnotation.Clickable("ref", TextLinkStyles(SpanStyle(color = linkColor, textDecoration = TextDecoration.Underline))) {
+                                    shown = l.passage
+                                },
+                                l.start, l.end,
+                            )
+                        }
+                    })
+                }
+
+                Fact("Author", intro.author)
+                Fact("Written", intro.date)
+                Fact("Where", intro.place)
+                Fact("Written to", intro.audience)
+                Fact("Type", intro.type)
+
+                Heading("Historical background")
+                Linked(intro.background)
+                Heading("Purpose")
+                Linked(intro.purpose)
+                Heading("Main themes")
+                Text(intro.themes)
+
+                Heading("Outline")
+                for (o in intro.outline) {
+                    Row(
+                        Modifier.fillMaxWidth().clip(RoundedCornerShape(8.dp)).clickable { open(o.passage) }.padding(vertical = 6.dp, horizontal = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(o.title, modifier = Modifier.weight(1f))
+                        Text(vm.passageLabel(o.passage).removePrefix(info.name + " "), color = linkColor, style = MaterialTheme.typography.labelLarge)
+                    }
+                }
+
+                Heading("Key people")
+                Text(intro.people)
+                Heading("Key places")
+                Text(intro.places)
+
+                Heading("Key verses")
+                Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    for (p in intro.keyVerses) {
+                        AssistChip(
+                            onClick = { shown = p },
+                            label = { Text(vm.passageLabel(p)) },
+                            leadingIcon = { Icon(Icons.Filled.Link, contentDescription = null, modifier = Modifier.size(16.dp)) },
+                        )
+                    }
+                }
+
+                Heading("Connections")
+                Linked(intro.connections)
+
+                Text(
+                    "Authorship and dates follow the traditional view.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.outline,
+                    modifier = Modifier.padding(top = 16.dp),
+                )
+            }
+            Row(Modifier.padding(top = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Button(onClick = { open(Passage(book, 1, 1, 1, 1)) }) { Text("Read from chapter 1") }
+            }
+        }
+    }
+    shown?.let { p ->
+        Popup(alignment = Alignment.Center, onDismissRequest = { shown = null }, properties = PopupProperties(focusable = true)) {
+            PassageCard(
+                vm, p, version,
+                onGoTo = { vm.openPassage(p, panelIndex, beside = false); onDismiss(true) },
+                onOpenBeside = { vm.openPassage(p, panelIndex, beside = true); onDismiss(true) },
+                onClose = { shown = null },
+            )
+        }
+    }
 }

@@ -617,4 +617,24 @@ class FeatureTest {
         waitForLoaded()
         assertEquals("WEB", vm.panels[0].version)
     }
+
+    @Test
+    fun bookIntroductionsOpenFromThePickerAndHeader() {
+        compose.onNodeWithText("John 3").performClick()
+        compose.onNodeWithContentDescription("About Romans").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithText("About Romans").assertExists()
+        compose.onNodeWithText("Historical background").assertExists()
+        snap("44-book-intro")
+        // An outline section opens the book there and closes the picker.
+        compose.onNodeWithText("Made right by faith").performScrollTo().performClick()
+        waitForLoaded()
+        assertEquals(45, vm.panels[0].book)
+        assertEquals(3, vm.panels[0].chapter)
+        compose.onNodeWithText("Choose a book").assertDoesNotExist()
+
+        // The chapter header opens the current book's introduction.
+        compose.onNodeWithContentDescription("About this book").performClick()
+        compose.onNodeWithText("About Romans").assertExists()
+    }
 }

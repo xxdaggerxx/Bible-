@@ -180,6 +180,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // ---------- other UI state ----------
     var message by mutableStateOf<String?>(null)
     var verseSheet by mutableStateOf<VerseTarget?>(null)
+    /** The book whose introduction is open (STD-13), if any. */
+    var introBook by mutableStateOf<Int?>(null)
     var lastSearch by mutableStateOf("")
     /** Bumped after a restore so panels reload their data. */
     var dataGeneration by mutableIntStateOf(0)

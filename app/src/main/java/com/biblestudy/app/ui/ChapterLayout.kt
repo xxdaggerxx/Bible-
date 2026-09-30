@@ -464,4 +464,5 @@ private fun measureRefs(measurer: TextMeasurer, font: FontFamily, refs: String, 
 }
 
 /** Link colour for references on the page; reads on the light, sepia and dark page themes. */
-private val LINK_COLOR = Color(0xFF3D7CC9)
+/** Colour of Bible links, on the page and in dialogs. */
+val LINK_COLOR = Color(0xFF3D7CC9)

@@ -29,6 +29,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
@@ -319,6 +320,9 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
         }
         IconButton(onClick = { vm.activePanel = index; vm.nextChapter(index) }) {
             Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next chapter")
+        }
+        IconButton(onClick = { vm.activePanel = index; vm.introBook = panel.book }) {
+            Icon(Icons.Outlined.Info, contentDescription = "About this book")
         }
         VersionPicker(vm, index)
         Spacer(Modifier.weight(1f))
