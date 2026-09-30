@@ -115,3 +115,8 @@ dependencies {
     testImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
+
+// Print each test as it starts and finishes, so a stuck test is easy to spot.
+tasks.withType<Test>().configureEach {
+    testLogging { events("started", "passed", "failed", "skipped") }
+}
