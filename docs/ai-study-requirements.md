@@ -10,6 +10,7 @@ Make the Bible easier to study by adding:
 2. **Word studies** in the original Hebrew and Greek.
 3. **An AI-built study index** of people, places, events, speakers, kinds of text, links between passages and book outlines.
 4. **AI-written study syntheses**: topic guides, passage guides, character studies and study questions, every claim tied to verses.
+5. **Search that understands the kind of question.** "Paul's travels" gives a timeline and map, "Abraham's trials" gives his life in order, and "seed" gives its different meanings, using ready-made result pages built by an AI agent and an optional live agent online.
 
 ## 2. Guiding principles
 
@@ -39,6 +40,15 @@ Make the Bible easier to study by adding:
 
 Example: Gen 30:33 is "righteousness" in the KJV and "honesty" in the BSB. Searching "just" is mostly noise: the BSB has 289 verses with "just as". Keyword search in one translation therefore cannot find "all" passages on a topic.
 
+More examples from the same databases:
+
+| Phrase | KJV | BSB | WEB | Note |
+|---|---|---|---|---|
+| "seed(s)" | 256 | 90 | 67 | The BSB says "offspring/descendants" (479 verses). The KJV has "seed" in 192 verses where the BSB doesn't. |
+| "word of the LORD" | 255 | 236 | 18 | The WEB says "the word of Yahweh". |
+| "word of God" | 48 | 43 | 41 | 52 verses in total, mostly in the New Testament. John 1:1 and 2 Tim 3:16 don't contain the phrase. |
+| Gen 22:1 | "God did **tempt** Abraham" | "God **tested** Abraham" | "God **tested** Abraham" | Same Hebrew verb, *nasah* H5254. |
+
 ## 4. Architecture overview
 
 ```
@@ -46,7 +56,7 @@ BUILD TIME (desktop, tools/)                         APP (tablet, offline)
 ────────────────────────────                         ─────────────────────
 KJV/BSB/WEB text ─┐                                  query
 STEPBible tags ───┼─► section records (AI) ──┐          │
-Lexicons ─────────┤   topic guides (AI)      ├─► study.db    ├─► query router (topic / word / keyword / reference)
+Lexicons ─────────┤   topic guides (AI)      ├─► study.db    ├─► ready-made page? ─► query parser (search plan)
 Theographic data ─┤   embeddings ────────────┤   lexicon.db  ├─► keyword (FTS) ─┐
 Cross-references ─┘   checks & evaluation ───┘   vectors     ├─► lemma ─────────┼─► merge (RRF) ─► group ─► results
                                                              ├─► vectors ────────┤
@@ -70,7 +80,7 @@ Cross-references ─┘   checks & evaluation ───┘   vectors     ├─�
 | ID | Requirement | Priority |
 |---|---|---|
 | S1 | The search box accepts plain English questions, keywords, quoted phrases, references (`Rom 3:21`), Strong's numbers (`H6666`), transliterations (`tsedaqah`), and Hebrew or Greek script. | Must |
-| S2 | A query router classifies the query as **reference**, **exact phrase**, **word study**, **topic**, or **general**, and strips question framing ("What does the Bible say about…"). | Must |
+| S2 | A query parser turns the query into a **search plan**: its search shape (§5.5), the people, places, topics and words it names, and how the results should be shown. It strips question framing ("What does the Bible say about…", "What is…"). See §5.7. | Must |
 | S3 | Existing exact-phrase search (quoted text) keeps its current behaviour. | Must |
 | S4 | When a query matches a lexicon word or a topic, the app offers shortcuts: "Word study: *tsedaqah*" and "Topic: Righteousness". | Should |
 
@@ -90,17 +100,26 @@ Cross-references ─┘   checks & evaluation ───┘   vectors     ├─�
 
 | ID | Requirement | Priority |
 |---|---|---|
-| T1 | For a topic with a Hebrew/Greek word family, results include **100%** of the verses containing any lemma in that family, whatever the English translation. | Must |
+| T1 | For a topic with a Hebrew/Greek word rule (T8), results include **100%** of the verses matching the rule, whatever the English translation. | Must |
 | T2 | Results also include passages about the topic that do not use its words (concept layer, §5.4). | Must |
 | T3 | Results include strongly voted OpenBible cross-references of the core verses, ranked lower. | Should |
 | T4 | The **first screen** shows **key passages**, ranked by word-family density, number of cross-references pointing to it, Nave's listing, and concept score. | Must |
 | T5 | The full result set is grouped into **subtopics** (clusters assigned at build time). Example for righteousness: God's righteousness; righteousness by faith; living righteously; the righteous and the wicked; justice for the poor; Christ the Righteous One; self-righteousness. | Must |
 | T6 | "All N verses" opens a complete list, filterable by book, testament, lemma, and subtopic. | Must |
 | T7 | Topic results link to the matching topic study guide (§8.1) and word studies (§6). | Should |
+| T8 | **Word rules** define which verses belong to a topic. A rule is either a **word family** (any lemma in a set) or a **word combination** (a lemma together with another lemma or a speaker/owner within the same phrase). Combinations are needed when the words are common: *dabar* (≈1,400 uses, mostly "thing, matter") and *logos* (≈330) only mean "the word of God" together with God / the LORD. | Must |
+| T9 | **Topics with several meanings.** A topic can have named meanings, each with its own word rules, concept tags and key passages. Results are grouped by meaning first, then by subtopic. Examples: "the word of God" (Christ the Word; Scripture; God's creating word; the prophetic word; the gospel preached; hearing and doing the word), "seed" (the promised Seed; offspring; the word as seed; sowing and reaping; mustard-seed faith; literal agriculture). | Must |
+| T10 | **Relationships between topics.** A query joining two topics with a relationship ("righteousness *in* Jesus Christ") returns passages where the relationship holds, not the union or plain overlap of the two topics. Uses the concept layer plus AI-tagged relationships in section records. | Must |
+| T11 | Meanings or subtopics that are very large and repetitive (e.g. "The word of the LORD came to…", ≈260 verses) are collapsed with a count and a few examples. | Should |
 
-**Word families** are held in a table (`topic_lemma`). Righteousness, for example:
+**Word rules** are held in tables (`topic_rule`, `topic_meaning`). Righteousness, for example (word family):
 - Hebrew: H6662 *tsaddiq*, H6663 *tsadaq*, H6664 *tsedeq*, H6666 *tsedaqah*
 - Greek: G1342 *dikaios*, G1343 *dikaiosynē*, G1344 *dikaioō*, G1345 *dikaiōma*, G1347 *dikaiōsis*
+
+The word of God, for example (word combination):
+- H1697 *dabar* or H565 *imrah* **with** H3068 YHWH or H430 *Elohim* in the same phrase
+- G3056 *logos* or G4487 *rhēma* **with** G2316 *theos* or G2962 *kyrios* in the same phrase
+- Plus concept tags for passages without the phrase (John 1:1–14, 2 Tim 3:16, Ps 119)
 
 A topic can also list related families (e.g. *mishpat*, "justice") as optional expansions.
 
@@ -115,6 +134,51 @@ A topic can also list related families (e.g. *mishpat*, "justice") as optional e
 | C5 | Vector matches are kept if their similarity is above a threshold calibrated on the evaluation set, not a fixed top-k. | Must |
 | C6 | Summaries are used only to find and rank passages. The results list always shows Bible text, never the summary alone. | Must |
 | C7 | The search runs as brute-force cosine similarity over int8 vectors in under 50 ms on the Tab S9. No approximate index is needed at this size. | Must |
+
+### 5.5 Search shapes and how results are shown
+
+Different searches need different indexes and a different way of showing results.
+
+| Shape | Example | Indexes used | Shown as |
+|---|---|---|---|
+| Reference | `Rom 3:21` | text | opens the passage |
+| Exact phrase | `"the just shall live by faith"` | keyword | verse list |
+| Word | `hesed`, `H2617` | lemma, lexicon | word study page (§6) |
+| Topic | righteousness | word rule, concept, topic tags, cross-references | key passages + subtopics (§5.3) |
+| Topic with several meanings | word of God; seed | word rules, concept, topic tags | groups by meaning, then subtopics |
+| Relationship between topics | righteousness in Jesus Christ | concept, topic tags, word rules, relationships | key passages + views where traditions differ |
+| Person + theme | Abraham's trials | people, events, concept, lemma | the person's life as a timeline, then NT commentary |
+| Person + events + places | Paul's travels | people, events, places | timeline + map, by journey |
+| Person | David | people, events | life timeline, family, key passages |
+| Place | Bethel | places, events | map + events there, in order |
+| Event | the Exodus | events, places, people | ordered passages + parallel accounts |
+| General | anything else | hybrid search (§5.2) | ranked passages |
+
+| ID | Requirement | Priority |
+|---|---|---|
+| SH1 | Every search is assigned one of the shapes above. The shape decides the indexes used and how results are shown. | Must |
+| SH2 | Results show the search plan in one line, e.g. "Abraham → events tagged *testing* + *nasah* (H5254) + Heb 11, Rom 4, Jas 2". Tapping it lets the user change the shape or remove a part. | Must |
+| SH3 | When the shape is uncertain, the app shows the most likely shape and offers the next one ("Did you mean: word study *zera*?"). | Should |
+| SH4 | Timelines order events by the event index. Where the order is uncertain or disputed, the app says so. | Should |
+
+### 5.6 Ready-made result pages
+
+| ID | Requirement | Priority |
+|---|---|---|
+| RP1 | At build time, an AI search agent (B8) runs over a list of likely searches: every topic in the topic list, every major person, place and event, every multi-meaning word, and the acceptance searches (§15). | Must |
+| RP2 | For each one it plans the search, runs it against the same indexes the app uses, checks the results and saves a **ready-made result page** (groups, order, key passages, plan line) in `study.db`. | Must |
+| RP3 | A query that matches a ready-made page (after the parser normalises it) shows that page instantly and offline. | Must |
+| RP4 | Ready-made pages contain only verse references and labels from the indexes. Every reference is checked (Q3). | Must |
+| RP5 | Queries with no ready-made page fall back to the query parser (§5.7) and live hybrid search. | Must |
+
+### 5.7 Query parser (on the tablet, offline)
+
+| ID | Requirement | Priority |
+|---|---|---|
+| QP1 | The parser turns a query into a structured **search plan**, e.g. `{"shape": "person_theme", "person": "Abraham", "theme": "testing", "present": "timeline"}`. | Must |
+| QP2 | The parser matches against the index vocabulary first: names of people and places (with alternative spellings), topics and their synonyms, Strong's glosses and transliterations, book names. | Must |
+| QP3 | Where vocabulary matching is not enough, a small on-device model may be used, if testing (E1) shows it helps. | Could |
+| QP4 | The parser returns a plan in under 100 ms. | Must |
 
 ## 6. Word studies
 
@@ -222,7 +286,9 @@ A topic can also list related families (e.g. *mishpat*, "justice") as optional e
 | B4 | `tools/ai_guides.py` produces topic guides, passage guides and character studies from the section records and the indexes. | Should |
 | B5 | `tools/build_study_db.py` checks all records (Q3, Q4), computes embeddings, clusters topic results into subtopics and writes `study.db`. | Must |
 | B6 | Generated JSON is committed to the repo (`data/ai/`), so the app can be rebuilt without calling the API again. | Must |
-| B7 | Expected one-time cost: tens of US dollars for about 2,500 section records and about 500 topic guides. | Info |
+| B8 | `tools/ai_search_agent.py` runs the search agent at build time over the list of likely searches (RP1), using the same tools as §12 against the built databases, and writes the ready-made result pages. | Must |
+| B9 | `tools/eval/run_eval.py` runs the evaluation set (§15) against the built databases and fails the build on a regression. | Must |
+| B7 | Expected one-time cost: tens of US dollars for about 2,500 section records, about 500 topic guides and a few thousand ready-made result pages. | Info |
 
 **Section record schema (draft)**
 
@@ -243,14 +309,34 @@ A topic can also list related families (e.g. *mishpat*, "justice") as optional e
 }
 ```
 
-## 12. Optional online AI
+## 12. Optional online AI search agent
+
+For open questions that have no ready-made page and that the parser can't handle well, an optional live agent plans and runs the search.
 
 | ID | Requirement | Priority |
 |---|---|---|
-| A1 | "Ask a question" sends the question plus the top passages found on the device to the Claude API and returns an answer with verse citations. Only the retrieved passages are used as sources. | Could |
+| A1 | The agent uses the Claude API with **tools that run on the tablet** against the local indexes (below). It chooses tools, reads results, refines, and returns grouped, ordered results plus a short cited overview. | Could |
 | A2 | Uses the user's own API key, stored in encrypted app storage. Off by default. | Must (if A1) |
-| A3 | Answers follow Q1–Q3 (labelled, descriptive, citations checked on the device). | Must (if A1) |
-| A4 | Only the question and Bible passages are sent. Notes, ink and bookmarks are never sent. | Must (if A1) |
+| A3 | The agent can only cite verses its tools returned. The app checks every reference before display and drops any that fail. | Must (if A1) |
+| A4 | The results are always Bible passages. The overview is labelled as AI, follows Q1–Q2, and can be hidden. | Must (if A1) |
+| A5 | The agent's plan is shown (SH2), so the user can see and adjust what was searched. | Must (if A1) |
+| A6 | Only the question, tool calls and Bible passages are sent. Notes, ink and bookmarks are never sent. | Must (if A1) |
+| A7 | Target: results within 5–20 s; the app shows progress ("Searching people: Abraham…"). | Should |
+| A8 | A useful agent result can be saved on the device as a personal result page. | Could |
+
+**Agent tools**
+
+| Tool | What it does |
+|---|---|
+| `search_keyword` | Exact words and phrases in any translation |
+| `search_lemma` | Verses by Strong's number, word family or word combination |
+| `search_concept` | Meaning-based search over sections and summaries |
+| `get_topic` | A topic's results, meanings and subtopics |
+| `get_person` | A person, their family and events |
+| `get_events` | Events by person, place, theme or range, in order |
+| `get_place` | A place, its coordinates and events |
+| `get_xrefs` | Cross-references of a verse or passage |
+| `read_passage` | Bible text of a passage in a chosen translation |
 
 ## 13. Non-functional requirements
 
@@ -292,17 +378,30 @@ A topic can also list related families (e.g. *mishpat*, "justice") as optional e
 | E4 | **Key passages on the first screen** (T4): at least 90% of Nave's key verses for the topic appear on the first screen. |
 | E5 | **Overall search:** recall of expected verses in the top 10 and ranking quality (nDCG@10) are reported per build. A drop of more than 3 points fails the build. |
 | E6 | **Checks** (Q3/Q4): 0 invalid citations or tags in shipped data. |
-| E7 | **Acceptance queries** that must pass before release: *righteousness, grace, forgiveness, faith, love, anger, prayer, suffering, the Holy Spirit, the kingdom of God*. |
+| E7 | **Acceptance queries** that must pass before release: *righteousness, grace, forgiveness, faith, love, anger, prayer, suffering, the Holy Spirit, the kingdom of God*, plus the searches in E8. |
+| E8 | **Search-shape acceptance set.** Each search must get the right shape, and its first screen must show the expected groups and key passages (table below). |
+| E9 | **Parser accuracy:** at least 90% of the evaluation queries get the correct shape. |
+
+**E8 acceptance searches**
+
+| Search | Expected shape | Expected groups / order | Must include on first screen |
+|---|---|---|---|
+| what is the word of God | topic with several meanings | Christ the Word; Scripture; God's creating word; the prophetic word; the gospel preached; hearing and doing | John 1:1–14, Rev 19:13, 2 Tim 3:16–17, Heb 4:12, Ps 119:105, Isa 55:10–11, Luke 8:11 |
+| seed | topic with several meanings | the promised Seed; offspring; the word as seed; sowing and reaping; mustard-seed faith; literal (collapsed) | Gen 3:15, Gen 22:18, Gal 3:16, Luke 8:11, 1 Pet 1:23, Gal 6:7 |
+| righteousness in Jesus Christ | relationship between topics | key passages; views where traditions differ | Rom 3:21–26, Rom 5:17–19, Rom 10:4, 1 Cor 1:30, 2 Cor 5:21, Phil 3:9, Jer 23:6 |
+| Paul's travels | person + events + places | Damascus and Arabia; first journey; second journey; third journey; voyage to Rome; plans in the letters | Gal 1:17, Acts 13–14, Acts 15:36–18:22, Acts 18:23–21:17, Acts 27–28, Rom 15:24 |
+| Abraham's trials | person + theme | his life in order, then NT commentary | Gen 12, Gen 16, Gen 22, Heb 11:8–19, Rom 4:18–21, Jas 2:21–23 |
+| what does the Bible say about righteousness | topic | key passages; subtopics (§5.3 T5) | Gen 15:6, Ps 1, Mic 6:8, Matt 5:20, Rom 3:21–26, 2 Cor 5:21, Phil 3:9 |
 
 ## 16. Phases
 
 | Phase | Release | Contents | Depends on |
 |---|---|---|---|
 | 1 | 0.5 | `lexicon.db`; tap-a-word; word study page (W1, W3, W8); lemma search; T1 | STEPBible data |
-| 2 | 0.6 | Sections; section records; concept layer; hybrid search; topic results with subtopics (S, T, C); evaluation set | Phase 1 |
-| 3 | 0.7 | People, places, events; speakers; kinds of text; lists; outlines (I) | Phase 2 records |
+| 2 | 0.6 | Sections; section records; concept layer; hybrid search; topic results with meanings and subtopics (S, T, C); query parser (QP); evaluation set | Phase 1 |
+| 3 | 0.7 | People, places, events; speakers; kinds of text; lists; outlines (I); all search shapes with timelines and maps (SH); build-time search agent and ready-made result pages (RP, B8) | Phase 2 records |
 | 4 | 0.8 | Topic guides, passage guides, study questions (G); notes in search (N) | Phases 2–3 |
-| 5 | later | Sense groups (W6), Septuagint links, character studies, reading plans, optional online "Ask" (A) | — |
+| 5 | later | Sense groups (W6), Septuagint links, character studies, reading plans, optional online search agent (A) | — |
 
 **First prototype:** run the section-record pass on Micah (7 chapters) and Romans (16 chapters), build a small `study.db`, and run the "righteousness" acceptance query on the desktop before starting the Android work.
 
@@ -313,3 +412,5 @@ A topic can also list related families (e.g. *mishpat*, "justice") as optional e
 3. Who does the human spot checks (Q5), and which theological reviewers, if any?
 4. Can the BSB alignment data be used offline, or do word taps go through the KJV alignment only?
 5. Should topic guides be written for a general audience or configurable by study depth?
+6. Is a small on-device model needed for the query parser (QP3), or is vocabulary matching enough? Decide from E9.
+7. How are timelines shown where the order of events is disputed (e.g. Paul's visits to Jerusalem in Galatians vs Acts)?
