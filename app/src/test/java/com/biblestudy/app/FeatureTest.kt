@@ -84,13 +84,56 @@ class FeatureTest {
             val out = StringBuilder("STATE WRITES in ${d.methodName}:\n")
             counts.entries.sortedByDescending { it.value }.take(12).forEach { out.append("  ${it.value}  ${it.key}\n") }
             runCatching {
+                val m = compose.activity.let { ViewModelProvider(it)[StudyViewModel::class.java] }
+                out.append("  pendingLoads=${m.pendingLoads} sidePane=${m.sidePane} active=${m.activePanel} max=${m.maxPanels}\n")
+                m.panels.forEach { p ->
+                    out.append("  panel ${p.version} ${p.book}:${p.chapter} top=${p.topVerse} pending=${p.pendingVerse} nav=${p.navGen} " +
+                        "view=${p.viewW}x${p.viewH} zoom=${p.zoom} pan=${p.panX},${p.panY}\n")
+                }
+            }.onFailure { out.append("  vm: $it\n") }
+            runCatching {
                 val global = Class.forName("android.view.WindowManagerGlobal")
                 val instance = global.getMethod("getInstance").invoke(null)
                 @Suppress("UNCHECKED_CAST")
                 val roots = global.getDeclaredField("mViews").apply { isAccessible = true }.get(instance) as List<android.view.View>
                 out.append("  windows: ${roots.size}\n")
                 for (r in roots) out.append("    ${r.javaClass.simpleName} attached=${r.isAttachedToWindow} shown=${r.isShown} ctx=${r.context}\n")
+                fun walk(v: android.view.View, depth: Int) {
+                    val cls = v.javaClass.name
+                    if (cls.contains("AndroidComposeView")) {
+                        val pending = runCatching {
+                            v.javaClass.getMethod("getHasPendingMeasureOrLayout").invoke(v)
+                        }.getOrElse { "?" }
+                        out.append("      compose view ${v.width}x${v.height} attached=${v.isAttachedToWindow} pendingLayout=$pending layoutRequested=${v.isLayoutRequested}\n")
+                    }
+                    if (v is android.view.ViewGroup) for (i in 0 until v.childCount) walk(v.getChildAt(i), depth + 1)
+                }
+                for (r in roots) walk(r, 0)
             }
+            runCatching {
+                // Tasks waiting on Compose's test scheduler (a coroutine that keeps rescheduling itself shows here).
+                val clock = compose.mainClock
+                var sched: Any? = null
+                var c: Class<*>? = clock.javaClass
+                while (c != null && sched == null) {
+                    for (f in c.declaredFields) {
+                        f.isAccessible = true
+                        val v = f.get(clock)
+                        if (v != null && v.javaClass.name.contains("TestCoroutineScheduler")) sched = v
+                    }
+                    c = c.superclass
+                }
+                out.append("  scheduler: ${sched?.javaClass?.name}\n")
+                val events = sched!!.javaClass.getDeclaredField("events").apply { isAccessible = true }.get(sched)
+                var ec: Class<*>? = events.javaClass
+                var af: java.lang.reflect.Field? = null
+                while (ec != null && af == null) { af = ec.declaredFields.firstOrNull { it.name == "a" }; ec = ec.superclass }
+                val arr = af!!.apply { isAccessible = true }.get(events) as Array<*>?
+                arr?.filterNotNull()?.take(10)?.forEach { e ->
+                    val fields = e.javaClass.declaredFields.joinToString { f -> f.isAccessible = true; "${f.name}=${f.get(e)}".take(300) }
+                    out.append("    event: $fields\n")
+                }
+            }.onFailure { out.append("  scheduler: $it\n") }
             File("build/state-writes.txt").appendText(out.toString())
         }
         override fun finished(d: org.junit.runner.Description) { handle?.dispose() }
@@ -620,6 +663,7 @@ class FeatureTest {
             if (compose.onAllNodesWithText("Remove highlight").fetchSemanticsNodes().isNotEmpty()) break
             if (compose.onAllNodesWithText("Copy").fetchSemanticsNodes().isNotEmpty()) compose.onNodeWithText("Copy").performClick()
             y += 25f
+            compose.mainClock.advanceTimeBy(600) // so the next press isn't taken as a double-tap
             assertTrue("no whole-verse highlight found", y < 700f)
         }
         compose.onNodeWithText("Remove highlight").performClick()
