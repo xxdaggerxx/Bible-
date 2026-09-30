@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -32,6 +33,7 @@ import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
+import org.robolectric.shadows.ShadowDialog
 import java.io.File
 
 /**
@@ -95,7 +97,16 @@ class FeatureTest {
         val dir = File("build/screenshots").apply { mkdirs() }
         val view = compose.activity.window.decorView
         val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
-        view.draw(Canvas(bitmap))
+        val canvas = Canvas(bitmap)
+        view.draw(canvas)
+        // Dialogs are separate windows: draw the open one on top, centred and over a dim layer.
+        ShadowDialog.getLatestDialog()?.takeIf { it.isShowing }?.window?.decorView?.let { d ->
+            canvas.drawColor(0x66000000)
+            canvas.save()
+            canvas.translate((view.width - d.width) / 2f, (view.height - d.height) / 2f)
+            d.draw(canvas)
+            canvas.restore()
+        }
         File(dir, "$name.png").outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
     }
 
@@ -312,5 +323,51 @@ class FeatureTest {
         assertTrue(vm.user.searchNotes("love world", 1, 39).isEmpty()) // Old Testament only
         assertTrue(vm.user.searchNotes("100%", 1, 66).isEmpty())
         compose.runOnUiThread { vm.setNote(com.biblestudy.app.model.VerseTarget(43, 3, 16), "") }
+    }
+
+    @Test
+    fun bookPickerMarksWhereNotesAreOnVisibleLayers() {
+        // Draw on John 3 on the default layer.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset((Page.COL_PAD + 100f) * z, 620f))
+            repeat(10) { moveBy(Offset(20f, 0f)) }
+            up()
+        }
+        compose.waitForIdle()
+        val verse = vm.textStrokesFor("KJV", 43, 3).single().verse
+        compose.runOnUiThread { vm.fingerDraw = false }
+
+        // Book, chapter and verse are all marked.
+        compose.onNodeWithText("John 3").performClick()
+        compose.waitUntil(5_000) { compose.onAllNodesWithContentDescription("John has notes").fetchSemanticsNodes().isNotEmpty() }
+        compose.onAllNodesWithContentDescription("Genesis has notes").assertCountEquals(0)
+        snap("15-picker-books")
+        compose.onNodeWithText("John").performClick()
+        compose.onNodeWithContentDescription("John 3 has notes").assertExists()
+        compose.onAllNodesWithContentDescription("John 4 has notes").assertCountEquals(0)
+        compose.onNodeWithText("3").performClick()
+        compose.waitUntil(5_000) { compose.onAllNodesWithContentDescription("John 3:$verse has notes").fetchSemanticsNodes().isNotEmpty() }
+        snap("16-picker-verses")
+
+        // Hiding the layer hides its markers.
+        compose.runOnUiThread { vm.setAllLayersVisible(false) }
+        compose.waitForIdle()
+        compose.onAllNodesWithContentDescription("John 3:$verse has notes").assertCountEquals(0)
+        compose.onNodeWithContentDescription("Back to chapters").performClick()
+        compose.onNodeWithContentDescription("Back to books").performClick()
+        compose.onAllNodesWithContentDescription("John has notes").assertCountEquals(0)
+        compose.onNodeWithContentDescription("Close").performClick()
+
+        // Typed notes aren't on a layer, so they are always marked.
+        compose.runOnUiThread { vm.setNote(com.biblestudy.app.model.VerseTarget(19, 23, 1), "The Lord is my shepherd") }
+        compose.waitUntil(5_000) { vm.user.notedVerses().contains(19023001) }
+        compose.onNodeWithText("John 3").performClick()
+        compose.waitUntil(5_000) { compose.onAllNodesWithContentDescription("Psalms has notes").fetchSemanticsNodes().isNotEmpty() }
+        compose.runOnUiThread {
+            vm.setAllLayersVisible(true)
+            vm.setNote(com.biblestudy.app.model.VerseTarget(19, 23, 1), "")
+        }
     }
 }

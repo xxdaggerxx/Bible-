@@ -115,4 +115,13 @@ class LayoutAnchorTest {
         val line = plain.lineAt(100f)
         assertEquals(100f + withHeadings.baseline(line) - plain.baseline(line), withHeadings.displayPoints(converted)[1], 0.5f)
     }
+
+    @Test
+    fun verseOffsetsMatchTheLaidOutText() {
+        val l = layout(headings = true, spacing = LineSpacing.NORMAL)
+        val verses = kjv.chapter(43, 1)
+        val starts = com.biblestudy.app.ui.verseStartOffsets(verses)
+        starts.forEachIndexed { i, off -> assertEquals(verses[i].verse, l.verseAtOffset(off)) }
+        assertEquals(verses.last().verse, l.verseAtOffset(l.textLength - 1))
+    }
 }

@@ -20,6 +20,7 @@ import com.biblestudy.app.model.ChapterData
 import com.biblestudy.app.model.Heading
 import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.Region
+import com.biblestudy.app.model.Verse
 import kotlin.math.floor
 
 /**
@@ -330,7 +331,7 @@ fun buildChapterLayout(
         starts[i] = builder.length
         numbers[i] = v.verse
         builder.withStyle(numberStyle) { append(v.verse.toString()) }
-        builder.append(" ")
+        builder.append("\u2009")
         builder.append(v.text)
         if (i < data.verses.lastIndex) builder.append("\n")
     }
@@ -356,6 +357,20 @@ fun buildChapterLayout(
         HeadingBlock(line, lines, height)
     }
     return ChapterLayout(data.version, data.book, data.chapter, title, text, starts, numbers, blocks)
+}
+
+/**
+ * Where each verse starts in a chapter's text, exactly as [buildChapterLayout] builds it
+ * (number, thin space, text, newline). Lets highlights be placed in a verse without laying out the text.
+ */
+fun verseStartOffsets(verses: List<Verse>): IntArray {
+    val out = IntArray(verses.size)
+    var pos = 0
+    verses.forEachIndexed { i, v ->
+        out[i] = pos
+        pos += v.verse.toString().length + 1 + v.text.length + 1
+    }
+    return out
 }
 
 private fun measureHeading(measurer: TextMeasurer, font: FontFamily, h: Heading, c: Constraints): List<TextLayoutResult> {

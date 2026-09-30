@@ -641,7 +641,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 is MarginImage -> a.copy(layerId = layerId)
             }
         }
-        message = "Moved to “${layer.name}”."
+        message = "Moved to \u201c${layer.name}\u201d."
     }
 
     fun deleteSelection() {
@@ -752,6 +752,15 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
         return null
     }
+
+    // ---------- book picker markers ----------
+
+    /** Where the user has notes, for the book picker (read from the database, after pending writes). */
+    suspend fun loadMarkers(version: String): MarkerIndex =
+        withContext(dbDispatcher) { MarkerIndex(user.markerRows(version), user.notedVerses()) }
+
+    /** Visible layers, in drawing order: their items are the ones marked in the book picker. */
+    fun visibleLayerIds(): List<Long> = layers.filter { it.visible }.map { it.id }
 
     // ---------- notes & bookmarks ----------
 

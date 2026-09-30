@@ -35,6 +35,7 @@ import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.LockOpen
 import androidx.compose.material.icons.filled.Search
@@ -68,6 +69,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -83,6 +86,7 @@ import com.biblestudy.app.data.RefParser
 import com.biblestudy.app.model.CrossRef
 import com.biblestudy.app.model.SearchHit
 import com.biblestudy.app.model.SearchScope
+import com.biblestudy.app.model.Verse
 import com.biblestudy.app.model.VerseId
 import com.biblestudy.app.model.VerseTarget
 import kotlinx.coroutines.Dispatchers
@@ -119,40 +123,128 @@ private fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composabl
 @Composable
 fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     var book by remember { mutableStateOf<Int?>(null) }
+    var chapter by remember { mutableStateOf<Int?>(null) }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
+    val version = vm.activeVersion
+    // Where the user has notes; ink on the words counts for the version being read.
+    val markers by produceState<MarkerIndex?>(null, version, vm.dataGeneration) { value = vm.loadMarkers(version) }
+    val visible = vm.visibleLayerIds()
+    val colors = vm.layers.associate { it.id to it.color }
+
+    fun marks(layerIds: List<Long>, note: Boolean, bookmark: Boolean) =
+        Marks(layerIds.mapNotNull { colors[it] }, note, bookmark)
+
     BigDialog(onDismiss) {
         Column {
             val b = book
-            if (b == null) {
-                DialogTitle("Choose a book", onDismiss)
-                LazyVerticalGrid(columns = GridCells.Adaptive(150.dp), modifier = Modifier.weight(1f)) {
-                    item(span = { GridItemSpan(maxLineSpan) }) { SectionLabel("Old Testament") }
-                    items(vm.bible.books.filter { it.id <= 39 }, key = { it.id }) { bk ->
-                        GridCell(bk.name) {
-                            if (bk.chapters == 1) { vm.goTo(panelIndex, bk.id, 1); onDismiss() } else book = bk.id
-                        }
-                    }
-                    item(span = { GridItemSpan(maxLineSpan) }) { SectionLabel("New Testament") }
-                    items(vm.bible.books.filter { it.id >= 40 }, key = { it.id }) { bk ->
-                        GridCell(bk.name) {
-                            if (bk.chapters == 1) { vm.goTo(panelIndex, bk.id, 1); onDismiss() } else book = bk.id
+            val c = chapter
+            when {
+                b == null -> {
+                    DialogTitle("Choose a book", onDismiss)
+                    MarkerLegend()
+                    LazyVerticalGrid(columns = GridCells.Adaptive(150.dp), modifier = Modifier.weight(1f)) {
+                        for ((label, range) in listOf("Old Testament" to 1..39, "New Testament" to 40..66)) {
+                            item(span = { GridItemSpan(maxLineSpan) }) { SectionLabel(label) }
+                            items(vm.bible.books.filter { it.id in range }, key = { it.id }) { bk ->
+                                val m = markers?.let { idx ->
+                                    marks(idx.layers(visible, bk.id), idx.hasNote(bk.id), vm.bookmarks.any { it.book == bk.id })
+                                }
+                                GridCell(bk.name, m) { book = bk.id; if (bk.chapters == 1) chapter = 1 }
+                            }
                         }
                     }
                 }
-            } else {
-                val info = vm.bible.book(b)
-                DialogTitle(info.name, onDismiss) {
-                    IconButton(onClick = { book = null }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back to books")
+                c == null -> {
+                    val info = vm.bible.book(b)
+                    DialogTitle(info.name, onDismiss) {
+                        IconButton(onClick = { book = null }) {
+                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back to books")
+                        }
+                    }
+                    MarkerLegend()
+                    LazyVerticalGrid(columns = GridCells.Adaptive(72.dp), modifier = Modifier.weight(1f)) {
+                        items((1..info.chapters).toList()) { ch ->
+                            val m = markers?.let { idx ->
+                                marks(
+                                    idx.layers(visible, b, ch), idx.hasNote(b, ch),
+                                    vm.bookmarks.any { it.book == b && it.chapter == ch },
+                                )
+                            }
+                            GridCell(ch.toString(), m, label = "${info.name} $ch") { chapter = ch }
+                        }
                     }
                 }
-                LazyVerticalGrid(columns = GridCells.Adaptive(64.dp), modifier = Modifier.weight(1f)) {
-                    items((1..info.chapters).toList()) { c ->
-                        GridCell(c.toString()) { vm.goTo(panelIndex, b, c); onDismiss() }
+                else -> {
+                    val info = vm.bible.book(b)
+                    val verses by produceState(emptyList<Verse>(), b, c, version) {
+                        value = withContext(Dispatchers.IO) { vm.text(version).chapter(b, c) }
+                    }
+                    DialogTitle("${info.name} $c", onDismiss) {
+                        IconButton(onClick = { chapter = null; if (info.chapters == 1) book = null }) {
+                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back to chapters")
+                        }
+                    }
+                    MarkerLegend()
+                    val byVerse = markers?.verseLayers(visible, b, c, verses) ?: emptyMap()
+                    LazyVerticalGrid(columns = GridCells.Adaptive(64.dp), modifier = Modifier.weight(1f)) {
+                        items(verses, key = { it.verse }) { v ->
+                            val m = marks(
+                                byVerse[v.verse] ?: emptyList(),
+                                markers?.hasNote(b, c, v.verse) == true,
+                                vm.bookmarks.any { it.book == b && it.chapter == c && it.verse == v.verse },
+                            )
+                            GridCell(v.verse.toString(), m, label = "${info.name} $c:${v.verse}") {
+                                vm.goTo(panelIndex, b, c, v.verse)
+                                onDismiss()
+                            }
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+/** What a picker cell has: colours of layers with ink, highlights or images; a typed note; a bookmark. */
+private class Marks(val layerColors: List<Int>, val note: Boolean, val bookmark: Boolean) {
+    val any get() = layerColors.isNotEmpty() || note || bookmark
+}
+
+@Composable
+private fun MarkerLegend() {
+    Row(
+        Modifier.padding(bottom = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        Box(Modifier.size(8.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary))
+        Text("Ink, highlights or images (one dot per visible layer)", style = MaterialTheme.typography.bodySmall)
+        Spacer(Modifier.width(8.dp))
+        Icon(Icons.Filled.EditNote, contentDescription = null, modifier = Modifier.size(14.dp))
+        Text("Typed note", style = MaterialTheme.typography.bodySmall)
+        Spacer(Modifier.width(8.dp))
+        Icon(Icons.Filled.Bookmark, contentDescription = null, tint = BOOKMARK_RED, modifier = Modifier.size(14.dp))
+        Text("Bookmark", style = MaterialTheme.typography.bodySmall)
+    }
+}
+
+private val BOOKMARK_RED = Color(0xFFC62828)
+
+@Composable
+private fun MarkerRow(m: Marks?, label: String) {
+    // Always the same height, so cells line up whether or not they have markers.
+    Row(
+        Modifier
+            .height(12.dp)
+            .then(if (m?.any == true) Modifier.semantics { contentDescription = "$label has notes" } else Modifier),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(3.dp),
+    ) {
+        if (m == null) return@Row
+        for (c in m.layerColors.take(4)) Box(Modifier.size(7.dp).clip(CircleShape).background(Color(c)))
+        if (m.layerColors.size > 4) Text("+", style = MaterialTheme.typography.labelSmall)
+        if (m.note) Icon(Icons.Filled.EditNote, contentDescription = null, modifier = Modifier.size(12.dp))
+        if (m.bookmark) Icon(Icons.Filled.Bookmark, contentDescription = null, tint = BOOKMARK_RED, modifier = Modifier.size(12.dp))
     }
 }
 
@@ -165,16 +257,20 @@ private fun SectionLabel(text: String) {
 }
 
 @Composable
-private fun GridCell(text: String, onClick: () -> Unit) {
-    Box(
+private fun GridCell(text: String, marks: Marks? = null, label: String = text, onClick: () -> Unit) {
+    Column(
         Modifier
             .padding(4.dp)
             .clip(RoundedCornerShape(10.dp))
             .background(MaterialTheme.colorScheme.surfaceContainerHigh)
             .clickable(onClick = onClick)
-            .padding(horizontal = 10.dp, vertical = 14.dp),
-        contentAlignment = Alignment.Center,
-    ) { Text(text, maxLines = 1, overflow = TextOverflow.Ellipsis) }
+            .padding(horizontal = 10.dp, vertical = 8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Text(text, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        Spacer(Modifier.height(3.dp))
+        MarkerRow(marks, label)
+    }
 }
 
 // ---------------------------------------------------------------------------------------------

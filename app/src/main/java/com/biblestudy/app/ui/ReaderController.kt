@@ -412,13 +412,13 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
                 val layer = vm.activeLayer()
                 if (layer == null) { mode = null; return }
                 if (layer.locked) {
-                    vm.message = "Layer “${layer.name}” is locked. Unlock it in Layers to draw."
+                    vm.message = "Layer \u201c${layer.name}\u201d is locked. Unlock it in Layers to draw."
                     mode = null
                     return
                 }
                 if (!layer.visible) {
                     vm.setLayerVisible(layer.id, true)
-                    vm.message = "Showing layer “${layer.name}”."
+                    vm.message = "Showing layer \u201c${layer.name}\u201d."
                 }
                 val region = g.regionAt(p.x)
                 val verse = g.layout.verseAtY(p.y)

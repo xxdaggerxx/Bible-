@@ -13,8 +13,12 @@ import com.biblestudy.app.model.Layer
 import com.biblestudy.app.model.MarginImage
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SearchHit
+import com.biblestudy.app.model.VerseId
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
+
+/** One annotation's place and layer, for the book picker's markers. */
+data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
 class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
@@ -183,6 +187,34 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
         }
         return strokes to images
     }
+
+    // ---------- markers for the book picker ----------
+
+    /**
+     * Where the user has ink, highlights or images, by layer: margin items (every version) and
+     * items on the words of [version]. Highlights have no verse column, so [MarkRow.start] carries
+     * their character offset instead (verse = 0).
+     */
+    fun markerRows(version: String): List<MarkRow> {
+        val db = readableDatabase
+        fun rows(sql: String, args: Array<String>, highlight: Boolean) = db.rawQuery(sql, args).use { c ->
+            buildList {
+                while (c.moveToNext()) add(
+                    if (highlight) MarkRow(c.getInt(0), c.getInt(1), 0, c.getLong(3), start = c.getInt(2))
+                    else MarkRow(c.getInt(0), c.getInt(1), c.getInt(2), c.getLong(3))
+                )
+            }
+        }
+        return rows("SELECT DISTINCT book, chapter, verse, layer_id FROM strokes WHERE region != 0 OR version = ?", arrayOf(version), false) +
+            rows("SELECT DISTINCT book, chapter, verse, layer_id FROM images", emptyArray(), false) +
+            rows("SELECT book, chapter, start_off, layer_id FROM highlights WHERE version = ?", arrayOf(version), true)
+    }
+
+    /** Verse ids that have a typed note. */
+    fun notedVerses(): Set<Int> =
+        readableDatabase.rawQuery("SELECT book, chapter, verse FROM notes", null).use { c ->
+            buildSet { while (c.moveToNext()) add(VerseId.of(c.getInt(0), c.getInt(1), c.getInt(2))) }
+        }
 
     // ---------- notes & bookmarks ----------
 

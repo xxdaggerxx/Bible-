@@ -66,6 +66,14 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 0.4.1
+
+- **See where your notes are.** Tap the chapter name to open the picker, which now goes book → chapter → verse.
+  - Books, chapters and verses with your ink, highlights or images show a small dot for each layer they're on, in that layer's colour.
+  - Only layers that are switched on count, so hiding a layer in *Layers* hides its dots.
+  - Ink on the words counts for the version you're reading; margin notes count in every version.
+  - Typed notes show a note icon and bookmarks a red ribbon. These aren't on layers, so they always show.
+
 ## New in version 0.4
 
 - **Section headings** such as "Jesus and Nicodemus" above John 3:1, with the related passages listed under them. They come from the Berean Standard Bible (3,102 headings, public domain) and show in every version. Turn them off in *⋮ → Section headings*.
