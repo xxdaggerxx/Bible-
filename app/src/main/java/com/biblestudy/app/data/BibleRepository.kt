@@ -10,22 +10,25 @@ import com.biblestudy.app.model.SearchScope
 import com.biblestudy.app.model.Verse
 import java.io.File
 
+/** A Bible version bundled with the app. */
+data class BibleVersion(val code: String, val name: String, val asset: String, val copyright: String)
+
 /**
- * Read-only access to one bundled Bible version (SQLite with an FTS4 search index
- * and OpenBible.info cross-references). The database ships in assets/bibles and is
- * copied to app storage on first launch so it works fully offline.
+ * Read-only access to one bundled Bible version (SQLite with an FTS4 search index; the KJV
+ * database also holds the OpenBible.info cross-references). The database ships in
+ * assets/bibles and is copied to app storage on first launch so it works fully offline.
  */
-class BibleRepository(context: Context) {
-    val code = "KJV"
+class BibleRepository(context: Context, val version: BibleVersion) {
+    val code = version.code
     private val db: SQLiteDatabase
     val books: List<BookInfo>
 
     init {
-        val file = context.getDatabasePath(DB_FILE)
+        val file = context.getDatabasePath("bible_${version.asset.removeSuffix(".db")}_v$DB_VERSION.db")
         if (!file.exists()) {
             file.parentFile?.mkdirs()
             val tmp = File(file.path + ".tmp")
-            context.assets.open("bibles/kjv.db").use { input ->
+            context.assets.open("bibles/${version.asset}").use { input ->
                 tmp.outputStream().use { output -> input.copyTo(output) }
             }
             tmp.renameTo(file)
@@ -87,8 +90,21 @@ class BibleRepository(context: Context) {
     }
 
     companion object {
-        const val DB_FILE = "bible_kjv_v1.db"
+        /** Bump when a bundled database changes, so the new copy replaces the old one. */
+        private const val DB_VERSION = 1
         const val MAX_RESULTS = 2000
+
+        val KJV = BibleVersion("KJV", "King James Version (1769)", "kjv.db", "Public domain.")
+        val BSB = BibleVersion(
+            "BSB", "Berean Standard Bible", "bsb.db",
+            "The Holy Bible, Berean Standard Bible (BSB). Dedicated to the public domain, 2023.",
+        )
+        val WEB = BibleVersion(
+            "WEB", "World English Bible", "web.db",
+            "World English Bible (WEB). Public domain. \u201cWorld English Bible\u201d is a trademark of eBible.org.",
+        )
+        /** In the order shown in the version picker. */
+        val ALL = listOf(KJV, BSB, WEB)
 
         /**
          * Turns what the user typed into an FTS4 query:

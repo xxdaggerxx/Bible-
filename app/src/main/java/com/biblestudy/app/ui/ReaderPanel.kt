@@ -28,6 +28,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
@@ -86,6 +87,7 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.biblestudy.app.R
+import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.model.ChapterData
 import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.Tool
@@ -125,7 +127,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         for ((b, c) in wanted) {
             val key = ctl.layoutKey(v, b, c)
             if (ctl.layouts[key] == null) {
-                val verses = withContext(Dispatchers.IO) { vm.bible.chapter(b, c) }
+                val verses = withContext(Dispatchers.IO) { vm.text(v).chapter(b, c) }
                 ctl.layouts[key] = buildChapterLayout(measurer, bibleFont, vm.bible.book(b).name, ChapterData(v, b, c, verses))
             }
             vm.ensureLoaded(v, b, c)
@@ -205,7 +207,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             Canvas(Modifier.fillMaxSize()) { drawLiveLayer(vm, ctl, theme) }
 
             if (geo == null) {
-                CircularProgressIndicator(Modifier.align(Alignment.Center))
+                CircularProgressIndicator(Modifier.align(Alignment.Center).testTag("loading"))
             }
             val selected = ctl.selectedImage()
             if (selected != null && vm.tool == Tool.SELECT) {
@@ -242,12 +244,33 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
         IconButton(onClick = { vm.activePanel = index; vm.nextChapter(index) }) {
             Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next chapter")
         }
-        Text(panel.version, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.outline)
+        VersionPicker(vm, index)
         Spacer(Modifier.weight(1f))
         TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
         if (vm.panels.size > 1) {
             IconButton(onClick = { vm.closePanel(index) }) {
                 Icon(Icons.Filled.Close, contentDescription = "Close panel")
+            }
+        }
+    }
+}
+
+/** One-tap version switch (BIB-3). Ink on the words stays with its version; margin notes are shared. */
+@Composable
+private fun VersionPicker(vm: StudyViewModel, index: Int) {
+    val panel = vm.panels[index]
+    var open by remember { mutableStateOf(false) }
+    Box {
+        TextButton(onClick = { vm.activePanel = index; open = true }) {
+            Text(panel.version, style = MaterialTheme.typography.titleMedium)
+            Icon(Icons.Filled.ArrowDropDown, contentDescription = "Change Bible version")
+        }
+        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            for (v in BibleRepository.ALL) {
+                DropdownMenuItem(
+                    text = { Text("${v.code} \u2014 ${v.name}" + if (v.code == panel.version) "  \u2713" else "") },
+                    onClick = { open = false; vm.setVersion(index, v.code) },
+                )
             }
         }
     }

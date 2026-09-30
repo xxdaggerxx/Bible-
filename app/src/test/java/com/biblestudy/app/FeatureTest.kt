@@ -4,13 +4,17 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.swipeDown
 import androidx.compose.ui.test.swipeUp
 import androidx.lifecycle.ViewModelProvider
+import com.biblestudy.app.model.SearchScope
 import com.biblestudy.app.model.Tool
 import com.biblestudy.app.ui.Page
 import com.biblestudy.app.ui.StudyViewModel
@@ -40,14 +44,36 @@ class FeatureTest {
 
     private val vm: StudyViewModel get() = ViewModelProvider(compose.activity)[StudyViewModel::class.java]
 
-    /** Settings are saved between tests in the same run, so start each test from the defaults. */
+    /**
+     * Chapters and saved ink load on background threads, which waitForIdle doesn't track.
+     * Wait until the page is laid out and its annotations are read from the database.
+     */
+    private fun waitForLoaded() {
+        compose.waitUntil(10_000) {
+            compose.onAllNodesWithTag("loading").fetchSemanticsNodes().isEmpty() && vm.pendingLoads == 0
+        }
+        compose.waitForIdle()
+    }
+
+    /** Settings and notes are saved between tests in the same run, so start each test from the defaults. */
     @Before
     fun resetSettings() {
-        compose.waitForIdle()
+        waitForLoaded()
         compose.runOnUiThread {
             vm.fingerDraw = false
             vm.tool = Tool.PEN
             vm.clearSelection()
+            vm.setVersion(0, "KJV")
+            vm.goTo(0, 43, 3)
+        }
+        waitForLoaded()
+        // The notes database also survives between tests: start with no ink on John 3.
+        compose.runOnUiThread {
+            for (v in listOf("KJV", "BSB", "WEB")) {
+                vm.textStrokesFor(v, 43, 3).toList().forEach { vm.removeItem(it) }
+                vm.highlightsFor(v, 43, 3).toList().forEach { vm.removeItem(it) }
+            }
+            vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) }
         }
         compose.waitForIdle()
     }
@@ -83,6 +109,38 @@ class FeatureTest {
         compose.onNodeWithTag("reader0").performTouchInput { swipeDown(durationMillis = 300) }
         compose.waitForIdle()
         compose.onNodeWithText("John 3").assertExists()
+    }
+
+    @Test
+    fun switchingVersionsKeepsInkWithItsVersion() {
+        compose.waitForIdle()
+        // Draw on the KJV words.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset((Page.COL_PAD + 100f) * z, 520f))
+            repeat(10) { moveBy(Offset(20f, 0f)) }
+            up()
+        }
+        compose.waitForIdle()
+        assertEquals(1, vm.textStrokesFor("KJV", 43, 3).size)
+
+        // Switch to the BSB with the version picker.
+        compose.runOnUiThread { vm.fingerDraw = false } // taps on the menu shouldn't draw
+        compose.onNodeWithContentDescription("Change Bible version").performClick()
+        compose.onNodeWithText("BSB", substring = true).performClick()
+        waitForLoaded()
+        assertEquals("BSB", vm.panels[0].version)
+        compose.onNodeWithText("BSB").assertExists()
+        assertEquals(0, vm.textStrokesFor("BSB", 43, 3).size) // KJV ink stays on the KJV
+        assertEquals(1, vm.textStrokesFor("KJV", 43, 3).size)
+        snap("13-bsb")
+
+        // Each version has its own text and search index.
+        assertTrue(vm.text("BSB").verseText(43003016)!!.contains("one and only Son"))
+        assertTrue(vm.text("WEB").verseText(43003016)!!.contains("only born Son"))
+        assertTrue(vm.text("BSB").search("\"one and only Son\"", SearchScope.ALL, 43).isNotEmpty())
+        assertTrue(vm.text("KJV").search("\"one and only Son\"", SearchScope.ALL, 43).isEmpty())
     }
 
     @Test

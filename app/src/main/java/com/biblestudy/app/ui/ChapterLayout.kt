@@ -53,9 +53,15 @@ class ChapterLayout(
 
     val verses: IntArray get() = verseNumbers
 
+    /**
+     * Top of a verse's first line. A verse this version leaves out (e.g. Matthew 17:21 in modern
+     * translations) uses the nearest verse before it, so margin notes stay close to where they belong.
+     */
     fun verseTop(verse: Int): Float {
-        val i = verseNumbers.indexOf(verse)
-        return if (i >= 0) verseTops[i] else if (verseTops.isEmpty()) Page.TEXT_TOP else verseTops.last()
+        if (verseTops.isEmpty()) return Page.TEXT_TOP
+        var i = 0
+        while (i + 1 < verseNumbers.size && verseNumbers[i + 1] <= verse) i++
+        return verseTops[i]
     }
 
     /** The verse whose first line starts at or above page y. */

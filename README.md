@@ -1,4 +1,4 @@
-# Bible Study — version 0.2
+# Bible Study — version 0.3
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -66,6 +66,25 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 0.3
+
+- **Three Bible versions, all offline:**
+  - **KJV**: King James Version.
+  - **BSB**: Berean Standard Bible, a modern translation that reads much like the NIV.
+  - **WEB**: World English Bible, a modern translation in everyday English.
+
+  All three are public domain. They stand in for the NIV and NLT until licensing is sorted out (see below).
+- **One-tap version switch.** Tap the version name (e.g. *KJV ▾*) next to the chapter name at the top of a panel. The panel stays on the same verse. Each panel remembers its version, so split view can show two versions side by side.
+- **Ink follows the rules in the requirements.** Ink and highlights drawn on the words stay with the version you drew them on. Margin notes, typed notes and bookmarks show in every version.
+- **Search any version.** Search has KJV / BSB / WEB chips, starting on the version you're reading. The verse popup and bookmark list also show the verse in that version.
+- Where a modern translation leaves out a verse (for example Matthew 17:21), margin notes for it sit beside the nearest verse before it.
+
+### NIV and NLT
+
+The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be included without permission. There are two ways to add them later:
+- **Offline, with permission:** ask Biblica and Tyndale for personal, non-commercial offline use. With their files, a database can be built the same way as the BSB and WEB ones (`tools/build_version_db.py`), and nothing else in the app changes.
+- **Online, through [API.Bible](https://api.bible/):** its free Starter plan includes up to three copyrighted Bibles, NIV and NLT among them, for non-commercial use. You sign up and put your own API key in the app. The drawbacks: NIV and NLT would need an internet connection, only recently read chapters could be kept for offline use, and the app would need to report anonymous usage to API.Bible.
+
 ## New in version 0.2
 
 - **Continuous scrolling.** Keep scrolling past the end of a chapter into the next one (or back into the previous one). The chapter name at the top follows along. A flick keeps the page gliding. The arrows and the book picker still jump straight to the start of a chapter.
@@ -122,20 +141,22 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
 - Light, sepia and dark page themes.
 - Back up everything (ink, highlights, images, notes, layers, bookmarks) to a single .zip file, and restore it on this tablet or a new one.
 
-## Known limits in 0.2
+## Known limits in 0.3
 
-- Only the KJV is included. NIV and NLT are waiting on licensing.
+- NIV and NLT are waiting on licensing (see above). Cross-references come from the KJV numbering, which the BSB and WEB share.
 - The eraser removes whole strokes; there is no partial erasing.
 - The lasso moves and recolours but can't resize or rotate a selection yet.
 - Pen rendering still uses standard Android drawing rather than the front-buffered ink engine Samsung Notes uses, so it can lag the pen tip slightly.
 
 ## Next milestones
 
-- **0.3:** Import NIV and NLT once licensing is sorted, link the scrolling of split panels, front-buffered (lowest-latency) ink, and lasso resize.
-- **0.4:** Strong's numbers and a lexicon (STEPBible data), handwriting search, and sketch pages.
+- **0.4:** NIV and NLT (offline with permission, or through API.Bible), parallel view of one verse in every version, linked scrolling of split panels, front-buffered (lowest-latency) ink, and lasso resize.
+- **0.5:** Strong's numbers and a lexicon (STEPBible data), handwriting search, and sketch pages.
 
 ## Credits
 
 - King James Version (1769): public domain. Text from the scrollmapper/bible_databases project (MIT).
+- Berean Standard Bible (BSB): dedicated to the public domain (2023). Text from scrollmapper/bible_databases.
+- World English Bible (WEB): public domain; "World English Bible" is a trademark of eBible.org. Text from eBible.org.
 - Cross-references: OpenBible.info, CC BY 4.0.
 - Font: Gentium Book Plus © SIL International, SIL Open Font License 1.1 (see `licenses/Gentium-OFL.txt`).

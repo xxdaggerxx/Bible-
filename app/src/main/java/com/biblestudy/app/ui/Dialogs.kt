@@ -53,6 +53,7 @@ import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -76,6 +77,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import com.biblestudy.app.BuildConfig
 import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.data.RefParser
 import com.biblestudy.app.model.CrossRef
@@ -183,6 +185,7 @@ private fun GridCell(text: String, onClick: () -> Unit) {
 fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     var query by remember { mutableStateOf(vm.lastSearch) }
     var scope by remember { mutableStateOf(SearchScope.ALL) }
+    var version by remember { mutableStateOf(vm.activeVersion) }
     var results by remember { mutableStateOf<List<SearchHit>?>(null) }
     var searchedTerms by remember { mutableStateOf(emptyList<String>()) }
     val co = rememberCoroutineScope()
@@ -195,12 +198,13 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
         val q = query
         vm.lastSearch = q
         co.launch {
-            results = withContext(Dispatchers.IO) { vm.bible.search(q, scope, currentBook) }
+            val v = version
+            results = withContext(Dispatchers.IO) { vm.text(v).search(q, scope, currentBook) }
             searchedTerms = BibleRepository.terms(q)
         }
     }
     LaunchedEffect(Unit) { focus.requestFocus() }
-    LaunchedEffect(scope) { if (query.isNotBlank() && results != null) run() }
+    LaunchedEffect(scope, version) { if (query.isNotBlank() && results != null) run() }
 
     BigDialog(onDismiss) {
         Column {
@@ -216,6 +220,10 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                 modifier = Modifier.fillMaxWidth().focusRequester(focus),
             )
             Row(Modifier.padding(vertical = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                for (v in BibleRepository.ALL) {
+                    FilterChip(selected = version == v.code, onClick = { version = v.code }, label = { Text(v.code) })
+                }
+                VerticalDivider(Modifier.height(32.dp))
                 for (s in SearchScope.entries) {
                     val label = if (s == SearchScope.BOOK) vm.bible.book(currentBook).name else s.label
                     FilterChip(selected = scope == s, onClick = { scope = s }, label = { Text(label) })
@@ -287,11 +295,16 @@ private fun markTerms(text: String, terms: List<String>, style: SpanStyle): Anno
 @Composable
 fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
     val id = VerseId.of(t.book, t.chapter, t.verse)
-    val verseText = remember(t) { vm.bible.verseText(id) ?: "" }
+    val version = vm.activeVersion
+    val verseText = remember(t, version) { vm.text(version).verseText(id) ?: vm.bible.verseText(id) ?: "" }
     val original = remember(t) { vm.user.note(t.book, t.chapter, t.verse) ?: "" }
     var note by remember(t) { mutableStateOf(original) }
     val refs by produceState(emptyList<CrossRef>(), t) {
-        value = withContext(Dispatchers.IO) { vm.bible.crossRefs(id) }
+        value = withContext(Dispatchers.IO) {
+            // Previews in the version being read (the cross-reference list itself is shared).
+            val text = vm.text(version)
+            vm.bible.crossRefs(id).map { r -> text.verseText(r.toStart)?.let { r.copy(preview = it) } ?: r }
+        }
     }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     val otherPanel = if (vm.panels.size > 1) 1 - panelIndex else null
@@ -303,7 +316,7 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
 
     BigDialog(::close) {
         Column {
-            DialogTitle(vm.refLabel(id), ::close)
+            DialogTitle("${vm.refLabel(id)} ($version)", ::close)
             Text(verseText, style = MaterialTheme.typography.bodyLarge)
             Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 8.dp)) {
                 val marked = vm.isBookmarked(t)
@@ -474,7 +487,7 @@ fun BookmarksDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                                 .padding(vertical = 8.dp)
                         ) {
                             Text(vm.refLabel(id), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                            Text(vm.bible.verseText(id) ?: "", maxLines = 2, overflow = TextOverflow.Ellipsis)
+                            Text(vm.text(vm.activeVersion).verseText(id) ?: "", maxLines = 2, overflow = TextOverflow.Ellipsis)
                         }
                         IconButton(onClick = { vm.deleteBookmark(b) }) { Icon(Icons.Filled.Delete, contentDescription = "Remove bookmark") }
                     }
@@ -494,13 +507,13 @@ fun AboutDialog(onDismiss: () -> Unit) {
     AlertDialog(
         onDismissRequest = onDismiss,
         confirmButton = { TextButton(onClick = onDismiss) { Text("Close") } },
-        title = { Text("Bible Study \u2014 version 0.1") },
+        title = { Text("Bible Study \u2014 version ${BuildConfig.VERSION_NAME}") },
         text = {
             Column(Modifier.verticalScroll(rememberScrollState())) {
                 Text("Works completely offline. Your notes stay on this tablet unless you make a backup.")
                 Spacer(Modifier.height(12.dp))
                 Text("Credits", style = MaterialTheme.typography.titleMedium)
-                Text("\u2022 King James Version (1769): public domain.")
+                for (v in BibleRepository.ALL) Text("\u2022 ${v.name}: ${v.copyright}")
                 Text("\u2022 Cross-references: OpenBible.info, licensed CC BY.")
                 Text("\u2022 Bible text font: Gentium Book Plus \u00a9 SIL International, SIL Open Font License.")
                 Spacer(Modifier.height(12.dp))

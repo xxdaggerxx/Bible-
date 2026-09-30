@@ -72,7 +72,16 @@ class PanelState(book: Int, chapter: Int) {
 
 class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private val prefs = app.getSharedPreferences("study", Context.MODE_PRIVATE)
-    val bible = BibleRepository(app)
+    /** The KJV: book names, chapter counts and cross-references come from here for every version. */
+    val bible = BibleRepository(app, BibleRepository.KJV)
+    private val texts = HashMap<String, BibleRepository>().apply { put(bible.code, bible) }
+
+    /** The text of one version, opened (and copied out of the APK) the first time it's needed. */
+    @Synchronized
+    fun text(code: String): BibleRepository = texts.getOrPut(code) {
+        val v = BibleRepository.ALL.firstOrNull { it.code == code } ?: BibleRepository.KJV
+        if (v.code == bible.code) bible else BibleRepository(getApplication(), v)
+    }
     val user = UserDb(app)
     private val imagesDir = File(app.filesDir, "images").apply { mkdirs() }
 
@@ -153,7 +162,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         for (i in 0 until count) {
             val b = prefs.getInt("p${i}b", 43).coerceIn(1, 66)
             val c = prefs.getInt("p${i}c", if (b == 43) 3 else 1).coerceIn(1, bible.book(b).chapters)
-            panels.add(PanelState(b, c))
+            panels.add(PanelState(b, c).apply { version = validVersion(prefs.getString("p${i}v", null)) })
         }
         layers.addAll(user.layers())
         if (layers.isEmpty()) {
@@ -185,7 +194,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putFloat("split", splitFraction)
             putInt("panels", panels.size)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
-            panels.forEachIndexed { i, p -> putInt("p${i}b", p.book); putInt("p${i}c", p.chapter) }
+            panels.forEachIndexed { i, p ->
+                putInt("p${i}b", p.book); putInt("p${i}c", p.chapter); putString("p${i}v", p.version)
+            }
         }
     }
 
@@ -202,6 +213,21 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         p.pendingVerse = verse
         p.navGen++
     }
+
+    private fun validVersion(code: String?) =
+        BibleRepository.ALL.firstOrNull { it.code == code }?.code ?: BibleRepository.KJV.code
+
+    /** Switches a panel to another version, staying at the verse at the top of the view. */
+    fun setVersion(index: Int, code: String) {
+        val p = panels.getOrNull(index) ?: return
+        if (p.version == code) return
+        selection = null
+        p.pendingVerse = p.topVerse
+        p.version = validVersion(code)
+    }
+
+    /** The version shown in the active panel (used by search and the verse popup). */
+    val activeVersion: String get() = panels.getOrNull(activePanel)?.version ?: bible.code
 
     /** The chapter before (dir = -1) or after (dir = 1), or null at either end of the Bible. */
     fun neighbor(book: Int, chapter: Int, dir: Int): Pair<Int, Int>? = when {
@@ -232,7 +258,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun toggleSplit() {
         if (panels.size == 1) {
             val p = panels[0]
-            panels.add(PanelState(p.book, p.chapter))
+            panels.add(PanelState(p.book, p.chapter).apply { version = p.version })
             activePanel = 1
         } else {
             closePanel(1)
@@ -355,21 +381,35 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         return map
     }
 
+    /** How many chapters' annotations are still being read from the database. */
+    var pendingLoads by mutableIntStateOf(0)
+        private set
+
     fun ensureLoaded(version: String, book: Int, chapter: Int) {
         val t = tk(version, book, chapter)
         if (loaded.add("t$t")) {
+            pendingLoads++
             viewModelScope.launch {
-                val (s, h) = withContext(dbDispatcher) { user.loadText(version, book, chapter) }
-                merge(textStrokesFor(version, book, chapter), s)
-                merge(highlightsFor(version, book, chapter), h)
+                try {
+                    val (s, h) = withContext(dbDispatcher) { user.loadText(version, book, chapter) }
+                    merge(textStrokesFor(version, book, chapter), s)
+                    merge(highlightsFor(version, book, chapter), h)
+                } finally {
+                    pendingLoads--
+                }
             }
         }
         val m = mk(book, chapter)
         if (loaded.add("m$m")) {
+            pendingLoads++
             viewModelScope.launch {
-                val (s, i) = withContext(dbDispatcher) { user.loadMargin(book, chapter) }
-                merge(marginStrokesFor(book, chapter), s)
-                merge(imagesFor(book, chapter), i)
+                try {
+                    val (s, i) = withContext(dbDispatcher) { user.loadMargin(book, chapter) }
+                    merge(marginStrokesFor(book, chapter), s)
+                    merge(imagesFor(book, chapter), i)
+                } finally {
+                    pendingLoads--
+                }
             }
         }
     }
