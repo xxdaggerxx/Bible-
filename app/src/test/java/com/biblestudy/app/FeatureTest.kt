@@ -503,4 +503,20 @@ class FeatureTest {
         assertEquals(8 to 1, vm.panels[0].book to vm.panels[0].chapter)
         compose.runOnUiThread { vm.setNote(com.biblestudy.app.model.VerseTarget(43, 3, 16), "") }
     }
+
+    @Test
+    fun longPressOnHighlightedTextStillShowsTheBar() {
+        val z = zoom()
+        val at = Offset((Page.COL_PAD + 250f) * z, 600f)
+        // Highlight a word with a long press, then long-press the same, now highlighted, word.
+        compose.onNodeWithTag("reader0").performTouchInput { longClick(at) }
+        compose.onNodeWithText("Highlight").performClick()
+        compose.waitForIdle()
+        assertEquals(1, vm.highlightsFor("KJV", 43, 3).size)
+        compose.onNodeWithTag("reader0").performTouchInput { longClick(at) }
+        compose.waitForIdle()
+        compose.onNodeWithText("Copy").assertExists()
+        compose.onNodeWithText("Share").assertExists()
+        compose.onNodeWithText("Note").assertExists()
+    }
 }
