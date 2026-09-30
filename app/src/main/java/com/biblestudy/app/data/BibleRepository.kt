@@ -98,7 +98,8 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         }
 
     fun search(raw: String, scope: SearchScope, currentBook: Int): List<SearchHit> {
-        val query = ftsQuery(raw) ?: return emptyList()
+        val (wanted, excluded) = splitExcluded(raw)
+        val query = ftsQuery(wanted) ?: return emptyList()
         val (lo, hi) = when (scope) {
             SearchScope.ALL -> 1 to 66
             SearchScope.OT -> 1 to 39
@@ -113,7 +114,10 @@ class BibleRepository(context: Context, val version: BibleVersion) {
                 arrayOf(query, lo.toString(), hi.toString()),
             ).use { c ->
                 buildList {
-                    while (c.moveToNext()) add(SearchHit(c.getInt(0), c.getInt(1), c.getInt(2), c.getString(3)))
+                    while (c.moveToNext()) {
+                        val hit = SearchHit(c.getInt(0), c.getInt(1), c.getInt(2), c.getString(3))
+                        if (!containsAny(hit.text, excluded)) add(hit)
+                    }
                 }
             }
         } catch (e: SQLiteException) {
@@ -159,6 +163,37 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         val ALL = listOf(KJV, BSB, WEB)
 
         /**
+         * Separates words to leave out (SRCH-3), written with a minus sign ("love -world"), from the
+         * rest of the query. Returns the query without them and the excluded words (lower case,
+         * a trailing * kept for word beginnings).
+         */
+        fun splitExcluded(raw: String): Pair<String, List<String>> {
+            val excluded = ArrayList<String>()
+            val kept = StringBuilder()
+            Regex("\"[^\"]*\"|\\S+").findAll(raw).forEach { m ->
+                val tok = m.value
+                if (tok.length > 1 && tok.startsWith("-") && !tok.startsWith("\"")) {
+                    val w = tok.drop(1).lowercase().replace('\'', '\u2019').filter { it.isLetterOrDigit() || it == '\u2019' || it == '*' }
+                    if (w.trimEnd('*').isNotEmpty()) excluded += w
+                } else {
+                    kept.append(tok).append(' ')
+                }
+            }
+            return kept.toString().trim() to excluded
+        }
+
+        /** Whether [text] has any of [words] as a whole word (or word beginning, for "lov*"). */
+        fun containsAny(text: String, words: List<String>): Boolean {
+            if (words.isEmpty()) return false
+            val t = text.lowercase().replace('\'', '\u2019')
+            return words.any { w ->
+                val stem = Regex.escape(w.trimEnd('*'))
+                val end = if (w.endsWith("*")) "" else "(?![\\p{L}\\p{N}])"
+                Regex("(?<![\\p{L}\\p{N}])$stem$end").containsMatchIn(t)
+            }
+        }
+
+        /**
          * Turns what the user typed into an FTS4 query:
          *  - words are ANDed, "quoted text" is an exact phrase,
          *  - OR between words means either, a trailing * matches word prefixes (lov* → love, loved).
@@ -191,7 +226,7 @@ class BibleRepository(context: Context, val version: BibleVersion) {
 
         /** Lower-case words from a query, used to bold matches in results. */
         fun terms(raw: String): List<String> =
-            Regex("[\\p{L}\u2019']+").findAll(raw).map { it.value.lowercase().replace('\'', '\u2019') }
+            Regex("[\\p{L}\u2019']+").findAll(splitExcluded(raw).first).map { it.value.lowercase().replace('\'', '\u2019') }
                 .filter { it != "or" && it.length > 1 }.toList()
     }
 }

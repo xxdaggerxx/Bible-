@@ -30,7 +30,15 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.VerticalSplit
+import com.biblestudy.app.model.Bookmark
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material.icons.filled.DriveFileMove
+import androidx.compose.material.icons.filled.CreateNewFolder
+import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.Bookmark
@@ -43,6 +51,7 @@ import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.LockOpen
+import androidx.compose.material.icons.filled.Remove
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
@@ -340,7 +349,8 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                         SearchScope.NT -> 40 to 66
                         SearchScope.BOOK -> currentBook to currentBook
                     }
-                    vm.user.searchNotes(q, lo, hi)
+                    val (wanted, excluded) = BibleRepository.splitExcluded(q)
+                    vm.user.searchNotes(wanted, lo, hi).filterNot { BibleRepository.containsAny(it.text, excluded) }
                 } else {
                     vm.text(v).search(q, scope, currentBook)
                 }
@@ -348,7 +358,6 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             searchedTerms = BibleRepository.terms(q)
         }
     }
-    LaunchedEffect(Unit) { focus.requestFocus() }
     LaunchedEffect(scope, version, inNotes) { if (query.isNotBlank() && results != null) run() }
 
     BigDialog(onDismiss) {
@@ -364,6 +373,8 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                 trailingIcon = { IconButton(onClick = { run() }) { Icon(Icons.Filled.Search, contentDescription = "Search") } },
                 modifier = Modifier.fillMaxWidth().focusRequester(focus),
             )
+            // Inside the dialog, so the field exists by the time it asks for the keyboard.
+            LaunchedEffect(Unit) { runCatching { focus.requestFocus() } }
             Row(Modifier.padding(vertical = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 for (v in BibleRepository.ALL) {
                     FilterChip(
@@ -380,7 +391,8 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                 }
             }
             Text(
-                "Tip: use OR between words for either word, and * for word beginnings (lov* finds love, loved, loveth).",
+                "Tips: all words must match; \"quotes\" for an exact phrase; OR between words for either; " +
+                    "-word to leave out verses with that word; * for word beginnings (lov* finds love, loved, loveth).",
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
             )
             if (ref != null) {
@@ -392,32 +404,69 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             }
             val r = results
             if (r != null) {
+                // Results grouped by book, with counts (SRCH-5); a book chip shows just that book.
+                var onlyBook by remember(r) { mutableStateOf<Int?>(null) }
+                val byBook = remember(r) { r.groupBy { it.book } }
                 Text(
                     when {
                         r.isEmpty() -> if (inNotes) "No notes found." else "No verses found."
-                        inNotes -> "${r.size} note" + if (r.size == 1) "" else "s"
+                        inNotes -> "${r.size} note" + (if (r.size == 1) "" else "s") + " in ${byBook.size} book" + if (byBook.size == 1) "" else "s"
                         r.size >= BibleRepository.MAX_RESULTS -> "Showing the first ${r.size} verses"
-                        else -> "${r.size} verse" + if (r.size == 1) "" else "s"
+                        else -> "${r.size} verse" + (if (r.size == 1) "" else "s") + " in ${byBook.size} book" + if (byBook.size == 1) "" else "s"
                     },
                     style = MaterialTheme.typography.titleSmall,
                     modifier = Modifier.padding(top = 12.dp, bottom = 4.dp),
                 )
+                if (byBook.size > 1) {
+                    Row(
+                        Modifier.horizontalScroll(rememberScrollState()).padding(bottom = 4.dp),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        FilterChip(selected = onlyBook == null, onClick = { onlyBook = null }, label = { Text("All books") })
+                        for ((b, hits) in byBook) {
+                            FilterChip(
+                                selected = onlyBook == b,
+                                onClick = { onlyBook = if (onlyBook == b) null else b },
+                                label = { Text("${vm.bible.book(b).name} ${hits.size}") },
+                            )
+                        }
+                    }
+                }
                 val matchStyle = SpanStyle(fontWeight = FontWeight.Bold, background = Color(0x55FFE600))
                 LazyColumn(Modifier.weight(1f)) {
-                    items(r) { hit ->
-                        Column(
-                            Modifier
-                                .fillMaxWidth()
-                                .clickable { vm.goTo(panelIndex, hit.book, hit.chapter, hit.verse); onDismiss() }
-                                .padding(vertical = 8.dp)
-                        ) {
+                    for ((b, hits) in byBook) {
+                        if (onlyBook != null && onlyBook != b) continue
+                        item(key = "book$b") {
                             Text(
-                                vm.refLabel(VerseId.of(hit.book, hit.chapter, hit.verse)),
-                                style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary,
+                                "${vm.bible.book(b).name} \u2014 ${hits.size}",
+                                style = MaterialTheme.typography.titleSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainerHigh)
+                                    .padding(horizontal = 8.dp, vertical = 6.dp),
                             )
-                            Text(markTerms(hit.text, searchedTerms, matchStyle))
                         }
-                        HorizontalDivider()
+                        items(hits, key = { "${it.book}.${it.chapter}.${it.verse}" }) { hit ->
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Column(
+                                    Modifier
+                                        .weight(1f)
+                                        .clickable { vm.goTo(panelIndex, hit.book, hit.chapter, hit.verse); onDismiss() }
+                                        .padding(vertical = 8.dp)
+                                ) {
+                                    Text(
+                                        vm.refLabel(VerseId.of(hit.book, hit.chapter, hit.verse)),
+                                        style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary,
+                                    )
+                                    Text(markTerms(hit.text, searchedTerms, matchStyle))
+                                }
+                                // Open in the side panel, keeping this passage where it is.
+                                IconButton(onClick = {
+                                    vm.openPassage(Passage(hit.book, hit.chapter, hit.verse, hit.chapter, hit.verse), panelIndex, beside = true)
+                                    onDismiss()
+                                }) { Icon(Icons.Filled.VerticalSplit, contentDescription = "Open beside") }
+                            }
+                            HorizontalDivider()
+                        }
                     }
                 }
             }
@@ -448,8 +497,14 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
     val id = VerseId.of(t.book, t.chapter, t.verse)
     val version = vm.activeVersion
     val verseText = remember(t, version) { vm.text(version).verseText(id) ?: vm.bible.verseText(id) ?: "" }
-    val original = remember(t) { vm.user.note(t.book, t.chapter, t.verse) ?: "" }
+    // The note on this verse, or on a range of verses that includes it (NOTE-1).
+    val existing = remember(t) { vm.user.noteCovering(t.book, t.chapter, t.verse) }
+    val noteStart = existing?.verse ?: t.verse
+    val original = existing?.text ?: ""
+    val originalEnd = existing?.endVerse ?: t.verse
     var note by remember(t) { mutableStateOf(original) }
+    var noteEnd by remember(t) { mutableStateOf(originalEnd) }
+    val lastVerse = remember(t) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: t.verse }
     val refs by produceState(emptyList<CrossRef>(), t) {
         value = withContext(Dispatchers.IO) {
             // Previews in the version being read (the cross-reference list itself is shared).
@@ -460,8 +515,12 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     val otherPanel = if (vm.panels.size > 1) 1 - panelIndex else null
 
+    fun save() {
+        if (note != original || noteEnd != originalEnd) vm.setNote(VerseTarget(t.book, t.chapter, noteStart), note, noteEnd)
+    }
+
     fun close() {
-        if (note != original) vm.setNote(t, note)
+        save()
         onDismiss()
     }
 
@@ -475,7 +534,7 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                         val text = remember(t, v) { vm.text(v.code).verseText(id) }
                         Column(
                             Modifier.fillMaxWidth().clickable {
-                                if (note != original) vm.setNote(t, note)
+                                save()
                                 vm.setVersion(panelIndex, v.code)
                                 vm.goTo(panelIndex, t.book, t.chapter, t.verse, remember = false)
                                 onDismiss()
@@ -523,6 +582,18 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                 maxLines = 5,
                 modifier = Modifier.fillMaxWidth(),
             )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    "Note on " + vm.refLabel(VerseId.of(t.book, t.chapter, noteStart), VerseId.of(t.book, t.chapter, noteEnd)),
+                    style = MaterialTheme.typography.labelLarge,
+                )
+                IconButton(onClick = { noteEnd-- }, enabled = noteEnd > noteStart) {
+                    Icon(Icons.Filled.Remove, contentDescription = "Note on one verse fewer")
+                }
+                IconButton(onClick = { noteEnd++ }, enabled = noteEnd < lastVerse) {
+                    Icon(Icons.Filled.Add, contentDescription = "Note on one more verse")
+                }
+            }
             // References typed in the note, as links to their passages (LINK-4).
             val noteLinks = remember(note) { RefLinks.find(note, vm.bible.books) }
             var notePassage by remember(t) { mutableStateOf<Passage?>(null) }
@@ -546,8 +617,8 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                 Popup(alignment = Alignment.Center, onDismissRequest = { notePassage = null }, properties = PopupProperties(focusable = true)) {
                     PassageCard(
                         vm, p, version,
-                        onGoTo = { if (note != original) vm.setNote(t, note); vm.openPassage(p, panelIndex, beside = false); onDismiss() },
-                        onOpenBeside = { if (note != original) vm.setNote(t, note); vm.openPassage(p, panelIndex, beside = true); onDismiss() },
+                        onGoTo = { save(); vm.openPassage(p, panelIndex, beside = false); onDismiss() },
+                        onOpenBeside = { save(); vm.openPassage(p, panelIndex, beside = true); onDismiss() },
                         onClose = { notePassage = null },
                     )
                 }
@@ -565,7 +636,7 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                             Modifier
                                 .weight(1f)
                                 .clickable {
-                                    if (note != original) vm.setNote(t, note)
+                                    save()
                                     vm.goTo(panelIndex, b, c, v); onDismiss()
                                 }
                                 .padding(vertical = 8.dp)
@@ -700,29 +771,130 @@ fun BookmarksDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             }
             Spacer(Modifier.height(8.dp))
             if (tab == 0) {
-                if (vm.bookmarks.isEmpty()) {
-                    Text("No bookmarks yet. Tap a verse with your finger, then tap Bookmark.")
-                }
-                LazyColumn(Modifier.weight(1f)) {
-                    items(vm.bookmarks.toList(), key = { it.id }) { b ->
-                        val id = VerseId.of(b.book, b.chapter, b.verse)
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Column(
-                                Modifier.weight(1f).clickable { vm.goTo(panelIndex, b.book, b.chapter, b.verse); onDismiss() }
-                                    .padding(vertical = 8.dp)
-                            ) {
-                                Text(vm.refLabel(id), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                                Text(vm.text(vm.activeVersion).verseText(id) ?: "", maxLines = 2, overflow = TextOverflow.Ellipsis)
-                            }
-                            IconButton(onClick = { vm.deleteBookmark(b) }) { Icon(Icons.Filled.Delete, contentDescription = "Remove bookmark") }
-                        }
-                        HorizontalDivider()
-                    }
-                }
+                BookmarksList(vm, panelIndex, onDismiss, Modifier.weight(1f))
             } else {
                 HighlightsList(vm, panelIndex, onDismiss, Modifier.weight(1f))
             }
         }
+    }
+}
+
+/** Bookmarks, newest first, filtered by folder (NOTE-3). */
+@Composable
+private fun BookmarksList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
+    // null = all bookmarks, "" = not in a folder
+    var folder by remember { mutableStateOf<String?>(null) }
+    // Asking for a folder name: to make a new folder (and move [naming] into it), or to rename one.
+    var naming by remember { mutableStateOf<Bookmark?>(null) }
+    var askName by remember { mutableStateOf(false) }
+    var renaming by remember { mutableStateOf<String?>(null) }
+    val folders = vm.allBookmarkFolders()
+
+    Column(modifier) {
+        Row(
+            Modifier.horizontalScroll(rememberScrollState()),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            FilterChip(selected = folder == null, onClick = { folder = null }, label = { Text("All (${vm.bookmarks.size})") })
+            if (folders.isNotEmpty()) {
+                val loose = vm.bookmarks.count { it.folder.isEmpty() }
+                FilterChip(selected = folder == "", onClick = { folder = "" }, label = { Text("Not in a folder ($loose)") })
+            }
+            for (f in folders) {
+                FilterChip(
+                    selected = folder == f,
+                    onClick = { folder = f },
+                    label = { Text("$f (${vm.bookmarks.count { it.folder == f }})") },
+                    leadingIcon = { Icon(Icons.Filled.Folder, contentDescription = null, modifier = Modifier.size(16.dp)) },
+                )
+            }
+            TextButton(onClick = { naming = null; askName = true }) {
+                Icon(Icons.Filled.CreateNewFolder, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.width(4.dp))
+                Text("New folder")
+            }
+        }
+        val f = folder
+        if (f != null && f.isNotEmpty()) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                TextButton(onClick = { renaming = f }) { Text("Rename folder") }
+                TextButton(onClick = { vm.deleteBookmarkFolder(f); folder = null }) { Text("Delete folder") }
+            }
+        }
+        val shown = vm.bookmarks.filter { f == null || it.folder == f }
+        if (shown.isEmpty()) {
+            Text(
+                if (vm.bookmarks.isEmpty()) "No bookmarks yet. Tap a verse with your finger, then tap Bookmark."
+                else "No bookmarks in this folder. Use the folder button on a bookmark to move it here.",
+                modifier = Modifier.padding(vertical = 8.dp),
+            )
+        }
+        LazyColumn(Modifier.weight(1f)) {
+            items(shown, key = { it.id }) { b ->
+                val id = VerseId.of(b.book, b.chapter, b.verse)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Column(
+                        Modifier.weight(1f).clickable { vm.goTo(panelIndex, b.book, b.chapter, b.verse); onDismiss() }
+                            .padding(vertical = 8.dp)
+                    ) {
+                        Text(
+                            vm.refLabel(id) + if (b.folder.isNotEmpty() && f == null) "  \u00b7  ${b.folder}" else "",
+                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.primary,
+                        )
+                        Text(vm.text(vm.activeVersion).verseText(id) ?: "", maxLines = 2, overflow = TextOverflow.Ellipsis)
+                    }
+                    var menu by remember { mutableStateOf(false) }
+                    Box {
+                        IconButton(onClick = { menu = true }) { Icon(Icons.Filled.DriveFileMove, contentDescription = "Move to folder") }
+                        DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                            DropdownMenuItem(
+                                text = { Text("Not in a folder" + if (b.folder.isEmpty()) "  \u2713" else "") },
+                                onClick = { vm.moveBookmark(b, ""); menu = false },
+                            )
+                            for (name in folders) {
+                                DropdownMenuItem(
+                                    text = { Text(name + if (b.folder == name) "  \u2713" else "") },
+                                    onClick = { vm.moveBookmark(b, name); menu = false },
+                                )
+                            }
+                            DropdownMenuItem(text = { Text("New folder\u2026") }, onClick = { menu = false; naming = b; askName = true })
+                        }
+                    }
+                    IconButton(onClick = { vm.deleteBookmark(b) }) { Icon(Icons.Filled.Delete, contentDescription = "Remove bookmark") }
+                }
+                HorizontalDivider()
+            }
+        }
+    }
+
+    if (askName || renaming != null) {
+        var name by remember { mutableStateOf(renaming ?: "") }
+        fun done() {
+            val r = renaming
+            if (r != null) {
+                vm.renameBookmarkFolder(r, name)
+                if (folder == r) folder = name.trim().ifEmpty { r }
+            } else {
+                vm.addBookmarkFolder(name)?.let { n -> naming?.let { vm.moveBookmark(it, n) } }
+            }
+            askName = false; renaming = null; naming = null
+        }
+        AlertDialog(
+            onDismissRequest = { askName = false; renaming = null; naming = null },
+            title = { Text(if (renaming != null) "Rename folder" else "New folder") },
+            text = {
+                OutlinedTextField(
+                    value = name, onValueChange = { name = it }, singleLine = true,
+                    placeholder = { Text("e.g. Sermon series, Promises") },
+                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                    keyboardActions = KeyboardActions(onDone = { done() }),
+                )
+            },
+            confirmButton = { TextButton(onClick = ::done, enabled = name.isNotBlank()) { Text("Save") } },
+            dismissButton = { TextButton(onClick = { askName = false; renaming = null; naming = null }) { Text("Cancel") } },
+        )
     }
 }
 

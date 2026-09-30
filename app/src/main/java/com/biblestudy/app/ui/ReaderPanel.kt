@@ -546,8 +546,14 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     }
 
     // Verse markers: typed note (dot) and bookmark (ribbon)
-    for (v in notes.keys) {
-        drawCircle(Color(0xFFA07B45), radius = 6f, center = Offset(g.textLeft - 24f, layout.verseTop(v) + 22f))
+    for (n in notes.values) {
+        val top = layout.verseTop(n.verse) + 22f
+        drawCircle(NOTE_COLOR, radius = 6f, center = Offset(g.textLeft - 24f, top))
+        if (n.endVerse > n.verse) {
+            // A note on several verses: a line down beside them (NOTE-1).
+            val bottom = layout.verseSpan(n.endVerse).second - 10f
+            drawLine(NOTE_COLOR, Offset(g.textLeft - 24f, top), Offset(g.textLeft - 24f, bottom), strokeWidth = 3f)
+        }
     }
     for (b in vm.bookmarks) {
         if (b.book == layout.book && b.chapter == layout.chapter) {
@@ -613,6 +619,7 @@ private fun strokeColor(c: Int, highlighter: Boolean) =
     Color(c).let { if (highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
 
 private val SELECT_BLUE = Color(0xFF1E88E5)
+private val NOTE_COLOR = Color(0xFFA07B45)
 private const val TEXT_SEL_ID = Long.MIN_VALUE
 
 /** The stroke or lasso in progress, selection outlines and margin grips. */

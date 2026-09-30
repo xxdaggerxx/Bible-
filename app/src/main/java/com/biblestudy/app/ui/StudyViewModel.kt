@@ -37,6 +37,7 @@ import com.biblestudy.app.model.Layer
 import com.biblestudy.app.model.MarginImage
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SideButton
+import com.biblestudy.app.model.TypedNote
 import com.biblestudy.app.model.Tool
 import com.biblestudy.app.model.VerseId
 import com.biblestudy.app.model.VerseTarget
@@ -205,7 +206,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private val highlights = HashMap<String, SnapshotStateList<Highlight>>()
     private val marginStrokes = HashMap<String, SnapshotStateList<InkStroke>>()
     private val images = HashMap<String, SnapshotStateList<MarginImage>>()
-    private val notes = HashMap<String, SnapshotStateMap<Int, String>>()
+    private val notes = HashMap<String, SnapshotStateMap<Int, TypedNote>>()
     private val loaded = HashSet<String>()
     private val renders = HashMap<Long, StrokeRender>()
     val bitmaps = mutableStateMapOf<String, ImageBitmap>()
@@ -463,7 +464,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun imagesFor(book: Int, chapter: Int) = images.getOrPut(mk(book, chapter)) { mutableStateListOf() }
 
-    fun notesFor(book: Int, chapter: Int): SnapshotStateMap<Int, String> {
+    /** Typed notes in a chapter, by the verse each starts on. */
+    fun notesFor(book: Int, chapter: Int): SnapshotStateMap<Int, TypedNote> {
         val key = mk(book, chapter)
         val map = notes.getOrPut(key) { mutableStateMapOf() }
         if (loaded.add("n$key")) {
@@ -922,10 +924,57 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     // ---------- notes & bookmarks ----------
 
-    fun setNote(t: VerseTarget, text: String) {
+    /** Saves a typed note on verses [t]..[endVerse] of one chapter (NOTE-1); blank text deletes it. */
+    fun setNote(t: VerseTarget, text: String, endVerse: Int = t.verse) {
         val map = notesFor(t.book, t.chapter)
-        if (text.isBlank()) map.remove(t.verse) else map[t.verse] = text
-        io { user.setNote(t.book, t.chapter, t.verse, text) }
+        if (text.isBlank()) map.remove(t.verse) else map[t.verse] = TypedNote(t.verse, maxOf(t.verse, endVerse), text)
+        io { user.setNote(t.book, t.chapter, t.verse, text, endVerse) }
+    }
+
+    // ---------- bookmark folders (NOTE-3) ----------
+
+    /** Folder names, including empty folders the user has made. */
+    val bookmarkFolders = mutableStateListOf<String>().apply {
+        addAll(prefs.getStringSet("bmFolders", emptySet())!!.sorted())
+    }
+
+    private fun saveFolders() {
+        prefs.edit { putStringSet("bmFolders", bookmarkFolders.toSet()) }
+    }
+
+    /** Every folder: the ones made here plus any that bookmarks are in (e.g. after a restore). */
+    fun allBookmarkFolders(): List<String> =
+        (bookmarkFolders + bookmarks.map { it.folder }.filter { it.isNotEmpty() }).distinct().sortedBy { it.lowercase() }
+
+    fun addBookmarkFolder(name: String): String? {
+        val n = name.trim()
+        if (n.isEmpty()) return null
+        if (n !in bookmarkFolders) {
+            bookmarkFolders.add(n); bookmarkFolders.sort(); saveFolders()
+        }
+        return n
+    }
+
+    fun moveBookmark(b: Bookmark, folder: String) {
+        val i = bookmarks.indexOfFirst { it.id == b.id }
+        if (i < 0) return
+        val moved = bookmarks[i].copy(folder = folder)
+        bookmarks[i] = moved
+        if (folder.isNotEmpty()) addBookmarkFolder(folder)
+        io { user.addBookmark(moved) }
+    }
+
+    fun renameBookmarkFolder(old: String, new: String) {
+        val n = new.trim()
+        if (n.isEmpty() || n == old) return
+        bookmarks.filter { it.folder == old }.forEach { moveBookmark(it, n) }
+        bookmarkFolders.remove(old); addBookmarkFolder(n); saveFolders()
+    }
+
+    /** Deletes a folder; its bookmarks are kept, outside any folder. */
+    fun deleteBookmarkFolder(name: String) {
+        bookmarks.filter { it.folder == name }.forEach { moveBookmark(it, "") }
+        bookmarkFolders.remove(name); saveFolders()
     }
 
     fun isBookmarked(t: VerseTarget) = bookmarks.any { it.book == t.book && it.chapter == t.chapter && it.verse == t.verse }

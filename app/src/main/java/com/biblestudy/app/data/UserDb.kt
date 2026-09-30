@@ -13,6 +13,7 @@ import com.biblestudy.app.model.Layer
 import com.biblestudy.app.model.MarginImage
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SearchHit
+import com.biblestudy.app.model.TypedNote
 import com.biblestudy.app.model.VerseId
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
@@ -21,7 +22,7 @@ import java.nio.ByteOrder
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
+class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
@@ -49,11 +50,12 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
         db.execSQL("CREATE INDEX images_bc ON images(book, chapter)")
         db.execSQL(
             "CREATE TABLE notes(book INTEGER NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, " +
-                "text TEXT NOT NULL, updated INTEGER NOT NULL, PRIMARY KEY(book, chapter, verse))"
+                "text TEXT NOT NULL, updated INTEGER NOT NULL, end_verse INTEGER NOT NULL DEFAULT 0, " +
+                "PRIMARY KEY(book, chapter, verse))"
         )
         db.execSQL(
             "CREATE TABLE bookmarks(id INTEGER PRIMARY KEY, book INTEGER NOT NULL, chapter INTEGER NOT NULL, " +
-                "verse INTEGER NOT NULL, created INTEGER NOT NULL)"
+                "verse INTEGER NOT NULL, created INTEGER NOT NULL, folder TEXT NOT NULL DEFAULT '')"
         )
         db.execSQL("INSERT INTO layers VALUES(1, 'My Notes', ${DEFAULT_LAYER_COLOR}, 1, 0, 0)")
     }
@@ -63,6 +65,12 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
             // 0.4: ink on the words is stored in line coordinates (coords = 1). Older strokes keep
             // page coordinates (coords = 0) until the app converts them on first load.
             db.execSQL("ALTER TABLE strokes ADD COLUMN coords INTEGER NOT NULL DEFAULT 0")
+        }
+        if (oldVersion < 3) {
+            // 0.6: notes can cover a range of verses (NOTE-1; 0 = just the one verse) and
+            // bookmarks can be put in folders (NOTE-3).
+            db.execSQL("ALTER TABLE notes ADD COLUMN end_verse INTEGER NOT NULL DEFAULT 0")
+            db.execSQL("ALTER TABLE bookmarks ADD COLUMN folder TEXT NOT NULL DEFAULT ''")
         }
     }
 
@@ -222,17 +230,30 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
 
     /** Verse ids that have a typed note. */
     fun notedVerses(): Set<Int> =
-        readableDatabase.rawQuery("SELECT book, chapter, verse FROM notes", null).use { c ->
-            buildSet { while (c.moveToNext()) add(VerseId.of(c.getInt(0), c.getInt(1), c.getInt(2))) }
+        readableDatabase.rawQuery("SELECT book, chapter, verse, end_verse FROM notes", null).use { c ->
+            buildSet {
+                while (c.moveToNext()) {
+                    val v = c.getInt(2)
+                    for (x in v..maxOf(v, c.getInt(3))) add(VerseId.of(c.getInt(0), c.getInt(1), x))
+                }
+            }
         }
 
     // ---------- notes & bookmarks ----------
 
-    fun notes(book: Int, chapter: Int): Map<Int, String> =
+    fun notes(book: Int, chapter: Int): Map<Int, TypedNote> =
         readableDatabase.rawQuery(
-            "SELECT verse, text FROM notes WHERE book = ? AND chapter = ?",
+            "SELECT verse, end_verse, text FROM notes WHERE book = ? AND chapter = ?",
             arrayOf(book.toString(), chapter.toString()),
-        ).use { c -> buildMap { while (c.moveToNext()) put(c.getInt(0), c.getString(1)) } }
+        ).use { c -> buildMap { while (c.moveToNext()) put(c.getInt(0), c.toNote()) } }
+
+    /** The note on [verse], or on a range of verses that includes it (NOTE-1). */
+    fun noteCovering(book: Int, chapter: Int, verse: Int): TypedNote? =
+        readableDatabase.rawQuery(
+            "SELECT verse, end_verse, text FROM notes WHERE book = ? AND chapter = ? AND verse <= ? " +
+                "AND MAX(verse, end_verse) >= CAST(? AS INTEGER) ORDER BY verse DESC LIMIT 1",
+            arrayOf(book.toString(), chapter.toString(), verse.toString(), verse.toString()),
+        ).use { c -> if (c.moveToFirst()) c.toNote() else null }
 
     /** Typed notes containing every word of [query] (SRCH-6), in Bible order. */
     fun searchNotes(query: String, lo: Int, hi: Int): List<SearchHit> {
@@ -253,7 +274,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
             arrayOf(book.toString(), chapter.toString(), verse.toString()),
         ).use { c -> if (c.moveToFirst()) c.getString(0) else null }
 
-    fun setNote(book: Int, chapter: Int, verse: Int, text: String) {
+    fun setNote(book: Int, chapter: Int, verse: Int, text: String, endVerse: Int = verse) {
         val db = writableDatabase
         if (text.isBlank()) {
             db.delete("notes", "book = ? AND chapter = ? AND verse = ?", arrayOf(book.toString(), chapter.toString(), verse.toString()))
@@ -261,19 +282,22 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
             db.insertWithOnConflict("notes", null, ContentValues().apply {
                 put("book", book); put("chapter", chapter); put("verse", verse)
                 put("text", text); put("updated", System.currentTimeMillis())
+                put("end_verse", if (endVerse > verse) endVerse else 0)
             }, SQLiteDatabase.CONFLICT_REPLACE)
         }
     }
 
     fun bookmarks(): List<Bookmark> =
-        readableDatabase.rawQuery("SELECT id, book, chapter, verse, created FROM bookmarks ORDER BY created DESC", null)
+        readableDatabase.rawQuery("SELECT id, book, chapter, verse, created, folder FROM bookmarks ORDER BY created DESC", null)
             .use { c ->
-                buildList { while (c.moveToNext()) add(Bookmark(c.getLong(0), c.getInt(1), c.getInt(2), c.getInt(3), c.getLong(4))) }
+                buildList {
+                    while (c.moveToNext()) add(Bookmark(c.getLong(0), c.getInt(1), c.getInt(2), c.getInt(3), c.getLong(4), c.getString(5)))
+                }
             }
 
     fun addBookmark(b: Bookmark) {
         writableDatabase.insertWithOnConflict("bookmarks", null, ContentValues().apply {
-            put("id", b.id); put("book", b.book); put("chapter", b.chapter); put("verse", b.verse); put("created", b.created)
+            put("id", b.id); put("book", b.book); put("chapter", b.chapter); put("verse", b.verse); put("created", b.created); put("folder", b.folder)
         }, SQLiteDatabase.CONFLICT_REPLACE)
     }
 
@@ -291,6 +315,11 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
         const val DEFAULT_LAYER_COLOR = 0xFF7A5C2E.toInt()
         private const val STROKE_COLS =
             "id, layer_id, version, book, chapter, region, verse, highlighter, color, width, points, coords"
+
+        private fun Cursor.toNote(): TypedNote {
+            val v = getInt(0)
+            return TypedNote(v, maxOf(v, getInt(1)), getString(2))
+        }
 
         private fun Cursor.toHighlight() =
             Highlight(getLong(0), getLong(1), getString(2), getInt(3), getInt(4), getInt(5), getInt(6), getInt(7))

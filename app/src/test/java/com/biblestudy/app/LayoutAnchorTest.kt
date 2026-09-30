@@ -81,6 +81,44 @@ class LayoutAnchorTest {
         assertFalse(others[0].isOnText(others[0].charCenter(0).y - 40f))
     }
 
+    private fun createNotesAndBookmarks(db: SQLiteDatabase) {
+        db.execSQL(
+            "CREATE TABLE notes(book INTEGER NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, " +
+                "text TEXT NOT NULL, updated INTEGER NOT NULL, PRIMARY KEY(book, chapter, verse))"
+        )
+        db.execSQL(
+            "CREATE TABLE bookmarks(id INTEGER PRIMARY KEY, book INTEGER NOT NULL, chapter INTEGER NOT NULL, " +
+                "verse INTEGER NOT NULL, created INTEGER NOT NULL)"
+        )
+    }
+
+    @Test
+    fun notesAndBookmarksFrom05SurviveTheUpgrade() {
+        // A database from 0.5 (schema version 2): notes are single verses, bookmarks have no folders.
+        val file = app.getDatabasePath(UserDb.NAME)
+        file.parentFile?.mkdirs()
+        file.delete()
+        SQLiteDatabase.openOrCreateDatabase(file, null).use { db ->
+            createNotesAndBookmarks(db)
+            db.execSQL("INSERT INTO notes VALUES(43, 3, 16, 'For God so loved', 1)")
+            db.execSQL("INSERT INTO bookmarks VALUES(7, 19, 23, 1, 2)")
+            db.version = 2
+        }
+        val user = UserDb(app)
+        val n = user.noteCovering(43, 3, 16)!!
+        assertEquals("For God so loved", n.text)
+        assertEquals(16, n.endVerse)
+        assertEquals(null, user.noteCovering(43, 3, 17))
+        val b = user.bookmarks().single()
+        assertEquals(7L, b.id)
+        assertEquals("", b.folder)
+        user.setNote(43, 3, 16, "For God so loved", endVerse = 18)
+        assertEquals(16, user.noteCovering(43, 3, 18)!!.verse)
+        user.addBookmark(b.copy(folder = "Psalms"))
+        assertEquals("Psalms", user.bookmarks().single().folder)
+        user.close()
+    }
+
     @Test
     fun inkSavedBefore04IsMarkedForConversion() {
         // A database from 0.3 (schema version 1): strokes have no coords column.
@@ -97,6 +135,7 @@ class LayoutAnchorTest {
                 "CREATE TABLE highlights(id INTEGER PRIMARY KEY, layer_id INTEGER, version TEXT, book INTEGER, chapter INTEGER, " +
                     "start_off INTEGER, end_off INTEGER, color INTEGER)"
             )
+            createNotesAndBookmarks(db)
             db.insert("strokes", null, ContentValues().apply {
                 put("id", 1); put("layer_id", 1); put("version", "KJV"); put("book", 43); put("chapter", 1)
                 put("region", 0); put("verse", 1); put("highlighter", 0); put("color", 0); put("width", 3f)

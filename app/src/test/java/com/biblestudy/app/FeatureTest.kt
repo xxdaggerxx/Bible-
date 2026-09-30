@@ -12,6 +12,8 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performImeAction
+import com.biblestudy.app.model.VerseTarget
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.doubleClick
@@ -636,5 +638,78 @@ class FeatureTest {
         // The chapter header opens the current book's introduction.
         compose.onNodeWithContentDescription("About this book").performClick()
         compose.onNodeWithText("About Romans").assertExists()
+    }
+
+    @Test
+    fun searchLeavesOutMinusWordsAndGroupsByBook() {
+        val all = vm.text("KJV").search("loved", SearchScope.ALL, 43)
+        val without = vm.text("KJV").search("loved -world", SearchScope.ALL, 43)
+        assertTrue(without.isNotEmpty() && without.size < all.size)
+        assertTrue(without.none { it.text.contains("world", ignoreCase = true) })
+
+        compose.onNodeWithContentDescription("Search").performScrollTo().performClick()
+        compose.onNodeWithText("Words", substring = true).performTextInput("loved -world")
+        compose.onNodeWithText("Words", substring = true).performImeAction()
+        compose.waitUntil(5_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("John 3:16").assertDoesNotExist() // "the world" is left out
+        snap("45-search-grouped")
+        compose.onNodeWithText("Genesis \u2014 8").assertExists()
+        // A book chip shows just that book.
+        compose.onNodeWithText("Deuteronomy 4").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithText("Deuteronomy \u2014 4").assertExists()
+        compose.onNodeWithText("Genesis \u2014 8").assertDoesNotExist()
+    }
+
+    @Test
+    fun aNoteCanCoverSeveralVerses() {
+        compose.runOnUiThread { vm.setNote(VerseTarget(43, 3, 16), "") }
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.onNodeWithText("Typed note", substring = true).performTextInput("God's love for the world")
+        compose.onNodeWithContentDescription("Note on one more verse").performClick()
+        compose.onNodeWithContentDescription("Note on one more verse").performClick()
+        compose.onNodeWithText("Note on John 3:16\u201318").assertExists()
+        snap("46-range-note")
+        compose.onNodeWithContentDescription("Close").performClick()
+        compose.waitForIdle()
+        compose.waitUntil(5_000) { vm.user.noteCovering(43, 3, 17) != null }
+        val n = vm.user.noteCovering(43, 3, 18)!!
+        assertEquals(16, n.verse)
+        assertEquals(18, n.endVerse)
+        assertEquals(18, vm.notesFor(43, 3)[16]!!.endVerse)
+
+        // Tapping a verse inside the range opens the same note.
+        compose.runOnUiThread { vm.openVerse(43, 3, 17) }
+        compose.onNodeWithText("God's love for the world").assertExists()
+        compose.onNodeWithContentDescription("Close").performClick()
+        compose.runOnUiThread { vm.setNote(VerseTarget(43, 3, 16), "") }
+        compose.waitForIdle()
+    }
+
+    @Test
+    fun bookmarksCanBePutInFolders() {
+        compose.runOnUiThread {
+            vm.bookmarks.toList().forEach { vm.deleteBookmark(it) }
+            vm.bookmarkFolders.toList().forEach { vm.deleteBookmarkFolder(it) }
+            vm.toggleBookmark(VerseTarget(43, 3, 16))
+            vm.toggleBookmark(VerseTarget(19, 23, 1))
+        }
+        compose.onNodeWithContentDescription("Bookmarks").performScrollTo().performClick()
+        compose.onAllNodesWithContentDescription("Move to folder")[0].performClick()
+        compose.onNodeWithText("New folder\u2026").performClick()
+        compose.onNodeWithText("e.g. Sermon series, Promises").performTextInput("Psalms of trust")
+        compose.onNodeWithText("Save").performClick()
+        compose.waitForIdle()
+        assertEquals("Psalms of trust", vm.bookmarks.first { it.book == 19 }.folder)
+        compose.onNodeWithText("Psalms of trust (1)").performClick()
+        compose.onNodeWithText("Psalms 23:1", substring = true).assertExists()
+        compose.onNodeWithText("John 3:16", substring = true).assertDoesNotExist()
+        snap("47-bookmark-folders")
+        // Deleting the folder keeps its bookmarks.
+        compose.onNodeWithText("Delete folder").performClick()
+        compose.waitForIdle()
+        assertEquals(2, vm.bookmarks.size)
+        assertTrue(vm.bookmarks.all { it.folder.isEmpty() })
+        compose.runOnUiThread { vm.bookmarks.toList().forEach { vm.deleteBookmark(it) } }
     }
 }

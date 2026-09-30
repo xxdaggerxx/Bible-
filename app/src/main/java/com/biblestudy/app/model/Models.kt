@@ -141,7 +141,11 @@ data class SearchHit(val book: Int, val chapter: Int, val verse: Int, val text: 
 
 data class CrossRef(val toStart: Int, val toEnd: Int, val votes: Int, val preview: String)
 
-data class Bookmark(val id: Long, val book: Int, val chapter: Int, val verse: Int, val created: Long)
+/** A bookmarked verse; [folder] is "" for bookmarks not in a folder (NOTE-3). */
+data class Bookmark(val id: Long, val book: Int, val chapter: Int, val verse: Int, val created: Long, val folder: String = "")
+
+/** A typed note on verses [verse]..[endVerse] of a chapter (NOTE-1); a one-verse note has endVerse == verse. */
+data class TypedNote(val verse: Int, val endVerse: Int, val text: String)
 
 data class VerseTarget(val book: Int, val chapter: Int, val verse: Int)
 
