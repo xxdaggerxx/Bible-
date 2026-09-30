@@ -35,6 +35,8 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Link
+import androidx.compose.material.icons.filled.LinkOff
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -54,6 +56,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
@@ -184,15 +187,28 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             ctl.lastPageW = g.width
             ctl.lastViewW = panel.viewW
         }
+        var jumped = false
         if (panel.navGen != ctl.lastNavGen) {
             panel.panY = 0f
             ctl.lastNavGen = panel.navGen
+            jumped = true
         }
         panel.pendingVerse?.let { v ->
             ctl.scrollToVerse(v)
             panel.pendingVerse = null
+            jumped = true
         }
         ctl.clamp()
+        ctl.pendingFollow?.let { ctl.follow(it) }
+        if (jumped) ctl.announceScroll() // a linked panel jumps along
+    }
+
+    // Linked split view: follow the other panel, and bring it along when linking is switched on.
+    LaunchedEffect(ctl) {
+        snapshotFlow { vm.linkPos }.collect { pos -> if (pos != null && vm.linked) ctl.follow(pos) }
+    }
+    LaunchedEffect(vm.linkPanels, vm.panels.size) {
+        if (vm.linked && vm.activePanel == index) ctl.announceScroll()
     }
 
     // The tablet's Back gesture steps back through this panel's history when it is the active one.
@@ -295,6 +311,13 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
         Spacer(Modifier.weight(1f))
         TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
         if (vm.panels.size > 1) {
+            IconButton(onClick = { vm.activePanel = index; vm.linkPanels = !vm.linkPanels }) {
+                Icon(
+                    if (vm.linkPanels) Icons.Filled.Link else Icons.Filled.LinkOff,
+                    contentDescription = if (vm.linkPanels) "Unlink panels" else "Link panels",
+                    tint = if (vm.linkPanels) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
+                )
+            }
             IconButton(onClick = { vm.closePanel(index) }) {
                 Icon(Icons.Filled.Close, contentDescription = "Close panel")
             }

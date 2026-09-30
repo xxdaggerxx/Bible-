@@ -82,6 +82,13 @@ class PanelState(book: Int, chapter: Int) {
     var lastZoomRel = 2f
 }
 
+/**
+ * Where a panel is scrolled to, for linked split view (SPLIT-3): the verse at the top of the view
+ * and how far into it ([frac] of the verse's height, negative above the first verse). Versions lay
+ * out differently, so linked panels match verses rather than pixels.
+ */
+data class ScrollPos(val source: Int, val book: Int, val chapter: Int, val verse: Int, val frac: Float)
+
 /** A spot to return to with Back / Forward. */
 data class Place(val book: Int, val chapter: Int, val verse: Int)
 
@@ -112,6 +119,16 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var snapHighlights by mutableStateOf(prefs.getBoolean("snap", true))
     var fingerDraw by mutableStateOf(prefs.getBoolean("fingerDraw", false))
     var showHeadings by mutableStateOf(prefs.getBoolean("headings", true))
+    /** Split panels scroll together (SPLIT-3). */
+    var linkPanels by mutableStateOf(prefs.getBoolean("linkPanels", false))
+    val linked: Boolean get() = linkPanels && panels.size > 1
+    /** The latest position announced by a linked panel; the other panel follows it. */
+    var linkPos by mutableStateOf<ScrollPos?>(null)
+        private set
+
+    fun announceScroll(pos: ScrollPos) {
+        if (linked) linkPos = pos
+    }
     /** Eraser removes only what it touches (INK-7), instead of whole strokes. */
     var partialEraser by mutableStateOf(prefs.getBoolean("partialEraser", false))
     var lineSpacing by mutableStateOf(
@@ -216,7 +233,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser)
+            putBoolean("partialEraser", partialEraser); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)

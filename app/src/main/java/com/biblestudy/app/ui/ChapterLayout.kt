@@ -237,6 +237,18 @@ class ChapterLayout(
         return verseTops[i]
     }
 
+    /**
+     * Page-y range a verse occupies: from its first line to the next verse's first line (so a
+     * heading above the next verse counts as part of this one). The last verse ends with the text.
+     */
+    fun verseSpan(verse: Int): Pair<Float, Float> {
+        if (verseTops.isEmpty()) return Page.TEXT_TOP to Page.TEXT_TOP + displayHeight
+        var i = 0
+        while (i + 1 < verseNumbers.size && verseNumbers[i + 1] <= verse) i++
+        val bottom = if (i + 1 < verseTops.size) verseTops[i + 1] else Page.TEXT_TOP + displayHeight
+        return verseTops[i] to maxOf(bottom, verseTops[i] + 1f)
+    }
+
     /** The verse whose first line starts at or above page y. */
     fun verseAtY(y: Float): Int {
         var result = verseNumbers.firstOrNull() ?: 1

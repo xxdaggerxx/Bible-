@@ -222,6 +222,52 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         panel.zoom = new
         if (zoomChange != 1f) panel.zoomRel[vm.orientationKey] = new / fit
         clamp()
+        announceScroll()
+    }
+
+    // ---------- linked panels ----------
+
+    /** Set while applying another panel's position, so this panel doesn't echo it back. */
+    private var following = false
+    /** A position to apply once this panel's chapter is laid out. */
+    var pendingFollow: ScrollPos? = null
+
+    /**
+     * Tells a linked panel which verse is at the top of this one, and how far into it. Only the
+     * active panel (the one being used) leads, so the two panels never pull each other back and forth.
+     */
+    fun announceScroll() {
+        if (!vm.linked || following || vm.activePanel != panelIndex) return
+        val topY = -panel.panY / panel.zoom
+        val page = pageAt(topY) ?: return
+        val layout = page.layout
+        val y = topY - page.top
+        val verse = layout.verseAtY(y)
+        val (top, bottom) = layout.verseSpan(verse)
+        vm.announceScroll(ScrollPos(panelIndex, layout.book, layout.chapter, verse, (y - top) / (bottom - top)))
+    }
+
+    /** Scrolls to the same verse (and point within it) as the linked panel. */
+    fun follow(pos: ScrollPos) {
+        if (pos.source == panelIndex) return
+        following = true
+        try {
+            if (panel.book != pos.book || panel.chapter != pos.chapter) {
+                panel.book = pos.book
+                panel.chapter = pos.chapter
+            }
+            val g = geo
+            if (g == null) {
+                pendingFollow = pos // chapter still loading
+                return
+            }
+            pendingFollow = null
+            val (top, bottom) = g.layout.verseSpan(pos.verse)
+            panel.panY = -(top + pos.frac * (bottom - top)) * panel.zoom
+            clamp()
+        } finally {
+            following = false
+        }
     }
 
     fun clamp() {

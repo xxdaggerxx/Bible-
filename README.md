@@ -1,4 +1,4 @@
-# Bible Study — version 0.4
+# Bible Study — version 0.5
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,14 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 0.5
+
+- **Linked split view.** In split view, tap the link button in either panel's header.
+  - Scrolling one panel keeps the other on the **same verse**, even when they show different versions whose lines wrap differently. When one panel scrolls into the next chapter, the other follows.
+  - Jumps (book picker, search, cross-references, bookmarks, Back/Forward) move both panels.
+  - Each panel keeps its own zoom.
+  - The panel you're using leads and the other follows. Tap the button again to unlink.
 
 ## New in version 0.4.1
 
@@ -170,7 +178,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 
 ## Next milestones
 
-- **0.5:** Split view: linked scrolling, parallel view of one verse in every version, panels for search results and notes, and up to three panels on large tablets. Also images from the camera, files or clipboard; a slide-over margin on narrow screens; bookmark folders; and notes on a range of verses.
+- **0.5 (in progress):** Split view: parallel view of one verse in every version, panels for search results and notes, and up to three panels on large tablets. Also images from the camera, files or clipboard; a slide-over margin on narrow screens; bookmark folders; and notes on a range of verses.
 - **0.6:** NIV and NLT (once permission is granted), Strong's word studies (the BSB data includes Strong's numbers), front-buffered (lowest-latency) ink, lasso resize, and sketch pages.
 
 ## Credits

@@ -26,6 +26,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
+import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -68,6 +69,8 @@ class FeatureTest {
             vm.fingerDraw = false
             vm.tool = Tool.PEN
             vm.clearSelection()
+            if (vm.panels.size > 1) vm.closePanel(1)
+            vm.linkPanels = false
             vm.setVersion(0, "KJV")
             vm.goTo(0, 43, 3, remember = false)
             vm.partialEraser = false
@@ -85,6 +88,20 @@ class FeatureTest {
             vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) }
         }
         compose.waitForIdle()
+    }
+
+    /**
+     * Finish each test with nothing loading in the background and a single panel, so the next test's
+     * app doesn't inherit half-finished work (which stalls it) or a split view.
+     */
+    @After
+    fun settle() {
+        waitForLoaded()
+        compose.runOnUiThread {
+            vm.linkPanels = false
+            if (vm.panels.size > 1) vm.closePanel(1)
+        }
+        waitForLoaded()
     }
 
     private fun readerSize() = compose.onNodeWithTag("reader0").fetchSemanticsNode().size
@@ -369,5 +386,45 @@ class FeatureTest {
             vm.setAllLayersVisible(true)
             vm.setNote(com.biblestudy.app.model.VerseTarget(19, 23, 1), "")
         }
+    }
+
+    @Test
+    fun linkedPanelsScrollTogetherByVerse() {
+        compose.runOnUiThread {
+            vm.toggleSplit()
+            vm.setVersion(1, "WEB")
+        }
+        waitForLoaded()
+        compose.onAllNodesWithContentDescription("Link panels")[0].performClick()
+        waitForLoaded()
+        assertTrue(vm.linked)
+
+        // Scroll the left (KJV) panel into John 4: the right (WEB) panel follows, verse for verse.
+        var swipes = 0
+        while (vm.panels[0].chapter == 3 && swipes < 40) {
+            compose.onNodeWithTag("reader0").performTouchInput { swipeUp(durationMillis = 300) }
+            compose.waitForIdle()
+            swipes++
+        }
+        waitForLoaded()
+        assertEquals(4, vm.panels[0].chapter)
+        assertEquals(4, vm.panels[1].chapter)
+        assertTrue(
+            "top verses ${vm.panels[0].topVerse} and ${vm.panels[1].topVerse}",
+            kotlin.math.abs(vm.panels[0].topVerse - vm.panels[1].topVerse) <= 1,
+        )
+        snap("17-linked-panels")
+
+        // A jump in one panel takes the other along (Psalm 119 is long enough to put verse 50 at the top).
+        compose.runOnUiThread { vm.goTo(0, 19, 119, 50) }
+        waitForLoaded()
+        assertEquals(19 to 119, vm.panels[1].book to vm.panels[1].chapter)
+        assertTrue("right panel at ${vm.panels[1].topVerse}", kotlin.math.abs(vm.panels[1].topVerse - 50) <= 1)
+
+        // Unlinked, the panels move independently.
+        compose.onAllNodesWithContentDescription("Unlink panels")[0].performClick()
+        compose.runOnUiThread { vm.goTo(0, 43, 1) }
+        waitForLoaded()
+        assertEquals(19 to 119, vm.panels[1].book to vm.panels[1].chapter)
     }
 }
