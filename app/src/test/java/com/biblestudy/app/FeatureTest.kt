@@ -71,8 +71,20 @@ class FeatureTest {
     val writes = object : org.junit.rules.TestWatcher() {
         val counts = java.util.concurrent.ConcurrentHashMap<String, Int>()
         var handle: androidx.compose.runtime.snapshots.ObserverHandle? = null
+        var flusher: androidx.compose.runtime.snapshots.ObserverHandle? = null
         override fun starting(d: org.junit.runner.Description) {
             counts.clear()
+            // Apply state changes made outside composition, as Compose's GlobalSnapshotManager does
+            // on a device. In a long Robolectric run that manager stops doing it after a few tests,
+            // leaving changes pending so Compose never reports idle.
+            val main = android.os.Handler(android.os.Looper.getMainLooper())
+            val posted = java.util.concurrent.atomic.AtomicBoolean(false)
+            flusher = androidx.compose.runtime.snapshots.Snapshot.registerGlobalWriteObserver {
+                if (posted.compareAndSet(false, true)) main.post {
+                    posted.set(false)
+                    androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications()
+                }
+            }
             handle = androidx.compose.runtime.snapshots.Snapshot.registerApplyObserver { changed, _ ->
                 for (c in changed) {
                     val k = c.toString().take(160)
@@ -134,9 +146,45 @@ class FeatureTest {
                     out.append("    event: $fields\n")
                 }
             }.onFailure { out.append("  scheduler: $it\n") }
+            runCatching {
+                // Compose roots created but never attached keep Compose "busy" forever.
+                fun fieldOf(o: Any, type: String): Any? {
+                    var c: Class<*>? = o.javaClass
+                    while (c != null) {
+                        for (f in c.declaredFields) {
+                            f.isAccessible = true
+                            val v = f.get(o) ?: continue
+                            if (v.javaClass.name.contains(type)) return v
+                        }
+                        c = c.superclass
+                    }
+                    return null
+                }
+                val env = fieldOf(compose, "AndroidComposeUiTestEnvironment")!!
+                val reg = fieldOf(env, "ComposeRootRegistry")!!
+                @Suppress("UNCHECKED_CAST")
+                val created = reg.javaClass.getMethod("getCreatedComposeRoots").invoke(reg) as Set<Any>
+                out.append("  created roots: ${created.size}\n")
+                val idling = fieldOf(env, "ComposeIdlingResource")
+                if (idling != null) {
+                    val idle = idling.javaClass.getMethod("isIdleNow").invoke(idling)
+                    val flags = idling.javaClass.declaredFields.filter { it.type == java.lang.Boolean.TYPE }
+                        .joinToString { f -> f.isAccessible = true; "${f.name}=${f.get(idling)}" }
+                    out.append("  idle=$idle $flags\n")
+                    val rec = fieldOf(idling, "Recomposer")
+                    if (rec != null) {
+                        out.append("  recomposer pendingWork=${rec.javaClass.getMethod("getHasPendingWork").invoke(rec)}\n")
+                    }
+                    out.append("  snapshot pending=${androidx.compose.runtime.snapshots.Snapshot.current.hasPendingChanges()}\n")
+                } else out.append("  no idling resource on env\n")
+                for (r in created) {
+                    val v = r as android.view.View
+                    out.append("    ${v.javaClass.simpleName} attached=${v.isAttachedToWindow} parent=${v.parent?.javaClass?.simpleName} ctx=${v.context.javaClass.simpleName}\n")
+                }
+            }.onFailure { out.append("  roots: $it\n") }
             File("build/state-writes.txt").appendText(out.toString())
         }
-        override fun finished(d: org.junit.runner.Description) { handle?.dispose() }
+        override fun finished(d: org.junit.runner.Description) { handle?.dispose(); flusher?.dispose() }
     }
 
     private val vm: StudyViewModel get() = ViewModelProvider(compose.activity)[StudyViewModel::class.java]
