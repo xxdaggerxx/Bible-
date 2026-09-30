@@ -12,6 +12,8 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import com.biblestudy.app.ui.PaneKind
+import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.performImeAction
 import com.biblestudy.app.model.VerseTarget
 import androidx.compose.ui.test.performScrollTo
@@ -85,12 +87,14 @@ class FeatureTest {
             vm.fingerDraw = false
             vm.tool = Tool.PEN
             vm.clearSelection()
-            if (vm.panels.size > 1) vm.closePanel(1)
+            while (vm.panels.size > 1) vm.closePanel(vm.panels.lastIndex)
             vm.linkPanels = false
             vm.setVersion(0, "KJV")
             vm.goTo(0, 43, 3, remember = false)
             vm.partialEraser = false
             vm.highlightsAllVersions = true
+            vm.sidePane = null
+            vm.paneVerse = null
             vm.compareVersions = false
             vm.panels[0].back.clear()
             vm.panels[0].forward.clear()
@@ -117,7 +121,7 @@ class FeatureTest {
         waitForLoaded()
         compose.runOnUiThread {
             vm.linkPanels = false
-            if (vm.panels.size > 1) vm.closePanel(1)
+            while (vm.panels.size > 1) vm.closePanel(vm.panels.lastIndex)
         }
         waitForLoaded()
     }
@@ -711,5 +715,60 @@ class FeatureTest {
         assertEquals(2, vm.bookmarks.size)
         assertTrue(vm.bookmarks.all { it.folder.isEmpty() })
         compose.runOnUiThread { vm.bookmarks.toList().forEach { vm.deleteBookmark(it) } }
+    }
+
+    @Test
+    fun threeBiblePanelsFitOnALargeLandscapeScreen() {
+        assertEquals(3, vm.maxPanels)
+        compose.onNodeWithContentDescription("Panels").performScrollTo().performClick()
+        compose.onNodeWithText("Add a Bible panel").performClick()
+        compose.onNodeWithContentDescription("Panels").performClick()
+        compose.onNodeWithText("Add a Bible panel").performClick()
+        waitForLoaded()
+        assertEquals(3, vm.panels.size)
+        for (i in 0..2) compose.onNodeWithTag("reader$i").assertExists()
+        snap("48-three-panels")
+        compose.onNodeWithContentDescription("Panels").performClick()
+        compose.onNodeWithText("Add a Bible panel").assertIsNotEnabled()
+        compose.onNodeWithText("Close other panels").performClick()
+        waitForLoaded()
+        assertEquals(1, vm.panels.size)
+    }
+
+    @Test
+    fun theStudyPaneShowsCrossReferencesNotesAndSearch() {
+        compose.runOnUiThread { vm.sidePane = PaneKind.CROSSREFS; vm.paneVerse = VerseTarget(43, 3, 16) }
+        waitForLoaded()
+        compose.onNodeWithTag("reader0").assertExists()
+        compose.onNodeWithTag("pane").assertExists()
+        compose.waitUntil(5_000) { compose.onAllNodesWithText("Romans 5:8").fetchSemanticsNodes().isNotEmpty() }
+        snap("49-pane-crossrefs")
+        // Opening a cross-reference moves the Bible panel; the pane stays.
+        compose.onNodeWithText("Romans 5:8").performClick()
+        waitForLoaded()
+        assertEquals(45, vm.panels[0].book)
+        compose.onNodeWithTag("pane").assertExists()
+
+        // Notes in the chapter being read.
+        compose.runOnUiThread {
+            vm.goTo(0, 43, 3, remember = false)
+            vm.setNote(VerseTarget(43, 3, 16), "The gospel in one verse")
+            vm.sidePane = PaneKind.NOTES
+        }
+        waitForLoaded()
+        compose.onNodeWithText("The gospel in one verse").assertExists()
+        snap("50-pane-notes")
+        compose.runOnUiThread { vm.setNote(VerseTarget(43, 3, 16), "") }
+
+        // Search results kept beside the text.
+        compose.runOnUiThread { vm.paneSearch = "\"only begotten\""; vm.sidePane = PaneKind.SEARCH }
+        compose.waitUntil(5_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("John 1:14").performClick()
+        waitForLoaded()
+        assertEquals(1, vm.panels[0].chapter)
+        compose.onNodeWithText("John 1:18").assertExists() // results are still there
+        snap("51-pane-search")
+        compose.onNodeWithContentDescription("Close side pane").performClick()
+        assertEquals(null, vm.sidePane)
     }
 }

@@ -70,7 +70,8 @@ class PanelState(book: Int, chapter: Int) {
     var pendingVerse by mutableStateOf<Int?>(null)
     var viewW by mutableFloatStateOf(0f)
     var viewH by mutableFloatStateOf(0f)
-    var topVerse = 1
+    /** The verse at the top of the view (observable, so a cross-references pane can follow it). */
+    var topVerse by mutableIntStateOf(1)
     /** Bumped on every explicit jump (picker, search, arrows) so the panel scrolls to the top. */
     var navGen by mutableIntStateOf(0)
 
@@ -95,6 +96,9 @@ data class ScrollPos(val source: Int, val book: Int, val chapter: Int, val verse
 
 /** A passage pop-over open over panel [panel], pointing at [anchor] (pixels in that panel). */
 data class PassagePop(val panel: Int, val passage: Passage, val anchor: Offset)
+
+/** What the study pane beside the Bible panels shows (SPLIT-2). */
+enum class PaneKind(val label: String) { SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes") }
 
 /** A spot to return to with Back / Forward. */
 data class Place(val book: Int, val chapter: Int, val verse: Int)
@@ -152,6 +156,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var marginRight by mutableStateOf(prefs.getBoolean("marginRight", true))
     var theme by mutableStateOf(runCatching { PageTheme.valueOf(prefs.getString("theme", "LIGHT")!!) }.getOrDefault(PageTheme.LIGHT))
     var splitFraction by mutableFloatStateOf(prefs.getFloat("split", 0.5f))
+    /** Relative widths (or heights) of the Bible panels, one per panel. */
+    val panelWeights = mutableStateListOf<Float>()
+    /** How many Bible panels fit: 3 on large screens in landscape, otherwise 2 (ADP-3). */
+    var maxPanels by mutableIntStateOf(2)
+    /** The study pane beside the Bible panels, if open (SPLIT-2), and its share of the screen. */
+    var sidePane by mutableStateOf(prefs.getString("sidePane", null)?.let { n -> PaneKind.entries.firstOrNull { it.name == n } })
+    var paneFraction by mutableFloatStateOf(prefs.getFloat("paneFraction", 0.32f))
+    /** A search the search pane should run when it opens. */
+    var paneSearch by mutableStateOf<String?>(null)
+    /** The verse the cross-references pane shows; null follows the top of the active panel. */
+    var paneVerse by mutableStateOf<VerseTarget?>(null)
 
     /** Set by the UI; margin widths and zoom are remembered separately for landscape and portrait. */
     var landscape by mutableStateOf(true)
@@ -214,7 +229,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private var lastId = 0L
 
     init {
-        val count = prefs.getInt("panels", 1).coerceIn(1, 2)
+        val count = prefs.getInt("panels", 1).coerceIn(1, 3)
         for (i in 0 until count) {
             val b = prefs.getInt("p${i}b", 43).coerceIn(1, 66)
             val c = prefs.getInt("p${i}c", if (b == 43) 3 else 1).coerceIn(1, bible.book(b).chapters)
@@ -254,6 +269,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
+            putString("sidePane", sidePane?.name); putFloat("paneFraction", paneFraction)
             putInt("panels", panels.size)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
             panels.forEachIndexed { i, p ->
@@ -351,22 +367,57 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun toggleSplit() {
-        if (panels.size == 1) {
-            val p = panels[0]
-            panels.add(PanelState(p.book, p.chapter).apply { version = p.version })
-            activePanel = 1
-        } else {
-            closePanel(1)
+        if (panels.size == 1) addPanel() else while (panels.size > 1) closePanel(panels.lastIndex)
+    }
+
+    /** Opens another Bible panel showing the active one's passage (up to [maxPanels]). */
+    fun addPanel() {
+        if (panels.size >= maxPanels) {
+            message = "No room for another panel on this screen."
+            return
         }
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        panels.add(PanelState(p.book, p.chapter).apply { version = p.version })
+        panelWeights.clear()
+        activePanel = panels.lastIndex
     }
 
     fun closePanel(index: Int) {
-        if (panels.size > 1 && index in panels.indices) panels.removeAt(index)
+        if (panels.size > 1 && index in panels.indices) {
+            panels.removeAt(index)
+            panelWeights.clear()
+        }
         activePanel = 0
+    }
+
+    /** The weights of the panels (equal, or the saved split for two, until a divider is dragged). */
+    fun weights(): List<Float> =
+        if (panelWeights.size == panels.size) panelWeights.toList()
+        else if (panels.size == 2) listOf(splitFraction, 1f - splitFraction)
+        else List(panels.size) { 1f }
+
+    /** Moves the divider after panel [i] by [delta] (a fraction of the panels' total size). */
+    fun dragDivider(i: Int, delta: Float) {
+        val w = weights().toMutableList()
+        if (i + 1 >= w.size) return
+        val total = w.sum()
+        val d = delta * total
+        val min = 0.15f * total
+        val a = (w[i] + d).coerceIn(min, w[i] + w[i + 1] - min)
+        w[i + 1] = w[i] + w[i + 1] - a
+        w[i] = a
+        panelWeights.clear(); panelWeights.addAll(w)
+        if (w.size == 2) splitFraction = w[0] / total
+    }
+
+    /** Opens (or switches) the study pane; the same kind again closes it. */
+    fun togglePane(kind: PaneKind) {
+        sidePane = if (sidePane == kind) null else kind
     }
 
     fun openVerse(book: Int, chapter: Int, verse: Int) {
         verseSheet = VerseTarget(book, chapter, verse)
+        paneVerse = verseSheet
     }
 
     fun refLabel(start: Int, end: Int = start): String {
@@ -902,12 +953,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         passagePop = null
         var target = from.coerceIn(0, panels.lastIndex)
         if (beside) {
-            if (panels.size == 1) toggleSplit()
+            if (panels.size == 1) addPanel()
             if (linkPanels) {
                 linkPanels = false
                 message = "Panels unlinked to show the passage beside."
             }
-            target = 1 - target.coerceIn(0, 1)
+            target = panels.indices.first { it != target }
         }
         activePanel = target
         goTo(target, p.book, p.chapter, p.verse)

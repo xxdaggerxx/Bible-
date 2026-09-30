@@ -105,37 +105,60 @@ fun StudyApp(vm: StudyViewModel) {
                 val landscape = maxWidth >= maxHeight
                 SideEffect { vm.landscape = landscape }
                 val openPicker = { dialog = DialogKind.PICKER }
-                if (vm.panels.size == 1) {
-                    key(vm.panels[0]) {
-                        ReaderPanel(vm, 0, openPicker, Modifier.fillMaxSize())
+                // Three Bible panels fit on a large screen in landscape (ADP-3), otherwise two.
+                val maxPanels = if (landscape && maxWidth >= 1200.dp) 3 else 2
+                SideEffect { vm.maxPanels = maxPanels }
+                LaunchedEffect(maxPanels) { while (vm.panels.size > maxPanels) vm.closePanel(vm.panels.lastIndex) }
+                val sideBySide = landscape
+                val density = LocalDensity.current
+                val pane = vm.sidePane
+                val totalPx = with(density) { (if (sideBySide) maxWidth else maxHeight).toPx() }
+
+                @Composable
+                fun Divider(onDrag: (Float) -> Unit) {
+                    val state = rememberDraggableState(onDrag)
+                    Box(
+                        (if (sideBySide) Modifier.width(14.dp).fillMaxHeight() else Modifier.height(14.dp).fillMaxWidth())
+                            .draggable(state, if (sideBySide) Orientation.Horizontal else Orientation.Vertical),
+                        contentAlignment = Alignment.Center,
+                    ) { Handle(vertical = sideBySide) }
+                }
+
+                @Composable
+                fun Panels(modifier: Modifier) {
+                    val n = vm.panels.size.coerceAtMost(maxPanels)
+                    val weights = vm.weights()
+                    val areaPx = totalPx * (if (pane != null) 1f - vm.paneFraction else 1f)
+                    @Composable
+                    fun Items(cell: @Composable (Int, Float) -> Unit) {
+                        for (i in 0 until n) {
+                            if (i > 0) Divider { d -> vm.dragDivider(i - 1, d / areaPx) }
+                            key(vm.panels[i]) { cell(i, weights.getOrElse(i) { 1f }) }
+                        }
                     }
+                    if (sideBySide) {
+                        Row(modifier) { Items { i, w -> ReaderPanel(vm, i, openPicker, Modifier.weight(w).fillMaxHeight()) } }
+                    } else {
+                        Column(modifier) { Items { i, w -> ReaderPanel(vm, i, openPicker, Modifier.weight(w).fillMaxWidth()) } }
+                    }
+                }
+
+                if (pane == null) {
+                    Panels(Modifier.fillMaxSize())
                 } else {
-                    // Side by side in landscape, stacked in portrait.
-                    val sideBySide = maxWidth >= maxHeight
-                    val totalPx = with(LocalDensity.current) { (if (sideBySide) maxWidth else maxHeight).toPx() }
-                    val drag = rememberDraggableState { delta ->
-                        vm.splitFraction = (vm.splitFraction + delta / totalPx).coerceIn(0.2f, 0.8f)
-                    }
-                    val f = vm.splitFraction
+                    // The study pane beside the Bible panels (SPLIT-2): on the right, or below in portrait.
+                    val paneDrag: (Float) -> Unit = { d -> vm.paneFraction = (vm.paneFraction - d / totalPx).coerceIn(0.2f, 0.6f) }
                     if (sideBySide) {
                         Row(Modifier.fillMaxSize()) {
-                            key(vm.panels[0]) { ReaderPanel(vm, 0, openPicker, Modifier.weight(f).fillMaxHeight()) }
-                            Box(
-                                Modifier.width(14.dp).fillMaxHeight()
-                                    .draggable(drag, Orientation.Horizontal),
-                                contentAlignment = Alignment.Center,
-                            ) { Handle(vertical = true) }
-                            key(vm.panels[1]) { ReaderPanel(vm, 1, openPicker, Modifier.weight(1f - f).fillMaxHeight()) }
+                            Panels(Modifier.weight(1f - vm.paneFraction).fillMaxHeight())
+                            Divider(paneDrag)
+                            StudyPane(vm, pane, Modifier.weight(vm.paneFraction).fillMaxHeight())
                         }
                     } else {
                         Column(Modifier.fillMaxSize()) {
-                            key(vm.panels[0]) { ReaderPanel(vm, 0, openPicker, Modifier.weight(f).fillMaxWidth()) }
-                            Box(
-                                Modifier.height(14.dp).fillMaxWidth()
-                                    .draggable(drag, Orientation.Vertical),
-                                contentAlignment = Alignment.Center,
-                            ) { Handle(vertical = false) }
-                            key(vm.panels[1]) { ReaderPanel(vm, 1, openPicker, Modifier.weight(1f - f).fillMaxWidth()) }
+                            Panels(Modifier.weight(1f - vm.paneFraction).fillMaxWidth())
+                            Divider(paneDrag)
+                            StudyPane(vm, pane, Modifier.weight(vm.paneFraction).fillMaxWidth())
                         }
                     }
                 }

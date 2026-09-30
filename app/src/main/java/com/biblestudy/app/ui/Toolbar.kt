@@ -120,8 +120,33 @@ fun StudyToolbar(
 
             FilterChip(selected = vm.marginLeft, onClick = { vm.marginLeft = !vm.marginLeft }, label = { Text("Left margin") })
             FilterChip(selected = vm.marginRight, onClick = { vm.marginRight = !vm.marginRight }, label = { Text("Right margin") })
-            IconButton(onClick = vm::toggleSplit) {
-                Icon(Icons.Filled.VerticalSplit, contentDescription = if (vm.panels.size > 1) "Close split view" else "Split view")
+            // Panels: more Bible panels (up to three on large screens, ADP-3) and the study pane (SPLIT-2).
+            var panelsMenu by remember { mutableStateOf(false) }
+            Box {
+                IconButton(onClick = { panelsMenu = true }) {
+                    Icon(Icons.Filled.VerticalSplit, contentDescription = "Panels")
+                }
+                DropdownMenu(expanded = panelsMenu, onDismissRequest = { panelsMenu = false }) {
+                    DropdownMenuItem(
+                        text = { Text("Add a Bible panel") },
+                        enabled = vm.panels.size < vm.maxPanels,
+                        onClick = { vm.addPanel(); panelsMenu = false },
+                    )
+                    if (vm.panels.size > 1) {
+                        DropdownMenuItem(text = { Text("Close other panels") }, onClick = {
+                            val keep = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
+                            while (vm.panels.size > 1) vm.closePanel(vm.panels.indexOfFirst { it !== keep })
+                            panelsMenu = false
+                        })
+                    }
+                    HorizontalDivider()
+                    for (k in PaneKind.entries) {
+                        DropdownMenuItem(
+                            text = { Text("Beside the text: ${k.label}" + if (vm.sidePane == k) "  \u2713" else "") },
+                            onClick = { vm.togglePane(k); panelsMenu = false },
+                        )
+                    }
+                }
             }
             IconButton(onClick = onSearch) { Icon(Icons.Filled.Search, contentDescription = "Search") }
             IconButton(onClick = onBookmarks) { Icon(Icons.Filled.Bookmarks, contentDescription = "Bookmarks") }

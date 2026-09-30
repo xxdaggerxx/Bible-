@@ -29,6 +29,10 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
@@ -298,45 +302,65 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
 private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, onOpenPicker: () -> Unit) {
     val panel = vm.panels[index]
     val book = vm.bible.book(panel.book)
-    Row(
-        Modifier
-            .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.surfaceContainer)
-            .padding(horizontal = 4.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
-            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-        }
-        IconButton(onClick = { vm.activePanel = index; vm.goForward(index) }, enabled = panel.forward.isNotEmpty()) {
-            Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Forward")
-        }
-        VerticalDivider(Modifier.height(24.dp).padding(horizontal = 4.dp))
-        IconButton(onClick = { vm.activePanel = index; vm.prevChapter(index) }) {
-            Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous chapter")
-        }
-        TextButton(onClick = { vm.activePanel = index; onOpenPicker() }) {
-            Text("${book.name} ${panel.chapter}", style = MaterialTheme.typography.titleMedium)
-        }
-        IconButton(onClick = { vm.activePanel = index; vm.nextChapter(index) }) {
-            Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next chapter")
-        }
-        IconButton(onClick = { vm.activePanel = index; vm.introBook = panel.book }) {
-            Icon(Icons.Outlined.Info, contentDescription = "About this book")
-        }
-        VersionPicker(vm, index)
-        Spacer(Modifier.weight(1f))
-        TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
-        if (vm.panels.size > 1) {
-            IconButton(onClick = { vm.activePanel = index; vm.linkPanels = !vm.linkPanels }) {
-                Icon(
-                    if (vm.linkPanels) Icons.Filled.Link else Icons.Filled.LinkOff,
-                    contentDescription = if (vm.linkPanels) "Unlink panels" else "Link panels",
-                    tint = if (vm.linkPanels) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
-                )
+    BoxWithConstraints(Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer)) {
+        // Narrow panels (e.g. three side by side) move the less-used buttons into a menu.
+        val compact = maxWidth < 620.dp
+        Row(Modifier.fillMaxWidth().padding(horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+            if (!compact) {
+                IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                }
+                IconButton(onClick = { vm.activePanel = index; vm.goForward(index) }, enabled = panel.forward.isNotEmpty()) {
+                    Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Forward")
+                }
+                VerticalDivider(Modifier.height(24.dp).padding(horizontal = 4.dp))
             }
-            IconButton(onClick = { vm.closePanel(index) }) {
-                Icon(Icons.Filled.Close, contentDescription = "Close panel")
+            IconButton(onClick = { vm.activePanel = index; vm.prevChapter(index) }) {
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous chapter")
+            }
+            TextButton(onClick = { vm.activePanel = index; onOpenPicker() }, contentPadding = PaddingValues(horizontal = 6.dp)) {
+                Text("${book.name} ${panel.chapter}", style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            }
+            IconButton(onClick = { vm.activePanel = index; vm.nextChapter(index) }) {
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next chapter")
+            }
+            if (!compact) {
+                IconButton(onClick = { vm.activePanel = index; vm.introBook = panel.book }) {
+                    Icon(Icons.Outlined.Info, contentDescription = "About this book")
+                }
+            }
+            VersionPicker(vm, index)
+            Spacer(Modifier.weight(1f))
+            if (!compact) TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
+            if (vm.panels.size > 1) {
+                IconButton(onClick = { vm.activePanel = index; vm.linkPanels = !vm.linkPanels }) {
+                    Icon(
+                        if (vm.linkPanels) Icons.Filled.Link else Icons.Filled.LinkOff,
+                        contentDescription = if (vm.linkPanels) "Unlink panels" else "Link panels",
+                        tint = if (vm.linkPanels) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
+                    )
+                }
+            }
+            if (compact) {
+                var menu by remember { mutableStateOf(false) }
+                Box {
+                    IconButton(onClick = { vm.activePanel = index; menu = true }) {
+                        Icon(Icons.Filled.MoreVert, contentDescription = "Panel menu")
+                    }
+                    DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                        DropdownMenuItem(text = { Text("Back") }, enabled = panel.back.isNotEmpty(), onClick = { menu = false; vm.goBack(index) })
+                        DropdownMenuItem(text = { Text("Forward") }, enabled = panel.forward.isNotEmpty(), onClick = { menu = false; vm.goForward(index) })
+                        DropdownMenuItem(text = { Text("About this book") }, onClick = { menu = false; vm.introBook = panel.book })
+                        DropdownMenuItem(text = { Text("Fit width") }, onClick = { menu = false; ctl.fitWidth() })
+                        if (vm.panels.size > 1) {
+                            DropdownMenuItem(text = { Text("Close panel") }, onClick = { menu = false; vm.closePanel(index) })
+                        }
+                    }
+                }
+            } else if (vm.panels.size > 1) {
+                IconButton(onClick = { vm.closePanel(index) }) {
+                    Icon(Icons.Filled.Close, contentDescription = "Close panel")
+                }
             }
         }
     }

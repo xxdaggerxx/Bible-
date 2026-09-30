@@ -323,6 +323,20 @@ private fun GridCell(text: String, marks: Marks? = null, label: String = text, o
 
 @Composable
 fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
+    BigDialog(onDismiss) {
+        Column {
+            DialogTitle("Search", onDismiss)
+            SearchPane(vm, Modifier.weight(1f), onOpened = onDismiss, inPane = false)
+        }
+    }
+}
+
+/**
+ * Search box, options and results. In the dialog, opening a result closes it; in the study pane
+ * beside the text (SPLIT-2) the results stay while the Bible panel moves.
+ */
+@Composable
+fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inPane: Boolean) {
     var query by remember { mutableStateOf(vm.lastSearch) }
     var scope by remember { mutableStateOf(SearchScope.ALL) }
     var version by remember { mutableStateOf(vm.activeVersion) }
@@ -360,9 +374,18 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     }
     LaunchedEffect(scope, version, inNotes) { if (query.isNotBlank() && results != null) run() }
 
-    BigDialog(onDismiss) {
-        Column {
-            DialogTitle("Search", onDismiss)
+    // The search pane runs a search handed over from the search dialog.
+    if (inPane) {
+        LaunchedEffect(vm.paneSearch) {
+            val q = vm.paneSearch ?: return@LaunchedEffect
+            vm.paneSearch = null
+            query = q
+            run()
+        }
+    }
+
+    Column(modifier) {
+        run {
             OutlinedTextField(
                 value = query,
                 onValueChange = { query = it },
@@ -374,8 +397,12 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                 modifier = Modifier.fillMaxWidth().focusRequester(focus),
             )
             // Inside the dialog, so the field exists by the time it asks for the keyboard.
-            LaunchedEffect(Unit) { runCatching { focus.requestFocus() } }
-            Row(Modifier.padding(vertical = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            if (!inPane) LaunchedEffect(Unit) { runCatching { focus.requestFocus() } }
+            Row(
+                Modifier.horizontalScroll(rememberScrollState()).padding(vertical = 8.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
                 for (v in BibleRepository.ALL) {
                     FilterChip(
                         selected = !inNotes && version == v.code,
@@ -398,11 +425,18 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             if (ref != null) {
                 val label = vm.bible.book(ref.book).name + " ${ref.chapter}" + (ref.verse?.let { ":$it" } ?: "")
                 Button(
-                    onClick = { vm.goTo(panelIndex, ref.book, ref.chapter, ref.verse); onDismiss() },
+                    onClick = { vm.goTo(panelIndex, ref.book, ref.chapter, ref.verse); onOpened() },
                     modifier = Modifier.padding(top = 8.dp),
                 ) { Text("Go to $label") }
             }
             val r = results
+            if (r != null && r.isNotEmpty() && !inPane) {
+                TextButton(onClick = { vm.paneSearch = query; vm.sidePane = PaneKind.SEARCH; onOpened() }) {
+                    Icon(Icons.Filled.VerticalSplit, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Spacer(Modifier.width(6.dp))
+                    Text("Keep results beside the text")
+                }
+            }
             if (r != null) {
                 // Results grouped by book, with counts (SRCH-5); a book chip shows just that book.
                 var onlyBook by remember(r) { mutableStateOf<Int?>(null) }
@@ -450,7 +484,7 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                                 Column(
                                     Modifier
                                         .weight(1f)
-                                        .clickable { vm.goTo(panelIndex, hit.book, hit.chapter, hit.verse); onDismiss() }
+                                        .clickable { vm.goTo(panelIndex, hit.book, hit.chapter, hit.verse); onOpened() }
                                         .padding(vertical = 8.dp)
                                 ) {
                                     Text(
@@ -462,7 +496,7 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                                 // Open in the side panel, keeping this passage where it is.
                                 IconButton(onClick = {
                                     vm.openPassage(Passage(hit.book, hit.chapter, hit.verse, hit.chapter, hit.verse), panelIndex, beside = true)
-                                    onDismiss()
+                                    onOpened()
                                 }) { Icon(Icons.Filled.VerticalSplit, contentDescription = "Open beside") }
                             }
                             HorizontalDivider()
@@ -513,7 +547,7 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
         }
     }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
-    val otherPanel = if (vm.panels.size > 1) 1 - panelIndex else null
+    val otherPanel = vm.panels.indices.firstOrNull { it != panelIndex }
 
     fun save() {
         if (note != original || noteEnd != originalEnd) vm.setNote(VerseTarget(t.book, t.chapter, noteStart), note, noteEnd)
