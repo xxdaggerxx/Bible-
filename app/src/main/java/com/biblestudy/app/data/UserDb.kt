@@ -12,6 +12,7 @@ import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.Layer
 import com.biblestudy.app.model.MarginImage
 import com.biblestudy.app.model.Region
+import com.biblestudy.app.model.SearchHit
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
@@ -190,6 +191,19 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
             "SELECT verse, text FROM notes WHERE book = ? AND chapter = ?",
             arrayOf(book.toString(), chapter.toString()),
         ).use { c -> buildMap { while (c.moveToNext()) put(c.getInt(0), c.getString(1)) } }
+
+    /** Typed notes containing every word of [query] (SRCH-6), in Bible order. */
+    fun searchNotes(query: String, lo: Int, hi: Int): List<SearchHit> {
+        val words = query.replace("\"", " ").split(Regex("\\s+")).filter { it.isNotBlank() && it != "OR" }.take(8)
+        if (words.isEmpty()) return emptyList()
+        val where = words.joinToString(" AND ") { "text LIKE ? ESCAPE '\\'" }
+        val args = words.map { "%" + it.trimEnd('*').replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_") + "%" } +
+            listOf(lo.toString(), hi.toString())
+        return readableDatabase.rawQuery(
+            "SELECT book, chapter, verse, text FROM notes WHERE $where AND book BETWEEN ? AND ? ORDER BY book, chapter, verse LIMIT 500",
+            args.toTypedArray(),
+        ).use { c -> buildList { while (c.moveToNext()) add(SearchHit(c.getInt(0), c.getInt(1), c.getInt(2), c.getString(3))) } }
+    }
 
     fun note(book: Int, chapter: Int, verse: Int): String? =
         readableDatabase.rawQuery(

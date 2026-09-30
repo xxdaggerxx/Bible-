@@ -186,6 +186,7 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     var query by remember { mutableStateOf(vm.lastSearch) }
     var scope by remember { mutableStateOf(SearchScope.ALL) }
     var version by remember { mutableStateOf(vm.activeVersion) }
+    var inNotes by remember { mutableStateOf(false) }
     var results by remember { mutableStateOf<List<SearchHit>?>(null) }
     var searchedTerms by remember { mutableStateOf(emptyList<String>()) }
     val co = rememberCoroutineScope()
@@ -199,12 +200,25 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
         vm.lastSearch = q
         co.launch {
             val v = version
-            results = withContext(Dispatchers.IO) { vm.text(v).search(q, scope, currentBook) }
+            val notes = inNotes
+            results = withContext(Dispatchers.IO) {
+                if (notes) {
+                    val (lo, hi) = when (scope) {
+                        SearchScope.ALL -> 1 to 66
+                        SearchScope.OT -> 1 to 39
+                        SearchScope.NT -> 40 to 66
+                        SearchScope.BOOK -> currentBook to currentBook
+                    }
+                    vm.user.searchNotes(q, lo, hi)
+                } else {
+                    vm.text(v).search(q, scope, currentBook)
+                }
+            }
             searchedTerms = BibleRepository.terms(q)
         }
     }
     LaunchedEffect(Unit) { focus.requestFocus() }
-    LaunchedEffect(scope, version) { if (query.isNotBlank() && results != null) run() }
+    LaunchedEffect(scope, version, inNotes) { if (query.isNotBlank() && results != null) run() }
 
     BigDialog(onDismiss) {
         Column {
@@ -221,8 +235,13 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             )
             Row(Modifier.padding(vertical = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 for (v in BibleRepository.ALL) {
-                    FilterChip(selected = version == v.code, onClick = { version = v.code }, label = { Text(v.code) })
+                    FilterChip(
+                        selected = !inNotes && version == v.code,
+                        onClick = { version = v.code; inNotes = false },
+                        label = { Text(v.code) },
+                    )
                 }
+                FilterChip(selected = inNotes, onClick = { inNotes = true }, label = { Text("My notes") })
                 VerticalDivider(Modifier.height(32.dp))
                 for (s in SearchScope.entries) {
                     val label = if (s == SearchScope.BOOK) vm.bible.book(currentBook).name else s.label
@@ -244,7 +263,8 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             if (r != null) {
                 Text(
                     when {
-                        r.isEmpty() -> "No verses found."
+                        r.isEmpty() -> if (inNotes) "No notes found." else "No verses found."
+                        inNotes -> "${r.size} note" + if (r.size == 1) "" else "s"
                         r.size >= BibleRepository.MAX_RESULTS -> "Showing the first ${r.size} verses"
                         else -> "${r.size} verse" + if (r.size == 1) "" else "s"
                     },

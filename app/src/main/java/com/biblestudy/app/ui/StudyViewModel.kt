@@ -69,7 +69,21 @@ class PanelState(book: Int, chapter: Int) {
     var topVerse = 1
     /** Bumped on every explicit jump (picker, search, arrows) so the panel scrolls to the top. */
     var navGen by mutableIntStateOf(0)
+
+    /** Places visited before and after jumps (READ-5). */
+    val back = mutableStateListOf<Place>()
+    val forward = mutableStateListOf<Place>()
+
+    fun here() = Place(book, chapter, topVerse)
+
+    /** Zoom relative to fit-width, remembered per orientation (ANCH-7). 1 = fit width. */
+    val zoomRel = mutableMapOf("land" to 1f, "port" to 1f)
+    /** The zoom a double-tap returns to from fit-width. */
+    var lastZoomRel = 2f
 }
+
+/** A spot to return to with Back / Forward. */
+data class Place(val book: Int, val chapter: Int, val verse: Int)
 
 class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private val prefs = app.getSharedPreferences("study", Context.MODE_PRIVATE)
@@ -98,6 +112,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var snapHighlights by mutableStateOf(prefs.getBoolean("snap", true))
     var fingerDraw by mutableStateOf(prefs.getBoolean("fingerDraw", false))
     var showHeadings by mutableStateOf(prefs.getBoolean("headings", true))
+    /** Eraser removes only what it touches (INK-7), instead of whole strokes. */
+    var partialEraser by mutableStateOf(prefs.getBoolean("partialEraser", false))
     var lineSpacing by mutableStateOf(
         runCatching { LineSpacing.valueOf(prefs.getString("lineSpacing", "NORMAL")!!) }.getOrDefault(LineSpacing.NORMAL)
     )
@@ -109,8 +125,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var theme by mutableStateOf(runCatching { PageTheme.valueOf(prefs.getString("theme", "LIGHT")!!) }.getOrDefault(PageTheme.LIGHT))
     var splitFraction by mutableFloatStateOf(prefs.getFloat("split", 0.5f))
 
-    /** Set by the UI; margin widths are remembered separately for landscape and portrait. */
+    /** Set by the UI; margin widths and zoom are remembered separately for landscape and portrait. */
     var landscape by mutableStateOf(true)
+    val orientationKey: String get() = if (landscape) "land" else "port"
     private val marginWidths = mutableStateMapOf<String, Float>()
 
     private fun marginKey(left: Boolean) = "mw_" + (if (left) "L" else "R") + if (landscape) "_land" else "_port"
@@ -167,7 +184,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         for (i in 0 until count) {
             val b = prefs.getInt("p${i}b", 43).coerceIn(1, 66)
             val c = prefs.getInt("p${i}c", if (b == 43) 3 else 1).coerceIn(1, bible.book(b).chapters)
-            panels.add(PanelState(b, c).apply { version = validVersion(prefs.getString("p${i}v", null)) })
+            panels.add(PanelState(b, c).apply {
+                version = validVersion(prefs.getString("p${i}v", null))
+                for (o in listOf("land", "port")) zoomRel[o] = prefs.getFloat("p${i}z_$o", 1f)
+                lastZoomRel = prefs.getFloat("p${i}zl", 2f)
+            })
         }
         layers.addAll(user.layers())
         if (layers.isEmpty()) {
@@ -195,6 +216,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
+            putBoolean("partialEraser", partialEraser)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -202,6 +224,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
             panels.forEachIndexed { i, p ->
                 putInt("p${i}b", p.book); putInt("p${i}c", p.chapter); putString("p${i}v", p.version)
+                p.zoomRel.forEach { (o, z) -> putFloat("p${i}z_$o", z) }
+                putFloat("p${i}zl", p.lastZoomRel)
             }
         }
     }
@@ -211,8 +235,22 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     // ---------- navigation ----------
 
-    fun goTo(index: Int, book: Int, chapter: Int, verse: Int? = null) {
+    /**
+     * Jumps a panel to a passage. Jumps from the picker, search, cross-references and bookmarks
+     * are remembered for Back; the chapter arrows pass [remember] = false.
+     */
+    fun goTo(index: Int, book: Int, chapter: Int, verse: Int? = null, remember: Boolean = true) {
         val p = panels.getOrNull(index) ?: return
+        if (remember) {
+            val here = p.here()
+            if (p.back.lastOrNull() != here) p.back.add(here)
+            while (p.back.size > MAX_HISTORY) p.back.removeAt(0)
+            p.forward.clear()
+        }
+        jump(p, book, chapter, verse)
+    }
+
+    private fun jump(p: PanelState, book: Int, chapter: Int, verse: Int?) {
         val b = book.coerceIn(1, 66)
         p.book = b
         p.chapter = chapter.coerceIn(1, bible.book(b).chapters)
@@ -256,12 +294,26 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun nextChapter(index: Int) {
         val p = panels.getOrNull(index) ?: return
-        neighbor(p.book, p.chapter, 1)?.let { (b, c) -> goTo(index, b, c) }
+        neighbor(p.book, p.chapter, 1)?.let { (b, c) -> goTo(index, b, c, remember = false) }
     }
 
     fun prevChapter(index: Int) {
         val p = panels.getOrNull(index) ?: return
-        neighbor(p.book, p.chapter, -1)?.let { (b, c) -> goTo(index, b, c) }
+        neighbor(p.book, p.chapter, -1)?.let { (b, c) -> goTo(index, b, c, remember = false) }
+    }
+
+    fun goBack(index: Int) {
+        val p = panels.getOrNull(index) ?: return
+        val to = p.back.removeLastOrNull() ?: return
+        p.forward.add(p.here())
+        jump(p, to.book, to.chapter, to.verse)
+    }
+
+    fun goForward(index: Int) {
+        val p = panels.getOrNull(index) ?: return
+        val to = p.forward.removeLastOrNull() ?: return
+        p.back.add(p.here())
+        jump(p, to.book, to.chapter, to.verse)
     }
 
     fun toggleSplit() {
@@ -515,6 +567,16 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         e.added.forEach { addItem(it) }
         undoStack.addLast(e)
         editVersion++
+    }
+
+    /** Highlights a character range chosen by selecting text with a finger (NOTE-2). */
+    fun addHighlight(layout: ChapterLayout, start: Int, end: Int) {
+        val layer = activeLayer() ?: return
+        if (layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return }
+        if (!layer.visible) setLayerVisible(layer.id, true)
+        val h = Highlight(newId(), layer.id, layout.version, layout.book, layout.chapter, start, end, highlightColor)
+        addItem(h)
+        record(Edit(listOf(h), emptyList()))
     }
 
     // ---------- lasso selection ----------
@@ -802,6 +864,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     companion object {
         private const val COPY_SHIFT = 30f
+        private const val MAX_HISTORY = 100
     }
 
     private fun io(block: () -> Unit) {

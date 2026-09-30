@@ -16,6 +16,7 @@ import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.MarginImage
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.Tool
+import com.biblestudy.app.model.VerseId
 import kotlin.math.abs
 import kotlin.math.hypot
 import kotlin.math.max
@@ -66,6 +67,9 @@ class LiveLasso(val page: PlacedPage) {
     }
 }
 
+/** Text chosen with a long press: a character range of one laid-out chapter. [anchor] is the first word. */
+data class TextSel(val layout: ChapterLayout, val anchor: IntRange, val start: Int, val end: Int)
+
 private class ImageDrag(val page: PlacedPage, val original: MarginImage, val resize: Boolean, val start: Offset) {
     var current: MarginImage = original
 }
@@ -101,6 +105,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     var lasso by mutableStateOf<LiveLasso?>(null)
         private set
     var selectedImageId by mutableStateOf<Long?>(null)
+    var textSel by mutableStateOf<TextSel?>(null)
+        private set
     /** Pen drag offset (page units) applied to the lasso selection while it is being moved. */
     var moveOffset by mutableStateOf(Offset.Zero)
         private set
@@ -112,6 +118,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     private var penPanLast: Offset? = null
     private var lastPenUp = Long.MIN_VALUE / 2 // "never", even right after the device boots
     private val erased = ArrayList<Annotation>()
+    /** Pieces created by partial erasing during the current swipe (they may be cut again). */
+    private val erasedAdded = LinkedHashMap<Long, Annotation>()
     private var drag: ImageDrag? = null
     private var lassoDrag: LassoDrag? = null
 
@@ -175,14 +183,32 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     /** Zooms so the page fills the panel's width, keeping the same line at the top of the view. */
     fun fitWidth() {
+        panel.zoomRel[vm.orientationKey] = 1f
+        applyRememberedZoom()
+    }
+
+    /** Applies this panel's remembered zoom for the current orientation (relative to fit-width). */
+    fun applyRememberedZoom() {
         val g = geo ?: return
         if (panel.viewW <= 0f) return
         val old = panel.zoom
-        val new = fitZoom(g)
+        val new = fitZoom(g) * (panel.zoomRel[vm.orientationKey] ?: 1f)
         panel.panY *= new / old
+        panel.panX *= new / old
         panel.zoom = new
-        panel.panX = 0f
         clamp()
+    }
+
+    /** Double-tap: fit-width if zoomed, otherwise back to the last zoom, centred on [at]. */
+    fun toggleFit(at: Offset) {
+        val g = geo ?: return
+        val fit = fitZoom(g)
+        val rel = panel.zoom / fit
+        val target = if (abs(rel - 1f) < 0.02f) panel.lastZoomRel.coerceAtLeast(1.25f) else {
+            panel.lastZoomRel = rel
+            1f
+        }
+        transform(at, Offset.Zero, target * fit / panel.zoom)
     }
 
     fun transform(centroid: Offset, pan: Offset, zoomChange: Float) {
@@ -194,6 +220,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         panel.panX = centroid.x - (centroid.x - panel.panX) * k + pan.x
         panel.panY = centroid.y - (centroid.y - panel.panY) * k + pan.y
         panel.zoom = new
+        if (zoomChange != 1f) panel.zoomRel[vm.orientationKey] = new / fit
         clamp()
     }
 
@@ -243,6 +270,48 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         panel.panY = -(g.layout.verseTop(verse) - 40f) * panel.zoom
         clamp()
     }
+
+    // ---------- text selection (long press) ----------
+
+    private fun textPoint(pos: Offset): Pair<PlacedPage, Offset>? {
+        val s = toStrip(pos)
+        val page = pageAt(s.y) ?: return null
+        return page to Offset(s.x - page.geo.textLeft, s.y - page.top - Page.TEXT_TOP)
+    }
+
+    /** Selects the word under a long-pressed finger. Returns false if the finger isn't on the text. */
+    fun startTextSelect(pos: Offset): Boolean {
+        val (page, local) = textPoint(pos) ?: return false
+        val layout = page.layout
+        if (page.geo.regionAt(local.x + page.geo.textLeft) != Region.TEXT || !layout.isOnText(local.y)) return false
+        val w = layout.text.getWordBoundary(layout.offsetAt(local.x, local.y))
+        if (w.end <= w.start) return false
+        textSel = TextSel(layout, w.start until w.end, w.start, w.end)
+        return true
+    }
+
+    /** Extends the selection to the word under the finger, in either direction from the first word. */
+    fun extendTextSelect(pos: Offset) {
+        val ts = textSel ?: return
+        val (page, local) = textPoint(pos) ?: return
+        if (page.layout !== ts.layout) return // selections stay within one chapter
+        val w = ts.layout.text.getWordBoundary(ts.layout.offsetAt(local.x, local.y.coerceIn(0f, ts.layout.displayHeight)))
+        textSel = ts.copy(start = minOf(ts.anchor.first, w.start), end = maxOf(ts.anchor.last + 1, w.end))
+    }
+
+    fun clearTextSelect() { textSel = null }
+
+    /** "John 3:16\u201317 (KJV)" for the selected verses. */
+    fun selectionLabel(ts: TextSel): String {
+        val l = ts.layout
+        val a = l.verseAtOffset(ts.start)
+        val b = l.verseAtOffset((ts.end - 1).coerceAtLeast(ts.start))
+        return vm.refLabel(VerseId.of(l.book, l.chapter, a), VerseId.of(l.book, l.chapter, b)) + " (${l.version})"
+    }
+
+    /** The selected words with their reference, for copying or sharing. */
+    fun selectionText(ts: TextSel): String =
+        selectionLabel(ts) + "\n" + ts.layout.textOf(ts.start, ts.end).replace('\u2009', ' ').trim()
 
     // ---------- margin resizing ----------
 
@@ -300,6 +369,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     // ---------- finger tap ----------
 
     fun onTap(pos: Offset) {
+        if (textSel != null) { textSel = null; return } // a tap away from the selection clears it
         val s = toStrip(pos)
         val page = pageAt(s.y) ?: return
         val g = page.geo
@@ -317,6 +387,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     /** [override] replaces the selected tool for this stroke (eraser end or side button). */
     fun penStart(pos: Offset, pressure: Float, override: Tool?) {
         touched()
+        textSel = null
         val s = toStrip(pos)
         val page = pageAt(s.y) ?: return
         val g = page.geo
@@ -365,6 +436,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             }
             Tool.ERASER -> {
                 erased.clear()
+                erasedAdded.clear()
                 eraseAt(s)
             }
             Tool.LASSO -> {
@@ -403,8 +475,10 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         when (mode) {
             Tool.PEN, Tool.HIGHLIGHTER -> finishStroke()
             Tool.ERASER -> {
-                if (erased.isNotEmpty()) vm.record(Edit(emptyList(), erased.toList()))
+                // One undo step per swipe: pieces left over by partial erasing, and what was removed.
+                if (erased.isNotEmpty() || erasedAdded.isNotEmpty()) vm.record(Edit(erasedAdded.values.toList(), erased.toList()))
                 erased.clear()
+                erasedAdded.clear()
             }
             Tool.LASSO -> {
                 if (lassoDrag != null) {
@@ -497,20 +571,70 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             return false
         }
 
+        val partial = vm.partialEraser
+        fun erase(st: InkStroke, ox: Float, oy: Float) {
+            if (!hits(st, ox, oy)) return
+            val pieces = if (partial) cut(st, layout, p.x - ox, p.y - oy, r) else emptyList()
+            eraseItem(st)
+            pieces.forEach { vm.addItem(it); erasedAdded[it.id] = it }
+        }
+
         for (st in vm.textStrokesFor(layout.version, layout.book, layout.chapter).toList()) {
-            if (st.layerId in usable && hits(st, g.textLeft, Page.TEXT_TOP)) { vm.removeItem(st); erased += st }
+            if (st.layerId in usable) erase(st, g.textLeft, Page.TEXT_TOP)
         }
         for (st in vm.marginStrokesFor(layout.book, layout.chapter).toList()) {
-            if (st.layerId in usable && g.visible(st.region) && hits(st, g.originX(st.region), g.originY(st.region, st.verse))) {
-                vm.removeItem(st); erased += st
-            }
+            if (st.layerId in usable && g.visible(st.region)) erase(st, g.originX(st.region), g.originY(st.region, st.verse))
         }
         val local = Offset(p.x - g.textLeft, p.y - Page.TEXT_TOP)
         if (layout.isOnText(local.y) && local.x >= -r && local.x <= Page.TEXT_W + r) {
             val off = layout.offsetAt(local.x, local.y)
             for (h in vm.highlightsFor(layout.version, layout.book, layout.chapter).toList()) {
-                if (h.layerId in usable && off >= h.start && off <= h.end) { vm.removeItem(h); erased += h }
+                if (h.layerId !in usable || off < h.start || off > h.end) continue
+                eraseItem(h)
+                if (partial) {
+                    // Take out just the word under the eraser.
+                    val word = layout.text.getWordBoundary(off.coerceIn(0, layout.textLength))
+                    listOf(h.start to word.start, word.end to h.end).filter { (a, b) -> b - a > 1 }.forEach { (a, b) ->
+                        val piece = h.copy(id = vm.newId(), start = a, end = b)
+                        vm.addItem(piece)
+                        erasedAdded[piece.id] = piece
+                    }
+                }
             }
+        }
+    }
+
+    /** Removes an item for this swipe's undo step (a piece made earlier in the swipe just disappears). */
+    private fun eraseItem(a: Annotation) {
+        vm.removeItem(a)
+        if (erasedAdded.remove(a.id) == null) erased += a
+    }
+
+    /**
+     * Partial erase: the parts of [st] outside the eraser circle at local ([lx], [ly]) with radius [r],
+     * as new strokes. Points inside the circle are dropped, and the stroke is also split where a
+     * segment passes through the circle.
+     */
+    private fun cut(st: InkStroke, layout: ChapterLayout, lx: Float, ly: Float, r: Float): List<InkStroke> {
+        val pts = strokePoints(st, layout)
+        val n = pts.size / 3
+        val reach = r + st.width / 2f
+        val reach2 = reach * reach
+        fun inside(i: Int) = (pts[3 * i] - lx).let { it * it } + (pts[3 * i + 1] - ly).let { it * it } <= reach2
+        val runs = ArrayList<FloatArray>()
+        var start = -1
+        fun close(end: Int) {
+            if (start >= 0 && end - start >= 2) runs += pts.copyOfRange(3 * start, 3 * end)
+            start = -1
+        }
+        for (i in 0 until n) {
+            if (inside(i)) { close(i); continue }
+            if (start >= 0 && distSqToSegment(lx, ly, pts[3 * i - 3], pts[3 * i - 2], pts[3 * i], pts[3 * i + 1]) <= reach2) close(i)
+            if (start < 0) start = i
+        }
+        close(n)
+        return runs.map { run ->
+            st.copyAs(id = vm.newId(), points = if (st.region == Region.TEXT) layout.linePoints(run) else run)
         }
     }
 

@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -11,6 +12,8 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.doubleClick
+import androidx.compose.ui.test.longClick
 import androidx.compose.ui.test.swipeDown
 import androidx.compose.ui.test.swipeUp
 import androidx.lifecycle.ViewModelProvider
@@ -64,7 +67,11 @@ class FeatureTest {
             vm.tool = Tool.PEN
             vm.clearSelection()
             vm.setVersion(0, "KJV")
-            vm.goTo(0, 43, 3)
+            vm.goTo(0, 43, 3, remember = false)
+            vm.partialEraser = false
+            vm.panels[0].back.clear()
+            vm.panels[0].forward.clear()
+            vm.panels[0].zoomRel.keys.forEach { vm.panels[0].zoomRel[it] = 1f }
         }
         waitForLoaded()
         // The notes database also survives between tests: start with no ink on John 3.
@@ -221,5 +228,89 @@ class FeatureTest {
         val restored = vm.textStrokesFor("KJV", 43, 3).single()
         assertEquals(original[1], restored.points[1], 0.01f)
         assertNull(vm.selection)
+    }
+
+    @Test
+    fun backAndForwardReturnToEarlierPassages() {
+        compose.runOnUiThread { vm.goTo(0, 19, 23) } // e.g. from the book picker
+        waitForLoaded()
+        compose.onNodeWithText("Psalms 23").assertExists()
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        compose.onNodeWithContentDescription("Forward").performClick()
+        waitForLoaded()
+        assertEquals(19 to 23, vm.panels[0].book to vm.panels[0].chapter)
+        // The chapter arrows don't add to history.
+        compose.onNodeWithContentDescription("Next chapter").performClick()
+        assertEquals(1, vm.panels[0].back.size)
+    }
+
+    @Test
+    fun doubleTapTogglesFitWidthAndLastZoom() {
+        val fit = vm.panels[0].zoom
+        compose.onNodeWithTag("reader0").performTouchInput { doubleClick(center) }
+        compose.waitForIdle()
+        assertTrue("zoomed in", vm.panels[0].zoom > fit * 1.2f)
+        assertTrue(vm.panels[0].zoomRel.values.any { it > 1.2f }) // remembered for this orientation
+        compose.onNodeWithTag("reader0").performTouchInput { doubleClick(center) }
+        compose.waitForIdle()
+        assertEquals(fit, vm.panels[0].zoom, 0.001f)
+    }
+
+    @Test
+    fun partialEraserCutsAStrokeInTwo() {
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        val y = 520f
+        val x0 = (Page.COL_PAD + 60f) * z
+        val x1 = (Page.COL_PAD + 560f) * z
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(x0, y))
+            for (i in 1..40) moveTo(Offset(x0 + (x1 - x0) * i / 40f, y))
+            up()
+        }
+        compose.waitForIdle()
+        assertEquals(1, vm.textStrokesFor("KJV", 43, 3).size)
+
+        // Erase straight down through the middle.
+        compose.runOnUiThread { vm.tool = Tool.ERASER; vm.partialEraser = true }
+        val mid = (x0 + x1) / 2f
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(mid, y - 60f))
+            for (i in 1..12) moveTo(Offset(mid, y - 60f + 10f * i))
+            up()
+        }
+        compose.waitForIdle()
+        assertEquals(2, vm.textStrokesFor("KJV", 43, 3).size)
+        compose.runOnUiThread { vm.undo() } // one step restores the whole stroke
+        compose.waitForIdle()
+        assertEquals(1, vm.textStrokesFor("KJV", 43, 3).size)
+    }
+
+    @Test
+    fun longPressSelectsTextToHighlight() {
+        val z = zoom()
+        // A word in the middle of the first line of verse 2.
+        compose.onNodeWithTag("reader0").performTouchInput { longClick(Offset((Page.COL_PAD + 250f) * z, 600f)) }
+        compose.waitForIdle()
+        compose.onNodeWithText("Copy").assertExists()
+        compose.onNodeWithText("(KJV)", substring = true).assertExists()
+        snap("14-text-selection")
+        compose.onNodeWithText("Highlight").performClick()
+        compose.waitForIdle()
+        assertEquals(1, vm.highlightsFor("KJV", 43, 3).size)
+        compose.onAllNodesWithText("Copy").assertCountEquals(0)
+    }
+
+    @Test
+    fun typedNotesAreSearchable() {
+        compose.runOnUiThread { vm.setNote(com.biblestudy.app.model.VerseTarget(43, 3, 16), "God's love for the whole world") }
+        compose.waitUntil(5_000) { vm.user.searchNotes("whole world", 1, 66).isNotEmpty() }
+        val hits = vm.user.searchNotes("love world", 40, 66)
+        assertEquals(43003016, hits.single().let { it.book * 1_000_000 + it.chapter * 1_000 + it.verse })
+        assertTrue(vm.user.searchNotes("love world", 1, 39).isEmpty()) // Old Testament only
+        assertTrue(vm.user.searchNotes("100%", 1, 66).isEmpty())
+        compose.runOnUiThread { vm.setNote(com.biblestudy.app.model.VerseTarget(43, 3, 16), "") }
     }
 }

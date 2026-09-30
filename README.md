@@ -1,4 +1,4 @@
-# Bible Study — version 0.3
+# Bible Study — version 0.4
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,18 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 0.4
+
+- **Section headings** such as "Jesus and Nicodemus" above John 3:1, with the related passages listed under them. They come from the Berean Standard Bible (3,102 headings, public domain) and show in every version. Turn them off in *⋮ → Section headings*.
+- **Line spacing.** *⋮ → Line spacing* offers Normal, Wide or Extra wide, for more room to write between lines.
+- **Ink stays on its words.** Each stroke on the text is anchored to its line and moves with it when headings or line spacing change. Underlines stay under their words and circles keep their shape. Ink from earlier versions is converted automatically the first time a chapter opens.
+- **Back and forward.** Arrows at the left of each panel's header return to where you were before a jump (book picker, search, cross-reference or bookmark). The tablet's Back gesture steps back too. The chapter arrows and scrolling don't add to history.
+- **Zoom is remembered** for each panel, separately in landscape and portrait. **Double-tap** with a finger to switch between fit-width and your last zoom.
+- **Partial eraser.** With *Eraser* picked, choose *Partial* to erase only what the eraser touches: strokes are cut, and highlights lose just the word under the eraser. *Whole strokes* works as before.
+- **Select text with a long press.** Hold a finger on a word, then drag to extend. The bar that appears lets you *Copy* or *Share* the words with their reference, *Highlight* them in the current highlighter colour, or add a *Note* to the verse.
+- **Search your notes.** In Search, pick *My notes* to find typed notes containing all the words you enter.
+- **About the translations.** The version menu shows what each translation is like, and *About these versions…* explains how they differ.
 
 ## New in version 0.3
 
@@ -141,7 +153,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Light, sepia and dark page themes.
 - Back up everything (ink, highlights, images, notes, layers, bookmarks) to a single .zip file, and restore it on this tablet or a new one.
 
-## Known limits in 0.3
+## Known limits in 0.4
 
 - NIV and NLT are waiting on licensing (see above). Cross-references come from the KJV numbering, which the BSB and WEB share.
 - The eraser removes whole strokes; there is no partial erasing.
@@ -150,13 +162,13 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 
 ## Next milestones
 
-- **0.4:** NIV and NLT (offline with permission, or through API.Bible), parallel view of one verse in every version, linked scrolling of split panels, front-buffered (lowest-latency) ink, and lasso resize.
-- **0.5:** Strong's numbers and a lexicon (STEPBible data), handwriting search, and sketch pages.
+- **0.5:** Split view: linked scrolling, parallel view of one verse in every version, panels for search results and notes, and up to three panels on large tablets. Also images from the camera, files or clipboard; a slide-over margin on narrow screens; bookmark folders; and notes on a range of verses.
+- **0.6:** NIV and NLT (once permission is granted), Strong's word studies (the BSB data includes Strong's numbers), front-buffered (lowest-latency) ink, lasso resize, and sketch pages.
 
 ## Credits
 
 - King James Version (1769): public domain. Text from the scrollmapper/bible_databases project (MIT).
-- Berean Standard Bible (BSB): dedicated to the public domain (2023). Text from scrollmapper/bible_databases.
+- Berean Standard Bible (BSB): dedicated to the public domain (2023). Text from scrollmapper/bible_databases; section headings from eBible.org.
 - World English Bible (WEB): public domain; "World English Bible" is a trademark of eBible.org. Text from eBible.org.
 - Cross-references: OpenBible.info, CC BY 4.0.
 - Font: Gentium Book Plus © SIL International, SIL Open Font License 1.1 (see `licenses/Gentium-OFL.txt`).

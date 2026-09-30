@@ -95,7 +95,10 @@ fun StudyToolbar(
                         label = { Text("Snap to words") },
                     )
                 }
-                Tool.ERASER -> Text("Erases whole strokes and highlights", style = MaterialTheme.typography.bodySmall)
+                Tool.ERASER -> {
+                    FilterChip(selected = !vm.partialEraser, onClick = { vm.partialEraser = false }, label = { Text("Whole strokes") })
+                    FilterChip(selected = vm.partialEraser, onClick = { vm.partialEraser = true }, label = { Text("Partial") })
+                }
                 Tool.LASSO -> Text("Draw a loop around ink to select it, then drag it or use the bar", style = MaterialTheme.typography.bodySmall)
                 Tool.SELECT -> Text("Drag an image to move it, its corner dot to resize", style = MaterialTheme.typography.bodySmall)
             }

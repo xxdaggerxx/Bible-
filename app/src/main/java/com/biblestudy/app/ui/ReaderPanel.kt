@@ -1,5 +1,7 @@
 package com.biblestudy.app.ui
 
+import android.content.Intent
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.AnimationState
 import androidx.compose.animation.core.animateDecay
 import androidx.compose.animation.splineBasedDecay
@@ -20,12 +22,15 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.ArrowDropDown
@@ -41,6 +46,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
@@ -74,10 +80,15 @@ import androidx.compose.ui.input.pointer.PointerType
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.input.pointer.positionChanged
 import androidx.compose.ui.input.pointer.util.VelocityTracker
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalFontFamilyResolver
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.drawText
 import androidx.compose.ui.text.font.Font
@@ -116,6 +127,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     val resolver = LocalFontFamilyResolver.current
     val measurer = remember(resolver) { TextMeasurer(resolver, Density(1f, 1f), LayoutDirection.Ltr) }
     val density = LocalDensity.current.density
+    val haptics = LocalHapticFeedback.current
     val theme = vm.theme
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
@@ -168,7 +180,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         val g = ctl.geo ?: return@LaunchedEffect
         if (panel.viewW <= 0f) return@LaunchedEffect
         if (ctl.resizing == null && (ctl.lastPageW != g.width || ctl.lastViewW != panel.viewW)) {
-            ctl.fitWidth()
+            ctl.applyRememberedZoom()
             ctl.lastPageW = g.width
             ctl.lastViewW = panel.viewW
         }
@@ -182,6 +194,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         }
         ctl.clamp()
     }
+
+    // The tablet's Back gesture steps back through this panel's history when it is the active one.
+    BackHandler(enabled = vm.activePanel == index && panel.back.isNotEmpty()) { vm.goBack(index) }
 
     val active = vm.activePanel == index && vm.panels.size > 1
     Column(
@@ -200,7 +215,11 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                     panel.viewW = it.width.toFloat()
                     panel.viewH = it.height.toFloat()
                 }
-                .pointerInput(ctl) { readerGestures(ctl) { vm.fingerDraw } }
+                .pointerInput(ctl) {
+                    readerGestures(ctl, fingerDraw = { vm.fingerDraw }, onLongPress = {
+                        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                    })
+                }
         ) {
             // The page: text, highlights, saved ink and images. Redrawn when any of those change.
             Canvas(Modifier.fillMaxSize()) {
@@ -234,6 +253,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                     modifier = Modifier.align(Alignment.TopEnd).padding(12.dp),
                 ) { Text("Delete image") }
             }
+            ctl.textSel?.let { ts ->
+                TextSelectionBar(vm, ctl, ts, Modifier.align(Alignment.TopCenter).padding(top = 8.dp, start = 8.dp, end = 8.dp))
+            }
             val sel = vm.selection
             if (sel != null && ctl.pages().any { sel.isOn(it.layout) } && (vm.activePanel == index || vm.panels.size == 1)) {
                 SelectionBar(vm, ctl, Modifier.align(Alignment.TopCenter).padding(top = 8.dp, start = 8.dp, end = 8.dp))
@@ -253,6 +275,13 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
             .padding(horizontal = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
+        IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
+            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+        }
+        IconButton(onClick = { vm.activePanel = index; vm.goForward(index) }, enabled = panel.forward.isNotEmpty()) {
+            Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Forward")
+        }
+        VerticalDivider(Modifier.height(24.dp).padding(horizontal = 4.dp))
         IconButton(onClick = { vm.activePanel = index; vm.prevChapter(index) }) {
             Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous chapter")
         }
@@ -304,6 +333,35 @@ private fun VersionPicker(vm: StudyViewModel, index: Int) {
         }
     }
     if (about) VersionsDialog { about = false }
+}
+
+/** Actions for text selected with a long press (PEN-3, NOTE-2). */
+@Composable
+private fun TextSelectionBar(vm: StudyViewModel, ctl: ReaderController, ts: TextSel, modifier: Modifier = Modifier) {
+    val clipboard = LocalClipboardManager.current
+    val context = LocalContext.current
+    Surface(modifier, shape = RoundedCornerShape(28.dp), tonalElevation = 6.dp, shadowElevation = 6.dp) {
+        Row(
+            Modifier.horizontalScroll(rememberScrollState()).padding(horizontal = 12.dp, vertical = 2.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
+            Text(ctl.selectionLabel(ts), style = MaterialTheme.typography.labelLarge)
+            TextButton(onClick = { clipboard.setText(AnnotatedString(ctl.selectionText(ts))); ctl.clearTextSelect() }) { Text("Copy") }
+            TextButton(onClick = {
+                val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, ctl.selectionText(ts))
+                context.startActivity(Intent.createChooser(send, null))
+                ctl.clearTextSelect()
+            }) { Text("Share") }
+            TextButton(onClick = { vm.addHighlight(ts.layout, ts.start, ts.end); ctl.clearTextSelect() }) { Text("Highlight") }
+            TextButton(onClick = {
+                val l = ts.layout
+                vm.openVerse(l.book, l.chapter, l.verseAtOffset(ts.start))
+                ctl.clearTextSelect()
+            }) { Text("Note") }
+            IconButton(onClick = ctl::clearTextSelect) { Icon(Icons.Filled.Close, contentDescription = "Clear selection") }
+        }
+    }
 }
 
 /** Actions for the lasso selection: recolour, copy, move to a layer, delete. */
@@ -484,6 +542,7 @@ private fun strokeColor(c: Int, highlighter: Boolean) =
     Color(c).let { if (highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
 
 private val SELECT_BLUE = Color(0xFF1E88E5)
+private const val TEXT_SEL_ID = Long.MIN_VALUE
 
 /** The stroke or lasso in progress, selection outlines and margin grips. */
 private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, theme: PageTheme) {
@@ -498,6 +557,15 @@ private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, t
             val r = buildRender(ink.toArray(), ink.width, ink.highlighter)
             val c = Color(ink.color).let { if (ink.highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
             drawStrokeRender(r, c, ink.ox, ink.page.top + ink.oy)
+        }
+
+        ctl.textSel?.let { ts ->
+            val page = ctl.pages().firstOrNull { it.layout === ts.layout }
+            if (page != null) {
+                translate(page.geo.textLeft, page.top + Page.TEXT_TOP) {
+                    drawPath(ts.layout.highlightPath(TEXT_SEL_ID, ts.start, ts.end), SELECT_BLUE.copy(alpha = 0.28f))
+                }
+            }
         }
 
         ctl.lasso?.let { l ->
@@ -559,7 +627,11 @@ private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, t
 private fun PointerInputChange.isPen() =
     type == PointerType.Stylus || type == PointerType.Eraser || type == PointerType.Mouse
 
-private suspend fun PointerInputScope.readerGestures(ctl: ReaderController, fingerDraw: () -> Boolean) = coroutineScope {
+private suspend fun PointerInputScope.readerGestures(
+    ctl: ReaderController,
+    fingerDraw: () -> Boolean,
+    onLongPress: () -> Unit,
+) = coroutineScope {
     var fling: Job? = null
     awaitEachGesture {
         val down = awaitFirstDown(requireUnconsumed = false)
@@ -584,10 +656,28 @@ private suspend fun PointerInputScope.readerGestures(ctl: ReaderController, fing
         var travelled = 0f
         var multiTouch = false
         var penDown: PointerInputChange? = null
+        var lastTime = down.uptimeMillis
+        var waitingForLongPress = true
         val velocity = VelocityTracker()
         velocity.addPosition(down.uptimeMillis, down.position)
         while (true) {
-            val event = awaitPointerEvent()
+            // Until the finger moves, lifts or a second finger lands, holding still selects text.
+            val event = if (waitingForLongPress && !multiTouch && travelled < viewConfiguration.touchSlop) {
+                val remaining = viewConfiguration.longPressTimeoutMillis - (lastTime - down.uptimeMillis)
+                withTimeoutOrNull(remaining.coerceAtLeast(1L)) { awaitPointerEvent() }
+            } else {
+                awaitPointerEvent()
+            }
+            if (event == null) {
+                waitingForLongPress = false
+                if (ctl.startTextSelect(down.position)) {
+                    onLongPress()
+                    trackTextSelect(down, ctl)
+                    return@awaitEachGesture
+                }
+                continue
+            }
+            lastTime = event.changes.first().uptimeMillis
             penDown = event.changes.firstOrNull { it.pressed && !it.previousPressed && it.isPen() }
             if (penDown != null) break
             if (event.changes.none { it.pressed }) break
@@ -604,7 +694,17 @@ private suspend fun PointerInputScope.readerGestures(ctl: ReaderController, fing
         if (pen != null) {
             trackPen(pen, ctl) // pen touched down while palm/finger was resting
         } else if (!multiTouch && travelled < viewConfiguration.touchSlop) {
-            ctl.onTap(down.position)
+            // A second tap close by toggles fit-width; otherwise it was a single tap on a verse.
+            val second = withTimeoutOrNull(viewConfiguration.doubleTapTimeoutMillis) {
+                awaitFirstDown(requireUnconsumed = false)
+            }
+            if (second != null && !second.isPen() && (second.position - down.position).getDistance() < 48.dp.toPx()) {
+                consumeUntilUp()
+                ctl.toggleFit(second.position)
+            } else {
+                ctl.onTap(down.position)
+                if (second != null && second.isPen()) trackPen(second, ctl) // writing straight after a tap
+            }
         } else if (!multiTouch) {
             // Keep scrolling after a flick, slowing down naturally.
             val v = velocity.calculateVelocity()
@@ -627,6 +727,17 @@ private suspend fun AwaitPointerEventScope.consumeUntilUp() {
         val event = awaitPointerEvent()
         event.changes.forEach { it.consume() }
     } while (event.changes.any { it.pressed })
+}
+
+/** Long-press selection: the finger drags the end of the selection until it lifts. */
+private suspend fun AwaitPointerEventScope.trackTextSelect(first: PointerInputChange, ctl: ReaderController) {
+    while (true) {
+        val event = awaitPointerEvent()
+        val c = event.changes.firstOrNull { it.id == first.id }
+        if (c == null || !c.pressed) break
+        ctl.extendTextSelect(c.position)
+        event.changes.forEach { it.consume() }
+    }
 }
 
 private suspend fun AwaitPointerEventScope.trackResize(first: PointerInputChange, left: Boolean, ctl: ReaderController) {
