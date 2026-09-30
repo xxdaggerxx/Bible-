@@ -93,6 +93,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     var lastPageW = -1f
     var lastViewW = -1f
     var lastNavGen = -1
+    /** Headings/spacing the cached layouts were built with. */
+    var layoutSpec: String? = null
 
     var live by mutableStateOf<LiveInk?>(null)
         private set
@@ -113,7 +115,6 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     private var drag: ImageDrag? = null
     private var lassoDrag: LassoDrag? = null
 
-    private val hlPaths = HashMap<Long, Pair<Highlight, Path>>()
 
     // ---------- pages ----------
 
@@ -153,14 +154,14 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         pages.firstOrNull { y >= it.top && y < it.bottom }
             ?: pages.minByOrNull { if (y < it.top) it.top - y else y - it.bottom }
 
-    fun highlightPath(h: Highlight, layout: ChapterLayout): Path {
-        val cached = hlPaths[h.id]
-        if (cached != null && cached.first.start == h.start && cached.first.end == h.end) return cached.second
-        val len = layout.textLength
-        val path = layout.text.getPathForRange(h.start.coerceIn(0, len), h.end.coerceIn(0, len))
-        hlPaths[h.id] = h to path
-        return path
-    }
+    fun highlightPath(h: Highlight, layout: ChapterLayout): Path = layout.highlightPath(h.id, h.start, h.end)
+
+    /** Drawn points of a stroke in its region's local coordinates (display units). */
+    fun strokePoints(s: InkStroke, layout: ChapterLayout): FloatArray =
+        if (s.region == Region.TEXT) layout.render(s).points else s.points
+
+    fun strokeRender(s: InkStroke, layout: ChapterLayout): StrokeRender =
+        if (s.region == Region.TEXT) layout.render(s) else vm.render(s)
 
     fun touched() { vm.activePanel = panelIndex }
 
@@ -304,8 +305,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val g = page.geo
         if (g.regionAt(s.x) != Region.TEXT) return
         val localY = s.y - page.top - Page.TEXT_TOP
-        if (localY < 0f || localY > g.layout.text.size.height) return
-        val off = g.layout.text.getOffsetForPosition(Offset(s.x - g.textLeft, localY))
+        if (!g.layout.isOnText(localY)) return
+        val off = g.layout.offsetAt(s.x - g.textLeft, localY)
         vm.openVerse(g.layout.book, g.layout.chapter, g.layout.verseAtOffset(off))
     }
 
@@ -410,7 +411,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
                     val off = moveOffset
                     lassoDrag = null
                     moveOffset = Offset.Zero
-                    if (off.getDistance() > 0.5f) vm.moveSelection(off)
+                    val selPage = vm.selection?.let { sel -> pages().firstOrNull { sel.isOn(it.layout) } }
+                    if (off.getDistance() > 0.5f && selPage != null) vm.moveSelection(off, selPage.layout)
                 } else {
                     lasso?.let { finishLasso(it) }
                     lasso = null
@@ -446,7 +448,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             version = if (ink.region == Region.TEXT) layout.version else null,
             book = layout.book, chapter = layout.chapter,
             region = ink.region, verse = ink.verse,
-            highlighter = ink.highlighter, color = ink.color, width = ink.width, points = pts,
+            highlighter = ink.highlighter, color = ink.color, width = ink.width,
+            points = if (ink.region == Region.TEXT) layout.linePoints(pts) else pts,
         )
         vm.addItem(s)
         vm.record(Edit(listOf(s), emptyList()))
@@ -455,12 +458,12 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     /** Snaps a highlighter swipe to whole words on the text lines it crosses. */
     private fun snapHighlight(layout: ChapterLayout, pts: FloatArray, ink: LiveInk): Highlight? {
         val t = layout.text
-        val h = t.size.height.toFloat()
+        val h = layout.displayHeight
         val a = Offset(pts[0], pts[1])
         val b = Offset(pts[pts.size - 3], pts[pts.size - 2])
         if (a.y < 0f || a.y > h || b.y < 0f || b.y > h) return null
-        var s = t.getOffsetForPosition(a)
-        var e = t.getOffsetForPosition(b)
+        var s = layout.offsetAt(a.x, a.y)
+        var e = layout.offsetAt(b.x, b.y)
         if (s > e) { val tmp = s; s = e; e = tmp }
         val start = t.getWordBoundary(s.coerceIn(0, layout.textLength)).start
         val end = t.getWordBoundary(e.coerceIn(0, layout.textLength)).end
@@ -482,7 +485,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val r = max(8f, 20f / panel.zoom)
 
         fun hits(st: InkStroke, ox: Float, oy: Float): Boolean {
-            val pts = st.points
+            val pts = strokePoints(st, layout)
             val reach = r + st.width / 2f
             val reach2 = reach * reach
             val lx = p.x - ox; val ly = p.y - oy
@@ -503,13 +506,10 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             }
         }
         val local = Offset(p.x - g.textLeft, p.y - Page.TEXT_TOP)
-        if (local.y >= 0f && local.y <= layout.text.size.height && local.x >= -r && local.x <= Page.TEXT_W + r) {
-            val off = layout.text.getOffsetForPosition(local)
-            val line = layout.text.getLineForOffset(off)
-            if (local.y >= layout.text.getLineTop(line) && local.y <= layout.text.getLineBottom(line)) {
-                for (h in vm.highlightsFor(layout.version, layout.book, layout.chapter).toList()) {
-                    if (h.layerId in usable && off >= h.start && off <= h.end) { vm.removeItem(h); erased += h }
-                }
+        if (layout.isOnText(local.y) && local.x >= -r && local.x <= Page.TEXT_W + r) {
+            val off = layout.offsetAt(local.x, local.y)
+            for (h in vm.highlightsFor(layout.version, layout.book, layout.chapter).toList()) {
+                if (h.layerId in usable && off >= h.start && off <= h.end) { vm.removeItem(h); erased += h }
             }
         }
     }
@@ -525,7 +525,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val picked = ArrayList<Annotation>()
 
         fun strokeInside(st: InkStroke, ox: Float, oy: Float): Boolean {
-            val pts = st.points
+            val pts = strokePoints(st, layout)
             val n = pts.size / 3
             if (n == 0) return false
             var inside = 0
@@ -549,9 +549,9 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             val step = max(1, (b - a) / 24)
             var total = 0; var inside = 0
             for (i in a until b step step) {
-                val box = layout.text.getBoundingBox(i)
+                val c = layout.charCenter(i)
                 total++
-                if (pointInPolygon(box.center.x + g.textLeft, box.center.y + Page.TEXT_TOP, poly)) inside++
+                if (pointInPolygon(c.x + g.textLeft, c.y + Page.TEXT_TOP, poly)) inside++
             }
             if (total > 0 && inside * 2 >= total) picked += h
         }
@@ -577,7 +577,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         for (a in vm.selectedItems(sel)) {
             when (a) {
                 is InkStroke -> if (a.region == Region.TEXT || g.visible(a.region)) {
-                    add(vm.render(a).bounds.translate(g.originX(a.region), g.originY(a.region, a.verse)))
+                    add(strokeRender(a, layout).bounds.translate(g.originX(a.region), g.originY(a.region, a.verse)))
                 }
                 is Highlight -> add(highlightPath(a, layout).getBounds().translate(g.textLeft, Page.TEXT_TOP))
                 is MarginImage -> if (g.visible(a.region)) add(imageRect(g, a))

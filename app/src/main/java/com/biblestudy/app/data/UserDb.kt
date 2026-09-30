@@ -16,7 +16,7 @@ import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 1) {
+class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 2) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
@@ -26,7 +26,8 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 1) {
         db.execSQL(
             "CREATE TABLE strokes(id INTEGER PRIMARY KEY, layer_id INTEGER NOT NULL, version TEXT, " +
                 "book INTEGER NOT NULL, chapter INTEGER NOT NULL, region INTEGER NOT NULL, verse INTEGER NOT NULL, " +
-                "highlighter INTEGER NOT NULL, color INTEGER NOT NULL, width REAL NOT NULL, points BLOB NOT NULL)"
+                "highlighter INTEGER NOT NULL, color INTEGER NOT NULL, width REAL NOT NULL, points BLOB NOT NULL, " +
+                "coords INTEGER NOT NULL DEFAULT 1)"
         )
         db.execSQL("CREATE INDEX strokes_bc ON strokes(book, chapter)")
         db.execSQL(
@@ -52,7 +53,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 1) {
         db.execSQL("INSERT INTO layers VALUES(1, 'My Notes', ${DEFAULT_LAYER_COLOR}, 1, 0, 0)")
     }
 
-    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {}
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        if (oldVersion < 2) {
+            // 0.4: ink on the words is stored in line coordinates (coords = 1). Older strokes keep
+            // page coordinates (coords = 0) until the app converts them on first load.
+            db.execSQL("ALTER TABLE strokes ADD COLUMN coords INTEGER NOT NULL DEFAULT 0")
+        }
+    }
 
     // ---------- layers ----------
 
@@ -103,7 +110,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 1) {
                 put("id", a.id); put("layer_id", a.layerId); put("version", a.version)
                 put("book", a.book); put("chapter", a.chapter); put("region", a.region.code); put("verse", a.verse)
                 put("highlighter", if (a.highlighter) 1 else 0); put("color", a.color); put("width", a.width)
-                put("points", a.points.toBlob())
+                put("points", a.points.toBlob()); put("coords", if (a.lineAnchored) 1 else 0)
             }, SQLiteDatabase.CONFLICT_REPLACE)
 
             is Highlight -> db.insertWithOnConflict("highlights", null, ContentValues().apply {
@@ -227,12 +234,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 1) {
         const val NAME = "userdata.db"
         const val DEFAULT_LAYER_COLOR = 0xFF7A5C2E.toInt()
         private const val STROKE_COLS =
-            "id, layer_id, version, book, chapter, region, verse, highlighter, color, width, points"
+            "id, layer_id, version, book, chapter, region, verse, highlighter, color, width, points, coords"
 
         private fun Cursor.toStroke() = InkStroke(
             id = getLong(0), layerId = getLong(1), version = if (isNull(2)) null else getString(2),
             book = getInt(3), chapter = getInt(4), region = Region.of(getInt(5)), verse = getInt(6),
             highlighter = getInt(7) != 0, color = getInt(8), width = getFloat(9), points = getBlob(10).toFloats(),
+            lineAnchored = getInt(11) != 0,
         )
 
         fun FloatArray.toBlob(): ByteArray {

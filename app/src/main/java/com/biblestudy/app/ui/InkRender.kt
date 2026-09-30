@@ -12,12 +12,16 @@ import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.roundToInt
 
-/** A stroke pre-built into a few paths grouped by (pressure-based) width. [source] is the points it was built from. */
-class StrokeRender(val pieces: List<Pair<Path, Float>>, val bounds: Rect, val source: FloatArray? = null)
+/**
+ * A stroke pre-built into a few paths grouped by (pressure-based) width.
+ * [points] are the drawn (display) points; [source] is the stored points they came from, so a
+ * cache can tell when the stroke has changed (e.g. moved with the lasso).
+ */
+class StrokeRender(val pieces: List<Pair<Path, Float>>, val bounds: Rect, val points: FloatArray, val source: FloatArray)
 
 fun penWidth(base: Float, pressure: Float) = base * (0.35f + 0.9f * pressure.coerceIn(0f, 1f))
 
-fun buildRender(points: FloatArray, width: Float, highlighter: Boolean): StrokeRender {
+fun buildRender(points: FloatArray, width: Float, highlighter: Boolean, source: FloatArray = points): StrokeRender {
     val n = points.size / 3
     var minX = Float.MAX_VALUE; var minY = Float.MAX_VALUE
     var maxX = -Float.MAX_VALUE; var maxY = -Float.MAX_VALUE
@@ -27,7 +31,7 @@ fun buildRender(points: FloatArray, width: Float, highlighter: Boolean): StrokeR
     }
     val pad = width * 1.4f + 2f
     val bounds = if (n == 0) Rect.Zero else Rect(minX - pad, minY - pad, maxX + pad, maxY + pad)
-    if (n == 0) return StrokeRender(emptyList(), bounds, points)
+    if (n == 0) return StrokeRender(emptyList(), bounds, points, source)
 
     if (highlighter || n < 3) {
         val p = Path()
@@ -35,7 +39,7 @@ fun buildRender(points: FloatArray, width: Float, highlighter: Boolean): StrokeR
         for (i in 1 until n) p.lineTo(points[3 * i], points[3 * i + 1])
         if (n == 1) p.lineTo(points[0] + 0.1f, points[1])
         val w = if (highlighter) width else penWidth(width, points[2])
-        return StrokeRender(listOf(p to w), bounds, points)
+        return StrokeRender(listOf(p to w), bounds, points, source)
     }
 
     val pieces = ArrayList<Pair<Path, Float>>()
@@ -52,7 +56,7 @@ fun buildRender(points: FloatArray, width: Float, highlighter: Boolean): StrokeR
         }
         cur.lineTo(points[3 * i], points[3 * i + 1])
     }
-    return StrokeRender(pieces, bounds, points)
+    return StrokeRender(pieces, bounds, points, source)
 }
 
 fun DrawScope.drawStrokeRender(r: StrokeRender, color: Color, ox: Float, oy: Float) {

@@ -34,6 +34,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -63,6 +64,7 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.drawscope.clipRect
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.drawscope.withTransform
 import androidx.compose.ui.input.pointer.AwaitPointerEventScope
@@ -117,8 +119,18 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     val theme = vm.theme
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing) {
         val v = panel.version
+        val spacing = vm.lineSpacing
+        val headingsOn = vm.showHeadings
+        val spec = "$headingsOn|$spacing"
+        if (ctl.layoutSpec != spec) {
+            // Headings or spacing changed: re-lay out every chapter, staying on the same verse.
+            if (ctl.layoutSpec != null) panel.pendingVerse = panel.topVerse
+            ctl.layoutSpec = spec
+            ctl.layouts.clear()
+            ctl.dropUnused()
+        }
         val wanted = listOfNotNull(
             panel.book to panel.chapter,
             vm.neighbor(panel.book, panel.chapter, 1),
@@ -126,11 +138,17 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         )
         for ((b, c) in wanted) {
             val key = ctl.layoutKey(v, b, c)
+            val name = vm.bible.book(b).name
             if (ctl.layouts[key] == null) {
-                val verses = withContext(Dispatchers.IO) { vm.text(v).chapter(b, c) }
-                ctl.layouts[key] = buildChapterLayout(measurer, bibleFont, vm.bible.book(b).name, ChapterData(v, b, c, verses))
+                val data = withContext(Dispatchers.IO) {
+                    ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
+                }
+                ctl.layouts[key] = buildChapterLayout(measurer, bibleFont, name, data, spacing)
             }
-            vm.ensureLoaded(v, b, c)
+            vm.ensureLoaded(v, b, c) {
+                // Only for ink saved before 0.4: its y was measured at normal spacing, without headings.
+                buildChapterLayout(measurer, bibleFont, name, ChapterData(v, b, c, vm.text(v).chapter(b, c)))
+            }
         }
         if (ctl.layouts.size > MAX_LAYOUTS) {
             val keep = wanted.mapTo(HashSet()) { ctl.layoutKey(v, it.first, it.second) }
@@ -218,7 +236,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             }
             val sel = vm.selection
             if (sel != null && ctl.pages().any { sel.isOn(it.layout) } && (vm.activePanel == index || vm.panels.size == 1)) {
-                SelectionBar(vm, Modifier.align(Alignment.TopCenter).padding(top = 8.dp, start = 8.dp, end = 8.dp))
+                SelectionBar(vm, ctl, Modifier.align(Alignment.TopCenter).padding(top = 8.dp, start = 8.dp, end = 8.dp))
             }
         }
     }
@@ -260,6 +278,7 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
 private fun VersionPicker(vm: StudyViewModel, index: Int) {
     val panel = vm.panels[index]
     var open by remember { mutableStateOf(false) }
+    var about by remember { mutableStateOf(false) }
     Box {
         TextButton(onClick = { vm.activePanel = index; open = true }) {
             Text(panel.version, style = MaterialTheme.typography.titleMedium)
@@ -268,17 +287,28 @@ private fun VersionPicker(vm: StudyViewModel, index: Int) {
         DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
             for (v in BibleRepository.ALL) {
                 DropdownMenuItem(
-                    text = { Text("${v.code} \u2014 ${v.name}" + if (v.code == panel.version) "  \u2713" else "") },
+                    text = {
+                        Column(Modifier.padding(vertical = 4.dp)) {
+                            Text(
+                                "${v.code} \u2014 ${v.name}" + if (v.code == panel.version) "  \u2713" else "",
+                                style = MaterialTheme.typography.titleSmall,
+                            )
+                            Text(v.summary, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                        }
+                    },
                     onClick = { open = false; vm.setVersion(index, v.code) },
                 )
             }
+            HorizontalDivider()
+            DropdownMenuItem(text = { Text("About these versions\u2026") }, onClick = { open = false; about = true })
         }
     }
+    if (about) VersionsDialog { about = false }
 }
 
 /** Actions for the lasso selection: recolour, copy, move to a layer, delete. */
 @Composable
-private fun SelectionBar(vm: StudyViewModel, modifier: Modifier = Modifier) {
+private fun SelectionBar(vm: StudyViewModel, ctl: ReaderController, modifier: Modifier = Modifier) {
     Surface(modifier, shape = RoundedCornerShape(28.dp), tonalElevation = 6.dp, shadowElevation = 6.dp) {
         Row(
             Modifier.horizontalScroll(rememberScrollState()).padding(horizontal = 12.dp, vertical = 6.dp),
@@ -298,7 +328,10 @@ private fun SelectionBar(vm: StudyViewModel, modifier: Modifier = Modifier) {
                         .clickable { vm.recolorSelection(c) }
                 )
             }
-            TextButton(onClick = vm::copySelection) { Text("Copy") }
+            TextButton(onClick = {
+                val sel = vm.selection
+                ctl.pages().firstOrNull { sel != null && sel.isOn(it.layout) }?.let { vm.copySelection(it.layout) }
+            }) { Text("Copy") }
             var layerMenu by remember { mutableStateOf(false) }
             Box {
                 TextButton(onClick = { layerMenu = true }) { Text("Move to layer") }
@@ -364,9 +397,24 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
         drawStrokes(vm, g, view, textStrokes, marginStrokes, layerId, highlighter = true, moving, shift)
     }
 
-    // Scripture text
+    // Scripture text, drawn in runs between section headings
     drawText(layout.title, color = theme.text, topLeft = Offset(g.textLeft, Page.TITLE_TOP))
-    drawText(layout.text, color = theme.text, topLeft = Offset(g.textLeft, Page.TEXT_TOP))
+    for ((first, last, dy) in layout.segments) {
+        val (clipTop, clipBottom) = layout.segmentClip(first, last)
+        translate(g.textLeft, Page.TEXT_TOP + dy) {
+            clipRect(left = -Page.COL_PAD, top = clipTop, right = Page.TEXT_W + Page.COL_PAD, bottom = clipBottom) {
+                drawText(layout.text, color = theme.text)
+            }
+        }
+    }
+    for (block in layout.headings) {
+        var y = Page.TEXT_TOP + layout.displayTop(block.beforeLine) - block.height +
+            if (block.beforeLine == 0) HeadingBlock.FIRST_TOP_PAD else HeadingBlock.TOP_PAD
+        for (line in block.lines) {
+            drawText(line, color = theme.text, topLeft = Offset(g.textLeft, y))
+            y += line.size.height + HeadingBlock.GAP
+        }
+    }
 
     // Verse markers: typed note (dot) and bookmark (ribbon)
     for (v in notes.keys) {
@@ -417,7 +465,7 @@ private fun DrawScope.drawStrokes(
         val d = if (s.id in moving) shift else Offset.Zero
         val ox = g.textLeft + d.x
         val oy = Page.TEXT_TOP + d.y
-        val r = vm.render(s)
+        val r = g.layout.render(s)
         if (!ReaderController.overlaps(r.bounds.translate(ox, oy), view)) continue
         drawStrokeRender(r, strokeColor(s.color, highlighter), ox, oy)
     }

@@ -27,6 +27,7 @@ import com.biblestudy.app.data.UserDb
 import com.biblestudy.app.model.Annotation
 import com.biblestudy.app.model.Bookmark
 import com.biblestudy.app.model.Edit
+import com.biblestudy.app.model.Heading
 import com.biblestudy.app.model.Highlight
 import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.Layer
@@ -96,6 +97,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var highlightSize by mutableIntStateOf(prefs.getInt("hlSize", 1))
     var snapHighlights by mutableStateOf(prefs.getBoolean("snap", true))
     var fingerDraw by mutableStateOf(prefs.getBoolean("fingerDraw", false))
+    var showHeadings by mutableStateOf(prefs.getBoolean("headings", true))
+    var lineSpacing by mutableStateOf(
+        runCatching { LineSpacing.valueOf(prefs.getString("lineSpacing", "NORMAL")!!) }.getOrDefault(LineSpacing.NORMAL)
+    )
     var sideButton by mutableStateOf(
         runCatching { SideButton.valueOf(prefs.getString("sideButton", "ERASER")!!) }.getOrDefault(SideButton.ERASER)
     )
@@ -189,6 +194,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putInt("penSize", penSize); putInt("hlSize", highlightSize)
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
+            putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -225,6 +231,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         p.pendingVerse = p.topVerse
         p.version = validVersion(code)
     }
+
+    /** Section headings for a chapter. Only the BSB has them; being public domain, they are shown in every version. */
+    fun headings(book: Int, chapter: Int): List<Heading> = text(BibleRepository.BSB.code).headings(book, chapter)
 
     /** The version shown in the active panel (used by search and the verse popup). */
     val activeVersion: String get() = panels.getOrNull(activePanel)?.version ?: bible.code
@@ -385,13 +394,26 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var pendingLoads by mutableIntStateOf(0)
         private set
 
-    fun ensureLoaded(version: String, book: Int, chapter: Int) {
+    /**
+     * Loads a chapter's annotations. [legacyLayout] builds the chapter's layout at normal line
+     * spacing without headings; it is only called if ink saved before 0.4 needs converting to
+     * line coordinates.
+     */
+    fun ensureLoaded(version: String, book: Int, chapter: Int, legacyLayout: () -> ChapterLayout) {
         val t = tk(version, book, chapter)
         if (loaded.add("t$t")) {
             pendingLoads++
             viewModelScope.launch {
                 try {
-                    val (s, h) = withContext(dbDispatcher) { user.loadText(version, book, chapter) }
+                    val (loadedStrokes, h) = withContext(dbDispatcher) { user.loadText(version, book, chapter) }
+                    var s = loadedStrokes
+                    if (s.any { !it.lineAnchored }) {
+                        val base = legacyLayout()
+                        s = s.map { st ->
+                            if (st.lineAnchored) st
+                            else st.copyAs(points = base.linePoints(st.points), lineAnchored = true).also { c -> io { user.insert(c) } }
+                        }
+                    }
                     merge(textStrokesFor(version, book, chapter), s)
                     merge(highlightsFor(version, book, chapter), h)
                 } finally {
@@ -420,7 +442,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         list.clear(); list.addAll(fromDb); list.addAll(extra)
     }
 
-    /** Cached drawing paths for a stroke; rebuilt if the stroke's points change (e.g. moved with the lasso). */
+    /**
+     * Cached drawing paths for a margin stroke; rebuilt if its points change (e.g. moved with the
+     * lasso). Strokes on the words are drawn through their [ChapterLayout.render] instead.
+     */
     fun render(s: InkStroke): StrokeRender {
         renders[s.id]?.let { if (it.source === s.points) return it }
         return buildRender(s.points, s.width, s.highlighter).also { renders[s.id] = it }
@@ -516,7 +541,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Moves selected ink and images by [off] page units. Highlights stay on their words. */
-    fun moveSelection(off: Offset) {
+    fun moveSelection(off: Offset, layout: ChapterLayout) {
         val items = selectedItems()
         if (items.isNotEmpty() && items.all { it is Highlight }) {
             message = "Highlights stay on their words; only ink and images can be moved."
@@ -524,12 +549,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
         changeSelection { a ->
             when (a) {
-                is InkStroke -> a.withPoints(a.points.translated(off.x, off.y))
+                is InkStroke -> a.withPoints(shifted(a, off.x, off.y, layout))
                 is MarginImage -> a.copy(x = a.x + off.x, y = a.y + off.y)
                 is Highlight -> null
             }
         }
     }
+
+    /** A stroke's points moved by (dx, dy) page units; ink on the words goes through line coordinates. */
+    private fun shifted(s: InkStroke, dx: Float, dy: Float, layout: ChapterLayout): FloatArray =
+        if (s.region == Region.TEXT) layout.linePoints(layout.render(s).points.translated(dx, dy))
+        else s.points.translated(dx, dy)
 
     fun recolorSelection(color: Int) = changeSelection { a ->
         when (a) {
@@ -560,11 +590,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Duplicates the selected ink and images a little below and to the right, and selects the copies. */
-    fun copySelection() {
+    fun copySelection(layout: ChapterLayout) {
         val sel = selection ?: return
         val copies = selectedItems().mapNotNull { a ->
             when (a) {
-                is InkStroke -> a.copyAs(newId(), a.points.translated(COPY_SHIFT, COPY_SHIFT))
+                is InkStroke -> a.copyAs(newId(), shifted(a, COPY_SHIFT, COPY_SHIFT, layout))
                 is MarginImage -> a.copy(id = newId(), x = a.x + COPY_SHIFT, y = a.y + COPY_SHIFT)
                 is Highlight -> null
             }

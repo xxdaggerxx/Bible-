@@ -201,16 +201,17 @@ class FeatureTest {
         assertEquals(1, vm.selection!!.ids.size)
         snap("12-lasso-selection")
 
-        // Drag the selection down by 150 px.
+        // Drag the selection 150 px to the right. (Vertical moves re-anchor the stroke on its new
+        // line; LayoutAnchorTest covers line coordinates.)
         compose.onNodeWithTag("reader0").performTouchInput {
             down(Offset((x0 + x1) / 2f, y))
-            repeat(10) { moveBy(Offset(0f, 15f)) }
+            repeat(10) { moveBy(Offset(15f, 0f)) }
             up()
         }
         compose.waitForIdle()
         val moved = vm.textStrokesFor("KJV", 43, 3).single().points
-        assertEquals(original[1] + 150f / z, moved[1], 1.5f)
-        assertEquals(original[0], moved[0], 1.5f)
+        assertEquals(original[0] + 150f / z, moved[0], 1.5f)
+        assertEquals(original[1], moved[1], 0.0001f)
 
         // Recolour, then undo twice to get back to the original stroke.
         compose.runOnUiThread { vm.recolorSelection(0xFFC62828.toInt()) }

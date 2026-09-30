@@ -5,13 +5,22 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import com.biblestudy.app.model.BookInfo
 import com.biblestudy.app.model.CrossRef
+import com.biblestudy.app.model.Heading
 import com.biblestudy.app.model.SearchHit
 import com.biblestudy.app.model.SearchScope
 import com.biblestudy.app.model.Verse
+import com.biblestudy.app.model.VerseId
 import java.io.File
 
-/** A Bible version bundled with the app. */
-data class BibleVersion(val code: String, val name: String, val asset: String, val copyright: String)
+/** A Bible version bundled with the app, with a one-line [summary] and a short [description] for readers. */
+data class BibleVersion(
+    val code: String,
+    val name: String,
+    val asset: String,
+    val copyright: String,
+    val summary: String,
+    val description: String,
+)
 
 /**
  * Read-only access to one bundled Bible version (SQLite with an FTS4 search index; the KJV
@@ -24,8 +33,11 @@ class BibleRepository(context: Context, val version: BibleVersion) {
     val books: List<BookInfo>
 
     init {
-        val file = context.getDatabasePath("bible_${version.asset.removeSuffix(".db")}_v$DB_VERSION.db")
+        val base = "bible_${version.asset.removeSuffix(".db")}_v"
+        val file = context.getDatabasePath("$base$DB_VERSION.db")
         if (!file.exists()) {
+            // Remove copies of older bundled databases.
+            file.parentFile?.listFiles()?.filter { it.name.startsWith(base) && it.name != file.name }?.forEach { it.delete() }
             file.parentFile?.mkdirs()
             val tmp = File(file.path + ".tmp")
             context.assets.open("bibles/${version.asset}").use { input ->
@@ -50,6 +62,19 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         ).use { c ->
             buildList { while (c.moveToNext()) add(Verse(c.getInt(0), c.getString(1))) }
         }
+
+    /** Section headings in a chapter (only databases built with headings have any). */
+    fun headings(book: Int, chapter: Int): List<Heading> = try {
+        val lo = VerseId.of(book, chapter, 0)
+        db.rawQuery(
+            "SELECT verse_id, level, text, refs FROM headings WHERE verse_id BETWEEN ? AND ? ORDER BY verse_id, level",
+            arrayOf(lo.toString(), (lo + 999).toString()),
+        ).use { c ->
+            buildList { while (c.moveToNext()) add(Heading(VerseId.verse(c.getInt(0)), c.getInt(1), c.getString(2), c.getString(3))) }
+        }
+    } catch (e: SQLiteException) {
+        emptyList() // no headings table
+    }
 
     fun verseText(id: Int): String? =
         db.rawQuery("SELECT text FROM verses WHERE id = ?", arrayOf(id.toString())).use { c ->
@@ -91,17 +116,37 @@ class BibleRepository(context: Context, val version: BibleVersion) {
 
     companion object {
         /** Bump when a bundled database changes, so the new copy replaces the old one. */
-        private const val DB_VERSION = 1
+        private const val DB_VERSION = 2
         const val MAX_RESULTS = 2000
 
-        val KJV = BibleVersion("KJV", "King James Version (1769)", "kjv.db", "Public domain.")
+        val KJV = BibleVersion(
+            "KJV", "King James Version (1769)", "kjv.db", "Public domain.",
+            summary = "Classic 1611 English, word for word",
+            description = "Translated by a team of English scholars and first published in 1611; this is the " +
+                "1769 revision found in most KJV Bibles today. It follows the Hebrew and Greek closely, word for " +
+                "word, in the Early Modern English of its time (\u201cthee\u201d, \u201cthou\u201d, " +
+                "\u201cbelieveth\u201d). Its New Testament is based on the Greek Textus Receptus. Loved for its " +
+                "beauty and memorable phrasing, though some words have changed meaning since.",
+        )
         val BSB = BibleVersion(
             "BSB", "Berean Standard Bible", "bsb.db",
             "The Holy Bible, Berean Standard Bible (BSB). Dedicated to the public domain, 2023.",
+            summary = "Modern, accurate and readable \u2014 closest to the NIV",
+            description = "A modern translation first published in 2016 and given to the public domain in " +
+                "2023. It balances word-for-word accuracy with natural, current English, much like the NIV or " +
+                "ESV. The New Testament mainly follows the modern critical Greek text, so a few verses found in " +
+                "the KJV (such as Matthew 17:21) appear only as footnotes. Pronouns for God are capitalised " +
+                "(\u201cHe\u201d, \u201cHis\u201d). The section headings shown in this app come from the BSB.",
         )
         val WEB = BibleVersion(
             "WEB", "World English Bible", "web.db",
             "World English Bible (WEB). Public domain. \u201cWorld English Bible\u201d is a trademark of eBible.org.",
+            summary = "Modern-English update of the 1901 ASV, fairly literal",
+            description = "A revision of the American Standard Version (1901) into modern English, made by " +
+                "volunteers and completed in the early 2000s. It stays close to the original wording \u2014 more " +
+                "literal than the NIV or NLT \u2014 while replacing words like \u201cthee\u201d and " +
+                "\u201cthou\u201d. Its New Testament follows the Majority Text (the reading of most Greek " +
+                "manuscripts), so it keeps almost all the verses the KJV has.",
         )
         /** In the order shown in the version picker. */
         val ALL = listOf(KJV, BSB, WEB)

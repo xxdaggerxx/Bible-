@@ -29,10 +29,13 @@ sealed interface Annotation {
 /**
  * A pen or freehand-highlighter stroke.
  *
- * Points are packed as (x, y, pressure) triples in *local* page units:
- *  - Region.TEXT: relative to the top-left of the text column (Study Layout coordinates).
- *    These strokes belong to one Bible version ([version] is set).
- *  - Region.LEFT / RIGHT: relative to (margin left edge, top of [verse]).
+ * Points are packed as (x, y, pressure) triples:
+ *  - Region.TEXT: x in page units from the text column's left edge; y in *line coordinates*
+ *    (line index + fraction of the line pitch), so ink stays on its words when headings or line
+ *    spacing change. These strokes belong to one Bible version ([version] is set).
+ *    Strokes saved before version 0.4 ([lineAnchored] = false) hold y in page units from the
+ *    text's top at normal spacing; they are converted when first loaded.
+ *  - Region.LEFT / RIGHT: page units relative to (margin left edge, top of [verse]).
  *    Margin strokes are shared across versions ([version] is null).
  */
 class InkStroke(
@@ -47,13 +50,15 @@ class InkStroke(
     val color: Int,
     val width: Float,
     val points: FloatArray,
+    val lineAnchored: Boolean = true,
 ) : Annotation {
     fun copyAs(
         id: Long = this.id,
         points: FloatArray = this.points,
         color: Int = this.color,
         layerId: Long = this.layerId,
-    ) = InkStroke(id, layerId, version, book, chapter, region, verse, highlighter, color, width, points)
+        lineAnchored: Boolean = this.lineAnchored,
+    ) = InkStroke(id, layerId, version, book, chapter, region, verse, highlighter, color, width, points, lineAnchored)
 
     fun withPoints(p: FloatArray) = copyAs(points = p)
     fun withColor(c: Int) = copyAs(color = c)
@@ -112,7 +117,16 @@ data class BookInfo(val id: Int, val name: String, val osis: String, val chapter
 
 data class Verse(val verse: Int, val text: String)
 
-data class ChapterData(val version: String, val book: Int, val chapter: Int, val verses: List<Verse>)
+/** A section heading shown above [verse] (level 0 = major division, 1 = heading, 2 = subheading). */
+data class Heading(val verse: Int, val level: Int, val text: String, val refs: String)
+
+data class ChapterData(
+    val version: String,
+    val book: Int,
+    val chapter: Int,
+    val verses: List<Verse>,
+    val headings: List<Heading> = emptyList(),
+)
 
 data class SearchHit(val book: Int, val chapter: Int, val verse: Int, val text: String)
 

@@ -135,6 +135,17 @@ fun StudyToolbar(
                     }
                     HorizontalDivider()
                     DropdownMenuItem(
+                        text = { Text("Section headings" + if (vm.showHeadings) "  \u2713" else "") },
+                        onClick = { vm.showHeadings = !vm.showHeadings; menu = false },
+                    )
+                    for (sp in LineSpacing.entries) {
+                        DropdownMenuItem(
+                            text = { Text("Line spacing: ${sp.label}" + if (vm.lineSpacing == sp) "  \u2713" else "") },
+                            onClick = { vm.lineSpacing = sp; menu = false },
+                        )
+                    }
+                    HorizontalDivider()
+                    DropdownMenuItem(
                         text = { Text("Draw with finger" + if (vm.fingerDraw) "  \u2713" else "") },
                         onClick = { vm.fingerDraw = !vm.fingerDraw; menu = false },
                     )

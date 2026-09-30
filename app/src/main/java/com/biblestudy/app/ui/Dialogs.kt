@@ -502,6 +502,32 @@ fun BookmarksDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
 // About
 // ---------------------------------------------------------------------------------------------
 
+/** What each bundled translation is, so readers know how they differ. */
+@Composable
+fun VersionsDialog(onDismiss: () -> Unit) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        confirmButton = { TextButton(onClick = onDismiss) { Text("Close") } },
+        title = { Text("About these versions") },
+        text = {
+            Column(Modifier.verticalScroll(rememberScrollState())) {
+                for (v in BibleRepository.ALL) {
+                    Text("${v.code} \u2014 ${v.name}", style = MaterialTheme.typography.titleMedium)
+                    Text(v.summary, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                    Spacer(Modifier.height(4.dp))
+                    Text(v.description)
+                    Text(v.copyright, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                    Spacer(Modifier.height(16.dp))
+                }
+                Text(
+                    "The NIV and NLT are copyrighted and can be added once permission is granted by their publishers.",
+                    style = MaterialTheme.typography.bodySmall,
+                )
+            }
+        },
+    )
+}
+
 @Composable
 fun AboutDialog(onDismiss: () -> Unit) {
     AlertDialog(
