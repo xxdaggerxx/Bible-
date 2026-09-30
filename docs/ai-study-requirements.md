@@ -278,7 +278,9 @@ Every search is answered by the first step below that can handle it. All steps e
 | G20 | Character studies for major figures (e.g. "The life of Joseph"), with every event cited and in order. | Could |
 | G21 | Thematic reading plans (e.g. "30 days on grace") built from the topic index. | Could |
 
-### 8.4 Sermons
+### 8.4 Sermons (later stage)
+
+**Scheduled for a later stage (phase 6), after the Bible study features in phases 1–5 are complete.** Nothing in phases 1–5 depends on sermons. The requirements below describe the intended design; the "Must" priorities apply once this stage starts.
 
 Topic pages, passages and word studies show sermons on the same topic or text, with an AI summary of each and a link to the original. Sermons come from two kinds of source, handled differently.
 
@@ -457,8 +459,9 @@ For open questions that have no ready-made page and that the parser can't handle
 | 1 | 0.5 | `lexicon.db`; tap-a-word; word study page (W1, W3, W8); lemma search; T1 | STEPBible data |
 | 2 | 0.6 | Sections; section records; concept layer; hybrid search; topic results with meanings and subtopics (S, T, C); query parser (QP); evaluation set | Phase 1 |
 | 3 | 0.7 | People, places, events; speakers; kinds of text; lists; outlines (I); all search shapes with timelines and maps (SH); build-time search agent and ready-made result pages (RP, B8) | Phase 2 records |
-| 4 | 0.8 | Topic guides, passage guides, study questions (G); notes in search (N); historical sermon library (SR, public domain) | Phases 2–3 |
-| 5 | later | Modern sermon summaries and links (SR6–SR9), starting with ministries that have open sharing policies; sense groups (W6), Septuagint links, character studies, reading plans, optional online search agent (A) | — |
+| 4 | 0.8 | Topic guides, passage guides, study questions (G); notes in search (N) | Phases 2–3 |
+| 5 | later | Sense groups (W6), Septuagint links, character studies, reading plans, optional online search agent (A) | — |
+| 6 | later stage | **Sermons (§8.4):** sermon search and summaries. First historical (public-domain) sermons, then modern pastors' summaries with links (SR6–SR9), starting with ministries that have open sharing policies | Phases 2–4 (topics, sections, guides) |
 
 **First prototype:** run the section-record pass on Micah (7 chapters) and Romans (16 chapters), build a small `study.db`, and run the "righteousness" acceptance query on the desktop before starting the Android work.
 
