@@ -1,4 +1,4 @@
-# Bible Study — version 0.5
+# Bible Study — version 0.6
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,39 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 0.6
+
+- **Highlights list.** Next to Bookmarks there's now a *Highlights* tab. It lists every highlight in Bible order with its words, colour, version and layer. You can filter by colour or layer, tap one to go there, or remove it.
+- **Edit a highlight.** Hold a finger on highlighted words to select the whole highlight. The bar then offers other colours and *Remove highlight* instead of *Highlight*. Both can be undone.
+- **Highlights in every version.** A highlight shows in the other translations too, over the whole verses it covers and a shade lighter. Holding a finger on it there changes the original. Turn it off in *More → Highlights in every version*.
+- **Compare versions.** In a verse's window (tap a verse), *Compare versions* shows it in the KJV, BSB and WEB stacked together. Tap one to read in it.
+- **Book introductions.** Every book has a study introduction covering:
+  - author, date, place, first readers and type of writing
+  - historical background, purpose and themes
+  - an outline you can tap to jump to a section
+  - key people and places
+  - key verses and connections, as links
+
+  Open one from the ⓘ on each book in *Choose a book*, from *About this book* on the chapter screen, or from the ⓘ in the reader's header. Authorship and dates follow the traditional view.
+- **Bookmark folders.** In *Bookmarks*, make folders and move bookmarks into them with the folder button. You can also rename a folder, or delete it (its bookmarks are kept).
+- **Notes on several verses.** In a verse's window, the − and + beside "Note on …" make the note cover a range such as John 3:16–18. A line beside the verses shows its extent.
+- **Better search.**
+  - `-word` leaves out verses with that word, for example `love -world`.
+  - Results are grouped by book with counts, and you can tap a book to see just its verses.
+  - Each result has *Open beside*.
+  - *Keep results beside the text* moves the results into a side pane.
+- **Study pane.** The panels button in the toolbar opens a pane beside the text. It can show:
+  - **Search** results that stay while you read.
+  - **Cross-references**, following the verse at the top of the page, or a verse you tapped.
+  - **My notes**: the notes and bookmarks in the chapter you're reading.
+- **Up to three Bible panels** on large screens in landscape. Add them from the panels button and drag the dividers to resize. Narrow panels move Back/Forward, *About this book* and *Fit width* into a ⋮ menu.
+- **More ways to add images.** The image button offers the gallery, the camera, files, or a picture on the clipboard.
+- **Margin drawers on narrow screens.** On small tablets in portrait, the text fills the width. Tabs at the edges slide the margins into view.
+- **Text font.** Under *More*, choose Gentium Book, Serif or Sans-serif. Ink on the words moves with its words when the font changes.
+- Tested on small (8") and large (14.6") tablet sizes as well as the Tab S9.
+
+Your notes database is upgraded automatically on first launch; existing notes, bookmarks and ink are kept.
 
 ## New in version 0.5
 
@@ -172,17 +205,16 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Light, sepia and dark page themes.
 - Back up everything (ink, highlights, images, notes, layers, bookmarks) to a single .zip file, and restore it on this tablet or a new one.
 
-## Known limits in 0.4
+## Known limits
 
 - NIV and NLT are waiting on licensing (see above). Cross-references come from the KJV numbering, which the BSB and WEB share.
-- The eraser removes whole strokes; there is no partial erasing.
 - The lasso moves and recolours but can't resize or rotate a selection yet.
 - Pen rendering still uses standard Android drawing rather than the front-buffered ink engine Samsung Notes uses, so it can lag the pen tip slightly.
 
 ## Next milestones
 
-- **Later in 0.5:** Split view: parallel view of one verse in every version, panels for search results and notes, and up to three panels on large tablets. Also images from the camera, files or clipboard; a slide-over margin on narrow screens; bookmark folders; and notes on a range of verses.
-- **0.6:** NIV and NLT (once permission is granted), Strong's word studies (the BSB data includes Strong's numbers), front-buffered (lowest-latency) ink, lasso resize, and sketch pages.
+- **Next (0.6 step 6, released on its own):** front-buffered, lowest-latency ink, so the feel can be judged on the tablet.
+- **Later:** NIV and NLT (once permission is granted), Strong's word studies, lasso resize, and sketch pages.
 
 ## Credits
 
