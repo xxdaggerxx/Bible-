@@ -186,7 +186,43 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     // ---------- view transform ----------
 
-    private fun fitZoom(g: PageGeometry) = if (panel.viewW > 0f) panel.viewW / g.width else 1f
+    /**
+     * A narrow panel in portrait (MRG-14): fit-width fits just the text column, and the margins
+     * slide in from the side like drawers instead of shrinking the text.
+     */
+    val drawerMode: Boolean get() = !vm.landscape && panel.viewW > 0f && panel.viewW / density < DRAWER_BELOW_DP
+
+    private fun fitZoom(g: PageGeometry): Float {
+        if (panel.viewW <= 0f) return 1f
+        val w = if (drawerMode && (g.left || g.right)) Page.COL_W else g.width
+        return panel.viewW / w
+    }
+
+    /** Where the page sits sideways with the text in view, and with each margin drawer open. */
+    private fun textPanX(g: PageGeometry) = -g.leftW * panel.zoom
+    private fun rightOpenPanX(g: PageGeometry) = panel.viewW - g.width * panel.zoom
+
+    /** Which margin drawer is open, if any. */
+    val openDrawer: Region?
+        get() {
+            val g = geo ?: return null
+            if (!drawerMode) return null
+            return when {
+                g.right && panel.panX <= rightOpenPanX(g) + 1f && abs(rightOpenPanX(g) - textPanX(g)) > 1f -> Region.RIGHT
+                g.left && panel.panX >= -1f && g.leftW > 0f -> Region.LEFT
+                else -> null
+            }
+        }
+
+    /** Slides a margin drawer open, or back to the text if it is already open. */
+    suspend fun toggleDrawer(region: Region) {
+        val g = geo ?: return
+        val target = if (openDrawer == region) textPanX(g) else if (region == Region.RIGHT) rightOpenPanX(g) else 0f
+        androidx.compose.animation.core.animate(panel.panX, target) { v, _ ->
+            panel.panX = v
+            clamp()
+        }
+    }
 
     /** Zooms so the page fills the panel's width, keeping the same line at the top of the view. */
     fun fitWidth() {
@@ -203,6 +239,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         panel.panY *= new / old
         panel.panX *= new / old
         panel.zoom = new
+        if (drawerMode) panel.panX = textPanX(g) // text in view, margins tucked away
         clamp()
     }
 
@@ -857,6 +894,9 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     }
 
     companion object {
+        /** Panels narrower than this in portrait show the margins as drawers (MRG-14). */
+        const val DRAWER_BELOW_DP = 600f
+
         fun overlaps(a: Rect, b: Rect) = a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom
 
         /** Even-odd rule point-in-polygon test. */

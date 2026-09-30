@@ -890,6 +890,28 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
+    /** Puts a picture copied to the clipboard (e.g. a screenshot) into the margin (MRG-7). */
+    fun pasteImage() {
+        val app = getApplication<Application>()
+        val clip = (app.getSystemService(Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager).primaryClip
+        val uri = clip?.takeIf { it.itemCount > 0 }?.getItemAt(0)?.uri
+        val isImage = uri != null && (clip.description.hasMimeType("image/*") || app.contentResolver.getType(uri)?.startsWith("image/") == true)
+        if (uri == null || !isImage) {
+            message = "There's no picture on the clipboard. Copy an image first, then paste."
+            return
+        }
+        insertImage(uri)
+    }
+
+    /** A file for the camera to save a photo into, shared with it through the app's FileProvider. */
+    fun newCameraUri(): Uri {
+        val app = getApplication<Application>()
+        val dir = File(app.cacheDir, "camera").apply { mkdirs() }
+        dir.listFiles()?.forEach { it.delete() } // earlier photos have already been copied
+        val file = File(dir, "photo-${System.currentTimeMillis()}.jpg")
+        return androidx.core.content.FileProvider.getUriForFile(app, app.packageName + ".files", file)
+    }
+
     private fun importImage(uri: Uri, id: Long): Pair<String, Float>? = try {
         val source = ImageDecoder.createSource(getApplication<Application>().contentResolver, uri)
         val bmp = ImageDecoder.decodeBitmap(source) { decoder, info, _ ->

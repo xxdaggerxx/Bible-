@@ -35,6 +35,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -69,6 +70,13 @@ fun StudyApp(vm: StudyViewModel) {
         val pickImage = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
             if (uri != null) vm.insertImage(uri)
         }
+        val openImageFile = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+            if (uri != null) vm.insertImage(uri)
+        }
+        var cameraUri by rememberSaveable { mutableStateOf<android.net.Uri?>(null) }
+        val takePhoto = rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()) { ok ->
+            cameraUri?.takeIf { ok }?.let { vm.insertImage(it) }
+        }
         val backupLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/zip")) { uri ->
             if (uri != null) vm.backup(uri)
         }
@@ -84,8 +92,18 @@ fun StudyApp(vm: StudyViewModel) {
                     onLayers = { dialog = DialogKind.LAYERS },
                     onSearch = { dialog = DialogKind.SEARCH },
                     onBookmarks = { dialog = DialogKind.BOOKMARKS },
-                    onInsertImage = {
-                        pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+                    onInsertImage = { src ->
+                        when (src) {
+                            ImageSource.GALLERY ->
+                                pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+                            ImageSource.CAMERA -> {
+                                val uri = vm.newCameraUri()
+                                cameraUri = uri
+                                runCatching { takePhoto.launch(uri) }.onFailure { vm.message = "No camera app is available." }
+                            }
+                            ImageSource.FILES -> openImageFile.launch(arrayOf("image/*"))
+                            ImageSource.CLIPBOARD -> vm.pasteImage()
+                        }
                     },
                     onBackup = {
                         val stamp = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())

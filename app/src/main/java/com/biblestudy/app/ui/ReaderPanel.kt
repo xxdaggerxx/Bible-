@@ -29,6 +29,9 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import com.biblestudy.app.model.Region
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.material3.FilledTonalIconButton
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -276,6 +279,27 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
 
             if (geo == null) {
                 CircularProgressIndicator(Modifier.align(Alignment.Center).testTag("loading"))
+            }
+            // Narrow portrait: tabs at the edges slide a margin in over the page (MRG-14).
+            if (geo != null && ctl.drawerMode) {
+                val scope = rememberCoroutineScope()
+                val open = ctl.openDrawer
+                for (region in listOf(Region.LEFT, Region.RIGHT)) {
+                    if (!geo.visible(region)) continue
+                    val isOpen = open == region
+                    val label = (if (isOpen) "Hide " else "Show ") + (if (region == Region.LEFT) "left" else "right") + " margin"
+                    val pointsRight = (region == Region.RIGHT) == isOpen
+                    FilledTonalIconButton(
+                        onClick = { scope.launch { ctl.toggleDrawer(region) } },
+                        modifier = Modifier.align(if (region == Region.LEFT) Alignment.CenterStart else Alignment.CenterEnd)
+                            .padding(horizontal = 2.dp).size(width = 28.dp, height = 64.dp),
+                    ) {
+                        Icon(
+                            if (pointsRight) Icons.AutoMirrored.Filled.KeyboardArrowRight else Icons.AutoMirrored.Filled.KeyboardArrowLeft,
+                            contentDescription = label,
+                        )
+                    }
+                }
             }
             val selected = ctl.selectedImage()
             if (selected != null && vm.tool == Tool.SELECT) {

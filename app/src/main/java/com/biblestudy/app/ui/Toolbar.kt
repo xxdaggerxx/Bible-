@@ -59,7 +59,7 @@ fun StudyToolbar(
     onLayers: () -> Unit,
     onSearch: () -> Unit,
     onBookmarks: () -> Unit,
-    onInsertImage: () -> Unit,
+    onInsertImage: (ImageSource) -> Unit,
     onBackup: () -> Unit,
     onRestore: () -> Unit,
     onAbout: () -> Unit,
@@ -115,7 +115,16 @@ fun StudyToolbar(
                 label = { Text(vm.activeLayer()?.name ?: "Layers") },
                 leadingIcon = { Icon(Icons.Filled.Layers, contentDescription = "Layers") },
             )
-            IconButton(onClick = onInsertImage) { Icon(Icons.Filled.Image, contentDescription = "Insert image into margin") }
+            // Pictures for the margin from the gallery, camera, files or clipboard (MRG-7).
+            var imageMenu by remember { mutableStateOf(false) }
+            Box {
+                IconButton(onClick = { imageMenu = true }) { Icon(Icons.Filled.Image, contentDescription = "Insert image into margin") }
+                DropdownMenu(expanded = imageMenu, onDismissRequest = { imageMenu = false }) {
+                    for (src in ImageSource.entries) {
+                        DropdownMenuItem(text = { Text(src.label) }, onClick = { imageMenu = false; onInsertImage(src) })
+                    }
+                }
+            }
             Divider()
 
             FilterChip(selected = vm.marginLeft, onClick = { vm.marginLeft = !vm.marginLeft }, label = { Text("Left margin") })
@@ -197,6 +206,11 @@ fun StudyToolbar(
             Spacer(Modifier.width(4.dp))
         }
     }
+}
+
+/** Where a picture for the margin comes from (MRG-7). */
+enum class ImageSource(val label: String) {
+    GALLERY("From the gallery"), CAMERA("Take a photo"), FILES("From files"), CLIPBOARD("Paste from clipboard")
 }
 
 @Composable

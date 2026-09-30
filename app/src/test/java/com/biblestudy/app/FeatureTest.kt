@@ -771,4 +771,40 @@ class FeatureTest {
         compose.onNodeWithContentDescription("Close side pane").performClick()
         assertEquals(null, vm.sidePane)
     }
+
+    @Test
+    @Config(qualifiers = "w420dp-h800dp-port-xhdpi")
+    fun marginsSlideInAsDrawersOnANarrowPortraitScreen() {
+        waitForLoaded()
+        compose.runOnUiThread { vm.marginRight = true; vm.marginLeft = false }
+        waitForLoaded()
+        // The text fills the width; the margin is tucked away behind a tab.
+        compose.onNodeWithContentDescription("Show right margin").assertExists()
+        val z = vm.panels[0].zoom
+        assertEquals(readerSize().width / Page.COL_W, z, 0.01f)
+        snap("52-drawer-closed")
+        compose.onNodeWithContentDescription("Show right margin").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithContentDescription("Hide right margin").assertExists()
+        snap("53-drawer-open")
+        compose.onNodeWithContentDescription("Hide right margin").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithContentDescription("Show right margin").assertExists()
+    }
+
+    @Test
+    fun imagesCanComeFromCameraFilesOrClipboard() {
+        compose.onNodeWithContentDescription("Insert image into margin").performScrollTo().performClick()
+        for (label in listOf("From the gallery", "Take a photo", "From files", "Paste from clipboard")) {
+            compose.onNodeWithText(label).assertExists()
+        }
+        snap("54-image-sources")
+        // Nothing on the clipboard: a friendly message rather than an error.
+        compose.onNodeWithText("Paste from clipboard").performClick()
+        assertTrue(vm.message.orEmpty().contains("no picture on the clipboard"))
+        // The camera gets a file it can write to through the app's FileProvider.
+        val uri = vm.newCameraUri()
+        assertEquals("content", uri.scheme)
+        assertEquals(compose.activity.packageName + ".files", uri.authority)
+    }
 }
