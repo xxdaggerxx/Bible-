@@ -181,7 +181,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 
 ## Next milestones
 
-- **0.5 (in progress):** Split view: parallel view of one verse in every version, panels for search results and notes, and up to three panels on large tablets. Also images from the camera, files or clipboard; a slide-over margin on narrow screens; bookmark folders; and notes on a range of verses.
+- **Later in 0.5:** Split view: parallel view of one verse in every version, panels for search results and notes, and up to three panels on large tablets. Also images from the camera, files or clipboard; a slide-over margin on narrow screens; bookmark folders; and notes on a range of verses.
 - **0.6:** NIV and NLT (once permission is granted), Strong's word studies (the BSB data includes Strong's numbers), front-buffered (lowest-latency) ink, lasso resize, and sketch pages.
 
 ## Credits
