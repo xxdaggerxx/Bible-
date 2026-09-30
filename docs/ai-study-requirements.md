@@ -16,7 +16,7 @@ Make the Bible easier to study by adding:
 
 | # | Principle |
 |---|---|
-| P1 | **Offline first.** Everything except the optional features in §12 works with no internet connection. |
+| P1 | **Offline first, AI agent optional.** Every search works with no internet connection and no online AI. The online agent (§12) only adds to results that have already been shown; it is never needed to get an answer. See §5.8. |
 | P2 | **Build once, ship data.** All AI summarising, tagging and writing runs once on a desktop. The results ship in databases. The tablet only encodes the search query. |
 | P3 | **The Bible text is the authority.** AI output helps readers *find* and *organise* passages. It is never shown in place of the text and is always visually separate from it. |
 | P4 | **Every claim cites verses**, and the build checks the citations automatically. |
@@ -180,6 +180,29 @@ Different searches need different indexes and a different way of showing results
 | QP3 | Where vocabulary matching is not enough, a small on-device model may be used, if testing (E1) shows it helps. | Could |
 | QP4 | The parser returns a plan in under 100 ms. | Must |
 
+### 5.8 Fallback chain: search without the online agent
+
+Every search is answered by the first step below that can handle it. All steps except the last are offline, and the last one is optional.
+
+| Step | Handles | Needs | If it can't answer |
+|---|---|---|---|
+| 1. **Ready-made page** | Topics, people, places, events and words prepared at build time (§5.6) | `study.db` | go to step 2 |
+| 2. **Query parser + shape handler** | Any query the parser can give a plan with reasonable confidence (§5.5, §5.7) | `study.db`, `lexicon.db` | go to step 3 |
+| 3. **Hybrid search** | Any query: keyword + lemma + meaning + tags, merged (§5.2) | query encoder, `study.db`, `lexicon.db` | drop the parts that are unavailable, still show results |
+| 4. **Keyword search** | Any query: the existing full-text search across KJV, BSB and WEB | Bible databases only | shows "No results" with suggestions (spelling, fewer words, browse topics) |
+| 5. **Online agent** *(optional)* | Open questions, after results from steps 1–4 are already on screen | internet, API key, user opt-in | nothing changes; the offline results stay |
+
+| ID | Requirement | Priority |
+|---|---|---|
+| F1 | Every search shows results from steps 1–4 first, within the NF1 time limits, whether or not the online agent is available, enabled or configured. | Must |
+| F2 | The online agent never replaces the offline results. It runs only when the user asks ("Search deeper with AI") and its results are shown as an addition that can be dismissed. | Must |
+| F3 | If the device is offline, no API key is set, the agent is switched off, the request fails, or it takes longer than 30 s, the offline results stay on screen and a short note explains why (e.g. "AI search needs internet"). There is never a blank or error-only screen. | Must |
+| F4 | Each offline part fails on its own: if the query encoder can't load (e.g. low memory), step 3 runs without meaning-based search; if `study.db` or `lexicon.db` is missing or damaged, steps 1–2 are skipped and step 3 uses what remains; step 4 always works because it only needs the Bible databases. | Must |
+| F5 | The results screen shows which step answered ("Prepared study page", "Matched: person + theme", "Keyword results only") so the user knows how complete the results are. | Should |
+| F6 | When a step is skipped because a part is unavailable, the app logs it locally and offers to repair it (e.g. reinstall the study data), without blocking search. | Should |
+| F7 | Nothing in steps 1–4 calls the network, including analytics or model downloads. All models and data ship in the APK or its bundled data. | Must |
+| F8 | All acceptance searches (E7, E8) pass in airplane mode with the online agent switched off. | Must |
+
 ## 6. Word studies
 
 | ID | Requirement | Priority |
@@ -315,6 +338,7 @@ For open questions that have no ready-made page and that the parser can't handle
 
 | ID | Requirement | Priority |
 |---|---|---|
+| A0 | The agent is optional and additive. The app is complete without it, and every rule in §5.8 applies. | Must |
 | A1 | The agent uses the Claude API with **tools that run on the tablet** against the local indexes (below). It chooses tools, reads results, refines, and returns grouped, ordered results plus a short cited overview. | Could |
 | A2 | Uses the user's own API key, stored in encrypted app storage. Off by default. | Must (if A1) |
 | A3 | The agent can only cite verses its tools returned. The app checks every reference before display and drops any that fail. | Must (if A1) |
@@ -343,7 +367,7 @@ For open questions that have no ready-made page and that the parser can't handle
 | ID | Requirement |
 |---|---|
 | NF1 | Search returns its first screen within 500 ms on a Galaxy Tab S9 (warm start). The complete set of topic results loads within 1.5 s. |
-| NF2 | Everything in §5–§11 works offline. |
+| NF2 | Everything in §5–§11 works offline. Only §12 uses the network, and only when the user asks for it. |
 | NF3 | The AI features add no more than 250 MB to the installed app. |
 | NF4 | The query encoder loads lazily. The first search after launch may take up to 2 s. |
 | NF5 | New databases are read-only and versioned. A data update never affects user notes, ink or bookmarks. |
@@ -381,6 +405,8 @@ For open questions that have no ready-made page and that the parser can't handle
 | E7 | **Acceptance queries** that must pass before release: *righteousness, grace, forgiveness, faith, love, anger, prayer, suffering, the Holy Spirit, the kingdom of God*, plus the searches in E8. |
 | E8 | **Search-shape acceptance set.** Each search must get the right shape, and its first screen must show the expected groups and key passages (table below). |
 | E9 | **Parser accuracy:** at least 90% of the evaluation queries get the correct shape. |
+| E10 | **Offline test:** the whole evaluation set runs in airplane mode with the agent off; the scores in E2–E9 must be met without it. |
+| E11 | **Failure tests:** automated tests remove or damage each part in turn (network, API key, query encoder, `study.db`, `lexicon.db`) and check that search still returns results from the next step in the chain (F4), with no crash and no blank screen. |
 
 **E8 acceptance searches**
 
