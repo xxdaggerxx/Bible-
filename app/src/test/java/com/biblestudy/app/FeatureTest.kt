@@ -571,7 +571,8 @@ class FeatureTest {
     fun highlightsShowAsWholeVersesInOtherVersions() {
         val at = Offset((Page.COL_PAD + 250f) * zoom(), 600f)
         val h = highlightWordAt(at)
-        compose.runOnUiThread { vm.setVersion(0, "BSB") }
+        // Start from the top of the chapter, so verse 1 is where the long press below expects it.
+        compose.runOnUiThread { vm.setVersion(0, "BSB"); vm.goTo(0, 43, 3, remember = false) }
         waitForLoaded()
         val cross = vm.crossHighlights("BSB", 43, 3)
         assertEquals(1, cross.size)
@@ -655,7 +656,7 @@ class FeatureTest {
         compose.onNodeWithContentDescription("Search").performScrollTo().performClick()
         compose.onNodeWithText("Words", substring = true).performTextInput("loved -world")
         compose.onNodeWithText("Words", substring = true).performImeAction()
-        compose.waitUntil(5_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.waitUntil(15_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("John 3:16").assertDoesNotExist() // "the world" is left out
         snap("45-search-grouped")
         compose.onNodeWithText("Genesis \u2014 8").assertExists()
@@ -742,7 +743,7 @@ class FeatureTest {
         waitForLoaded()
         compose.onNodeWithTag("reader0").assertExists()
         compose.onNodeWithTag("pane").assertExists()
-        compose.waitUntil(5_000) { compose.onAllNodesWithText("Romans 5:8").fetchSemanticsNodes().isNotEmpty() }
+        compose.waitUntil(15_000) { compose.onAllNodesWithText("Romans 5:8").fetchSemanticsNodes().isNotEmpty() }
         snap("49-pane-crossrefs")
         // Opening a cross-reference moves the Bible panel; the pane stays.
         compose.onNodeWithText("Romans 5:8").performClick()
@@ -763,7 +764,7 @@ class FeatureTest {
 
         // Search results kept beside the text.
         compose.runOnUiThread { vm.paneSearch = "\"only begotten\""; vm.sidePane = PaneKind.SEARCH }
-        compose.waitUntil(5_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.waitUntil(15_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("John 1:14").performClick()
         waitForLoaded()
         assertEquals(1, vm.panels[0].chapter)

@@ -118,5 +118,8 @@ dependencies {
 
 // Print each test as it starts and finishes, so a stuck test is easy to spot.
 tasks.withType<Test>().configureEach {
-    testLogging { events("started", "passed", "failed", "skipped") }
+    testLogging {
+        events("started", "passed", "failed", "skipped")
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+    }
 }
