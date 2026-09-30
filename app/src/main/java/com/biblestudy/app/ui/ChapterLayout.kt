@@ -12,15 +12,18 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.BaselineShift
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.sp
+import com.biblestudy.app.data.RefLink
 import com.biblestudy.app.model.ChapterData
 import com.biblestudy.app.model.Heading
 import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.Verse
+import kotlin.math.abs
 import kotlin.math.floor
 
 /**
@@ -48,8 +51,16 @@ enum class LineSpacing(val label: String, val factor: Float) {
     NORMAL("Normal", 1f), WIDE("Wide", 1.45f), EXTRA("Extra wide", 1.9f)
 }
 
-/** One or more section headings laid out together, shown in a gap above [beforeLine]. */
-class HeadingBlock(val beforeLine: Int, val lines: List<TextLayoutResult>, val height: Float) {
+/**
+ * One or more section headings laid out together, shown in a gap above [beforeLine].
+ * [links] holds, for lines that list parallel passages, the references on that line (LINK-1).
+ */
+class HeadingBlock(
+    val beforeLine: Int,
+    val lines: List<TextLayoutResult>,
+    val height: Float,
+    val links: Map<Int, List<RefLink>> = emptyMap(),
+) {
     companion object {
         const val TOP_PAD = 30f
         const val FIRST_TOP_PAD = 6f // right under the chapter title
@@ -173,6 +184,33 @@ class ChapterLayout(
         val top = if (firstLine == 0) -10_000f else layoutTop(firstLine)
         val bottom = if (lastLine >= lineCount - 1) 100_000f else layoutTop(lastLine + 1)
         return top to bottom
+    }
+
+    // ---------- section headings ----------
+
+    /** Display y (relative to the text's top) of each line of a heading block. */
+    fun headingLineTops(block: HeadingBlock): List<Float> {
+        var y = displayTop(block.beforeLine) - block.height +
+            if (block.beforeLine == 0) HeadingBlock.FIRST_TOP_PAD else HeadingBlock.TOP_PAD
+        return block.lines.map { line -> y.also { y += line.size.height + HeadingBlock.GAP } }
+    }
+
+    /** The parallel-passage link under a point (relative to the text's top-left), if any. */
+    fun headingLinkAt(x: Float, y: Float): RefLink? {
+        for (block in headings) {
+            if (block.links.isEmpty()) continue
+            val tops = headingLineTops(block)
+            for ((i, links) in block.links) {
+                val line = block.lines[i]
+                val top = tops[i]
+                if (y < top - 6f || y > top + line.size.height + 6f || x < -6f || x > line.size.width + 6f) continue
+                val off = line.getOffsetForPosition(Offset(x.coerceAtLeast(0f), (y - top).coerceIn(0f, line.size.height - 1f)))
+                // Generous targets: the nearest link on the line within a few characters.
+                return links.minByOrNull { l -> if (off in l.start until l.end) 0 else minOf(abs(off - l.start), abs(off - l.end)) }
+                    ?.takeIf { l -> off in (l.start - 2) until (l.end + 2) }
+            }
+        }
+        return null
     }
 
     // ---------- ink on the words ----------
@@ -329,6 +367,7 @@ fun buildChapterLayout(
     bookName: String,
     data: ChapterData,
     spacing: LineSpacing = LineSpacing.NORMAL,
+    linkify: (String) -> List<RefLink> = { emptyList() },
 ): ChapterLayout {
     val builder = AnnotatedString.Builder()
     val starts = IntArray(data.verses.size)
@@ -362,11 +401,20 @@ fun buildChapterLayout(
         val i = numbers.indexOf(verse).takeIf { it >= 0 } ?: numbers.indexOfFirst { it > verse }.takeIf { it >= 0 }
             ?: return@mapNotNull null
         val line = text.getLineForOffset(starts[i])
-        val lines = hs.sortedBy { it.level }.flatMap { h -> measureHeading(measurer, font, h, constraints) }
+        val lines = ArrayList<TextLayoutResult>()
+        val links = HashMap<Int, List<RefLink>>()
+        for (h in hs.sortedBy { it.level }) {
+            lines += measureHeading(measurer, font, h.text, h.level, constraints)
+            if (h.refs.isNotBlank()) {
+                val refLinks = linkify(h.refs)
+                if (refLinks.isNotEmpty()) links[lines.size] = refLinks
+                lines += measureRefs(measurer, font, h.refs, refLinks, constraints)
+            }
+        }
         val top = if (line == 0) HeadingBlock.FIRST_TOP_PAD else HeadingBlock.TOP_PAD
         val height = top + lines.sumOf { it.size.height.toDouble() }.toFloat() + HeadingBlock.GAP * (lines.size - 1) +
             HeadingBlock.BOTTOM_PAD
-        HeadingBlock(line, lines, height)
+        HeadingBlock(line, lines, height, links)
     }
     return ChapterLayout(data.version, data.book, data.chapter, title, text, starts, numbers, blocks)
 }
@@ -385,16 +433,23 @@ fun verseStartOffsets(verses: List<Verse>): IntArray {
     return out
 }
 
-private fun measureHeading(measurer: TextMeasurer, font: FontFamily, h: Heading, c: Constraints): List<TextLayoutResult> {
-    val style = when (h.level) {
+private fun measureHeading(measurer: TextMeasurer, font: FontFamily, text: String, level: Int, c: Constraints): TextLayoutResult {
+    val style = when (level) {
         0 -> TextStyle(fontFamily = font, fontSize = 20.sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
         1 -> TextStyle(fontFamily = font, fontSize = 23.sp, fontWeight = FontWeight.Bold)
         else -> TextStyle(fontFamily = font, fontSize = 20.sp, fontStyle = FontStyle.Italic)
     }
-    val out = mutableListOf(measurer.measure(AnnotatedString(h.text), style, constraints = c, density = PAGE_DENSITY))
-    if (h.refs.isNotBlank()) {
-        val refStyle = TextStyle(fontFamily = font, fontSize = 15.sp, fontStyle = FontStyle.Italic, color = Color(0xFF8A7A62))
-        out += measurer.measure(AnnotatedString(h.refs), refStyle, constraints = c, density = PAGE_DENSITY)
-    }
-    return out
+    return measurer.measure(AnnotatedString(text), style, constraints = c, density = PAGE_DENSITY)
 }
+
+/** The parallel-passage line under a heading, with each reference styled as a link. */
+private fun measureRefs(measurer: TextMeasurer, font: FontFamily, refs: String, links: List<RefLink>, c: Constraints): TextLayoutResult {
+    val text = AnnotatedString.Builder(refs).apply {
+        for (l in links) addStyle(SpanStyle(color = LINK_COLOR, textDecoration = TextDecoration.Underline), l.start, l.end)
+    }.toAnnotatedString()
+    val style = TextStyle(fontFamily = font, fontSize = 15.sp, fontStyle = FontStyle.Italic, color = Color(0xFF8A7A62))
+    return measurer.measure(text, style, constraints = c, density = PAGE_DENSITY)
+}
+
+/** Link colour for references on the page; reads on the light, sepia and dark page themes. */
+private val LINK_COLOR = Color(0xFF3D7CC9)

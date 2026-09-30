@@ -56,7 +56,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
@@ -104,6 +103,7 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.biblestudy.app.R
 import com.biblestudy.app.data.BibleRepository
+import com.biblestudy.app.data.RefLinks
 import com.biblestudy.app.model.ChapterData
 import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.Tool
@@ -158,7 +158,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                 val data = withContext(Dispatchers.IO) {
                     ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
                 }
-                ctl.layouts[key] = buildChapterLayout(measurer, bibleFont, name, data, spacing)
+                ctl.layouts[key] = buildChapterLayout(measurer, bibleFont, name, data, spacing) {
+                    RefLinks.parseList(it, vm.bible.books)
+                }
             }
             vm.ensureLoaded(v, b, c) {
                 // Only for ink saved before 0.4: its y was measured at normal spacing, without headings.
@@ -204,8 +206,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     }
 
     // Linked split view: follow the other panel, and bring it along when linking is switched on.
-    LaunchedEffect(ctl) {
-        snapshotFlow { vm.linkPos }.collect { pos -> if (pos != null && vm.linked) ctl.follow(pos) }
+    val linkPos = vm.linkPos
+    LaunchedEffect(linkPos) {
+        if (linkPos != null && vm.linked) ctl.follow(linkPos)
     }
     LaunchedEffect(vm.linkPanels, vm.panels.size) {
         if (vm.linked && vm.activePanel == index) ctl.announceScroll()
@@ -231,14 +234,19 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                     panel.viewW = it.width.toFloat()
                     panel.viewH = it.height.toFloat()
                 }
-                .pointerInput(ctl) {
-                    readerGestures(ctl, fingerDraw = { vm.fingerDraw }, onLongPress = {
-                        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                    })
-                }
         ) {
             // The page: text, highlights, saved ink and images. Redrawn when any of those change.
-            Canvas(Modifier.fillMaxSize()) {
+            // It also takes pen and finger input; the bars and pop-overs drawn above it get their own
+            // taps first, so tapping a button never also taps the verse underneath.
+            Canvas(
+                Modifier
+                    .fillMaxSize()
+                    .pointerInput(ctl) {
+                        readerGestures(ctl, fingerDraw = { vm.fingerDraw }, onLongPress = {
+                            haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                        })
+                    }
+            ) {
                 drawRect(theme.surround)
                 val pages = ctl.pages()
                 if (pages.isEmpty()) return@Canvas
@@ -268,6 +276,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                     onClick = { vm.deleteImage(selected.second); ctl.selectedImageId = null },
                     modifier = Modifier.align(Alignment.TopEnd).padding(12.dp),
                 ) { Text("Delete image") }
+            }
+            vm.passagePop?.takeIf { it.panel == index }?.let { pop ->
+                PassagePopover(vm, pop, onDismiss = { vm.passagePop = null })
             }
             ctl.textSel?.let { ts ->
                 TextSelectionBar(vm, ctl, ts, Modifier.align(Alignment.TopCenter).padding(top = 8.dp, start = 8.dp, end = 8.dp))
@@ -489,11 +500,14 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
         }
     }
     for (block in layout.headings) {
-        var y = Page.TEXT_TOP + layout.displayTop(block.beforeLine) - block.height +
-            if (block.beforeLine == 0) HeadingBlock.FIRST_TOP_PAD else HeadingBlock.TOP_PAD
-        for (line in block.lines) {
-            drawText(line, color = theme.text, topLeft = Offset(g.textLeft, y))
-            y += line.size.height + HeadingBlock.GAP
+        layout.headingLineTops(block).forEachIndexed { i, y ->
+            val line = block.lines[i]
+            // Heading text takes the page's text colour; the reference line keeps its own muted colour.
+            if (i in block.links || line.layoutInput.style.fontSize.value < 16f) {
+                drawText(line, topLeft = Offset(g.textLeft, Page.TEXT_TOP + y))
+            } else {
+                drawText(line, color = theme.text, topLeft = Offset(g.textLeft, Page.TEXT_TOP + y))
+            }
         }
     }
 

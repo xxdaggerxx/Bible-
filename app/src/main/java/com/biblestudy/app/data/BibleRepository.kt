@@ -76,6 +76,13 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         emptyList() // no headings table
     }
 
+    /** Verses from [fromId] to [toId] (verse ids), in order, at most [limit]. */
+    fun versesBetween(fromId: Int, toId: Int, limit: Int): List<Pair<Int, String>> =
+        db.rawQuery(
+            "SELECT id, text FROM verses WHERE id BETWEEN ? AND ? ORDER BY id LIMIT $limit",
+            arrayOf(fromId.toString(), toId.toString()),
+        ).use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getString(1)) } }
+
     fun verseText(id: Int): String? =
         db.rawQuery("SELECT text FROM verses WHERE id = ?", arrayOf(id.toString())).use { c ->
             if (c.moveToFirst()) c.getString(0) else null

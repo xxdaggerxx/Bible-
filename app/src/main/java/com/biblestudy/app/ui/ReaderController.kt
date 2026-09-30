@@ -421,6 +421,11 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val g = page.geo
         if (g.regionAt(s.x) != Region.TEXT) return
         val localY = s.y - page.top - Page.TEXT_TOP
+        // A parallel-passage link under a heading opens its pop-over (LINK-1, LINK-2).
+        g.layout.headingLinkAt(s.x - g.textLeft, localY)?.let { link ->
+            vm.passagePop = PassagePop(panelIndex, link.passage, pos)
+            return
+        }
         if (!g.layout.isOnText(localY)) return
         val off = g.layout.offsetAt(s.x - g.textLeft, localY)
         vm.openVerse(g.layout.book, g.layout.chapter, g.layout.verseAtOffset(off))

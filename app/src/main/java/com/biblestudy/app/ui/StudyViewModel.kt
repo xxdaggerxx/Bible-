@@ -23,6 +23,7 @@ import androidx.core.content.edit
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.biblestudy.app.data.BibleRepository
+import com.biblestudy.app.data.Passage
 import com.biblestudy.app.data.UserDb
 import com.biblestudy.app.model.Annotation
 import com.biblestudy.app.model.Bookmark
@@ -88,6 +89,9 @@ class PanelState(book: Int, chapter: Int) {
  * out differently, so linked panels match verses rather than pixels.
  */
 data class ScrollPos(val source: Int, val book: Int, val chapter: Int, val verse: Int, val frac: Float)
+
+/** A passage pop-over open over panel [panel], pointing at [anchor] (pixels in that panel). */
+data class PassagePop(val panel: Int, val passage: Passage, val anchor: Offset)
 
 /** A spot to return to with Back / Forward. */
 data class Place(val book: Int, val chapter: Int, val verse: Int)
@@ -176,6 +180,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     val bookmarks = mutableStateListOf<Bookmark>()
     var selection by mutableStateOf<Selection?>(null)
         private set
+    /** The passage pop-over opened from a Bible hyperlink (LINK-2), if any. */
+    var passagePop by mutableStateOf<PassagePop?>(null)
 
     // ---------- undo ----------
     private val undoStack = ArrayDeque<Edit>()
@@ -770,6 +776,41 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         return null
     }
 
+    // ---------- Bible hyperlinks ----------
+
+    /** "Mark 1:9\u201311", "Psalms 23" or "Psalms 1\u201341" for a passage. */
+    fun passageLabel(p: Passage): String {
+        val name = bible.book(p.book).name
+        return when {
+            p.verse == 1 && p.endVerse >= 999 && p.chapter == p.endChapter -> "$name ${p.chapter}"
+            p.verse == 1 && p.endVerse >= 999 -> "$name ${p.chapter}\u2013${p.endChapter}"
+            else -> refLabel(p.startId, p.endId)
+        }
+    }
+
+    /** The passage's verses in [version], up to [PASSAGE_LIMIT] of them. */
+    fun passageVerses(p: Passage, version: String): List<Pair<Int, String>> =
+        text(version).versesBetween(p.startId, p.endId, PASSAGE_LIMIT)
+
+    /**
+     * Opens a linked passage: in the panel it came from, or [beside] it in the other panel (opening
+     * split view if needed) to read parallel accounts side by side (LINK-3).
+     */
+    fun openPassage(p: Passage, from: Int, beside: Boolean) {
+        passagePop = null
+        var target = from.coerceIn(0, panels.lastIndex)
+        if (beside) {
+            if (panels.size == 1) toggleSplit()
+            if (linkPanels) {
+                linkPanels = false
+                message = "Panels unlinked to show the passage beside."
+            }
+            target = 1 - target.coerceIn(0, 1)
+        }
+        activePanel = target
+        goTo(target, p.book, p.chapter, p.verse)
+    }
+
     // ---------- book picker markers ----------
 
     /** Where the user has notes, for the book picker (read from the database, after pending writes). */
@@ -891,6 +932,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     companion object {
         private const val COPY_SHIFT = 30f
         private const val MAX_HISTORY = 100
+        const val PASSAGE_LIMIT = 80
     }
 
     private fun io(block: () -> Unit) {

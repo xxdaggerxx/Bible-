@@ -73,6 +73,9 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - Jumps (book picker, search, cross-references, bookmarks, Back/Forward) move both panels.
   - Each panel keeps its own zoom.
   - The panel you're using leads and the other follows. Tap the button again to unlink.
+- **Bible hyperlinks.** References become links that open a small pop-over with the passage, in the version you're reading, without leaving the page. *Go to* jumps there; *Open beside* shows it in the other panel (opening split view if needed), which is ideal for reading parallel accounts side by side.
+  - **Parallel passages:** the references under section headings, such as "(Mark 1:9–11; Luke 3:21–22; John 1:29–34)" beside Matthew's account of Jesus' baptism, are underlined links.
+  - **References in your notes:** type "Rom 8:28", "1 Cor 13:4-7" or "Psalm 23" in a verse's note, and each shows as a link chip under the note.
 
 ## New in version 0.4.1
 

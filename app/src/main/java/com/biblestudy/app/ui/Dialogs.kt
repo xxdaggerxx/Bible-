@@ -2,6 +2,7 @@ package com.biblestudy.app.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -36,12 +37,14 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.EditNote
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.LockOpen
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
@@ -80,8 +83,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import androidx.compose.ui.window.Popup
+import androidx.compose.ui.window.PopupProperties
 import com.biblestudy.app.BuildConfig
 import com.biblestudy.app.data.BibleRepository
+import com.biblestudy.app.data.Passage
+import com.biblestudy.app.data.RefLinks
 import com.biblestudy.app.data.RefParser
 import com.biblestudy.app.model.CrossRef
 import com.biblestudy.app.model.SearchHit
@@ -446,10 +453,40 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                 value = note,
                 onValueChange = { note = it },
                 label = { Text("Typed note (shows in every version)") },
+                supportingText = { Text("References like Rom 8:28 or Psalm 23 become links.") },
                 minLines = 2,
                 maxLines = 5,
                 modifier = Modifier.fillMaxWidth(),
             )
+            // References typed in the note, as links to their passages (LINK-4).
+            val noteLinks = remember(note) { RefLinks.find(note, vm.bible.books) }
+            var notePassage by remember(t) { mutableStateOf<Passage?>(null) }
+            if (noteLinks.isNotEmpty()) {
+                Row(
+                    Modifier.horizontalScroll(rememberScrollState()).padding(top = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    Text("Links in this note:", style = MaterialTheme.typography.labelLarge)
+                    for (l in noteLinks) {
+                        AssistChip(
+                            onClick = { notePassage = l.passage },
+                            label = { Text(vm.passageLabel(l.passage)) },
+                            leadingIcon = { Icon(Icons.Filled.Link, contentDescription = null, modifier = Modifier.size(16.dp)) },
+                        )
+                    }
+                }
+            }
+            notePassage?.let { p ->
+                Popup(alignment = Alignment.Center, onDismissRequest = { notePassage = null }, properties = PopupProperties(focusable = true)) {
+                    PassageCard(
+                        vm, p, version,
+                        onGoTo = { if (note != original) vm.setNote(t, note); vm.openPassage(p, panelIndex, beside = false); onDismiss() },
+                        onOpenBeside = { if (note != original) vm.setNote(t, note); vm.openPassage(p, panelIndex, beside = true); onDismiss() },
+                        onClose = { notePassage = null },
+                    )
+                }
+            }
             Text(
                 "Cross-references (${refs.size})",
                 style = MaterialTheme.typography.titleMedium,

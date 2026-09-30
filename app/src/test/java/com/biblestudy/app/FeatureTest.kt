@@ -17,6 +17,19 @@ import androidx.compose.ui.test.doubleClick
 import androidx.compose.ui.test.longClick
 import androidx.compose.ui.test.swipeDown
 import androidx.compose.ui.test.swipeUp
+import androidx.compose.ui.test.click
+import androidx.compose.ui.test.hasSetTextAction
+import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.text.TextMeasurer
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.createFontFamilyResolver
+import androidx.compose.ui.unit.Density
+import androidx.compose.ui.unit.LayoutDirection
+import com.biblestudy.app.data.RefLinks
+import com.biblestudy.app.model.ChapterData
+import com.biblestudy.app.ui.buildChapterLayout
 import androidx.lifecycle.ViewModelProvider
 import com.biblestudy.app.model.SearchScope
 import com.biblestudy.app.model.Tool
@@ -116,12 +129,23 @@ class FeatureTest {
         val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         view.draw(canvas)
-        // Dialogs are separate windows: draw the open one on top, centred and over a dim layer.
-        ShadowDialog.getLatestDialog()?.takeIf { it.isShowing }?.window?.decorView?.let { d ->
-            canvas.drawColor(0x66000000)
+        // Dialogs and pop-overs are separate windows: draw each one above the app, in stacking order.
+        val global = Class.forName("android.view.WindowManagerGlobal")
+        val instance = global.getMethod("getInstance").invoke(null)
+        @Suppress("UNCHECKED_CAST")
+        val roots = global.getDeclaredField("mViews").apply { isAccessible = true }.get(instance) as List<android.view.View>
+        for (root in roots) {
+            if (root === view || !root.isShown || root.width == 0) continue
+            if (root === ShadowDialog.getLatestDialog()?.window?.decorView) canvas.drawColor(0x66000000)
+            val at = IntArray(2).also { root.getLocationOnScreen(it) }
+            val params = root.layoutParams as? android.view.WindowManager.LayoutParams
+            val x = if (at[0] != 0 || params == null) at[0] else params.x
+            val y = if (at[1] != 0 || params == null) at[1] else params.y
             canvas.save()
-            canvas.translate((view.width - d.width) / 2f, (view.height - d.height) / 2f)
-            d.draw(canvas)
+            // Robolectric doesn't place dialog windows; centre those.
+            if (x == 0 && y == 0 && root.width < view.width) canvas.translate((view.width - root.width) / 2f, (view.height - root.height) / 2f)
+            else canvas.translate(x.toFloat(), y.toFloat())
+            root.draw(canvas)
             canvas.restore()
         }
         File(dir, "$name.png").outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
@@ -426,5 +450,57 @@ class FeatureTest {
         compose.runOnUiThread { vm.goTo(0, 43, 1) }
         waitForLoaded()
         assertEquals(19 to 119, vm.panels[1].book to vm.panels[1].chapter)
+    }
+
+    @Test
+    fun headingLinksOpenAPassagePopover() {
+        compose.runOnUiThread { vm.goTo(0, 43, 1) }
+        waitForLoaded()
+        // Lay out John 1 the way the reader does, to find the "Genesis 1:1\u20132" link under its first heading.
+        val measurer = TextMeasurer(createFontFamilyResolver(compose.activity), Density(1f, 1f), LayoutDirection.Ltr)
+        val font = FontFamily(Font(R.font.gentium_book_plus_regular), Font(R.font.gentium_book_plus_bold, FontWeight.Bold))
+        val layout = buildChapterLayout(
+            measurer, font, "John", ChapterData("KJV", 43, 1, vm.text("KJV").chapter(43, 1), vm.headings(43, 1)), vm.lineSpacing,
+        ) { RefLinks.parseList(it, vm.bible.books) }
+        val block = layout.headings.first()
+        val (lineIndex, links) = block.links.entries.first()
+        val link = links.first()
+        assertEquals("Genesis 1:1\u20132", vm.passageLabel(link.passage))
+        val box = block.lines[lineIndex].getBoundingBox((link.start + link.end) / 2)
+        val z = vm.panels[0].zoom
+        val x = (Page.COL_PAD + box.center.x) * z
+        val y = (Page.TEXT_TOP + layout.headingLineTops(block)[lineIndex] + box.center.y) * z + vm.panels[0].panY
+        compose.onNodeWithTag("reader0").performTouchInput { click(Offset(x, y)) }
+        compose.waitUntil(5_000) { compose.onAllNodesWithText("Genesis 1:1\u20132 (KJV)").fetchSemanticsNodes().isNotEmpty() }
+        compose.waitUntil(5_000) { compose.onAllNodesWithText("In the beginning", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onAllNodesWithText("the earth was without form", substring = true).assertCountEquals(1)
+        snap("18-passage-popover")
+
+        // Open beside: split view with Genesis 1 in the other panel, John 1 still here.
+        compose.onNodeWithText("Open beside").performClick()
+        waitForLoaded()
+        assertEquals(2, vm.panels.size)
+        assertEquals(1 to 1, vm.panels[1].book to vm.panels[1].chapter)
+        assertEquals(43 to 1, vm.panels[0].book to vm.panels[0].chapter)
+        assertNull(vm.passagePop)
+    }
+
+    @Test
+    fun referencesInNotesAreLinks() {
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.waitForIdle()
+        // (References chosen so they aren't also in this verse's cross-reference list.)
+        compose.onNode(hasSetTextAction()).performTextInput("Like Ruth 1:16, and Ps 23.")
+        compose.onNodeWithText("Ruth 1:16").assertExists()
+        compose.onNodeWithText("Psalms 23").performClick()
+        compose.waitUntil(5_000) { compose.onAllNodesWithText("is my shepherd", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        snap("19-note-link")
+        compose.onNodeWithContentDescription("Close passage").performClick()
+        compose.onNodeWithText("Ruth 1:16").performClick()
+        compose.waitUntil(5_000) { compose.onAllNodesWithText("Intreat me not to leave thee", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Go to").performClick()
+        waitForLoaded()
+        assertEquals(8 to 1, vm.panels[0].book to vm.panels[0].chapter)
+        compose.runOnUiThread { vm.setNote(com.biblestudy.app.model.VerseTarget(43, 3, 16), "") }
     }
 }
