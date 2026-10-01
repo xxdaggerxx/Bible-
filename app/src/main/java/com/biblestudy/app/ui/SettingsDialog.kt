@@ -16,6 +16,11 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.draw.clip
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -47,6 +52,7 @@ fun SettingsDialog(
 ) {
     var confirmReset by remember { mutableStateOf(false) }
     var versions by remember { mutableStateOf(false) }
+    var meaningsOpen by remember { mutableStateOf(false) }
     BigDialog({ vm.savePrefs(); onDismiss() }) {
         Column {
             DialogTitle("Settings", { vm.savePrefs(); onDismiss() })
@@ -73,6 +79,19 @@ fun SettingsDialog(
                     "Highlights in every version", "Shown over the whole verses in other translations, a shade lighter",
                     vm.highlightsAllVersions,
                 ) { vm.highlightsAllVersions = it }
+                // What each colour means (HL-5), in its own small window so the keyboard only opens there.
+                Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Column(Modifier.weight(1f)) {
+                        Text("Colour meanings")
+                        Text(
+                            vm.meanings.entries.sortedBy { HIGHLIGHT_COLORS.indexOf(it.key) }.joinToString { it.value }
+                                .ifEmpty { "e.g. yellow = promises, green = commands" },
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.outline,
+                        )
+                    }
+                    OutlinedButton(onClick = { meaningsOpen = true }) { Text("Edit\u2026") }
+                }
 
                 Group("Margins & panels")
                 Toggle("Left margin", null, vm.marginLeft) { vm.marginLeft = it }
@@ -102,6 +121,32 @@ fun SettingsDialog(
         }
     }
     if (versions) VersionsDialog { versions = false }
+    if (meaningsOpen) {
+        AlertDialog(
+            onDismissRequest = { meaningsOpen = false },
+            title = { Text("Colour meanings") },
+            text = {
+                Column {
+                    Text("Shown in the highlighter's menu and the highlights list.", style = MaterialTheme.typography.bodySmall)
+                    for ((i, c) in HIGHLIGHT_COLORS.withIndex()) {
+                        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 2.dp)) {
+                            androidx.compose.foundation.layout.Box(
+                                Modifier.padding(end = 12.dp).size(26.dp).clip(CircleShape).background(androidx.compose.ui.graphics.Color(c))
+                            )
+                            var label by remember(c) { mutableStateOf(vm.meanings[c].orEmpty()) }
+                            OutlinedTextField(
+                                value = label,
+                                onValueChange = { label = it; vm.setMeaning(c, it) },
+                                singleLine = true,
+                                placeholder = { Text(listOf("Promises", "Commands", "Prayer", "Sin", "Holy Spirit", "Prophecy")[i % 6]) },
+                            )
+                        }
+                    }
+                }
+            },
+            confirmButton = { TextButton(onClick = { meaningsOpen = false }) { Text("Done") } },
+        )
+    }
     if (confirmReset) {
         AlertDialog(
             onDismissRequest = { confirmReset = false },

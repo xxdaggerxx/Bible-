@@ -19,6 +19,9 @@ import com.biblestudy.app.model.VerseId
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
+/** A typed note for the notes browser (NOTE-5). */
+data class NoteEntry(val book: Int, val chapter: Int, val verse: Int, val endVerse: Int, val text: String, val updated: Long)
+
 /** One annotation's place and layer, for the book picker's markers. */
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
@@ -90,6 +93,11 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
                 "bg INTEGER NOT NULL)"
         )
         db.execSQL("CREATE INDEX texts_bc ON texts(book, chapter)")
+        // Tags on notes, highlights, bookmarks and text boxes (NOTE-4); [item] is a key such as
+        // "n:43:3:16" (typed note), "h:<id>", "b:<id>" or "t:<id>".
+        db.execSQL("CREATE TABLE tags(item TEXT NOT NULL, tag TEXT NOT NULL, PRIMARY KEY(item, tag))")
+        // What each highlight colour means (HL-5).
+        db.execSQL("CREATE TABLE meanings(color INTEGER PRIMARY KEY, label TEXT NOT NULL)")
     }
 
     // ---------- layers ----------
@@ -177,6 +185,65 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
         }
         writableDatabase.delete(table, "id = ?", arrayOf(a.id.toString()))
     }
+
+    // ---------- tags (NOTE-4) and colour meanings (HL-5) ----------
+
+    fun tags(): Map<String, Set<String>> =
+        readableDatabase.rawQuery("SELECT item, tag FROM tags", null).use { c ->
+            val out = HashMap<String, MutableSet<String>>()
+            while (c.moveToNext()) out.getOrPut(c.getString(0)) { sortedSetOf() }.add(c.getString(1))
+            out
+        }
+
+    fun setTags(item: String, tags: Set<String>) {
+        val db = writableDatabase
+        db.beginTransaction()
+        try {
+            db.delete("tags", "item = ?", arrayOf(item))
+            for (t in tags) db.insert("tags", null, ContentValues().apply { put("item", item); put("tag", t) })
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+    }
+
+    fun meanings(): Map<Int, String> =
+        readableDatabase.rawQuery("SELECT color, label FROM meanings", null).use { c ->
+            buildMap { while (c.moveToNext()) put(c.getInt(0), c.getString(1)) }
+        }
+
+    fun setMeaning(color: Int, label: String) {
+        if (label.isBlank()) writableDatabase.delete("meanings", "color = ?", arrayOf(color.toString()))
+        else writableDatabase.insertWithOnConflict("meanings", null, ContentValues().apply {
+            put("color", color); put("label", label.trim())
+        }, SQLiteDatabase.CONFLICT_REPLACE)
+    }
+
+    /** Every typed note, for the notes browser (NOTE-5): with when it was last changed. */
+    fun allNotes(): List<NoteEntry> =
+        readableDatabase.rawQuery("SELECT book, chapter, verse, end_verse, text, updated FROM notes", null).use { c ->
+            buildList {
+                while (c.moveToNext()) {
+                    val v = c.getInt(2)
+                    add(NoteEntry(c.getInt(0), c.getInt(1), v, maxOf(v, c.getInt(3)), c.getString(4), c.getLong(5)))
+                }
+            }
+        }
+
+    /** Every margin text box, for the notes browser. */
+    fun allTexts(): List<MarginText> =
+        readableDatabase.rawQuery(
+            "SELECT id, layer_id, book, chapter, region, verse, x, y, w, body, size, color, bg FROM texts", null,
+        ).use { c ->
+            buildList {
+                while (c.moveToNext()) add(
+                    MarginText(
+                        c.getLong(0), c.getLong(1), c.getInt(2), c.getInt(3), Region.of(c.getInt(4)), c.getInt(5),
+                        c.getFloat(6), c.getFloat(7), c.getFloat(8), c.getString(9), c.getFloat(10), c.getInt(11), c.getInt(12),
+                    )
+                )
+            }
+        }
 
     /** Margin text boxes in a chapter (MRG-12). */
     fun loadTexts(book: Int, chapter: Int): List<MarginText> =

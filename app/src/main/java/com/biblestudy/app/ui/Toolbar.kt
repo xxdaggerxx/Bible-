@@ -191,7 +191,7 @@ fun StudyToolbar(
                 }
             }
             IconButton(onClick = onSearch) { Icon(Icons.Filled.Search, contentDescription = "Search") }
-            IconButton(onClick = onBookmarks) { Icon(Icons.Filled.Bookmarks, contentDescription = "Bookmarks") }
+            IconButton(onClick = onBookmarks) { Icon(Icons.Filled.Bookmarks, contentDescription = "My notes") }
 
             var menu by remember { mutableStateOf(false) }
             Box {
@@ -245,6 +245,7 @@ private fun ToolOptions(vm: StudyViewModel) {
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             for (c in HIGHLIGHT_COLORS) Swatch(c, vm.highlightColor == c) { vm.highlightColor = c }
                         }
+                        vm.meanings[vm.highlightColor]?.let { Text("This colour means: $it", style = MaterialTheme.typography.bodySmall) }
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             FilterChip(selected = !vm.underlineMode, onClick = { vm.underlineMode = false }, label = { Text("Highlight") })
                             FilterChip(selected = vm.underlineMode, onClick = { vm.underlineMode = true; vm.snapHighlights = true }, label = { Text("Underline") })

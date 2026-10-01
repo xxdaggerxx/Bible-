@@ -48,6 +48,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import com.biblestudy.app.ui.HIGHLIGHT_COLORS
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.ui.LineSpacing
 import org.junit.runner.RunWith
@@ -737,7 +738,7 @@ class FeatureTest {
         val h = highlightWordAt(Offset((Page.COL_PAD + 250f) * zoom(), 600f))
         compose.runOnUiThread { vm.goTo(0, 1, 1, remember = false) }
         waitForLoaded()
-        compose.onNodeWithContentDescription("Bookmarks").performScrollTo().performClick()
+        compose.onNodeWithContentDescription("My notes").performScrollTo().performClick()
         compose.waitForIdle()
         compose.onNodeWithText("Highlights").performClick()
         compose.waitUntil(5_000) { compose.onAllNodesWithText("John 3:", substring = true).fetchSemanticsNodes().isNotEmpty() }
@@ -837,7 +838,8 @@ class FeatureTest {
             vm.toggleBookmark(VerseTarget(43, 3, 16))
             vm.toggleBookmark(VerseTarget(19, 23, 1))
         }
-        compose.onNodeWithContentDescription("Bookmarks").performScrollTo().performClick()
+        compose.onNodeWithContentDescription("My notes").performScrollTo().performClick()
+        compose.onNodeWithText("Bookmarks").performClick()
         compose.onAllNodesWithContentDescription("Move to folder")[0].performClick()
         compose.onNodeWithText("New folder\u2026").performClick()
         compose.onNodeWithText("e.g. Sermon series, Promises").performTextInput("Psalms of trust")
@@ -1028,6 +1030,7 @@ class FeatureTest {
         compose.onNodeWithText("Reading").assertExists()
         snap("71-settings")
         compose.onNodeWithText("Wide").performClick()
+        snap("71b-settings-after")
         assertEquals(LineSpacing.WIDE, vm.lineSpacing)
         compose.onNodeWithText("Draw with finger").performScrollTo().performClick()
         assertTrue(vm.fingerDraw)
@@ -1164,5 +1167,41 @@ class FeatureTest {
         assertEquals(15, s.points.size) // a clean arrow: line plus two head strokes
         assertTrue("reaches across the text", s.points[3] < -50f) // tip well left of the margin (MRG-11)
         snap("77-arrow")
+    }
+
+    @Test
+    fun notesBrowserWithTagsAndColourMeanings() {
+        compose.runOnUiThread {
+            vm.tags.keys.toList().forEach { vm.setTags(it, emptySet()) }
+            vm.setNote(VerseTarget(43, 3, 16), "God so loved")
+            vm.setNote(VerseTarget(19, 23, 1), "The Lord is my shepherd")
+            vm.setMeaning(HIGHLIGHT_COLORS[0], "Promises")
+        }
+        compose.onNodeWithContentDescription("My notes").performClick()
+        compose.waitUntil(5_000) { compose.onAllNodesWithText("God so loved").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("The Lord is my shepherd").assertExists()
+
+        // Tag one note, then filter by the tag.
+        compose.onAllNodesWithContentDescription("Add tags")[0].performClick()
+        compose.onNodeWithText("New tag, e.g. grace").performTextInput("love")
+        compose.onNodeWithText("Save").performClick()
+        compose.waitForIdle()
+        assertEquals(setOf("love"), vm.tags[vm.noteKey(19, 23, 1)] ?: vm.tags[vm.noteKey(43, 3, 16)])
+        compose.onAllNodesWithText("#love")[0].performClick()
+        compose.waitForIdle()
+        assertEquals(1, compose.onAllNodesWithText("1 note").fetchSemanticsNodes().size)
+        snap("78-notes-browser")
+
+        // Colour meanings show in the highlighter's menu.
+        compose.onNodeWithContentDescription("Close").performClick()
+        compose.runOnUiThread { vm.tool = Tool.HIGHLIGHTER; vm.highlightColor = HIGHLIGHT_COLORS[0] }
+        compose.onNodeWithContentDescription("Highlighter colour and size").performClick()
+        compose.onNodeWithText("This colour means: Promises").assertExists()
+
+        compose.runOnUiThread {
+            vm.setNote(VerseTarget(43, 3, 16), ""); vm.setNote(VerseTarget(19, 23, 1), "")
+            vm.setMeaning(HIGHLIGHT_COLORS[0], "")
+            vm.tags.keys.toList().forEach { vm.setTags(it, emptySet()) }
+        }
     }
 }

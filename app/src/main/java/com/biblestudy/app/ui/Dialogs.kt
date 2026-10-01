@@ -30,11 +30,12 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Sell
 import androidx.compose.material.icons.filled.VerticalSplit
 import com.biblestudy.app.model.Bookmark
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.DropdownMenu
-import androidx.compose.material.icons.filled.DriveFileMove
+import androidx.compose.material.icons.automirrored.filled.DriveFileMove
 import androidx.compose.material.icons.filled.CreateNewFolder
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -606,6 +607,8 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                     onClick = { vm.compareVersions = !vm.compareVersions },
                     label = { Text("Compare versions") },
                 )
+                // Tags on this verse's note (NOTE-4).
+                if (original.isNotBlank()) TagButton(vm, vm.noteKey(t.book, t.chapter, noteStart))
             }
             OutlinedTextField(
                 value = note,
@@ -795,22 +798,187 @@ fun LayersDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
 @Composable
 fun BookmarksDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
+    // The notes browser (NOTE-5): typed notes and text boxes, highlights, and bookmarks.
     var tab by remember { mutableStateOf(0) }
     BigDialog(onDismiss) {
         Column {
-            DialogTitle(if (tab == 0) "Bookmarks" else "Highlights", onDismiss)
+            DialogTitle("My notes", onDismiss)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                FilterChip(selected = tab == 0, onClick = { tab = 0 }, label = { Text("Bookmarks") })
+                FilterChip(selected = tab == 0, onClick = { tab = 0 }, label = { Text("Notes") })
                 FilterChip(selected = tab == 1, onClick = { tab = 1 }, label = { Text("Highlights") })
+                FilterChip(selected = tab == 2, onClick = { tab = 2 }, label = { Text("Bookmarks") })
             }
             Spacer(Modifier.height(8.dp))
-            if (tab == 0) {
-                BookmarksList(vm, panelIndex, onDismiss, Modifier.weight(1f))
-            } else {
-                HighlightsList(vm, panelIndex, onDismiss, Modifier.weight(1f))
+            when (tab) {
+                0 -> NotesList(vm, panelIndex, onDismiss, Modifier.weight(1f))
+                1 -> HighlightsList(vm, panelIndex, onDismiss, Modifier.weight(1f))
+                else -> BookmarksList(vm, panelIndex, onDismiss, Modifier.weight(1f))
             }
         }
     }
+}
+
+/**
+ * Typed notes and margin text boxes (NOTE-5), by book, tag and layer, in Bible order or newest
+ * first. Tap one to go there.
+ */
+@Composable
+private fun NotesList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
+    val data by produceState<Pair<List<com.biblestudy.app.data.NoteEntry>, List<com.biblestudy.app.model.MarginText>>?>(
+        null, vm.dataGeneration, vm.editCount,
+    ) { value = vm.browseNotes() }
+    var book by remember { mutableStateOf<Int?>(null) }
+    var tagFilter by remember { mutableStateOf<String?>(null) }
+    var layer by remember { mutableStateOf<Long?>(null) }
+    var newest by remember { mutableStateOf(false) }
+    val d = data
+    if (d == null) { Text("Loading\u2026"); return }
+
+    /** One row: a typed note (layer null) or a text box. */
+    class Item(val key: String, val book: Int, val chapter: Int, val verse: Int, val endVerse: Int, val text: String, val time: Long, val layer: Long?)
+    val items = d.first.map { Item(vm.noteKey(it.book, it.chapter, it.verse), it.book, it.chapter, it.verse, it.endVerse, it.text, it.updated, null) } +
+        d.second.filter { it.text.isNotBlank() }.map { Item("t:${it.id}", it.book, it.chapter, it.verse, it.verse, it.text, it.id / 1000, it.layerId) }
+    if (items.isEmpty()) {
+        Text("No notes yet. Tap a verse to type a note, or add a text box from the Insert menu.")
+        return
+    }
+    Row(
+        Modifier.horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        FilterChip(selected = !newest, onClick = { newest = false }, label = { Text("Bible order") })
+        FilterChip(selected = newest, onClick = { newest = true }, label = { Text("Newest") })
+        VerticalDivider(Modifier.height(24.dp))
+        var bookMenu by remember { mutableStateOf(false) }
+        Box {
+            FilterChip(
+                selected = book != null,
+                onClick = { bookMenu = true },
+                label = { Text(book?.let { vm.bible.book(it).name } ?: "All books") },
+            )
+            DropdownMenu(expanded = bookMenu, onDismissRequest = { bookMenu = false }) {
+                DropdownMenuItem(text = { Text("All books") }, onClick = { book = null; bookMenu = false })
+                for (b in items.map { it.book }.distinct().sorted()) {
+                    DropdownMenuItem(text = { Text(vm.bible.book(b).name) }, onClick = { book = b; bookMenu = false })
+                }
+            }
+        }
+        val layerIds = items.mapNotNull { it.layer }.toSet()
+        if (layerIds.size > 1) {
+            for (l in vm.layers.filter { it.id in layerIds }) {
+                FilterChip(selected = layer == l.id, onClick = { layer = if (layer == l.id) null else l.id }, label = { Text(l.name) })
+            }
+        }
+    }
+    TagFilter(vm, items.map { it.key }, tagFilter) { tagFilter = it }
+    val shown = items.filter { i ->
+        (book == null || i.book == book) && (layer == null || i.layer == layer) &&
+            (tagFilter == null || tagFilter in vm.tags[i.key].orEmpty())
+    }.let { l -> if (newest) l.sortedByDescending { it.time } else l.sortedWith(compareBy({ it.book }, { it.chapter }, { it.verse })) }
+    val dateFormat = remember { java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM) }
+    Text(
+        "${shown.size} note" + (if (shown.size == 1) "" else "s"),
+        style = MaterialTheme.typography.bodySmall,
+        color = MaterialTheme.colorScheme.outline,
+        modifier = Modifier.padding(vertical = 4.dp),
+    )
+    LazyColumn(modifier) {
+        items(shown, key = { it.key }) { i ->
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Column(
+                    Modifier.weight(1f).clickable { vm.goTo(panelIndex, i.book, i.chapter, i.verse); onDismiss() }.padding(vertical = 8.dp)
+                ) {
+                    val where = if (i.layer != null) "margin" else "note"
+                    Text(
+                        vm.refLabel(VerseId.of(i.book, i.chapter, i.verse), VerseId.of(i.book, i.chapter, i.endVerse)) +
+                            "  \u00b7  $where  \u00b7  ${dateFormat.format(java.util.Date(i.time))}",
+                        style = MaterialTheme.typography.labelLarge,
+                        color = MaterialTheme.colorScheme.primary,
+                    )
+                    Text(i.text, maxLines = 3, overflow = TextOverflow.Ellipsis)
+                    vm.tags[i.key]?.let { t ->
+                        Text(t.joinToString("  ") { "#$it" }, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                    }
+                }
+                TagButton(vm, i.key)
+            }
+            HorizontalDivider()
+        }
+    }
+}
+
+/** Chips to show only items with one tag (NOTE-4); hidden when none of [keys] has a tag. */
+@Composable
+private fun TagFilter(vm: StudyViewModel, keys: List<String>, selected: String?, onSelect: (String?) -> Unit) {
+    val used = keys.flatMap { vm.tags[it].orEmpty() }.distinct().sortedBy { it.lowercase() }
+    if (used.isEmpty()) return
+    Row(
+        Modifier.horizontalScroll(rememberScrollState()).padding(top = 4.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(Icons.Filled.Sell, contentDescription = null, modifier = Modifier.size(18.dp), tint = MaterialTheme.colorScheme.outline)
+        for (t in used) {
+            FilterChip(selected = selected == t, onClick = { onSelect(if (selected == t) null else t) }, label = { Text("#$t") })
+        }
+    }
+}
+
+/** A small tag button for one item; shows how many tags it has and opens the tag editor. */
+@Composable
+fun TagButton(vm: StudyViewModel, key: String) {
+    var open by remember { mutableStateOf(false) }
+    val count = vm.tags[key]?.size ?: 0
+    IconButton(onClick = { open = true }) {
+        Icon(
+            Icons.Filled.Sell,
+            contentDescription = if (count == 0) "Add tags" else "Tags ($count)",
+            tint = if (count == 0) MaterialTheme.colorScheme.outline else MaterialTheme.colorScheme.primary,
+        )
+    }
+    if (open) TagEditor(vm, key) { open = false }
+}
+
+/** Pick existing tags or type a new one (NOTE-4). */
+@Composable
+fun TagEditor(vm: StudyViewModel, key: String, onDismiss: () -> Unit) {
+    var chosen by remember { mutableStateOf(vm.tags[key].orEmpty()) }
+    var typed by remember { mutableStateOf("") }
+    val known = (vm.allTags() + chosen).distinct().sortedBy { it.lowercase() }
+    fun add() {
+        val t = typed.trim().removePrefix("#")
+        if (t.isNotEmpty()) chosen = chosen + t
+        typed = ""
+    }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Tags") },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                if (known.isNotEmpty()) {
+                    Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        for (t in known) {
+                            FilterChip(
+                                selected = t in chosen,
+                                onClick = { chosen = if (t in chosen) chosen - t else chosen + t },
+                                label = { Text("#$t") },
+                            )
+                        }
+                    }
+                }
+                OutlinedTextField(
+                    value = typed, onValueChange = { typed = it }, singleLine = true,
+                    placeholder = { Text("New tag, e.g. grace") },
+                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                    keyboardActions = KeyboardActions(onDone = { add() }),
+                    trailingIcon = { TextButton(onClick = ::add, enabled = typed.isNotBlank()) { Text("Add") } },
+                )
+            }
+        },
+        confirmButton = { TextButton(onClick = { add(); vm.setTags(key, chosen); onDismiss() }) { Text("Save") } },
+        dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel") } },
+    )
 }
 
 /** Bookmarks, newest first, filtered by folder (NOTE-3). */
@@ -856,7 +1024,9 @@ private fun BookmarksList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> 
                 TextButton(onClick = { vm.deleteBookmarkFolder(f); folder = null }) { Text("Delete folder") }
             }
         }
-        val shown = vm.bookmarks.filter { f == null || it.folder == f }
+        var tagFilter by remember { mutableStateOf<String?>(null) }
+        TagFilter(vm, vm.bookmarks.map { "b:${it.id}" }, tagFilter) { tagFilter = it }
+        val shown = vm.bookmarks.filter { (f == null || it.folder == f) && (tagFilter == null || tagFilter in vm.tags["b:${it.id}"].orEmpty()) }
         if (shown.isEmpty()) {
             Text(
                 if (vm.bookmarks.isEmpty()) "No bookmarks yet. Tap a verse with your finger, then tap Bookmark."
@@ -881,7 +1051,7 @@ private fun BookmarksList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> 
                     }
                     var menu by remember { mutableStateOf(false) }
                     Box {
-                        IconButton(onClick = { menu = true }) { Icon(Icons.Filled.DriveFileMove, contentDescription = "Move to folder") }
+                        IconButton(onClick = { menu = true }) { Icon(Icons.AutoMirrored.Filled.DriveFileMove, contentDescription = "Move to folder") }
                         DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
                             DropdownMenuItem(
                                 text = { Text("Not in a folder" + if (b.folder.isEmpty()) "  \u2713" else "") },
@@ -896,6 +1066,7 @@ private fun BookmarksList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> 
                             DropdownMenuItem(text = { Text("New folder\u2026") }, onClick = { menu = false; naming = b; askName = true })
                         }
                     }
+                    TagButton(vm, "b:${b.id}")
                     IconButton(onClick = { vm.deleteBookmark(b) }) { Icon(Icons.Filled.Delete, contentDescription = "Remove bookmark") }
                 }
                 HorizontalDivider()
@@ -956,7 +1127,16 @@ private fun HighlightsList(vm: StudyViewModel, panelIndex: Int, onDismiss: () ->
     ) {
         FilterChip(selected = colorFilter == null && layerFilter == null, onClick = { colorFilter = null; layerFilter = null }, label = { Text("All") })
         for (c in colors) {
-            Box(
+            val meaning = vm.meanings[c]
+            if (meaning != null) {
+                // A colour with a meaning (HL-5) shows it, e.g. "Promises".
+                FilterChip(
+                    selected = colorFilter == c,
+                    onClick = { colorFilter = if (colorFilter == c) null else c },
+                    label = { Text(meaning) },
+                    leadingIcon = { Box(Modifier.size(16.dp).clip(CircleShape).background(Color(c))) },
+                )
+            } else Box(
                 Modifier
                     .size(28.dp)
                     .clip(CircleShape)
@@ -981,8 +1161,11 @@ private fun HighlightsList(vm: StudyViewModel, panelIndex: Int, onDismiss: () ->
             }
         }
     }
+    var tagFilter by remember { mutableStateOf<String?>(null) }
+    TagFilter(vm, all.map { "h:${it.highlight.id}" }, tagFilter) { tagFilter = it }
     val shown = all.filter { e ->
-        (colorFilter == null || e.highlight.color == colorFilter) && (layerFilter == null || e.highlight.layerId == layerFilter)
+        (colorFilter == null || e.highlight.color == colorFilter) && (layerFilter == null || e.highlight.layerId == layerFilter) &&
+            (tagFilter == null || tagFilter in vm.tags["h:${e.highlight.id}"].orEmpty())
     }
     Text(
         "${shown.size} highlight" + (if (shown.size == 1) "" else "s"),
@@ -1017,6 +1200,7 @@ private fun HighlightsList(vm: StudyViewModel, panelIndex: Int, onDismiss: () ->
                         overflow = TextOverflow.Ellipsis,
                     )
                 }
+                TagButton(vm, "h:${h.id}")
                 IconButton(onClick = { vm.removeHighlight(h) }) { Icon(Icons.Filled.Delete, contentDescription = "Remove highlight") }
             }
             HorizontalDivider()

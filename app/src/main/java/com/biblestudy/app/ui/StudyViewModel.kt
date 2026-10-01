@@ -986,6 +986,33 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         record(Edit(listOf(after), listOf(before)))
     }
 
+    // ---------- tags (NOTE-4) and colour meanings (HL-5) ----------
+
+    /** Tags by item key: "n:book:chapter:verse" (typed note), "h:id", "b:id" or "t:id". */
+    val tags = mutableStateMapOf<String, Set<String>>().apply { putAll(user.tags()) }
+    /** What each highlight colour means, e.g. yellow = "Promises". */
+    val meanings = mutableStateMapOf<Int, String>().apply { putAll(user.meanings()) }
+
+    fun noteKey(book: Int, chapter: Int, verse: Int) = "n:$book:$chapter:$verse"
+
+    /** Every tag in use, alphabetically. */
+    fun allTags(): List<String> = tags.values.flatten().distinct().sortedBy { it.lowercase() }
+
+    fun setTags(item: String, set: Set<String>) {
+        val clean = set.map { it.trim() }.filter { it.isNotEmpty() }.toSortedSet()
+        if (clean.isEmpty()) tags.remove(item) else tags[item] = clean
+        io { user.setTags(item, clean) }
+    }
+
+    fun setMeaning(color: Int, label: String) {
+        if (label.isBlank()) meanings.remove(color) else meanings[color] = label.trim()
+        io { user.setMeaning(color, label) }
+    }
+
+    /** Typed notes and text boxes, for the notes browser (NOTE-5). */
+    suspend fun browseNotes(): Pair<List<com.biblestudy.app.data.NoteEntry>, List<MarginText>> =
+        withContext(dbDispatcher) { user.allNotes() to user.allTexts() }
+
     // ---------- margin text boxes (MRG-12) ----------
 
     /** Heights of text boxes as last drawn, for tapping and dragging them (page units). */
@@ -1348,6 +1375,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             layers.clear(); layers.addAll(result.first)
             if (layers.none { it.id == activeLayerId }) activeLayerId = layers.firstOrNull()?.id ?: 1L
             bookmarks.clear(); bookmarks.addAll(result.second)
+            tags.clear(); tags.putAll(user.tags())
+            meanings.clear(); meanings.putAll(user.meanings())
             dataGeneration++
             message = "Notes restored."
         }
