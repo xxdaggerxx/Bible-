@@ -44,6 +44,7 @@ class LiveInk(
         private set
 
     fun add(x: Float, y: Float, pressure: Float) {
+        if (frozen) return
         if (size >= 3) {
             val dx = x - data[size - 3]; val dy = y - data[size - 2]
             if (dx * dx + dy * dy < 0.36f) return
@@ -55,6 +56,18 @@ class LiveInk(
     }
 
     fun toArray(): FloatArray = data.copyOf(size)
+
+    /** Replaces the points (a stroke snapped to a shape, INK-12); later points are ignored. */
+    fun replaceAll(points: FloatArray) {
+        data = points.copyOf(maxOf(points.size, 3))
+        size = points.size
+        frozen = true
+        tick++
+    }
+
+    /** Set once the stroke has snapped to a shape. */
+    var frozen = false
+        private set
 }
 
 /** A lasso being drawn: points in page-local coordinates of [page]. */
@@ -647,6 +660,23 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             }
             Tool.SELECT -> moveSelect(s, pos)
             null -> {}
+        }
+    }
+
+    /**
+     * The pen has been held still while drawing (INK-12): a pen stroke snaps to a line, arrow, box
+     * or oval if it looks like one.
+     */
+    fun penHold() {
+        if (mode != Tool.PEN) return
+        val ink = live ?: return
+        if (ink.frozen) return
+        val (_, shape) = ShapeSnap.recognize(ink.toArray()) ?: return
+        ink.replaceAll(shape)
+        if (fastStroke) {
+            // The freehand stroke on the fast layer gives way to the clean shape on the live layer.
+            fastStroke = false
+            fastInk?.clearNow()
         }
     }
 

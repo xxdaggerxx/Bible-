@@ -48,6 +48,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import com.biblestudy.app.model.Region
 import com.biblestudy.app.ui.LineSpacing
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -1140,5 +1141,26 @@ class FeatureTest {
         val h = vm.highlightsFor("KJV", 43, 3).single()
         assertTrue(h.underline)
         snap("76-underline")
+    }
+
+    @Test
+    fun holdingThePenSnapsAnArrowFromTheMarginAcrossTheText() {
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        val start = Offset((Page.COL_W + 120f) * z, 560f) // in the right margin
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(start)
+            repeat(20) { moveBy(Offset(-25f, 1.5f)) } // a slightly wobbly line into the text
+            repeat(3) { moveBy(Offset(16f, -16f)) } // a flick back at the tip
+            advanceEventTime(800) // hold still
+            moveBy(Offset(1f, 0f))
+            up()
+        }
+        compose.waitForIdle()
+        val s = vm.marginStrokesFor(43, 3).single()
+        assertEquals(Region.RIGHT, s.region)
+        assertEquals(15, s.points.size) // a clean arrow: line plus two head strokes
+        assertTrue("reaches across the text", s.points[3] < -50f) // tip well left of the margin (MRG-11)
+        snap("77-arrow")
     }
 }

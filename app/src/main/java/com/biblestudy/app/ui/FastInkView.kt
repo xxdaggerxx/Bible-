@@ -73,6 +73,11 @@ class FastInkView(context: Context) : SurfaceView(context) {
         renderer?.renderFrontBufferedLayer(segment)
     }
 
+    fun clearNow() {
+        strokes++
+        renderer?.clear()
+    }
+
     /**
      * Clears the stroke once the page has had time to draw the saved one, so it never blinks out.
      */

@@ -953,17 +953,36 @@ private fun penToolOverride(first: PointerInputChange, ctl: ReaderController): T
     else -> null
 }
 
+/** How long the pen is held still to snap a stroke to a shape (INK-12). */
+private const val SHAPE_HOLD_MS = 600L
+
 @OptIn(ExperimentalComposeUiApi::class)
 private suspend fun AwaitPointerEventScope.trackPen(first: PointerInputChange, ctl: ReaderController) {
     ctl.penStart(first.position, first.pressure, penToolOverride(first, ctl))
     first.consume()
+    // Holding the pen still at the end of a stroke snaps it to a shape (INK-12). A resting pen still
+    // jitters, so "still" means within a few pixels since the last real movement.
+    var stillAt = first.position
+    var stillSince = first.uptimeMillis
+    var held = false
     try {
         while (true) {
-            val event = awaitPointerEvent()
+            val event = withTimeoutOrNull(SHAPE_HOLD_MS) { awaitPointerEvent() }
+            if (event == null) {
+                if (!held) { held = true; ctl.penHold() }
+                continue
+            }
             val c = event.changes.firstOrNull { it.id == first.id }
             if (c == null || !c.pressed) break
             for (h in c.historical) ctl.penMove(h.position, c.pressure)
             ctl.penMove(c.position, c.pressure)
+            if ((c.position - stillAt).getDistance() > 6f * density) {
+                stillAt = c.position
+                stillSince = c.uptimeMillis
+            } else if (!held && c.uptimeMillis - stillSince >= SHAPE_HOLD_MS) {
+                held = true
+                ctl.penHold()
+            }
             event.changes.forEach { it.consume() }
         }
     } finally {
