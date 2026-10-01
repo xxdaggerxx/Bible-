@@ -19,6 +19,7 @@ import com.biblestudy.app.data.RefLinks
 import com.biblestudy.app.data.Passage
 import com.biblestudy.app.model.MarginText
 import com.biblestudy.app.model.Region
+import com.biblestudy.app.model.Sketch
 import com.biblestudy.app.model.Tool
 import com.biblestudy.app.model.VerseId
 import kotlin.math.abs
@@ -172,6 +173,12 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     private fun geoFor(book: Int, chapter: Int): PageGeometry? {
         val layout = layouts[layoutKey(panel.version, book, chapter)] ?: return null
+        vm.sketchOf(book)?.let { sk ->
+            // A sketch page: all drawing space, no text column or margins (SKT-1).
+            val cached = geoCache[layout]
+            if (cached != null && cached.height == sk.height) return cached
+            return PageGeometry(layout, 0f, Sketch.WIDTH, colW = 0f, fixedHeight = sk.height).also { geoCache[layout] = it }
+        }
         val lw = vm.marginWidth(left = true)
         val rw = vm.marginWidth(left = false)
         val cached = geoCache[layout]
@@ -237,7 +244,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
      * A narrow panel in portrait (MRG-14): fit-width fits just the text column, and the margins
      * slide in from the side like drawers instead of shrinking the text.
      */
-    val drawerMode: Boolean get() = !vm.landscape && panel.viewW > 0f && panel.viewW / density < DRAWER_BELOW_DP
+    val drawerMode: Boolean get() = !Sketch.isSketch(panel.book) && !vm.landscape && panel.viewW > 0f && panel.viewW / density < DRAWER_BELOW_DP
 
     private fun fitZoom(g: PageGeometry): Float {
         if (panel.viewW <= 0f) return 1f
@@ -510,6 +517,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     /** Screen x of a margin's inner edge (where the grip is drawn), or null if that margin is hidden. */
     fun marginEdgeX(left: Boolean): Float? {
         val g = geo ?: return null
+        if (g.sketch) return null // a sketch page has no margins to resize
         if (left && !g.left || !left && !g.right) return null
         val edge = if (left) g.leftW else g.colRight
         return panel.panX + (edge + drawerShift(if (left) Region.LEFT else Region.RIGHT)) * panel.zoom
@@ -567,6 +575,13 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val page = pageAt(s.y) ?: return
         val g = page.geo
         if (tapText(page, Offset(s.x, s.y - page.top), pos)) return
+        // A sketch page's badge opens it (SKT-2).
+        if (!g.sketch) {
+            val local = Offset(s.x, s.y - page.top)
+            vm.sketchesIn(g.layout.book, g.layout.chapter).firstOrNull {
+                (sketchBadgeCenter(g, g.layout, it) - local).getDistance() < 30f
+            }?.let { vm.openSketch(it, panelIndex); return }
+        }
         if (g.regionAt(s.x) != Region.TEXT) return
         val localY = s.y - page.top - Page.TEXT_TOP
         // A parallel-passage link under a heading opens its pop-over (LINK-1, LINK-2).
@@ -1162,6 +1177,15 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     }
 
     companion object {
+        /**
+         * Where a sketch page's badge sits on its passage's page: in the right margin beside its
+         * verse when the margin is shown, otherwise just left of the text.
+         */
+        fun sketchBadgeCenter(g: PageGeometry, layout: ChapterLayout, s: Sketch): Offset {
+            val y = layout.verseTop(s.linkVerse.coerceAtLeast(1)) + 22f
+            return if (g.right) Offset(g.colRight + 26f, y) else Offset(g.textLeft - 34f, y + 34f)
+        }
+
         /** Space between a text box's edge and its text, in page units. */
         const val TEXT_PAD = 8f
 

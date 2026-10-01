@@ -367,13 +367,22 @@ class ChapterLayout(
 }
 
 /** Page geometry for a chapter with the current margin widths (0 = margin hidden). */
-class PageGeometry(val layout: ChapterLayout, val leftW: Float, val rightW: Float) {
+class PageGeometry(
+    val layout: ChapterLayout,
+    val leftW: Float,
+    val rightW: Float,
+    /** Width of the text column; 0 for a sketch page, which is all drawing space (SKT-1). */
+    colW: Float = Page.COL_W,
+    /** A sketch page's own height; chapters are as tall as their text. */
+    fixedHeight: Float? = null,
+) {
     val left = leftW > 0f
     val right = rightW > 0f
     val textLeft = leftW + Page.COL_PAD
-    val colRight = leftW + Page.COL_W
+    val colRight = leftW + colW
     val width = colRight + rightW
-    val height = Page.TEXT_TOP + layout.displayHeight + Page.BOTTOM
+    val height = fixedHeight ?: (Page.TEXT_TOP + layout.displayHeight + Page.BOTTOM)
+    val sketch = fixedHeight != null
 
     fun regionAt(x: Float): Region = when {
         left && x < leftW -> Region.LEFT
@@ -413,6 +422,8 @@ fun buildChapterLayout(
     bookName: String,
     data: ChapterData,
     spacing: LineSpacing = LineSpacing.NORMAL,
+    /** The page title, when it isn't "Book chapter" (a sketch page's name). */
+    title: String? = null,
     linkify: (String) -> List<RefLink> = { emptyList() },
 ): ChapterLayout {
     val builder = AnnotatedString.Builder()
@@ -436,7 +447,7 @@ fun buildChapterLayout(
     val constraints = Constraints(maxWidth = Page.TEXT_W.toInt())
     val text = measurer.measure(builder.toAnnotatedString(), textStyle, constraints = constraints, density = PAGE_DENSITY)
     val title = measurer.measure(
-        text = AnnotatedString("$bookName ${data.chapter}"),
+        text = AnnotatedString(title ?: "$bookName ${data.chapter}"),
         style = TextStyle(fontFamily = font, fontSize = 40.sp, fontWeight = FontWeight.Bold),
         constraints = constraints,
         density = PAGE_DENSITY,

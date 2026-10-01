@@ -144,6 +144,12 @@ fun StudyToolbar(
             )
             // Insert: pictures (MRG-7); text boxes and shapes join here (UI-1).
             var insertMenu by remember { mutableStateOf(false) }
+            var insertDialog by remember { mutableStateOf<String?>(null) }
+            when (insertDialog) {
+                "sketch" -> NewSketchDialog(vm) { insertDialog = null }
+                "verse" -> VerseCardDialog(vm) { insertDialog = null }
+                "name" -> NameCardDialog(vm) { insertDialog = null }
+            }
             Box {
                 IconButton(onClick = { insertMenu = true }) { Icon(Icons.Filled.AddBox, contentDescription = "Insert") }
                 DropdownMenu(expanded = insertMenu, onDismissRequest = { insertMenu = false }) {
@@ -151,6 +157,11 @@ fun StudyToolbar(
                         text = { Text("Text box") },
                         onClick = { insertMenu = false; vm.insertTextBox() },
                     )
+                    // Cards are filled-in text boxes (SKT-4); sketch pages are new pages (SKT-1).
+                    DropdownMenuItem(text = { Text("Verse card\u2026") }, onClick = { insertMenu = false; insertDialog = "verse" })
+                    DropdownMenuItem(text = { Text("Person or place card\u2026") }, onClick = { insertMenu = false; insertDialog = "name" })
+                    DropdownMenuItem(text = { Text("Sketch page\u2026") }, onClick = { insertMenu = false; insertDialog = "sketch" })
+                    HorizontalDivider()
                     for (src in ImageSource.entries) {
                         DropdownMenuItem(
                             text = { Text("Picture: " + src.label.replaceFirstChar { it.lowercase() }) },

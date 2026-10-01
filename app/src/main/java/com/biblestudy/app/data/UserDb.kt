@@ -29,7 +29,7 @@ data class ChapterReading(val book: Int, val chapter: Int, val seconds: Int, val
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 6) {
+class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 7) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
@@ -68,6 +68,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 6) {
         )
         createTexts(db)
         createReading(db)
+        createSketches(db)
         db.execSQL("INSERT INTO layers(id, name, color, visible, locked, sort) VALUES(1, 'My Notes', ${DEFAULT_LAYER_COLOR}, 1, 0, 0)")
     }
 
@@ -98,6 +99,14 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 6) {
             db.execSQL("ALTER TABLE layers ADD COLUMN opacity REAL NOT NULL DEFAULT 1") // 0.8: faded layers (LAY-8)
         }
         if (oldVersion < 6) createReading(db) // 0.9: reading analytics (ANL-1 to ANL-6)
+        if (oldVersion < 7) createSketches(db) // 0.9: sketch pages (SKT-1 to SKT-4)
+    }
+
+    private fun createSketches(db: SQLiteDatabase) {
+        db.execSQL(
+            "CREATE TABLE IF NOT EXISTS sketches(id INTEGER PRIMARY KEY, name TEXT NOT NULL, paper TEXT NOT NULL, " +
+                "book INTEGER NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, height REAL NOT NULL, created INTEGER NOT NULL)"
+        )
     }
 
     private fun createReading(db: SQLiteDatabase) {
@@ -128,6 +137,40 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 6) {
         db.execSQL("CREATE TABLE workspaces(name TEXT PRIMARY KEY, json TEXT NOT NULL, created INTEGER NOT NULL)")
     }
 
+    // ---------- sketch pages (SKT) ----------
+
+    fun sketches(): List<com.biblestudy.app.model.Sketch> =
+        readableDatabase.rawQuery("SELECT id, name, paper, book, chapter, verse, height, created FROM sketches ORDER BY created", null).use { c ->
+            buildList {
+                while (c.moveToNext()) add(
+                    com.biblestudy.app.model.Sketch(
+                        c.getLong(0), c.getString(1),
+                        runCatching { com.biblestudy.app.model.Paper.valueOf(c.getString(2)) }.getOrDefault(com.biblestudy.app.model.Paper.BLANK),
+                        c.getInt(3), c.getInt(4), c.getInt(5), c.getFloat(6), c.getLong(7),
+                    )
+                )
+            }
+        }
+
+    fun saveSketch(s: com.biblestudy.app.model.Sketch) {
+        val v = ContentValues().apply {
+            put("id", s.id); put("name", s.name); put("paper", s.paper.name); put("book", s.linkBook)
+            put("chapter", s.linkChapter); put("verse", s.linkVerse); put("height", s.height); put("created", s.created)
+        }
+        writableDatabase.insertWithOnConflict("sketches", null, v, SQLiteDatabase.CONFLICT_REPLACE)
+    }
+
+    /** Deletes a sketch page and everything on it; returns its pictures' files to remove. */
+    fun deleteSketch(s: com.biblestudy.app.model.Sketch): List<String> {
+        val db = writableDatabase
+        val files = db.rawQuery("SELECT file FROM images WHERE book = ?", arrayOf(s.book.toString())).use { c ->
+            buildList { while (c.moveToNext()) add(c.getString(0)) }
+        }
+        for (t in listOf("strokes", "images", "texts")) db.delete(t, "book = ?", arrayOf(s.book.toString()))
+        db.delete("sketches", "id = ?", arrayOf(s.id.toString()))
+        return files
+    }
+
     // ---------- reading analytics (ANL) ----------
 
     // Insert-then-update rather than an upsert: Android 10's SQLite (3.22) has no ON CONFLICT DO UPDATE.
@@ -147,6 +190,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 6) {
         } finally {
             db.endTransaction()
         }
+    }
+
+    /** Time on a sketch page: study time for the day, not tied to a chapter. */
+    fun addStudy(day: String, seconds: Int) {
+        val db = writableDatabase
+        db.execSQL("INSERT OR IGNORE INTO reading_days VALUES(?, 0, 0)", arrayOf(day))
+        db.execSQL("UPDATE reading_days SET study_s = study_s + ? WHERE day = ?", arrayOf(seconds, day))
     }
 
     private fun ensureChapter(db: SQLiteDatabase, book: Int, chapter: Int) =
@@ -333,7 +383,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 6) {
     /** Every margin text box, for the notes browser. */
     fun allTexts(): List<MarginText> =
         readableDatabase.rawQuery(
-            "SELECT id, layer_id, book, chapter, region, verse, x, y, w, body, size, color, bg FROM texts", null,
+            "SELECT id, layer_id, book, chapter, region, verse, x, y, w, body, size, color, bg FROM texts WHERE book < 1000", null, // not sketch pages
         ).use { c ->
             buildList {
                 while (c.moveToNext()) add(
@@ -437,9 +487,10 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 6) {
                 )
             }
         }
-        return rows("SELECT DISTINCT book, chapter, verse, layer_id FROM strokes WHERE region != 0 OR version = ?", arrayOf(version), false) +
-            rows("SELECT DISTINCT book, chapter, verse, layer_id FROM images", emptyArray(), false) +
-            rows("SELECT DISTINCT book, chapter, verse, layer_id FROM texts", emptyArray(), false) +
+        // Sketch pages (books from 1000) aren't Bible chapters.
+        return rows("SELECT DISTINCT book, chapter, verse, layer_id FROM strokes WHERE (region != 0 OR version = ?) AND book < 1000", arrayOf(version), false) +
+            rows("SELECT DISTINCT book, chapter, verse, layer_id FROM images WHERE book < 1000", emptyArray(), false) +
+            rows("SELECT DISTINCT book, chapter, verse, layer_id FROM texts WHERE book < 1000", emptyArray(), false) +
             rows("SELECT book, chapter, start_off, layer_id FROM highlights WHERE version = ?", arrayOf(version), true)
     }
 

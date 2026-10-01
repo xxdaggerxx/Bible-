@@ -885,12 +885,40 @@ fun BookmarksDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                 FilterChip(selected = tab == 0, onClick = { tab = 0 }, label = { Text("Notes") })
                 FilterChip(selected = tab == 1, onClick = { tab = 1 }, label = { Text("Highlights") })
                 FilterChip(selected = tab == 2, onClick = { tab = 2 }, label = { Text("Bookmarks") })
+                FilterChip(selected = tab == 3, onClick = { tab = 3 }, label = { Text("Sketch pages") })
             }
             Spacer(Modifier.height(8.dp))
             when (tab) {
                 0 -> NotesList(vm, panelIndex, onDismiss, Modifier.weight(1f))
                 1 -> HighlightsList(vm, panelIndex, onDismiss, Modifier.weight(1f))
-                else -> BookmarksList(vm, panelIndex, onDismiss, Modifier.weight(1f))
+                2 -> BookmarksList(vm, panelIndex, onDismiss, Modifier.weight(1f))
+                else -> SketchList(vm, panelIndex, onDismiss, Modifier.weight(1f))
+            }
+        }
+    }
+}
+
+/** Every sketch page (SKT-2), newest first, with the passage it belongs to. Tap one to open it. */
+@Composable
+private fun SketchList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
+    val list = vm.sketches.sortedByDescending { it.created }
+    Column(modifier) {
+        if (list.isEmpty()) {
+            Text("No sketch pages yet. Make one from Insert \u2192 Sketch page; it's linked to the passage you're reading.")
+        }
+        LazyColumn {
+            items(list, key = { it.id }) { s ->
+                Column(
+                    Modifier.fillMaxWidth().clickable { vm.openSketch(s, panelIndex); onDismiss() }.padding(vertical = 10.dp)
+                ) {
+                    Text(s.name, style = MaterialTheme.typography.titleMedium)
+                    Text(
+                        "${vm.refLabel(VerseId.of(s.linkBook, s.linkChapter, s.linkVerse))} \u00b7 ${s.paper.label} \u00b7 " +
+                            java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM).format(java.util.Date(s.created)),
+                        style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                    )
+                }
+                HorizontalDivider()
             }
         }
     }

@@ -201,3 +201,35 @@ object VerseId {
     fun chapter(id: Int) = (id / 1_000) % 1_000
     fun verse(id: Int) = id % 1_000
 }
+
+/** Kinds of paper for a sketch page (SKT-1). */
+enum class Paper(val label: String) { BLANK("Blank"), LINED("Lined"), GRID("Grid"), DOTTED("Dotted") }
+
+/**
+ * A sketch page (SKT-1, SKT-2): a full page for drawing, linked to a passage. Its ink, pictures
+ * and text boxes are stored like margin notes, under the book number [book] (chapter 1).
+ */
+data class Sketch(
+    val id: Long,
+    val name: String,
+    val paper: Paper,
+    /** The passage it belongs to, where its marker shows. */
+    val linkBook: Int,
+    val linkChapter: Int,
+    val linkVerse: Int,
+    /** Page height in page units; "More space" makes it taller. */
+    val height: Float,
+    val created: Long,
+) {
+    val book get() = SKETCH_BOOK + id.toInt()
+
+    companion object {
+        /** Sketch pages use book numbers from here up; Bible books are 1 to 66. */
+        const val SKETCH_BOOK = 1000
+        const val WIDTH = 1300f
+        const val START_HEIGHT = 1840f // A4-shaped
+
+        fun isSketch(book: Int) = book >= SKETCH_BOOK
+        fun idOf(book: Int) = (book - SKETCH_BOOK).toLong()
+    }
+}

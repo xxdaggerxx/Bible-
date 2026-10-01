@@ -55,6 +55,8 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -155,7 +157,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     val theme = vm.theme
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.sketchOf(panel.book)?.name) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
@@ -173,6 +175,18 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             vm.neighbor(panel.book, panel.chapter, 1),
             vm.neighbor(panel.book, panel.chapter, -1),
         )
+        val sketch = vm.sketchOf(panel.book)
+        if (sketch != null) {
+            // A sketch page: an empty "chapter" whose title is the sketch's name (SKT-1).
+            val key = ctl.layoutKey(v, sketch.book, 1)
+            if (ctl.layouts[key]?.title?.layoutInput?.text?.text != sketch.name) {
+                ctl.layouts[key] = buildChapterLayout(
+                    measurer, font.family(), sketch.name, ChapterData(v, sketch.book, 1, listOf(com.biblestudy.app.model.Verse(1, ""))), title = sketch.name,
+                )
+            }
+            vm.ensureLoaded(v, sketch.book, 1) { ctl.layouts[key]!! }
+            return@LaunchedEffect
+        }
         for ((b, c) in wanted) {
             val key = ctl.layoutKey(v, b, c)
             val name = vm.bible.book(b).name
@@ -408,6 +422,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
 @Composable
 private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, onOpenPicker: () -> Unit) {
     val panel = vm.panels[index]
+    vm.sketchOf(panel.book)?.let { SketchHeader(vm, index, ctl, it); return }
     val book = vm.bible.book(panel.book)
     BoxWithConstraints(Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer)) {
         // Narrow panels (e.g. three side by side) move the less-used buttons into a menu.
@@ -476,6 +491,68 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
                 }
             }
         }
+    }
+}
+
+/**
+ * A sketch page's header (SKT-1, SKT-2): Back to where you were, the page's name, its passage,
+ * and one menu for paper, more space, renaming and deleting.
+ */
+@Composable
+private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, sk: com.biblestudy.app.model.Sketch) {
+    val panel = vm.panels[index]
+    var menu by remember { mutableStateOf(false) }
+    var renaming by remember { mutableStateOf(false) }
+    var deleting by remember { mutableStateOf(false) }
+    Row(
+        Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer).padding(horizontal = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
+            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+        }
+        Text(sk.name, style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(horizontal = 6.dp))
+        TextButton(onClick = { vm.goTo(index, sk.linkBook, sk.linkChapter, sk.linkVerse) }) {
+            Text("on " + vm.refLabel(com.biblestudy.app.model.VerseId.of(sk.linkBook, sk.linkChapter, sk.linkVerse)), maxLines = 1)
+        }
+        Spacer(Modifier.weight(1f))
+        TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
+        Box {
+            IconButton(onClick = { vm.activePanel = index; menu = true }) { Icon(Icons.Filled.MoreVert, contentDescription = "Sketch page menu") }
+            DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                Text("Paper", style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(start = 16.dp, top = 8.dp))
+                for (p in com.biblestudy.app.model.Paper.entries) {
+                    DropdownMenuItem(
+                        text = { Text(p.label + if (p == sk.paper) "  \u2713" else "") },
+                        onClick = { vm.updateSketch(sk.copy(paper = p)); menu = false },
+                    )
+                }
+                HorizontalDivider()
+                DropdownMenuItem(text = { Text("More space below") }, onClick = { vm.updateSketch(sk.copy(height = sk.height + com.biblestudy.app.model.Sketch.START_HEIGHT / 2)); menu = false })
+                DropdownMenuItem(text = { Text("Rename\u2026") }, onClick = { renaming = true; menu = false })
+                DropdownMenuItem(text = { Text("Delete sketch page\u2026") }, onClick = { deleting = true; menu = false })
+                if (vm.panels.size > 1) DropdownMenuItem(text = { Text("Close panel") }, onClick = { menu = false; vm.closePanel(index) })
+            }
+        }
+    }
+    if (renaming) {
+        var name by remember { mutableStateOf(sk.name) }
+        AlertDialog(
+            onDismissRequest = { renaming = false },
+            title = { Text("Rename sketch page") },
+            text = { OutlinedTextField(value = name, onValueChange = { name = it }, singleLine = true) },
+            confirmButton = { TextButton(onClick = { if (name.isNotBlank()) vm.updateSketch(sk.copy(name = name.trim())); renaming = false }) { Text("Save") } },
+            dismissButton = { TextButton(onClick = { renaming = false }) { Text("Cancel") } },
+        )
+    }
+    if (deleting) {
+        AlertDialog(
+            onDismissRequest = { deleting = false },
+            title = { Text("Delete \u201c${sk.name}\u201d?") },
+            text = { Text("Everything drawn and written on this sketch page is deleted. This can't be undone.") },
+            confirmButton = { TextButton(onClick = { deleting = false; vm.deleteSketch(sk) }) { Text("Delete") } },
+            dismissButton = { TextButton(onClick = { deleting = false }) { Text("Cancel") } },
+        )
     }
 }
 
@@ -638,6 +715,37 @@ private inline fun DrawScope.withOpacity(alpha: Float?, bounds: Rect, block: Dra
     drawContext.canvas.restore()
 }
 
+/** The colour of a sketch page's badge in the margin. */
+private val SKETCH_BADGE = Color(0xFF6A8CAF)
+
+/** Lines, a grid or dots on a sketch page (SKT-1). */
+private fun DrawScope.drawPaper(paper: com.biblestudy.app.model.Paper, g: PageGeometry, theme: PageTheme) {
+    val c = theme.rule.copy(alpha = 0.55f)
+    val step = 48f
+    val top = Page.TEXT_TOP
+    when (paper) {
+        com.biblestudy.app.model.Paper.BLANK -> {}
+        com.biblestudy.app.model.Paper.LINED -> {
+            var y = top + step
+            while (y < g.height) { drawLine(c, Offset(40f, y), Offset(g.width - 40f, y), strokeWidth = 1.2f); y += step }
+        }
+        com.biblestudy.app.model.Paper.GRID -> {
+            var y = top
+            while (y < g.height) { drawLine(c, Offset(0f, y), Offset(g.width, y), strokeWidth = 1f); y += step }
+            var x = 0f
+            while (x < g.width) { drawLine(c, Offset(x, top), Offset(x, g.height), strokeWidth = 1f); x += step }
+        }
+        com.biblestudy.app.model.Paper.DOTTED -> {
+            var y = top
+            while (y < g.height) {
+                var x = step / 2
+                while (x < g.width) { drawCircle(c, 2.2f, Offset(x, y)); x += step }
+                y += step
+            }
+        }
+    }
+}
+
 private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: PlacedPage, theme: PageTheme, view: Rect, measurer: TextMeasurer) {
     val g = page.geo
     val layout = g.layout
@@ -662,11 +770,13 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
 
     // Paper and margins
     drawRect(theme.page, size = Size(g.width, g.height))
-    if (g.left) {
+    val sketch = vm.sketchOf(layout.book)
+    if (sketch != null) drawPaper(sketch.paper, g, theme)
+    if (g.left && sketch == null) {
         drawRect(theme.margin, topLeft = Offset.Zero, size = Size(g.leftW, g.height))
         drawLine(theme.rule, Offset(g.leftW, 0f), Offset(g.leftW, g.height), strokeWidth = 1.5f)
     }
-    if (g.right) {
+    if (g.right && sketch == null) {
         drawRect(theme.margin, topLeft = Offset(g.colRight, 0f), size = Size(g.rightW, g.height))
         drawLine(theme.rule, Offset(g.colRight, 0f), Offset(g.colRight, g.height), strokeWidth = 1.5f)
     }
@@ -697,7 +807,16 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
 
     // Scripture text, drawn in runs between section headings
     drawText(layout.title, color = theme.text, topLeft = Offset(g.textLeft, Page.TITLE_TOP))
-    for ((first, last, dy) in layout.segments) {
+    // Sketch pages linked to this chapter: a badge beside the verse (SKT-2).
+    if (sketch == null) {
+        for (sk in vm.sketchesIn(layout.book, layout.chapter)) {
+            val c = ReaderController.sketchBadgeCenter(g, layout, sk)
+            drawRoundRect(SKETCH_BADGE, topLeft = c - Offset(16f, 13f), size = Size(32f, 26f), cornerRadius = androidx.compose.ui.geometry.CornerRadius(6f))
+            drawLine(Color.White, c + Offset(-8f, 6f), c + Offset(8f, -6f), strokeWidth = 3f)
+            drawCircle(Color.White, 3f, c + Offset(-8f, 6f))
+        }
+    }
+    if (sketch == null) for ((first, last, dy) in layout.segments) {
         val (clipTop, clipBottom) = layout.segmentClip(first, last)
         translate(g.textLeft, Page.TEXT_TOP + dy) {
             clipRect(left = -Page.COL_PAD, top = clipTop, right = Page.TEXT_W + Page.COL_PAD, bottom = clipBottom) {

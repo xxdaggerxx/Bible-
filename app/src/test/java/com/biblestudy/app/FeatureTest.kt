@@ -1574,4 +1574,69 @@ class FeatureTest {
         snap("95-place-map")
         compose.runOnUiThread { vm.nameOpen = null; vm.sidePane = null }
     }
+
+    @Test
+    fun sketchPagesWithVerseAndNameCards() {
+        compose.runOnUiThread { vm.sketches.toList().forEach { vm.deleteSketch(it) } }
+        waitForLoaded()
+        // A new sketch page, linked to the passage being read.
+        compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
+        compose.onNodeWithText("Sketch page\u2026").performClick()
+        compose.onNodeWithText("e.g. Timeline of the kings").performTextInput("Born again")
+        compose.onNodeWithText("Grid").performClick()
+        compose.onNodeWithText("Create").performClick()
+        waitForLoaded()
+        val sk = vm.sketches.single()
+        assertEquals(sk.book, vm.panels[0].book)
+        assertEquals(43 to 3, sk.linkBook to sk.linkChapter)
+        compose.onNodeWithText("Born again").assertExists()
+
+        // Draw on it like anywhere else.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        compose.onNodeWithTag("reader0").performTouchInput { down(Offset(300f, 500f)); repeat(8) { moveBy(Offset(25f, 10f)) }; up() }
+        compose.waitForIdle()
+        assertEquals(1, vm.marginStrokesFor(sk.book, 1).size)
+
+        // A verse card: type the reference.
+        compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
+        compose.onNodeWithText("Verse card\u2026").performClick()
+        compose.onNodeWithText("Reference, e.g. John 3:16-18").performTextInput("John 3:16")
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("cardPreview").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Add card").performClick()
+        compose.waitForIdle()
+        assertTrue(vm.textsFor(sk.book, 1).any { it.text.startsWith("John 3:16 (KJV)\nFor God so loved") })
+
+        // A person card.
+        compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
+        compose.onNodeWithText("Person or place card\u2026").performClick()
+        compose.onNodeWithText("Find a person or place").performTextInput("Nicodemus")
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("nameRow").fetchSemanticsNodes().isNotEmpty() }
+        compose.onAllNodesWithTag("nameRow").onFirst().performClick()
+        compose.waitForIdle()
+        assertTrue(vm.textsFor(sk.book, 1).any { it.text.startsWith("Nicodemus\nPharisee") })
+        compose.runOnUiThread { vm.fingerDraw = false }
+        snap("96-sketch-page")
+
+        // Back to John 3; the sketch page reopens from My notes.
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        snap("97-sketch-badge")
+        compose.onNodeWithContentDescription("My notes").performScrollTo().performClick()
+        compose.onNodeWithText("Sketch pages").performClick()
+        compose.onNodeWithText("Born again").performClick()
+        waitForLoaded()
+        assertEquals(sk.book, vm.panels[0].book)
+        // Kept in the notes database, and not listed among typed notes.
+        assertEquals(listOf("Born again"), vm.user.sketches().map { it.name })
+        assertTrue(vm.user.allTexts().none { it.book >= 1000 })
+
+        // Delete it: everything on it goes, and the panel returns to its passage.
+        compose.onNodeWithContentDescription("Sketch page menu").performClick()
+        compose.onNodeWithText("Delete sketch page\u2026").performClick()
+        compose.onNodeWithText("Delete").performClick()
+        waitForLoaded()
+        assertEquals(43, vm.panels[0].book)
+        assertTrue(vm.user.sketches().isEmpty())
+    }
 }

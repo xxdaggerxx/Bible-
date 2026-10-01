@@ -41,6 +41,8 @@ import com.biblestudy.app.model.MarginImage
 import com.biblestudy.app.model.MarginText
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SideButton
+import com.biblestudy.app.model.Sketch
+import com.biblestudy.app.model.Paper
 import com.biblestudy.app.model.TextFont
 import com.biblestudy.app.model.TypedNote
 import com.biblestudy.app.model.Tool
@@ -393,7 +395,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putInt("panels", panels.size)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
             panels.forEachIndexed { i, p ->
-                putInt("p${i}b", p.book); putInt("p${i}c", p.chapter); putString("p${i}v", p.version)
+                // A sketch page reopens on its passage next time.
+                val sk = sketchOf(p.book)
+                putInt("p${i}b", sk?.linkBook ?: p.book); putInt("p${i}c", sk?.linkChapter ?: p.chapter); putString("p${i}v", p.version)
                 p.zoomRel.forEach { (o, z) -> putFloat("p${i}z_$o", z) }
                 putFloat("p${i}zl", p.lastZoomRel)
             }
@@ -421,6 +425,15 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     private fun jump(p: PanelState, book: Int, chapter: Int, verse: Int?) {
+        if (Sketch.isSketch(book)) {
+            // A sketch page (SKT-1): one page, no chapters around it.
+            if (sketchOf(book) == null) return
+            p.book = book
+            p.chapter = 1
+            p.pendingVerse = null
+            p.navGen++
+            return
+        }
         val b = book.coerceIn(1, 66)
         p.book = b
         p.chapter = chapter.coerceIn(1, bible.book(b).chapters)
@@ -448,6 +461,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** The chapter before (dir = -1) or after (dir = 1), or null at either end of the Bible. */
     fun neighbor(book: Int, chapter: Int, dir: Int): Pair<Int, Int>? = when {
+        Sketch.isSketch(book) -> null
         dir > 0 && chapter < bible.book(book).chapters -> book to chapter + 1
         dir > 0 && book < 66 -> book + 1 to 1
         dir < 0 && chapter > 1 -> book to chapter - 1
@@ -580,6 +594,99 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         paneVerse = VerseTarget(book, chapter, verse)
     }
 
+    // ---------- sketch pages (SKT-1 to SKT-4) ----------
+
+    val sketches = mutableStateListOf<Sketch>().apply { addAll(user.sketches()) }
+
+    fun sketchOf(book: Int): Sketch? = if (Sketch.isSketch(book)) sketches.firstOrNull { it.book == book } else null
+
+    /** Sketch pages linked to a chapter, shown as markers in its margin (SKT-2). */
+    fun sketchesIn(book: Int, chapter: Int): List<Sketch> = sketches.filter { it.linkBook == book && it.linkChapter == chapter }
+
+    /** A heading for what a panel shows: "John 3", or a sketch page's name. */
+    fun placeName(book: Int, chapter: Int): String = sketchOf(book)?.name ?: "${bible.book(book).name} $chapter"
+
+    /** Makes a sketch page linked to the passage being read and opens it in the active panel. */
+    fun createSketch(name: String, paper: Paper): Sketch {
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        // Linked to the Bible passage in view (or, from a sketch, to that sketch's passage).
+        val from = sketchOf(p.book)
+        // Small ids, never reused: a sketch's book number is SKETCH_BOOK + id.
+        val id = maxOf(prefs.getLong("nextSketch", 1L), (sketches.maxOfOrNull { it.id } ?: 0L) + 1)
+        prefs.edit { putLong("nextSketch", id + 1) }
+        val s = Sketch(
+            id, name.trim().ifEmpty { "Sketch" }, paper,
+            from?.linkBook ?: p.book, from?.linkChapter ?: p.chapter, from?.linkVerse ?: p.topVerse,
+            Sketch.START_HEIGHT, System.currentTimeMillis(),
+        )
+        sketches.add(s)
+        io { user.saveSketch(s) }
+        openSketch(s)
+        return s
+    }
+
+    fun openSketch(s: Sketch, index: Int = activePanel.coerceIn(0, panels.lastIndex)) {
+        goTo(index, s.book, 1)
+    }
+
+    fun updateSketch(s: Sketch) {
+        val i = sketches.indexOfFirst { it.id == s.id }
+        if (i >= 0) sketches[i] = s
+        io { user.saveSketch(s) }
+    }
+
+    /** Deletes a sketch page and its drawing; panels showing it go back to its passage. */
+    fun deleteSketch(s: Sketch) {
+        for ((i, p) in panels.withIndex()) {
+            if (p.book == s.book) goTo(i, s.linkBook, s.linkChapter, s.linkVerse, remember = false)
+            p.back.removeAll { it.book == s.book }
+            p.forward.removeAll { it.book == s.book }
+        }
+        sketches.removeAll { it.id == s.id }
+        marginStrokesFor(s.book, 1).clear(); imagesFor(s.book, 1).clear(); textsFor(s.book, 1).clear()
+        io { user.deleteSketch(s).forEach { File(imagesDir, it).delete() } }
+    }
+
+    /**
+     * Where to put something new on a sketch page, in its item coordinates (relative to the top of
+     * the page's text area): below the title and below anything already there in view.
+     */
+    fun sketchSpot(p: PanelState, w: Float): Pair<Float, Float> {
+        val viewTop = (-p.panY / p.zoom).coerceAtLeast(0f)
+        val x = (-p.panX / p.zoom).coerceAtLeast(0f) + 60f
+        var y = maxOf(viewTop + 40f, Page.TEXT_TOP + 20f) - Page.TEXT_TOP
+        // Boxes already on the page, as (top, bottom) where they overlap this column.
+        val taken = textsFor(p.book, 1).filter { it.x < x + w && it.x + it.w > x }
+            .map { it.y to it.y + (textHeights[it.id] ?: estimateTextHeight(it)) } +
+            imagesFor(p.book, 1).filter { it.x < x + w && it.x + it.w > x }.map { it.y to it.y + it.h }
+        var moved = true
+        while (moved) {
+            moved = false
+            for ((top, bottom) in taken) {
+                if (y < bottom + 16f && y + 60f > top) { y = bottom + 24f; moved = true }
+            }
+        }
+        return x to y
+    }
+
+    /** A text box's height before it has been laid out: wrapped lines at about half an em per letter. */
+    private fun estimateTextHeight(t: MarginText): Float {
+        val perLine = ((t.w - 16f) / (t.size * 0.5f)).coerceAtLeast(1f)
+        val lines = t.text.lines().sumOf { kotlin.math.ceil((it.length.coerceAtLeast(1)) / perLine).toInt() }
+        return lines * t.size * 1.35f + 16f
+    }
+
+    /**
+     * Adds a card to the page: a text box already filled in, e.g. a verse with its reference
+     * (which shows as a link) or a person or place (SKT-4).
+     */
+    fun insertCard(text: String, background: Int) {
+        val t = insertTextBox(startEditing = false) ?: return
+        val card = t.copy(text = text, background = background)
+        replaceItem(card)
+        record(Edit(listOf(card), emptyList()))
+    }
+
     // ---------- reading analytics (ANL-1 to ANL-6) ----------
 
     /** Whether reading time is counted (ANL-6). */
@@ -613,6 +720,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (!trackReading || !foreground || now - lastActive > IDLE_MS || since < 1000) return
         val p = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex)) ?: return
         val book = p.book; val chapter = p.chapter
+        if (Sketch.isSketch(book)) {
+            // Time on a sketch page counts as study time for its passage's day, not as reading.
+            val day = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
+            val seconds = (since / 1000).toInt()
+            io { user.addStudy(day, seconds) }
+            readingGeneration++
+            return
+        }
         val key = book * 1000 + chapter
         if (key != visitKey) {
             visitKey = key; visitSeconds = 0; visitRead = false
@@ -1314,11 +1429,19 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * Adds an empty text box beside the verse at the top of the active panel and starts typing in
      * it. Returns it, or null if the active layer is locked.
      */
-    fun insertTextBox(): MarginText? {
+    fun insertTextBox(startEditing: Boolean = true): MarginText? {
         val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
         val layer = activeLayer() ?: return null
         if (layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return null }
         if (!layer.visible) setLayerVisible(layer.id, true)
+        if (Sketch.isSketch(p.book)) {
+            // On a sketch page: in the first free space from the top-left of what's in view.
+            val (x, y) = sketchSpot(p, 480f)
+            val t = MarginText(newId(), layer.id, p.book, 1, Region.RIGHT, 1, x, y, 480f, "")
+            addItem(t)
+            if (startEditing) editingText = t.id
+            return t
+        }
         val region = when {
             marginRight -> Region.RIGHT
             marginLeft -> Region.LEFT
@@ -1327,7 +1450,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val w = marginWidth(region == Region.LEFT) - 48f
         val t = MarginText(newId(), layer.id, p.book, p.chapter, region, p.topVerse, 24f, 8f, w, "")
         addItem(t)
-        editingText = t.id
+        if (startEditing) editingText = t.id
         return t
     }
 
@@ -1383,24 +1506,29 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val layer = activeLayer() ?: return
         if (layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return }
         if (!layer.visible) setLayerVisible(layer.id, true)
+        val sketch = Sketch.isSketch(p.book)
         val region = when {
-            marginRight -> Region.RIGHT
+            sketch || marginRight -> Region.RIGHT // a sketch page is all "right margin"
             marginLeft -> Region.LEFT
             else -> { marginRight = true; Region.RIGHT }
         }
-        val marginW = marginWidth(region == Region.LEFT)
-        val book = p.book; val chapter = p.chapter; val verse = p.topVerse
+        val marginW = if (sketch) 620f else marginWidth(region == Region.LEFT)
+        val book = p.book; val chapter = p.chapter; val verse = if (sketch) 1 else p.topVerse
+        // On a sketch page it goes in free space where you're looking (SKT-3).
+        val spot = if (sketch) sketchSpot(p, marginW - 48f) else null
+        val x = spot?.first ?: 24f
+        val y = spot?.second ?: 8f
         viewModelScope.launch {
             val id = newId()
             val saved = withContext(Dispatchers.IO) { importImage(uri, id) }
             if (saved == null) { message = "Couldn't open that image."; return@launch }
             val (file, aspect) = saved
             val w = marginW - 48f
-            val img = MarginImage(id, layer.id, book, chapter, region, verse, 24f, 8f, w, w * aspect, file)
+            val img = MarginImage(id, layer.id, book, chapter, region, verse, x, y, w, w * aspect, file)
             addItem(img)
             record(Edit(listOf(img), emptyList()))
             tool = Tool.SELECT
-            message = "Image added beside verse $verse. Use Select to move or resize it."
+            message = if (sketch) "Picture added. Use Select to move or resize it." else "Image added beside verse $verse. Use Select to move or resize it."
         }
     }
 
