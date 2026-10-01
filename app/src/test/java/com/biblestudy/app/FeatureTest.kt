@@ -885,7 +885,12 @@ class FeatureTest {
         compose.waitUntil(15_000) { compose.onAllNodesWithText("Romans 5:8").fetchSemanticsNodes().isNotEmpty() }
         snap("49-pane-crossrefs")
         // Opening a cross-reference moves the Bible panel; the pane stays.
+        // A cross-reference opens its passage pop-over (LINK-5); Go to moves the Bible panel.
         compose.onNodeWithText("Romans 5:8").performClick()
+        compose.waitForIdle()
+        assertEquals(2, compose.onAllNodesWithText("commendeth", substring = true).fetchSemanticsNodes().size) // list + pop-over
+        snap("79-xref-popover")
+        compose.onNodeWithText("Go to").performClick()
         waitForLoaded()
         assertEquals(45, vm.panels[0].book)
         compose.onNodeWithTag("pane").assertExists()

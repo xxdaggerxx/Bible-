@@ -548,7 +548,6 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
         }
     }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
-    val otherPanel = vm.panels.indices.firstOrNull { it != panelIndex }
 
     fun save() {
         if (note != original || noteEnd != originalEnd) vm.setNote(VerseTarget(t.book, t.chapter, noteStart), note, noteEnd)
@@ -667,23 +666,16 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
             )
             LazyColumn(Modifier.weight(1f)) {
                 items(refs) { r ->
-                    val b = VerseId.book(r.toStart); val c = VerseId.chapter(r.toStart); val v = VerseId.verse(r.toStart)
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Column(
-                            Modifier
-                                .weight(1f)
-                                .clickable {
-                                    save()
-                                    vm.goTo(panelIndex, b, c, v); onDismiss()
-                                }
-                                .padding(vertical = 8.dp)
-                        ) {
-                            Text(vm.refLabel(r.toStart, r.toEnd), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                            Text(r.preview, maxLines = 2, overflow = TextOverflow.Ellipsis)
-                        }
-                        if (otherPanel != null) {
-                            TextButton(onClick = { vm.goTo(otherPanel, b, c, v) }) { Text("Open in other panel") }
-                        }
+                    // A cross-reference opens the passage pop-over (LINK-5): read it here, then
+                    // Go to or Open beside.
+                    Column(
+                        Modifier
+                            .fillMaxWidth()
+                            .clickable { notePassage = r.passage() }
+                            .padding(vertical = 8.dp)
+                    ) {
+                        Text(vm.refLabel(r.toStart, r.toEnd), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                        Text(r.preview, maxLines = 2, overflow = TextOverflow.Ellipsis)
                     }
                     HorizontalDivider()
                 }
@@ -1391,3 +1383,8 @@ fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolea
         }
     }
 }
+
+/** The passage a cross-reference points to (LINK-5). */
+fun CrossRef.passage() = Passage(
+    VerseId.book(toStart), VerseId.chapter(toStart), VerseId.verse(toStart), VerseId.chapter(toEnd), VerseId.verse(toEnd),
+)

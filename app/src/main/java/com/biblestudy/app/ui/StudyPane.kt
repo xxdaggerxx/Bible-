@@ -26,6 +26,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.window.Popup
+import androidx.compose.ui.window.PopupProperties
+import com.biblestudy.app.data.Passage
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
@@ -107,11 +112,23 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
             r == null -> Text("Loading…", modifier = Modifier.padding(top = 8.dp))
             r.isEmpty() -> Text("No cross-references for this verse.", modifier = Modifier.padding(top = 8.dp))
         }
+        // A cross-reference opens the passage pop-over (LINK-5), with Go to and Open beside.
+        var shown by remember { mutableStateOf<Passage?>(null) }
+        shown?.let { p ->
+            Popup(alignment = Alignment.Center, onDismissRequest = { shown = null }, properties = PopupProperties(focusable = true)) {
+                PassageCard(
+                    vm, p, version,
+                    onGoTo = { vm.openPassage(p, index, beside = false); shown = null },
+                    onOpenBeside = { vm.openPassage(p, index, beside = true); shown = null },
+                    onClose = { shown = null },
+                )
+            }
+        }
         LazyColumn(Modifier.weight(1f)) {
             items(r.orEmpty()) { x ->
                 Column(
                     Modifier.fillMaxWidth()
-                        .clickable { vm.goTo(index, VerseId.book(x.toStart), VerseId.chapter(x.toStart), VerseId.verse(x.toStart)) }
+                        .clickable { shown = x.passage() }
                         .padding(vertical = 8.dp)
                 ) {
                     Text(vm.refLabel(x.toStart, x.toEnd), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
