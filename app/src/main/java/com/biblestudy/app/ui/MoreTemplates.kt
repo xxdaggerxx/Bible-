@@ -267,9 +267,11 @@ internal object MoreTemplates {
                 "Herod's temple, where Jesus taught: described by Josephus and the Mishnah; the layout is approximate.", size = 17f)
         // Solomon's temple: the house 60 x 20 cubits, with a porch 10 deep and side rooms around.
         val c = 9f
-        val sx = LEFT + 160f; val sy = 150f
-        out += DrawnBox(LEFT, sy - 50f, 600f, "Solomon's temple (built c. 966–959 BC)", size = 20f, color = 0xFF7A5C2E.toInt())
-        out += rect(sx - 5f * c, sy - 5f * c, 80f * c, 30f * c, GREY, 2f) // side rooms
+        val sx = LEFT + 160f; val sy = 190f
+        out += DrawnBox(LEFT, sy - 110f, 600f, "Solomon's temple (built c. 966–959 BC)", size = 20f, color = 0xFF7A5C2E.toInt())
+        // Side rooms in three storeys round the north, west and south walls (1 Kings 6:5-10).
+        out += DrawnLine(listOf(sx + 60f * c to sy - 5f * c, sx - 5f * c to sy - 5f * c, sx - 5f * c to sy + 25f * c, sx + 60f * c to sy + 25f * c), GREY, 2f)
+        out += DrawnBox(sx - 5f * c, sy + 25f * c + 2f, 300f, "side rooms", size = 12f, color = GREY)
         out += rect(sx, sy, 60f * c, 20f * c, INK, 4f)
         out += line(sx + 20f * c to sy, sx + 20f * c to sy + 20f * c, color = 0xFFC62828.toInt(), width = 4f)
         out += rect(sx + 60f * c, sy, 10f * c, 20f * c, INK, 3f) // porch
