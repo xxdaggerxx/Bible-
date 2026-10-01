@@ -579,6 +579,8 @@ class FeatureTest {
         compose.runOnUiThread { vm.goTo(0, 19, 119, 50) }
         waitForLoaded()
         assertEquals(19 to 119, vm.panels[1].book to vm.panels[1].chapter)
+        // The other panel follows once its chapter is laid out.
+        runCatching { compose.waitUntil(5_000) { kotlin.math.abs(vm.panels[1].topVerse - 50) <= 1 } }
         assertTrue("right panel at ${vm.panels[1].topVerse}", kotlin.math.abs(vm.panels[1].topVerse - 50) <= 1)
 
         // Unlinked, the panels move independently.
