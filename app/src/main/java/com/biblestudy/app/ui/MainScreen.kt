@@ -81,8 +81,11 @@ fun StudyApp(vm: StudyViewModel) {
             if (uri != null) vm.backup(uri)
         }
         // Chapter export (DATA-5): pick where to save, then the active panel draws it.
+        // Set when exporting one layer from the Layers window (LAY-11).
+        var exportLayer by remember { mutableStateOf<Long?>(null) }
         val exportPdf = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/pdf")) { uri ->
-            if (uri != null) vm.exportRequest = ExportRequest(uri, pdf = true)
+            if (uri != null) vm.exportRequest = ExportRequest(uri, pdf = true, layer = exportLayer)
+            exportLayer = null
         }
         val exportPng = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("image/png")) { uri ->
             if (uri != null) vm.exportRequest = ExportRequest(uri, pdf = false)
@@ -199,7 +202,12 @@ fun StudyApp(vm: StudyViewModel) {
         when (dialog) {
             DialogKind.PICKER -> BookPickerDialog(vm) { dialog = null }
             DialogKind.SEARCH -> SearchDialog(vm) { dialog = null }
-            DialogKind.LAYERS -> LayersDialog(vm) { dialog = null }
+            DialogKind.LAYERS -> LayersDialog(vm, onExportLayer = { id ->
+                dialog = null
+                exportLayer = id
+                val layer = vm.layers.firstOrNull { it.id == id }?.name ?: "layer"
+                runCatching { exportPdf.launch("${vm.exportName()} - $layer.pdf") }.onFailure { vm.message = "No file app is available." }
+            }) { dialog = null }
             DialogKind.NOTES -> MyNotesDialog(vm) { dialog = null }
             DialogKind.ABOUT -> AboutDialog { dialog = null }
             DialogKind.STATS -> ReadingStatsDialog(vm) { dialog = null }

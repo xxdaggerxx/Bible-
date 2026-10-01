@@ -1835,4 +1835,51 @@ class FeatureTest {
         assertTrue(vm.textsFor(adam.book, 1).any { it.text == "JESUS" })
         compose.runOnUiThread { vm.sketches.toList().forEach { vm.deleteSketch(it) } }
     }
+
+    @Test
+    fun wordDifferencesViewsAndOneLayerExport() {
+        // Compare versions marks words that differ from the version being read.
+        compose.runOnUiThread { vm.compareVersions = true; vm.openVerse(43, 3, 16) }
+        compose.waitUntil(5_000) { compose.onAllNodesWithTag("compare_WEB", useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty() }
+        val web = compose.onNodeWithTag("compare_WEB", useUnmergedTree = true).fetchSemanticsNode()
+            .config[androidx.compose.ui.semantics.SemanticsProperties.Text].first()
+        assertTrue(web.spanStyles.map { web.text.substring(it.start, it.end) }.toString(), web.spanStyles.any { web.text.substring(it.start, it.end) == "born" })
+        snap("110-compare-differences")
+        compose.runOnUiThread { vm.verseSheet = null; vm.compareVersions = false }
+
+        // Side by side: the WEB beside the KJV is marked where its wording differs.
+        compose.runOnUiThread { vm.markDifferences = true; vm.addPanel(); vm.setVersion(1, "WEB"); vm.goTo(1, 43, 3, remember = false) }
+        waitForLoaded()
+        assertEquals("WEB", vm.diffVersionFor(vm.panels[0]))
+        assertEquals("KJV", vm.diffVersionFor(vm.panels[1]))
+        snap("111-side-by-side-differences")
+        compose.runOnUiThread { vm.closePanel(1); vm.markDifferences = false }
+
+        // A saved view of layers comes back with one tap.
+        val second = compose.runOnIdle { vm.addLayer("Sermon"); vm.layers.last().id }
+        compose.runOnUiThread { vm.showOnlyLayer(second); vm.saveLayerPreset("Sermon prep"); vm.setAllLayersVisible(true) }
+        compose.onNodeWithContentDescription("Layers").performClick()
+        compose.onNodeWithText("Sermon prep").performClick()
+        assertEquals(listOf(second), vm.layers.filter { it.visible }.map { it.id })
+        snap("112-layer-views")
+        compose.onNodeWithContentDescription("Close").performClick()
+
+        // Exporting one layer draws only that layer's notes.
+        compose.runOnUiThread { vm.setAllLayersVisible(true); vm.activeLayerId = second; vm.fingerDraw = true; vm.tool = Tool.PEN }
+        waitForLoaded()
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(300f, 600f)); repeat(20) { moveBy(Offset(20f, 6f)) }; up()
+        }
+        compose.runOnUiThread { vm.fingerDraw = false }
+        val dir = File(compose.activity.cacheDir, "export").apply { mkdirs() }
+        val sizes = vm.layers.map { l ->
+            val out = File(dir, "layer${l.id}.png").apply { delete() }
+            compose.runOnUiThread { vm.exportRequest = com.biblestudy.app.ui.ExportRequest(android.net.Uri.fromFile(out), false, l.id) }
+            compose.waitUntil(10_000) { vm.exportRequest == null }
+            compose.waitForIdle()
+            out.readBytes().contentHashCode()
+        }
+        assertTrue(sizes.toSet().size == 2)
+        compose.runOnUiThread { vm.undo(); vm.deleteLayer(second); vm.deleteLayerPreset("Sermon prep") }
+    }
 }

@@ -166,7 +166,8 @@ data class Workspace(
 enum class AutoBackup(val label: String, val days: Int) { OFF("Off", 0), DAILY("Daily", 1), WEEKLY("Weekly", 7) }
 
 /** A chapter to export as a PDF or picture (DATA-5), handled by the active panel. */
-data class ExportRequest(val uri: Uri, val pdf: Boolean)
+/** Export the active panel's chapter (DATA-5); with [layer], only that layer's notes (LAY-11). */
+data class ExportRequest(val uri: Uri, val pdf: Boolean, val layer: Long? = null)
 
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
 enum class PaneKind(val label: String) {
@@ -314,6 +315,15 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var verseNumbers by mutableStateOf(prefs.getBoolean("verseNumbers", true))
         private set
 
+    /** Mark words that differ when two versions are side by side (SPLIT-5). */
+    var markDifferences by mutableStateOf(prefs.getBoolean("markDifferences", false))
+
+    /** The version to compare [p] with: another panel's, when it shows the same book in a different version. */
+    fun diffVersionFor(p: PanelState): String? {
+        if (!markDifferences || Sketch.isSketch(p.book)) return null
+        return panels.firstOrNull { it !== p && it.book == p.book && it.version != p.version }?.version
+    }
+
     /** The words of Jesus in red (BIB-8); only colours change, so ink stays where it is. */
     var redLetters by mutableStateOf(prefs.getBoolean("redLetters", false))
 
@@ -457,7 +467,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -1029,6 +1039,45 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun setAllLayersVisible(visible: Boolean) {
         layers.map { it.id }.forEach { id -> setLayerVisible(id, visible) }
+    }
+
+    /** While exporting one layer (LAY-11): the only layer drawn. */
+    var drawOnlyLayer: Long? = null
+
+    /** Saved sets of shown layers, e.g. "Sermon prep" (LAY-10): name → the layers shown. */
+    val layerPresets = mutableStateMapOf<String, Set<Long>>().apply {
+        runCatching {
+            val o = org.json.JSONObject(prefs.getString("layerPresets", "{}")!!)
+            for (k in o.keys()) {
+                val a = o.getJSONArray(k)
+                put(k, (0 until a.length()).map { a.getLong(it) }.toSet())
+            }
+        }
+    }
+
+    private fun saveLayerPresets() {
+        val o = org.json.JSONObject()
+        for ((k, v) in layerPresets) o.put(k, org.json.JSONArray(v.toList()))
+        prefs.edit { putString("layerPresets", o.toString()) }
+    }
+
+    /** Remembers which layers are shown now under [name]. */
+    fun saveLayerPreset(name: String) {
+        val n = name.trim().ifEmpty { "View ${layerPresets.size + 1}" }
+        layerPresets[n] = layers.filter { it.visible }.mapTo(HashSet()) { it.id }
+        saveLayerPresets()
+    }
+
+    /** Shows exactly the layers saved under [name] (layers made since then are hidden). */
+    fun applyLayerPreset(name: String) {
+        val shown = layerPresets[name] ?: return
+        layers.map { it.id }.forEach { setLayerVisible(it, it in shown) }
+        message = "Showing \u201c$name\u201d."
+    }
+
+    fun deleteLayerPreset(name: String) {
+        layerPresets.remove(name)
+        saveLayerPresets()
     }
 
     fun showOnlyLayer(id: Long) {

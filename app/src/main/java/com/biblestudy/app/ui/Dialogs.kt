@@ -33,6 +33,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Sell
 import androidx.compose.material.icons.filled.VerticalSplit
+import androidx.compose.material3.InputChip
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material.icons.automirrored.filled.DriveFileMove
@@ -597,13 +598,29 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                                 style = MaterialTheme.typography.labelLarge,
                                 color = MaterialTheme.colorScheme.primary,
                             )
+                            // Words that differ from the version being read are lightly marked (SPLIT-5).
+                            val shown = remember(text, verseText, v) {
+                                androidx.compose.ui.text.buildAnnotatedString {
+                                    append(text ?: "Not in this version (see its footnotes).")
+                                    if (text != null && v.code != version && verseText.isNotEmpty()) {
+                                        for (r in com.biblestudy.app.data.WordDiff.changed(text, verseText)) {
+                                            addStyle(androidx.compose.ui.text.SpanStyle(background = DIFF_MARK), r.first, r.last + 1)
+                                        }
+                                    }
+                                }
+                            }
                             Text(
-                                text ?: "Not in this version (see its footnotes).",
+                                shown,
                                 style = MaterialTheme.typography.bodyLarge,
                                 color = if (text == null) MaterialTheme.colorScheme.outline else Color.Unspecified,
+                                modifier = Modifier.testTag("compare_${v.code}"),
                             )
                         }
                     }
+                    Text(
+                        "Words that differ from the ${version} are marked.",
+                        style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                    )
                 }
             } else if (vm.originalView) {
                 // The Hebrew or Greek, word by word (STD-4).
@@ -728,8 +745,10 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
 // ---------------------------------------------------------------------------------------------
 
 @Composable
-fun LayersDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
+fun LayersDialog(vm: StudyViewModel, onExportLayer: (Long) -> Unit = {}, onDismiss: () -> Unit) {
     var newName by remember { mutableStateOf("") }
+    var savingView by remember { mutableStateOf(false) }
+    var viewName by remember { mutableStateOf("") }
     var renaming by remember { mutableStateOf<Long?>(null) }
     var renameText by remember { mutableStateOf("") }
     var confirmDelete by remember { mutableStateOf<Long?>(null) }
@@ -746,6 +765,26 @@ fun LayersDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                 OutlinedButton(onClick = { vm.setAllLayersVisible(true) }) { Text("Show all") }
                 OutlinedButton(onClick = { vm.setAllLayersVisible(false) }) { Text("Hide all") }
                 OutlinedButton(onClick = { vm.activeLayer()?.let { vm.showOnlyLayer(it.id) } }) { Text("Show only selected") }
+            }
+            // Saved views: which layers are shown, switched with one tap (LAY-10).
+            Row(
+                Modifier.horizontalScroll(rememberScrollState()).padding(bottom = 8.dp),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text("Views:", style = MaterialTheme.typography.labelLarge)
+                for (name in vm.layerPresets.keys.sorted()) {
+                    InputChip(
+                        selected = false,
+                        onClick = { vm.applyLayerPreset(name) },
+                        label = { Text(name) },
+                        trailingIcon = {
+                            Icon(Icons.Filled.Close, contentDescription = "Forget view $name",
+                                modifier = Modifier.size(18.dp).clickable { vm.deleteLayerPreset(name) })
+                        },
+                    )
+                }
+                TextButton(onClick = { viewName = ""; savingView = true }) { Text("Save what\u2019s shown\u2026") }
             }
             LazyColumn(Modifier.weight(1f)) {
                 items(vm.layers.reversed(), key = { it.id }) { l ->
@@ -822,6 +861,10 @@ fun LayersDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                                 }
                                 HorizontalDivider(Modifier.padding(vertical = 4.dp))
                                 DropdownMenuItem(
+                                    text = { Text("Export this chapter\u2019s ${l.name} as PDF\u2026") },
+                                    onClick = { menu = false; onExportLayer(l.id) },
+                                )
+                                DropdownMenuItem(
                                     text = { Text("Delete layer") },
                                     leadingIcon = { Icon(Icons.Filled.Delete, contentDescription = null) },
                                     enabled = vm.layers.size > 1,
@@ -843,6 +886,24 @@ fun LayersDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                 Button(onClick = { vm.addLayer(newName); newName = "" }) { Text("Add layer") }
             }
         }
+    }
+
+    if (savingView) {
+        AlertDialog(
+            onDismissRequest = { savingView = false },
+            title = { Text("Save this view") },
+            text = {
+                Column {
+                    Text("Remembers which layers are shown now, to switch back with one tap.", style = MaterialTheme.typography.bodyMedium)
+                    OutlinedTextField(
+                        value = viewName, onValueChange = { viewName = it }, singleLine = true,
+                        placeholder = { Text("e.g. Sermon prep") }, modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
+                    )
+                }
+            },
+            confirmButton = { TextButton(onClick = { vm.saveLayerPreset(viewName); savingView = false }) { Text("Save") } },
+            dismissButton = { TextButton(onClick = { savingView = false }) { Text("Cancel") } },
+        )
     }
 
     confirmDelete?.let { id ->

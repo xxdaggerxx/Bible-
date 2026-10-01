@@ -161,25 +161,31 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         val style = vm.styleKey()
         val headingsOn = vm.showHeadings
         val redOn = vm.redLetters
+        val other = vm.diffVersionFor(panel)
         val (data, paras, red) = withContext(Dispatchers.IO) {
             val d = ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
             Triple(d, if (style.paragraphs) vm.study.paragraphStarts(v, b, c) else null,
                 if (redOn) vm.study.redLetters(v, b, c, d.verses.associate { it.verse to it.text }) else emptyMap())
         }
+        // Side by side with another version of this book: mark where the wording differs (SPLIT-5).
+        val diffs = if (other == null) emptyMap() else withContext(Dispatchers.Default) {
+            val theirs = vm.text(other).chapter(b, c).associate { it.verse to it.text }
+            data.verses.mapNotNull { vs -> theirs[vs.verse]?.let { vs.verse to com.biblestudy.app.data.WordDiff.changed(vs.text, it) } }.toMap()
+        }
         buildChapterLayout(
             measurer, style.font.family(), vm.bible.book(b).name, data, vm.lineSpacing,
-            paragraphs = paras, numbers = style.numbers, spacers = spacers, red = red,
+            paragraphs = paras, numbers = style.numbers, spacers = spacers, red = red, diffs = diffs,
         ) { RefLinks.parseList(it, vm.bible.books) }
     }
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.sketchOf(panel.book)?.name) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
         val font = vm.textFont
         val style = vm.styleKey()
-        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}"
+        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.diffVersionFor(panel)}"
         if (ctl.layoutSpec != spec) {
             // Headings, spacing or font changed: re-lay out every chapter, staying on the same verse.
             if (ctl.layoutSpec != null) panel.pendingVerse = panel.topVerse
@@ -297,7 +303,10 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         }
         val g = page.geo
         val area = Rect(0f, 0f, g.width, g.height)
-        val draw: androidx.compose.ui.graphics.drawscope.DrawScope.() -> Unit = { drawPage(vm, ctl, page, PageTheme.LIGHT, area, measurer) }
+        val draw: androidx.compose.ui.graphics.drawscope.DrawScope.() -> Unit = {
+            vm.drawOnlyLayer = req.layer
+            try { drawPage(vm, ctl, page, PageTheme.LIGHT, area, measurer) } finally { vm.drawOnlyLayer = null }
+        }
         // Drawn on the main thread, like the screen, since drawing fills the view model's caches.
         val ok = runCatching {
             vm.getApplication<android.app.Application>().contentResolver.openOutputStream(req.uri)?.use {
@@ -786,7 +795,8 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     val layout = g.layout
 
     // Layer order: later layers draw on top. Hidden layers are skipped entirely.
-    val order = vm.layers.filter { it.visible }.map { it.id }
+    // Exporting one layer (LAY-11) draws only that layer, whether or not it is shown.
+    val order = vm.drawOnlyLayer?.let { listOf(it) } ?: vm.layers.filter { it.visible }.map { it.id }
     // A layer can be faded (LAY-8): its ink, highlights and pictures are drawn see-through.
     val fade = vm.layers.filter { it.visible && it.opacity < 0.999f }.associate { it.id to it.opacity }
     val pageRect = Rect(0f, 0f, g.width, g.height)
