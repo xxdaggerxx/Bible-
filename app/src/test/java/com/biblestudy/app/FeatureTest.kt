@@ -48,6 +48,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import com.biblestudy.app.ui.LineSpacing
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
@@ -926,13 +927,13 @@ class FeatureTest {
 
     @Test
     fun imagesCanComeFromCameraFilesOrClipboard() {
-        compose.onNodeWithContentDescription("Insert image into margin").performScrollTo().performClick()
-        for (label in listOf("From the gallery", "Take a photo", "From files", "Paste from clipboard")) {
-            compose.onNodeWithText(label).assertExists()
+        compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
+        for (label in listOf("from the gallery", "take a photo", "from files", "paste from clipboard")) {
+            compose.onNodeWithText("Picture: $label").assertExists()
         }
         snap("54-image-sources")
         // Nothing on the clipboard: a friendly message rather than an error.
-        compose.onNodeWithText("Paste from clipboard").performClick()
+        compose.onNodeWithText("Picture: paste from clipboard").performClick()
         assertTrue(vm.message.orEmpty().contains("no picture on the clipboard"))
         // The camera gets a file it can write to through the app's FileProvider.
         val uri = vm.newCameraUri()
@@ -1000,4 +1001,37 @@ class FeatureTest {
     @Test
     @Config(qualifiers = "w1848dp-h1232dp-land-xhdpi")
     fun large14InchTabletLandscape() = checkScreen("14in-landscape", com.biblestudy.app.ui.WidthClass.EXPANDED, 3)
+
+    @Test
+    fun toolbarFitsAndSettingsHoldTheRest() {
+        // The toolbar fits without scrolling on the Tab S9 (UI-3): its last button is on screen.
+        val more = compose.onNodeWithContentDescription("More").fetchSemanticsNode()
+        val width = compose.activity.window.decorView.width
+        assertTrue("More button at ${more.boundsInRoot.right} of $width", more.boundsInRoot.right <= width)
+        snap("70-toolbar")
+
+        // Colours and sizes open from one button.
+        compose.onNodeWithContentDescription("Pen colour and size").performClick()
+        compose.onNodeWithText("L").performClick()
+        assertEquals(2, vm.penSize)
+        compose.waitForIdle()
+
+        // Settings: grouped options, applied at once.
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Settings").performClick()
+        compose.onNodeWithText("Reading").assertExists()
+        snap("71-settings")
+        compose.onNodeWithText("Wide").performClick()
+        assertEquals(LineSpacing.WIDE, vm.lineSpacing)
+        compose.onNodeWithText("Draw with finger").performScrollTo().performClick()
+        assertTrue(vm.fingerDraw)
+
+        // Reset puts them back, without touching notes.
+        compose.onNodeWithText("Reset settings to defaults").performScrollTo().performClick()
+        compose.onNodeWithText("Reset").performClick()
+        compose.waitForIdle()
+        assertEquals(LineSpacing.NORMAL, vm.lineSpacing)
+        assertEquals(false, vm.fingerDraw)
+        assertEquals(1, vm.penSize)
+    }
 }

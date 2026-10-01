@@ -120,7 +120,7 @@ import kotlinx.coroutines.withContext
 
 /** A large dialog sized for tablets. */
 @Composable
-private fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
+internal fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
     Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
         Surface(
             shape = RoundedCornerShape(20.dp),
@@ -133,7 +133,7 @@ private fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
 }
 
 @Composable
-private fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composable () -> Unit)? = null) {
+internal fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composable () -> Unit)? = null) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         leading?.invoke()
         Text(title, style = MaterialTheme.typography.headlineSmall, modifier = Modifier.weight(1f))

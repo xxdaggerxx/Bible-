@@ -44,7 +44,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 
-private enum class DialogKind { PICKER, SEARCH, LAYERS, BOOKMARKS, ABOUT, RESTORE }
+private enum class DialogKind { PICKER, SEARCH, LAYERS, BOOKMARKS, ABOUT, RESTORE, SETTINGS }
 
 private val LightColors = lightColorScheme(
     primary = Color(0xFF7A5C2E),
@@ -109,7 +109,7 @@ fun StudyApp(vm: StudyViewModel) {
                         val stamp = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
                         backupLauncher.launch("bible-study-backup-$stamp.zip")
                     },
-                    onRestore = { dialog = DialogKind.RESTORE },
+                    onSettings = { dialog = DialogKind.SETTINGS },
                     onAbout = { dialog = DialogKind.ABOUT },
                 )
             },
@@ -190,6 +190,16 @@ fun StudyApp(vm: StudyViewModel) {
             DialogKind.LAYERS -> LayersDialog(vm) { dialog = null }
             DialogKind.BOOKMARKS -> BookmarksDialog(vm) { dialog = null }
             DialogKind.ABOUT -> AboutDialog { dialog = null }
+            DialogKind.SETTINGS -> SettingsDialog(
+                vm,
+                onBackup = {
+                    val stamp = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
+                    backupLauncher.launch("bible-study-backup-$stamp.zip")
+                },
+                onRestore = { dialog = DialogKind.RESTORE },
+                onAbout = { dialog = DialogKind.ABOUT },
+                onDismiss = { dialog = null },
+            )
             DialogKind.RESTORE -> AlertDialog(
                 onDismissRequest = { dialog = null },
                 title = { Text("Restore from a backup?") },

@@ -1,0 +1,148 @@
+package com.biblestudy.app.ui
+
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Switch
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.unit.dp
+import com.biblestudy.app.BuildConfig
+import com.biblestudy.app.data.BibleRepository
+import com.biblestudy.app.model.SideButton
+import com.biblestudy.app.model.TextFont
+
+/**
+ * Every option in one place (SET-1, SET-2), grouped, applied as soon as it's changed. The toolbar
+ * keeps only what's used while writing (SET-5).
+ */
+@Composable
+fun SettingsDialog(
+    vm: StudyViewModel,
+    onBackup: () -> Unit,
+    onRestore: () -> Unit,
+    onAbout: () -> Unit,
+    onDismiss: () -> Unit,
+) {
+    var confirmReset by remember { mutableStateOf(false) }
+    var versions by remember { mutableStateOf(false) }
+    BigDialog({ vm.savePrefs(); onDismiss() }) {
+        Column {
+            DialogTitle("Settings", { vm.savePrefs(); onDismiss() })
+            Column(Modifier.weight(1f).verticalScroll(rememberScrollState())) {
+                Group("Reading")
+                Choices("Page", PageTheme.entries, vm.theme, { it.label }) { vm.theme = it }
+                Choices("Font", TextFont.entries, vm.textFont, { it.label }) { vm.changeTextFont(it) }
+                Choices("Line spacing", LineSpacing.entries, vm.lineSpacing, { it.label }) { vm.lineSpacing = it }
+                Toggle("Section headings", "Headings and parallel-passage links from the BSB", vm.showHeadings) { vm.showHeadings = it }
+                Choices(
+                    "New panels open in", listOf<String?>(null) + BibleRepository.ALL.map { it.code }, vm.newPanelVersion,
+                    { it ?: "Same version" },
+                ) { vm.newPanelVersion = it }
+
+                Group("Pen & ink")
+                Toggle("Draw with finger", "Off: fingers scroll and tap; only the pen draws", vm.fingerDraw) { vm.fingerDraw = it }
+                Choices("S Pen button", SideButton.entries, vm.sideButton, { it.label }) { vm.sideButton = it }
+                Choices("Eraser", listOf(false, true), vm.partialEraser, { if (it) "Partial" else "Whole strokes" }) { vm.partialEraser = it }
+                Toggle("Snap highlighter to words", "Highlights follow the lines of text", vm.snapHighlights) { vm.snapHighlights = it }
+                Toggle("Fast ink", "Pen strokes go straight to the screen for the lowest delay", vm.fastInk) { vm.fastInk = it }
+
+                Group("Highlights")
+                Toggle(
+                    "Highlights in every version", "Shown over the whole verses in other translations, a shade lighter",
+                    vm.highlightsAllVersions,
+                ) { vm.highlightsAllVersions = it }
+
+                Group("Margins & panels")
+                Toggle("Left margin", null, vm.marginLeft) { vm.marginLeft = it }
+                Toggle("Right margin", null, vm.marginRight) { vm.marginRight = it }
+                Toggle("Link panels", "Panels scroll together, verse by verse", vm.linkPanels) { vm.linkPanels = it }
+
+                Group("Verse window")
+                Toggle("Compare versions", "Show the verse in every version when it opens", vm.compareVersions) { vm.compareVersions = it }
+
+                Group("Backup")
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
+                    OutlinedButton(onClick = onBackup) { Text("Back up my notes…") }
+                    OutlinedButton(onClick = onRestore) { Text("Restore from backup…") }
+                }
+
+                Group("About")
+                Text("Bible Study, version ${BuildConfig.VERSION_NAME}. Works completely offline.")
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
+                    TextButton(onClick = { versions = true }) { Text("About these versions") }
+                    TextButton(onClick = onAbout) { Text("Credits") }
+                }
+
+                HorizontalDivider(Modifier.padding(vertical = 12.dp))
+                TextButton(onClick = { confirmReset = true }) { Text("Reset settings to defaults") }
+                Spacer(Modifier.padding(8.dp))
+            }
+        }
+    }
+    if (versions) VersionsDialog { versions = false }
+    if (confirmReset) {
+        AlertDialog(
+            onDismissRequest = { confirmReset = false },
+            title = { Text("Reset settings?") },
+            text = { Text("All settings go back to their defaults. Your notes, ink, highlights, bookmarks and layers are not changed.") },
+            confirmButton = { TextButton(onClick = { vm.resetSettings(); confirmReset = false }) { Text("Reset") } },
+            dismissButton = { TextButton(onClick = { confirmReset = false }) { Text("Cancel") } },
+        )
+    }
+}
+
+@Composable
+private fun Group(title: String) {
+    Text(
+        title,
+        style = MaterialTheme.typography.titleMedium,
+        color = MaterialTheme.colorScheme.primary,
+        modifier = Modifier.padding(top = 20.dp, bottom = 4.dp),
+    )
+}
+
+@Composable
+private fun Toggle(title: String, detail: String?, checked: Boolean, onChange: (Boolean) -> Unit) {
+    Row(
+        Modifier.fillMaxWidth().clickable(role = Role.Switch) { onChange(!checked) }.padding(vertical = 6.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Column(Modifier.weight(1f)) {
+            Text(title)
+            if (detail != null) Text(detail, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+        }
+        Switch(checked = checked, onCheckedChange = onChange)
+    }
+}
+
+@Composable
+private fun <T> Choices(title: String, options: List<T>, selected: T, label: (T) -> String, onPick: (T) -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+        Text(title, modifier = Modifier.width(170.dp))
+        Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            for (o in options) FilterChip(selected = o == selected, onClick = { onPick(o) }, label = { Text(label(o)) })
+        }
+    }
+}

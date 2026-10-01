@@ -162,12 +162,38 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var partialEraser by mutableStateOf(prefs.getBoolean("partialEraser", false))
     /** Draw pen strokes straight to the screen for the lowest latency (INK-4). */
     var fastInk by mutableStateOf(prefs.getBoolean("fastInk", true))
+    /** The version a new Bible panel opens in; null = the same as the panel it comes from. */
+    var newPanelVersion by mutableStateOf(prefs.getString("newPanelVersion", null))
     /**
      * The Bible text's typeface (READ-3). Changing it reflows the lines, so ink on the words is
      * reloaded and moved to the same characters in the new layout.
      */
     var textFont by mutableStateOf(runCatching { TextFont.valueOf(prefs.getString("textFont", "BOOK")!!) }.getOrDefault(TextFont.BOOK))
         private set
+
+    /**
+     * Puts every setting back to its default (SET-4). Notes, ink, highlights, bookmarks, layers and
+     * the open passages are not touched.
+     */
+    fun resetSettings() {
+        theme = PageTheme.LIGHT
+        changeTextFont(TextFont.BOOK)
+        lineSpacing = LineSpacing.NORMAL
+        showHeadings = true
+        newPanelVersion = null
+        fingerDraw = false
+        sideButton = SideButton.entries.first()
+        partialEraser = false
+        snapHighlights = true
+        fastInk = true
+        penSize = 1; highlightSize = 1
+        highlightsAllVersions = true
+        marginLeft = false; marginRight = true
+        linkPanels = false
+        compareVersions = false
+        savePrefs()
+        message = "Settings reset to their defaults."
+    }
 
     fun changeTextFont(f: TextFont) {
         if (f == textFont) return
@@ -302,7 +328,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -414,7 +440,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             return
         }
         val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
-        panels.add(PanelState(p.book, p.chapter).apply { version = p.version })
+        panels.add(PanelState(p.book, p.chapter).apply { version = validVersion(newPanelVersion ?: p.version) })
         panelWeights.clear()
         activePanel = panels.lastIndex
     }
