@@ -424,29 +424,40 @@ fun buildChapterLayout(
     spacing: LineSpacing = LineSpacing.NORMAL,
     /** The page title, when it isn't "Book chapter" (a sketch page's name). */
     title: String? = null,
+    /** Verses that start a paragraph; null lays out one verse per line (READ-6). */
+    paragraphs: Set<Int>? = null,
+    /** Verse numbers shown; hidden ones keep their place in the text but take no room (READ-6). */
+    numbers: Boolean = true,
     linkify: (String) -> List<RefLink> = { emptyList() },
 ): ChapterLayout {
     val builder = AnnotatedString.Builder()
     val starts = IntArray(data.verses.size)
-    val numbers = IntArray(data.verses.size)
+    val verseNos = IntArray(data.verses.size)
     val numberStyle = SpanStyle(
         fontSize = 13.sp,
         fontWeight = FontWeight.Bold,
         color = Color(0xFFA07B45),
         baselineShift = BaselineShift(0.4f),
     )
+    // Hidden numbers stay in the text (so highlights keep their places) but are drawn invisibly tiny.
+    val hiddenNumber = SpanStyle(fontSize = 0.1.sp, color = Color.Transparent)
     data.verses.forEachIndexed { i, v ->
         starts[i] = builder.length
-        numbers[i] = v.verse
-        builder.withStyle(numberStyle) { append(v.verse.toString()) }
-        builder.append("\u2009")
+        verseNos[i] = v.verse
+        builder.withStyle(if (numbers) numberStyle else hiddenNumber) { append(v.verse.toString()) }
+        builder.append(if (numbers) "\u2009" else "\u200B")
         builder.append(v.text)
-        if (i < data.verses.lastIndex) builder.append("\n")
+        // Between verses: a new line, or in paragraphs a space unless the next verse starts one.
+        // Either way one character, so text positions are the same in every layout.
+        if (i < data.verses.lastIndex) {
+            val next = data.verses[i + 1].verse
+            builder.append(if (paragraphs == null || next in paragraphs) "\n" else " ")
+        }
     }
     val textStyle = TextStyle(fontFamily = font, fontSize = Page.FONT.sp, lineHeight = (Page.LINE * spacing.factor).sp)
     val constraints = Constraints(maxWidth = Page.TEXT_W.toInt())
     val text = measurer.measure(builder.toAnnotatedString(), textStyle, constraints = constraints, density = PAGE_DENSITY)
-    val title = measurer.measure(
+    val titleLayout = measurer.measure(
         text = AnnotatedString(title ?: "$bookName ${data.chapter}"),
         style = TextStyle(fontFamily = font, fontSize = 40.sp, fontWeight = FontWeight.Bold),
         constraints = constraints,
@@ -455,7 +466,7 @@ fun buildChapterLayout(
 
     // Section headings go in a gap above the first line of the verse they introduce.
     val blocks = data.headings.groupBy { it.verse }.mapNotNull { (verse, hs) ->
-        val i = numbers.indexOf(verse).takeIf { it >= 0 } ?: numbers.indexOfFirst { it > verse }.takeIf { it >= 0 }
+        val i = verseNos.indexOf(verse).takeIf { it >= 0 } ?: verseNos.indexOfFirst { it > verse }.takeIf { it >= 0 }
             ?: return@mapNotNull null
         val line = text.getLineForOffset(starts[i])
         val lines = ArrayList<TextLayoutResult>()
@@ -473,7 +484,7 @@ fun buildChapterLayout(
             HeadingBlock.BOTTOM_PAD
         HeadingBlock(line, lines, height, links)
     }
-    return ChapterLayout(data.version, data.book, data.chapter, title, text, starts, numbers, blocks)
+    return ChapterLayout(data.version, data.book, data.chapter, titleLayout, text, starts, verseNos, blocks)
 }
 
 /**

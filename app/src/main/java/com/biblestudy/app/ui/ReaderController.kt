@@ -825,7 +825,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             region = ink.region, verse = ink.verse,
             highlighter = ink.highlighter, color = ink.color, width = ink.width,
             points = if (ink.region == Region.TEXT) layout.linePoints(pts) else pts,
-            font = vm.textFont.name,
+            font = vm.styleKey().encode(),
         )
         vm.addItem(s)
         vm.record(Edit(listOf(s), emptyList()))

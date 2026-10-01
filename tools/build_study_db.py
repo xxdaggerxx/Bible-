@@ -133,6 +133,52 @@ def build_tags(db, code, asset, folder):
     print(code, "verses", len(rows), "words tagged %.1f%%" % (100.0 * hit / max(1, total)))
 
 
+def build_paragraphs(db, code, folder):
+    """Verses that start a paragraph or poetry line (READ-6), from USFM paragraph markers and,
+    in the KJV, the pilcrow (¶) at a verse's start."""
+    para = re.compile(r"\\(p|m|pi\d?|mi|pc|pmo|li\d?|q\d?|qc|b)(?=\s)")
+    rows = []
+    for path in sorted(glob.glob(os.path.join(work, folder, "*.usfm"))):
+        text = open(path, encoding="utf-8").read()
+        m = re.search(r"\\id (\w+)", text)
+        if not m or m.group(1) not in BOOK:
+            continue
+        book = BOOK[m.group(1)]
+        text = re.sub(r"\\f .*?\\f\*|\\x .*?\\x\*", " ", text, flags=re.S)
+        chapter = 0
+        pending = False
+        for part in re.split(r"(\\c \d+|\\v \d+[-\d]*)", text):
+            if part.startswith("\\c "):
+                chapter = int(part[3:]); pending = True
+                continue
+            if part.startswith("\\v "):
+                v = int(re.match(r"\d+", part[3:]).group())
+                if pending and chapter:
+                    rows.append((code, book * 1000000 + chapter * 1000 + v))
+                pending = False
+                continue
+            if para.search(part):
+                pending = True
+    # The KJV marks paragraphs with a pilcrow just after the verse number ("\v 16 ¶ For God...").
+    for path in sorted(glob.glob(os.path.join(work, folder, "*.usfm"))):
+        text = open(path, encoding="utf-8").read()
+        m = re.search(r"\\id (\w+)", text)
+        if not m or m.group(1) not in BOOK:
+            continue
+        book = BOOK[m.group(1)]
+        chapter = 0
+        for line in re.split(r"(\\c \d+|\\v \d+)", text):
+            if line.startswith("\\c "):
+                chapter = int(line[3:]); continue
+            if line.startswith("\\v "):
+                cur = int(line[3:]); continue
+            if chapter and "¶" in line[:12]:
+                rows.append((code, book * 1000000 + chapter * 1000 + cur))
+    rows = sorted(set(rows))
+    db.executemany("INSERT INTO paragraphs VALUES(?,?)", rows)
+    print(code, "paragraph starts", len(rows))
+
+
 def build_lexicon(db):
     for fn, prefix in (("strongs-hebrew-dictionary.js", "H"), ("strongs-greek-dictionary.js", "G")):
         text = open(os.path.join(work, fn), encoding="utf-8").read()
@@ -354,6 +400,7 @@ CREATE TABLE dictionary(id INTEGER PRIMARY KEY, term TEXT NOT NULL, key TEXT NOT
 CREATE TABLE topics(id INTEGER PRIMARY KEY, name TEXT NOT NULL, key TEXT NOT NULL, body TEXT NOT NULL);
 CREATE TABLE topic_refs(topic INTEGER NOT NULL, start INTEGER NOT NULL, end INTEGER NOT NULL);
 CREATE TABLE commentary(start INTEGER NOT NULL, end INTEGER NOT NULL, body TEXT NOT NULL);
+CREATE TABLE paragraphs(version TEXT NOT NULL, id INTEGER NOT NULL, PRIMARY KEY(version, id)) WITHOUT ROWID;
 CREATE TABLE names(id INTEGER PRIMARY KEY, uid TEXT NOT NULL, name TEXT NOT NULL, key TEXT NOT NULL, kind TEXT NOT NULL,
   brief TEXT, article TEXT, parents TEXT, siblings TEXT, partners TEXT, children TEXT, area TEXT, lat REAL, lon REAL, refs INTEGER NOT NULL);
 CREATE TABLE name_refs(name INTEGER NOT NULL, verse INTEGER NOT NULL);
@@ -363,6 +410,9 @@ db.execute("INSERT INTO meta VALUES('schema','2')")
 build_tags(db, "KJV", "kjv.db", "eng-kjv2006")
 build_tags(db, "BSB", "bsb.db", "engbsb")
 build_tags(db, "WEB", "web.db", "engwebp")
+build_paragraphs(db, "KJV", "eng-kjv2006")
+build_paragraphs(db, "BSB", "engbsb")
+build_paragraphs(db, "WEB", "engwebp")
 build_lexicon(db)
 build_easton(db)
 build_nave(db)

@@ -1639,4 +1639,32 @@ class FeatureTest {
         assertEquals(43, vm.panels[0].book)
         assertTrue(vm.user.sketches().isEmpty())
     }
+
+    @Test
+    fun paragraphsAndHiddenVerseNumbersFromSettings() {
+        compose.runOnUiThread { vm.setVersion(0, "BSB"); vm.fingerDraw = true; vm.tool = Tool.PEN }
+        waitForLoaded()
+        val z = zoom()
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset((Page.COL_PAD + 200f) * z, 700f)); repeat(6) { moveBy(Offset(15f, 0f)) }; up()
+        }
+        compose.waitForIdle()
+        val before = vm.textStrokesFor("BSB", 43, 3).single()
+        compose.runOnUiThread { vm.fingerDraw = false }
+
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Settings").performClick()
+        compose.onNodeWithText("Paragraphs").performScrollTo().performClick()
+        compose.onNodeWithText("Verse numbers").performScrollTo().performClick()
+        compose.onNodeWithContentDescription("Close").performClick()
+        assertTrue(vm.paragraphMode)
+        assertTrue(!vm.verseNumbers)
+        waitForLoaded()
+        compose.waitUntil(5_000) { vm.textStrokesFor("BSB", 43, 3).isNotEmpty() }
+        val after = vm.textStrokesFor("BSB", 43, 3).single()
+        assertEquals(before.id, after.id)
+        assertEquals("BOOK|p|n", after.font) // moved onto the paragraph layout
+        snap("98-paragraphs")
+        compose.runOnUiThread { vm.changeParagraphs(false); vm.changeVerseNumbers(true); vm.undo() }
+    }
 }

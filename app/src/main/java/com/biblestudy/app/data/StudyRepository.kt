@@ -163,6 +163,15 @@ class StudyRepository(context: Context) {
             .take(limit)
     }
 
+    /** Verse numbers in a chapter that start a paragraph or a line of poetry (READ-6). */
+    fun paragraphStarts(version: String, book: Int, chapter: Int): Set<Int> {
+        val lo = book * 1_000_000 + chapter * 1000
+        return db.rawQuery(
+            "SELECT id FROM paragraphs WHERE version = ? AND id BETWEEN ? AND ?",
+            arrayOf(version, lo.toString(), (lo + 999).toString()),
+        ).use { c -> buildSet { while (c.moveToNext()) add(c.getInt(0) % 1000) } }
+    }
+
     // ---------- names and places (STD-10, STD-11) ----------
 
     private val NAME_COLS = "id, uid, name, kind, brief, article, parents, siblings, partners, children, area, lat, lon, refs"
@@ -264,7 +273,7 @@ class StudyRepository(context: Context) {
 
     companion object {
         /** Bump when study.db changes, so the new copy replaces the old one. */
-        private const val DB_VERSION = 3
+        private const val DB_VERSION = 4
         const val NT_START = 40_000_000
 
         private val WORD = Regex("[\\p{L}\\p{M}\\p{N}_’']+")

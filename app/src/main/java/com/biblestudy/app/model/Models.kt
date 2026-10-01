@@ -73,6 +73,23 @@ class InkStroke(
 /** The typeface for the Bible text (READ-3). */
 enum class TextFont(val label: String) { BOOK("Gentium Book"), SERIF("Serif"), SANS("Sans-serif") }
 
+/**
+ * How the text is laid out: the font, verses as paragraphs, and verse numbers shown (READ-3,
+ * READ-6). Ink on the words records the layout it was drawn in ("BOOK", "BOOK|p|n"), so it can
+ * be moved onto another layout's lines.
+ */
+data class TextStyleKey(val font: TextFont = TextFont.BOOK, val paragraphs: Boolean = false, val numbers: Boolean = true) {
+    fun encode() = font.name + (if (paragraphs) "|p" else "") + (if (!numbers) "|n" else "")
+
+    companion object {
+        fun decode(s: String) = TextStyleKey(
+            runCatching { TextFont.valueOf(s.substringBefore('|')) }.getOrDefault(TextFont.BOOK),
+            paragraphs = "|p" in s,
+            numbers = "|n" !in s,
+        )
+    }
+}
+
 /** A copy of (x, y, pressure) triples shifted by (dx, dy). */
 fun FloatArray.translated(dx: Float, dy: Float): FloatArray = FloatArray(size) { i ->
     when (i % 3) {

@@ -44,6 +44,7 @@ import com.biblestudy.app.model.SideButton
 import com.biblestudy.app.model.Sketch
 import com.biblestudy.app.model.Paper
 import com.biblestudy.app.model.TextFont
+import com.biblestudy.app.model.TextStyleKey
 import com.biblestudy.app.model.TypedNote
 import com.biblestudy.app.model.Tool
 import com.biblestudy.app.model.VerseId
@@ -234,6 +235,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun resetSettings() {
         theme = PageTheme.LIGHT
         changeTextFont(TextFont.BOOK)
+        changeParagraphs(false)
+        changeVerseNumbers(true)
         lineSpacing = LineSpacing.NORMAL
         showHeadings = true
         newPanelVersion = null
@@ -256,6 +259,24 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun changeTextFont(f: TextFont) {
         if (f == textFont) return
         textFont = f
+        relayout()
+    }
+
+    /** Paragraphs instead of one verse per line (READ-6). */
+    var paragraphMode by mutableStateOf(prefs.getBoolean("paragraphs", false))
+        private set
+    /** Verse numbers shown (READ-6). */
+    var verseNumbers by mutableStateOf(prefs.getBoolean("verseNumbers", true))
+        private set
+
+    fun changeParagraphs(on: Boolean) { if (on != paragraphMode) { paragraphMode = on; relayout() } }
+    fun changeVerseNumbers(on: Boolean) { if (on != verseNumbers) { verseNumbers = on; relayout() } }
+
+    /** The layout ink on the words is drawn in now. */
+    fun styleKey() = TextStyleKey(textFont, paragraphMode, verseNumbers)
+
+    /** The words move to new lines: ink on them is reloaded and moved along (READ-3, READ-6). */
+    private fun relayout() {
         selection = null
         undoStack.clear(); redoStack.clear(); editVersion++
         loaded.removeAll { it.startsWith("t") }
@@ -387,7 +408,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("verseNumbers", verseNumbers); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -947,7 +968,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * line spacing without headings; it is only called to convert ink saved before 0.4 to line
      * coordinates, or ink drawn in another font (READ-3).
      */
-    fun ensureLoaded(version: String, book: Int, chapter: Int, plainLayout: (TextFont) -> ChapterLayout) {
+    fun ensureLoaded(version: String, book: Int, chapter: Int, plainLayout: (TextStyleKey) -> ChapterLayout) {
         val t = tk(version, book, chapter)
         if (loaded.add("t$t")) {
             pendingLoads++
@@ -955,19 +976,21 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 try {
                     val (loadedStrokes, h) = withContext(dbDispatcher) { user.loadText(version, book, chapter) }
                     var s = loadedStrokes
-                    val font = textFont
-                    if (s.any { !it.lineAnchored || it.font != font.name }) {
-                        val layouts = HashMap<TextFont, ChapterLayout>()
-                        fun plain(f: TextFont) = layouts.getOrPut(f) { plainLayout(f) }
+                    val key = styleKey()
+                    val now = key.encode()
+                    if (s.any { !it.lineAnchored || it.font != now }) {
+                        val layouts = HashMap<TextStyleKey, ChapterLayout>()
+                        fun plain(k: TextStyleKey) = layouts.getOrPut(k) { plainLayout(k) }
                         s = s.map { st ->
                             var c = st
                             if (!c.lineAnchored) {
                                 // Ink from before 0.4: page y at normal spacing in the book font.
-                                c = c.copyAs(points = plain(TextFont.BOOK).linePoints(c.points), lineAnchored = true, font = TextFont.BOOK.name)
+                                c = c.copyAs(points = plain(TextStyleKey()).linePoints(c.points), lineAnchored = true, font = TextFont.BOOK.name)
                             }
-                            if (c.font != font.name) {
-                                val from = runCatching { TextFont.valueOf(c.font) }.getOrDefault(TextFont.BOOK)
-                                c = c.copyAs(points = reflowPoints(c.points, plain(from), plain(font)), font = font.name)
+                            if (c.font != now) {
+                                // Drawn in another font or layout: onto the same words here.
+                                val from = TextStyleKey.decode(c.font)
+                                c = c.copyAs(points = reflowPoints(c.points, plain(from), plain(key)), font = now)
                             }
                             if (c !== st) io { user.insert(c) }
                             c

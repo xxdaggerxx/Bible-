@@ -157,12 +157,13 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     val theme = vm.theme
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.sketchOf(panel.book)?.name) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.sketchOf(panel.book)?.name) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
         val font = vm.textFont
-        val spec = "$headingsOn|$spacing|$font"
+        val style = vm.styleKey()
+        val spec = "$headingsOn|$spacing|${style.encode()}"
         if (ctl.layoutSpec != spec) {
             // Headings, spacing or font changed: re-lay out every chapter, staying on the same verse.
             if (ctl.layoutSpec != null) panel.pendingVerse = panel.topVerse
@@ -191,17 +192,21 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             val key = ctl.layoutKey(v, b, c)
             val name = vm.bible.book(b).name
             if (ctl.layouts[key] == null) {
-                val data = withContext(Dispatchers.IO) {
-                    ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
+                val (data, paras) = withContext(Dispatchers.IO) {
+                    ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList()) to
+                        (if (style.paragraphs) vm.study.paragraphStarts(v, b, c) else null)
                 }
-                ctl.layouts[key] = buildChapterLayout(measurer, font.family(), name, data, spacing) {
-                    RefLinks.parseList(it, vm.bible.books)
-                }
+                ctl.layouts[key] = buildChapterLayout(
+                    measurer, font.family(), name, data, spacing, paragraphs = paras, numbers = style.numbers,
+                ) { RefLinks.parseList(it, vm.bible.books) }
             }
-            vm.ensureLoaded(v, b, c) { f ->
+            vm.ensureLoaded(v, b, c) { k ->
                 // For converting ink saved before 0.4 (y measured at normal spacing, without
-                // headings) or drawn in another font.
-                buildChapterLayout(measurer, f.family(), name, ChapterData(v, b, c, vm.text(v).chapter(b, c)))
+                // headings) or drawn in another font or layout.
+                buildChapterLayout(
+                    measurer, k.font.family(), name, ChapterData(v, b, c, vm.text(v).chapter(b, c)),
+                    paragraphs = if (k.paragraphs) vm.study.paragraphStarts(v, b, c) else null, numbers = k.numbers,
+                )
             }
         }
         if (ctl.layouts.size > MAX_LAYOUTS) {

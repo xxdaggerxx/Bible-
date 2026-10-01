@@ -219,4 +219,31 @@ class LayoutAnchorTest {
         assertEquals("G4561", study.strongs("KJV", 43001014)[5])
         assertEquals("\u03c3\u03ac\u03c1\u03be", study.lexicon("G4561")!!.lemma)
     }
+
+    @Test
+    fun paragraphsAndHiddenNumbersKeepInkAndHighlightsOnTheirWords() {
+        val study = com.biblestudy.app.data.StudyRepository(app)
+        val verses = bsb.chapter(43, 3)
+        val data = ChapterData("BSB", 43, 3, verses)
+        val lines = buildChapterLayout(measurer, font, "John", data)
+        val paras = buildChapterLayout(measurer, font, "John", data, paragraphs = study.paragraphStarts("BSB", 43, 3), numbers = false)
+        // Same characters in the same places, so highlights (stored as offsets) stay put.
+        assertEquals(lines.textLength, paras.textLength)
+        val word = lines.text.layoutInput.text.text.indexOf("loved the world")
+        assertEquals(word, paras.text.layoutInput.text.text.indexOf("loved the world"))
+        // Fewer lines in paragraphs.
+        assertTrue("${paras.lineCount} vs ${lines.lineCount}", paras.lineCount < lines.lineCount)
+        // A circle round "loved" moves with it.
+        val c = lines.charCenter(word + 2)
+        val circle = floatArrayOf(c.x - 20f, c.y, 0.5f, c.x, c.y - 12f, 0.5f, c.x + 20f, c.y, 0.5f, c.x, c.y + 12f, 0.5f)
+        val moved = paras.displayPoints(reflowPoints(lines.linePoints(circle), lines, paras))
+        val target = paras.charCenter(word + 2)
+        assertEquals(target.x, (moved[0] + moved[6]) / 2f, 2f)
+        assertEquals(target.y, (moved[4] + moved[10]) / 2f, 2f)
+        // The style is remembered on the ink in a short code.
+        val k = com.biblestudy.app.model.TextStyleKey(com.biblestudy.app.model.TextFont.SANS, paragraphs = true, numbers = false)
+        assertEquals("SANS|p|n", k.encode())
+        assertEquals(k, com.biblestudy.app.model.TextStyleKey.decode("SANS|p|n"))
+        assertEquals(com.biblestudy.app.model.TextStyleKey(), com.biblestudy.app.model.TextStyleKey.decode("BOOK"))
+    }
 }
