@@ -654,6 +654,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun toggleLayerVisible(id: Long) = updateLayer(id) { it.copy(visible = !it.visible) }
     fun toggleLayerLocked(id: Long) = updateLayer(id) { it.copy(locked = !it.locked) }
+    fun setLayerColor(id: Long, color: Int) = updateLayer(id) { it.copy(color = color) }
+    fun setLayerOpacity(id: Long, opacity: Float) = updateLayer(id) { it.copy(opacity = opacity.coerceIn(0.25f, 1f)) }
     fun renameLayer(id: Long, name: String) { if (name.isNotBlank()) updateLayer(id) { it.copy(name = name.trim()) } }
     fun setLayerVisible(id: Long, visible: Boolean) = updateLayer(id) { it.copy(visible = visible) }
 

@@ -1480,4 +1480,19 @@ class FeatureTest {
         snap("90-related")
         compose.runOnUiThread { vm.sidePane = null }
     }
+
+    @Test
+    fun aLayerCanBeFadedAndRecolouredFromItsMenu() {
+        compose.onNodeWithText("My Notes").performClick()
+        compose.onNodeWithText("Layers").assertExists()
+        compose.onNodeWithContentDescription("More for My Notes").performClick()
+        snap("91-layer-menu")
+        compose.onNodeWithText("50%").performClick()
+        compose.waitForIdle()
+        assertEquals(0.5f, vm.layers.first().opacity, 0.001f)
+        assertEquals(0.5f, vm.user.layers().first().opacity, 0.001f) // saved
+        compose.runOnUiThread { vm.setLayerColor(vm.layers.first().id, com.biblestudy.app.ui.LAYER_COLORS[2]) }
+        assertEquals(com.biblestudy.app.ui.LAYER_COLORS[2], vm.user.layers().first().color)
+        compose.runOnUiThread { vm.setLayerOpacity(vm.layers.first().id, 1f); vm.setLayerColor(vm.layers.first().id, com.biblestudy.app.ui.LAYER_COLORS[0]) }
+    }
 }

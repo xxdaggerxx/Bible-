@@ -628,12 +628,23 @@ private fun DrawScope.drawUnderline(layout: ChapterLayout, start: Int, end: Int,
     }
 }
 
+/** Draws [block] see-through at [alpha] (a faded layer, LAY-8), or as it is when [alpha] is null. */
+private inline fun DrawScope.withOpacity(alpha: Float?, bounds: Rect, block: DrawScope.() -> Unit) {
+    if (alpha == null) { block(); return }
+    drawContext.canvas.saveLayer(bounds, androidx.compose.ui.graphics.Paint().apply { this.alpha = alpha })
+    block()
+    drawContext.canvas.restore()
+}
+
 private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: PlacedPage, theme: PageTheme, view: Rect, measurer: TextMeasurer) {
     val g = page.geo
     val layout = g.layout
 
     // Layer order: later layers draw on top. Hidden layers are skipped entirely.
     val order = vm.layers.filter { it.visible }.map { it.id }
+    // A layer can be faded (LAY-8): its ink, highlights and pictures are drawn see-through.
+    val fade = vm.layers.filter { it.visible && it.opacity < 0.999f }.associate { it.id to it.opacity }
+    val pageRect = Rect(0f, 0f, g.width, g.height)
 
     val textStrokes = vm.textStrokesFor(layout.version, layout.book, layout.chapter)
     val marginStrokes = vm.marginStrokesFor(layout.book, layout.chapter)
@@ -661,7 +672,7 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     drawLine(theme.rule, Offset(0f, g.height), Offset(g.width, g.height), strokeWidth = 3f)
 
     // Highlights sit beneath the text.
-    for (layerId in order) {
+    for (layerId in order) withOpacity(fade[layerId], pageRect) {
         translate(g.textLeft, Page.TEXT_TOP) {
             // Highlights made in other translations cover whole verses, a shade lighter (HL-10).
             for (x in crossHighlights) {
@@ -722,7 +733,7 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     }
 
     // Margin images, then pen ink, layer by layer.
-    for (layerId in order) {
+    for (layerId in order) withOpacity(fade[layerId], pageRect) {
         for (img in images) {
             if (img.layerId != layerId || !g.visible(img.region)) continue
             val r = ctl.imageRect(g, img).let { if (img.id in moving) it.translate(shift) else it }

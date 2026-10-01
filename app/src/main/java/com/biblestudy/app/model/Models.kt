@@ -155,6 +155,8 @@ data class Layer(
     val visible: Boolean,
     val locked: Boolean,
     val sort: Int,
+    /** How solid the layer's marks are drawn, 0.25 to 1 (LAY-8). */
+    val opacity: Float = 1f,
 )
 
 /** One undoable step: things that were added and things that were removed. */

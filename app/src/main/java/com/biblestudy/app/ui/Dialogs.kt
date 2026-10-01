@@ -1,5 +1,6 @@
 package com.biblestudy.app.ui
 
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -767,7 +768,8 @@ fun LayersDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                             TextButton(onClick = { vm.renameLayer(l.id, renameText); renaming = null }) { Text("Save") }
                         } else {
                             Text(
-                                l.name + if (l.locked) "  (locked)" else "",
+                                l.name + (if (l.locked) "  (locked)" else "") +
+                                    if (l.opacity < 0.999f) "  \u00b7 ${(l.opacity * 100).toInt()}%" else "",
                                 style = MaterialTheme.typography.titleMedium,
                                 color = if (l.visible) Color.Unspecified else MaterialTheme.colorScheme.outline,
                                 modifier = Modifier.weight(1f),
@@ -779,17 +781,55 @@ fun LayersDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                         IconButton(onClick = { vm.toggleLayerLocked(l.id) }) {
                             Icon(if (l.locked) Icons.Filled.Lock else Icons.Filled.LockOpen, contentDescription = if (l.locked) "Unlock" else "Lock")
                         }
-                        IconButton(onClick = { vm.moveLayer(l.id, towardTop = true) }) {
-                            Icon(Icons.Filled.ArrowUpward, contentDescription = "Move up")
-                        }
-                        IconButton(onClick = { vm.moveLayer(l.id, towardTop = false) }) {
-                            Icon(Icons.Filled.ArrowDownward, contentDescription = "Move down")
-                        }
-                        IconButton(onClick = { renaming = l.id; renameText = l.name }) {
-                            Icon(Icons.Filled.Edit, contentDescription = "Rename")
-                        }
-                        IconButton(onClick = { confirmDelete = l.id }, enabled = vm.layers.size > 1) {
-                            Icon(Icons.Filled.Delete, contentDescription = "Delete")
+                        // Everything else is in the layer's menu, so each row stays short (UI-1).
+                        var menu by remember { mutableStateOf(false) }
+                        Box {
+                            IconButton(onClick = { menu = true }) { Icon(Icons.Filled.MoreVert, contentDescription = "More for ${l.name}") }
+                            DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                                DropdownMenuItem(
+                                    text = { Text("Move up") },
+                                    leadingIcon = { Icon(Icons.Filled.ArrowUpward, contentDescription = null) },
+                                    onClick = { vm.moveLayer(l.id, towardTop = true) },
+                                )
+                                DropdownMenuItem(
+                                    text = { Text("Move down") },
+                                    leadingIcon = { Icon(Icons.Filled.ArrowDownward, contentDescription = null) },
+                                    onClick = { vm.moveLayer(l.id, towardTop = false) },
+                                )
+                                DropdownMenuItem(
+                                    text = { Text("Rename") },
+                                    leadingIcon = { Icon(Icons.Filled.Edit, contentDescription = null) },
+                                    onClick = { renaming = l.id; renameText = l.name; menu = false },
+                                )
+                                // Colour tag and how solid the layer is drawn (LAY-8).
+                                Text("Colour", style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(start = 16.dp, top = 8.dp))
+                                Row(Modifier.padding(horizontal = 12.dp, vertical = 4.dp), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                    for (c in LAYER_COLORS) {
+                                        Box(
+                                            Modifier.size(28.dp).clip(CircleShape).background(Color(c))
+                                                .then(if (c == l.color) Modifier.border(3.dp, MaterialTheme.colorScheme.onSurface, CircleShape) else Modifier)
+                                                .clickable { vm.setLayerColor(l.id, c) }
+                                        )
+                                    }
+                                }
+                                Text("Opacity", style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(start = 16.dp, top = 8.dp))
+                                Row(Modifier.padding(horizontal = 12.dp, vertical = 4.dp), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                    for (o in listOf(1f, 0.75f, 0.5f, 0.25f)) {
+                                        FilterChip(
+                                            selected = kotlin.math.abs(l.opacity - o) < 0.01f,
+                                            onClick = { vm.setLayerOpacity(l.id, o) },
+                                            label = { Text("${(o * 100).toInt()}%") },
+                                        )
+                                    }
+                                }
+                                HorizontalDivider(Modifier.padding(vertical = 4.dp))
+                                DropdownMenuItem(
+                                    text = { Text("Delete layer") },
+                                    leadingIcon = { Icon(Icons.Filled.Delete, contentDescription = null) },
+                                    enabled = vm.layers.size > 1,
+                                    onClick = { confirmDelete = l.id; menu = false },
+                                )
+                            }
                         }
                     }
                     HorizontalDivider()

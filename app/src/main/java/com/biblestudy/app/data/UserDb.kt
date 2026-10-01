@@ -26,12 +26,12 @@ data class NoteEntry(val book: Int, val chapter: Int, val verse: Int, val endVer
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
+class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 5) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
             "CREATE TABLE layers(id INTEGER PRIMARY KEY, name TEXT NOT NULL, color INTEGER NOT NULL, " +
-                "visible INTEGER NOT NULL, locked INTEGER NOT NULL, sort INTEGER NOT NULL)"
+                "visible INTEGER NOT NULL, locked INTEGER NOT NULL, sort INTEGER NOT NULL, opacity REAL NOT NULL DEFAULT 1)"
         )
         db.execSQL(
             "CREATE TABLE strokes(id INTEGER PRIMARY KEY, layer_id INTEGER NOT NULL, version TEXT, " +
@@ -64,7 +64,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
                 "verse INTEGER NOT NULL, created INTEGER NOT NULL, folder TEXT NOT NULL DEFAULT '')"
         )
         createTexts(db)
-        db.execSQL("INSERT INTO layers VALUES(1, 'My Notes', ${DEFAULT_LAYER_COLOR}, 1, 0, 0)")
+        db.execSQL("INSERT INTO layers(id, name, color, visible, locked, sort) VALUES(1, 'My Notes', ${DEFAULT_LAYER_COLOR}, 1, 0, 0)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -90,6 +90,9 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
                 db.execSQL("ALTER TABLE images ADD COLUMN ${c.first} REAL NOT NULL DEFAULT ${c.second}")
             }
         }
+        if (oldVersion < 5) {
+            db.execSQL("ALTER TABLE layers ADD COLUMN opacity REAL NOT NULL DEFAULT 1") // 0.8: faded layers (LAY-8)
+        }
     }
 
     private fun createTexts(db: SQLiteDatabase) {
@@ -112,11 +115,11 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
     // ---------- layers ----------
 
     fun layers(): List<Layer> =
-        readableDatabase.rawQuery("SELECT id, name, color, visible, locked, sort FROM layers ORDER BY sort, id", null)
+        readableDatabase.rawQuery("SELECT id, name, color, visible, locked, sort, opacity FROM layers ORDER BY sort, id", null)
             .use { c ->
                 buildList {
                     while (c.moveToNext()) add(
-                        Layer(c.getLong(0), c.getString(1), c.getInt(2), c.getInt(3) != 0, c.getInt(4) != 0, c.getInt(5))
+                        Layer(c.getLong(0), c.getString(1), c.getInt(2), c.getInt(3) != 0, c.getInt(4) != 0, c.getInt(5), c.getFloat(6))
                     )
                 }
             }
@@ -125,6 +128,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
         val v = ContentValues().apply {
             put("id", l.id); put("name", l.name); put("color", l.color)
             put("visible", if (l.visible) 1 else 0); put("locked", if (l.locked) 1 else 0); put("sort", l.sort)
+            put("opacity", l.opacity)
         }
         writableDatabase.insertWithOnConflict("layers", null, v, SQLiteDatabase.CONFLICT_REPLACE)
     }
