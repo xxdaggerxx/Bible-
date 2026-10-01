@@ -113,6 +113,9 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     // Front-buffered rendering for the lowest-latency pen ink (INK-4).
     implementation("androidx.graphics:graphics-core:1.0.2")
+    // Reading handwriting on the tablet (INK-14, SRCH-8); its English model is downloaded once.
+    implementation("com.google.mlkit:digital-ink-recognition:18.1.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.9.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.14.1")

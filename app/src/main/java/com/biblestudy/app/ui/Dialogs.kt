@@ -476,7 +476,7 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                             FilterChip(
                                 selected = onlyBook == b,
                                 onClick = { onlyBook = if (onlyBook == b) null else b },
-                                label = { Text("${vm.bible.book(b).name} ${hits.size}") },
+                                label = { Text("${vm.bookLabel(b)} ${hits.size}") },
                             )
                         }
                     }
@@ -487,7 +487,7 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                         if (onlyBook != null && onlyBook != b) continue
                         item(key = "book$b") {
                             Text(
-                                "${vm.bible.book(b).name} \u2014 ${hits.size}",
+                                "${vm.bookLabel(b)} \u2014 ${hits.size}",
                                 style = MaterialTheme.typography.titleSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 modifier = Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainerHigh)
@@ -503,7 +503,7 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                                         .padding(vertical = 8.dp)
                                 ) {
                                     Text(
-                                        vm.refLabel(VerseId.of(hit.book, hit.chapter, hit.verse)),
+                                        vm.hitLabel(hit.book, hit.chapter, hit.verse),
                                         style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary,
                                     )
                                     val words = strongWords[VerseId.of(hit.book, hit.chapter, hit.verse)]

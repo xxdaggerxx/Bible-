@@ -2079,4 +2079,63 @@ class FeatureTest {
         snap("125-card-bsb")
         compose.runOnUiThread { vm.deleteSketch(vm.sketches.first { it.id == sk.id }) }
     }
+
+    /** Stands in for Google's handwriting reader: every line reads as "grace upon grace". */
+    private class FakeInkReader : com.biblestudy.app.ui.InkReader {
+        var prepared = false
+        override suspend fun ready() = prepared
+        override suspend fun prepare() { prepared = true }
+        override suspend fun read(line: List<FloatArray>) = "grace upon grace"
+    }
+
+    @Test
+    fun handwritingCanBeSearchedAndTurnedIntoText() {
+        val reader = FakeInkReader()
+        compose.runOnUiThread { vm.inkReader = reader; vm.marginRight = true }
+        waitForLoaded()
+        // Write in the right margin beside John 3.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val w = readerSize().width
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(w - 250f, 500f)); repeat(8) { moveBy(Offset(15f, 4f)) }; up()
+        }
+        compose.waitForIdle()
+        compose.runOnUiThread { vm.fingerDraw = false }
+        val stroke = vm.marginStrokesFor(43, 3).single()
+
+        // Switching it on downloads the model once, then reads what's there.
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Settings").performClick()
+        compose.onNodeWithText("Read my handwriting").performScrollTo().performClick()
+        compose.waitUntil(10_000) { vm.handwritingStatus.startsWith("On") }
+        assertTrue(reader.prepared)
+        snap("126-handwriting-setting")
+        compose.onNodeWithContentDescription("Close").performClick()
+
+        // Search \u2192 My notes finds it.
+        assertEquals(1, vm.user.searchNotes("upon", 1, 66).count { it.book == 43 && it.chapter == 3 && it.verse == stroke.verse })
+
+        // Lasso \u2192 Convert to text turns it into a text box; undo brings the ink back.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.LASSO }
+        compose.onNodeWithTag("reader0").performTouchInput {
+            var at = Offset(w - 280f, 470f)
+            down(at)
+            for (p in listOf(Offset(w - 90f, 470f), Offset(w - 90f, 570f), Offset(w - 280f, 570f), Offset(w - 280f, 472f))) {
+                for (k in 1..8) moveTo(at + (p - at) * (k / 8f))
+                at = p
+            }
+            up()
+        }
+        compose.waitForIdle()
+        compose.runOnUiThread { vm.fingerDraw = false }
+        assertEquals(setOf(stroke.id), vm.selection?.ids)
+        compose.onNodeWithText("Convert to text").performClick()
+        compose.waitUntil(5_000) { vm.textsFor(43, 3).any { it.text == "grace upon grace" } }
+        assertTrue(vm.marginStrokesFor(43, 3).isEmpty())
+        snap("127-converted")
+        compose.runOnUiThread { vm.undo() }
+        assertEquals(1, vm.marginStrokesFor(43, 3).size)
+        assertTrue(vm.textsFor(43, 3).none { it.text == "grace upon grace" })
+        compose.runOnUiThread { vm.changeHandwriting(false) }
+    }
 }

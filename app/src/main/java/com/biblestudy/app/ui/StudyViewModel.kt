@@ -329,6 +329,113 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun changeWritingSounds(on: Boolean) { writingSounds = on; sound.enabled = on }
     fun changeSoundVolume(v: Float) { soundVolume = v.coerceIn(0f, 1f); sound.volume = soundVolume }
 
+    // ---------- handwriting (INK-14, SRCH-8) ----------
+
+    /** Reads handwriting; the real one unless a test puts in its own. */
+    var inkReader: InkReader? = null
+    private fun reader(): InkReader = inkReader ?: defaultInkReader(getApplication()).also { inkReader = it }
+
+    /** Handwriting is read so it can be searched and turned into text. Off until switched on (it needs a download). */
+    var handwritingOn by mutableStateOf(prefs.getBoolean("handwriting", false))
+        private set
+    /** What the handwriting reader is doing, for Settings. */
+    var handwritingStatus by mutableStateOf("")
+        private set
+    private val inkJobs = HashMap<Int, kotlinx.coroutines.Job>()
+
+    fun changeHandwriting(on: Boolean) {
+        handwritingOn = on
+        prefs.edit { putBoolean("handwriting", on) }
+        if (!on) { handwritingStatus = ""; return }
+        viewModelScope.launch {
+            handwritingStatus = "Getting ready\u2026"
+            val ok = runCatching {
+                val r = reader()
+                if (!r.ready()) {
+                    handwritingStatus = "Downloading the handwriting model (about 20 MB, needs Wi-Fi)\u2026"
+                    r.prepare()
+                }
+            }.isSuccess
+            if (!ok) {
+                handwritingStatus = "Couldn't download it. Connect to Wi-Fi and switch this on again."
+                handwritingOn = false
+                prefs.edit { putBoolean("handwriting", false) }
+                return@launch
+            }
+            readAllHandwriting()
+        }
+    }
+
+    /** Reads the handwriting in every chapter and sketch page with margin ink (once, after switching on). */
+    private suspend fun readAllHandwriting() {
+        val chapters = withContext(dbDispatcher) { user.inkChapters() }
+        chapters.forEachIndexed { i, (b, c) ->
+            handwritingStatus = "Reading your handwriting\u2026 ${i + 1} of ${chapters.size}"
+            readHandwriting(b, c, withContext(dbDispatcher) { user.loadMargin(b, c).first })
+        }
+        handwritingStatus = "On: your handwriting can be searched."
+    }
+
+    /** Reads one chapter's margin handwriting and saves it for search, per verse (SRCH-8). */
+    suspend fun readHandwriting(book: Int, chapter: Int, strokes: List<InkStroke>) {
+        val r = reader()
+        if (!runCatching { r.ready() }.getOrDefault(false)) return
+        val visible = strokes.filter { it.region != Region.TEXT && !it.highlighter }
+        val texts = HashMap<Int, String>()
+        for ((verse, group) in visible.groupBy { it.verse }) {
+            InkLines.read(r, group)?.let { texts[verse] = it }
+        }
+        withContext(dbDispatcher) { user.saveInkText(book, chapter, texts) }
+    }
+
+    /** New or removed margin ink: read the chapter again a few seconds after writing stops. */
+    private fun handwritingChanged(book: Int, chapter: Int) {
+        if (!handwritingOn) return
+        val key = book * 1000 + chapter
+        inkJobs[key]?.cancel()
+        inkJobs[key] = viewModelScope.launch {
+            kotlinx.coroutines.delay(3000)
+            readHandwriting(book, chapter, marginStrokesFor(book, chapter).toList())
+        }
+    }
+
+    /**
+     * Lasso → Convert to text (INK-14): the selected handwriting becomes a text box in the same
+     * place, one undoable step.
+     */
+    fun convertSelectionToText() {
+        val strokes = selectedItems().filterIsInstance<InkStroke>().filter { !it.highlighter }
+        if (strokes.isEmpty()) { message = "Select some handwriting with the lasso first."; return }
+        if (strokes.any { it.region == Region.TEXT }) { message = "Only writing in the margins or on sketch pages can be turned into text."; return }
+        viewModelScope.launch {
+            val r = reader()
+            if (!runCatching { r.ready() }.getOrDefault(false)) {
+                message = "Switch on Settings \u2192 Pen & ink \u2192 Read my handwriting first."
+                return@launch
+            }
+            // Strokes may sit under different verses; place the box with the first line's verse.
+            val first = strokes.minBy { s -> (1 until s.points.size step 3).minOf { s.points[it] } }
+            val sameAnchor = strokes.filter { it.region == first.region && it.verse == first.verse }
+            val text = InkLines.read(r, sameAnchor)
+            if (text == null) { message = "Couldn't read that handwriting."; return@launch }
+            val lines = InkLines.group(sameAnchor)
+            val left = lines.minOf { it.left }; val top = lines.minOf { it.top }; val right = lines.maxOf { it.right }
+            val lineH = lines.map { it.bottom - it.top }.average().toFloat()
+            // The box stays inside its margin (or page) and wraps there.
+            val room = if (Sketch.isSketch(first.book)) Sketch.WIDTH else marginWidth(first.region == Region.LEFT)
+            val w = ((right - left).coerceAtLeast(160f) + 24f).coerceAtMost(room - 16f)
+            val box = MarginText(
+                newId(), first.layerId, first.book, first.chapter, first.region, first.verse,
+                left.coerceIn(0f, (room - w - 8f).coerceAtLeast(0f)), top, w, text, size = (lineH * 0.55f).coerceIn(16f, 32f),
+            )
+            sameAnchor.forEach { removeItem(it) }
+            addItem(box)
+            record(Edit(listOf(box), sameAnchor))
+            selection = null
+            message = "Turned into text. Undo brings the handwriting back."
+        }
+    }
+
     /** Mark words that differ when two versions are side by side (SPLIT-5). */
     var markDifferences by mutableStateOf(prefs.getBoolean("markDifferences", false))
 
@@ -738,6 +845,13 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Sketch pages linked to a chapter, shown as markers in its margin (SKT-2). */
     fun sketchesIn(book: Int, chapter: Int): List<Sketch> = sketches.filter { it.linkBook == book && it.linkChapter == chapter }
+
+    /** A book's name, or a sketch page's (for search results that include handwriting on sketch pages). */
+    fun bookLabel(book: Int): String = sketchOf(book)?.name ?: bible.book(book).name
+
+    /** "John 3:16", or a sketch page's name. */
+    fun hitLabel(book: Int, chapter: Int, verse: Int): String =
+        sketchOf(book)?.let { "Sketch page: ${it.name}" } ?: refLabel(VerseId.of(book, chapter, verse))
 
     /** A heading for what a panel shows: "John 3", or a sketch page's name. */
     fun placeName(book: Int, chapter: Int): String = sketchOf(book)?.name ?: "${bible.book(book).name} $chapter"
@@ -1418,6 +1532,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun addItem(a: Annotation) {
+        if (a is InkStroke && a.region != Region.TEXT && !a.highlighter) handwritingChanged(a.book, a.chapter)
         when (a) {
             is InkStroke ->
                 if (a.region == Region.TEXT) textStrokesFor(a.version ?: bible.code, a.book, a.chapter).add(a)
@@ -1430,6 +1545,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun removeItem(a: Annotation) {
+        if (a is InkStroke && a.region != Region.TEXT && !a.highlighter) handwritingChanged(a.book, a.chapter)
         when (a) {
             is InkStroke ->
                 if (a.region == Region.TEXT) textStrokesFor(a.version ?: bible.code, a.book, a.chapter).removeAll { it.id == a.id }
