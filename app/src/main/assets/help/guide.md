@@ -20,6 +20,16 @@ Everything works without the internet. Your notes save the moment you lift the p
 - **Read mode.** The lock at the far left stops the pen marking the page; the pen then scrolls like a finger. Tap it again to write.
 - **Undo and redo** are the curved arrows.
 - **Shapes.** Draw a line, arrow, box or circle and hold the pen still at the end. It snaps to a neat shape.
+- **Hover.** Hold the S Pen just above the screen and a small mark shows exactly where it will touch: a dot the size of the pen, a bar for the highlighter, a circle for the eraser.
+- **Writing sounds.** A soft pen-on-paper sound follows your writing: louder when you write fast or press hard, quiet when you stop. The pen, highlighter and eraser each sound different. Turn it off, or change the volume, in *Settings → Pen & ink → Writing sounds*. It plays through the tablet's media volume.
+
+## Reading your handwriting
+
+The app can read what you write by hand in the margins and on sketch pages.
+
+- **Switch it on** in *Settings → Pen & ink → Read my handwriting*. The first time, it downloads Google's handwriting model (about 20 MB) over Wi-Fi. After that it works offline, on the tablet; nothing you write is sent anywhere.
+- **Search it.** *Search → My notes* now finds words you wrote by hand as well as typed notes (marked ✍). Your handwriting is read a few seconds after you stop writing.
+- **Turn writing into text.** Draw round some handwriting with the lasso and tap *Convert to text* in the bar. It becomes a text box in the same place. Undo brings the handwriting back.
 
 ## Highlighting and underlining
 
@@ -28,12 +38,14 @@ Everything works without the internet. Your notes save the moment you lift the p
 - **Change or remove a highlight.** Hold a finger on highlighted words. The bar that appears offers other colours and *Remove highlight*.
 - **Colour meanings.** Give each colour a meaning, such as yellow = promises (*Settings → Highlights → Colour meanings*).
 - **In every version.** A highlight also shows, a shade lighter, over the same verses in the other translations. Erasing or removing it in any version removes it from every version. Turn this off in *Settings → Highlights*.
+- **Text boxes and verse cards.** Swipe the highlighter over a text box or verse card and it snaps to the words there too. On a verse card the highlight is the Bible's own: it shows on the card, on that verse in the Bible and in every version, and erasing it in any of those places erases it everywhere.
 - **Your highlights list.** *My notes → Highlights* lists every highlighted verse in full, with the marked words in their colour. Filter by colour, layer or tag; tap one to go there.
 
 ## Erasing
 
 - Pick the eraser and rub out ink or highlights.
 - *Whole strokes* removes a stroke at a touch. *Partial* erases only what the eraser passes over. Choose in the eraser's menu or in *Settings → Pen & ink*.
+- **Text boxes and verse cards.** Rub the eraser over a highlight in a text box or verse card to take it out.
 - **Highlights erase in every version.** Erase a highlight in one version and it's gone from all of them. *Whole strokes* removes the whole highlight; *Partial* removes the verse you erase over (or, in the version it was made in, the word).
 
 ## Selecting text
@@ -46,6 +58,7 @@ Everything works without the internet. Your notes save the moment you lift the p
 - **Write in the margins.** Anything written or drawn in a margin belongs to its verse and shows in every version.
 - **Left and right margins** are switched on or off in *Settings → Margins & panels*.
 - **Make a margin wider** by dragging the small grip on the line between the text and the margin.
+- **Write full screen.** For a longer note on a verse, tap the verse and choose *Write full screen*. A whole page opens for that verse. Back on the Bible page it shows shrunk to fit beside the verse; tap it to open it again.
 - **Expand to fit** (*Settings → Margins & panels*) opens space under a verse when your margin notes are taller than it.
 - **On a small screen** the margins slide in from tabs at the edges.
 
@@ -121,7 +134,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 - Tap the magnifying glass. Pick the version, and the whole Bible, Old or New Testament, or the book you're in.
 - Several words find verses with all of them. Put words in "quotes" for an exact phrase. *OR* finds either word. *lov\** finds love, loved, loveth. *-word* leaves out verses with that word.
 - Type a reference like *jn 3:16* to jump straight there.
-- Pick *My notes* to search your typed notes.
+- Pick *My notes* to search your typed notes, text boxes and (with *Read my handwriting* on) your handwriting.
 - Results are grouped by book. *Open beside* shows a result in another panel. *Keep results beside the text* moves them into the study pane.
 
 ## Links and pop-overs
@@ -160,12 +173,21 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
   - *The tabernacle*: a plan to scale with each piece of furniture numbered, what each means, and key verses.
   - *The kings of Israel and Judah*: a timeline from 931 to 586 BC (Edwin Thiele's dates), good and evil kings coloured, with the prophets of the time and a link to each king's story.
   - *From Adam to Jesus*: the line of descent through Genesis, Ruth and Matthew.
+  - *Paul's missionary journeys*: the three journeys and the voyage to Rome, in four colours on the map.
+  - *The Exodus and the wilderness*: the traditional route from Egypt to the Jordan on the map, with the main events.
+  - *The life of Christ*: the main events in order, with the passages in Matthew, Mark, Luke and John side by side.
+  - *The twelve tribes*: Jacob's sons by their mothers, and where each tribe's land was.
+  - *Solomon's and Herod's temples*: labelled plans of both.
   They're ordinary ink, text boxes and verse cards, so you can write on them, move things, change them or delete them. If you delete one, *Put back deleted ready-made pages* at the bottom of the list brings it back.
 - **Beside the text:** to see a sketch page next to the Bible, choose *Sketch pages* from the panels button and tap the page.
 - **Make your own:** *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
 - **Linked or on its own.** In the same window, *Link to …* ties the page to the verse you're reading: a small badge in that verse's margin opens it. Turn the switch off for a page that stands on its own, such as a topic study; open it from *My notes*.
 - **Every pen tool works** on a sketch page, plus shapes, the lasso, layers, pictures and text boxes.
-- **Verse cards:** *Insert → Verse card…*, type a reference like *John 3:16-18*, and the verses go on the page as a card.
+- **Verse cards:** *Insert → Verse card…*, type a reference like *John 3:16-18*, and the verses go on the page as a card. A card works like the Bible page:
+  - tap its reference to read the passage in a pop-over;
+  - tap a verse to open the verse window (word study, *Compare versions*, *Hebrew/Greek*, notes, cross-references);
+  - highlight it with the highlighter, and the words of Jesus show in red when that's on;
+  - hold a finger on the card for its bar: switch it to another version (*KJV*, *BSB*, *WEB*…), *Copy*, *Share*, change its size or background, or delete it.
 - **Person or place cards:** *Insert → Person or place card…*.
 - **The page's ⋮ menu:** change the paper, add more space below, rename it, *Link to a passage…* (or *Link to another passage…*), *Unlink*, or delete it.
 

@@ -1,4 +1,4 @@
-# Bible Study — version 1.0.2
+# Bible Study — version 1.1
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,37 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.1
+
+- **Writing sounds.** A soft pen-on-paper sound follows your writing. It gets louder and brighter when you write fast or press hard, and stops when the pen rests or lifts. Each tool has its own sound:
+  - the pen, a fine scratch;
+  - the highlighter, a felt-tip swish;
+  - the eraser, a rubbing.
+
+  The sound is made on the tablet as you write, not from recordings. *Settings → Pen & ink → Writing sounds* turns it off and sets the volume. It plays through media volume.
+- **Pen hover.** With the S Pen just above the screen, a small mark shows where it will touch: a dot the size of the pen, a bar for the highlighter, a circle for the eraser. Tilt shading isn't included, because the Tab S9's S Pen doesn't report tilt.
+- **Verse cards work like the Bible page.**
+  - Tap a verse on a card for the verse window: word study, *Compare versions*, *Hebrew/Greek*, notes and cross-references.
+  - Tap its reference for the passage.
+  - Words of Jesus show in red.
+  - Hold a finger on a card for its bar: switch version, *Copy*, *Share*, size, background, delete.
+  - A highlight on a card is the Bible's own highlight on that verse. It shows on the card, in the Bible and in every version, and erasing it anywhere erases it everywhere.
+  - Existing cards, including those on the ready-made pages, work this way already.
+- **Highlights snap in text boxes.** The highlighter snaps to the words of a text box; the eraser takes them out.
+- **Your handwriting can be searched.** Switch on *Settings → Pen & ink → Read my handwriting*. The first time, it downloads Google's handwriting model once (about 20 MB, Wi-Fi). After that it reads on the tablet and nothing is sent anywhere. This is the only time the app uses the internet.
+  - *Search → My notes* then finds handwritten words in the margins and on sketch pages.
+  - Lasso some handwriting and tap *Convert to text* to make it a text box. Undo brings the ink back.
+- **Full-screen margin notes.** Tap a verse, then *Write full screen*, for a whole page about that verse. It shows shrunk to fit beside the verse; tap it to open it again.
+- **Five more ready-made pages:**
+  - *Paul's missionary journeys* and *The Exodus and the wilderness*, drawn on the offline map;
+  - *The life of Christ*, with the four Gospels side by side;
+  - *The twelve tribes*;
+  - *Solomon's and Herod's temples*.
+
+  If you already have the first four, only the new ones are added.
+
+Your notes database is upgraded the first time 1.1 opens.
 
 ## New in version 1.0.2
 
@@ -345,17 +376,17 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Words of Jesus in the BSB are inferred from the WEB's markings and the BSB's quotation marks, so a few dialogue verses may be coloured slightly differently from a printed red-letter BSB.
 - The Hebrew and Greek view uses the Hebrew text (Leningrad Codex) and the amalgamated Greek editions; it doesn't follow an imported Bible's wording.
 - The performance pass for very long chapters (Psalm 119) and very large sketch pages still needs checking on the tablet itself.
+- Writing sounds, pen hover and handwriting reading can only be judged on the tablet: the automated tests use a stand-in reader and no speaker. Tell me if the sounds are too scratchy, soft or loud.
+- From 1.1 the app is built for 64-bit ARM tablets only (the Tab S9 and almost all current tablets), to keep it about 30 MB smaller.
+- Handwriting is read in English only. Ink written over the Bible text itself is not read (only margins and sketch pages).
+- A shrunk full-screen note shows its ink and text boxes; pictures on it show only when it's opened.
 - Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
 - The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
 - Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
 
 ## Next milestones
 
-- **Later:**
-  - turning handwriting into searchable text (needs Google's on-device handwriting model);
-  - search by meaning;
-  - pen tilt and hover;
-  - full-screen margin notes.
+- **Later:** search by meaning.
 - **Waiting on permission:** NIV and NLT. Once you have the files, *Settings → Bibles → Import a Bible…* adds them.
 
 ## Credits
@@ -367,6 +398,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Strong's Hebrew and Greek dictionaries (1890, public domain), JSON edition by Open Scriptures, CC BY-SA.
 - Strong's numbers for each word: the Strong's-tagged KJV, BSB and WEB USFM files from eBible.org (public domain).
 - Hebrew and Greek word by word: STEPBible.org TAHOT (Translators Amalgamated Hebrew OT) and TAGNT (Translators Amalgamated Greek NT), Tyndale House Cambridge, CC BY 4.0. Only the columns shown are kept, and Greek words in neither the modern editions nor the KJV's text are left out; `tools/build_original_db.py` makes `assets/study/original.db`.
+- Handwriting recognition: Google ML Kit Digital Ink Recognition (on-device; its English model is downloaded once when switched on).
 - Words of Jesus: the red-letter markings in eBible.org's KJV and WEB USFM files (public domain).
 - People and places: STEPBible.org TIPNR (Translators Individualised Proper Names), CC BY 4.0. Map outline, lakes and rivers: Natural Earth (public domain); `tools/build_map.py` makes `assets/map/lands.bin`.
 - Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library (ccel.org). `tools/build_study_db.py` rebuilds `study.db` from these.
