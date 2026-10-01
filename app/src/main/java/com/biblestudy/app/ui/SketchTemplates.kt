@@ -14,7 +14,10 @@ import kotlin.math.sin
  * them can be moved, changed, written over or deleted. References in the text become links.
  * Dates and meanings follow the traditional view (for the kings, Edwin Thiele's chronology).
  */
-class SketchTemplate(val id: String, val name: String, val about: String, val paper: Paper, val items: () -> List<Drawn>)
+class SketchTemplate(val id: String, val name: String, val about: String, val paper: Paper, val items: (TemplateEnv) -> List<Drawn>)
+
+/** What a ready-made page may draw from: the offline map outline (null if it couldn't be read). */
+class TemplateEnv(val map: LandsMap?)
 
 object SketchTemplates {
     val all = listOf(
@@ -22,6 +25,12 @@ object SketchTemplates {
         SketchTemplate("tabernacle", "The tabernacle", "A labelled plan, each piece of furniture and its meaning", Paper.GRID) { tabernacle() },
         SketchTemplate("kings", "The kings of Israel and Judah", "A timeline from 931 to 586 BC, with the prophets", Paper.BLANK) { kings() },
         SketchTemplate("adam", "From Adam to Jesus", "The line of descent through Genesis, Ruth, Matthew and Luke", Paper.BLANK) { adamToJesus() },
+        // Added in 1.1.
+        SketchTemplate("paul", "Paul's missionary journeys", "The three journeys and the voyage to Rome, on the map", Paper.BLANK) { MoreTemplates.paul(it) },
+        SketchTemplate("exodus", "The Exodus and the wilderness", "The traditional route from Egypt to the Jordan, with the main events", Paper.BLANK) { MoreTemplates.exodus(it) },
+        SketchTemplate("christ", "The life of Christ", "The main events in order, with the four Gospels side by side", Paper.BLANK) { MoreTemplates.lifeOfChrist() },
+        SketchTemplate("tribes", "The twelve tribes", "Jacob's sons by their mothers, and the tribes' lands", Paper.BLANK) { MoreTemplates.twelveTribes(it) },
+        SketchTemplate("temples", "Solomon's and Herod's temples", "Labelled plans of both temples", Paper.GRID) { MoreTemplates.temples() },
     )
 
     private const val LEFT = 40f

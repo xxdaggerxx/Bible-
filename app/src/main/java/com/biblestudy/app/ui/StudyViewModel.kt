@@ -930,16 +930,22 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * The ready-made pages (SKT-5): made once, on first start, as ordinary free-standing sketch pages
      * on the first layer. Later it puts back any that were deleted ([announce] says how many).
      */
-    fun addReadyMadePages(announce: Boolean = false) {
+    fun addReadyMadePages(announce: Boolean = false, onlyNew: Boolean = false) {
         val layer = layers.firstOrNull() ?: return
         var added = 0
+        // Pages made before (by name), so a new version adds its new pages but not ones you deleted.
+        val made = prefs.getStringSet("readyMadeNames", null)?.toMutableSet()
+            ?: (if (prefs.getBoolean("readyMadeAdded", false)) SketchTemplates.all.take(4).map { it.name }.toMutableSet() else mutableSetOf())
+        val env = TemplateEnv(runCatching { LandsMap.load(getApplication()) }.getOrNull())
         SketchTemplates.all.forEachIndexed { i, t ->
-            if (sketches.any { it.readyMade && it.name == t.name }) return@forEachIndexed
+            if (sketches.any { it.readyMade && it.name == t.name }) { made += t.name; return@forEachIndexed }
+            if (onlyNew && t.name in made) return@forEachIndexed
             val s = createSketch(t.name, t.paper, link = null, open = false, created = (i + 1).toLong())
-            placeOnSketch(s, t.items(), layerId = layer.id, undoable = false)
+            placeOnSketch(s, t.items(env), layerId = layer.id, undoable = false)
+            made += t.name
             added++
         }
-        prefs.edit { putBoolean("readyMadeAdded", true) }
+        prefs.edit { putBoolean("readyMadeAdded", true); putStringSet("readyMadeNames", made) }
         if (announce) message = when (added) {
             0 -> "All the ready-made pages are already here."
             1 -> "1 ready-made page put back."
@@ -2376,7 +2382,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // The ready-made sketch pages are there from the first start (SKT-5). Last in the class, so
     // everything they use is set up.
     init {
-        if (!prefs.getBoolean("readyMadeAdded", false)) runCatching { addReadyMadePages() }
+        // The first start makes them all; after an update, only pages new in that version.
+        runCatching { addReadyMadePages(onlyNew = true) }
     }
 
     companion object {

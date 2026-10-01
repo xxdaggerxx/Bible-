@@ -1823,7 +1823,7 @@ class FeatureTest {
         waitForLoaded()
         assertEquals(ready[0].book, vm.panels[0].book)
         snap("117-feasts")
-        for ((t, shot) in ready.drop(1).zip(listOf("118-tabernacle", "119-kings", "120-adam-to-jesus"))) {
+        for ((t, shot) in ready.drop(1).zip(listOf("118-tabernacle", "119-kings", "120-adam-to-jesus", "130-paul", "131-exodus", "132-life-of-christ", "133-tribes", "134-temples"))) {
             compose.runOnUiThread { vm.openSketch(t, 0) }
             waitForLoaded()
             snap(shot)

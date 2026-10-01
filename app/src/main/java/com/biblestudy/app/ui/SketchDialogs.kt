@@ -84,7 +84,7 @@ fun NewSketchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                     Text("It stands on its own and opens from My notes \u2192 Sketch pages.", style = MaterialTheme.typography.bodySmall)
                 }
                 Text(
-                    "Ready-made pages (the feasts, the tabernacle, the kings, Adam to Jesus) are already in My notes \u2192 Sketch pages.",
+                    "Ready-made pages (the feasts, the tabernacle, the kings, Paul's journeys and more) are already in My notes \u2192 Sketch pages.",
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                 )
             }
