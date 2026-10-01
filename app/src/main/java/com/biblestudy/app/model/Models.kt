@@ -117,6 +117,27 @@ data class MarginImage(
     val file: String,
 ) : Annotation
 
+/**
+ * A typed text box in a margin (MRG-12), anchored to a verse like other margin notes and shared
+ * across versions. [x], [y] and [w] are page units from the margin's left edge and the verse's top;
+ * the height follows the text. [size] is the text size in page units; [background] 0 = none.
+ */
+data class MarginText(
+    override val id: Long,
+    override val layerId: Long,
+    override val book: Int,
+    override val chapter: Int,
+    val region: Region,
+    val verse: Int,
+    val x: Float,
+    val y: Float,
+    val w: Float,
+    val text: String,
+    val size: Float = 20f,
+    val color: Int = 0xFF222222.toInt(),
+    val background: Int = 0,
+) : Annotation
+
 data class Layer(
     val id: Long,
     val name: String,

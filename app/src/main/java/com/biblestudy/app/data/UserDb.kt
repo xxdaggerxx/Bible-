@@ -11,6 +11,7 @@ import com.biblestudy.app.model.Highlight
 import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.Layer
 import com.biblestudy.app.model.MarginImage
+import com.biblestudy.app.model.MarginText
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SearchHit
 import com.biblestudy.app.model.TypedNote
@@ -22,7 +23,7 @@ import java.nio.ByteOrder
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
+class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
@@ -57,6 +58,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
             "CREATE TABLE bookmarks(id INTEGER PRIMARY KEY, book INTEGER NOT NULL, chapter INTEGER NOT NULL, " +
                 "verse INTEGER NOT NULL, created INTEGER NOT NULL, folder TEXT NOT NULL DEFAULT '')"
         )
+        createTexts(db)
         db.execSQL("INSERT INTO layers VALUES(1, 'My Notes', ${DEFAULT_LAYER_COLOR}, 1, 0, 0)")
     }
 
@@ -74,6 +76,17 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
             // READ-3: the font ink on the words was drawn in (all earlier ink used Gentium Book).
             db.execSQL("ALTER TABLE strokes ADD COLUMN font TEXT NOT NULL DEFAULT 'BOOK'")
         }
+        if (oldVersion < 4) createTexts(db) // 0.7: margin text boxes (MRG-12)
+    }
+
+    private fun createTexts(db: SQLiteDatabase) {
+        db.execSQL(
+            "CREATE TABLE texts(id INTEGER PRIMARY KEY, layer_id INTEGER NOT NULL, book INTEGER NOT NULL, " +
+                "chapter INTEGER NOT NULL, region INTEGER NOT NULL, verse INTEGER NOT NULL, x REAL NOT NULL, " +
+                "y REAL NOT NULL, w REAL NOT NULL, body TEXT NOT NULL, size REAL NOT NULL, color INTEGER NOT NULL, " +
+                "bg INTEGER NOT NULL)"
+        )
+        db.execSQL("CREATE INDEX texts_bc ON texts(book, chapter)")
     }
 
     // ---------- layers ----------
@@ -108,6 +121,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
             db.delete("strokes", "layer_id = ?", args)
             db.delete("highlights", "layer_id = ?", args)
             db.delete("images", "layer_id = ?", args)
+            db.delete("texts", "layer_id = ?", args)
             db.delete("layers", "id = ?", args)
             db.setTransactionSuccessful()
         } finally {
@@ -140,6 +154,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
                 put("region", a.region.code); put("verse", a.verse)
                 put("x", a.x); put("y", a.y); put("w", a.w); put("h", a.h); put("file", a.file)
             }, SQLiteDatabase.CONFLICT_REPLACE)
+
+            is MarginText -> db.insertWithOnConflict("texts", null, ContentValues().apply {
+                put("id", a.id); put("layer_id", a.layerId); put("book", a.book); put("chapter", a.chapter)
+                put("region", a.region.code); put("verse", a.verse)
+                put("x", a.x); put("y", a.y); put("w", a.w); put("body", a.text)
+                put("size", a.size); put("color", a.color); put("bg", a.background)
+            }, SQLiteDatabase.CONFLICT_REPLACE)
         }
     }
 
@@ -148,9 +169,27 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
             is InkStroke -> "strokes"
             is Highlight -> "highlights"
             is MarginImage -> "images"
+            is MarginText -> "texts"
         }
         writableDatabase.delete(table, "id = ?", arrayOf(a.id.toString()))
     }
+
+    /** Margin text boxes in a chapter (MRG-12). */
+    fun loadTexts(book: Int, chapter: Int): List<MarginText> =
+        readableDatabase.rawQuery(
+            "SELECT id, layer_id, book, chapter, region, verse, x, y, w, body, size, color, bg FROM texts " +
+                "WHERE book = ? AND chapter = ? ORDER BY id",
+            arrayOf(book.toString(), chapter.toString()),
+        ).use { c ->
+            buildList {
+                while (c.moveToNext()) add(
+                    MarginText(
+                        c.getLong(0), c.getLong(1), c.getInt(2), c.getInt(3), Region.of(c.getInt(4)), c.getInt(5),
+                        c.getFloat(6), c.getFloat(7), c.getFloat(8), c.getString(9), c.getFloat(10), c.getInt(11), c.getInt(12),
+                    )
+                )
+            }
+        }
 
     /** Ink drawn on the words of one version's chapter. */
     fun loadText(version: String, book: Int, chapter: Int): Pair<List<InkStroke>, List<Highlight>> {
@@ -228,6 +267,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
         }
         return rows("SELECT DISTINCT book, chapter, verse, layer_id FROM strokes WHERE region != 0 OR version = ?", arrayOf(version), false) +
             rows("SELECT DISTINCT book, chapter, verse, layer_id FROM images", emptyArray(), false) +
+            rows("SELECT DISTINCT book, chapter, verse, layer_id FROM texts", emptyArray(), false) +
             rows("SELECT book, chapter, start_off, layer_id FROM highlights WHERE version = ?", arrayOf(version), true)
     }
 
@@ -265,9 +305,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 3) {
         val where = words.joinToString(" AND ") { "text LIKE ? ESCAPE '\\'" }
         val args = words.map { "%" + it.trimEnd('*').replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_") + "%" } +
             listOf(lo.toString(), hi.toString())
+        // Typed notes on verses and text boxes in the margins (MRG-12).
+        val textWhere = where.replace("text LIKE", "body LIKE")
         return readableDatabase.rawQuery(
-            "SELECT book, chapter, verse, text FROM notes WHERE $where AND book BETWEEN ? AND ? ORDER BY book, chapter, verse LIMIT 500",
-            args.toTypedArray(),
+            "SELECT book, chapter, verse, text FROM notes WHERE $where AND book BETWEEN ? AND ? " +
+                "UNION ALL SELECT book, chapter, verse, body FROM texts WHERE $textWhere AND book BETWEEN ? AND ? " +
+                "ORDER BY 1, 2, 3 LIMIT 500",
+            (args + args).toTypedArray(),
         ).use { c -> buildList { while (c.moveToNext()) add(SearchHit(c.getInt(0), c.getInt(1), c.getInt(2), c.getString(3))) } }
     }
 

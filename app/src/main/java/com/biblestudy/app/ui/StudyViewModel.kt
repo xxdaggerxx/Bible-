@@ -35,6 +35,7 @@ import com.biblestudy.app.model.Highlight
 import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.Layer
 import com.biblestudy.app.model.MarginImage
+import com.biblestudy.app.model.MarginText
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SideButton
 import com.biblestudy.app.model.TextFont
@@ -284,6 +285,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private val highlights = HashMap<String, SnapshotStateList<Highlight>>()
     private val marginStrokes = HashMap<String, SnapshotStateList<InkStroke>>()
     private val images = HashMap<String, SnapshotStateList<MarginImage>>()
+    private val marginTexts = HashMap<String, SnapshotStateList<MarginText>>()
     private val notes = HashMap<String, SnapshotStateMap<Int, TypedNote>>()
     private val loaded = HashSet<String>()
     private val renders = HashMap<Long, StrokeRender>()
@@ -554,6 +556,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         highlights.values.forEach { l -> l.removeAll { it.layerId == id } }
         marginStrokes.values.forEach { l -> l.removeAll { it.layerId == id } }
         images.values.forEach { l -> l.removeAll { it.layerId == id } }
+        marginTexts.values.forEach { l -> l.removeAll { it.layerId == id } }
         undoStack.clear(); redoStack.clear(); editVersion++
         selection = null
         io {
@@ -577,6 +580,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         marginStrokes.getOrPut(mk(book, chapter)) { mutableStateListOf() }
 
     fun imagesFor(book: Int, chapter: Int) = images.getOrPut(mk(book, chapter)) { mutableStateListOf() }
+
+    /** Margin text boxes in a chapter (MRG-12). */
+    fun textsFor(book: Int, chapter: Int) = marginTexts.getOrPut(mk(book, chapter)) { mutableStateListOf() }
 
     /** Typed notes in a chapter, by the verse each starts on. */
     fun notesFor(book: Int, chapter: Int): SnapshotStateMap<Int, TypedNote> {
@@ -659,8 +665,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             viewModelScope.launch {
                 try {
                     val (s, i) = withContext(dbDispatcher) { user.loadMargin(book, chapter) }
+                    val t = withContext(dbDispatcher) { user.loadTexts(book, chapter) }
                     merge(marginStrokesFor(book, chapter), s)
                     merge(imagesFor(book, chapter), i)
+                    merge(textsFor(book, chapter), t)
                 } finally {
                     pendingLoads--
                 }
@@ -749,6 +757,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 else marginStrokesFor(after.book, after.chapter).swap(after)
             is Highlight -> highlightsFor(after.version, after.book, after.chapter).swap(after)
             is MarginImage -> imagesFor(after.book, after.chapter).swap(after)
+            is MarginText -> textsFor(after.book, after.chapter).swap(after)
         }
         io { user.insert(after) }
     }
@@ -760,6 +769,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 else marginStrokesFor(a.book, a.chapter).add(a)
             is Highlight -> highlightsFor(a.version, a.book, a.chapter).add(a)
             is MarginImage -> imagesFor(a.book, a.chapter).add(a)
+            is MarginText -> textsFor(a.book, a.chapter).add(a)
         }
         io { user.insert(a) }
     }
@@ -771,6 +781,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 else marginStrokesFor(a.book, a.chapter).removeAll { it.id == a.id }
             is Highlight -> highlightsFor(a.version, a.book, a.chapter).removeAll { it.id == a.id }
             is MarginImage -> imagesFor(a.book, a.chapter).removeAll { it.id == a.id }
+            is MarginText -> textsFor(a.book, a.chapter).removeAll { it.id == a.id }
         }
         io { user.delete(a) }
     }
@@ -842,6 +853,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         marginStrokesFor(sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
         highlightsFor(sel.version, sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
         imagesFor(sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
+        textsFor(sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
     }
 
     private fun changeSelection(change: (Annotation) -> Annotation?) {
@@ -863,6 +875,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             when (a) {
                 is InkStroke -> a.withPoints(shifted(a, off.x, off.y, layout))
                 is MarginImage -> a.copy(x = a.x + off.x, y = a.y + off.y)
+                is MarginText -> a.copy(x = a.x + off.x, y = a.y + off.y)
                 is Highlight -> null
             }
         }
@@ -878,6 +891,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             is InkStroke -> a.withColor(color)
             is Highlight -> a.copy(color = color)
             is MarginImage -> null
+            is MarginText -> a.copy(color = color)
         }
     }
 
@@ -889,6 +903,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 is InkStroke -> a.withLayer(layerId)
                 is Highlight -> a.copy(layerId = layerId)
                 is MarginImage -> a.copy(layerId = layerId)
+                is MarginText -> a.copy(layerId = layerId)
             }
         }
         message = "Moved to \u201c${layer.name}\u201d."
@@ -908,6 +923,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             when (a) {
                 is InkStroke -> a.copyAs(newId(), shifted(a, COPY_SHIFT, COPY_SHIFT, layout))
                 is MarginImage -> a.copy(id = newId(), x = a.x + COPY_SHIFT, y = a.y + COPY_SHIFT)
+                is MarginText -> a.copy(id = newId(), x = a.x + COPY_SHIFT, y = a.y + COPY_SHIFT)
                 is Highlight -> null
             }
         }
@@ -930,6 +946,79 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (before == after) return
         io { user.insert(after) }
         record(Edit(listOf(after), listOf(before)))
+    }
+
+    // ---------- margin text boxes (MRG-12) ----------
+
+    /** Heights of text boxes as last drawn, for tapping and dragging them (page units). */
+    val textHeights = HashMap<Long, Float>()
+    /** Text boxes' laid-out text as last drawn, for finding the reference under a tap. */
+    val textLayouts = HashMap<Long, androidx.compose.ui.text.TextLayoutResult>()
+    val textLayoutKeys = HashMap<Long, MarginText>()
+
+    /** The text box being typed in, if any. */
+    var editingText by mutableStateOf<Long?>(null)
+
+    /**
+     * Adds an empty text box beside the verse at the top of the active panel and starts typing in
+     * it. Returns it, or null if the active layer is locked.
+     */
+    fun insertTextBox(): MarginText? {
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        val layer = activeLayer() ?: return null
+        if (layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return null }
+        if (!layer.visible) setLayerVisible(layer.id, true)
+        val region = when {
+            marginRight -> Region.RIGHT
+            marginLeft -> Region.LEFT
+            else -> { marginRight = true; Region.RIGHT }
+        }
+        val w = marginWidth(region == Region.LEFT) - 48f
+        val t = MarginText(newId(), layer.id, p.book, p.chapter, region, p.topVerse, 24f, 8f, w, "")
+        addItem(t)
+        editingText = t.id
+        return t
+    }
+
+    /** Ends typing in a text box: saves its new text (undoable), or removes it if left empty. */
+    fun finishTextEdit(before: MarginText, text: String) {
+        editingText = null
+        val list = textsFor(before.book, before.chapter)
+        val current = list.firstOrNull { it.id == before.id } ?: return
+        if (text.isBlank()) {
+            removeItem(current)
+            if (before.text.isNotBlank()) record(Edit(emptyList(), listOf(before)))
+            return
+        }
+        if (text == before.text && current == before) return
+        val after = current.copy(text = text)
+        replaceItem(after)
+        record(Edit(listOf(after), if (before.text.isBlank()) emptyList() else listOf(before)))
+    }
+
+    /** Changes a text box's look (size, colour, background), undoable. */
+    fun restyleText(before: MarginText, after: MarginText) {
+        if (before == after) return
+        replaceItem(after)
+        record(Edit(listOf(after), listOf(before)))
+    }
+
+    fun replaceTextLive(t: MarginText) {
+        val list = textsFor(t.book, t.chapter)
+        val i = list.indexOfFirst { it.id == t.id }
+        if (i >= 0) list[i] = t
+    }
+
+    fun commitTextChange(before: MarginText, after: MarginText) {
+        if (before == after) return
+        io { user.insert(after) }
+        record(Edit(listOf(after), listOf(before)))
+    }
+
+    fun deleteText(t: MarginText) {
+        if (editingText == t.id) editingText = null
+        removeItem(t)
+        record(Edit(emptyList(), listOf(t)))
     }
 
     fun deleteImage(img: MarginImage) {
@@ -1213,6 +1302,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             highlights.values.forEach { it.clear() }
             marginStrokes.values.forEach { it.clear() }
             images.values.forEach { it.clear() }
+            marginTexts.values.forEach { it.clear() }
             notes.values.forEach { it.clear() }
             loaded.clear(); renders.clear(); bitmaps.clear(); requestedBitmaps.clear()
             selection = null

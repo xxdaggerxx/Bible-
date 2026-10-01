@@ -121,6 +121,10 @@ fun StudyToolbar(
             Box {
                 IconButton(onClick = { insertMenu = true }) { Icon(Icons.Filled.AddBox, contentDescription = "Insert") }
                 DropdownMenu(expanded = insertMenu, onDismissRequest = { insertMenu = false }) {
+                    DropdownMenuItem(
+                        text = { Text("Text box") },
+                        onClick = { insertMenu = false; vm.insertTextBox() },
+                    )
                     for (src in ImageSource.entries) {
                         DropdownMenuItem(
                             text = { Text("Picture: " + src.label.replaceFirstChar { it.lowercase() }) },

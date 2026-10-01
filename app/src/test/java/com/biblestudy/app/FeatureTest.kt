@@ -231,6 +231,7 @@ class FeatureTest {
                 vm.highlightsFor(v, 43, 3).toList().forEach { vm.removeItem(it) }
             }
             vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) }
+            vm.textsFor(43, 3).toList().forEach { vm.removeItem(it) }
         }
         compose.waitForIdle()
     }
@@ -1033,5 +1034,42 @@ class FeatureTest {
         assertEquals(LineSpacing.NORMAL, vm.lineSpacing)
         assertEquals(false, vm.fingerDraw)
         assertEquals(1, vm.penSize)
+    }
+
+    @Test
+    fun marginTextBoxesTurnReferencesIntoLinks() {
+        compose.onNodeWithContentDescription("Insert").performClick()
+        compose.onNodeWithText("Text box").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithTag("textBoxEditor").performTextInput("Compare Rom 8:28 and Ps 23")
+        snap("72-text-box-typing")
+        compose.onNodeWithText("Done").performClick()
+        compose.waitForIdle()
+        val box = vm.textsFor(43, 3).single()
+        assertEquals("Compare Rom 8:28 and Ps 23", box.text)
+        assertEquals(2, com.biblestudy.app.data.RefLinks.find(box.text, vm.bible.books).size)
+        compose.waitUntil(5_000) { vm.user.searchNotes("Compare", 1, 66).isNotEmpty() } // in note search too
+
+        // A finger tap on the box selects it; the bar offers its options.
+        val z = zoom()
+        val x = (Page.COL_W + 60f) * z
+        var y = 40f
+        while (compose.onAllNodesWithText("Edit").fetchSemanticsNodes().isEmpty()) {
+            compose.onNodeWithTag("reader0").performTouchInput { click(Offset(x, y)) }
+            compose.waitForIdle()
+            compose.mainClock.advanceTimeBy(600)
+            y += 20f
+            assertTrue("text box not found", y < 900f)
+        }
+        snap("73-text-box-selected")
+        compose.onNodeWithText("A+").performClick()
+        assertTrue(vm.textsFor(43, 3).single().size > box.size)
+
+        // Undo works on it like other notes; Delete removes it.
+        compose.runOnUiThread { vm.undo() }
+        assertEquals(box.size, vm.textsFor(43, 3).single().size)
+        compose.onNodeWithText("Delete").performClick()
+        compose.waitForIdle()
+        assertTrue(vm.textsFor(43, 3).isEmpty())
     }
 }

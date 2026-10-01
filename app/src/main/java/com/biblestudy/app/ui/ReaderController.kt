@@ -14,6 +14,9 @@ import com.biblestudy.app.model.Edit
 import com.biblestudy.app.model.Highlight
 import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.MarginImage
+import com.biblestudy.app.data.RefLinks
+import com.biblestudy.app.data.Passage
+import com.biblestudy.app.model.MarginText
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.Tool
 import com.biblestudy.app.model.VerseId
@@ -79,6 +82,11 @@ data class TextSel(
 
 private class ImageDrag(val page: PlacedPage, val original: MarginImage, val resize: Boolean, val start: Offset) {
     var current: MarginImage = original
+}
+
+/** A margin text box being moved, or widened from its corner (MRG-12). */
+private class TextDrag(val page: PlacedPage, val original: MarginText, val resize: Boolean, val start: Offset) {
+    var current: MarginText = original
 }
 
 private class LassoDrag(val start: Offset)
@@ -490,6 +498,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val s = toStrip(pos)
         val page = pageAt(s.y) ?: return
         val g = page.geo
+        if (tapText(page, Offset(s.x, s.y - page.top), pos)) return
         if (g.regionAt(s.x) != Region.TEXT) return
         val localY = s.y - page.top - Page.TEXT_TOP
         // A parallel-passage link under a heading opens its pop-over (LINK-1, LINK-2).
@@ -644,6 +653,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             Tool.SELECT -> {
                 drag?.let { vm.commitImageChange(it.original, it.current) }
                 drag = null
+                textDrag?.let { vm.commitTextChange(it.original, it.current) }
+                textDrag = null
                 penPanLast = null
             }
             null -> {}
@@ -838,6 +849,11 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             val c = imageRect(g, img).center
             if (pointInPolygon(c.x, c.y, poly)) picked += img
         }
+        for (t in vm.textsFor(layout.book, layout.chapter)) {
+            if (t.layerId !in usable || !g.visible(t.region)) continue
+            val c = textRect(g, t).center
+            if (pointInPolygon(c.x, c.y, poly)) picked += t
+        }
         if (picked.isEmpty()) {
             vm.message = "Nothing inside the lasso. Draw a loop around ink, highlights or images."
             return
@@ -859,6 +875,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
                 }
                 is Highlight -> add(highlightPath(a, layout).getBounds().translate(g.textLeft, Page.TEXT_TOP))
                 is MarginImage -> if (g.visible(a.region)) add(imageRect(g, a))
+                is MarginText -> if (g.visible(a.region)) add(textRect(g, a))
             }
         }
         return r
@@ -871,10 +888,83 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         return Rect(ox + img.x, oy + img.y, ox + img.x + img.w, oy + img.y + img.h)
     }
 
+    // ---------- margin text boxes (MRG-12) ----------
+
+    /** The text box picked by a tap, showing its bar. */
+    var selectedTextId by mutableStateOf<Long?>(null)
+    private var textDrag: TextDrag? = null
+
+    fun textRect(g: PageGeometry, t: MarginText): Rect {
+        val ox = g.originX(t.region); val oy = g.originY(t.region, t.verse)
+        val h = vm.textHeights[t.id] ?: (t.size * 1.6f)
+        return Rect(ox + t.x, oy + t.y, ox + t.x + t.w, oy + t.y + h)
+    }
+
+    private fun textAt(page: PlacedPage, p: Offset, layers: Set<Long>): MarginText? {
+        val g = page.geo
+        return vm.textsFor(g.layout.book, g.layout.chapter).lastOrNull {
+            it.layerId in layers && g.visible(it.region) && textRect(g, it).inflate(6f / panel.zoom).contains(p)
+        }
+    }
+
+    /** The passage linked at a point inside a text box, if the point is on a Bible reference. */
+    private fun textLinkAt(t: MarginText, local: Offset): Passage? {
+        val layout = vm.textLayouts[t.id] ?: return null
+        val inner = local - Offset(TEXT_PAD, TEXT_PAD)
+        if (inner.y < 0f || inner.y > layout.size.height) return null
+        val off = layout.getOffsetForPosition(inner)
+        return RefLinks.find(t.text, vm.bible.books).firstOrNull { off >= it.start && off < it.end }?.passage
+    }
+
+    /**
+     * A finger tap on a text box: a reference opens its passage pop-over; otherwise the first tap
+     * selects the box and a second starts typing in it. Returns false if no box was tapped.
+     */
+    private fun tapText(page: PlacedPage, p: Offset, pos: Offset): Boolean {
+        val hit = textAt(page, p, vm.visibleLayerIds().toSet())
+        if (hit == null) {
+            // A tap away from a box ends typing in it, or clears its selection.
+            if (vm.editingText != null || selectedTextId != null) {
+                vm.editingText = null
+                selectedTextId = null
+                return true
+            }
+            return false
+        }
+        val r = textRect(page.geo, hit)
+        if (vm.editingText != hit.id) {
+            textLinkAt(hit, p - r.topLeft)?.let {
+                vm.passagePop = PassagePop(panelIndex, it, pos)
+                return true
+            }
+        }
+        if (selectedTextId == hit.id && vm.editingText == null) vm.editingText = hit.id
+        selectedTextId = hit.id
+        return true
+    }
+
+    /** The selected text box and the page it is on, if visible in this panel. */
+    fun selectedText(): Pair<PlacedPage, MarginText>? {
+        val id = vm.editingText ?: selectedTextId ?: return null
+        for (page in pages()) {
+            val t = vm.textsFor(page.layout.book, page.layout.chapter).firstOrNull { it.id == id }
+            if (t != null) return page to t
+        }
+        return null
+    }
+
     private fun startSelect(page: PlacedPage, p: Offset, screen: Offset) {
         val g = page.geo
         val layout = g.layout
         val usable = vm.usableLayerIds()
+        textAt(page, p, usable)?.let { t ->
+            selectedTextId = t.id
+            selectedImageId = null
+            val rect = textRect(g, t)
+            val handle = hypot(p.x - rect.right, p.y - rect.bottom) < 40f / panel.zoom
+            textDrag = TextDrag(page, t, handle, p)
+            return
+        }
         val hit = vm.imagesFor(layout.book, layout.chapter).lastOrNull {
             it.layerId in usable && g.visible(it.region) && imageRect(g, it).inflate(4f / panel.zoom).contains(p)
         }
@@ -890,6 +980,13 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     }
 
     private fun moveSelect(s: Offset, screen: Offset) {
+        textDrag?.let { td ->
+            val dx = s.x - td.start.x; val dy = s.y - td.page.top - td.start.y
+            val o = td.original
+            td.current = if (td.resize) o.copy(w = max(80f, o.w + dx)) else o.copy(x = o.x + dx, y = o.y + dy)
+            vm.replaceTextLive(td.current)
+            return
+        }
         val d = drag
         if (d == null) {
             val last = penPanLast ?: return
@@ -926,6 +1023,9 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     }
 
     companion object {
+        /** Space between a text box's edge and its text, in page units. */
+        const val TEXT_PAD = 8f
+
         /** Panels narrower than this in portrait show the margins as drawers (MRG-14). */
         const val DRAWER_BELOW_DP = 600f
 

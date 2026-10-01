@@ -279,7 +279,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                     for (page in pages) {
                         if (page.bottom < view.top || page.top > view.bottom) continue
                         translate(0f, page.top) {
-                            drawPage(vm, ctl, page, theme, view.translate(0f, -page.top))
+                            drawPage(vm, ctl, page, theme, view.translate(0f, -page.top), measurer)
                         }
                     }
                 }
@@ -331,6 +331,11 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             }
             vm.passagePop?.takeIf { it.panel == index }?.let { pop ->
                 PassagePopover(vm, pop, onDismiss = { vm.passagePop = null })
+            }
+            // Margin text box: typing in place, and its bar while selected (MRG-12).
+            ctl.selectedText()?.let { (page, t) ->
+                if (vm.editingText == t.id && (vm.activePanel == index || vm.panels.size == 1)) TextBoxEditor(vm, ctl, page, t)
+                TextBoxBar(vm, ctl, t, Modifier.align(Alignment.TopCenter).padding(top = 8.dp, start = 8.dp, end = 8.dp))
             }
             ctl.textSel?.let { ts ->
                 TextSelectionBar(vm, ctl, ts, Modifier.align(Alignment.TopCenter).padding(top = 8.dp, start = 8.dp, end = 8.dp))
@@ -544,7 +549,7 @@ private fun SelectionBar(vm: StudyViewModel, ctl: ReaderController, modifier: Mo
 // ---------------------------------------------------------------------------------------------
 
 /** Draws one chapter page in its own page coordinates. [view] is the visible area in page units. */
-private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: PlacedPage, theme: PageTheme, view: Rect) {
+private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: PlacedPage, theme: PageTheme, view: Rect, measurer: TextMeasurer) {
     val g = page.geo
     val layout = g.layout
 
@@ -648,6 +653,13 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
                     filterQuality = FilterQuality.Medium,
                 )
             }
+        }
+        // Margin text boxes (MRG-12)
+        for (t in vm.textsFor(layout.book, layout.chapter)) {
+            if (t.layerId != layerId || !g.visible(t.region)) continue
+            val r = ctl.textRect(g, t).let { if (t.id in moving) it.translate(shift) else it }
+            if (!ReaderController.overlaps(r, view)) continue
+            drawTextBox(vm, measurer, t, r.left, r.top, selected = ctl.selectedTextId == t.id, editing = vm.editingText == t.id)
         }
         drawStrokes(vm, g, view, textStrokes, marginStrokes, layerId, highlighter = false, moving, shift)
     }
