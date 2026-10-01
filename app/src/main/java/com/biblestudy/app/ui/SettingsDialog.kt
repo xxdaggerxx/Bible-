@@ -266,7 +266,7 @@ fun SettingsDialog(
         AlertDialog(
             onDismissRequest = { confirmReset = false },
             title = { Text("Reset settings?") },
-            text = { Text("All settings go back to their defaults. Your notes, ink, highlights, bookmarks and layers are not changed.") },
+            text = { Text("All settings go back to their defaults. Your notes, ink, highlights, sketch pages and layers are not changed.") },
             confirmButton = { TextButton(onClick = { vm.resetSettings(); confirmReset = false }) { Text("Reset") } },
             dismissButton = { TextButton(onClick = { confirmReset = false }) { Text("Cancel") } },
         )

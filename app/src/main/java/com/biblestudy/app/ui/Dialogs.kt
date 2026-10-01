@@ -33,7 +33,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Sell
 import androidx.compose.material.icons.filled.VerticalSplit
-import com.biblestudy.app.model.Bookmark
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material.icons.automirrored.filled.DriveFileMove
@@ -43,8 +42,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.filled.ArrowUpward
-import androidx.compose.material.icons.filled.Bookmark
-import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
@@ -91,6 +88,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.TextLinkStyles
@@ -165,8 +163,7 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     val visible = vm.visibleLayerIds()
     val colors = vm.layers.associate { it.id to it.color }
 
-    fun marks(layerIds: List<Long>, note: Boolean, bookmark: Boolean) =
-        Marks(layerIds.mapNotNull { colors[it] }, note, bookmark)
+    fun marks(layerIds: List<Long>, note: Boolean) = Marks(layerIds.mapNotNull { colors[it] }, note)
 
     BigDialog(onDismiss) {
         Column {
@@ -181,7 +178,7 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                             item(span = { GridItemSpan(maxLineSpan) }) { SectionLabel(label) }
                             items(vm.bible.books.filter { it.id in range }, key = { it.id }) { bk ->
                                 val m = markers?.let { idx ->
-                                    marks(idx.layers(visible, bk.id), idx.hasNote(bk.id), vm.bookmarks.any { it.book == bk.id })
+                                    marks(idx.layers(visible, bk.id), idx.hasNote(bk.id))
                                 }
                                 GridCell(bk.name, m, onInfo = { vm.introBook = bk.id }) { book = bk.id; if (bk.chapters == 1) chapter = 1 }
                             }
@@ -204,10 +201,7 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                     LazyVerticalGrid(columns = GridCells.Adaptive(72.dp), modifier = Modifier.weight(1f)) {
                         items((1..info.chapters).toList()) { ch ->
                             val m = markers?.let { idx ->
-                                marks(
-                                    idx.layers(visible, b, ch), idx.hasNote(b, ch),
-                                    vm.bookmarks.any { it.book == b && it.chapter == ch },
-                                )
+                                marks(idx.layers(visible, b, ch), idx.hasNote(b, ch))
                             }
                             GridCell(ch.toString(), m, label = "${info.name} $ch", read = b * 1000 + ch in readChapters) { chapter = ch }
                         }
@@ -227,11 +221,7 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                     val byVerse = markers?.verseLayers(visible, b, c, verses) ?: emptyMap()
                     LazyVerticalGrid(columns = GridCells.Adaptive(64.dp), modifier = Modifier.weight(1f)) {
                         items(verses, key = { it.verse }) { v ->
-                            val m = marks(
-                                byVerse[v.verse] ?: emptyList(),
-                                markers?.hasNote(b, c, v.verse) == true,
-                                vm.bookmarks.any { it.book == b && it.chapter == c && it.verse == v.verse },
-                            )
+                            val m = marks(byVerse[v.verse] ?: emptyList(), markers?.hasNote(b, c, v.verse) == true)
                             GridCell(v.verse.toString(), m, label = "${info.name} $c:${v.verse}") {
                                 vm.goTo(panelIndex, b, c, v.verse)
                                 onDismiss()
@@ -244,9 +234,9 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     }
 }
 
-/** What a picker cell has: colours of layers with ink, highlights or images; a typed note; a bookmark. */
-private class Marks(val layerColors: List<Int>, val note: Boolean, val bookmark: Boolean) {
-    val any get() = layerColors.isNotEmpty() || note || bookmark
+/** What a picker cell has: colours of layers with ink, highlights or images; a typed note. */
+private class Marks(val layerColors: List<Int>, val note: Boolean) {
+    val any get() = layerColors.isNotEmpty() || note
 }
 
 @Composable
@@ -261,13 +251,9 @@ private fun MarkerLegend() {
         Spacer(Modifier.width(8.dp))
         Icon(Icons.Filled.EditNote, contentDescription = null, modifier = Modifier.size(14.dp))
         Text("Typed note", style = MaterialTheme.typography.bodySmall)
-        Spacer(Modifier.width(8.dp))
-        Icon(Icons.Filled.Bookmark, contentDescription = null, tint = BOOKMARK_RED, modifier = Modifier.size(14.dp))
-        Text("Bookmark", style = MaterialTheme.typography.bodySmall)
     }
 }
 
-private val BOOKMARK_RED = Color(0xFFC62828)
 /** A chapter that has been read (ANL-5). */
 val READ_TINT = Color(0x4D7FB77E)
 
@@ -285,7 +271,6 @@ private fun MarkerRow(m: Marks?, label: String) {
         for (c in m.layerColors.take(4)) Box(Modifier.size(7.dp).clip(CircleShape).background(Color(c)))
         if (m.layerColors.size > 4) Text("+", style = MaterialTheme.typography.labelSmall)
         if (m.note) Icon(Icons.Filled.EditNote, contentDescription = null, modifier = Modifier.size(12.dp))
-        if (m.bookmark) Icon(Icons.Filled.Bookmark, contentDescription = null, tint = BOOKMARK_RED, modifier = Modifier.size(12.dp))
     }
 }
 
@@ -557,7 +542,7 @@ private fun markTerms(text: String, terms: List<String>, style: SpanStyle): Anno
 }
 
 // ---------------------------------------------------------------------------------------------
-// Verse: note, bookmark, cross-references
+// Verse: note, cross-references
 // ---------------------------------------------------------------------------------------------
 
 @Composable
@@ -639,12 +624,6 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.padding(vertical = 8.dp),
             ) {
-                val marked = vm.isBookmarked(t)
-                OutlinedButton(onClick = { vm.toggleBookmark(t) }) {
-                    Icon(if (marked) Icons.Filled.Bookmark else Icons.Filled.BookmarkBorder, contentDescription = null)
-                    Spacer(Modifier.width(6.dp))
-                    Text(if (marked) "Bookmarked" else "Bookmark")
-                }
                 FilterChip(
                     selected = vm.compareVersions,
                     onClick = { vm.compareVersions = !vm.compareVersions },
@@ -870,13 +849,13 @@ fun LayersDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
 }
 
 // ---------------------------------------------------------------------------------------------
-// Bookmarks
+// My notes: typed notes, highlights and sketch pages
 // ---------------------------------------------------------------------------------------------
 
 @Composable
-fun BookmarksDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
+fun MyNotesDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
-    // The notes browser (NOTE-5): typed notes and text boxes, highlights, and bookmarks.
+    // The notes browser (NOTE-5): typed notes and text boxes, highlights, and sketch pages.
     var tab by remember { mutableStateOf(0) }
     BigDialog(onDismiss) {
         Column {
@@ -884,14 +863,12 @@ fun BookmarksDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 FilterChip(selected = tab == 0, onClick = { tab = 0 }, label = { Text("Notes") })
                 FilterChip(selected = tab == 1, onClick = { tab = 1 }, label = { Text("Highlights") })
-                FilterChip(selected = tab == 2, onClick = { tab = 2 }, label = { Text("Bookmarks") })
-                FilterChip(selected = tab == 3, onClick = { tab = 3 }, label = { Text("Sketch pages") })
+                FilterChip(selected = tab == 2, onClick = { tab = 2 }, label = { Text("Sketch pages") })
             }
             Spacer(Modifier.height(8.dp))
             when (tab) {
                 0 -> NotesList(vm, panelIndex, onDismiss, Modifier.weight(1f))
                 1 -> HighlightsList(vm, panelIndex, onDismiss, Modifier.weight(1f))
-                2 -> BookmarksList(vm, panelIndex, onDismiss, Modifier.weight(1f))
                 else -> SketchList(vm, panelIndex, onDismiss, Modifier.weight(1f))
             }
         }
@@ -1087,128 +1064,6 @@ fun TagEditor(vm: StudyViewModel, key: String, onDismiss: () -> Unit) {
     )
 }
 
-/** Bookmarks, newest first, filtered by folder (NOTE-3). */
-@Composable
-private fun BookmarksList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
-    // null = all bookmarks, "" = not in a folder
-    var folder by remember { mutableStateOf<String?>(null) }
-    // Asking for a folder name: to make a new folder (and move [naming] into it), or to rename one.
-    var naming by remember { mutableStateOf<Bookmark?>(null) }
-    var askName by remember { mutableStateOf(false) }
-    var renaming by remember { mutableStateOf<String?>(null) }
-    val folders = vm.allBookmarkFolders()
-
-    Column(modifier) {
-        Row(
-            Modifier.horizontalScroll(rememberScrollState()),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            FilterChip(selected = folder == null, onClick = { folder = null }, label = { Text("All (${vm.bookmarks.size})") })
-            if (folders.isNotEmpty()) {
-                val loose = vm.bookmarks.count { it.folder.isEmpty() }
-                FilterChip(selected = folder == "", onClick = { folder = "" }, label = { Text("Not in a folder ($loose)") })
-            }
-            for (f in folders) {
-                FilterChip(
-                    selected = folder == f,
-                    onClick = { folder = f },
-                    label = { Text("$f (${vm.bookmarks.count { it.folder == f }})") },
-                    leadingIcon = { Icon(Icons.Filled.Folder, contentDescription = null, modifier = Modifier.size(16.dp)) },
-                )
-            }
-            TextButton(onClick = { naming = null; askName = true }) {
-                Icon(Icons.Filled.CreateNewFolder, contentDescription = null, modifier = Modifier.size(18.dp))
-                Spacer(Modifier.width(4.dp))
-                Text("New folder")
-            }
-        }
-        val f = folder
-        if (f != null && f.isNotEmpty()) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                TextButton(onClick = { renaming = f }) { Text("Rename folder") }
-                TextButton(onClick = { vm.deleteBookmarkFolder(f); folder = null }) { Text("Delete folder") }
-            }
-        }
-        var tagFilter by remember { mutableStateOf<String?>(null) }
-        TagFilter(vm, vm.bookmarks.map { "b:${it.id}" }, tagFilter) { tagFilter = it }
-        val shown = vm.bookmarks.filter { (f == null || it.folder == f) && (tagFilter == null || tagFilter in vm.tags["b:${it.id}"].orEmpty()) }
-        if (shown.isEmpty()) {
-            Text(
-                if (vm.bookmarks.isEmpty()) "No bookmarks yet. Tap a verse with your finger, then tap Bookmark."
-                else "No bookmarks in this folder. Use the folder button on a bookmark to move it here.",
-                modifier = Modifier.padding(vertical = 8.dp),
-            )
-        }
-        LazyColumn(Modifier.weight(1f)) {
-            items(shown, key = { it.id }) { b ->
-                val id = VerseId.of(b.book, b.chapter, b.verse)
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Column(
-                        Modifier.weight(1f).clickable { vm.goTo(panelIndex, b.book, b.chapter, b.verse); onDismiss() }
-                            .padding(vertical = 8.dp)
-                    ) {
-                        Text(
-                            vm.refLabel(id) + if (b.folder.isNotEmpty() && f == null) "  \u00b7  ${b.folder}" else "",
-                            style = MaterialTheme.typography.labelLarge,
-                            color = MaterialTheme.colorScheme.primary,
-                        )
-                        Text(vm.text(vm.activeVersion).verseText(id) ?: "", maxLines = 2, overflow = TextOverflow.Ellipsis)
-                    }
-                    var menu by remember { mutableStateOf(false) }
-                    Box {
-                        IconButton(onClick = { menu = true }) { Icon(Icons.AutoMirrored.Filled.DriveFileMove, contentDescription = "Move to folder") }
-                        DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                            DropdownMenuItem(
-                                text = { Text("Not in a folder" + if (b.folder.isEmpty()) "  \u2713" else "") },
-                                onClick = { vm.moveBookmark(b, ""); menu = false },
-                            )
-                            for (name in folders) {
-                                DropdownMenuItem(
-                                    text = { Text(name + if (b.folder == name) "  \u2713" else "") },
-                                    onClick = { vm.moveBookmark(b, name); menu = false },
-                                )
-                            }
-                            DropdownMenuItem(text = { Text("New folder\u2026") }, onClick = { menu = false; naming = b; askName = true })
-                        }
-                    }
-                    TagButton(vm, "b:${b.id}")
-                    IconButton(onClick = { vm.deleteBookmark(b) }) { Icon(Icons.Filled.Delete, contentDescription = "Remove bookmark") }
-                }
-                HorizontalDivider()
-            }
-        }
-    }
-
-    if (askName || renaming != null) {
-        var name by remember { mutableStateOf(renaming ?: "") }
-        fun done() {
-            val r = renaming
-            if (r != null) {
-                vm.renameBookmarkFolder(r, name)
-                if (folder == r) folder = name.trim().ifEmpty { r }
-            } else {
-                vm.addBookmarkFolder(name)?.let { n -> naming?.let { vm.moveBookmark(it, n) } }
-            }
-            askName = false; renaming = null; naming = null
-        }
-        AlertDialog(
-            onDismissRequest = { askName = false; renaming = null; naming = null },
-            title = { Text(if (renaming != null) "Rename folder" else "New folder") },
-            text = {
-                OutlinedTextField(
-                    value = name, onValueChange = { name = it }, singleLine = true,
-                    placeholder = { Text("e.g. Sermon series, Promises") },
-                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
-                    keyboardActions = KeyboardActions(onDone = { done() }),
-                )
-            },
-            confirmButton = { TextButton(onClick = ::done, enabled = name.isNotBlank()) { Text("Save") } },
-            dismissButton = { TextButton(onClick = { askName = false; renaming = null; naming = null }) { Text("Cancel") } },
-        )
-    }
-}
-
 /** Every highlight in Bible order, with its words in their colour; filter by colour or layer (HL-8). */
 @Composable
 private fun HighlightsList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
@@ -1292,18 +1147,21 @@ private fun HighlightsList(vm: StudyViewModel, panelIndex: Int, onDismiss: () ->
                     }.padding(vertical = 8.dp)
                 ) {
                     Text(
-                        vm.refLabel(VerseId.of(h.book, h.chapter, e.verse)) + "  \u00b7  ${h.version}  \u00b7  $layerName",
+                        vm.refLabel(VerseId.of(h.book, h.chapter, e.verse), VerseId.of(h.book, h.chapter, e.endVerse)) +
+                            "  \u00b7  ${h.version}  \u00b7  $layerName",
                         style = MaterialTheme.typography.labelLarge,
                         color = MaterialTheme.colorScheme.primary,
                     )
+                    // The whole verse, with the highlighted words in the highlight's colour.
+                    val mark = SpanStyle(background = Color(h.color).copy(alpha = HIGHLIGHT_ALPHA))
                     Text(
                         buildAnnotatedString {
-                            pushStyle(SpanStyle(background = Color(h.color).copy(alpha = HIGHLIGHT_ALPHA)))
-                            append(e.words)
-                            pop()
+                            append(e.text)
+                            val r = e.marked
+                            if (r != null) addStyle(mark, r.first, r.last + 1)
+                            else if (e.text == e.words) addStyle(mark, 0, e.text.length)
                         },
-                        maxLines = 3,
-                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.testTag("highlightText"),
                     )
                 }
                 TagButton(vm, "h:${h.id}")

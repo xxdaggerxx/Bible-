@@ -753,6 +753,10 @@ class FeatureTest {
         compose.waitForIdle()
         compose.onNodeWithText("Highlights").performClick()
         compose.waitUntil(5_000) { compose.onAllNodesWithText("John 3:", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        // The whole verse is listed, not just the highlighted word.
+        val shown = compose.onNodeWithTag("highlightText", useUnmergedTree = true).fetchSemanticsNode().config[androidx.compose.ui.semantics.SemanticsProperties.Text].first().text
+        val verse = vm.text(h.version).verseText(com.biblestudy.app.model.VerseId.of(43, 3, vm.highlightVerses(h).first))!!
+        assertEquals(verse, shown)
         snap("42-highlights-list")
         compose.onAllNodesWithText("John 3:", substring = true)[0].performClick()
         waitForLoaded()
@@ -842,31 +846,16 @@ class FeatureTest {
     }
 
     @Test
-    fun bookmarksCanBePutInFolders() {
-        compose.runOnUiThread {
-            vm.bookmarks.toList().forEach { vm.deleteBookmark(it) }
-            vm.bookmarkFolders.toList().forEach { vm.deleteBookmarkFolder(it) }
-            vm.toggleBookmark(VerseTarget(43, 3, 16))
-            vm.toggleBookmark(VerseTarget(19, 23, 1))
-        }
-        compose.onNodeWithContentDescription("My notes").performScrollTo().performClick()
-        compose.onNodeWithText("Bookmarks").performClick()
-        compose.onAllNodesWithContentDescription("Move to folder")[0].performClick()
-        compose.onNodeWithText("New folder\u2026").performClick()
-        compose.onNodeWithText("e.g. Sermon series, Promises").performTextInput("Psalms of trust")
-        compose.onNodeWithText("Save").performClick()
-        compose.waitForIdle()
-        assertEquals("Psalms of trust", vm.bookmarks.first { it.book == 19 }.folder)
-        compose.onNodeWithText("Psalms of trust (1)").performClick()
-        compose.onNodeWithText("Psalms 23:1", substring = true).assertExists()
-        compose.onNodeWithText("John 3:16", substring = true).assertDoesNotExist()
-        snap("47-bookmark-folders")
-        // Deleting the folder keeps its bookmarks.
-        compose.onNodeWithText("Delete folder").performClick()
-        compose.waitForIdle()
-        assertEquals(2, vm.bookmarks.size)
-        assertTrue(vm.bookmarks.all { it.folder.isEmpty() })
-        compose.runOnUiThread { vm.bookmarks.toList().forEach { vm.deleteBookmark(it) } }
+    fun oldBookmarksBecomeWholeVerseHighlights() {
+        // A bookmark saved by 0.8, in a folder.
+        vm.user.addBookmark(com.biblestudy.app.model.Bookmark(77L, 43, 3, 16, 1L, "Gospel"))
+        compose.runOnUiThread { vm.convertBookmarks(); vm.dataGeneration++ }
+        assertTrue(vm.user.bookmarks().isEmpty())
+        val h = vm.user.allHighlights().single { it.book == 43 && it.chapter == 3 }
+        val verse = vm.text("KJV").verseText(43003016)!!
+        assertEquals(verse.length, h.end - h.start) // the whole verse, without its number
+        assertEquals(setOf("bookmark", "Gospel"), vm.user.tags()["h:${h.id}"])
+        compose.runOnUiThread { vm.removeHighlight(h) }
     }
 
     @Test

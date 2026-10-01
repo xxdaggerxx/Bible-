@@ -44,7 +44,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 
-private enum class DialogKind { PICKER, SEARCH, LAYERS, BOOKMARKS, ABOUT, RESTORE, SETTINGS, STATS }
+private enum class DialogKind { PICKER, SEARCH, LAYERS, NOTES, ABOUT, RESTORE, SETTINGS, STATS }
 
 private val LightColors = lightColorScheme(
     primary = Color(0xFF7A5C2E),
@@ -98,7 +98,7 @@ fun StudyApp(vm: StudyViewModel) {
                     vm = vm,
                     onLayers = { dialog = DialogKind.LAYERS },
                     onSearch = { dialog = DialogKind.SEARCH },
-                    onBookmarks = { dialog = DialogKind.BOOKMARKS },
+                    onNotes = { dialog = DialogKind.NOTES },
                     onInsertImage = { src ->
                         when (src) {
                             ImageSource.GALLERY ->
@@ -200,7 +200,7 @@ fun StudyApp(vm: StudyViewModel) {
             DialogKind.PICKER -> BookPickerDialog(vm) { dialog = null }
             DialogKind.SEARCH -> SearchDialog(vm) { dialog = null }
             DialogKind.LAYERS -> LayersDialog(vm) { dialog = null }
-            DialogKind.BOOKMARKS -> BookmarksDialog(vm) { dialog = null }
+            DialogKind.NOTES -> MyNotesDialog(vm) { dialog = null }
             DialogKind.ABOUT -> AboutDialog { dialog = null }
             DialogKind.STATS -> ReadingStatsDialog(vm) { dialog = null }
             DialogKind.SETTINGS -> SettingsDialog(
@@ -216,7 +216,7 @@ fun StudyApp(vm: StudyViewModel) {
             DialogKind.RESTORE -> AlertDialog(
                 onDismissRequest = { dialog = null },
                 title = { Text("Restore from a backup?") },
-                text = { Text("This replaces all ink, highlights, images, notes, layers and bookmarks on this tablet with the ones in the backup file.") },
+                text = { Text("This replaces all ink, highlights, images, notes, sketch pages and layers on this tablet with the ones in the backup file.") },
                 confirmButton = {
                     TextButton(onClick = {
                         dialog = null

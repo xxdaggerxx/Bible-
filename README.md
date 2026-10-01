@@ -95,6 +95,11 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - Imported versions work everywhere the built-in ones do (except word studies) and can be removed.
   - This is how NIV or NLT files could be added once permission is granted. Only import versions you have the right to use.
 - **Exports** now carry the version's copyright line on every page.
+- **Bookmarks are replaced by highlights.**
+  - The *Bookmark* button, the *Bookmarks* tab and the red ribbons are gone.
+  - Each bookmark you had becomes a yellow highlight over its whole verse in the KJV, tagged "bookmark" and with its folder's name as a tag. Filter by those tags in *My notes → Highlights*.
+  - The Highlights list now shows each highlight's whole verse, with the highlighted words marked in its colour.
+  - The study pane's *My notes* lists the chapter's highlighted verses.
 
 Your notes database is upgraded the first time 0.9 opens. Backups include sketch pages and reading stats. Imported Bibles aren't in backups; import the file again on a new tablet.
 

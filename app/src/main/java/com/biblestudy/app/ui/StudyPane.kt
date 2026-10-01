@@ -166,18 +166,19 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
     }
 }
 
-/** Typed notes and bookmarks in the chapter shown in the active panel. */
+/** Typed notes and highlighted verses in the chapter shown in the active panel. */
 @Composable
 private fun NotesPane(vm: StudyViewModel, modifier: Modifier) {
     val panel = vm.panels[vm.readerIndex()]
     val book = panel.book
     val chapter = panel.chapter
     val notes = vm.notesFor(book, chapter).values.sortedBy { it.verse }
-    val marks = vm.bookmarks.filter { it.book == book && it.chapter == chapter }.sortedBy { it.verse }
+    // Highlighted verses, whole (in the version being read).
+    val marks = vm.highlightsFor(panel.version, book, chapter).map { vm.highlightVerses(it) }.distinct().sortedBy { it.first }
     Column(modifier) {
         Text("${vm.bible.book(book).name} $chapter", style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(vertical = 8.dp))
         if (notes.isEmpty() && marks.isEmpty()) {
-            Text("No typed notes or bookmarks in this chapter. Tap a verse with your finger to add one.")
+            Text("No typed notes or highlights in this chapter. Tap a verse with your finger to add a note.")
         }
         LazyColumn(Modifier.weight(1f)) {
             items(notes, key = { "n${it.verse}" }) { n ->
@@ -194,16 +195,18 @@ private fun NotesPane(vm: StudyViewModel, modifier: Modifier) {
                 HorizontalDivider()
             }
             if (marks.isNotEmpty()) {
-                item { Text("Bookmarks", style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 12.dp)) }
-                items(marks, key = { "b${it.id}" }) { b ->
-                    val id = VerseId.of(b.book, b.chapter, b.verse)
-                    Column(Modifier.fillMaxWidth().clickable { vm.openVerse(book, chapter, b.verse) }.padding(vertical = 8.dp)) {
+                item { Text("Highlights", style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 12.dp)) }
+                items(marks, key = { "h${it.first}-${it.second}" }) { (from, to) ->
+                    Column(Modifier.fillMaxWidth().clickable { vm.openVerse(book, chapter, from) }.padding(vertical = 8.dp)) {
                         Text(
-                            vm.refLabel(id) + if (b.folder.isNotEmpty()) "  ·  ${b.folder}" else "",
+                            vm.refLabel(VerseId.of(book, chapter, from), VerseId.of(book, chapter, to)),
                             style = MaterialTheme.typography.labelLarge,
                             color = MaterialTheme.colorScheme.primary,
                         )
-                        Text(vm.text(panel.version).verseText(id) ?: "", maxLines = 2, overflow = TextOverflow.Ellipsis)
+                        Text(
+                            (from..to).mapNotNull { vm.text(panel.version).verseText(VerseId.of(book, chapter, it)) }.joinToString(" "),
+                            maxLines = 3, overflow = TextOverflow.Ellipsis,
+                        )
                     }
                     HorizontalDivider()
                 }

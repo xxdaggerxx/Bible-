@@ -43,7 +43,7 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.AddBox
 import androidx.compose.material.icons.automirrored.filled.Redo
 import androidx.compose.material.icons.automirrored.filled.Undo
-import androidx.compose.material.icons.filled.Bookmarks
+import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Layers
 import androidx.compose.material.icons.filled.MoreVert
@@ -79,7 +79,7 @@ fun StudyToolbar(
     vm: StudyViewModel,
     onLayers: () -> Unit,
     onSearch: () -> Unit,
-    onBookmarks: () -> Unit,
+    onNotes: () -> Unit,
     onInsertImage: (ImageSource) -> Unit,
     onBackup: () -> Unit,
     onExport: (pdf: Boolean) -> Unit,
@@ -88,7 +88,7 @@ fun StudyToolbar(
     onAbout: () -> Unit,
 ) {
     // Kept short so it fits without scrolling (UI-3): tools, one button for the tool's colour and
-    // size, undo/redo, layers, Insert, panels, search, bookmarks and a small menu. Everything
+    // size, undo/redo, layers, Insert, panels, search, my notes and a small menu. Everything
     // else lives in Settings.
     Surface(tonalElevation = 3.dp, shadowElevation = 2.dp) {
         Row(
@@ -240,7 +240,7 @@ fun StudyToolbar(
                 }
             }
             IconButton(onClick = onSearch) { Icon(Icons.Filled.Search, contentDescription = "Search") }
-            IconButton(onClick = onBookmarks) { Icon(Icons.Filled.Bookmarks, contentDescription = "My notes") }
+            IconButton(onClick = onNotes) { Icon(Icons.Filled.EditNote, contentDescription = "My notes") }
 
             var menu by remember { mutableStateOf(false) }
             Box {

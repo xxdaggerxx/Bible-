@@ -29,7 +29,6 @@ import com.biblestudy.app.data.StudyEntry
 import com.biblestudy.app.data.StudyRepository
 import com.biblestudy.app.data.UserDb
 import com.biblestudy.app.model.Annotation
-import com.biblestudy.app.model.Bookmark
 import com.biblestudy.app.model.CrossHighlight
 import com.biblestudy.app.model.HighlightEntry
 import com.biblestudy.app.model.Edit
@@ -230,7 +229,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         private set
 
     /**
-     * Puts every setting back to its default (SET-4). Notes, ink, highlights, bookmarks, layers and
+     * Puts every setting back to its default (SET-4). Notes, ink, highlights, sketch pages, layers and
      * the open passages are not touched.
      */
     fun resetSettings() {
@@ -385,7 +384,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var lastSearch by mutableStateOf("")
     /** Bumped after a restore so panels reload their data. */
     var dataGeneration by mutableIntStateOf(0)
-    val bookmarks = mutableStateListOf<Bookmark>()
     var selection by mutableStateOf<Selection?>(null)
         private set
     /** The passage pop-over opened from a Bible hyperlink (LINK-2), if any. */
@@ -430,7 +428,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             layers.add(l); user.saveLayer(l)
         }
         if (layers.none { it.id == activeLayerId }) activeLayerId = layers.first().id
-        bookmarks.addAll(user.bookmarks())
+        convertBookmarks()
         for (k in listOf("mw_L_land", "mw_R_land", "mw_L_port", "mw_R_port")) {
             if (prefs.contains(k)) marginWidths[k] = prefs.getFloat(k, Page.MARGIN_W)
         }
@@ -473,7 +471,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // ---------- navigation ----------
 
     /**
-     * Jumps a panel to a passage. Jumps from the picker, search, cross-references and bookmarks
+     * Jumps a panel to a passage. Jumps from the picker, search, cross-references and notes
      * are remembered for Back; the chapter arrows pass [remember] = false.
      */
     fun goTo(index: Int, book: Int, chapter: Int, verse: Int? = null, remember: Boolean = true) {
@@ -1159,6 +1157,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Every highlight with its words, in Bible order, for the Highlights list (HL-8). */
+    /** The first and last verse a highlight covers. */
+    fun highlightVerses(h: Highlight): Pair<Int, Int> =
+        verseOf(h.version, h.book, h.chapter, h.start) to verseOf(h.version, h.book, h.chapter, (h.end - 1).coerceAtLeast(h.start))
+
     suspend fun highlightEntries(): List<HighlightEntry> = withContext(dbDispatcher) {
         val chapters = HashMap<String, String>()
         user.allHighlights().map { h ->
@@ -1167,7 +1169,13 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             }
             val words = text.substring(h.start.coerceIn(0, text.length), h.end.coerceIn(0, text.length))
                 .replace(Regex("\\n\\d+\u2009"), " ").replace(Regex("^\\d+\u2009"), "").trim()
-            HighlightEntry(h, verseOf(h.version, h.book, h.chapter, h.start), words)
+            // The whole verse (or verses) it's in, with the highlighted words marked.
+            val first = verseOf(h.version, h.book, h.chapter, h.start)
+            val last = verseOf(h.version, h.book, h.chapter, (h.end - 1).coerceAtLeast(h.start))
+            val verses = text(h.version).chapter(h.book, h.chapter).filter { it.verse in first..last }
+            val full = if (verses.size == 1) verses.single().text else verses.joinToString(" ") { "${it.verse} ${it.text}" }
+            val at = if (verses.size == 1) full.indexOf(words) else -1
+            HighlightEntry(h, first, words, last, full.ifEmpty { words }, if (at >= 0 && words.isNotEmpty()) at until at + words.length else null)
         }
     }
 
@@ -1739,7 +1747,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** Visible layers, in drawing order: their items are the ones marked in the book picker. */
     fun visibleLayerIds(): List<Long> = layers.filter { it.visible }.map { it.id }
 
-    // ---------- notes & bookmarks ----------
+    // ---------- notes ----------
 
     /** Saves a typed note on verses [t]..[endVerse] of one chapter (NOTE-1); blank text deletes it. */
     fun setNote(t: VerseTarget, text: String, endVerse: Int = t.verse) {
@@ -1748,70 +1756,34 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         io { user.setNote(t.book, t.chapter, t.verse, text, endVerse) }
     }
 
-    // ---------- bookmark folders (NOTE-3) ----------
+    // ---------- bookmarks become highlights (0.9) ----------
 
-    /** Folder names, including empty folders the user has made. */
-    val bookmarkFolders = mutableStateListOf<String>().apply {
-        addAll(prefs.getStringSet("bmFolders", emptySet())!!.sorted())
-    }
-
-    private fun saveFolders() {
-        prefs.edit { putStringSet("bmFolders", bookmarkFolders.toSet()) }
-    }
-
-    /** Every folder: the ones made here plus any that bookmarks are in (e.g. after a restore). */
-    fun allBookmarkFolders(): List<String> =
-        (bookmarkFolders + bookmarks.map { it.folder }.filter { it.isNotEmpty() }).distinct().sortedBy { it.lowercase() }
-
-    fun addBookmarkFolder(name: String): String? {
-        val n = name.trim()
-        if (n.isEmpty()) return null
-        if (n !in bookmarkFolders) {
-            bookmarkFolders.add(n); bookmarkFolders.sort(); saveFolders()
-        }
-        return n
-    }
-
-    fun moveBookmark(b: Bookmark, folder: String) {
-        val i = bookmarks.indexOfFirst { it.id == b.id }
-        if (i < 0) return
-        val moved = bookmarks[i].copy(folder = folder)
-        bookmarks[i] = moved
-        if (folder.isNotEmpty()) addBookmarkFolder(folder)
-        io { user.addBookmark(moved) }
-    }
-
-    fun renameBookmarkFolder(old: String, new: String) {
-        val n = new.trim()
-        if (n.isEmpty() || n == old) return
-        bookmarks.filter { it.folder == old }.forEach { moveBookmark(it, n) }
-        bookmarkFolders.remove(old); addBookmarkFolder(n); saveFolders()
-    }
-
-    /** Deletes a folder; its bookmarks are kept, outside any folder. */
-    fun deleteBookmarkFolder(name: String) {
-        bookmarks.filter { it.folder == name }.forEach { moveBookmark(it, "") }
-        bookmarkFolders.remove(name); saveFolders()
-    }
-
-    fun isBookmarked(t: VerseTarget) = bookmarks.any { it.book == t.book && it.chapter == t.chapter && it.verse == t.verse }
-
-    fun toggleBookmark(t: VerseTarget) {
-        val existing = bookmarks.firstOrNull { it.book == t.book && it.chapter == t.chapter && it.verse == t.verse }
-        if (existing != null) {
-            bookmarks.remove(existing)
-            io { user.deleteBookmark(existing.id) }
-        } else {
-            val b = Bookmark(newId(), t.book, t.chapter, t.verse, System.currentTimeMillis())
-            bookmarks.add(0, b)
-            io { user.addBookmark(b) }
+    /**
+     * Bookmarks were replaced by highlights in 0.9: each saved bookmark becomes a yellow highlight
+     * over its whole verse in the KJV, tagged "bookmark" (and its folder's name), on the first
+     * layer. Runs at start-up and after restoring an older backup; nothing happens once done.
+     */
+    fun convertBookmarks() {
+        val old = user.bookmarks()
+        if (old.isEmpty()) return
+        val layer = layers.firstOrNull()?.id ?: 1L
+        for (b in old) {
+            val verses = text(bible.code).chapter(b.book, b.chapter)
+            var offset = 0
+            for (v in verses) {
+                val numberLen = v.verse.toString().length + 1
+                if (v.verse == b.verse) {
+                    val h = Highlight(newId(), layer, bible.code, b.book, b.chapter, offset + numberLen, offset + numberLen + v.text.length, HIGHLIGHT_COLORS[0])
+                    user.insert(h)
+                    user.setTags("h:${h.id}", (setOf("bookmark") + listOfNotNull(b.folder.ifEmpty { null })).toSortedSet())
+                    break
+                }
+                offset += numberLen + v.text.length + 1 // the verse, then the line break or space after it
+            }
+            user.deleteBookmark(b.id)
         }
     }
 
-    fun deleteBookmark(b: Bookmark) {
-        bookmarks.remove(b)
-        io { user.deleteBookmark(b.id) }
-    }
 
     // ---------- backup & restore ----------
 
@@ -1954,7 +1926,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                     imagesDir.listFiles()?.forEach { it.delete() }
                     File(tmp, "images").listFiles()?.forEach { it.copyTo(File(imagesDir, it.name), overwrite = true) }
                     tmp.deleteRecursively()
-                    user.layers() to user.bookmarks()
+                    user.layers() to Unit
                 }
             }
             val result = ok.getOrNull()
@@ -1973,7 +1945,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             undoStack.clear(); redoStack.clear(); editVersion++
             layers.clear(); layers.addAll(result.first)
             if (layers.none { it.id == activeLayerId }) activeLayerId = layers.firstOrNull()?.id ?: 1L
-            bookmarks.clear(); bookmarks.addAll(result.second)
+            convertBookmarks() // an older backup may still have bookmarks
             tags.clear(); tags.putAll(user.tags())
             meanings.clear(); meanings.putAll(user.meanings())
             workspaces.clear(); workspaces.addAll(user.workspaces().mapNotNull { (n, j) -> Workspace.fromJson(n, j) })

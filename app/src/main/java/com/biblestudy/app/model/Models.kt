@@ -120,7 +120,18 @@ data class Highlight(
 data class CrossHighlight(val source: Highlight, val fromVerse: Int, val toVerse: Int)
 
 /** A highlight for the Highlights list (HL-8), with the words it covers. */
-data class HighlightEntry(val highlight: Highlight, val verse: Int, val words: String)
+/**
+ * A highlight in the highlights list (HL-8): the whole verse or verses it's in ([text], numbered
+ * when there are several), with [marked] the highlighted words' place in that text.
+ */
+data class HighlightEntry(
+    val highlight: Highlight,
+    val verse: Int,
+    val words: String,
+    val endVerse: Int = verse,
+    val text: String = words,
+    val marked: IntRange? = null,
+)
 
 /** A picture placed in a margin, anchored to a verse and shared across versions. */
 data class MarginImage(

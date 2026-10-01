@@ -869,7 +869,7 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
         }
     }
 
-    // Verse markers: typed note (dot) and bookmark (ribbon)
+    // Verse markers: a dot for a typed note
     for (n in notes.values) {
         val top = layout.verseTop(n.verse) + 22f
         drawCircle(NOTE_COLOR, radius = 6f, center = Offset(g.textLeft - 24f, top))
@@ -877,12 +877,6 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
             // A note on several verses: a line down beside them (NOTE-1).
             val bottom = layout.verseSpan(n.endVerse).second - 10f
             drawLine(NOTE_COLOR, Offset(g.textLeft - 24f, top), Offset(g.textLeft - 24f, bottom), strokeWidth = 3f)
-        }
-    }
-    for (b in vm.bookmarks) {
-        if (b.book == layout.book && b.chapter == layout.chapter) {
-            val y = layout.verseTop(b.verse) + 8f
-            drawRect(Color(0xFFC62828), topLeft = Offset(g.textLeft - 44f, y), size = Size(8f, 26f))
         }
     }
 
