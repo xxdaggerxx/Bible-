@@ -182,10 +182,12 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     private fun geoFor(book: Int, chapter: Int): PageGeometry? {
         val layout = layouts[layoutKey(panel.version, book, chapter)] ?: return null
         vm.sketchOf(book)?.let { sk ->
-            // A sketch page: all drawing space, no text column or margins (SKT-1).
+            // A sketch page: all drawing space, no text column or margins (SKT-1). It has no limit:
+            // there is always at least a page's width and height of room beyond what's on it.
+            val (w, h) = vm.sketchSize(sk)
             val cached = geoCache[layout]
-            if (cached != null && cached.height == sk.height) return cached
-            return PageGeometry(layout, 0f, Sketch.WIDTH, colW = 0f, fixedHeight = sk.height).also { geoCache[layout] = it }
+            if (cached != null && cached.height == h && cached.width == w) return cached
+            return PageGeometry(layout, 0f, w, colW = 0f, fixedHeight = h).also { geoCache[layout] = it }
         }
         // Margins in every panel, or only the first (MRG-13).
         val margins = vm.marginsAllPanels || panelIndex == 0
@@ -258,7 +260,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     private fun fitZoom(g: PageGeometry): Float {
         if (panel.viewW <= 0f) return 1f
-        val w = if (drawerMode && (g.left || g.right)) Page.COL_W else g.width
+        // A sketch page fits its first page's width, however far it has grown.
+        val w = if (g.sketch) Sketch.WIDTH else if (drawerMode && (g.left || g.right)) Page.COL_W else g.width
         return panel.viewW / w
     }
 
@@ -334,7 +337,10 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val g = geo ?: return
         val fit = fitZoom(g)
         val old = panel.zoom
-        val new = (old * zoomChange).coerceIn(fit * 0.6f, max(fit * 6f, 3f))
+        // A big sketch page can be zoomed out until all of it is in view.
+        val g0 = geo
+        val least = if (g0 != null && g0.sketch) minOf(fit * 0.6f, panel.viewW / g0.width, panel.viewH / g0.height) else fit * 0.6f
+        val new = (old * zoomChange).coerceIn(least, max(fit * 6f, 3f))
         val k = new / old
         panel.panX = centroid.x - (centroid.x - panel.panX) * k + pan.x
         panel.panY = centroid.y - (centroid.y - panel.panY) * k + pan.y

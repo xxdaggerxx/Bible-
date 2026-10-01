@@ -896,6 +896,27 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         openSketch(s)
     }
 
+    private val sketchSizes = HashMap<Int, Pair<Int, Pair<Float, Float>>>()
+
+    /**
+     * A sketch page's size (SKT-1): it grows with what's on it, always keeping at least a page's
+     * width and height of empty room to the right and below, so there's no edge to run into.
+     */
+    fun sketchSize(s: Sketch): Pair<Float, Float> {
+        val strokes = marginStrokesFor(s.book, 1); val texts = textsFor(s.book, 1); val images = imagesFor(s.book, 1)
+        val key = editCount * 31 + strokes.size * 7 + texts.size * 3 + images.size + s.height.toInt()
+        sketchSizes[s.book]?.let { (k, size) -> if (k == key) return size }
+        var right = 0f; var bottom = 0f
+        for (st in strokes) for (i in st.points.indices step 3) { right = maxOf(right, st.points[i]); bottom = maxOf(bottom, st.points[i + 1]) }
+        for (t in texts) { right = maxOf(right, t.x + t.w); bottom = maxOf(bottom, t.y + (textHeights[t.id] ?: estimateTextHeight(t))) }
+        for (im in images) { right = maxOf(right, im.x + im.w); bottom = maxOf(bottom, im.y + im.h) }
+        val w = maxOf(Sketch.WIDTH, right + Sketch.WIDTH)
+        val h = maxOf(s.height, Page.TEXT_TOP + bottom + Sketch.START_HEIGHT)
+        val size = w to h
+        sketchSizes[s.book] = key to size
+        return size
+    }
+
     /** How far down a note page is written on, in page units from its top (MRG-15). */
     fun noteContentBottom(s: Sketch): Float {
         val strokes = marginStrokesFor(s.book, 1).maxOfOrNull { st -> (1 until st.points.size step 3).maxOfOrNull { st.points[it] } ?: 0f } ?: 0f

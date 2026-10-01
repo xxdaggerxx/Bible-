@@ -182,6 +182,7 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
 - **Beside the text:** to see a sketch page next to the Bible, choose *Sketch pages* from the panels button and tap the page.
 - **Make your own:** *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
 - **Linked or on its own.** In the same window, *Link to …* ties the page to the verse you're reading: a small badge in that verse's margin opens it. Turn the switch off for a page that stands on its own, such as a topic study; open it from *My notes*.
+- **No edges.** A sketch page grows as you use it: there's always at least a page's width of room to the right and a page's height below whatever you've drawn. Drag with a finger to move around, and pinch out to see the whole page at once.
 - **Every pen tool works** on a sketch page, plus shapes, the lasso, layers, pictures and text boxes.
 - **Verse cards:** *Insert → Verse card…*, type a reference like *John 3:16-18*, and the verses go on the page as a card. A card works like the Bible page:
   - tap its reference to read the passage in a pop-over;
@@ -189,7 +190,7 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
   - highlight it with the highlighter, and the words of Jesus show in red when that's on;
   - hold a finger on the card for its bar: switch it to another version (*KJV*, *BSB*, *WEB*…), *Copy*, *Share*, change its size or background, or delete it.
 - **Person or place cards:** *Insert → Person or place card…*.
-- **The page's ⋮ menu:** change the paper, add more space below, rename it, *Link to a passage…* (or *Link to another passage…*), *Unlink*, or delete it.
+- **The page's ⋮ menu:** change the paper, rename it, *Link to a passage…* (or *Link to another passage…*), *Unlink*, or delete it.
 
 ## My notes
 

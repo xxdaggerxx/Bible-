@@ -574,7 +574,6 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
                     )
                 }
                 HorizontalDivider()
-                DropdownMenuItem(text = { Text("More space below") }, onClick = { vm.updateSketch(sk.copy(height = sk.height + com.biblestudy.app.model.Sketch.START_HEIGHT / 2)); menu = false })
                 DropdownMenuItem(text = { Text("Rename\u2026") }, onClick = { renaming = true; menu = false })
                 DropdownMenuItem(
                     text = { Text(if (sk.linked) "Link to another passage\u2026" else "Link to a passage\u2026") },
@@ -803,28 +802,30 @@ private val SKETCH_BADGE = Color(0xFF6A8CAF)
 private fun sameSpacers(a: Map<Int, Float>, b: Map<Int, Float>): Boolean =
     (a.keys + b.keys).all { kotlin.math.abs((a[it] ?: 0f) - (b[it] ?: 0f)) < 8f }
 
-/** Lines, a grid or dots on a sketch page (SKT-1). */
-private fun DrawScope.drawPaper(paper: com.biblestudy.app.model.Paper, g: PageGeometry, theme: PageTheme) {
+/** Lines, a grid or dots on a sketch page (SKT-1), only where it's in [view] (the page has no limit). */
+private fun DrawScope.drawPaper(paper: com.biblestudy.app.model.Paper, g: PageGeometry, theme: PageTheme, view: Rect) {
     val c = theme.rule.copy(alpha = 0.55f)
     val step = 48f
     val top = Page.TEXT_TOP
+    val x0 = maxOf(0f, kotlin.math.floor(view.left / step) * step); val x1 = minOf(g.width, view.right + step)
+    val y0 = maxOf(top, top + kotlin.math.floor((view.top - top) / step) * step); val y1 = minOf(g.height, view.bottom + step)
     when (paper) {
         com.biblestudy.app.model.Paper.BLANK -> {}
         com.biblestudy.app.model.Paper.LINED -> {
-            var y = top + step
-            while (y < g.height) { drawLine(c, Offset(40f, y), Offset(g.width - 40f, y), strokeWidth = 1.2f); y += step }
+            var y = y0 + step
+            while (y < y1) { drawLine(c, Offset(maxOf(40f, x0), y), Offset(minOf(g.width - 40f, x1), y), strokeWidth = 1.2f); y += step }
         }
         com.biblestudy.app.model.Paper.GRID -> {
-            var y = top
-            while (y < g.height) { drawLine(c, Offset(0f, y), Offset(g.width, y), strokeWidth = 1f); y += step }
-            var x = 0f
-            while (x < g.width) { drawLine(c, Offset(x, top), Offset(x, g.height), strokeWidth = 1f); x += step }
+            var y = y0
+            while (y < y1) { drawLine(c, Offset(x0, y), Offset(x1, y), strokeWidth = 1f); y += step }
+            var x = x0
+            while (x < x1) { drawLine(c, Offset(x, y0), Offset(x, y1), strokeWidth = 1f); x += step }
         }
         com.biblestudy.app.model.Paper.DOTTED -> {
-            var y = top
-            while (y < g.height) {
-                var x = step / 2
-                while (x < g.width) { drawCircle(c, 2.2f, Offset(x, y)); x += step }
+            var y = y0
+            while (y < y1) {
+                var x = x0 + step / 2
+                while (x < x1) { drawCircle(c, 2.2f, Offset(x, y)); x += step }
                 y += step
             }
         }
@@ -857,7 +858,7 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     // Paper and margins
     drawRect(theme.page, size = Size(g.width, g.height))
     val sketch = vm.sketchOf(layout.book)
-    if (sketch != null) drawPaper(sketch.paper, g, theme)
+    if (sketch != null) drawPaper(sketch.paper, g, theme, view)
     if (g.left && sketch == null) {
         drawRect(theme.margin, topLeft = Offset.Zero, size = Size(g.leftW, g.height))
         drawLine(theme.rule, Offset(g.leftW, 0f), Offset(g.leftW, g.height), strokeWidth = 1.5f)

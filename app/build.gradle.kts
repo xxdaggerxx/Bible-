@@ -47,8 +47,8 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 14
-        versionName = "1.1.0"
+        versionCode = 15
+        versionName = "1.1.1"
         // Only 64-bit ARM tablets (the Tab S9 and almost every current Android tablet). The handwriting
         // reader's native code for other processors would add about 30 MB.
         ndk { abiFilters += "arm64-v8a" }

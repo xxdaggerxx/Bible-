@@ -1,4 +1,4 @@
-# Bible Study — version 1.1
+# Bible Study — version 1.1.1
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,10 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.1.1
+
+- **Sketch pages have no edges.** A page grows with what's on it, keeping at least a page's width of room to the right and a page's height below. Move around with a finger, and pinch out until the whole page is in view. *More space below* is gone, since the page grows by itself. Paper lines, grids and dots are drawn only where you're looking, so big pages stay quick.
 
 ## New in version 1.1
 

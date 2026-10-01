@@ -2170,4 +2170,31 @@ class FeatureTest {
         assertEquals(note.book, vm.panels[0].book)
         compose.runOnUiThread { vm.deleteSketch(vm.sketches.single { it.note }) }
     }
+
+    @Test
+    fun sketchPagesGrowWithoutLimit() {
+        compose.runOnUiThread { vm.createSketch("Big map", com.biblestudy.app.model.Paper.GRID, link = null) }
+        waitForLoaded()
+        val sk = vm.sketches.first { it.name == "Big map" }
+        val (w0, h0) = vm.sketchSize(sk)
+        assertEquals(com.biblestudy.app.model.Sketch.WIDTH, w0)
+        // Something far to the right and far down: the page grows to keep room beyond it.
+        compose.runOnUiThread {
+            vm.placeOnSketch(sk, listOf(com.biblestudy.app.model.DrawnLine(listOf(100f to 100f, 3000f to 4000f))))
+        }
+        val (w1, h1) = vm.sketchSize(vm.sketches.first { it.id == sk.id })
+        assertTrue("width $w1", w1 >= 3000f + com.biblestudy.app.model.Sketch.WIDTH)
+        assertTrue("height $h1 (was $h0)", h1 >= 4000f + com.biblestudy.app.model.Sketch.START_HEIGHT)
+        // Pan across to the far side and write there.
+        compose.runOnUiThread { vm.panels[0].panX = -2600f * vm.panels[0].zoom; vm.panels[0].panY = -3500f * vm.panels[0].zoom }
+        waitForLoaded()
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        compose.onNodeWithTag("reader0").performTouchInput { down(Offset(300f, 300f)); repeat(8) { moveBy(Offset(25f, 10f)) }; up() }
+        compose.waitForIdle()
+        compose.runOnUiThread { vm.fingerDraw = false }
+        val far = vm.marginStrokesFor(sk.book, 1).last()
+        assertTrue("x ${far.points[0]}", far.points[0] > 2500f)
+        snap("135-sketch-far-side")
+        compose.runOnUiThread { vm.deleteSketch(vm.sketches.first { it.id == sk.id }) }
+    }
 }
