@@ -118,6 +118,8 @@ fun SettingsDialog(
                 Group("Margins & panels")
                 Toggle("Left margin", null, vm.marginLeft) { vm.marginLeft = it }
                 Toggle("Right margin", null, vm.marginRight) { vm.marginRight = it }
+                Toggle("Expand to fit", "Opens space below a verse when its margin notes are taller than it", vm.expandToFit) { vm.expandToFit = it }
+                Toggle("Margins in every panel", "Off: only the first Bible panel has margins", vm.marginsAllPanels) { vm.marginsAllPanels = it }
                 Toggle("Link panels", "Panels scroll together, verse by verse", vm.linkPanels) { vm.linkPanels = it }
 
                 Group("Verse window")

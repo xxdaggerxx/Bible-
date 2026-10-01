@@ -1667,4 +1667,30 @@ class FeatureTest {
         snap("98-paragraphs")
         compose.runOnUiThread { vm.changeParagraphs(false); vm.changeVerseNumbers(true); vm.undo() }
     }
+
+    @Test
+    fun expandToFitMakesRoomForTallMarginNotes() {
+        waitForLoaded()
+        // A tall picture beside verse 1 of John 3, which is only two lines long.
+        val file = "tall.png"
+        val bmp = android.graphics.Bitmap.createBitmap(100, 300, android.graphics.Bitmap.Config.ARGB_8888).apply { eraseColor(android.graphics.Color.rgb(120, 160, 200)) }
+        val img = com.biblestudy.app.model.MarginImage(vm.newId(), vm.activeLayerId, 43, 3, Region.RIGHT, 1, 24f, 8f, 200f, 600f, file)
+        compose.runOnUiThread { vm.bitmaps[file] = bmp.asImageBitmap(); vm.addItem(img); vm.record(com.biblestudy.app.model.Edit(listOf(img), emptyList())) }
+        waitForLoaded()
+        assertTrue(vm.fitGaps["KJV|43|3"].isNullOrEmpty()) // off by default
+        compose.runOnUiThread { vm.expandToFit = true }
+        compose.waitUntil(10_000) { (vm.fitGaps["KJV|43|3"]?.get(2) ?: 0f) > 400f }
+        snap("99-expand-to-fit")
+        // Turned off: the text closes up again.
+        compose.runOnUiThread { vm.expandToFit = false }
+        compose.waitUntil(10_000) { vm.fitGaps["KJV|43|3"]?.isEmpty() == true }
+        compose.runOnUiThread { vm.undo() }
+
+        // Margins only in the first panel.
+        compose.runOnUiThread { vm.addPanel(); vm.marginsAllPanels = false }
+        waitForLoaded()
+        snap("99b-margins-first-panel")
+        compose.runOnUiThread { vm.marginsAllPanels = true }
+    }
+
 }

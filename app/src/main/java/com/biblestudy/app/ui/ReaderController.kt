@@ -171,6 +171,9 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     fun layoutKey(version: String, book: Int, chapter: Int) = "$version|$book|$chapter"
 
+    /** Expand-to-fit gaps per chapter layout (MRG-10), kept when a chapter is laid out again. */
+    val spacers = HashMap<String, Map<Int, Float>>()
+
     private fun geoFor(book: Int, chapter: Int): PageGeometry? {
         val layout = layouts[layoutKey(panel.version, book, chapter)] ?: return null
         vm.sketchOf(book)?.let { sk ->
@@ -179,8 +182,10 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             if (cached != null && cached.height == sk.height) return cached
             return PageGeometry(layout, 0f, Sketch.WIDTH, colW = 0f, fixedHeight = sk.height).also { geoCache[layout] = it }
         }
-        val lw = vm.marginWidth(left = true)
-        val rw = vm.marginWidth(left = false)
+        // Margins in every panel, or only the first (MRG-13).
+        val margins = vm.marginsAllPanels || panelIndex == 0
+        val lw = if (margins) vm.marginWidth(left = true) else 0f
+        val rw = if (margins) vm.marginWidth(left = false) else 0f
         val cached = geoCache[layout]
         if (cached != null && cached.leftW == lw && cached.rightW == rw) return cached
         return PageGeometry(layout, lw, rw).also { geoCache[layout] = it }

@@ -90,7 +90,10 @@ class ChapterLayout(
     private val verseStarts: IntArray,
     private val verseNumbers: IntArray,
     val headings: List<HeadingBlock> = emptyList(),
+    /** The expand-to-fit gaps this layout was built with (MRG-10). */
+    val spacers: Map<Int, Float> = emptyMap(),
 ) {
+
     val textLength = text.layoutInput.text.length
     val lineCount = text.lineCount
 
@@ -98,7 +101,7 @@ class ChapterLayout(
     private val shift = FloatArray(lineCount).also { arr ->
         var acc = 0f
         var h = 0
-        val sorted = headings.sortedBy { it.beforeLine }
+        val sorted = headings.sortedBy { it.beforeLine } // stable: gaps stay before headings
         for (i in 0 until lineCount) {
             while (h < sorted.size && sorted[h].beforeLine <= i) acc += sorted[h++].height
             arr[i] = acc
@@ -428,6 +431,8 @@ fun buildChapterLayout(
     paragraphs: Set<Int>? = null,
     /** Verse numbers shown; hidden ones keep their place in the text but take no room (READ-6). */
     numbers: Boolean = true,
+    /** Extra space opened above a verse so the margin notes before it fit (MRG-10): verse → height. */
+    spacers: Map<Int, Float> = emptyMap(),
     linkify: (String) -> List<RefLink> = { emptyList() },
 ): ChapterLayout {
     val builder = AnnotatedString.Builder()
@@ -484,7 +489,13 @@ fun buildChapterLayout(
             HeadingBlock.BOTTOM_PAD
         HeadingBlock(line, lines, height, links)
     }
-    return ChapterLayout(data.version, data.book, data.chapter, titleLayout, text, starts, verseNos, blocks)
+    // Expand to fit: empty gaps above verses, listed before any heading on the same line so the
+    // heading stays just above its verse.
+    val gaps = spacers.mapNotNull { (verse, h) ->
+        val i = verseNos.indexOf(verse)
+        if (i <= 0 || h <= 0f) null else HeadingBlock(text.getLineForOffset(starts[i]), emptyList(), h)
+    }
+    return ChapterLayout(data.version, data.book, data.chapter, titleLayout, text, starts, verseNos, gaps + blocks, spacers)
 }
 
 /**

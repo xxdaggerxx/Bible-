@@ -156,6 +156,20 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     val haptics = LocalHapticFeedback.current
     val theme = vm.theme
 
+    // Lays out one chapter with the current reading settings and any expand-to-fit gaps (MRG-10).
+    val buildChapter: suspend (String, Int, Int, Map<Int, Float>) -> ChapterLayout = { v, b, c, spacers ->
+        val style = vm.styleKey()
+        val headingsOn = vm.showHeadings
+        val (data, paras) = withContext(Dispatchers.IO) {
+            ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList()) to
+                (if (style.paragraphs) vm.study.paragraphStarts(v, b, c) else null)
+        }
+        buildChapterLayout(
+            measurer, style.font.family(), vm.bible.book(b).name, data, vm.lineSpacing,
+            paragraphs = paras, numbers = style.numbers, spacers = spacers,
+        ) { RefLinks.parseList(it, vm.bible.books) }
+    }
+
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
     LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.sketchOf(panel.book)?.name) {
         val v = panel.version
@@ -192,13 +206,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             val key = ctl.layoutKey(v, b, c)
             val name = vm.bible.book(b).name
             if (ctl.layouts[key] == null) {
-                val (data, paras) = withContext(Dispatchers.IO) {
-                    ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList()) to
-                        (if (style.paragraphs) vm.study.paragraphStarts(v, b, c) else null)
-                }
-                ctl.layouts[key] = buildChapterLayout(
-                    measurer, font.family(), name, data, spacing, paragraphs = paras, numbers = style.numbers,
-                ) { RefLinks.parseList(it, vm.bible.books) }
+                ctl.layouts[key] = buildChapter(v, b, c, ctl.spacers[key] ?: emptyMap())
             }
             vm.ensureLoaded(v, b, c) { k ->
                 // For converting ink saved before 0.4 (y measured at normal spacing, without
@@ -213,6 +221,22 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             val keep = wanted.mapTo(HashSet()) { ctl.layoutKey(v, it.first, it.second) }
             ctl.layouts.keys.filter { it !in keep }.take(ctl.layouts.size - MAX_LAYOUTS).forEach { ctl.layouts.remove(it) }
             ctl.dropUnused()
+        }
+    }
+
+    // Expand to fit (MRG-10): when margin notes outgrow their verse, open space before the next.
+    val loadedKeys = ctl.layouts.keys.toSet()
+    LaunchedEffect(vm.expandToFit, vm.editCount, vm.pendingLoads, vm.marginLeft, vm.marginRight, vm.layers.toList(), loadedKeys) {
+        if (vm.pendingLoads > 0) return@LaunchedEffect
+        for (key in loadedKeys) {
+            val layout = ctl.layouts[key] ?: continue
+            if (vm.sketchOf(layout.book) != null) continue
+            val want = vm.fitSpacers(layout)
+            if (!sameSpacers(want, layout.spacers)) {
+                ctl.spacers[key] = want
+                ctl.layouts[key] = buildChapter(layout.version, layout.book, layout.chapter, want)
+                vm.fitGaps[key] = want
+            }
         }
     }
 
@@ -722,6 +746,10 @@ private inline fun DrawScope.withOpacity(alpha: Float?, bounds: Rect, block: Dra
 
 /** The colour of a sketch page's badge in the margin. */
 private val SKETCH_BADGE = Color(0xFF6A8CAF)
+
+/** Whether two sets of expand-to-fit gaps are the same, give or take a few units. */
+private fun sameSpacers(a: Map<Int, Float>, b: Map<Int, Float>): Boolean =
+    (a.keys + b.keys).all { kotlin.math.abs((a[it] ?: 0f) - (b[it] ?: 0f)) < 8f }
 
 /** Lines, a grid or dots on a sketch page (SKT-1). */
 private fun DrawScope.drawPaper(paper: com.biblestudy.app.model.Paper, g: PageGeometry, theme: PageTheme) {

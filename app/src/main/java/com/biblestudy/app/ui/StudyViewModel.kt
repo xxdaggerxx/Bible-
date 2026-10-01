@@ -237,6 +237,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         changeTextFont(TextFont.BOOK)
         changeParagraphs(false)
         changeVerseNumbers(true)
+        expandToFit = false
+        marginsAllPanels = true
         lineSpacing = LineSpacing.NORMAL
         showHeadings = true
         newPanelVersion = null
@@ -260,6 +262,45 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (f == textFont) return
         textFont = f
         relayout()
+    }
+
+    /** Open space below a verse when its margin notes are taller than it (MRG-10). */
+    var expandToFit by mutableStateOf(prefs.getBoolean("expandToFit", false))
+    /** The expand-to-fit gaps each laid-out chapter has now ("KJV|43|3" → verse → height). */
+    val fitGaps = mutableStateMapOf<String, Map<Int, Float>>()
+    /** Margins in every Bible panel, or only the first (MRG-13). */
+    var marginsAllPanels by mutableStateOf(prefs.getBoolean("marginsAllPanels", true))
+
+    /**
+     * The gaps a chapter needs so each verse's margin notes end before the next verse starts
+     * (MRG-10): verse → extra height above it. Only notes on shown layers and margins count.
+     */
+    fun fitSpacers(layout: ChapterLayout): Map<Int, Float> {
+        if (!expandToFit) return emptyMap()
+        val visible = visibleLayerIds()
+        fun shown(r: Region) = (r == Region.LEFT && marginLeft) || (r == Region.RIGHT && marginRight)
+        val bottoms = HashMap<Int, Float>()
+        fun need(v: Int, bottom: Float) { bottoms[v] = maxOf(bottoms[v] ?: 0f, bottom) }
+        for (st in marginStrokesFor(layout.book, layout.chapter)) {
+            if (st.layerId !in visible || !shown(st.region) || st.points.isEmpty()) continue
+            var maxY = -Float.MAX_VALUE
+            for (i in 1 until st.points.size step 3) maxY = maxOf(maxY, st.points[i])
+            need(st.verse, maxY + st.width)
+        }
+        for (img in imagesFor(layout.book, layout.chapter)) if (img.layerId in visible && shown(img.region)) need(img.verse, img.y + img.h)
+        for (t in textsFor(layout.book, layout.chapter)) if (t.layerId in visible && shown(t.region)) {
+            need(t.verse, t.y + (textHeights[t.id] ?: estimateTextHeight(t)))
+        }
+        val vs = layout.verses
+        val out = HashMap<Int, Float>()
+        for (i in 0 until vs.size - 1) {
+            val b = bottoms[vs[i]] ?: continue
+            val next = vs[i + 1]
+            val space = layout.verseTop(next) - layout.verseTop(vs[i]) - (layout.spacers[next] ?: 0f)
+            val gap = b + 16f - space
+            if (gap > 8f) out[next] = kotlin.math.ceil(gap / 8f) * 8f
+        }
+        return out
     }
 
     /** Paragraphs instead of one verse per line (READ-6). */
@@ -408,7 +449,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("verseNumbers", verseNumbers); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
