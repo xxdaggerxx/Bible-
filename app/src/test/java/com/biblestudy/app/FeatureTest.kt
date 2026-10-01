@@ -1693,4 +1693,30 @@ class FeatureTest {
         compose.runOnUiThread { vm.marginsAllPanels = true }
     }
 
+
+    @Test
+    fun importingABibleAddsItToEveryVersionList() {
+        val dir = File(compose.activity.cacheDir, "import").apply { mkdirs() }
+        val file = File(dir, "tst.usfm")
+        file.writeText("\\id JHN\n\\h John\n\\c 3\n\\p\n\\v 16 Imported words about lovingkindness.\n\\v 17 More imported words.\n")
+        compose.runOnUiThread {
+            vm.importBible(listOf("tst.usfm"), { file.inputStream() }, "tst", "Test Version", "Test copyright.")
+        }
+        compose.waitUntil(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "TST" } && !vm.importing }
+        assertEquals("Imported words about lovingkindness.", vm.text("TST").verseText(43003016))
+        assertEquals(1, vm.text("TST").search("lovingkindness", com.biblestudy.app.model.SearchScope.ALL, 43).size)
+        // Read it like any version, and it's listed in Settings with its copyright.
+        compose.runOnUiThread { vm.setVersion(0, "TST") }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Settings").performClick()
+        compose.onNodeWithText("TST \u2014 Test Version").performScrollTo().assertExists()
+        compose.onNodeWithText("Test copyright.", substring = true).assertExists()
+        snap("100-bibles")
+        compose.onNodeWithText("Remove").performScrollTo().performClick()
+        compose.onAllNodesWithText("Remove").onLast().performClick()
+        compose.waitForIdle()
+        assertTrue(com.biblestudy.app.data.BibleRepository.ALL.none { it.code == "TST" })
+        assertEquals("KJV", vm.panels[0].version)
+    }
 }

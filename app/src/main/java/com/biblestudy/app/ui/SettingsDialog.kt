@@ -58,6 +58,9 @@ fun SettingsDialog(
     var versions by remember { mutableStateOf(false) }
     var meaningsOpen by remember { mutableStateOf(false) }
     var confirmClearStats by remember { mutableStateOf(false) }
+    var removing by remember { mutableStateOf<String?>(null) }
+    var picked by remember { mutableStateOf<List<android.net.Uri>>(emptyList()) }
+    val pickBible = rememberLauncherForActivityResult(ActivityResultContracts.OpenMultipleDocuments()) { uris -> picked = uris }
     val context = LocalContext.current
     // A folder for automatic backups, e.g. one synced to the cloud (DATA-6).
     val pickFolder = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri ->
@@ -125,6 +128,30 @@ fun SettingsDialog(
                 Group("Verse window")
                 Toggle("Compare versions", "Show the verse in every version when it opens", vm.compareVersions) { vm.compareVersions = it }
 
+                Group("Bibles")
+                // The version manager (BIB-5) and importing (BIB-4).
+                for (v in BibleRepository.ALL) {
+                    val size = remember(v.code) { BibleRepository.fileOf(context, v).length() }
+                    Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Column(Modifier.weight(1f)) {
+                            Text("${v.code} \u2014 ${v.name}")
+                            Text(
+                                (if (size > 0) "%.1f MB \u00b7 ".format(size / 1e6) else "") + v.copyright,
+                                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                            )
+                        }
+                        if (v.imported) TextButton(onClick = { removing = v.code }) { Text("Remove") }
+                        else Text("Built in", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.outline)
+                    }
+                }
+                OutlinedButton(onClick = { runCatching { pickBible.launch(arrayOf("*/*")) } }, enabled = !vm.importing) {
+                    Text(if (vm.importing) "Importing\u2026" else "Import a Bible\u2026")
+                }
+                Text(
+                    "USFM files (or a .zip of them), OSIS XML, or this app's own database. Only import versions you have the right to use.",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                )
+
                 Group("Backup")
                 Choices("Automatic backup", AutoBackup.entries, vm.autoBackup, { it.label }) {
                     vm.autoBackup = it
@@ -191,6 +218,41 @@ fun SettingsDialog(
             confirmButton = { TextButton(onClick = { meaningsOpen = false }) { Text("Done") } },
         )
     }
+    removing?.let { code ->
+        AlertDialog(
+            onDismissRequest = { removing = null },
+            title = { Text("Remove $code?") },
+            text = { Text("The version is removed from this tablet. Ink drawn on its words stays saved and comes back if you import it again with the same code.") },
+            confirmButton = { TextButton(onClick = { vm.removeBible(code); removing = null }) { Text("Remove") } },
+            dismissButton = { TextButton(onClick = { removing = null }) { Text("Cancel") } },
+        )
+    }
+    if (picked.isNotEmpty()) {
+        val names = remember(picked) { picked.map { u -> displayName(context, u) } }
+        var code by remember(picked) { mutableStateOf(names.first().substringBefore('.').take(6).uppercase().filter { it.isLetterOrDigit() }) }
+        var name by remember(picked) { mutableStateOf("") }
+        var copyright by remember(picked) { mutableStateOf("") }
+        AlertDialog(
+            onDismissRequest = { picked = emptyList() },
+            title = { Text("Import a Bible") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(names.joinToString(), style = MaterialTheme.typography.bodySmall)
+                    OutlinedTextField(value = code, onValueChange = { code = it.take(8) }, singleLine = true, label = { Text("Short code, e.g. NIV") })
+                    OutlinedTextField(value = name, onValueChange = { name = it }, singleLine = true, label = { Text("Name, e.g. New International Version") })
+                    OutlinedTextField(value = copyright, onValueChange = { copyright = it }, label = { Text("Copyright line (shown in About and on exports)") })
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    val uris = picked
+                    vm.importBible(names, { i -> context.contentResolver.openInputStream(uris[i])!! }, code, name, copyright)
+                    picked = emptyList()
+                }) { Text("Import") }
+            },
+            dismissButton = { TextButton(onClick = { picked = emptyList() }) { Text("Cancel") } },
+        )
+    }
     if (confirmClearStats) {
         AlertDialog(
             onDismissRequest = { confirmClearStats = false },
@@ -244,3 +306,11 @@ private fun <T> Choices(title: String, options: List<T>, selected: T, label: (T)
         }
     }
 }
+
+/** A picked file's name, e.g. "niv.zip". */
+private fun displayName(context: android.content.Context, uri: android.net.Uri): String =
+    runCatching {
+        context.contentResolver.query(uri, arrayOf(android.provider.OpenableColumns.DISPLAY_NAME), null, null, null)?.use { c ->
+            if (c.moveToFirst()) c.getString(0) else null
+        }
+    }.getOrNull() ?: uri.lastPathSegment?.substringAfterLast('/') ?: "file"

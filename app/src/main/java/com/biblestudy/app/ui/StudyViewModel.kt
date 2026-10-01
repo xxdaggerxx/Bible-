@@ -176,6 +176,7 @@ data class Place(val book: Int, val chapter: Int, val verse: Int)
 
 class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private val prefs = app.getSharedPreferences("study", Context.MODE_PRIVATE)
+    init { BibleRepository.loadImported(app) } // before panels restore their versions
     /** The KJV: book names, chapter counts and cross-references come from here for every version. */
     val bible = BibleRepository(app, BibleRepository.KJV)
     private val texts = HashMap<String, BibleRepository>().apply { put(bible.code, bible) }
@@ -654,6 +655,43 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun openVerse(book: Int, chapter: Int, verse: Int, word: Int = -1) {
         verseSheet = VerseTarget(book, chapter, verse, word)
         paneVerse = VerseTarget(book, chapter, verse)
+    }
+
+    // ---------- Bibles: version manager and import (BIB-4, BIB-5) ----------
+
+    /** Imports a Bible file (or several); runs off the main thread. */
+    fun importBible(names: List<String>, open: (Int) -> java.io.InputStream, code: String, name: String, copyright: String) {
+        val c = code.trim().uppercase()
+        if (c.isEmpty() || name.isBlank() || copyright.isBlank()) { message = "Give the version a short code, a name and its copyright line."; return }
+        if (BibleRepository.BUNDLED.any { it.code == c }) { message = "$c is already built in. Choose another code."; return }
+        importing = true
+        viewModelScope.launch {
+            val result = withContext(Dispatchers.IO) {
+                runCatching {
+                    if (names.size == 1 && names[0].lowercase().endsWith(".db")) {
+                        open(0).use { com.biblestudy.app.data.BibleImport.saveAppDb(getApplication(), it, c, name.trim(), copyright.trim()) }
+                    } else {
+                        val parsed = com.biblestudy.app.data.BibleImport.parse(names, open)
+                        com.biblestudy.app.data.BibleImport.save(getApplication(), parsed, c, name.trim(), copyright.trim(), bible.books)
+                    }
+                }
+            }
+            importing = false
+            synchronized(this@StudyViewModel) { texts.remove(c) }
+            message = result.fold({ "${it.code} added. Pick it from the version menu." }, { "Couldn't import: ${it.message}" })
+        }
+    }
+
+    var importing by mutableStateOf(false)
+        private set
+
+    /** Removes an imported version; panels reading it go back to the KJV. */
+    fun removeBible(code: String) {
+        panels.forEachIndexed { i, p -> if (p.version == code) setVersion(i, "KJV") }
+        if (newPanelVersion == code) newPanelVersion = null
+        synchronized(this) { texts.remove(code) }
+        BibleRepository.removeImported(getApplication(), code)
+        message = "$code removed."
     }
 
     // ---------- sketch pages (SKT-1 to SKT-4) ----------

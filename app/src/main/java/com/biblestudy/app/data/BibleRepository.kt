@@ -20,6 +20,8 @@ data class BibleVersion(
     val copyright: String,
     val summary: String,
     val description: String,
+    /** Imported by the user (BIB-4): [asset] is then the database file's full path. */
+    val imported: Boolean = false,
 )
 
 /**
@@ -34,8 +36,8 @@ class BibleRepository(context: Context, val version: BibleVersion) {
 
     init {
         val base = "bible_${version.asset.removeSuffix(".db")}_v"
-        val file = context.getDatabasePath("$base$DB_VERSION.db")
-        if (!file.exists()) {
+        val file = if (version.imported) File(version.asset) else context.getDatabasePath("$base$DB_VERSION.db")
+        if (!version.imported && !file.exists()) {
             // Remove copies of older bundled databases.
             file.parentFile?.listFiles()?.filter { it.name.startsWith(base) && it.name != file.name }?.forEach { it.delete() }
             file.parentFile?.mkdirs()
@@ -159,8 +161,44 @@ class BibleRepository(context: Context, val version: BibleVersion) {
                 "\u201cthou\u201d. Its New Testament follows the Majority Text (the reading of most Greek " +
                 "manuscripts), so it keeps almost all the verses the KJV has.",
         )
-        /** In the order shown in the version picker. */
-        val ALL = listOf(KJV, BSB, WEB)
+        val BUNDLED = listOf(KJV, BSB, WEB)
+
+        /** Versions the user imported (BIB-4), remembered in files/bibles/imported.json. */
+        private val imported = androidx.compose.runtime.mutableStateListOf<BibleVersion>()
+
+        /** Every version, in the order shown in the version picker: the bundled ones, then imported. */
+        val ALL: List<BibleVersion> get() = BUNDLED + imported
+
+        private fun registry(context: Context) = File(File(context.filesDir, "bibles").apply { mkdirs() }, "imported.json")
+
+        fun loadImported(context: Context) {
+            val f = registry(context)
+            val list = if (f.exists()) runCatching { BibleImport.fromJson(org.json.JSONArray(f.readText())) }.getOrDefault(emptyList()) else emptyList()
+            imported.clear()
+            imported.addAll(list.filter { File(it.asset).exists() })
+        }
+
+        private fun saveRegistry(context: Context) {
+            val a = org.json.JSONArray()
+            imported.forEach { a.put(BibleImport.toJson(it)) }
+            registry(context).writeText(a.toString())
+        }
+
+        fun addImported(context: Context, v: BibleVersion) {
+            imported.removeAll { it.code == v.code }
+            imported.add(v)
+            saveRegistry(context)
+        }
+
+        fun removeImported(context: Context, code: String) {
+            imported.firstOrNull { it.code == code }?.let { File(it.asset).delete() }
+            imported.removeAll { it.code == code }
+            saveRegistry(context)
+        }
+
+        /** The database file a version reads, for its size in the version manager (BIB-5). */
+        fun fileOf(context: Context, v: BibleVersion): File =
+            if (v.imported) File(v.asset) else context.getDatabasePath("bible_${v.asset.removeSuffix(".db")}_v$DB_VERSION.db")
 
         /**
          * Separates words to leave out (SRCH-3), written with a minus sign ("love -world"), from the
