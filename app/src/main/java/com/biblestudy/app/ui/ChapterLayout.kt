@@ -419,6 +419,9 @@ private val PAGE_DENSITY = Density(1f, 1f)
 /** Scale for offsets from a line's baseline in line coordinates; keeps every offset inside one line's slot. */
 private const val LINE_K = 4000f
 
+/** The colour of the words of Jesus: a red that reads on every page colour. */
+val RED_LETTER = SpanStyle(color = Color(0xFFD32F2F))
+
 fun buildChapterLayout(
     measurer: TextMeasurer,
     font: FontFamily,
@@ -433,6 +436,8 @@ fun buildChapterLayout(
     numbers: Boolean = true,
     /** Extra space opened above a verse so the margin notes before it fit (MRG-10): verse → height. */
     spacers: Map<Int, Float> = emptyMap(),
+    /** Words of Jesus to show in red (BIB-8): verse → character ranges in its text. */
+    red: Map<Int, List<IntRange>> = emptyMap(),
     linkify: (String) -> List<RefLink> = { emptyList() },
 ): ChapterLayout {
     val builder = AnnotatedString.Builder()
@@ -451,7 +456,9 @@ fun buildChapterLayout(
         verseNos[i] = v.verse
         builder.withStyle(if (numbers) numberStyle else hiddenNumber) { append(v.verse.toString()) }
         builder.append(if (numbers) "\u2009" else "\u200B")
+        val at = builder.length
         builder.append(v.text)
+        red[v.verse]?.forEach { r -> builder.addStyle(RED_LETTER, at + r.first, at + r.last + 1) }
         // Between verses: a new line, or in paragraphs a space unless the next verse starts one.
         // Either way one character, so text positions are the same in every layout.
         if (i < data.verses.lastIndex) {

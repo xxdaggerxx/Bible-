@@ -84,6 +84,7 @@ fun SettingsDialog(
                 Choices("Line spacing", LineSpacing.entries, vm.lineSpacing, { it.label }) { vm.lineSpacing = it }
                 Choices("Layout", listOf(false, true), vm.paragraphMode, { if (it) "Paragraphs" else "Verse per line" }) { vm.changeParagraphs(it) }
                 Toggle("Verse numbers", null, vm.verseNumbers) { vm.changeVerseNumbers(it) }
+                Toggle("Words of Jesus in red", "In the KJV, BSB and WEB", vm.redLetters) { vm.redLetters = it }
                 Toggle("Section headings", "Headings and parallel-passage links from the BSB", vm.showHeadings) { vm.showHeadings = it }
                 Choices(
                     "New panels open in", listOf<String?>(null) + BibleRepository.ALL.map { it.code }, vm.newPanelVersion,

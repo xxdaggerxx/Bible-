@@ -253,7 +253,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         highlightsAllVersions = true
         marginLeft = false; marginRight = true
         linkPanels = false
-        compareVersions = false
+        compareVersions = false; originalView = false; redLetters = false
         savePrefs()
         message = "Settings reset to their defaults."
     }
@@ -310,6 +310,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var verseNumbers by mutableStateOf(prefs.getBoolean("verseNumbers", true))
         private set
 
+    /** The words of Jesus in red (BIB-8); only colours change, so ink stays where it is. */
+    var redLetters by mutableStateOf(prefs.getBoolean("redLetters", false))
+
     fun changeParagraphs(on: Boolean) { if (on != paragraphMode) { paragraphMode = on; relayout() } }
     fun changeVerseNumbers(on: Boolean) { if (on != verseNumbers) { verseNumbers = on; relayout() } }
 
@@ -327,6 +330,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var highlightsAllVersions by mutableStateOf(prefs.getBoolean("hlAllVersions", true))
     /** The verse window shows the verse in every version, stacked (SPLIT-4). */
     var compareVersions by mutableStateOf(prefs.getBoolean("compareVersions", false))
+    /** The verse window shows the Hebrew or Greek word by word (STD-4). */
+    var originalView by mutableStateOf(prefs.getBoolean("originalView", false))
     var lineSpacing by mutableStateOf(
         runCatching { LineSpacing.valueOf(prefs.getString("lineSpacing", "NORMAL")!!) }.getOrDefault(LineSpacing.NORMAL)
     )
@@ -448,7 +453,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)

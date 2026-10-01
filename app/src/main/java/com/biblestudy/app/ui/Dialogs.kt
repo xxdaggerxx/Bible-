@@ -605,6 +605,9 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                         }
                     }
                 }
+            } else if (vm.originalView) {
+                // The Hebrew or Greek, word by word (STD-4).
+                OriginalVerse(vm, id, version)
             } else {
                 // Each word with Hebrew or Greek behind it opens a word study (STD-3).
                 StudyableVerse(vm, id, version, verseText)
@@ -626,8 +629,14 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
             ) {
                 FilterChip(
                     selected = vm.compareVersions,
-                    onClick = { vm.compareVersions = !vm.compareVersions },
+                    onClick = { vm.compareVersions = !vm.compareVersions; vm.originalView = false },
                     label = { Text("Compare versions") },
+                )
+                FilterChip(
+                    selected = vm.originalView && !vm.compareVersions,
+                    onClick = { vm.originalView = !(vm.originalView && !vm.compareVersions); vm.compareVersions = false },
+                    label = { Text(if (t.book < 40) "Hebrew" else "Greek") },
+                    modifier = Modifier.testTag("originalChip"),
                 )
                 // Tags on this verse's note (NOTE-4).
                 if (original.isNotBlank()) TagButton(vm, vm.noteKey(t.book, t.chapter, noteStart))
@@ -1218,6 +1227,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 Text("\u2022 Hebrew and Greek dictionaries: Strong's (1890, public domain), from the Open Scriptures edition, licensed CC BY-SA.")
                 Text("\u2022 Strong's numbers for each word: the KJV, BSB and WEB editions at eBible.org (public domain).")
                 Text("\u2022 People and places: STEPBible.org TIPNR, licensed CC BY 4.0. Map outline: Natural Earth (public domain).")
+                Text("\u2022 Hebrew and Greek word by word: STEPBible.org TAHOT and TAGNT (Tyndale House, Cambridge), licensed CC BY 4.0. Only the columns shown are kept.")
                 Text("\u2022 Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library.")
                 Text("\u2022 Bible text font: Gentium Book Plus \u00a9 SIL International, SIL Open Font License.")
                 Spacer(Modifier.height(12.dp))

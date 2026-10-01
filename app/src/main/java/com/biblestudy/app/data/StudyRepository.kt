@@ -54,6 +54,15 @@ data class NameEntry(
     }
 }
 
+/**
+ * One word of the Hebrew or Greek text (STD-4): the word, how it's said, its English meaning here,
+ * its Strong's number, its grammar code ("H:Ncfsa", "A:…" or "G:N-GSF") and which editions have it
+ * ("" all, "m" modern editions only, "k" only the text the KJV was translated from).
+ */
+data class OriginalWord(val word: String, val xlit: String, val gloss: String, val strong: String, val grammar: String, val edition: String) {
+    val hebrew: Boolean get() = !grammar.startsWith("G:")
+}
+
 /** Matthew Henry on a range of verses (STD-7). */
 data class CommentarySection(val start: Int, val end: Int, val body: String)
 
@@ -62,20 +71,61 @@ data class CommentarySection(val start: Int, val end: Int, val body: String)
  * numbers for each word of the KJV, BSB and WEB, Strong's Hebrew and Greek dictionaries, Easton's
  * Bible Dictionary, Nave's Topical Bible and Matthew Henry's Concise Commentary.
  */
-class StudyRepository(context: Context) {
-    private val db: SQLiteDatabase
+class StudyRepository(private val context: Context) {
+    private val db: SQLiteDatabase = open("study", DB_VERSION)
 
-    init {
-        val file = context.getDatabasePath("study_v$DB_VERSION.db")
+    /** The Hebrew and Greek text (assets/study/original.db), copied out the first time it's needed. */
+    private val orig: SQLiteDatabase by lazy { open("original", ORIGINAL_VERSION) }
+
+    private fun open(name: String, version: Int): SQLiteDatabase {
+        val file = context.getDatabasePath("${name}_v$version.db")
         if (!file.exists()) {
-            file.parentFile?.listFiles()?.filter { it.name.startsWith("study_v") && it.name != file.name }?.forEach { it.delete() }
+            file.parentFile?.listFiles()?.filter { it.name.startsWith("${name}_v") && it.name != file.name }?.forEach { it.delete() }
             file.parentFile?.mkdirs()
             val tmp = File(file.path + ".tmp")
-            context.assets.open("study/study.db").use { input -> tmp.outputStream().use { input.copyTo(it) } }
+            context.assets.open("study/$name.db").use { input -> tmp.outputStream().use { input.copyTo(it) } }
             tmp.renameTo(file)
         }
-        db = SQLiteDatabase.openDatabase(file.path, null, SQLiteDatabase.OPEN_READONLY)
+        return SQLiteDatabase.openDatabase(file.path, null, SQLiteDatabase.OPEN_READONLY)
     }
+
+    // ---------- words of Jesus (BIB-8) ----------
+
+    /**
+     * The words of Jesus in a chapter: verse number → character ranges in that verse's [texts].
+     * Only the bundled KJV, BSB and WEB are marked.
+     */
+    fun redLetters(version: String, book: Int, chapter: Int, texts: Map<Int, String>): Map<Int, List<IntRange>> {
+        if (book < 40) return emptyMap()
+        val base = book * 1_000_000 + chapter * 1_000
+        val out = HashMap<Int, List<IntRange>>()
+        db.rawQuery("SELECT id, words FROM red WHERE version = ? AND id BETWEEN ? AND ?",
+            arrayOf(version, base.toString(), (base + 999).toString())).use { c ->
+            while (c.moveToNext()) {
+                val verse = c.getInt(0) - base
+                val words = words(texts[verse] ?: continue)
+                val ranges = c.getString(1).split(',').mapNotNull { r ->
+                    val (a, b) = r.split('-').map { it.toInt() }
+                    if (a > b || b >= words.size) null else words[a].first..words[b].last
+                }
+                if (ranges.isNotEmpty()) out[verse] = ranges
+            }
+        }
+        return out
+    }
+
+    // ---------- the original languages (STD-4, BIB-9) ----------
+
+    /** A verse in Hebrew or Greek, word by word, in the original order (English verse numbering). */
+    fun original(verseId: Int): List<OriginalWord> =
+        orig.rawQuery("SELECT words FROM original WHERE id = ?", arrayOf(verseId.toString())).use { c ->
+            if (!c.moveToFirst()) emptyList()
+            else c.getString(0).split('\n').map { line ->
+                val f = line.split('\t')
+                OriginalWord(f[0], f.getOrElse(1) { "" }, f.getOrElse(2) { "" }, f.getOrElse(3) { "" },
+                    f.getOrElse(4) { "" }, f.getOrElse(5) { "" })
+            }
+        }
 
     // ---------- word studies ----------
 
@@ -273,7 +323,8 @@ class StudyRepository(context: Context) {
 
     companion object {
         /** Bump when study.db changes, so the new copy replaces the old one. */
-        private const val DB_VERSION = 4
+        private const val DB_VERSION = 5
+        private const val ORIGINAL_VERSION = 1
         const val NT_START = 40_000_000
 
         private val WORD = Regex("[\\p{L}\\p{M}\\p{N}_’']+")

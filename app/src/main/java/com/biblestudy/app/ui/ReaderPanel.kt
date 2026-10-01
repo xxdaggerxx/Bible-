@@ -160,24 +160,26 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     val buildChapter: suspend (String, Int, Int, Map<Int, Float>) -> ChapterLayout = { v, b, c, spacers ->
         val style = vm.styleKey()
         val headingsOn = vm.showHeadings
-        val (data, paras) = withContext(Dispatchers.IO) {
-            ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList()) to
-                (if (style.paragraphs) vm.study.paragraphStarts(v, b, c) else null)
+        val redOn = vm.redLetters
+        val (data, paras, red) = withContext(Dispatchers.IO) {
+            val d = ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
+            Triple(d, if (style.paragraphs) vm.study.paragraphStarts(v, b, c) else null,
+                if (redOn) vm.study.redLetters(v, b, c, d.verses.associate { it.verse to it.text }) else emptyMap())
         }
         buildChapterLayout(
             measurer, style.font.family(), vm.bible.book(b).name, data, vm.lineSpacing,
-            paragraphs = paras, numbers = style.numbers, spacers = spacers,
+            paragraphs = paras, numbers = style.numbers, spacers = spacers, red = red,
         ) { RefLinks.parseList(it, vm.bible.books) }
     }
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.sketchOf(panel.book)?.name) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.sketchOf(panel.book)?.name) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
         val font = vm.textFont
         val style = vm.styleKey()
-        val spec = "$headingsOn|$spacing|${style.encode()}"
+        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}"
         if (ctl.layoutSpec != spec) {
             // Headings, spacing or font changed: re-lay out every chapter, staying on the same verse.
             if (ctl.layoutSpec != null) panel.pendingVerse = panel.topVerse

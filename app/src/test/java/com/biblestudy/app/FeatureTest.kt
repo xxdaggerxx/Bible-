@@ -45,6 +45,7 @@ import com.biblestudy.app.ui.StudyViewModel
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
+import androidx.compose.ui.test.assertTextEquals
 import org.junit.Assert.assertTrue
 import org.junit.After
 import org.junit.Before
@@ -1712,5 +1713,44 @@ class FeatureTest {
         compose.waitForIdle()
         assertTrue(com.biblestudy.app.data.BibleRepository.ALL.none { it.code == "TST" })
         assertEquals("KJV", vm.panels[0].version)
+    }
+
+    @Test
+    fun wordsOfJesusInRedAndTheGreekWordByWord() {
+        // John 3:16 is all the words of Jesus in each version; John 3:2 (Nicodemus) is not.
+        for (v in listOf("KJV", "BSB", "WEB")) {
+            val texts = vm.text(v).chapter(43, 3).associate { it.verse to it.text }
+            val red = vm.study.redLetters(v, 43, 3, texts)
+            assertTrue(v, red[16]!!.first().first <= 4)
+            assertNull(v, red[2])
+        }
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Settings").performClick()
+        compose.onNodeWithText("Words of Jesus in red").performScrollTo().performClick()
+        compose.onNodeWithContentDescription("Close").performClick()
+        assertTrue(vm.redLetters)
+        compose.runOnUiThread { vm.goTo(0, 43, 3, 14, remember = false) }
+        waitForLoaded()
+        snap("101-red-letters")
+
+        // The verse window shows the Greek word by word; a word gives its grammar and a word study.
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.onNodeWithTag("originalChip").performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("originalWord").fetchSemanticsNodes().size > 10 }
+        compose.onNodeWithText("\u0113gap\u0113sen").performClick()
+        compose.onNodeWithTag("grammar").assertTextEquals("verb, aorist active indicative, 3rd person singular")
+        snap("102-greek")
+        compose.onNodeWithText("Word study").performScrollTo().performClick()
+        compose.waitForIdle()
+        assertEquals("G25", vm.wordStudy?.strong)
+        compose.runOnUiThread { vm.wordStudy = null; vm.verseSheet = null }
+
+        // Hebrew reads right to left, with its grammar in plain words.
+        compose.runOnUiThread { vm.openVerse(1, 1, 1) }
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("originalWord").fetchSemanticsNodes().size == 7 }
+        compose.onNodeWithText("ba.Ra'").performClick()
+        compose.onNodeWithTag("grammar").assertTextEquals("verb, Qal perfect, 3rd person masculine singular")
+        snap("103-hebrew")
+        compose.runOnUiThread { vm.verseSheet = null; vm.originalView = false; vm.redLetters = false }
     }
 }
