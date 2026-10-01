@@ -108,6 +108,8 @@ dependencies {
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")
+    // Front-buffered rendering for the lowest-latency pen ink (INK-4).
+    implementation("androidx.graphics:graphics-core:1.0.2")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.14.1")

@@ -160,6 +160,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
     /** Eraser removes only what it touches (INK-7), instead of whole strokes. */
     var partialEraser by mutableStateOf(prefs.getBoolean("partialEraser", false))
+    /** Draw pen strokes straight to the screen for the lowest latency (INK-4). */
+    var fastInk by mutableStateOf(prefs.getBoolean("fastInk", true))
     /**
      * The Bible text's typeface (READ-3). Changing it reflows the lines, so ink on the words is
      * reloaded and moved to the same characters in the new layout.
@@ -300,7 +302,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)

@@ -507,7 +507,24 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     fun sideButtonTool(): Tool? = vm.sideButton.tool
 
     /** [override] replaces the selected tool for this stroke (eraser end or side button). */
+    /** The front-buffered layer for fast pen ink (INK-4), when the device supports it. */
+    var fastInk: FastInkView? = null
+    /** Whether the stroke being written is drawn on [fastInk] (and so not by the live layer). */
+    var fastStroke = false
+        private set
+    private var lastPos = Offset.Zero
+
+    /** Draws the newest piece of a fast stroke, in the panel's pixels. */
+    private fun fastSegment(to: Offset, pressure: Float) {
+        val ink = live ?: return
+        val f = fastInk ?: return
+        val w = penWidth(ink.width, pressure) * panel.zoom
+        f.draw(InkSegment(lastPos.x, lastPos.y, to.x, to.y, w, ink.color))
+        lastPos = to
+    }
+
     fun penStart(pos: Offset, pressure: Float, override: Tool?) {
+        fastStroke = false
         touched()
         textSel = null
         val s = toStrip(pos)
@@ -555,6 +572,15 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
                 )
                 ink.add(p.x - ink.ox, p.y - ink.oy, pressure)
                 live = ink
+                // Pen ink goes straight to the screen; the translucent highlighter stays on the page,
+                // where overlapping pieces don't darken.
+                val f = fastInk
+                if (!hl && vm.fastInk && f != null && f.ready) {
+                    fastStroke = true
+                    f.startStroke()
+                    lastPos = pos
+                    fastSegment(pos + Offset(0.1f, 0f), pressure)
+                }
             }
             Tool.ERASER -> {
                 erased.clear()
@@ -575,6 +601,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         when (mode) {
             Tool.PEN, Tool.HIGHLIGHTER -> live?.let {
                 it.add(s.x - it.ox, s.y - it.page.top - it.oy, pressure)
+                if (fastStroke) fastSegment(pos, pressure)
             }
             Tool.ERASER -> eraseAt(s)
             Tool.LASSO -> {
@@ -627,6 +654,10 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     private fun finishStroke() {
         val ink = live ?: return
         live = null
+        if (fastStroke) {
+            fastStroke = false
+            fastInk?.clearSoon() // the page draws the saved stroke; then the fast layer clears
+        }
         var pts = ink.toArray()
         if (pts.size == 3) pts = floatArrayOf(pts[0], pts[1], pts[2], pts[0] + 0.5f, pts[1], pts[2])
         val layout = ink.page.layout

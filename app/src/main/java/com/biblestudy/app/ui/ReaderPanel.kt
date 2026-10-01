@@ -29,6 +29,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.ui.viewinterop.AndroidView
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.TextFont
 import androidx.compose.runtime.rememberCoroutineScope
@@ -282,6 +283,16 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                         }
                     }
                 }
+            }
+            // Fast pen ink (INK-4): a front-buffered surface drawn above the page. It is placed here,
+            // under the live layer, so it never takes touches; its surface still shows on top.
+            if (vm.fastInk && FastInkView.supported) {
+                AndroidView(
+                    factory = { ctx -> FastInkView(ctx) },
+                    modifier = Modifier.fillMaxSize(),
+                    update = { v -> ctl.fastInk = v },
+                    onRelease = { if (ctl.fastInk === it) ctl.fastInk = null },
+                )
             }
             // Live layer: the stroke or lasso being drawn, selection outlines and margin grips.
             // Kept separate so each new pen point redraws only this, not the whole chapter.
@@ -688,7 +699,7 @@ private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, t
         translate(panel.panX, panel.panY)
         scale(zoom, zoom, pivot = Offset.Zero)
     }) {
-        ctl.live?.let { ink ->
+        ctl.live?.takeIf { !ctl.fastStroke }?.let { ink ->
             ink.tick // redraw on every new point
             val r = buildRender(ink.toArray(), ink.width, ink.highlighter)
             val c = Color(ink.color).let { if (ink.highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
