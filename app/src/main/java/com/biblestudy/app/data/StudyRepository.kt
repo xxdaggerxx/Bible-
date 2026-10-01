@@ -1,0 +1,200 @@
+package com.biblestudy.app.data
+
+import android.content.Context
+import android.database.sqlite.SQLiteDatabase
+import java.io.File
+
+/** A Hebrew or Greek word from Strong's dictionaries (STD-3). [id] is e.g. "G26" or "H7225". */
+data class LexEntry(
+    val id: String,
+    val lemma: String,
+    val xlit: String,
+    val pron: String,
+    val derivation: String,
+    val def: String,
+    val kjv: String,
+) {
+    val hebrew get() = id.startsWith("H")
+    val language get() = if (hebrew) "Hebrew" else "Greek"
+}
+
+/** A verse where a Strong's number is used, with the word ranges (in the verse text) it translates. */
+data class Occurrence(val id: Int, val text: String, val words: List<IntRange>)
+
+/** A dictionary article or topic, with [body] in the study markup (see [StudyText]). */
+data class StudyEntry(val id: Long, val title: String, val body: String)
+
+/** Matthew Henry on a range of verses (STD-7). */
+data class CommentarySection(val start: Int, val end: Int, val body: String)
+
+/**
+ * The bundled study library (assets/study/study.db, built by tools/build_study_db.py): Strong's
+ * numbers for each word of the KJV, BSB and WEB, Strong's Hebrew and Greek dictionaries, Easton's
+ * Bible Dictionary, Nave's Topical Bible and Matthew Henry's Concise Commentary.
+ */
+class StudyRepository(context: Context) {
+    private val db: SQLiteDatabase
+
+    init {
+        val file = context.getDatabasePath("study_v$DB_VERSION.db")
+        if (!file.exists()) {
+            file.parentFile?.listFiles()?.filter { it.name.startsWith("study_v") && it.name != file.name }?.forEach { it.delete() }
+            file.parentFile?.mkdirs()
+            val tmp = File(file.path + ".tmp")
+            context.assets.open("study/study.db").use { input -> tmp.outputStream().use { input.copyTo(it) } }
+            tmp.renameTo(file)
+        }
+        db = SQLiteDatabase.openDatabase(file.path, null, SQLiteDatabase.OPEN_READONLY)
+    }
+
+    // ---------- word studies ----------
+
+    /** The Strong's number of each word of a verse (as split by [words]), or null where there is none. */
+    fun strongs(version: String, verseId: Int): List<String?> {
+        val raw = db.rawQuery("SELECT words FROM tags WHERE version = ? AND id = ?", arrayOf(version, verseId.toString()))
+            .use { c -> if (c.moveToFirst()) c.getString(0) else null } ?: return emptyList()
+        val prefix = if (verseId < NT_START) "H" else "G"
+        return raw.substring(1, raw.length - 1).split(' ').map { n ->
+            when {
+                n.isEmpty() -> null
+                n[0].isLetter() -> n
+                else -> prefix + n
+            }
+        }
+    }
+
+    fun lexicon(id: String): LexEntry? =
+        db.rawQuery("SELECT id, lemma, xlit, pron, derivation, def, kjv FROM lexicon WHERE id = ?", arrayOf(id)).use { c ->
+            if (c.moveToFirst()) LexEntry(c.getString(0), c.getString(1) ?: "", c.getString(2) ?: "", c.getString(3) ?: "",
+                c.getString(4) ?: "", c.getString(5) ?: "", c.getString(6) ?: "") else null
+        }
+
+    /**
+     * Every verse in [version] where the word [strong] is used (STD-8, SRCH-7), in Bible order,
+     * with the English words that translate it. [text] gives a verse's text in that version.
+     */
+    fun occurrences(version: String, strong: String, text: (Int) -> String?, limit: Int = 5000): List<Occurrence> {
+        val s = normalizeStrong(strong) ?: return emptyList()
+        val hebrew = s[0] == 'H'
+        val num = s.substring(1)
+        val (lo, hi) = if (hebrew) 0 to NT_START - 1 else NT_START to Int.MAX_VALUE
+        val tokens = listOf(" $num ", " $s ")
+        val rows = db.rawQuery(
+            "SELECT id, words FROM tags WHERE version = ? AND id BETWEEN ? AND ? AND (words LIKE ? OR words LIKE ?) ORDER BY id LIMIT $limit",
+            arrayOf(version, lo.toString(), hi.toString(), "%${tokens[0]}%", "%${tokens[1]}%"),
+        ).use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getString(1)) } }
+        return rows.mapNotNull { (id, words) ->
+            val t = text(id) ?: return@mapNotNull null
+            val nums = words.substring(1, words.length - 1).split(' ')
+            val ranges = words(t)
+            val hits = nums.indices.filter { nums[it] == num || nums[it] == s }.mapNotNull { ranges.getOrNull(it) }
+            Occurrence(id, t, mergeAdjacent(hits, t))
+        }
+    }
+
+    // ---------- dictionary and topics ----------
+
+    /** Easton's article for [term] (any case), if there is one. */
+    fun dictionaryEntry(term: String): StudyEntry? = entry("dictionary", "term", term)
+
+    /** Easton's articles whose title starts with [prefix] (or all, alphabetically, when blank). */
+    fun dictionarySearch(prefix: String, limit: Int = 200): List<StudyEntry> = search("dictionary", "term", prefix, limit)
+
+    fun dictionaryById(id: Long): StudyEntry? = byId("dictionary", "term", id)
+
+    fun topic(name: String): StudyEntry? = entry("topics", "name", name)
+
+    fun topicSearch(prefix: String, limit: Int = 200): List<StudyEntry> = search("topics", "name", prefix, limit)
+
+    fun topicById(id: Long): StudyEntry? = byId("topics", "name", id)
+
+    /** Nave's topics that list this verse (STD-6, STD-9), most specific (fewest verses) first. */
+    fun topicsFor(verseId: Int, limit: Int = 30): List<StudyEntry> =
+        db.rawQuery(
+            "SELECT t.id, t.name, (SELECT COUNT(*) FROM topic_refs r2 WHERE r2.topic = t.id) AS n FROM topic_refs r " +
+                "JOIN topics t ON t.id = r.topic WHERE r.start BETWEEN ? AND ? AND r.end >= ? GROUP BY t.id ORDER BY n LIMIT $limit",
+            arrayOf((verseId - 999).toString(), verseId.toString(), verseId.toString()),
+        ).use { c -> buildList { while (c.moveToNext()) add(StudyEntry(c.getLong(0), c.getString(1), "")) } }
+
+    /**
+     * Passages related to a verse through the topics they share (STD-9): verses listed under two
+     * or more of the same topics, most shared first. Returns (start, end, shared topic count).
+     */
+    fun relatedByTopics(verseId: Int, limit: Int = 20): List<Triple<Int, Int, Int>> {
+        val topics = topicsFor(verseId, 60).map { it.id }
+        if (topics.isEmpty()) return emptyList()
+        val chapter = verseId / 1000
+        return db.rawQuery(
+            "SELECT start, end, COUNT(DISTINCT topic) AS k FROM topic_refs WHERE topic IN (${topics.joinToString(",")}) " +
+                "GROUP BY start, end HAVING k >= 2 ORDER BY k DESC, start LIMIT ${limit * 3}",
+            null,
+        ).use { c -> buildList { while (c.moveToNext()) add(Triple(c.getInt(0), c.getInt(1), c.getInt(2))) } }
+            .filter { it.first / 1000 != chapter } // not the verse's own chapter
+            .take(limit)
+    }
+
+    // ---------- commentary ----------
+
+    /** Matthew Henry's sections on a chapter, in order (STD-7). */
+    fun commentary(book: Int, chapter: Int): List<CommentarySection> {
+        val lo = book * 1_000_000 + chapter * 1000
+        return db.rawQuery(
+            "SELECT start, end, body FROM commentary WHERE start <= ? AND end >= ? ORDER BY start",
+            arrayOf((lo + 999).toString(), lo.toString()),
+        ).use { c -> buildList { while (c.moveToNext()) add(CommentarySection(c.getInt(0), c.getInt(1), c.getString(2))) } }
+    }
+
+    private fun entry(table: String, col: String, term: String): StudyEntry? =
+        db.rawQuery("SELECT id, $col, body FROM $table WHERE key = ? LIMIT 1", arrayOf(term.trim().lowercase())).use { c ->
+            if (c.moveToFirst()) StudyEntry(c.getLong(0), c.getString(1), c.getString(2)) else null
+        }
+
+    private fun byId(table: String, col: String, id: Long): StudyEntry? =
+        db.rawQuery("SELECT id, $col, body FROM $table WHERE id = ?", arrayOf(id.toString())).use { c ->
+            if (c.moveToFirst()) StudyEntry(c.getLong(0), c.getString(1), c.getString(2)) else null
+        }
+
+    private fun search(table: String, col: String, prefix: String, limit: Int): List<StudyEntry> {
+        val p = prefix.trim().lowercase()
+        // Titles that start with what was typed, then titles that contain it.
+        val starts = db.rawQuery(
+            "SELECT id, $col FROM $table WHERE key >= ? AND key < ? ORDER BY key LIMIT $limit",
+            arrayOf(p, p + "￿"),
+        ).use { c -> buildList { while (c.moveToNext()) add(StudyEntry(c.getLong(0), c.getString(1), "")) } }
+        if (p.length < 3 || starts.size >= limit) return starts
+        val seen = starts.map { it.id }.toSet()
+        val contains = db.rawQuery(
+            "SELECT id, $col FROM $table WHERE key LIKE ? ORDER BY key LIMIT $limit",
+            arrayOf("%$p%"),
+        ).use { c -> buildList { while (c.moveToNext()) { val id = c.getLong(0); if (id !in seen) add(StudyEntry(id, c.getString(1), "")) } } }
+        return (starts + contains).take(limit)
+    }
+
+    companion object {
+        /** Bump when study.db changes, so the new copy replaces the old one. */
+        private const val DB_VERSION = 2
+        const val NT_START = 40_000_000
+
+        private val WORD = Regex("[\\p{L}\\p{M}\\p{N}_’']+")
+
+        /** Character ranges of the words of a verse, split the same way as when study.db was built. */
+        fun words(text: String): List<IntRange> = WORD.findAll(text).map { it.range }.toList()
+
+        /** "g26", "G0026" or "G26" → "G26"; null if it isn't a Strong's number. */
+        fun normalizeStrong(s: String): String? {
+            val m = Regex("^([HhGg])0*(\\d{1,5})$").find(s.trim()) ?: return null
+            return m.groupValues[1].uppercase() + m.groupValues[2]
+        }
+
+        /** Joins neighbouring words that translate one original word ("only begotten") into one range. */
+        private fun mergeAdjacent(ranges: List<IntRange>, text: String): List<IntRange> {
+            val out = ArrayList<IntRange>()
+            for (r in ranges) {
+                val last = out.lastOrNull()
+                if (last != null && text.substring(last.last + 1, r.first).isBlank()) out[out.lastIndex] = last.first..r.last
+                else out += r
+            }
+            return out
+        }
+    }
+}

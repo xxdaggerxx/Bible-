@@ -12,6 +12,8 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.onFirst
+import androidx.compose.ui.test.onLast
 import com.biblestudy.app.ui.PaneKind
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.performImeAction
@@ -1390,5 +1392,92 @@ class FeatureTest {
             }
         }
         assertEquals("John 3 (KJV)", vm.exportName())
+    }
+
+    @Test
+    fun aTappedWordOpensItsWordStudyAndConcordance() {
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        // As if "loved" in John 3:16 was tapped ("For God so loved"): word 3.
+        compose.runOnUiThread { vm.openVerse(43, 3, 16, word = 3) }
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Word study: \u201cloved\u201d").fetchSemanticsNodes().isNotEmpty() }
+        snap("84-verse-word")
+        compose.onNodeWithText("Word study: \u201cloved\u201d").performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Used in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("\u1f00\u03b3\u03b1\u03c0\u03ac\u03c9").assertExists() // agapaō
+        compose.onNodeWithText("Greek \u00b7 Strong's G25", substring = true).assertExists()
+        val count = compose.onNodeWithTag("useCount").fetchSemanticsNode().config[androidx.compose.ui.semantics.SemanticsProperties.Text].first().text
+        val n = Regex("Used in (\\d+) verses").find(count)!!.groupValues[1].toInt()
+        assertTrue(count, n > 100)
+        snap("85-word-study")
+
+        // Only the uses in one book.
+        val in1John = vm.study.occurrences("KJV", "G25", { vm.text("KJV").verseText(it) }).filter { it.id / 1_000_000 == 62 }
+        compose.onNodeWithText("1 John ${in1John.size}").performScrollTo().performClick()
+        val first = vm.refLabel(in1John.first().id)
+        compose.onNodeWithText(first).assertExists()
+        // Tapping a verse goes there and closes the windows.
+        compose.onNodeWithText(first).performClick()
+        waitForLoaded()
+        assertEquals(62, vm.panels[0].book)
+        assertNull(vm.wordStudy)
+        assertNull(vm.verseSheet)
+    }
+
+    @Test
+    fun searchingAStrongsNumberFindsEveryUseOfTheWord() {
+        compose.onNodeWithContentDescription("Search").performScrollTo().performClick()
+        compose.onNodeWithText("Words, \"exact phrase\", or a reference like John 3:16").performTextInput("G26")
+        compose.onAllNodesWithContentDescription("Search").onLast().performClick()
+        compose.waitUntil(15_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("\u1f00\u03b3\u03ac\u03c0\u03b7", substring = true).assertExists() // agapē
+        val inJohn = vm.study.occurrences("KJV", "G26", { vm.text("KJV").verseText(it) }).count { it.id / 1_000_000 == 43 }
+        compose.onNodeWithText("John $inJohn").performScrollTo().performClick()
+        compose.onNodeWithText("John 13:35").assertExists()
+        snap("86-strongs-search")
+        compose.onNodeWithText("Word study").performClick()
+        compose.onNodeWithTag("wordStudy").assertExists()
+        compose.runOnUiThread { vm.wordStudy = null }
+    }
+
+    @Test
+    fun dictionaryTopicsCommentaryAndRelatedPassagesInTheStudyPane() {
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false); vm.sidePane = PaneKind.NOTES; vm.dictionaryOpen = null }
+        waitForLoaded()
+        // The pane's one menu picks what it shows.
+        compose.onNodeWithContentDescription("Choose what the pane shows").performClick()
+        snap("86b-pane-menu")
+        compose.onNodeWithText("Dictionary").performClick()
+        assertEquals(PaneKind.DICTIONARY, vm.sidePane)
+        // Easton's: names in the chapter are suggested.
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Nicodemus").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Nicodemus").performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Pharisee", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        snap("87-dictionary")
+        compose.onNodeWithContentDescription("Back to the list").performClick()
+
+        // Nave's: search for a topic and open it.
+        compose.runOnUiThread { vm.sidePane = PaneKind.TOPICS; vm.topicOpen = null }
+        compose.onNodeWithText("Find a topic, e.g. Prayer or Faith").performTextInput("Prayer")
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("entry").fetchSemanticsNodes().isNotEmpty() }
+        compose.onAllNodesWithTag("entry").onFirst().performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Daily, in the morning", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        snap("88-topic")
+        compose.runOnUiThread { vm.topicOpen = null }
+
+        // Matthew Henry on the chapter.
+        compose.runOnUiThread { vm.sidePane = PaneKind.COMMENTARY }
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Nicodemus was afraid", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Matthew Henry \u00b7 John 3").assertExists()
+        snap("89-commentary")
+
+        // Cross-references end with topics, parallel accounts and related passages.
+        compose.runOnUiThread { vm.goTo(0, 40, 3, remember = false); vm.paneVerse = VerseTarget(40, 3, 13); vm.sidePane = PaneKind.CROSSREFS }
+        waitForLoaded()
+        compose.waitUntil(15_000) { compose.onAllNodesWithText("Parallel accounts").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Parallel accounts").performScrollTo()
+        assertTrue(compose.onAllNodesWithText("Mark 1:9", substring = true).fetchSemanticsNodes().isNotEmpty())
+        snap("90-related")
+        compose.runOnUiThread { vm.sidePane = null }
     }
 }

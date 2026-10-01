@@ -15,6 +15,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.foundation.layout.Box
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -53,9 +60,21 @@ fun StudyPane(vm: StudyViewModel, kind: PaneKind, modifier: Modifier) {
             Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer).padding(start = 8.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Row(Modifier.weight(1f).horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                for (k in PaneKind.entries) {
-                    FilterChip(selected = kind == k, onClick = { vm.sidePane = k }, label = { Text(k.label) })
+            // One menu rather than a row of six buttons: what the pane shows.
+            var menu by remember { mutableStateOf(false) }
+            Box(Modifier.weight(1f)) {
+                TextButton(onClick = { menu = true }, modifier = Modifier.semantics { contentDescription = "Choose what the pane shows" }) {
+                    Text(kind.label, style = MaterialTheme.typography.titleMedium)
+                    Icon(Icons.Filled.ArrowDropDown, contentDescription = null)
+                }
+                DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                    for (k in PaneKind.entries) {
+                        DropdownMenuItem(
+                            text = { Text(k.label) },
+                            onClick = { vm.sidePane = k; menu = false },
+                            leadingIcon = if (k == kind) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
+                        )
+                    }
                 }
             }
             IconButton(onClick = { vm.sidePane = null }) { Icon(Icons.Filled.Close, contentDescription = "Close side pane") }
@@ -65,6 +84,9 @@ fun StudyPane(vm: StudyViewModel, kind: PaneKind, modifier: Modifier) {
             PaneKind.SEARCH -> SearchPane(vm, inner.padding(top = 8.dp), onOpened = {}, inPane = true)
             PaneKind.CROSSREFS -> CrossRefsPane(vm, inner)
             PaneKind.NOTES -> NotesPane(vm, inner)
+            PaneKind.DICTIONARY -> DictionaryPane(vm, inner)
+            PaneKind.TOPICS -> TopicsPane(vm, inner)
+            PaneKind.COMMENTARY -> CommentaryPane(vm, inner.padding(top = 4.dp))
         }
     }
 }
@@ -136,6 +158,9 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
                 }
                 HorizontalDivider()
             }
+            // Topics, parallel accounts and passages that share topics (STD-2, STD-6, STD-9).
+            // Added once the list is in, so the list doesn't open scrolled to it.
+            if (r != null) item(key = "related") { RelatedPassages(vm, id, version, onShow = { shown = it }) }
         }
     }
 }

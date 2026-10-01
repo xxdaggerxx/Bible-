@@ -566,7 +566,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         }
         if (!g.layout.isOnText(localY)) return
         val off = g.layout.offsetAt(s.x - g.textLeft, localY)
-        vm.openVerse(g.layout.book, g.layout.chapter, g.layout.verseAtOffset(off))
+        vm.openVerse(g.layout.book, g.layout.chapter, g.layout.verseAtOffset(off), g.layout.wordAt(off))
     }
 
     // ---------- pen ----------

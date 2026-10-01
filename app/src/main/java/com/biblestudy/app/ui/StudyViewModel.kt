@@ -24,6 +24,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.biblestudy.app.data.BibleRepository
 import com.biblestudy.app.data.Passage
+import com.biblestudy.app.data.RefLinks
+import com.biblestudy.app.data.StudyEntry
+import com.biblestudy.app.data.StudyRepository
 import com.biblestudy.app.data.UserDb
 import com.biblestudy.app.model.Annotation
 import com.biblestudy.app.model.Bookmark
@@ -108,6 +111,7 @@ data class PassagePop(val panel: Int, val passage: Passage, val anchor: Offset)
  */
 enum class WidthClass { COMPACT, MEDIUM, EXPANDED;
     companion object {
+
         fun of(widthDp: Float) = when {
             widthDp < 600f -> COMPACT
             widthDp < 840f -> MEDIUM
@@ -157,7 +161,10 @@ enum class AutoBackup(val label: String, val days: Int) { OFF("Off", 0), DAILY("
 data class ExportRequest(val uri: Uri, val pdf: Boolean)
 
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
-enum class PaneKind(val label: String) { SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes") }
+enum class PaneKind(val label: String) {
+    SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
+    DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"),
+}
 
 /** A spot to return to with Back / Forward. */
 data class Place(val book: Int, val chapter: Int, val verse: Int)
@@ -566,9 +573,59 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         sidePane = if (sidePane == kind) null else kind
     }
 
-    fun openVerse(book: Int, chapter: Int, verse: Int) {
-        verseSheet = VerseTarget(book, chapter, verse)
-        paneVerse = verseSheet
+    fun openVerse(book: Int, chapter: Int, verse: Int, word: Int = -1) {
+        verseSheet = VerseTarget(book, chapter, verse, word)
+        paneVerse = VerseTarget(book, chapter, verse)
+    }
+
+    // ---------- study library (0.8) ----------
+
+    /** Word studies, dictionary, topics and commentary; opened on first use. */
+    val study by lazy { StudyRepository(getApplication()) }
+
+    /** The word study window, when open (STD-3). */
+    var wordStudy by mutableStateOf<WordStudy?>(null)
+    /** The dictionary article and topic open in the study pane, if any. */
+    var dictionaryOpen by mutableStateOf<Long?>(null)
+    var topicOpen by mutableStateOf<Long?>(null)
+
+    fun openDictionary(id: Long) {
+        dictionaryOpen = id
+        sidePane = PaneKind.DICTIONARY
+    }
+
+    fun openTopic(id: Long) {
+        topicOpen = id
+        sidePane = PaneKind.TOPICS
+    }
+
+    /** Easton's articles for the names and words of a chapter, in the order they first appear (STD-5). */
+    fun chapterArticles(version: String, book: Int, chapter: Int): List<StudyEntry> {
+        val seen = HashSet<String>()
+        val out = ArrayList<StudyEntry>()
+        for (v in text(version).chapter(book, chapter)) {
+            for (m in Regex("\\b\\p{Lu}[\\p{L}\u2019']+").findAll(v.text)) {
+                val w = m.value.removeSuffix("\u2019s").removeSuffix("'s")
+                if (w.length < 3 || !seen.add(w.lowercase()) || w.lowercase() in COMMON_WORDS) continue
+                study.dictionaryEntry(w)?.let { out += it }
+                if (out.size >= 40) return out
+            }
+        }
+        return out
+    }
+
+    /**
+     * Parallel accounts of a verse's passage (STD-2): the references listed under its section
+     * heading in the BSB (Gospel parallels, Kings and Chronicles, and so on).
+     */
+    fun parallelAccounts(verseId: Int): List<Passage> {
+        val b = VerseId.book(verseId); val c = VerseId.chapter(verseId); val v = VerseId.verse(verseId)
+        val bsb = text("BSB")
+        // The nearest heading at or before the verse, looking back into the previous chapter if needed.
+        val here = bsb.headings(b, c).filter { it.verse <= v }
+        val heading = here.lastOrNull { it.refs.isNotBlank() }?.takeIf { h -> here.none { it.verse > h.verse } || here.last().verse == h.verse }
+            ?: return emptyList()
+        return RefLinks.find(heading.refs, bible.books).map { it.passage }
     }
 
     fun refLabel(start: Int, end: Int = start): String {
@@ -1613,6 +1670,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     companion object {
+        /** Capitalised words that start sentences, not names worth a dictionary article. */
+        private val COMMON_WORDS = setOf(
+            "and", "the", "then", "but", "for", "now", "when", "who", "what", "this", "that", "these", "they", "there",
+            "thou", "thy", "thee", "you", "your", "his", "her", "him", "she", "with", "from", "after", "behold",
+            "verily", "therefore", "how", "why", "which", "not", "all", "let", "are", "was", "were", "has", "have",
+        )
         private const val COPY_SHIFT = 30f
         private const val MAX_HISTORY = 100
         const val PASSAGE_LIMIT = 80

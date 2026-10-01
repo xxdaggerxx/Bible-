@@ -203,4 +203,19 @@ class LayoutAnchorTest {
         starts.forEachIndexed { i, off -> assertEquals(verses[i].verse, l.verseAtOffset(off)) }
         assertEquals(verses.last().verse, l.verseAtOffset(l.textLength - 1))
     }
+
+    @Test
+    fun aTappedWordFindsItsGreekWord() {
+        val l = layout(headings = true, spacing = LineSpacing.NORMAL)
+        // "And the Word was made flesh" (John 1:14): tapping inside "flesh" finds word 5, Greek sarx.
+        val v14 = l.verseRange(14)!!
+        val text = l.text.layoutInput.text.text
+        val at = text.indexOf("flesh", v14.first) + 2
+        assertEquals(14, l.verseAtOffset(at))
+        assertEquals(5, l.wordAt(at))
+        assertEquals(-1, l.wordAt(v14.first)) // on the verse number
+        val study = com.biblestudy.app.data.StudyRepository(app)
+        assertEquals("G4561", study.strongs("KJV", 43001014)[5])
+        assertEquals("\u03c3\u03ac\u03c1\u03be", study.lexicon("G4561")!!.lemma)
+    }
 }

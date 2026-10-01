@@ -227,6 +227,7 @@ fun StudyApp(vm: StudyViewModel) {
         }
 
         vm.verseSheet?.let { t -> VerseDialog(vm, t) { vm.verseSheet = null } }
+        vm.wordStudy?.let { w -> WordStudyDialog(vm, w) { vm.wordStudy = null } }
         vm.introBook?.let { b ->
             BookIntroDialog(vm, b) { navigated ->
                 vm.introBook = null

@@ -308,6 +308,21 @@ class ChapterLayout(
         return verseNumbers.getOrElse(ans) { 1 }
     }
 
+    /**
+     * The index of the word at [offset] within its verse's text (as split by
+     * StudyRepository.words), for word studies; -1 on the verse number or between verses.
+     */
+    fun wordAt(offset: Int): Int {
+        var i = 0
+        while (i + 1 < verseStarts.size && verseStarts[i + 1] <= offset) i++
+        val start = verseStarts[i] + verseNumbers[i].toString().length + 1
+        val end = if (i + 1 < verseStarts.size) verseStarts[i + 1] - 1 else textLength
+        if (offset < start || offset >= end) return -1
+        val words = com.biblestudy.app.data.StudyRepository.words(text.layoutInput.text.text.substring(start, end))
+        val rel = offset - start
+        return words.indexOfFirst { rel in it }.takeIf { it >= 0 } ?: words.indexOfLast { it.first <= rel }
+    }
+
     /** Character range of a verse (without its number), for selecting whole verses. */
     fun verseRange(verse: Int): IntRange? {
         val i = verseNumbers.indexOf(verse)

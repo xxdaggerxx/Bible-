@@ -217,6 +217,7 @@ def build_nave(db):
         term = html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip()
         refs = []
         body = to_text(m.group(2), refs)
+        body = re.sub(r"(^|\n)\.\s*", r"\1• ", body)  # sub-topic lines
         if not term or not body:
             continue
         name = term.title() if term.isupper() else term

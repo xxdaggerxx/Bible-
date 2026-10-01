@@ -185,7 +185,8 @@ data class Bookmark(val id: Long, val book: Int, val chapter: Int, val verse: In
 /** A typed note on verses [verse]..[endVerse] of a chapter (NOTE-1); a one-verse note has endVerse == verse. */
 data class TypedNote(val verse: Int, val endVerse: Int, val text: String)
 
-data class VerseTarget(val book: Int, val chapter: Int, val verse: Int)
+/** A verse to open; [word] is the index of the tapped word in its text, or -1. */
+data class VerseTarget(val book: Int, val chapter: Int, val verse: Int, val word: Int = -1)
 
 enum class SearchScope(val label: String) {
     ALL("Whole Bible"), OT("Old Testament"), NT("New Testament"), BOOK("This book")

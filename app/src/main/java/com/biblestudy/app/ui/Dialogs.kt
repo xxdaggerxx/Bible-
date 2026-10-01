@@ -60,6 +60,7 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -104,6 +105,7 @@ import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupProperties
 import com.biblestudy.app.BuildConfig
 import com.biblestudy.app.data.BibleRepository
+import com.biblestudy.app.data.StudyRepository
 import com.biblestudy.app.data.BookIntros
 import com.biblestudy.app.data.Passage
 import com.biblestudy.app.data.RefLinks
@@ -344,6 +346,8 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
     var inNotes by remember { mutableStateOf(false) }
     var results by remember { mutableStateOf<List<SearchHit>?>(null) }
     var searchedTerms by remember { mutableStateOf(emptyList<String>()) }
+    var searchedStrong by remember { mutableStateOf<String?>(null) }
+    var strongWords by remember { mutableStateOf<Map<Int, List<IntRange>>>(emptyMap()) }
     val co = rememberCoroutineScope()
     val focus = remember { FocusRequester() }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
@@ -366,11 +370,24 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                     }
                     val (wanted, excluded) = BibleRepository.splitExcluded(q)
                     vm.user.searchNotes(wanted, lo, hi).filterNot { BibleRepository.containsAny(it.text, excluded) }
+                } else if (StudyRepository.normalizeStrong(q) != null) {
+                    // A Strong's number, e.g. G26 or H7225 (SRCH-7): every verse using that word.
+                    val (lo, hi) = when (scope) {
+                        SearchScope.ALL -> 1 to 66
+                        SearchScope.OT -> 1 to 39
+                        SearchScope.NT -> 40 to 66
+                        SearchScope.BOOK -> currentBook to currentBook
+                    }
+                    val uses = vm.study.occurrences(v, q, { vm.text(v).verseText(it) })
+                        .filter { VerseId.book(it.id) in lo..hi }
+                    strongWords = uses.associate { it.id to it.words }
+                    uses.map { SearchHit(VerseId.book(it.id), VerseId.chapter(it.id), VerseId.verse(it.id), it.text) }
                 } else {
                     vm.text(v).search(q, scope, currentBook)
                 }
             }
-            searchedTerms = BibleRepository.terms(q)
+            searchedStrong = if (!notes) StudyRepository.normalizeStrong(q) else null
+            searchedTerms = if (searchedStrong != null) emptyList() else BibleRepository.terms(q)
         }
     }
     LaunchedEffect(scope, version, inNotes) { if (query.isNotBlank() && results != null) run() }
@@ -420,7 +437,8 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
             }
             Text(
                 "Tips: all words must match; \"quotes\" for an exact phrase; OR between words for either; " +
-                    "-word to leave out verses with that word; * for word beginnings (lov* finds love, loved, loveth).",
+                    "-word to leave out verses with that word; * for word beginnings (lov* finds love, loved, loveth); " +
+                    "a Strong's number like G26 or H2617 finds every verse using that Greek or Hebrew word.",
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
             )
             if (ref != null) {
@@ -438,6 +456,7 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                     Text("Keep results beside the text")
                 }
             }
+            searchedStrong?.let { if (r != null) StrongsHeader(vm, it, version) }
             if (r != null) {
                 // Results grouped by book, with counts (SRCH-5); a book chip shows just that book.
                 var onlyBook by remember(r) { mutableStateOf<Int?>(null) }
@@ -492,7 +511,12 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                                         vm.refLabel(VerseId.of(hit.book, hit.chapter, hit.verse)),
                                         style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary,
                                     )
-                                    Text(markTerms(hit.text, searchedTerms, matchStyle))
+                                    val words = strongWords[VerseId.of(hit.book, hit.chapter, hit.verse)]
+                                    if (searchedStrong != null && words != null) {
+                                        Text(buildAnnotatedString { append(hit.text); for (w in words) addStyle(matchStyle, w.first, w.last + 1) })
+                                    } else {
+                                        Text(markTerms(hit.text, searchedTerms, matchStyle))
+                                    }
                                 }
                                 // Open in the side panel, keeping this passage where it is.
                                 IconButton(onClick = {
@@ -588,7 +612,16 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                     }
                 }
             } else {
-                Text(verseText, style = MaterialTheme.typography.bodyLarge)
+                // Each word with Hebrew or Greek behind it opens a word study (STD-3).
+                StudyableVerse(vm, id, version, verseText)
+            }
+            // The word tapped on the page, ready to study.
+            val tapped by produceState<WordStudy?>(null, t, version) {
+                value = if (t.word < 0) null else withContext(Dispatchers.IO) {
+                    val strong = vm.study.strongs(version, id).getOrNull(t.word)
+                    val range = com.biblestudy.app.data.StudyRepository.words(verseText).getOrNull(t.word)
+                    if (strong != null && range != null) WordStudy(strong, version, verseText.substring(range)) else null
+                }
             }
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -608,6 +641,9 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                 )
                 // Tags on this verse's note (NOTE-4).
                 if (original.isNotBlank()) TagButton(vm, vm.noteKey(t.book, t.chapter, noteStart))
+                tapped?.let { w ->
+                    FilledTonalButton(onClick = { vm.wordStudy = w }) { Text("Word study: \u201c${w.word}\u201d") }
+                }
             }
             OutlinedTextField(
                 value = note,
