@@ -1430,7 +1430,8 @@ class FeatureTest {
         compose.onNodeWithText("Words, \"exact phrase\", or a reference like John 3:16").performTextInput("G26")
         compose.onAllNodesWithContentDescription("Search").onLast().performClick()
         compose.waitUntil(15_000) { compose.onAllNodesWithText("verses in", substring = true).fetchSemanticsNodes().isNotEmpty() }
-        compose.onNodeWithText("\u1f00\u03b3\u03ac\u03c0\u03b7", substring = true).assertExists() // agapē
+        // The header with the Greek word loads just after the results.
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("\u1f00\u03b3\u03ac\u03c0\u03b7", substring = true).fetchSemanticsNodes().isNotEmpty() } // agapē
         val inJohn = vm.study.occurrences("KJV", "G26", { vm.text("KJV").verseText(it) }).count { it.id / 1_000_000 == 43 }
         compose.onNodeWithText("John $inJohn").performScrollTo().performClick()
         compose.onNodeWithText("John 13:35").assertExists()
