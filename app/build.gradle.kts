@@ -90,6 +90,9 @@ android {
     }
     testOptions {
         unitTests.isIncludeAndroidResources = true
+        // The full suite keeps several Robolectric sandboxes, each with its own copies of the
+        // bundled databases; the default 512 MB heap leaves it starved and timing out.
+        unitTests.all { it.maxHeapSize = "2g" }
     }
 }
 

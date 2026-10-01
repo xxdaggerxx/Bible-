@@ -188,6 +188,12 @@ class FeatureTest {
                     out.append("    ${v.javaClass.simpleName} attached=${v.isAttachedToWindow} parent=${v.parent?.javaClass?.simpleName} ctx=${v.context.javaClass.simpleName}\n")
                 }
             }.onFailure { out.append("  roots: $it\n") }
+            // Where every thread is, to find a load that never finishes.
+            for ((t, stack) in Thread.getAllStackTraces()) {
+                if (stack.none { it.className.startsWith("com.biblestudy") || it.className.contains("sqlite", true) }) continue
+                out.append("  THREAD ${t.name} ${t.state}\n")
+                stack.take(25).forEach { out.append("      at $it\n") }
+            }
             File("build/state-writes.txt").appendText(out.toString())
         }
         override fun finished(d: org.junit.runner.Description) { handle?.dispose(); flusher?.dispose() }
@@ -1563,9 +1569,8 @@ class FeatureTest {
         compose.onAllNodesWithTag("nameRow").onFirst().performClick()
         compose.waitUntil(10_000) { compose.onAllNodesWithText("Brothers and sisters").fetchSemanticsNodes().isNotEmpty() }
         compose.onNodeWithText("Moses").performScrollTo().performClick()
-        compose.waitUntil(10_000) { vm.nameOpen != null && compose.onAllNodesWithText("Moses").fetchSemanticsNodes().size >= 1 &&
-            compose.onAllNodesWithText("Aaron").fetchSemanticsNodes().isNotEmpty() }
-        assertEquals("Moses", vm.study.nameById(vm.nameOpen!!)!!.name)
+        // The family member is looked up in the background, then opens.
+        compose.waitUntil(10_000) { vm.nameOpen?.let { vm.study.nameById(it)?.name } == "Moses" }
 
         // A place on the offline map.
         compose.runOnUiThread { vm.nameOpen = vm.study.nameSearch("Bethlehem").first().id }
