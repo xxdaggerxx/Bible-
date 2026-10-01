@@ -33,6 +33,12 @@ class MainActivity : ComponentActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
+    /** A hovering pen arrives here, not as a touch: record its side button for the hover cursor (INK-13). */
+    override fun dispatchGenericMotionEvent(ev: MotionEvent): Boolean {
+        StylusState.record(ev)
+        return super.dispatchGenericMotionEvent(ev)
+    }
+
     /** Reading time is counted every 15 seconds while the app is on screen (ANL-1). */
     private val ticks = android.os.Handler(android.os.Looper.getMainLooper())
     private val tick = object : Runnable {

@@ -138,6 +138,10 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     var live by mutableStateOf<LiveInk?>(null)
         private set
+    /** Where a hovering pen is, in view pixels, or null (INK-13). */
+    var hover by mutableStateOf<Offset?>(null)
+    /** The hovering pen is the eraser end, or its button is held. */
+    var hoverEraser by mutableStateOf(false)
     var lasso by mutableStateOf<LiveLasso?>(null)
         private set
     var selectedImageId by mutableStateOf<Long?>(null)

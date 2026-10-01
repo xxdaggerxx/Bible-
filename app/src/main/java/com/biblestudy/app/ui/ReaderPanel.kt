@@ -33,6 +33,7 @@ import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.viewinterop.AndroidView
 import com.biblestudy.app.model.Region
+import com.biblestudy.app.model.SideButton
 import com.biblestudy.app.model.TextFont
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.material3.FilledTonalIconButton
@@ -350,6 +351,8 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                             haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                         })
                     }
+                    // Pen hover (INK-13): where the pen will touch, before it lands.
+                    .pointerInput(ctl) { trackHover(ctl) { vm.sideButton } }
             ) {
                 drawRect(theme.surround)
                 val pages = ctl.pages()
@@ -399,6 +402,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             // Kept separate so each new pen point redraws only this, not the whole chapter.
             Canvas(Modifier.fillMaxSize()) {
                 drawLiveLayer(vm, ctl, theme)
+                drawHover(vm, ctl)
                 // Again over an open margin drawer, where the pen is writing in the margin (MRG-14).
                 for (region in listOf(Region.LEFT, Region.RIGHT)) {
                     val shift = ctl.drawerShift(region)
@@ -1274,5 +1278,50 @@ private suspend fun AwaitPointerEventScope.trackPen(first: PointerInputChange, c
         }
     } finally {
         ctl.penEnd()
+    }
+}
+
+/** Follows a hovering pen (INK-13) without taking any input from the gestures. */
+private suspend fun PointerInputScope.trackHover(ctl: ReaderController, sideButton: () -> SideButton) {
+    awaitPointerEventScope {
+        while (true) {
+            val e = awaitPointerEvent(androidx.compose.ui.input.pointer.PointerEventPass.Initial)
+            val c = e.changes.firstOrNull() ?: continue
+            if (c.type != PointerType.Stylus && c.type != PointerType.Eraser) continue
+            ctl.hover = when {
+                e.type == androidx.compose.ui.input.pointer.PointerEventType.Exit || c.pressed -> null
+                else -> c.position
+            }
+            ctl.hoverEraser = c.type == PointerType.Eraser || (StylusState.sideButtonHeld && sideButton() == SideButton.ERASER)
+        }
+    }
+}
+
+/**
+ * The hover cursor (INK-13): a ring the size of what the tool will mark, in its colour, so you can
+ * see exactly where the pen, highlighter or eraser will land.
+ */
+private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawHover(vm: StudyViewModel, ctl: ReaderController) {
+    val at = ctl.hover ?: return
+    if (vm.readMode) return
+    val z = ctl.panel.zoom
+    val tool = if (ctl.hoverEraser) Tool.ERASER else vm.tool
+    when (tool) {
+        Tool.PEN -> {
+            val r = (vm.currentWidth(false) * z / 2f).coerceAtLeast(2.5f)
+            drawCircle(Color(vm.penColor).copy(alpha = 0.55f), r, at)
+            drawCircle(Color.White.copy(alpha = 0.8f), r + 1.5f, at, style = androidx.compose.ui.graphics.drawscope.Stroke(1.5f))
+        }
+        Tool.HIGHLIGHTER -> {
+            val h = vm.currentWidth(true) * z
+            drawRect(Color(vm.highlightColor).copy(alpha = 0.35f), Offset(at.x - h * 0.15f, at.y - h / 2f), Size(h * 0.3f, h))
+        }
+        Tool.ERASER -> {
+            // The eraser's reach, as in ReaderController.eraseAt.
+            val r = maxOf(8f, 20f / z) * z
+            drawCircle(Color.Gray.copy(alpha = 0.18f), r, at)
+            drawCircle(Color.Gray, r, at, style = androidx.compose.ui.graphics.drawscope.Stroke(1.5f))
+        }
+        else -> drawCircle(Color.Gray.copy(alpha = 0.6f), 3f, at)
     }
 }
