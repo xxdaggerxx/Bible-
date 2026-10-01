@@ -1,4 +1,4 @@
-# Bible Study — version 0.6
+# Bible Study — version 0.7
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,24 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 0.7
+
+- **Faster ink.** Pen strokes go straight to the screen through a front-buffered layer, as in Samsung Notes. Turn it off in *Settings → Pen & ink → Fast ink* if anything looks wrong.
+- **Settings.** *⋮ → Settings* holds every option in groups: Reading, Pen & ink, Highlights, Margins & panels, Verse window, Backup and About, plus *Reset settings to defaults*. The toolbar keeps only what you use while writing. Each tool's colours and sizes open from one button.
+- **Text boxes in the margins.** Use *Insert → Text box*, then type. Bible references you type, like "Rom 5:8" or "John 3:16-18", become links as you go. Tap a box to move it, change its size or colour, edit it or delete it.
+- **Resize with the lasso.** Drag the corner handle of a lasso selection to make ink, pictures and text boxes bigger or smaller.
+- **Read mode.** The lock button at the left of the toolbar stops the pen marking the page. The pen then scrolls and taps like a finger.
+- **Underline.** The highlighter's menu has *Highlight* and *Underline*. An underline snaps to the words like a highlight does.
+- **Shapes.** Draw a line, arrow, box or circle and hold the pen still at the end. It snaps to a clean shape. Ink can cross from the margin over the text.
+- **Colour meanings and tags.** Give each highlight colour a meaning (*Settings → Highlights → Colour meanings*, e.g. yellow = promises). Notes and highlights can carry tags. *My notes* (the notes button) lists all notes, highlights and bookmarks, and filters by tag or meaning.
+- **Cross-reference pop-overs.** Tapping a cross-reference in a verse's window or the study pane shows the passage in a pop-over instead of leaving your place.
+- **Turn and crop pictures.** Select a margin picture with the Select tool, then *Turn* or *Crop*.
+- **Saved layouts.** *Panels → Save this layout…* keeps the open panels, their passages and versions, and the study pane. Open it again from the same menu.
+- **Automatic backups.** *Settings → Backup → Automatic backup* makes a backup daily or weekly when you leave the app. It keeps the newest 5. Backups go to app storage, or to a folder you choose, such as a synced Google Drive or OneDrive folder.
+- **Export a chapter.** *⋮ → Export chapter as PDF…* or *as picture…* saves the chapter with your ink, highlights, pictures and text boxes, to share or print.
+
+Your notes database is upgraded the first time 0.7 opens. Back up first if you like (*⋮ → Back up my notes…*).
 
 ## New in version 0.6
 
@@ -208,13 +226,14 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 ## Known limits
 
 - NIV and NLT are waiting on licensing (see above). Cross-references come from the KJV numbering, which the BSB and WEB share.
-- The lasso moves and recolours but can't resize or rotate a selection yet.
-- Pen rendering still uses standard Android drawing rather than the front-buffered ink engine Samsung Notes uses, so it can lag the pen tip slightly.
+- The lasso can move, resize and recolour a selection, but not rotate it.
+- The crop window shows a turned picture the way it was before turning.
+- On a narrow portrait screen the margin drawer pushes the page aside instead of sliding over it.
+- Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
 
 ## Next milestones
 
-- **Next (0.6 step 6, released on its own):** front-buffered, lowest-latency ink, so the feel can be judged on the tablet.
-- **Later:** NIV and NLT (once permission is granted), Strong's word studies, lasso resize, and sketch pages.
+- **Later:** NIV and NLT (once permission is granted), Strong's word studies, lasso rotate, and sketch pages.
 
 ## Credits
 

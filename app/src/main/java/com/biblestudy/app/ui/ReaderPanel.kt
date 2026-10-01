@@ -237,6 +237,31 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         if (vm.linked && vm.activePanel == index) ctl.announceScroll()
     }
 
+    // Export the chapter shown here as a PDF or picture (DATA-5); the active panel handles it.
+    val exportReq = vm.exportRequest
+    LaunchedEffect(exportReq) {
+        val req = exportReq ?: return@LaunchedEffect
+        if (vm.activePanel.coerceIn(0, vm.panels.lastIndex) != index) return@LaunchedEffect
+        vm.exportRequest = null
+        val page = ctl.pages().firstOrNull {
+            it.layout.version == panel.version && it.layout.book == panel.book && it.layout.chapter == panel.chapter
+        }
+        if (page == null) {
+            vm.message = "The chapter is still loading. Try again in a moment."
+            return@LaunchedEffect
+        }
+        val g = page.geo
+        val area = Rect(0f, 0f, g.width, g.height)
+        val draw: androidx.compose.ui.graphics.drawscope.DrawScope.() -> Unit = { drawPage(vm, ctl, page, PageTheme.LIGHT, area, measurer) }
+        // Drawn on the main thread, like the screen, since drawing fills the view model's caches.
+        val ok = runCatching {
+            vm.getApplication<android.app.Application>().contentResolver.openOutputStream(req.uri)?.use {
+                if (req.pdf) ChapterExport.pdf(it, g.width, g.height, draw) else ChapterExport.png(it, g.width, g.height, draw)
+            } ?: error("Couldn't write the file")
+        }.isSuccess
+        vm.message = if (ok) "Chapter exported." else "Export failed."
+    }
+
     // The tablet's Back gesture steps back through this panel's history when it is the active one.
     BackHandler(enabled = vm.activePanel == index && panel.back.isNotEmpty()) { vm.goBack(index) }
 

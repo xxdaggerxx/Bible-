@@ -35,5 +35,6 @@ class MainActivity : ComponentActivity() {
     override fun onStop() {
         super.onStop()
         vm.savePrefs()
+        vm.autoBackupIfDue() // DATA-6: a backup each day or week, when the app goes to the background
     }
 }

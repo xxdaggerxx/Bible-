@@ -1295,4 +1295,56 @@ class FeatureTest {
         assertEquals(listOf("Baptism of Jesus"), vm.user.workspaces().map { it.first })
         compose.runOnUiThread { vm.deleteWorkspace(vm.workspaces.single()); vm.sidePane = null }
     }
+
+    @Test
+    fun automaticBackupsKeepTheNewestFive() {
+        compose.runOnUiThread { vm.backupFolder = null }
+        vm.appBackups().forEach { it.delete() }
+        // Turned on in Settings, under Backup.
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Settings").performClick()
+        compose.onNodeWithText("Automatic backup").performScrollTo()
+        compose.onNodeWithText("Weekly").performClick()
+        compose.waitForIdle()
+        assertEquals(com.biblestudy.app.ui.AutoBackup.WEEKLY, vm.autoBackup)
+        compose.onNodeWithText("Backup folder").assertExists()
+        snap("83-auto-backup")
+        compose.onNodeWithContentDescription("Close").performClick()
+
+        val day = 24L * 3600_000L
+        val start = 1_800_000_000_000L
+        for (i in 0 until 7) {
+            var job: kotlinx.coroutines.Job? = null
+            compose.runOnUiThread { job = vm.autoBackupIfDue(start + i * 8 * day) }
+            assertNotNull("backup $i was due", job)
+            kotlinx.coroutines.runBlocking { job!!.join() }
+        }
+        // Not due again a day later.
+        compose.runOnUiThread { assertNull(vm.autoBackupIfDue(start + 49 * day)) }
+        val kept = vm.appBackups()
+        assertEquals(5, kept.size)
+        assertTrue(kept.all { it.length() > 0 })
+        compose.runOnUiThread { vm.autoBackup = com.biblestudy.app.ui.AutoBackup.OFF }
+        vm.appBackups().forEach { it.delete() }
+    }
+
+    @Test
+    fun aChapterExportsAsAPictureAndAPdf() {
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        val dir = File(compose.activity.cacheDir, "export").apply { mkdirs() }
+        for (pdf in listOf(false, true)) {
+            val out = File(dir, if (pdf) "john3.pdf" else "john3.png").apply { delete() }
+            compose.runOnUiThread { vm.exportRequest = com.biblestudy.app.ui.ExportRequest(android.net.Uri.fromFile(out), pdf) }
+            compose.waitUntil(10_000) { vm.exportRequest == null }
+            compose.waitForIdle()
+            // Robolectric's PdfDocument writes nothing, so only the picture's bytes can be checked here.
+            if (!pdf) {
+                assertTrue("$out: ${out.length()} bytes", out.length() > 0)
+                val bmp = android.graphics.BitmapFactory.decodeFile(out.path)
+                assertTrue("picture ${bmp.width} x ${bmp.height}", bmp.height > bmp.width)
+            }
+        }
+        assertEquals("John 3 (KJV)", vm.exportName())
+    }
 }

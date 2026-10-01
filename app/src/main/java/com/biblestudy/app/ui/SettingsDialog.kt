@@ -1,6 +1,10 @@
 package com.biblestudy.app.ui
 
+import android.content.Intent
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -53,6 +57,19 @@ fun SettingsDialog(
     var confirmReset by remember { mutableStateOf(false) }
     var versions by remember { mutableStateOf(false) }
     var meaningsOpen by remember { mutableStateOf(false) }
+    val context = LocalContext.current
+    // A folder for automatic backups, e.g. one synced to the cloud (DATA-6).
+    val pickFolder = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri ->
+        if (uri != null) {
+            runCatching {
+                context.contentResolver.takePersistableUriPermission(
+                    uri, Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION,
+                )
+            }
+            vm.backupFolder = uri.toString()
+            vm.savePrefs()
+        }
+    }
     BigDialog({ vm.savePrefs(); onDismiss() }) {
         Column {
             DialogTitle("Settings", { vm.savePrefs(); onDismiss() })
@@ -102,6 +119,26 @@ fun SettingsDialog(
                 Toggle("Compare versions", "Show the verse in every version when it opens", vm.compareVersions) { vm.compareVersions = it }
 
                 Group("Backup")
+                Choices("Automatic backup", AutoBackup.entries, vm.autoBackup, { it.label }) {
+                    vm.autoBackup = it
+                    vm.savePrefs()
+                }
+                if (vm.autoBackup != AutoBackup.OFF) {
+                    Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Column(Modifier.weight(1f)) {
+                            Text("Backup folder")
+                            Text(
+                                vm.backupFolderName() + (
+                                    if (vm.lastAutoBackup > 0) " \u00b7 last " + java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM).format(java.util.Date(vm.lastAutoBackup))
+                                    else ""
+                                    ) + " \u00b7 keeps the newest 5",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.outline,
+                            )
+                        }
+                        OutlinedButton(onClick = { runCatching { pickFolder.launch(null) } }) { Text("Choose\u2026") }
+                    }
+                }
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
                     OutlinedButton(onClick = onBackup) { Text("Back up my notes…") }
                     OutlinedButton(onClick = onRestore) { Text("Restore from backup…") }

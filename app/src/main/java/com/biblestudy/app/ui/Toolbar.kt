@@ -82,6 +82,7 @@ fun StudyToolbar(
     onBookmarks: () -> Unit,
     onInsertImage: (ImageSource) -> Unit,
     onBackup: () -> Unit,
+    onExport: (pdf: Boolean) -> Unit,
     onSettings: () -> Unit,
     onAbout: () -> Unit,
 ) {
@@ -238,6 +239,8 @@ fun StudyToolbar(
                         leadingIcon = { Icon(Icons.Filled.Settings, contentDescription = null) },
                         onClick = { menu = false; onSettings() },
                     )
+                    DropdownMenuItem(text = { Text("Export chapter as PDF\u2026") }, onClick = { menu = false; onExport(true) })
+                    DropdownMenuItem(text = { Text("Export chapter as picture\u2026") }, onClick = { menu = false; onExport(false) })
                     DropdownMenuItem(text = { Text("Back up my notes\u2026") }, onClick = { menu = false; onBackup() })
                     DropdownMenuItem(text = { Text("About & credits") }, onClick = { menu = false; onAbout() })
                 }

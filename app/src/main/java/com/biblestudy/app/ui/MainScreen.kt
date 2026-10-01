@@ -80,6 +80,13 @@ fun StudyApp(vm: StudyViewModel) {
         val backupLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/zip")) { uri ->
             if (uri != null) vm.backup(uri)
         }
+        // Chapter export (DATA-5): pick where to save, then the active panel draws it.
+        val exportPdf = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/pdf")) { uri ->
+            if (uri != null) vm.exportRequest = ExportRequest(uri, pdf = true)
+        }
+        val exportPng = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("image/png")) { uri ->
+            if (uri != null) vm.exportRequest = ExportRequest(uri, pdf = false)
+        }
         val restoreLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
             if (uri != null) vm.restore(uri)
         }
@@ -108,6 +115,10 @@ fun StudyApp(vm: StudyViewModel) {
                     onBackup = {
                         val stamp = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
                         backupLauncher.launch("bible-study-backup-$stamp.zip")
+                    },
+                    onExport = { pdf ->
+                        val name = vm.exportName() + if (pdf) ".pdf" else ".png"
+                        runCatching { (if (pdf) exportPdf else exportPng).launch(name) }.onFailure { vm.message = "No file app is available." }
                     },
                     onSettings = { dialog = DialogKind.SETTINGS },
                     onAbout = { dialog = DialogKind.ABOUT },

@@ -150,6 +150,12 @@ data class Workspace(
     }
 }
 
+/** How often notes are backed up automatically (DATA-6). */
+enum class AutoBackup(val label: String, val days: Int) { OFF("Off", 0), DAILY("Daily", 1), WEEKLY("Weekly", 7) }
+
+/** A chapter to export as a PDF or picture (DATA-5), handled by the active panel. */
+data class ExportRequest(val uri: Uri, val pdf: Boolean)
+
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
 enum class PaneKind(val label: String) { SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes") }
 
@@ -370,7 +376,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -1395,29 +1401,112 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     // ---------- backup & restore ----------
 
+    /** Writes everything (the notes database and pictures) as one zip. Call on [dbDispatcher]. */
+    private fun writeBackup(os: java.io.OutputStream) {
+        user.checkpoint()
+        val dbFile = getApplication<Application>().getDatabasePath(UserDb.NAME)
+        ZipOutputStream(os).use { zip ->
+            zip.putNextEntry(ZipEntry("userdata.db"))
+            dbFile.inputStream().use { it.copyTo(zip) }
+            zip.closeEntry()
+            imagesDir.listFiles()?.forEach { f ->
+                zip.putNextEntry(ZipEntry("images/${f.name}"))
+                f.inputStream().use { it.copyTo(zip) }
+                zip.closeEntry()
+            }
+        }
+    }
+
     fun backup(uri: Uri) {
         viewModelScope.launch {
             val ok = withContext(dbDispatcher) {
                 runCatching {
-                    user.checkpoint()
-                    val app = getApplication<Application>()
-                    val dbFile = app.getDatabasePath(UserDb.NAME)
-                    app.contentResolver.openOutputStream(uri)?.use { os ->
-                        ZipOutputStream(os).use { zip ->
-                            zip.putNextEntry(ZipEntry("userdata.db"))
-                            dbFile.inputStream().use { it.copyTo(zip) }
-                            zip.closeEntry()
-                            imagesDir.listFiles()?.forEach { f ->
-                                zip.putNextEntry(ZipEntry("images/${f.name}"))
-                                f.inputStream().use { it.copyTo(zip) }
-                                zip.closeEntry()
-                            }
-                        }
-                    } ?: error("Couldn't write file")
+                    getApplication<Application>().contentResolver.openOutputStream(uri)?.use { writeBackup(it) }
+                        ?: error("Couldn't write file")
                 }.isSuccess
             }
             message = if (ok) "Backup saved." else "Backup failed."
         }
+    }
+
+    // ---------- automatic backups (DATA-6) ----------
+
+    var autoBackup by mutableStateOf(runCatching { AutoBackup.valueOf(prefs.getString("autoBackup", "OFF")!!) }.getOrDefault(AutoBackup.OFF))
+    /** A folder the user chose for automatic backups (a document-tree URI), or null for app storage. */
+    var backupFolder by mutableStateOf(prefs.getString("backupFolder", null))
+    var lastAutoBackup by mutableLongStateOf(prefs.getLong("lastAutoBackup", 0L))
+        private set
+
+    /** Where backups go when no folder is chosen: Android/data/<app>/files/Backups. */
+    private val appBackupDir: File get() = File(getApplication<Application>().getExternalFilesDir(null) ?: getApplication<Application>().filesDir, "Backups")
+
+    /** A readable name for where automatic backups go. */
+    fun backupFolderName(): String = backupFolder?.let { Uri.parse(it).lastPathSegment?.substringAfterLast(':')?.ifEmpty { null } ?: "Chosen folder" }
+        ?: "App storage (Android/data)"
+
+    /**
+     * Makes an automatic backup if one is due (DATA-6): run when the app goes to the background.
+     * Keeps the [KEEP_BACKUPS] newest automatic backups. Returns the job, or null if none was due.
+     */
+    fun autoBackupIfDue(now: Long = System.currentTimeMillis(), force: Boolean = false): kotlinx.coroutines.Job? {
+        val every = autoBackup.days
+        if (every == 0 && !force) return null
+        if (!force && now - lastAutoBackup < every * 24L * 3600_000L - 3600_000L) return null
+        lastAutoBackup = now
+        prefs.edit { putLong("lastAutoBackup", now) }
+        val name = "bible-study-auto-" + java.text.SimpleDateFormat("yyyy-MM-dd-HHmmss", java.util.Locale.US).format(java.util.Date(now)) + ".zip"
+        val folder = backupFolder
+        val app = getApplication<Application>()
+        return viewModelScope.launch(dbDispatcher) {
+            runCatching {
+                if (folder != null) {
+                    val tree = Uri.parse(folder)
+                    val dir = android.provider.DocumentsContract.buildDocumentUriUsingTree(tree, android.provider.DocumentsContract.getTreeDocumentId(tree))
+                    val doc = android.provider.DocumentsContract.createDocument(app.contentResolver, dir, "application/zip", name)
+                        ?: error("Couldn't create the backup file")
+                    app.contentResolver.openOutputStream(doc)?.use { writeBackup(it) }
+                    pruneTree(tree)
+                } else {
+                    val dir = appBackupDir.apply { mkdirs() }
+                    File(dir, name).outputStream().use { writeBackup(it) }
+                    dir.listFiles { f -> f.name.startsWith("bible-study-auto-") }?.sortedByDescending { it.name }
+                        ?.drop(KEEP_BACKUPS)?.forEach { it.delete() }
+                }
+            }.onFailure { withContext(Dispatchers.Main) { message = "Automatic backup failed: ${it.message}" } }
+        }
+    }
+
+    /** The automatic backups kept in app storage, newest first (for Settings and tests). */
+    fun appBackups(): List<File> =
+        appBackupDir.listFiles { f -> f.name.startsWith("bible-study-auto-") }?.sortedByDescending { it.name } ?: emptyList()
+
+    private fun pruneTree(tree: Uri) {
+        val app = getApplication<Application>()
+        val children = android.provider.DocumentsContract.buildChildDocumentsUriUsingTree(
+            tree, android.provider.DocumentsContract.getTreeDocumentId(tree),
+        )
+        val found = ArrayList<Pair<String, String>>()
+        app.contentResolver.query(
+            children,
+            arrayOf(android.provider.DocumentsContract.Document.COLUMN_DOCUMENT_ID, android.provider.DocumentsContract.Document.COLUMN_DISPLAY_NAME),
+            null, null, null,
+        )?.use { c -> while (c.moveToNext()) found += c.getString(0) to c.getString(1) }
+        found.filter { it.second.startsWith("bible-study-auto-") }.sortedByDescending { it.second }.drop(KEEP_BACKUPS).forEach { (id, _) ->
+            runCatching {
+                android.provider.DocumentsContract.deleteDocument(app.contentResolver, android.provider.DocumentsContract.buildDocumentUriUsingTree(tree, id))
+            }
+        }
+    }
+
+    // ---------- export (DATA-5) ----------
+
+    /** A chapter export waiting for the active panel to draw it. */
+    var exportRequest by mutableStateOf<ExportRequest?>(null)
+
+    /** A file name for exporting the active panel's chapter, e.g. "John 3 (BSB)". */
+    fun exportName(): String {
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        return "${text(p.version).book(p.book).name} ${p.chapter} (${p.version})"
     }
 
     fun restore(uri: Uri) {
@@ -1483,6 +1572,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         private const val COPY_SHIFT = 30f
         private const val MAX_HISTORY = 100
         const val PASSAGE_LIMIT = 80
+        /** How many automatic backups are kept (DATA-6). */
+        const val KEEP_BACKUPS = 5
     }
 
     private fun io(block: () -> Unit) {
