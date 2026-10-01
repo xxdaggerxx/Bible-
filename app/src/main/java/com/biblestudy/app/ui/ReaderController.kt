@@ -594,7 +594,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         if (!g.sketch) {
             val local = Offset(s.x, s.y - page.top)
             vm.sketchesIn(g.layout.book, g.layout.chapter).firstOrNull {
-                (sketchBadgeCenter(g, g.layout, it) - local).getDistance() < 30f
+                val note = if (it.note) notePreviewRect(g, g.layout, it, vm.noteContentBottom(it)) else null
+                note?.contains(local) ?: ((sketchBadgeCenter(g, g.layout, it) - local).getDistance() < 30f)
             }?.let { vm.openSketch(it, panelIndex); return }
         }
         if (g.regionAt(s.x) != Region.TEXT) return
@@ -1362,6 +1363,26 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
          * Where a sketch page's badge sits on its passage's page: in the right margin beside its
          * verse when the margin is shown, otherwise just left of the text.
          */
+        /**
+         * Where a full-screen margin note (MRG-15) shows shrunk beside its verse: across the right
+         * margin (or the left one), at most [NOTE_PREVIEW_MAX] tall. Null if no margin is shown.
+         */
+        fun notePreviewRect(g: PageGeometry, layout: ChapterLayout, s: Sketch, contentBottom: Float): Rect? {
+            val (x, w) = when {
+                g.right -> g.colRight + 12f to g.rightW - 24f
+                g.left -> 12f to g.leftW - 24f
+                else -> return null
+            }
+            if (w < 60f) return null
+            val scale = w / Sketch.WIDTH
+            // Only as tall as what's written on it.
+            val h = ((contentBottom + 40f) * scale).coerceIn(60f, NOTE_PREVIEW_MAX)
+            val top = layout.verseTop(s.linkVerse.coerceAtLeast(1))
+            return Rect(x, top, x + w, top + h)
+        }
+
+        const val NOTE_PREVIEW_MAX = 360f
+
         fun sketchBadgeCenter(g: PageGeometry, layout: ChapterLayout, s: Sketch): Offset {
             val y = layout.verseTop(s.linkVerse.coerceAtLeast(1)) + 22f
             return if (g.right) Offset(g.colRight + 26f, y) else Offset(g.textLeft - 34f, y + 34f)

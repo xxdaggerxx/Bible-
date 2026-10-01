@@ -883,6 +883,45 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         return s
     }
 
+    /**
+     * Writes a verse's margin note full screen (MRG-15): its note page, made the first time, opens in
+     * the active panel. Back beside the verse it shows shrunk to fit; tap it to open it again.
+     */
+    fun openNotePage(book: Int, chapter: Int, verse: Int) {
+        val existing = sketches.firstOrNull { it.note && it.linkBook == book && it.linkChapter == chapter && it.linkVerse == verse }
+        if (existing != null) { openSketch(existing); return }
+        val s = createSketch("Note on ${refLabel(VerseId.of(book, chapter, verse))}", Paper.LINED, link = Triple(book, chapter, verse), open = false)
+            .copy(note = true)
+        updateSketch(s)
+        openSketch(s)
+    }
+
+    /** How far down a note page is written on, in page units from its top (MRG-15). */
+    fun noteContentBottom(s: Sketch): Float {
+        val strokes = marginStrokesFor(s.book, 1).maxOfOrNull { st -> (1 until st.points.size step 3).maxOfOrNull { st.points[it] } ?: 0f } ?: 0f
+        val texts = textsFor(s.book, 1).maxOfOrNull { it.y + (textHeights[it.id] ?: estimateTextHeight(it)) } ?: 0f
+        val images = imagesFor(s.book, 1).maxOfOrNull { it.y + it.h } ?: 0f
+        return maxOf(strokes, texts, images, 120f)
+    }
+
+    /** Reads a sketch page's drawing from the notes database (for the shrunk note beside its verse). */
+    fun ensureSketchLoaded(s: Sketch) {
+        val m = mk(s.book, 1)
+        if (!loaded.add("m$m")) return
+        pendingLoads++
+        viewModelScope.launch {
+            try {
+                val (st, i) = withContext(dbDispatcher) { user.loadMargin(s.book, 1) }
+                val t = withContext(dbDispatcher) { user.loadTexts(s.book, 1) }
+                merge(marginStrokesFor(s.book, 1), st)
+                merge(imagesFor(s.book, 1), i)
+                merge(textsFor(s.book, 1), t)
+            } finally {
+                pendingLoads--
+            }
+        }
+    }
+
     /** The last Bible passage a panel showed before its sketch page, for leaving a free-standing page. */
     private fun biblePlaceBefore(p: PanelState): Pair<Int, Int> =
         p.back.lastOrNull { !Sketch.isSketch(it.book) }?.let { it.book to it.chapter } ?: (43 to 1)

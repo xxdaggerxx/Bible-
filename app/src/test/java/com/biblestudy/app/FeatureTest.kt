@@ -2138,4 +2138,36 @@ class FeatureTest {
         assertTrue(vm.textsFor(43, 3).none { it.text == "grace upon grace" })
         compose.runOnUiThread { vm.changeHandwriting(false) }
     }
+
+    @Test
+    fun marginNotesCanBeWrittenFullScreen() {
+        compose.runOnUiThread { vm.sketches.filter { it.note }.forEach { vm.deleteSketch(it) }; vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        // From the verse window: Write full screen.
+        compose.runOnUiThread { vm.openVerse(43, 3, 2) }
+        compose.onNodeWithText("Write full screen").performClick()
+        waitForLoaded()
+        val note = vm.sketches.single { it.note }
+        assertEquals(Triple(43, 3, 2), Triple(note.linkBook, note.linkChapter, note.linkVerse))
+        assertEquals(note.book, vm.panels[0].book)
+        // Write on it.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(200f, 600f)); repeat(30) { moveBy(Offset(30f, if (it % 2 == 0) 25f else -25f)) }; up()
+        }
+        compose.waitForIdle()
+        compose.runOnUiThread { vm.fingerDraw = false }
+        assertEquals(1, vm.marginStrokesFor(note.book, 1).size)
+        snap("128-note-full-screen")
+        // Back on John 3 it shows shrunk beside verse 2; tapping it opens it again.
+        compose.runOnUiThread { vm.goBack(0) }
+        waitForLoaded()
+        assertEquals(43, vm.panels[0].book)
+        snap("129-note-in-margin")
+        compose.runOnUiThread { vm.openNotePage(43, 3, 2) }
+        waitForLoaded()
+        assertEquals(1, vm.sketches.count { it.note })
+        assertEquals(note.book, vm.panels[0].book)
+        compose.runOnUiThread { vm.deleteSketch(vm.sketches.single { it.note }) }
+    }
 }

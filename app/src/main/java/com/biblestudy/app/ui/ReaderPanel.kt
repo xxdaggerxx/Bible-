@@ -30,6 +30,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.viewinterop.AndroidView
 import com.biblestudy.app.model.Region
@@ -895,6 +896,12 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     // Sketch pages linked to this chapter: a badge beside the verse (SKT-2).
     if (sketch == null) {
         for (sk in vm.sketchesIn(layout.book, layout.chapter)) {
+            // A full-screen margin note (MRG-15) shows shrunk to fit beside its verse.
+            val note = if (sk.note) ReaderController.notePreviewRect(g, layout, sk, vm.noteContentBottom(sk)) else null
+            if (note != null) {
+                drawNotePreview(vm, measurer, sk, note, theme)
+                continue
+            }
             val c = ReaderController.sketchBadgeCenter(g, layout, sk)
             drawRoundRect(SKETCH_BADGE, topLeft = c - Offset(16f, 13f), size = Size(32f, 26f), cornerRadius = androidx.compose.ui.geometry.CornerRadius(6f))
             drawLine(Color.White, c + Offset(-8f, 6f), c + Offset(8f, -6f), strokeWidth = 3f)
@@ -1326,4 +1333,34 @@ private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawHover(vm: Study
         }
         else -> drawCircle(Color.Gray.copy(alpha = 0.6f), 3f, at)
     }
+}
+
+/** A note page drawn small in [r] (MRG-15): its ink and text boxes, scaled to the margin's width. */
+private fun DrawScope.drawNotePreview(vm: StudyViewModel, measurer: TextMeasurer, sk: com.biblestudy.app.model.Sketch, r: Rect, theme: PageTheme) {
+    vm.ensureSketchLoaded(sk)
+    val k = r.width / com.biblestudy.app.model.Sketch.WIDTH
+    drawRoundRect(theme.surround.copy(alpha = 0.35f), topLeft = r.topLeft, size = r.size, cornerRadius = androidx.compose.ui.geometry.CornerRadius(8f))
+    drawRoundRect(SKETCH_BADGE, topLeft = r.topLeft, size = r.size, cornerRadius = androidx.compose.ui.geometry.CornerRadius(8f), style = androidx.compose.ui.graphics.drawscope.Stroke(1.5f))
+    clipRect(r.left, r.top, r.right, r.bottom) {
+        translate(r.left, r.top) {
+            scale(k, k, pivot = Offset.Zero) {
+                for (st in vm.marginStrokesFor(sk.book, 1)) {
+                    val p = st.points
+                    if (p.size < 6) continue
+                    val path = androidx.compose.ui.graphics.Path().apply {
+                        moveTo(p[0], p[1])
+                        for (i in 3 until p.size step 3) lineTo(p[i], p[i + 1])
+                    }
+                    drawPath(
+                        path, Color(st.color).copy(alpha = if (st.highlighter) HIGHLIGHT_ALPHA else 1f),
+                        style = androidx.compose.ui.graphics.drawscope.Stroke(st.width, cap = androidx.compose.ui.graphics.StrokeCap.Round, join = androidx.compose.ui.graphics.StrokeJoin.Round),
+                    )
+                }
+                for (t in vm.textsFor(sk.book, 1)) drawTextBox(vm, measurer, t, t.x, t.y, selected = false, editing = false)
+            }
+        }
+    }
+    // A small corner tab says it opens.
+    drawRoundRect(SKETCH_BADGE, topLeft = Offset(r.right - 28f, r.top + 4f), size = Size(24f, 20f), cornerRadius = androidx.compose.ui.geometry.CornerRadius(5f))
+    drawLine(Color.White, Offset(r.right - 22f, r.top + 19f), Offset(r.right - 10f, r.top + 9f), strokeWidth = 2.5f)
 }

@@ -655,6 +655,8 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                     label = { Text(if (t.book < 40) "Hebrew" else "Greek") },
                     modifier = Modifier.testTag("originalChip"),
                 )
+                // Write at length about the verse on a full page (MRG-15).
+                TextButton(onClick = { close(); vm.openNotePage(t.book, t.chapter, t.verse) }) { Text("Write full screen") }
                 // Tags on this verse's note (NOTE-4).
                 if (original.isNotBlank()) TagButton(vm, vm.noteKey(t.book, t.chapter, noteStart))
                 tapped?.let { w ->

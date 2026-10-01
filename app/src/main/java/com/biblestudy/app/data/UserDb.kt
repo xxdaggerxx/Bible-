@@ -103,6 +103,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
         if (oldVersion < 7) createSketches(db) // 0.9: sketch pages (SKT-1 to SKT-4)
         if (oldVersion in 4..7) db.execSQL("ALTER TABLE texts ADD COLUMN marks TEXT NOT NULL DEFAULT ''") // 1.1: highlights in text boxes (HL-11)
         if (oldVersion < 8) createInkText(db) // 1.1: handwriting read for search (SRCH-8)
+        if (oldVersion == 7) db.execSQL("ALTER TABLE sketches ADD COLUMN note INTEGER NOT NULL DEFAULT 0") // 1.1: full-screen margin notes (MRG-15)
     }
 
     /** Handwriting as read text (SRCH-8): one row per verse's margin (or sketch page) per chapter. */
@@ -140,7 +141,8 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
     private fun createSketches(db: SQLiteDatabase) {
         db.execSQL(
             "CREATE TABLE IF NOT EXISTS sketches(id INTEGER PRIMARY KEY, name TEXT NOT NULL, paper TEXT NOT NULL, " +
-                "book INTEGER NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, height REAL NOT NULL, created INTEGER NOT NULL)"
+                "book INTEGER NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, height REAL NOT NULL, created INTEGER NOT NULL, " +
+                "note INTEGER NOT NULL DEFAULT 0)"
         )
     }
 
@@ -175,13 +177,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
     // ---------- sketch pages (SKT) ----------
 
     fun sketches(): List<com.biblestudy.app.model.Sketch> =
-        readableDatabase.rawQuery("SELECT id, name, paper, book, chapter, verse, height, created FROM sketches ORDER BY created", null).use { c ->
+        readableDatabase.rawQuery("SELECT id, name, paper, book, chapter, verse, height, created, note FROM sketches ORDER BY created", null).use { c ->
             buildList {
                 while (c.moveToNext()) add(
                     com.biblestudy.app.model.Sketch(
                         c.getLong(0), c.getString(1),
                         runCatching { com.biblestudy.app.model.Paper.valueOf(c.getString(2)) }.getOrDefault(com.biblestudy.app.model.Paper.BLANK),
-                        c.getInt(3), c.getInt(4), c.getInt(5), c.getFloat(6), c.getLong(7),
+                        c.getInt(3), c.getInt(4), c.getInt(5), c.getFloat(6), c.getLong(7), c.getInt(8) == 1,
                     )
                 )
             }
@@ -190,7 +192,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
     fun saveSketch(s: com.biblestudy.app.model.Sketch) {
         val v = ContentValues().apply {
             put("id", s.id); put("name", s.name); put("paper", s.paper.name); put("book", s.linkBook)
-            put("chapter", s.linkChapter); put("verse", s.linkVerse); put("height", s.height); put("created", s.created)
+            put("chapter", s.linkChapter); put("verse", s.linkVerse); put("height", s.height); put("created", s.created); put("note", if (s.note) 1 else 0)
         }
         writableDatabase.insertWithOnConflict("sketches", null, v, SQLiteDatabase.CONFLICT_REPLACE)
     }

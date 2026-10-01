@@ -272,6 +272,8 @@ data class Sketch(
     /** Page height in page units; "More space" makes it taller. */
     val height: Float,
     val created: Long,
+    /** A full-screen margin note for its verse (MRG-15): shown shrunk beside the verse. */
+    val note: Boolean = false,
 ) {
     val book get() = SKETCH_BOOK + id.toInt()
 
