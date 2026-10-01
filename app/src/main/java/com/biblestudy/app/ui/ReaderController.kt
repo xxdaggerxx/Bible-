@@ -108,6 +108,9 @@ private class LassoDrag(val start: Offset)
 /** Resizing the lasso selection from its corner (INK-11): [bounds] on [page] when it started. */
 private class ResizeDrag(val page: PlacedPage, val bounds: Rect, val start: Offset)
 
+/** Turning a lasso selection by its handle above the outline (INK-11). */
+private class RotateDrag(val page: PlacedPage, val centre: Offset, val start: Offset)
+
 /**
  * Turns pen and finger input on one panel into drawing, erasing, selecting, panning and zooming.
  *
@@ -143,6 +146,9 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     var moveOffset by mutableStateOf(Offset.Zero)
     /** The scale of a selection being resized from its corner, and the corner it grows from. */
     var resizeScale by mutableFloatStateOf(1f)
+    /** The turn (radians, clockwise) being dragged on the selection, for the outline preview. */
+    var rotateAngle by mutableFloatStateOf(0f)
+    private var selRotate: RotateDrag? = null
         private set
     private var selResize: ResizeDrag? = null
         private set
@@ -211,7 +217,19 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     fun recentlyPenned() = SystemClock.uptimeMillis() - lastPenUp < 600
 
-    fun toStrip(p: Offset) = Offset((p.x - panel.panX) / panel.zoom, (p.y - panel.panY) / panel.zoom)
+    fun toStrip(p: Offset): Offset {
+        val x = (p.x - panel.panX) / panel.zoom
+        val y = (p.y - panel.panY) / panel.zoom
+        // Over an open margin drawer, the pen is in the margin, not the text beneath (MRG-14).
+        val g = geo
+        if (g != null && drawer != null && drawerMode) {
+            val right = drawerShift(Region.RIGHT)
+            if (right < 0f && x >= g.colRight + right) return Offset(x - right, y)
+            val left = drawerShift(Region.LEFT)
+            if (left > 0f && x < g.leftW + left) return Offset(x - left, y)
+        }
+        return Offset(x, y)
+    }
 
     // ---------- view transform ----------
 
@@ -227,29 +245,40 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         return panel.viewW / w
     }
 
-    /** Where the page sits sideways with the text in view, and with each margin drawer open. */
+    /** Where the page sits sideways with the text in view. */
     private fun textPanX(g: PageGeometry) = -g.leftW * panel.zoom
-    private fun rightOpenPanX(g: PageGeometry) = panel.viewW - g.width * panel.zoom
+
+    /** The margin drawer showing over the text (MRG-14), and how far it has slid in (0 to 1). */
+    var drawer by mutableStateOf<Region?>(null)
+    var drawerT by mutableFloatStateOf(0f)
 
     /** Which margin drawer is open, if any. */
     val openDrawer: Region?
-        get() {
-            val g = geo ?: return null
-            if (!drawerMode) return null
-            return when {
-                g.right && panel.panX <= rightOpenPanX(g) + 1f && abs(rightOpenPanX(g) - textPanX(g)) > 1f -> Region.RIGHT
-                g.left && panel.panX >= -1f && g.leftW > 0f -> Region.LEFT
-                else -> null
-            }
-        }
+        get() = if (drawerMode && drawerT > 0.5f) drawer else null
 
-    /** Slides a margin drawer open, or back to the text if it is already open. */
+    /**
+     * How far (in page units) a margin is drawn from its place while its drawer slides over the
+     * text: the right margin moves left, the left one right.
+     */
+    fun drawerShift(region: Region): Float {
+        val g = geo ?: return 0f
+        if (!drawerMode || drawer != region || drawerT <= 0f) return 0f
+        return when (region) {
+            Region.RIGHT -> -g.rightW * drawerT
+            Region.LEFT -> g.leftW * drawerT
+            Region.TEXT -> 0f
+        }
+    }
+
+    /** Slides a margin drawer in over the text, or away again if it is already open. */
     suspend fun toggleDrawer(region: Region) {
-        val g = geo ?: return
-        val target = if (openDrawer == region) textPanX(g) else if (region == Region.RIGHT) rightOpenPanX(g) else 0f
-        androidx.compose.animation.core.animate(panel.panX, target) { v, _ ->
-            panel.panX = v
-            clamp()
+        if (openDrawer == region) {
+            androidx.compose.animation.core.animate(drawerT, 0f) { v, _ -> drawerT = v }
+            drawer = null
+        } else {
+            if (drawer != null && drawer != region) drawerT = 0f
+            drawer = region
+            androidx.compose.animation.core.animate(drawerT, 1f) { v, _ -> drawerT = v }
         }
     }
 
@@ -347,8 +376,15 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val pages = pages()
         val cur = pages.firstOrNull { it.top == 0f } ?: return
         val z = panel.zoom
-        val sw = cur.geo.width * z
-        panel.panX = if (sw <= panel.viewW) (panel.viewW - sw) / 2f else panel.panX.coerceIn(panel.viewW - sw, 0f)
+        if (drawerMode && (cur.geo.left || cur.geo.right)) {
+            // Margins are drawers here (MRG-14): only the text column pans into view.
+            val l = -cur.geo.leftW * z
+            val r = panel.viewW - cur.geo.colRight * z
+            panel.panX = if (r >= l) l else panel.panX.coerceIn(r, l)
+        } else {
+            val sw = cur.geo.width * z
+            panel.panX = if (sw <= panel.viewW) (panel.viewW - sw) / 2f else panel.panX.coerceIn(panel.viewW - sw, 0f)
+        }
 
         val stripTop = pages.first().top
         val stripBottom = pages.last().bottom
@@ -465,7 +501,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     fun marginEdgeX(left: Boolean): Float? {
         val g = geo ?: return null
         if (left && !g.left || !left && !g.right) return null
-        return panel.panX + (if (left) g.leftW else g.colRight) * panel.zoom
+        val edge = if (left) g.leftW else g.colRight
+        return panel.panX + (edge + drawerShift(if (left) Region.LEFT else Region.RIGHT)) * panel.zoom
     }
 
     /** Which margin grip (if any) is under a finger at [pos]. The grip sits halfway down the panel. */
@@ -569,6 +606,13 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             val b = selPage?.let { selectionBounds(it) }
             val local = selPage?.let { Offset(s.x, s.y - it.top) }
             // The corner handle resizes the selection (INK-11).
+            // The handle above it turns it.
+            if (b != null && local != null && (local - rotateHandle(b)).getDistance() < 36f / panel.zoom) {
+                mode = Tool.LASSO
+                selRotate = RotateDrag(selPage, b.center, local)
+                rotateAngle = 0f
+                return
+            }
             if (b != null && local != null && (local - b.inflate(10f / panel.zoom).bottomRight).getDistance() < 36f / panel.zoom) {
                 mode = Tool.LASSO
                 selResize = ResizeDrag(selPage, b, local)
@@ -647,7 +691,11 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
                 val d = lassoDrag
                 val l = lasso
                 val rz = selResize
-                if (rz != null) {
+                val rt = selRotate
+                if (rt != null) {
+                    val local = Offset(s.x, s.y - rt.page.top)
+                    rotateAngle = snapAngle(angleOf(local - rt.centre) - angleOf(rt.start - rt.centre))
+                } else if (rz != null) {
                     val local = Offset(s.x, s.y - rz.page.top)
                     val from = (rz.start - rz.bounds.topLeft).getDistance()
                     if (from > 1f) resizeScale = ((local - rz.bounds.topLeft).getDistance() / from).coerceIn(0.2f, 5f)
@@ -692,7 +740,13 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             }
             Tool.LASSO -> {
                 val rz = selResize
-                if (rz != null) {
+                val rt = selRotate
+                if (rt != null) {
+                    selRotate = null
+                    val a = rotateAngle
+                    rotateAngle = 0f
+                    vm.rotateSelection(a, rt.centre, rt.page.geo)
+                } else if (rz != null) {
                     selResize = null
                     val k = resizeScale
                     resizeScale = 1f
@@ -1079,6 +1133,22 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val l = -panel.panX / panel.zoom
         val t = -panel.panY / panel.zoom
         return Rect(l, t, l + panel.viewW / panel.zoom, t + panel.viewH / panel.zoom)
+    }
+
+    /** Where the turn handle sits: just above the middle of the selection's outline. */
+    fun rotateHandle(b: Rect): Offset = Offset(b.center.x, b.top - 10f / panel.zoom - 36f / panel.zoom)
+
+    private fun angleOf(v: Offset) = kotlin.math.atan2(v.y, v.x)
+
+    /** Wraps to -π..π and settles on 15° steps when close to one. */
+    private fun snapAngle(a: Float): Float {
+        val pi = Math.PI.toFloat()
+        var x = a
+        while (x > pi) x -= 2 * pi
+        while (x < -pi) x += 2 * pi
+        val step = pi / 12f
+        val snapped = kotlin.math.round(x / step) * step
+        return if (kotlin.math.abs(x - snapped) < pi / 36f) snapped else x
     }
 
     companion object {

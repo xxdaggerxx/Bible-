@@ -30,6 +30,8 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asAndroidBitmap
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
@@ -58,9 +60,18 @@ fun ImageBar(vm: StudyViewModel, ctl: ReaderController, img: MarginImage, modifi
 /** Drag the corners of the frame to keep part of the picture (MRG-8). */
 @Composable
 fun CropDialog(vm: StudyViewModel, img: MarginImage, onDismiss: () -> Unit) {
-    val bmp = vm.bitmap(img.file) ?: return onDismiss()
-    // The frame as fractions of the picture.
-    var frame by remember { mutableStateOf(Rect(img.cropL, img.cropT, img.cropR, img.cropB)) }
+    val stored = vm.bitmap(img.file) ?: return onDismiss()
+    val turns = ((img.rotation % 4) + 4) % 4
+    // Shown the way it's turned on the page; the crop is stored on the unturned picture.
+    val bmp = remember(stored, turns) {
+        if (turns == 0) stored else {
+            val m = android.graphics.Matrix().apply { postRotate(turns * 90f) }
+            val a = stored.asAndroidBitmap()
+            android.graphics.Bitmap.createBitmap(a, 0, 0, a.width, a.height, m, true).asImageBitmap()
+        }
+    }
+    // The frame as fractions of the picture as shown.
+    var frame by remember { mutableStateOf(turnFrame(Rect(img.cropL, img.cropT, img.cropR, img.cropB), turns)) }
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text("Crop") },
@@ -113,7 +124,8 @@ fun CropDialog(vm: StudyViewModel, img: MarginImage, onDismiss: () -> Unit) {
         },
         confirmButton = {
             TextButton(onClick = {
-                vm.cropImage(img, frame.left, frame.top, frame.right, frame.bottom)
+                val f = turnFrame(frame, (4 - turns) % 4)
+                vm.cropImage(img, f.left, f.top, f.right, f.bottom)
                 onDismiss()
             }) { Text("Done") }
         },
@@ -124,4 +136,14 @@ fun CropDialog(vm: StudyViewModel, img: MarginImage, onDismiss: () -> Unit) {
             }
         },
     )
+}
+
+/** A crop frame (fractions of a picture) as it lands after turning the picture [turns] quarter turns clockwise. */
+fun turnFrame(f: Rect, turns: Int): Rect {
+    var r = f
+    repeat(((turns % 4) + 4) % 4) {
+        // A point (x, y) moves to (1 - y, x).
+        r = Rect(1f - r.bottom, r.left, 1f - r.top, r.right)
+    }
+    return r
 }

@@ -309,6 +309,24 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                             drawPage(vm, ctl, page, theme, view.translate(0f, -page.top), measurer)
                         }
                     }
+                    // An open margin drawer is drawn again over the text (MRG-14).
+                    for (region in listOf(Region.LEFT, Region.RIGHT)) {
+                        val shift = ctl.drawerShift(region)
+                        if (shift == 0f) continue
+                        for (page in pages) {
+                            if (page.bottom < view.top || page.top > view.bottom) continue
+                            val g = page.geo
+                            val (l, r) = if (region == Region.LEFT) 0f to g.leftW else g.colRight to g.width
+                            translate(shift, page.top) {
+                                val edge = if (region == Region.LEFT) r else l
+                                drawRect(Color.Black.copy(alpha = 0.18f), Offset(if (region == Region.LEFT) r else l - 10f, 0f), Size(10f, g.height))
+                                clipRect(l, 0f, r, g.height) {
+                                    drawPage(vm, ctl, page, theme, view.translate(-shift, -page.top), measurer)
+                                }
+                                drawLine(theme.rule, Offset(edge, 0f), Offset(edge, g.height), strokeWidth = 1.5f)
+                            }
+                        }
+                    }
                 }
             }
             // Fast pen ink (INK-4): a front-buffered surface drawn above the page. It is placed here,
@@ -323,7 +341,20 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             }
             // Live layer: the stroke or lasso being drawn, selection outlines and margin grips.
             // Kept separate so each new pen point redraws only this, not the whole chapter.
-            Canvas(Modifier.fillMaxSize()) { drawLiveLayer(vm, ctl, theme) }
+            Canvas(Modifier.fillMaxSize()) {
+                drawLiveLayer(vm, ctl, theme)
+                // Again over an open margin drawer, where the pen is writing in the margin (MRG-14).
+                for (region in listOf(Region.LEFT, Region.RIGHT)) {
+                    val shift = ctl.drawerShift(region)
+                    val g = ctl.geo ?: continue
+                    if (shift == 0f) continue
+                    val (l, r) = if (region == Region.LEFT) 0f to g.leftW else g.colRight to g.width
+                    val z = ctl.panel.zoom
+                    clipRect((l + shift) * z + ctl.panel.panX, 0f, (r + shift) * z + ctl.panel.panX, size.height) {
+                        translate(shift * z, 0f) { drawLiveLayer(vm, ctl, theme) }
+                    }
+                }
+            }
 
             if (geo == null) {
                 CircularProgressIndicator(Modifier.align(Alignment.Center).testTag("loading"))
@@ -815,13 +846,21 @@ private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, t
                 val k = ctl.resizeScale
                 val grown = Rect(b.left, b.top, b.left + b.width * k, b.top + b.height * k)
                 val r = grown.inflate(10f / zoom).translate(ctl.moveOffset.x, ctl.moveOffset.y + page.top)
-                drawRect(SELECT_BLUE.copy(alpha = 0.06f), topLeft = r.topLeft, size = r.size)
-                drawRect(
-                    SELECT_BLUE, topLeft = r.topLeft, size = r.size,
-                    style = Stroke(width = 2f / zoom, pathEffect = PathEffect.dashPathEffect(floatArrayOf(12f / zoom, 8f / zoom))),
-                )
-                // Drag the corner to resize (INK-11).
-                drawCircle(SELECT_BLUE, radius = 12f / zoom, center = r.bottomRight)
+                rotate(Math.toDegrees(ctl.rotateAngle.toDouble()).toFloat(), pivot = b.center.plus(Offset(0f, page.top))) {
+                    drawRect(SELECT_BLUE.copy(alpha = 0.06f), topLeft = r.topLeft, size = r.size)
+                    drawRect(
+                        SELECT_BLUE, topLeft = r.topLeft, size = r.size,
+                        style = Stroke(width = 2f / zoom, pathEffect = PathEffect.dashPathEffect(floatArrayOf(12f / zoom, 8f / zoom))),
+                    )
+                    // Drag the corner to resize, the handle above to turn (INK-11).
+                    drawCircle(SELECT_BLUE, radius = 12f / zoom, center = r.bottomRight)
+                    if (k == 1f) {
+                        val h = ctl.rotateHandle(b).plus(Offset(ctl.moveOffset.x, ctl.moveOffset.y + page.top))
+                        drawLine(SELECT_BLUE, Offset(h.x, r.top), h, strokeWidth = 2f / zoom)
+                        drawCircle(Color.White, radius = 12f / zoom, center = h)
+                        drawCircle(SELECT_BLUE, radius = 12f / zoom, center = h, style = Stroke(width = 3f / zoom))
+                    }
+                }
             }
         }
 

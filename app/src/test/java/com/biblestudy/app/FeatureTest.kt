@@ -931,10 +931,23 @@ class FeatureTest {
         val z = vm.panels[0].zoom
         assertEquals(readerSize().width / Page.COL_W, z, 0.01f)
         snap("52-drawer-closed")
+        val panX = vm.panels[0].panX
         compose.onNodeWithContentDescription("Show right margin").performClick()
         compose.waitForIdle()
         compose.onNodeWithContentDescription("Hide right margin").assertExists()
+        // The drawer slides over the text; the text itself stays where it is.
+        assertEquals(panX, vm.panels[0].panX, 0.5f)
+        // Writing on the open drawer goes into the margin.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val w = readerSize().width.toFloat()
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(w - 150f, 500f)); repeat(5) { moveBy(Offset(15f, 4f)) }; up()
+        }
+        compose.waitForIdle()
+        val s = vm.marginStrokesFor(43, 3).single()
+        assertEquals(Region.RIGHT, s.region)
         snap("53-drawer-open")
+        compose.runOnUiThread { vm.undo(); vm.fingerDraw = false }
         compose.onNodeWithContentDescription("Hide right margin").performClick()
         compose.waitForIdle()
         compose.onNodeWithContentDescription("Show right margin").assertExists()
@@ -1119,6 +1132,35 @@ class FeatureTest {
         assertTrue(after.width > before.width)
         compose.runOnUiThread { vm.undo() }
         assertEquals(before.points[27], vm.marginStrokesFor(43, 3).single().points[27], 0.01f)
+
+        // Drag the handle above the outline a quarter turn clockwise: the ink turns with it.
+        compose.mainClock.advanceTimeBy(600)
+        if (vm.selection == null) {
+            compose.onNodeWithTag("reader0").performTouchInput {
+                down(Offset(mx - 40f, 460f)); moveBy(Offset(190f, 0f)); moveBy(Offset(0f, 140f)); moveBy(Offset(-190f, 0f)); moveBy(Offset(0f, -140f)); up()
+            }
+            compose.waitForIdle()
+            compose.mainClock.advanceTimeBy(600)
+        }
+        assertEquals(setOf(before.id), vm.selection?.ids)
+        val cx = mx + 50f; val cy = 530f
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(cx, 452f))
+            for (i in 1..12) {
+                val a = Math.toRadians(-90.0 + 90.0 * i / 12)
+                moveTo(Offset(cx + 78f * Math.cos(a).toFloat(), cy + 78f * Math.sin(a).toFloat()))
+            }
+            up()
+        }
+        compose.waitForIdle()
+        val turned = vm.marginStrokesFor(43, 3).single()
+        val dx = turned.points[27] - turned.points[0]
+        val dy = turned.points[28] - turned.points[1]
+        // A quarter turn (snapped): (dx, dy) becomes (-dy, dx).
+        assertEquals(-(before.points[28] - before.points[1]), dx, 1f)
+        assertEquals(before.points[27] - before.points[0], dy, 1f)
+        snap("74b-lasso-turned")
+        compose.runOnUiThread { vm.undo() }
     }
 
     @Test
@@ -1254,7 +1296,9 @@ class FeatureTest {
         compose.onNodeWithText("Done").performClick()
         compose.waitForIdle()
         val cropped = vm.imagesFor(43, 3).single()
-        assertTrue("crop ${cropped.cropR} x ${cropped.cropB}", cropped.cropR < 0.8f && cropped.cropB < 0.8f)
+        // The frame was drawn on the turned picture; it's kept on the unturned one.
+        assertTrue("crop $cropped", cropped.cropR - cropped.cropL < 0.8f && cropped.cropB - cropped.cropT < 0.8f)
+        assertEquals(1f, cropped.cropB, 0.01f) // the turned picture's bottom-right is the original's bottom-left
         compose.runOnUiThread { vm.undo(); vm.undo() }
         assertEquals(0, vm.imagesFor(43, 3).single().rotation)
     }

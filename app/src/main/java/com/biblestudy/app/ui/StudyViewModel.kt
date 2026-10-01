@@ -999,6 +999,50 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
+    /**
+     * Turns the selection by [angle] radians (clockwise) about [pivot] (INK-11). Ink turns freely;
+     * pictures turn with it when the angle is a whole number of quarter turns, otherwise they and
+     * text boxes keep upright and only move round the pivot.
+     */
+    fun rotateSelection(angle: Float, pivot: Offset, g: PageGeometry) {
+        if (kotlin.math.abs(angle) < 0.01f) return
+        val layout = g.layout
+        val c = kotlin.math.cos(angle); val sn = kotlin.math.sin(angle)
+        fun rot(x: Float, y: Float) = Offset(
+            (x - pivot.x) * c - (y - pivot.y) * sn + pivot.x,
+            (x - pivot.x) * sn + (y - pivot.y) * c + pivot.y,
+        )
+        val q = kotlin.math.round(angle / (Math.PI.toFloat() / 2f)).toInt()
+        val quarter = kotlin.math.abs(angle - q * Math.PI.toFloat() / 2f) < 0.02f
+        changeSelection { a ->
+            when (a) {
+                is InkStroke -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    val shown = if (a.region == Region.TEXT) layout.render(a).points else a.points
+                    val pts = shown.copyOf()
+                    for (i in 0 until shown.size / 3) {
+                        val r = rot(ox + shown[3 * i], oy + shown[3 * i + 1])
+                        pts[3 * i] = r.x - ox; pts[3 * i + 1] = r.y - oy
+                    }
+                    a.copyAs(points = if (a.region == Region.TEXT) layout.linePoints(pts) else pts)
+                }
+                is MarginImage -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    val centre = rot(ox + a.x + a.w / 2f, oy + a.y + a.h / 2f)
+                    val turns = if (quarter) ((q % 4) + 4) % 4 else 0
+                    val (w, h) = if (turns % 2 == 1) a.h to a.w else a.w to a.h
+                    a.copy(x = centre.x - w / 2f - ox, y = centre.y - h / 2f - oy, w = w, h = h, rotation = (a.rotation + turns) % 4)
+                }
+                is MarginText -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    val centre = rot(ox + a.x + a.w / 2f, oy + a.y)
+                    a.copy(x = centre.x - a.w / 2f - ox, y = centre.y - oy)
+                }
+                is Highlight -> null
+            }
+        }
+    }
+
     /** A stroke's points moved by (dx, dy) page units; ink on the words goes through line coordinates. */
     private fun shifted(s: InkStroke, dx: Float, dy: Float, layout: ChapterLayout): FloatArray =
         if (s.region == Region.TEXT) layout.linePoints(layout.render(s).points.translated(dx, dy))

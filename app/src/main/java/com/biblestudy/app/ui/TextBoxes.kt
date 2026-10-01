@@ -130,7 +130,7 @@ fun TextBoxEditor(vm: StudyViewModel, ctl: ReaderController, page: PlacedPage, t
     val panel = ctl.panel
     val r = ctl.textRect(page.geo, t)
     val density = LocalDensity.current
-    val left = r.left * panel.zoom + panel.panX
+    val left = (r.left + ctl.drawerShift(t.region)) * panel.zoom + panel.panX
     val top = (page.top + r.top) * panel.zoom + panel.panY
     val pad = with(density) { (ReaderController.TEXT_PAD * panel.zoom).toDp() }
     val fontSize = with(density) { (t.size * panel.zoom).toSp() }
