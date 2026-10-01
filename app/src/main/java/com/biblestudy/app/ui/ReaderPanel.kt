@@ -29,6 +29,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.viewinterop.AndroidView
 import com.biblestudy.app.model.Region
@@ -325,10 +326,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             }
             val selected = ctl.selectedImage()
             if (selected != null && vm.tool == Tool.SELECT) {
-                FilledTonalButton(
-                    onClick = { vm.deleteImage(selected.second); ctl.selectedImageId = null },
-                    modifier = Modifier.align(Alignment.TopEnd).padding(12.dp),
-                ) { Text("Delete image") }
+                ImageBar(vm, ctl, selected.second, Modifier.align(Alignment.TopCenter).padding(top = 8.dp))
             }
             vm.passagePop?.takeIf { it.panel == index }?.let { pop ->
                 PassagePopover(vm, pop, onDismiss = { vm.passagePop = null })
@@ -671,12 +669,25 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
             if (bmp == null) {
                 drawRect(theme.rule, topLeft = r.topLeft, size = r.size)
             } else {
-                drawImage(
-                    bmp,
-                    dstOffset = IntOffset(r.left.roundToInt(), r.top.roundToInt()),
-                    dstSize = IntSize(r.width.roundToInt(), r.height.roundToInt()),
-                    filterQuality = FilterQuality.Medium,
+                // Cropped (the part of the picture kept) and turned in quarter turns (MRG-8).
+                val src = IntOffset((img.cropL * bmp.width).roundToInt(), (img.cropT * bmp.height).roundToInt())
+                val srcSize = IntSize(
+                    ((img.cropR - img.cropL) * bmp.width).roundToInt().coerceAtLeast(1),
+                    ((img.cropB - img.cropT) * bmp.height).roundToInt().coerceAtLeast(1),
                 )
+                val sideways = img.rotation % 2 == 1
+                val dw = if (sideways) r.height else r.width
+                val dh = if (sideways) r.width else r.height
+                rotate(img.rotation * 90f, pivot = r.center) {
+                    drawImage(
+                        bmp,
+                        srcOffset = src,
+                        srcSize = srcSize,
+                        dstOffset = IntOffset((r.center.x - dw / 2f).roundToInt(), (r.center.y - dh / 2f).roundToInt()),
+                        dstSize = IntSize(dw.roundToInt(), dh.roundToInt()),
+                        filterQuality = FilterQuality.Medium,
+                    )
+                }
             }
         }
         // Margin text boxes (MRG-12)

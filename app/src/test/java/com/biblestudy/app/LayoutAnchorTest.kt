@@ -103,6 +103,11 @@ class LayoutAnchorTest {
 
     private fun createNotesAndBookmarks(db: SQLiteDatabase) {
         db.execSQL(
+            "CREATE TABLE images(id INTEGER PRIMARY KEY, layer_id INTEGER NOT NULL, book INTEGER NOT NULL, " +
+                "chapter INTEGER NOT NULL, region INTEGER NOT NULL, verse INTEGER NOT NULL, x REAL NOT NULL, " +
+                "y REAL NOT NULL, w REAL NOT NULL, h REAL NOT NULL, file TEXT NOT NULL)"
+        )
+        db.execSQL(
             "CREATE TABLE notes(book INTEGER NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, " +
                 "text TEXT NOT NULL, updated INTEGER NOT NULL, PRIMARY KEY(book, chapter, verse))"
         )

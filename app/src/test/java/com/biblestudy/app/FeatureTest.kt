@@ -48,6 +48,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import androidx.compose.ui.graphics.asImageBitmap
 import com.biblestudy.app.ui.HIGHLIGHT_COLORS
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.ui.LineSpacing
@@ -236,6 +237,7 @@ class FeatureTest {
             }
             vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) }
             vm.textsFor(43, 3).toList().forEach { vm.removeItem(it) }
+            vm.imagesFor(43, 3).toList().forEach { vm.removeItem(it) }
         }
         compose.waitForIdle()
     }
@@ -1208,5 +1210,52 @@ class FeatureTest {
             vm.setMeaning(HIGHLIGHT_COLORS[0], "")
             vm.tags.keys.toList().forEach { vm.setTags(it, emptySet()) }
         }
+    }
+
+    @Test
+    fun marginPicturesTurnAndCrop() {
+        // A 200 x 100 picture beside verse 1.
+        val file = "test-picture.png"
+        val bmp = android.graphics.Bitmap.createBitmap(200, 100, android.graphics.Bitmap.Config.ARGB_8888)
+        bmp.eraseColor(android.graphics.Color.rgb(60, 120, 200))
+        File(compose.activity.filesDir, "images").apply { mkdirs() }.resolve(file).outputStream().use {
+            bmp.compress(android.graphics.Bitmap.CompressFormat.PNG, 100, it)
+        }
+        val img = com.biblestudy.app.model.MarginImage(vm.newId(), vm.activeLayerId, 43, 3, Region.RIGHT, 1, 24f, 8f, 300f, 150f, file)
+        compose.runOnUiThread {
+            vm.bitmaps[file] = bmp.asImageBitmap() // as if already read from storage
+            vm.addItem(img); vm.tool = Tool.SELECT; vm.fingerDraw = true
+        }
+        compose.waitForIdle()
+
+        // Select it with the Select tool: its bar offers Turn, Crop and Delete.
+        val z = zoom()
+        var y = 40f
+        while (compose.onAllNodesWithText("Turn").fetchSemanticsNodes().isEmpty()) {
+            compose.onNodeWithTag("reader0").performTouchInput { down(Offset((Page.COL_W + 150f) * z, y)); up() }
+            compose.waitForIdle()
+            y += 25f
+            assertTrue("picture not found", y < 900f)
+        }
+        compose.onNodeWithText("Turn").performClick()
+        compose.waitForIdle()
+        val turned = vm.imagesFor(43, 3).single()
+        assertEquals(1, turned.rotation)
+        assertEquals(150f, turned.w, 0.1f)
+        assertEquals(300f, turned.h, 0.1f)
+        snap("80-picture-turned")
+
+        // Crop: drag the bottom-right corner in; the picture keeps part of itself.
+        compose.onNodeWithText("Crop").performClick()
+        compose.onNodeWithTag("cropArea").performTouchInput {
+            down(Offset(width - 2f, height - 2f)); moveBy(Offset(-width * 0.25f, -height * 0.25f)); moveBy(Offset(-width * 0.25f, -height * 0.25f)); up()
+        }
+        snap("81-crop")
+        compose.onNodeWithText("Done").performClick()
+        compose.waitForIdle()
+        val cropped = vm.imagesFor(43, 3).single()
+        assertTrue("crop ${cropped.cropR} x ${cropped.cropB}", cropped.cropR < 0.8f && cropped.cropB < 0.8f)
+        compose.runOnUiThread { vm.undo(); vm.undo() }
+        assertEquals(0, vm.imagesFor(43, 3).single().rotation)
     }
 }

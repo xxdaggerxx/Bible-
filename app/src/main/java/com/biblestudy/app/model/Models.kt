@@ -118,6 +118,13 @@ data class MarginImage(
     val w: Float,
     val h: Float,
     val file: String,
+    /** Quarter turns clockwise, 0..3 (MRG-8); w and h are the box as shown. */
+    val rotation: Int = 0,
+    /** The part of the picture shown, as fractions of its width and height (MRG-8). */
+    val cropL: Float = 0f,
+    val cropT: Float = 0f,
+    val cropR: Float = 1f,
+    val cropB: Float = 1f,
 ) : Annotation
 
 /**

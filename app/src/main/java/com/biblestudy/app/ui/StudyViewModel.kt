@@ -980,6 +980,28 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (i >= 0) list[i] = img
     }
 
+    /** Turns a margin picture a quarter turn clockwise (MRG-8), keeping its top-left corner. */
+    fun rotateImage(img: MarginImage) {
+        val after = img.copy(rotation = (img.rotation + 1) % 4, w = img.h, h = img.w)
+        replaceItem(after)
+        record(Edit(listOf(after), listOf(img)))
+    }
+
+    /**
+     * Keeps part of a margin picture (MRG-8): [l], [t], [r], [b] are fractions of the picture as
+     * stored (before turning). The box keeps its width; its height follows the new shape.
+     */
+    fun cropImage(img: MarginImage, l: Float, t: Float, r: Float, b: Float) {
+        val bmp = bitmap(img.file) ?: return
+        val cw = (r - l) * bmp.width
+        val ch = (b - t) * bmp.height
+        if (cw < 4f || ch < 4f) return
+        val shownAspect = if (img.rotation % 2 == 0) ch / cw else cw / ch
+        val after = img.copy(cropL = l, cropT = t, cropR = r, cropB = b, h = img.w * shownAspect)
+        replaceItem(after)
+        record(Edit(listOf(after), listOf(img)))
+    }
+
     fun commitImageChange(before: MarginImage, after: MarginImage) {
         if (before == after) return
         io { user.insert(after) }

@@ -49,7 +49,9 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
         db.execSQL(
             "CREATE TABLE images(id INTEGER PRIMARY KEY, layer_id INTEGER NOT NULL, book INTEGER NOT NULL, " +
                 "chapter INTEGER NOT NULL, region INTEGER NOT NULL, verse INTEGER NOT NULL, x REAL NOT NULL, " +
-                "y REAL NOT NULL, w REAL NOT NULL, h REAL NOT NULL, file TEXT NOT NULL)"
+                "y REAL NOT NULL, w REAL NOT NULL, h REAL NOT NULL, file TEXT NOT NULL, rot INTEGER NOT NULL DEFAULT 0, " +
+                "crop_l REAL NOT NULL DEFAULT 0, crop_t REAL NOT NULL DEFAULT 0, crop_r REAL NOT NULL DEFAULT 1, " +
+                "crop_b REAL NOT NULL DEFAULT 1)"
         )
         db.execSQL("CREATE INDEX images_bc ON images(book, chapter)")
         db.execSQL(
@@ -82,6 +84,11 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
         if (oldVersion < 4) {
             createTexts(db) // 0.7: margin text boxes (MRG-12)
             db.execSQL("ALTER TABLE highlights ADD COLUMN style INTEGER NOT NULL DEFAULT 0") // 0 = fill, 1 = underline (HL-4)
+            // Rotated and cropped margin pictures (MRG-8).
+            db.execSQL("ALTER TABLE images ADD COLUMN rot INTEGER NOT NULL DEFAULT 0")
+            for (c in listOf("crop_l" to 0, "crop_t" to 0, "crop_r" to 1, "crop_b" to 1)) {
+                db.execSQL("ALTER TABLE images ADD COLUMN ${c.first} REAL NOT NULL DEFAULT ${c.second}")
+            }
         }
     }
 
@@ -165,6 +172,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
                 put("id", a.id); put("layer_id", a.layerId); put("book", a.book); put("chapter", a.chapter)
                 put("region", a.region.code); put("verse", a.verse)
                 put("x", a.x); put("y", a.y); put("w", a.w); put("h", a.h); put("file", a.file)
+                put("rot", a.rotation); put("crop_l", a.cropL); put("crop_t", a.cropT); put("crop_r", a.cropR); put("crop_b", a.cropB)
             }, SQLiteDatabase.CONFLICT_REPLACE)
 
             is MarginText -> db.insertWithOnConflict("texts", null, ContentValues().apply {
@@ -303,7 +311,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
             args,
         ).use { c -> buildList { while (c.moveToNext()) add(c.toStroke()) } }
         val images = db.rawQuery(
-            "SELECT id, layer_id, book, chapter, region, verse, x, y, w, h, file FROM images " +
+            "SELECT id, layer_id, book, chapter, region, verse, x, y, w, h, file, rot, crop_l, crop_t, crop_r, crop_b FROM images " +
                 "WHERE book = ? AND chapter = ? ORDER BY id",
             args,
         ).use { c ->
@@ -312,6 +320,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
                     MarginImage(
                         c.getLong(0), c.getLong(1), c.getInt(2), c.getInt(3), Region.of(c.getInt(4)), c.getInt(5),
                         c.getFloat(6), c.getFloat(7), c.getFloat(8), c.getFloat(9), c.getString(10),
+                        c.getInt(11), c.getFloat(12), c.getFloat(13), c.getFloat(14), c.getFloat(15),
                     )
                 )
             }
