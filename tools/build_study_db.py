@@ -386,6 +386,120 @@ def build_names(db):
           "places with coordinates", sum(1 for r in rows if r[12] is not None), "refs", len(refs))
 
 
+def usfm_red(folder):
+    """{verse id: [(word, spoken by Jesus)]} from the \\wj markers of a USFM folder (BIB-8)."""
+    verses = {}
+    tok = re.compile(r"(\\wj\*|\\wj |\\\+?[a-z]+\d?\*?|[\w’']+)", re.UNICODE)
+    for path in sorted(glob.glob(os.path.join(folder, "*.usfm"))):
+        text = open(path, encoding="utf-8").read()
+        m = re.search(r"\\id (\w+)", text)
+        if not m or m.group(1) not in BOOK or BOOK[m.group(1)] < 40:
+            continue
+        book = BOOK[m.group(1)]
+        text = re.sub(r"\\f .*?\\f\*|\\x .*?\\x\*", " ", text, flags=re.S)
+        text = re.sub(r'\|[a-z]+="[^"]*"', "", text)
+        chapter, cur, red = 0, None, False
+        for part in re.split(r"(\\c \d+|\\v \d+[-\d]*)", text):
+            if part.startswith("\\c "):
+                chapter, cur = int(part[3:]), None
+                continue
+            if part.startswith("\\v "):
+                cur = book * 1000000 + chapter * 1000 + int(re.match(r"\d+", part[3:]).group())
+                verses[cur] = []
+                continue
+            if cur is None:
+                continue
+            part = re.sub(r"\\(?:s\d?|d|r|ms\d?|mr|qa|sp) [^\n]*", " ", part)
+            for t in tok.findall(part):
+                if t == "\\wj ":
+                    red = True
+                elif t == "\\wj*":
+                    red = False
+                elif not t.startswith("\\"):
+                    verses[cur].append((t, red))
+    return verses
+
+
+def red_ranges(flags):
+    """Word-index ranges "a-b,c-d" of the words that are true."""
+    out, start = [], None
+    for i, f in enumerate(flags + [False]):
+        if f and start is None:
+            start = i
+        elif not f and start is not None:
+            out.append("%d-%d" % (start, i - 1))
+            start = None
+    return ",".join(out)
+
+
+def build_red(db):
+    """Words of Jesus (BIB-8): KJV and WEB from their \\wj markers; the BSB has none, so its
+    quotations are coloured in the verses where the WEB marks Jesus speaking."""
+    marked = {}
+    for code, asset, folder in (("KJV", "kjv.db", "eng-kjv2006"), ("WEB", "web.db", "engwebp")):
+        src = sqlite3.connect(os.path.join(bibles, asset))
+        red = usfm_red(os.path.join(work, folder))
+        rows = []
+        for vid, text in src.execute("SELECT id, text FROM verses WHERE id >= 40000000 ORDER BY id"):
+            r = red.get(vid)
+            if not r or not any(f for _, f in r):
+                continue
+            words = WORD.findall(text)
+            flags = align(words, r)
+            ranges = red_ranges([bool(f) for f in flags])
+            if ranges:
+                rows.append((code, vid, ranges))
+        if code == "WEB":
+            marked = {v for _, v, _ in rows}
+        db.executemany("INSERT INTO red VALUES(?,?,?)", rows)
+        print("red", code, len(rows))
+    web = {}
+    wsrc = sqlite3.connect(os.path.join(bibles, "web.db"))
+    for code, vid, ranges in [r for r in db.execute("SELECT version, id, words FROM red WHERE version='WEB'")]:
+        words = [norm(w) for w in WORD.findall(wsrc.execute("SELECT text FROM verses WHERE id=?", (vid,)).fetchone()[0])]
+        red = set()
+        for r in ranges.split(","):
+            a, b = map(int, r.split("-"))
+            red.update(range(a, b + 1))
+        web[vid] = ({w for i, w in enumerate(words) if i in red}, {w for i, w in enumerate(words) if i not in red})
+    src = sqlite3.connect(os.path.join(bibles, "bsb.db"))
+    rows, quoted, chapter = [], False, None
+    for vid, text in src.execute("SELECT id, text FROM verses WHERE id >= 40000000 ORDER BY id"):
+        if vid // 1000 != chapter:
+            chapter, quoted = vid // 1000, False
+        # Each quotation (or the part of one in this verse) is coloured when its words are closer
+        # to the WEB's words of Jesus than to the rest of the WEB verse.
+        segs, words = [], []
+        for m in re.finditer(r"[“”]|[\w’']+", text):
+            t = m.group()
+            if t == "“":
+                quoted = True
+            elif t == "”":
+                quoted = False
+            else:
+                if quoted and (not segs or segs[-1][1] != len(words) - 1 or not segs[-1][2]):
+                    segs.append([len(words), len(words), True])
+                elif quoted:
+                    segs[-1][1] = len(words)
+                words.append(norm(t))
+            if t == "”" and segs:
+                segs[-1][2] = False
+        if vid not in web:
+            continue
+        red_w, rest_w = web[vid]
+        flags = [False] * len(words)
+        for a, b, _ in segs:
+            seg = words[a:b + 1]
+            if sum(w in red_w for w in seg) > sum(w in rest_w for w in seg):
+                for i in range(a, b + 1):
+                    flags[i] = True
+        ranges = red_ranges(flags)
+        if ranges:
+            rows.append(("BSB", vid, ranges))
+    db.executemany("INSERT INTO red VALUES(?,?,?)", rows)
+    print("red BSB", len(rows))
+
+
 if os.path.exists(out):
     os.remove(out)
 os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -405,8 +519,9 @@ CREATE TABLE names(id INTEGER PRIMARY KEY, uid TEXT NOT NULL, name TEXT NOT NULL
   brief TEXT, article TEXT, parents TEXT, siblings TEXT, partners TEXT, children TEXT, area TEXT, lat REAL, lon REAL, refs INTEGER NOT NULL);
 CREATE TABLE name_refs(name INTEGER NOT NULL, verse INTEGER NOT NULL);
 CREATE TABLE name_strongs(strong TEXT NOT NULL, name INTEGER NOT NULL);
+CREATE TABLE red(version TEXT NOT NULL, id INTEGER NOT NULL, words TEXT NOT NULL, PRIMARY KEY(version, id)) WITHOUT ROWID;
 """)
-db.execute("INSERT INTO meta VALUES('schema','2')")
+db.execute("INSERT INTO meta VALUES('schema','3')")
 build_tags(db, "KJV", "kjv.db", "eng-kjv2006")
 build_tags(db, "BSB", "bsb.db", "engbsb")
 build_tags(db, "WEB", "web.db", "engwebp")
@@ -418,6 +533,7 @@ build_easton(db)
 build_nave(db)
 build_commentary(db)
 build_names(db)
+build_red(db)
 db.executescript("""
 CREATE INDEX names_key ON names(key);
 CREATE INDEX names_uid ON names(uid);
