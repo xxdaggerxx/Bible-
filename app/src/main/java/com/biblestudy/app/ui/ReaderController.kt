@@ -707,6 +707,19 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             }
             Tool.SELECT -> startSelect(page, p, pos)
         }
+        // Writing sounds (INK-15) for the tools that touch the paper.
+        val texture = when (mode) {
+            Tool.PEN -> WritingSound.Texture.PEN
+            Tool.HIGHLIGHTER -> WritingSound.Texture.HIGHLIGHTER
+            Tool.ERASER -> WritingSound.Texture.ERASER
+            else -> null
+        }
+        if (texture != null) vm.sound.start(texture, pos.x, pos.y, android.os.SystemClock.uptimeMillis())
+    }
+
+    /** The pen moved at [timeMs]: the writing sound follows its speed and pressure (INK-15). */
+    fun soundMove(pos: Offset, pressure: Float, timeMs: Long, density: Float) {
+        if (mode == Tool.PEN || mode == Tool.HIGHLIGHTER || mode == Tool.ERASER) vm.sound.move(pos.x, pos.y, pressure, timeMs, density)
     }
 
     fun penMove(pos: Offset, pressure: Float) {
@@ -759,6 +772,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     }
 
     fun penEnd() {
+        vm.sound.stop()
         lastPenUp = SystemClock.uptimeMillis()
         when (mode) {
             Tool.PEN, Tool.HIGHLIGHTER -> finishStroke()

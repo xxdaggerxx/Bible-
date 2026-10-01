@@ -260,6 +260,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         marginLeft = false; marginRight = true
         linkPanels = false
         compareVersions = false; originalView = false; redLetters = false
+        changeWritingSounds(true); changeSoundVolume(0.6f)
         savePrefs()
         message = "Settings reset to their defaults."
     }
@@ -315,6 +316,18 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** Verse numbers shown (READ-6). */
     var verseNumbers by mutableStateOf(prefs.getBoolean("verseNumbers", true))
         private set
+
+    /** Pen-on-paper sounds while writing (INK-15), and how loud (0..1). */
+    val sound = WritingSound()
+    var writingSounds by mutableStateOf(prefs.getBoolean("writingSounds", true))
+        private set
+    var soundVolume by mutableFloatStateOf(prefs.getFloat("soundVolume", 0.6f))
+        private set
+
+    init { sound.enabled = writingSounds; sound.volume = soundVolume }
+
+    fun changeWritingSounds(on: Boolean) { writingSounds = on; sound.enabled = on }
+    fun changeSoundVolume(v: Float) { soundVolume = v.coerceIn(0f, 1f); sound.volume = soundVolume }
 
     /** Mark words that differ when two versions are side by side (SPLIT-5). */
     var markDifferences by mutableStateOf(prefs.getBoolean("markDifferences", false))
@@ -468,7 +481,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -2193,6 +2206,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     override fun onCleared() {
+        sound.release()
         super.onCleared()
         dbDispatcher.close()
     }

@@ -1262,6 +1262,7 @@ private suspend fun AwaitPointerEventScope.trackPen(first: PointerInputChange, c
             if (c == null || !c.pressed) break
             for (h in c.historical) ctl.penMove(h.position, c.pressure)
             ctl.penMove(c.position, c.pressure)
+            ctl.soundMove(c.position, c.pressure, c.uptimeMillis, density)
             if ((c.position - stillAt).getDistance() > 6f * density) {
                 stillAt = c.position
                 stillSince = c.uptimeMillis
