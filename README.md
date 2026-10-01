@@ -1,4 +1,4 @@
-# Bible Study — version 0.7
+# Bible Study — version 0.8
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,36 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 0.8
+
+Version 0.8 adds offline study tools: Hebrew and Greek word studies, a Bible dictionary, a topical index and a commentary.
+
+- **Word studies.** Tap a word with your finger, then *Word study* in the verse window. You can also tap any word in the verse window's text. The word study shows:
+  - the Hebrew or Greek word and how it's pronounced;
+  - its meaning (Strong's) and how the KJV translates it;
+  - every verse that uses it in the version you're reading, counted by book.
+
+  Tap a verse in the list to go there. Works in the KJV, BSB and WEB.
+- **Search by Strong's number.** Type a number like `G26` (agapē, love) or `H2617` (chesed, lovingkindness) in Search to find every verse using that word.
+- **One menu for the study pane.** The study pane's choices are now one menu at its top:
+  - Search, Cross-references and My notes, as before;
+  - **Dictionary** (Easton's): it suggests the people and places in the chapter you're reading;
+  - **Topics** (Nave's): it suggests the topics for the verse you're on;
+  - **Commentary** (Matthew Henry's Concise): it follows the chapter and scrolls to the verse.
+
+  References in all three are links.
+- **Related passages.** Under a verse's cross-references:
+  - its topics;
+  - parallel accounts (other Gospels, Kings and Chronicles);
+  - passages listed under the same topics.
+- **Layers:** each layer's ⋮ menu now sets its colour and opacity (100%, 75%, 50% or 25%). Moving the layer up or down, renaming it and deleting it moved into the same menu to keep the rows short.
+- **Fixes to 0.7's rough edges:**
+  - On narrow portrait screens the margin drawer now slides over the text instead of pushing the page aside, and you can write in it there.
+  - The crop window shows a turned picture the way it's turned.
+  - A lasso selection can be rotated: drag the round handle above it. It settles on 15° steps, and pictures turn when it's a quarter turn.
+
+The app is about 10 MB bigger because of the study library. Your notes database is upgraded the first time 0.8 opens.
 
 ## New in version 0.7
 
@@ -226,14 +256,15 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 ## Known limits
 
 - NIV and NLT are waiting on licensing (see above). Cross-references come from the KJV numbering, which the BSB and WEB share.
-- The lasso can move, resize and recolour a selection, but not rotate it.
-- The crop window shows a turned picture the way it was before turning.
-- On a narrow portrait screen the margin drawer pushes the page aside instead of sliding over it.
+- Rotating a lasso selection turns ink freely, but pictures only turn in quarter turns and text boxes stay upright.
+- Strong's numbers come from the tagged texts at eBible.org. In the KJV some small words ("the", "unto") have none, so they can't be tapped for a word study.
+- Matthew Henry's Concise Commentary skips some chapters (mostly lists and genealogies).
 - Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
 
 ## Next milestones
 
-- **Later:** NIV and NLT (once permission is granted), Strong's word studies, lasso rotate, and sketch pages.
+- **0.9 (proposed):** sketch pages, a study journal, reading plans, paragraph layout, margins that expand to fit, and importing other Bible files.
+- **Later:** NIV and NLT, once permission is granted.
 
 ## Credits
 
@@ -241,4 +272,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Berean Standard Bible (BSB): dedicated to the public domain (2023). Text from scrollmapper/bible_databases; section headings from eBible.org.
 - World English Bible (WEB): public domain; "World English Bible" is a trademark of eBible.org. Text from eBible.org.
 - Cross-references: OpenBible.info, CC BY 4.0.
+- Strong's Hebrew and Greek dictionaries (1890, public domain), JSON edition by Open Scriptures, CC BY-SA.
+- Strong's numbers for each word: the Strong's-tagged KJV, BSB and WEB USFM files from eBible.org (public domain).
+- Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library (ccel.org). `tools/build_study_db.py` rebuilds `study.db` from these.
 - Font: Gentium Book Plus © SIL International, SIL Open Font License 1.1 (see `licenses/Gentium-OFL.txt`).
