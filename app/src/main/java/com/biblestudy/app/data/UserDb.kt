@@ -22,11 +22,14 @@ import java.nio.ByteOrder
 /** A typed note for the notes browser (NOTE-5). */
 data class NoteEntry(val book: Int, val chapter: Int, val verse: Int, val endVerse: Int, val text: String, val updated: Long)
 
+/** Reading recorded for one chapter (ANL-2, ANL-4). */
+data class ChapterReading(val book: Int, val chapter: Int, val seconds: Int, val opens: Int, val timesRead: Int, val lastRead: Long)
+
 /** One annotation's place and layer, for the book picker's markers. */
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 5) {
+class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 6) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
@@ -64,6 +67,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 5) {
                 "verse INTEGER NOT NULL, created INTEGER NOT NULL, folder TEXT NOT NULL DEFAULT '')"
         )
         createTexts(db)
+        createReading(db)
         db.execSQL("INSERT INTO layers(id, name, color, visible, locked, sort) VALUES(1, 'My Notes', ${DEFAULT_LAYER_COLOR}, 1, 0, 0)")
     }
 
@@ -93,6 +97,18 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 5) {
         if (oldVersion < 5) {
             db.execSQL("ALTER TABLE layers ADD COLUMN opacity REAL NOT NULL DEFAULT 1") // 0.8: faded layers (LAY-8)
         }
+        if (oldVersion < 6) createReading(db) // 0.9: reading analytics (ANL-1 to ANL-6)
+    }
+
+    private fun createReading(db: SQLiteDatabase) {
+        // Seconds spent each day, reading and in the study tools (ANL-1, ANL-3).
+        db.execSQL("CREATE TABLE IF NOT EXISTS reading_days(day TEXT PRIMARY KEY, read_s INTEGER NOT NULL, study_s INTEGER NOT NULL)")
+        // Per chapter: time spent, times opened and times read through (ANL-2, ANL-4).
+        db.execSQL(
+            "CREATE TABLE IF NOT EXISTS reading_chapters(book INTEGER NOT NULL, chapter INTEGER NOT NULL, " +
+                "seconds INTEGER NOT NULL, opens INTEGER NOT NULL, times_read INTEGER NOT NULL, last_read INTEGER NOT NULL, " +
+                "PRIMARY KEY(book, chapter))"
+        )
     }
 
     private fun createTexts(db: SQLiteDatabase) {
@@ -110,6 +126,61 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 5) {
         db.execSQL("CREATE TABLE meanings(color INTEGER PRIMARY KEY, label TEXT NOT NULL)")
         // Saved panel layouts (SPLIT-6), as JSON.
         db.execSQL("CREATE TABLE workspaces(name TEXT PRIMARY KEY, json TEXT NOT NULL, created INTEGER NOT NULL)")
+    }
+
+    // ---------- reading analytics (ANL) ----------
+
+    // Insert-then-update rather than an upsert: Android 10's SQLite (3.22) has no ON CONFLICT DO UPDATE.
+
+    fun addReading(day: String, book: Int, chapter: Int, seconds: Int, study: Boolean) {
+        val db = writableDatabase
+        db.beginTransaction()
+        try {
+            db.execSQL("INSERT OR IGNORE INTO reading_days VALUES(?, 0, 0)", arrayOf(day))
+            db.execSQL(
+                "UPDATE reading_days SET read_s = read_s + ?, study_s = study_s + ? WHERE day = ?",
+                arrayOf(seconds, if (study) seconds else 0, day),
+            )
+            ensureChapter(db, book, chapter)
+            db.execSQL("UPDATE reading_chapters SET seconds = seconds + ? WHERE book = ? AND chapter = ?", arrayOf(seconds, book, chapter))
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+    }
+
+    private fun ensureChapter(db: SQLiteDatabase, book: Int, chapter: Int) =
+        db.execSQL("INSERT OR IGNORE INTO reading_chapters VALUES(?, ?, 0, 0, 0, 0)", arrayOf(book, chapter))
+
+    fun addOpen(book: Int, chapter: Int) {
+        val db = writableDatabase
+        ensureChapter(db, book, chapter)
+        db.execSQL("UPDATE reading_chapters SET opens = opens + 1 WHERE book = ? AND chapter = ?", arrayOf(book, chapter))
+    }
+
+    fun markRead(book: Int, chapter: Int, at: Long) {
+        val db = writableDatabase
+        ensureChapter(db, book, chapter)
+        db.execSQL(
+            "UPDATE reading_chapters SET times_read = times_read + 1, last_read = ? WHERE book = ? AND chapter = ?",
+            arrayOf(at, book, chapter),
+        )
+    }
+
+    /** (day, reading seconds, study seconds), oldest first. */
+    fun readingDays(): List<Triple<String, Int, Int>> =
+        readableDatabase.rawQuery("SELECT day, read_s, study_s FROM reading_days ORDER BY day", null).use { c ->
+            buildList { while (c.moveToNext()) add(Triple(c.getString(0), c.getInt(1), c.getInt(2))) }
+        }
+
+    fun readingChapters(): List<ChapterReading> =
+        readableDatabase.rawQuery("SELECT book, chapter, seconds, opens, times_read, last_read FROM reading_chapters", null).use { c ->
+            buildList { while (c.moveToNext()) add(ChapterReading(c.getInt(0), c.getInt(1), c.getInt(2), c.getInt(3), c.getInt(4), c.getLong(5))) }
+        }
+
+    fun clearReading() {
+        writableDatabase.execSQL("DELETE FROM reading_days")
+        writableDatabase.execSQL("DELETE FROM reading_chapters")
     }
 
     // ---------- layers ----------

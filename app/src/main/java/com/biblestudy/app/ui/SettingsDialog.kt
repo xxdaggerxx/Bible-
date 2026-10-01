@@ -57,6 +57,7 @@ fun SettingsDialog(
     var confirmReset by remember { mutableStateOf(false) }
     var versions by remember { mutableStateOf(false) }
     var meaningsOpen by remember { mutableStateOf(false) }
+    var confirmClearStats by remember { mutableStateOf(false) }
     val context = LocalContext.current
     // A folder for automatic backups, e.g. one synced to the cloud (DATA-6).
     val pickFolder = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri ->
@@ -83,6 +84,8 @@ fun SettingsDialog(
                     "New panels open in", listOf<String?>(null) + BibleRepository.ALL.map { it.code }, vm.newPanelVersion,
                     { it ?: "Same version" },
                 ) { vm.newPanelVersion = it }
+                Toggle("Count reading time", "For Reading stats: kept only on this tablet", vm.trackReading) { vm.trackReading = it }
+                TextButton(onClick = { confirmClearStats = true }) { Text("Clear reading statistics\u2026") }
 
                 Group("Pen & ink")
                 Toggle("Draw with finger", "Off: fingers scroll and tap; only the pen draws", vm.fingerDraw) { vm.fingerDraw = it }
@@ -182,6 +185,15 @@ fun SettingsDialog(
                 }
             },
             confirmButton = { TextButton(onClick = { meaningsOpen = false }) { Text("Done") } },
+        )
+    }
+    if (confirmClearStats) {
+        AlertDialog(
+            onDismissRequest = { confirmClearStats = false },
+            title = { Text("Clear reading statistics?") },
+            text = { Text("Reading time, chapters read and days read are all reset to nothing. Your notes are not changed.") },
+            confirmButton = { TextButton(onClick = { vm.clearReadingStats(); confirmClearStats = false }) { Text("Clear") } },
+            dismissButton = { TextButton(onClick = { confirmClearStats = false }) { Text("Cancel") } },
         )
     }
     if (confirmReset) {

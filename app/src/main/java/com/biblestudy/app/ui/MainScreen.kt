@@ -44,7 +44,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 
-private enum class DialogKind { PICKER, SEARCH, LAYERS, BOOKMARKS, ABOUT, RESTORE, SETTINGS }
+private enum class DialogKind { PICKER, SEARCH, LAYERS, BOOKMARKS, ABOUT, RESTORE, SETTINGS, STATS }
 
 private val LightColors = lightColorScheme(
     primary = Color(0xFF7A5C2E),
@@ -121,6 +121,7 @@ fun StudyApp(vm: StudyViewModel) {
                         runCatching { (if (pdf) exportPdf else exportPng).launch(name) }.onFailure { vm.message = "No file app is available." }
                     },
                     onSettings = { dialog = DialogKind.SETTINGS },
+                    onStats = { dialog = DialogKind.STATS },
                     onAbout = { dialog = DialogKind.ABOUT },
                 )
             },
@@ -201,6 +202,7 @@ fun StudyApp(vm: StudyViewModel) {
             DialogKind.LAYERS -> LayersDialog(vm) { dialog = null }
             DialogKind.BOOKMARKS -> BookmarksDialog(vm) { dialog = null }
             DialogKind.ABOUT -> AboutDialog { dialog = null }
+            DialogKind.STATS -> ReadingStatsDialog(vm) { dialog = null }
             DialogKind.SETTINGS -> SettingsDialog(
                 vm,
                 onBackup = {

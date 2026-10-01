@@ -256,7 +256,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         // Drawn on the main thread, like the screen, since drawing fills the view model's caches.
         val ok = runCatching {
             vm.getApplication<android.app.Application>().contentResolver.openOutputStream(req.uri)?.use {
-                if (req.pdf) ChapterExport.pdf(it, g.width, g.height, draw) else ChapterExport.png(it, g.width, g.height, draw)
+                val v = com.biblestudy.app.data.BibleRepository.ALL.firstOrNull { b -> b.code == panel.version } ?: vm.bible.version
+                val footer = ChapterExport.footerFor(v, "${vm.bible.book(panel.book).name} ${panel.chapter}")
+                if (req.pdf) ChapterExport.pdf(it, g.width, g.height, footer, draw) else ChapterExport.png(it, g.width, g.height, footer, draw)
             } ?: error("Couldn't write the file")
         }.isSuccess
         vm.message = if (ok) "Chapter exported." else "Export failed."

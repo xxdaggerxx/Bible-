@@ -22,6 +22,7 @@ class MainActivity : ComponentActivity() {
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         StylusState.record(ev)
+        if (ev.actionMasked == MotionEvent.ACTION_DOWN) vm.userActive()
         // Deliver pen movement as soon as it arrives instead of once per frame, so ink keeps up with
         // the tip (INK-4).
         if (ev.actionMasked == MotionEvent.ACTION_DOWN && Build.VERSION.SDK_INT >= Build.VERSION_CODES.R &&
@@ -32,8 +33,27 @@ class MainActivity : ComponentActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
+    /** Reading time is counted every 15 seconds while the app is on screen (ANL-1). */
+    private val ticks = android.os.Handler(android.os.Looper.getMainLooper())
+    private val tick = object : Runnable {
+        override fun run() {
+            vm.readingTick()
+            ticks.postDelayed(this, 15_000)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        vm.foreground = true
+        vm.userActive()
+        vm.startReadingClock() // time spent away isn't counted
+        ticks.postDelayed(tick, 15_000)
+    }
+
     override fun onStop() {
         super.onStop()
+        vm.foreground = false
+        ticks.removeCallbacks(tick)
         vm.savePrefs()
         vm.autoBackupIfDue() // DATA-6: a backup each day or week, when the app goes to the background
     }

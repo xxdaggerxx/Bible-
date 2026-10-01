@@ -88,6 +88,7 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.AnnotatedString
@@ -157,6 +158,10 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     val version = vm.activeVersion
     // Where the user has notes; ink on the words counts for the version being read.
     val markers by produceState<MarkerIndex?>(null, version, vm.dataGeneration) { value = vm.loadMarkers(version) }
+    // Chapters already read get a light tint (ANL-5).
+    val readChapters by produceState(emptySet<Int>(), vm.readingGeneration) {
+        value = withContext(Dispatchers.IO) { vm.user.readingChapters().filter { it.timesRead > 0 }.mapTo(HashSet()) { it.book * 1000 + it.chapter } }
+    }
     val visible = vm.visibleLayerIds()
     val colors = vm.layers.associate { it.id to it.color }
 
@@ -204,7 +209,7 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                                     vm.bookmarks.any { it.book == b && it.chapter == ch },
                                 )
                             }
-                            GridCell(ch.toString(), m, label = "${info.name} $ch") { chapter = ch }
+                            GridCell(ch.toString(), m, label = "${info.name} $ch", read = b * 1000 + ch in readChapters) { chapter = ch }
                         }
                     }
                 }
@@ -263,6 +268,8 @@ private fun MarkerLegend() {
 }
 
 private val BOOKMARK_RED = Color(0xFFC62828)
+/** A chapter that has been read (ANL-5). */
+val READ_TINT = Color(0x4D7FB77E)
 
 @Composable
 private fun MarkerRow(m: Marks?, label: String) {
@@ -291,12 +298,13 @@ private fun SectionLabel(text: String) {
 }
 
 @Composable
-private fun GridCell(text: String, marks: Marks? = null, label: String = text, onInfo: (() -> Unit)? = null, onClick: () -> Unit) {
+private fun GridCell(text: String, marks: Marks? = null, label: String = text, read: Boolean = false, onInfo: (() -> Unit)? = null, onClick: () -> Unit) {
     Box(
         Modifier
             .padding(4.dp)
             .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surfaceContainerHigh)
+            .background(if (read) READ_TINT else MaterialTheme.colorScheme.surfaceContainerHigh)
+            .then(if (read) Modifier.semantics { stateDescription = "read" } else Modifier)
     ) {
         Column(
             Modifier

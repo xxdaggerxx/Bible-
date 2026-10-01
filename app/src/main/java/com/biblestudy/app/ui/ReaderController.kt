@@ -400,7 +400,17 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         }
         val topY = -panel.panY / z
         pageAt(topY)?.let { panel.topVerse = it.layout.verseAtY(topY - it.top + 80f) }
+        // How far into the current chapter the reader has seen (ANL-2).
+        val bottomY = topY + panel.viewH / z
+        val cur2 = pages.firstOrNull { it.top == 0f }
+        if (cur2 != null) {
+            val seen = if (bottomY >= cur2.bottom - 40f) Int.MAX_VALUE else cur2.layout.verseAtY(bottomY - cur2.top - 40f)
+            val key = cur2.layout.book * 1000 + cur2.layout.chapter
+            if (key != seenKey) { seenKey = key; panel.seenTo = 0 }
+            if (seen > panel.seenTo) panel.seenTo = seen
+        }
     }
+    private var seenKey = -1
 
     /** Continuous scrolling: when the view's top edge leaves the current chapter, make its neighbour current. */
     private fun reanchor(cur: PlacedPage) {

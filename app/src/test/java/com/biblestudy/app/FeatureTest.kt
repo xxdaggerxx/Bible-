@@ -1497,4 +1497,48 @@ class FeatureTest {
         assertEquals(com.biblestudy.app.ui.LAYER_COLORS[2], vm.user.layers().first().color)
         compose.runOnUiThread { vm.setLayerOpacity(vm.layers.first().id, 1f); vm.setLayerColor(vm.layers.first().id, com.biblestudy.app.ui.LAYER_COLORS[0]) }
     }
+
+    @Test
+    fun readingIsCountedAndShownInReadingStats() {
+        compose.runOnUiThread { vm.clearReadingStats(); vm.trackReading = true; vm.foreground = true }
+        waitForLoaded()
+        // Scroll through John 3.
+        // Down to the end of John 3.
+        compose.runOnUiThread { vm.goTo(0, 43, 3, 30, remember = false) }
+        waitForLoaded()
+        val ch = vm.panels[0].chapter
+        assertEquals(3, ch)
+        assertTrue("seen to ${vm.panels[0].seenTo}", vm.panels[0].seenTo >= 29)
+        // Five quarter-minutes of reading, touching now and then: the chapter counts as read.
+        var t = 10_000_000L
+        compose.runOnUiThread {
+            vm.startReadingClock(t); vm.userActive(t)
+            repeat(5) { t += 15_000; vm.userActive(t - 5_000); vm.readingTick(t) }
+        }
+        // Three idle minutes later nothing more is counted.
+        compose.runOnUiThread { vm.readingTick(t + 180_000) }
+        runCatching { compose.waitUntil(10_000) { vm.user.readingChapters().any { it.book == 43 && it.chapter == ch && it.timesRead == 1 } } }
+            .onFailure { throw AssertionError("${vm.user.readingChapters()} at ${vm.panels[0].chapter} seen ${vm.panels[0].seenTo}", it) }
+        val john3 = vm.user.readingChapters().single { it.book == 43 && it.chapter == ch }
+        assertEquals(75, john3.seconds)
+        assertEquals(1, john3.opens)
+
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Reading stats").performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("1 of 1189 chapters").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(compose.onAllNodesWithText("1 min", substring = true).fetchSemanticsNodes().isNotEmpty())
+        snap("92-reading-stats")
+        compose.onNodeWithContentDescription("Close").performClick()
+
+        // The book picker tints chapters already read.
+        compose.onNodeWithText("John $ch").performClick()
+        compose.onNodeWithText("John").performClick()
+        assertEquals(
+            "read",
+            compose.onAllNodes(androidx.compose.ui.test.hasStateDescription("read")).fetchSemanticsNodes().single()
+                .config[androidx.compose.ui.semantics.SemanticsProperties.StateDescription],
+        )
+        snap("93-picker-read")
+        compose.runOnUiThread { vm.clearReadingStats() }
+    }
 }

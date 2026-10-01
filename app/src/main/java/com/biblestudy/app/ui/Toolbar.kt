@@ -84,6 +84,7 @@ fun StudyToolbar(
     onBackup: () -> Unit,
     onExport: (pdf: Boolean) -> Unit,
     onSettings: () -> Unit,
+    onStats: () -> Unit,
     onAbout: () -> Unit,
 ) {
     // Kept short so it fits without scrolling (UI-3): tools, one button for the tool's colour and
@@ -239,6 +240,7 @@ fun StudyToolbar(
                         leadingIcon = { Icon(Icons.Filled.Settings, contentDescription = null) },
                         onClick = { menu = false; onSettings() },
                     )
+                    DropdownMenuItem(text = { Text("Reading stats") }, onClick = { menu = false; onStats() })
                     DropdownMenuItem(text = { Text("Export chapter as PDF\u2026") }, onClick = { menu = false; onExport(true) })
                     DropdownMenuItem(text = { Text("Export chapter as picture\u2026") }, onClick = { menu = false; onExport(false) })
                     DropdownMenuItem(text = { Text("Back up my notes\u2026") }, onClick = { menu = false; onBackup() })

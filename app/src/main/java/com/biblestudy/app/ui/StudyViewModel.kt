@@ -77,6 +77,8 @@ class PanelState(book: Int, chapter: Int) {
     var viewH by mutableFloatStateOf(0f)
     /** The verse at the top of the view (observable, so a cross-references pane can follow it). */
     var topVerse by mutableIntStateOf(1)
+    /** The last verse of the current chapter that has been in view (ANL-2); past the end means it was all seen. */
+    var seenTo by mutableIntStateOf(0)
     /** Bumped on every explicit jump (picker, search, arrows) so the panel scrolls to the top. */
     var navGen by mutableIntStateOf(0)
 
@@ -383,7 +385,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -576,6 +578,69 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun openVerse(book: Int, chapter: Int, verse: Int, word: Int = -1) {
         verseSheet = VerseTarget(book, chapter, verse, word)
         paneVerse = VerseTarget(book, chapter, verse)
+    }
+
+    // ---------- reading analytics (ANL-1 to ANL-6) ----------
+
+    /** Whether reading time is counted (ANL-6). */
+    var trackReading by mutableStateOf(prefs.getBoolean("trackReading", true))
+    /** True while the app is on screen. */
+    var foreground = false
+    /** Set when something is shown that counts as study rather than reading, e.g. a sketch page. */
+    var studyOpen = false
+    /** Changes when reading statistics change, so the book picker and stats can refresh. */
+    var readingGeneration by mutableIntStateOf(0)
+        private set
+    private var lastActive = 0L
+    private var lastTick = 0L
+    private var visitKey = -1
+    private var visitSeconds = 0
+    private var visitRead = false
+
+    fun startReadingClock(now: Long = android.os.SystemClock.uptimeMillis()) { lastTick = now }
+
+    /** A touch or pen stroke: the reader is here (ANL-1). */
+    fun userActive(now: Long = android.os.SystemClock.uptimeMillis()) { lastActive = now }
+
+    /**
+     * Counts the time since the last tick for the chapter at the top of the active panel (ANL-1),
+     * unless the app is in the background or untouched for two minutes. A chapter counts as read
+     * (ANL-2) once a visit to it has lasted a minute and most of it has been in view.
+     */
+    fun readingTick(now: Long = android.os.SystemClock.uptimeMillis()) {
+        val since = (now - lastTick).coerceIn(0L, 30_000L)
+        lastTick = now
+        if (!trackReading || !foreground || now - lastActive > IDLE_MS || since < 1000) return
+        val p = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex)) ?: return
+        val book = p.book; val chapter = p.chapter
+        val key = book * 1000 + chapter
+        if (key != visitKey) {
+            visitKey = key; visitSeconds = 0; visitRead = false
+            io { user.addOpen(book, chapter) }
+        }
+        val seconds = (since / 1000).toInt()
+        visitSeconds += seconds
+        val study = sidePane != null || wordStudy != null || studyOpen
+        val day = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
+        io { user.addReading(day, book, chapter, seconds, study) }
+        if (!visitRead && visitSeconds >= 60) {
+            val last = verseCount(book, chapter)
+            if (p.seenTo >= (last * 0.8f).toInt()) {
+                visitRead = true
+                io { user.markRead(book, chapter, System.currentTimeMillis()) }
+            }
+        }
+        readingGeneration++
+    }
+
+    private val verseCounts = HashMap<Int, Int>()
+    private fun verseCount(book: Int, chapter: Int): Int =
+        verseCounts.getOrPut(book * 1000 + chapter) { bible.chapter(book, chapter).size }
+
+    fun clearReadingStats() {
+        io { user.clearReading() }
+        visitKey = -1
+        readingGeneration++
     }
 
     // ---------- study library (0.8) ----------
@@ -1672,6 +1737,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     companion object {
+        /** Reading time pauses after this long without a touch (ANL-1). */
+        const val IDLE_MS = 120_000L
+
         /** Capitalised words that start sentences, not names worth a dictionary article. */
         private val COMMON_WORDS = setOf(
             "and", "the", "then", "but", "for", "now", "when", "who", "what", "this", "that", "these", "they", "there",
