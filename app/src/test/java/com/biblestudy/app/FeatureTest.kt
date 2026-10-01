@@ -1960,4 +1960,53 @@ class FeatureTest {
         assertEquals("Backed up words.", vm.text("BAK").verseText(43003016))
         compose.runOnUiThread { vm.removeBible("BAK") }
     }
+
+    @Test
+    fun anySketchPageOpensBesideTheText() {
+        compose.runOnUiThread { vm.addReadyMadePages() }
+        waitForLoaded()
+        // Panels \u2192 Beside the text: Sketch pages lists every page.
+        compose.onNodeWithContentDescription("Panels").performClick()
+        compose.onNodeWithText("Beside the text: Sketch pages").performClick()
+        compose.onNodeWithTag("sketchesPane").assertExists()
+        snap("121-sketches-pane")
+        compose.onNodeWithText("The tabernacle").performClick()
+        waitForLoaded()
+        val tab = vm.sketches.first { it.name == "The tabernacle" }
+        assertEquals(2, vm.panels.size)
+        assertEquals(43, vm.panels[0].book) // the Bible stays where it was
+        assertEquals(tab.book, vm.panels[1].book)
+        snap("122-sketch-beside")
+        // Another page replaces it in the same panel.
+        compose.runOnUiThread { vm.sidePane = com.biblestudy.app.ui.PaneKind.SKETCHES }
+        compose.onNodeWithText("The feasts of Israel").performClick()
+        waitForLoaded()
+        assertEquals(2, vm.panels.size)
+        assertEquals(43, vm.panels[0].book)
+        assertEquals(vm.sketches.first { it.name == "The feasts of Israel" }.book, vm.panels[1].book)
+        compose.runOnUiThread { vm.closePanel(1) }
+    }
+
+    @Test
+    fun erasingAHighlightInOneVersionErasesItInEvery() {
+        val at = Offset((Page.COL_PAD + 250f) * zoom(), 600f)
+        val h = highlightWordAt(at)
+        compose.runOnUiThread { vm.setVersion(0, "BSB"); vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        assertEquals(1, vm.crossHighlights("BSB", 43, 3).size)
+        // Rub the eraser down the page in the BSB: the KJV highlight goes too.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.ERASER; vm.partialEraser = false }
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(at.x, 60f)); repeat(64) { moveBy(Offset(0f, 10f)) }; up()
+        }
+        compose.waitForIdle()
+        assertTrue(vm.highlightsFor("KJV", 43, 3).none { it.id == h.id })
+        assertTrue(vm.crossHighlights("BSB", 43, 3).isEmpty())
+        // One undo brings it back in both.
+        compose.runOnUiThread { vm.undo() }
+        compose.waitForIdle()
+        assertTrue(vm.highlightsFor("KJV", 43, 3).any { it.id == h.id })
+        assertEquals(1, vm.crossHighlights("BSB", 43, 3).size)
+        compose.runOnUiThread { vm.fingerDraw = false; vm.tool = Tool.PEN }
+    }
 }

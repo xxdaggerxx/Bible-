@@ -27,13 +27,14 @@ Everything works without the internet. Your notes save the moment you lift the p
 - **Underline.** In the highlighter's menu choose *Underline* instead of *Highlight*.
 - **Change or remove a highlight.** Hold a finger on highlighted words. The bar that appears offers other colours and *Remove highlight*.
 - **Colour meanings.** Give each colour a meaning, such as yellow = promises (*Settings → Highlights → Colour meanings*).
-- **In every version.** A highlight also shows, a shade lighter, over the same verses in the other translations. Turn this off in *Settings → Highlights*.
+- **In every version.** A highlight also shows, a shade lighter, over the same verses in the other translations. Erasing or removing it in any version removes it from every version. Turn this off in *Settings → Highlights*.
 - **Your highlights list.** *My notes → Highlights* lists every highlighted verse in full, with the marked words in their colour. Filter by colour, layer or tag; tap one to go there.
 
 ## Erasing
 
 - Pick the eraser and rub out ink or highlights.
 - *Whole strokes* removes a stroke at a touch. *Partial* erases only what the eraser passes over. Choose in the eraser's menu or in *Settings → Pen & ink*.
+- **Highlights erase in every version.** Erase a highlight in one version and it's gone from all of them. *Whole strokes* removes the whole highlight; *Partial* removes the verse you erase over (or, in the version it was made in, the word).
 
 ## Selecting text
 
@@ -133,7 +134,8 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 - **Panels button** (the split-page icon): *Add a Bible panel* for two (or three, on a big screen in landscape) passages side by side. Drag the divider to resize. *Close other panels* goes back to one.
 - **Link panels** with the link button in a panel's header: they scroll together verse by verse, even in different versions.
 - **Mark word differences** (*Settings → Reading*): when two panels show the same book in different versions, the words that differ are lightly marked.
-- **The study pane** opens beside the text from the panels button. Its menu at the top switches between Search, Cross-references, My notes, Dictionary, Topics, Commentary and Names & places.
+- **The study pane** opens beside the text from the panels button. Its menu at the top switches between Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places and Sketch pages.
+- **A sketch page beside the text:** choose *Sketch pages* in the panels button (*Beside the text: Sketch pages*) or the study pane's menu, then tap any page, yours or ready-made. It opens in a panel beside the Bible so you can read and draw side by side. Tap another page to swap it in.
 - **Save this layout…** keeps your panels, passages, versions and study pane, to open again from the same menu.
 
 ## Dictionary, topics and commentary
@@ -159,6 +161,7 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
   - *The kings of Israel and Judah*: a timeline from 931 to 586 BC (Edwin Thiele's dates), good and evil kings coloured, with the prophets of the time and a link to each king's story.
   - *From Adam to Jesus*: the line of descent through Genesis, Ruth and Matthew.
   They're ordinary ink, text boxes and verse cards, so you can write on them, move things, change them or delete them. If you delete one, *Put back deleted ready-made pages* at the bottom of the list brings it back.
+- **Beside the text:** to see a sketch page next to the Bible, choose *Sketch pages* from the panels button and tap the page.
 - **Make your own:** *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
 - **Linked or on its own.** In the same window, *Link to …* ties the page to the verse you're reading: a small badge in that verse's margin opens it. Turn the switch off for a page that stands on its own, such as a topic study; open it from *My notes*.
 - **Every pen tool works** on a sketch page, plus shapes, the lasso, layers, pictures and text boxes.

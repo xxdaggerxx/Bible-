@@ -963,9 +963,9 @@ private fun SketchList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Uni
                     style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(vertical = 8.dp),
                 )
             }
-            items(mine, key = { it.id }) { s -> SketchRow(vm, s, panelIndex, onDismiss) }
+            items(mine, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketch(s, panelIndex); onDismiss() } }
             item { Text("Ready-made pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 16.dp)) }
-            items(ready, key = { it.id }) { s -> SketchRow(vm, s, panelIndex, onDismiss) }
+            items(ready, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketch(s, panelIndex); onDismiss() } }
             if (missing) item {
                 TextButton(onClick = { vm.addReadyMadePages(announce = true) }) { Text("Put back deleted ready-made pages") }
             }
@@ -973,10 +973,11 @@ private fun SketchList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Uni
     }
 }
 
+/** A sketch page in a list: its name, the verse it's on (or "On its own"), paper and date. */
 @Composable
-private fun SketchRow(vm: StudyViewModel, s: com.biblestudy.app.model.Sketch, panelIndex: Int, onDismiss: () -> Unit) {
+internal fun SketchRow(vm: StudyViewModel, s: com.biblestudy.app.model.Sketch, onOpen: () -> Unit) {
     Column(
-        Modifier.fillMaxWidth().clickable { vm.openSketch(s, panelIndex); onDismiss() }.padding(vertical = 10.dp).testTag("sketchRow")
+        Modifier.fillMaxWidth().clickable(onClick = onOpen).padding(vertical = 10.dp).testTag("sketchRow")
     ) {
         Text(s.name, style = MaterialTheme.typography.titleMedium)
         val where = if (s.linked) "On " + vm.refLabel(VerseId.of(s.linkBook, s.linkChapter, s.linkVerse)) else "On its own"

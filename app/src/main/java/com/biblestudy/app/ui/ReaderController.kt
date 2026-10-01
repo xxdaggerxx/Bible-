@@ -909,6 +909,23 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
                     }
                 }
             }
+            // A highlight made in another version shows here over whole verses (HL-10). Erasing it
+            // here erases it there too: all of it, or with the partial eraser just this verse of it.
+            val verse = layout.verseAtOffset(off)
+            for (x in vm.crossHighlights(layout.version, layout.book, layout.chapter)) {
+                val h = x.source
+                if (h.layerId !in usable || verse !in x.fromVerse..x.toVerse) continue
+                eraseItem(h)
+                if (partial) {
+                    val span = vm.verseSpan(h.version, h.book, h.chapter, verse) ?: continue
+                    listOf(h.start to minOf(h.end, span.first), maxOf(h.start, span.last + 1) to h.end)
+                        .filter { (a, b) -> b - a > 1 }.forEach { (a, b) ->
+                            val piece = h.copy(id = vm.newId(), start = a, end = b)
+                            vm.addItem(piece)
+                            erasedAdded[piece.id] = piece
+                        }
+                }
+            }
         }
     }
 

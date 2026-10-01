@@ -88,6 +88,7 @@ fun StudyPane(vm: StudyViewModel, kind: PaneKind, modifier: Modifier) {
             PaneKind.TOPICS -> TopicsPane(vm, inner)
             PaneKind.COMMENTARY -> CommentaryPane(vm, inner.padding(top = 4.dp))
             PaneKind.NAMES -> NamesPane(vm, inner)
+            PaneKind.SKETCHES -> SketchesPane(vm, inner)
         }
     }
 }
@@ -212,5 +213,31 @@ private fun NotesPane(vm: StudyViewModel, modifier: Modifier) {
                 }
             }
         }
+    }
+}
+
+/**
+ * Every sketch page (SKT-2): tap one to show it in a panel beside the Bible text, to read and write
+ * side by side.
+ */
+@Composable
+private fun SketchesPane(vm: StudyViewModel, modifier: Modifier) {
+    val mine = vm.sketches.filter { !it.readyMade }.sortedByDescending { it.created }
+    val ready = vm.sketches.filter { it.readyMade }.sortedBy { it.created }
+    LazyColumn(modifier.testTag("sketchesPane")) {
+        item {
+            Text(
+                "Tap a page to show it beside the text.",
+                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                modifier = Modifier.padding(vertical = 8.dp),
+            )
+        }
+        item { Text("My sketch pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary) }
+        if (mine.isEmpty()) item {
+            Text("None yet. Make one from Insert \u2192 Sketch page.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(vertical = 8.dp))
+        }
+        items(mine, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketchBeside(s) } }
+        item { Text("Ready-made pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 16.dp)) }
+        items(ready, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketchBeside(s) } }
     }
 }

@@ -173,6 +173,7 @@ data class ExportRequest(val uri: Uri, val pdf: Boolean, val layer: Long? = null
 enum class PaneKind(val label: String) {
     SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
     DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), NAMES("Names & places"),
+    SKETCHES("Sketch pages"),
 }
 
 /** A spot to return to with Back / Forward. */
@@ -780,6 +781,24 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
+    /**
+     * Shows a sketch page in a panel beside the Bible text (SPLIT-2, SKT-2): a panel already showing a
+     * sketch page is reused, otherwise another panel (one is added if there's only one). The study
+     * pane closes to give the page room.
+     */
+    fun openSketchBeside(s: Sketch) {
+        val reading = panels.indexOfFirst { !Sketch.isSketch(it.book) }.takeIf { it >= 0 } ?: 0
+        val target = panels.indices.firstOrNull { it != reading && Sketch.isSketch(panels[it].book) }
+            ?: run {
+                if (panels.size == 1) addPanel()
+                if (linkPanels) linkPanels = false
+                panels.indices.first { it != reading }
+            }
+        sidePane = null
+        activePanel = target
+        openSketch(s, target)
+    }
+
     fun openSketch(s: Sketch, index: Int = activePanel.coerceIn(0, panels.lastIndex)) {
         goTo(index, s.book, 1)
     }
@@ -1291,6 +1310,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val v = verseStartOffsets(verses) to IntArray(verses.size) { verses[it].verse }
         synchronized(verseStartCache) { verseStartCache[key] = v }
         return v
+    }
+
+    /** The characters of [verse] in a chapter's text in [version] (its number to just before the next verse). */
+    fun verseSpan(version: String, book: Int, chapter: Int, verse: Int): IntRange? {
+        val (starts, numbers) = verseStarts(version, book, chapter)
+        val i = numbers.indexOf(verse).takeIf { it >= 0 } ?: return null
+        val end = if (i + 1 < starts.size) starts[i + 1] else Int.MAX_VALUE
+        return starts[i] until end
     }
 
     /** The verse holding character [offset] of a chapter's text in [version]. */
