@@ -1923,6 +1923,20 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 f.inputStream().use { it.copyTo(zip) }
                 zip.closeEntry()
             }
+            // Imported Bibles (BIB-4) go too, so a new tablet gets them back.
+            val imported = BibleRepository.ALL.filter { it.imported }
+            if (imported.isNotEmpty()) {
+                zip.putNextEntry(ZipEntry("bibles/imported.json"))
+                zip.write(BibleRepository.importedJson().toByteArray())
+                zip.closeEntry()
+                for (v in imported) {
+                    val f = File(v.asset)
+                    if (!f.exists()) continue
+                    zip.putNextEntry(ZipEntry("bibles/${f.name}"))
+                    f.inputStream().use { it.copyTo(zip) }
+                    zip.closeEntry()
+                }
+            }
         }
     }
 
@@ -2030,7 +2044,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                                 val e = zip.nextEntry ?: break
                                 val name = e.name
                                 val safe = name == "userdata.db" ||
-                                    (name.startsWith("images/") && !name.contains("..") && name.count { it == '/' } == 1)
+                                    ((name.startsWith("images/") || name.startsWith("bibles/")) && !name.contains("..") && name.count { it == '/' } == 1)
                                 if (!e.isDirectory && safe) {
                                     val out = File(tmp, name)
                                     out.parentFile?.mkdirs()
@@ -2048,6 +2062,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                     newDb.copyTo(dbFile, overwrite = true)
                     imagesDir.listFiles()?.forEach { it.delete() }
                     File(tmp, "images").listFiles()?.forEach { it.copyTo(File(imagesDir, it.name), overwrite = true) }
+                    File(tmp, "bibles/imported.json").takeIf { it.exists() }?.let {
+                        BibleRepository.restoreImported(app, it.readText(), File(tmp, "bibles"))
+                    }
                     tmp.deleteRecursively()
                     user.layers() to Unit
                 }

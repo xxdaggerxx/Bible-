@@ -44,7 +44,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 
-private enum class DialogKind { PICKER, SEARCH, LAYERS, NOTES, ABOUT, RESTORE, SETTINGS, STATS }
+private enum class DialogKind { PICKER, SEARCH, LAYERS, NOTES, ABOUT, RESTORE, SETTINGS, STATS, HELP }
 
 private val LightColors = lightColorScheme(
     primary = Color(0xFF7A5C2E),
@@ -125,6 +125,7 @@ fun StudyApp(vm: StudyViewModel) {
                     },
                     onSettings = { dialog = DialogKind.SETTINGS },
                     onStats = { dialog = DialogKind.STATS },
+                    onHelp = { dialog = DialogKind.HELP },
                     onAbout = { dialog = DialogKind.ABOUT },
                 )
             },
@@ -211,6 +212,7 @@ fun StudyApp(vm: StudyViewModel) {
             DialogKind.NOTES -> MyNotesDialog(vm) { dialog = null }
             DialogKind.ABOUT -> AboutDialog { dialog = null }
             DialogKind.STATS -> ReadingStatsDialog(vm) { dialog = null }
+            DialogKind.HELP -> HelpDialog { dialog = null }
             DialogKind.SETTINGS -> SettingsDialog(
                 vm,
                 onBackup = {

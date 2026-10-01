@@ -544,6 +544,7 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
     var menu by remember { mutableStateOf(false) }
     var renaming by remember { mutableStateOf(false) }
     var deleting by remember { mutableStateOf(false) }
+    var relinking by remember { mutableStateOf(false) }
     Row(
         Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer).padding(horizontal = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -570,6 +571,7 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
                 HorizontalDivider()
                 DropdownMenuItem(text = { Text("More space below") }, onClick = { vm.updateSketch(sk.copy(height = sk.height + com.biblestudy.app.model.Sketch.START_HEIGHT / 2)); menu = false })
                 DropdownMenuItem(text = { Text("Rename\u2026") }, onClick = { renaming = true; menu = false })
+                DropdownMenuItem(text = { Text("Link to another passage\u2026") }, onClick = { relinking = true; menu = false })
                 DropdownMenuItem(text = { Text("Delete sketch page\u2026") }, onClick = { deleting = true; menu = false })
                 if (vm.panels.size > 1) DropdownMenuItem(text = { Text("Close panel") }, onClick = { menu = false; vm.closePanel(index) })
             }
@@ -583,6 +585,31 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
             text = { OutlinedTextField(value = name, onValueChange = { name = it }, singleLine = true) },
             confirmButton = { TextButton(onClick = { if (name.isNotBlank()) vm.updateSketch(sk.copy(name = name.trim())); renaming = false }) { Text("Save") } },
             dismissButton = { TextButton(onClick = { renaming = false }) { Text("Cancel") } },
+        )
+    }
+    if (relinking) {
+        // Move the page's marker to another verse (SKT-2).
+        var ref by remember { mutableStateOf(vm.refLabel(com.biblestudy.app.model.VerseId.of(sk.linkBook, sk.linkChapter, sk.linkVerse))) }
+        val found = remember(ref) { com.biblestudy.app.data.RefLinks.find(ref.trim(), vm.bible.books).firstOrNull()?.passage }
+        AlertDialog(
+            onDismissRequest = { relinking = false },
+            title = { Text("Link to a passage") },
+            text = {
+                Column {
+                    OutlinedTextField(value = ref, onValueChange = { ref = it }, singleLine = true, label = { Text("Reference, e.g. Exodus 25:8") })
+                    Text(
+                        if (found == null) "Type a book, chapter and verse." else "Its marker will show beside ${vm.passageLabel(found)}.",
+                        style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 6.dp),
+                    )
+                }
+            },
+            confirmButton = {
+                TextButton(enabled = found != null, onClick = {
+                    found?.let { vm.updateSketch(sk.copy(linkBook = it.book, linkChapter = it.chapter, linkVerse = it.verse)) }
+                    relinking = false
+                }) { Text("Link") }
+            },
+            dismissButton = { TextButton(onClick = { relinking = false }) { Text("Cancel") } },
         )
     }
     if (deleting) {

@@ -1,5 +1,11 @@
 package com.biblestudy.app.ui
 
+import androidx.compose.ui.platform.testTag
+import androidx.compose.material3.Icon
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.Icons
+import androidx.compose.runtime.compositionLocalOf
+import androidx.compose.runtime.CompositionLocalProvider
 import android.content.Intent
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -77,6 +83,15 @@ fun SettingsDialog(
     BigDialog({ vm.savePrefs(); onDismiss() }) {
         Column {
             DialogTitle("Settings", { vm.savePrefs(); onDismiss() })
+            // Find a setting by name (a few words of it are enough).
+            var query by remember { mutableStateOf("") }
+            OutlinedTextField(
+                value = query, onValueChange = { query = it }, singleLine = true,
+                placeholder = { Text("Find a setting, e.g. red, margin, backup") },
+                leadingIcon = { Icon(Icons.Filled.Search, contentDescription = null) },
+                modifier = Modifier.fillMaxWidth().padding(bottom = 4.dp).testTag("settingsSearch"),
+            )
+            CompositionLocalProvider(LocalSettingsQuery provides query.trim()) {
             Column(Modifier.weight(1f).verticalScroll(rememberScrollState())) {
                 Group("Reading")
                 Choices("Page", PageTheme.entries, vm.theme, { it.label }) { vm.theme = it }
@@ -92,7 +107,9 @@ fun SettingsDialog(
                     { it ?: "Same version" },
                 ) { vm.newPanelVersion = it }
                 Toggle("Count reading time", "For Reading stats: kept only on this tablet", vm.trackReading) { vm.trackReading = it }
-                TextButton(onClick = { confirmClearStats = true }) { Text("Clear reading statistics\u2026") }
+                Matches("Clear reading statistics", "reading stats") {
+                    TextButton(onClick = { confirmClearStats = true }) { Text("Clear reading statistics\u2026") }
+                }
 
                 Group("Pen & ink")
                 Toggle("Draw with finger", "Off: fingers scroll and tap; only the pen draws", vm.fingerDraw) { vm.fingerDraw = it }
@@ -107,6 +124,7 @@ fun SettingsDialog(
                     vm.highlightsAllVersions,
                 ) { vm.highlightsAllVersions = it }
                 // What each colour means (HL-5), in its own small window so the keyboard only opens there.
+                Matches("Colour meanings", "highlight colours") {
                 Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                     Column(Modifier.weight(1f)) {
                         Text("Colour meanings")
@@ -118,6 +136,7 @@ fun SettingsDialog(
                         )
                     }
                     OutlinedButton(onClick = { meaningsOpen = true }) { Text("Edit\u2026") }
+                }
                 }
 
                 Group("Margins & panels")
@@ -132,6 +151,7 @@ fun SettingsDialog(
 
                 Group("Bibles")
                 // The version manager (BIB-5) and importing (BIB-4).
+                Matches("Bibles", "versions", "import a Bible", "translations", *BibleRepository.ALL.map { it.code + " " + it.name }.toTypedArray()) {
                 for (v in BibleRepository.ALL) {
                     val size = remember(v.code) { BibleRepository.fileOf(context, v).length() }
                     Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -153,13 +173,14 @@ fun SettingsDialog(
                     "USFM files (or a .zip of them), OSIS XML, or this app's own database. Only import versions you have the right to use.",
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                 )
+                }
 
                 Group("Backup")
                 Choices("Automatic backup", AutoBackup.entries, vm.autoBackup, { it.label }) {
                     vm.autoBackup = it
                     vm.savePrefs()
                 }
-                if (vm.autoBackup != AutoBackup.OFF) {
+                if (vm.autoBackup != AutoBackup.OFF) Matches("Backup folder", "automatic backup") {
                     Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
                             Text("Backup folder")
@@ -175,21 +196,28 @@ fun SettingsDialog(
                         OutlinedButton(onClick = { runCatching { pickFolder.launch(null) } }) { Text("Choose\u2026") }
                     }
                 }
+                Matches("Back up my notes", "Restore from backup") {
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
                     OutlinedButton(onClick = onBackup) { Text("Back up my notes…") }
                     OutlinedButton(onClick = onRestore) { Text("Restore from backup…") }
                 }
+                }
 
                 Group("About")
+                Matches("About", "version", "credits", "licences") {
                 Text("Bible Study, version ${BuildConfig.VERSION_NAME}. Works completely offline.")
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
                     TextButton(onClick = { versions = true }) { Text("About these versions") }
                     TextButton(onClick = onAbout) { Text("Credits") }
                 }
+                }
 
+                Matches("Reset settings to defaults") {
                 HorizontalDivider(Modifier.padding(vertical = 12.dp))
                 TextButton(onClick = { confirmReset = true }) { Text("Reset settings to defaults") }
+                }
                 Spacer(Modifier.padding(8.dp))
+            }
             }
         }
     }
@@ -275,8 +303,21 @@ fun SettingsDialog(
     }
 }
 
+/** What's typed in the Settings search box; rows that don't match it are hidden. */
+private val LocalSettingsQuery = compositionLocalOf { "" }
+
+/** Shows [content] when nothing is being searched for, or one of [words] contains the search. */
+@Composable
+private fun Matches(vararg words: String, content: @Composable () -> Unit) {
+    val q = LocalSettingsQuery.current
+    if (q.isEmpty() || words.any { it.contains(q, ignoreCase = true) } ||
+        q.split(' ').filter { it.isNotBlank() }.all { part -> words.any { it.contains(part, ignoreCase = true) } }) content()
+}
+
 @Composable
 private fun Group(title: String) {
+    // Group headings step aside while searching, so the matches sit together.
+    if (LocalSettingsQuery.current.isNotEmpty()) return
     Text(
         title,
         style = MaterialTheme.typography.titleMedium,
@@ -286,7 +327,7 @@ private fun Group(title: String) {
 }
 
 @Composable
-private fun Toggle(title: String, detail: String?, checked: Boolean, onChange: (Boolean) -> Unit) {
+private fun Toggle(title: String, detail: String?, checked: Boolean, onChange: (Boolean) -> Unit) = Matches(title, detail ?: "") {
     Row(
         Modifier.fillMaxWidth().clickable(role = Role.Switch) { onChange(!checked) }.padding(vertical = 6.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -300,7 +341,8 @@ private fun Toggle(title: String, detail: String?, checked: Boolean, onChange: (
 }
 
 @Composable
-private fun <T> Choices(title: String, options: List<T>, selected: T, label: (T) -> String, onPick: (T) -> Unit) {
+private fun <T> Choices(title: String, options: List<T>, selected: T, label: (T) -> String, onPick: (T) -> Unit) =
+    Matches(title, *options.map(label).toTypedArray()) {
     Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
         Text(title, modifier = Modifier.width(170.dp))
         Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {

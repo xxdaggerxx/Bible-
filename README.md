@@ -1,4 +1,4 @@
-# Bible Study — version 0.9
+# Bible Study — version 1.0
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -66,6 +66,41 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 1.0
+
+Version 1.0 finishes the planned features. It adds Hebrew and Greek word by word, ready-made sketch pages, family trees and a Help guide.
+
+- **Help.** *⋮ → Help* explains every feature in plain words, one topic at a time, with a search box. The guide lives in `app/src/main/assets/help/guide.md` and is updated with every change. A test fails if a menu item or feature is missing from it.
+- **Hebrew and Greek word by word.** In a verse's window, tap *Hebrew* (Old Testament) or *Greek* (New Testament). Each word card shows:
+  - the original word, how it sounds and what it means in this verse;
+  - what kind of word it is.
+
+  Tap a card for its full grammar in plain words and a *Word study*. Hebrew runs right to left. Greek words found in only some manuscripts are paler, with a note on whether the KJV's text has them. The data is STEPBible's TAHOT and TAGNT, adding about 6 MB to the app.
+- **Words of Jesus in red.** *Settings → Reading → Words of Jesus in red*:
+  - The KJV and WEB use their own red-letter markings.
+  - The BSB has none, so its quotations are coloured where the WEB marks Jesus speaking. Other speakers in the same verse stay black.
+- **Ready-made sketch pages.** *Insert → Sketch page… → Start from*:
+  - *The feasts of Israel*: the seven feasts of Leviticus 23 plus Purim and Hanukkah, on a year line, each with how it points to Christ.
+  - *The tabernacle*: a scale plan with numbered furniture, what each piece means, and verse cards.
+  - *The kings of Israel and Judah*: a timeline from 931 to 586 BC with Edwin Thiele's dates, good and evil kings coloured, the prophets of the time, and a link to each king's story.
+  - *From Adam to Jesus*: the line of descent through Genesis, Ruth and Matthew.
+
+  They're built from ordinary ink, text boxes and verse cards, so everything can be written on, moved or changed.
+- **Family trees.** *Family tree* on a person in Names & places shows:
+  - grandparents and parents;
+  - brothers and sisters;
+  - whom they married, and their children.
+
+  Tap anyone to see their family. *Copy to sketch page* draws the tree on a sketch page.
+- **Word differences.**
+  - *Compare versions* in the verse window lightly marks the words that differ from the version you're reading.
+  - *Settings → Reading → Mark word differences* does the same for two panels showing different versions. It's off by default because KJV and modern wording differ almost everywhere.
+- **Layer views.** In Layers, show the layers you want and tap *Save what’s shown…* to name the view, e.g. *Sermon prep*. Tap its name later to switch back with one tap.
+- **Export one layer.** A layer's ⋮ menu can export this chapter with only that layer's notes, as a PDF.
+- **Settings search.** Type in the box at the top of Settings to find an option.
+- **Backups include imported Bibles**, and restoring brings them back.
+- **Sketch pages can be re-linked:** the page's ⋮ menu has *Link to another passage…*.
+
 ## New in version 0.9
 
 - **Sketch pages.** Use *Insert → Sketch page…* to make a full page (blank, lined, grid or dotted) for timelines, diagrams, maps and sketch notes.
@@ -101,7 +136,7 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - The Highlights list now shows each highlight's whole verse, with the highlighted words marked in its colour.
   - The study pane's *My notes* lists the chapter's highlighted verses.
 
-Your notes database is upgraded the first time 0.9 opens. Backups include sketch pages and reading stats. Imported Bibles aren't in backups; import the file again on a new tablet.
+Your notes database is upgraded the first time 0.9 opens. Backups include sketch pages and reading stats. (From 1.0, backups also include imported Bibles.)
 
 ## New in version 0.8
 
@@ -296,18 +331,21 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Rotating a lasso selection turns ink freely, but pictures only turn in quarter turns and text boxes stay upright.
 - Strong's numbers come from the tagged texts at eBible.org. In the KJV some small words ("the", "unto") have none, so they can't be tapped for a word study.
 - Matthew Henry's Concise Commentary skips some chapters (mostly lists and genealogies).
+- Words of Jesus in the BSB are inferred from the WEB's markings and the BSB's quotation marks, so a few dialogue verses may be coloured slightly differently from a printed red-letter BSB.
+- The Hebrew and Greek view uses the Hebrew text (Leningrad Codex) and the amalgamated Greek editions; it doesn't follow an imported Bible's wording.
+- The performance pass for very long chapters (Psalm 119) and very large sketch pages still needs checking on the tablet itself.
 - Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
-- On a sketch page the "Linked to" passage is set when the page is made.
 - The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
 - Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
 
 ## Next milestones
 
 - **Later:**
-  - ready-made sketch pages: the Jewish festivals, the tabernacle, a timeline of the kings, a genealogy diagram drawn from the family data;
-  - an interlinear view with the full Hebrew and Greek;
-  - highlighting the differences between versions.
-- **Waiting on permission:** NIV and NLT.
+  - turning handwriting into searchable text (needs Google's on-device handwriting model);
+  - search by meaning;
+  - pen tilt and hover;
+  - full-screen margin notes.
+- **Waiting on permission:** NIV and NLT. Once you have the files, *Settings → Bibles → Import a Bible…* adds them.
 
 ## Credits
 
@@ -317,6 +355,8 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Cross-references: OpenBible.info, CC BY 4.0.
 - Strong's Hebrew and Greek dictionaries (1890, public domain), JSON edition by Open Scriptures, CC BY-SA.
 - Strong's numbers for each word: the Strong's-tagged KJV, BSB and WEB USFM files from eBible.org (public domain).
+- Hebrew and Greek word by word: STEPBible.org TAHOT (Translators Amalgamated Hebrew OT) and TAGNT (Translators Amalgamated Greek NT), Tyndale House Cambridge, CC BY 4.0. Only the columns shown are kept, and Greek words in neither the modern editions nor the KJV's text are left out; `tools/build_original_db.py` makes `assets/study/original.db`.
+- Words of Jesus: the red-letter markings in eBible.org's KJV and WEB USFM files (public domain).
 - People and places: STEPBible.org TIPNR (Translators Individualised Proper Names), CC BY 4.0. Map outline, lakes and rivers: Natural Earth (public domain); `tools/build_map.py` makes `assets/map/lands.bin`.
 - Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library (ccel.org). `tools/build_study_db.py` rebuilds `study.db` from these.
 - Font: Gentium Book Plus © SIL International, SIL Open Font License 1.1 (see `licenses/Gentium-OFL.txt`).

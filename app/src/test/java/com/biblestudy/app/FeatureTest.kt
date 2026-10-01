@@ -14,6 +14,7 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onLast
+import androidx.compose.ui.test.performTextClearance
 import com.biblestudy.app.ui.PaneKind
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.performImeAction
@@ -1881,5 +1882,59 @@ class FeatureTest {
         }
         assertTrue(sizes.toSet().size == 2)
         compose.runOnUiThread { vm.undo(); vm.deleteLayer(second); vm.deleteLayerPreset("Sermon prep") }
+    }
+
+    @Test
+    fun helpSettingsSearchSketchLinkAndBackedUpBibles() {
+        // Help: search, then open a topic.
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Help").performClick()
+        compose.onNodeWithTag("helpSearch").performTextInput("Greek")
+        compose.onNodeWithText("Hebrew and Greek word by word").assertExists()
+        snap("113-help-search")
+        compose.onNodeWithText("Hebrew and Greek word by word").performClick()
+        compose.onNodeWithTag("helpSection").assertExists()
+        compose.onNodeWithText("Hebrew reads right to left", substring = true).assertExists()
+        snap("114-help-topic")
+        compose.onNodeWithContentDescription("Close").performClick()
+
+        // Settings: typing finds the setting and hides the rest.
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Settings").performClick()
+        compose.onNodeWithTag("settingsSearch").performTextInput("red")
+        compose.onNodeWithText("Words of Jesus in red").assertExists()
+        compose.onNodeWithText("Verse numbers").assertDoesNotExist()
+        snap("115-settings-search")
+        compose.onNodeWithContentDescription("Close").performClick()
+
+        // A sketch page can be linked to another passage.
+        compose.runOnUiThread { vm.sketches.toList().forEach { vm.deleteSketch(it) }; vm.createSketch("Tabernacle notes", com.biblestudy.app.model.Paper.BLANK) }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("Sketch page menu").performClick()
+        compose.onNodeWithText("Link to another passage\u2026").performClick()
+        compose.onNodeWithText("Reference, e.g. Exodus 25:8").performTextClearance()
+        compose.onNodeWithText("Reference, e.g. Exodus 25:8").performTextInput("Exodus 25:8")
+        compose.onNodeWithText("Link").performClick()
+        val sk = vm.sketches.single()
+        assertEquals(Triple(2, 25, 8), Triple(sk.linkBook, sk.linkChapter, sk.linkVerse))
+        compose.runOnUiThread { vm.deleteSketch(sk) }
+
+        // Imported Bibles go into backups and come back on restore.
+        val dir = File(compose.activity.cacheDir, "import").apply { mkdirs() }
+        val file = File(dir, "bak.usfm")
+        file.writeText("\\id JHN\n\\c 3\n\\p\n\\v 16 Backed up words.\n")
+        compose.runOnUiThread { vm.importBible(listOf("bak.usfm"), { file.inputStream() }, "BAK", "Backup Test", "Test.") }
+        compose.waitUntil(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "BAK" } && !vm.importing }
+        val zip = File(dir, "backup.zip").apply { delete() }
+        compose.runOnUiThread { vm.backup(android.net.Uri.fromFile(zip)) }
+        compose.waitUntil(15_000) { zip.length() > 0 && vm.message?.contains("ack") == true }
+        val names = java.util.zip.ZipFile(zip).use { z -> z.entries().toList().map { it.name } }
+        assertTrue(names.toString(), "bibles/imported.json" in names && names.any { it.startsWith("bibles/") && it.endsWith(".db") })
+        compose.runOnUiThread { vm.removeBible("BAK") }
+        assertTrue(com.biblestudy.app.data.BibleRepository.ALL.none { it.code == "BAK" })
+        compose.runOnUiThread { vm.restore(android.net.Uri.fromFile(zip)) }
+        compose.waitUntil(15_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "BAK" } }
+        assertEquals("Backed up words.", vm.text("BAK").verseText(43003016))
+        compose.runOnUiThread { vm.removeBible("BAK") }
     }
 }

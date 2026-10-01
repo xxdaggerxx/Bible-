@@ -28,6 +28,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
@@ -112,7 +113,8 @@ private fun WordCard(w: OriginalWord, selected: Boolean, onClick: () -> Unit) {
         shape = RoundedCornerShape(8.dp),
         color = if (selected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surface,
         border = BorderStroke(1.dp, if (muted) MaterialTheme.colorScheme.outline.copy(alpha = 0.4f) else MaterialTheme.colorScheme.outlineVariant),
-        modifier = Modifier.widthIn(min = 64.dp).clickable(onClick = onClick)
+        // A word only some manuscripts have is drawn paler.
+        modifier = Modifier.widthIn(min = 64.dp).alpha(if (muted && !selected) 0.6f else 1f).clickable(onClick = onClick)
             .semantics { contentDescription = "${w.xlit}: ${w.gloss}" }.testTag("originalWord"),
     ) {
         // Only the order of the cards runs right to left; the English inside reads normally.

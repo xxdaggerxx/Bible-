@@ -1,5 +1,6 @@
 package com.biblestudy.app.ui
 
+import androidx.compose.material.icons.automirrored.filled.HelpOutline
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -85,6 +86,7 @@ fun StudyToolbar(
     onExport: (pdf: Boolean) -> Unit,
     onSettings: () -> Unit,
     onStats: () -> Unit,
+    onHelp: () -> Unit = {},
     onAbout: () -> Unit,
 ) {
     // Kept short so it fits without scrolling (UI-3): tools, one button for the tool's colour and
@@ -255,6 +257,11 @@ fun StudyToolbar(
                     DropdownMenuItem(text = { Text("Export chapter as PDF\u2026") }, onClick = { menu = false; onExport(true) })
                     DropdownMenuItem(text = { Text("Export chapter as picture\u2026") }, onClick = { menu = false; onExport(false) })
                     DropdownMenuItem(text = { Text("Back up my notes\u2026") }, onClick = { menu = false; onBackup() })
+                    DropdownMenuItem(
+                        text = { Text("Help") },
+                        leadingIcon = { Icon(Icons.AutoMirrored.Filled.HelpOutline, contentDescription = null) },
+                        onClick = { menu = false; onHelp() },
+                    )
                     DropdownMenuItem(text = { Text("About & credits") }, onClick = { menu = false; onAbout() })
                 }
             }

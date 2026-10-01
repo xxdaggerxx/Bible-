@@ -190,6 +190,25 @@ class BibleRepository(context: Context, val version: BibleVersion) {
             saveRegistry(context)
         }
 
+        /** The imported versions' list as saved in backups (DATA-1). */
+        fun importedJson(): String = org.json.JSONArray().also { a -> imported.forEach { a.put(BibleImport.toJson(it)) } }.toString()
+
+        /**
+         * Brings back imported versions from a backup: [files] holds their database files by name.
+         * Each is added (replacing one with the same code) with its file in this tablet's folder.
+         */
+        fun restoreImported(context: Context, json: String, files: File) {
+            val dir = File(context.filesDir, "bibles").apply { mkdirs() }
+            val list = runCatching { BibleImport.fromJson(org.json.JSONArray(json)) }.getOrDefault(emptyList())
+            for (v in list) {
+                val src = File(files, File(v.asset).name)
+                if (!src.exists()) continue
+                val dest = File(dir, src.name)
+                src.copyTo(dest, overwrite = true)
+                addImported(context, v.copy(asset = dest.path))
+            }
+        }
+
         fun removeImported(context: Context, code: String) {
             imported.firstOrNull { it.code == code }?.let { File(it.asset).delete() }
             imported.removeAll { it.code == code }

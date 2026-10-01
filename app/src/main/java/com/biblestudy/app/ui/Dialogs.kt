@@ -780,7 +780,7 @@ fun LayersDialog(vm: StudyViewModel, onExportLayer: (Long) -> Unit = {}, onDismi
                         label = { Text(name) },
                         trailingIcon = {
                             Icon(Icons.Filled.Close, contentDescription = "Forget view $name",
-                                modifier = Modifier.size(18.dp).clickable { vm.deleteLayerPreset(name) })
+                                modifier = Modifier.size(24.dp).clickable { vm.deleteLayerPreset(name) })
                         },
                     )
                 }
