@@ -1541,4 +1541,37 @@ class FeatureTest {
         snap("93-picker-read")
         compose.runOnUiThread { vm.clearReadingStats() }
     }
+
+    @Test
+    fun namesAndPlacesWithFamilyAndAMap() {
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false); vm.nameOpen = null }
+        waitForLoaded()
+        // The verse window lists the people in the verse; one opens in the study pane.
+        compose.runOnUiThread { vm.openVerse(43, 3, 1) }
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Nicodemus").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Nicodemus").performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Pharisee who visited Jesus").fetchSemanticsNodes().isNotEmpty() }
+        assertEquals(PaneKind.NAMES, vm.sidePane)
+        assertNull(vm.verseSheet)
+        compose.onNodeWithText("Mentioned in 5 verses").performScrollTo().assertExists()
+        snap("94-person")
+
+        // A family: Aaron's brother opens from his entry.
+        compose.onNodeWithContentDescription("Back to the list").performClick()
+        compose.onNodeWithText("Find a person or place").performTextInput("Aaron")
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("nameRow").fetchSemanticsNodes().isNotEmpty() }
+        compose.onAllNodesWithTag("nameRow").onFirst().performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Brothers and sisters").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Moses").performScrollTo().performClick()
+        compose.waitUntil(10_000) { vm.nameOpen != null && compose.onAllNodesWithText("Moses").fetchSemanticsNodes().size >= 1 &&
+            compose.onAllNodesWithText("Aaron").fetchSemanticsNodes().isNotEmpty() }
+        assertEquals("Moses", vm.study.nameById(vm.nameOpen!!)!!.name)
+
+        // A place on the offline map.
+        compose.runOnUiThread { vm.nameOpen = vm.study.nameSearch("Bethlehem").first().id }
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("placeMap").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Place \u00b7 Tribe of Judah").assertExists()
+        snap("95-place-map")
+        compose.runOnUiThread { vm.nameOpen = null; vm.sidePane = null }
+    }
 }

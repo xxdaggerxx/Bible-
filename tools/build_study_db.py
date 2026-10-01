@@ -12,6 +12,9 @@ Sources (download into a working folder first, then run from there):
     https://www.ccel.org/ccel/e/easton/ebd2.xml   -> easton.xml   (Easton's Bible Dictionary, 1897)
     https://www.ccel.org/ccel/nave/bible.xml      -> nave.xml     (Nave's Topical Bible, 1896)
     https://www.ccel.org/ccel/henry/mhcc.xml      -> mhcc.xml     (Matthew Henry's Concise Commentary)
+  People and places (STEPBible TIPNR, CC BY 4.0), from github.com/STEPBible/STEPBible-Data:
+    "Proper Nouns/TIPNR - Translators Individualised Proper Names with all References - STEPBible.org CC BY.txt"
+                                                  -> tipnr.txt
 
 Usage: python3 build_study_db.py <working folder> <assets/bibles folder> <output study.db>
 
@@ -250,6 +253,93 @@ def build_commentary(db):
     print("commentary sections", len(rows))
 
 
+STEP = ("Gen Exo Lev Num Deu Jos Jdg Rut 1Sa 2Sa 1Ki 2Ki 1Ch 2Ch Ezr Neh Est Job Psa Pro Ecc Sng Isa Jer Lam "
+        "Ezk Dan Hos Jol Amo Oba Jon Mic Nam Hab Zep Hag Zec Mal Mat Mrk Luk Jhn Act Rom 1Co 2Co Gal Eph Php "
+        "Col 1Th 2Th 1Ti 2Ti Tit Phm Heb Jas 1Pe 2Pe 1Jn 2Jn 3Jn Jud Rev").split()
+STEP_BOOK = {c: i + 1 for i, c in enumerate(STEP)}
+STEP_REF = re.compile(r"\b(%s)\.(\d+)\.(\d+)" % "|".join(re.escape(c) for c in STEP))
+
+
+def step_text(t):
+    """TIPNR article markup -> plain text with [[start-end|label]] references."""
+    def ref(m):
+        r = STEP_REF.match(m.group(1))
+        label = m.group(2)
+        if not r:
+            return label
+        v = STEP_BOOK[r.group(1)] * 1000000 + int(r.group(2)) * 1000 + int(r.group(3))
+        return "[[%d-%d|%s]]" % (v, v, label)
+    t = re.sub(r'<ref="([^"]*)">(.*?)</ref>\)?', ref, t)
+    t = re.sub(r"<br\s*/?>", "\n\n", t, flags=re.I)
+    t = re.sub(r"<[^>]+>", "", t)
+    return html.unescape(t).strip()
+
+
+def build_names(db):
+    """People and places (STD-10, STD-11) from STEPBible TIPNR."""
+    section = None
+    rec = None
+    records = []
+    for line in open(os.path.join(work, "tipnr.txt"), encoding="utf-8"):
+        line = line.rstrip("\n")
+        if line.startswith("$=========="):
+            if rec: records.append(rec)
+            rec = None
+            section = "person" if "PERSON" in line else "place" if "PLACE" in line else "other"
+            continue
+        if section not in ("person", "place"):
+            continue
+        f = line.split("\t")
+        if rec is None and re.match(r"^[^\s–@#*$]+@[1-3]?[A-Z][a-z]{1,2}\.\d", f[0]):
+            rec = {"kind": section, "f": f, "refs": set(), "strongs": set(), "names": set()}
+            continue
+        if rec is None:
+            continue
+        if line.startswith("– ") and not line.startswith("– Total"):
+            if len(f) > 3:
+                ds = f[2].split("«")[0]
+                m = re.match(r"([HG])0*(\d+)", ds)
+                if m: rec["strongs"].add(m.group(1) + m.group(2))
+                rec["names"].add(f[3].split("=")[0].strip().split(";")[0].strip())
+            for r in STEP_REF.finditer(" ".join(x for x in f[4:] if x.strip())):
+                rec["refs"].add(STEP_BOOK[r.group(1)] * 1000000 + int(r.group(2)) * 1000 + int(r.group(3)))
+        elif line.startswith("@Brief="):
+            rec["brief"] = line[7:].strip()
+        elif line.startswith("@Short="):
+            rec["short"] = line[7:].strip()
+        elif line.startswith("@Article="):
+            rec["article"] = line[9:].strip()
+    if rec: records.append(rec)
+
+    rows, refs, strongs = [], [], []
+    for i, r in enumerate(records, 1):
+        f = r["f"] + [""] * 10
+        uid = f[0].split("=")[0]
+        name = uid.split("@")[0].replace("_", " ")
+        if r["kind"] == "person":
+            desc, parents, siblings, partners, children, area, summary = f[1], f[2], f[3], f[4], f[5], f[6], f[7]
+            lat = lon = None
+        else:
+            desc, parents, siblings, partners, children, area, summary = "", "", "", "", "", f[6], f[7]
+            m = re.search(r"@(-?\d+\.\d+),(-?\d+\.\d+)", f[4])
+            lat, lon = (float(m.group(1)), float(m.group(2))) if m else (None, None)
+            # Founder and people who lived there are links too.
+            parents, children = f[2], f[3]
+        clean = lambda x: "" if x.strip() in ("", ">", "+", " + ") else x.strip()
+        article = r.get("article") or r.get("short") or step_text(summary.lstrip("#"))
+        rows.append((
+            i, uid, name, name.lower(), r["kind"], r.get("brief") or clean(desc), step_text(article),
+            clean(parents), clean(siblings), clean(partners), clean(children), clean(area), lat, lon, len(r["refs"]),
+        ))
+        refs += [(i, v) for v in r["refs"]]
+        strongs += [(s, i) for s in r["strongs"]]
+    db.executemany("INSERT INTO names VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", rows)
+    db.executemany("INSERT INTO name_refs VALUES(?,?)", refs)
+    db.executemany("INSERT INTO name_strongs VALUES(?,?)", strongs)
+    print("names", len(rows), "people", sum(1 for r in rows if r[4] == "person"),
+          "places with coordinates", sum(1 for r in rows if r[12] is not None), "refs", len(refs))
+
+
 if os.path.exists(out):
     os.remove(out)
 os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -264,8 +354,12 @@ CREATE TABLE dictionary(id INTEGER PRIMARY KEY, term TEXT NOT NULL, key TEXT NOT
 CREATE TABLE topics(id INTEGER PRIMARY KEY, name TEXT NOT NULL, key TEXT NOT NULL, body TEXT NOT NULL);
 CREATE TABLE topic_refs(topic INTEGER NOT NULL, start INTEGER NOT NULL, end INTEGER NOT NULL);
 CREATE TABLE commentary(start INTEGER NOT NULL, end INTEGER NOT NULL, body TEXT NOT NULL);
+CREATE TABLE names(id INTEGER PRIMARY KEY, uid TEXT NOT NULL, name TEXT NOT NULL, key TEXT NOT NULL, kind TEXT NOT NULL,
+  brief TEXT, article TEXT, parents TEXT, siblings TEXT, partners TEXT, children TEXT, area TEXT, lat REAL, lon REAL, refs INTEGER NOT NULL);
+CREATE TABLE name_refs(name INTEGER NOT NULL, verse INTEGER NOT NULL);
+CREATE TABLE name_strongs(strong TEXT NOT NULL, name INTEGER NOT NULL);
 """)
-db.execute("INSERT INTO meta VALUES('schema','1')")
+db.execute("INSERT INTO meta VALUES('schema','2')")
 build_tags(db, "KJV", "kjv.db", "eng-kjv2006")
 build_tags(db, "BSB", "bsb.db", "engbsb")
 build_tags(db, "WEB", "web.db", "engwebp")
@@ -273,7 +367,13 @@ build_lexicon(db)
 build_easton(db)
 build_nave(db)
 build_commentary(db)
+build_names(db)
 db.executescript("""
+CREATE INDEX names_key ON names(key);
+CREATE INDEX names_uid ON names(uid);
+CREATE INDEX name_refs_verse ON name_refs(verse);
+CREATE INDEX name_refs_name ON name_refs(name);
+CREATE INDEX name_strongs_strong ON name_strongs(strong);
 CREATE INDEX dictionary_key ON dictionary(key);
 CREATE INDEX topics_key ON topics(key);
 CREATE INDEX topic_refs_start ON topic_refs(start);

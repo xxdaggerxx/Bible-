@@ -64,7 +64,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 /** A word to study (STD-3): its Strong's number, the version it was tapped in, and the English word. */
-data class WordStudy(val strong: String, val version: String, val word: String? = null)
+data class WordStudy(val strong: String, val version: String, val word: String? = null, val verseId: Int = 0)
 
 private val STUDY_LINK = Regex("\\[\\[(\\d+)-(\\d+)\\|([^\\]]*)]]")
 
@@ -133,7 +133,7 @@ fun StudyableVerse(vm: StudyViewModel, verseId: Int, version: String, text: Stri
             for ((i, r) in ranges.withIndex()) {
                 val s = strongs.getOrNull(i) ?: continue
                 val word = text.substring(r)
-                addLink(LinkAnnotation.Clickable("w$i", style) { vm.wordStudy = WordStudy(s, version, word) }, r.first, r.last + 1)
+                addLink(LinkAnnotation.Clickable("w$i", style) { vm.wordStudy = WordStudy(s, version, word, verseId) }, r.first, r.last + 1)
             }
         }
     }
@@ -169,6 +169,9 @@ fun WordStudyDialog(vm: StudyViewModel, start: WordStudy, onDismiss: () -> Unit)
         value = start.word?.let { w -> withContext(Dispatchers.IO) { vm.study.dictionaryEntry(w) ?: vm.study.dictionaryEntry(w.trimEnd('s')) } }
     }
 
+    val person by produceState<com.biblestudy.app.data.NameEntry?>(null, strong, start.verseId) {
+        value = withContext(Dispatchers.IO) { vm.study.nameForStrong(strong, start.verseId) }
+    }
     BigDialog(onDismiss) {
         Column(Modifier.testTag("wordStudy")) {
             DialogTitle(
@@ -219,6 +222,13 @@ fun WordStudyDialog(vm: StudyViewModel, start: WordStudy, onDismiss: () -> Unit)
                 if (e.kjv.isNotBlank()) {
                     Text("Translated in the KJV as", style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 12.dp))
                     Text(e.kjv.trimEnd('.'), style = MaterialTheme.typography.bodyMedium)
+                }
+                // A name: who or where it is (STD-10, STD-11).
+                person?.let { n ->
+                    OutlinedButton(
+                        onClick = { vm.openName(n.id); vm.verseSheet = null; onDismiss() },
+                        modifier = Modifier.padding(top = 8.dp),
+                    ) { Text("About ${n.name} (${if (n.place) "place" else "person"})") }
                 }
                 article?.let { a ->
                     OutlinedButton(

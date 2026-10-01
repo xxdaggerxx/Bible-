@@ -87,6 +87,7 @@ fun StudyPane(vm: StudyViewModel, kind: PaneKind, modifier: Modifier) {
             PaneKind.DICTIONARY -> DictionaryPane(vm, inner)
             PaneKind.TOPICS -> TopicsPane(vm, inner)
             PaneKind.COMMENTARY -> CommentaryPane(vm, inner.padding(top = 4.dp))
+            PaneKind.NAMES -> NamesPane(vm, inner)
         }
     }
 }

@@ -48,4 +48,10 @@ class RefLinksTest {
         assertEquals(emptyList<Any>(), find("it is 5 minutes; read page 23 of the book"))
         assertEquals(emptyList<Any>(), find("Genesis 99:1")) // no such chapter
     }
+
+    @Test
+    fun plainReferencesInArticlesBecomeStudyLinks() {
+        val t = com.biblestudy.app.ui.linkPlainRefs("Rachel's tomb (Genesis 35:19) near [[8001001-8001001|Rut.1.1]].", books)
+        assertEquals("Rachel's tomb ([[1035019-1035019|Genesis 35:19]]) near [[8001001-8001001|Rut.1.1]].", t)
+    }
 }

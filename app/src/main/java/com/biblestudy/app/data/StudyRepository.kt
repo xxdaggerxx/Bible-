@@ -24,6 +24,36 @@ data class Occurrence(val id: Int, val text: String, val words: List<IntRange>)
 /** A dictionary article or topic, with [body] in the study markup (see [StudyText]). */
 data class StudyEntry(val id: Long, val title: String, val body: String)
 
+/**
+ * A person or place in the Bible (STD-10, STD-11), from STEPBible's TIPNR. Family fields hold
+ * TIPNR ids ("Amram@Exo.6.18-1Ch") separated by commas, or a "+" between two parents.
+ */
+data class NameEntry(
+    val id: Long,
+    val uid: String,
+    val name: String,
+    val place: Boolean,
+    val brief: String,
+    val article: String,
+    val parents: String,
+    val siblings: String,
+    val partners: String,
+    val children: String,
+    val area: String,
+    val lat: Double?,
+    val lon: Double?,
+    val refCount: Int,
+) {
+    companion object {
+        /** The TIPNR ids in a family field. */
+        fun ids(field: String): List<String> =
+            field.split(',', '+').map { it.substringBefore('=').replace("(?)", "").trim() }.filter { '@' in it }
+
+        /** "Jerusalem_wives@2Sa.5.13" → "Jerusalem wives". */
+        fun label(uid: String) = uid.substringBefore('@').replace('_', ' ')
+    }
+}
+
 /** Matthew Henry on a range of verses (STD-7). */
 data class CommentarySection(val start: Int, val end: Int, val body: String)
 
@@ -133,6 +163,68 @@ class StudyRepository(context: Context) {
             .take(limit)
     }
 
+    // ---------- names and places (STD-10, STD-11) ----------
+
+    private val NAME_COLS = "id, uid, name, kind, brief, article, parents, siblings, partners, children, area, lat, lon, refs"
+    /** The same columns of the names table joined as "n". */
+    private val N_COLS = NAME_COLS.split(", ").joinToString { "n.$it" }
+
+    private fun android.database.Cursor.toName() = NameEntry(
+        getLong(0), getString(1), getString(2), getString(3) == "place", getString(4) ?: "", getString(5) ?: "",
+        getString(6) ?: "", getString(7) ?: "", getString(8) ?: "", getString(9) ?: "", getString(10) ?: "",
+        if (isNull(11)) null else getDouble(11), if (isNull(12)) null else getDouble(12), getInt(13),
+    )
+
+    private fun names(sql: String, args: Array<String>?): List<NameEntry> =
+        db.rawQuery(sql, args).use { c -> buildList { while (c.moveToNext()) add(c.toName()) } }
+
+    fun nameById(id: Long): NameEntry? = names("SELECT $NAME_COLS FROM names WHERE id = ?", arrayOf(id.toString())).firstOrNull()
+
+    fun nameByUid(uid: String): NameEntry? = names("SELECT $NAME_COLS FROM names WHERE uid = ?", arrayOf(uid)).firstOrNull()
+
+    /** People and places whose name starts with (then contains) [prefix]; the best known first. */
+    fun nameSearch(prefix: String, limit: Int = 200): List<NameEntry> {
+        val p = prefix.trim().lowercase()
+        val starts = names("SELECT $NAME_COLS FROM names WHERE key >= ? AND key < ? ORDER BY refs DESC LIMIT $limit", arrayOf(p, p + "\uffff"))
+        if (p.length < 3) return starts
+        val seen = starts.map { it.id }.toSet()
+        return (starts + names("SELECT $NAME_COLS FROM names WHERE key LIKE ? ORDER BY refs DESC LIMIT $limit", arrayOf("%$p%")).filter { it.id !in seen }).take(limit)
+    }
+
+    /** The people and places mentioned in a verse. */
+    fun namesInVerse(verseId: Int): List<NameEntry> =
+        names("SELECT $N_COLS FROM name_refs r JOIN names n ON n.id = r.name WHERE r.verse = ? ORDER BY n.refs DESC", arrayOf(verseId.toString()))
+
+    /** The people and places mentioned in a chapter, most mentioned first. */
+    fun namesInChapter(book: Int, chapter: Int, limit: Int = 60): List<NameEntry> {
+        val lo = book * 1_000_000 + chapter * 1000
+        return names(
+            "SELECT $N_COLS FROM name_refs r JOIN names n ON n.id = r.name " +
+                "WHERE r.verse BETWEEN ? AND ? GROUP BY n.id ORDER BY COUNT(*) DESC, n.refs DESC LIMIT $limit",
+            arrayOf(lo.toString(), (lo + 999).toString()),
+        )
+    }
+
+    /** The person or place a Strong's number names, preferring the one mentioned in [verseId]. */
+    fun nameForStrong(strong: String, verseId: Int): NameEntry? {
+        val s = normalizeStrong(strong) ?: return null
+        return names(
+            "SELECT $N_COLS FROM name_strongs s JOIN names n ON n.id = s.name WHERE s.strong = ? " +
+                "ORDER BY EXISTS(SELECT 1 FROM name_refs r WHERE r.name = n.id AND r.verse = ?) DESC, n.refs DESC LIMIT 1",
+            arrayOf(s, verseId.toString()),
+        ).firstOrNull()
+    }
+
+    /** Every verse that mentions a person or place, in Bible order. */
+    fun nameVerses(id: Long): List<Int> =
+        db.rawQuery("SELECT verse FROM name_refs WHERE name = ? ORDER BY verse", arrayOf(id.toString())).use { c ->
+            buildList { while (c.moveToNext()) add(c.getInt(0)) }
+        }
+
+    /** Well-known places with coordinates, to help find your way on the map. */
+    fun landmarks(limit: Int = 40): List<NameEntry> =
+        names("SELECT $NAME_COLS FROM names WHERE kind = 'place' AND lat IS NOT NULL ORDER BY refs DESC LIMIT $limit", null)
+
     // ---------- commentary ----------
 
     /** Matthew Henry's sections on a chapter, in order (STD-7). */
@@ -172,7 +264,7 @@ class StudyRepository(context: Context) {
 
     companion object {
         /** Bump when study.db changes, so the new copy replaces the old one. */
-        private const val DB_VERSION = 2
+        private const val DB_VERSION = 3
         const val NT_START = 40_000_000
 
         private val WORD = Regex("[\\p{L}\\p{M}\\p{N}_’']+")

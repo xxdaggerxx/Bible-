@@ -165,7 +165,7 @@ data class ExportRequest(val uri: Uri, val pdf: Boolean)
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
 enum class PaneKind(val label: String) {
     SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
-    DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"),
+    DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), NAMES("Names & places"),
 }
 
 /** A spot to return to with Back / Forward. */
@@ -657,6 +657,22 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun openDictionary(id: Long) {
         dictionaryOpen = id
         sidePane = PaneKind.DICTIONARY
+    }
+
+    /** The person or place open in the study pane (STD-10, STD-11). */
+    var nameOpen by mutableStateOf<Long?>(null)
+
+    fun openName(id: Long) {
+        nameOpen = id
+        sidePane = PaneKind.NAMES
+    }
+
+    /** Opens a person or place by its TIPNR id, e.g. a parent or child in a family list. */
+    fun openNameUid(uid: String) {
+        viewModelScope.launch {
+            val n = withContext(Dispatchers.IO) { study.nameByUid(uid) }
+            if (n != null) openName(n.id) else message = "No entry for ${com.biblestudy.app.data.NameEntry.label(uid)}."
+        }
     }
 
     fun openTopic(id: Long) {

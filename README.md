@@ -274,5 +274,6 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Cross-references: OpenBible.info, CC BY 4.0.
 - Strong's Hebrew and Greek dictionaries (1890, public domain), JSON edition by Open Scriptures, CC BY-SA.
 - Strong's numbers for each word: the Strong's-tagged KJV, BSB and WEB USFM files from eBible.org (public domain).
+- People and places: STEPBible.org TIPNR (Translators Individualised Proper Names), CC BY 4.0. Map outline, lakes and rivers: Natural Earth (public domain); `tools/build_map.py` makes `assets/map/lands.bin`.
 - Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library (ccel.org). `tools/build_study_db.py` rebuilds `study.db` from these.
 - Font: Gentium Book Plus © SIL International, SIL Open Font License 1.1 (see `licenses/Gentium-OFL.txt`).

@@ -624,12 +624,14 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                 // Each word with Hebrew or Greek behind it opens a word study (STD-3).
                 StudyableVerse(vm, id, version, verseText)
             }
+            // People and places in the verse open in the study pane (STD-10, STD-11).
+            NamesInVerse(vm, id, onOpen = ::close)
             // The word tapped on the page, ready to study.
             val tapped by produceState<WordStudy?>(null, t, version) {
                 value = if (t.word < 0) null else withContext(Dispatchers.IO) {
                     val strong = vm.study.strongs(version, id).getOrNull(t.word)
                     val range = com.biblestudy.app.data.StudyRepository.words(verseText).getOrNull(t.word)
-                    if (strong != null && range != null) WordStudy(strong, version, verseText.substring(range)) else null
+                    if (strong != null && range != null) WordStudy(strong, version, verseText.substring(range), id) else null
                 }
             }
             Row(
@@ -1329,6 +1331,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 Text("\u2022 Cross-references: OpenBible.info, licensed CC BY.")
                 Text("\u2022 Hebrew and Greek dictionaries: Strong's (1890, public domain), from the Open Scriptures edition, licensed CC BY-SA.")
                 Text("\u2022 Strong's numbers for each word: the KJV, BSB and WEB editions at eBible.org (public domain).")
+                Text("\u2022 People and places: STEPBible.org TIPNR, licensed CC BY 4.0. Map outline: Natural Earth (public domain).")
                 Text("\u2022 Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library.")
                 Text("\u2022 Bible text font: Gentium Book Plus \u00a9 SIL International, SIL Open Font License.")
                 Spacer(Modifier.height(12.dp))
