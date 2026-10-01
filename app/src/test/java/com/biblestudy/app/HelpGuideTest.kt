@@ -32,6 +32,7 @@ class HelpGuideTest {
             "Reading stats", "Export chapter as PDF", "Back up my notes", "Settings", "Text box", "Sketch page", "Verse card",
             "Person or place card", "Read mode", "Lasso", "Layers", "Family tree", "Words of Jesus in red", "Compare versions",
             "Mark word differences", "Save what\u2019s shown", "Import a Bible", "Link to another passage", "Restore from backup",
+            "Ready-made pages", "Unlink", "Put back deleted ready-made pages",
         )) assertTrue("Help doesn't mention $s", text.contains(s, ignoreCase = true))
     }
 

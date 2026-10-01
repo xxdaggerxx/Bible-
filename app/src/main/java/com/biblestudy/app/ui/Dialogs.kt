@@ -945,30 +945,48 @@ fun MyNotesDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     }
 }
 
-/** Every sketch page (SKT-2), newest first, with the passage it belongs to. Tap one to open it. */
+/**
+ * Every sketch page (SKT-2): yours, newest first, then the ready-made ones (SKT-5). Each shows the
+ * verse it's linked to, or that it stands on its own. Tap one to open it.
+ */
 @Composable
 private fun SketchList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit, modifier: Modifier) {
-    val list = vm.sketches.sortedByDescending { it.created }
+    val mine = vm.sketches.filter { !it.readyMade }.sortedByDescending { it.created }
+    val ready = vm.sketches.filter { it.readyMade }.sortedBy { it.created }
+    val missing = SketchTemplates.all.size > ready.size
     Column(modifier) {
-        if (list.isEmpty()) {
-            Text("No sketch pages yet. Make one from Insert \u2192 Sketch page; it's linked to the passage you're reading.")
-        }
-        LazyColumn {
-            items(list, key = { it.id }) { s ->
-                Column(
-                    Modifier.fillMaxWidth().clickable { vm.openSketch(s, panelIndex); onDismiss() }.padding(vertical = 10.dp)
-                ) {
-                    Text(s.name, style = MaterialTheme.typography.titleMedium)
-                    Text(
-                        "${vm.refLabel(VerseId.of(s.linkBook, s.linkChapter, s.linkVerse))} \u00b7 ${s.paper.label} \u00b7 " +
-                            java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM).format(java.util.Date(s.created)),
-                        style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
-                    )
-                }
-                HorizontalDivider()
+        LazyColumn(Modifier.weight(1f)) {
+            item { Text("My sketch pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 8.dp)) }
+            if (mine.isEmpty()) item {
+                Text(
+                    "None yet. Make one from Insert \u2192 Sketch page, linked to a verse or on its own.",
+                    style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(vertical = 8.dp),
+                )
+            }
+            items(mine, key = { it.id }) { s -> SketchRow(vm, s, panelIndex, onDismiss) }
+            item { Text("Ready-made pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 16.dp)) }
+            items(ready, key = { it.id }) { s -> SketchRow(vm, s, panelIndex, onDismiss) }
+            if (missing) item {
+                TextButton(onClick = { vm.addReadyMadePages(announce = true) }) { Text("Put back deleted ready-made pages") }
             }
         }
     }
+}
+
+@Composable
+private fun SketchRow(vm: StudyViewModel, s: com.biblestudy.app.model.Sketch, panelIndex: Int, onDismiss: () -> Unit) {
+    Column(
+        Modifier.fillMaxWidth().clickable { vm.openSketch(s, panelIndex); onDismiss() }.padding(vertical = 10.dp).testTag("sketchRow")
+    ) {
+        Text(s.name, style = MaterialTheme.typography.titleMedium)
+        val where = if (s.linked) "On " + vm.refLabel(VerseId.of(s.linkBook, s.linkChapter, s.linkVerse)) else "On its own"
+        val detail = listOfNotNull(
+            where, s.paper.label,
+            if (s.readyMade) null else java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM).format(java.util.Date(s.created)),
+        )
+        Text(detail.joinToString(" \u00b7 "), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+    }
+    HorizontalDivider()
 }
 
 /**

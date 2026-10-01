@@ -1576,7 +1576,8 @@ class FeatureTest {
     @Test
     fun sketchPagesWithVerseAndNameCards() {
         compose.runOnUiThread { vm.sketches.toList().forEach { vm.deleteSketch(it) } }
-        waitForLoaded()
+        // Deleting the big ready-made pages queues a lot of database work ahead of the chapter's load.
+        waitForLoaded(30_000)
         // A new sketch page, linked to the passage being read.
         compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
         compose.onNodeWithText("Sketch page\u2026").performClick()
@@ -1799,42 +1800,64 @@ class FeatureTest {
     }
 
     @Test
-    fun readyMadeSketchPages() {
-        compose.runOnUiThread { vm.sketches.toList().forEach { vm.deleteSketch(it) } }
-        waitForLoaded()
-        // From the Insert menu: start from the feasts of Israel.
-        compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
-        compose.onNodeWithText("Sketch page\u2026").performClick()
-        compose.onNodeWithText("The feasts of Israel").performClick()
-        compose.onNodeWithText("Create").performClick()
-        compose.waitForIdle()
-        val feasts = vm.sketches.single()
-        assertEquals("The feasts of Israel", feasts.name)
-        val texts = vm.textsFor(feasts.book, 1).map { it.text }
-        assertTrue(texts.any { it.startsWith("1. Passover") })
-        assertTrue(texts.any { it.startsWith("9. Dedication") })
-        waitForLoaded()
-        snap("106-feasts")
+    fun readyMadeSketchPagesAreThereFromTheStart() {
+        // The ready-made pages exist from the first start, on their own (not linked to a verse).
+        compose.runOnUiThread { vm.sketches.filter { !it.readyMade }.forEach { vm.deleteSketch(it) }; vm.addReadyMadePages() }
+        val ready = vm.sketches.filter { it.readyMade }.sortedBy { it.created }
+        assertEquals(com.biblestudy.app.ui.SketchTemplates.all.map { it.name }, ready.map { it.name })
+        assertTrue(ready.none { it.linked })
+        assertTrue(vm.textsFor(ready[0].book, 1).any { it.text.startsWith("1. Passover") })
+        assertTrue(vm.textsFor(ready[1].book, 1).any { it.text.startsWith("Hebrews 9:11\u201312 (KJV)") })
+        assertTrue(vm.textsFor(ready[2].book, 1).any { it.text.startsWith("Josiah  641\u2013609") })
+        assertTrue(vm.textsFor(ready[3].book, 1).any { it.text == "JESUS" })
+        // They aren't badges in any chapter's margin.
+        assertTrue(vm.sketchesIn(43, 3).none { it.readyMade })
 
-        // The others, each opened in turn.
-        for ((t, shot) in com.biblestudy.app.ui.SketchTemplates.all.drop(1).zip(listOf("107-tabernacle", "108-kings", "109-adam-to-jesus"))) {
-            compose.runOnUiThread {
-                val sk = vm.createSketch(t.name, t.paper)
-                assertTrue(vm.placeOnSketch(sk, t.items()))
-            }
+        // Open one from My notes \u2192 Sketch pages.
+        compose.onNodeWithContentDescription("My notes").performClick()
+        compose.onNodeWithText("Sketch pages").performClick()
+        compose.onNodeWithText("Ready-made pages").assertExists()
+        snap("116-sketch-list")
+        compose.onNodeWithText("The feasts of Israel").performClick()
+        waitForLoaded()
+        assertEquals(ready[0].book, vm.panels[0].book)
+        snap("117-feasts")
+        for ((t, shot) in ready.drop(1).zip(listOf("118-tabernacle", "119-kings", "120-adam-to-jesus"))) {
+            compose.runOnUiThread { vm.openSketch(t, 0) }
             waitForLoaded()
-            compose.runOnUiThread { vm.panels[0].panY = 0f }
-            compose.waitForIdle()
             snap(shot)
         }
-        val tab = vm.sketches.first { it.name == "The tabernacle" }
-        // Verse cards come from the Bible being read, with the reference as a link.
-        assertTrue(vm.textsFor(tab.book, 1).any { it.text.startsWith("Hebrews 9:11\u201312 (KJV)") })
-        val kings = vm.sketches.first { it.name == "The kings of Israel and Judah" }
-        assertTrue(vm.textsFor(kings.book, 1).any { it.text.startsWith("Josiah  641\u2013609") })
-        val adam = vm.sketches.first { it.name == "From Adam to Jesus" }
-        assertTrue(vm.textsFor(adam.book, 1).any { it.text == "JESUS" })
-        compose.runOnUiThread { vm.sketches.toList().forEach { vm.deleteSketch(it) } }
+
+        // Deleted ones can be put back.
+        compose.runOnUiThread { vm.deleteSketch(ready[2]) }
+        assertTrue(vm.sketches.none { it.name == "The kings of Israel and Judah" })
+        compose.runOnUiThread { vm.addReadyMadePages(announce = true) }
+        assertTrue(vm.sketches.any { it.readyMade && it.name == "The kings of Israel and Judah" })
+        assertEquals("1 ready-made page put back.", vm.message)
+
+        // A new page can stand on its own, or be linked to a verse and later unlinked.
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
+        compose.onNodeWithText("Sketch page\u2026").performClick()
+        compose.onNodeWithText("e.g. Timeline of the kings").performTextInput("Free page")
+        compose.onNodeWithText("Link to John 3:1").performClick()
+        compose.onNodeWithText("Create").performClick()
+        val free = vm.sketches.first { it.name == "Free page" }
+        assertTrue(!free.linked)
+        waitForLoaded()
+        compose.onNodeWithText("on John", substring = true).assertDoesNotExist()
+        compose.onNodeWithContentDescription("Sketch page menu").performClick()
+        compose.onNodeWithText("Link to a passage\u2026").performClick()
+        compose.onNodeWithText("Reference, e.g. Exodus 25:8").performTextInput("Psalm 23:1")
+        compose.onNodeWithText("Link").performClick()
+        assertEquals(Triple(19, 23, 1), vm.sketches.first { it.id == free.id }.let { Triple(it.linkBook, it.linkChapter, it.linkVerse) })
+        compose.onNodeWithContentDescription("Sketch page menu").performClick()
+        compose.onNodeWithText("Unlink from", substring = true).performClick()
+        assertTrue(!vm.sketches.first { it.id == free.id }.linked)
+        // Deleting a page on its own goes back to the Bible.
+        compose.runOnUiThread { vm.deleteSketch(vm.sketches.first { it.id == free.id }) }
+        assertEquals(43, vm.panels[0].book)
     }
 
     @Test
@@ -1908,14 +1931,14 @@ class FeatureTest {
         compose.onNodeWithContentDescription("Close").performClick()
 
         // A sketch page can be linked to another passage.
-        compose.runOnUiThread { vm.sketches.toList().forEach { vm.deleteSketch(it) }; vm.createSketch("Tabernacle notes", com.biblestudy.app.model.Paper.BLANK) }
+        compose.runOnUiThread { vm.createSketch("Tabernacle notes", com.biblestudy.app.model.Paper.BLANK) }
         waitForLoaded()
         compose.onNodeWithContentDescription("Sketch page menu").performClick()
         compose.onNodeWithText("Link to another passage\u2026").performClick()
         compose.onNodeWithText("Reference, e.g. Exodus 25:8").performTextClearance()
         compose.onNodeWithText("Reference, e.g. Exodus 25:8").performTextInput("Exodus 25:8")
         compose.onNodeWithText("Link").performClick()
-        val sk = vm.sketches.single()
+        val sk = vm.sketches.first { it.name == "Tabernacle notes" }
         assertEquals(Triple(2, 25, 8), Triple(sk.linkBook, sk.linkChapter, sk.linkVerse))
         compose.runOnUiThread { vm.deleteSketch(sk) }
 

@@ -1,4 +1,4 @@
-# Bible Study — version 1.0
+# Bible Study — version 1.0.1
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -66,6 +66,12 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 1.0.1
+
+- **The ready-made sketch pages come with the app.** *The feasts of Israel*, *The tabernacle*, *The kings of Israel and Judah* and *From Adam to Jesus* are already in *My notes → Sketch pages → Ready-made pages* when the app is installed, or on the first start after updating. You don't make them yourself any more. They're ordinary pages you can write on, and *Put back deleted ready-made pages* restores any you delete.
+- **Sketch pages can stand on their own.** A sketch page no longer has to belong to a verse. Turn off *Link to …* when making one, or use *Unlink* in its ⋮ menu. *Link to a passage…* links it again. Pages on their own open from *My notes → Sketch pages*.
+- *New sketch page* no longer has *Start from*; the ready-made pages are already there.
+
 ## New in version 1.0
 
 Version 1.0 finishes the planned features. It adds Hebrew and Greek word by word, ready-made sketch pages, family trees and a Help guide.
@@ -79,7 +85,7 @@ Version 1.0 finishes the planned features. It adds Hebrew and Greek word by word
 - **Words of Jesus in red.** *Settings → Reading → Words of Jesus in red*:
   - The KJV and WEB use their own red-letter markings.
   - The BSB has none, so its quotations are coloured where the WEB marks Jesus speaking. Other speakers in the same verse stay black.
-- **Ready-made sketch pages.** *Insert → Sketch page… → Start from*:
+- **Ready-made sketch pages** (in 1.0.1 these come with the app, in *My notes → Sketch pages*):
   - *The feasts of Israel*: the seven feasts of Leviticus 23 plus Purim and Hanukkah, on a year line, each with how it points to Christ.
   - *The tabernacle*: a scale plan with numbered furniture, what each piece means, and verse cards.
   - *The kings of Israel and Judah*: a timeline from 931 to 586 BC with Edwin Thiele's dates, good and evil kings coloured, the prophets of the time, and a link to each king's story.

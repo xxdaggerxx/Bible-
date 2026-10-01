@@ -1,9 +1,8 @@
 package com.biblestudy.app.ui
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.selection.selectable
-import androidx.compose.foundation.selection.selectableGroup
-import androidx.compose.material3.RadioButton
+import androidx.compose.foundation.selection.toggleable
+import androidx.compose.material3.Switch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.semantics.Role
 import androidx.compose.foundation.layout.Arrangement
@@ -43,17 +42,17 @@ const val VERSE_CARD_BG = 0x40FFE082
 const val NAME_CARD_BG = 0x4090CAF9
 
 /**
- * A new sketch page: its name and paper, blank or started from a ready-made page (SKT-5);
- * it's linked to the passage being read (SKT-1, SKT-2).
+ * A new sketch page: its name and paper, and whether it's linked to the passage being read (its
+ * badge then shows beside that verse) or stands on its own (SKT-1, SKT-2). The ready-made pages are
+ * already in My notes, so new pages start blank.
  */
 @Composable
 fun NewSketchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     var name by remember { mutableStateOf("") }
     var paper by remember { mutableStateOf(Paper.BLANK) }
-    var template by remember { mutableStateOf<SketchTemplate?>(null) }
-    val p = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
-    val link = vm.sketchOf(p.book)?.let { vm.refLabel(com.biblestudy.app.model.VerseId.of(it.linkBook, it.linkChapter, it.linkVerse)) }
-        ?: vm.refLabel(com.biblestudy.app.model.VerseId.of(p.book, p.chapter, p.topVerse))
+    val here = remember { vm.sketchLinkHere() }
+    var linked by remember { mutableStateOf(here != null) }
+    val label = here?.let { vm.refLabel(com.biblestudy.app.model.VerseId.of(it.first, it.second, it.third)) }
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text("New sketch page") },
@@ -61,36 +60,38 @@ fun NewSketchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 OutlinedTextField(
                     value = name, onValueChange = { name = it }, singleLine = true,
-                    placeholder = { Text(template?.name ?: "e.g. Timeline of the kings") }, modifier = Modifier.fillMaxWidth(),
+                    placeholder = { Text("e.g. Timeline of the kings") }, modifier = Modifier.fillMaxWidth(),
                 )
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                     for (pp in Paper.entries) FilterChip(selected = paper == pp, onClick = { paper = pp }, label = { Text(pp.label) })
                 }
-                Text("Start from", style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(top = 4.dp))
-                Column(Modifier.selectableGroup()) {
-                    for (t in listOf<SketchTemplate?>(null) + SketchTemplates.all) {
-                        Row(
-                            Modifier.fillMaxWidth().selectable(selected = template == t, role = Role.RadioButton) {
-                                template = t
-                                if (t != null) paper = t.paper
-                            }.padding(vertical = 2.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                        ) {
-                            RadioButton(selected = template == t, onClick = null)
-                            Column(Modifier.padding(start = 8.dp)) {
-                                Text(t?.name ?: "A blank page", style = MaterialTheme.typography.bodyLarge)
-                                if (t != null) Text(t.about, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
-                            }
+                if (label != null) {
+                    Row(
+                        Modifier.fillMaxWidth().toggleable(value = linked, role = Role.Switch) { linked = it },
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Column(Modifier.weight(1f)) {
+                            Text("Link to $label")
+                            Text(
+                                if (linked) "It opens from a marker beside that verse, and from My notes."
+                                else "It stands on its own and opens from My notes \u2192 Sketch pages.",
+                                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                            )
                         }
+                        Switch(checked = linked, onCheckedChange = null)
                     }
+                } else {
+                    Text("It stands on its own and opens from My notes \u2192 Sketch pages.", style = MaterialTheme.typography.bodySmall)
                 }
-                Text("Linked to $link: it opens from a marker beside that verse.", style = MaterialTheme.typography.bodySmall)
+                Text(
+                    "Ready-made pages (the feasts, the tabernacle, the kings, Adam to Jesus) are already in My notes \u2192 Sketch pages.",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                )
             }
         },
         confirmButton = {
             TextButton(onClick = {
-                val s = vm.createSketch(name.ifBlank { template?.name ?: "" }, paper)
-                template?.let { vm.placeOnSketch(s, it.items()) }
+                vm.createSketch(name, paper, link = if (linked) here else null)
                 onDismiss()
             }) { Text("Create") }
         },

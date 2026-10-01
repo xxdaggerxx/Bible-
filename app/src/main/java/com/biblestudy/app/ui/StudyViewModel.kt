@@ -475,9 +475,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putInt("panels", panels.size)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
             panels.forEachIndexed { i, p ->
-                // A sketch page reopens on its passage next time.
+                // A sketch page reopens on its passage next time (or, if it has none, where you were before it).
                 val sk = sketchOf(p.book)
-                putInt("p${i}b", sk?.linkBook ?: p.book); putInt("p${i}c", sk?.linkChapter ?: p.chapter); putString("p${i}v", p.version)
+                val (b, c) = when {
+                    sk == null -> p.book to p.chapter
+                    sk.linked -> sk.linkBook to sk.linkChapter
+                    else -> biblePlaceBefore(p).let { it.first to it.second }
+                }
+                putInt("p${i}b", b); putInt("p${i}c", c); putString("p${i}v", p.version)
                 p.zoomRel.forEach { (o, z) -> putFloat("p${i}z_$o", z) }
                 putFloat("p${i}zl", p.lastZoomRel)
             }
@@ -724,22 +729,55 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun placeName(book: Int, chapter: Int): String = sketchOf(book)?.name ?: "${bible.book(book).name} $chapter"
 
     /** Makes a sketch page linked to the passage being read and opens it in the active panel. */
-    fun createSketch(name: String, paper: Paper): Sketch {
+    /** The passage a new sketch page would be linked to: the one in view, or the open sketch page's. */
+    fun sketchLinkHere(): Triple<Int, Int, Int>? {
         val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
-        // Linked to the Bible passage in view (or, from a sketch, to that sketch's passage).
-        val from = sketchOf(p.book)
+        val from = sketchOf(p.book) ?: return Triple(p.book, p.chapter, p.topVerse)
+        return if (from.linked) Triple(from.linkBook, from.linkChapter, from.linkVerse) else null
+    }
+
+    /**
+     * Makes a sketch page and opens it in the active panel. With [link] it's tied to that verse and
+     * opens from a badge beside it (SKT-2); without, it stands alone and opens from My notes.
+     */
+    fun createSketch(name: String, paper: Paper, link: Triple<Int, Int, Int>? = sketchLinkHere(), open: Boolean = true, created: Long = System.currentTimeMillis()): Sketch {
         // Small ids, never reused: a sketch's book number is SKETCH_BOOK + id.
         val id = maxOf(prefs.getLong("nextSketch", 1L), (sketches.maxOfOrNull { it.id } ?: 0L) + 1)
         prefs.edit { putLong("nextSketch", id + 1) }
         val s = Sketch(
             id, name.trim().ifEmpty { "Sketch" }, paper,
-            from?.linkBook ?: p.book, from?.linkChapter ?: p.chapter, from?.linkVerse ?: p.topVerse,
-            Sketch.START_HEIGHT, System.currentTimeMillis(),
+            link?.first ?: 0, link?.second ?: 0, link?.third ?: 0,
+            Sketch.START_HEIGHT, created,
         )
         sketches.add(s)
         io { user.saveSketch(s) }
-        openSketch(s)
+        if (open) openSketch(s)
         return s
+    }
+
+    /** The last Bible passage a panel showed before its sketch page, for leaving a free-standing page. */
+    private fun biblePlaceBefore(p: PanelState): Pair<Int, Int> =
+        p.back.lastOrNull { !Sketch.isSketch(it.book) }?.let { it.book to it.chapter } ?: (43 to 1)
+
+    /**
+     * The ready-made pages (SKT-5): made once, on first start, as ordinary free-standing sketch pages
+     * on the first layer. Later it puts back any that were deleted ([announce] says how many).
+     */
+    fun addReadyMadePages(announce: Boolean = false) {
+        val layer = layers.firstOrNull() ?: return
+        var added = 0
+        SketchTemplates.all.forEachIndexed { i, t ->
+            if (sketches.any { it.readyMade && it.name == t.name }) return@forEachIndexed
+            val s = createSketch(t.name, t.paper, link = null, open = false, created = (i + 1).toLong())
+            placeOnSketch(s, t.items(), layerId = layer.id, undoable = false)
+            added++
+        }
+        prefs.edit { putBoolean("readyMadeAdded", true) }
+        if (announce) message = when (added) {
+            0 -> "All the ready-made pages are already here."
+            1 -> "1 ready-made page put back."
+            else -> "$added ready-made pages put back."
+        }
     }
 
     fun openSketch(s: Sketch, index: Int = activePanel.coerceIn(0, panels.lastIndex)) {
@@ -755,7 +793,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** Deletes a sketch page and its drawing; panels showing it go back to its passage. */
     fun deleteSketch(s: Sketch) {
         for ((i, p) in panels.withIndex()) {
-            if (p.book == s.book) goTo(i, s.linkBook, s.linkChapter, s.linkVerse, remember = false)
+            if (p.book == s.book) {
+                if (s.linked) goTo(i, s.linkBook, s.linkChapter, s.linkVerse, remember = false)
+                else biblePlaceBefore(p).let { (b, c) -> goTo(i, b, c, remember = false) }
+            }
             p.back.removeAll { it.book == s.book }
             p.forward.removeAll { it.book == s.book }
         }
@@ -791,10 +832,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * (STD-16, SKT-5). [items] are in page units from the top-left of the page's drawing area; they
      * go below anything already there, and the page grows to fit. Returns false if the layer is locked.
      */
-    fun placeOnSketch(s: Sketch, items: List<Drawn>): Boolean {
-        val layer = activeLayer() ?: return false
-        if (layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return false }
-        if (!layer.visible) setLayerVisible(layer.id, true)
+    fun placeOnSketch(s: Sketch, items: List<Drawn>, layerId: Long? = null, undoable: Boolean = true): Boolean {
+        val layer = (if (layerId != null) layers.firstOrNull { it.id == layerId } else activeLayer()) ?: return false
+        if (layerId == null && layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return false }
+        if (layerId == null && !layer.visible) setLayerVisible(layer.id, true)
         val book = s.book
         val existing = textsFor(book, 1).map { it.y + (textHeights[it.id] ?: estimateTextHeight(it)) } +
             imagesFor(book, 1).map { it.y + it.h } +
@@ -834,7 +875,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             }
         }
         added.forEach { addItem(it) }
-        record(Edit(added, emptyList()))
+        if (undoable) record(Edit(added, emptyList()))
         val needed = Page.TEXT_TOP + bottom + 120f
         sketchOf(book)?.let { if (it.height < needed) updateSketch(it.copy(height = needed)) }
         return true
@@ -2094,6 +2135,13 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             dataGeneration++
             message = "Notes restored."
         }
+    }
+
+
+    // The ready-made sketch pages are there from the first start (SKT-5). Last in the class, so
+    // everything they use is set up.
+    init {
+        if (!prefs.getBoolean("readyMadeAdded", false)) runCatching { addReadyMadePages() }
     }
 
     companion object {

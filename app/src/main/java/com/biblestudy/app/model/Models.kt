@@ -251,6 +251,12 @@ data class Sketch(
 ) {
     val book get() = SKETCH_BOOK + id.toInt()
 
+    /** Linked to a verse, where its badge shows; otherwise free-standing, opened from My notes. */
+    val linked get() = linkBook in 1..66
+
+    /** One of the app's ready-made pages (they're made with [created] = their order, not a date). */
+    val readyMade get() = created in 1..999
+
     companion object {
         /** Sketch pages use book numbers from here up; Bible books are 1 to 66. */
         const val SKETCH_BOOK = 1000

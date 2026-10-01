@@ -151,20 +151,20 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 
 ## Sketch pages
 
-A sketch page is a whole blank page for timelines, diagrams, maps and sketch notes.
+A sketch page is a whole page for timelines, diagrams, maps and sketch notes. All of them are listed in *My notes → Sketch pages*.
 
-- **Make one:** *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
-- **Start from a ready-made page** in the same window:
+- **Ready-made pages** are already there when you install the app, under *My notes → Sketch pages → Ready-made pages*:
   - *The feasts of Israel*: the seven feasts of Leviticus 23 plus Purim and Hanukkah on a year line, each with when it is, what it remembers, how it was kept and how it points to Christ.
   - *The tabernacle*: a plan to scale with each piece of furniture numbered, what each means, and key verses.
   - *The kings of Israel and Judah*: a timeline from 931 to 586 BC (Edwin Thiele's dates), good and evil kings coloured, with the prophets of the time and a link to each king's story.
   - *From Adam to Jesus*: the line of descent through Genesis, Ruth and Matthew.
-  Everything on a ready-made page is ordinary ink, text boxes and verse cards, so you can write on it, move things, change them or delete them.
+  They're ordinary ink, text boxes and verse cards, so you can write on them, move things, change them or delete them. If you delete one, *Put back deleted ready-made pages* at the bottom of the list brings it back.
+- **Make your own:** *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
+- **Linked or on its own.** In the same window, *Link to …* ties the page to the verse you're reading: a small badge in that verse's margin opens it. Turn the switch off for a page that stands on its own, such as a topic study; open it from *My notes*.
 - **Every pen tool works** on a sketch page, plus shapes, the lasso, layers, pictures and text boxes.
 - **Verse cards:** *Insert → Verse card…*, type a reference like *John 3:16-18*, and the verses go on the page as a card.
 - **Person or place cards:** *Insert → Person or place card…*.
-- **Each page is linked to a passage** and opens from a small badge in that passage's margin. All your sketch pages are listed in *My notes → Sketch pages*.
-- **The page's ⋮ menu:** change the paper, add more space below, rename it, *Link to another passage…* (move its badge to another verse), or delete it.
+- **The page's ⋮ menu:** change the paper, add more space below, rename it, *Link to a passage…* (or *Link to another passage…*), *Unlink*, or delete it.
 
 ## My notes
 

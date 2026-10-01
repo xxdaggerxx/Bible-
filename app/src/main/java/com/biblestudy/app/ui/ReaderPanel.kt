@@ -553,7 +553,7 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
             Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
         }
         Text(sk.name, style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(horizontal = 6.dp))
-        TextButton(onClick = { vm.goTo(index, sk.linkBook, sk.linkChapter, sk.linkVerse) }) {
+        if (sk.linked) TextButton(onClick = { vm.goTo(index, sk.linkBook, sk.linkChapter, sk.linkVerse) }) {
             Text("on " + vm.refLabel(com.biblestudy.app.model.VerseId.of(sk.linkBook, sk.linkChapter, sk.linkVerse)), maxLines = 1)
         }
         Spacer(Modifier.weight(1f))
@@ -571,7 +571,14 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
                 HorizontalDivider()
                 DropdownMenuItem(text = { Text("More space below") }, onClick = { vm.updateSketch(sk.copy(height = sk.height + com.biblestudy.app.model.Sketch.START_HEIGHT / 2)); menu = false })
                 DropdownMenuItem(text = { Text("Rename\u2026") }, onClick = { renaming = true; menu = false })
-                DropdownMenuItem(text = { Text("Link to another passage\u2026") }, onClick = { relinking = true; menu = false })
+                DropdownMenuItem(
+                    text = { Text(if (sk.linked) "Link to another passage\u2026" else "Link to a passage\u2026") },
+                    onClick = { relinking = true; menu = false },
+                )
+                if (sk.linked) DropdownMenuItem(
+                    text = { Text("Unlink from ${vm.refLabel(com.biblestudy.app.model.VerseId.of(sk.linkBook, sk.linkChapter, sk.linkVerse))}") },
+                    onClick = { menu = false; vm.updateSketch(sk.copy(linkBook = 0, linkChapter = 0, linkVerse = 0)) },
+                )
                 DropdownMenuItem(text = { Text("Delete sketch page\u2026") }, onClick = { deleting = true; menu = false })
                 if (vm.panels.size > 1) DropdownMenuItem(text = { Text("Close panel") }, onClick = { menu = false; vm.closePanel(index) })
             }
@@ -589,7 +596,7 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
     }
     if (relinking) {
         // Move the page's marker to another verse (SKT-2).
-        var ref by remember { mutableStateOf(vm.refLabel(com.biblestudy.app.model.VerseId.of(sk.linkBook, sk.linkChapter, sk.linkVerse))) }
+        var ref by remember { mutableStateOf(if (sk.linked) vm.refLabel(com.biblestudy.app.model.VerseId.of(sk.linkBook, sk.linkChapter, sk.linkVerse)) else "") }
         val found = remember(ref) { com.biblestudy.app.data.RefLinks.find(ref.trim(), vm.bible.books).firstOrNull()?.passage }
         AlertDialog(
             onDismissRequest = { relinking = false },
