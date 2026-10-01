@@ -29,6 +29,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.viewinterop.AndroidView
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.TextFont
@@ -263,7 +264,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                 Modifier
                     .fillMaxSize()
                     .pointerInput(ctl) {
-                        readerGestures(ctl, fingerDraw = { vm.fingerDraw }, onLongPress = {
+                        readerGestures(ctl, fingerDraw = { vm.fingerDraw }, readMode = { vm.readMode }, onLongPress = {
                             haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                         })
                     }
@@ -511,15 +512,26 @@ private fun SelectionBar(vm: StudyViewModel, ctl: ReaderController, modifier: Mo
             val count = vm.selectedItems().size
             Text("$count selected", style = MaterialTheme.typography.labelLarge)
             Spacer(Modifier.size(4.dp))
-            for (c in PEN_COLORS + HIGHLIGHT_COLORS) {
-                Box(
-                    Modifier
-                        .size(26.dp)
-                        .clip(CircleShape)
-                        .background(Color(c))
-                        .border(1.dp, MaterialTheme.colorScheme.outline, CircleShape)
-                        .clickable { vm.recolorSelection(c) }
-                )
+            // One colour button instead of a row of swatches (UI-1).
+            var colours by remember { mutableStateOf(false) }
+            Box {
+                TextButton(onClick = { colours = true }) { Text("Colour") }
+                DropdownMenu(expanded = colours, onDismissRequest = { colours = false }) {
+                    for (row in listOf(PEN_COLORS, HIGHLIGHT_COLORS)) {
+                        Row(Modifier.padding(horizontal = 12.dp, vertical = 4.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            for (c in row) {
+                                Box(
+                                    Modifier
+                                        .size(28.dp)
+                                        .clip(CircleShape)
+                                        .background(Color(c))
+                                        .border(1.dp, MaterialTheme.colorScheme.outline, CircleShape)
+                                        .clickable { vm.recolorSelection(c); colours = false }
+                                )
+                            }
+                        }
+                    }
+                }
             }
             TextButton(onClick = {
                 val sel = vm.selection
@@ -549,6 +561,13 @@ private fun SelectionBar(vm: StudyViewModel, ctl: ReaderController, modifier: Mo
 // ---------------------------------------------------------------------------------------------
 
 /** Draws one chapter page in its own page coordinates. [view] is the visible area in page units. */
+/** A snapped underline (HL-4) under a character range, in text coordinates. */
+private fun DrawScope.drawUnderline(layout: ChapterLayout, start: Int, end: Int, color: Color) {
+    for ((x0, x1, y) in layout.underlines(start, end)) {
+        drawLine(color, Offset(x0, y), Offset(x1, y), strokeWidth = 3.5f, cap = StrokeCap.Round)
+    }
+}
+
 private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: PlacedPage, theme: PageTheme, view: Rect, measurer: TextMeasurer) {
     val g = page.geo
     val layout = g.layout
@@ -588,10 +607,16 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
             for (x in crossHighlights) {
                 if (x.source.layerId != layerId) continue
                 val r = layout.versesRange(x.fromVerse, x.toVerse) ?: continue
-                drawPath(layout.highlightPath(-x.source.id, r.first, r.last + 1), Color(x.source.color).copy(alpha = CROSS_HIGHLIGHT_ALPHA))
+                if (x.source.underline) {
+                    drawUnderline(layout, r.first, r.last + 1, Color(x.source.color).copy(alpha = 0.5f))
+                } else {
+                    drawPath(layout.highlightPath(-x.source.id, r.first, r.last + 1), Color(x.source.color).copy(alpha = CROSS_HIGHLIGHT_ALPHA))
+                }
             }
             for (h in highlights) {
-                if (h.layerId == layerId) drawPath(ctl.highlightPath(h, layout), Color(h.color).copy(alpha = HIGHLIGHT_ALPHA))
+                if (h.layerId != layerId) continue
+                if (h.underline) drawUnderline(layout, h.start, h.end, Color(h.color))
+                else drawPath(ctl.highlightPath(h, layout), Color(h.color).copy(alpha = HIGHLIGHT_ALPHA))
             }
         }
         drawStrokes(vm, g, view, textStrokes, marginStrokes, layerId, highlighter = true, moving, shift)
@@ -745,12 +770,16 @@ private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, t
             for (page in ctl.pages()) {
                 if (!sel.isOn(page.layout)) continue
                 val b = ctl.selectionBounds(page) ?: continue
-                val r = b.inflate(10f / zoom).translate(ctl.moveOffset.x, ctl.moveOffset.y + page.top)
+                val k = ctl.resizeScale
+                val grown = Rect(b.left, b.top, b.left + b.width * k, b.top + b.height * k)
+                val r = grown.inflate(10f / zoom).translate(ctl.moveOffset.x, ctl.moveOffset.y + page.top)
                 drawRect(SELECT_BLUE.copy(alpha = 0.06f), topLeft = r.topLeft, size = r.size)
                 drawRect(
                     SELECT_BLUE, topLeft = r.topLeft, size = r.size,
                     style = Stroke(width = 2f / zoom, pathEffect = PathEffect.dashPathEffect(floatArrayOf(12f / zoom, 8f / zoom))),
                 )
+                // Drag the corner to resize (INK-11).
+                drawCircle(SELECT_BLUE, radius = 12f / zoom, center = r.bottomRight)
             }
         }
 
@@ -789,6 +818,7 @@ private fun PointerInputChange.isPen() =
 private suspend fun PointerInputScope.readerGestures(
     ctl: ReaderController,
     fingerDraw: () -> Boolean,
+    readMode: () -> Boolean,
     onLongPress: () -> Unit,
 ) = coroutineScope {
     var fling: Job? = null
@@ -804,7 +834,8 @@ private suspend fun PointerInputScope.readerGestures(
                 return@awaitEachGesture
             }
         }
-        if (down.isPen() || (down.type == PointerType.Touch && fingerDraw())) {
+        // In read mode (PEN-4) the pen scrolls and taps like a finger.
+        if (!readMode() && (down.isPen() || (down.type == PointerType.Touch && fingerDraw()))) {
             trackPen(down, ctl)
             return@awaitEachGesture
         }

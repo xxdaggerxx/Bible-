@@ -318,6 +318,24 @@ class ChapterLayout(
     }
 
     /**
+     * The lines under a character range, as (left, right, y) in display coordinates: a snapped
+     * underline (HL-4) is drawn along them.
+     */
+    fun underlines(start: Int, end: Int): List<Triple<Float, Float, Float>> {
+        val a = start.coerceIn(0, textLength)
+        val b = end.coerceIn(0, textLength)
+        if (b <= a) return emptyList()
+        val first = text.getLineForOffset(a)
+        val last = text.getLineForOffset(b - 1)
+        return (first..last).mapNotNull { line ->
+            val s = maxOf(a, text.getLineStart(line))
+            val e = minOf(b, text.getLineEnd(line, visibleEnd = true))
+            if (e <= s) null
+            else Triple(text.getHorizontalPosition(s, true), text.getHorizontalPosition(e, true), baseline(line) + 5f)
+        }
+    }
+
+    /**
      * Character range covering verses [from]..[to] whole (with their numbers), or null if this
      * version has none of them. Used to show another translation's highlight here (HL-10).
      */

@@ -218,6 +218,8 @@ class FeatureTest {
             vm.sidePane = null
             vm.paneVerse = null
             vm.compareVersions = false
+            vm.readMode = false
+            vm.underlineMode = false
             vm.changeTextFont(com.biblestudy.app.model.TextFont.BOOK)
             vm.panels[0].back.clear()
             vm.panels[0].forward.clear()
@@ -1071,5 +1073,72 @@ class FeatureTest {
         compose.onNodeWithText("Delete").performClick()
         compose.waitForIdle()
         assertTrue(vm.textsFor(43, 3).isEmpty())
+    }
+
+    @Test
+    fun lassoSelectionResizesFromItsCorner() {
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        val mx = (Page.COL_W + 80f) * z // in the right margin
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(mx, 500f)); repeat(10) { moveBy(Offset(10f, 6f)) }; up()
+        }
+        compose.waitForIdle()
+        val before = vm.marginStrokesFor(43, 3).single()
+        compose.runOnUiThread { vm.tool = Tool.LASSO }
+        compose.mainClock.advanceTimeBy(600)
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(mx - 40f, 460f)); moveBy(Offset(190f, 0f)); moveBy(Offset(0f, 140f)); moveBy(Offset(-190f, 0f)); moveBy(Offset(0f, -140f)); up()
+        }
+        compose.waitForIdle()
+        assertEquals(setOf(before.id), vm.selection?.ids)
+        snap("74-lasso-handle")
+        // Drag the corner handle (just past the stroke's bottom-right) outwards: the ink doubles in size.
+        compose.mainClock.advanceTimeBy(600)
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(mx + 100f + 24f, 560f + 24f)); repeat(10) { moveBy(Offset(12f, 7f)) }; up()
+        }
+        compose.waitForIdle()
+        val after = vm.marginStrokesFor(43, 3).single()
+        val w0 = before.points[27] - before.points[0]
+        val w1 = after.points[27] - after.points[0]
+        assertTrue("width $w0 -> $w1", w1 > w0 * 1.3f)
+        assertTrue(after.width > before.width)
+        compose.runOnUiThread { vm.undo() }
+        assertEquals(before.points[27], vm.marginStrokesFor(43, 3).single().points[27], 0.01f)
+    }
+
+    @Test
+    fun readModeStopsThePenMarkingThePage() {
+        compose.onNodeWithContentDescription("Read mode off").performClick()
+        assertTrue(vm.readMode)
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset((Page.COL_PAD + 100f) * z, 520f)); repeat(10) { moveBy(Offset(20f, 0f)) }; up()
+        }
+        compose.waitForIdle()
+        assertTrue(vm.textStrokesFor("KJV", 43, 3).isEmpty())
+        snap("75-read-mode")
+        compose.onNodeWithContentDescription("Read mode on").performClick()
+        assertEquals(false, vm.readMode)
+    }
+
+    @Test
+    fun theHighlighterCanSnapAnUnderline() {
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.HIGHLIGHTER; vm.snapHighlights = true }
+        compose.onNodeWithContentDescription("Highlighter colour and size").performClick()
+        compose.onNodeWithText("Underline").performClick()
+        compose.waitForIdle()
+        assertTrue(vm.underlineMode)
+        compose.mainClock.advanceTimeBy(600)
+        val z = zoom()
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset((Page.COL_PAD + 60f) * z, 600f)); repeat(10) { moveBy(Offset(30f, 0f)) }; up()
+        }
+        compose.waitForIdle()
+        val h = vm.highlightsFor("KJV", 43, 3).single()
+        assertTrue(h.underline)
+        snap("76-underline")
     }
 }

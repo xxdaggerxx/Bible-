@@ -62,6 +62,7 @@ class InkStroke(
         layerId: Long = this.layerId,
         lineAnchored: Boolean = this.lineAnchored,
         font: String = this.font,
+        width: Float = this.width,
     ) = InkStroke(id, layerId, version, book, chapter, region, verse, highlighter, color, width, points, lineAnchored, font)
 
     fun withPoints(p: FloatArray) = copyAs(points = p)
@@ -91,6 +92,8 @@ data class Highlight(
     val start: Int,
     val end: Int,
     val color: Int,
+    /** Drawn as a line under the words instead of a fill (HL-4). */
+    val underline: Boolean = false,
 ) : Annotation
 
 /**

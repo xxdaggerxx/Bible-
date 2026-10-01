@@ -40,7 +40,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
         db.execSQL(
             "CREATE TABLE highlights(id INTEGER PRIMARY KEY, layer_id INTEGER NOT NULL, version TEXT NOT NULL, " +
                 "book INTEGER NOT NULL, chapter INTEGER NOT NULL, start_off INTEGER NOT NULL, " +
-                "end_off INTEGER NOT NULL, color INTEGER NOT NULL)"
+                "end_off INTEGER NOT NULL, color INTEGER NOT NULL, style INTEGER NOT NULL DEFAULT 0)"
         )
         db.execSQL("CREATE INDEX highlights_bc ON highlights(book, chapter)")
         db.execSQL(
@@ -76,7 +76,10 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
             // READ-3: the font ink on the words was drawn in (all earlier ink used Gentium Book).
             db.execSQL("ALTER TABLE strokes ADD COLUMN font TEXT NOT NULL DEFAULT 'BOOK'")
         }
-        if (oldVersion < 4) createTexts(db) // 0.7: margin text boxes (MRG-12)
+        if (oldVersion < 4) {
+            createTexts(db) // 0.7: margin text boxes (MRG-12)
+            db.execSQL("ALTER TABLE highlights ADD COLUMN style INTEGER NOT NULL DEFAULT 0") // 0 = fill, 1 = underline (HL-4)
+        }
     }
 
     private fun createTexts(db: SQLiteDatabase) {
@@ -147,6 +150,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
                 put("id", a.id); put("layer_id", a.layerId); put("version", a.version)
                 put("book", a.book); put("chapter", a.chapter)
                 put("start_off", a.start); put("end_off", a.end); put("color", a.color)
+                put("style", if (a.underline) 1 else 0)
             }, SQLiteDatabase.CONFLICT_REPLACE)
 
             is MarginImage -> db.insertWithOnConflict("images", null, ContentValues().apply {
@@ -200,7 +204,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
             args,
         ).use { c -> buildList { while (c.moveToNext()) add(c.toStroke()) } }
         val highlights = db.rawQuery(
-            "SELECT id, layer_id, version, book, chapter, start_off, end_off, color FROM highlights " +
+            "SELECT id, layer_id, version, book, chapter, start_off, end_off, color, style FROM highlights " +
                 "WHERE version = ? AND book = ? AND chapter = ? ORDER BY id",
             args,
         ).use { c -> buildList { while (c.moveToNext()) add(c.toHighlight()) } }
@@ -210,7 +214,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
     /** Highlights in every version of a chapter (HL-10 shows them across translations). */
     fun chapterHighlights(book: Int, chapter: Int): List<Highlight> =
         readableDatabase.rawQuery(
-            "SELECT id, layer_id, version, book, chapter, start_off, end_off, color FROM highlights " +
+            "SELECT id, layer_id, version, book, chapter, start_off, end_off, color, style FROM highlights " +
                 "WHERE book = ? AND chapter = ? ORDER BY id",
             arrayOf(book.toString(), chapter.toString()),
         ).use { c -> buildList { while (c.moveToNext()) add(c.toHighlight()) } }
@@ -218,7 +222,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
     /** Every highlight, in Bible order (HL-8). */
     fun allHighlights(): List<Highlight> =
         readableDatabase.rawQuery(
-            "SELECT id, layer_id, version, book, chapter, start_off, end_off, color FROM highlights " +
+            "SELECT id, layer_id, version, book, chapter, start_off, end_off, color, style FROM highlights " +
                 "ORDER BY book, chapter, start_off, id",
             null,
         ).use { c -> buildList { while (c.moveToNext()) add(c.toHighlight()) } }
@@ -369,7 +373,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
         }
 
         private fun Cursor.toHighlight() =
-            Highlight(getLong(0), getLong(1), getString(2), getInt(3), getInt(4), getInt(5), getInt(6), getInt(7))
+            Highlight(getLong(0), getLong(1), getString(2), getInt(3), getInt(4), getInt(5), getInt(6), getInt(7), getInt(8) == 1)
 
         private fun Cursor.toStroke() = InkStroke(
             id = getLong(0), layerId = getLong(1), version = if (isNull(2)) null else getString(2),

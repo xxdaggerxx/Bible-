@@ -163,6 +163,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var partialEraser by mutableStateOf(prefs.getBoolean("partialEraser", false))
     /** Draw pen strokes straight to the screen for the lowest latency (INK-4). */
     var fastInk by mutableStateOf(prefs.getBoolean("fastInk", true))
+    /** The snapping highlighter draws a line under the words instead of a fill (HL-4). */
+    var underlineMode by mutableStateOf(prefs.getBoolean("underline", false))
+    /** Read mode (PEN-4): the pen scrolls and taps like a finger, so nothing is marked by accident. */
+    var readMode by mutableStateOf(prefs.getBoolean("readMode", false))
     /** The version a new Bible panel opens in; null = the same as the panel it comes from. */
     var newPanelVersion by mutableStateOf(prefs.getString("newPanelVersion", null))
     /**
@@ -187,6 +191,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         partialEraser = false
         snapHighlights = true
         fastInk = true
+        underlineMode = false
+        readMode = false
         penSize = 1; highlightSize = 1
         highlightsAllVersions = true
         marginLeft = false; marginRight = true
@@ -330,7 +336,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("linkPanels", linkPanels)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             putFloat("split", splitFraction)
@@ -876,6 +882,38 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 is InkStroke -> a.withPoints(shifted(a, off.x, off.y, layout))
                 is MarginImage -> a.copy(x = a.x + off.x, y = a.y + off.y)
                 is MarginText -> a.copy(x = a.x + off.x, y = a.y + off.y)
+                is Highlight -> null
+            }
+        }
+    }
+
+    /**
+     * Resizes the selection by [k] about [pivot] (page units on [g]'s page), INK-11. Ink, images and
+     * text boxes grow or shrink; highlights stay on their words.
+     */
+    fun scaleSelection(k: Float, pivot: Offset, g: PageGeometry) {
+        if (k <= 0f || kotlin.math.abs(k - 1f) < 0.01f) return
+        val layout = g.layout
+        fun sx(ox: Float, x: Float) = (ox + x - pivot.x) * k + pivot.x - ox
+        fun sy(oy: Float, y: Float) = (oy + y - pivot.y) * k + pivot.y - oy
+        changeSelection { a ->
+            when (a) {
+                is InkStroke -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    val shown = if (a.region == Region.TEXT) layout.render(a).points else a.points
+                    val pts = FloatArray(shown.size) { i ->
+                        when (i % 3) { 0 -> sx(ox, shown[i]); 1 -> sy(oy, shown[i]); else -> shown[i] }
+                    }
+                    a.copyAs(points = if (a.region == Region.TEXT) layout.linePoints(pts) else pts, width = a.width * k)
+                }
+                is MarginImage -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    a.copy(x = sx(ox, a.x), y = sy(oy, a.y), w = a.w * k, h = a.h * k)
+                }
+                is MarginText -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    a.copy(x = sx(ox, a.x), y = sy(oy, a.y), w = a.w * k, size = (a.size * k).coerceIn(8f, 96f))
+                }
                 is Highlight -> null
             }
         }

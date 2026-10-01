@@ -4,6 +4,7 @@ import android.os.SystemClock
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.geometry.Offset
@@ -91,6 +92,9 @@ private class TextDrag(val page: PlacedPage, val original: MarginText, val resiz
 
 private class LassoDrag(val start: Offset)
 
+/** Resizing the lasso selection from its corner (INK-11): [bounds] on [page] when it started. */
+private class ResizeDrag(val page: PlacedPage, val bounds: Rect, val start: Offset)
+
 /**
  * Turns pen and finger input on one panel into drawing, erasing, selecting, panning and zooming.
  *
@@ -124,6 +128,10 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         private set
     /** Pen drag offset (page units) applied to the lasso selection while it is being moved. */
     var moveOffset by mutableStateOf(Offset.Zero)
+    /** The scale of a selection being resized from its corner, and the corner it grows from. */
+    var resizeScale by mutableFloatStateOf(1f)
+        private set
+    private var selResize: ResizeDrag? = null
         private set
     /** Which margin edge is being dragged (true = left), or null. */
     var resizing by mutableStateOf<Boolean?>(null)
@@ -545,7 +553,16 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val sel = vm.selection
         if (sel != null && override != Tool.ERASER) {
             val selPage = pages().firstOrNull { sel.isOn(it.layout) }
-            if (selPage != null && selectionBounds(selPage)?.inflate(12f / panel.zoom)?.contains(Offset(s.x, s.y - selPage.top)) == true) {
+            val b = selPage?.let { selectionBounds(it) }
+            val local = selPage?.let { Offset(s.x, s.y - it.top) }
+            // The corner handle resizes the selection (INK-11).
+            if (b != null && local != null && (local - b.inflate(10f / panel.zoom).bottomRight).getDistance() < 36f / panel.zoom) {
+                mode = Tool.LASSO
+                selResize = ResizeDrag(selPage, b, local)
+                resizeScale = 1f
+                return
+            }
+            if (selPage != null && b?.inflate(12f / panel.zoom)?.contains(Offset(s.x, s.y - selPage.top)) == true) {
                 mode = Tool.LASSO
                 lassoDrag = LassoDrag(Offset(s.x, s.y - selPage.top))
                 return
@@ -616,7 +633,12 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             Tool.LASSO -> {
                 val d = lassoDrag
                 val l = lasso
-                if (d != null) {
+                val rz = selResize
+                if (rz != null) {
+                    val local = Offset(s.x, s.y - rz.page.top)
+                    val from = (rz.start - rz.bounds.topLeft).getDistance()
+                    if (from > 1f) resizeScale = ((local - rz.bounds.topLeft).getDistance() / from).coerceIn(0.2f, 5f)
+                } else if (d != null) {
                     val selPage = vm.selection?.let { sel -> pages().firstOrNull { sel.isOn(it.layout) } }
                     if (selPage != null) moveOffset = Offset(s.x, s.y - selPage.top) - d.start
                 } else if (l != null) {
@@ -639,7 +661,13 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
                 erasedAdded.clear()
             }
             Tool.LASSO -> {
-                if (lassoDrag != null) {
+                val rz = selResize
+                if (rz != null) {
+                    selResize = null
+                    val k = resizeScale
+                    resizeScale = 1f
+                    vm.scaleSelection(k, rz.bounds.topLeft, rz.page.geo)
+                } else if (lassoDrag != null) {
                     val off = moveOffset
                     lassoDrag = null
                     moveOffset = Offset.Zero
@@ -710,6 +738,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         return Highlight(
             id = vm.newId(), layerId = ink.layerId, version = layout.version,
             book = layout.book, chapter = layout.chapter, start = start, end = end, color = ink.color,
+            underline = vm.underlineMode,
         )
     }
 

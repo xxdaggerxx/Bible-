@@ -21,6 +21,8 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.LockOpen
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.foundation.layout.Column
@@ -92,9 +94,27 @@ fun StudyToolbar(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(2.dp),
         ) {
+            // Read mode (PEN-4): a lock that stops the pen marking the page.
+            IconToggleButton(
+                checked = vm.readMode,
+                onCheckedChange = {
+                    vm.readMode = it
+                    vm.message = if (it) "Read mode: the pen scrolls the page and won't mark it." else "Read mode off."
+                },
+                colors = IconButtonDefaults.iconToggleButtonColors(
+                    checkedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                    checkedContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                ),
+            ) {
+                Icon(
+                    if (vm.readMode) Icons.Filled.Lock else Icons.Filled.LockOpen,
+                    contentDescription = if (vm.readMode) "Read mode on" else "Read mode off",
+                )
+            }
             for (t in Tool.entries) {
                 IconToggleButton(
-                    checked = vm.tool == t,
+                    checked = vm.tool == t && !vm.readMode,
+                    enabled = !vm.readMode,
                     onCheckedChange = { vm.tool = t },
                     colors = IconButtonDefaults.iconToggleButtonColors(
                         checkedContainerColor = MaterialTheme.colorScheme.secondaryContainer,
@@ -102,7 +122,7 @@ fun StudyToolbar(
                     ),
                 ) { Icon(t.icon(), contentDescription = t.label) }
             }
-            ToolOptions(vm)
+            if (!vm.readMode) ToolOptions(vm)
             Divider()
             IconButton(onClick = vm::undo, enabled = vm.canUndo) {
                 Icon(Icons.AutoMirrored.Filled.Undo, contentDescription = "Undo")
@@ -224,6 +244,10 @@ private fun ToolOptions(vm: StudyViewModel) {
                     Tool.HIGHLIGHTER -> {
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             for (c in HIGHLIGHT_COLORS) Swatch(c, vm.highlightColor == c) { vm.highlightColor = c }
+                        }
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            FilterChip(selected = !vm.underlineMode, onClick = { vm.underlineMode = false }, label = { Text("Highlight") })
+                            FilterChip(selected = vm.underlineMode, onClick = { vm.underlineMode = true; vm.snapHighlights = true }, label = { Text("Underline") })
                         }
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
                             SizePicker(vm.highlightSize) { vm.highlightSize = it }
