@@ -261,3 +261,15 @@ data class Sketch(
         fun idOf(book: Int) = (book - SKETCH_BOOK).toLong()
     }
 }
+
+/** Ready-made drawing for a sketch page (STD-16, SKT-5), in page units; see StudyViewModel.placeOnSketch. */
+sealed interface Drawn
+
+/** A text box: [background] 0 = none. */
+data class DrawnBox(
+    val x: Float, val y: Float, val w: Float, val text: String,
+    val size: Float = 20f, val color: Int = 0xFF222222.toInt(), val background: Int = 0,
+) : Drawn
+
+/** A pen line through [points]. */
+data class DrawnLine(val points: List<Pair<Float, Float>>, val color: Int = 0xFF6D4C41.toInt(), val width: Float = 3f) : Drawn

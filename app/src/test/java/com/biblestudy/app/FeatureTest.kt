@@ -46,6 +46,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import androidx.compose.ui.test.assertTextEquals
+import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.filter
 import org.junit.Assert.assertTrue
 import org.junit.After
 import org.junit.Before
@@ -1752,5 +1754,46 @@ class FeatureTest {
         compose.onNodeWithTag("grammar").assertTextEquals("verb, Qal perfect, 3rd person masculine singular")
         snap("103-hebrew")
         compose.runOnUiThread { vm.verseSheet = null; vm.originalView = false; vm.redLetters = false }
+    }
+
+    private fun assertTreeNode(name: String) {
+        assertEquals(name, 1, compose.onAllNodesWithTag("treeNode").filter(hasText(name)).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun familyTreeRecentresAndCopiesToASketchPage() {
+        compose.runOnUiThread { vm.sketches.toList().forEach { vm.deleteSketch(it) } }
+        waitForLoaded()
+        // From Moses's entry in Names & places.
+        compose.runOnUiThread { vm.openName(vm.study.nameSearch("Moses").first().id) }
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("nameView").fetchSemanticsNodes().isNotEmpty() }
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Family tree").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Family tree").performScrollTo().performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Family of Moses").fetchSemanticsNodes().isNotEmpty() }
+        // Parents, grandparents, brother and sister, wife and sons.
+        for (n in listOf("Amram", "Jochebed", "Kohath", "Aaron", "Miriam", "Zipporah", "Gershom", "Eliezer")) {
+            assertTreeNode(n)
+        }
+        snap("104-family-tree")
+        // Tap Aaron to see his family.
+        compose.onAllNodesWithTag("treeNode").filter(hasText("Aaron")).onFirst().performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Family of Aaron").fetchSemanticsNodes().isNotEmpty() }
+        assertTreeNode("Elisheba")
+        assertTreeNode("Nadab")
+        // Copied onto a new sketch page as text boxes and lines.
+        compose.onNodeWithText("Copy to sketch page").performClick()
+        compose.waitForIdle()
+        val sketch = vm.sketches.single()
+        assertEquals("Family of Aaron", sketch.name)
+        assertEquals(sketch.book, vm.panels[0].book)
+        val texts = vm.textsFor(sketch.book, 1).map { it.text }
+        assertTrue(texts.containsAll(listOf("Aaron", "Elisheba", "Nadab", "Moses")))
+        assertTrue(vm.marginStrokesFor(sketch.book, 1).size > 5)
+        waitForLoaded()
+        snap("105-tree-on-sketch")
+        // One undo removes it all.
+        compose.runOnUiThread { vm.undo() }
+        assertTrue(vm.textsFor(sketch.book, 1).isEmpty())
+        compose.runOnUiThread { vm.deleteSketch(sketch); vm.sidePane = null; vm.nameOpen = null }
     }
 }

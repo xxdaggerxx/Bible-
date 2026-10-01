@@ -29,6 +29,9 @@ import com.biblestudy.app.data.StudyEntry
 import com.biblestudy.app.data.StudyRepository
 import com.biblestudy.app.data.UserDb
 import com.biblestudy.app.model.Annotation
+import com.biblestudy.app.model.Drawn
+import com.biblestudy.app.model.DrawnBox
+import com.biblestudy.app.model.DrawnLine
 import com.biblestudy.app.model.CrossHighlight
 import com.biblestudy.app.model.HighlightEntry
 import com.biblestudy.app.model.Edit
@@ -770,6 +773,62 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             }
         }
         return x to y
+    }
+
+    /**
+     * Puts ready-made drawing on a sketch page as ordinary text boxes and ink, one undoable step
+     * (STD-16, SKT-5). [items] are in page units from the top-left of the page's drawing area; they
+     * go below anything already there, and the page grows to fit. Returns false if the layer is locked.
+     */
+    fun placeOnSketch(s: Sketch, items: List<Drawn>): Boolean {
+        val layer = activeLayer() ?: return false
+        if (layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return false }
+        if (!layer.visible) setLayerVisible(layer.id, true)
+        val book = s.book
+        val existing = textsFor(book, 1).map { it.y + (textHeights[it.id] ?: estimateTextHeight(it)) } +
+            imagesFor(book, 1).map { it.y + it.h } +
+            marginStrokesFor(book, 1).map { st -> (1 until st.points.size step 3).maxOfOrNull { st.points[it] } ?: 0f }
+        val top = (existing.maxOrNull()?.let { it + 60f } ?: 40f)
+        val added = ArrayList<Annotation>()
+        var bottom = top
+        for (d in items) when (d) {
+            is DrawnBox -> {
+                val t = MarginText(newId(), layer.id, book, 1, Region.RIGHT, 1, d.x, top + d.y, d.w, d.text, d.size, d.color, d.background)
+                added += t
+                bottom = maxOf(bottom, t.y + estimateTextHeight(t))
+            }
+            is DrawnLine -> {
+                // Straight runs are filled in every few units so they draw like a pen line.
+                val pts = ArrayList<Float>()
+                for (i in d.points.indices) {
+                    val (x, y) = d.points[i]
+                    if (i > 0) {
+                        val (px, py) = d.points[i - 1]
+                        val n = (kotlin.math.hypot(x - px, y - py) / 12f).toInt()
+                        for (k in 1 until n) { pts += px + (x - px) * k / n; pts += top + py + (y - py) * k / n; pts += 0.6f }
+                    }
+                    pts += x; pts += top + y; pts += 0.6f
+                    bottom = maxOf(bottom, top + y)
+                }
+                added += InkStroke(newId(), layer.id, null, book, 1, Region.RIGHT, 1, false, d.color, d.width, pts.toFloatArray())
+            }
+        }
+        added.forEach { addItem(it) }
+        record(Edit(added, emptyList()))
+        val needed = Page.TEXT_TOP + bottom + 120f
+        sketchOf(book)?.let { if (it.height < needed) updateSketch(it.copy(height = needed)) }
+        return true
+    }
+
+    /** The family tree being shown (STD-16): a person's TIPNR id. */
+    var familyTree by mutableStateOf<String?>(null)
+
+    /** Draws a family tree on the sketch page in view, or on a new one (STD-16). */
+    fun copyTreeToSketch(tree: FamilyTree) {
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        val existing = sketchOf(p.book)
+        val s = existing ?: createSketch("Family of ${tree.name}", com.biblestudy.app.model.Paper.BLANK)
+        if (placeOnSketch(s, tree.drawing(title = existing != null))) message = "Family tree drawn on \u201c${s.name}\u201d."
     }
 
     /** A text box's height before it has been laid out: wrapped lines at about half an em per letter. */

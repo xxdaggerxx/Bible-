@@ -27,6 +27,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.SuggestionChip
@@ -248,13 +249,16 @@ private fun NameView(vm: StudyViewModel, id: Long, modifier: Modifier) {
                 }
             }
             if (n.brief.isNotBlank()) Text(n.brief, style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(vertical = 4.dp))
+            val family = if (n.place) listOf("Founded by" to n.parents, "People who lived there" to n.children)
+            else listOf("Parents" to n.parents, "Brothers and sisters" to n.siblings, "Married to" to n.partners, "Children" to n.children)
+            if (!n.place && family.any { NameEntry.ids(it.second).isNotEmpty() }) {
+                OutlinedButton(onClick = { vm.familyTree = n.uid }, modifier = Modifier.padding(bottom = 8.dp)) { Text("Family tree") }
+            }
             if (n.place && n.lat != null) PlaceMap(vm, n, Modifier.padding(vertical = 8.dp))
             // References written out in the article ("Genesis 35:19") become links too.
             val article = remember(n.id) { linkPlainRefs(n.article, vm.bible.books) }
             StudyText(article, onPassage = { shown = it })
             // Family, or for a place its founder and people who lived there (each a link).
-            val family = if (n.place) listOf("Founded by" to n.parents, "People who lived there" to n.children)
-            else listOf("Parents" to n.parents, "Brothers and sisters" to n.siblings, "Married to" to n.partners, "Children" to n.children)
             for ((label, field) in family) {
                 val ids = NameEntry.ids(field)
                 if (ids.isEmpty()) continue
