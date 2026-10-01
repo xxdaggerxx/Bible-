@@ -273,3 +273,6 @@ data class DrawnBox(
 
 /** A pen line through [points]. */
 data class DrawnLine(val points: List<Pair<Float, Float>>, val color: Int = 0xFF6D4C41.toInt(), val width: Float = 3f) : Drawn
+
+/** A verse card for [ref] ("John 3:16-18") in the version being read. */
+data class DrawnVerse(val x: Float, val y: Float, val w: Float, val ref: String) : Drawn

@@ -32,6 +32,7 @@ import com.biblestudy.app.model.Annotation
 import com.biblestudy.app.model.Drawn
 import com.biblestudy.app.model.DrawnBox
 import com.biblestudy.app.model.DrawnLine
+import com.biblestudy.app.model.DrawnVerse
 import com.biblestudy.app.model.CrossHighlight
 import com.biblestudy.app.model.HighlightEntry
 import com.biblestudy.app.model.Edit
@@ -794,6 +795,15 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         for (d in items) when (d) {
             is DrawnBox -> {
                 val t = MarginText(newId(), layer.id, book, 1, Region.RIGHT, 1, d.x, top + d.y, d.w, d.text, d.size, d.color, d.background)
+                added += t
+                bottom = maxOf(bottom, t.y + estimateTextHeight(t))
+            }
+            is DrawnVerse -> {
+                val p = com.biblestudy.app.data.RefLinks.find(d.ref, bible.books).firstOrNull()?.passage ?: continue
+                val v = activeVersion
+                val verses = passageVerses(p, v)
+                if (verses.isEmpty()) continue
+                val t = MarginText(newId(), layer.id, book, 1, Region.RIGHT, 1, d.x, top + d.y, d.w, verseCardText(this, p, v, verses), 20f, background = VERSE_CARD_BG)
                 added += t
                 bottom = maxOf(bottom, t.y + estimateTextHeight(t))
             }

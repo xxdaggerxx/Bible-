@@ -1,6 +1,11 @@
 package com.biblestudy.app.ui
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
+import androidx.compose.material3.RadioButton
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.semantics.Role
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -37,11 +42,15 @@ import kotlinx.coroutines.withContext
 const val VERSE_CARD_BG = 0x40FFE082
 const val NAME_CARD_BG = 0x4090CAF9
 
-/** A new sketch page: its name and paper; it's linked to the passage being read (SKT-1, SKT-2). */
+/**
+ * A new sketch page: its name and paper, blank or started from a ready-made page (SKT-5);
+ * it's linked to the passage being read (SKT-1, SKT-2).
+ */
 @Composable
 fun NewSketchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     var name by remember { mutableStateOf("") }
     var paper by remember { mutableStateOf(Paper.BLANK) }
+    var template by remember { mutableStateOf<SketchTemplate?>(null) }
     val p = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
     val link = vm.sketchOf(p.book)?.let { vm.refLabel(com.biblestudy.app.model.VerseId.of(it.linkBook, it.linkChapter, it.linkVerse)) }
         ?: vm.refLabel(com.biblestudy.app.model.VerseId.of(p.book, p.chapter, p.topVerse))
@@ -52,15 +61,39 @@ fun NewSketchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 OutlinedTextField(
                     value = name, onValueChange = { name = it }, singleLine = true,
-                    placeholder = { Text("e.g. Timeline of the kings") }, modifier = Modifier.fillMaxWidth(),
+                    placeholder = { Text(template?.name ?: "e.g. Timeline of the kings") }, modifier = Modifier.fillMaxWidth(),
                 )
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                     for (pp in Paper.entries) FilterChip(selected = paper == pp, onClick = { paper = pp }, label = { Text(pp.label) })
                 }
+                Text("Start from", style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(top = 4.dp))
+                Column(Modifier.selectableGroup()) {
+                    for (t in listOf<SketchTemplate?>(null) + SketchTemplates.all) {
+                        Row(
+                            Modifier.fillMaxWidth().selectable(selected = template == t, role = Role.RadioButton) {
+                                template = t
+                                if (t != null) paper = t.paper
+                            }.padding(vertical = 2.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            RadioButton(selected = template == t, onClick = null)
+                            Column(Modifier.padding(start = 8.dp)) {
+                                Text(t?.name ?: "A blank page", style = MaterialTheme.typography.bodyLarge)
+                                if (t != null) Text(t.about, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                            }
+                        }
+                    }
+                }
                 Text("Linked to $link: it opens from a marker beside that verse.", style = MaterialTheme.typography.bodySmall)
             }
         },
-        confirmButton = { TextButton(onClick = { vm.createSketch(name, paper); onDismiss() }) { Text("Create") } },
+        confirmButton = {
+            TextButton(onClick = {
+                val s = vm.createSketch(name.ifBlank { template?.name ?: "" }, paper)
+                template?.let { vm.placeOnSketch(s, it.items()) }
+                onDismiss()
+            }) { Text("Create") }
+        },
         dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel") } },
     )
 }

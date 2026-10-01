@@ -1796,4 +1796,43 @@ class FeatureTest {
         assertTrue(vm.textsFor(sketch.book, 1).isEmpty())
         compose.runOnUiThread { vm.deleteSketch(sketch); vm.sidePane = null; vm.nameOpen = null }
     }
+
+    @Test
+    fun readyMadeSketchPages() {
+        compose.runOnUiThread { vm.sketches.toList().forEach { vm.deleteSketch(it) } }
+        waitForLoaded()
+        // From the Insert menu: start from the feasts of Israel.
+        compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
+        compose.onNodeWithText("Sketch page\u2026").performClick()
+        compose.onNodeWithText("The feasts of Israel").performClick()
+        compose.onNodeWithText("Create").performClick()
+        compose.waitForIdle()
+        val feasts = vm.sketches.single()
+        assertEquals("The feasts of Israel", feasts.name)
+        val texts = vm.textsFor(feasts.book, 1).map { it.text }
+        assertTrue(texts.any { it.startsWith("1. Passover") })
+        assertTrue(texts.any { it.startsWith("9. Dedication") })
+        waitForLoaded()
+        snap("106-feasts")
+
+        // The others, each opened in turn.
+        for ((t, shot) in com.biblestudy.app.ui.SketchTemplates.all.drop(1).zip(listOf("107-tabernacle", "108-kings", "109-adam-to-jesus"))) {
+            compose.runOnUiThread {
+                val sk = vm.createSketch(t.name, t.paper)
+                assertTrue(vm.placeOnSketch(sk, t.items()))
+            }
+            waitForLoaded()
+            compose.runOnUiThread { vm.panels[0].panY = 0f }
+            compose.waitForIdle()
+            snap(shot)
+        }
+        val tab = vm.sketches.first { it.name == "The tabernacle" }
+        // Verse cards come from the Bible being read, with the reference as a link.
+        assertTrue(vm.textsFor(tab.book, 1).any { it.text.startsWith("Hebrews 9:11\u201312 (KJV)") })
+        val kings = vm.sketches.first { it.name == "The kings of Israel and Judah" }
+        assertTrue(vm.textsFor(kings.book, 1).any { it.text.startsWith("Josiah  641\u2013609") })
+        val adam = vm.sketches.first { it.name == "From Adam to Jesus" }
+        assertTrue(vm.textsFor(adam.book, 1).any { it.text == "JESUS" })
+        compose.runOnUiThread { vm.sketches.toList().forEach { vm.deleteSketch(it) } }
+    }
 }
