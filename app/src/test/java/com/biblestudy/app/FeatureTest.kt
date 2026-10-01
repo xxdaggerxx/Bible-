@@ -199,8 +199,8 @@ class FeatureTest {
      * Chapters and saved ink load on background threads, which waitForIdle doesn't track.
      * Wait until the page is laid out and its annotations are read from the database.
      */
-    private fun waitForLoaded() {
-        compose.waitUntil(10_000) {
+    private fun waitForLoaded(timeoutMs: Long = 10_000) {
+        compose.waitUntil(timeoutMs) {
             compose.onAllNodesWithTag("loading").fetchSemanticsNodes().isEmpty() && vm.pendingLoads == 0
         }
         compose.waitForIdle()
@@ -209,7 +209,8 @@ class FeatureTest {
     /** Settings and notes are saved between tests in the same run, so start each test from the defaults. */
     @Before
     fun resetSettings() {
-        waitForLoaded()
+        // The first test in a fresh sandbox copies every bundled database (about 65 MB) first.
+        waitForLoaded(30_000)
         compose.runOnUiThread {
             vm.fingerDraw = false
             vm.tool = Tool.PEN
