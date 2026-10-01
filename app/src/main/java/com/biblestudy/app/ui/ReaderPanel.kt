@@ -381,7 +381,7 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
             VersionPicker(vm, index)
             Spacer(Modifier.weight(1f))
             if (!compact) TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
-            if (vm.panels.size > 1) {
+            if (vm.panels.size > 1 && !compact) {
                 IconButton(onClick = { vm.activePanel = index; vm.linkPanels = !vm.linkPanels }) {
                     Icon(
                         if (vm.linkPanels) Icons.Filled.Link else Icons.Filled.LinkOff,
@@ -401,6 +401,12 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
                         DropdownMenuItem(text = { Text("Forward") }, enabled = panel.forward.isNotEmpty(), onClick = { menu = false; vm.goForward(index) })
                         DropdownMenuItem(text = { Text("About this book") }, onClick = { menu = false; vm.introBook = panel.book })
                         DropdownMenuItem(text = { Text("Fit width") }, onClick = { menu = false; ctl.fitWidth() })
+                        if (vm.panels.size > 1) {
+                            DropdownMenuItem(
+                                text = { Text(if (vm.linkPanels) "Unlink panels" else "Link panels") },
+                                onClick = { menu = false; vm.activePanel = index; vm.linkPanels = !vm.linkPanels },
+                            )
+                        }
                         if (vm.panels.size > 1) {
                             DropdownMenuItem(text = { Text("Close panel") }, onClick = { menu = false; vm.closePanel(index) })
                         }

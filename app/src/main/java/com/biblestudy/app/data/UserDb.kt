@@ -105,6 +105,8 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
         db.execSQL("CREATE TABLE tags(item TEXT NOT NULL, tag TEXT NOT NULL, PRIMARY KEY(item, tag))")
         // What each highlight colour means (HL-5).
         db.execSQL("CREATE TABLE meanings(color INTEGER PRIMARY KEY, label TEXT NOT NULL)")
+        // Saved panel layouts (SPLIT-6), as JSON.
+        db.execSQL("CREATE TABLE workspaces(name TEXT PRIMARY KEY, json TEXT NOT NULL, created INTEGER NOT NULL)")
     }
 
     // ---------- layers ----------
@@ -225,6 +227,21 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 4) {
         else writableDatabase.insertWithOnConflict("meanings", null, ContentValues().apply {
             put("color", color); put("label", label.trim())
         }, SQLiteDatabase.CONFLICT_REPLACE)
+    }
+
+    fun workspaces(): List<Pair<String, String>> =
+        readableDatabase.rawQuery("SELECT name, json FROM workspaces ORDER BY created", null).use { c ->
+            buildList { while (c.moveToNext()) add(c.getString(0) to c.getString(1)) }
+        }
+
+    fun saveWorkspace(name: String, json: String) {
+        writableDatabase.insertWithOnConflict("workspaces", null, ContentValues().apply {
+            put("name", name); put("json", json); put("created", System.currentTimeMillis())
+        }, SQLiteDatabase.CONFLICT_REPLACE)
+    }
+
+    fun deleteWorkspace(name: String) {
+        writableDatabase.delete("workspaces", "name = ?", arrayOf(name))
     }
 
     /** Every typed note, for the notes browser (NOTE-5): with when it was last changed. */

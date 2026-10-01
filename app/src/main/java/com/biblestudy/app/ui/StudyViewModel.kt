@@ -116,6 +116,40 @@ enum class WidthClass { COMPACT, MEDIUM, EXPANDED;
     }
 }
 
+/** One Bible panel in a saved layout. */
+data class WorkspacePanel(val book: Int, val chapter: Int, val version: String)
+
+/** A saved panel layout (SPLIT-6): the Bible panels, the study pane, linking and sizes. */
+data class Workspace(
+    val name: String,
+    val panels: List<WorkspacePanel>,
+    val pane: PaneKind?,
+    val linked: Boolean,
+    val weights: List<Float>,
+) {
+    fun toJson(): String = org.json.JSONObject().apply {
+        put("panels", org.json.JSONArray(panels.map { org.json.JSONObject().put("b", it.book).put("c", it.chapter).put("v", it.version) }))
+        put("pane", pane?.name ?: "")
+        put("linked", linked)
+        put("weights", org.json.JSONArray(weights.map { it.toDouble() }))
+    }.toString()
+
+    companion object {
+        fun fromJson(name: String, json: String): Workspace? = runCatching {
+            val o = org.json.JSONObject(json)
+            val p = o.getJSONArray("panels")
+            val w = o.optJSONArray("weights")
+            Workspace(
+                name,
+                List(p.length()) { i -> p.getJSONObject(i).let { WorkspacePanel(it.getInt("b"), it.getInt("c"), it.getString("v")) } },
+                PaneKind.entries.firstOrNull { it.name == o.optString("pane") },
+                o.optBoolean("linked"),
+                if (w == null) emptyList() else List(w.length()) { w.getDouble(it).toFloat() },
+            )
+        }.getOrNull()
+    }
+}
+
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
 enum class PaneKind(val label: String) { SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes") }
 
@@ -479,6 +513,46 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         w[i] = a
         panelWeights.clear(); panelWeights.addAll(w)
         if (w.size == 2) splitFraction = w[0] / total
+    }
+
+    // ---------- saved layouts (SPLIT-6) ----------
+
+    val workspaces = mutableStateListOf<Workspace>().apply {
+        addAll(user.workspaces().mapNotNull { (n, j) -> Workspace.fromJson(n, j) })
+    }
+
+    /** Saves the open panels, study pane, linking and sizes under [name] (replacing one of that name). */
+    fun saveWorkspace(name: String) {
+        val n = name.trim()
+        if (n.isEmpty()) return
+        val w = Workspace(n, panels.map { WorkspacePanel(it.book, it.chapter, it.version) }, sidePane, linkPanels, weights())
+        workspaces.removeAll { it.name == n }
+        workspaces.add(w)
+        io { user.saveWorkspace(n, w.toJson()) }
+        message = "Layout \u201c$n\u201d saved."
+    }
+
+    /** Opens a saved layout (as many panels as fit this screen). */
+    fun openWorkspace(w: Workspace) {
+        val list = w.panels.take(maxPanels).ifEmpty { return }
+        selection = null
+        linkPanels = false
+        panels.clear()
+        for (p in list) {
+            panels.add(PanelState(p.book.coerceIn(1, 66), p.chapter.coerceIn(1, bible.book(p.book.coerceIn(1, 66)).chapters)).apply {
+                version = validVersion(p.version)
+            })
+        }
+        panelWeights.clear()
+        if (w.weights.size == panels.size) panelWeights.addAll(w.weights)
+        activePanel = 0
+        sidePane = w.pane
+        linkPanels = w.linked && panels.size > 1
+    }
+
+    fun deleteWorkspace(w: Workspace) {
+        workspaces.removeAll { it.name == w.name }
+        io { user.deleteWorkspace(w.name) }
     }
 
     /** Opens (or switches) the study pane; the same kind again closes it. */
@@ -1399,6 +1473,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             bookmarks.clear(); bookmarks.addAll(result.second)
             tags.clear(); tags.putAll(user.tags())
             meanings.clear(); meanings.putAll(user.meanings())
+            workspaces.clear(); workspaces.addAll(user.workspaces().mapNotNull { (n, j) -> Workspace.fromJson(n, j) })
             dataGeneration++
             message = "Notes restored."
         }

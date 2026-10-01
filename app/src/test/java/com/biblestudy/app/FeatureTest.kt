@@ -1258,4 +1258,41 @@ class FeatureTest {
         compose.runOnUiThread { vm.undo(); vm.undo() }
         assertEquals(0, vm.imagesFor(43, 3).single().rotation)
     }
+
+    @Test
+    fun panelLayoutsCanBeSavedAndOpenedAgain() {
+        compose.runOnUiThread {
+            vm.workspaces.toList().forEach { vm.deleteWorkspace(it) }
+            vm.goTo(0, 40, 3, remember = false)
+            vm.addPanel(); vm.goTo(1, 41, 1, remember = false); vm.setVersion(1, "BSB")
+            vm.addPanel(); vm.goTo(2, 42, 3, remember = false); vm.setVersion(2, "WEB")
+            vm.sidePane = PaneKind.CROSSREFS
+        }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("Panels").performClick()
+        compose.onNodeWithText("Save this layout\u2026").performClick()
+        compose.onNodeWithText("e.g. Gospels side by side").performTextInput("Baptism of Jesus")
+        compose.onNodeWithText("Save").performClick()
+        compose.waitForIdle()
+        assertEquals(listOf("Baptism of Jesus"), vm.workspaces.map { it.name })
+
+        // Change everything, then bring the layout back from the panels menu.
+        compose.runOnUiThread {
+            while (vm.panels.size > 1) vm.closePanel(vm.panels.lastIndex)
+            vm.goTo(0, 1, 1, remember = false)
+            vm.sidePane = null
+        }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("Panels").performClick()
+        compose.onNodeWithText("Layout: Baptism of Jesus").performClick()
+        waitForLoaded()
+        assertEquals(listOf(40 to 3, 41 to 1, 42 to 3), vm.panels.map { it.book to it.chapter })
+        assertEquals(listOf("KJV", "BSB", "WEB"), vm.panels.map { it.version })
+        assertEquals(PaneKind.CROSSREFS, vm.sidePane)
+        snap("82-workspace")
+
+        // Saved layouts survive a restart (they're in the notes database).
+        assertEquals(listOf("Baptism of Jesus"), vm.user.workspaces().map { it.first })
+        compose.runOnUiThread { vm.deleteWorkspace(vm.workspaces.single()); vm.sidePane = null }
+    }
 }

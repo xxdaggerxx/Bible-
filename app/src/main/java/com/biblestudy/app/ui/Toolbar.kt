@@ -21,6 +21,10 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material.icons.filled.LockOpen
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.ui.semantics.semantics
@@ -155,6 +159,24 @@ fun StudyToolbar(
             }
             // Panels: more Bible panels (ADP-3), the study pane (SPLIT-2) and the margins.
             var panelsMenu by remember { mutableStateOf(false) }
+            var naming by remember { mutableStateOf(false) }
+            if (naming) {
+                var name by remember { mutableStateOf("") }
+                AlertDialog(
+                    onDismissRequest = { naming = false },
+                    title = { Text("Save this layout") },
+                    text = {
+                        OutlinedTextField(
+                            value = name, onValueChange = { name = it }, singleLine = true,
+                            placeholder = { Text("e.g. Gospels side by side") },
+                        )
+                    },
+                    confirmButton = {
+                        TextButton(onClick = { vm.saveWorkspace(name); naming = false }, enabled = name.isNotBlank()) { Text("Save") }
+                    },
+                    dismissButton = { TextButton(onClick = { naming = false }) { Text("Cancel") } },
+                )
+            }
             Box {
                 IconButton(onClick = { panelsMenu = true }) {
                     Icon(Icons.Filled.VerticalSplit, contentDescription = "Panels")
@@ -179,6 +201,20 @@ fun StudyToolbar(
                             onClick = { vm.togglePane(k); panelsMenu = false },
                         )
                     }
+                    HorizontalDivider()
+                    // Saved layouts (SPLIT-6).
+                    for (w in vm.workspaces) {
+                        DropdownMenuItem(
+                            text = { Text("Layout: ${w.name}") },
+                            onClick = { vm.openWorkspace(w); panelsMenu = false },
+                            trailingIcon = {
+                                IconButton(onClick = { vm.deleteWorkspace(w) }) {
+                                    Icon(Icons.Filled.Close, contentDescription = "Delete layout ${w.name}")
+                                }
+                            },
+                        )
+                    }
+                    DropdownMenuItem(text = { Text("Save this layout\u2026") }, onClick = { panelsMenu = false; naming = true })
                     HorizontalDivider()
                     DropdownMenuItem(
                         text = { Text("Left margin" + if (vm.marginLeft) "  \u2713" else "") },
