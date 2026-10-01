@@ -1735,6 +1735,46 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** Text boxes' laid-out text as last drawn, for finding the reference under a tap. */
     val textLayouts = HashMap<Long, androidx.compose.ui.text.TextLayoutResult>()
     val textLayoutKeys = HashMap<Long, MarginText>()
+    val textLayoutStamps = HashMap<Long, Int>()
+    /** The verses on each verse card as last laid out (SKT-6), for taps and highlighting. */
+    val cardTexts = HashMap<Long, CardText>()
+    private val cardSpecs = HashMap<Long, Pair<String, CardSpec?>>()
+
+    /** The card a text box is, if any, worked out once per text. */
+    fun cardSpecCached(t: MarginText): CardSpec? {
+        cardSpecs[t.id]?.let { (text, spec) -> if (text == t.text) return spec }
+        val spec = cardSpec(t)
+        cardSpecs[t.id] = t.text to spec
+        return spec
+    }
+
+    /** Changes when anything a verse card shows could have changed: highlights, settings, layers. */
+    fun cardStamp(): Int = editCount * 31 + highlightLoads * 17 + (if (redLetters) 1 else 0) +
+        (if (highlightsAllVersions) 2 else 0) + layers.hashCode() * 7
+
+    /** Highlights read from the notes database for verse cards; counts up as they arrive. */
+    var highlightLoads by mutableIntStateOf(0)
+        private set
+
+    /** Reads every version's highlights for the chapters on a card, once (SKT-6, HL-10). */
+    fun ensureCardHighlights(spec: CardSpec) {
+        val p = spec.passage
+        for (ch in p.chapter..p.endChapter) {
+            val m = mk(p.book, ch)
+            if (!loaded.add("a$m")) continue
+            viewModelScope.launch {
+                val all = withContext(dbDispatcher) {
+                    user.chapterHighlights(p.book, ch).groupBy { it.version }.onEach { (v, _) -> verseStarts(v, p.book, ch) }
+                }
+                for ((v, list) in all) {
+                    val target = highlightsFor(v, p.book, ch)
+                    val have = target.mapTo(HashSet()) { it.id }
+                    target.addAll(list.filter { it.id !in have })
+                }
+                highlightLoads++
+            }
+        }
+    }
 
     /** The text box being typed in, if any. */
     var editingText by mutableStateOf<Long?>(null)

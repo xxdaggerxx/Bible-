@@ -174,7 +174,31 @@ data class MarginText(
     val size: Float = 20f,
     val color: Int = 0xFF222222.toInt(),
     val background: Int = 0,
-) : Annotation
+    /**
+     * Highlights on the box's own words (HL-11), "start-end-colour-u;…" (u = underline). A verse
+     * card's highlights are the Bible's, so they aren't kept here.
+     */
+    val marks: String = "",
+) : Annotation {
+    /** The highlights in [marks]. */
+    fun markList(): List<TextMark> = marks.split(';').mapNotNull { TextMark.parse(it) }
+
+    fun withMarks(list: List<TextMark>) = copy(marks = list.joinToString(";") { it.encode() })
+}
+
+/** A highlight on a text box's words (HL-11). */
+data class TextMark(val start: Int, val end: Int, val color: Int, val underline: Boolean) {
+    fun encode() = "$start-$end-${Integer.toHexString(color)}" + if (underline) "-u" else ""
+
+    companion object {
+        fun parse(s: String): TextMark? {
+            val f = s.split('-')
+            if (f.size < 3) return null
+            return TextMark(f[0].toIntOrNull() ?: return null, f[1].toIntOrNull() ?: return null,
+                f[2].toLongOrNull(16)?.toInt() ?: return null, f.getOrNull(3) == "u")
+        }
+    }
+}
 
 data class Layer(
     val id: Long,

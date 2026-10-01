@@ -80,18 +80,45 @@ class RefLinkTransformation(private val books: List<BookInfo>) : VisualTransform
     override fun filter(text: AnnotatedString) = TransformedText(linkedText(text.text, books), OffsetMapping.Identity)
 }
 
-/** Lays out a text box's text at page scale (cached until the box changes). */
+/** A text box's own text with its links and its highlights (HL-11). */
+fun StudyViewModel.markedText(t: MarginText): AnnotatedString {
+    val base = linkedText(t.text, bible.books)
+    val marks = t.markList()
+    if (marks.isEmpty()) return base
+    return buildAnnotatedString {
+        append(base)
+        for (m in marks) {
+            val a = m.start.coerceIn(0, t.text.length); val b = m.end.coerceIn(a, t.text.length)
+            if (b > a) addStyle(highlightSpan(m.color, m.underline, 1f), a, b)
+        }
+    }
+}
+
+/**
+ * Lays out a text box's text at page scale (cached until the box changes). A verse card (SKT-6) is
+ * laid out from the Bible's verses, with their highlights, and redone when those change.
+ */
 fun StudyViewModel.textLayout(measurer: TextMeasurer, t: MarginText): TextLayoutResult {
+    val spec = cardSpecCached(t)
+    val stamp = if (spec != null) cardStamp() else 0
     val key = textLayoutKeys[t.id]
-    textLayouts[t.id]?.let { if (key == t) return it }
+    textLayouts[t.id]?.let { if (key == t && textLayoutStamps[t.id] == stamp) return it }
     val inner = (t.w - 2 * ReaderController.TEXT_PAD).coerceAtLeast(20f).roundToInt()
+    val shown = if (spec != null) {
+        ensureCardHighlights(spec)
+        cardText(t, spec).also { cardTexts[t.id] = it }.text
+    } else {
+        cardTexts.remove(t.id)
+        markedText(t)
+    }
     val r = measurer.measure(
-        linkedText(t.text, bible.books),
+        shown,
         TextStyle(fontSize = t.size.sp, color = Color(t.color)),
         constraints = Constraints(maxWidth = inner),
     )
     textLayouts[t.id] = r
     textLayoutKeys[t.id] = t
+    textLayoutStamps[t.id] = stamp
     textHeights[t.id] = r.size.height + 2 * ReaderController.TEXT_PAD
     return r
 }
@@ -158,14 +185,31 @@ fun TextBoxBar(vm: StudyViewModel, ctl: ReaderController, t: MarginText, modifie
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(6.dp),
         ) {
-            if (editing) {
+            val spec = vm.cardSpecCached(t)
+            if (spec != null) {
+                // A verse card (SKT-6): choose its version; its words come from the Bible.
+                val context = androidx.compose.ui.platform.LocalContext.current
+                val clipboard = androidx.compose.ui.platform.LocalClipboardManager.current
+                for (v in com.biblestudy.app.data.BibleRepository.ALL) {
+                    androidx.compose.material3.FilterChip(
+                        selected = v.code == spec.version,
+                        onClick = { vm.cardSavedText(spec, v.code)?.let { vm.restyleText(t, t.copy(text = it)) } ?: run { vm.message = "Not in the ${v.code}." } },
+                        label = { Text(v.code) },
+                    )
+                }
+                TextButton(onClick = { clipboard.setText(AnnotatedString(t.text)); vm.message = "Copied." }) { Text("Copy") }
+                TextButton(onClick = {
+                    val send = android.content.Intent(android.content.Intent.ACTION_SEND).setType("text/plain").putExtra(android.content.Intent.EXTRA_TEXT, t.text)
+                    runCatching { context.startActivity(android.content.Intent.createChooser(send, null)) }
+                }) { Text("Share") }
+            } else if (editing) {
                 TextButton(onClick = { vm.editingText = null }) { Text("Done") }
             } else {
                 TextButton(onClick = { vm.editingText = t.id }) { Text("Edit") }
             }
             TextButton(onClick = { vm.restyleText(t, t.copy(size = (t.size - 3f).coerceAtLeast(12f))) }) { Text("A−") }
             TextButton(onClick = { vm.restyleText(t, t.copy(size = (t.size + 3f).coerceAtMost(48f))) }) { Text("A+") }
-            for (c in TEXT_BOX_COLORS) {
+            if (spec == null) for (c in TEXT_BOX_COLORS) {
                 Box(
                     Modifier.size(24.dp).clip(CircleShape).background(Color(c))
                         .border(if (c == t.color) 3.dp else 1.dp, MaterialTheme.colorScheme.outline, CircleShape)

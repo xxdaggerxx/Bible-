@@ -107,7 +107,7 @@ class WritingSound {
         synth.texture = texture
         synth.target = 0f
         lastX = x; lastY = y; lastT = timeMs; speed = 0f
-        lastMove = System.currentTimeMillis()
+        lastMove = now()
         ensureRunning()
     }
 
@@ -120,7 +120,7 @@ class WritingSound {
         val v = d * 1000f / dt // dp per second
         speed += (v - speed) * 0.5f
         lastX = x; lastY = y; lastT = timeMs
-        lastMove = System.currentTimeMillis()
+        lastMove = now()
         val pace = (speed / 600f).coerceIn(0f, 1f)
         val press = 0.55f + 0.45f * pressure.coerceIn(0f, 1f)
         synth.brightness = pace
@@ -167,8 +167,8 @@ class WritingSound {
         try {
             while (running) {
                 // Silence while the pen rests; after a second of it, the audio stops until the next stroke.
-                if (System.currentTimeMillis() - lastMove > 120L) synth.target = 0f
-                if (System.currentTimeMillis() - lastMove > 1000L) break
+                if (now() - lastMove > 120L) synth.target = 0f
+                if (now() - lastMove > 1000L) break
                 synth.render(f)
                 for (i in f.indices) pcm[i] = (f[i] * 32767f).toInt().toShort()
                 t.write(pcm, 0, min(pcm.size, CHUNK))
@@ -180,6 +180,9 @@ class WritingSound {
             if (track === t) track = null
         }
     }
+
+    /** Real elapsed time (not the wall clock, which can stand still or jump). */
+    private fun now() = System.nanoTime() / 1_000_000L
 
     fun release() {
         running = false

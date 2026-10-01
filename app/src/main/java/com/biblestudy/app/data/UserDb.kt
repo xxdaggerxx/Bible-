@@ -29,7 +29,7 @@ data class ChapterReading(val book: Int, val chapter: Int, val seconds: Int, val
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 7) {
+class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
@@ -100,6 +100,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 7) {
         }
         if (oldVersion < 6) createReading(db) // 0.9: reading analytics (ANL-1 to ANL-6)
         if (oldVersion < 7) createSketches(db) // 0.9: sketch pages (SKT-1 to SKT-4)
+        if (oldVersion in 4..7) db.execSQL("ALTER TABLE texts ADD COLUMN marks TEXT NOT NULL DEFAULT ''") // 1.1: highlights in text boxes (HL-11)
     }
 
     private fun createSketches(db: SQLiteDatabase) {
@@ -125,7 +126,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 7) {
             "CREATE TABLE texts(id INTEGER PRIMARY KEY, layer_id INTEGER NOT NULL, book INTEGER NOT NULL, " +
                 "chapter INTEGER NOT NULL, region INTEGER NOT NULL, verse INTEGER NOT NULL, x REAL NOT NULL, " +
                 "y REAL NOT NULL, w REAL NOT NULL, body TEXT NOT NULL, size REAL NOT NULL, color INTEGER NOT NULL, " +
-                "bg INTEGER NOT NULL)"
+                "bg INTEGER NOT NULL, marks TEXT NOT NULL DEFAULT '')"
         )
         db.execSQL("CREATE INDEX texts_bc ON texts(book, chapter)")
         // Tags on notes, highlights, bookmarks and text boxes (NOTE-4); [item] is a key such as
@@ -306,7 +307,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 7) {
                 put("id", a.id); put("layer_id", a.layerId); put("book", a.book); put("chapter", a.chapter)
                 put("region", a.region.code); put("verse", a.verse)
                 put("x", a.x); put("y", a.y); put("w", a.w); put("body", a.text)
-                put("size", a.size); put("color", a.color); put("bg", a.background)
+                put("size", a.size); put("color", a.color); put("bg", a.background); put("marks", a.marks)
             }, SQLiteDatabase.CONFLICT_REPLACE)
         }
     }
@@ -383,13 +384,14 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 7) {
     /** Every margin text box, for the notes browser. */
     fun allTexts(): List<MarginText> =
         readableDatabase.rawQuery(
-            "SELECT id, layer_id, book, chapter, region, verse, x, y, w, body, size, color, bg FROM texts WHERE book < 1000", null, // not sketch pages
+            "SELECT id, layer_id, book, chapter, region, verse, x, y, w, body, size, color, bg, marks FROM texts WHERE book < 1000", null, // not sketch pages
         ).use { c ->
             buildList {
                 while (c.moveToNext()) add(
                     MarginText(
                         c.getLong(0), c.getLong(1), c.getInt(2), c.getInt(3), Region.of(c.getInt(4)), c.getInt(5),
                         c.getFloat(6), c.getFloat(7), c.getFloat(8), c.getString(9), c.getFloat(10), c.getInt(11), c.getInt(12),
+                        c.getString(13) ?: "",
                     )
                 )
             }
@@ -398,7 +400,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 7) {
     /** Margin text boxes in a chapter (MRG-12). */
     fun loadTexts(book: Int, chapter: Int): List<MarginText> =
         readableDatabase.rawQuery(
-            "SELECT id, layer_id, book, chapter, region, verse, x, y, w, body, size, color, bg FROM texts " +
+            "SELECT id, layer_id, book, chapter, region, verse, x, y, w, body, size, color, bg, marks FROM texts " +
                 "WHERE book = ? AND chapter = ? ORDER BY id",
             arrayOf(book.toString(), chapter.toString()),
         ).use { c ->
@@ -407,6 +409,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 7) {
                     MarginText(
                         c.getLong(0), c.getLong(1), c.getInt(2), c.getInt(3), Region.of(c.getInt(4)), c.getInt(5),
                         c.getFloat(6), c.getFloat(7), c.getFloat(8), c.getString(9), c.getFloat(10), c.getInt(11), c.getInt(12),
+                        c.getString(13) ?: "",
                     )
                 )
             }

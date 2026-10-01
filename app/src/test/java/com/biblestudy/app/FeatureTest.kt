@@ -222,6 +222,7 @@ class FeatureTest {
         // The first test in a fresh sandbox copies every bundled database (about 65 MB) first.
         waitForLoaded(30_000)
         compose.runOnUiThread {
+            vm.changeWritingSounds(false) // no audio thread in tests
             vm.fingerDraw = false
             vm.tool = Tool.PEN
             vm.clearSelection()
@@ -2008,5 +2009,74 @@ class FeatureTest {
         assertTrue(vm.highlightsFor("KJV", 43, 3).any { it.id == h.id })
         assertEquals(1, vm.crossHighlights("BSB", 43, 3).size)
         compose.runOnUiThread { vm.fingerDraw = false; vm.tool = Tool.PEN }
+    }
+
+    /** Where a point of a sketch page (page units) is on screen in panel 0. */
+    private fun sketchPoint(x: Float, y: Float): Offset {
+        val p = vm.panels[0]
+        return Offset(p.panX + x * p.zoom, p.panY + (y + Page.TEXT_TOP) * p.zoom)
+    }
+
+    @Test
+    fun verseCardsWorkLikeTheBibleText() {
+        compose.runOnUiThread {
+            for (v in listOf("KJV", "BSB", "WEB")) vm.highlightsFor(v, 43, 3).toList().forEach { vm.removeItem(it) }
+            val sk = vm.createSketch("Cards", com.biblestudy.app.model.Paper.BLANK, link = null)
+            vm.placeOnSketch(sk, listOf(com.biblestudy.app.model.DrawnVerse(40f, 0f, 700f, "John 3:16"), com.biblestudy.app.model.DrawnBox(40f, 300f, 700f, "My own words about grace and truth")))
+            vm.panels[0].panX = 0f; vm.panels[0].panY = 0f
+        }
+        waitForLoaded()
+        val sk = vm.sketches.first { it.name == "Cards" }
+        val card = vm.textsFor(sk.book, 1).first { it.text.startsWith("John 3:16 (KJV)") }
+        val note = vm.textsFor(sk.book, 1).first { it.text.startsWith("My own words") }
+        snap("123-verse-card")
+
+        // A tap on the verse opens the verse window, as on the page.
+        compose.onNodeWithTag("reader0").performTouchInput { click(sketchPoint(card.x + 120f, card.y + 50f)) }
+        compose.waitUntil(5_000) { vm.verseSheet != null }
+        assertEquals(VerseTarget(43, 3, 16, vm.verseSheet!!.word), vm.verseSheet)
+        compose.runOnUiThread { vm.verseSheet = null }
+        compose.mainClock.advanceTimeBy(600)
+
+        // The highlighter on the card highlights John 3:16 in the Bible itself.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.HIGHLIGHTER; vm.snapHighlights = true }
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(sketchPoint(card.x + 20f, card.y + 50f)); repeat(10) { moveBy(Offset(25f * vm.panels[0].zoom, 0f)) }; up()
+        }
+        compose.waitForIdle()
+        val h = vm.highlightsFor("KJV", 43, 3).single()
+        assertEquals(16, vm.highlightVerses(h).first)
+        // It shows on the card and in John 3 in the other versions.
+        // (The page is only drawn here when a picture is taken.)
+        snap("124-card-highlighted")
+        assertTrue(vm.cardTexts[card.id]!!.text.spanStyles.any { it.item.background != androidx.compose.ui.graphics.Color.Unspecified })
+        assertEquals(1, vm.crossHighlights("BSB", 43, 3).size)
+
+        // A plain text box keeps highlights on its own words.
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(sketchPoint(note.x + 20f, note.y + 20f)); repeat(8) { moveBy(Offset(25f * vm.panels[0].zoom, 0f)) }; up()
+        }
+        compose.waitForIdle()
+        assertEquals(1, vm.textsFor(sk.book, 1).first { it.id == note.id }.markList().size)
+
+        // The eraser on the card takes the highlight out of the Bible too.
+        compose.runOnUiThread { vm.tool = Tool.ERASER; vm.partialEraser = false }
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(sketchPoint(card.x + 20f, card.y + 50f)); repeat(20) { moveBy(Offset(15f * vm.panels[0].zoom, 0f)) }; up()
+        }
+        compose.waitForIdle()
+        assertTrue(vm.highlightsFor("KJV", 43, 3).isEmpty())
+
+        // A long press selects the card: its bar switches it to the BSB.
+        compose.runOnUiThread { vm.fingerDraw = false; vm.tool = Tool.PEN }
+        // Past palm rejection after writing (it uses the system clock).
+        org.robolectric.shadows.ShadowSystemClock.advanceBy(java.time.Duration.ofSeconds(2))
+        compose.onNodeWithTag("reader0").performTouchInput { longClick(sketchPoint(card.x + 120f, card.y + 50f)) }
+        compose.waitForIdle()
+        compose.onNodeWithText("BSB").performClick()
+        compose.waitForIdle()
+        assertTrue(vm.textsFor(sk.book, 1).first { it.id == card.id }.text.startsWith("John 3:16 (BSB)\nFor God so loved the world that He gave His one and only Son"))
+        snap("125-card-bsb")
+        compose.runOnUiThread { vm.deleteSketch(vm.sketches.first { it.id == sk.id }) }
     }
 }

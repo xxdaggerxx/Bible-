@@ -20,6 +20,7 @@ import com.biblestudy.app.data.Passage
 import com.biblestudy.app.model.MarginText
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.Sketch
+import com.biblestudy.app.model.TextMark
 import com.biblestudy.app.model.Tool
 import com.biblestudy.app.model.VerseId
 import kotlin.math.abs
@@ -461,7 +462,11 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     }
 
     /** Selects the word under a long-pressed finger. Returns false if the finger isn't on the text. */
+    /** A long press just selected a verse card; the finger lifting isn't a tap. */
+    private var cardPressed = false
+
     fun startTextSelect(pos: Offset): Boolean {
+        if (selectCardAt(pos)) { cardPressed = true; return false }
         val (page, local) = textPoint(pos) ?: return false
         val layout = page.layout
         if (page.geo.regionAt(local.x + page.geo.textLeft) != Region.TEXT || !layout.isOnText(local.y)) return false
@@ -579,6 +584,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     // ---------- finger tap ----------
 
     fun onTap(pos: Offset) {
+        if (cardPressed) { cardPressed = false; return }
         if (textSel != null) { textSel = null; return } // a tap away from the selection clears it
         val s = toStrip(pos)
         val page = pageAt(s.y) ?: return
@@ -833,6 +839,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         if (pts.size == 3) pts = floatArrayOf(pts[0], pts[1], pts[2], pts[0] + 0.5f, pts[1], pts[2])
         val layout = ink.page.layout
 
+        if (ink.highlighter && vm.snapHighlights && ink.region != Region.TEXT && highlightBox(ink, pts)) return
         if (ink.highlighter && vm.snapHighlights && ink.region == Region.TEXT) {
             val h = snapHighlight(layout, pts, ink)
             if (h != null) {
@@ -852,6 +859,49 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         )
         vm.addItem(s)
         vm.record(Edit(listOf(s), emptyList()))
+    }
+
+    /**
+     * A highlighter swipe over a text box or verse card snaps to its words (HL-11). On a verse card
+     * it highlights those words in the Bible itself, so the highlight shows in both (SKT-6).
+     * Returns false if the swipe wasn't over a box.
+     */
+    private fun highlightBox(ink: LiveInk, pts: FloatArray): Boolean {
+        val g = ink.page.geo
+        val a = Offset(ink.ox + pts[0], ink.oy + pts[1])
+        val b = Offset(ink.ox + pts[pts.size - 3], ink.oy + pts[pts.size - 2])
+        val box = vm.textsFor(g.layout.book, g.layout.chapter).lastOrNull {
+            it.layerId in vm.visibleLayerIds() && g.visible(it.region) && textRect(g, it).let { r -> r.contains(a) && r.contains(b) }
+        } ?: return false
+        val layout = vm.textLayouts[box.id] ?: return false
+        val r = textRect(g, box)
+        var s = boxOffset(box, a - r.topLeft) ?: return false
+        var e = boxOffset(box, b - r.topLeft) ?: return false
+        if (s > e) { val t = s; s = e; e = t }
+        val start = layout.getWordBoundary(s.coerceIn(0, layout.layoutInput.text.length)).start
+        val end = layout.getWordBoundary(e.coerceIn(0, layout.layoutInput.text.length)).end
+        if (end <= start) return false
+        val card = vm.cardTexts[box.id]
+        val spec = vm.cardSpecCached(box)
+        if (card != null && spec != null) {
+            val made = card.verses.mapNotNull { cv ->
+                val from = maxOf(start, cv.cardStart); val to = minOf(end, cv.cardEnd)
+                if (to <= from) null else Highlight(
+                    id = vm.newId(), layerId = ink.layerId, version = spec.version,
+                    book = VerseId.book(cv.id), chapter = VerseId.chapter(cv.id),
+                    start = cv.chapterStart + (from - cv.cardStart), end = cv.chapterStart + (to - cv.cardStart),
+                    color = ink.color, underline = vm.underlineMode,
+                )
+            }
+            if (made.isEmpty()) return false
+            made.forEach { vm.addItem(it) }
+            vm.record(Edit(made, emptyList()))
+            return true
+        }
+        // A plain text box keeps its highlights itself; a new one replaces any it overlaps.
+        val keep = box.markList().filter { it.end <= start || it.start >= end }
+        vm.restyleText(box, box.withMarks(keep + TextMark(start, end, ink.color, vm.underlineMode)))
+        return true
     }
 
     /** Snaps a highlighter swipe to whole words on the text lines it crosses. */
@@ -911,6 +961,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         for (st in vm.marginStrokesFor(layout.book, layout.chapter).toList()) {
             if (st.layerId in usable && g.visible(st.region)) erase(st, g.originX(st.region), g.originY(st.region, st.verse))
         }
+        eraseInBoxes(g, p, usable, partial)
         val local = Offset(p.x - g.textLeft, p.y - Page.TEXT_TOP)
         if (layout.isOnText(local.y) && local.x >= -r && local.x <= Page.TEXT_W + r) {
             val off = layout.offsetAt(local.x, local.y)
@@ -943,6 +994,62 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
                             erasedAdded[piece.id] = piece
                         }
                 }
+            }
+        }
+    }
+
+    /**
+     * The eraser over a text box or verse card takes out its highlights (HL-11): a card's are the
+     * Bible's, so they go there too, in every version (SKT-6, HL-10).
+     */
+    private fun eraseInBoxes(g: PageGeometry, p: Offset, usable: Set<Long>, partial: Boolean) {
+        for (box in vm.textsFor(g.layout.book, g.layout.chapter).toList()) {
+            if (!g.visible(box.region)) continue
+            val r = textRect(g, box)
+            if (!r.contains(p)) continue
+            val off = boxOffset(box, p - r.topLeft) ?: continue
+            val layout = vm.textLayouts[box.id] ?: continue
+            val word = layout.getWordBoundary(off.coerceIn(0, layout.layoutInput.text.length))
+            val card = vm.cardTexts[box.id]
+            val spec = vm.cardSpecCached(box)
+            if (card != null && spec != null) {
+                val cv = card.verseAt(off) ?: continue
+                val book = VerseId.book(cv.id); val ch = VerseId.chapter(cv.id); val v = VerseId.verse(cv.id)
+                val at = cv.chapterStart + (off - cv.cardStart)
+                for (h in vm.highlightsFor(spec.version, book, ch).toList()) {
+                    if (h.layerId !in usable || at < h.start || at > h.end) continue
+                    eraseItem(h)
+                    if (partial) {
+                        val ws = cv.chapterStart + (word.start - cv.cardStart); val we = cv.chapterStart + (word.end - cv.cardStart)
+                        listOf(h.start to ws, we to h.end).filter { (a, b) -> b - a > 1 }.forEach { (a, b) ->
+                            val piece = h.copy(id = vm.newId(), start = a, end = b)
+                            vm.addItem(piece); erasedAdded[piece.id] = piece
+                        }
+                    }
+                }
+                for (x in vm.crossHighlights(spec.version, book, ch)) {
+                    val h = x.source
+                    if (h.layerId !in usable || v !in x.fromVerse..x.toVerse) continue
+                    eraseItem(h)
+                    if (partial) {
+                        val span = vm.verseSpan(h.version, h.book, h.chapter, v) ?: continue
+                        listOf(h.start to minOf(h.end, span.first), maxOf(h.start, span.last + 1) to h.end)
+                            .filter { (a, b) -> b - a > 1 }.forEach { (a, b) ->
+                                val piece = h.copy(id = vm.newId(), start = a, end = b)
+                                vm.addItem(piece); erasedAdded[piece.id] = piece
+                            }
+                    }
+                }
+            } else if (box.layerId in usable) {
+                val marks = box.markList()
+                val hitMarks = marks.filter { off >= it.start && off <= it.end }
+                if (hitMarks.isEmpty()) continue
+                val left = (marks - hitMarks.toSet()) + if (partial) hitMarks.flatMap { m ->
+                    listOf(m.copy(end = minOf(m.end, word.start)), m.copy(start = maxOf(m.start, word.end))).filter { it.end - it.start > 1 }
+                } else emptyList()
+                eraseItem(box)
+                val after = box.withMarks(left)
+                vm.addItem(after); erasedAdded[after.id] = after
             }
         }
     }
@@ -1085,6 +1192,24 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         }
     }
 
+    /** The character of a text box's laid-out text at [local] (from the box's top-left), or null. */
+    private fun boxOffset(t: MarginText, local: Offset): Int? {
+        val layout = vm.textLayouts[t.id] ?: return null
+        val inner = local - Offset(TEXT_PAD, TEXT_PAD)
+        if (inner.y < -4f || inner.y > layout.size.height + 4f) return null
+        return layout.getOffsetForPosition(inner)
+    }
+
+    /** A long press on a verse card selects it and shows its bar (version, size, copy, share…). */
+    fun selectCardAt(pos: Offset): Boolean {
+        val s = toStrip(pos)
+        val page = pageAt(s.y) ?: return false
+        val hit = textAt(page, Offset(s.x, s.y - page.top), vm.visibleLayerIds().toSet()) ?: return false
+        if (vm.cardSpecCached(hit) == null) return false
+        selectedTextId = hit.id
+        return true
+    }
+
     /** The passage linked at a point inside a text box, if the point is on a Bible reference. */
     private fun textLinkAt(t: MarginText, local: Offset): Passage? {
         val layout = vm.textLayouts[t.id] ?: return null
@@ -1110,6 +1235,22 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             return false
         }
         val r = textRect(page.geo, hit)
+        // A verse card works like the page (SKT-6): its reference opens the passage, a verse opens
+        // the verse window (word study, compare versions, Hebrew/Greek, notes…).
+        val card = vm.cardTexts[hit.id]
+        val spec = vm.cardSpecCached(hit)
+        if (card != null && spec != null && vm.editingText != hit.id) {
+            val off = boxOffset(hit, p - r.topLeft) ?: return true
+            selectedTextId = null
+            if (off <= card.headerEnd) {
+                vm.passagePop = PassagePop(panelIndex, spec.passage, pos)
+            } else card.verseAt(off)?.let { cv ->
+                val inVerse = off - cv.cardStart
+                val word = com.biblestudy.app.data.StudyRepository.words(cv.text).indexOfFirst { inVerse >= it.first && inVerse <= it.last + 1 }
+                vm.openVerse(VerseId.book(cv.id), VerseId.chapter(cv.id), VerseId.verse(cv.id), word)
+            }
+            return true
+        }
         if (vm.editingText != hit.id) {
             textLinkAt(hit, p - r.topLeft)?.let {
                 vm.passagePop = PassagePop(panelIndex, it, pos)
