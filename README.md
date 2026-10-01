@@ -1,4 +1,4 @@
-# Bible Study — version 0.8
+# Bible Study — version 0.9
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,38 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 0.9
+
+- **Sketch pages.** Use *Insert → Sketch page…* to make a full page (blank, lined, grid or dotted) for timelines, diagrams, maps and sketch notes.
+  - Every pen tool works on it, plus shapes, the lasso, layers, undo, pictures and text boxes.
+  - Each page is linked to the passage you were reading and opens from a small badge in that passage's margin.
+  - *My notes → Sketch pages* lists them all.
+  - The page's ⋮ menu changes the paper, adds more space below, renames it or deletes it.
+- **Verse cards and person or place cards.** *Insert → Verse card…*: type a reference like "John 3:16-18" and the verses land as a card whose reference is a link. *Person or place card…* does the same for anyone or anywhere in the Bible. Cards work in the margins too.
+- **Names and places.** A new study pane choice, *Names & places*, covers about 4,000 people and places.
+  - **People:** who they were, their family (parents, brothers and sisters, spouse, children; each one opens) and every verse that mentions them.
+  - **Places:** a description, the region and a dot on a small offline map you can zoom and drag.
+  - **Where to open it:** the verse window lists the people and places in a verse, and a word study on a name offers *About …*.
+- **Reading stats** (*⋮ → Reading stats*):
+  - how much of the Bible you've read, overall, by Testament and by book;
+  - time this week and in all, and days in a row;
+  - your last 30 days;
+  - your most-read chapters and books;
+  - a grid of every chapter, shaded by how often you've read it.
+
+  Read chapters are also tinted in the book picker. A chapter counts as read after a minute in it, scrolled through most of the way. Time pauses after two minutes without a touch. It's all kept on the tablet, and Settings can turn counting off or clear it.
+- **Reading layout.** *Settings → Reading* now offers *Paragraphs* (instead of one verse per line) and *Verse numbers* on or off. Ink and highlights stay on their words.
+- **Margin options.**
+  - *Expand to fit* opens space under a verse when its margin notes are taller than it.
+  - *Margins in every panel* can be turned off so only the first Bible panel has margins.
+- **Bibles.** *Settings → Bibles* lists each version with its size and copyright.
+  - *Import a Bible…* adds a version from USFM files (or a .zip of them), OSIS XML, or this app's own database.
+  - Imported versions work everywhere the built-in ones do (except word studies) and can be removed.
+  - This is how NIV or NLT files could be added once permission is granted. Only import versions you have the right to use.
+- **Exports** now carry the version's copyright line on every page.
+
+Your notes database is upgraded the first time 0.9 opens. Backups include sketch pages and reading stats. Imported Bibles aren't in backups; import the file again on a new tablet.
 
 ## New in version 0.8
 
@@ -259,12 +291,18 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Rotating a lasso selection turns ink freely, but pictures only turn in quarter turns and text boxes stay upright.
 - Strong's numbers come from the tagged texts at eBible.org. In the KJV some small words ("the", "unto") have none, so they can't be tapped for a word study.
 - Matthew Henry's Concise Commentary skips some chapters (mostly lists and genealogies).
+- Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
+- On a sketch page the "Linked to" passage is set when the page is made.
+- The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
 - Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
 
 ## Next milestones
 
-- **0.9 (proposed):** sketch pages, a study journal, reading plans, paragraph layout, margins that expand to fit, and importing other Bible files.
-- **Later:** NIV and NLT, once permission is granted.
+- **Later:**
+  - ready-made sketch pages: the Jewish festivals, the tabernacle, a timeline of the kings, a genealogy diagram drawn from the family data;
+  - an interlinear view with the full Hebrew and Greek;
+  - highlighting the differences between versions.
+- **Waiting on permission:** NIV and NLT.
 
 ## Credits
 

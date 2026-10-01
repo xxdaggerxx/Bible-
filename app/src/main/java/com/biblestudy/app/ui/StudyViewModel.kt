@@ -1977,6 +1977,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             tags.clear(); tags.putAll(user.tags())
             meanings.clear(); meanings.putAll(user.meanings())
             workspaces.clear(); workspaces.addAll(user.workspaces().mapNotNull { (n, j) -> Workspace.fromJson(n, j) })
+            sketches.clear(); sketches.addAll(user.sketches()) // sketch pages (SKT)
+            readingGeneration++ // reading stats came with the backup
             dataGeneration++
             message = "Notes restored."
         }
