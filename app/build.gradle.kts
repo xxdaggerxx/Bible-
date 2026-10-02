@@ -49,9 +49,18 @@ android {
         targetSdk = 35
         versionCode = 15
         versionName = "1.1.1"
-        // Only 64-bit ARM tablets (the Tab S9 and almost every current Android tablet). The handwriting
-        // reader's native code for other processors would add about 30 MB.
-        ndk { abiFilters += "arm64-v8a" }
+    }
+
+    // Two APKs from each build: a small one for 64-bit ARM tablets (the Tab S9 and almost every
+    // current tablet), and a universal one that runs on any Android tablet. The handwriting reader's
+    // native code for the other processors makes the universal one about 30 MB bigger.
+    splits {
+        abi {
+            isEnable = true
+            reset()
+            include("arm64-v8a")
+            isUniversalApk = true
+        }
     }
 
     signingConfigs {

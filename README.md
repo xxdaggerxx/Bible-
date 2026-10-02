@@ -33,13 +33,18 @@ On a computer with Android Studio or the Android SDK and JDK 17+:
 ./gradlew assembleRelease
 ```
 
-The signed file appears at `app/build/outputs/apk/release/app-release.apk`. Nothing else to set up: Gradle finds `keystore.properties` on its own. If the build prints "No release signing key found", that file is missing and the APK is signed with a throwaway debug key instead. Don't install that one over your real copy.
+Two signed files appear in `app/build/outputs/apk/release/`:
+
+- `app-arm64-v8a-release.apk` (about 50 MB) for 64-bit ARM tablets: the Tab S9 and almost every current tablet;
+- `app-universal-release.apk` (about 81 MB) runs on any Android 10+ tablet. It is bigger because it carries the handwriting reader for every kind of processor.
+
+Both are the same app and install over each other. Nothing else to set up: Gradle finds `keystore.properties` on its own. If the build prints "No release signing key found", that file is missing and the APK is signed with a throwaway debug key instead. Don't install that one over your real copy.
 
 In Android Studio you can also use *Build → Generate Signed App Bundle / APK → APK*, choose *Choose existing…*, and pick `signing/biblestudy-release.jks` with the password from `keystore.properties`.
 
 ### Install or update on the tablet
 
-1. Copy `app-release.apk` to the tablet (USB cable, cloud drive or email) and tap it in *My Files*.
+1. Copy the APK to the tablet (USB cable, cloud drive or email) and tap it in *My Files*.
 2. If Android warns about unknown sources, allow it for the app you opened the file from, go back, and tap **Install**.
 3. To update, build a new APK the same way, with a higher `versionCode` in `app/build.gradle.kts`, and install it over the old one. Your notes stay.
 
@@ -48,7 +53,7 @@ If Android says the app conflicts with an existing package, the installed copy w
 ### Check which key an APK uses
 
 ```
-apksigner verify --print-certs app-release.apk
+apksigner verify --print-certs app-arm64-v8a-release.apk
 ```
 
 For this key the line should read `CN=Bible Study, O=Personal`, with SHA-256 `70f5af93762f26149c355e7a39cd61f653afa5c17a2f7405ad475fea749efc32`. `CN=Android Debug` means the wrong key was used.
@@ -381,7 +386,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - The Hebrew and Greek view uses the Hebrew text (Leningrad Codex) and the amalgamated Greek editions; it doesn't follow an imported Bible's wording.
 - The performance pass for very long chapters (Psalm 119) and very large sketch pages still needs checking on the tablet itself.
 - Writing sounds, pen hover and handwriting reading can only be judged on the tablet: the automated tests use a stand-in reader and no speaker. Tell me if the sounds are too scratchy, soft or loud.
-- From 1.1 the app is built for 64-bit ARM tablets only (the Tab S9 and almost all current tablets), to keep it about 30 MB smaller.
+- There are two downloads: `BibleStudy-<version>.apk` (about 50 MB) for 64-bit ARM tablets, which includes the Tab S9, and `BibleStudy-<version>-universal.apk` (about 81 MB) for any other Android tablet. If you're not sure, the universal one always works.
 - Handwriting is read in English only. Ink written over the Bible text itself is not read (only margins and sketch pages).
 - A shrunk full-screen note shows its ink and text boxes; pictures on it show only when it's opened.
 - Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
