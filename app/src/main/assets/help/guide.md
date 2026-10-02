@@ -1,6 +1,6 @@
-# How to use Bible Study
+# How to use Ink & Word
 
-Everything works without the internet. Your notes save the moment you lift the pen. Tap a heading below to read it, or type in the search box to find something.
+Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; look for the open Bible with a quill. Everything works without the internet. Your notes save the moment you lift the pen. Tap a heading below to read it, or type in the search box to find something.
 
 ## Getting around
 

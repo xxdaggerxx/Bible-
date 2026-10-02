@@ -117,7 +117,7 @@ fun StudyApp(vm: StudyViewModel) {
                     },
                     onBackup = {
                         val stamp = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
-                        backupLauncher.launch("bible-study-backup-$stamp.zip")
+                        backupLauncher.launch("ink-and-word-backup-$stamp.zip")
                     },
                     onExport = { pdf ->
                         val name = vm.exportName() + if (pdf) ".pdf" else ".png"
@@ -217,7 +217,7 @@ fun StudyApp(vm: StudyViewModel) {
                 vm,
                 onBackup = {
                     val stamp = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
-                    backupLauncher.launch("bible-study-backup-$stamp.zip")
+                    backupLauncher.launch("ink-and-word-backup-$stamp.zip")
                 },
                 onRestore = { dialog = DialogKind.RESTORE },
                 onAbout = { dialog = DialogKind.ABOUT },

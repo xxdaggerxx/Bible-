@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Ink & Word: an open Bible with a quill writing on its right page. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
-    <path android:fillColor="#FFF6EEDC"
-        android:pathData="M54,40 C46,35 37,34 30,35 L30,72 C37,71 46,72 54,77 Z" />
-    <path android:fillColor="#FFFFFFFF"
-        android:pathData="M54,40 C62,35 71,34 78,35 L78,72 C71,71 62,72 54,77 Z" />
-    <path android:strokeColor="#FF7A5C2E" android:strokeWidth="2.5"
-        android:strokeLineCap="round"
-        android:pathData="M60,48 L72,46 M60,55 L72,53 M60,62 L68,61" />
+    <group android:pivotX="55.5" android:pivotY="53"
+        android:scaleX="0.84" android:scaleY="0.84"
+        android:translateX="-1.5" android:translateY="2">
+        <!-- Cover -->
+        <path android:fillColor="#FFB8892F"
+            android:pathData="M54,60 C45,55 34,54 25,56 L25,82 C34,80 45,81 54,86 C63,81 74,80 83,82 L83,56 C74,54 63,55 54,60 Z" />
+        <!-- Pages -->
+        <path android:fillColor="#FFEFE3C8"
+            android:pathData="M54,58 C46,53 36,52 28,53 L28,78 C36,77 46,78 54,83 Z" />
+        <path android:fillColor="#FFFBF5E8"
+            android:pathData="M54,58 C62,53 72,52 80,53 L80,78 C72,77 62,78 54,83 Z" />
+        <!-- Printed lines on the left page -->
+        <path android:strokeColor="#FF1E2B45" android:strokeAlpha="0.55"
+            android:strokeWidth="1.6" android:strokeLineCap="round"
+            android:pathData="M33,60 L49,62.5 M33,65 L49,67.5 M33,70 L45,71.8" />
+        <!-- Ink written on the right page -->
+        <path android:strokeColor="#FF1E2B45" android:strokeWidth="2"
+            android:strokeLineCap="round" android:strokeLineJoin="round"
+            android:pathData="M59,71 C61,67 63,67 63.5,69.5 C64,72 66,72 67.5,68.5" />
+        <!-- Quill, its nib on the end of the ink -->
+        <group android:translateX="68.5" android:translateY="67.5" android:rotation="32">
+            <path android:fillColor="#FFF6EEDC"
+                android:pathData="M0,-9 C-9,-17 -11,-34 -3,-50 C-1,-44 1,-40 3,-38 C7,-30 6,-16 0,-9 Z" />
+            <path android:fillColor="#FF1E2B45"
+                android:pathData="M-8.5,-30 L-3,-27 L-8,-25 Z M-9.2,-21 L-3,-19.5 L-7.5,-17 Z M5.5,-25 L1.5,-23.5 L5,-21 Z" />
+            <path android:strokeColor="#FFC9B48A" android:strokeWidth="1.2"
+                android:strokeLineCap="round" android:pathData="M0,-6 L-1.5,-46" />
+            <path android:fillColor="#FFD4A94A"
+                android:pathData="M-1.8,-9 L1.8,-9 L1.2,-3 L0,0 L-1.2,-3 Z" />
+        </group>
+    </group>
 </vector>

@@ -2252,7 +2252,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                         }
                     } ?: error("Couldn't read file")
                     val newDb = File(tmp, "userdata.db")
-                    require(newDb.exists()) { "Not a Bible Study backup" }
+                    require(newDb.exists()) { "Not an Ink & Word backup" }
                     user.close()
                     val dbFile = app.getDatabasePath(UserDb.NAME)
                     File(dbFile.path + "-wal").delete()
