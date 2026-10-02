@@ -215,4 +215,35 @@ class BibleImportTest {
         assertTrue(study.redLetters("NLT2", 40, 5, nlt.chapter(40, 5).associate { it.verse to it.text })[1] == null)
         assertTrue(16 in study.paragraphStarts("NLT2", 43, 3))
     }
+
+    @Test
+    fun theTranslationTableMatchesTheAppsOwnWordSplitting() {
+        // tools/build_glosses.py splits and stems words in Python; the app must agree with it.
+        val study = StudyRepository(app)
+        val wanted = listOf("lov", "god", "shepherd", "the", "believ", "lord's", "spirit")
+            .map { com.biblestudy.app.data.WordTagger.stem(it) }.toSet()
+        val pairs = HashMap<Pair<String, String>, Int>()
+        val counts = HashMap<String, Int>()
+        for (v in BibleRepository.BUNDLED) {
+            val bible = BibleRepository(app, v)
+            val texts = bible.allVerses().toMap()
+            study.forEachTagged(v.code) { id, strongs ->
+                val text = texts[id] ?: return@forEachTagged
+                val words = StudyRepository.words(text)
+                if (words.size != strongs.size) return@forEachTagged
+                for (i in words.indices) {
+                    val k = com.biblestudy.app.data.WordTagger.stem(text.substring(words[i]))
+                    if (k !in wanted) continue
+                    counts[k] = (counts[k] ?: 0) + 1
+                    strongs[i]?.let { pairs[k to it] = (pairs[k to it] ?: 0) + 1 }
+                }
+            }
+            opened += bible.database
+        }
+        for (k in wanted) {
+            assertEquals(k, counts[k] ?: 0, study.translations.count(k))
+            assertEquals(k, pairs.filterKeys { it.first == k }.mapKeys { it.key.second }, study.translations.translations(k))
+        }
+        assertTrue(study.translations.translations("lov")["G25"]!! > 20) // "loved", "loves"
+    }
 }

@@ -17,25 +17,33 @@ package com.biblestudy.app.data
  * match the published tags.
  */
 class WordTagger(
-    model: Model,
+    translations: Model,
     private val references: List<Reference>,
     private val original: (Int) -> List<OriginalWord>,
     private val lexicon: (String) -> String?,
 ) {
-    /** A tagged version: every verse's text with the Strong's number of each word (as [StudyRepository.words] splits it). */
-    interface Reference {
-        fun forEachVerse(f: (id: Int, text: String, strongs: List<String?>) -> Unit)
+    /** A tagged version: a verse's text with the Strong's number of each word (as [StudyRepository.words] splits it). */
+    fun interface Reference {
         fun verse(id: Int): Pair<String, List<String?>>?
     }
 
     /**
-     * How the reference versions translate: stem → Strong's number → how often ([pairs]), and
-     * stem → how often it appears at all ([counts]). See [learn].
+     * How the KJV, BSB and WEB translate, worked out when study.db is built
+     * (tools/build_glosses.py): for a stem, how often it translates each Strong's number, and how
+     * often it appears at all.
      */
-    class Model(val pairs: HashMap<String, HashMap<String, Int>>, val counts: HashMap<String, Int>)
+    interface Model {
+        fun translations(stem: String): Map<String, Int>
+        fun count(stem: String): Int
+    }
 
-    private val pairs = model.pairs
-    private val counts = model.counts
+    /** [translations], each stem looked up once. */
+    private val model = object : Model {
+        val t = HashMap<String, Map<String, Int>>()
+        val c = HashMap<String, Int>()
+        override fun translations(stem: String) = t.getOrPut(stem) { translations.translations(stem) }
+        override fun count(stem: String) = c.getOrPut(stem) { translations.count(stem) }
+    }
     private val lexiconStems = HashMap<String, Set<String>>()
 
     /**
@@ -80,11 +88,11 @@ class WordTagger(
                 for ((p, s) in here) score[s] = (score[s] ?: 0f) + 1f - kotlin.math.abs(p - position)
                 score.maxByOrNull { it.value }?.key
             } else {
-                val total = counts[k] ?: 0
-                val byWord = pairs[k]
+                val total = model.count(k)
+                val byWord = model.translations(k)
                 var pick: String? = null
                 var most = 0
-                if (byWord != null) for (s in candidates) {
+                for (s in candidates) {
                     val c = byWord[s] ?: 0
                     if (c >= 1 && c >= 0.02 * total && c > most) { pick = s; most = c }
                 }
@@ -92,7 +100,7 @@ class WordTagger(
                     ?: if (norm(w) in SMALL) null else candidates.filter { k in lexiconStems(it) }.singleOrNull()
             }
             // Small words only keep a number they're commonly used for.
-            if (best != null && norm(w) in SMALL && (pairs[k]?.get(best) ?: 0) < 0.05 * maxOf(1, counts[k] ?: 0)) null else best
+            if (best != null && norm(w) in SMALL && (model.translations(k)[best] ?: 0) < 0.05 * maxOf(1, model.count(k))) null else best
         }
     }
 
@@ -117,24 +125,6 @@ class WordTagger(
             if (s.endsWith("'s")) s = s.dropLast(2)
             for (suf in SUFFIXES) if (s.endsWith(suf) && s.length - suf.length >= 3) return s.dropLast(suf.length)
             return s
-        }
-
-        /** Learns from the [references] how each Strong's number is translated (a few seconds on a tablet). */
-        fun learn(references: List<Reference>): Model {
-            val pairs = HashMap<String, HashMap<String, Int>>()
-            val counts = HashMap<String, Int>()
-            for (r in references) r.forEachVerse { _, text, strongs ->
-                val ranges = StudyRepository.words(text)
-                if (ranges.size != strongs.size) return@forEachVerse
-                for (i in ranges.indices) {
-                    val k = stem(text.substring(ranges[i]))
-                    counts[k] = (counts[k] ?: 0) + 1
-                    val s = strongs[i] ?: continue
-                    val m = pairs.getOrPut(k) { HashMap() }
-                    m[s] = (m[s] ?: 0) + 1
-                }
-            }
-            return Model(pairs, counts)
         }
 
         /** Strong's numbers as stored in a tags row: " 25 2316  1063 ", the testament's letter left off. */

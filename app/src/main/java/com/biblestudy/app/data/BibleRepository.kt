@@ -193,13 +193,9 @@ class BibleRepository(context: Context, val version: BibleVersion) {
             registry(context).writeText(a.toString())
         }
 
-        // The list is Compose state and is changed from import threads: each change is applied at
-        // once in its own snapshot, so the screen hears about it wherever it was made.
         fun addImported(context: Context, v: BibleVersion) {
-            androidx.compose.runtime.snapshots.Snapshot.withMutableSnapshot {
-                imported.removeAll { it.code == v.code }
-                imported.add(v)
-            }
+            imported.removeAll { it.code == v.code }
+            imported.add(v)
             saveRegistry(context)
         }
 
@@ -224,7 +220,7 @@ class BibleRepository(context: Context, val version: BibleVersion) {
 
         fun removeImported(context: Context, code: String) {
             imported.firstOrNull { it.code == code }?.let { File(it.asset).delete() }
-            androidx.compose.runtime.snapshots.Snapshot.withMutableSnapshot { imported.removeAll { it.code == code } }
+            imported.removeAll { it.code == code }
             saveRegistry(context)
         }
 

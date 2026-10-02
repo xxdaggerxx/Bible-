@@ -719,7 +719,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             importing = false
             importStatus = null
             synchronized(this@StudyViewModel) { texts.remove(c) }
-            dataGeneration++
             message = result.fold({ "${it.code} added, with word studies. Pick it from the version menu." }, { "Couldn't import: ${it.message}" })
         }
     }

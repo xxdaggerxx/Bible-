@@ -196,7 +196,7 @@ Your ink and highlights stay on their words whatever you choose.
 - The KJV, BSB and WEB are built in.
 - *Settings → Bibles → Import a Bible…* adds another version from USFM files (or a .zip of them), OSIS XML, or this app's own database file. Only import versions you have the right to use.
   - USFM is the best choice: one file per book, or all of them in one .zip.
-  - Importing takes a minute or so while the button shows *Preparing word studies…*. After that the version has word studies, words of Jesus in red and paragraphs, like the built-in ones. Footnotes in the file are left out.
+  - Importing takes a few seconds while the button shows *Preparing word studies…*. After that the version has word studies, words of Jesus in red and paragraphs, like the built-in ones. Footnotes in the file are left out.
   - Verses printed together (such as "1–2") are shown under the first verse number.
   - Versions you imported before this get word studies the next time the app starts.
 - *Remove* takes an imported version off the tablet.

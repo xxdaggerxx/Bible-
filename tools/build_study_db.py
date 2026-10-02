@@ -534,6 +534,9 @@ build_nave(db)
 build_commentary(db)
 build_names(db)
 build_red(db)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from build_glosses import build_glosses  # how the three translate each Strong's number (BIB-4)
+build_glosses(db, bibles)
 db.executescript("""
 CREATE INDEX names_key ON names(key);
 CREATE INDEX names_uid ON names(uid);

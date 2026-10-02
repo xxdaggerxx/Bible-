@@ -40,8 +40,7 @@ object ImportStudy {
             }
         progress(0f)
         val refs = references.map { reference(it, study) }
-        // Learned afresh each time (a few seconds) rather than kept in memory between imports.
-        val tagger = WordTagger(WordTagger.learn(refs), refs, { id -> study.original(id) }, { id -> study.lexicon(id)?.let { it.kjv + " " + it.def } })
+        val tagger = WordTagger(study.translations, refs, { id -> study.original(id) }, { id -> study.lexicon(id)?.let { it.kjv + " " + it.def } })
         progress(0.1f)
 
         val paragraphs = parsed?.paragraphs?.takeIf { it.isNotEmpty() }
@@ -73,16 +72,8 @@ object ImportStudy {
         progress(1f)
     }
 
-    private fun reference(bible: BibleRepository, study: StudyRepository) = object : WordTagger.Reference {
-        override fun forEachVerse(f: (Int, String, List<String?>) -> Unit) {
-            val texts = bible.allVerses().toMap()
-            study.forEachTagged(bible.code) { id, strongs -> texts[id]?.let { f(id, it, strongs) } }
-        }
-
-        override fun verse(id: Int): Pair<String, List<String?>>? {
-            val text = bible.verseText(id) ?: return null
-            return text to study.strongs(bible.code, id)
-        }
+    private fun reference(bible: BibleRepository, study: StudyRepository) = WordTagger.Reference { id ->
+        bible.verseText(id)?.let { it to study.strongs(bible.code, id) }
     }
 
     /**

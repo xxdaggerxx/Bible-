@@ -153,6 +153,17 @@ class StudyRepository(private val context: Context) {
         }
     }
 
+    /** How the KJV, BSB and WEB translate each Strong's number, for tagging imported Bibles (see [WordTagger]). */
+    val translations = object : WordTagger.Model {
+        override fun translations(stem: String): Map<String, Int> =
+            db.rawQuery("SELECT strong, n FROM glosses WHERE stem = ?", arrayOf(stem)).use { c ->
+                buildMap { while (c.moveToNext()) put(c.getString(0), c.getInt(1)) }
+            }
+
+        override fun count(stem: String): Int =
+            db.rawQuery("SELECT n FROM stems WHERE stem = ?", arrayOf(stem)).use { c -> if (c.moveToFirst()) c.getInt(0) else 0 }
+    }
+
     /** A version's words of Jesus as stored: verse id → word ranges ("0-4,9-12"). */
     fun redRows(version: String): Map<Int, String> =
         source(version, "red").rawQuery("SELECT id, words FROM red WHERE version = ?", arrayOf(version)).use { c ->
@@ -345,7 +356,7 @@ class StudyRepository(private val context: Context) {
 
     companion object {
         /** Bump when study.db changes, so the new copy replaces the old one. */
-        private const val DB_VERSION = 5
+        private const val DB_VERSION = 6
         private const val ORIGINAL_VERSION = 1
         const val NT_START = 40_000_000
 
