@@ -1490,6 +1490,22 @@ class FeatureTest {
         assertTrue(hl.points[1] > hl.points[0])
         snap("135-highlight-on-dictionary")
 
+        // The lasso picks the pen stroke; its bar recolours or deletes it (one undo each).
+        compose.runOnUiThread { vm.tool = Tool.LASSO }
+        compose.onNodeWithTag("inkable").performTouchInput {
+            down(Offset(10f, 10f)); for (p in listOf(Offset(420f, 10f), Offset(420f, 110f), Offset(10f, 110f), Offset(10f, 12f))) { repeat(6) { moveBy((p - Offset(0f, 0f)) * 0f) }; moveTo(p) }; up()
+        }
+        compose.waitForIdle()
+        compose.onNodeWithTag("studyLassoBar").assertExists()
+        snap("147-study-lasso")
+        compose.runOnUiThread { vm.penColor = com.biblestudy.app.ui.PEN_COLORS[2] }
+        compose.onNodeWithText("Colour").performClick()
+        assertEquals(com.biblestudy.app.ui.PEN_COLORS[2], vm.marginStrokesFor(doc, id.toInt()).single { !it.highlighter }.color)
+        compose.runOnUiThread { vm.undo() }
+        assertEquals(pen.color, vm.marginStrokesFor(doc, id.toInt()).single { !it.highlighter }.color)
+        compose.onNodeWithText("Done").performClick()
+        compose.runOnUiThread { vm.tool = Tool.PEN; vm.penColor = pen.color }
+
         // Narrowing the panel rewraps the words; the writing is kept against its letters.
         compose.runOnUiThread { vm.addPanel(); vm.tab.split = 0.35f }
         waitForLoaded()
@@ -1607,6 +1623,45 @@ class FeatureTest {
         snap("146-greek-and-word-study")
         firstWord.assertExists()
         compose.runOnUiThread { vm.sidePane = null }
+    }
+
+    @Test
+    fun introPanelNewTabFromLinksAndDraggingTabs() {
+        // About the book beside the text, following the Bible panel's book.
+        compose.runOnUiThread { vm.sidePane = PaneKind.INTRO }
+        waitForLoaded()
+        compose.onNodeWithText("About John").assertExists()
+        compose.onNodeWithText("Historical background").assertExists()
+        snap("148-intro-panel")
+
+        // A cross-reference's pop-over opens its passage in a new tab.
+        compose.runOnUiThread { vm.paneVerse = VerseTarget(43, 3, 16); vm.sidePane = PaneKind.CROSSREFS }
+        compose.waitUntil(15_000) { compose.onAllNodesWithText("Romans 5:8").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Romans 5:8").performClick()
+        compose.onNodeWithText("New tab").performClick()
+        waitForLoaded()
+        assertEquals(2, vm.tabs.size)
+        assertEquals(45 to 5, vm.panels[0].book to vm.panels[0].chapter)
+
+        // Holding a finger on a search result opens it in a new tab too.
+        compose.runOnUiThread { vm.selectTab(0) }
+        compose.onNodeWithContentDescription("Search").performClick()
+        compose.onNodeWithText("Words", substring = true).performTextInput("\"charity suffereth long\"")
+        compose.onNodeWithText("Words", substring = true).performImeAction()
+        compose.waitUntil(15_000) { compose.onAllNodesWithText("1 Corinthians 13:4", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onAllNodesWithText("1 Corinthians 13:4", substring = true).onFirst().performTouchInput { longClick() }
+        waitForLoaded()
+        assertEquals(3, vm.tabs.size)
+        assertEquals(46 to 13, vm.panels[0].book to vm.panels[0].chapter)
+
+        // Drag a tab along the strip to move it.
+        val first = vm.tabs[0]
+        compose.onNodeWithContentDescription("Tab 1:", substring = true).performTouchInput {
+            down(center); advanceEventTime(1000); repeat(20) { moveBy(Offset(30f, 0f)) }; up()
+        }
+        compose.waitForIdle()
+        assertTrue("tab moved", vm.tabs.indexOf(first) > 0)
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex) }
     }
 
     @Test

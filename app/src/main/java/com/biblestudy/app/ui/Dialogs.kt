@@ -4,6 +4,7 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -333,6 +334,7 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
  * Search box, options and results. In the dialog, opening a result closes it; in the study pane
  * beside the text (SPLIT-2) the results stay while the Bible panel moves.
  */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
 fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inPane: Boolean) {
     var query by remember { mutableStateOf(vm.lastSearch) }
@@ -499,7 +501,11 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                                 Column(
                                     Modifier
                                         .weight(1f)
-                                        .clickable { vm.goTo(panelIndex, hit.book, hit.chapter, hit.verse); onOpened() }
+                                        // Tap to go there; hold a finger to open it in a new tab (TAB-3).
+                                        .combinedClickable(
+                                            onClick = { vm.goTo(panelIndex, hit.book, hit.chapter, hit.verse); onOpened() },
+                                            onLongClick = { vm.newTab(hit.book, hit.chapter, hit.verse); onOpened() },
+                                        )
                                         .padding(vertical = 8.dp)
                                 ) {
                                     Text(
@@ -1320,88 +1326,7 @@ fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolea
                 Text("No introduction for this book yet.")
                 return@Column
             }
-            Column(Modifier.weight(1f).verticalScroll(rememberScrollState())) {
-                @Composable
-                fun Fact(label: String, text: String) {
-                    if (text.isBlank()) return
-                    Row(Modifier.padding(vertical = 3.dp)) {
-                        Text(label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary, modifier = Modifier.width(110.dp))
-                        Text(text, modifier = Modifier.weight(1f))
-                    }
-                }
-
-                @Composable
-                fun Heading(text: String) {
-                    Text(text, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(top = 16.dp, bottom = 4.dp))
-                }
-
-                /** Text with Bible references made into links (LINK-4 style). */
-                @Composable
-                fun Linked(text: String) {
-                    val links = remember(text) { RefLinks.find(text, vm.bible.books) }
-                    Text(buildAnnotatedString {
-                        append(text)
-                        for (l in links) {
-                            addLink(
-                                LinkAnnotation.Clickable("ref", TextLinkStyles(SpanStyle(color = linkColor, textDecoration = TextDecoration.Underline))) {
-                                    shown = l.passage
-                                },
-                                l.start, l.end,
-                            )
-                        }
-                    })
-                }
-
-                Fact("Author", intro.author)
-                Fact("Written", intro.date)
-                Fact("Where", intro.place)
-                Fact("Written to", intro.audience)
-                Fact("Type", intro.type)
-
-                Heading("Historical background")
-                Linked(intro.background)
-                Heading("Purpose")
-                Linked(intro.purpose)
-                Heading("Main themes")
-                Text(intro.themes)
-
-                Heading("Outline")
-                for (o in intro.outline) {
-                    Row(
-                        Modifier.fillMaxWidth().clip(RoundedCornerShape(8.dp)).clickable { open(o.passage) }.padding(vertical = 6.dp, horizontal = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        Text(o.title, modifier = Modifier.weight(1f))
-                        Text(vm.passageLabel(o.passage).removePrefix(info.name + " "), color = linkColor, style = MaterialTheme.typography.labelLarge)
-                    }
-                }
-
-                Heading("Key people")
-                Text(intro.people)
-                Heading("Key places")
-                Text(intro.places)
-
-                Heading("Key verses")
-                Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    for (p in intro.keyVerses) {
-                        AssistChip(
-                            onClick = { shown = p },
-                            label = { Text(vm.passageLabel(p)) },
-                            leadingIcon = { Icon(Icons.Filled.Link, contentDescription = null, modifier = Modifier.size(16.dp)) },
-                        )
-                    }
-                }
-
-                Heading("Connections")
-                Linked(intro.connections)
-
-                Text(
-                    "Authorship and dates follow the traditional view.",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.outline,
-                    modifier = Modifier.padding(top = 16.dp),
-                )
-            }
+            BookIntroBody(vm, book, intro, Modifier.weight(1f), onOpen = ::open, onShow = { shown = it })
             Row(Modifier.padding(top = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(onClick = { open(Passage(book, 1, 1, 1, 1)) }) { Text("Read from chapter 1") }
             }
@@ -1417,6 +1342,111 @@ fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolea
             )
         }
     }
+}
+
+/** A book's introduction (STD-12): facts, background, outline and key verses, in a window or a panel. */
+@Composable
+fun BookIntroBody(vm: StudyViewModel, book: Int, intro: com.biblestudy.app.data.BookIntro, modifier: Modifier = Modifier, onOpen: (Passage) -> Unit, onShow: (Passage) -> Unit) {
+    Column(modifier.verticalScroll(rememberScrollState())) {
+                @Composable
+        fun Fact(label: String, text: String) {
+            if (text.isBlank()) return
+            Row(Modifier.padding(vertical = 3.dp)) {
+                Text(label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary, modifier = Modifier.width(110.dp))
+                Text(text, modifier = Modifier.weight(1f))
+            }
+        }
+
+        @Composable
+        fun Heading(text: String) {
+            Text(text, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(top = 16.dp, bottom = 4.dp))
+        }
+
+        /** Text with Bible references made into links (LINK-4 style), which can be written on (INK-16). */
+        @Composable
+        fun Linked(text: String, part: Int) {
+            val links = remember(text) { RefLinks.find(text, vm.bible.books) }
+            val annotated = buildAnnotatedString {
+                append(text)
+                for (l in links) {
+            addLink(
+                LinkAnnotation.Clickable("ref", TextLinkStyles(SpanStyle(color = LINK_COLOR, textDecoration = TextDecoration.Underline))) {
+                    onShow(l.passage)
+                },
+                l.start, l.end,
+            )
+                }
+            }
+            InkableText(vm, InkDoc(StudyInk.INTRO, book, part), annotated, style = MaterialTheme.typography.bodyLarge)
+        }
+
+        Fact("Author", intro.author)
+        Fact("Written", intro.date)
+        Fact("Where", intro.place)
+        Fact("Written to", intro.audience)
+        Fact("Type", intro.type)
+
+        Heading("Historical background")
+        Linked(intro.background, 0)
+        Heading("Purpose")
+        Linked(intro.purpose, 1)
+        Heading("Main themes")
+        Linked(intro.themes, 3)
+
+        Heading("Outline")
+        for (o in intro.outline) {
+            Row(
+                Modifier.fillMaxWidth().clip(RoundedCornerShape(8.dp)).clickable { onOpen(o.passage) }.padding(vertical = 6.dp, horizontal = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(o.title, modifier = Modifier.weight(1f))
+                Text(vm.passageLabel(o.passage).removePrefix(vm.bible.book(book).name + " "), color = LINK_COLOR, style = MaterialTheme.typography.labelLarge)
+            }
+        }
+
+        Heading("Key people")
+        Linked(intro.people, 4)
+        Heading("Key places")
+        Linked(intro.places, 5)
+
+        Heading("Key verses")
+        Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            for (p in intro.keyVerses) {
+                AssistChip(
+            onClick = { onShow(p) },
+            label = { Text(vm.passageLabel(p)) },
+            leadingIcon = { Icon(Icons.Filled.Link, contentDescription = null, modifier = Modifier.size(16.dp)) },
+                )
+            }
+        }
+
+        Heading("Connections")
+        Linked(intro.connections, 2)
+
+        Text(
+            "Authorship and dates follow the traditional view.",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.outline,
+            modifier = Modifier.padding(top = 16.dp),
+        )
+                }
+}
+
+/** The introduction to the book being read, beside the text (SPLIT-7). */
+@Composable
+fun BookIntroPane(vm: StudyViewModel, modifier: Modifier) {
+    val context = LocalContext.current
+    val panel = vm.studyPanel()
+    val book = panel.book.coerceIn(1, 66)
+    val intro = remember(book) { BookIntros.get(context, book) }
+    var shown by remember(book) { mutableStateOf<Passage?>(null) }
+    val index = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
+    Column(modifier) {
+        Text("About ${vm.bible.book(book).name}", style = MaterialTheme.typography.titleLarge, modifier = Modifier.padding(vertical = 8.dp))
+        if (intro == null) { Text("No introduction for this book yet."); return@Column }
+        BookIntroBody(vm, book, intro, Modifier.weight(1f), onOpen = { p -> vm.showBible(); vm.goTo(index, p.book, p.chapter, p.verse) }, onShow = { shown = it })
+    }
+    PassagePopupHost(vm, shown, panel.version, onDismiss = { shown = null })
 }
 
 /** The passage a cross-reference points to (LINK-5). */

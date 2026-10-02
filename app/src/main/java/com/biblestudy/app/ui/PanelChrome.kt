@@ -2,6 +2,12 @@ package com.biblestudy.app.ui
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.runtime.key
+import androidx.compose.ui.zIndex
+import androidx.compose.foundation.layout.offset
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Box
@@ -114,7 +120,9 @@ fun TabStrip(vm: StudyViewModel) {
     ) {
         vm.tabs.forEachIndexed { i, t ->
             val front = i == vm.activeTab
-            Box {
+            // Hold a finger on a tab: let go for its menu, or drag it along the strip to move it (TAB-2).
+            var dragX by remember(t) { mutableStateOf(0f) }
+            key(t) { Box(Modifier.offset { androidx.compose.ui.unit.IntOffset(dragX.toInt(), 0) }.zIndex(if (dragX != 0f) 1f else 0f)) {
                 Text(
                     vm.tabLabel(t),
                     maxLines = 1,
@@ -125,7 +133,24 @@ fun TabStrip(vm: StudyViewModel) {
                         .padding(horizontal = 2.dp)
                         .clip(RoundedCornerShape(8.dp))
                         .background(if (front) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceContainer)
-                        .combinedClickable(onClick = { vm.selectTab(i) }, onLongClick = { menuFor = i })
+                        .clickable { vm.selectTab(i) }
+                        .pointerInput(t) {
+                            var moved = 0f
+                            val step = 96.dp.toPx()
+                            detectDragGesturesAfterLongPress(
+                                onDragStart = { moved = 0f; dragX = 0f },
+                                onDrag = { change, d ->
+                                    change.consume()
+                                    moved += kotlin.math.abs(d.x)
+                                    dragX += d.x
+                                    val at = vm.tabs.indexOf(t)
+                                    if (dragX > step && at < vm.tabs.lastIndex) { vm.moveTab(at, 1); dragX -= step }
+                                    if (dragX < -step && at > 0) { vm.moveTab(at, -1); dragX += step }
+                                },
+                                onDragEnd = { if (moved < 8f) menuFor = vm.tabs.indexOf(t); dragX = 0f },
+                                onDragCancel = { dragX = 0f },
+                            )
+                        }
                         .semantics { contentDescription = "Tab ${i + 1}: ${vm.tabLabel(t)}" }
                         .widthIn(max = 220.dp)
                         .padding(horizontal = 12.dp, vertical = 7.dp),
@@ -136,7 +161,7 @@ fun TabStrip(vm: StudyViewModel) {
                     DropdownMenuItem(text = { Text("Move right") }, enabled = i < vm.tabs.lastIndex, onClick = { menuFor = null; vm.moveTab(i, 1) })
                     DropdownMenuItem(text = { Text("Close tab") }, onClick = { menuFor = null; vm.closeTab(i) })
                 }
-            }
+            } }
         }
         IconButton(onClick = { vm.newTab() }) { Icon(Icons.Filled.Add, contentDescription = "New tab") }
     }

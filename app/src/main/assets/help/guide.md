@@ -137,21 +137,22 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 ## Panels and tabs
 
 - **One or two panels.** Each tab shows one panel, or two side by side or one above the other. Drag the divider between them to resize; double-tap it to make them equal.
-- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view: Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places, Sketch pages, Compare versions, Hebrew/Greek or Word study. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
+- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view: Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places, Sketch pages, Compare versions, Hebrew/Greek, Word study or About the book (the introduction to the book you're reading). The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
 - **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
 - **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
 - **Link panels** with the link button in a Bible panel's header: two Bible panels scroll together verse by verse, even in different versions.
 - **Mark word differences** (*Settings → Reading*): when two panels show the same book in different versions, the words that differ are lightly marked.
 - **Tabs, like a browser.** *New tab* is in the panels button (the split-page icon in the toolbar). Once you have two tabs, they show in a strip under the toolbar: tap one to switch, tap **+** for another. Each tab keeps its own panels and places.
-- **Rename, move or close a tab:** hold a finger on it.
-- **Open in a new tab:** from a panel's menu. Your tabs are kept when you close the app.
+- **Rename, move or close a tab:** hold a finger on it and let go for its menu. To move it, hold and then drag it along the strip.
+- **Open in a new tab:** from a panel's menu, with *New tab* in any passage pop-over (links, cross-references), or by holding a finger on a search result. Your tabs are kept when you close the app.
 - **A sketch page beside the text:** choose *Sketch pages* in a panel's menu or the panels button (*Beside the text: Sketch pages*), then tap any page, yours or ready-made. It opens in the other panel so you can read and draw side by side. Tap another page to swap it in.
 - **Save this layout…** (panels button) keeps all your tabs, with their panels, passages and versions. Opening a saved layout replaces the tabs you have open.
 
 ## Writing on study views
 
-- The pen, highlighter and eraser work on dictionary articles, topics, the commentary, names & places and cross-references, just as on the Bible text. There are no margins: you write over the text.
-- The highlighter snaps to whole words. Undo, layers and backups include this writing too.
+- The pen, highlighter and eraser work on dictionary articles, topics, the commentaries, names & places, cross-references and book introductions, just as on the Bible text. There are no margins: you write over the text.
+- The highlighter snaps to whole words. Undo, layers and backups include this writing too, and writing sounds play as on the Bible page.
+- **The lasso** works here too: draw round some writing, then *Colour* (gives it the colour in use), *Layer* (moves it to another layer) or *Delete*. Tap *Done* when finished.
 - Your writing belongs to that article, so it's there whenever you open it again, in any panel or tab. When a panel is made wider or narrower, the writing moves with its words (a line drawn across two lines of text stretches to follow them).
 - Search results and the My notes list can't be written on, because what's under the pen changes.
 

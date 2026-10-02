@@ -101,6 +101,7 @@ fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
             }
             PaneKind.ORIGINAL -> VersePane(vm, inner) { id, version, _ -> OriginalVerse(vm, id, version, maxHeight = 4000.dp) }
             PaneKind.WORDSTUDY -> WordStudyPane(vm, inner)
+            PaneKind.INTRO -> BookIntroPane(vm, inner)
         }
     }
 }

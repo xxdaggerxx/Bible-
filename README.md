@@ -1,4 +1,4 @@
-# Ink & Word — version 1.3.0
+# Ink & Word — version 1.4.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,13 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.4
+
+- **About the book as a panel view:** the book's introduction beside the text, following the book you're reading. You can write on it.
+- **Lasso on study views:** draw round writing on an article or commentary, then *Colour*, *Layer* or *Delete*. Writing sounds now play on study views too.
+- **New tab from anywhere:** *New tab* in every passage pop-over (links, cross-references, references in notes), and holding a finger on a search result opens it in a new tab.
+- **Drag tabs** along the strip to reorder them (hold, then drag). Holding and letting go still opens the tab's menu.
 
 ## New in version 1.3
 
@@ -410,7 +417,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Strong's numbers come from the tagged texts at eBible.org. In the KJV some small words ("the", "unto") have none, so they can't be tapped for a word study.
 - Matthew Henry's Concise Commentary skips some chapters (mostly lists and genealogies).
 - John Gill's Exposition isn't included: there's no clean public-domain digital edition to build from. Calvin's Commentaries and Spurgeon's Treasury of David were added instead. Barnes' Notes here cover the New Testament only.
-- Spurgeon's Treasury of David has one long note per psalm, and Matthew Henry comments on paragraphs, so linking moves them a psalm or a paragraph at a time. Writing on commentaries has no lasso yet.
+- Spurgeon's Treasury of David has one long note per psalm, and Matthew Henry comments on paragraphs, so linking moves them a psalm or a paragraph at a time.
 - Robertson's Word Pictures is marked by CrossWire as free for non-commercial use (its last two volumes' copyright has since expired); fine for this personal app.
 - Words of Jesus in the BSB are inferred from the WEB's markings and the BSB's quotation marks, so a few dialogue verses may be coloured slightly differently from a printed red-letter BSB.
 - The Hebrew and Greek view uses the Hebrew text (Leningrad Codex) and the amalgamated Greek editions; it doesn't follow an imported Bible's wording.
@@ -420,9 +427,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
 - The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
 - Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
-- Writing on study views has no lasso, and writing sounds and fast ink don't apply there yet. A line drawn across two lines of an article stretches to follow its words when the panel's width changes.
-- Word studies and book introductions still open as windows rather than panel views, and the Hebrew/Greek and compare-versions views stay in the verse window.
-- Reordering tabs is done with *Move left* / *Move right* (hold a finger on a tab), not by dragging.
+- On study views the lasso can recolour, move to a layer or delete writing, but not drag it to a new place; fast ink isn't used there. A line drawn across two lines of an article stretches to follow its words when the panel's width changes.
 
 ## Next milestones
 

@@ -3,6 +3,8 @@ package com.biblestudy.app.ui
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.text.BasicText
+import androidx.compose.foundation.layout.offset
+import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -52,6 +54,8 @@ object StudyInk {
     const val COMMENTARY = -3
     const val NAME = -4
     const val CROSSREF = -5
+    /** A book introduction: chapter is the book, verse the part (background, purpose and so on). */
+    const val INTRO = -6
 
     /** The third value of a highlight's single point: marks it as a character range. */
     const val RANGE = -7777f
@@ -108,11 +112,16 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
     var liveTool by remember { mutableStateOf<Tool?>(null) }
     val color = style.color.takeIf { it != Color.Unspecified } ?: androidx.compose.material3.MaterialTheme.colorScheme.onSurface
     val strokes = vm.marginStrokesFor(doc.book, doc.chapter)
+    // Writing picked with the lasso: its ids, and where to show the bar of actions.
+    var picked by remember { mutableStateOf<Set<Long>>(emptySet()) }
+    var pickedTop by remember { mutableStateOf(Offset.Zero) }
+    var pickedBottom by remember { mutableStateOf(0f) }
+    androidx.compose.foundation.layout.Box(modifier) {
     BasicText(
         text,
         style = style.copy(color = color),
         onTextLayout = { layout = it },
-        modifier = modifier
+        modifier = Modifier
             .testTag("inkable")
             .pointerInput(doc) {
                 awaitEachGesture {
@@ -121,12 +130,14 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
                     if (vm.readMode || !(pen || vm.fingerDraw)) return@awaitEachGesture
                     val tool = when {
                         down.type == PointerType.Eraser || (pen && StylusState.sideButtonHeld && vm.sideButton.tool == Tool.ERASER) -> Tool.ERASER
-                        vm.tool == Tool.PEN || vm.tool == Tool.HIGHLIGHTER || vm.tool == Tool.ERASER -> vm.tool
+                        pen && StylusState.sideButtonHeld && vm.sideButton.tool == Tool.LASSO -> Tool.LASSO
+                        vm.tool == Tool.PEN || vm.tool == Tool.HIGHLIGHTER || vm.tool == Tool.ERASER || vm.tool == Tool.LASSO -> vm.tool
                         else -> return@awaitEachGesture
                     }
+                    picked = emptySet()
                     val l = layout ?: return@awaitEachGesture
                     val layer = vm.activeLayer()
-                    if (tool != Tool.ERASER && (layer == null || layer.locked)) {
+                    if (tool != Tool.ERASER && tool != Tool.LASSO && (layer == null || layer.locked)) {
                         layer?.let { vm.message = "Layer “${it.name}” is locked." }
                         return@awaitEachGesture
                     }
@@ -144,6 +155,14 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
                         }
                     }
                     if (tool == Tool.ERASER) eraseAt(down.position)
+                    // Writing sounds (INK-15), as on the Bible page.
+                    val texture = when (tool) {
+                        Tool.PEN -> WritingSound.Texture.PEN
+                        Tool.HIGHLIGHTER -> WritingSound.Texture.HIGHLIGHTER
+                        Tool.ERASER -> WritingSound.Texture.ERASER
+                        else -> null
+                    }
+                    if (texture != null) vm.sound.start(texture, down.position.x, down.position.y, down.uptimeMillis)
                     var moved = false
                     while (true) {
                         val ev = awaitPointerEvent(PointerEventPass.Initial)
@@ -153,11 +172,28 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
                         moved = true
                         c.consume()
                         if (tool == Tool.ERASER) eraseAt(c.position)
+                        if (texture != null) vm.sound.move(c.position.x, c.position.y, c.pressure, c.uptimeMillis, density)
                         if (live.isEmpty() || (c.position - live.last()).getDistance() >= 1.5f) live.add(c.position)
                     }
                     liveTool = null
+                    vm.sound.stop()
                     val points = live.toList()
                     live.clear()
+                    if (tool == Tool.LASSO) {
+                        // Pick the writing inside the loop (most of a stroke, or a highlight's first word).
+                        if (points.size < 3) return@awaitEachGesture
+                        val sel = strokes.filter { st ->
+                            if (st.verse != doc.verse) return@filter false
+                            val at = if (StudyInk.isRange(st)) listOf(l.getBoundingBox(st.points[0].toInt().coerceIn(0, (l.layoutInput.text.length - 1).coerceAtLeast(0))).center)
+                            else l.drawnPoints(st)
+                            at.isNotEmpty() && at.count { inside(it, points) } * 2 >= at.size
+                        }
+                        picked = sel.mapTo(HashSet()) { it.id }
+                        pickedTop = Offset(points.minOf { it.x }, points.minOf { it.y })
+                        pickedBottom = points.maxOf { it.y }
+                        if (sel.isEmpty()) vm.message = "Nothing written inside the loop."
+                        return@awaitEachGesture
+                    }
                     if (tool == Tool.ERASER) {
                         if (erased.isNotEmpty()) vm.record(Edit(emptyList(), erased))
                         return@awaitEachGesture
@@ -202,12 +238,98 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
                     val alpha = (if (s.highlighter) 0.4f else 1f) * layer.opacity
                     drawInk(l.drawnPoints(s), Color(s.color).copy(alpha = alpha), s.width * density / 2f)
                 }
+                // The picked writing is outlined.
+                if (l != null && picked.isNotEmpty()) for (st in mine) {
+                    if (st.id !in picked) continue
+                    val pts = if (StudyInk.isRange(st)) {
+                        val n = l.layoutInput.text.length
+                        val a = st.points[0].toInt().coerceIn(0, n); val b = st.points[1].toInt().coerceIn(a, n)
+                        l.getPathForRange(a, b).getBounds().let { listOf(it.topLeft, it.bottomRight) }
+                    } else l.drawnPoints(st)
+                    if (pts.isEmpty()) continue
+                    val pad = 6f
+                    drawRect(
+                        Color(0xFF1E88E5), Offset(pts.minOf { it.x } - pad, pts.minOf { it.y } - pad),
+                        androidx.compose.ui.geometry.Size(pts.maxOf { it.x } - pts.minOf { it.x } + 2 * pad, pts.maxOf { it.y } - pts.minOf { it.y } + 2 * pad),
+                        style = Stroke(1.5f, pathEffect = androidx.compose.ui.graphics.PathEffect.dashPathEffect(floatArrayOf(8f, 6f))),
+                    )
+                }
+                if (liveTool == Tool.LASSO) {
+                    drawInk(live.toList() + live.take(1), Color(0xFF1E88E5), 2f)
+                }
                 if (liveTool == Tool.PEN || liveTool == Tool.HIGHLIGHTER) {
                     val hl = liveTool == Tool.HIGHLIGHTER
                     drawInk(live.toList(), Color(if (hl) vm.highlightColor else vm.penColor).copy(alpha = if (hl) 0.4f else 1f), vm.currentWidth(hl) * density / 2f)
                 }
             },
     )
+    if (picked.isNotEmpty()) {
+        // Above the loop, or below it when there's no room above.
+        StudyLassoBar(vm, strokes.filter { it.id in picked }, Modifier.offset {
+            val above = pickedTop.y - 56 * density
+            androidx.compose.ui.unit.IntOffset(pickedTop.x.toInt(), (if (above >= 0) above else pickedBottom + 8 * density).toInt())
+        }) {
+            picked = it
+        }
+    }
+    }
+}
+
+/**
+ * The actions for writing picked with the lasso on a study view (INK-16): give it the colour in
+ * use, move it to another layer, or delete it. Each is one undoable step.
+ */
+@Composable
+private fun StudyLassoBar(vm: StudyViewModel, sel: List<InkStroke>, modifier: Modifier, onPicked: (Set<Long>) -> Unit) {
+    fun swap(after: List<InkStroke>) {
+        sel.forEach { vm.removeItem(it) }
+        after.forEach { vm.addItem(it) }
+        vm.record(Edit(after, sel))
+        onPicked(after.mapTo(HashSet()) { it.id })
+    }
+    androidx.compose.material3.Surface(
+        modifier.testTag("studyLassoBar"),
+        shape = androidx.compose.foundation.shape.RoundedCornerShape(10.dp),
+        tonalElevation = 6.dp,
+        shadowElevation = 6.dp,
+    ) {
+        androidx.compose.foundation.layout.Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+            androidx.compose.material3.TextButton(onClick = {
+                swap(sel.map { it.withColor(if (it.highlighter) vm.highlightColor else vm.penColor) })
+            }) { androidx.compose.material3.Text("Colour") }
+            var layers by remember { mutableStateOf(false) }
+            androidx.compose.foundation.layout.Box {
+                androidx.compose.material3.TextButton(onClick = { layers = true }) { androidx.compose.material3.Text("Layer") }
+                androidx.compose.material3.DropdownMenu(expanded = layers, onDismissRequest = { layers = false }) {
+                    for (layer in vm.layers) {
+                        androidx.compose.material3.DropdownMenuItem(
+                            text = { androidx.compose.material3.Text(layer.name) },
+                            enabled = !layer.locked,
+                            onClick = { layers = false; swap(sel.map { it.withLayer(layer.id) }) },
+                        )
+                    }
+                }
+            }
+            androidx.compose.material3.TextButton(onClick = {
+                sel.forEach { vm.removeItem(it) }
+                vm.record(Edit(emptyList(), sel))
+                onPicked(emptySet())
+            }) { androidx.compose.material3.Text("Delete") }
+            androidx.compose.material3.TextButton(onClick = { onPicked(emptySet()) }) { androidx.compose.material3.Text("Done") }
+        }
+    }
+}
+
+/** Whether [p] is inside the loop [poly] (even-odd rule). */
+private fun inside(p: Offset, poly: List<Offset>): Boolean {
+    var c = false
+    var j = poly.lastIndex
+    for (i in poly.indices) {
+        val a = poly[i]; val b = poly[j]
+        if ((a.y > p.y) != (b.y > p.y) && p.x < (b.x - a.x) * (p.y - a.y) / (b.y - a.y) + a.x) c = !c
+        j = i
+    }
+    return c
 }
 
 private fun DrawScope.drawInk(points: List<Offset>, color: Color, width: Float) {
