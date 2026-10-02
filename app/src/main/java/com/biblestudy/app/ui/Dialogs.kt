@@ -1298,7 +1298,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
     AlertDialog(
         onDismissRequest = onDismiss,
         confirmButton = { TextButton(onClick = onDismiss) { Text("Close") } },
-        title = { Text("Bible Study \u2014 version ${BuildConfig.VERSION_NAME}") },
+        title = { Text("Ink & Word \u2014 version ${BuildConfig.VERSION_NAME}") },
         text = {
             Column(Modifier.verticalScroll(rememberScrollState())) {
                 Text("Works completely offline. Your notes stay on this tablet unless you make a backup.")

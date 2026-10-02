@@ -1,6 +1,6 @@
-# Bible Study — version 1.2.0
+# Ink & Word — version 1.2.0
 
-A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
+**Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
 ## Install on your tablet (about 30 minutes the first time)
 
@@ -75,7 +75,14 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - Two Bible panels can still be linked to scroll together.
 - **Write on study views.** The pen, highlighter and eraser work on dictionary articles, topics, the commentary, names & places and cross-references, over the text (no margins). Writing belongs to the article, comes back wherever it's opened, and moves with its words when a panel is resized. The highlighter snaps to whole words. Undo, layers and backups include it.
 - **Saved layouts keep every tab.** Opening one replaces your tabs. Layouts saved before 1.2 open as tabs of up to two panels.
+- **Your painted icon:** the open Bible with a quill now on a blue-to-gold background, replacing the drawn icon from 1.1.3. It fits round, square and rounded launcher shapes.
 - **Two panels per tab at most.** If you had three panels, or two panels and the study pane, the extra one moves to a second tab when you update, so nothing is lost.
+
+## New in version 1.1.3
+
+- **A new name: Ink & Word.** The app was called *Bible Study*. The new name shows on the home screen, in *Settings → About* and in the Credits window, and exported pages now say "Exported from Ink & Word". Backups you save yourself are named `ink-and-word-backup-…zip`.
+- **A new icon:** an open Bible with a quill writing on its right page, in cream and gold on deep ink blue.
+- Nothing else changes. It installs over 1.1.2 and keeps your notes, and old backups (including automatic ones) still restore.
 
 ## New in version 1.1.2
 
@@ -389,6 +396,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 
 ## Known limits
 
+- Behind the scenes the app keeps its old internal name (`com.biblestudy.app`, signing key alias `biblestudy`, automatic backups named `bible-study-auto-…`). Changing those would stop updates installing over your copy, so only the name you see has changed.
 - NIV and NLT are waiting on licensing (see above). Cross-references come from the KJV numbering, which the BSB and WEB share.
 - Rotating a lasso selection turns ink freely, but pictures only turn in quarter turns and text boxes stay upright.
 - Strong's numbers come from the tagged texts at eBible.org. In the KJV some small words ("the", "unto") have none, so they can't be tapped for a word study.

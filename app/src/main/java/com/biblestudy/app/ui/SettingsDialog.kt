@@ -213,7 +213,7 @@ fun SettingsDialog(
 
                 Group("About")
                 Matches("About", "version", "credits", "licences") {
-                Text("Bible Study, version ${BuildConfig.VERSION_NAME}. Works completely offline.")
+                Text("Ink & Word, version ${BuildConfig.VERSION_NAME}. Works completely offline.")
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
                     TextButton(onClick = { versions = true }) { Text("About these versions") }
                     TextButton(onClick = onAbout) { Text("Credits") }
