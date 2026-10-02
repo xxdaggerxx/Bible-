@@ -1399,7 +1399,7 @@ class FeatureTest {
         compose.onNodeWithContentDescription("Panel view").performClick()
         compose.onNodeWithText("Topics").performClick()
         waitForLoaded()
-        assertEquals(listOf<Slot>(Slot.Study(PaneKind.DICTIONARY), Slot.Study(PaneKind.TOPICS)), vm.tab.slots())
+        assertEquals(listOf<Slot>(Slot.Study(PaneKind.DICTIONARY, 0), Slot.Study(PaneKind.TOPICS, 1)), vm.tab.slots())
         assertEquals(43, vm.studyPanel().book)
         // ...and back to the Bible.
         compose.onAllNodesWithContentDescription("Choose what the pane shows")[1].performClick()
@@ -1518,6 +1518,95 @@ class FeatureTest {
         // Study writing never shows up as a Bible chapter's notes.
         assertTrue(vm.user.markerRows("KJV").none { it.book < 1 })
         compose.runOnUiThread { vm.fingerDraw = false; vm.tool = Tool.PEN }
+    }
+
+    @Test
+    fun commentariesCanBeChosenExplainedAndLinkedBothWays() {
+        compose.runOnUiThread { vm.setCommentary(0, com.biblestudy.app.data.Commentaries.CONCISE); vm.sidePane = PaneKind.COMMENTARY }
+        waitForLoaded()
+        // Choose Jamieson-Fausset-Brown from the commentary's menu (STD-17); it's unpacked the first time.
+        compose.onNodeWithContentDescription("Choose a commentary").performClick()
+        snap("140-commentary-menu")
+        compose.onNodeWithText("Jamieson-Fausset-Brown").performClick()
+        runCatching { compose.waitUntil(60_000) { compose.onAllNodesWithText("Verse 3").fetchSemanticsNodes().isNotEmpty() } }
+            .onFailure { snap("141-jfb-failed"); throw AssertionError("message=${vm.message} commentary=${vm.commentaryAt(0)}", it) }
+        assertEquals("jfb", vm.commentaryAt(0))
+        assertEquals("jfb", vm.lastCommentary)
+        snap("141-jfb")
+        // About this commentary (STD-19).
+        compose.onNodeWithContentDescription("About this commentary").performClick()
+        compose.onNodeWithText("Jamieson, Fausset and Brown Commentary").assertExists()
+        assertTrue(compose.onAllNodesWithText("Robert Jamieson", substring = true).fetchSemanticsNodes().isNotEmpty())
+        snap("142-commentary-about")
+        compose.onNodeWithText("Close").performClick()
+
+        // Linked (STD-18): the Bible at verse 16 brings the commentary to its note on 14-16...
+        compose.runOnUiThread { vm.goTo(0, 43, 3, 16, remember = false) }
+        waitForLoaded()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Verses 14\u201316").fetchSemanticsNodes().any { n ->
+            n.boundsInRoot.top < 600f } }
+        // Following the Bible never moves the Bible itself.
+        assertTrue("Bible at ${vm.panels[0].topVerse}", vm.panels[0].topVerse >= 16)
+        // Scrolling the commentary by hand past the long note on 14-16 brings the Bible along.
+        repeat(6) {
+            compose.onNodeWithTag("commentary").performTouchInput { swipeUp(startY = bottom - 10f, endY = top + 10f, durationMillis = 600) }
+            compose.waitForIdle()
+        }
+        waitForLoaded()
+        assertTrue("Bible at ${vm.panels[0].topVerse}", vm.panels[0].topVerse > 16)
+        snap("144-commentary-leads")
+        // Unlinked, the two scroll on their own.
+        compose.onNodeWithContentDescription("Unlink from the Bible").performClick()
+        assertFalse(vm.commentaryLinked(0))
+        val before = vm.panels[0].topVerse
+        compose.onNodeWithTag("commentary").performTouchInput { swipeDown(startY = top + 10f, endY = bottom - 10f, durationMillis = 600) }
+        compose.waitForIdle()
+        assertEquals(before, vm.panels[0].topVerse)
+
+        // Two commentaries side by side in one tab, each with its own choice.
+        compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onAllNodesWithText("Commentary").onLast().performScrollTo().performClick()
+        waitForLoaded()
+        assertEquals(listOf(PaneKind.COMMENTARY, PaneKind.COMMENTARY), vm.tab.studies.toList())
+        // The left panel (the Bible's) became the first commentary; JFB is now the second.
+        assertEquals("jfb", vm.commentaryAt(1))
+        compose.runOnUiThread { vm.setCommentary(0, "wesley") }
+        compose.waitUntil(60_000) { compose.onAllNodesWithText("Wesley's Notes").fetchSemanticsNodes().isNotEmpty() }
+        assertEquals("jfb", vm.commentaryAt(1))
+        snap("143-two-commentaries")
+        compose.runOnUiThread { vm.sidePane = null }
+    }
+
+    @Test
+    fun compareHebrewGreekAndWordStudyAsPanelViews() {
+        // Compare versions beside the text, on the verse tapped.
+        compose.runOnUiThread { vm.paneVerse = VerseTarget(43, 3, 16); vm.sidePane = PaneKind.COMPARE }
+        waitForLoaded()
+        compose.onNodeWithTag("compare_BSB", useUnmergedTree = true).assertExists()
+        compose.onNodeWithText("John 3:16 (KJV)").assertExists()
+        snap("145-compare-panel")
+        // The arrows move through the chapter.
+        compose.onNodeWithContentDescription("Next verse").performClick()
+        compose.onNodeWithText("John 3:17 (KJV)").assertExists()
+
+        // Greek word by word, and a word study in the panel beside it.
+        compose.runOnUiThread { vm.sidePane = PaneKind.ORIGINAL }
+        compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithText("Word study").performScrollTo().performClick()
+        waitForLoaded()
+        assertEquals(listOf(PaneKind.WORDSTUDY, PaneKind.ORIGINAL), vm.tab.studies.toList())
+        compose.onNodeWithText("Tap a word in the Bible", substring = true).assertExists()
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("originalVerse").fetchSemanticsNodes().isNotEmpty() }
+        val firstWord = compose.onAllNodesWithTag("originalVerse").onFirst()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Greek. Tap a word", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onAllNodes(androidx.compose.ui.test.hasClickAction() and androidx.compose.ui.test.hasAnyAncestor(androidx.compose.ui.test.hasTestTag("originalVerse")))[1].performClick()
+        compose.onNodeWithText("Word study").let { compose.onAllNodesWithText("Word study").onLast().performClick() }
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("lemma").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(vm.studyWord != null)
+        assertTrue(vm.wordStudy == null) // in the panel, not a window
+        snap("146-greek-and-word-study")
+        firstWord.assertExists()
+        compose.runOnUiThread { vm.sidePane = null }
     }
 
     @Test
@@ -1661,9 +1750,9 @@ class FeatureTest {
         compose.runOnUiThread { vm.topicOpen = null }
 
         // Matthew Henry on the chapter.
-        compose.runOnUiThread { vm.sidePane = PaneKind.COMMENTARY }
+        compose.runOnUiThread { vm.setCommentary(0, com.biblestudy.app.data.Commentaries.CONCISE); vm.sidePane = PaneKind.COMMENTARY }
         compose.waitUntil(10_000) { compose.onAllNodesWithText("Nicodemus was afraid", substring = true).fetchSemanticsNodes().isNotEmpty() }
-        compose.onNodeWithText("Matthew Henry \u00b7 John 3").assertExists()
+        compose.onNodeWithText("Matthew Henry (Concise)").assertExists()
         snap("89-commentary")
 
         // Cross-references end with topics, parallel accounts and related passages.

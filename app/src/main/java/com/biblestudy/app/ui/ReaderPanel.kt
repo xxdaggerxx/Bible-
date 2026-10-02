@@ -286,6 +286,11 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     LaunchedEffect(linkPos) {
         if (linkPos != null && vm.linked) ctl.follow(linkPos)
     }
+    // A linked commentary scrolled by hand (STD-18): the panel in use follows it.
+    val commentaryPos = vm.commentaryPos
+    LaunchedEffect(commentaryPos) {
+        if (commentaryPos != null && vm.activePanel.coerceIn(0, vm.panels.lastIndex) == index) ctl.follow(commentaryPos)
+    }
     LaunchedEffect(vm.linkPanels, vm.panels.size) {
         if (vm.linked && vm.activePanel == index) ctl.announceScroll()
     }

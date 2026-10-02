@@ -183,6 +183,7 @@ enum class PaneKind(val label: String) {
     SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
     DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), NAMES("Names & places"),
     SKETCHES("Sketch pages"),
+    COMPARE("Compare versions"), ORIGINAL("Hebrew/Greek"), WORDSTUDY("Word study"),
 }
 
 /** A spot to return to with Back / Forward. */
@@ -659,7 +660,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             linked = prefs.getBoolean("linkPanels", false) && panels.size == 2
             split = prefs.getFloat("split", 0.5f).coerceIn(TabState.SPLIT_MIN, 1f - TabState.SPLIT_MIN)
             if (pane != null && old.size == 1) {
-                studies.add(pane)
+                addStudy(pane)
                 split = (1f - prefs.getFloat("paneFraction", 0.32f)).coerceIn(TabState.SPLIT_MIN, 1f - TabState.SPLIT_MIN)
             }
         }
@@ -668,7 +669,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (rest.isNotEmpty() || (pane != null && old.size > 1)) {
             out.add(TabState().apply {
                 panels.add(rest.firstOrNull() ?: PanelState(old[0].book, old[0].chapter).apply { version = old[0].version })
-                if (pane != null && old.size > 1) studies.add(pane)
+                if (pane != null && old.size > 1) addStudy(pane)
             })
         }
         return out
@@ -732,17 +733,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val t = tab
         if (kind in t.studies) return
         when {
-            t.studies.isNotEmpty() -> t.studies[0] = kind
+            t.studies.isNotEmpty() -> t.setStudyAt(0, kind)
             t.panels.size >= 2 -> {
                 // The second panel makes way, unless the first is a sketch page beside Bible text.
                 val other = if (Sketch.isSketch(t.panels[0].book) && !Sketch.isSketch(t.panels[1].book)) 0 else 1
                 t.panels.removeAt(other)
                 t.linked = false
                 t.activePanel = 0
-                t.studies.add(kind)
+                t.addStudy(kind)
                 t.studyFirst = other == 0
             }
-            else -> { t.studies.add(kind); t.studyFirst = false }
+            else -> { t.addStudy(kind); t.studyFirst = false }
         }
         t.normalize()
     }
@@ -750,7 +751,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** Closes study view [kind] in the tab in front. */
     fun closeStudy(kind: PaneKind) {
         val t = tab
-        t.studies.remove(kind)
+        t.studies.indexOf(kind).takeIf { it >= 0 }?.let { t.removeStudyAt(it) }
         if (t.studies.isEmpty()) {
             t.bibleHidden = false
             t.pinned = null
@@ -774,29 +775,29 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         when (slot) {
             is Slot.Bible -> {
                 if (view == null) return
-                if (view in t.studies) { message = "${view.label} is already open in this tab."; return }
+                if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
                 if (t.panels.size >= 2) {
                     t.panels.removeAt(slot.index)
                     t.linked = false
                     t.activePanel = 0
-                    t.studies.add(view)
+                    t.addStudy(view)
                     t.studyFirst = slot.index == 0
                 } else {
                     // The tab's only Bible panel: it stays, out of sight, keeping the passage.
-                    if (t.studies.isEmpty()) t.studies.add(view)
-                    else if (t.studyFirst) t.studies.add(view) else t.studies.add(0, view)
+                    if (t.studies.isEmpty()) t.addStudy(view)
+                    else if (t.studyFirst) t.addStudy(view) else t.addStudy(view, at = 0)
                     t.bibleHidden = true
                 }
             }
             is Slot.Study -> {
-                val i = t.studies.indexOf(slot.kind)
+                val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
                 if (i < 0) return
                 if (view != null) {
-                    if (view in t.studies) { message = "${view.label} is already open in this tab."; return }
-                    t.studies[i] = view
+                    if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
+                    t.setStudyAt(i, view)
                 } else {
                     // Back to a Bible panel at the passage the study view was working with.
-                    t.studies.removeAt(i)
+                    t.removeStudyAt(i)
                     if (t.bibleHidden) {
                         t.bibleHidden = false
                         t.studyFirst = i == 1
@@ -816,7 +817,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         when (slot) {
             is Slot.Bible -> closePanel(slot.index)
             is Slot.Study -> {
-                if (tab.shown == 1 && tabs.size > 1) closeTab(activeTab) else if (tab.shown > 1) closeStudy(slot.kind)
+                if (tab.shown == 1 && tabs.size > 1) closeTab(activeTab)
+                else if (tab.shown > 1) {
+                    val t = tab
+                    val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
+                    if (i >= 0) t.removeStudyAt(i)
+                    if (t.studies.isEmpty()) { t.bibleHidden = false; t.pinned = null }
+                    t.normalize()
+                }
             }
         }
     }
@@ -869,9 +877,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 newTab(p.book, p.chapter, p.topVerse, p.version)
             }
             is Slot.Study -> {
+                val from = tab
                 val p = studyPanel()
                 newTab(p.book, p.chapter, p.topVerse, p.version)
-                tab.studies.add(slot.kind)
+                tab.addStudy(slot.kind, commentary = from.commentaries.getOrElse(slot.pos) { "" })
                 tab.bibleHidden = true
                 tab.normalize()
             }
@@ -947,6 +956,18 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun openVerse(book: Int, chapter: Int, verse: Int, word: Int = -1) {
         verseSheet = VerseTarget(book, chapter, verse, word)
         paneVerse = VerseTarget(book, chapter, verse)
+        // A tapped word goes to the Word study panel too (SPLIT-7).
+        if (word >= 0) viewModelScope.launch {
+            val version = activeVersion
+            val id = VerseId.of(book, chapter, verse)
+            val w = withContext(Dispatchers.IO) {
+                val strong = study.strongs(version, id).getOrNull(word)
+                val text = text(version).verseText(id) ?: ""
+                val range = com.biblestudy.app.data.StudyRepository.words(text).getOrNull(word)
+                if (strong != null && range != null) WordStudy(strong, version, text.substring(range), id) else null
+            }
+            if (w != null) studyWord = w
+        }
     }
 
     // ---------- Bibles: version manager and import (BIB-4, BIB-5) ----------
@@ -1365,6 +1386,13 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** The word study window, when open (STD-3). */
     var wordStudy by mutableStateOf<WordStudy?>(null)
+    /** The word shown in a Word study panel (SPLIT-7): the last one tapped or chosen. */
+    var studyWord by mutableStateOf<WordStudy?>(null)
+
+    /** Opens a word study: in the tab's Word study panel if it has one, else in its own window. */
+    fun openWordStudy(w: WordStudy) {
+        if (PaneKind.WORDSTUDY in tab.studies) studyWord = w else wordStudy = w
+    }
     /** The dictionary article and topic open in the study pane, if any. */
     var dictionaryOpen by mutableStateOf<Long?>(null)
     var topicOpen by mutableStateOf<Long?>(null)
@@ -1393,6 +1421,54 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun openTopic(id: Long) {
         topicOpen = id
         sidePane = PaneKind.TOPICS
+    }
+
+    // ---------- commentaries (STD-17 to STD-19) ----------
+
+    /** The commentary a new commentary panel opens with: the last one chosen. */
+    var lastCommentary by mutableStateOf(prefs.getString("commentary", null) ?: com.biblestudy.app.data.Commentaries.CONCISE)
+        private set
+
+    /** The commentary shown by study view [pos] of the tab in front. */
+    fun commentaryAt(pos: Int): String = tab.commentaries.getOrNull(pos)?.ifEmpty { null } ?: lastCommentary
+
+    fun setCommentary(pos: Int, id: String) {
+        val t = tab
+        while (t.commentaries.size <= pos) t.commentaries.add("")
+        t.commentaries[pos] = id
+        lastCommentary = id
+        prefs.edit { putString("commentary", id) }
+    }
+
+    /** Whether commentary [pos] scrolls together with the Bible panel (STD-18); on unless switched off. */
+    fun commentaryLinked(pos: Int): Boolean = tab.commentaryLinked.getOrNull(pos) ?: true
+
+    fun toggleCommentaryLink(pos: Int) {
+        val t = tab
+        while (t.commentaryLinked.size <= pos) t.commentaryLinked.add(true)
+        t.commentaryLinked[pos] = !t.commentaryLinked[pos]
+    }
+
+    /** A commentary's notes on one chapter (unpacking it the first time). */
+    suspend fun loadCommentary(id: String, book: Int, chapter: Int): List<com.biblestudy.app.data.CommentarySection> =
+        withContext(Dispatchers.IO) {
+            if (id == com.biblestudy.app.data.Commentaries.CONCISE) study.commentary(book, chapter)
+            else runCatching { com.biblestudy.app.data.Commentaries.chapter(getApplication(), id, book, chapter) }.getOrElse { e ->
+                android.util.Log.w("Commentaries", "Couldn't open $id", e)
+                withContext(Dispatchers.Main) { message = "Couldn't open ${com.biblestudy.app.data.Commentaries.info(id).short}: ${e.message}" }
+                emptyList()
+            }
+        }
+
+    /** The "book" study writing on commentary [id] is kept under (INK-16): one per commentary. */
+    fun commentaryInkBook(id: String): Int = -100 - com.biblestudy.app.data.Commentaries.all.indexOfFirst { it.id == id }.coerceAtLeast(0)
+
+    /** Where a linked commentary was scrolled to by hand: the Bible panel follows it (STD-18). */
+    var commentaryPos by mutableStateOf<ScrollPos?>(null)
+        private set
+
+    fun followCommentary(book: Int, chapter: Int, verse: Int) {
+        commentaryPos = ScrollPos(-1, book, chapter, verse, 0f)
     }
 
     /** Easton's articles for the names and words of a chapter, in the order they first appear (STD-5). */

@@ -17,6 +17,11 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.LinkOff
+import androidx.compose.material.icons.filled.Link
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -29,6 +34,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
@@ -38,6 +44,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
@@ -140,7 +148,7 @@ fun StudyableVerse(vm: StudyViewModel, verseId: Int, version: String, text: Stri
             for ((i, r) in ranges.withIndex()) {
                 val s = strongs.getOrNull(i) ?: continue
                 val word = text.substring(r)
-                addLink(LinkAnnotation.Clickable("w$i", style) { vm.wordStudy = WordStudy(s, version, word, verseId) }, r.first, r.last + 1)
+                addLink(LinkAnnotation.Clickable("w$i", style) { vm.openWordStudy(WordStudy(s, version, word, verseId)) }, r.first, r.last + 1)
             }
         }
     }
@@ -160,6 +168,49 @@ fun StudyableVerse(vm: StudyViewModel, verseId: Int, version: String, text: Stri
  */
 @Composable
 fun WordStudyDialog(vm: StudyViewModel, start: WordStudy, onDismiss: () -> Unit) {
+    BigDialog(onDismiss) {
+        Column(Modifier.testTag("wordStudy")) {
+            WordStudyBody(vm, start, onDismiss) { title, back ->
+                DialogTitle(title, onDismiss, leading = back?.let { b ->
+                    { IconButton(onClick = b) { Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back") } }
+                })
+            }
+        }
+    }
+}
+
+/** A word study (STD-3, STD-8) in a panel beside the text (SPLIT-7): the word last tapped. */
+@Composable
+fun WordStudyPane(vm: StudyViewModel, modifier: Modifier) {
+    val w = vm.studyWord
+    Column(modifier.testTag("wordStudyPane")) {
+        if (w == null) {
+            Text(
+                "Tap a word in the Bible, or a Hebrew or Greek word, and its word study shows here.",
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.padding(top = 12.dp),
+            )
+            return@Column
+        }
+        key(w) {
+            WordStudyBody(vm, w, onDismiss = {}) { title, back ->
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    if (back != null) IconButton(onClick = back) { Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back") }
+                    Text(title, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(vertical = 8.dp))
+                }
+            }
+        }
+    }
+}
+
+/** The word study itself, in a window or a panel; [header] shows its title and a Back button. */
+@Composable
+private fun androidx.compose.foundation.layout.ColumnScope.WordStudyBody(
+    vm: StudyViewModel,
+    start: WordStudy,
+    onDismiss: () -> Unit,
+    header: @Composable (String, (() -> Unit)?) -> Unit,
+) {
     // Following "from G25" links keeps a trail to come back along.
     val trail = remember(start) { mutableStateListOf(start.strong) }
     val strong = trail.last()
@@ -179,14 +230,11 @@ fun WordStudyDialog(vm: StudyViewModel, start: WordStudy, onDismiss: () -> Unit)
     val person by produceState<com.biblestudy.app.data.NameEntry?>(null, strong, start.verseId) {
         value = withContext(Dispatchers.IO) { vm.study.nameForStrong(strong, start.verseId) }
     }
-    BigDialog(onDismiss) {
-        Column(Modifier.testTag("wordStudy")) {
-            DialogTitle(
+    run {
+        run {
+            header(
                 "Word study" + (start.word?.takeIf { trail.size == 1 }?.let { ": “$it”" } ?: ""),
-                onDismiss,
-                leading = if (trail.size > 1) {
-                    { IconButton(onClick = { trail.removeAt(trail.lastIndex) }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back") } }
-                } else null,
+                if (trail.size > 1) { { trail.removeAt(trail.lastIndex) } } else null,
             )
             val e = entry
             if (e == null) {
@@ -397,50 +445,172 @@ fun TopicsPane(vm: StudyViewModel, modifier: Modifier) {
     )
 }
 
-/** Matthew Henry's Concise Commentary on the chapter being read (STD-7), at the verse in view. */
+/** One line of a commentary panel: a section's heading, or one of its paragraphs. */
+private data class CommentaryLine(val section: Int, val para: Int, val text: String)
+
+/**
+ * A commentary on the chapter being read (STD-7, STD-17): the one chosen for this panel, with its
+ * introduction (STD-19) and, when linked, scrolling together with the Bible panel both ways (STD-18).
+ */
 @Composable
-fun CommentaryPane(vm: StudyViewModel, modifier: Modifier) {
+fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
     val panel = vm.studyPanel()
-    val sections by produceState<List<CommentarySection>?>(null, panel.book, panel.chapter) {
-        value = withContext(Dispatchers.IO) { vm.study.commentary(panel.book, panel.chapter) }
+    val id = vm.commentaryAt(pos)
+    val info = com.biblestudy.app.data.Commentaries.info(id)
+    val canLink = vm.tab.pinned == null && !vm.tab.bibleHidden
+    val linked = vm.commentaryLinked(pos) && canLink
+    val sections by produceState<List<CommentarySection>?>(null, id, panel.book, panel.chapter) {
+        value = null
+        value = vm.loadCommentary(id, panel.book, panel.chapter)
     }
     var shown by remember { mutableStateOf<Passage?>(null) }
     PassagePopupHost(vm, shown, panel.version, onDismiss = { shown = null })
+    var about by remember { mutableStateOf(false) }
     val state = rememberLazyListState()
+    val list = sections
+    // Paragraphs are separate lines, so long notes (Matthew Henry, Spurgeon) stay quick to show.
+    val lines = remember(list) {
+        list.orEmpty().flatMapIndexed { si, s ->
+            listOf(CommentaryLine(si, -1, "")) + s.body.split("\n\n").filter { it.isNotBlank() }.mapIndexed { pi, t -> CommentaryLine(si, pi, t) }
+        }
+    }
+    val firstLine = remember(lines) { lines.withIndex().filter { it.value.para == -1 }.associate { it.value.section to it.index } }
     val t = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
     val verse = t?.verse ?: panel.topVerse
-    val list = sections
-    // Keep the section about the verse being read in view.
-    LaunchedEffect(list, verse) {
-        val i = list?.indexOfLast { VerseId.verse(it.start) <= verse || VerseId.chapter(it.start) < panel.chapter } ?: -1
-        if (i >= 0) state.animateScrollToItem(i)
+    // The section about a verse: the last one starting at or before it in this chapter.
+    fun sectionFor(v: Int): Int = list?.indexOfLast { s ->
+        VerseId.chapter(s.start) < panel.chapter || (VerseId.chapter(s.start) == panel.chapter && VerseId.verse(s.start) <= v)
+    } ?: -1
+    var moving by remember { mutableStateOf(false) }
+    // Bible to commentary: keep the note on the verse being read at the top.
+    LaunchedEffect(lines, verse, linked) {
+        if (!linked && state.firstVisibleItemIndex > 0) return@LaunchedEffect
+        val target = sectionFor(verse).takeIf { it >= 0 } ?: return@LaunchedEffect
+        val at = lines.getOrNull(state.firstVisibleItemIndex)?.section
+        if (at == target) return@LaunchedEffect
+        moving = true
+        try { state.animateScrollToItem(firstLine[target] ?: 0) } finally { moving = false }
+    }
+    // Commentary to Bible: scrolling the commentary by hand (a drag and the glide after it) brings
+    // the Bible to the verses it's on. Scrolling done here to follow the Bible never leads.
+    var byHand by remember { mutableStateOf(false) }
+    LaunchedEffect(state) {
+        state.interactionSource.interactions.collect { if (it is androidx.compose.foundation.interaction.DragInteraction.Start) byHand = true }
+    }
+    LaunchedEffect(state) {
+        androidx.compose.runtime.snapshotFlow { state.isScrollInProgress }.collect { if (!it) byHand = false }
+    }
+    LaunchedEffect(state, lines, linked) {
+        if (!linked) return@LaunchedEffect
+        androidx.compose.runtime.snapshotFlow { state.firstVisibleItemIndex }.collect { i ->
+            if (moving || !byHand) return@collect
+            val s = lines.getOrNull(i)?.let { list?.getOrNull(it.section) } ?: return@collect
+            if (VerseId.chapter(s.start) != panel.chapter || VerseId.verse(s.start) == 0) return@collect
+            if (sectionFor(verse) == lines[i].section) return@collect
+            vm.followCommentary(panel.book, panel.chapter, VerseId.verse(s.start))
+        }
     }
     Column(modifier) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            var menu by remember { mutableStateOf(false) }
+            androidx.compose.foundation.layout.Box(Modifier.weight(1f)) {
+                androidx.compose.material3.TextButton(
+                    onClick = { menu = true },
+                    modifier = Modifier.semantics { contentDescription = "Choose a commentary" },
+                ) {
+                    Text(info.short, style = MaterialTheme.typography.titleMedium, maxLines = 1)
+                    Icon(Icons.Filled.ArrowDropDown, contentDescription = null)
+                }
+                androidx.compose.material3.DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                    for (c in com.biblestudy.app.data.Commentaries.all) {
+                        androidx.compose.material3.DropdownMenuItem(
+                            text = {
+                                Column {
+                                    Text(c.short)
+                                    Text("${c.covers} · ${c.years}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                                }
+                            },
+                            onClick = { menu = false; vm.setCommentary(pos, c.id) },
+                            leadingIcon = if (c.id == id) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
+                        )
+                    }
+                }
+            }
+            IconButton(onClick = { about = true }) {
+                Icon(Icons.Outlined.Info, contentDescription = "About this commentary")
+            }
+            if (canLink) {
+                IconButton(onClick = { vm.toggleCommentaryLink(pos) }) {
+                    Icon(
+                        if (linked) Icons.Filled.Link else Icons.Filled.LinkOff,
+                        contentDescription = if (linked) "Unlink from the Bible" else "Link to the Bible",
+                        tint = if (linked) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
+                    )
+                }
+            }
+        }
         Text(
-            "Matthew Henry · ${vm.bible.book(panel.book).name} ${panel.chapter}",
-            style = MaterialTheme.typography.titleMedium,
-            modifier = Modifier.padding(vertical = 8.dp),
+            "${vm.bible.book(panel.book).name} ${panel.chapter}" + if (linked) " · scrolls with the Bible" else "",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.outline,
+            modifier = Modifier.padding(bottom = 4.dp),
         )
         when {
-            list == null -> Text("Loading…")
-            list.isEmpty() -> Text("Matthew Henry's Concise Commentary has no comment on this chapter.")
+            list == null -> Text(
+                if (com.biblestudy.app.data.Commentaries.isUnpacked(vm.getApplication(), id)) "Loading…"
+                else "Getting ${info.short} ready (the first time only)…",
+            )
+            !info.covers(panel.book) -> Text("${info.short} covers the ${info.covers}. Choose another commentary for ${vm.bible.book(panel.book).name}.")
+            list.isEmpty() -> Text("${info.short} has no notes on this chapter.")
         }
+        val inkBook = vm.commentaryInkBook(id)
         LazyColumn(Modifier.weight(1f).testTag("commentary"), state = state) {
-            items(list.orEmpty(), key = { "${it.start}-${it.end}" }) { s ->
-                Column(Modifier.padding(vertical = 8.dp)) {
+            items(lines.size, key = { "${lines[it].section}-${lines[it].para}" }) { li ->
+                val line = lines[li]
+                val s = list?.getOrNull(line.section) ?: return@items
+                if (line.para == -1) {
+                    if (li > 0) HorizontalDivider(Modifier.padding(top = 6.dp))
                     Text(
-                        "Verses " + vm.refLabel(s.start, s.end).substringAfter(':').let { r ->
-                            if (VerseId.chapter(s.start) != VerseId.chapter(s.end) || VerseId.chapter(s.start) != panel.chapter) vm.refLabel(s.start, s.end) else r
-                        },
+                        commentaryHeading(vm, s, panel.chapter),
                         style = MaterialTheme.typography.titleSmall,
                         color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(top = 8.dp, bottom = 2.dp),
                     )
-                    StudyText(s.body, onPassage = { shown = it }, vm = vm, doc = InkDoc(StudyInk.COMMENTARY, s.start, s.end))
+                } else {
+                    // Writing stays with its note and paragraph (INK-16); the Concise keeps its 1.2 key.
+                    val doc = if (id == com.biblestudy.app.data.Commentaries.CONCISE) InkDoc(StudyInk.COMMENTARY, s.start, s.end)
+                    else InkDoc(inkBook, s.start, line.para)
+                    StudyText(line.text, onPassage = { shown = it }, modifier = Modifier.padding(vertical = 4.dp), vm = vm, doc = doc)
                 }
-                HorizontalDivider()
             }
         }
     }
+    if (about) {
+        androidx.compose.material3.AlertDialog(
+            onDismissRequest = { about = false },
+            title = { Text(info.name) },
+            text = {
+                Column(Modifier.verticalScroll(rememberScrollState())) {
+                    Text("${info.author} · ${info.years} · ${info.covers}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                    for ((k, v) in info.about) {
+                        Text(k, style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 10.dp))
+                        Text(v, style = MaterialTheme.typography.bodyMedium)
+                    }
+                    Text("Public domain.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(top = 10.dp))
+                }
+            },
+            confirmButton = { androidx.compose.material3.TextButton(onClick = { about = false }) { Text("Close") } },
+        )
+    }
+}
+
+/** "Verses 14–16", "Introduction to Romans" or "Introduction to chapter 3". */
+private fun commentaryHeading(vm: StudyViewModel, s: CommentarySection, chapter: Int): String = when {
+    VerseId.chapter(s.start) == 0 -> "Introduction to ${vm.bible.book(VerseId.book(s.start)).name}"
+    VerseId.verse(s.start) == 0 -> "Introduction to chapter ${VerseId.chapter(s.start)}"
+    VerseId.chapter(s.start) != VerseId.chapter(s.end) || VerseId.chapter(s.start) != chapter -> vm.refLabel(s.start, s.end)
+    s.start == s.end -> "Verse " + VerseId.verse(s.start)
+    else -> "Verses " + vm.refLabel(s.start, s.end).substringAfter(':')
 }
 
 /**
@@ -503,6 +673,6 @@ fun StrongsHeader(vm: StudyViewModel, strong: String, version: String) {
             })
             Text(entry.def.trim(), maxLines = 2, style = MaterialTheme.typography.bodySmall)
         }
-        OutlinedButton(onClick = { vm.wordStudy = WordStudy(entry.id, version) }) { Text("Word study") }
+        OutlinedButton(onClick = { vm.openWordStudy(WordStudy(entry.id, version)) }) { Text("Word study") }
     }
 }

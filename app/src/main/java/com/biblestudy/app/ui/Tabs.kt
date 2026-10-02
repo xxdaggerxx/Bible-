@@ -13,8 +13,8 @@ import org.json.JSONObject
 sealed class Slot {
     /** Bible panel [index] of the tab: a passage in a version, or a sketch page. */
     data class Bible(val index: Int) : Slot()
-    /** A study view: cross-references, dictionary, topics and the rest. */
-    data class Study(val kind: PaneKind) : Slot()
+    /** A study view: cross-references, dictionary, topics and the rest; [pos] is its place in [TabState.studies]. */
+    data class Study(val kind: PaneKind, val pos: Int = 0) : Slot()
 }
 
 /**
@@ -30,6 +30,22 @@ class TabState {
     val panels = mutableStateListOf<PanelState>()
     /** The study views shown (none, one, or two when the Bible panel is hidden). */
     val studies = mutableStateListOf<PaneKind>()
+    /** The commentary each study view shows when it is a commentary (STD-17), kept alongside [studies]. */
+    val commentaries = mutableStateListOf<String>()
+    /** Whether each commentary scrolls together with the Bible panel (STD-18), alongside [studies]. */
+    val commentaryLinked = mutableStateListOf<Boolean>()
+
+    fun addStudy(kind: PaneKind, at: Int = studies.size, commentary: String = "") {
+        studies.add(at, kind); commentaries.add(at, commentary); commentaryLinked.add(at, true)
+    }
+
+    fun removeStudyAt(i: Int) {
+        studies.removeAt(i); commentaries.removeAt(i); commentaryLinked.removeAt(i)
+    }
+
+    fun setStudyAt(i: Int, kind: PaneKind) {
+        studies[i] = kind
+    }
     /** With a Bible panel and a study view: the study view comes first (left, or top). */
     var studyFirst by mutableStateOf(false)
     /** True when every panel shows a study view and the Bible panel is out of sight. */
@@ -48,7 +64,7 @@ class TabState {
 
     /** The panels on screen, in order. */
     fun slots(): List<Slot> = when {
-        bibleHidden || panels.isEmpty() -> studies.take(2).map { Slot.Study(it) }
+        bibleHidden || panels.isEmpty() -> studies.take(2).mapIndexed { i, k -> Slot.Study(k, i) }
         studies.isNotEmpty() -> {
             val s = Slot.Study(studies[0]); val b = Slot.Bible(0)
             if (studyFirst) listOf(s, b) else listOf(b, s)
@@ -66,6 +82,8 @@ class TabState {
                 .put("zland", (p.zoomRel["land"] ?: 1f).toDouble()).put("zport", (p.zoomRel["port"] ?: 1f).toDouble())
         }))
         put("studies", JSONArray(studies.map { it.name }))
+        put("commentaries", JSONArray(commentaries.toList()))
+        put("commentaryLinked", JSONArray(commentaryLinked.toList()))
         put("studyFirst", studyFirst)
         put("hidden", bibleHidden)
         put("stacked", when (stacked) { null -> -1; true -> 1; false -> 0 })
@@ -96,7 +114,11 @@ class TabState {
                     })
                 }
                 val ss = o.optJSONArray("studies") ?: JSONArray()
-                for (i in 0 until ss.length()) PaneKind.entries.firstOrNull { it.name == ss.optString(i) }?.let { if (it !in studies) studies.add(it) }
+                val cs = o.optJSONArray("commentaries"); val ls = o.optJSONArray("commentaryLinked")
+                for (i in 0 until ss.length()) PaneKind.entries.firstOrNull { it.name == ss.optString(i) }?.let {
+                    if (it !in studies || it == PaneKind.COMMENTARY) addStudy(it, commentary = cs?.optString(i, "") ?: "")
+                    if (ls != null && i < ls.length() && i < commentaryLinked.size) commentaryLinked[commentaryLinked.lastIndex] = ls.optBoolean(i, true)
+                }
                 studyFirst = o.optBoolean("studyFirst")
                 bibleHidden = o.optBoolean("hidden")
                 stacked = when (o.optInt("stacked", -1)) { 1 -> true; 0 -> false; else -> null }
@@ -123,7 +145,9 @@ class TabState {
 
     /** Keeps the tab within its rules: at most two panels on screen, at least one Bible panel. */
     fun normalize() {
-        while (studies.size > 2) studies.removeAt(studies.lastIndex)
+        while (studies.size > 2) removeStudyAt(studies.lastIndex)
+        while (commentaries.size < studies.size) commentaries.add("")
+        while (commentaryLinked.size < studies.size) commentaryLinked.add(true)
         if (studies.size == 2) bibleHidden = true
         if (studies.isEmpty()) bibleHidden = false
         if (!bibleHidden && studies.isNotEmpty()) while (panels.size > 1) panels.removeAt(panels.lastIndex)

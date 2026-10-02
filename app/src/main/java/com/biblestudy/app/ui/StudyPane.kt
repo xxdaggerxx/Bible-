@@ -55,14 +55,14 @@ import kotlinx.coroutines.withContext
  * verse being read, or the notes in the chapter being read. It works with the active Bible panel.
  */
 @Composable
-fun StudyPane(vm: StudyViewModel, kind: PaneKind, modifier: Modifier) {
+fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
+    val kind = slot.kind
     Column(modifier.background(MaterialTheme.colorScheme.surface).testTag("pane")) {
         Row(
             Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer).padding(start = 8.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             // One menu rather than a row of buttons: what the panel shows, its arrangement and tab (SPLIT-7).
-            val slot = Slot.Study(kind)
             var menu by remember { mutableStateOf(false) }
             Box(Modifier.weight(1f)) {
                 TextButton(onClick = { menu = true }, modifier = Modifier.semantics { contentDescription = "Choose what the pane shows" }) {
@@ -89,9 +89,18 @@ fun StudyPane(vm: StudyViewModel, kind: PaneKind, modifier: Modifier) {
             PaneKind.NOTES -> NotesPane(vm, inner)
             PaneKind.DICTIONARY -> DictionaryPane(vm, inner)
             PaneKind.TOPICS -> TopicsPane(vm, inner)
-            PaneKind.COMMENTARY -> CommentaryPane(vm, inner.padding(top = 4.dp))
+            PaneKind.COMMENTARY -> CommentaryPane(vm, slot.pos, inner.padding(top = 4.dp))
             PaneKind.NAMES -> NamesPane(vm, inner)
             PaneKind.SKETCHES -> SketchesPane(vm, inner)
+            PaneKind.COMPARE -> VersePane(vm, inner) { id, version, text ->
+                CompareVersions(vm, id, version, text, Modifier.fillMaxWidth()) { code ->
+                    // Tap a version to read it in the Bible panel.
+                    val i = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
+                    vm.showBible(); vm.setVersion(i, code)
+                }
+            }
+            PaneKind.ORIGINAL -> VersePane(vm, inner) { id, version, _ -> OriginalVerse(vm, id, version, maxHeight = 4000.dp) }
+            PaneKind.WORDSTUDY -> WordStudyPane(vm, inner)
         }
     }
 }
@@ -247,5 +256,37 @@ private fun SketchesPane(vm: StudyViewModel, modifier: Modifier) {
         items(mine, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketchBeside(s) } }
         item { Text("Ready-made pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 16.dp)) }
         items(ready, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketchBeside(s) } }
+    }
+}
+
+/**
+ * A view of one verse beside the text (SPLIT-7): the verse last tapped in this chapter, or the one at
+ * the top of the Bible panel, with arrows to the verse before and after.
+ */
+@Composable
+private fun VersePane(vm: StudyViewModel, modifier: Modifier, content: @Composable (Int, String, String) -> Unit) {
+    val panel = vm.studyPanel()
+    val chosen = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
+    val t = chosen ?: VerseTarget(panel.book, panel.chapter, panel.topVerse.coerceAtLeast(1))
+    val id = VerseId.of(t.book, t.chapter, t.verse)
+    val version = panel.version
+    val text = remember(id, version) { vm.text(version).verseText(id) ?: vm.bible.verseText(id) ?: "" }
+    val lastVerse = remember(t.book, t.chapter) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: 1 }
+    Column(modifier) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse - 1) }, enabled = t.verse > 1) {
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous verse")
+            }
+            Text("${vm.refLabel(id)} ($version)", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
+            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse + 1) }, enabled = t.verse < lastVerse) {
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next verse")
+            }
+        }
+        if (chosen == null) {
+            Text("Follows the verse at the top of the page. Tap a verse to fix on it.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+        } else {
+            TextButton(onClick = { vm.paneVerse = null }) { Text("Follow the page as I read") }
+        }
+        Column(Modifier.weight(1f).padding(top = 6.dp)) { content(id, version, text) }
     }
 }

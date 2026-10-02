@@ -582,45 +582,11 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
             DialogTitle("${vm.refLabel(id)} ($version)", ::close)
             if (vm.compareVersions) {
                 // Parallel view: the verse in every version, stacked (SPLIT-4). Tap one to read it.
-                Column(Modifier.heightIn(max = 320.dp).verticalScroll(rememberScrollState())) {
-                    for (v in BibleRepository.ALL) {
-                        val text = remember(t, v) { vm.text(v.code).verseText(id) }
-                        Column(
-                            Modifier.fillMaxWidth().clickable {
-                                save()
-                                vm.setVersion(panelIndex, v.code)
-                                vm.goTo(panelIndex, t.book, t.chapter, t.verse, remember = false)
-                                onDismiss()
-                            }.padding(vertical = 4.dp)
-                        ) {
-                            Text(
-                                v.code + if (v.code == version) "  (reading)" else "",
-                                style = MaterialTheme.typography.labelLarge,
-                                color = MaterialTheme.colorScheme.primary,
-                            )
-                            // Words that differ from the version being read are lightly marked (SPLIT-5).
-                            val shown = remember(text, verseText, v) {
-                                androidx.compose.ui.text.buildAnnotatedString {
-                                    append(text ?: "Not in this version (see its footnotes).")
-                                    if (text != null && v.code != version && verseText.isNotEmpty()) {
-                                        for (r in com.biblestudy.app.data.WordDiff.changed(text, verseText)) {
-                                            addStyle(androidx.compose.ui.text.SpanStyle(background = DIFF_MARK), r.first, r.last + 1)
-                                        }
-                                    }
-                                }
-                            }
-                            Text(
-                                shown,
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = if (text == null) MaterialTheme.colorScheme.outline else Color.Unspecified,
-                                modifier = Modifier.testTag("compare_${v.code}"),
-                            )
-                        }
-                    }
-                    Text(
-                        "Words that differ from the ${version} are marked.",
-                        style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
-                    )
+                CompareVersions(vm, id, version, verseText, Modifier.heightIn(max = 320.dp)) { code ->
+                    save()
+                    vm.setVersion(panelIndex, code)
+                    vm.goTo(panelIndex, t.book, t.chapter, t.verse, remember = false)
+                    onDismiss()
                 }
             } else if (vm.originalView) {
                 // The Hebrew or Greek, word by word (STD-4).
@@ -660,7 +626,7 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
                 // Tags on this verse's note (NOTE-4).
                 if (original.isNotBlank()) TagButton(vm, vm.noteKey(t.book, t.chapter, noteStart))
                 tapped?.let { w ->
-                    FilledTonalButton(onClick = { vm.wordStudy = w }) { Text("Word study: \u201c${w.word}\u201d") }
+                    FilledTonalButton(onClick = { vm.openWordStudy(w) }) { Text("Word study: \u201c${w.word}\u201d") }
                 }
             }
             OutlinedTextField(
@@ -1311,6 +1277,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 Text("\u2022 People and places: STEPBible.org TIPNR, licensed CC BY 4.0. Map outline: Natural Earth (public domain).")
                 Text("\u2022 Hebrew and Greek word by word: STEPBible.org TAHOT and TAGNT (Tyndale House, Cambridge), licensed CC BY 4.0. Only the columns shown are kept.")
                 Text("\u2022 Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library.")
+                Text("\u2022 Commentaries (public domain): Matthew Henry's Complete, Jamieson-Fausset-Brown, Wesley, the Geneva notes, Barnes, Adam Clarke, Keil & Delitzsch, Robertson's Word Pictures, Calvin and Spurgeon's Treasury of David, from the CrossWire Bible Society's SWORD library.")
                 Text("\u2022 Bible text font: Gentium Book Plus \u00a9 SIL International, SIL Open Font License.")
                 Spacer(Modifier.height(12.dp))
                 Text("How to use", style = MaterialTheme.typography.titleMedium)
@@ -1456,3 +1423,40 @@ fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolea
 fun CrossRef.passage() = Passage(
     VerseId.book(toStart), VerseId.chapter(toStart), VerseId.verse(toStart), VerseId.chapter(toEnd), VerseId.verse(toEnd),
 )
+
+/**
+ * One verse in every version, stacked (SPLIT-4), with the words that differ from [version] lightly
+ * marked (SPLIT-5). Used in the verse window and as a panel view (SPLIT-7).
+ */
+@Composable
+fun CompareVersions(vm: StudyViewModel, id: Int, version: String, verseText: String, modifier: Modifier = Modifier, onPick: (String) -> Unit) {
+    Column(modifier.verticalScroll(rememberScrollState())) {
+        for (v in BibleRepository.ALL) {
+            val text = remember(id, v) { vm.text(v.code).verseText(id) }
+            Column(Modifier.fillMaxWidth().clickable { onPick(v.code) }.padding(vertical = 4.dp)) {
+                Text(
+                    v.code + if (v.code == version) "  (reading)" else "",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.primary,
+                )
+                val shown = remember(text, verseText, v) {
+                    androidx.compose.ui.text.buildAnnotatedString {
+                        append(text ?: "Not in this version (see its footnotes).")
+                        if (text != null && v.code != version && verseText.isNotEmpty()) {
+                            for (r in com.biblestudy.app.data.WordDiff.changed(text, verseText)) {
+                                addStyle(androidx.compose.ui.text.SpanStyle(background = DIFF_MARK), r.first, r.last + 1)
+                            }
+                        }
+                    }
+                }
+                Text(
+                    shown,
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = if (text == null) MaterialTheme.colorScheme.outline else Color.Unspecified,
+                    modifier = Modifier.testTag("compare_${v.code}"),
+                )
+            }
+        }
+        Text("Words that differ from the $version are marked.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+    }
+}

@@ -1,4 +1,4 @@
-# Ink & Word — version 1.2.0
+# Ink & Word — version 1.3.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,14 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.3
+
+- **Eleven commentaries.** Besides Matthew Henry's Concise: Matthew Henry's Complete, Jamieson-Fausset-Brown, Wesley's Notes, the Geneva Bible notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin's Commentaries and Spurgeon's Treasury of David (Psalms). Choose one from the menu at the top of the commentary panel. Each is unpacked the first time it's opened (a few seconds).
+- **About this commentary:** the ⓘ gives the author, dates, background, what kind of commentary it is and what it's best for.
+- **Commentary linked to the Bible, both ways:** scroll the Bible and the commentary keeps the note on the verse at the top in view; scroll the commentary and the Bible follows. The link button turns it off.
+- **Two commentaries side by side,** each panel with its own.
+- **Three more panel views:** *Compare versions*, *Hebrew/Greek* and *Word study*. They follow the verse you tap; a Word study panel shows the word you tap.
 
 ## New in version 1.2
 
@@ -401,6 +409,9 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Rotating a lasso selection turns ink freely, but pictures only turn in quarter turns and text boxes stay upright.
 - Strong's numbers come from the tagged texts at eBible.org. In the KJV some small words ("the", "unto") have none, so they can't be tapped for a word study.
 - Matthew Henry's Concise Commentary skips some chapters (mostly lists and genealogies).
+- John Gill's Exposition isn't included: there's no clean public-domain digital edition to build from. Calvin's Commentaries and Spurgeon's Treasury of David were added instead. Barnes' Notes here cover the New Testament only.
+- Spurgeon's Treasury of David has one long note per psalm, and Matthew Henry comments on paragraphs, so linking moves them a psalm or a paragraph at a time. Writing on commentaries has no lasso yet.
+- Robertson's Word Pictures is marked by CrossWire as free for non-commercial use (its last two volumes' copyright has since expired); fine for this personal app.
 - Words of Jesus in the BSB are inferred from the WEB's markings and the BSB's quotation marks, so a few dialogue verses may be coloured slightly differently from a printed red-letter BSB.
 - The Hebrew and Greek view uses the Hebrew text (Leningrad Codex) and the amalgamated Greek editions; it doesn't follow an imported Bible's wording.
 - The performance pass for very long chapters (Psalm 119) and very large sketch pages still needs checking on the tablet itself.
@@ -429,5 +440,6 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Hebrew and Greek word by word: STEPBible.org TAHOT (Translators Amalgamated Hebrew OT) and TAGNT (Translators Amalgamated Greek NT), Tyndale House Cambridge, CC BY 4.0. Only the columns shown are kept, and Greek words in neither the modern editions nor the KJV's text are left out; `tools/build_original_db.py` makes `assets/study/original.db`.
 - Words of Jesus: the red-letter markings in eBible.org's KJV and WEB USFM files (public domain).
 - People and places: STEPBible.org TIPNR (Translators Individualised Proper Names), CC BY 4.0. Map outline, lakes and rivers: Natural Earth (public domain); `tools/build_map.py` makes `assets/map/lands.bin`.
+- Commentaries (public domain): Matthew Henry's Complete, Jamieson-Fausset-Brown, Wesley, Geneva notes, Barnes, Clarke, Keil & Delitzsch, Robertson's Word Pictures, Calvin and Spurgeon's Treasury of David, from the CrossWire Bible Society's SWORD library (crosswire.org). `tools/build_commentaries.py` rebuilds them.
 - Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library (ccel.org). `tools/build_study_db.py` rebuilds `study.db` from these.
 - Font: Gentium Book Plus © SIL International, SIL Open Font License 1.1 (see `licenses/Gentium-OFL.txt`).

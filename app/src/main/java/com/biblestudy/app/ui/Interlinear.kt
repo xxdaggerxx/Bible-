@@ -49,7 +49,7 @@ import kotlinx.coroutines.withContext
  */
 @OptIn(ExperimentalLayoutApi::class, ExperimentalFoundationApi::class)
 @Composable
-fun OriginalVerse(vm: StudyViewModel, verseId: Int, version: String) {
+fun OriginalVerse(vm: StudyViewModel, verseId: Int, version: String, maxHeight: androidx.compose.ui.unit.Dp = 360.dp) {
     val words by produceState<List<OriginalWord>?>(null, verseId) {
         value = withContext(Dispatchers.IO) { vm.study.original(verseId) }
     }
@@ -60,7 +60,7 @@ fun OriginalVerse(vm: StudyViewModel, verseId: Int, version: String) {
         return
     }
     val hebrew = ws.first().hebrew
-    Column(Modifier.heightIn(max = 360.dp).verticalScroll(rememberScrollState()).testTag("originalVerse")) {
+    Column(Modifier.heightIn(max = maxHeight).verticalScroll(rememberScrollState()).testTag("originalVerse")) {
         CompositionLocalProvider(LocalLayoutDirection provides if (hebrew) LayoutDirection.Rtl else LayoutDirection.Ltr) {
             FlowRow(
                 Modifier.fillMaxWidth(),
@@ -86,7 +86,7 @@ fun OriginalVerse(vm: StudyViewModel, verseId: Int, version: String) {
                         }
                     }
                     if (w.strong.isNotEmpty()) {
-                        FilledTonalButton(onClick = { vm.wordStudy = WordStudy(w.strong, version, w.gloss, verseId) }) { Text("Word study") }
+                        FilledTonalButton(onClick = { vm.openWordStudy(WordStudy(w.strong, version, w.gloss, verseId)) }) { Text("Word study") }
                     }
                 }
             }

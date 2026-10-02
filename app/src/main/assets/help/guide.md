@@ -137,7 +137,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 ## Panels and tabs
 
 - **One or two panels.** Each tab shows one panel, or two side by side or one above the other. Drag the divider between them to resize; double-tap it to make them equal.
-- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view: Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places or Sketch pages. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
+- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view: Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places, Sketch pages, Compare versions, Hebrew/Greek or Word study. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
 - **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
 - **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
 - **Link panels** with the link button in a Bible panel's header: two Bible panels scroll together verse by verse, even in different versions.
@@ -159,7 +159,22 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 
 - **Dictionary** (Easton's): look up any word; it suggests the people and places in your chapter.
 - **Topics** (Nave's): every verse on a subject; it suggests topics for the verse you're on.
-- **Commentary** (Matthew Henry's Concise): it follows the chapter you're reading.
+- **Commentary:** it follows the chapter you're reading. See *Commentaries* below.
+
+## Commentaries
+
+- **Eleven commentaries.** Tap the commentary's name at the top of the panel to choose one: Matthew Henry (Concise or Complete), Jamieson-Fausset-Brown, Wesley's Notes, Geneva Notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin, and Spurgeon's Treasury of David (Psalms). The panel remembers the last one you chose.
+- **The first time** you open a commentary it takes a few seconds to get ready; after that it opens straight away.
+- **About this commentary:** tap the ⓘ for who wrote it, when, their background, and what it's best for.
+- **Linked to the Bible:** with the link button on (it is at first), the commentary and the Bible scroll together both ways. Scroll the Bible and the note on the verse at the top stays in view; scroll the commentary and the Bible moves to the verses it's on. Tap the link button to scroll them separately.
+- **Two at once:** choose *Commentary* in the other panel's menu too, and give each its own commentary.
+- You can write and highlight on any commentary, as on the dictionary.
+
+## Compare versions, Hebrew/Greek and word studies beside the text
+
+- In a panel's menu choose *Compare versions* (the verse in every version, with differing words marked), *Hebrew/Greek* (the verse word by word) or *Word study*.
+- They follow the verse you tap in the Bible, or the verse at the top of the page. The arrows step to the verse before or after.
+- With a *Word study* panel open, tapping a word in the Bible or *Word study* on a Hebrew or Greek word shows its study there instead of in a window.
 
 ## Names and places
 

@@ -47,8 +47,13 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 18
-        versionName = "1.2.0"
+        versionCode = 19
+        versionName = "1.3.0"
+    }
+
+    // The commentaries are already packed tightly (xz); don't zip them again.
+    androidResources {
+        noCompress += "xz"
     }
 
     signingConfigs {
@@ -113,6 +118,8 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     // Front-buffered rendering for the lowest-latency pen ink (INK-4).
     implementation("androidx.graphics:graphics-core:1.0.2")
+    // Unpacks the bundled commentaries (STD-17), stored as xz to keep the app small.
+    implementation("org.tukaani:xz:1.10")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.14.1")

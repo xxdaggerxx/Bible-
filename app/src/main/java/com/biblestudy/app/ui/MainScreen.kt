@@ -153,7 +153,7 @@ fun StudyApp(vm: StudyViewModel) {
                     fun Cell(slot: Slot, modifier: Modifier) {
                         when (slot) {
                             is Slot.Bible -> key(tab.panels[slot.index]) { ReaderPanel(vm, slot.index, openPicker, modifier) }
-                            is Slot.Study -> key(slot.kind) { StudyPane(vm, slot.kind, modifier) }
+                            is Slot.Study -> key(slot) { StudyPane(vm, slot, modifier) }
                         }
                     }
 
