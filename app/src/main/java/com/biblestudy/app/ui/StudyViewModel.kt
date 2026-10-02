@@ -502,7 +502,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
-            putString("tabs", tabsJson(tabs))
+            putString("tabs", savedTabsJson())
             putInt("activeTab", activeTab)
         }
     }
@@ -622,6 +622,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             else -> biblePlaceBefore(p).let { it.first to it.second }
         }
     }
+
+    /** The open tabs as they are saved when the app closes (TAB-4). */
+    fun savedTabsJson(): String = tabsJson(tabs)
 
     private fun tabsJson(list: List<TabState>): String {
         val json = org.json.JSONArray(TabState.listToJson(list))
@@ -1069,6 +1072,21 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val texts = textsFor(s.book, 1).maxOfOrNull { it.y + (textHeights[it.id] ?: estimateTextHeight(it)) } ?: 0f
         val images = imagesFor(s.book, 1).maxOfOrNull { it.y + it.h } ?: 0f
         return maxOf(strokes, texts, images, 120f)
+    }
+
+    /** Reads the writing on study articles of one kind and number (INK-16) from the notes database. */
+    fun ensureStudyInkLoaded(book: Int, chapter: Int) {
+        val m = mk(book, chapter)
+        if (!loaded.add("m$m")) return
+        loadStarted()
+        viewModelScope.launch {
+            try {
+                val (st, _) = withContext(dbDispatcher) { user.loadMargin(book, chapter) }
+                merge(marginStrokesFor(book, chapter), st)
+            } finally {
+                loadFinished()
+            }
+        }
     }
 
     /** Reads a sketch page's drawing from the notes database (for the shrunk note beside its verse). */

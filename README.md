@@ -1,4 +1,4 @@
-# Bible Study — version 1.1.2
+# Bible Study — version 1.2.0
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,17 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.2
+
+- **Tabs, like a browser.** *Panels → New tab*, or *Open in new tab* from a panel's menu. Once there are two tabs, a strip under the toolbar shows them: tap to switch, **+** for another, hold a finger on one to rename, move or close it. Each tab keeps its own panels, passages and arrangement, and tabs are kept when the app closes.
+- **Any panel shows anything.** A tab has one or two panels, side by side or top and bottom. The button at the top left of each panel (or a study view's name) picks what it shows: the Bible, or Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places or Sketch pages. The same menu adds a panel beside, switches *Top and bottom* / *Side by side*, opens the panel in a new tab, or closes it. Double-tap the divider to make the panels equal.
+  - Study views follow the Bible panel beside them. *Keep on this passage* pins one where it is.
+  - Two study views can share a tab (e.g. the dictionary above topics); they stay on the passage you were reading.
+  - Two Bible panels can still be linked to scroll together.
+- **Write on study views.** The pen, highlighter and eraser work on dictionary articles, topics, the commentary, names & places and cross-references, over the text (no margins). Writing belongs to the article, comes back wherever it's opened, and moves with its words when a panel is resized. The highlighter snaps to whole words. Undo, layers and backups include it.
+- **Saved layouts keep every tab.** Opening one replaces your tabs. Layouts saved before 1.2 open as tabs of up to two panels.
+- **Two panels per tab at most.** If you had three panels, or two panels and the study pane, the extra one moves to a second tab when you update, so nothing is lost.
 
 ## New in version 1.1.2
 
@@ -231,7 +242,7 @@ The app is about 10 MB bigger because of the study library. Your notes database 
 - **Colour meanings and tags.** Give each highlight colour a meaning (*Settings → Highlights → Colour meanings*, e.g. yellow = promises). Notes and highlights can carry tags. *My notes* (the notes button) lists all notes, highlights and bookmarks, and filters by tag or meaning.
 - **Cross-reference pop-overs.** Tapping a cross-reference in a verse's window or the study pane shows the passage in a pop-over instead of leaving your place.
 - **Turn and crop pictures.** Select a margin picture with the Select tool, then *Turn* or *Crop*.
-- **Saved layouts.** *Panels → Save this layout…* keeps the open panels, their passages and versions, and the study pane. Open it again from the same menu.
+- **Saved layouts.** *Panels → Save this layout…* keeps the open panels, their passages and versions, and the study pane. Open it again from the same menu. (From 1.2 it keeps every tab.)
 - **Automatic backups.** *Settings → Backup → Automatic backup* makes a backup daily or weekly when you leave the app. It keeps the newest 5. Backups go to app storage, or to a folder you choose, such as a synced Google Drive or OneDrive folder.
 - **Export a chapter.** *⋮ → Export chapter as PDF…* or *as picture…* saves the chapter with your ink, highlights, pictures and text boxes, to share or print.
 
@@ -390,6 +401,9 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
 - The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
 - Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
+- Writing on study views has no lasso, and writing sounds and fast ink don't apply there yet. A line drawn across two lines of an article stretches to follow its words when the panel's width changes.
+- Word studies and book introductions still open as windows rather than panel views, and the Hebrew/Greek and compare-versions views stay in the verse window.
+- Reordering tabs is done with *Move left* / *Move right* (hold a finger on a tab), not by dragging.
 
 ## Next milestones
 

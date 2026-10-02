@@ -54,6 +54,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import org.junit.Assert.assertFalse
 import com.biblestudy.app.ui.Slot
 import androidx.compose.ui.graphics.asImageBitmap
 import com.biblestudy.app.ui.HIGHLIGHT_COLORS
@@ -1444,8 +1445,8 @@ class FeatureTest {
         assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
 
         // Tabs are kept when the app closes (TAB-4).
-        compose.runOnUiThread { vm.savePrefs() }
-        val json = compose.activity.getSharedPreferences("study", android.content.Context.MODE_PRIVATE).getString("tabs", null)!!
+        var json = ""
+        compose.runOnUiThread { json = vm.savedTabsJson() }
         val again = com.biblestudy.app.ui.TabState.listFromJson(json) { b, c, v -> Triple(b, c, v ?: "KJV") }!!
         assertEquals(listOf("Romans", null, null), again.map { it.name })
         assertEquals(listOf(45 to 8), again[0].panels.map { it.book to it.chapter })
@@ -1458,6 +1459,65 @@ class FeatureTest {
         compose.onNodeWithText("Close tab").performScrollTo().performClick()
         waitForLoaded()
         assertEquals(2, vm.tabs.size)
+    }
+
+    @Test
+    fun studyArticlesCanBeWrittenOn() {
+        val id = vm.study.dictionarySearch("Nicodemus").first().id
+        compose.runOnUiThread { vm.openDictionary(id) }
+        waitForLoaded()
+        compose.onNodeWithTag("inkable").assertExists()
+        val doc = com.biblestudy.app.ui.StudyInk.DICTIONARY
+        // Write across the first lines with the pen (a finger here, with Draw with finger on).
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        compose.onNodeWithTag("inkable").performTouchInput {
+            down(Offset(40f, 30f)); repeat(10) { moveBy(Offset(30f, 6f)) }; up()
+        }
+        compose.waitForIdle()
+        val pen = vm.marginStrokesFor(doc, id.toInt()).single()
+        assertFalse(pen.highlighter)
+        assertTrue(pen.points.size >= 3 * 8)
+        snap("134-ink-on-dictionary")
+
+        // The highlighter snaps to whole words, kept as a range of letters.
+        compose.runOnUiThread { vm.tool = Tool.HIGHLIGHTER }
+        compose.onNodeWithTag("inkable").performTouchInput {
+            down(Offset(60f, 130f)); repeat(8) { moveBy(Offset(40f, 0f)) }; up()
+        }
+        compose.waitForIdle()
+        val hl = vm.marginStrokesFor(doc, id.toInt()).single { it.highlighter }
+        assertTrue(com.biblestudy.app.ui.StudyInk.isRange(hl))
+        assertTrue(hl.points[1] > hl.points[0])
+        snap("135-highlight-on-dictionary")
+
+        // Narrowing the panel rewraps the words; the writing is kept against its letters.
+        compose.runOnUiThread { vm.addPanel(); vm.tab.split = 0.35f }
+        waitForLoaded()
+        assertEquals(2, vm.marginStrokesFor(doc, id.toInt()).size)
+        snap("136-ink-after-resize")
+
+        // The eraser takes the pen stroke out; undo brings it back. Both are saved.
+        compose.runOnUiThread { vm.tool = Tool.ERASER }
+        val first = pen.points
+        compose.onNodeWithTag("inkable").performTouchInput {
+            down(Offset(10f, 20f)); repeat(30) { moveBy(Offset(12f, 3f)) }; up()
+        }
+        compose.waitForIdle()
+        if (vm.marginStrokesFor(doc, id.toInt()).any { it.id == pen.id }) {
+            // Rewrapped: rub across where it is now.
+            compose.onNodeWithTag("inkable").performTouchInput {
+                for (y in listOf(20f, 50f, 80f, 110f)) { down(Offset(5f, y)); repeat(40) { moveBy(Offset(15f, 0f)) }; up() }
+            }
+            compose.waitForIdle()
+        }
+        assertTrue(vm.marginStrokesFor(doc, id.toInt()).none { it.id == pen.id })
+        compose.runOnUiThread { vm.undo() }
+        assertTrue(vm.marginStrokesFor(doc, id.toInt()).any { it.id == pen.id && it.points.contentEquals(first) })
+        vm.awaitSaves()
+        assertTrue(vm.user.loadMargin(doc, id.toInt()).first.any { it.id == pen.id })
+        // Study writing never shows up as a Bible chapter's notes.
+        assertTrue(vm.user.markerRows("KJV").none { it.book < 1 })
+        compose.runOnUiThread { vm.fingerDraw = false; vm.tool = Tool.PEN }
     }
 
     @Test

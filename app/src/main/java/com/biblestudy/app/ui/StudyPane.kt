@@ -159,7 +159,12 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
                         .padding(vertical = 8.dp)
                 ) {
                     Text(vm.refLabel(x.toStart, x.toEnd), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                    Text(x.preview, maxLines = 3, overflow = TextOverflow.Ellipsis)
+                    // Writing on a cross-reference stays with it (INK-16): this verse to that passage.
+                    InkableText(
+                        vm, InkDoc(StudyInk.CROSSREF, x.toStart, id),
+                        androidx.compose.ui.text.AnnotatedString(x.preview.let { if (it.length > 240) it.take(240).trimEnd() + "\u2026" else it }),
+                        style = MaterialTheme.typography.bodyLarge,
+                    )
                 }
                 HorizontalDivider()
             }

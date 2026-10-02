@@ -494,7 +494,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
             }
         }
         // Sketch pages (books from 1000) aren't Bible chapters.
-        return rows("SELECT DISTINCT book, chapter, verse, layer_id FROM strokes WHERE (region != 0 OR version = ?) AND book < 1000", arrayOf(version), false) +
+        return rows("SELECT DISTINCT book, chapter, verse, layer_id FROM strokes WHERE (region != 0 OR version = ?) AND book BETWEEN 1 AND 999" /* not sketch pages or study articles */, arrayOf(version), false) +
             rows("SELECT DISTINCT book, chapter, verse, layer_id FROM images WHERE book < 1000", emptyArray(), false) +
             rows("SELECT DISTINCT book, chapter, verse, layer_id FROM texts WHERE book < 1000", emptyArray(), false) +
             rows("SELECT book, chapter, start_off, layer_id FROM highlights WHERE version = ?", arrayOf(version), true)

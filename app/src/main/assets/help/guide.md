@@ -127,21 +127,33 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 - Several words find verses with all of them. Put words in "quotes" for an exact phrase. *OR* finds either word. *lov\** finds love, loved, loveth. *-word* leaves out verses with that word.
 - Type a reference like *jn 3:16* to jump straight there.
 - Pick *My notes* to search your typed notes and text boxes.
-- Results are grouped by book. *Open beside* shows a result in another panel. *Keep results beside the text* moves them into the study pane.
+- Results are grouped by book. *Open beside* shows a result in another panel. *Keep results beside the text* moves them into a study view in the other panel.
 
 ## Links and pop-overs
 
 - References in headings, notes, text boxes, the dictionary and the commentary are links.
 - Tap one to read the passage in a small pop-over. *Go to* jumps there; *Open beside* shows it in another panel.
 
-## Panels and the study pane
+## Panels and tabs
 
-- **Panels button** (the split-page icon): *Add a Bible panel* for two (or three, on a big screen in landscape) passages side by side. Drag the divider to resize. *Close other panels* goes back to one.
-- **Link panels** with the link button in a panel's header: they scroll together verse by verse, even in different versions.
+- **One or two panels.** Each tab shows one panel, or two side by side or one above the other. Drag the divider between them to resize; double-tap it to make them equal.
+- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view: Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places or Sketch pages. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
+- **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
+- **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
+- **Link panels** with the link button in a Bible panel's header: two Bible panels scroll together verse by verse, even in different versions.
 - **Mark word differences** (*Settings → Reading*): when two panels show the same book in different versions, the words that differ are lightly marked.
-- **The study pane** opens beside the text from the panels button. Its menu at the top switches between Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places and Sketch pages.
-- **A sketch page beside the text:** choose *Sketch pages* in the panels button (*Beside the text: Sketch pages*) or the study pane's menu, then tap any page, yours or ready-made. It opens in a panel beside the Bible so you can read and draw side by side. Tap another page to swap it in.
-- **Save this layout…** keeps your panels, passages, versions and study pane, to open again from the same menu.
+- **Tabs, like a browser.** *New tab* is in the panels button (the split-page icon in the toolbar). Once you have two tabs, they show in a strip under the toolbar: tap one to switch, tap **+** for another. Each tab keeps its own panels and places.
+- **Rename, move or close a tab:** hold a finger on it.
+- **Open in a new tab:** from a panel's menu. Your tabs are kept when you close the app.
+- **A sketch page beside the text:** choose *Sketch pages* in a panel's menu or the panels button (*Beside the text: Sketch pages*), then tap any page, yours or ready-made. It opens in the other panel so you can read and draw side by side. Tap another page to swap it in.
+- **Save this layout…** (panels button) keeps all your tabs, with their panels, passages and versions. Opening a saved layout replaces the tabs you have open.
+
+## Writing on study views
+
+- The pen, highlighter and eraser work on dictionary articles, topics, the commentary, names & places and cross-references, just as on the Bible text. There are no margins: you write over the text.
+- The highlighter snaps to whole words. Undo, layers and backups include this writing too.
+- Your writing belongs to that article, so it's there whenever you open it again, in any panel or tab. When a panel is made wider or narrower, the writing moves with its words (a line drawn across two lines of text stretches to follow them).
+- Search results and the My notes list can't be written on, because what's under the pen changes.
 
 ## Dictionary, topics and commentary
 
@@ -151,7 +163,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 
 ## Names and places
 
-- In the study pane choose *Names & places*, or tap a name in a verse window.
+- In a panel's menu choose *Names & places*, or tap a name in a verse window.
 - **People:** who they were, their family (each name opens) and every verse that mentions them.
 - **Places:** what and where they were, with a small map you can pinch and drag.
 - **Family tree:** tap *Family tree* on a person. It shows grandparents, parents, brothers and sisters, whom they married, and their children. Tap anyone to see their family instead. *Copy to sketch page* draws the tree on the sketch page you're viewing, or on a new one.

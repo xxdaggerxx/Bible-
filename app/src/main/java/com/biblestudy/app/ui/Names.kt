@@ -257,7 +257,7 @@ private fun NameView(vm: StudyViewModel, id: Long, modifier: Modifier) {
             if (n.place && n.lat != null) PlaceMap(vm, n, Modifier.padding(vertical = 8.dp))
             // References written out in the article ("Genesis 35:19") become links too.
             val article = remember(n.id) { linkPlainRefs(n.article, vm.bible.books) }
-            StudyText(article, onPassage = { shown = it })
+            StudyText(article, onPassage = { shown = it }, vm = vm, doc = InkDoc(StudyInk.NAME, n.id.toInt()))
             // Family, or for a place its founder and people who lived there (each a link).
             for ((label, field) in family) {
                 val ids = NameEntry.ids(field)

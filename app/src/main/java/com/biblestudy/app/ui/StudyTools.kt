@@ -94,11 +94,18 @@ fun studyAnnotated(body: String, onPassage: (Passage) -> Unit): AnnotatedString 
     append(body.substring(pos))
 }
 
-/** Study text (dictionary, topic or commentary) with its links. */
+/** Study text (dictionary, topic or commentary) with its links; with [vm] and [doc], it can be written on (INK-16). */
 @Composable
-fun StudyText(body: String, onPassage: (Passage) -> Unit, modifier: Modifier = Modifier, style: TextStyle = MaterialTheme.typography.bodyLarge) {
+fun StudyText(
+    body: String,
+    onPassage: (Passage) -> Unit,
+    modifier: Modifier = Modifier,
+    style: TextStyle = MaterialTheme.typography.bodyLarge,
+    vm: StudyViewModel? = null,
+    doc: InkDoc? = null,
+) {
     val text = remember(body) { studyAnnotated(body, onPassage) }
-    Text(text, modifier, style = style)
+    if (vm != null && doc != null) InkableText(vm, doc, text, modifier, style) else Text(text, modifier, style = style)
 }
 
 /** A passage pop-over (LINK-2) for links in study text; [onNavigate] runs after Go to / Open beside. */
@@ -298,6 +305,7 @@ private fun LookupPane(
     search: (String) -> List<StudyEntry>,
     suggestions: List<StudyEntry>,
     suggestionsLabel: String?,
+    inkBook: Int,
 ) {
     var query by remember { mutableStateOf("") }
     var shown by remember { mutableStateOf<Passage?>(null) }
@@ -312,7 +320,7 @@ private fun LookupPane(
                 Text(e.title, style = MaterialTheme.typography.titleLarge, modifier = Modifier.weight(1f))
             }
             Column(Modifier.weight(1f).verticalScroll(rememberScrollState()).padding(bottom = 8.dp)) {
-                StudyText(e.body, onPassage = { shown = it })
+                StudyText(e.body, onPassage = { shown = it }, vm = vm, doc = InkDoc(inkBook, e.id.toInt()))
             }
             return@Column
         }
@@ -362,6 +370,7 @@ fun DictionaryPane(vm: StudyViewModel, modifier: Modifier) {
         search = { vm.study.dictionarySearch(it) },
         suggestions = suggestions,
         suggestionsLabel = "In ${vm.bible.book(panel.book).name} ${panel.chapter}",
+        inkBook = StudyInk.DICTIONARY,
     )
 }
 
@@ -384,6 +393,7 @@ fun TopicsPane(vm: StudyViewModel, modifier: Modifier) {
         search = { vm.study.topicSearch(it) },
         suggestions = suggestions,
         suggestionsLabel = "Topics for ${vm.refLabel(id)}",
+        inkBook = StudyInk.TOPIC,
     )
 }
 
@@ -425,7 +435,7 @@ fun CommentaryPane(vm: StudyViewModel, modifier: Modifier) {
                         style = MaterialTheme.typography.titleSmall,
                         color = MaterialTheme.colorScheme.primary,
                     )
-                    StudyText(s.body, onPassage = { shown = it })
+                    StudyText(s.body, onPassage = { shown = it }, vm = vm, doc = InkDoc(StudyInk.COMMENTARY, s.start, s.end))
                 }
                 HorizontalDivider()
             }
