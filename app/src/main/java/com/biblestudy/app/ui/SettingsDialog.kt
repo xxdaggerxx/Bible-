@@ -154,7 +154,8 @@ fun SettingsDialog(
                 Toggle("Margins in every panel", "Off: only the first Bible panel has margins", vm.marginsAllPanels) { vm.marginsAllPanels = it }
                 Toggle("Link panels", "Panels scroll together, verse by verse", vm.linkPanels) { vm.linkPanels = it }
 
-                Group("Verse window")
+                Group("Verse details")
+                Toggle("Verse details in a panel", "Tapping a verse shows it beside the text. Off: in a window", vm.verseInPanel) { vm.verseInPanel = it }
                 Toggle("Compare versions", "Show the verse in every version when it opens", vm.compareVersions) { vm.compareVersions = it }
 
                 Group("Bibles")

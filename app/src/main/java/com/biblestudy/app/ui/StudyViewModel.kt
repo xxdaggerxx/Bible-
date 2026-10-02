@@ -183,7 +183,7 @@ enum class PaneKind(val label: String) {
     SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
     DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), NAMES("Names & places"),
     SKETCHES("Sketch pages"),
-    COMPARE("Compare versions"), ORIGINAL("Hebrew/Greek"), WORDSTUDY("Word study"), INTRO("About the book"),
+    VERSE("Verse details"), COMPARE("Compare versions"), ORIGINAL("Hebrew/Greek"), WORDSTUDY("Word study"), INTRO("About the book"),
 }
 
 /** A spot to return to with Back / Forward. */
@@ -271,7 +271,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         highlightsAllVersions = true
         marginLeft = false; marginRight = true
         linkPanels = false
-        compareVersions = false; originalView = false; redLetters = false
+        compareVersions = false; originalView = false; redLetters = false; verseInPanel = true
         changeWritingSounds(true); changeSoundVolume(0.6f)
         savePrefs()
         message = "Settings reset to their defaults."
@@ -372,6 +372,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var compareVersions by mutableStateOf(prefs.getBoolean("compareVersions", false))
     /** The verse window shows the Hebrew or Greek word by word (STD-4). */
     var originalView by mutableStateOf(prefs.getBoolean("originalView", false))
+    /** Tapping a verse shows its details in a panel beside the text rather than a window (SPLIT-9). */
+    var verseInPanel by mutableStateOf(prefs.getBoolean("verseInPanel", true))
     var lineSpacing by mutableStateOf(
         runCatching { LineSpacing.valueOf(prefs.getString("lineSpacing", "NORMAL")!!) }.getOrDefault(LineSpacing.NORMAL)
     )
@@ -499,7 +501,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("verseInPanel", verseInPanel)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
@@ -953,9 +955,21 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         io { user.deleteWorkspace(w.name) }
     }
 
+    /**
+     * Shows a verse's details (SPLIT-9): in the tab's Verse details panel, opening it beside the
+     * text when the tab has room; or, when both panels are in use or it's turned off in Settings,
+     * in the verse window.
+     */
     fun openVerse(book: Int, chapter: Int, verse: Int, word: Int = -1) {
-        verseSheet = VerseTarget(book, chapter, verse, word)
-        paneVerse = VerseTarget(book, chapter, verse)
+        paneVerse = VerseTarget(book, chapter, verse, word)
+        verseWordStudy = null
+        val t = tab
+        if (verseInPanel && (PaneKind.VERSE in t.studies || (t.studies.isEmpty() && t.shown < 2))) {
+            verseSheet = null
+            showStudy(PaneKind.VERSE)
+        } else {
+            verseSheet = VerseTarget(book, chapter, verse, word)
+        }
         // A tapped word goes to the Word study panel too (SPLIT-7).
         if (word >= 0) viewModelScope.launch {
             val version = activeVersion
@@ -1389,10 +1403,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** The word shown in a Word study panel (SPLIT-7): the last one tapped or chosen. */
     var studyWord by mutableStateOf<WordStudy?>(null)
 
-    /** Opens a word study: in the tab's Word study panel if it has one, else in its own window. */
+    /** Opens a word study: in the tab's Word study or Verse details panel if it has one, else in its own window. */
     fun openWordStudy(w: WordStudy) {
-        if (PaneKind.WORDSTUDY in tab.studies) studyWord = w else wordStudy = w
+        when {
+            PaneKind.WORDSTUDY in tab.studies -> studyWord = w
+            // In the Verse details panel, with a way back to the verse.
+            PaneKind.VERSE in tab.studies && verseSheet == null -> verseWordStudy = w
+            else -> wordStudy = w
+        }
     }
+    /** A word study opened from the Verse details panel, shown in it until Back (SPLIT-9). */
+    var verseWordStudy by mutableStateOf<WordStudy?>(null)
     /** The dictionary article and topic open in the study pane, if any. */
     var dictionaryOpen by mutableStateOf<Long?>(null)
     var topicOpen by mutableStateOf<Long?>(null)

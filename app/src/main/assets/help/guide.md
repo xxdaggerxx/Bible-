@@ -83,15 +83,24 @@ Layers are like clear sheets over the page. Tap the layers button (it shows the 
 
 ## Typed notes on verses
 
-- Tap a verse with your finger to open its window.
+- Tap a verse with your finger to open its details (see *Verse details* below).
 - Type in *Typed note*. It shows in every version.
 - The − and + beside *Note on …* make the note cover several verses, e.g. John 3:16–18.
 - References in a note, such as *Psalm 23*, appear as links under it.
 - Notes can have tags, for finding them later in *My notes*.
 
-## The verse window
+## Verse details
 
-Tap any verse with your finger. Its window shows:
+Tap any verse with your finger. Its details open in a panel beside the text, called *Verse details*:
+
+- If the tab shows only the Bible, the panel opens beside it.
+- If the panel is already open, it moves to the verse you tapped. The arrows at its top go to the verse before and after.
+- If both panels are already in use (two Bibles, or the Bible and a commentary), the details open in a window instead, as before.
+- To always use the window, turn off *Settings → Verse details → Verse details in a panel*.
+- A word study opened from the panel shows in the same panel. *Back to the verse* returns.
+- Your typed note is kept as you type, and when you move to another verse.
+
+The details show:
 
 - **The verse.** Tap a word to study the Hebrew or Greek behind it.
 - **Compare versions:** the verse in every version, one under another. Words that differ from the version you're reading are lightly marked. Tap a version to read in it.
@@ -103,7 +112,7 @@ Tap any verse with your finger. Its window shows:
 
 ## Hebrew and Greek word by word
 
-- In the verse window, tap *Hebrew* (Old Testament) or *Greek* (New Testament).
+- In Verse details, tap *Hebrew* (Old Testament) or *Greek* (New Testament).
 - Each card shows the original word, how it sounds, what it means here and what kind of word it is (noun, verb…).
 - Hebrew reads right to left, so the first word is on the right.
 - In how a word sounds, the capital letters show the stressed syllable (*ba.Ra'* is said ba-RA).
@@ -113,7 +122,7 @@ Tap any verse with your finger. Its window shows:
 
 ## Word studies
 
-- Tap a word in the verse window (or tap a word on the page with your finger, then *Word study*).
+- Tap a word in Verse details (or tap a word on the page with your finger, then *Word study*).
 - You see the Hebrew or Greek word, how it's pronounced, its meaning, how the KJV translates it, and every verse that uses it, counted by book. Tap a verse to go there.
 - **Search by Strong's number:** type *G26* (agapē, love) or *H2617* (chesed, lovingkindness) in Search.
 
@@ -179,7 +188,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 
 ## Names and places
 
-- In a panel's menu choose *Names & places*, or tap a name in a verse window.
+- In a panel's menu choose *Names & places*, or tap a name in Verse details.
 - **People:** who they were, their family (each name opens) and every verse that mentions them.
 - **Places:** what and where they were, with a small map you can pinch and drag.
 - **Family tree:** tap *Family tree* on a person. It shows grandparents, parents, brothers and sisters, whom they married, and their children. Tap anyone to see their family instead. *Copy to sketch page* draws the tree on the sketch page you're viewing, or on a new one.
@@ -206,7 +215,7 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
 - **Every pen tool works** on a sketch page, plus shapes, the lasso, layers, pictures and text boxes.
 - **Verse cards:** *Insert → Verse card…*, type a reference like *John 3:16-18*, and the verses go on the page as a card. A card works like the Bible page:
   - tap its reference to read the passage in a pop-over;
-  - tap a verse to open the verse window (word study, *Compare versions*, *Hebrew/Greek*, notes, cross-references);
+  - tap a verse to open its details (word study, *Compare versions*, *Hebrew/Greek*, notes, cross-references);
   - highlight it with the highlighter, and the words of Jesus show in red when that's on;
   - hold a finger on the card for its bar: switch it to another version (*KJV*, *BSB*, *WEB*…), *Copy*, *Share*, change its size or background, or delete it.
 - **Person or place cards:** *Insert → Person or place card…*.

@@ -245,6 +245,8 @@ class FeatureTest {
             vm.sidePane = null
             vm.paneVerse = null
             vm.compareVersions = false
+            vm.verseInPanel = false // the older tests use the verse window
+            vm.verseWordStudy = null
             vm.readMode = false
             vm.underlineMode = false
             vm.changeTextFont(com.biblestudy.app.model.TextFont.BOOK)
@@ -833,6 +835,57 @@ class FeatureTest {
         compose.waitForIdle()
         compose.onNodeWithText("Deuteronomy \u2014 4").assertExists()
         compose.onNodeWithText("Genesis \u2014 8").assertDoesNotExist()
+    }
+
+    @Test
+    fun tappingAVerseShowsItsDetailsInAPanel() {
+        compose.runOnUiThread { vm.setNote(VerseTarget(43, 3, 16), ""); vm.verseInPanel = true; vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        // As if "loved" in John 3:16 was tapped: the details open beside the text, not in a window.
+        compose.runOnUiThread { vm.openVerse(43, 3, 16, word = 3) }
+        compose.waitForIdle()
+        assertNull(vm.verseSheet)
+        assertEquals(PaneKind.VERSE, vm.sidePane)
+        assertEquals(2, vm.tab.shown)
+        compose.onNodeWithTag("verseDetails").assertExists()
+        compose.onNodeWithText("John 3:16 (KJV)").assertExists()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Word study: \u201cloved\u201d").fetchSemanticsNodes().isNotEmpty() }
+        snap("130-verse-panel")
+
+        // Its word study opens in the same panel, with Back to the verse.
+        compose.onNodeWithText("Word study: \u201cloved\u201d").performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithText("Used in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        assertNull(vm.wordStudy)
+        assertEquals("G25", vm.verseWordStudy?.strong)
+        compose.onNodeWithContentDescription("Back to the verse").performClick()
+        compose.waitForIdle()
+        assertNull(vm.verseWordStudy)
+
+        // A typed note is kept when another verse is tapped; the panel moves to that verse.
+        compose.onNodeWithText("Typed note", substring = true).performTextInput("Written in the panel")
+        compose.runOnUiThread { vm.openVerse(43, 3, 17) }
+        compose.waitForIdle()
+        compose.waitUntil(5_000) { vm.user.noteCovering(43, 3, 16)?.text == "Written in the panel" }
+        compose.onNodeWithText("John 3:17 (KJV)").assertExists()
+        assertNull(vm.verseSheet)
+        assertEquals(1, vm.tab.studies.size)
+
+        // With both panels in use, the verse window opens as before.
+        compose.runOnUiThread { vm.sidePane = null; vm.addPanel() }
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.waitForIdle()
+        assertEquals(VerseTarget(43, 3, 16), vm.verseSheet)
+        assertEquals(2, vm.panels.size)
+        compose.onNodeWithText("Written in the panel").assertExists()
+        compose.runOnUiThread { vm.verseSheet = null; vm.closePanel(1) }
+
+        // Turned off in Settings: always the window.
+        compose.runOnUiThread { vm.verseInPanel = false; vm.openVerse(43, 3, 16) }
+        compose.waitForIdle()
+        assertTrue(vm.tab.studies.isEmpty())
+        assertEquals(VerseTarget(43, 3, 16), vm.verseSheet)
+        compose.runOnUiThread { vm.verseSheet = null; vm.setNote(VerseTarget(43, 3, 16), "") }
+        compose.waitForIdle()
     }
 
     @Test

@@ -6,6 +6,7 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -101,6 +102,16 @@ fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
             }
             PaneKind.ORIGINAL -> VersePane(vm, inner) { id, version, _ -> OriginalVerse(vm, id, version, maxHeight = 4000.dp) }
             PaneKind.WORDSTUDY -> WordStudyPane(vm, inner)
+            PaneKind.VERSE -> vm.verseWordStudy?.let { w ->
+                // A word study opened from here, with Back to the verse.
+                WordStudyPane(vm, inner, w, onBack = { vm.verseWordStudy = null })
+            } ?: VersePane(vm, inner) { id, version, _ ->
+                val word = vm.paneVerse?.takeIf { VerseId.of(it.book, it.chapter, it.verse) == id }?.word ?: -1
+                VerseDetails(
+                    vm, VerseTarget(VerseId.book(id), VerseId.chapter(id), VerseId.verse(id), word), version,
+                    inPanel = true, onDone = {}, modifier = Modifier.fillMaxSize(),
+                )
+            }
             PaneKind.INTRO -> BookIntroPane(vm, inner)
         }
     }
@@ -127,11 +138,11 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
     val lastVerse = remember(t.book, t.chapter) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: 1 }
     Column(modifier) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse - 1) }, enabled = t.verse > 1) {
+            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse - 1, word = -1) }, enabled = t.verse > 1) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous verse")
             }
             Text(vm.refLabel(id), style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
-            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse + 1) }, enabled = t.verse < lastVerse) {
+            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse + 1, word = -1) }, enabled = t.verse < lastVerse) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next verse")
             }
         }
@@ -275,11 +286,11 @@ private fun VersePane(vm: StudyViewModel, modifier: Modifier, content: @Composab
     val lastVerse = remember(t.book, t.chapter) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: 1 }
     Column(modifier) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse - 1) }, enabled = t.verse > 1) {
+            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse - 1, word = -1) }, enabled = t.verse > 1) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous verse")
             }
             Text("${vm.refLabel(id)} ($version)", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
-            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse + 1) }, enabled = t.verse < lastVerse) {
+            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse + 1, word = -1) }, enabled = t.verse < lastVerse) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next verse")
             }
         }

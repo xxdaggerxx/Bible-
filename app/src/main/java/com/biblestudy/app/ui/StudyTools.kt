@@ -181,8 +181,7 @@ fun WordStudyDialog(vm: StudyViewModel, start: WordStudy, onDismiss: () -> Unit)
 
 /** A word study (STD-3, STD-8) in a panel beside the text (SPLIT-7): the word last tapped. */
 @Composable
-fun WordStudyPane(vm: StudyViewModel, modifier: Modifier) {
-    val w = vm.studyWord
+fun WordStudyPane(vm: StudyViewModel, modifier: Modifier, w: WordStudy? = vm.studyWord, onBack: (() -> Unit)? = null) {
     Column(modifier.testTag("wordStudyPane")) {
         if (w == null) {
             Text(
@@ -193,9 +192,10 @@ fun WordStudyPane(vm: StudyViewModel, modifier: Modifier) {
             return@Column
         }
         key(w) {
-            WordStudyBody(vm, w, onDismiss = {}) { title, back ->
+            WordStudyBody(vm, w, onDismiss = { onBack?.invoke() }) { title, back ->
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (back != null) IconButton(onClick = back) { Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back") }
+                    else if (onBack != null) IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back to the verse") }
                     Text(title, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(vertical = 8.dp))
                 }
             }
