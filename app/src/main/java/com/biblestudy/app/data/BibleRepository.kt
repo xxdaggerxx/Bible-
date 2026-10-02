@@ -85,6 +85,15 @@ class BibleRepository(context: Context, val version: BibleVersion) {
             arrayOf(fromId.toString(), toId.toString()),
         ).use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getString(1)) } }
 
+    /** The open database, for an imported version's word tags, red letters and paragraphs (see [StudyRepository.ownDb]). */
+    internal val database: SQLiteDatabase get() = db
+
+    /** Every verse, in Bible order. */
+    fun allVerses(): List<Pair<Int, String>> =
+        db.rawQuery("SELECT id, text FROM verses ORDER BY id", null).use { c ->
+            buildList { while (c.moveToNext()) add(c.getInt(0) to c.getString(1)) }
+        }
+
     fun verseText(id: Int): String? =
         db.rawQuery("SELECT text FROM verses WHERE id = ?", arrayOf(id.toString())).use { c ->
             if (c.moveToFirst()) c.getString(0) else null
@@ -184,9 +193,13 @@ class BibleRepository(context: Context, val version: BibleVersion) {
             registry(context).writeText(a.toString())
         }
 
+        // The list is Compose state and is changed from import threads: each change is applied at
+        // once in its own snapshot, so the screen hears about it wherever it was made.
         fun addImported(context: Context, v: BibleVersion) {
-            imported.removeAll { it.code == v.code }
-            imported.add(v)
+            androidx.compose.runtime.snapshots.Snapshot.withMutableSnapshot {
+                imported.removeAll { it.code == v.code }
+                imported.add(v)
+            }
             saveRegistry(context)
         }
 
@@ -211,7 +224,7 @@ class BibleRepository(context: Context, val version: BibleVersion) {
 
         fun removeImported(context: Context, code: String) {
             imported.firstOrNull { it.code == code }?.let { File(it.asset).delete() }
-            imported.removeAll { it.code == code }
+            androidx.compose.runtime.snapshots.Snapshot.withMutableSnapshot { imported.removeAll { it.code == code } }
             saveRegistry(context)
         }
 

@@ -101,7 +101,7 @@ fun SettingsDialog(
                 Choices("Layout", listOf(false, true), vm.paragraphMode, { if (it) "Paragraphs" else "Verse per line" }) { vm.changeParagraphs(it) }
                 Toggle("Verse numbers", null, vm.verseNumbers) { vm.changeVerseNumbers(it) }
                 Toggle("Mark word differences", "When two versions are side by side", vm.markDifferences) { vm.markDifferences = it }
-                Toggle("Words of Jesus in red", "In the KJV, BSB and WEB", vm.redLetters) { vm.redLetters = it }
+                Toggle("Words of Jesus in red", "In every version, imported ones too", vm.redLetters) { vm.redLetters = it }
                 Toggle("Section headings", "Headings and parallel-passage links from the BSB", vm.showHeadings) { vm.showHeadings = it }
                 Choices(
                     "New panels open in", listOf<String?>(null) + BibleRepository.ALL.map { it.code }, vm.newPanelVersion,
@@ -175,10 +175,10 @@ fun SettingsDialog(
                     }
                 }
                 OutlinedButton(onClick = { runCatching { pickBible.launch(arrayOf("*/*")) } }, enabled = !vm.importing) {
-                    Text(if (vm.importing) "Importing\u2026" else "Import a Bible\u2026")
+                    Text(if (vm.importing) vm.importStatus ?: "Importing\u2026" else "Import a Bible\u2026")
                 }
                 Text(
-                    "USFM files (or a .zip of them), OSIS XML, or this app's own database. Only import versions you have the right to use.",
+                    "USFM files (or a .zip of them), OSIS XML, or this app's own database. Word studies, words of Jesus in red and paragraphs work in it too. Only import versions you have the right to use.",
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                 )
                 }

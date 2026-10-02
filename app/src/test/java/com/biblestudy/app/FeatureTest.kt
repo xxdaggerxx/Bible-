@@ -1426,6 +1426,50 @@ class FeatureTest {
     }
 
     @Test
+    fun anImportedBibleHasWordStudiesWordsOfJesusAndParagraphs() {
+        // The ESV test passages (src/test/resources/import/esv), imported as the user would.
+        val files = File(javaClass.classLoader!!.getResource("import/esv")!!.toURI()).listFiles()!!.sorted()
+        compose.runOnUiThread {
+            vm.importBible(files.map { it.name }, { i -> files[i].inputStream() }, "ESV", "English Standard Version", "ESV test passages")
+        }
+        compose.waitUntil(180_000) { !vm.importing }
+        assertEquals("ESV added, with word studies. Pick it from the version menu.", vm.message)
+        try {
+            compose.runOnUiThread {
+                vm.setVersion(0, "ESV")
+                vm.goTo(0, 43, 3, remember = false)
+                vm.redLetters = true
+                vm.changeParagraphs(true)
+            }
+            waitForLoaded()
+            snap("87-imported-esv")
+            val john3 = vm.text("ESV").chapter(43, 3).associate { it.verse to it.text }
+            assertTrue(vm.study.redLetters("ESV", 43, 3, john3)[16]!!.isNotEmpty())
+            assertTrue(16 in vm.study.paragraphStarts("ESV", 43, 3))
+            // "For God so loved": word 3 opens the word study for agapaō, with its uses in the ESV.
+            compose.runOnUiThread { vm.openVerse(43, 3, 16, word = 3) }
+            compose.waitUntil(10_000) { compose.onAllNodesWithText("Word study: \u201cloved\u201d").fetchSemanticsNodes().isNotEmpty() }
+            compose.onNodeWithText("Word study: \u201cloved\u201d").performClick()
+            compose.waitUntil(10_000) { compose.onAllNodesWithText("Used in", substring = true).fetchSemanticsNodes().isNotEmpty() }
+            compose.onNodeWithText("Greek \u00b7 Strong's G25", substring = true).assertExists()
+            assertTrue(vm.study.occurrences("ESV", "G25", { vm.text("ESV").verseText(it) }).any { it.id == 43003016 })
+            snap("88-imported-word-study")
+        } finally {
+            // Back to the KJV and settled before the ESV goes, so nothing is still loading from it.
+            compose.runOnUiThread {
+                vm.wordStudy = null
+                vm.verseSheet = null
+                vm.redLetters = false
+                vm.changeParagraphs(false)
+                vm.setVersion(0, "KJV")
+            }
+            waitForLoaded(30_000)
+            compose.runOnUiThread { vm.removeBible("ESV") }
+            waitForLoaded(30_000)
+        }
+    }
+
+    @Test
     fun searchingAStrongsNumberFindsEveryUseOfTheWord() {
         compose.onNodeWithContentDescription("Search").performScrollTo().performClick()
         compose.onNodeWithText("Words, \"exact phrase\", or a reference like John 3:16").performTextInput("G26")
@@ -1492,9 +1536,10 @@ class FeatureTest {
         compose.onNodeWithText("50%").performClick()
         compose.waitForIdle()
         assertEquals(0.5f, vm.layers.first().opacity, 0.001f)
-        assertEquals(0.5f, vm.user.layers().first().opacity, 0.001f) // saved
+        // Saved on the database thread.
+        compose.waitUntil(5_000) { kotlin.math.abs(vm.user.layers().first().opacity - 0.5f) < 0.001f }
         compose.runOnUiThread { vm.setLayerColor(vm.layers.first().id, com.biblestudy.app.ui.LAYER_COLORS[2]) }
-        assertEquals(com.biblestudy.app.ui.LAYER_COLORS[2], vm.user.layers().first().color)
+        compose.waitUntil(5_000) { vm.user.layers().first().color == com.biblestudy.app.ui.LAYER_COLORS[2] }
         compose.runOnUiThread { vm.setLayerOpacity(vm.layers.first().id, 1f); vm.setLayerColor(vm.layers.first().id, com.biblestudy.app.ui.LAYER_COLORS[0]) }
     }
 

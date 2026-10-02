@@ -1305,7 +1305,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 for (v in BibleRepository.ALL) Text("\u2022 ${v.name}: ${v.copyright}")
                 Text("\u2022 Cross-references: OpenBible.info, licensed CC BY.")
                 Text("\u2022 Hebrew and Greek dictionaries: Strong's (1890, public domain), from the Open Scriptures edition, licensed CC BY-SA.")
-                Text("\u2022 Strong's numbers for each word: the KJV, BSB and WEB editions at eBible.org (public domain).")
+                Text("\u2022 Strong's numbers for each word: the KJV, BSB and WEB editions at eBible.org (public domain). Imported Bibles are tagged on the tablet by matching each word to these and to the Hebrew and Greek of its verse.")
                 Text("\u2022 People and places: STEPBible.org TIPNR, licensed CC BY 4.0. Map outline: Natural Earth (public domain).")
                 Text("\u2022 Hebrew and Greek word by word: STEPBible.org TAHOT and TAGNT (Tyndale House, Cambridge), licensed CC BY 4.0. Only the columns shown are kept.")
                 Text("\u2022 Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library.")

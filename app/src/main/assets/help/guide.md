@@ -111,10 +111,11 @@ Tap any verse with your finger. Its window shows:
 - Tap a word in the verse window (or tap a word on the page with your finger, then *Word study*).
 - You see the Hebrew or Greek word, how it's pronounced, its meaning, how the KJV translates it, and every verse that uses it, counted by book. Tap a verse to go there.
 - **Search by Strong's number:** type *G26* (agapē, love) or *H2617* (chesed, lovingkindness) in Search.
+- **Imported Bibles have word studies too.** When you import a version, the app works out which Hebrew or Greek word each English word translates, by comparing the verse with the KJV, BSB and WEB and with the original text. Most important words are tapped just like in the built-in versions. A few small words ("the", "of") and loosely worded phrases have none.
 
 ## Words of Jesus in red
 
-Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB and WEB.
+Turn on *Settings → Reading → Words of Jesus in red*. Works in every version. An imported Bible uses its own red-letter marks; if its file has none, the app colours Jesus' quotations where the WEB marks him speaking.
 
 ## Searching
 
@@ -194,6 +195,10 @@ Your ink and highlights stay on their words whatever you choose.
 
 - The KJV, BSB and WEB are built in.
 - *Settings → Bibles → Import a Bible…* adds another version from USFM files (or a .zip of them), OSIS XML, or this app's own database file. Only import versions you have the right to use.
+  - USFM is the best choice: one file per book, or all of them in one .zip.
+  - Importing takes a minute or so while the button shows *Preparing word studies…*. After that the version has word studies, words of Jesus in red and paragraphs, like the built-in ones. Footnotes in the file are left out.
+  - Verses printed together (such as "1–2") are shown under the first verse number.
+  - Versions you imported before this get word studies the next time the app starts.
 - *Remove* takes an imported version off the tablet.
 - *About these versions* explains how the translations differ.
 

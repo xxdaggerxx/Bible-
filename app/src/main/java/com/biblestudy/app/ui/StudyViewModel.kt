@@ -701,25 +701,65 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (c.isEmpty() || name.isBlank() || copyright.isBlank()) { message = "Give the version a short code, a name and its copyright line."; return }
         if (BibleRepository.BUNDLED.any { it.code == c }) { message = "$c is already built in. Choose another code."; return }
         importing = true
+        importStatus = "Importing\u2026"
         viewModelScope.launch {
             val result = withContext(Dispatchers.IO) {
                 runCatching {
+                    // A version being replaced is read from its new file afterwards.
+                    synchronized(this@StudyViewModel) { texts.remove(c) }
+                    val addStudy = { db: android.database.sqlite.SQLiteDatabase, parsed: com.biblestudy.app.data.BibleImport.Parsed? -> buildStudy(db, c, parsed) }
                     if (names.size == 1 && names[0].lowercase().endsWith(".db")) {
-                        open(0).use { com.biblestudy.app.data.BibleImport.saveAppDb(getApplication(), it, c, name.trim(), copyright.trim()) }
+                        open(0).use { com.biblestudy.app.data.BibleImport.saveAppDb(getApplication(), it, c, name.trim(), copyright.trim(), addStudy) }
                     } else {
                         val parsed = com.biblestudy.app.data.BibleImport.parse(names, open)
-                        com.biblestudy.app.data.BibleImport.save(getApplication(), parsed, c, name.trim(), copyright.trim(), bible.books)
+                        com.biblestudy.app.data.BibleImport.save(getApplication(), parsed, c, name.trim(), copyright.trim(), bible.books, addStudy)
                     }
                 }
             }
             importing = false
+            importStatus = null
             synchronized(this@StudyViewModel) { texts.remove(c) }
-            message = result.fold({ "${it.code} added. Pick it from the version menu." }, { "Couldn't import: ${it.message}" })
+            dataGeneration++
+            message = result.fold({ "${it.code} added, with word studies. Pick it from the version menu." }, { "Couldn't import: ${it.message}" })
         }
     }
 
     var importing by mutableStateOf(false)
         private set
+
+    /** What an import (or preparing word studies) is doing, shown on the import button. */
+    var importStatus by mutableStateOf<String?>(null)
+        private set
+
+    /** Word tags, words of Jesus and paragraphs for imported version [code] (see [ImportStudy]). */
+    private fun buildStudy(db: android.database.sqlite.SQLiteDatabase, code: String, parsed: com.biblestudy.app.data.BibleImport.Parsed?) {
+        com.biblestudy.app.data.ImportStudy.build(db, code, parsed, study, BibleRepository.BUNDLED.map { text(it.code) }) { f ->
+            val status = "Preparing word studies\u2026 ${(f * 100).toInt()}%"
+            viewModelScope.launch(Dispatchers.Main) { if (importing) importStatus = status }
+        }
+    }
+
+    /**
+     * Versions imported before word studies worked for them (or restored from such a backup) get
+     * their word tags, words of Jesus and paragraphs now, in the background.
+     */
+    fun prepareImported() {
+        val todo = BibleRepository.ALL.filter { it.imported }
+        if (todo.isEmpty() || importing) return
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                for (v in todo) runCatching {
+                    android.database.sqlite.SQLiteDatabase.openDatabase(v.asset, null, android.database.sqlite.SQLiteDatabase.OPEN_READWRITE).use { db ->
+                        if (!com.biblestudy.app.data.ImportStudy.isBuilt(db)) {
+                            withContext(Dispatchers.Main) { importing = true }
+                            buildStudy(db, v.code, null)
+                        }
+                    }
+                }
+            }
+            if (importing) { importing = false; importStatus = null; dataGeneration++ }
+        }
+    }
 
     /** Removes an imported version; panels reading it go back to the KJV. */
     fun removeBible(code: String) {
@@ -1016,7 +1056,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // ---------- study library (0.8) ----------
 
     /** Word studies, dictionary, topics and commentary; opened on first use. */
-    val study by lazy { StudyRepository(getApplication()) }
+    val study by lazy {
+        StudyRepository(getApplication()).also { s ->
+            // Imported versions keep their word tags, red letters and paragraphs in their own database.
+            s.ownDb = { code -> if (BibleRepository.ALL.any { it.code == code && it.imported }) text(code).database else null }
+        }
+    }
 
     /** The word study window, when open (STD-3). */
     var wordStudy by mutableStateOf<WordStudy?>(null)
@@ -2214,6 +2259,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             readingGeneration++ // reading stats came with the backup
             dataGeneration++
             message = "Notes restored."
+            prepareImported() // versions in an older backup have no word tags yet
         }
     }
 
@@ -2222,6 +2268,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // everything they use is set up.
     init {
         if (!prefs.getBoolean("readyMadeAdded", false)) runCatching { addReadyMadePages() }
+        prepareImported()
     }
 
     companion object {

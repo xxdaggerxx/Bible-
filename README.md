@@ -66,6 +66,16 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 1.1 (in progress)
+
+- **Imported Bibles work with every feature.** *Import a Bible…* now gives the version:
+  - **Word studies.** The files publishers give out have no Strong's numbers, so the app works them out when importing: each English word is matched to a Hebrew or Greek word of the same verse, using the same word in the KJV, BSB and WEB, how those three translate each original word across the Bible, and the original word's English meaning. Small words like "the" are only tagged when the match is a usual one. Tested on the BSB and WEB (each tagged from the other two), about 9 in 10 content words are tagged and about 9 in 10 of those agree with the published tags. In the ESV and NLT test passages, almost every important word is tagged (John 3:16 "loved" → G25 agapaō, Psalm 23:1 "shepherd" → H7462).
+  - **Words of Jesus in red**, from the file's `\wj` (USFM) or `<q who="Jesus">` (OSIS) marks; for a file without them, Jesus' quotations are found where the WEB marks him speaking.
+  - **Paragraphs and poetry lines**, from the file's paragraph markers (or the BSB's when it has none).
+  - Verses printed together ("\v 1-2") are kept under the first verse and tagged against both.
+  - Bibles imported before this get all of it in the background the next time the app starts, and when restored from an older backup.
+- The import tests use short ESV and NLT passages (31 verses each, within the publishers' quotation allowances).
+
 ## New in version 1.0.2
 
 - **Any sketch page beside the text.** The study pane has a new choice, *Sketch pages*. Open it from the panels button (*Beside the text: Sketch pages*) or the pane's menu. It lists your pages and the ready-made ones. Tap one and it opens in a panel beside the Bible, so you can read and draw side by side. Tapping another swaps it into the same panel.
@@ -346,6 +356,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - The Hebrew and Greek view uses the Hebrew text (Leningrad Codex) and the amalgamated Greek editions; it doesn't follow an imported Bible's wording.
 - The performance pass for very long chapters (Psalm 119) and very large sketch pages still needs checking on the tablet itself.
 - Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
+- Word tags in imported Bibles are worked out, not published ones: roughly 1 in 10 tagged words may point to a neighbouring Hebrew or Greek word, and loosely paraphrased words (common in the NLT, e.g. "meadows", "unfailing") have none. Footnotes in imported files are left out. Verses printed together ("1–2") show under the first verse number.
 - The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
 - Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
 
