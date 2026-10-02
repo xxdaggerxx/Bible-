@@ -301,7 +301,7 @@ private fun LookupPane(
 ) {
     var query by remember { mutableStateOf("") }
     var shown by remember { mutableStateOf<Passage?>(null) }
-    val version = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)].version
+    val version = vm.studyPanel().version
     PassagePopupHost(vm, shown, version, onDismiss = { shown = null })
     Column(modifier) {
         val entry by produceState<StudyEntry?>(null, open) { value = open?.let { withContext(Dispatchers.IO) { load(it) } } }
@@ -349,7 +349,7 @@ private fun LookupPane(
 /** Easton's Bible Dictionary (STD-5), suggesting names and words from the chapter being read. */
 @Composable
 fun DictionaryPane(vm: StudyViewModel, modifier: Modifier) {
-    val panel = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
+    val panel = vm.studyPanel()
     val suggestions by produceState(emptyList<StudyEntry>(), panel.book, panel.chapter, panel.version) {
         value = withContext(Dispatchers.IO) { vm.chapterArticles(panel.version, panel.book, panel.chapter) }
     }
@@ -368,7 +368,7 @@ fun DictionaryPane(vm: StudyViewModel, modifier: Modifier) {
 /** Nave's Topical Bible (STD-6), suggesting the topics that list the verse being read. */
 @Composable
 fun TopicsPane(vm: StudyViewModel, modifier: Modifier) {
-    val panel = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
+    val panel = vm.studyPanel()
     val t = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
     val verse = t?.verse ?: panel.topVerse
     val id = VerseId.of(panel.book, panel.chapter, verse)
@@ -390,7 +390,7 @@ fun TopicsPane(vm: StudyViewModel, modifier: Modifier) {
 /** Matthew Henry's Concise Commentary on the chapter being read (STD-7), at the verse in view. */
 @Composable
 fun CommentaryPane(vm: StudyViewModel, modifier: Modifier) {
-    val panel = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
+    val panel = vm.studyPanel()
     val sections by produceState<List<CommentarySection>?>(null, panel.book, panel.chapter) {
         value = withContext(Dispatchers.IO) { vm.study.commentary(panel.book, panel.chapter) }
     }

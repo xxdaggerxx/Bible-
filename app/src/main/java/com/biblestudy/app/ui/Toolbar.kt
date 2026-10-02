@@ -197,13 +197,16 @@ fun StudyToolbar(
                     Icon(Icons.Filled.VerticalSplit, contentDescription = "Panels")
                 }
                 DropdownMenu(expanded = panelsMenu, onDismissRequest = { panelsMenu = false }) {
+                    // Tabs (TAB-1): each keeps its own one or two panels.
+                    DropdownMenuItem(text = { Text("New tab") }, onClick = { vm.newTab(); panelsMenu = false })
                     DropdownMenuItem(
                         text = { Text("Add a Bible panel") },
-                        enabled = vm.panels.size < vm.maxPanels,
+                        enabled = vm.tab.shown < vm.maxPanels,
                         onClick = { vm.addPanel(); panelsMenu = false },
                     )
-                    if (vm.panels.size > 1) {
-                        DropdownMenuItem(text = { Text("Close other panels") }, onClick = {
+                    if (vm.tab.shown > 1) {
+                        DropdownMenuItem(text = { Text("Close other panel") }, onClick = {
+                            vm.closeStudies()
                             val keep = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
                             while (vm.panels.size > 1) vm.closePanel(vm.panels.indexOfFirst { it !== keep })
                             panelsMenu = false

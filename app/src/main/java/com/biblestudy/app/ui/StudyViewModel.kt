@@ -128,36 +128,45 @@ enum class WidthClass { COMPACT, MEDIUM, EXPANDED;
     }
 }
 
-/** One Bible panel in a saved layout. */
-data class WorkspacePanel(val book: Int, val chapter: Int, val version: String)
+/**
+ * A saved layout (SPLIT-6): every tab with its panels, as [TabState.listToJson] writes them, and the
+ * tab that was in front. Layouts saved before 1.2 (Bible panels and a study pane) open as tabs of
+ * at most two panels.
+ */
+class Workspace(val name: String, private val tabsJson: String, val active: Int) {
+    fun toJson(): String = org.json.JSONObject().put("tabs", org.json.JSONArray(tabsJson)).put("active", active).toString()
 
-/** A saved panel layout (SPLIT-6): the Bible panels, the study pane, linking and sizes. */
-data class Workspace(
-    val name: String,
-    val panels: List<WorkspacePanel>,
-    val pane: PaneKind?,
-    val linked: Boolean,
-    val weights: List<Float>,
-) {
-    fun toJson(): String = org.json.JSONObject().apply {
-        put("panels", org.json.JSONArray(panels.map { org.json.JSONObject().put("b", it.book).put("c", it.chapter).put("v", it.version) }))
-        put("pane", pane?.name ?: "")
-        put("linked", linked)
-        put("weights", org.json.JSONArray(weights.map { it.toDouble() }))
-    }.toString()
+    /** The layout's tabs, made fresh each time it is opened. */
+    fun tabs(place: (Int, Int, String?) -> Triple<Int, Int, String>): List<TabState> =
+        TabState.listFromJson(tabsJson, place).orEmpty()
 
     companion object {
         fun fromJson(name: String, json: String): Workspace? = runCatching {
             val o = org.json.JSONObject(json)
+            if (o.has("tabs")) return@runCatching Workspace(name, o.getJSONArray("tabs").toString(), o.optInt("active"))
+            // Before 1.2: up to three Bible panels, a study pane, linking and sizes.
             val p = o.getJSONArray("panels")
+            val pane = PaneKind.entries.firstOrNull { it.name == o.optString("pane") }
             val w = o.optJSONArray("weights")
-            Workspace(
-                name,
-                List(p.length()) { i -> p.getJSONObject(i).let { WorkspacePanel(it.getInt("b"), it.getInt("c"), it.getString("v")) } },
-                PaneKind.entries.firstOrNull { it.name == o.optString("pane") },
-                o.optBoolean("linked"),
-                if (w == null) emptyList() else List(w.length()) { w.getDouble(it).toFloat() },
-            )
+            fun panel(i: Int) = p.getJSONObject(i).let {
+                org.json.JSONObject().put("b", it.getInt("b")).put("c", it.getInt("c")).put("v", it.getString("v"))
+            }
+            val tabs = org.json.JSONArray()
+            val first = org.json.JSONObject()
+            val firstPanels = org.json.JSONArray()
+            for (i in 0 until minOf(p.length(), 2)) firstPanels.put(panel(i))
+            first.put("panels", firstPanels)
+            first.put("linked", o.optBoolean("linked") && p.length() >= 2)
+            if (w != null && w.length() >= 2) first.put("split", w.getDouble(0) / (w.getDouble(0) + w.getDouble(1)))
+            if (pane != null && p.length() == 1) first.put("studies", org.json.JSONArray().put(pane.name))
+            tabs.put(first)
+            if (p.length() > 2 || (pane != null && p.length() > 1)) {
+                val second = org.json.JSONObject()
+                second.put("panels", org.json.JSONArray().put(panel(if (p.length() > 2) 2 else 0)))
+                if (pane != null && p.length() > 1) second.put("studies", org.json.JSONArray().put(pane.name))
+                tabs.put(second)
+            }
+            Workspace(name, tabs.toString(), 0)
         }.getOrNull()
     }
 }
@@ -207,8 +216,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var snapHighlights by mutableStateOf(prefs.getBoolean("snap", true))
     var fingerDraw by mutableStateOf(prefs.getBoolean("fingerDraw", false))
     var showHeadings by mutableStateOf(prefs.getBoolean("headings", true))
-    /** Split panels scroll together (SPLIT-3). */
-    var linkPanels by mutableStateOf(prefs.getBoolean("linkPanels", false))
+    /** The tab's two Bible panels scroll together (SPLIT-3); each tab has its own setting. */
+    var linkPanels: Boolean
+        get() = tab.linked
+        set(v) { tab.linked = v }
     val linked: Boolean get() = linkPanels && panels.size > 1
     /** The latest position announced by a linked panel; the other panel follows it. */
     var linkPos by mutableStateOf<ScrollPos?>(null)
@@ -369,16 +380,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var marginLeft by mutableStateOf(prefs.getBoolean("marginLeft", false))
     var marginRight by mutableStateOf(prefs.getBoolean("marginRight", true))
     var theme by mutableStateOf(runCatching { PageTheme.valueOf(prefs.getString("theme", "LIGHT")!!) }.getOrDefault(PageTheme.LIGHT))
-    var splitFraction by mutableFloatStateOf(prefs.getFloat("split", 0.5f))
-    /** Relative widths (or heights) of the Bible panels, one per panel. */
-    val panelWeights = mutableStateListOf<Float>()
-    /** How many Bible panels fit: 3 on large screens in landscape, otherwise 2 (ADP-3). */
-    var maxPanels by mutableIntStateOf(2)
+    /** A tab holds at most two panels (SPLIT-8); more go in other tabs. */
+    val maxPanels = 2
     /** The window's width class (ADP-1). */
     var widthClass by mutableStateOf(WidthClass.EXPANDED)
-    /** The study pane beside the Bible panels, if open (SPLIT-2), and its share of the screen. */
-    var sidePane by mutableStateOf(prefs.getString("sidePane", null)?.let { n -> PaneKind.entries.firstOrNull { it.name == n } })
-    var paneFraction by mutableFloatStateOf(prefs.getFloat("paneFraction", 0.32f))
+    /**
+     * The study view in the tab in front, if one is shown (SPLIT-2, SPLIT-7). Setting it shows that
+     * view in a panel (see [showStudy]); null closes the tab's study views.
+     */
+    var sidePane: PaneKind?
+        get() = tab.studies.firstOrNull()
+        set(v) { if (v == null) closeStudies() else showStudy(v) }
     /** A search the search pane should run when it opens. */
     var paneSearch by mutableStateOf<String?>(null)
     /** The verse the cross-references pane shows; null follows the top of the active panel. */
@@ -401,9 +413,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         marginWidths[marginKey(left)] = width.coerceIn(Page.MARGIN_MIN, Page.MARGIN_MAX)
     }
 
-    // ---------- panels ----------
-    val panels = mutableStateListOf<PanelState>()
-    var activePanel by mutableIntStateOf(0)
+    // ---------- tabs and panels (TAB-1, SPLIT-7, SPLIT-8) ----------
+    /** The open tabs; each has its own panels. */
+    val tabs = mutableStateListOf<TabState>()
+    var activeTab by mutableIntStateOf(0)
+    /** The tab in front. */
+    val tab: TabState get() = tabs[activeTab.coerceIn(0, tabs.lastIndex)]
+    /** The Bible panels of the tab in front. */
+    val panels: androidx.compose.runtime.snapshots.SnapshotStateList<PanelState> get() = tab.panels
+    var activePanel: Int
+        get() = tab.activePanel
+        set(v) { tab.activePanel = v }
 
     // ---------- layers ----------
     val layers = mutableStateListOf<Layer>()
@@ -445,15 +465,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private var lastId = 0L
 
     init {
-        val count = prefs.getInt("panels", 1).coerceIn(1, 3)
-        for (i in 0 until count) {
-            val b = prefs.getInt("p${i}b", 43).coerceIn(1, 66)
-            val c = prefs.getInt("p${i}c", if (b == 43) 3 else 1).coerceIn(1, bible.book(b).chapters)
-            panels.add(PanelState(b, c).apply {
-                version = validVersion(prefs.getString("p${i}v", null))
-                for (o in listOf("land", "port")) zoomRel[o] = prefs.getFloat("p${i}z_$o", 1f)
-                lastZoomRel = prefs.getFloat("p${i}zl", 2f)
-            })
+        val saved = prefs.getString("tabs", null)?.let { TabState.listFromJson(it, ::validPlace) }.orEmpty()
+        if (saved.isNotEmpty()) {
+            tabs.addAll(saved)
+            activeTab = prefs.getInt("activeTab", 0).coerceIn(0, tabs.lastIndex)
+        } else {
+            tabs.addAll(tabsFromOldPrefs())
         }
         layers.addAll(user.layers())
         if (layers.isEmpty()) {
@@ -481,25 +498,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("linkPanels", linkPanels)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
-            putFloat("split", splitFraction)
-            putString("sidePane", sidePane?.name); putFloat("paneFraction", paneFraction)
-            putInt("panels", panels.size)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
-            panels.forEachIndexed { i, p ->
-                // A sketch page reopens on its passage next time (or, if it has none, where you were before it).
-                val sk = sketchOf(p.book)
-                val (b, c) = when {
-                    sk == null -> p.book to p.chapter
-                    sk.linked -> sk.linkBook to sk.linkChapter
-                    else -> biblePlaceBefore(p).let { it.first to it.second }
-                }
-                putInt("p${i}b", b); putInt("p${i}c", c); putString("p${i}v", p.version)
-                p.zoomRel.forEach { (o, z) -> putFloat("p${i}z_$o", z) }
-                putFloat("p${i}zl", p.lastZoomRel)
-            }
+            putString("tabs", tabsJson(tabs))
+            putInt("activeTab", activeTab)
         }
     }
 
@@ -600,47 +604,308 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun toggleSplit() {
-        if (panels.size == 1) addPanel() else while (panels.size > 1) closePanel(panels.lastIndex)
+        if (tab.shown == 1) addPanel() else while (panels.size > 1) closePanel(panels.lastIndex)
     }
 
-    /** Opens another Bible panel showing the active one's passage (up to [maxPanels]). */
+    /** A Bible passage and version as saved, made valid (sketch pages reopen on their passage). */
+    private fun validPlace(book: Int, chapter: Int, version: String?): Triple<Int, Int, String> {
+        val b = book.coerceIn(1, 66)
+        return Triple(b, chapter.coerceIn(1, bible.book(b).chapters), validVersion(version))
+    }
+
+    /** Where a panel is, for saving: a sketch page is saved as its passage (or where you were before it). */
+    private fun savedPlace(p: PanelState): Pair<Int, Int> {
+        val sk = sketchOf(p.book)
+        return when {
+            sk == null -> p.book to p.chapter
+            sk.linked -> sk.linkBook to sk.linkChapter
+            else -> biblePlaceBefore(p).let { it.first to it.second }
+        }
+    }
+
+    private fun tabsJson(list: List<TabState>): String {
+        val json = org.json.JSONArray(TabState.listToJson(list))
+        // Sketch pages are saved as their passages.
+        list.forEachIndexed { t, tab ->
+            val ps = json.getJSONObject(t).getJSONArray("panels")
+            tab.panels.forEachIndexed { i, p ->
+                val (b, c) = savedPlace(p)
+                ps.getJSONObject(i).put("b", b).put("c", c)
+            }
+        }
+        return json.toString()
+    }
+
+    /**
+     * Before 1.2 the screen had up to three Bible panels and a study pane. They become tabs of at
+     * most two panels: a third Bible panel, or the study pane beside two Bible panels, moves to a
+     * second tab.
+     */
+    private fun tabsFromOldPrefs(): List<TabState> {
+        val old = (0 until prefs.getInt("panels", 1).coerceIn(1, 3)).map { i ->
+            val (b, c, v) = validPlace(prefs.getInt("p${i}b", 43), prefs.getInt("p${i}c", 3), prefs.getString("p${i}v", null))
+            PanelState(b, c).apply {
+                version = v
+                for (o in listOf("land", "port")) zoomRel[o] = prefs.getFloat("p${i}z_$o", 1f)
+                lastZoomRel = prefs.getFloat("p${i}zl", 2f)
+            }
+        }
+        val pane = prefs.getString("sidePane", null)?.let { n -> PaneKind.entries.firstOrNull { it.name == n } }
+        val first = TabState().apply {
+            panels.addAll(old.take(2))
+            linked = prefs.getBoolean("linkPanels", false) && panels.size == 2
+            split = prefs.getFloat("split", 0.5f).coerceIn(TabState.SPLIT_MIN, 1f - TabState.SPLIT_MIN)
+            if (pane != null && old.size == 1) {
+                studies.add(pane)
+                split = (1f - prefs.getFloat("paneFraction", 0.32f)).coerceIn(TabState.SPLIT_MIN, 1f - TabState.SPLIT_MIN)
+            }
+        }
+        val out = mutableListOf(first)
+        val rest = old.drop(2)
+        if (rest.isNotEmpty() || (pane != null && old.size > 1)) {
+            out.add(TabState().apply {
+                panels.add(rest.firstOrNull() ?: PanelState(old[0].book, old[0].chapter).apply { version = old[0].version })
+                if (pane != null && old.size > 1) studies.add(pane)
+            })
+        }
+        return out
+    }
+
+    /** Opens another Bible panel in this tab, showing the active one's passage. */
     fun addPanel() {
-        if (panels.size >= maxPanels) {
-            message = "No room for another panel on this screen."
+        if (tab.shown >= maxPanels) {
+            message = "A tab holds two panels. Open a new tab for more."
             return
         }
         val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        if (tab.bibleHidden) {
+            // Both panels showed study views and one was closed: bring the Bible panel back.
+            tab.bibleHidden = false
+            tab.studyFirst = true // the study view stays where it was; the Bible comes in beside it
+            activePanel = 0
+            return
+        }
         panels.add(PanelState(p.book, p.chapter).apply { version = validVersion(newPanelVersion ?: p.version) })
-        panelWeights.clear()
         activePanel = panels.lastIndex
     }
 
+    /**
+     * Closes Bible panel [index]. The tab's last Bible panel can't go, but beside a study view it
+     * is kept out of sight; a tab left with nothing is closed.
+     */
     fun closePanel(index: Int) {
-        if (panels.size > 1 && index in panels.indices) {
-            panels.removeAt(index)
-            panelWeights.clear()
+        val t = tab
+        when {
+            t.panels.size > 1 && index in t.panels.indices -> {
+                t.panels.removeAt(index)
+                t.linked = false
+            }
+            t.studies.isNotEmpty() -> t.bibleHidden = true
+            tabs.size > 1 -> { closeTab(activeTab); return }
         }
-        activePanel = 0
+        t.activePanel = 0
     }
 
-    /** The weights of the panels (equal, or the saved split for two, until a divider is dragged). */
-    fun weights(): List<Float> =
-        if (panelWeights.size == panels.size) panelWeights.toList()
-        else if (panels.size == 2) listOf(splitFraction, 1f - splitFraction)
-        else List(panels.size) { 1f }
+    /** The weights of the panels on screen. */
+    fun weights(): List<Float> = if (tab.shown == 2) listOf(tab.split, 1f - tab.split) else listOf(1f)
 
-    /** Moves the divider after panel [i] by [delta] (a fraction of the panels' total size). */
-    fun dragDivider(i: Int, delta: Float) {
-        val w = weights().toMutableList()
-        if (i + 1 >= w.size) return
-        val total = w.sum()
-        val d = delta * total
-        val min = 0.15f * total
-        val a = (w[i] + d).coerceIn(min, w[i] + w[i + 1] - min)
-        w[i + 1] = w[i] + w[i + 1] - a
-        w[i] = a
-        panelWeights.clear(); panelWeights.addAll(w)
-        if (w.size == 2) splitFraction = w[0] / total
+    /** Moves the divider by [delta] (a fraction of the space both panels share). */
+    fun dragDivider(@Suppress("UNUSED_PARAMETER") i: Int, delta: Float) {
+        tab.split = (tab.split + delta).coerceIn(TabState.SPLIT_MIN, 1f - TabState.SPLIT_MIN)
+    }
+
+    /** Top and bottom (true) or side by side (false), as chosen for the tab in front. */
+    fun isStacked(t: TabState = tab): Boolean = t.stacked ?: !landscape
+
+    fun setStacked(stacked: Boolean) { tab.stacked = stacked }
+
+    // ---------- study views (SPLIT-7) ----------
+
+    /**
+     * Shows a study view in the tab in front: it replaces the study view already shown, or takes
+     * the second panel. With two Bible panels, the one not in use makes way for it.
+     */
+    fun showStudy(kind: PaneKind) {
+        val t = tab
+        if (kind in t.studies) return
+        when {
+            t.studies.isNotEmpty() -> t.studies[0] = kind
+            t.panels.size >= 2 -> {
+                // The second panel makes way, unless the first is a sketch page beside Bible text.
+                val other = if (Sketch.isSketch(t.panels[0].book) && !Sketch.isSketch(t.panels[1].book)) 0 else 1
+                t.panels.removeAt(other)
+                t.linked = false
+                t.activePanel = 0
+                t.studies.add(kind)
+                t.studyFirst = other == 0
+            }
+            else -> { t.studies.add(kind); t.studyFirst = false }
+        }
+        t.normalize()
+    }
+
+    /** Closes study view [kind] in the tab in front. */
+    fun closeStudy(kind: PaneKind) {
+        val t = tab
+        t.studies.remove(kind)
+        if (t.studies.isEmpty()) {
+            t.bibleHidden = false
+            t.pinned = null
+        }
+        t.normalize()
+    }
+
+    /** Closes the study views in the tab in front, leaving its Bible panel. */
+    fun closeStudies() {
+        for (k in tab.studies.toList()) closeStudy(k)
+    }
+
+    /** Opens (or switches) the study view; the same kind again closes it. */
+    fun togglePane(kind: PaneKind) {
+        if (kind in tab.studies) closeStudy(kind) else showStudy(kind)
+    }
+
+    /** Turns the panel at [slot] into [view]: a study view, or (null) a Bible panel. */
+    fun setSlotView(slot: Slot, view: PaneKind?) {
+        val t = tab
+        when (slot) {
+            is Slot.Bible -> {
+                if (view == null) return
+                if (view in t.studies) { message = "${view.label} is already open in this tab."; return }
+                if (t.panels.size >= 2) {
+                    t.panels.removeAt(slot.index)
+                    t.linked = false
+                    t.activePanel = 0
+                    t.studies.add(view)
+                    t.studyFirst = slot.index == 0
+                } else {
+                    // The tab's only Bible panel: it stays, out of sight, keeping the passage.
+                    if (t.studies.isEmpty()) t.studies.add(view)
+                    else if (t.studyFirst) t.studies.add(view) else t.studies.add(0, view)
+                    t.bibleHidden = true
+                }
+            }
+            is Slot.Study -> {
+                val i = t.studies.indexOf(slot.kind)
+                if (i < 0) return
+                if (view != null) {
+                    if (view in t.studies) { message = "${view.label} is already open in this tab."; return }
+                    t.studies[i] = view
+                } else {
+                    // Back to a Bible panel at the passage the study view was working with.
+                    t.studies.removeAt(i)
+                    if (t.bibleHidden) {
+                        t.bibleHidden = false
+                        t.studyFirst = i == 1
+                    } else {
+                        val p = t.panels[t.activePanel.coerceIn(0, t.panels.lastIndex)]
+                        t.panels.add(if (i == 0 && t.studyFirst) 0 else t.panels.size, PanelState(p.book, p.chapter).apply { version = p.version })
+                        t.activePanel = if (t.studyFirst) 0 else t.panels.lastIndex
+                    }
+                }
+            }
+        }
+        t.normalize()
+    }
+
+    /** Closes the panel at [slot]; the tab's last panel closes the tab (if there's another). */
+    fun closeSlot(slot: Slot) {
+        when (slot) {
+            is Slot.Bible -> closePanel(slot.index)
+            is Slot.Study -> {
+                if (tab.shown == 1 && tabs.size > 1) closeTab(activeTab) else if (tab.shown > 1) closeStudy(slot.kind)
+            }
+        }
+    }
+
+    /**
+     * The Bible panel study views work with: the tab's active one, or a copy fixed in place
+     * while the study views are pinned.
+     */
+    fun studyPanel(): PanelState = tab.pinned ?: panels[activePanel.coerceIn(0, panels.lastIndex)]
+
+    /** Pins the tab's study views to the passage they show now, or lets them follow again. */
+    fun togglePin() {
+        val t = tab
+        t.pinned = if (t.pinned != null) null else {
+            val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+            PanelState(p.book, p.chapter).apply { version = p.version; topVerse = p.topVerse }
+        }
+    }
+
+    // ---------- tabs (TAB-1 to TAB-4) ----------
+
+    /** A tab's name: the one given, or what its first panel shows. */
+    fun tabLabel(t: TabState): String {
+        t.name?.let { return it }
+        return when (val s = t.slots().firstOrNull()) {
+            is Slot.Study -> s.kind.label
+            is Slot.Bible -> t.panels.getOrNull(s.index)?.let { p ->
+                sketchOf(p.book)?.name ?: "${bible.book(p.book.coerceIn(1, 66)).name} ${p.chapter}"
+            } ?: "Tab"
+            null -> "Tab"
+        }
+    }
+
+    /** Opens a new tab after the one in front, on [book]:[chapter] (default: where you are). */
+    fun newTab(book: Int? = null, chapter: Int = 1, verse: Int? = null, version: String? = null) {
+        val from = panels.getOrNull(activePanel)
+        val t = TabState()
+        val p = PanelState(from?.book ?: 43, from?.chapter ?: 3).apply { this.version = version ?: from?.version ?: bible.code }
+        t.panels.add(p)
+        tabs.add(activeTab + 1, t)
+        selectTab(activeTab + 1)
+        if (book != null) jump(p, book, chapter, verse) else p.pendingVerse = from?.topVerse
+    }
+
+    /** Opens the panel at [slot] in a new tab of its own (TAB-3). */
+    fun openSlotInNewTab(slot: Slot) {
+        when (slot) {
+            is Slot.Bible -> {
+                val p = panels.getOrNull(slot.index) ?: return
+                newTab(p.book, p.chapter, p.topVerse, p.version)
+            }
+            is Slot.Study -> {
+                val p = studyPanel()
+                newTab(p.book, p.chapter, p.topVerse, p.version)
+                tab.studies.add(slot.kind)
+                tab.bibleHidden = true
+                tab.normalize()
+            }
+        }
+    }
+
+    fun selectTab(i: Int) {
+        if (i !in tabs.indices || i == activeTab) { activeTab = i.coerceIn(0, tabs.lastIndex); return }
+        selection = null
+        passagePop = null
+        linkPos = null
+        activeTab = i
+    }
+
+    fun closeTab(i: Int) {
+        if (tabs.size <= 1 || i !in tabs.indices) return
+        selection = null
+        tabs.removeAt(i)
+        activeTab = when {
+            activeTab > i -> activeTab - 1
+            activeTab == i -> i.coerceAtMost(tabs.lastIndex)
+            else -> activeTab
+        }
+    }
+
+    fun renameTab(i: Int, name: String) {
+        tabs.getOrNull(i)?.name = name.trim().ifEmpty { null }
+    }
+
+    /** Moves tab [i] one place left (-1) or right (1). */
+    fun moveTab(i: Int, dir: Int) {
+        val j = i + dir
+        if (i !in tabs.indices || j !in tabs.indices) return
+        val front = tab
+        val t = tabs.removeAt(i)
+        tabs.add(j, t)
+        activeTab = tabs.indexOf(front)
     }
 
     // ---------- saved layouts (SPLIT-6) ----------
@@ -649,43 +914,31 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         addAll(user.workspaces().mapNotNull { (n, j) -> Workspace.fromJson(n, j) })
     }
 
-    /** Saves the open panels, study pane, linking and sizes under [name] (replacing one of that name). */
+    /** Saves every tab, with its panels, under [name] (replacing one of that name). */
     fun saveWorkspace(name: String) {
         val n = name.trim()
         if (n.isEmpty()) return
-        val w = Workspace(n, panels.map { WorkspacePanel(it.book, it.chapter, it.version) }, sidePane, linkPanels, weights())
+        val w = Workspace(n, tabsJson(tabs), activeTab)
         workspaces.removeAll { it.name == n }
         workspaces.add(w)
         io { user.saveWorkspace(n, w.toJson()) }
-        message = "Layout \u201c$n\u201d saved."
+        message = "Layout “$n” saved."
     }
 
-    /** Opens a saved layout (as many panels as fit this screen). */
+    /** Opens a saved layout: its tabs replace the open ones. */
     fun openWorkspace(w: Workspace) {
-        val list = w.panels.take(maxPanels).ifEmpty { return }
+        val list = w.tabs(::validPlace).ifEmpty { return }
         selection = null
-        linkPanels = false
-        panels.clear()
-        for (p in list) {
-            panels.add(PanelState(p.book.coerceIn(1, 66), p.chapter.coerceIn(1, bible.book(p.book.coerceIn(1, 66)).chapters)).apply {
-                version = validVersion(p.version)
-            })
-        }
-        panelWeights.clear()
-        if (w.weights.size == panels.size) panelWeights.addAll(w.weights)
-        activePanel = 0
-        sidePane = w.pane
-        linkPanels = w.linked && panels.size > 1
+        passagePop = null
+        linkPos = null
+        tabs.clear()
+        tabs.addAll(list)
+        activeTab = w.active.coerceIn(0, tabs.lastIndex)
     }
 
     fun deleteWorkspace(w: Workspace) {
         workspaces.removeAll { it.name == w.name }
         io { user.deleteWorkspace(w.name) }
-    }
-
-    /** Opens (or switches) the study pane; the same kind again closes it. */
-    fun togglePane(kind: PaneKind) {
-        sidePane = if (sidePane == kind) null else kind
     }
 
     fun openVerse(book: Int, chapter: Int, verse: Int, word: Int = -1) {
@@ -874,13 +1127,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      */
     fun openSketchBeside(s: Sketch) {
         val reading = panels.indexOfFirst { !Sketch.isSketch(it.book) }.takeIf { it >= 0 } ?: 0
-        val target = panels.indices.firstOrNull { it != reading && Sketch.isSketch(panels[it].book) }
+        val target = panels.indices.firstOrNull { it != reading && Sketch.isSketch(panels[it].book) && !tab.bibleHidden }
             ?: run {
+                // The page takes the tab's other panel (a study view beside the text makes way).
+                closeStudies()
                 if (panels.size == 1) addPanel()
                 if (linkPanels) linkPanels = false
                 panels.indices.first { it != reading }
             }
-        sidePane = null
         activePanel = target
         openSketch(s, target)
     }
@@ -2044,16 +2298,26 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * Opens a linked passage: in the panel it came from, or [beside] it in the other panel (opening
      * split view if needed) to read parallel accounts side by side (LINK-3).
      */
+    /** Brings the tab's Bible panel into view if both panels show study views (it takes the second one's place). */
+    fun showBible() {
+        if (tab.bibleHidden) tab.studies.lastOrNull()?.let { setSlotView(Slot.Study(it), null) }
+    }
+
     fun openPassage(p: Passage, from: Int, beside: Boolean) {
         passagePop = null
+        showBible()
         var target = from.coerceIn(0, panels.lastIndex)
         if (beside) {
-            if (panels.size == 1) addPanel()
+            if (panels.size == 1) {
+                // The passage takes the tab's other panel (a study view makes way for it).
+                tab.studies.lastOrNull()?.let { setSlotView(Slot.Study(it), null) } ?: addPanel()
+                target = target.coerceIn(0, panels.lastIndex)
+            }
             if (linkPanels) {
                 linkPanels = false
                 message = "Panels unlinked to show the passage beside."
             }
-            target = panels.indices.first { it != target }
+            target = panels.indices.firstOrNull { it != target } ?: target
         }
         activePanel = target
         goTo(target, p.book, p.chapter, p.verse)

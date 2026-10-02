@@ -166,7 +166,7 @@ private fun DrawScope.drawLabel(t: androidx.compose.ui.text.TextLayoutResult, x:
  */
 @Composable
 fun NamesPane(vm: StudyViewModel, modifier: Modifier) {
-    val panel = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
+    val panel = vm.studyPanel()
     val t = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
     val verse = t?.verse ?: panel.topVerse
     val id = VerseId.of(panel.book, panel.chapter, verse)
@@ -233,7 +233,7 @@ private fun NameView(vm: StudyViewModel, id: Long, modifier: Modifier) {
         value = withContext(Dispatchers.IO) { vm.study.nameById(id)?.let { it to vm.study.nameVerses(id) } }
     }
     var shown by remember { mutableStateOf<Passage?>(null) }
-    val version = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)].version
+    val version = vm.studyPanel().version
     PassagePopupHost(vm, shown, version, onDismiss = { shown = null })
     val (n, verses) = entry ?: run { Text("Loading…", modifier); return }
     LazyColumn(modifier.testTag("nameView")) {

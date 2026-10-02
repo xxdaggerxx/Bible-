@@ -40,6 +40,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.testTag
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
@@ -130,70 +133,58 @@ fun StudyApp(vm: StudyViewModel) {
                 )
             },
         ) { padding ->
-            BoxWithConstraints(
-                Modifier
-                    .padding(padding)
-                    .fillMaxSize()
-                    .background(vm.theme.surround)
-            ) {
-                val landscape = maxWidth >= maxHeight
-                SideEffect { vm.landscape = landscape }
-                val openPicker = { dialog = DialogKind.PICKER }
-                // Three Bible panels fit on a large screen in landscape (ADP-3), otherwise two.
-                val widthClass = WidthClass.of(maxWidth.value)
-                val maxPanels = if (landscape && maxWidth >= 1200.dp) 3 else 2
-                SideEffect { vm.maxPanels = maxPanels; vm.widthClass = widthClass }
-                LaunchedEffect(maxPanels) { while (vm.panels.size > maxPanels) vm.closePanel(vm.panels.lastIndex) }
-                val sideBySide = landscape
-                val density = LocalDensity.current
-                val pane = vm.sidePane
-                val totalPx = with(density) { (if (sideBySide) maxWidth else maxHeight).toPx() }
+            Column(Modifier.padding(padding).fillMaxSize().background(vm.theme.surround)) {
+                // Tabs (TAB-1, TAB-2): the strip shows once there's a second tab.
+                if (vm.tabs.size > 1) TabStrip(vm)
+                BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
+                    val landscape = maxWidth >= maxHeight
+                    SideEffect { vm.landscape = landscape }
+                    val openPicker = { dialog = DialogKind.PICKER }
+                    val widthClass = WidthClass.of(maxWidth.value)
+                    SideEffect { vm.widthClass = widthClass }
+                    val tab = vm.tab
+                    // One or two panels (SPLIT-8), side by side or one above the other.
+                    val stacked = vm.isStacked(tab)
+                    val density = LocalDensity.current
+                    val totalPx = with(density) { (if (stacked) maxHeight else maxWidth).toPx() }
+                    val slots = tab.slots()
 
-                @Composable
-                fun Divider(onDrag: (Float) -> Unit) {
-                    val state = rememberDraggableState(onDrag)
-                    Box(
-                        (if (sideBySide) Modifier.width(14.dp).fillMaxHeight() else Modifier.height(14.dp).fillMaxWidth())
-                            .draggable(state, if (sideBySide) Orientation.Horizontal else Orientation.Vertical),
-                        contentAlignment = Alignment.Center,
-                    ) { Handle(vertical = sideBySide) }
-                }
-
-                @Composable
-                fun Panels(modifier: Modifier) {
-                    val n = vm.panels.size.coerceAtMost(maxPanels)
-                    val weights = vm.weights()
-                    val areaPx = totalPx * (if (pane != null) 1f - vm.paneFraction else 1f)
                     @Composable
-                    fun Items(cell: @Composable (Int, Float) -> Unit) {
-                        for (i in 0 until n) {
-                            if (i > 0) Divider { d -> vm.dragDivider(i - 1, d / areaPx) }
-                            key(vm.panels[i]) { cell(i, weights.getOrElse(i) { 1f }) }
+                    fun Cell(slot: Slot, modifier: Modifier) {
+                        when (slot) {
+                            is Slot.Bible -> key(tab.panels[slot.index]) { ReaderPanel(vm, slot.index, openPicker, modifier) }
+                            is Slot.Study -> key(slot.kind) { StudyPane(vm, slot.kind, modifier) }
                         }
                     }
-                    if (sideBySide) {
-                        Row(modifier) { Items { i, w -> ReaderPanel(vm, i, openPicker, Modifier.weight(w).fillMaxHeight()) } }
-                    } else {
-                        Column(modifier) { Items { i, w -> ReaderPanel(vm, i, openPicker, Modifier.weight(w).fillMaxWidth()) } }
-                    }
-                }
 
-                if (pane == null) {
-                    Panels(Modifier.fillMaxSize())
-                } else {
-                    // The study pane beside the Bible panels (SPLIT-2): on the right, or below in portrait.
-                    val paneDrag: (Float) -> Unit = { d -> vm.paneFraction = (vm.paneFraction - d / totalPx).coerceIn(0.2f, 0.6f) }
-                    if (sideBySide) {
-                        Row(Modifier.fillMaxSize()) {
-                            Panels(Modifier.weight(1f - vm.paneFraction).fillMaxHeight())
-                            Divider(paneDrag)
-                            StudyPane(vm, pane, Modifier.weight(vm.paneFraction).fillMaxHeight())
-                        }
-                    } else {
-                        Column(Modifier.fillMaxSize()) {
-                            Panels(Modifier.weight(1f - vm.paneFraction).fillMaxWidth())
-                            Divider(paneDrag)
-                            StudyPane(vm, pane, Modifier.weight(vm.paneFraction).fillMaxWidth())
+                    @Composable
+                    fun Divider() {
+                        val state = rememberDraggableState { d -> vm.dragDivider(0, d / totalPx) }
+                        Box(
+                            (if (stacked) Modifier.height(14.dp).fillMaxWidth() else Modifier.width(14.dp).fillMaxHeight())
+                                .draggable(state, if (stacked) Orientation.Vertical else Orientation.Horizontal)
+                                // Double-tap: both panels the same size.
+                                .pointerInput(tab) { detectTapGestures(onDoubleTap = { tab.split = 0.5f }) }
+                                .testTag("divider"),
+                            contentAlignment = Alignment.Center,
+                        ) { Handle(vertical = !stacked) }
+                    }
+
+                    key(tab) {
+                        if (slots.size < 2) {
+                            slots.firstOrNull()?.let { Cell(it, Modifier.fillMaxSize()) }
+                        } else if (stacked) {
+                            Column(Modifier.fillMaxSize()) {
+                                Cell(slots[0], Modifier.weight(tab.split).fillMaxWidth())
+                                Divider()
+                                Cell(slots[1], Modifier.weight(1f - tab.split).fillMaxWidth())
+                            }
+                        } else {
+                            Row(Modifier.fillMaxSize()) {
+                                Cell(slots[0], Modifier.weight(tab.split).fillMaxHeight())
+                                Divider()
+                                Cell(slots[1], Modifier.weight(1f - tab.split).fillMaxHeight())
+                            }
                         }
                     }
                 }

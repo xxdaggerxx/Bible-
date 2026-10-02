@@ -17,6 +17,7 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.foundation.layout.Box
@@ -60,24 +61,26 @@ fun StudyPane(vm: StudyViewModel, kind: PaneKind, modifier: Modifier) {
             Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer).padding(start = 8.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            // One menu rather than a row of six buttons: what the pane shows.
+            // One menu rather than a row of buttons: what the panel shows, its arrangement and tab (SPLIT-7).
+            val slot = Slot.Study(kind)
             var menu by remember { mutableStateOf(false) }
             Box(Modifier.weight(1f)) {
                 TextButton(onClick = { menu = true }, modifier = Modifier.semantics { contentDescription = "Choose what the pane shows" }) {
                     Text(kind.label, style = MaterialTheme.typography.titleMedium)
                     Icon(Icons.Filled.ArrowDropDown, contentDescription = null)
                 }
-                DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                    for (k in PaneKind.entries) {
-                        DropdownMenuItem(
-                            text = { Text(k.label) },
-                            onClick = { vm.sidePane = k; menu = false },
-                            leadingIcon = if (k == kind) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
-                        )
-                    }
+                PanelViewMenu(vm, slot, menu) { menu = false }
+            }
+            vm.tab.pinned?.let { p ->
+                // Pinned: the view stays on this passage; tap to follow your reading again.
+                TextButton(onClick = { vm.togglePin() }) {
+                    Icon(Icons.Filled.PushPin, contentDescription = "Unpin", modifier = Modifier.padding(end = 4.dp))
+                    Text("${vm.bible.book(p.book.coerceIn(1, 66)).name} ${p.chapter}", maxLines = 1)
                 }
             }
-            IconButton(onClick = { vm.sidePane = null }) { Icon(Icons.Filled.Close, contentDescription = "Close side pane") }
+            if (vm.tab.shown > 1 || vm.tabs.size > 1) {
+                IconButton(onClick = { vm.closeSlot(slot) }) { Icon(Icons.Filled.Close, contentDescription = "Close side pane") }
+            }
         }
         val inner = Modifier.weight(1f).fillMaxWidth().padding(horizontal = 12.dp)
         when (kind) {
@@ -100,7 +103,7 @@ private fun StudyViewModel.readerIndex() = activePanel.coerceIn(0, panels.lastIn
 @Composable
 private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
     val index = vm.readerIndex()
-    val panel = vm.panels[index]
+    val panel = vm.studyPanel()
     val chosen = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
     val t = chosen ?: VerseTarget(panel.book, panel.chapter, panel.topVerse)
     val id = VerseId.of(t.book, t.chapter, t.verse)
@@ -170,7 +173,7 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
 /** Typed notes and highlighted verses in the chapter shown in the active panel. */
 @Composable
 private fun NotesPane(vm: StudyViewModel, modifier: Modifier) {
-    val panel = vm.panels[vm.readerIndex()]
+    val panel = vm.studyPanel()
     val book = panel.book
     val chapter = panel.chapter
     val notes = vm.notesFor(book, chapter).values.sortedBy { it.verse }

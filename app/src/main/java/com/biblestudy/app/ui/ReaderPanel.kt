@@ -473,6 +473,8 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
         // Narrow panels (e.g. three side by side) move the less-used buttons into a menu.
         val compact = maxWidth < 620.dp
         Row(Modifier.fillMaxWidth().padding(horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+            // What this panel shows, the tab's arrangement, new tab and close (SPLIT-7).
+            PanelViewButton(vm, Slot.Bible(index)) { vm.activePanel = index }
             if (!compact) {
                 IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
                     Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
@@ -525,14 +527,7 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
                                 onClick = { menu = false; vm.activePanel = index; vm.linkPanels = !vm.linkPanels },
                             )
                         }
-                        if (vm.panels.size > 1) {
-                            DropdownMenuItem(text = { Text("Close panel") }, onClick = { menu = false; vm.closePanel(index) })
-                        }
                     }
-                }
-            } else if (vm.panels.size > 1) {
-                IconButton(onClick = { vm.closePanel(index) }) {
-                    Icon(Icons.Filled.Close, contentDescription = "Close panel")
                 }
             }
         }
@@ -554,6 +549,7 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
         Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer).padding(horizontal = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
+        PanelViewButton(vm, Slot.Bible(index)) { vm.activePanel = index }
         IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
             Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
         }
@@ -584,7 +580,6 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
                     onClick = { menu = false; vm.updateSketch(sk.copy(linkBook = 0, linkChapter = 0, linkVerse = 0)) },
                 )
                 DropdownMenuItem(text = { Text("Delete sketch page\u2026") }, onClick = { deleting = true; menu = false })
-                if (vm.panels.size > 1) DropdownMenuItem(text = { Text("Close panel") }, onClick = { menu = false; vm.closePanel(index) })
             }
         }
     }

@@ -54,6 +54,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import com.biblestudy.app.ui.Slot
 import androidx.compose.ui.graphics.asImageBitmap
 import com.biblestudy.app.ui.HIGHLIGHT_COLORS
 import com.biblestudy.app.model.Region
@@ -231,8 +232,11 @@ class FeatureTest {
             vm.fingerDraw = false
             vm.tool = Tool.PEN
             vm.clearSelection()
+            while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex)
+            vm.sidePane = null
             while (vm.panels.size > 1) vm.closePanel(vm.panels.lastIndex)
             vm.linkPanels = false
+            vm.tab.stacked = null
             vm.setVersion(0, "KJV")
             vm.goTo(0, 43, 3, remember = false)
             vm.partialEraser = false
@@ -869,19 +873,17 @@ class FeatureTest {
     }
 
     @Test
-    fun threeBiblePanelsFitOnALargeLandscapeScreen() {
-        assertEquals(3, vm.maxPanels)
+    fun aTabHoldsTwoPanelsAndNewTabsHoldMore() {
+        assertEquals(2, vm.maxPanels)
         compose.onNodeWithContentDescription("Panels").performScrollTo().performClick()
         compose.onNodeWithText("Add a Bible panel").performClick()
-        compose.onNodeWithContentDescription("Panels").performClick()
-        compose.onNodeWithText("Add a Bible panel").performClick()
         waitForLoaded()
-        assertEquals(3, vm.panels.size)
-        for (i in 0..2) compose.onNodeWithTag("reader$i").assertExists()
-        snap("48-three-panels")
+        assertEquals(2, vm.panels.size)
+        for (i in 0..1) compose.onNodeWithTag("reader$i").assertExists()
+        // A third doesn't fit: the menu offers a new tab instead.
         compose.onNodeWithContentDescription("Panels").performClick()
         compose.onNodeWithText("Add a Bible panel").assertIsNotEnabled()
-        compose.onNodeWithText("Close other panels").performClick()
+        compose.onNodeWithText("Close other panel").performClick()
         waitForLoaded()
         assertEquals(1, vm.panels.size)
     }
@@ -1015,11 +1017,17 @@ class FeatureTest {
         compose.onNodeWithText("John 3").assertExists()
         compose.onNodeWithContentDescription("Next chapter").assertExists()
         snap("60-$name")
-        compose.runOnUiThread { vm.addPanel(); vm.sidePane = PaneKind.CROSSREFS }
+        compose.runOnUiThread { vm.addPanel() }
         waitForLoaded()
         compose.onNodeWithTag("reader1").assertExists()
-        compose.onNodeWithTag("pane").assertExists()
         snap("61-$name-split")
+        // A study view takes the second panel (SPLIT-7).
+        compose.runOnUiThread { vm.sidePane = PaneKind.CROSSREFS }
+        waitForLoaded()
+        compose.onNodeWithTag("reader0").assertExists()
+        compose.onNodeWithTag("pane").assertExists()
+        snap("61-$name-study")
+        compose.runOnUiThread { vm.sidePane = null }
     }
 
     @Test
@@ -1036,7 +1044,7 @@ class FeatureTest {
 
     @Test
     @Config(qualifiers = "w1848dp-h1232dp-land-xhdpi")
-    fun large14InchTabletLandscape() = checkScreen("14in-landscape", com.biblestudy.app.ui.WidthClass.EXPANDED, 3)
+    fun large14InchTabletLandscape() = checkScreen("14in-landscape", com.biblestudy.app.ui.WidthClass.EXPANDED, 2)
 
     @Test
     fun toolbarFitsAndSettingsHoldTheRest() {
@@ -1317,8 +1325,11 @@ class FeatureTest {
             vm.workspaces.toList().forEach { vm.deleteWorkspace(it) }
             vm.goTo(0, 40, 3, remember = false)
             vm.addPanel(); vm.goTo(1, 41, 1, remember = false); vm.setVersion(1, "BSB")
-            vm.addPanel(); vm.goTo(2, 42, 3, remember = false); vm.setVersion(2, "WEB")
+            vm.linkPanels = true
+            // A second tab: Luke 3 in the WEB with cross-references, one above the other.
+            vm.newTab(42, 3, version = "WEB")
             vm.sidePane = PaneKind.CROSSREFS
+            vm.setStacked(true)
         }
         waitForLoaded()
         compose.onNodeWithContentDescription("Panels").performClick()
@@ -1328,8 +1339,9 @@ class FeatureTest {
         compose.waitForIdle()
         assertEquals(listOf("Baptism of Jesus"), vm.workspaces.map { it.name })
 
-        // Change everything, then bring the layout back from the panels menu.
+        // Change everything, then bring the layout back from the panels menu: it replaces the tabs.
         compose.runOnUiThread {
+            while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex)
             while (vm.panels.size > 1) vm.closePanel(vm.panels.lastIndex)
             vm.goTo(0, 1, 1, remember = false)
             vm.sidePane = null
@@ -1338,14 +1350,130 @@ class FeatureTest {
         compose.onNodeWithContentDescription("Panels").performClick()
         compose.onNodeWithText("Layout: Baptism of Jesus").performClick()
         waitForLoaded()
-        assertEquals(listOf(40 to 3, 41 to 1, 42 to 3), vm.panels.map { it.book to it.chapter })
-        assertEquals(listOf("KJV", "BSB", "WEB"), vm.panels.map { it.version })
+        assertEquals(2, vm.tabs.size)
+        assertEquals(1, vm.activeTab)
+        val first = vm.tabs[0]
+        assertEquals(listOf(40 to 3, 41 to 1), first.panels.map { it.book to it.chapter })
+        assertEquals(listOf("KJV", "BSB"), first.panels.map { it.version })
+        assertTrue(first.linked)
+        assertEquals(listOf(42 to 3), vm.panels.map { it.book to it.chapter })
+        assertEquals("WEB", vm.panels[0].version)
         assertEquals(PaneKind.CROSSREFS, vm.sidePane)
+        assertTrue(vm.isStacked())
         snap("82-workspace")
 
         // Saved layouts survive a restart (they're in the notes database).
         assertEquals(listOf("Baptism of Jesus"), vm.user.workspaces().map { it.first })
-        compose.runOnUiThread { vm.deleteWorkspace(vm.workspaces.single()); vm.sidePane = null }
+        compose.runOnUiThread {
+            vm.deleteWorkspace(vm.workspaces.single())
+            vm.closeTab(1)
+            while (vm.panels.size > 1) vm.closePanel(vm.panels.lastIndex)
+            vm.linkPanels = false
+        }
+    }
+
+    @Test
+    fun anyPanelShowsAnyViewAndTabsHoldMore() {
+        // The panel menu turns the Bible panel into a dictionary (SPLIT-7).
+        compose.onNodeWithContentDescription("Panel view").performClick()
+        snap("130-panel-menu")
+        compose.onNodeWithText("Dictionary").performClick()
+        waitForLoaded()
+        assertEquals(listOf<Slot>(Slot.Study(PaneKind.DICTIONARY)), vm.tab.slots())
+        compose.onNodeWithTag("reader0").assertDoesNotExist()
+        // Add a panel beside: the Bible comes back to the right of it.
+        compose.onNodeWithText("Dictionary").performClick()
+        compose.onNodeWithText("Add a panel beside").performScrollTo().performClick()
+        waitForLoaded()
+        assertEquals(listOf(Slot.Study(PaneKind.DICTIONARY), Slot.Bible(0)), vm.tab.slots())
+        compose.onNodeWithTag("reader0").assertExists()
+        snap("131-dictionary-beside")
+        // Top and bottom.
+        compose.onNodeWithText("Dictionary").performClick()
+        compose.onNodeWithText("Top and bottom").performScrollTo().performClick()
+        waitForLoaded()
+        assertTrue(vm.isStacked())
+        snap("132-top-and-bottom")
+        // The Bible panel becomes topics: two study views, the passage kept out of sight.
+        compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithText("Topics").performClick()
+        waitForLoaded()
+        assertEquals(listOf<Slot>(Slot.Study(PaneKind.DICTIONARY), Slot.Study(PaneKind.TOPICS)), vm.tab.slots())
+        assertEquals(43, vm.studyPanel().book)
+        // ...and back to the Bible.
+        compose.onAllNodesWithContentDescription("Choose what the pane shows")[1].performClick()
+        compose.onNodeWithText("Bible").performClick()
+        waitForLoaded()
+        assertEquals(listOf(Slot.Study(PaneKind.DICTIONARY), Slot.Bible(0)), vm.tab.slots())
+
+        // Open in new tab (TAB-3): the strip appears with two tabs.
+        compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithText("Open in new tab").performScrollTo().performClick()
+        waitForLoaded()
+        assertEquals(2, vm.tabs.size)
+        assertEquals(1, vm.activeTab)
+        assertEquals(listOf<Slot>(Slot.Bible(0)), vm.tab.slots())
+        compose.onNodeWithTag("tabs").assertExists()
+        compose.runOnUiThread { vm.goTo(0, 45, 8, remember = false) }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("Tab 2: Romans 8").assertExists()
+        snap("133-two-tabs")
+        // Switching tabs keeps each one's panels.
+        compose.onNodeWithContentDescription("Tab 1: Dictionary").performClick()
+        waitForLoaded()
+        assertEquals(0, vm.activeTab)
+        assertEquals(PaneKind.DICTIONARY, vm.sidePane)
+        assertEquals(43, vm.panels[0].book)
+
+        // Hold a finger on a tab to rename, move or close it (TAB-2).
+        compose.onNodeWithContentDescription("Tab 2: Romans 8").performTouchInput { longClick() }
+        compose.onNodeWithText("Rename\u2026").performClick()
+        compose.onAllNodes(hasSetTextAction()).onLast().performTextInput("Romans")
+        compose.onNodeWithText("Save").performClick()
+        compose.onNodeWithContentDescription("Tab 2: Romans").assertExists()
+        compose.onNodeWithContentDescription("Tab 2: Romans").performTouchInput { longClick() }
+        compose.onNodeWithText("Move left").performClick()
+        compose.waitForIdle()
+        assertEquals("Romans", vm.tabs[0].name)
+        assertEquals(1, vm.activeTab) // the dictionary tab is still in front
+        // New tab from the strip opens where you are.
+        compose.onNodeWithContentDescription("New tab").performClick()
+        waitForLoaded()
+        assertEquals(3, vm.tabs.size)
+        assertEquals(2, vm.activeTab)
+        assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+
+        // Tabs are kept when the app closes (TAB-4).
+        compose.runOnUiThread { vm.savePrefs() }
+        val json = compose.activity.getSharedPreferences("study", android.content.Context.MODE_PRIVATE).getString("tabs", null)!!
+        val again = com.biblestudy.app.ui.TabState.listFromJson(json) { b, c, v -> Triple(b, c, v ?: "KJV") }!!
+        assertEquals(listOf("Romans", null, null), again.map { it.name })
+        assertEquals(listOf(45 to 8), again[0].panels.map { it.book to it.chapter })
+        assertEquals(listOf(PaneKind.DICTIONARY), again[1].studies.toList())
+        assertTrue(again[1].studyFirst)
+        assertEquals(true, again[1].stacked)
+
+        // Closing the last tab's only panel closes the tab.
+        compose.onNodeWithContentDescription("Panel view").performClick()
+        compose.onNodeWithText("Close tab").performScrollTo().performClick()
+        waitForLoaded()
+        assertEquals(2, vm.tabs.size)
+    }
+
+    @Test
+    fun layoutsSavedBefore12OpenAsTabs() {
+        // Three Bible panels and a study pane, saved by version 1.1.
+        val old = """{"panels":[{"b":40,"c":3,"v":"KJV"},{"b":41,"c":1,"v":"BSB"},{"b":42,"c":3,"v":"WEB"}],"pane":"CROSSREFS","linked":true,"weights":[1,1,1]}"""
+        val w = com.biblestudy.app.ui.Workspace.fromJson("Old", old)!!
+        compose.runOnUiThread { vm.openWorkspace(w) }
+        waitForLoaded()
+        assertEquals(2, vm.tabs.size)
+        // The two were linked, so the second follows the first, as before.
+        assertEquals(listOf("KJV", "BSB"), vm.tabs[0].panels.map { it.version })
+        assertEquals(40 to 3, vm.tabs[0].panels[0].let { it.book to it.chapter })
+        assertTrue(vm.tabs[0].linked)
+        assertEquals(listOf(42 to 3), vm.tabs[1].panels.map { it.book to it.chapter })
+        assertEquals(listOf(PaneKind.CROSSREFS), vm.tabs[1].studies.toList())
     }
 
     @Test
