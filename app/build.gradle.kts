@@ -47,20 +47,8 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 15
-        versionName = "1.1.1"
-    }
-
-    // Two APKs from each build: a small one for 64-bit ARM tablets (the Tab S9 and almost every
-    // current tablet), and a universal one that runs on any Android tablet. The handwriting reader's
-    // native code for the other processors makes the universal one about 30 MB bigger.
-    splits {
-        abi {
-            isEnable = true
-            reset()
-            include("arm64-v8a")
-            isUniversalApk = true
-        }
+        versionCode = 16
+        versionName = "1.1.2"
     }
 
     signingConfigs {
@@ -125,9 +113,6 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     // Front-buffered rendering for the lowest-latency pen ink (INK-4).
     implementation("androidx.graphics:graphics-core:1.0.2")
-    // Reading handwriting on the tablet (INK-14, SRCH-8); its English model is downloaded once.
-    implementation("com.google.mlkit:digital-ink-recognition:18.1.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.9.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.14.1")

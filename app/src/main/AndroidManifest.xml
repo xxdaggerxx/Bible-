@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- The app works offline. The internet is used for one thing only: downloading Google's
-         handwriting model once, when "Read my handwriting" is switched on (INK-14). -->
-    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"

@@ -23,14 +23,6 @@ Everything works without the internet. Your notes save the moment you lift the p
 - **Hover.** Hold the S Pen just above the screen and a small mark shows exactly where it will touch: a dot the size of the pen, a bar for the highlighter, a circle for the eraser.
 - **Writing sounds.** A soft pen-on-paper sound follows your writing: louder when you write fast or press hard, quiet when you stop. The pen, highlighter and eraser each sound different. Turn it off, or change the volume, in *Settings → Pen & ink → Writing sounds*. It plays through the tablet's media volume.
 
-## Reading your handwriting
-
-The app can read what you write by hand in the margins and on sketch pages.
-
-- **Switch it on** in *Settings → Pen & ink → Read my handwriting*. The first time, it downloads Google's handwriting model (about 20 MB) over Wi-Fi. After that it works offline, on the tablet; nothing you write is sent anywhere.
-- **Search it.** *Search → My notes* now finds words you wrote by hand as well as typed notes (marked ✍). Your handwriting is read a few seconds after you stop writing.
-- **Turn writing into text.** Draw round some handwriting with the lasso and tap *Convert to text* in the bar. It becomes a text box in the same place. Undo brings the handwriting back.
-
 ## Highlighting and underlining
 
 - **Highlight.** Pick the highlighter and swipe over words. It snaps to whole words. (Turn off *Snap to words* in its menu to highlight freehand.)
@@ -134,7 +126,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 - Tap the magnifying glass. Pick the version, and the whole Bible, Old or New Testament, or the book you're in.
 - Several words find verses with all of them. Put words in "quotes" for an exact phrase. *OR* finds either word. *lov\** finds love, loved, loveth. *-word* leaves out verses with that word.
 - Type a reference like *jn 3:16* to jump straight there.
-- Pick *My notes* to search your typed notes, text boxes and (with *Read my handwriting* on) your handwriting.
+- Pick *My notes* to search your typed notes and text boxes.
 - Results are grouped by book. *Open beside* shows a result in another panel. *Keep results beside the text* moves them into the study pane.
 
 ## Links and pop-overs

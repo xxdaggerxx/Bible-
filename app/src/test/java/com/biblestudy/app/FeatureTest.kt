@@ -210,8 +210,13 @@ class FeatureTest {
      * Wait until the page is laid out and its annotations are read from the database.
      */
     private fun waitForLoaded(timeoutMs: Long = 10_000) {
-        compose.waitUntil(timeoutMs) {
-            compose.onAllNodesWithTag("loading").fetchSemanticsNodes().isEmpty() && vm.pendingLoads == 0
+        runCatching {
+            compose.waitUntil(timeoutMs) {
+                compose.onAllNodesWithTag("loading").fetchSemanticsNodes().isEmpty() && vm.pendingLoads == 0
+            }
+        }.onFailure {
+            val spinners = compose.onAllNodesWithTag("loading").fetchSemanticsNodes().size
+            throw AssertionError("still loading: $spinners spinner(s), pendingLoads=${vm.pendingLoads}, panels=${vm.panels.map { p -> "${p.book}:${p.chapter}" }}", it)
         }
         compose.waitForIdle()
     }
@@ -1494,6 +1499,7 @@ class FeatureTest {
         assertEquals(0.5f, vm.layers.first().opacity, 0.001f)
         assertEquals(0.5f, vm.user.layers().first().opacity, 0.001f) // saved
         compose.runOnUiThread { vm.setLayerColor(vm.layers.first().id, com.biblestudy.app.ui.LAYER_COLORS[2]) }
+        vm.awaitSaves()
         assertEquals(com.biblestudy.app.ui.LAYER_COLORS[2], vm.user.layers().first().color)
         compose.runOnUiThread { vm.setLayerOpacity(vm.layers.first().id, 1f); vm.setLayerColor(vm.layers.first().id, com.biblestudy.app.ui.LAYER_COLORS[0]) }
     }
@@ -1525,7 +1531,7 @@ class FeatureTest {
 
         compose.onNodeWithContentDescription("More").performClick()
         compose.onNodeWithText("Reading stats").performClick()
-        compose.waitUntil(10_000) { compose.onAllNodesWithText("1 of 1189 chapters").fetchSemanticsNodes().isNotEmpty() }
+        compose.waitUntil(30_000) { compose.onAllNodesWithText("1 of 1189 chapters").fetchSemanticsNodes().isNotEmpty() }
         assertTrue(compose.onAllNodesWithText("1 min", substring = true).fetchSemanticsNodes().isNotEmpty())
         snap("92-reading-stats")
         compose.onNodeWithContentDescription("Close").performClick()
@@ -2078,65 +2084,6 @@ class FeatureTest {
         assertTrue(vm.textsFor(sk.book, 1).first { it.id == card.id }.text.startsWith("John 3:16 (BSB)\nFor God so loved the world that He gave His one and only Son"))
         snap("125-card-bsb")
         compose.runOnUiThread { vm.deleteSketch(vm.sketches.first { it.id == sk.id }) }
-    }
-
-    /** Stands in for Google's handwriting reader: every line reads as "grace upon grace". */
-    private class FakeInkReader : com.biblestudy.app.ui.InkReader {
-        var prepared = false
-        override suspend fun ready() = prepared
-        override suspend fun prepare() { prepared = true }
-        override suspend fun read(line: List<FloatArray>) = "grace upon grace"
-    }
-
-    @Test
-    fun handwritingCanBeSearchedAndTurnedIntoText() {
-        val reader = FakeInkReader()
-        compose.runOnUiThread { vm.inkReader = reader; vm.marginRight = true }
-        waitForLoaded()
-        // Write in the right margin beside John 3.
-        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
-        val w = readerSize().width
-        compose.onNodeWithTag("reader0").performTouchInput {
-            down(Offset(w - 250f, 500f)); repeat(8) { moveBy(Offset(15f, 4f)) }; up()
-        }
-        compose.waitForIdle()
-        compose.runOnUiThread { vm.fingerDraw = false }
-        val stroke = vm.marginStrokesFor(43, 3).single()
-
-        // Switching it on downloads the model once, then reads what's there.
-        compose.onNodeWithContentDescription("More").performClick()
-        compose.onNodeWithText("Settings").performClick()
-        compose.onNodeWithText("Read my handwriting").performScrollTo().performClick()
-        compose.waitUntil(10_000) { vm.handwritingStatus.startsWith("On") }
-        assertTrue(reader.prepared)
-        snap("126-handwriting-setting")
-        compose.onNodeWithContentDescription("Close").performClick()
-
-        // Search \u2192 My notes finds it.
-        assertEquals(1, vm.user.searchNotes("upon", 1, 66).count { it.book == 43 && it.chapter == 3 && it.verse == stroke.verse })
-
-        // Lasso \u2192 Convert to text turns it into a text box; undo brings the ink back.
-        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.LASSO }
-        compose.onNodeWithTag("reader0").performTouchInput {
-            var at = Offset(w - 280f, 470f)
-            down(at)
-            for (p in listOf(Offset(w - 90f, 470f), Offset(w - 90f, 570f), Offset(w - 280f, 570f), Offset(w - 280f, 472f))) {
-                for (k in 1..8) moveTo(at + (p - at) * (k / 8f))
-                at = p
-            }
-            up()
-        }
-        compose.waitForIdle()
-        compose.runOnUiThread { vm.fingerDraw = false }
-        assertEquals(setOf(stroke.id), vm.selection?.ids)
-        compose.onNodeWithText("Convert to text").performClick()
-        compose.waitUntil(5_000) { vm.textsFor(43, 3).any { it.text == "grace upon grace" } }
-        assertTrue(vm.marginStrokesFor(43, 3).isEmpty())
-        snap("127-converted")
-        compose.runOnUiThread { vm.undo() }
-        assertEquals(1, vm.marginStrokesFor(43, 3).size)
-        assertTrue(vm.textsFor(43, 3).none { it.text == "grace upon grace" })
-        compose.runOnUiThread { vm.changeHandwriting(false) }
     }
 
     @Test

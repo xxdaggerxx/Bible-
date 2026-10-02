@@ -767,8 +767,6 @@ private fun SelectionBar(vm: StudyViewModel, ctl: ReaderController, modifier: Mo
                     }
                 }
             }
-            // Handwriting into a text box (INK-14).
-            TextButton(onClick = vm::convertSelectionToText) { Text("Convert to text") }
             TextButton(onClick = vm::deleteSelection) { Text("Delete") }
             TextButton(onClick = vm::clearSelection) { Text("Done") }
         }

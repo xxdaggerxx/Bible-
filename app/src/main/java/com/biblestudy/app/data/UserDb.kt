@@ -29,7 +29,7 @@ data class ChapterReading(val book: Int, val chapter: Int, val seconds: Int, val
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
+class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
@@ -67,7 +67,6 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
                 "verse INTEGER NOT NULL, created INTEGER NOT NULL, folder TEXT NOT NULL DEFAULT '')"
         )
         createTexts(db)
-        createInkText(db)
         createReading(db)
         createSketches(db)
         db.execSQL("INSERT INTO layers(id, name, color, visible, locked, sort) VALUES(1, 'My Notes', ${DEFAULT_LAYER_COLOR}, 1, 0, 0)")
@@ -102,41 +101,9 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
         if (oldVersion < 6) createReading(db) // 0.9: reading analytics (ANL-1 to ANL-6)
         if (oldVersion < 7) createSketches(db) // 0.9: sketch pages (SKT-1 to SKT-4)
         if (oldVersion in 4..7) db.execSQL("ALTER TABLE texts ADD COLUMN marks TEXT NOT NULL DEFAULT ''") // 1.1: highlights in text boxes (HL-11)
-        if (oldVersion < 8) createInkText(db) // 1.1: handwriting read for search (SRCH-8)
         if (oldVersion == 7) db.execSQL("ALTER TABLE sketches ADD COLUMN note INTEGER NOT NULL DEFAULT 0") // 1.1: full-screen margin notes (MRG-15)
+        db.execSQL("DROP TABLE IF EXISTS ink_text") // 1.1.2: handwriting reading removed (1.1.0 and 1.1.1 kept read text here)
     }
-
-    /** Handwriting as read text (SRCH-8): one row per verse's margin (or sketch page) per chapter. */
-    private fun createInkText(db: SQLiteDatabase) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS ink_text(book INTEGER NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, text TEXT NOT NULL)")
-        db.execSQL("CREATE INDEX IF NOT EXISTS ink_text_bc ON ink_text(book, chapter)")
-    }
-
-    /** Replaces a chapter's read handwriting: verse → text. */
-    fun saveInkText(book: Int, chapter: Int, texts: Map<Int, String>) {
-        val db = writableDatabase
-        db.beginTransaction()
-        try {
-            db.delete("ink_text", "book = ? AND chapter = ?", arrayOf(book.toString(), chapter.toString()))
-            for ((verse, text) in texts) db.insert("ink_text", null, ContentValues().apply {
-                put("book", book); put("chapter", chapter); put("verse", verse); put("text", text)
-            })
-            db.setTransactionSuccessful()
-        } finally {
-            db.endTransaction()
-        }
-    }
-
-    /** Chapters (and sketch pages) with handwriting in their margins, to read once the reader is ready. */
-    fun inkChapters(): List<Pair<Int, Int>> =
-        readableDatabase.rawQuery("SELECT DISTINCT book, chapter FROM strokes WHERE region != 0 AND highlighter = 0", null).use { c ->
-            buildList { while (c.moveToNext()) add(c.getInt(0) to c.getInt(1)) }
-        }
-
-    fun inkText(book: Int, chapter: Int): Map<Int, String> =
-        readableDatabase.rawQuery("SELECT verse, text FROM ink_text WHERE book = ? AND chapter = ?", arrayOf(book.toString(), chapter.toString())).use { c ->
-            buildMap { while (c.moveToNext()) put(c.getInt(0), c.getString(1)) }
-        }
 
     private fun createSketches(db: SQLiteDatabase) {
         db.execSQL(
@@ -572,10 +539,8 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
         return readableDatabase.rawQuery(
             "SELECT book, chapter, verse, text FROM notes WHERE $where AND book BETWEEN ? AND ? " +
                 "UNION ALL SELECT book, chapter, verse, body FROM texts WHERE $textWhere AND book BETWEEN ? AND ? " +
-                // Handwriting the app has read (SRCH-8), in the margins and on sketch pages (searched with the whole Bible).
-                "UNION ALL SELECT book, chapter, verse, '\u270D ' || text FROM ink_text WHERE $where AND (book BETWEEN ? AND ? OR (book >= 1000 AND ? = '1')) " +
                 "ORDER BY 1, 2, 3 LIMIT 500",
-            (args + args + args + listOf(if (lo == 1 && hi == 66) "1" else "0")).toTypedArray(),
+            (args + args).toTypedArray(),
         ).use { c -> buildList { while (c.moveToNext()) add(SearchHit(c.getInt(0), c.getInt(1), c.getInt(2), c.getString(3))) } }
     }
 

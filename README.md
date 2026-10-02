@@ -1,4 +1,4 @@
-# Bible Study — version 1.1.1
+# Bible Study — version 1.1.2
 
 A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -33,12 +33,7 @@ On a computer with Android Studio or the Android SDK and JDK 17+:
 ./gradlew assembleRelease
 ```
 
-Two signed files appear in `app/build/outputs/apk/release/`:
-
-- `app-arm64-v8a-release.apk` (about 50 MB) for 64-bit ARM tablets: the Tab S9 and almost every current tablet;
-- `app-universal-release.apk` (about 81 MB) runs on any Android 10+ tablet. It is bigger because it carries the handwriting reader for every kind of processor.
-
-Both are the same app and install over each other. Nothing else to set up: Gradle finds `keystore.properties` on its own. If the build prints "No release signing key found", that file is missing and the APK is signed with a throwaway debug key instead. Don't install that one over your real copy.
+The signed file appears at `app/build/outputs/apk/release/app-release.apk` (about 38 MB; it runs on any Android 10+ tablet). Nothing else to set up: Gradle finds `keystore.properties` on its own. If the build prints "No release signing key found", that file is missing and the APK is signed with a throwaway debug key instead. Don't install that one over your real copy.
 
 In Android Studio you can also use *Build → Generate Signed App Bundle / APK → APK*, choose *Choose existing…*, and pick `signing/biblestudy-release.jks` with the password from `keystore.properties`.
 
@@ -53,7 +48,7 @@ If Android says the app conflicts with an existing package, the installed copy w
 ### Check which key an APK uses
 
 ```
-apksigner verify --print-certs app-arm64-v8a-release.apk
+apksigner verify --print-certs app-release.apk
 ```
 
 For this key the line should read `CN=Bible Study, O=Personal`, with SHA-256 `70f5af93762f26149c355e7a39cd61f653afa5c17a2f7405ad475fea749efc32`. `CN=Android Debug` means the wrong key was used.
@@ -70,6 +65,11 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.1.2
+
+- **Handwriting reading is removed.** *Read my handwriting* (in Settings) and *Convert to text* (in the lasso bar) are gone, and *Search → My notes* searches typed notes and text boxes only. Your handwriting itself is untouched. Without Google's handwriting library the app is one 38 MB download that runs on any Android 10+ tablet, and it no longer asks for internet access at all.
+- **Fixed:** the app could occasionally lose count of chapters still loading, which stopped margin notes from getting extra room below their verse (expand to fit).
 
 ## New in version 1.1.1
 
@@ -92,7 +92,7 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - A highlight on a card is the Bible's own highlight on that verse. It shows on the card, in the Bible and in every version, and erasing it anywhere erases it everywhere.
   - Existing cards, including those on the ready-made pages, work this way already.
 - **Highlights snap in text boxes.** The highlighter snaps to the words of a text box; the eraser takes them out.
-- **Your handwriting can be searched.** Switch on *Settings → Pen & ink → Read my handwriting*. The first time, it downloads Google's handwriting model once (about 20 MB, Wi-Fi). After that it reads on the tablet and nothing is sent anywhere. This is the only time the app uses the internet.
+- **Your handwriting can be searched** (removed again in 1.1.2). Switch on *Settings → Pen & ink → Read my handwriting*. The first time, it downloads Google's handwriting model once (about 20 MB, Wi-Fi). After that it reads on the tablet and nothing is sent anywhere. This is the only time the app uses the internet.
   - *Search → My notes* then finds handwritten words in the margins and on sketch pages.
   - Lasso some handwriting and tap *Convert to text* to make it a text box. Undo brings the ink back.
 - **Full-screen margin notes.** Tap a verse, then *Write full screen*, for a whole page about that verse. It shows shrunk to fit beside the verse; tap it to open it again.
@@ -385,9 +385,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Words of Jesus in the BSB are inferred from the WEB's markings and the BSB's quotation marks, so a few dialogue verses may be coloured slightly differently from a printed red-letter BSB.
 - The Hebrew and Greek view uses the Hebrew text (Leningrad Codex) and the amalgamated Greek editions; it doesn't follow an imported Bible's wording.
 - The performance pass for very long chapters (Psalm 119) and very large sketch pages still needs checking on the tablet itself.
-- Writing sounds, pen hover and handwriting reading can only be judged on the tablet: the automated tests use a stand-in reader and no speaker. Tell me if the sounds are too scratchy, soft or loud.
-- There are two downloads: `BibleStudy-<version>.apk` (about 50 MB) for 64-bit ARM tablets, which includes the Tab S9, and `BibleStudy-<version>-universal.apk` (about 81 MB) for any other Android tablet. If you're not sure, the universal one always works.
-- Handwriting is read in English only. Ink written over the Bible text itself is not read (only margins and sketch pages).
+- Writing sounds and pen hover can only be judged on the tablet: the automated tests have no speaker or hovering pen. Tell me if the sounds are too scratchy, soft or loud.
 - A shrunk full-screen note shows its ink and text boxes; pictures on it show only when it's opened.
 - Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
 - The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
@@ -407,7 +405,6 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Strong's Hebrew and Greek dictionaries (1890, public domain), JSON edition by Open Scriptures, CC BY-SA.
 - Strong's numbers for each word: the Strong's-tagged KJV, BSB and WEB USFM files from eBible.org (public domain).
 - Hebrew and Greek word by word: STEPBible.org TAHOT (Translators Amalgamated Hebrew OT) and TAGNT (Translators Amalgamated Greek NT), Tyndale House Cambridge, CC BY 4.0. Only the columns shown are kept, and Greek words in neither the modern editions nor the KJV's text are left out; `tools/build_original_db.py` makes `assets/study/original.db`.
-- Handwriting recognition: Google ML Kit Digital Ink Recognition (on-device; its English model is downloaded once when switched on).
 - Words of Jesus: the red-letter markings in eBible.org's KJV and WEB USFM files (public domain).
 - People and places: STEPBible.org TIPNR (Translators Individualised Proper Names), CC BY 4.0. Map outline, lakes and rivers: Natural Earth (public domain); `tools/build_map.py` makes `assets/map/lands.bin`.
 - Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library (ccel.org). `tools/build_study_db.py` rebuilds `study.db` from these.

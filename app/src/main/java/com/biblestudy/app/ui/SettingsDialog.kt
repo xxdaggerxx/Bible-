@@ -117,11 +117,6 @@ fun SettingsDialog(
                 Choices("S Pen button", SideButton.entries, vm.sideButton, { it.label }) { vm.sideButton = it }
                 Choices("Eraser", listOf(false, true), vm.partialEraser, { if (it) "Partial" else "Whole strokes" }) { vm.partialEraser = it }
                 Toggle("Snap highlighter to words", "Highlights follow the lines of text", vm.snapHighlights) { vm.snapHighlights = it }
-                Toggle(
-                    "Read my handwriting",
-                    vm.handwritingStatus.ifEmpty { "Search your handwriting and turn it into text. Downloads Google's 20 MB handwriting model once, over Wi-Fi; after that it works offline on the tablet." },
-                    vm.handwritingOn,
-                ) { vm.changeHandwriting(it) }
                 Toggle("Writing sounds", "A soft pen-on-paper sound as you write", vm.writingSounds) { vm.changeWritingSounds(it) }
                 if (vm.writingSounds) Matches("Sound volume", "writing sounds") {
                     Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
