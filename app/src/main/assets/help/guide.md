@@ -189,7 +189,8 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 
 The one part of the app that uses the internet. It works like a search summary: ask a question, and the AI searches the web (your trusted sites first), reads the best articles and sums them up. It doesn't answer from its own knowledge: if the search finds nothing it can cite, it says so and shows what it searched for.
 
-- **Open it** with the round chat bubble at the bottom right. The chat opens in a panel beside the text.
+- **Open it** with the round chat bubble at the bottom right. The chat opens in its own little window over the text. You can keep reading and tapping verses while it's open. Tap × (or the bubble) to close it; your conversation stays.
+- **Want it beside the text instead?** Tap the panel button at the top of the chat window. It moves into a panel next to the Bible. You can also choose *AI chat* from a panel's menu.
 - **The first time,** paste your Claude API key (from console.anthropic.com) and tap *Save key*. It's kept on this tablet only, and isn't in your backups. Each question costs a few cents on your Claude account.
 - **Ask about a passage:** select words with a long press, or hold a finger on a highlight, and tap *Ask AI*. In *Verse details*, tap *Ask AI* to send the whole verse. The passages wait above the question box; tap × on one to leave it out.
 - **Answers** start with a short overview, then the main points, then the key verses. They must cite the pages they use: an answer without citations isn't shown. They show a number like [1] after each part, matching the *Sources* listed under the answer. Tap a source to read the page in your browser. Bible references in an answer are links: tap one to read the passage.

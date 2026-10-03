@@ -248,6 +248,7 @@ class FeatureTest {
             vm.compareVersions = false
             vm.verseInPanel = false // the older tests use the verse window
             vm.showVerseCommentary(false)
+            vm.chatWindow = false
             vm.verseWordStudy = null
             vm.chat.changeEnabled(false) // no chat bubble over the page in the older tests
             vm.readMode = false
@@ -858,14 +859,19 @@ class FeatureTest {
             vm.chat.changeSites(com.biblestudy.app.data.AiChat.DEFAULT_SITES)
             vm.chat.service = com.biblestudy.app.data.ChatService { _, sites, _, history, q, hasVerses -> asked += Triple(sites, history, q); assertTrue(hasVerses("see Rom 5:8")); reply }
         }
-        // The bubble opens the chat beside the text; first it asks for the key.
+        // The bubble opens the chat in its own little window over the text; first it asks for the key.
         compose.onNodeWithTag("chatBubble").performClick()
         compose.waitForIdle()
-        assertEquals(PaneKind.CHAT, vm.sidePane)
+        assertTrue(vm.chatWindow)
+        assertNull(vm.sidePane)
+        compose.onNodeWithTag("chatWindow").assertExists()
         compose.onNodeWithTag("chatKey").performTextInput("sk-test-key")
         compose.onNodeWithText("Save key").performClick()
         assertEquals("sk-test-key", vm.chat.apiKey)
-        compose.onNodeWithTag("chatBubble").assertDoesNotExist()
+        // The bubble closes it again; Ask AI below opens it.
+        compose.onNodeWithTag("chatBubble").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithTag("chatWindow").assertDoesNotExist()
 
         // A verse goes to the chat from its window.
         compose.runOnUiThread { vm.openVerse(43, 3, 16) }
@@ -920,6 +926,17 @@ class FeatureTest {
         assertEquals(2, asked.last().second.size)
         assertFalse(asked.last().second[0].text.isEmpty())
         assertEquals(3, asked.size)
+
+        assertTrue(vm.chatWindow)
+        snap("132-ai-chat-window")
+
+        // The chat can move into a panel beside the text; the bubble makes way.
+        compose.onNodeWithContentDescription("Open the chat beside the text").performClick()
+        compose.waitForIdle()
+        assertFalse(vm.chatWindow)
+        assertEquals(PaneKind.CHAT, vm.sidePane)
+        compose.onNodeWithTag("chatBubble").assertDoesNotExist()
+        compose.onNodeWithText("Searched for: \u201choliness in Leviticus\u201d", substring = true).assertExists()
 
         // Turned off: no bubble, no Ask AI, and the panel view leaves the menu.
         compose.runOnUiThread { vm.sidePane = null; vm.chat.changeEnabled(false); vm.openVerse(43, 3, 16) }

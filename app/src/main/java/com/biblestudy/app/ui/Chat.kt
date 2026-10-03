@@ -20,6 +20,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.material.icons.filled.VerticalSplit
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Public
@@ -167,6 +169,33 @@ fun ChatPane(vm: StudyViewModel, modifier: Modifier) {
                 onOpenBeside = { vm.openPassage(p, panelIndex, beside = true); shown = null },
                 onClose = { shown = null },
             )
+        }
+    }
+}
+
+/**
+ * The chat in its own little window (AI-10), floating over the text above the chat bubble, so
+ * you can keep reading and tapping verses while it's open. It can move into a panel beside the text.
+ */
+@Composable
+fun ChatWindow(vm: StudyViewModel, modifier: Modifier) {
+    androidx.compose.material3.Surface(
+        modifier.imePadding().testTag("chatWindow"),
+        shape = androidx.compose.foundation.shape.RoundedCornerShape(20.dp),
+        tonalElevation = 3.dp,
+        shadowElevation = 12.dp,
+    ) {
+        Column(Modifier.padding(start = 16.dp, end = 8.dp, top = 4.dp, bottom = 8.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text("AI chat", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
+                IconButton(onClick = { vm.chatBeside() }) {
+                    Icon(Icons.Filled.VerticalSplit, contentDescription = "Open the chat beside the text")
+                }
+                IconButton(onClick = { vm.chatWindow = false }) {
+                    Icon(Icons.Filled.Close, contentDescription = "Close the chat")
+                }
+            }
+            ChatPane(vm, Modifier.weight(1f).padding(end = 8.dp))
         }
     }
 }

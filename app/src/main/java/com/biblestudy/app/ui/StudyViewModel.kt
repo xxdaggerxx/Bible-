@@ -1432,7 +1432,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     val chat by lazy { ChatState(getApplication(), viewModelScope) { com.biblestudy.app.data.RefLinks.find(it, bible.books).isNotEmpty() } }
 
     /** Opens the AI chat in a panel beside the text. */
-    fun openChat() { if (chat.enabled) showStudy(PaneKind.CHAT) }
+    /** The little chat window over the text (AI-10), opened by the chat bubble. */
+    var chatWindow by mutableStateOf(false)
+
+    /** Opens the chat: in its little window, unless the AI chat panel is already showing. */
+    fun openChat() { if (chat.enabled && PaneKind.CHAT !in tab.studies) chatWindow = true }
+
+    /** Moves the chat from its window into a panel beside the text. */
+    fun chatBeside() { chatWindow = false; showStudy(PaneKind.CHAT) }
 
     /** Adds Bible text to the next question and opens the chat (AI-6). */
     fun sendToChat(label: String, text: String) {
