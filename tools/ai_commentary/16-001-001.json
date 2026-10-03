@@ -1,0 +1,139 @@
+{
+ "book": 16,
+ "chapter": 1,
+ "first": 1,
+ "last": 11,
+ "ref": "Nehemiah 1",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Nehemiah opens his personal memoir while living in the royal citadel of Susa, the winter home of the Persian kings. The date is the month of Chislev, which falls in late autumn, during the twentieth year of King Artaxerxes. Even though he lives in comfort in a foreign capital, Nehemiah's heart remains tied to God's chosen people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://biblehub.com/commentaries/nehemiah/1-1.htm"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The Catholic Encyclopedia notes that while most historians date Nehemiah's arrival to 445 BC, another historical arrangement places Ezra's return after Nehemiah under Artaxerxes II.",
+     "sources": [
+      "https://www.newadvent.org/cathen/10737c.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Hanani, a close relative of Nehemiah, arrives at the palace with a group of visitors from Judah. Nehemiah does not let his high court status make him forget his humble brothers. He eagerly asks them how the Jewish survivors are doing and what condition Jerusalem is in.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "https://enduringword.com/bible-commentary/nehemiah-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The visitors report that the returned Jewish exiles are living in deep distress and shame. Jerusalem's defensive stone walls still lie in ruins, and its wooden gates remain charred from fire. Without walls, the people are completely exposed and helpless against attacks from hostile neighbors.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/nehemiah-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The heartbreaking report causes Nehemiah to sit down and weep in deep sorrow. For days, he mourns, fasts by going without food, and pours out his grief in prayer before the God of heaven. Before trying to solve the problem with human power, he takes his pain directly to the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "https://biblehub.com/commentaries/nehemiah/1-1.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Nehemiah begins his prayer by praising the Lord as majestic, mighty, and completely faithful. God keeps His covenant, which is a sacred, binding promise He made to His people. Nehemiah rests his hopes on God's steadfast love toward those who love Him and follow His commands.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://www.preceptaustin.org/nehemiah-1-commentary"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Nehemiah asks God to look upon him and listen closely as he prays day and night for the nation of Israel. Instead of blaming others, he openly confesses the sins of his people. He humbles himself by admitting that he and his own family share in that national guilt.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Nehemiah confesses that the people have acted very corruptly and failed to obey the laws God delivered through Moses. He makes no excuses for their rebellion. He recognizes that Israel's past defeat and present shame came from breaking God's good rules.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://www.preceptaustin.org/nehemiah-1-commentary"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 9,
+   "meaning": "Nehemiah brings God's own words back to Him from the books of Moses. God had warned that unfaithfulness would scatter Israel across foreign lands, but He also promised to bring them home if they turned back to Him in obedience. Nehemiah bases his hope for Jerusalem on God's unchanging pledge to gather His people back to the place chosen for His name.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/nehemiah-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Nehemiah reminds God that these suffering people are His own chosen servants. Long ago, God redeemed them, meaning He bought them back and rescued them from slavery in Egypt with His mighty hand. Because the Lord paid such a great price to save them, Nehemiah asks Him not to leave them in ruins now.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://www.preceptaustin.org/nehemiah-1-commentary"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The prayer concludes with an earnest plea for God to hear Nehemiah and all the faithful believers who delight in honoring His name. Nehemiah asks for success and mercy as he prepares to make a bold request of King Artaxerxes, referring to the mighty monarch merely as 'this man' compared to God. As the royal cupbearer, Nehemiah held an influential post of great trust that gave him personal access to the king.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "https://biblehub.com/commentaries/nehemiah/1-11.htm",
+    "https://www.studylight.org/commentaries/eng/dcc/nehemiah-1.html"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,144 @@
+{
+ "book": 9,
+ "chapter": 29,
+ "first": 1,
+ "last": 11,
+ "ref": "1 Samuel 29",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The Philistines gathered their whole army at Aphek for a massive invasion, while the Israelites made camp by a large water spring in Jezreel. Having plenty of fresh water was vital for sustaining thousands of soldiers before a major battle. This gathering set the stage for the tragic final battle between the Philistines and King Saul.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Keil & Delitzsch",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Philistine leaders led their troops forward in organized divisions of hundreds and thousands, while David and his six hundred men brought up the rear as the personal bodyguard of Achish. David had fled into Philistine land during a low moment of fear, and he now found himself trapped in a terrible position alongside Israel's enemies. He was on the verge of either committing treason against God's people or betraying the foreign ruler who had protected him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "When the other Philistine commanders noticed Hebrew soldiers marching among them, they angrily asked what these men were doing in their ranks. Achish defended David, explaining that David had deserted Saul and served him blamelessly for well over a year. Even though Achish was fully convinced of David's loyalty, the commanders saw clearly that Hebrews had no proper place fighting alongside the Philistines.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The Philistine commanders were furious with Achish and insisted that David be sent back to his assigned town of Ziklag. They feared that once the battle started, David would turn against them and kill Philistine soldiers to buy his way back into Saul's good graces. Through the anger and suspicion of David's enemies, God worked quietly to rescue him from an impossible trap without any fighting of his own.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The commanders reminded Achish of the victory song the women of Israel used to sing when David destroyed Goliath and the Philistine army. They remembered how David was celebrated for slaying tens of thousands, so they knew it would be foolish to trust him now. God used the memory of David's past faithfulness to keep him from joining an ungodly fight.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://www.studylight.org/commentaries/eng/geb/1-samuel-29.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Achish called David and swore by the living Lord that he personally considered David completely honest, faithful, and upright. However, Achish explained that because the other allied Philistine rulers did not approve of him, David could not remain in the army. Achish may have used the name of Israel's God out of politeness toward David, unaware that David's loyalty had always stayed with his own people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Achish told David to turn back and go home peacefully so that he would not upset the other Philistine rulers any further. Although Achish was king of Gath, he had to respect the demands of his fellow leaders to prevent a revolt in the ranks. God often uses the rejection of the world to protect His people from deeper troubles.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "David answered with a strong protest, asking what fault Achish had ever found in him to prevent him from fighting the enemies of his lord the king. Commentators note that David spoke with deliberate deception, since he secretly wanted to avoid fighting Israel but could not afford to let Achish doubt his loyalty. By saying 'my lord the king,' David used words that Achish took as a compliment, even while David's true allegiance remained elsewhere.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Achish answered David by saying he viewed him as honorable and blameless as an angel of God. In spite of his high praise, Achish repeated that the other commanders were completely unbending in their demand that David leave the battlefield. This shows that even powerful rulers must sometimes yield to counsel they disagree with.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Achish instructed David and his men to rise early in the morning and leave the camp as soon as daylight appeared. By calling them the servants of David's master Saul, Achish gently reminded David of the reason the other leaders refused to trust his company. Leaving right at dawn avoided any fresh fights with angry Philistine soldiers and hurried David along on his journey.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "David and his men woke up at first light and began their journey back toward Ziklag in the land of the Philistines, while the Philistine forces marched ahead to Jezreel. David was spared from raising his sword against his own countrymen, while also keeping the goodwill of Achish. In God's wise timing, leaving early allowed David to get back just when his family needed rescuing most.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 7: removed sources ['Wesley']",
+  "v. 11: removed sources ['Adam Clarke']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}
