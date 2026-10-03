@@ -38,7 +38,12 @@ data class ChatEntry(
  * and the sites it may search. The key is kept on this tablet only, apart from your notes and
  * backups.
  */
-class ChatState(context: Context, private val scope: CoroutineScope) {
+class ChatState(
+    context: Context,
+    private val scope: CoroutineScope,
+    /** Whether a text names a Bible passage (AI-8). */
+    private val hasVerses: (String) -> Boolean,
+) {
     private val prefs = context.getSharedPreferences("ai_chat", Context.MODE_PRIVATE)
     private val secret = context.getSharedPreferences("ai_key", Context.MODE_PRIVATE)
 
@@ -54,6 +59,9 @@ class ChatState(context: Context, private val scope: CoroutineScope) {
     /** Passages to go with the next question. */
     val attached = mutableStateListOf<ChatPassage>()
     var busy by mutableStateOf(false)
+        private set
+    /** The question being edited (AI-9): sending replaces it and everything after it. */
+    var editing by mutableStateOf<Int?>(null)
         private set
     /** The online service; tests put a stand-in here. */
     var service: ChatService = AiChat.claude
@@ -76,7 +84,17 @@ class ChatState(context: Context, private val scope: CoroutineScope) {
 
     fun attach(p: ChatPassage) { if (p !in attached) attached += p }
 
-    fun newChat() { if (!busy) { entries.clear(); save() } }
+    fun newChat() { if (!busy) { editing = null; entries.clear(); save() } }
+
+    /** Starts editing question [i]: its passages go back above the box; returns its words. */
+    fun startEdit(i: Int): String? {
+        val e = entries.getOrNull(i)?.takeIf { it.user && !busy } ?: return null
+        editing = i
+        attached.clear(); attached.addAll(e.passages)
+        return e.text
+    }
+
+    fun cancelEdit() { editing = null; attached.clear() }
 
     /** Sends [question] with the attached passages; the reply is added when it comes. */
     fun ask(question: String) {
@@ -84,6 +102,9 @@ class ChatState(context: Context, private val scope: CoroutineScope) {
         if (busy || (q.isEmpty() && attached.isEmpty())) return
         if (apiKey.isBlank()) return
         val passages = attached.toList()
+        // An edited question replaces the one asked and everything after it.
+        editing?.let { i -> if (i in entries.indices) entries.removeRange(i, entries.size) }
+        editing = null
         val history = entries.filter { it.note == null }.map { ChatTurn(it.user, if (it.user) prompt(it.text, it.passages) else it.text) }
         entries += ChatEntry(true, q, passages)
         attached.clear()
@@ -93,7 +114,7 @@ class ChatState(context: Context, private val scope: CoroutineScope) {
         val siteList = sites.toList()
         scope.launch {
             val result = withContext(Dispatchers.IO) {
-                runCatching { service.ask(key, siteList, history, prompt(q, passages)) }
+                runCatching { service.ask(key, siteList, history, prompt(q, passages), hasVerses) }
                     .getOrElse { ChatResult.Failed("Something went wrong: ${it.message ?: it.javaClass.simpleName}") }
             }
             entries += when (result) {

@@ -28,6 +28,7 @@ import androidx.compose.ui.test.swipeUp
 import androidx.compose.ui.test.click
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.performTextReplacement
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -854,7 +855,7 @@ class FeatureTest {
             vm.chat.newChat()
             vm.chat.attached.clear()
             vm.chat.changeSites(com.biblestudy.app.data.AiChat.DEFAULT_SITES)
-            vm.chat.service = com.biblestudy.app.data.ChatService { _, sites, history, q -> asked += Triple(sites, history, q); reply }
+            vm.chat.service = com.biblestudy.app.data.ChatService { _, sites, history, q, hasVerses -> asked += Triple(sites, history, q); assertTrue(hasVerses("see Rom 5:8")); reply }
         }
         // The bubble opens the chat beside the text; first it asks for the key.
         compose.onNodeWithTag("chatBubble").performClick()
@@ -887,6 +888,28 @@ class FeatureTest {
         assertTrue(answer.text, answer.text.contains("\u2022 See also Romans 5:8."))
         assertTrue(answer.getLinkAnnotations(0, answer.length).isNotEmpty())
 
+        // The verses it names are listed together; each opens its passage.
+        compose.onNodeWithTag("chatVerses").assertExists()
+        compose.onNodeWithText("Romans 5:8", useUnmergedTree = true).assertExists()
+
+        // Copy a message.
+        compose.onAllNodesWithText("Copy")[1].performClick()
+        val copied = androidx.test.core.app.ApplicationProvider.getApplicationContext<android.content.Context>()
+            .getSystemService(android.content.ClipboardManager::class.java).primaryClip!!.getItemAt(0).text.toString()
+        assertTrue(copied, copied.startsWith("The sites say God showed his love") && copied.contains("[2] The love of God: https://www.ligonier.org/learn/love"))
+
+        // Edit the question and send it again: it replaces the old one and its answer.
+        compose.onNodeWithText("Edit").performClick()
+        assertEquals(0, vm.chat.editing)
+        assertEquals(listOf("John 3:16 (KJV)"), vm.chat.attached.map { it.label })
+        compose.onNodeWithTag("chatInput").performTextReplacement("What does this verse teach about eternal life?")
+        compose.onNodeWithContentDescription("Send").performClick()
+        compose.waitUntil(5_000) { !vm.chat.busy && vm.chat.entries.size == 2 }
+        assertEquals("What does this verse teach about eternal life?", vm.chat.entries[0].text)
+        assertTrue(asked.last().second.isEmpty())
+        assertTrue(asked.last().third.contains("John 3:16 (KJV)"))
+        assertNull(vm.chat.editing)
+
         // Nothing found on the sites: no answer, just a note. The earlier turns go with it.
         reply = com.biblestudy.app.data.ChatResult.NotFound
         compose.onNodeWithTag("chatInput").performTextInput("And in Leviticus?")
@@ -894,6 +917,7 @@ class FeatureTest {
         compose.waitUntil(5_000) { compose.onAllNodesWithTag("chatNote").fetchSemanticsNodes().isNotEmpty() }
         assertEquals(2, asked.last().second.size)
         assertFalse(asked.last().second[0].text.isEmpty())
+        assertEquals(3, asked.size)
 
         // Turned off: no bubble, no Ask AI, and the panel view leaves the menu.
         compose.runOnUiThread { vm.sidePane = null; vm.chat.changeEnabled(false); vm.openVerse(43, 3, 16) }

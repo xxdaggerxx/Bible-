@@ -23,6 +23,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Public
+import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -40,7 +41,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.LinkAnnotation
@@ -70,6 +73,7 @@ fun ChatPane(vm: StudyViewModel, modifier: Modifier) {
     var shown by remember { mutableStateOf<Passage?>(null) }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     val version = vm.studyPanel().version
+    var question by remember { mutableStateOf("") }
     Column(modifier.testTag("chatPane")) {
         if (chat.apiKey.isBlank()) {
             KeyCard(vm)
@@ -90,7 +94,9 @@ fun ChatPane(vm: StudyViewModel, modifier: Modifier) {
                     modifier = Modifier.padding(vertical = 12.dp),
                 )
             }
-            itemsIndexed(chat.entries) { _, e -> ChatBubble(vm, e) { shown = it } }
+            itemsIndexed(chat.entries) { i, e ->
+                ChatBubble(vm, e, onPassage = { shown = it }, onEdit = { chat.startEdit(i)?.let { question = it } })
+            }
             if (chat.busy) item {
                 Row(Modifier.padding(vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
                     CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp)
@@ -117,7 +123,17 @@ fun ChatPane(vm: StudyViewModel, modifier: Modifier) {
                 }
             }
         }
-        var question by remember { mutableStateOf("") }
+        // Editing an earlier question (AI-9).
+        if (chat.editing != null) {
+            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 4.dp)) {
+                Text(
+                    "Editing your question. Sending replaces it and the answers after it.",
+                    style = MaterialTheme.typography.bodySmall,
+                    modifier = Modifier.weight(1f),
+                )
+                TextButton(onClick = { chat.cancelEdit(); question = "" }) { Text("Cancel") }
+            }
+        }
         Row(verticalAlignment = Alignment.CenterVertically) {
             OutlinedTextField(
                 value = question,
@@ -177,41 +193,73 @@ private fun KeyCard(vm: StudyViewModel) {
     }
 }
 
+@OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
 @Composable
-private fun ChatBubble(vm: StudyViewModel, e: ChatEntry, onPassage: (Passage) -> Unit) {
+private fun ChatBubble(vm: StudyViewModel, e: ChatEntry, onPassage: (Passage) -> Unit, onEdit: () -> Unit) {
     val context = LocalContext.current
-    Box(Modifier.fillMaxWidth().padding(vertical = 6.dp), contentAlignment = if (e.user) Alignment.CenterEnd else Alignment.CenterStart) {
-        Column(
-            Modifier
-                .widthIn(max = 560.dp)
-                .background(
-                    if (e.user) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceContainer,
-                    RoundedCornerShape(14.dp),
-                )
-                .padding(horizontal = 12.dp, vertical = 8.dp)
-        ) {
-            if (e.user) {
-                for (p in e.passages) {
-                    Text(p.label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                    Text(p.text, style = MaterialTheme.typography.bodySmall, maxLines = 3, overflow = TextOverflow.Ellipsis)
-                }
-                if (e.text.isNotBlank()) Text(e.text, style = MaterialTheme.typography.bodyLarge)
-            } else if (e.note != null) {
-                Text(e.note, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.error, modifier = Modifier.testTag("chatNote"))
-            } else {
-                val answer = remember(e.text) { answerText(vm, e.text, onPassage) }
-                Text(answer, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.testTag("chatAnswer"))
-                Text("Sources", style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 8.dp))
-                e.sources.forEachIndexed { i, s ->
-                    SourceRow(i + 1, s) {
-                        runCatching { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(s.url))) }
-                            .onFailure { vm.message = "No browser is available." }
+    val clipboard = LocalClipboardManager.current
+    Column(
+        Modifier.fillMaxWidth().padding(vertical = 6.dp),
+        horizontalAlignment = if (e.user) Alignment.End else Alignment.Start,
+    ) {
+        // Hold a finger on the words to select and copy part of them (AI-9).
+        SelectionContainer {
+            Column(
+                Modifier
+                    .widthIn(max = 560.dp)
+                    .background(
+                        if (e.user) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceContainer,
+                        RoundedCornerShape(14.dp),
+                    )
+                    .padding(horizontal = 12.dp, vertical = 8.dp)
+            ) {
+                if (e.user) {
+                    for (p in e.passages) {
+                        Text(p.label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                        Text(p.text, style = MaterialTheme.typography.bodySmall, maxLines = 3, overflow = TextOverflow.Ellipsis)
+                    }
+                    if (e.text.isNotBlank()) Text(e.text, style = MaterialTheme.typography.bodyLarge)
+                } else if (e.note != null) {
+                    Text(e.note, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.error, modifier = Modifier.testTag("chatNote"))
+                } else {
+                    val answer = remember(e.text) { answerText(vm, e.text, onPassage) }
+                    Text(answer, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.testTag("chatAnswer"))
+                    // The verses the answer names, together (AI-8).
+                    val verses = remember(e.text) { RefLinks.find(e.text, vm.bible.books).distinctBy { vm.passageLabel(it.passage) } }
+                    Text("Verses", style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 8.dp))
+                    if (verses.isEmpty()) {
+                        Text("The sources didn't name any verses for this.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                    } else {
+                        androidx.compose.foundation.layout.FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.testTag("chatVerses")) {
+                            for (v in verses) AssistChip(onClick = { onPassage(v.passage) }, label = { Text(vm.passageLabel(v.passage)) })
+                        }
+                    }
+                    Text("Sources", style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 8.dp))
+                    e.sources.forEachIndexed { i, s ->
+                        SourceRow(i + 1, s) {
+                            runCatching { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(s.url))) }
+                                .onFailure { vm.message = "No browser is available." }
+                        }
                     }
                 }
             }
         }
+        if (e.note == null || e.user) Row {
+            TextButton(onClick = { clipboard.setText(AnnotatedString(copyText(e))); vm.message = "Copied." }) { Text("Copy") }
+            if (e.user) TextButton(onClick = onEdit, enabled = !vm.chat.busy) { Text("Edit") }
+        }
     }
 }
+
+/** A message as copied: the passages and question, or the answer with its sources listed. */
+internal fun copyText(e: ChatEntry): String = buildString {
+    for (p in e.passages) append(p.label).append(": ").append(p.text).append("\n")
+    append(e.text)
+    if (e.sources.isNotEmpty()) {
+        append("\n\nSources:\n")
+        e.sources.forEachIndexed { i, s -> append("[${i + 1}] ${s.title}: ${s.url}\n") }
+    }
+}.trim()
 
 @Composable
 private fun SourceRow(n: Int, s: ChatSource, onOpen: () -> Unit) {

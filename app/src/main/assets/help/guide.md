@@ -193,7 +193,10 @@ The one part of the app that uses the internet. Ask a question, and the AI searc
 - **Open it** with the round chat bubble at the bottom right. The chat opens in a panel beside the text.
 - **The first time,** paste your Claude API key (from console.anthropic.com) and tap *Save key*. It's kept on this tablet only, and isn't in your backups. Each question costs a few cents on your Claude account.
 - **Ask about a passage:** select words with a long press, or hold a finger on a highlight, and tap *Ask AI*. In *Verse details*, tap *Ask AI* to send the whole verse. The passages wait above the question box; tap × on one to leave it out.
-- **Answers** show a number like [1] after each part, matching the *Sources* listed under the answer. Tap a source to read the page in your browser. Bible references in an answer are links: tap one to read the passage.
+- **Answers** must cite the pages they use: an answer without citations isn't shown. They show a number like [1] after each part, matching the *Sources* listed under the answer. Tap a source to read the page in your browser. Bible references in an answer are links: tap one to read the passage.
+- **Verses:** every answer ends with the Bible verses its sources give, listed together under *Verses*. Tap one to read it. If the AI leaves them out, the app asks it once more for them.
+- **Copy:** tap *Copy* under any message to copy it, with its sources. To copy part of a message, hold a finger on the words and drag.
+- **Edit:** tap *Edit* under one of your questions to change it, with its passages, and send it again. It replaces that question and everything after it. *Cancel* stops editing.
 - **Follow-up questions** keep the conversation. *New chat* starts again.
 - **Which sites:** *Settings → AI chat (online)* lists them, one per line. Add or remove sites, then *Save sites*. *Use the suggested sites* puts back the starting list.
 - **Turn it off** with the *AI chat* switch in Settings: the bubble and the *Ask AI* buttons go, and the app never goes online.

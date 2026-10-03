@@ -1415,7 +1415,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
     // ---------- AI chat, online (AI-1 to AI-7) ----------
 
-    val chat by lazy { ChatState(getApplication(), viewModelScope) }
+    val chat by lazy { ChatState(getApplication(), viewModelScope) { com.biblestudy.app.data.RefLinks.find(it, bible.books).isNotEmpty() } }
 
     /** Opens the AI chat in a panel beside the text. */
     fun openChat() { if (chat.enabled) showStudy(PaneKind.CHAT) }

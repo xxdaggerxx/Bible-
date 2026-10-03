@@ -32,8 +32,11 @@ sealed class ChatResult {
 
 /** Asks the online AI (AI-1). Swapped for a stand-in in tests. */
 fun interface ChatService {
-    /** Blocking: call off the main thread. */
-    fun ask(apiKey: String, sites: List<String>, history: List<ChatTurn>, question: String): ChatResult
+    /**
+     * Blocking: call off the main thread. [hasVerses] tells whether a text names a Bible passage;
+     * an answer must (AI-8).
+     */
+    fun ask(apiKey: String, sites: List<String>, history: List<ChatTurn>, question: String, hasVerses: (String) -> Boolean): ChatResult
 }
 
 /**
@@ -62,33 +65,52 @@ object AiChat {
 
         Rules:
         - Search before every answer, including follow-up questions. Never answer from your own knowledge, and add no opinions or reasoning of your own: only summarise what the search results say.
-        - Back every statement with a citation to the search result it comes from.
+        - Back every statement with a citation to the search result it comes from. Don't write anything you can't cite.
         - If the results don't answer the question, say only: "I couldn't find this on your chosen sites." Don't fill the gap yourself.
         - Where the sources disagree, say so and say which source holds which view.
         - Give the traditional reading of the Bible as the sources present it.
         - Name the Bible passages the sources rely on as plain references, such as John 3:16 or Romans 8:28-30.
+        - End with a short list headed "Key verses": the Bible passages your sources give for this, each as a plain reference with a few words on why, and cited.
         - Keep it short: a few short paragraphs or a short list, in plain English.
         - The user may include Bible passages they selected; they are the subject of the question.
     """.trimIndent()
 
-    /** Calls the Claude API with web search limited to [sites]. */
-    val claude = ChatService { apiKey, sites, history, question ->
+    /** Asked when an answer names no Bible passages (AI-8). */
+    const val VERSES_PLEASE = "Your answer doesn't name any Bible verses. From your sources (search again if you need to), " +
+        "list the Key verses they give for this, as plain references like John 3:16, each cited."
+
+    /** Calls the Claude API with web search limited to the chosen sites. */
+    val claude: ChatService = claude(null)
+
+    /** The service, sending requests to [baseUrl] (tests use a local stand-in) or Anthropic. */
+    fun claude(baseUrl: String?): ChatService = ChatService { apiKey, sites, history, question, hasVerses ->
         try {
-            val client = AnthropicOkHttpClient.builder().apiKey(apiKey).build()
-            var params = params(sites, history, question)
-            val blocks = ArrayList<ContentBlock>()
-            var msg: Message = client.messages().create(params)
-            blocks += msg.content()
-            // A long search can pause; send its turn back and it carries on (at most a few times).
-            var resumed = 0
-            while (msg.stopReason().orElse(null) == StopReason.PAUSE_TURN && resumed < 4) {
-                params = params.toBuilder().addMessage(msg).build()
-                msg = client.messages().create(params)
-                blocks += msg.content()
-                resumed++
+            val client = AnthropicOkHttpClient.builder().apiKey(apiKey).apply { baseUrl?.let { baseUrl(it) } }.build()
+            // Sends the request; a long search can pause, so its turn is sent back to carry on.
+            fun run(start: MessageCreateParams): Pair<MessageCreateParams, List<Message>> {
+                var params = start
+                val msgs = ArrayList<Message>()
+                var msg = client.messages().create(params)
+                msgs += msg
+                var resumed = 0
+                while (msg.stopReason().orElse(null) == StopReason.PAUSE_TURN && resumed < 4) {
+                    params = params.toBuilder().addMessage(msg).build()
+                    msg = client.messages().create(params)
+                    msgs += msg
+                    resumed++
+                }
+                return params.toBuilder().addMessage(msg).build() to msgs
             }
-            if (msg.stopReason().orElse(null) == StopReason.REFUSAL) ChatResult.Failed("The AI declined to answer this question.")
-            else read(blocks, sites)
+            val refused = { m: List<Message> -> m.last().stopReason().orElse(null) == StopReason.REFUSAL }
+            val (sent, first) = run(params(sites, history, question))
+            if (refused(first)) return@ChatService ChatResult.Failed("The AI declined to answer this question.")
+            val parts = arrayListOf(first.flatMap { it.content() })
+            val answer = readParts(parts, sites)
+            if (answer !is ChatResult.Answer || hasVerses(answer.text)) return@ChatService answer
+            // No verses named: ask once more for the ones its sources give.
+            val (_, more) = run(sent.toBuilder().addUserMessage(VERSES_PLEASE).build())
+            if (!refused(more)) parts += more.flatMap { it.content() }
+            readParts(parts, sites)
         } catch (e: UnauthorizedException) {
             ChatResult.Failed("Your API key wasn't accepted. Check it in Settings → AI chat.")
         } catch (e: PermissionDeniedException) {
@@ -120,25 +142,31 @@ object AiChat {
      * Turns the reply into an answer: its text with a [n] mark after each cited part, and the
      * pages cited. With no search results or no citations from the chosen sites, nothing is shown.
      */
-    fun read(blocks: List<ContentBlock>, sites: List<String>): ChatResult {
+    fun read(blocks: List<ContentBlock>, sites: List<String>): ChatResult = readParts(listOf(blocks), sites)
+
+    /** As [read], for a reply in several [parts] (an answer and its follow-up), one after another. */
+    fun readParts(parts: List<List<ContentBlock>>, sites: List<String>): ChatResult {
         var results = 0
         val sources = ArrayList<ChatSource>()
         val text = StringBuilder()
-        for (b in blocks) {
-            b.webSearchToolResult().ifPresent { r ->
-                r.content().resultBlocks().ifPresent { results += it.size }
-            }
-            b.text().ifPresent { t ->
-                text.append(t.text())
-                val marks = t.citations().orElse(emptyList()).mapNotNull { c ->
-                    c.webSearchResultLocation().orElse(null)?.let { w ->
-                        val s = ChatSource(w.title().orElse(null) ?: w.url(), w.url())
-                        if (!allowed(s, sites)) return@mapNotNull null
-                        val at = sources.indexOfFirst { it.url == s.url }.takeIf { it >= 0 } ?: run { sources += s; sources.lastIndex }
-                        at + 1
-                    }
-                }.distinct()
-                if (marks.isNotEmpty()) text.append(marks.joinToString("") { "[$it]" })
+        for ((n, blocks) in parts.withIndex()) {
+            if (n > 0 && text.isNotBlank()) text.append("\n\n")
+            for (b in blocks) {
+                b.webSearchToolResult().ifPresent { r ->
+                    r.content().resultBlocks().ifPresent { results += it.size }
+                }
+                b.text().ifPresent { t ->
+                    text.append(t.text())
+                    val marks = t.citations().orElse(emptyList()).mapNotNull { c ->
+                        c.webSearchResultLocation().orElse(null)?.let { w ->
+                            val s = ChatSource(w.title().orElse(null) ?: w.url(), w.url())
+                            if (!allowed(s, sites)) return@mapNotNull null
+                            val at = sources.indexOfFirst { it.url == s.url }.takeIf { it >= 0 } ?: run { sources += s; sources.lastIndex }
+                            at + 1
+                        }
+                    }.distinct()
+                    if (marks.isNotEmpty()) text.append(marks.joinToString("") { "[$it]" })
+                }
             }
         }
         if (results == 0 || sources.isEmpty() || text.isBlank()) return ChatResult.NotFound
