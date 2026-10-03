@@ -1,6 +1,6 @@
 """Builds the AI commentary: a short, plain-English note on every verse, grounded in sources.
 
-Each chapter takes two steps:
+Each chapter (or part) takes two steps:
   1. research: Claude searches the trusted sites below (and only those) for what pastors and teachers
      say about the chapter, where Protestant traditions differ, and other views. It writes notes
      that name the page for every point.
@@ -14,13 +14,19 @@ Each note has three parts (see CLAUDE.md):
   other    other views: modern scholarship, Catholic and Orthodox, popular modern teaching (only
            where one is well known).
 
-Usage:
-  ANTHROPIC_API_KEY=... python3 build_ai_commentary.py chapter <work folder> <out folder> "Acts 2" ...
-  python3 build_ai_commentary.py pack <out folder> <assets/commentaries/ai.db.xz>
+Chapters longer than 40 verses are done in parts of about 30 verses.
 
-The work folder holds the bundled commentaries unpacked (made the first time). The out folder gets
-<book>-<chapter>.json (the notes, with sources) and <book>-<chapter>.research.md for each chapter.
-pack turns the JSON files into the commentary database the app reads: entries(start, end, body).
+Usage:
+  ANTHROPIC_API_KEY=... python3 build_ai_commentary.py batch <work> <out> all|"Acts 2"|Ruth ... [--wait]
+      Sends the parts through the Message Batches API (half price), collects finished batches and sends
+      the next step. Run it again (or with --wait) until every part is done; it carries on where it left off.
+  ANTHROPIC_API_KEY=... python3 build_ai_commentary.py chapter <work> <out> "Acts 2" ...
+      Runs parts one at a time, straight away (full price), e.g. to redo ones the batch run couldn't finish.
+  python3 build_ai_commentary.py pack <out> app/src/main/assets/commentaries/ai.db.xz
+      Turns the finished notes into the commentary database the app reads: entries(start, end, body).
+
+<work> holds the bundled commentaries unpacked and the research notes. <out> holds the finished notes
+(<book>-<chapter>-<first verse>.json), batches.json, usage.json and log.txt.
 """
 import json
 import lzma
@@ -137,32 +143,69 @@ SCHEMA = {
     "required": ["notes"], "additionalProperties": False,
 }
 
-# ---------- Bible text and bundled commentaries ----------
+# ---------- Bible text, parts and bundled commentaries ----------
+
+PART = 30  # chapters longer than 40 verses are done in parts of about this many verses
+
 
 def bible(version):
     return sqlite3.connect(os.path.join(ASSETS, "bibles", f"{version}.db"))
 
 
-def book_ids():
+def book_names():
     db = bible("kjv")
-    ids = {}
+    ids, names = {}, {}
     for i, name, osis in db.execute("SELECT id, name, osis FROM books"):
-        ids[name.lower()] = i
-        ids[osis.lower()] = i
-    names = {i: n for i, n in db.execute("SELECT id, name FROM books")}
+        ids[name.lower()] = ids[osis.lower()] = i
+        names[i] = name
     return ids, names
 
 
-def parse_ref(ref, ids):
-    m = re.fullmatch(r"\s*(.+?)\s+(\d+)\s*", ref)
-    if not m or m.group(1).lower() not in ids:
-        sys.exit(f"Can't read {ref!r}: write it like \"Acts 2\"")
-    return ids[m.group(1).lower()], int(m.group(2))
+def all_parts():
+    """Every part of the Bible as (book, chapter, first verse, last verse), in KJV versification (as the app)."""
+    parts = []
+    for book, ch, n in bible("kjv").execute("SELECT book, chapter, MAX(verse) FROM verses GROUP BY book, chapter ORDER BY book, chapter"):
+        if n <= 40:
+            parts.append((book, ch, 1, n))
+        else:
+            k = -(-n // PART)
+            bounds = [round(i * n / k) for i in range(k + 1)]
+            parts += [(book, ch, bounds[i] + 1, bounds[i + 1]) for i in range(k)]
+    return parts
 
 
-def verses(book, chapter, version="bsb"):
-    return bible(version).execute(
-        "SELECT verse, text FROM verses WHERE book = ? AND chapter = ? ORDER BY verse", (book, chapter)).fetchall()
+def part_id(p):
+    return f"{p[0]:02d}-{p[1]:03d}-{p[2]:03d}"
+
+
+def select(refs):
+    """The parts for refs like "Acts 2", "Ruth" or "all"."""
+    ids, _ = book_names()
+    parts = all_parts()
+    if refs == ["all"]:
+        return parts
+    out = []
+    for ref in refs:
+        m = re.fullmatch(r"\s*(.+?)(?:\s+(\d+))?\s*", ref)
+        book = ids.get(m.group(1).lower())
+        if not book:
+            sys.exit(f"Can't read {ref!r}: write it like \"Acts 2\" or \"Ruth\"")
+        out += [p for p in parts if p[0] == book and (m.group(2) is None or p[1] == int(m.group(2)))]
+    return out
+
+
+def ref_of(p, names):
+    book, ch, a, b = p
+    n = bible("kjv").execute("SELECT MAX(verse) FROM verses WHERE book = ? AND chapter = ?", (book, ch)).fetchone()[0]
+    return f"{names[book]} {ch}" if (a, b) == (1, n) else f"{names[book]} {ch}:{a}-{b}"
+
+
+def text_of(p):
+    """The verses in the BSB; verses the BSB leaves out (as later additions) come from the KJV, marked."""
+    book, ch, a, b = p
+    bsb = dict(bible("bsb").execute("SELECT verse, text FROM verses WHERE book = ? AND chapter = ? AND verse BETWEEN ? AND ?", (book, ch, a, b)))
+    kjv = bible("kjv").execute("SELECT verse, text FROM verses WHERE book = ? AND chapter = ? AND verse BETWEEN ? AND ?", (book, ch, a, b)).fetchall()
+    return "\n".join(f"{v} {bsb[v]}" if v in bsb else f"{v} [KJV only; not in the oldest manuscripts] {t}" for v, t in kjv)
 
 
 def commentary_dbs(work):
@@ -186,17 +229,15 @@ def plain(body):
     return re.sub(r"\[\[[^|\]]*\|([^\]]*)\]\]", r"\1", body)
 
 
-def chapter_notes(dbs, book, chapter):
-    """{commentary id: [(start verse, end verse, text)]} for the notes touching the chapter."""
-    lo, hi = book * 1_000_000 + chapter * 1000, book * 1_000_000 + chapter * 1000 + 999
+def part_notes(dbs, p):
+    """{commentary id: [(start verse, end verse, text)]} for the notes touching the part (verse 0: introduction)."""
+    book, ch, a, b = p
+    base = book * 1_000_000 + ch * 1000
+    lo, hi = base + (0 if a == 1 else a), base + b
     out = {}
     for cid, (db, table) in dbs.items():
         rows = db.execute(f"SELECT start, end, body FROM {table} WHERE start <= ? AND end >= ? ORDER BY start", (hi, lo)).fetchall()
-        notes = []
-        for s, e, body in rows:
-            sv = s % 1000 if s >= lo else 0
-            ev = e % 1000 if e <= hi else 999
-            notes.append((sv, ev, plain(body)))
+        notes = [(s - base if s >= base else 0, e - base if e <= base + 999 else 999, plain(body)) for s, e, body in rows]
         if notes:
             out[cid] = notes
     return out
@@ -206,86 +247,77 @@ def covered(notes, cid, verse, end):
     """Whether bundled commentary [cid] has a note on any of the verses [verse]..[end]."""
     return any(s <= end and e >= verse for s, e, _ in notes.get(cid, []))
 
-# ---------- Claude ----------
+# ---------- requests ----------
 
-def client():
-    import anthropic
-    return anthropic.Anthropic(max_retries=4, timeout=1800)
-
-
-USAGE = {"input": 0, "output": 0, "cache_read": 0, "searches": 0, "fetches": 0}
-PRICE = {"input": 4.0, "output": 20.0, "cache_read": 0.2}  # $ per million tokens (Claude Opus 5.5)
+TOOLS = [
+    {"type": "web_search_20260209", "name": "web_search", "allowed_domains": DOMAINS, "max_uses": 8},
+    {"type": "web_fetch_20260209", "name": "web_fetch", "allowed_domains": DOMAINS, "max_uses": 6, "max_content_tokens": 8000},
+]
 
 
-def count(usage):
-    USAGE["input"] += usage.input_tokens + (usage.cache_creation_input_tokens or 0)
-    USAGE["output"] += usage.output_tokens
-    USAGE["cache_read"] += usage.cache_read_input_tokens or 0
-    stu = getattr(usage, "server_tool_use", None)
-    if stu:
-        USAGE["searches"] += getattr(stu, "web_search_requests", 0) or 0
-        USAGE["fetches"] += getattr(stu, "web_fetch_requests", 0) or 0
+def research_params(messages):
+    return dict(model=MODEL, max_tokens=32000, system=RESEARCH_SYSTEM, tools=TOOLS, messages=messages,
+                output_config={"effort": "medium"}, cache_control={"type": "ephemeral"})
 
 
-def cost():
-    tokens = sum(USAGE[k] * PRICE[k] for k in PRICE) / 1e6
-    return tokens + USAGE["searches"] * 0.01
+def research_start(p, names):
+    return [{"role": "user", "content": RESEARCH_TASK.format(ref=ref_of(p, names), text=text_of(p))}]
 
 
-def call(c, **params):
-    """One streamed request with refusal fallback; returns the final message."""
-    with c.beta.messages.stream(
-        model=MODEL, betas=["server-side-fallback-2026-07-01"], extra_body={"fallbacks": "default"}, **params,
-    ) as stream:
-        msg = stream.get_final_message()
-    count(msg.usage)
-    if msg.stop_reason == "refusal":
-        raise RuntimeError(f"Declined: {msg.stop_details}")
-    return msg
-
-
-def research(c, ref, text):
-    """Step 1: research notes, and the URLs of every page that came up in search or was read."""
-    tools = [
-        {"type": "web_search_20260209", "name": "web_search", "allowed_domains": DOMAINS, "max_uses": 8},
-        {"type": "web_fetch_20260209", "name": "web_fetch", "allowed_domains": DOMAINS, "max_uses": 6,
-         "max_content_tokens": 8000},
-    ]
-    messages = [{"role": "user", "content": RESEARCH_TASK.format(ref=ref, text=text)}]
-    urls, notes = set(), []
-    for _ in range(6):  # continue paused turns
-        msg = call(c, max_tokens=32000, system=RESEARCH_SYSTEM, tools=tools, messages=messages,
-                   output_config={"effort": "medium"}, cache_control={"type": "ephemeral"})
-        for b in msg.content:
-            if b.type == "web_search_tool_result" and isinstance(b.content, list):
-                urls.update(r.url for r in b.content if getattr(r, "url", None))
-            elif b.type == "web_fetch_tool_result" and getattr(b.content, "url", None):
-                urls.add(b.content.url)
-            elif b.type == "text":
-                notes.append(b.text)
-                for cit in getattr(b, "citations", None) or []:
-                    if getattr(cit, "url", None):
-                        urls.add(cit.url)
-        if msg.stop_reason != "pause_turn":
-            break
-        messages.append({"role": "assistant", "content": msg.content})
-    return "".join(notes).strip(), urls
-
-
-def write(c, ref, text, bundled, research_notes):
-    """Step 2: the verse notes as JSON."""
-    parts = [f"# {ref} (BSB)\n\n{text}\n\n# Bundled commentaries"]
+def write_params(p, names, bundled, research_notes):
+    ref = ref_of(p, names)
+    parts = [f"# {ref} (BSB)\n\n{text_of(p)}\n\n# Bundled commentaries"]
     for cid, notes in bundled.items():
         parts.append(f"\n## {BUNDLED[cid]}\n")
         for s, e, body in notes:
-            span = "introduction" if s == 0 else f"v. {s}" if s == e else f"v. {s}-{min(e, 999)}"
+            span = "introduction" if s == 0 else f"v. {s}" if s == e else f"v. {s}-{e}"
             parts.append(f"[{span}]\n{body}\n")
-    parts.append(f"\n# Research notes from trusted websites\n\n{research_notes}")
-    msg = call(c, max_tokens=64000, system=WRITE_SYSTEM,
-               messages=[{"role": "user", "content": [{"type": "text", "text": "\n".join(parts)},
-                                                      {"type": "text", "text": f"Write the notes for every verse of {ref}."}]}],
-               output_config={"effort": "high", "format": {"type": "json_schema", "schema": SCHEMA}})
-    return json.loads(next(b.text for b in msg.content if b.type == "text"))["notes"]
+    parts.append(f"\n# Research notes from trusted websites\n\n{research_notes or '(none found)'}")
+    return dict(model=MODEL, max_tokens=64000, system=WRITE_SYSTEM,
+                messages=[{"role": "user", "content": [
+                    {"type": "text", "text": "\n".join(parts)},
+                    {"type": "text", "text": f"Write the notes for every verse of {ref} (verses {p[2]}-{p[3]}), and only those verses."}]}],
+                output_config={"effort": "high", "format": {"type": "json_schema", "schema": SCHEMA}})
+
+
+def read_research(content):
+    """(notes text, URLs of every page found) from a research reply's content blocks (dicts)."""
+    urls, notes = set(), []
+    for b in content:
+        t = b.get("type")
+        if t == "web_search_tool_result" and isinstance(b.get("content"), list):
+            urls.update(r["url"] for r in b["content"] if r.get("url"))
+        elif t == "web_fetch_tool_result" and isinstance(b.get("content"), dict) and b["content"].get("url"):
+            urls.add(b["content"]["url"])
+        elif t == "text":
+            notes.append(b["text"])
+            for cit in b.get("citations") or []:
+                if cit.get("url"):
+                    urls.add(cit["url"])
+    return "".join(notes).strip(), urls
+
+
+def dump(content):
+    return [b.model_dump(mode="json", exclude_none=True) for b in content]
+
+# ---------- usage ----------
+
+PRICE = {"input": 4.0, "cache_write": 5.0, "output": 20.0, "cache_read": 0.2}  # $ per million tokens (Claude Opus 5.5)
+
+
+def add_usage(total, usage, batch):
+    u = usage.model_dump() if hasattr(usage, "model_dump") else usage
+    f = 0.5 if batch else 1.0
+    total["input"] = total.get("input", 0) + u.get("input_tokens", 0)
+    total["output"] = total.get("output", 0) + u.get("output_tokens", 0)
+    total["cache_read"] = total.get("cache_read", 0) + (u.get("cache_read_input_tokens") or 0)
+    total["cache_write"] = total.get("cache_write", 0) + (u.get("cache_creation_input_tokens") or 0)
+    stu = u.get("server_tool_use") or {}
+    total["searches"] = total.get("searches", 0) + (stu.get("web_search_requests") or 0)
+    total["fetches"] = total.get("fetches", 0) + (stu.get("web_fetch_requests") or 0)
+    total["dollars"] = total.get("dollars", 0) + f * sum((u.get(k) or 0) * PRICE[n] for k, n in (
+        ("input_tokens", "input"), ("cache_creation_input_tokens", "cache_write"), ("output_tokens", "output"),
+        ("cache_read_input_tokens", "cache_read"))) / 1e6 + (stu.get("web_search_requests") or 0) * 0.01
 
 # ---------- checking ----------
 
@@ -294,11 +326,11 @@ NAME_TO_ID = {v.lower(): k for k, v in BUNDLED.items()}
 
 def check_sources(sources, verse, end, bundled, urls, dropped):
     """The sources that check out; the others are recorded in [dropped]."""
-    good = []
+    good, known = [], {u.rstrip("/") for u in urls}
     for s in sources:
         s = s.strip()
         if s.startswith("http"):
-            ok = s.rstrip("/") in {u.rstrip("/") for u in urls}
+            ok = s.rstrip("/") in known
         else:
             cid = NAME_TO_ID.get(s.lower())
             ok = cid is not None and covered(bundled, cid, verse, end)
@@ -306,67 +338,250 @@ def check_sources(sources, verse, end, bundled, urls, dropped):
     return good
 
 
-def check(notes, bundled, urls):
-    """Drops unsupported points. Returns (checked notes, list of problems)."""
+def check(notes, p, bundled, urls):
+    """Keeps the notes inside the part and drops unsupported points. Returns (notes, problems)."""
     problems, out = [], []
-    for n in notes:
+    for n in sorted(notes, key=lambda n: n["verse"]):
         v, e = n["verse"], max(n["end"], n["verse"])
+        if v < p[2] or e > p[3]:
+            problems.append(f"v. {v}-{e}: outside verses {p[2]}-{p[3]}; dropped")
+            continue
         dropped = []
+        n["end"] = e
         n["meaning_sources"] = check_sources(n["meaning_sources"], v, e, bundled, urls, dropped)
         if not n["meaning_sources"]:
             problems.append(f"v. {v}: main note has no checkable source ({dropped}); kept but flagged")
             n["unchecked"] = True
         for key in ("differ", "other"):
             kept = []
-            for p in n[key]:
-                p["sources"] = check_sources(p["sources"], v, e, bundled, urls, dropped)
-                if p["sources"]:
-                    kept.append(p)
+            for q in n[key]:
+                q["sources"] = check_sources(q["sources"], v, e, bundled, urls, dropped)
+                if q["sources"]:
+                    kept.append(q)
                 else:
-                    problems.append(f"v. {v}: dropped {key} point ({p.get('tradition') or p.get('label')}): no checkable source")
+                    problems.append(f"v. {v}: dropped {key} point ({q.get('tradition') or q.get('label')}): no checkable source")
             n[key] = kept
         if dropped:
             problems.append(f"v. {v}: removed sources {dropped}")
         out.append(n)
     return out, problems
 
-# ---------- commands ----------
+
+def missing(notes, p):
+    have = {x for n in notes for x in range(n["verse"], n["end"] + 1)}
+    return [v for v in range(p[2], p[3] + 1) if v not in have]
+
+# ---------- state ----------
+#
+# <work>/state/research/<part>.json  {"notes", "urls"}, or while paused {"messages", "round"}
+# <out>/<part>.json                  the finished notes
+# <out>/batches.json                 every batch sent, so results can be fetched again (kept 29 days)
+# <out>/usage.json                   tokens, searches and dollars so far
+
+
+class State:
+    def __init__(self, work, out):
+        self.work, self.out = work, out
+        self.rdir = os.path.join(work, "state", "research")
+        os.makedirs(self.rdir, exist_ok=True)
+        os.makedirs(out, exist_ok=True)
+        self.batches = self._load("batches.json", [])
+        self.usage = self._load("usage.json", {})
+
+    def _load(self, name, default):
+        path = os.path.join(self.out, name)
+        return json.load(open(path)) if os.path.exists(path) else default
+
+    def save(self):
+        for name, data in (("batches.json", self.batches), ("usage.json", self.usage)):
+            with open(os.path.join(self.out, name) + ".tmp", "w") as f:
+                json.dump(data, f, indent=1)
+            os.replace(os.path.join(self.out, name) + ".tmp", os.path.join(self.out, name))
+
+    def research(self, pid):
+        path = os.path.join(self.rdir, pid + ".json")
+        return json.load(open(path)) if os.path.exists(path) else None
+
+    def set_research(self, pid, data):
+        with open(os.path.join(self.rdir, pid + ".json"), "w") as f:
+            json.dump(data, f, ensure_ascii=False)
+
+    def done(self, pid):
+        return os.path.exists(os.path.join(self.out, pid + ".json"))
+
+    def finish(self, p, names, notes, problems):
+        data = {"book": p[0], "chapter": p[1], "first": p[2], "last": p[3], "ref": ref_of(p, names),
+                "notes": notes, "problems": problems}
+        with open(os.path.join(self.out, part_id(p) + ".json"), "w") as f:
+            json.dump(data, f, indent=1, ensure_ascii=False)
+
+    def open_ids(self):
+        """custom_ids in batches not yet collected."""
+        return {cid for b in self.batches if not b.get("collected") for cid in b["ids"]}
+
+    def tries(self, cid):
+        return sum(cid in b["ids"] for b in self.batches)
+
+# ---------- batch run ----------
+
+
+def submit(c, st, kind, requests):
+    from anthropic.types.messages.batch_create_params import Request
+    for i in range(0, len(requests), 500):
+        chunk = requests[i:i + 500]
+        batch = c.messages.batches.create(requests=[Request(custom_id=cid, params=params) for cid, params in chunk])
+        st.batches.append({"id": batch.id, "kind": kind, "ids": [cid for cid, _ in chunk], "created": time.strftime("%Y-%m-%d %H:%M")})
+        st.save()
+        print(f"sent {kind} batch {batch.id}: {len(chunk)} requests", flush=True)
+
+
+def collect(c, st, parts, names, dbs, log):
+    by_id = {part_id(p): p for p in parts}
+    for b in st.batches:
+        if b.get("collected"):
+            continue
+        info = c.messages.batches.retrieve(b["id"])
+        if info.processing_status != "ended":
+            continue
+        for r in c.messages.batches.results(b["id"]):
+            kind, pid = r.custom_id.split("_", 1)
+            p = by_id.get(pid)
+            if p is None:
+                continue
+            if r.result.type != "succeeded":
+                log(f"{pid} {kind}: {r.result.type} {getattr(r.result, 'error', '')}")
+                continue
+            msg = r.result.message
+            add_usage(st.usage, msg.usage, batch=True)
+            if msg.stop_reason == "refusal":
+                log(f"{pid} {kind}: declined ({msg.stop_details})")
+                continue
+            if kind == "r":
+                prev = st.research(pid) or {"messages": research_start(p, names), "round": 0}
+                if msg.stop_reason == "pause_turn":
+                    st.set_research(pid, {"messages": prev["messages"] + [{"role": "assistant", "content": dump(msg.content)}],
+                                          "round": prev["round"] + 1, "content": prev.get("content", []) + dump(msg.content)})
+                else:
+                    notes, urls = read_research(prev.get("content", []) + dump(msg.content))
+                    st.set_research(pid, {"notes": notes, "urls": sorted(urls)})
+            else:
+                if msg.stop_reason == "max_tokens":
+                    log(f"{pid} write: ran out of room")
+                    continue
+                res = st.research(pid)
+                bundled = part_notes(dbs, p)
+                notes = json.loads(next(x.text for x in msg.content if x.type == "text"))["notes"]
+                notes, problems = check(notes, p, bundled, set(res["urls"]))
+                gaps = missing(notes, p)
+                if gaps:
+                    problems.append(f"no note for verses {gaps}")
+                st.finish(p, names, notes, problems)
+        b["collected"] = True
+        st.save()
+
+
+def cmd_batch(work, out, refs, wait):
+    import anthropic
+    c = anthropic.Anthropic(max_retries=6)
+    _, names = book_names()
+    dbs = commentary_dbs(work)
+    parts = select(refs)
+    st = State(work, out)
+    logf = open(os.path.join(out, "log.txt"), "a")
+
+    def log(line):
+        print(line, flush=True)
+        logf.write(time.strftime("%Y-%m-%d %H:%M ") + line + "\n")
+        logf.flush()
+
+    while True:
+        collect(c, st, parts, names, dbs, log)
+        busy = st.open_ids()
+        research, write, stuck = [], [], []
+        for p in parts:
+            pid = part_id(p)
+            if st.done(pid):
+                continue
+            res = st.research(pid)
+            cid = ("w_" if res and "notes" in res else "r_") + pid
+            if cid in busy:
+                continue
+            if st.tries(cid) - (res or {}).get("round", 0) >= 3 or (res or {}).get("round", 0) >= 6:
+                stuck.append(pid)
+            elif res and "notes" in res:
+                write.append((cid, write_params(p, names, part_notes(dbs, p), res["notes"])))
+            else:
+                research.append((cid, research_params(res["messages"] if res else research_start(p, names))))
+        if research:
+            submit(c, st, "research", research)
+        if write:
+            submit(c, st, "write", write)
+        done = sum(st.done(part_id(p)) for p in parts)
+        log(f"{done}/{len(parts)} parts done, {len(st.open_ids())} requests waiting, {len(stuck)} stuck; "
+            f"cost so far ${st.usage.get('dollars', 0):.2f}")
+        if not wait or not st.open_ids():
+            if stuck:
+                log(f"stuck (run them with the chapter command): {' '.join(stuck)}")
+            return
+        time.sleep(120)
+
+# ---------- one part at a time (for retries) ----------
+
 
 def cmd_chapter(work, out, refs):
-    ids, names = book_ids()
+    """Runs parts directly (not batched), with the server-side fallback for declined requests."""
+    import anthropic
+    c = anthropic.Anthropic(max_retries=4, timeout=1800)
+    _, names = book_names()
     dbs = commentary_dbs(work)
-    os.makedirs(out, exist_ok=True)
-    c = client()
-    for ref in refs:
-        book, ch = parse_ref(ref, ids)
-        ref = f"{names[book]} {ch}"
-        text = "\n".join(f"{v} {t}" for v, t in verses(book, ch))
-        bundled = chapter_notes(dbs, book, ch)
-        t0 = time.time()
-        print(f"{ref}: researching...", flush=True)
-        notes_md, urls = research(c, ref, text)
-        print(f"{ref}: {len(urls)} pages found (research ${cost():.2f}); writing...", flush=True)
-        notes = write(c, ref, text, bundled, notes_md)
-        notes, problems = check(notes, bundled, urls)
-        stem = os.path.join(out, f"{book:02d}-{ch:03d}")
-        with open(stem + ".research.md", "w") as f:
-            f.write(f"# Research: {ref}\n\n{notes_md}\n\n## Pages found\n\n" + "\n".join(sorted(urls)) + "\n")
-        with open(stem + ".json", "w") as f:
-            json.dump({"book": book, "chapter": ch, "ref": ref, "notes": notes, "problems": problems}, f, indent=1, ensure_ascii=False)
-        missing = sorted({v for v, _ in verses(book, ch)} - {x for n in notes for x in range(n["verse"], max(n["end"], n["verse"]) + 1)})
-        print(f"{ref}: {len(notes)} notes, {len(problems)} problems, missing verses {missing or 'none'}, "
-              f"{time.time() - t0:.0f}s; running cost ${cost():.2f} {USAGE}", flush=True)
+    st = State(work, out)
+
+    def call(params):
+        with c.beta.messages.stream(betas=["server-side-fallback-2026-07-01"], extra_body={"fallbacks": "default"}, **params) as s:
+            msg = s.get_final_message()
+        add_usage(st.usage, msg.usage, batch=False)
+        st.save()
+        if msg.stop_reason == "refusal":
+            raise RuntimeError(f"Declined: {msg.stop_details}")
+        return msg
+
+    for p in select(refs):
+        pid, t0 = part_id(p), time.time()
+        res = st.research(pid)
+        if not res or "notes" not in res:
+            messages, content = research_start(p, names), []
+            for _ in range(6):
+                msg = call(research_params(messages))
+                content += dump(msg.content)
+                if msg.stop_reason != "pause_turn":
+                    break
+                messages = messages + [{"role": "assistant", "content": dump(msg.content)}]
+            notes_md, urls = read_research(content)
+            res = {"notes": notes_md, "urls": sorted(urls)}
+            st.set_research(pid, res)
+        bundled = part_notes(dbs, p)
+        msg = call(write_params(p, names, bundled, res["notes"]))
+        notes = json.loads(next(b.text for b in msg.content if b.type == "text"))["notes"]
+        notes, problems = check(notes, p, bundled, set(res["urls"]))
+        gaps = missing(notes, p)
+        if gaps:
+            problems.append(f"no note for verses {gaps}")
+        st.finish(p, names, notes, problems)
+        print(f"{ref_of(p, names)}: {len(notes)} notes, {len(problems)} problems, {time.time() - t0:.0f}s; "
+              f"cost so far ${st.usage['dollars']:.2f}", flush=True)
+
+# ---------- packing ----------
 
 
 def body(n):
     """A note as the plain text the app shows."""
     def cite(sources):
         return "; ".join(s if not s.startswith("http") else re.sub(r"^https?://(www\.)?([^/]+).*", r"\2", s) for s in sources)
-    parts = [f"{n['meaning']}\n(Sources: {cite(n['meaning_sources'])})"]
+    parts = [n["meaning"] + (f"\n(Sources: {cite(n['meaning_sources'])})" if n["meaning_sources"] else "")]
     if n["differ"]:
-        parts.append("Where Christians differ:\n" + "\n".join(f"• {p['tradition']}: {p['view']} ({cite(p['sources'])})" for p in n["differ"]))
+        parts.append("Where Christians differ:\n" + "\n".join(f"• {q['tradition']}: {q['view']} ({cite(q['sources'])})" for q in n["differ"]))
     if n["other"]:
-        parts.append("Other views:\n" + "\n".join(f"• {p['label']}: {p['view']} ({cite(p['sources'])})" for p in n["other"]))
+        parts.append("Other views:\n" + "\n".join(f"• {q['label']}: {q['view']} ({cite(q['sources'])})" for q in n["other"]))
     return "\n\n".join(parts)
 
 
@@ -377,12 +592,12 @@ def cmd_pack(out, target):
     db = sqlite3.connect(path)
     db.execute("CREATE TABLE entries(start INTEGER NOT NULL, end INTEGER NOT NULL, body TEXT NOT NULL)")
     for name in sorted(os.listdir(out)):
-        if not name.endswith(".json"):
+        if not re.fullmatch(r"\d\d-\d\d\d-\d\d\d\.json", name):
             continue
         data = json.load(open(os.path.join(out, name)))
         base = data["book"] * 1_000_000 + data["chapter"] * 1000
         for n in data["notes"]:
-            db.execute("INSERT INTO entries VALUES (?, ?, ?)", (base + n["verse"], base + max(n["end"], n["verse"]), body(n)))
+            db.execute("INSERT INTO entries VALUES (?, ?, ?)", (base + n["verse"], base + n["end"], body(n)))
     db.execute("CREATE INDEX entries_start ON entries(start)")
     db.commit()
     db.execute("VACUUM")
@@ -394,9 +609,12 @@ def cmd_pack(out, target):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) >= 5 and sys.argv[1] == "chapter":
-        cmd_chapter(sys.argv[2], sys.argv[3], sys.argv[4:])
-    elif len(sys.argv) == 4 and sys.argv[1] == "pack":
-        cmd_pack(sys.argv[2], sys.argv[3])
+    args = sys.argv[1:]
+    if len(args) >= 4 and args[0] == "batch":
+        cmd_batch(args[1], args[2], [a for a in args[3:] if a != "--wait"], "--wait" in args)
+    elif len(args) >= 4 and args[0] == "chapter":
+        cmd_chapter(args[1], args[2], args[3:])
+    elif len(args) == 3 and args[0] == "pack":
+        cmd_pack(args[1], args[2])
     else:
         sys.exit(__doc__)
