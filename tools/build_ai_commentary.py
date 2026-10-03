@@ -55,7 +55,9 @@ SITES = {
 }
 DOMAINS = [d for ds in SITES.values() for d in ds]
 
-TRADITIONS = ["Baptist", "Methodist", "Pentecostal", "Reformed", "Lutheran", "Anglican", "Charismatic", "Holiness"]
+# Labels for "Where Christians differ": names lay readers know.
+TRADITIONS = ["Baptist", "Methodist", "Pentecostal", "Charismatic", "Reformed and Presbyterian", "Lutheran", "Anglican",
+              "Holiness", "Many evangelicals", "Some evangelicals"]
 
 STYLE = """How to write (the readers are ordinary church members, not scholars):
 - Plain, everyday English. Short sentences. About the reading level of a 12-year-old.
@@ -99,6 +101,9 @@ Each verse gets:
   that tradition's own terms, fairly, without saying who is right. Usually empty.
 - other: only where the sources give a well-known other view (modern scholarship, Catholic or Orthodox,
   popular modern teaching); one or two short sentences each, fairly, without a verdict. Usually empty.
+- Label views by the church tradition readers know, never by technical terms (not "cessationist",
+  "continuationist", "paedobaptist") or by a teacher's name. If needed, explain the view in plain words:
+  "Many evangelicals believe the gift of tongues ended with the apostles".
 
 Sources: name a bundled commentary exactly as given in its heading (e.g. "Matthew Henry"), or give the
 URL of a web page from the research notes. Only cite a source that says what you wrote. Never use your
@@ -117,7 +122,7 @@ SCHEMA = {
             "meaning_sources": {"type": "array", "items": {"type": "string"}},
             "differ": {"type": "array", "items": {
                 "type": "object",
-                "properties": {"tradition": {"type": "string"}, "view": {"type": "string"},
+                "properties": {"tradition": {"type": "string", "enum": TRADITIONS}, "view": {"type": "string"},
                                "sources": {"type": "array", "items": {"type": "string"}}},
                 "required": ["tradition", "view", "sources"], "additionalProperties": False}},
             "other": {"type": "array", "items": {
@@ -242,14 +247,15 @@ def call(c, **params):
 def research(c, ref, text):
     """Step 1: research notes, and the URLs of every page that came up in search or was read."""
     tools = [
-        {"type": "web_search_20260209", "name": "web_search", "allowed_domains": DOMAINS, "max_uses": 15},
-        {"type": "web_fetch_20260209", "name": "web_fetch", "allowed_domains": DOMAINS, "max_uses": 15},
+        {"type": "web_search_20260209", "name": "web_search", "allowed_domains": DOMAINS, "max_uses": 8},
+        {"type": "web_fetch_20260209", "name": "web_fetch", "allowed_domains": DOMAINS, "max_uses": 6,
+         "max_content_tokens": 8000},
     ]
     messages = [{"role": "user", "content": RESEARCH_TASK.format(ref=ref, text=text)}]
     urls, notes = set(), []
     for _ in range(6):  # continue paused turns
         msg = call(c, max_tokens=32000, system=RESEARCH_SYSTEM, tools=tools, messages=messages,
-                   output_config={"effort": "medium"})
+                   output_config={"effort": "medium"}, cache_control={"type": "ephemeral"})
         for b in msg.content:
             if b.type == "web_search_tool_result" and isinstance(b.content, list):
                 urls.update(r.url for r in b.content if getattr(r, "url", None))
@@ -339,7 +345,7 @@ def cmd_chapter(work, out, refs):
         t0 = time.time()
         print(f"{ref}: researching...", flush=True)
         notes_md, urls = research(c, ref, text)
-        print(f"{ref}: {len(urls)} pages found; writing...", flush=True)
+        print(f"{ref}: {len(urls)} pages found (research ${cost():.2f}); writing...", flush=True)
         notes = write(c, ref, text, bundled, notes_md)
         notes, problems = check(notes, bundled, urls)
         stem = os.path.join(out, f"{book:02d}-{ch:03d}")
