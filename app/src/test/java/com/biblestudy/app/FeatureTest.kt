@@ -247,6 +247,7 @@ class FeatureTest {
             vm.paneVerse = null
             vm.compareVersions = false
             vm.verseInPanel = false // the older tests use the verse window
+            vm.showVerseCommentary(false)
             vm.verseWordStudy = null
             vm.chat.changeEnabled(false) // no chat bubble over the page in the older tests
             vm.readMode = false
@@ -926,6 +927,45 @@ class FeatureTest {
         compose.onNodeWithText("Ask AI").assertDoesNotExist()
         compose.onNodeWithTag("chatBubble").assertDoesNotExist()
         compose.runOnUiThread { vm.verseSheet = null; vm.chat.newChat(); vm.chat.changeKey(""); vm.chat.service = com.biblestudy.app.data.AiChat.claude }
+        compose.waitForIdle()
+    }
+
+    @Test
+    fun theVersePopUpShowsWhatACommentarySaysOnTheVerse() {
+        compose.runOnUiThread { vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE); vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.waitForIdle()
+        // Cross-references first; the Commentary tab shows Matthew Henry's note on the verse (STD-20).
+        compose.onNodeWithText("Cross-references (", substring = true).assertExists()
+        compose.onNodeWithTag("verseCommentaryTab").performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(vm.verseCommentary)
+        compose.onNodeWithText("Verses 1\u201321").assertExists()
+        snap("131-verse-commentary")
+
+        // Another commentary is chosen right here, and remembered.
+        compose.onNodeWithContentDescription("Choose a commentary").performClick()
+        compose.onNodeWithText("Jamieson-Fausset-Brown").performClick()
+        compose.waitUntil(60_000) {
+            vm.lastCommentary == "jfb" && compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty()
+        }
+        compose.onNodeWithText("Jamieson-Fausset-Brown", substring = true).assertExists()
+
+        // A New Testament verse in an Old Testament commentary says so.
+        compose.runOnUiThread { vm.chooseCommentary("kd") }
+        compose.waitForIdle()
+        compose.onNodeWithText("Choose another commentary for John", substring = true).assertExists()
+        compose.runOnUiThread { vm.chooseCommentary("jfb") }
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty() }
+
+        // The whole chapter opens beside the text, at this verse.
+        compose.onNodeWithText("Whole chapter beside the text").performClick()
+        compose.waitForIdle()
+        assertNull(vm.verseSheet)
+        assertEquals(PaneKind.COMMENTARY, vm.sidePane)
+        assertEquals("jfb", vm.commentaryAt(0))
+        compose.runOnUiThread { vm.sidePane = null; vm.showVerseCommentary(false); vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE) }
         compose.waitForIdle()
     }
 

@@ -70,6 +70,10 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRow
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
@@ -612,8 +616,61 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
     }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     var notePassage by remember(id) { mutableStateOf<Passage?>(null) }
+    // The commentary's note on this verse (STD-20), loaded once the Commentary tab is chosen.
+    val cid = vm.lastCommentary
+    val cInfo = com.biblestudy.app.data.Commentaries.info(cid)
+    val note by produceState<VerseNote?>(null, cid, id, vm.verseCommentary) {
+        value = null
+        if (vm.verseCommentary) value = VerseNote(vm.commentaryOnVerse(cid, id))
+    }
 
     fun done() { draft.save(vm); onDone() }
+
+    @Composable
+    fun CommentaryChoice() {
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+            var menu by remember { mutableStateOf(false) }
+            Box(Modifier.weight(1f)) {
+                TextButton(onClick = { menu = true }, modifier = Modifier.semantics { contentDescription = "Choose a commentary" }) {
+                    Text(cInfo.short, style = MaterialTheme.typography.titleMedium, maxLines = 1)
+                    Icon(Icons.Filled.ArrowDropDown, contentDescription = null)
+                }
+                DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                    for (c in com.biblestudy.app.data.Commentaries.all) {
+                        DropdownMenuItem(
+                            text = {
+                                Column {
+                                    Text(c.short)
+                                    Text("${c.covers} · ${c.years}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                                }
+                            },
+                            onClick = { menu = false; vm.chooseCommentary(c.id) },
+                            leadingIcon = if (c.id == cid) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
+                        )
+                    }
+                }
+            }
+            // The whole chapter's commentary, beside the Bible text.
+            if (!inPanel) TextButton(onClick = { done(); vm.openCommentaryBeside() }) { Text("Whole chapter beside the text") }
+        }
+        val n = note
+        val status = when {
+            !cInfo.covers(t.book) -> "${cInfo.short} covers the ${cInfo.covers}. Choose another commentary for ${vm.bible.book(t.book).name}."
+            n == null -> if (com.biblestudy.app.data.Commentaries.isUnpacked(vm.getApplication(), cid)) "Loading…"
+                else "Getting ${cInfo.short} ready (the first time only)…"
+            n.section == null -> "${cInfo.short} has no notes on this verse. Try another commentary."
+            else -> null
+        }
+        if (status != null) Text(status, modifier = Modifier.padding(vertical = 8.dp))
+        n?.section?.let { s ->
+            Text(
+                commentaryHeading(vm, s, t.chapter),
+                style = MaterialTheme.typography.titleSmall,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(top = 4.dp),
+            )
+        }
+    }
 
     @Composable
     fun Top() {
@@ -715,11 +772,23 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
                 }
             }
         }
-        Text(
-            "Cross-references (${refs.size})",
-            style = MaterialTheme.typography.titleMedium,
-            modifier = Modifier.padding(top = 16.dp, bottom = 4.dp),
-        )
+        // Below: the cross-references, or what a commentary says on the verse (STD-20).
+        TabRow(selectedTabIndex = if (vm.verseCommentary) 1 else 0, modifier = Modifier.padding(top = 12.dp, bottom = 4.dp)) {
+            Tab(
+                selected = !vm.verseCommentary, onClick = { vm.showVerseCommentary(false) },
+                text = { Text("Cross-references (${refs.size})") },
+            )
+            Tab(
+                selected = vm.verseCommentary, onClick = { vm.showVerseCommentary(true) },
+                text = { Text("Commentary") }, modifier = Modifier.testTag("verseCommentaryTab"),
+            )
+        }
+        if (vm.verseCommentary) CommentaryChoice()
+    }
+
+    @Composable
+    fun Paragraph(text: String) {
+        StudyText(text, onPassage = { notePassage = it }, modifier = Modifier.padding(vertical = 4.dp).testTag("verseCommentary"))
     }
 
     @Composable
@@ -740,7 +809,7 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
     @Composable
     fun Credit() {
         Text(
-            "Cross-references: OpenBible.info (CC BY)",
+            if (vm.verseCommentary) "${cInfo.name}, ${cInfo.author} (public domain)" else "Cross-references: OpenBible.info (CC BY)",
             style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
         )
     }
@@ -755,20 +824,27 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
             )
         }
     }
+    val paragraphs = remember(note) { note?.section?.body?.split("\n\n")?.filter { it.isNotBlank() }.orEmpty() }
     if (inPanel) {
         LazyColumn(modifier.testTag("verseDetails")) {
             item(key = "top") { Column { Top() } }
-            items(refs, key = { "r${it.toStart}-${it.toEnd}" }) { Ref(it) }
+            if (vm.verseCommentary) items(paragraphs.size, key = { "c$it" }) { Paragraph(paragraphs[it]) }
+            else items(refs, key = { "r${it.toStart}-${it.toEnd}" }) { Ref(it) }
             item(key = "credit") { Credit() }
         }
     } else {
         Column(modifier) {
             Top()
-            LazyColumn(Modifier.weight(1f)) { items(refs) { Ref(it) } }
+            LazyColumn(Modifier.weight(1f)) {
+                if (vm.verseCommentary) items(paragraphs) { Paragraph(it) } else items(refs) { Ref(it) }
+            }
             Credit()
         }
     }
 }
+
+/** A commentary's note on a verse, once loaded: [section] is null when it has none. */
+private class VerseNote(val section: com.biblestudy.app.data.CommentarySection?)
 
 // ---------------------------------------------------------------------------------------------
 // Layers

@@ -1,4 +1,4 @@
-# Ink & Word — version 1.7.0
+# Ink & Word — version 1.7.1
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,11 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.7.1
+
+- **Commentary in the verse pop-up.** Next to *Cross-references* there's a *Commentary* tab: what Matthew Henry (or whichever commentary you choose there) says on the verse you tapped. *Whole chapter beside the text* opens the full commentary panel at that verse. The tab and commentary you used last are remembered.
+- Where a commentary's note runs on past its heading (Matthew Henry's Concise has a few, such as John 3:1–8 also covering 9–21), the pop-up shows the full range.
 
 ## New in version 1.7
 

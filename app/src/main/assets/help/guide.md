@@ -106,6 +106,7 @@ The details show:
 - **People and places** in the verse. Tap one to read about them.
 - **Your typed note.**
 - **Cross-references.** Tap one to read it in a small pop-over without losing your place, then *Go to* or *Open beside*.
+- **Commentary.** Tap the *Commentary* tab (next to *Cross-references*) to read what a commentary says on this verse. Tap the commentary's name to choose another, such as Jamieson-Fausset-Brown or Calvin. *Whole chapter beside the text* opens it in a panel for the whole chapter. The app remembers which tab and commentary you used last.
 - **Related passages:** topics, parallel accounts (other Gospels, Kings and Chronicles) and passages on the same topics.
 
 ## Hebrew and Greek word by word
@@ -229,7 +230,7 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
 - **Every pen tool works** on a sketch page, plus shapes, the lasso, layers, pictures and text boxes.
 - **Verse cards:** *Insert → Verse card…*, type a reference like *John 3:16-18*, and the verses go on the page as a card. A card works like the Bible page:
   - tap its reference to read the passage in a pop-over;
-  - tap a verse to open its details (word study, *Compare versions*, *Hebrew/Greek*, notes, cross-references);
+  - tap a verse to open its details (word study, *Compare versions*, *Hebrew/Greek*, notes, cross-references, commentary);
   - highlight it with the highlighter, and the words of Jesus show in red when that's on;
   - hold a finger on the card for its bar: switch it to another version (*KJV*, *BSB*, *WEB*…), *Copy*, *Share*, change its size or background, or delete it.
 - **Person or place cards:** *Insert → Person or place card…*.

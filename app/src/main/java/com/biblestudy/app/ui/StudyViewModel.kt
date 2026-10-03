@@ -283,7 +283,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         highlightsAllVersions = true
         marginLeft = false; marginRight = true
         linkPanels = false
-        compareVersions = false; originalView = false; redLetters = false; verseInPanel = false
+        compareVersions = false; originalView = false; redLetters = false; verseInPanel = false; verseCommentary = false
         changeWritingSounds(true); changeSoundVolume(0.6f)
         savePrefs()
         message = "Settings reset to their defaults."
@@ -516,7 +516,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary", verseCommentary)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
@@ -1486,8 +1486,43 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val t = tab
         while (t.commentaries.size <= pos) t.commentaries.add("")
         t.commentaries[pos] = id
+        chooseCommentary(id)
+    }
+
+    /** Makes [id] the commentary shown in the verse pop-up and in new commentary panels. */
+    fun chooseCommentary(id: String) {
         lastCommentary = id
         prefs.edit { putString("commentary", id) }
+    }
+
+    /** Whether the verse details show the commentary rather than the cross-references (STD-20); remembered. */
+    var verseCommentary by mutableStateOf(prefs.getBoolean("verseCommentary", false))
+        private set
+
+    fun showVerseCommentary(on: Boolean) {
+        verseCommentary = on
+        prefs.edit { putBoolean("verseCommentary", on) }
+    }
+
+    /**
+     * Commentary [cid]'s note on verse [id] (STD-20): the section covering it, or else the last one
+     * before it in the chapter. Null when it has none (or doesn't cover the book).
+     */
+    suspend fun commentaryOnVerse(cid: String, id: Int): com.biblestudy.app.data.CommentarySection? {
+        val sections = loadCommentary(cid, VerseId.book(id), VerseId.chapter(id))
+            .filter { VerseId.chapter(it.start) > 0 && VerseId.verse(it.start) > 0 }
+        sections.firstOrNull { id in it.start..it.end }?.let { return it }
+        // Between notes: the one before runs on to the next (some notes cover more than their heading says).
+        val before = sections.lastOrNull { it.start <= id } ?: return null
+        val next = sections.firstOrNull { it.start > id }
+        val end = if (next != null && VerseId.chapter(next.start) == VerseId.chapter(id)) next.start - 1
+            else VerseId.of(VerseId.book(id), VerseId.chapter(id), bible.chapter(VerseId.book(id), VerseId.chapter(id)).lastOrNull()?.verse ?: VerseId.verse(id))
+        return before.copy(end = maxOf(before.end, end))
+    }
+
+    /** Opens the commentary on the whole chapter beside the text, at the verse tapped. */
+    fun openCommentaryBeside() {
+        if (PaneKind.COMMENTARY !in tab.studies) showStudy(PaneKind.COMMENTARY)
     }
 
     /** Whether commentary [pos] scrolls together with the Bible panel (STD-18); on unless switched off. */
