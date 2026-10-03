@@ -34,3 +34,5 @@ val LAYER_COLORS = intArrayOf(
 val PEN_SIZES = floatArrayOf(2f, 3.5f, 6f)
 val HIGHLIGHT_SIZES = floatArrayOf(16f, 24f, 34f)
 const val HIGHLIGHT_ALPHA = 0.38f
+/** Highlights from another translation, shown over whole verses (HL-10). */
+const val CROSS_HIGHLIGHT_ALPHA = 0.2f

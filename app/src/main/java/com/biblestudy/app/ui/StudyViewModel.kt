@@ -23,16 +23,32 @@ import androidx.core.content.edit
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.biblestudy.app.data.BibleRepository
+import com.biblestudy.app.data.Passage
+import com.biblestudy.app.data.RefLinks
+import com.biblestudy.app.data.StudyEntry
+import com.biblestudy.app.data.StudyRepository
 import com.biblestudy.app.data.UserDb
 import com.biblestudy.app.model.Annotation
-import com.biblestudy.app.model.Bookmark
+import com.biblestudy.app.model.Drawn
+import com.biblestudy.app.model.DrawnBox
+import com.biblestudy.app.model.DrawnLine
+import com.biblestudy.app.model.DrawnVerse
+import com.biblestudy.app.model.CrossHighlight
+import com.biblestudy.app.model.HighlightEntry
 import com.biblestudy.app.model.Edit
+import com.biblestudy.app.model.Heading
 import com.biblestudy.app.model.Highlight
 import com.biblestudy.app.model.InkStroke
 import com.biblestudy.app.model.Layer
 import com.biblestudy.app.model.MarginImage
+import com.biblestudy.app.model.MarginText
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SideButton
+import com.biblestudy.app.model.Sketch
+import com.biblestudy.app.model.Paper
+import com.biblestudy.app.model.TextFont
+import com.biblestudy.app.model.TextStyleKey
+import com.biblestudy.app.model.TypedNote
 import com.biblestudy.app.model.Tool
 import com.biblestudy.app.model.VerseId
 import com.biblestudy.app.model.VerseTarget
@@ -65,13 +81,117 @@ class PanelState(book: Int, chapter: Int) {
     var pendingVerse by mutableStateOf<Int?>(null)
     var viewW by mutableFloatStateOf(0f)
     var viewH by mutableFloatStateOf(0f)
-    var topVerse = 1
+    /** The verse at the top of the view (observable, so a cross-references pane can follow it). */
+    var topVerse by mutableIntStateOf(1)
+    /** The last verse of the current chapter that has been in view (ANL-2); past the end means it was all seen. */
+    var seenTo by mutableIntStateOf(0)
     /** Bumped on every explicit jump (picker, search, arrows) so the panel scrolls to the top. */
     var navGen by mutableIntStateOf(0)
+
+    /** Places visited before and after jumps (READ-5). */
+    val back = mutableStateListOf<Place>()
+    val forward = mutableStateListOf<Place>()
+
+    fun here() = Place(book, chapter, topVerse)
+
+    /** Zoom relative to fit-width, remembered per orientation (ANCH-7). 1 = fit width. */
+    val zoomRel = mutableMapOf("land" to 1f, "port" to 1f)
+    /** The zoom a double-tap returns to from fit-width. */
+    var lastZoomRel = 2f
 }
+
+/**
+ * Where a panel is scrolled to, for linked split view (SPLIT-3): the verse at the top of the view
+ * and how far into it ([frac] of the verse's height, negative above the first verse). Versions lay
+ * out differently, so linked panels match verses rather than pixels.
+ */
+data class ScrollPos(val source: Int, val book: Int, val chapter: Int, val verse: Int, val frac: Float)
+
+/** A passage pop-over open over panel [panel], pointing at [anchor] (pixels in that panel). */
+data class PassagePop(val panel: Int, val passage: Passage, val anchor: Offset)
+
+/**
+ * Window width classes (ADP-1), as in Material guidance: compact below 600dp (phones, small
+ * tablets in portrait), medium to 840dp, expanded above. The layout adapts to them:
+ *  - compact: margins become drawers in portrait (MRG-14), panel headers go compact;
+ *  - medium: two Bible panels, one above the other in portrait;
+ *  - expanded: two Bible panels side by side, three from 1200dp in landscape (ADP-3).
+ */
+enum class WidthClass { COMPACT, MEDIUM, EXPANDED;
+    companion object {
+
+        fun of(widthDp: Float) = when {
+            widthDp < 600f -> COMPACT
+            widthDp < 840f -> MEDIUM
+            else -> EXPANDED
+        }
+    }
+}
+
+/**
+ * A saved layout (SPLIT-6): every tab with its panels, as [TabState.listToJson] writes them, and the
+ * tab that was in front. Layouts saved before 1.2 (Bible panels and a study pane) open as tabs of
+ * at most two panels.
+ */
+class Workspace(val name: String, private val tabsJson: String, val active: Int) {
+    fun toJson(): String = org.json.JSONObject().put("tabs", org.json.JSONArray(tabsJson)).put("active", active).toString()
+
+    /** The layout's tabs, made fresh each time it is opened. */
+    fun tabs(place: (Int, Int, String?) -> Triple<Int, Int, String>): List<TabState> =
+        TabState.listFromJson(tabsJson, place).orEmpty()
+
+    companion object {
+        fun fromJson(name: String, json: String): Workspace? = runCatching {
+            val o = org.json.JSONObject(json)
+            if (o.has("tabs")) return@runCatching Workspace(name, o.getJSONArray("tabs").toString(), o.optInt("active"))
+            // Before 1.2: up to three Bible panels, a study pane, linking and sizes.
+            val p = o.getJSONArray("panels")
+            val pane = PaneKind.entries.firstOrNull { it.name == o.optString("pane") }
+            val w = o.optJSONArray("weights")
+            fun panel(i: Int) = p.getJSONObject(i).let {
+                org.json.JSONObject().put("b", it.getInt("b")).put("c", it.getInt("c")).put("v", it.getString("v"))
+            }
+            val tabs = org.json.JSONArray()
+            val first = org.json.JSONObject()
+            val firstPanels = org.json.JSONArray()
+            for (i in 0 until minOf(p.length(), 2)) firstPanels.put(panel(i))
+            first.put("panels", firstPanels)
+            first.put("linked", o.optBoolean("linked") && p.length() >= 2)
+            if (w != null && w.length() >= 2) first.put("split", w.getDouble(0) / (w.getDouble(0) + w.getDouble(1)))
+            if (pane != null && p.length() == 1) first.put("studies", org.json.JSONArray().put(pane.name))
+            tabs.put(first)
+            if (p.length() > 2 || (pane != null && p.length() > 1)) {
+                val second = org.json.JSONObject()
+                second.put("panels", org.json.JSONArray().put(panel(if (p.length() > 2) 2 else 0)))
+                if (pane != null && p.length() > 1) second.put("studies", org.json.JSONArray().put(pane.name))
+                tabs.put(second)
+            }
+            Workspace(name, tabs.toString(), 0)
+        }.getOrNull()
+    }
+}
+
+/** How often notes are backed up automatically (DATA-6). */
+enum class AutoBackup(val label: String, val days: Int) { OFF("Off", 0), DAILY("Daily", 1), WEEKLY("Weekly", 7) }
+
+/** A chapter to export as a PDF or picture (DATA-5), handled by the active panel. */
+/** Export the active panel's chapter (DATA-5); with [layer], only that layer's notes (LAY-11). */
+data class ExportRequest(val uri: Uri, val pdf: Boolean, val layer: Long? = null)
+
+/** What the study pane beside the Bible panels shows (SPLIT-2). */
+enum class PaneKind(val label: String) {
+    SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
+    DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), NAMES("Names & places"),
+    SKETCHES("Sketch pages"),
+    VERSE("Verse details"), COMPARE("Compare versions"), ORIGINAL("Hebrew/Greek"), WORDSTUDY("Word study"), INTRO("About the book"),
+}
+
+/** A spot to return to with Back / Forward. */
+data class Place(val book: Int, val chapter: Int, val verse: Int)
 
 class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private val prefs = app.getSharedPreferences("study", Context.MODE_PRIVATE)
+    init { BibleRepository.loadImported(app) } // before panels restore their versions
     /** The KJV: book names, chapter counts and cross-references come from here for every version. */
     val bible = BibleRepository(app, BibleRepository.KJV)
     private val texts = HashMap<String, BibleRepository>().apply { put(bible.code, bible) }
@@ -96,16 +216,192 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var highlightSize by mutableIntStateOf(prefs.getInt("hlSize", 1))
     var snapHighlights by mutableStateOf(prefs.getBoolean("snap", true))
     var fingerDraw by mutableStateOf(prefs.getBoolean("fingerDraw", false))
+    var showHeadings by mutableStateOf(prefs.getBoolean("headings", true))
+    /** The tab's two Bible panels scroll together (SPLIT-3); each tab has its own setting. */
+    var linkPanels: Boolean
+        get() = tab.linked
+        set(v) { tab.linked = v }
+    val linked: Boolean get() = linkPanels && panels.size > 1
+    /** The latest position announced by a linked panel; the other panel follows it. */
+    var linkPos by mutableStateOf<ScrollPos?>(null)
+        private set
+
+    fun announceScroll(pos: ScrollPos) {
+        if (linked) linkPos = pos
+    }
+    /** Eraser removes only what it touches (INK-7), instead of whole strokes. */
+    var partialEraser by mutableStateOf(prefs.getBoolean("partialEraser", false))
+    /** Draw pen strokes straight to the screen for the lowest latency (INK-4). */
+    var fastInk by mutableStateOf(prefs.getBoolean("fastInk", true))
+    /** The snapping highlighter draws a line under the words instead of a fill (HL-4). */
+    var underlineMode by mutableStateOf(prefs.getBoolean("underline", false))
+    /** Read mode (PEN-4): the pen scrolls and taps like a finger, so nothing is marked by accident. */
+    var readMode by mutableStateOf(prefs.getBoolean("readMode", false))
+    /** The version a new Bible panel opens in; null = the same as the panel it comes from. */
+    var newPanelVersion by mutableStateOf(prefs.getString("newPanelVersion", null))
+    /**
+     * The Bible text's typeface (READ-3). Changing it reflows the lines, so ink on the words is
+     * reloaded and moved to the same characters in the new layout.
+     */
+    var textFont by mutableStateOf(runCatching { TextFont.valueOf(prefs.getString("textFont", "BOOK")!!) }.getOrDefault(TextFont.BOOK))
+        private set
+
+    /**
+     * Puts every setting back to its default (SET-4). Notes, ink, highlights, sketch pages, layers and
+     * the open passages are not touched.
+     */
+    fun resetSettings() {
+        theme = PageTheme.LIGHT
+        changeTextFont(TextFont.BOOK)
+        changeParagraphs(false)
+        changeVerseNumbers(true)
+        expandToFit = false
+        marginsAllPanels = true
+        lineSpacing = LineSpacing.NORMAL
+        showHeadings = true
+        newPanelVersion = null
+        fingerDraw = false
+        sideButton = SideButton.entries.first()
+        partialEraser = false
+        snapHighlights = true
+        fastInk = true
+        underlineMode = false
+        readMode = false
+        penSize = 1; highlightSize = 1
+        highlightsAllVersions = true
+        marginLeft = false; marginRight = true
+        linkPanels = false
+        compareVersions = false; originalView = false; redLetters = false; verseInPanel = true
+        changeWritingSounds(true); changeSoundVolume(0.6f)
+        savePrefs()
+        message = "Settings reset to their defaults."
+    }
+
+    fun changeTextFont(f: TextFont) {
+        if (f == textFont) return
+        textFont = f
+        relayout()
+    }
+
+    /** Open space below a verse when its margin notes are taller than it (MRG-10). */
+    var expandToFit by mutableStateOf(prefs.getBoolean("expandToFit", false))
+    /** The expand-to-fit gaps each laid-out chapter has now ("KJV|43|3" → verse → height). */
+    val fitGaps = mutableStateMapOf<String, Map<Int, Float>>()
+    /** Margins in every Bible panel, or only the first (MRG-13). */
+    var marginsAllPanels by mutableStateOf(prefs.getBoolean("marginsAllPanels", true))
+
+    /**
+     * The gaps a chapter needs so each verse's margin notes end before the next verse starts
+     * (MRG-10): verse → extra height above it. Only notes on shown layers and margins count.
+     */
+    fun fitSpacers(layout: ChapterLayout): Map<Int, Float> {
+        if (!expandToFit) return emptyMap()
+        val visible = visibleLayerIds()
+        fun shown(r: Region) = (r == Region.LEFT && marginLeft) || (r == Region.RIGHT && marginRight)
+        val bottoms = HashMap<Int, Float>()
+        fun need(v: Int, bottom: Float) { bottoms[v] = maxOf(bottoms[v] ?: 0f, bottom) }
+        for (st in marginStrokesFor(layout.book, layout.chapter)) {
+            if (st.layerId !in visible || !shown(st.region) || st.points.isEmpty()) continue
+            var maxY = -Float.MAX_VALUE
+            for (i in 1 until st.points.size step 3) maxY = maxOf(maxY, st.points[i])
+            need(st.verse, maxY + st.width)
+        }
+        for (img in imagesFor(layout.book, layout.chapter)) if (img.layerId in visible && shown(img.region)) need(img.verse, img.y + img.h)
+        for (t in textsFor(layout.book, layout.chapter)) if (t.layerId in visible && shown(t.region)) {
+            need(t.verse, t.y + (textHeights[t.id] ?: estimateTextHeight(t)))
+        }
+        val vs = layout.verses
+        val out = HashMap<Int, Float>()
+        for (i in 0 until vs.size - 1) {
+            val b = bottoms[vs[i]] ?: continue
+            val next = vs[i + 1]
+            val space = layout.verseTop(next) - layout.verseTop(vs[i]) - (layout.spacers[next] ?: 0f)
+            val gap = b + 16f - space
+            if (gap > 8f) out[next] = kotlin.math.ceil(gap / 8f) * 8f
+        }
+        return out
+    }
+
+    /** Paragraphs instead of one verse per line (READ-6). */
+    var paragraphMode by mutableStateOf(prefs.getBoolean("paragraphs", false))
+        private set
+    /** Verse numbers shown (READ-6). */
+    var verseNumbers by mutableStateOf(prefs.getBoolean("verseNumbers", true))
+        private set
+
+    /** Pen-on-paper sounds while writing (INK-15), and how loud (0..1). */
+    val sound = WritingSound()
+    var writingSounds by mutableStateOf(prefs.getBoolean("writingSounds", true))
+        private set
+    var soundVolume by mutableFloatStateOf(prefs.getFloat("soundVolume", 0.6f))
+        private set
+
+    init { sound.enabled = writingSounds; sound.volume = soundVolume }
+
+    fun changeWritingSounds(on: Boolean) { writingSounds = on; sound.enabled = on }
+    fun changeSoundVolume(v: Float) { soundVolume = v.coerceIn(0f, 1f); sound.volume = soundVolume }
+
+    /** Mark words that differ when two versions are side by side (SPLIT-5). */
+    var markDifferences by mutableStateOf(prefs.getBoolean("markDifferences", false))
+
+    /** The version to compare [p] with: another panel's, when it shows the same book in a different version. */
+    fun diffVersionFor(p: PanelState): String? {
+        if (!markDifferences || Sketch.isSketch(p.book)) return null
+        return panels.firstOrNull { it !== p && it.book == p.book && it.version != p.version }?.version
+    }
+
+    /** The words of Jesus in red (BIB-8); only colours change, so ink stays where it is. */
+    var redLetters by mutableStateOf(prefs.getBoolean("redLetters", false))
+
+    fun changeParagraphs(on: Boolean) { if (on != paragraphMode) { paragraphMode = on; relayout() } }
+    fun changeVerseNumbers(on: Boolean) { if (on != verseNumbers) { verseNumbers = on; relayout() } }
+
+    /** The layout ink on the words is drawn in now. */
+    fun styleKey() = TextStyleKey(textFont, paragraphMode, verseNumbers)
+
+    /** The words move to new lines: ink on them is reloaded and moved along (READ-3, READ-6). */
+    private fun relayout() {
+        selection = null
+        undoStack.clear(); redoStack.clear(); editVersion++
+        loaded.removeAll { it.startsWith("t") }
+        textStrokes.values.forEach { it.clear() }
+    }
+    /** Show highlights from other translations over whole verses (HL-10). */
+    var highlightsAllVersions by mutableStateOf(prefs.getBoolean("hlAllVersions", true))
+    /** The verse window shows the verse in every version, stacked (SPLIT-4). */
+    var compareVersions by mutableStateOf(prefs.getBoolean("compareVersions", false))
+    /** The verse window shows the Hebrew or Greek word by word (STD-4). */
+    var originalView by mutableStateOf(prefs.getBoolean("originalView", false))
+    /** Tapping a verse shows its details in a panel beside the text rather than a window (SPLIT-9). */
+    var verseInPanel by mutableStateOf(prefs.getBoolean("verseInPanel", true))
+    var lineSpacing by mutableStateOf(
+        runCatching { LineSpacing.valueOf(prefs.getString("lineSpacing", "NORMAL")!!) }.getOrDefault(LineSpacing.NORMAL)
+    )
     var sideButton by mutableStateOf(
         runCatching { SideButton.valueOf(prefs.getString("sideButton", "ERASER")!!) }.getOrDefault(SideButton.ERASER)
     )
     var marginLeft by mutableStateOf(prefs.getBoolean("marginLeft", false))
     var marginRight by mutableStateOf(prefs.getBoolean("marginRight", true))
     var theme by mutableStateOf(runCatching { PageTheme.valueOf(prefs.getString("theme", "LIGHT")!!) }.getOrDefault(PageTheme.LIGHT))
-    var splitFraction by mutableFloatStateOf(prefs.getFloat("split", 0.5f))
+    /** A tab holds at most two panels (SPLIT-8); more go in other tabs. */
+    val maxPanels = 2
+    /** The window's width class (ADP-1). */
+    var widthClass by mutableStateOf(WidthClass.EXPANDED)
+    /**
+     * The study view in the tab in front, if one is shown (SPLIT-2, SPLIT-7). Setting it shows that
+     * view in a panel (see [showStudy]); null closes the tab's study views.
+     */
+    var sidePane: PaneKind?
+        get() = tab.studies.firstOrNull()
+        set(v) { if (v == null) closeStudies() else showStudy(v) }
+    /** A search the search pane should run when it opens. */
+    var paneSearch by mutableStateOf<String?>(null)
+    /** The verse the cross-references pane shows; null follows the top of the active panel. */
+    var paneVerse by mutableStateOf<VerseTarget?>(null)
 
-    /** Set by the UI; margin widths are remembered separately for landscape and portrait. */
+    /** Set by the UI; margin widths and zoom are remembered separately for landscape and portrait. */
     var landscape by mutableStateOf(true)
+    val orientationKey: String get() = if (landscape) "land" else "port"
     private val marginWidths = mutableStateMapOf<String, Float>()
 
     private fun marginKey(left: Boolean) = "mw_" + (if (left) "L" else "R") + if (landscape) "_land" else "_port"
@@ -120,9 +416,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         marginWidths[marginKey(left)] = width.coerceIn(Page.MARGIN_MIN, Page.MARGIN_MAX)
     }
 
-    // ---------- panels ----------
-    val panels = mutableStateListOf<PanelState>()
-    var activePanel by mutableIntStateOf(0)
+    // ---------- tabs and panels (TAB-1, SPLIT-7, SPLIT-8) ----------
+    /** The open tabs; each has its own panels. */
+    val tabs = mutableStateListOf<TabState>()
+    var activeTab by mutableIntStateOf(0)
+    /** The tab in front. */
+    val tab: TabState get() = tabs[activeTab.coerceIn(0, tabs.lastIndex)]
+    /** The Bible panels of the tab in front. */
+    val panels: androidx.compose.runtime.snapshots.SnapshotStateList<PanelState> get() = tab.panels
+    var activePanel: Int
+        get() = tab.activePanel
+        set(v) { tab.activePanel = v }
 
     // ---------- layers ----------
     val layers = mutableStateListOf<Layer>()
@@ -131,17 +435,22 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // ---------- other UI state ----------
     var message by mutableStateOf<String?>(null)
     var verseSheet by mutableStateOf<VerseTarget?>(null)
+    /** The book whose introduction is open (STD-13), if any. */
+    var introBook by mutableStateOf<Int?>(null)
     var lastSearch by mutableStateOf("")
     /** Bumped after a restore so panels reload their data. */
     var dataGeneration by mutableIntStateOf(0)
-    val bookmarks = mutableStateListOf<Bookmark>()
     var selection by mutableStateOf<Selection?>(null)
         private set
+    /** The passage pop-over opened from a Bible hyperlink (LINK-2), if any. */
+    var passagePop by mutableStateOf<PassagePop?>(null)
 
     // ---------- undo ----------
     private val undoStack = ArrayDeque<Edit>()
     private val redoStack = ArrayDeque<Edit>()
     private var editVersion by mutableIntStateOf(0)
+    /** Changes whenever an annotation is added, removed or changed through undoable edits. */
+    val editCount: Int get() = editVersion
     val canUndo: Boolean get() = editVersion >= 0 && undoStack.isNotEmpty()
     val canRedo: Boolean get() = editVersion >= 0 && redoStack.isNotEmpty()
 
@@ -150,7 +459,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private val highlights = HashMap<String, SnapshotStateList<Highlight>>()
     private val marginStrokes = HashMap<String, SnapshotStateList<InkStroke>>()
     private val images = HashMap<String, SnapshotStateList<MarginImage>>()
-    private val notes = HashMap<String, SnapshotStateMap<Int, String>>()
+    private val marginTexts = HashMap<String, SnapshotStateList<MarginText>>()
+    private val notes = HashMap<String, SnapshotStateMap<Int, TypedNote>>()
     private val loaded = HashSet<String>()
     private val renders = HashMap<Long, StrokeRender>()
     val bitmaps = mutableStateMapOf<String, ImageBitmap>()
@@ -158,11 +468,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private var lastId = 0L
 
     init {
-        val count = prefs.getInt("panels", 1).coerceIn(1, 2)
-        for (i in 0 until count) {
-            val b = prefs.getInt("p${i}b", 43).coerceIn(1, 66)
-            val c = prefs.getInt("p${i}c", if (b == 43) 3 else 1).coerceIn(1, bible.book(b).chapters)
-            panels.add(PanelState(b, c).apply { version = validVersion(prefs.getString("p${i}v", null)) })
+        val saved = prefs.getString("tabs", null)?.let { TabState.listFromJson(it, ::validPlace) }.orEmpty()
+        if (saved.isNotEmpty()) {
+            tabs.addAll(saved)
+            activeTab = prefs.getInt("activeTab", 0).coerceIn(0, tabs.lastIndex)
+        } else {
+            tabs.addAll(tabsFromOldPrefs())
         }
         layers.addAll(user.layers())
         if (layers.isEmpty()) {
@@ -170,7 +481,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             layers.add(l); user.saveLayer(l)
         }
         if (layers.none { it.id == activeLayerId }) activeLayerId = layers.first().id
-        bookmarks.addAll(user.bookmarks())
+        convertBookmarks()
         for (k in listOf("mw_L_land", "mw_R_land", "mw_L_port", "mw_R_port")) {
             if (prefs.contains(k)) marginWidths[k] = prefs.getFloat(k, Page.MARGIN_W)
         }
@@ -189,14 +500,13 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putInt("penSize", penSize); putInt("hlSize", highlightSize)
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
+            putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("verseInPanel", verseInPanel)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
-            putFloat("split", splitFraction)
-            putInt("panels", panels.size)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
-            panels.forEachIndexed { i, p ->
-                putInt("p${i}b", p.book); putInt("p${i}c", p.chapter); putString("p${i}v", p.version)
-            }
+            putString("tabs", savedTabsJson())
+            putInt("activeTab", activeTab)
         }
     }
 
@@ -205,8 +515,31 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     // ---------- navigation ----------
 
-    fun goTo(index: Int, book: Int, chapter: Int, verse: Int? = null) {
+    /**
+     * Jumps a panel to a passage. Jumps from the picker, search, cross-references and notes
+     * are remembered for Back; the chapter arrows pass [remember] = false.
+     */
+    fun goTo(index: Int, book: Int, chapter: Int, verse: Int? = null, remember: Boolean = true) {
         val p = panels.getOrNull(index) ?: return
+        if (remember) {
+            val here = p.here()
+            if (p.back.lastOrNull() != here) p.back.add(here)
+            while (p.back.size > MAX_HISTORY) p.back.removeAt(0)
+            p.forward.clear()
+        }
+        jump(p, book, chapter, verse)
+    }
+
+    private fun jump(p: PanelState, book: Int, chapter: Int, verse: Int?) {
+        if (Sketch.isSketch(book)) {
+            // A sketch page (SKT-1): one page, no chapters around it.
+            if (sketchOf(book) == null) return
+            p.book = book
+            p.chapter = 1
+            p.pendingVerse = null
+            p.navGen++
+            return
+        }
         val b = book.coerceIn(1, 66)
         p.book = b
         p.chapter = chapter.coerceIn(1, bible.book(b).chapters)
@@ -226,11 +559,15 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         p.version = validVersion(code)
     }
 
+    /** Section headings for a chapter. Only the BSB has them; being public domain, they are shown in every version. */
+    fun headings(book: Int, chapter: Int): List<Heading> = text(BibleRepository.BSB.code).headings(book, chapter)
+
     /** The version shown in the active panel (used by search and the verse popup). */
     val activeVersion: String get() = panels.getOrNull(activePanel)?.version ?: bible.code
 
     /** The chapter before (dir = -1) or after (dir = 1), or null at either end of the Bible. */
     fun neighbor(book: Int, chapter: Int, dir: Int): Pair<Int, Int>? = when {
+        Sketch.isSketch(book) -> null
         dir > 0 && chapter < bible.book(book).chapters -> book to chapter + 1
         dir > 0 && book < 66 -> book + 1 to 1
         dir < 0 && chapter > 1 -> book to chapter - 1
@@ -247,31 +584,941 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun nextChapter(index: Int) {
         val p = panels.getOrNull(index) ?: return
-        neighbor(p.book, p.chapter, 1)?.let { (b, c) -> goTo(index, b, c) }
+        neighbor(p.book, p.chapter, 1)?.let { (b, c) -> goTo(index, b, c, remember = false) }
     }
 
     fun prevChapter(index: Int) {
         val p = panels.getOrNull(index) ?: return
-        neighbor(p.book, p.chapter, -1)?.let { (b, c) -> goTo(index, b, c) }
+        neighbor(p.book, p.chapter, -1)?.let { (b, c) -> goTo(index, b, c, remember = false) }
+    }
+
+    fun goBack(index: Int) {
+        val p = panels.getOrNull(index) ?: return
+        val to = p.back.removeLastOrNull() ?: return
+        p.forward.add(p.here())
+        jump(p, to.book, to.chapter, to.verse)
+    }
+
+    fun goForward(index: Int) {
+        val p = panels.getOrNull(index) ?: return
+        val to = p.forward.removeLastOrNull() ?: return
+        p.back.add(p.here())
+        jump(p, to.book, to.chapter, to.verse)
     }
 
     fun toggleSplit() {
-        if (panels.size == 1) {
-            val p = panels[0]
-            panels.add(PanelState(p.book, p.chapter).apply { version = p.version })
-            activePanel = 1
-        } else {
-            closePanel(1)
+        if (tab.shown == 1) addPanel() else while (panels.size > 1) closePanel(panels.lastIndex)
+    }
+
+    /** A Bible passage and version as saved, made valid (sketch pages reopen on their passage). */
+    private fun validPlace(book: Int, chapter: Int, version: String?): Triple<Int, Int, String> {
+        val b = book.coerceIn(1, 66)
+        return Triple(b, chapter.coerceIn(1, bible.book(b).chapters), validVersion(version))
+    }
+
+    /** Where a panel is, for saving: a sketch page is saved as its passage (or where you were before it). */
+    private fun savedPlace(p: PanelState): Pair<Int, Int> {
+        val sk = sketchOf(p.book)
+        return when {
+            sk == null -> p.book to p.chapter
+            sk.linked -> sk.linkBook to sk.linkChapter
+            else -> biblePlaceBefore(p).let { it.first to it.second }
         }
     }
 
-    fun closePanel(index: Int) {
-        if (panels.size > 1 && index in panels.indices) panels.removeAt(index)
-        activePanel = 0
+    /** The open tabs as they are saved when the app closes (TAB-4). */
+    fun savedTabsJson(): String = tabsJson(tabs)
+
+    private fun tabsJson(list: List<TabState>): String {
+        val json = org.json.JSONArray(TabState.listToJson(list))
+        // Sketch pages are saved as their passages.
+        list.forEachIndexed { t, tab ->
+            val ps = json.getJSONObject(t).getJSONArray("panels")
+            tab.panels.forEachIndexed { i, p ->
+                val (b, c) = savedPlace(p)
+                ps.getJSONObject(i).put("b", b).put("c", c)
+            }
+        }
+        return json.toString()
     }
 
-    fun openVerse(book: Int, chapter: Int, verse: Int) {
-        verseSheet = VerseTarget(book, chapter, verse)
+    /**
+     * Before 1.2 the screen had up to three Bible panels and a study pane. They become tabs of at
+     * most two panels: a third Bible panel, or the study pane beside two Bible panels, moves to a
+     * second tab.
+     */
+    private fun tabsFromOldPrefs(): List<TabState> {
+        val old = (0 until prefs.getInt("panels", 1).coerceIn(1, 3)).map { i ->
+            val (b, c, v) = validPlace(prefs.getInt("p${i}b", 43), prefs.getInt("p${i}c", 3), prefs.getString("p${i}v", null))
+            PanelState(b, c).apply {
+                version = v
+                for (o in listOf("land", "port")) zoomRel[o] = prefs.getFloat("p${i}z_$o", 1f)
+                lastZoomRel = prefs.getFloat("p${i}zl", 2f)
+            }
+        }
+        val pane = prefs.getString("sidePane", null)?.let { n -> PaneKind.entries.firstOrNull { it.name == n } }
+        val first = TabState().apply {
+            panels.addAll(old.take(2))
+            linked = prefs.getBoolean("linkPanels", false) && panels.size == 2
+            split = prefs.getFloat("split", 0.5f).coerceIn(TabState.SPLIT_MIN, 1f - TabState.SPLIT_MIN)
+            if (pane != null && old.size == 1) {
+                addStudy(pane)
+                split = (1f - prefs.getFloat("paneFraction", 0.32f)).coerceIn(TabState.SPLIT_MIN, 1f - TabState.SPLIT_MIN)
+            }
+        }
+        val out = mutableListOf(first)
+        val rest = old.drop(2)
+        if (rest.isNotEmpty() || (pane != null && old.size > 1)) {
+            out.add(TabState().apply {
+                panels.add(rest.firstOrNull() ?: PanelState(old[0].book, old[0].chapter).apply { version = old[0].version })
+                if (pane != null && old.size > 1) addStudy(pane)
+            })
+        }
+        return out
+    }
+
+    /** Opens another Bible panel in this tab, showing the active one's passage. */
+    fun addPanel() {
+        if (tab.shown >= maxPanels) {
+            message = "A tab holds two panels. Open a new tab for more."
+            return
+        }
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        if (tab.bibleHidden) {
+            // Both panels showed study views and one was closed: bring the Bible panel back.
+            tab.bibleHidden = false
+            tab.studyFirst = true // the study view stays where it was; the Bible comes in beside it
+            activePanel = 0
+            return
+        }
+        panels.add(PanelState(p.book, p.chapter).apply { version = validVersion(newPanelVersion ?: p.version) })
+        activePanel = panels.lastIndex
+    }
+
+    /**
+     * Closes Bible panel [index]. The tab's last Bible panel can't go, but beside a study view it
+     * is kept out of sight; a tab left with nothing is closed.
+     */
+    fun closePanel(index: Int) {
+        val t = tab
+        when {
+            t.panels.size > 1 && index in t.panels.indices -> {
+                t.panels.removeAt(index)
+                t.linked = false
+            }
+            t.studies.isNotEmpty() -> t.bibleHidden = true
+            tabs.size > 1 -> { closeTab(activeTab); return }
+        }
+        t.activePanel = 0
+    }
+
+    /** The weights of the panels on screen. */
+    fun weights(): List<Float> = if (tab.shown == 2) listOf(tab.split, 1f - tab.split) else listOf(1f)
+
+    /** Moves the divider by [delta] (a fraction of the space both panels share). */
+    fun dragDivider(@Suppress("UNUSED_PARAMETER") i: Int, delta: Float) {
+        tab.split = (tab.split + delta).coerceIn(TabState.SPLIT_MIN, 1f - TabState.SPLIT_MIN)
+    }
+
+    /** Top and bottom (true) or side by side (false), as chosen for the tab in front. */
+    fun isStacked(t: TabState = tab): Boolean = t.stacked ?: !landscape
+
+    fun setStacked(stacked: Boolean) { tab.stacked = stacked }
+
+    // ---------- study views (SPLIT-7) ----------
+
+    /**
+     * Shows a study view in the tab in front: it replaces the study view already shown, or takes
+     * the second panel. With two Bible panels, the one not in use makes way for it.
+     */
+    fun showStudy(kind: PaneKind) {
+        val t = tab
+        if (kind in t.studies) return
+        when {
+            t.studies.isNotEmpty() -> t.setStudyAt(0, kind)
+            t.panels.size >= 2 -> {
+                // The second panel makes way, unless the first is a sketch page beside Bible text.
+                val other = if (Sketch.isSketch(t.panels[0].book) && !Sketch.isSketch(t.panels[1].book)) 0 else 1
+                t.panels.removeAt(other)
+                t.linked = false
+                t.activePanel = 0
+                t.addStudy(kind)
+                t.studyFirst = other == 0
+            }
+            else -> { t.addStudy(kind); t.studyFirst = false }
+        }
+        t.normalize()
+    }
+
+    /** Closes study view [kind] in the tab in front. */
+    fun closeStudy(kind: PaneKind) {
+        val t = tab
+        t.studies.indexOf(kind).takeIf { it >= 0 }?.let { t.removeStudyAt(it) }
+        if (t.studies.isEmpty()) {
+            t.bibleHidden = false
+            t.pinned = null
+        }
+        t.normalize()
+    }
+
+    /** Closes the study views in the tab in front, leaving its Bible panel. */
+    fun closeStudies() {
+        for (k in tab.studies.toList()) closeStudy(k)
+    }
+
+    /** Opens (or switches) the study view; the same kind again closes it. */
+    fun togglePane(kind: PaneKind) {
+        if (kind in tab.studies) closeStudy(kind) else showStudy(kind)
+    }
+
+    /** Turns the panel at [slot] into [view]: a study view, or (null) a Bible panel. */
+    fun setSlotView(slot: Slot, view: PaneKind?) {
+        val t = tab
+        when (slot) {
+            is Slot.Bible -> {
+                if (view == null) return
+                if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
+                if (t.panels.size >= 2) {
+                    t.panels.removeAt(slot.index)
+                    t.linked = false
+                    t.activePanel = 0
+                    t.addStudy(view)
+                    t.studyFirst = slot.index == 0
+                } else {
+                    // The tab's only Bible panel: it stays, out of sight, keeping the passage.
+                    if (t.studies.isEmpty()) t.addStudy(view)
+                    else if (t.studyFirst) t.addStudy(view) else t.addStudy(view, at = 0)
+                    t.bibleHidden = true
+                }
+            }
+            is Slot.Study -> {
+                val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
+                if (i < 0) return
+                if (view != null) {
+                    if (view in t.studies && view != PaneKind.COMMENTARY) { message = "${view.label} is already open in this tab."; return }
+                    t.setStudyAt(i, view)
+                } else {
+                    // Back to a Bible panel at the passage the study view was working with.
+                    t.removeStudyAt(i)
+                    if (t.bibleHidden) {
+                        t.bibleHidden = false
+                        t.studyFirst = i == 1
+                    } else {
+                        val p = t.panels[t.activePanel.coerceIn(0, t.panels.lastIndex)]
+                        t.panels.add(if (i == 0 && t.studyFirst) 0 else t.panels.size, PanelState(p.book, p.chapter).apply { version = p.version })
+                        t.activePanel = if (t.studyFirst) 0 else t.panels.lastIndex
+                    }
+                }
+            }
+        }
+        t.normalize()
+    }
+
+    /** Closes the panel at [slot]; the tab's last panel closes the tab (if there's another). */
+    fun closeSlot(slot: Slot) {
+        when (slot) {
+            is Slot.Bible -> closePanel(slot.index)
+            is Slot.Study -> {
+                if (tab.shown == 1 && tabs.size > 1) closeTab(activeTab)
+                else if (tab.shown > 1) {
+                    val t = tab
+                    val i = slot.pos.takeIf { it in t.studies.indices && t.studies[it] == slot.kind } ?: t.studies.indexOf(slot.kind)
+                    if (i >= 0) t.removeStudyAt(i)
+                    if (t.studies.isEmpty()) { t.bibleHidden = false; t.pinned = null }
+                    t.normalize()
+                }
+            }
+        }
+    }
+
+    /**
+     * The Bible panel study views work with: the tab's active one, or a copy fixed in place
+     * while the study views are pinned.
+     */
+    fun studyPanel(): PanelState = tab.pinned ?: panels[activePanel.coerceIn(0, panels.lastIndex)]
+
+    /** Pins the tab's study views to the passage they show now, or lets them follow again. */
+    fun togglePin() {
+        val t = tab
+        t.pinned = if (t.pinned != null) null else {
+            val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+            PanelState(p.book, p.chapter).apply { version = p.version; topVerse = p.topVerse }
+        }
+    }
+
+    // ---------- tabs (TAB-1 to TAB-4) ----------
+
+    /** A tab's name: the one given, or what its first panel shows. */
+    fun tabLabel(t: TabState): String {
+        t.name?.let { return it }
+        return when (val s = t.slots().firstOrNull()) {
+            is Slot.Study -> s.kind.label
+            is Slot.Bible -> t.panels.getOrNull(s.index)?.let { p ->
+                sketchOf(p.book)?.name ?: "${bible.book(p.book.coerceIn(1, 66)).name} ${p.chapter}"
+            } ?: "Tab"
+            null -> "Tab"
+        }
+    }
+
+    /** Opens a new tab after the one in front, on [book]:[chapter] (default: where you are). */
+    fun newTab(book: Int? = null, chapter: Int = 1, verse: Int? = null, version: String? = null) {
+        val from = panels.getOrNull(activePanel)
+        val t = TabState()
+        val p = PanelState(from?.book ?: 43, from?.chapter ?: 3).apply { this.version = version ?: from?.version ?: bible.code }
+        t.panels.add(p)
+        tabs.add(activeTab + 1, t)
+        selectTab(activeTab + 1)
+        if (book != null) jump(p, book, chapter, verse) else p.pendingVerse = from?.topVerse
+    }
+
+    /** Opens the panel at [slot] in a new tab of its own (TAB-3). */
+    fun openSlotInNewTab(slot: Slot) {
+        when (slot) {
+            is Slot.Bible -> {
+                val p = panels.getOrNull(slot.index) ?: return
+                newTab(p.book, p.chapter, p.topVerse, p.version)
+            }
+            is Slot.Study -> {
+                val from = tab
+                val p = studyPanel()
+                newTab(p.book, p.chapter, p.topVerse, p.version)
+                tab.addStudy(slot.kind, commentary = from.commentaries.getOrElse(slot.pos) { "" })
+                tab.bibleHidden = true
+                tab.normalize()
+            }
+        }
+    }
+
+    fun selectTab(i: Int) {
+        if (i !in tabs.indices || i == activeTab) { activeTab = i.coerceIn(0, tabs.lastIndex); return }
+        selection = null
+        passagePop = null
+        linkPos = null
+        activeTab = i
+    }
+
+    fun closeTab(i: Int) {
+        if (tabs.size <= 1 || i !in tabs.indices) return
+        selection = null
+        tabs.removeAt(i)
+        activeTab = when {
+            activeTab > i -> activeTab - 1
+            activeTab == i -> i.coerceAtMost(tabs.lastIndex)
+            else -> activeTab
+        }
+    }
+
+    fun renameTab(i: Int, name: String) {
+        tabs.getOrNull(i)?.name = name.trim().ifEmpty { null }
+    }
+
+    /** Moves tab [i] one place left (-1) or right (1). */
+    fun moveTab(i: Int, dir: Int) {
+        val j = i + dir
+        if (i !in tabs.indices || j !in tabs.indices) return
+        val front = tab
+        val t = tabs.removeAt(i)
+        tabs.add(j, t)
+        activeTab = tabs.indexOf(front)
+    }
+
+    // ---------- saved layouts (SPLIT-6) ----------
+
+    val workspaces = mutableStateListOf<Workspace>().apply {
+        addAll(user.workspaces().mapNotNull { (n, j) -> Workspace.fromJson(n, j) })
+    }
+
+    /** Saves every tab, with its panels, under [name] (replacing one of that name). */
+    fun saveWorkspace(name: String) {
+        val n = name.trim()
+        if (n.isEmpty()) return
+        val w = Workspace(n, tabsJson(tabs), activeTab)
+        workspaces.removeAll { it.name == n }
+        workspaces.add(w)
+        io { user.saveWorkspace(n, w.toJson()) }
+        message = "Layout “$n” saved."
+    }
+
+    /** Opens a saved layout: its tabs replace the open ones. */
+    fun openWorkspace(w: Workspace) {
+        val list = w.tabs(::validPlace).ifEmpty { return }
+        selection = null
+        passagePop = null
+        linkPos = null
+        tabs.clear()
+        tabs.addAll(list)
+        activeTab = w.active.coerceIn(0, tabs.lastIndex)
+    }
+
+    fun deleteWorkspace(w: Workspace) {
+        workspaces.removeAll { it.name == w.name }
+        io { user.deleteWorkspace(w.name) }
+    }
+
+    /**
+     * Shows a verse's details (SPLIT-9): in the tab's Verse details panel, opening it beside the
+     * text when the tab has room; or, when both panels are in use or it's turned off in Settings,
+     * in the verse window.
+     */
+    fun openVerse(book: Int, chapter: Int, verse: Int, word: Int = -1) {
+        paneVerse = VerseTarget(book, chapter, verse, word)
+        verseWordStudy = null
+        val t = tab
+        if (verseInPanel && (PaneKind.VERSE in t.studies || (t.studies.isEmpty() && t.shown < 2))) {
+            verseSheet = null
+            showStudy(PaneKind.VERSE)
+        } else {
+            verseSheet = VerseTarget(book, chapter, verse, word)
+        }
+        // A tapped word goes to the Word study panel too (SPLIT-7).
+        if (word >= 0) viewModelScope.launch {
+            val version = activeVersion
+            val id = VerseId.of(book, chapter, verse)
+            val w = withContext(Dispatchers.IO) {
+                val strong = study.strongs(version, id).getOrNull(word)
+                val text = text(version).verseText(id) ?: ""
+                val range = com.biblestudy.app.data.StudyRepository.words(text).getOrNull(word)
+                if (strong != null && range != null) WordStudy(strong, version, text.substring(range), id) else null
+            }
+            if (w != null) studyWord = w
+        }
+    }
+
+    // ---------- Bibles: version manager and import (BIB-4, BIB-5) ----------
+
+    /** Imports a Bible file (or several); runs off the main thread. */
+    fun importBible(names: List<String>, open: (Int) -> java.io.InputStream, code: String, name: String, copyright: String) {
+        val c = code.trim().uppercase()
+        if (c.isEmpty() || name.isBlank() || copyright.isBlank()) { message = "Give the version a short code, a name and its copyright line."; return }
+        if (BibleRepository.BUNDLED.any { it.code == c }) { message = "$c is already built in. Choose another code."; return }
+        importing = true
+        viewModelScope.launch {
+            val result = withContext(Dispatchers.IO) {
+                runCatching {
+                    if (names.size == 1 && names[0].lowercase().endsWith(".db")) {
+                        open(0).use { com.biblestudy.app.data.BibleImport.saveAppDb(getApplication(), it, c, name.trim(), copyright.trim()) }
+                    } else {
+                        val parsed = com.biblestudy.app.data.BibleImport.parse(names, open)
+                        com.biblestudy.app.data.BibleImport.save(getApplication(), parsed, c, name.trim(), copyright.trim(), bible.books)
+                    }
+                }
+            }
+            importing = false
+            synchronized(this@StudyViewModel) { texts.remove(c) }
+            message = result.fold({ "${it.code} added. Pick it from the version menu." }, { "Couldn't import: ${it.message}" })
+        }
+    }
+
+    var importing by mutableStateOf(false)
+        private set
+
+    /** Removes an imported version; panels reading it go back to the KJV. */
+    fun removeBible(code: String) {
+        panels.forEachIndexed { i, p -> if (p.version == code) setVersion(i, "KJV") }
+        if (newPanelVersion == code) newPanelVersion = null
+        synchronized(this) { texts.remove(code) }
+        BibleRepository.removeImported(getApplication(), code)
+        message = "$code removed."
+    }
+
+    // ---------- sketch pages (SKT-1 to SKT-4) ----------
+
+    val sketches = mutableStateListOf<Sketch>().apply { addAll(user.sketches()) }
+
+    fun sketchOf(book: Int): Sketch? = if (Sketch.isSketch(book)) sketches.firstOrNull { it.book == book } else null
+
+    /** Sketch pages linked to a chapter, shown as markers in its margin (SKT-2). */
+    fun sketchesIn(book: Int, chapter: Int): List<Sketch> = sketches.filter { it.linkBook == book && it.linkChapter == chapter }
+
+    /** A book's name, or a sketch page's. */
+    fun bookLabel(book: Int): String = sketchOf(book)?.name ?: bible.book(book).name
+
+    /** "John 3:16", or a sketch page's name. */
+    fun hitLabel(book: Int, chapter: Int, verse: Int): String =
+        sketchOf(book)?.let { "Sketch page: ${it.name}" } ?: refLabel(VerseId.of(book, chapter, verse))
+
+    /** A heading for what a panel shows: "John 3", or a sketch page's name. */
+    fun placeName(book: Int, chapter: Int): String = sketchOf(book)?.name ?: "${bible.book(book).name} $chapter"
+
+    /** Makes a sketch page linked to the passage being read and opens it in the active panel. */
+    /** The passage a new sketch page would be linked to: the one in view, or the open sketch page's. */
+    fun sketchLinkHere(): Triple<Int, Int, Int>? {
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        val from = sketchOf(p.book) ?: return Triple(p.book, p.chapter, p.topVerse)
+        return if (from.linked) Triple(from.linkBook, from.linkChapter, from.linkVerse) else null
+    }
+
+    /**
+     * Makes a sketch page and opens it in the active panel. With [link] it's tied to that verse and
+     * opens from a badge beside it (SKT-2); without, it stands alone and opens from My notes.
+     */
+    fun createSketch(name: String, paper: Paper, link: Triple<Int, Int, Int>? = sketchLinkHere(), open: Boolean = true, created: Long = System.currentTimeMillis()): Sketch {
+        // Small ids, never reused: a sketch's book number is SKETCH_BOOK + id.
+        val id = maxOf(prefs.getLong("nextSketch", 1L), (sketches.maxOfOrNull { it.id } ?: 0L) + 1)
+        prefs.edit { putLong("nextSketch", id + 1) }
+        val s = Sketch(
+            id, name.trim().ifEmpty { "Sketch" }, paper,
+            link?.first ?: 0, link?.second ?: 0, link?.third ?: 0,
+            Sketch.START_HEIGHT, created,
+        )
+        sketches.add(s)
+        io { user.saveSketch(s) }
+        if (open) openSketch(s)
+        return s
+    }
+
+    /**
+     * Writes a verse's margin note full screen (MRG-15): its note page, made the first time, opens in
+     * the active panel. Back beside the verse it shows shrunk to fit; tap it to open it again.
+     */
+    fun openNotePage(book: Int, chapter: Int, verse: Int) {
+        val existing = sketches.firstOrNull { it.note && it.linkBook == book && it.linkChapter == chapter && it.linkVerse == verse }
+        if (existing != null) { openSketch(existing); return }
+        val s = createSketch("Note on ${refLabel(VerseId.of(book, chapter, verse))}", Paper.LINED, link = Triple(book, chapter, verse), open = false)
+            .copy(note = true)
+        updateSketch(s)
+        openSketch(s)
+    }
+
+    private val sketchSizes = HashMap<Int, Pair<Int, Pair<Float, Float>>>()
+
+    /**
+     * A sketch page's size (SKT-1): it grows with what's on it, always keeping at least a page's
+     * width and height of empty room to the right and below, so there's no edge to run into.
+     */
+    fun sketchSize(s: Sketch): Pair<Float, Float> {
+        val strokes = marginStrokesFor(s.book, 1); val texts = textsFor(s.book, 1); val images = imagesFor(s.book, 1)
+        val key = editCount * 31 + strokes.size * 7 + texts.size * 3 + images.size + s.height.toInt()
+        sketchSizes[s.book]?.let { (k, size) -> if (k == key) return size }
+        var right = 0f; var bottom = 0f
+        for (st in strokes) for (i in st.points.indices step 3) { right = maxOf(right, st.points[i]); bottom = maxOf(bottom, st.points[i + 1]) }
+        for (t in texts) { right = maxOf(right, t.x + t.w); bottom = maxOf(bottom, t.y + (textHeights[t.id] ?: estimateTextHeight(t))) }
+        for (im in images) { right = maxOf(right, im.x + im.w); bottom = maxOf(bottom, im.y + im.h) }
+        val w = maxOf(Sketch.WIDTH, right + Sketch.WIDTH)
+        val h = maxOf(s.height, Page.TEXT_TOP + bottom + Sketch.START_HEIGHT)
+        val size = w to h
+        sketchSizes[s.book] = key to size
+        return size
+    }
+
+    /** How far down a note page is written on, in page units from its top (MRG-15). */
+    fun noteContentBottom(s: Sketch): Float {
+        val strokes = marginStrokesFor(s.book, 1).maxOfOrNull { st -> (1 until st.points.size step 3).maxOfOrNull { st.points[it] } ?: 0f } ?: 0f
+        val texts = textsFor(s.book, 1).maxOfOrNull { it.y + (textHeights[it.id] ?: estimateTextHeight(it)) } ?: 0f
+        val images = imagesFor(s.book, 1).maxOfOrNull { it.y + it.h } ?: 0f
+        return maxOf(strokes, texts, images, 120f)
+    }
+
+    /** Reads the writing on study articles of one kind and number (INK-16) from the notes database. */
+    fun ensureStudyInkLoaded(book: Int, chapter: Int) {
+        val m = mk(book, chapter)
+        if (!loaded.add("m$m")) return
+        loadStarted()
+        viewModelScope.launch {
+            try {
+                val (st, _) = withContext(dbDispatcher) { user.loadMargin(book, chapter) }
+                merge(marginStrokesFor(book, chapter), st)
+            } finally {
+                loadFinished()
+            }
+        }
+    }
+
+    /** Reads a sketch page's drawing from the notes database (for the shrunk note beside its verse). */
+    fun ensureSketchLoaded(s: Sketch) {
+        val m = mk(s.book, 1)
+        if (!loaded.add("m$m")) return
+        loadStarted()
+        viewModelScope.launch {
+            try {
+                val (st, i) = withContext(dbDispatcher) { user.loadMargin(s.book, 1) }
+                val t = withContext(dbDispatcher) { user.loadTexts(s.book, 1) }
+                merge(marginStrokesFor(s.book, 1), st)
+                merge(imagesFor(s.book, 1), i)
+                merge(textsFor(s.book, 1), t)
+            } finally {
+                loadFinished()
+            }
+        }
+    }
+
+    /** The last Bible passage a panel showed before its sketch page, for leaving a free-standing page. */
+    private fun biblePlaceBefore(p: PanelState): Pair<Int, Int> =
+        p.back.lastOrNull { !Sketch.isSketch(it.book) }?.let { it.book to it.chapter } ?: (43 to 1)
+
+    /**
+     * The ready-made pages (SKT-5): made once, on first start, as ordinary free-standing sketch pages
+     * on the first layer. Later it puts back any that were deleted ([announce] says how many).
+     */
+    fun addReadyMadePages(announce: Boolean = false, onlyNew: Boolean = false) {
+        val layer = layers.firstOrNull() ?: return
+        var added = 0
+        // Pages made before (by name), so a new version adds its new pages but not ones you deleted.
+        val made = prefs.getStringSet("readyMadeNames", null)?.toMutableSet()
+            ?: (if (prefs.getBoolean("readyMadeAdded", false)) SketchTemplates.all.take(4).map { it.name }.toMutableSet() else mutableSetOf())
+        val env = TemplateEnv(runCatching { LandsMap.load(getApplication()) }.getOrNull())
+        SketchTemplates.all.forEachIndexed { i, t ->
+            if (sketches.any { it.readyMade && it.name == t.name }) { made += t.name; return@forEachIndexed }
+            if (onlyNew && t.name in made) return@forEachIndexed
+            val s = createSketch(t.name, t.paper, link = null, open = false, created = (i + 1).toLong())
+            placeOnSketch(s, t.items(env), layerId = layer.id, undoable = false)
+            made += t.name
+            added++
+        }
+        prefs.edit { putBoolean("readyMadeAdded", true); putStringSet("readyMadeNames", made) }
+        if (announce) message = when (added) {
+            0 -> "All the ready-made pages are already here."
+            1 -> "1 ready-made page put back."
+            else -> "$added ready-made pages put back."
+        }
+    }
+
+    /**
+     * Shows a sketch page in a panel beside the Bible text (SPLIT-2, SKT-2): a panel already showing a
+     * sketch page is reused, otherwise another panel (one is added if there's only one). The study
+     * pane closes to give the page room.
+     */
+    fun openSketchBeside(s: Sketch) {
+        val reading = panels.indexOfFirst { !Sketch.isSketch(it.book) }.takeIf { it >= 0 } ?: 0
+        val target = panels.indices.firstOrNull { it != reading && Sketch.isSketch(panels[it].book) && !tab.bibleHidden }
+            ?: run {
+                // The page takes the tab's other panel (a study view beside the text makes way).
+                closeStudies()
+                if (panels.size == 1) addPanel()
+                if (linkPanels) linkPanels = false
+                panels.indices.first { it != reading }
+            }
+        activePanel = target
+        openSketch(s, target)
+    }
+
+    fun openSketch(s: Sketch, index: Int = activePanel.coerceIn(0, panels.lastIndex)) {
+        goTo(index, s.book, 1)
+    }
+
+    fun updateSketch(s: Sketch) {
+        val i = sketches.indexOfFirst { it.id == s.id }
+        if (i >= 0) sketches[i] = s
+        io { user.saveSketch(s) }
+    }
+
+    /** Deletes a sketch page and its drawing; panels showing it go back to its passage. */
+    fun deleteSketch(s: Sketch) {
+        for ((i, p) in panels.withIndex()) {
+            if (p.book == s.book) {
+                if (s.linked) goTo(i, s.linkBook, s.linkChapter, s.linkVerse, remember = false)
+                else biblePlaceBefore(p).let { (b, c) -> goTo(i, b, c, remember = false) }
+            }
+            p.back.removeAll { it.book == s.book }
+            p.forward.removeAll { it.book == s.book }
+        }
+        sketches.removeAll { it.id == s.id }
+        marginStrokesFor(s.book, 1).clear(); imagesFor(s.book, 1).clear(); textsFor(s.book, 1).clear()
+        io { user.deleteSketch(s).forEach { File(imagesDir, it).delete() } }
+    }
+
+    /**
+     * Where to put something new on a sketch page, in its item coordinates (relative to the top of
+     * the page's text area): below the title and below anything already there in view.
+     */
+    fun sketchSpot(p: PanelState, w: Float): Pair<Float, Float> {
+        val viewTop = (-p.panY / p.zoom).coerceAtLeast(0f)
+        val x = (-p.panX / p.zoom).coerceAtLeast(0f) + 60f
+        var y = maxOf(viewTop + 40f, Page.TEXT_TOP + 20f) - Page.TEXT_TOP
+        // Boxes already on the page, as (top, bottom) where they overlap this column.
+        val taken = textsFor(p.book, 1).filter { it.x < x + w && it.x + it.w > x }
+            .map { it.y to it.y + (textHeights[it.id] ?: estimateTextHeight(it)) } +
+            imagesFor(p.book, 1).filter { it.x < x + w && it.x + it.w > x }.map { it.y to it.y + it.h }
+        var moved = true
+        while (moved) {
+            moved = false
+            for ((top, bottom) in taken) {
+                if (y < bottom + 16f && y + 60f > top) { y = bottom + 24f; moved = true }
+            }
+        }
+        return x to y
+    }
+
+    /**
+     * Puts ready-made drawing on a sketch page as ordinary text boxes and ink, one undoable step
+     * (STD-16, SKT-5). [items] are in page units from the top-left of the page's drawing area; they
+     * go below anything already there, and the page grows to fit. Returns false if the layer is locked.
+     */
+    fun placeOnSketch(s: Sketch, items: List<Drawn>, layerId: Long? = null, undoable: Boolean = true): Boolean {
+        val layer = (if (layerId != null) layers.firstOrNull { it.id == layerId } else activeLayer()) ?: return false
+        if (layerId == null && layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return false }
+        if (layerId == null && !layer.visible) setLayerVisible(layer.id, true)
+        val book = s.book
+        val existing = textsFor(book, 1).map { it.y + (textHeights[it.id] ?: estimateTextHeight(it)) } +
+            imagesFor(book, 1).map { it.y + it.h } +
+            marginStrokesFor(book, 1).map { st -> (1 until st.points.size step 3).maxOfOrNull { st.points[it] } ?: 0f }
+        val top = (existing.maxOrNull()?.let { it + 60f } ?: 40f)
+        val added = ArrayList<Annotation>()
+        var bottom = top
+        for (d in items) when (d) {
+            is DrawnBox -> {
+                val t = MarginText(newId(), layer.id, book, 1, Region.RIGHT, 1, d.x, top + d.y, d.w, d.text, d.size, d.color, d.background)
+                added += t
+                bottom = maxOf(bottom, t.y + estimateTextHeight(t))
+            }
+            is DrawnVerse -> {
+                val p = com.biblestudy.app.data.RefLinks.find(d.ref, bible.books).firstOrNull()?.passage ?: continue
+                val v = activeVersion
+                val verses = passageVerses(p, v)
+                if (verses.isEmpty()) continue
+                val t = MarginText(newId(), layer.id, book, 1, Region.RIGHT, 1, d.x, top + d.y, d.w, verseCardText(this, p, v, verses), 20f, background = VERSE_CARD_BG)
+                added += t
+                bottom = maxOf(bottom, t.y + estimateTextHeight(t))
+            }
+            is DrawnLine -> {
+                // Straight runs are filled in every few units so they draw like a pen line.
+                val pts = ArrayList<Float>()
+                for (i in d.points.indices) {
+                    val (x, y) = d.points[i]
+                    if (i > 0) {
+                        val (px, py) = d.points[i - 1]
+                        val n = (kotlin.math.hypot(x - px, y - py) / 12f).toInt()
+                        for (k in 1 until n) { pts += px + (x - px) * k / n; pts += top + py + (y - py) * k / n; pts += 0.6f }
+                    }
+                    pts += x; pts += top + y; pts += 0.6f
+                    bottom = maxOf(bottom, top + y)
+                }
+                added += InkStroke(newId(), layer.id, null, book, 1, Region.RIGHT, 1, false, d.color, d.width, pts.toFloatArray())
+            }
+        }
+        added.forEach { addItem(it) }
+        if (undoable) record(Edit(added, emptyList()))
+        val needed = Page.TEXT_TOP + bottom + 120f
+        sketchOf(book)?.let { if (it.height < needed) updateSketch(it.copy(height = needed)) }
+        return true
+    }
+
+    /** The family tree being shown (STD-16): a person's TIPNR id. */
+    var familyTree by mutableStateOf<String?>(null)
+
+    /** Draws a family tree on the sketch page in view, or on a new one (STD-16). */
+    fun copyTreeToSketch(tree: FamilyTree) {
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        val existing = sketchOf(p.book)
+        val s = existing ?: createSketch("Family of ${tree.name}", com.biblestudy.app.model.Paper.BLANK)
+        if (placeOnSketch(s, tree.drawing(title = existing != null))) message = "Family tree drawn on \u201c${s.name}\u201d."
+    }
+
+    /** A text box's height before it has been laid out: wrapped lines at about half an em per letter. */
+    private fun estimateTextHeight(t: MarginText): Float {
+        val perLine = ((t.w - 16f) / (t.size * 0.5f)).coerceAtLeast(1f)
+        val lines = t.text.lines().sumOf { kotlin.math.ceil((it.length.coerceAtLeast(1)) / perLine).toInt() }
+        return lines * t.size * 1.35f + 16f
+    }
+
+    /**
+     * Adds a card to the page: a text box already filled in, e.g. a verse with its reference
+     * (which shows as a link) or a person or place (SKT-4).
+     */
+    fun insertCard(text: String, background: Int) {
+        val t = insertTextBox(startEditing = false) ?: return
+        val card = t.copy(text = text, background = background)
+        replaceItem(card)
+        record(Edit(listOf(card), emptyList()))
+    }
+
+    // ---------- reading analytics (ANL-1 to ANL-6) ----------
+
+    /** Whether reading time is counted (ANL-6). */
+    var trackReading by mutableStateOf(prefs.getBoolean("trackReading", true))
+    /** True while the app is on screen. */
+    var foreground = false
+    /** Set when something is shown that counts as study rather than reading, e.g. a sketch page. */
+    var studyOpen = false
+    /** Changes when reading statistics change, so the book picker and stats can refresh. */
+    var readingGeneration by mutableIntStateOf(0)
+        private set
+    private var lastActive = 0L
+    private var lastTick = 0L
+    private var visitKey = -1
+    private var visitSeconds = 0
+    private var visitRead = false
+
+    fun startReadingClock(now: Long = android.os.SystemClock.uptimeMillis()) { lastTick = now }
+
+    /** A touch or pen stroke: the reader is here (ANL-1). */
+    fun userActive(now: Long = android.os.SystemClock.uptimeMillis()) { lastActive = now }
+
+    /**
+     * Counts the time since the last tick for the chapter at the top of the active panel (ANL-1),
+     * unless the app is in the background or untouched for two minutes. A chapter counts as read
+     * (ANL-2) once a visit to it has lasted a minute and most of it has been in view.
+     */
+    fun readingTick(now: Long = android.os.SystemClock.uptimeMillis()) {
+        val since = (now - lastTick).coerceIn(0L, 30_000L)
+        lastTick = now
+        if (!trackReading || !foreground || now - lastActive > IDLE_MS || since < 1000) return
+        val p = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex)) ?: return
+        val book = p.book; val chapter = p.chapter
+        if (Sketch.isSketch(book)) {
+            // Time on a sketch page counts as study time for its passage's day, not as reading.
+            val day = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
+            val seconds = (since / 1000).toInt()
+            io { user.addStudy(day, seconds) }
+            readingGeneration++
+            return
+        }
+        val key = book * 1000 + chapter
+        if (key != visitKey) {
+            visitKey = key; visitSeconds = 0; visitRead = false
+            io { user.addOpen(book, chapter) }
+        }
+        val seconds = (since / 1000).toInt()
+        visitSeconds += seconds
+        val study = sidePane != null || wordStudy != null || studyOpen
+        val day = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
+        io { user.addReading(day, book, chapter, seconds, study) }
+        if (!visitRead && visitSeconds >= 60) {
+            val last = verseCount(book, chapter)
+            if (p.seenTo >= (last * 0.8f).toInt()) {
+                visitRead = true
+                io { user.markRead(book, chapter, System.currentTimeMillis()) }
+            }
+        }
+        readingGeneration++
+    }
+
+    private val verseCounts = HashMap<Int, Int>()
+    private fun verseCount(book: Int, chapter: Int): Int =
+        verseCounts.getOrPut(book * 1000 + chapter) { bible.chapter(book, chapter).size }
+
+    fun clearReadingStats() {
+        io { user.clearReading() }
+        visitKey = -1
+        readingGeneration++
+    }
+
+    // ---------- study library (0.8) ----------
+
+    /** Word studies, dictionary, topics and commentary; opened on first use. */
+    val study by lazy { StudyRepository(getApplication()) }
+
+    /** The word study window, when open (STD-3). */
+    var wordStudy by mutableStateOf<WordStudy?>(null)
+    /** The word shown in a Word study panel (SPLIT-7): the last one tapped or chosen. */
+    var studyWord by mutableStateOf<WordStudy?>(null)
+
+    /** Opens a word study: in the tab's Word study or Verse details panel if it has one, else in its own window. */
+    fun openWordStudy(w: WordStudy) {
+        when {
+            PaneKind.WORDSTUDY in tab.studies -> studyWord = w
+            // In the Verse details panel, with a way back to the verse.
+            PaneKind.VERSE in tab.studies && verseSheet == null -> verseWordStudy = w
+            else -> wordStudy = w
+        }
+    }
+    /** A word study opened from the Verse details panel, shown in it until Back (SPLIT-9). */
+    var verseWordStudy by mutableStateOf<WordStudy?>(null)
+    /** The dictionary article and topic open in the study pane, if any. */
+    var dictionaryOpen by mutableStateOf<Long?>(null)
+    var topicOpen by mutableStateOf<Long?>(null)
+
+    fun openDictionary(id: Long) {
+        dictionaryOpen = id
+        sidePane = PaneKind.DICTIONARY
+    }
+
+    /** The person or place open in the study pane (STD-10, STD-11). */
+    var nameOpen by mutableStateOf<Long?>(null)
+
+    fun openName(id: Long) {
+        nameOpen = id
+        sidePane = PaneKind.NAMES
+    }
+
+    /** Opens a person or place by its TIPNR id, e.g. a parent or child in a family list. */
+    fun openNameUid(uid: String) {
+        viewModelScope.launch {
+            val n = withContext(Dispatchers.IO) { study.nameByUid(uid) }
+            if (n != null) openName(n.id) else message = "No entry for ${com.biblestudy.app.data.NameEntry.label(uid)}."
+        }
+    }
+
+    fun openTopic(id: Long) {
+        topicOpen = id
+        sidePane = PaneKind.TOPICS
+    }
+
+    // ---------- commentaries (STD-17 to STD-19) ----------
+
+    /** The commentary a new commentary panel opens with: the last one chosen. */
+    var lastCommentary by mutableStateOf(prefs.getString("commentary", null) ?: com.biblestudy.app.data.Commentaries.CONCISE)
+        private set
+
+    /** The commentary shown by study view [pos] of the tab in front. */
+    fun commentaryAt(pos: Int): String = tab.commentaries.getOrNull(pos)?.ifEmpty { null } ?: lastCommentary
+
+    fun setCommentary(pos: Int, id: String) {
+        val t = tab
+        while (t.commentaries.size <= pos) t.commentaries.add("")
+        t.commentaries[pos] = id
+        lastCommentary = id
+        prefs.edit { putString("commentary", id) }
+    }
+
+    /** Whether commentary [pos] scrolls together with the Bible panel (STD-18); on unless switched off. */
+    fun commentaryLinked(pos: Int): Boolean = tab.commentaryLinked.getOrNull(pos) ?: true
+
+    fun toggleCommentaryLink(pos: Int) {
+        val t = tab
+        while (t.commentaryLinked.size <= pos) t.commentaryLinked.add(true)
+        t.commentaryLinked[pos] = !t.commentaryLinked[pos]
+    }
+
+    /** A commentary's notes on one chapter (unpacking it the first time). */
+    suspend fun loadCommentary(id: String, book: Int, chapter: Int): List<com.biblestudy.app.data.CommentarySection> =
+        withContext(Dispatchers.IO) {
+            if (id == com.biblestudy.app.data.Commentaries.CONCISE) study.commentary(book, chapter)
+            else runCatching { com.biblestudy.app.data.Commentaries.chapter(getApplication(), id, book, chapter) }.getOrElse { e ->
+                android.util.Log.w("Commentaries", "Couldn't open $id", e)
+                withContext(Dispatchers.Main) { message = "Couldn't open ${com.biblestudy.app.data.Commentaries.info(id).short}: ${e.message}" }
+                emptyList()
+            }
+        }
+
+    /** The "book" study writing on commentary [id] is kept under (INK-16): one per commentary. */
+    fun commentaryInkBook(id: String): Int = -100 - com.biblestudy.app.data.Commentaries.all.indexOfFirst { it.id == id }.coerceAtLeast(0)
+
+    /** Where a linked commentary was scrolled to by hand: the Bible panel follows it (STD-18). */
+    var commentaryPos by mutableStateOf<ScrollPos?>(null)
+        private set
+
+    fun followCommentary(book: Int, chapter: Int, verse: Int) {
+        commentaryPos = ScrollPos(-1, book, chapter, verse, 0f)
+    }
+
+    /** Easton's articles for the names and words of a chapter, in the order they first appear (STD-5). */
+    fun chapterArticles(version: String, book: Int, chapter: Int): List<StudyEntry> {
+        val seen = HashSet<String>()
+        val out = ArrayList<StudyEntry>()
+        for (v in text(version).chapter(book, chapter)) {
+            for (m in Regex("\\b\\p{Lu}[\\p{L}\u2019']+").findAll(v.text)) {
+                val w = m.value.removeSuffix("\u2019s").removeSuffix("'s")
+                if (w.length < 3 || !seen.add(w.lowercase()) || w.lowercase() in COMMON_WORDS) continue
+                study.dictionaryEntry(w)?.let { out += it }
+                if (out.size >= 40) return out
+            }
+        }
+        return out
+    }
+
+    /**
+     * Parallel accounts of a verse's passage (STD-2): the references listed under its section
+     * heading in the BSB (Gospel parallels, Kings and Chronicles, and so on).
+     */
+    fun parallelAccounts(verseId: Int): List<Passage> {
+        val b = VerseId.book(verseId); val c = VerseId.chapter(verseId); val v = VerseId.verse(verseId)
+        val bsb = text("BSB")
+        // The nearest heading at or before the verse, looking back into the previous chapter if needed.
+        val here = bsb.headings(b, c).filter { it.verse <= v }
+        val heading = here.lastOrNull { it.refs.isNotBlank() }?.takeIf { h -> here.none { it.verse > h.verse } || here.last().verse == h.verse }
+            ?: return emptyList()
+        return RefLinks.find(heading.refs, bible.books).map { it.passage }
     }
 
     fun refLabel(start: Int, end: Int = start): String {
@@ -300,11 +1547,52 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun toggleLayerVisible(id: Long) = updateLayer(id) { it.copy(visible = !it.visible) }
     fun toggleLayerLocked(id: Long) = updateLayer(id) { it.copy(locked = !it.locked) }
+    fun setLayerColor(id: Long, color: Int) = updateLayer(id) { it.copy(color = color) }
+    fun setLayerOpacity(id: Long, opacity: Float) = updateLayer(id) { it.copy(opacity = opacity.coerceIn(0.25f, 1f)) }
     fun renameLayer(id: Long, name: String) { if (name.isNotBlank()) updateLayer(id) { it.copy(name = name.trim()) } }
     fun setLayerVisible(id: Long, visible: Boolean) = updateLayer(id) { it.copy(visible = visible) }
 
     fun setAllLayersVisible(visible: Boolean) {
         layers.map { it.id }.forEach { id -> setLayerVisible(id, visible) }
+    }
+
+    /** While exporting one layer (LAY-11): the only layer drawn. */
+    var drawOnlyLayer: Long? = null
+
+    /** Saved sets of shown layers, e.g. "Sermon prep" (LAY-10): name → the layers shown. */
+    val layerPresets = mutableStateMapOf<String, Set<Long>>().apply {
+        runCatching {
+            val o = org.json.JSONObject(prefs.getString("layerPresets", "{}")!!)
+            for (k in o.keys()) {
+                val a = o.getJSONArray(k)
+                put(k, (0 until a.length()).map { a.getLong(it) }.toSet())
+            }
+        }
+    }
+
+    private fun saveLayerPresets() {
+        val o = org.json.JSONObject()
+        for ((k, v) in layerPresets) o.put(k, org.json.JSONArray(v.toList()))
+        prefs.edit { putString("layerPresets", o.toString()) }
+    }
+
+    /** Remembers which layers are shown now under [name]. */
+    fun saveLayerPreset(name: String) {
+        val n = name.trim().ifEmpty { "View ${layerPresets.size + 1}" }
+        layerPresets[n] = layers.filter { it.visible }.mapTo(HashSet()) { it.id }
+        saveLayerPresets()
+    }
+
+    /** Shows exactly the layers saved under [name] (layers made since then are hidden). */
+    fun applyLayerPreset(name: String) {
+        val shown = layerPresets[name] ?: return
+        layers.map { it.id }.forEach { setLayerVisible(it, it in shown) }
+        message = "Showing \u201c$name\u201d."
+    }
+
+    fun deleteLayerPreset(name: String) {
+        layerPresets.remove(name)
+        saveLayerPresets()
     }
 
     fun showOnlyLayer(id: Long) {
@@ -345,6 +1633,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         highlights.values.forEach { l -> l.removeAll { it.layerId == id } }
         marginStrokes.values.forEach { l -> l.removeAll { it.layerId == id } }
         images.values.forEach { l -> l.removeAll { it.layerId == id } }
+        marginTexts.values.forEach { l -> l.removeAll { it.layerId == id } }
         undoStack.clear(); redoStack.clear(); editVersion++
         selection = null
         io {
@@ -369,7 +1658,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun imagesFor(book: Int, chapter: Int) = images.getOrPut(mk(book, chapter)) { mutableStateListOf() }
 
-    fun notesFor(book: Int, chapter: Int): SnapshotStateMap<Int, String> {
+    /** Margin text boxes in a chapter (MRG-12). */
+    fun textsFor(book: Int, chapter: Int) = marginTexts.getOrPut(mk(book, chapter)) { mutableStateListOf() }
+
+    /** Typed notes in a chapter, by the verse each starts on. */
+    fun notesFor(book: Int, chapter: Int): SnapshotStateMap<Int, TypedNote> {
         val key = mk(book, chapter)
         val map = notes.getOrPut(key) { mutableStateMapOf() }
         if (loaded.add("n$key")) {
@@ -384,33 +1677,155 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** How many chapters' annotations are still being read from the database. */
     var pendingLoads by mutableIntStateOf(0)
         private set
+    // Counted outside Compose's snapshots so no update can be lost; the state above mirrors it.
+    private val loadsInFlight = java.util.concurrent.atomic.AtomicInteger()
+    private fun loadStarted() { pendingLoads = loadsInFlight.incrementAndGet() }
+    private fun loadFinished() { pendingLoads = loadsInFlight.decrementAndGet() }
 
-    fun ensureLoaded(version: String, book: Int, chapter: Int) {
+    /**
+     * Loads a chapter's annotations. [plainLayout] builds the chapter's layout in a font at normal
+     * line spacing without headings; it is only called to convert ink saved before 0.4 to line
+     * coordinates, or ink drawn in another font (READ-3).
+     */
+    fun ensureLoaded(version: String, book: Int, chapter: Int, plainLayout: (TextStyleKey) -> ChapterLayout) {
         val t = tk(version, book, chapter)
         if (loaded.add("t$t")) {
-            pendingLoads++
+            loadStarted()
             viewModelScope.launch {
                 try {
-                    val (s, h) = withContext(dbDispatcher) { user.loadText(version, book, chapter) }
+                    val (loadedStrokes, h) = withContext(dbDispatcher) { user.loadText(version, book, chapter) }
+                    var s = loadedStrokes
+                    val key = styleKey()
+                    val now = key.encode()
+                    if (s.any { !it.lineAnchored || it.font != now }) {
+                        val layouts = HashMap<TextStyleKey, ChapterLayout>()
+                        fun plain(k: TextStyleKey) = layouts.getOrPut(k) { plainLayout(k) }
+                        s = s.map { st ->
+                            var c = st
+                            if (!c.lineAnchored) {
+                                // Ink from before 0.4: page y at normal spacing in the book font.
+                                c = c.copyAs(points = plain(TextStyleKey()).linePoints(c.points), lineAnchored = true, font = TextFont.BOOK.name)
+                            }
+                            if (c.font != now) {
+                                // Drawn in another font or layout: onto the same words here.
+                                val from = TextStyleKey.decode(c.font)
+                                c = c.copyAs(points = reflowPoints(c.points, plain(from), plain(key)), font = now)
+                            }
+                            if (c !== st) io { user.insert(c) }
+                            c
+                        }
+                    }
                     merge(textStrokesFor(version, book, chapter), s)
                     merge(highlightsFor(version, book, chapter), h)
                 } finally {
-                    pendingLoads--
+                    loadFinished()
                 }
             }
         }
         val m = mk(book, chapter)
+        if (loaded.add("h$m")) {
+            // Highlights made in the other translations, shown here over whole verses (HL-10).
+            loadStarted()
+            viewModelScope.launch {
+                try {
+                    val all = withContext(dbDispatcher) {
+                        user.chapterHighlights(book, chapter).filter { it.version != version }
+                            .groupBy { it.version }
+                            .onEach { (v, _) -> verseStarts(v, book, chapter) }
+                    }
+                    for ((v, list) in all) {
+                        val target = highlightsFor(v, book, chapter)
+                        val have = target.mapTo(HashSet()) { it.id }
+                        target.addAll(list.filter { it.id !in have })
+                    }
+                } finally {
+                    loadFinished()
+                }
+            }
+        }
         if (loaded.add("m$m")) {
-            pendingLoads++
+            loadStarted()
             viewModelScope.launch {
                 try {
                     val (s, i) = withContext(dbDispatcher) { user.loadMargin(book, chapter) }
+                    val t = withContext(dbDispatcher) { user.loadTexts(book, chapter) }
                     merge(marginStrokesFor(book, chapter), s)
                     merge(imagesFor(book, chapter), i)
+                    merge(textsFor(book, chapter), t)
                 } finally {
-                    pendingLoads--
+                    loadFinished()
                 }
             }
+        }
+    }
+
+    /** Verse start offsets and numbers of a chapter in [version] (cached). */
+    private val verseStartCache = HashMap<String, Pair<IntArray, IntArray>>()
+
+    private fun verseStarts(version: String, book: Int, chapter: Int): Pair<IntArray, IntArray> {
+        val key = tk(version, book, chapter)
+        synchronized(verseStartCache) { verseStartCache[key]?.let { return it } }
+        val verses = text(version).chapter(book, chapter)
+        val v = verseStartOffsets(verses) to IntArray(verses.size) { verses[it].verse }
+        synchronized(verseStartCache) { verseStartCache[key] = v }
+        return v
+    }
+
+    /** The characters of [verse] in a chapter's text in [version] (its number to just before the next verse). */
+    fun verseSpan(version: String, book: Int, chapter: Int, verse: Int): IntRange? {
+        val (starts, numbers) = verseStarts(version, book, chapter)
+        val i = numbers.indexOf(verse).takeIf { it >= 0 } ?: return null
+        val end = if (i + 1 < starts.size) starts[i + 1] else Int.MAX_VALUE
+        return starts[i] until end
+    }
+
+    /** The verse holding character [offset] of a chapter's text in [version]. */
+    private fun verseOf(version: String, book: Int, chapter: Int, offset: Int): Int {
+        val (starts, numbers) = verseStarts(version, book, chapter)
+        if (numbers.isEmpty()) return 1
+        var i = 0
+        while (i + 1 < starts.size && starts[i + 1] <= offset) i++
+        return numbers[i]
+    }
+
+    /**
+     * Highlights made in the other translations of a chapter, as the whole verses they cover
+     * (HL-10). Empty when the setting is off.
+     */
+    fun crossHighlights(version: String, book: Int, chapter: Int): List<CrossHighlight> {
+        if (!highlightsAllVersions) return emptyList()
+        val out = ArrayList<CrossHighlight>()
+        for (v in BibleRepository.ALL) {
+            if (v.code == version) continue
+            for (h in highlightsFor(v.code, book, chapter)) {
+                val from = verseOf(v.code, book, chapter, h.start)
+                val to = verseOf(v.code, book, chapter, maxOf(h.start, h.end - 1))
+                out += CrossHighlight(h, from, to)
+            }
+        }
+        return out
+    }
+
+    /** Every highlight with its words, in Bible order, for the Highlights list (HL-8). */
+    /** The first and last verse a highlight covers. */
+    fun highlightVerses(h: Highlight): Pair<Int, Int> =
+        verseOf(h.version, h.book, h.chapter, h.start) to verseOf(h.version, h.book, h.chapter, (h.end - 1).coerceAtLeast(h.start))
+
+    suspend fun highlightEntries(): List<HighlightEntry> = withContext(dbDispatcher) {
+        val chapters = HashMap<String, String>()
+        user.allHighlights().map { h ->
+            val text = chapters.getOrPut(tk(h.version, h.book, h.chapter)) {
+                text(h.version).chapter(h.book, h.chapter).joinToString("") { "${it.verse}\u2009${it.text}\n" }
+            }
+            val words = text.substring(h.start.coerceIn(0, text.length), h.end.coerceIn(0, text.length))
+                .replace(Regex("\\n\\d+\u2009"), " ").replace(Regex("^\\d+\u2009"), "").trim()
+            // The whole verse (or verses) it's in, with the highlighted words marked.
+            val first = verseOf(h.version, h.book, h.chapter, h.start)
+            val last = verseOf(h.version, h.book, h.chapter, (h.end - 1).coerceAtLeast(h.start))
+            val verses = text(h.version).chapter(h.book, h.chapter).filter { it.verse in first..last }
+            val full = if (verses.size == 1) verses.single().text else verses.joinToString(" ") { "${it.verse} ${it.text}" }
+            val at = if (verses.size == 1) full.indexOf(words) else -1
+            HighlightEntry(h, first, words, last, full.ifEmpty { words }, if (at >= 0 && words.isNotEmpty()) at until at + words.length else null)
         }
     }
 
@@ -420,7 +1835,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         list.clear(); list.addAll(fromDb); list.addAll(extra)
     }
 
-    /** Cached drawing paths for a stroke; rebuilt if the stroke's points change (e.g. moved with the lasso). */
+    /**
+     * Cached drawing paths for a margin stroke; rebuilt if its points change (e.g. moved with the
+     * lasso). Strokes on the words are drawn through their [ChapterLayout.render] instead.
+     */
     fun render(s: InkStroke): StrokeRender {
         renders[s.id]?.let { if (it.source === s.points) return it }
         return buildRender(s.points, s.width, s.highlighter).also { renders[s.id] = it }
@@ -440,6 +1858,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 else marginStrokesFor(after.book, after.chapter).swap(after)
             is Highlight -> highlightsFor(after.version, after.book, after.chapter).swap(after)
             is MarginImage -> imagesFor(after.book, after.chapter).swap(after)
+            is MarginText -> textsFor(after.book, after.chapter).swap(after)
         }
         io { user.insert(after) }
     }
@@ -451,6 +1870,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 else marginStrokesFor(a.book, a.chapter).add(a)
             is Highlight -> highlightsFor(a.version, a.book, a.chapter).add(a)
             is MarginImage -> imagesFor(a.book, a.chapter).add(a)
+            is MarginText -> textsFor(a.book, a.chapter).add(a)
         }
         io { user.insert(a) }
     }
@@ -462,6 +1882,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 else marginStrokesFor(a.book, a.chapter).removeAll { it.id == a.id }
             is Highlight -> highlightsFor(a.version, a.book, a.chapter).removeAll { it.id == a.id }
             is MarginImage -> imagesFor(a.book, a.chapter).removeAll { it.id == a.id }
+            is MarginText -> textsFor(a.book, a.chapter).removeAll { it.id == a.id }
         }
         io { user.delete(a) }
     }
@@ -492,6 +1913,34 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         editVersion++
     }
 
+    /** Highlights a character range chosen by selecting text with a finger (NOTE-2). */
+    fun addHighlight(layout: ChapterLayout, start: Int, end: Int) {
+        val layer = activeLayer() ?: return
+        if (layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return }
+        if (!layer.visible) setLayerVisible(layer.id, true)
+        val h = Highlight(newId(), layer.id, layout.version, layout.book, layout.chapter, start, end, highlightColor)
+        addItem(h)
+        record(Edit(listOf(h), emptyList()))
+    }
+
+    /** Changes a highlight's colour (undoable). Returns the changed highlight, or null if its layer is locked. */
+    fun recolorHighlight(h: Highlight, color: Int): Highlight? {
+        if (layers.firstOrNull { it.id == h.layerId }?.locked == true) { message = "That highlight's layer is locked."; return null }
+        if (h.color == color) return h
+        val after = h.copy(color = color)
+        replaceItem(after)
+        record(Edit(listOf(after), listOf(h)))
+        return after
+    }
+
+    /** Removes a highlight (undoable). */
+    fun removeHighlight(h: Highlight) {
+        if (layers.firstOrNull { it.id == h.layerId }?.locked == true) { message = "That highlight's layer is locked."; return }
+        removeItem(h)
+        record(Edit(emptyList(), listOf(h)))
+        message = "Highlight removed."
+    }
+
     // ---------- lasso selection ----------
 
     fun select(s: Selection) { selection = s }
@@ -505,6 +1954,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         marginStrokesFor(sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
         highlightsFor(sel.version, sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
         imagesFor(sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
+        textsFor(sel.book, sel.chapter).filterTo(this) { it.id in sel.ids }
     }
 
     private fun changeSelection(change: (Annotation) -> Annotation?) {
@@ -516,7 +1966,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Moves selected ink and images by [off] page units. Highlights stay on their words. */
-    fun moveSelection(off: Offset) {
+    fun moveSelection(off: Offset, layout: ChapterLayout) {
         val items = selectedItems()
         if (items.isNotEmpty() && items.all { it is Highlight }) {
             message = "Highlights stay on their words; only ink and images can be moved."
@@ -524,18 +1974,101 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
         changeSelection { a ->
             when (a) {
-                is InkStroke -> a.withPoints(a.points.translated(off.x, off.y))
+                is InkStroke -> a.withPoints(shifted(a, off.x, off.y, layout))
                 is MarginImage -> a.copy(x = a.x + off.x, y = a.y + off.y)
+                is MarginText -> a.copy(x = a.x + off.x, y = a.y + off.y)
                 is Highlight -> null
             }
         }
     }
+
+    /**
+     * Resizes the selection by [k] about [pivot] (page units on [g]'s page), INK-11. Ink, images and
+     * text boxes grow or shrink; highlights stay on their words.
+     */
+    fun scaleSelection(k: Float, pivot: Offset, g: PageGeometry) {
+        if (k <= 0f || kotlin.math.abs(k - 1f) < 0.01f) return
+        val layout = g.layout
+        fun sx(ox: Float, x: Float) = (ox + x - pivot.x) * k + pivot.x - ox
+        fun sy(oy: Float, y: Float) = (oy + y - pivot.y) * k + pivot.y - oy
+        changeSelection { a ->
+            when (a) {
+                is InkStroke -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    val shown = if (a.region == Region.TEXT) layout.render(a).points else a.points
+                    val pts = FloatArray(shown.size) { i ->
+                        when (i % 3) { 0 -> sx(ox, shown[i]); 1 -> sy(oy, shown[i]); else -> shown[i] }
+                    }
+                    a.copyAs(points = if (a.region == Region.TEXT) layout.linePoints(pts) else pts, width = a.width * k)
+                }
+                is MarginImage -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    a.copy(x = sx(ox, a.x), y = sy(oy, a.y), w = a.w * k, h = a.h * k)
+                }
+                is MarginText -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    a.copy(x = sx(ox, a.x), y = sy(oy, a.y), w = a.w * k, size = (a.size * k).coerceIn(8f, 96f))
+                }
+                is Highlight -> null
+            }
+        }
+    }
+
+    /**
+     * Turns the selection by [angle] radians (clockwise) about [pivot] (INK-11). Ink turns freely;
+     * pictures turn with it when the angle is a whole number of quarter turns, otherwise they and
+     * text boxes keep upright and only move round the pivot.
+     */
+    fun rotateSelection(angle: Float, pivot: Offset, g: PageGeometry) {
+        if (kotlin.math.abs(angle) < 0.01f) return
+        val layout = g.layout
+        val c = kotlin.math.cos(angle); val sn = kotlin.math.sin(angle)
+        fun rot(x: Float, y: Float) = Offset(
+            (x - pivot.x) * c - (y - pivot.y) * sn + pivot.x,
+            (x - pivot.x) * sn + (y - pivot.y) * c + pivot.y,
+        )
+        val q = kotlin.math.round(angle / (Math.PI.toFloat() / 2f)).toInt()
+        val quarter = kotlin.math.abs(angle - q * Math.PI.toFloat() / 2f) < 0.02f
+        changeSelection { a ->
+            when (a) {
+                is InkStroke -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    val shown = if (a.region == Region.TEXT) layout.render(a).points else a.points
+                    val pts = shown.copyOf()
+                    for (i in 0 until shown.size / 3) {
+                        val r = rot(ox + shown[3 * i], oy + shown[3 * i + 1])
+                        pts[3 * i] = r.x - ox; pts[3 * i + 1] = r.y - oy
+                    }
+                    a.copyAs(points = if (a.region == Region.TEXT) layout.linePoints(pts) else pts)
+                }
+                is MarginImage -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    val centre = rot(ox + a.x + a.w / 2f, oy + a.y + a.h / 2f)
+                    val turns = if (quarter) ((q % 4) + 4) % 4 else 0
+                    val (w, h) = if (turns % 2 == 1) a.h to a.w else a.w to a.h
+                    a.copy(x = centre.x - w / 2f - ox, y = centre.y - h / 2f - oy, w = w, h = h, rotation = (a.rotation + turns) % 4)
+                }
+                is MarginText -> {
+                    val ox = g.originX(a.region); val oy = g.originY(a.region, a.verse)
+                    val centre = rot(ox + a.x + a.w / 2f, oy + a.y)
+                    a.copy(x = centre.x - a.w / 2f - ox, y = centre.y - oy)
+                }
+                is Highlight -> null
+            }
+        }
+    }
+
+    /** A stroke's points moved by (dx, dy) page units; ink on the words goes through line coordinates. */
+    private fun shifted(s: InkStroke, dx: Float, dy: Float, layout: ChapterLayout): FloatArray =
+        if (s.region == Region.TEXT) layout.linePoints(layout.render(s).points.translated(dx, dy))
+        else s.points.translated(dx, dy)
 
     fun recolorSelection(color: Int) = changeSelection { a ->
         when (a) {
             is InkStroke -> a.withColor(color)
             is Highlight -> a.copy(color = color)
             is MarginImage -> null
+            is MarginText -> a.copy(color = color)
         }
     }
 
@@ -547,9 +2080,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 is InkStroke -> a.withLayer(layerId)
                 is Highlight -> a.copy(layerId = layerId)
                 is MarginImage -> a.copy(layerId = layerId)
+                is MarginText -> a.copy(layerId = layerId)
             }
         }
-        message = "Moved to “${layer.name}”."
+        message = "Moved to \u201c${layer.name}\u201d."
     }
 
     fun deleteSelection() {
@@ -560,12 +2094,13 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Duplicates the selected ink and images a little below and to the right, and selects the copies. */
-    fun copySelection() {
+    fun copySelection(layout: ChapterLayout) {
         val sel = selection ?: return
         val copies = selectedItems().mapNotNull { a ->
             when (a) {
-                is InkStroke -> a.copyAs(newId(), a.points.translated(COPY_SHIFT, COPY_SHIFT))
+                is InkStroke -> a.copyAs(newId(), shifted(a, COPY_SHIFT, COPY_SHIFT, layout))
                 is MarginImage -> a.copy(id = newId(), x = a.x + COPY_SHIFT, y = a.y + COPY_SHIFT)
+                is MarginText -> a.copy(id = newId(), x = a.x + COPY_SHIFT, y = a.y + COPY_SHIFT)
                 is Highlight -> null
             }
         }
@@ -584,10 +2119,180 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (i >= 0) list[i] = img
     }
 
+    /** Turns a margin picture a quarter turn clockwise (MRG-8), keeping its top-left corner. */
+    fun rotateImage(img: MarginImage) {
+        val after = img.copy(rotation = (img.rotation + 1) % 4, w = img.h, h = img.w)
+        replaceItem(after)
+        record(Edit(listOf(after), listOf(img)))
+    }
+
+    /**
+     * Keeps part of a margin picture (MRG-8): [l], [t], [r], [b] are fractions of the picture as
+     * stored (before turning). The box keeps its width; its height follows the new shape.
+     */
+    fun cropImage(img: MarginImage, l: Float, t: Float, r: Float, b: Float) {
+        val bmp = bitmap(img.file) ?: return
+        val cw = (r - l) * bmp.width
+        val ch = (b - t) * bmp.height
+        if (cw < 4f || ch < 4f) return
+        val shownAspect = if (img.rotation % 2 == 0) ch / cw else cw / ch
+        val after = img.copy(cropL = l, cropT = t, cropR = r, cropB = b, h = img.w * shownAspect)
+        replaceItem(after)
+        record(Edit(listOf(after), listOf(img)))
+    }
+
     fun commitImageChange(before: MarginImage, after: MarginImage) {
         if (before == after) return
         io { user.insert(after) }
         record(Edit(listOf(after), listOf(before)))
+    }
+
+    // ---------- tags (NOTE-4) and colour meanings (HL-5) ----------
+
+    /** Tags by item key: "n:book:chapter:verse" (typed note), "h:id", "b:id" or "t:id". */
+    val tags = mutableStateMapOf<String, Set<String>>().apply { putAll(user.tags()) }
+    /** What each highlight colour means, e.g. yellow = "Promises". */
+    val meanings = mutableStateMapOf<Int, String>().apply { putAll(user.meanings()) }
+
+    fun noteKey(book: Int, chapter: Int, verse: Int) = "n:$book:$chapter:$verse"
+
+    /** Every tag in use, alphabetically. */
+    fun allTags(): List<String> = tags.values.flatten().distinct().sortedBy { it.lowercase() }
+
+    fun setTags(item: String, set: Set<String>) {
+        val clean = set.map { it.trim() }.filter { it.isNotEmpty() }.toSortedSet()
+        if (clean.isEmpty()) tags.remove(item) else tags[item] = clean
+        io { user.setTags(item, clean) }
+    }
+
+    fun setMeaning(color: Int, label: String) {
+        if (label.isBlank()) meanings.remove(color) else meanings[color] = label.trim()
+        io { user.setMeaning(color, label) }
+    }
+
+    /** Typed notes and text boxes, for the notes browser (NOTE-5). */
+    suspend fun browseNotes(): Pair<List<com.biblestudy.app.data.NoteEntry>, List<MarginText>> =
+        withContext(dbDispatcher) { user.allNotes() to user.allTexts() }
+
+    // ---------- margin text boxes (MRG-12) ----------
+
+    /** Heights of text boxes as last drawn, for tapping and dragging them (page units). */
+    val textHeights = HashMap<Long, Float>()
+    /** Text boxes' laid-out text as last drawn, for finding the reference under a tap. */
+    val textLayouts = HashMap<Long, androidx.compose.ui.text.TextLayoutResult>()
+    val textLayoutKeys = HashMap<Long, MarginText>()
+    val textLayoutStamps = HashMap<Long, Int>()
+    /** The verses on each verse card as last laid out (SKT-6), for taps and highlighting. */
+    val cardTexts = HashMap<Long, CardText>()
+    private val cardSpecs = HashMap<Long, Pair<String, CardSpec?>>()
+
+    /** The card a text box is, if any, worked out once per text. */
+    fun cardSpecCached(t: MarginText): CardSpec? {
+        cardSpecs[t.id]?.let { (text, spec) -> if (text == t.text) return spec }
+        val spec = cardSpec(t)
+        cardSpecs[t.id] = t.text to spec
+        return spec
+    }
+
+    /** Changes when anything a verse card shows could have changed: highlights, settings, layers. */
+    fun cardStamp(): Int = editCount * 31 + highlightLoads * 17 + (if (redLetters) 1 else 0) +
+        (if (highlightsAllVersions) 2 else 0) + layers.hashCode() * 7
+
+    /** Highlights read from the notes database for verse cards; counts up as they arrive. */
+    var highlightLoads by mutableIntStateOf(0)
+        private set
+
+    /** Reads every version's highlights for the chapters on a card, once (SKT-6, HL-10). */
+    fun ensureCardHighlights(spec: CardSpec) {
+        val p = spec.passage
+        for (ch in p.chapter..p.endChapter) {
+            val m = mk(p.book, ch)
+            if (!loaded.add("a$m")) continue
+            viewModelScope.launch {
+                val all = withContext(dbDispatcher) {
+                    user.chapterHighlights(p.book, ch).groupBy { it.version }.onEach { (v, _) -> verseStarts(v, p.book, ch) }
+                }
+                for ((v, list) in all) {
+                    val target = highlightsFor(v, p.book, ch)
+                    val have = target.mapTo(HashSet()) { it.id }
+                    target.addAll(list.filter { it.id !in have })
+                }
+                highlightLoads++
+            }
+        }
+    }
+
+    /** The text box being typed in, if any. */
+    var editingText by mutableStateOf<Long?>(null)
+
+    /**
+     * Adds an empty text box beside the verse at the top of the active panel and starts typing in
+     * it. Returns it, or null if the active layer is locked.
+     */
+    fun insertTextBox(startEditing: Boolean = true): MarginText? {
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        val layer = activeLayer() ?: return null
+        if (layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return null }
+        if (!layer.visible) setLayerVisible(layer.id, true)
+        if (Sketch.isSketch(p.book)) {
+            // On a sketch page: in the first free space from the top-left of what's in view.
+            val (x, y) = sketchSpot(p, 480f)
+            val t = MarginText(newId(), layer.id, p.book, 1, Region.RIGHT, 1, x, y, 480f, "")
+            addItem(t)
+            if (startEditing) editingText = t.id
+            return t
+        }
+        val region = when {
+            marginRight -> Region.RIGHT
+            marginLeft -> Region.LEFT
+            else -> { marginRight = true; Region.RIGHT }
+        }
+        val w = marginWidth(region == Region.LEFT) - 48f
+        val t = MarginText(newId(), layer.id, p.book, p.chapter, region, p.topVerse, 24f, 8f, w, "")
+        addItem(t)
+        if (startEditing) editingText = t.id
+        return t
+    }
+
+    /** Ends typing in a text box: saves its new text (undoable), or removes it if left empty. */
+    fun finishTextEdit(before: MarginText, text: String) {
+        editingText = null
+        val list = textsFor(before.book, before.chapter)
+        val current = list.firstOrNull { it.id == before.id } ?: return
+        if (text.isBlank()) {
+            removeItem(current)
+            if (before.text.isNotBlank()) record(Edit(emptyList(), listOf(before)))
+            return
+        }
+        if (text == before.text && current == before) return
+        val after = current.copy(text = text)
+        replaceItem(after)
+        record(Edit(listOf(after), if (before.text.isBlank()) emptyList() else listOf(before)))
+    }
+
+    /** Changes a text box's look (size, colour, background), undoable. */
+    fun restyleText(before: MarginText, after: MarginText) {
+        if (before == after) return
+        replaceItem(after)
+        record(Edit(listOf(after), listOf(before)))
+    }
+
+    fun replaceTextLive(t: MarginText) {
+        val list = textsFor(t.book, t.chapter)
+        val i = list.indexOfFirst { it.id == t.id }
+        if (i >= 0) list[i] = t
+    }
+
+    fun commitTextChange(before: MarginText, after: MarginText) {
+        if (before == after) return
+        io { user.insert(after) }
+        record(Edit(listOf(after), listOf(before)))
+    }
+
+    fun deleteText(t: MarginText) {
+        if (editingText == t.id) editingText = null
+        removeItem(t)
+        record(Edit(emptyList(), listOf(t)))
     }
 
     fun deleteImage(img: MarginImage) {
@@ -601,25 +2306,52 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val layer = activeLayer() ?: return
         if (layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return }
         if (!layer.visible) setLayerVisible(layer.id, true)
+        val sketch = Sketch.isSketch(p.book)
         val region = when {
-            marginRight -> Region.RIGHT
+            sketch || marginRight -> Region.RIGHT // a sketch page is all "right margin"
             marginLeft -> Region.LEFT
             else -> { marginRight = true; Region.RIGHT }
         }
-        val marginW = marginWidth(region == Region.LEFT)
-        val book = p.book; val chapter = p.chapter; val verse = p.topVerse
+        val marginW = if (sketch) 620f else marginWidth(region == Region.LEFT)
+        val book = p.book; val chapter = p.chapter; val verse = if (sketch) 1 else p.topVerse
+        // On a sketch page it goes in free space where you're looking (SKT-3).
+        val spot = if (sketch) sketchSpot(p, marginW - 48f) else null
+        val x = spot?.first ?: 24f
+        val y = spot?.second ?: 8f
         viewModelScope.launch {
             val id = newId()
             val saved = withContext(Dispatchers.IO) { importImage(uri, id) }
             if (saved == null) { message = "Couldn't open that image."; return@launch }
             val (file, aspect) = saved
             val w = marginW - 48f
-            val img = MarginImage(id, layer.id, book, chapter, region, verse, 24f, 8f, w, w * aspect, file)
+            val img = MarginImage(id, layer.id, book, chapter, region, verse, x, y, w, w * aspect, file)
             addItem(img)
             record(Edit(listOf(img), emptyList()))
             tool = Tool.SELECT
-            message = "Image added beside verse $verse. Use Select to move or resize it."
+            message = if (sketch) "Picture added. Use Select to move or resize it." else "Image added beside verse $verse. Use Select to move or resize it."
         }
+    }
+
+    /** Puts a picture copied to the clipboard (e.g. a screenshot) into the margin (MRG-7). */
+    fun pasteImage() {
+        val app = getApplication<Application>()
+        val clip = (app.getSystemService(Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager).primaryClip
+        val uri = clip?.takeIf { it.itemCount > 0 }?.getItemAt(0)?.uri
+        val isImage = uri != null && (clip.description.hasMimeType("image/*") || app.contentResolver.getType(uri)?.startsWith("image/") == true)
+        if (uri == null || !isImage) {
+            message = "There's no picture on the clipboard. Copy an image first, then paste."
+            return
+        }
+        insertImage(uri)
+    }
+
+    /** A file for the camera to save a photo into, shared with it through the app's FileProvider. */
+    fun newCameraUri(): Uri {
+        val app = getApplication<Application>()
+        val dir = File(app.cacheDir, "camera").apply { mkdirs() }
+        dir.listFiles()?.forEach { it.delete() } // earlier photos have already been copied
+        val file = File(dir, "photo-${System.currentTimeMillis()}.jpg")
+        return androidx.core.content.FileProvider.getUriForFile(app, app.packageName + ".files", file)
     }
 
     private fun importImage(uri: Uri, id: Long): Pair<String, Float>? = try {
@@ -661,58 +2393,220 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         return null
     }
 
-    // ---------- notes & bookmarks ----------
+    // ---------- Bible hyperlinks ----------
 
-    fun setNote(t: VerseTarget, text: String) {
-        val map = notesFor(t.book, t.chapter)
-        if (text.isBlank()) map.remove(t.verse) else map[t.verse] = text
-        io { user.setNote(t.book, t.chapter, t.verse, text) }
-    }
-
-    fun isBookmarked(t: VerseTarget) = bookmarks.any { it.book == t.book && it.chapter == t.chapter && it.verse == t.verse }
-
-    fun toggleBookmark(t: VerseTarget) {
-        val existing = bookmarks.firstOrNull { it.book == t.book && it.chapter == t.chapter && it.verse == t.verse }
-        if (existing != null) {
-            bookmarks.remove(existing)
-            io { user.deleteBookmark(existing.id) }
-        } else {
-            val b = Bookmark(newId(), t.book, t.chapter, t.verse, System.currentTimeMillis())
-            bookmarks.add(0, b)
-            io { user.addBookmark(b) }
+    /** "Mark 1:9\u201311", "Psalms 23" or "Psalms 1\u201341" for a passage. */
+    fun passageLabel(p: Passage): String {
+        val name = bible.book(p.book).name
+        return when {
+            p.verse == 1 && p.endVerse >= 999 && p.chapter == p.endChapter -> "$name ${p.chapter}"
+            p.verse == 1 && p.endVerse >= 999 -> "$name ${p.chapter}\u2013${p.endChapter}"
+            else -> refLabel(p.startId, p.endId)
         }
     }
 
-    fun deleteBookmark(b: Bookmark) {
-        bookmarks.remove(b)
-        io { user.deleteBookmark(b.id) }
+    /** The passage's verses in [version], up to [PASSAGE_LIMIT] of them. */
+    fun passageVerses(p: Passage, version: String): List<Pair<Int, String>> =
+        text(version).versesBetween(p.startId, p.endId, PASSAGE_LIMIT)
+
+    /**
+     * Opens a linked passage: in the panel it came from, or [beside] it in the other panel (opening
+     * split view if needed) to read parallel accounts side by side (LINK-3).
+     */
+    /** Brings the tab's Bible panel into view if both panels show study views (it takes the second one's place). */
+    fun showBible() {
+        if (tab.bibleHidden) tab.studies.lastOrNull()?.let { setSlotView(Slot.Study(it), null) }
     }
 
+    fun openPassage(p: Passage, from: Int, beside: Boolean) {
+        passagePop = null
+        showBible()
+        var target = from.coerceIn(0, panels.lastIndex)
+        if (beside) {
+            if (panels.size == 1) {
+                // The passage takes the tab's other panel (a study view makes way for it).
+                tab.studies.lastOrNull()?.let { setSlotView(Slot.Study(it), null) } ?: addPanel()
+                target = target.coerceIn(0, panels.lastIndex)
+            }
+            if (linkPanels) {
+                linkPanels = false
+                message = "Panels unlinked to show the passage beside."
+            }
+            target = panels.indices.firstOrNull { it != target } ?: target
+        }
+        activePanel = target
+        goTo(target, p.book, p.chapter, p.verse)
+    }
+
+    // ---------- book picker markers ----------
+
+    /** Where the user has notes, for the book picker (read from the database, after pending writes). */
+    suspend fun loadMarkers(version: String): MarkerIndex =
+        withContext(dbDispatcher) { MarkerIndex(user.markerRows(version), user.notedVerses()) }
+
+    /** Visible layers, in drawing order: their items are the ones marked in the book picker. */
+    fun visibleLayerIds(): List<Long> = layers.filter { it.visible }.map { it.id }
+
+    // ---------- notes ----------
+
+    /** Saves a typed note on verses [t]..[endVerse] of one chapter (NOTE-1); blank text deletes it. */
+    fun setNote(t: VerseTarget, text: String, endVerse: Int = t.verse) {
+        val map = notesFor(t.book, t.chapter)
+        if (text.isBlank()) map.remove(t.verse) else map[t.verse] = TypedNote(t.verse, maxOf(t.verse, endVerse), text)
+        io { user.setNote(t.book, t.chapter, t.verse, text, endVerse) }
+    }
+
+    // ---------- bookmarks become highlights (0.9) ----------
+
+    /**
+     * Bookmarks were replaced by highlights in 0.9: each saved bookmark becomes a yellow highlight
+     * over its whole verse in the KJV, tagged "bookmark" (and its folder's name), on the first
+     * layer. Runs at start-up and after restoring an older backup; nothing happens once done.
+     */
+    fun convertBookmarks() {
+        val old = user.bookmarks()
+        if (old.isEmpty()) return
+        val layer = layers.firstOrNull()?.id ?: 1L
+        for (b in old) {
+            val verses = text(bible.code).chapter(b.book, b.chapter)
+            var offset = 0
+            for (v in verses) {
+                val numberLen = v.verse.toString().length + 1
+                if (v.verse == b.verse) {
+                    val h = Highlight(newId(), layer, bible.code, b.book, b.chapter, offset + numberLen, offset + numberLen + v.text.length, HIGHLIGHT_COLORS[0])
+                    user.insert(h)
+                    user.setTags("h:${h.id}", (setOf("bookmark") + listOfNotNull(b.folder.ifEmpty { null })).toSortedSet())
+                    break
+                }
+                offset += numberLen + v.text.length + 1 // the verse, then the line break or space after it
+            }
+            user.deleteBookmark(b.id)
+        }
+    }
+
+
     // ---------- backup & restore ----------
+
+    /** Writes everything (the notes database and pictures) as one zip. Call on [dbDispatcher]. */
+    private fun writeBackup(os: java.io.OutputStream) {
+        user.checkpoint()
+        val dbFile = getApplication<Application>().getDatabasePath(UserDb.NAME)
+        ZipOutputStream(os).use { zip ->
+            zip.putNextEntry(ZipEntry("userdata.db"))
+            dbFile.inputStream().use { it.copyTo(zip) }
+            zip.closeEntry()
+            imagesDir.listFiles()?.forEach { f ->
+                zip.putNextEntry(ZipEntry("images/${f.name}"))
+                f.inputStream().use { it.copyTo(zip) }
+                zip.closeEntry()
+            }
+            // Imported Bibles (BIB-4) go too, so a new tablet gets them back.
+            val imported = BibleRepository.ALL.filter { it.imported }
+            if (imported.isNotEmpty()) {
+                zip.putNextEntry(ZipEntry("bibles/imported.json"))
+                zip.write(BibleRepository.importedJson().toByteArray())
+                zip.closeEntry()
+                for (v in imported) {
+                    val f = File(v.asset)
+                    if (!f.exists()) continue
+                    zip.putNextEntry(ZipEntry("bibles/${f.name}"))
+                    f.inputStream().use { it.copyTo(zip) }
+                    zip.closeEntry()
+                }
+            }
+        }
+    }
 
     fun backup(uri: Uri) {
         viewModelScope.launch {
             val ok = withContext(dbDispatcher) {
                 runCatching {
-                    user.checkpoint()
-                    val app = getApplication<Application>()
-                    val dbFile = app.getDatabasePath(UserDb.NAME)
-                    app.contentResolver.openOutputStream(uri)?.use { os ->
-                        ZipOutputStream(os).use { zip ->
-                            zip.putNextEntry(ZipEntry("userdata.db"))
-                            dbFile.inputStream().use { it.copyTo(zip) }
-                            zip.closeEntry()
-                            imagesDir.listFiles()?.forEach { f ->
-                                zip.putNextEntry(ZipEntry("images/${f.name}"))
-                                f.inputStream().use { it.copyTo(zip) }
-                                zip.closeEntry()
-                            }
-                        }
-                    } ?: error("Couldn't write file")
+                    getApplication<Application>().contentResolver.openOutputStream(uri)?.use { writeBackup(it) }
+                        ?: error("Couldn't write file")
                 }.isSuccess
             }
             message = if (ok) "Backup saved." else "Backup failed."
         }
+    }
+
+    // ---------- automatic backups (DATA-6) ----------
+
+    var autoBackup by mutableStateOf(runCatching { AutoBackup.valueOf(prefs.getString("autoBackup", "OFF")!!) }.getOrDefault(AutoBackup.OFF))
+    /** A folder the user chose for automatic backups (a document-tree URI), or null for app storage. */
+    var backupFolder by mutableStateOf(prefs.getString("backupFolder", null))
+    var lastAutoBackup by mutableLongStateOf(prefs.getLong("lastAutoBackup", 0L))
+        private set
+
+    /** Where backups go when no folder is chosen: Android/data/<app>/files/Backups. */
+    private val appBackupDir: File get() = File(getApplication<Application>().getExternalFilesDir(null) ?: getApplication<Application>().filesDir, "Backups")
+
+    /** A readable name for where automatic backups go. */
+    fun backupFolderName(): String = backupFolder?.let { Uri.parse(it).lastPathSegment?.substringAfterLast(':')?.ifEmpty { null } ?: "Chosen folder" }
+        ?: "App storage (Android/data)"
+
+    /**
+     * Makes an automatic backup if one is due (DATA-6): run when the app goes to the background.
+     * Keeps the [KEEP_BACKUPS] newest automatic backups. Returns the job, or null if none was due.
+     */
+    fun autoBackupIfDue(now: Long = System.currentTimeMillis(), force: Boolean = false): kotlinx.coroutines.Job? {
+        val every = autoBackup.days
+        if (every == 0 && !force) return null
+        if (!force && now - lastAutoBackup < every * 24L * 3600_000L - 3600_000L) return null
+        lastAutoBackup = now
+        prefs.edit { putLong("lastAutoBackup", now) }
+        val name = "bible-study-auto-" + java.text.SimpleDateFormat("yyyy-MM-dd-HHmmss", java.util.Locale.US).format(java.util.Date(now)) + ".zip"
+        val folder = backupFolder
+        val app = getApplication<Application>()
+        return viewModelScope.launch(dbDispatcher) {
+            runCatching {
+                if (folder != null) {
+                    val tree = Uri.parse(folder)
+                    val dir = android.provider.DocumentsContract.buildDocumentUriUsingTree(tree, android.provider.DocumentsContract.getTreeDocumentId(tree))
+                    val doc = android.provider.DocumentsContract.createDocument(app.contentResolver, dir, "application/zip", name)
+                        ?: error("Couldn't create the backup file")
+                    app.contentResolver.openOutputStream(doc)?.use { writeBackup(it) }
+                    pruneTree(tree)
+                } else {
+                    val dir = appBackupDir.apply { mkdirs() }
+                    File(dir, name).outputStream().use { writeBackup(it) }
+                    dir.listFiles { f -> f.name.startsWith("bible-study-auto-") }?.sortedByDescending { it.name }
+                        ?.drop(KEEP_BACKUPS)?.forEach { it.delete() }
+                }
+            }.onFailure { withContext(Dispatchers.Main) { message = "Automatic backup failed: ${it.message}" } }
+        }
+    }
+
+    /** The automatic backups kept in app storage, newest first (for Settings and tests). */
+    fun appBackups(): List<File> =
+        appBackupDir.listFiles { f -> f.name.startsWith("bible-study-auto-") }?.sortedByDescending { it.name } ?: emptyList()
+
+    private fun pruneTree(tree: Uri) {
+        val app = getApplication<Application>()
+        val children = android.provider.DocumentsContract.buildChildDocumentsUriUsingTree(
+            tree, android.provider.DocumentsContract.getTreeDocumentId(tree),
+        )
+        val found = ArrayList<Pair<String, String>>()
+        app.contentResolver.query(
+            children,
+            arrayOf(android.provider.DocumentsContract.Document.COLUMN_DOCUMENT_ID, android.provider.DocumentsContract.Document.COLUMN_DISPLAY_NAME),
+            null, null, null,
+        )?.use { c -> while (c.moveToNext()) found += c.getString(0) to c.getString(1) }
+        found.filter { it.second.startsWith("bible-study-auto-") }.sortedByDescending { it.second }.drop(KEEP_BACKUPS).forEach { (id, _) ->
+            runCatching {
+                android.provider.DocumentsContract.deleteDocument(app.contentResolver, android.provider.DocumentsContract.buildDocumentUriUsingTree(tree, id))
+            }
+        }
+    }
+
+    // ---------- export (DATA-5) ----------
+
+    /** A chapter export waiting for the active panel to draw it. */
+    var exportRequest by mutableStateOf<ExportRequest?>(null)
+
+    /** A file name for exporting the active panel's chapter, e.g. "John 3 (BSB)". */
+    fun exportName(): String {
+        val p = panels[activePanel.coerceIn(0, panels.lastIndex)]
+        return "${text(p.version).book(p.book).name} ${p.chapter} (${p.version})"
     }
 
     fun restore(uri: Uri) {
@@ -727,7 +2621,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                                 val e = zip.nextEntry ?: break
                                 val name = e.name
                                 val safe = name == "userdata.db" ||
-                                    (name.startsWith("images/") && !name.contains("..") && name.count { it == '/' } == 1)
+                                    ((name.startsWith("images/") || name.startsWith("bibles/")) && !name.contains("..") && name.count { it == '/' } == 1)
                                 if (!e.isDirectory && safe) {
                                     val out = File(tmp, name)
                                     out.parentFile?.mkdirs()
@@ -737,7 +2631,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                         }
                     } ?: error("Couldn't read file")
                     val newDb = File(tmp, "userdata.db")
-                    require(newDb.exists()) { "Not a Bible Study backup" }
+                    require(newDb.exists()) { "Not an Ink & Word backup" }
                     user.close()
                     val dbFile = app.getDatabasePath(UserDb.NAME)
                     File(dbFile.path + "-wal").delete()
@@ -745,8 +2639,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                     newDb.copyTo(dbFile, overwrite = true)
                     imagesDir.listFiles()?.forEach { it.delete() }
                     File(tmp, "images").listFiles()?.forEach { it.copyTo(File(imagesDir, it.name), overwrite = true) }
+                    File(tmp, "bibles/imported.json").takeIf { it.exists() }?.let {
+                        BibleRepository.restoreImported(app, it.readText(), File(tmp, "bibles"))
+                    }
                     tmp.deleteRecursively()
-                    user.layers() to user.bookmarks()
+                    user.layers() to Unit
                 }
             }
             val result = ok.getOrNull()
@@ -758,27 +2655,58 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             highlights.values.forEach { it.clear() }
             marginStrokes.values.forEach { it.clear() }
             images.values.forEach { it.clear() }
+            marginTexts.values.forEach { it.clear() }
             notes.values.forEach { it.clear() }
             loaded.clear(); renders.clear(); bitmaps.clear(); requestedBitmaps.clear()
             selection = null
             undoStack.clear(); redoStack.clear(); editVersion++
             layers.clear(); layers.addAll(result.first)
             if (layers.none { it.id == activeLayerId }) activeLayerId = layers.firstOrNull()?.id ?: 1L
-            bookmarks.clear(); bookmarks.addAll(result.second)
+            convertBookmarks() // an older backup may still have bookmarks
+            tags.clear(); tags.putAll(user.tags())
+            meanings.clear(); meanings.putAll(user.meanings())
+            workspaces.clear(); workspaces.addAll(user.workspaces().mapNotNull { (n, j) -> Workspace.fromJson(n, j) })
+            sketches.clear(); sketches.addAll(user.sketches()) // sketch pages (SKT)
+            readingGeneration++ // reading stats came with the backup
             dataGeneration++
             message = "Notes restored."
         }
     }
 
+
+    // The ready-made sketch pages are there from the first start (SKT-5). Last in the class, so
+    // everything they use is set up.
+    init {
+        // The first start makes them all; after an update, only pages new in that version.
+        runCatching { addReadyMadePages(onlyNew = true) }
+    }
+
     companion object {
+        /** Reading time pauses after this long without a touch (ANL-1). */
+        const val IDLE_MS = 120_000L
+
+        /** Capitalised words that start sentences, not names worth a dictionary article. */
+        private val COMMON_WORDS = setOf(
+            "and", "the", "then", "but", "for", "now", "when", "who", "what", "this", "that", "these", "they", "there",
+            "thou", "thy", "thee", "you", "your", "his", "her", "him", "she", "with", "from", "after", "behold",
+            "verily", "therefore", "how", "why", "which", "not", "all", "let", "are", "was", "were", "has", "have",
+        )
         private const val COPY_SHIFT = 30f
+        private const val MAX_HISTORY = 100
+        const val PASSAGE_LIMIT = 80
+        /** How many automatic backups are kept (DATA-6). */
+        const val KEEP_BACKUPS = 5
     }
 
     private fun io(block: () -> Unit) {
         viewModelScope.launch(dbDispatcher) { block() }
     }
 
+    /** Waits until every save queued so far has reached the database (for tests). */
+    fun awaitSaves() = kotlinx.coroutines.runBlocking(dbDispatcher) {}
+
     override fun onCleared() {
+        sound.release()
         super.onCleared()
         dbDispatcher.close()
     }

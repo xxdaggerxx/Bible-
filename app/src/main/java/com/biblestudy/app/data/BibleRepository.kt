@@ -5,13 +5,24 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import com.biblestudy.app.model.BookInfo
 import com.biblestudy.app.model.CrossRef
+import com.biblestudy.app.model.Heading
 import com.biblestudy.app.model.SearchHit
 import com.biblestudy.app.model.SearchScope
 import com.biblestudy.app.model.Verse
+import com.biblestudy.app.model.VerseId
 import java.io.File
 
-/** A Bible version bundled with the app. */
-data class BibleVersion(val code: String, val name: String, val asset: String, val copyright: String)
+/** A Bible version bundled with the app, with a one-line [summary] and a short [description] for readers. */
+data class BibleVersion(
+    val code: String,
+    val name: String,
+    val asset: String,
+    val copyright: String,
+    val summary: String,
+    val description: String,
+    /** Imported by the user (BIB-4): [asset] is then the database file's full path. */
+    val imported: Boolean = false,
+)
 
 /**
  * Read-only access to one bundled Bible version (SQLite with an FTS4 search index; the KJV
@@ -24,8 +35,11 @@ class BibleRepository(context: Context, val version: BibleVersion) {
     val books: List<BookInfo>
 
     init {
-        val file = context.getDatabasePath("bible_${version.asset.removeSuffix(".db")}_v$DB_VERSION.db")
-        if (!file.exists()) {
+        val base = "bible_${version.asset.removeSuffix(".db")}_v"
+        val file = if (version.imported) File(version.asset) else context.getDatabasePath("$base$DB_VERSION.db")
+        if (!version.imported && !file.exists()) {
+            // Remove copies of older bundled databases.
+            file.parentFile?.listFiles()?.filter { it.name.startsWith(base) && it.name != file.name }?.forEach { it.delete() }
             file.parentFile?.mkdirs()
             val tmp = File(file.path + ".tmp")
             context.assets.open("bibles/${version.asset}").use { input ->
@@ -51,6 +65,26 @@ class BibleRepository(context: Context, val version: BibleVersion) {
             buildList { while (c.moveToNext()) add(Verse(c.getInt(0), c.getString(1))) }
         }
 
+    /** Section headings in a chapter (only databases built with headings have any). */
+    fun headings(book: Int, chapter: Int): List<Heading> = try {
+        val lo = VerseId.of(book, chapter, 0)
+        db.rawQuery(
+            "SELECT verse_id, level, text, refs FROM headings WHERE verse_id BETWEEN ? AND ? ORDER BY verse_id, level",
+            arrayOf(lo.toString(), (lo + 999).toString()),
+        ).use { c ->
+            buildList { while (c.moveToNext()) add(Heading(VerseId.verse(c.getInt(0)), c.getInt(1), c.getString(2), c.getString(3))) }
+        }
+    } catch (e: SQLiteException) {
+        emptyList() // no headings table
+    }
+
+    /** Verses from [fromId] to [toId] (verse ids), in order, at most [limit]. */
+    fun versesBetween(fromId: Int, toId: Int, limit: Int): List<Pair<Int, String>> =
+        db.rawQuery(
+            "SELECT id, text FROM verses WHERE id BETWEEN ? AND ? ORDER BY id LIMIT $limit",
+            arrayOf(fromId.toString(), toId.toString()),
+        ).use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getString(1)) } }
+
     fun verseText(id: Int): String? =
         db.rawQuery("SELECT text FROM verses WHERE id = ?", arrayOf(id.toString())).use { c ->
             if (c.moveToFirst()) c.getString(0) else null
@@ -66,7 +100,8 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         }
 
     fun search(raw: String, scope: SearchScope, currentBook: Int): List<SearchHit> {
-        val query = ftsQuery(raw) ?: return emptyList()
+        val (wanted, excluded) = splitExcluded(raw)
+        val query = ftsQuery(wanted) ?: return emptyList()
         val (lo, hi) = when (scope) {
             SearchScope.ALL -> 1 to 66
             SearchScope.OT -> 1 to 39
@@ -81,7 +116,10 @@ class BibleRepository(context: Context, val version: BibleVersion) {
                 arrayOf(query, lo.toString(), hi.toString()),
             ).use { c ->
                 buildList {
-                    while (c.moveToNext()) add(SearchHit(c.getInt(0), c.getInt(1), c.getInt(2), c.getString(3)))
+                    while (c.moveToNext()) {
+                        val hit = SearchHit(c.getInt(0), c.getInt(1), c.getInt(2), c.getString(3))
+                        if (!containsAny(hit.text, excluded)) add(hit)
+                    }
                 }
             }
         } catch (e: SQLiteException) {
@@ -91,20 +129,126 @@ class BibleRepository(context: Context, val version: BibleVersion) {
 
     companion object {
         /** Bump when a bundled database changes, so the new copy replaces the old one. */
-        private const val DB_VERSION = 1
+        private const val DB_VERSION = 2
         const val MAX_RESULTS = 2000
 
-        val KJV = BibleVersion("KJV", "King James Version (1769)", "kjv.db", "Public domain.")
+        val KJV = BibleVersion(
+            "KJV", "King James Version (1769)", "kjv.db", "Public domain.",
+            summary = "Classic 1611 English, word for word",
+            description = "Translated by a team of English scholars and first published in 1611; this is the " +
+                "1769 revision found in most KJV Bibles today. It follows the Hebrew and Greek closely, word for " +
+                "word, in the Early Modern English of its time (\u201cthee\u201d, \u201cthou\u201d, " +
+                "\u201cbelieveth\u201d). Its New Testament is based on the Greek Textus Receptus. Loved for its " +
+                "beauty and memorable phrasing, though some words have changed meaning since.",
+        )
         val BSB = BibleVersion(
             "BSB", "Berean Standard Bible", "bsb.db",
             "The Holy Bible, Berean Standard Bible (BSB). Dedicated to the public domain, 2023.",
+            summary = "Modern, accurate and readable \u2014 closest to the NIV",
+            description = "A modern translation first published in 2016 and given to the public domain in " +
+                "2023. It balances word-for-word accuracy with natural, current English, much like the NIV or " +
+                "ESV. The New Testament mainly follows the modern critical Greek text, so a few verses found in " +
+                "the KJV (such as Matthew 17:21) appear only as footnotes. Pronouns for God are capitalised " +
+                "(\u201cHe\u201d, \u201cHis\u201d). The section headings shown in this app come from the BSB.",
         )
         val WEB = BibleVersion(
             "WEB", "World English Bible", "web.db",
             "World English Bible (WEB). Public domain. \u201cWorld English Bible\u201d is a trademark of eBible.org.",
+            summary = "Modern-English update of the 1901 ASV, fairly literal",
+            description = "A revision of the American Standard Version (1901) into modern English, made by " +
+                "volunteers and completed in the early 2000s. It stays close to the original wording \u2014 more " +
+                "literal than the NIV or NLT \u2014 while replacing words like \u201cthee\u201d and " +
+                "\u201cthou\u201d. Its New Testament follows the Majority Text (the reading of most Greek " +
+                "manuscripts), so it keeps almost all the verses the KJV has.",
         )
-        /** In the order shown in the version picker. */
-        val ALL = listOf(KJV, BSB, WEB)
+        val BUNDLED = listOf(KJV, BSB, WEB)
+
+        /** Versions the user imported (BIB-4), remembered in files/bibles/imported.json. */
+        private val imported = androidx.compose.runtime.mutableStateListOf<BibleVersion>()
+
+        /** Every version, in the order shown in the version picker: the bundled ones, then imported. */
+        val ALL: List<BibleVersion> get() = BUNDLED + imported
+
+        private fun registry(context: Context) = File(File(context.filesDir, "bibles").apply { mkdirs() }, "imported.json")
+
+        fun loadImported(context: Context) {
+            val f = registry(context)
+            val list = if (f.exists()) runCatching { BibleImport.fromJson(org.json.JSONArray(f.readText())) }.getOrDefault(emptyList()) else emptyList()
+            imported.clear()
+            imported.addAll(list.filter { File(it.asset).exists() })
+        }
+
+        private fun saveRegistry(context: Context) {
+            val a = org.json.JSONArray()
+            imported.forEach { a.put(BibleImport.toJson(it)) }
+            registry(context).writeText(a.toString())
+        }
+
+        fun addImported(context: Context, v: BibleVersion) {
+            imported.removeAll { it.code == v.code }
+            imported.add(v)
+            saveRegistry(context)
+        }
+
+        /** The imported versions' list as saved in backups (DATA-1). */
+        fun importedJson(): String = org.json.JSONArray().also { a -> imported.forEach { a.put(BibleImport.toJson(it)) } }.toString()
+
+        /**
+         * Brings back imported versions from a backup: [files] holds their database files by name.
+         * Each is added (replacing one with the same code) with its file in this tablet's folder.
+         */
+        fun restoreImported(context: Context, json: String, files: File) {
+            val dir = File(context.filesDir, "bibles").apply { mkdirs() }
+            val list = runCatching { BibleImport.fromJson(org.json.JSONArray(json)) }.getOrDefault(emptyList())
+            for (v in list) {
+                val src = File(files, File(v.asset).name)
+                if (!src.exists()) continue
+                val dest = File(dir, src.name)
+                src.copyTo(dest, overwrite = true)
+                addImported(context, v.copy(asset = dest.path))
+            }
+        }
+
+        fun removeImported(context: Context, code: String) {
+            imported.firstOrNull { it.code == code }?.let { File(it.asset).delete() }
+            imported.removeAll { it.code == code }
+            saveRegistry(context)
+        }
+
+        /** The database file a version reads, for its size in the version manager (BIB-5). */
+        fun fileOf(context: Context, v: BibleVersion): File =
+            if (v.imported) File(v.asset) else context.getDatabasePath("bible_${v.asset.removeSuffix(".db")}_v$DB_VERSION.db")
+
+        /**
+         * Separates words to leave out (SRCH-3), written with a minus sign ("love -world"), from the
+         * rest of the query. Returns the query without them and the excluded words (lower case,
+         * a trailing * kept for word beginnings).
+         */
+        fun splitExcluded(raw: String): Pair<String, List<String>> {
+            val excluded = ArrayList<String>()
+            val kept = StringBuilder()
+            Regex("\"[^\"]*\"|\\S+").findAll(raw).forEach { m ->
+                val tok = m.value
+                if (tok.length > 1 && tok.startsWith("-") && !tok.startsWith("\"")) {
+                    val w = tok.drop(1).lowercase().replace('\'', '\u2019').filter { it.isLetterOrDigit() || it == '\u2019' || it == '*' }
+                    if (w.trimEnd('*').isNotEmpty()) excluded += w
+                } else {
+                    kept.append(tok).append(' ')
+                }
+            }
+            return kept.toString().trim() to excluded
+        }
+
+        /** Whether [text] has any of [words] as a whole word (or word beginning, for "lov*"). */
+        fun containsAny(text: String, words: List<String>): Boolean {
+            if (words.isEmpty()) return false
+            val t = text.lowercase().replace('\'', '\u2019')
+            return words.any { w ->
+                val stem = Regex.escape(w.trimEnd('*'))
+                val end = if (w.endsWith("*")) "" else "(?![\\p{L}\\p{N}])"
+                Regex("(?<![\\p{L}\\p{N}])$stem$end").containsMatchIn(t)
+            }
+        }
 
         /**
          * Turns what the user typed into an FTS4 query:
@@ -139,7 +283,7 @@ class BibleRepository(context: Context, val version: BibleVersion) {
 
         /** Lower-case words from a query, used to bold matches in results. */
         fun terms(raw: String): List<String> =
-            Regex("[\\p{L}\u2019']+").findAll(raw).map { it.value.lowercase().replace('\'', '\u2019') }
+            Regex("[\\p{L}\u2019']+").findAll(splitExcluded(raw).first).map { it.value.lowercase().replace('\'', '\u2019') }
                 .filter { it != "or" && it.length > 1 }.toList()
     }
 }

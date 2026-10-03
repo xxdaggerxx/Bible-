@@ -1,6 +1,6 @@
-# Bible Study — version 0.3
+# Ink & Word — version 1.5.0
 
-A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
+**Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
 ## Install on your tablet (about 30 minutes the first time)
 
@@ -33,13 +33,13 @@ On a computer with Android Studio or the Android SDK and JDK 17+:
 ./gradlew assembleRelease
 ```
 
-The signed file appears at `app/build/outputs/apk/release/app-release.apk`. Nothing else to set up: Gradle finds `keystore.properties` on its own. If the build prints "No release signing key found", that file is missing and the APK is signed with a throwaway debug key instead. Don't install that one over your real copy.
+The signed file appears at `app/build/outputs/apk/release/app-release.apk` (about 38 MB; it runs on any Android 10+ tablet). Nothing else to set up: Gradle finds `keystore.properties` on its own. If the build prints "No release signing key found", that file is missing and the APK is signed with a throwaway debug key instead. Don't install that one over your real copy.
 
 In Android Studio you can also use *Build → Generate Signed App Bundle / APK → APK*, choose *Choose existing…*, and pick `signing/biblestudy-release.jks` with the password from `keystore.properties`.
 
 ### Install or update on the tablet
 
-1. Copy `app-release.apk` to the tablet (USB cable, cloud drive or email) and tap it in *My Files*.
+1. Copy the APK to the tablet (USB cable, cloud drive or email) and tap it in *My Files*.
 2. If Android warns about unknown sources, allow it for the app you opened the file from, go back, and tap **Install**.
 3. To update, build a new APK the same way, with a higher `versionCode` in `app/build.gradle.kts`, and install it over the old one. Your notes stay.
 
@@ -65,6 +65,280 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.5
+
+- **Verse details in a panel:** tapping a verse opens its details (the verse with its words to study, *Compare versions*, *Hebrew/Greek*, people and places, your typed note and cross-references) in a panel beside the text instead of a pop-up window. The panel follows each verse you tap. A word study opened from it shows in the same panel, with *Back to the verse*.
+- When both panels are already in use, the details open in the window as before. *Settings → Verse details in a panel* turns the panel off.
+- Known gap: the panel menu now lists 14 views and scrolls on smaller screens.
+
+## New in version 1.4
+
+- **About the book as a panel view:** the book's introduction beside the text, following the book you're reading. You can write on it.
+- **Lasso on study views:** draw round writing on an article or commentary, then *Colour*, *Layer* or *Delete*. Writing sounds now play on study views too.
+- **New tab from anywhere:** *New tab* in every passage pop-over (links, cross-references, references in notes), and holding a finger on a search result opens it in a new tab.
+- **Drag tabs** along the strip to reorder them (hold, then drag). Holding and letting go still opens the tab's menu.
+
+## New in version 1.3
+
+- **Eleven commentaries.** Besides Matthew Henry's Concise: Matthew Henry's Complete, Jamieson-Fausset-Brown, Wesley's Notes, the Geneva Bible notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin's Commentaries and Spurgeon's Treasury of David (Psalms). Choose one from the menu at the top of the commentary panel. Each is unpacked the first time it's opened (a few seconds).
+- **About this commentary:** the ⓘ gives the author, dates, background, what kind of commentary it is and what it's best for.
+- **Commentary linked to the Bible, both ways:** scroll the Bible and the commentary keeps the note on the verse at the top in view; scroll the commentary and the Bible follows. The link button turns it off.
+- **Two commentaries side by side,** each panel with its own.
+- **Three more panel views:** *Compare versions*, *Hebrew/Greek* and *Word study*. They follow the verse you tap; a Word study panel shows the word you tap.
+
+## New in version 1.2
+
+- **Tabs, like a browser.** *Panels → New tab*, or *Open in new tab* from a panel's menu. Once there are two tabs, a strip under the toolbar shows them: tap to switch, **+** for another, hold a finger on one to rename, move or close it. Each tab keeps its own panels, passages and arrangement, and tabs are kept when the app closes.
+- **Any panel shows anything.** A tab has one or two panels, side by side or top and bottom. The button at the top left of each panel (or a study view's name) picks what it shows: the Bible, or Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places or Sketch pages. The same menu adds a panel beside, switches *Top and bottom* / *Side by side*, opens the panel in a new tab, or closes it. Double-tap the divider to make the panels equal.
+  - Study views follow the Bible panel beside them. *Keep on this passage* pins one where it is.
+  - Two study views can share a tab (e.g. the dictionary above topics); they stay on the passage you were reading.
+  - Two Bible panels can still be linked to scroll together.
+- **Write on study views.** The pen, highlighter and eraser work on dictionary articles, topics, the commentary, names & places and cross-references, over the text (no margins). Writing belongs to the article, comes back wherever it's opened, and moves with its words when a panel is resized. The highlighter snaps to whole words. Undo, layers and backups include it.
+- **Saved layouts keep every tab.** Opening one replaces your tabs. Layouts saved before 1.2 open as tabs of up to two panels.
+- **Your painted icon:** the open Bible with a quill now on a blue-to-gold background, replacing the drawn icon from 1.1.3. It fits round, square and rounded launcher shapes.
+- **Two panels per tab at most.** If you had three panels, or two panels and the study pane, the extra one moves to a second tab when you update, so nothing is lost.
+
+## New in version 1.1.3
+
+- **A new name: Ink & Word.** The app was called *Bible Study*. The new name shows on the home screen, in *Settings → About* and in the Credits window, and exported pages now say "Exported from Ink & Word". Backups you save yourself are named `ink-and-word-backup-…zip`.
+- **A new icon:** an open Bible with a quill writing on its right page, in cream and gold on deep ink blue.
+- Nothing else changes. It installs over 1.1.2 and keeps your notes, and old backups (including automatic ones) still restore.
+
+## New in version 1.1.2
+
+- **Handwriting reading is removed.** *Read my handwriting* (in Settings) and *Convert to text* (in the lasso bar) are gone, and *Search → My notes* searches typed notes and text boxes only. Your handwriting itself is untouched. Without Google's handwriting library the app is one 38 MB download that runs on any Android 10+ tablet, and it no longer asks for internet access at all.
+- **Fixed:** the app could occasionally lose count of chapters still loading, which stopped margin notes from getting extra room below their verse (expand to fit).
+
+## New in version 1.1.1
+
+- **Sketch pages have no edges.** A page grows with what's on it, keeping at least a page's width of room to the right and a page's height below. Move around with a finger, and pinch out until the whole page is in view. *More space below* is gone, since the page grows by itself. Paper lines, grids and dots are drawn only where you're looking, so big pages stay quick.
+
+## New in version 1.1
+
+- **Writing sounds.** A soft pen-on-paper sound follows your writing. It gets louder and brighter when you write fast or press hard, and stops when the pen rests or lifts. Each tool has its own sound:
+  - the pen, a fine scratch;
+  - the highlighter, a felt-tip swish;
+  - the eraser, a rubbing.
+
+  The sound is made on the tablet as you write, not from recordings. *Settings → Pen & ink → Writing sounds* turns it off and sets the volume. It plays through media volume.
+- **Pen hover.** With the S Pen just above the screen, a small mark shows where it will touch: a dot the size of the pen, a bar for the highlighter, a circle for the eraser. Tilt shading isn't included, because the Tab S9's S Pen doesn't report tilt.
+- **Verse cards work like the Bible page.**
+  - Tap a verse on a card for the verse window: word study, *Compare versions*, *Hebrew/Greek*, notes and cross-references.
+  - Tap its reference for the passage.
+  - Words of Jesus show in red.
+  - Hold a finger on a card for its bar: switch version, *Copy*, *Share*, size, background, delete.
+  - A highlight on a card is the Bible's own highlight on that verse. It shows on the card, in the Bible and in every version, and erasing it anywhere erases it everywhere.
+  - Existing cards, including those on the ready-made pages, work this way already.
+- **Highlights snap in text boxes.** The highlighter snaps to the words of a text box; the eraser takes them out.
+- **Your handwriting can be searched** (removed again in 1.1.2). Switch on *Settings → Pen & ink → Read my handwriting*. The first time, it downloads Google's handwriting model once (about 20 MB, Wi-Fi). After that it reads on the tablet and nothing is sent anywhere. This is the only time the app uses the internet.
+  - *Search → My notes* then finds handwritten words in the margins and on sketch pages.
+  - Lasso some handwriting and tap *Convert to text* to make it a text box. Undo brings the ink back.
+- **Full-screen margin notes.** Tap a verse, then *Write full screen*, for a whole page about that verse. It shows shrunk to fit beside the verse; tap it to open it again.
+- **Five more ready-made pages:**
+  - *Paul's missionary journeys* and *The Exodus and the wilderness*, drawn on the offline map;
+  - *The life of Christ*, with the four Gospels side by side;
+  - *The twelve tribes*;
+  - *Solomon's and Herod's temples*.
+
+  If you already have the first four, only the new ones are added.
+
+Your notes database is upgraded the first time 1.1 opens.
+
+## New in version 1.0.2
+
+- **Any sketch page beside the text.** The study pane has a new choice, *Sketch pages*. Open it from the panels button (*Beside the text: Sketch pages*) or the pane's menu. It lists your pages and the ready-made ones. Tap one and it opens in a panel beside the Bible, so you can read and draw side by side. Tapping another swaps it into the same panel.
+- **Erasing a highlight erases it in every version.** Rub out a highlight in one version and it's gone from all of them, wherever it was made. With the *Partial* eraser, only the verse you erase over goes. One undo brings it back everywhere.
+
+## New in version 1.0.1
+
+- **The ready-made sketch pages come with the app.** *The feasts of Israel*, *The tabernacle*, *The kings of Israel and Judah* and *From Adam to Jesus* are already in *My notes → Sketch pages → Ready-made pages* when the app is installed, or on the first start after updating. You don't make them yourself any more. They're ordinary pages you can write on, and *Put back deleted ready-made pages* restores any you delete.
+- **Sketch pages can stand on their own.** A sketch page no longer has to belong to a verse. Turn off *Link to …* when making one, or use *Unlink* in its ⋮ menu. *Link to a passage…* links it again. Pages on their own open from *My notes → Sketch pages*.
+- *New sketch page* no longer has *Start from*; the ready-made pages are already there.
+
+## New in version 1.0
+
+Version 1.0 finishes the planned features. It adds Hebrew and Greek word by word, ready-made sketch pages, family trees and a Help guide.
+
+- **Help.** *⋮ → Help* explains every feature in plain words, one topic at a time, with a search box. The guide lives in `app/src/main/assets/help/guide.md` and is updated with every change. A test fails if a menu item or feature is missing from it.
+- **Hebrew and Greek word by word.** In a verse's window, tap *Hebrew* (Old Testament) or *Greek* (New Testament). Each word card shows:
+  - the original word, how it sounds and what it means in this verse;
+  - what kind of word it is.
+
+  Tap a card for its full grammar in plain words and a *Word study*. Hebrew runs right to left. Greek words found in only some manuscripts are paler, with a note on whether the KJV's text has them. The data is STEPBible's TAHOT and TAGNT, adding about 6 MB to the app.
+- **Words of Jesus in red.** *Settings → Reading → Words of Jesus in red*:
+  - The KJV and WEB use their own red-letter markings.
+  - The BSB has none, so its quotations are coloured where the WEB marks Jesus speaking. Other speakers in the same verse stay black.
+- **Ready-made sketch pages** (in 1.0.1 these come with the app, in *My notes → Sketch pages*):
+  - *The feasts of Israel*: the seven feasts of Leviticus 23 plus Purim and Hanukkah, on a year line, each with how it points to Christ.
+  - *The tabernacle*: a scale plan with numbered furniture, what each piece means, and verse cards.
+  - *The kings of Israel and Judah*: a timeline from 931 to 586 BC with Edwin Thiele's dates, good and evil kings coloured, the prophets of the time, and a link to each king's story.
+  - *From Adam to Jesus*: the line of descent through Genesis, Ruth and Matthew.
+
+  They're built from ordinary ink, text boxes and verse cards, so everything can be written on, moved or changed.
+- **Family trees.** *Family tree* on a person in Names & places shows:
+  - grandparents and parents;
+  - brothers and sisters;
+  - whom they married, and their children.
+
+  Tap anyone to see their family. *Copy to sketch page* draws the tree on a sketch page.
+- **Word differences.**
+  - *Compare versions* in the verse window lightly marks the words that differ from the version you're reading.
+  - *Settings → Reading → Mark word differences* does the same for two panels showing different versions. It's off by default because KJV and modern wording differ almost everywhere.
+- **Layer views.** In Layers, show the layers you want and tap *Save what’s shown…* to name the view, e.g. *Sermon prep*. Tap its name later to switch back with one tap.
+- **Export one layer.** A layer's ⋮ menu can export this chapter with only that layer's notes, as a PDF.
+- **Settings search.** Type in the box at the top of Settings to find an option.
+- **Backups include imported Bibles**, and restoring brings them back.
+- **Sketch pages can be re-linked:** the page's ⋮ menu has *Link to another passage…*.
+
+## New in version 0.9
+
+- **Sketch pages.** Use *Insert → Sketch page…* to make a full page (blank, lined, grid or dotted) for timelines, diagrams, maps and sketch notes.
+  - Every pen tool works on it, plus shapes, the lasso, layers, undo, pictures and text boxes.
+  - Each page is linked to the passage you were reading and opens from a small badge in that passage's margin.
+  - *My notes → Sketch pages* lists them all.
+  - The page's ⋮ menu changes the paper, adds more space below, renames it or deletes it.
+- **Verse cards and person or place cards.** *Insert → Verse card…*: type a reference like "John 3:16-18" and the verses land as a card whose reference is a link. *Person or place card…* does the same for anyone or anywhere in the Bible. Cards work in the margins too.
+- **Names and places.** A new study pane choice, *Names & places*, covers about 4,000 people and places.
+  - **People:** who they were, their family (parents, brothers and sisters, spouse, children; each one opens) and every verse that mentions them.
+  - **Places:** a description, the region and a dot on a small offline map you can zoom and drag.
+  - **Where to open it:** the verse window lists the people and places in a verse, and a word study on a name offers *About …*.
+- **Reading stats** (*⋮ → Reading stats*):
+  - how much of the Bible you've read, overall, by Testament and by book;
+  - time this week and in all, and days in a row;
+  - your last 30 days;
+  - your most-read chapters and books;
+  - a grid of every chapter, shaded by how often you've read it.
+
+  Read chapters are also tinted in the book picker. A chapter counts as read after a minute in it, scrolled through most of the way. Time pauses after two minutes without a touch. It's all kept on the tablet, and Settings can turn counting off or clear it.
+- **Reading layout.** *Settings → Reading* now offers *Paragraphs* (instead of one verse per line) and *Verse numbers* on or off. Ink and highlights stay on their words.
+- **Margin options.**
+  - *Expand to fit* opens space under a verse when its margin notes are taller than it.
+  - *Margins in every panel* can be turned off so only the first Bible panel has margins.
+- **Bibles.** *Settings → Bibles* lists each version with its size and copyright.
+  - *Import a Bible…* adds a version from USFM files (or a .zip of them), OSIS XML, or this app's own database.
+  - Imported versions work everywhere the built-in ones do (except word studies) and can be removed.
+  - This is how NIV or NLT files could be added once permission is granted. Only import versions you have the right to use.
+- **Exports** now carry the version's copyright line on every page.
+- **Bookmarks are replaced by highlights.**
+  - The *Bookmark* button, the *Bookmarks* tab and the red ribbons are gone.
+  - Each bookmark you had becomes a yellow highlight over its whole verse in the KJV, tagged "bookmark" and with its folder's name as a tag. Filter by those tags in *My notes → Highlights*.
+  - The Highlights list now shows each highlight's whole verse, with the highlighted words marked in its colour.
+  - The study pane's *My notes* lists the chapter's highlighted verses.
+
+Your notes database is upgraded the first time 0.9 opens. Backups include sketch pages and reading stats. (From 1.0, backups also include imported Bibles.)
+
+## New in version 0.8
+
+Version 0.8 adds offline study tools: Hebrew and Greek word studies, a Bible dictionary, a topical index and a commentary.
+
+- **Word studies.** Tap a word with your finger, then *Word study* in the verse window. You can also tap any word in the verse window's text. The word study shows:
+  - the Hebrew or Greek word and how it's pronounced;
+  - its meaning (Strong's) and how the KJV translates it;
+  - every verse that uses it in the version you're reading, counted by book.
+
+  Tap a verse in the list to go there. Works in the KJV, BSB and WEB.
+- **Search by Strong's number.** Type a number like `G26` (agapē, love) or `H2617` (chesed, lovingkindness) in Search to find every verse using that word.
+- **One menu for the study pane.** The study pane's choices are now one menu at its top:
+  - Search, Cross-references and My notes, as before;
+  - **Dictionary** (Easton's): it suggests the people and places in the chapter you're reading;
+  - **Topics** (Nave's): it suggests the topics for the verse you're on;
+  - **Commentary** (Matthew Henry's Concise): it follows the chapter and scrolls to the verse.
+
+  References in all three are links.
+- **Related passages.** Under a verse's cross-references:
+  - its topics;
+  - parallel accounts (other Gospels, Kings and Chronicles);
+  - passages listed under the same topics.
+- **Layers:** each layer's ⋮ menu now sets its colour and opacity (100%, 75%, 50% or 25%). Moving the layer up or down, renaming it and deleting it moved into the same menu to keep the rows short.
+- **Fixes to 0.7's rough edges:**
+  - On narrow portrait screens the margin drawer now slides over the text instead of pushing the page aside, and you can write in it there.
+  - The crop window shows a turned picture the way it's turned.
+  - A lasso selection can be rotated: drag the round handle above it. It settles on 15° steps, and pictures turn when it's a quarter turn.
+
+The app is about 10 MB bigger because of the study library. Your notes database is upgraded the first time 0.8 opens.
+
+## New in version 0.7
+
+- **Faster ink.** Pen strokes go straight to the screen through a front-buffered layer, as in Samsung Notes. Turn it off in *Settings → Pen & ink → Fast ink* if anything looks wrong.
+- **Settings.** *⋮ → Settings* holds every option in groups: Reading, Pen & ink, Highlights, Margins & panels, Verse window, Backup and About, plus *Reset settings to defaults*. The toolbar keeps only what you use while writing. Each tool's colours and sizes open from one button.
+- **Text boxes in the margins.** Use *Insert → Text box*, then type. Bible references you type, like "Rom 5:8" or "John 3:16-18", become links as you go. Tap a box to move it, change its size or colour, edit it or delete it.
+- **Resize with the lasso.** Drag the corner handle of a lasso selection to make ink, pictures and text boxes bigger or smaller.
+- **Read mode.** The lock button at the left of the toolbar stops the pen marking the page. The pen then scrolls and taps like a finger.
+- **Underline.** The highlighter's menu has *Highlight* and *Underline*. An underline snaps to the words like a highlight does.
+- **Shapes.** Draw a line, arrow, box or circle and hold the pen still at the end. It snaps to a clean shape. Ink can cross from the margin over the text.
+- **Colour meanings and tags.** Give each highlight colour a meaning (*Settings → Highlights → Colour meanings*, e.g. yellow = promises). Notes and highlights can carry tags. *My notes* (the notes button) lists all notes, highlights and bookmarks, and filters by tag or meaning.
+- **Cross-reference pop-overs.** Tapping a cross-reference in a verse's window or the study pane shows the passage in a pop-over instead of leaving your place.
+- **Turn and crop pictures.** Select a margin picture with the Select tool, then *Turn* or *Crop*.
+- **Saved layouts.** *Panels → Save this layout…* keeps the open panels, their passages and versions, and the study pane. Open it again from the same menu. (From 1.2 it keeps every tab.)
+- **Automatic backups.** *Settings → Backup → Automatic backup* makes a backup daily or weekly when you leave the app. It keeps the newest 5. Backups go to app storage, or to a folder you choose, such as a synced Google Drive or OneDrive folder.
+- **Export a chapter.** *⋮ → Export chapter as PDF…* or *as picture…* saves the chapter with your ink, highlights, pictures and text boxes, to share or print.
+
+Your notes database is upgraded the first time 0.7 opens. Back up first if you like (*⋮ → Back up my notes…*).
+
+## New in version 0.6
+
+- **Highlights list.** Next to Bookmarks there's now a *Highlights* tab. It lists every highlight in Bible order with its words, colour, version and layer. You can filter by colour or layer, tap one to go there, or remove it.
+- **Edit a highlight.** Hold a finger on highlighted words to select the whole highlight. The bar then offers other colours and *Remove highlight* instead of *Highlight*. Both can be undone.
+- **Highlights in every version.** A highlight shows in the other translations too, over the whole verses it covers and a shade lighter. Holding a finger on it there changes the original. Turn it off in *More → Highlights in every version*.
+- **Compare versions.** In a verse's window (tap a verse), *Compare versions* shows it in the KJV, BSB and WEB stacked together. Tap one to read in it.
+- **Book introductions.** Every book has a study introduction covering:
+  - author, date, place, first readers and type of writing
+  - historical background, purpose and themes
+  - an outline you can tap to jump to a section
+  - key people and places
+  - key verses and connections, as links
+
+  Open one from the ⓘ on each book in *Choose a book*, from *About this book* on the chapter screen, or from the ⓘ in the reader's header. Authorship and dates follow the traditional view.
+- **Bookmark folders.** In *Bookmarks*, make folders and move bookmarks into them with the folder button. You can also rename a folder, or delete it (its bookmarks are kept).
+- **Notes on several verses.** In a verse's window, the − and + beside "Note on …" make the note cover a range such as John 3:16–18. A line beside the verses shows its extent.
+- **Better search.**
+  - `-word` leaves out verses with that word, for example `love -world`.
+  - Results are grouped by book with counts, and you can tap a book to see just its verses.
+  - Each result has *Open beside*.
+  - *Keep results beside the text* moves the results into a side pane.
+- **Study pane.** The panels button in the toolbar opens a pane beside the text. It can show:
+  - **Search** results that stay while you read.
+  - **Cross-references**, following the verse at the top of the page, or a verse you tapped.
+  - **My notes**: the notes and bookmarks in the chapter you're reading.
+- **Up to three Bible panels** on large screens in landscape. Add them from the panels button and drag the dividers to resize. Narrow panels move Back/Forward, *About this book* and *Fit width* into a ⋮ menu.
+- **More ways to add images.** The image button offers the gallery, the camera, files, or a picture on the clipboard.
+- **Margin drawers on narrow screens.** On small tablets in portrait, the text fills the width. Tabs at the edges slide the margins into view.
+- **Text font.** Under *More*, choose Gentium Book, Serif or Sans-serif. Ink on the words moves with its words when the font changes.
+- Tested on small (8") and large (14.6") tablet sizes as well as the Tab S9.
+
+Your notes database is upgraded automatically on first launch; existing notes, bookmarks and ink are kept.
+
+## New in version 0.5
+
+- **Linked split view.** In split view, tap the link button in either panel's header.
+  - Scrolling one panel keeps the other on the **same verse**, even when they show different versions whose lines wrap differently. When one panel scrolls into the next chapter, the other follows.
+  - Jumps (book picker, search, cross-references, bookmarks, Back/Forward) move both panels.
+  - Each panel keeps its own zoom.
+  - The panel you're using leads and the other follows. Tap the button again to unlink.
+- **Bible hyperlinks.** References become links that open a small pop-over with the passage, in the version you're reading, without leaving the page. *Go to* jumps there; *Open beside* shows it in the other panel (opening split view if needed), which is ideal for reading parallel accounts side by side.
+  - **Parallel passages:** the references under section headings, such as "(Mark 1:9–11; Luke 3:21–22; John 1:29–34)" beside Matthew's account of Jesus' baptism, are underlined links.
+  - **References in your notes:** type "Rom 8:28", "1 Cor 13:4-7" or "Psalm 23" in a verse's note, and each shows as a link chip under the note.
+
+## New in version 0.4.1
+
+- **See where your notes are.** Tap the chapter name to open the picker, which now goes book → chapter → verse.
+  - Books, chapters and verses with your ink, highlights or images show a small dot for each layer they're on, in that layer's colour.
+  - Only layers that are switched on count, so hiding a layer in *Layers* hides its dots.
+  - Ink on the words counts for the version you're reading; margin notes count in every version.
+  - Typed notes show a note icon and bookmarks a red ribbon. These aren't on layers, so they always show.
+
+## New in version 0.4
+
+- **Section headings** such as "Jesus and Nicodemus" above John 3:1, with the related passages listed under them. They come from the Berean Standard Bible (3,102 headings, public domain) and show in every version. Turn them off in *⋮ → Section headings*.
+- **Line spacing.** *⋮ → Line spacing* offers Normal, Wide or Extra wide, for more room to write between lines.
+- **Ink stays on its words.** Each stroke on the text is anchored to its line and moves with it when headings or line spacing change. Underlines stay under their words and circles keep their shape. Ink from earlier versions is converted automatically the first time a chapter opens.
+- **Back and forward.** Arrows at the left of each panel's header return to where you were before a jump (book picker, search, cross-reference or bookmark). The tablet's Back gesture steps back too. The chapter arrows and scrolling don't add to history.
+- **Zoom is remembered** for each panel, separately in landscape and portrait. **Double-tap** with a finger to switch between fit-width and your last zoom.
+- **Partial eraser.** With *Eraser* picked, choose *Partial* to erase only what the eraser touches: strokes are cut, and highlights lose just the word under the eraser. *Whole strokes* works as before.
+- **Select text with a long press.** Hold a finger on a word, then drag to extend. The bar that appears lets you *Copy* or *Share* the words with their reference, *Highlight* them in the current highlighter colour, or add a *Note* to the verse.
+- **Search your notes.** In Search, pick *My notes* to find typed notes containing all the words you enter.
+- **About the translations.** The version menu shows what each translation is like, and *About these versions…* explains how they differ.
 
 ## New in version 0.3
 
@@ -141,22 +415,42 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Light, sepia and dark page themes.
 - Back up everything (ink, highlights, images, notes, layers, bookmarks) to a single .zip file, and restore it on this tablet or a new one.
 
-## Known limits in 0.3
+## Known limits
 
+- Behind the scenes the app keeps its old internal name (`com.biblestudy.app`, signing key alias `biblestudy`, automatic backups named `bible-study-auto-…`). Changing those would stop updates installing over your copy, so only the name you see has changed.
 - NIV and NLT are waiting on licensing (see above). Cross-references come from the KJV numbering, which the BSB and WEB share.
-- The eraser removes whole strokes; there is no partial erasing.
-- The lasso moves and recolours but can't resize or rotate a selection yet.
-- Pen rendering still uses standard Android drawing rather than the front-buffered ink engine Samsung Notes uses, so it can lag the pen tip slightly.
+- Rotating a lasso selection turns ink freely, but pictures only turn in quarter turns and text boxes stay upright.
+- Strong's numbers come from the tagged texts at eBible.org. In the KJV some small words ("the", "unto") have none, so they can't be tapped for a word study.
+- Matthew Henry's Concise Commentary skips some chapters (mostly lists and genealogies).
+- John Gill's Exposition isn't included: there's no clean public-domain digital edition to build from. Calvin's Commentaries and Spurgeon's Treasury of David were added instead. Barnes' Notes here cover the New Testament only.
+- Spurgeon's Treasury of David has one long note per psalm, and Matthew Henry comments on paragraphs, so linking moves them a psalm or a paragraph at a time.
+- Robertson's Word Pictures is marked by CrossWire as free for non-commercial use (its last two volumes' copyright has since expired); fine for this personal app.
+- Words of Jesus in the BSB are inferred from the WEB's markings and the BSB's quotation marks, so a few dialogue verses may be coloured slightly differently from a printed red-letter BSB.
+- The Hebrew and Greek view uses the Hebrew text (Leningrad Codex) and the amalgamated Greek editions; it doesn't follow an imported Bible's wording.
+- The performance pass for very long chapters (Psalm 119) and very large sketch pages still needs checking on the tablet itself.
+- Writing sounds and pen hover can only be judged on the tablet: the automated tests have no speaker or hovering pen. Tell me if the sounds are too scratchy, soft or loud.
+- A shrunk full-screen note shows its ink and text boxes; pictures on it show only when it's opened.
+- Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
+- The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
+- Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
+- On study views the lasso can recolour, move to a layer or delete writing, but not drag it to a new place; fast ink isn't used there. A line drawn across two lines of an article stretches to follow its words when the panel's width changes.
 
 ## Next milestones
 
-- **0.4:** NIV and NLT (offline with permission, or through API.Bible), parallel view of one verse in every version, linked scrolling of split panels, front-buffered (lowest-latency) ink, and lasso resize.
-- **0.5:** Strong's numbers and a lexicon (STEPBible data), handwriting search, and sketch pages.
+- **Later:** search by meaning.
+- **Waiting on permission:** NIV and NLT. Once you have the files, *Settings → Bibles → Import a Bible…* adds them.
 
 ## Credits
 
 - King James Version (1769): public domain. Text from the scrollmapper/bible_databases project (MIT).
-- Berean Standard Bible (BSB): dedicated to the public domain (2023). Text from scrollmapper/bible_databases.
+- Berean Standard Bible (BSB): dedicated to the public domain (2023). Text from scrollmapper/bible_databases; section headings from eBible.org.
 - World English Bible (WEB): public domain; "World English Bible" is a trademark of eBible.org. Text from eBible.org.
 - Cross-references: OpenBible.info, CC BY 4.0.
+- Strong's Hebrew and Greek dictionaries (1890, public domain), JSON edition by Open Scriptures, CC BY-SA.
+- Strong's numbers for each word: the Strong's-tagged KJV, BSB and WEB USFM files from eBible.org (public domain).
+- Hebrew and Greek word by word: STEPBible.org TAHOT (Translators Amalgamated Hebrew OT) and TAGNT (Translators Amalgamated Greek NT), Tyndale House Cambridge, CC BY 4.0. Only the columns shown are kept, and Greek words in neither the modern editions nor the KJV's text are left out; `tools/build_original_db.py` makes `assets/study/original.db`.
+- Words of Jesus: the red-letter markings in eBible.org's KJV and WEB USFM files (public domain).
+- People and places: STEPBible.org TIPNR (Translators Individualised Proper Names), CC BY 4.0. Map outline, lakes and rivers: Natural Earth (public domain); `tools/build_map.py` makes `assets/map/lands.bin`.
+- Commentaries (public domain): Matthew Henry's Complete, Jamieson-Fausset-Brown, Wesley, Geneva notes, Barnes, Clarke, Keil & Delitzsch, Robertson's Word Pictures, Calvin and Spurgeon's Treasury of David, from the CrossWire Bible Society's SWORD library (crosswire.org). `tools/build_commentaries.py` rebuilds them.
+- Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library (ccel.org). `tools/build_study_db.py` rebuilds `study.db` from these.
 - Font: Gentium Book Plus © SIL International, SIL Open Font License 1.1 (see `licenses/Gentium-OFL.txt`).

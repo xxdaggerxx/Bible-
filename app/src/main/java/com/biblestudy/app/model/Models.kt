@@ -29,10 +29,15 @@ sealed interface Annotation {
 /**
  * A pen or freehand-highlighter stroke.
  *
- * Points are packed as (x, y, pressure) triples in *local* page units:
- *  - Region.TEXT: relative to the top-left of the text column (Study Layout coordinates).
- *    These strokes belong to one Bible version ([version] is set).
- *  - Region.LEFT / RIGHT: relative to (margin left edge, top of [verse]).
+ * Points are packed as (x, y, pressure) triples:
+ *  - Region.TEXT: x in page units from the text column's left edge; y in *line coordinates*
+ *    (line index + fraction of the line pitch), so ink stays on its words when headings or line
+ *    spacing change. These strokes belong to one Bible version ([version] is set).
+ *    Strokes saved before version 0.4 ([lineAnchored] = false) hold y in page units from the
+ *    text's top at normal spacing; they are converted when first loaded.
+ *    Lines depend on the text font, so each stroke on the words records the [font] it was drawn
+ *    in; after a font change it is moved to the same character in the new layout (READ-3).
+ *  - Region.LEFT / RIGHT: page units relative to (margin left edge, top of [verse]).
  *    Margin strokes are shared across versions ([version] is null).
  */
 class InkStroke(
@@ -47,17 +52,42 @@ class InkStroke(
     val color: Int,
     val width: Float,
     val points: FloatArray,
+    val lineAnchored: Boolean = true,
+    val font: String = TextFont.BOOK.name,
 ) : Annotation {
     fun copyAs(
         id: Long = this.id,
         points: FloatArray = this.points,
         color: Int = this.color,
         layerId: Long = this.layerId,
-    ) = InkStroke(id, layerId, version, book, chapter, region, verse, highlighter, color, width, points)
+        lineAnchored: Boolean = this.lineAnchored,
+        font: String = this.font,
+        width: Float = this.width,
+    ) = InkStroke(id, layerId, version, book, chapter, region, verse, highlighter, color, width, points, lineAnchored, font)
 
     fun withPoints(p: FloatArray) = copyAs(points = p)
     fun withColor(c: Int) = copyAs(color = c)
     fun withLayer(l: Long) = copyAs(layerId = l)
+}
+
+/** The typeface for the Bible text (READ-3). */
+enum class TextFont(val label: String) { BOOK("Gentium Book"), SERIF("Serif"), SANS("Sans-serif") }
+
+/**
+ * How the text is laid out: the font, verses as paragraphs, and verse numbers shown (READ-3,
+ * READ-6). Ink on the words records the layout it was drawn in ("BOOK", "BOOK|p|n"), so it can
+ * be moved onto another layout's lines.
+ */
+data class TextStyleKey(val font: TextFont = TextFont.BOOK, val paragraphs: Boolean = false, val numbers: Boolean = true) {
+    fun encode() = font.name + (if (paragraphs) "|p" else "") + (if (!numbers) "|n" else "")
+
+    companion object {
+        fun decode(s: String) = TextStyleKey(
+            runCatching { TextFont.valueOf(s.substringBefore('|')) }.getOrDefault(TextFont.BOOK),
+            paragraphs = "|p" in s,
+            numbers = "|n" !in s,
+        )
+    }
 }
 
 /** A copy of (x, y, pressure) triples shifted by (dx, dy). */
@@ -79,7 +109,29 @@ data class Highlight(
     val start: Int,
     val end: Int,
     val color: Int,
+    /** Drawn as a line under the words instead of a fill (HL-4). */
+    val underline: Boolean = false,
 ) : Annotation
+
+/**
+ * A highlight made in another translation, shown here over whole verses (HL-10):
+ * [source] covers verses [fromVerse]..[toVerse] of its own version.
+ */
+data class CrossHighlight(val source: Highlight, val fromVerse: Int, val toVerse: Int)
+
+/** A highlight for the Highlights list (HL-8), with the words it covers. */
+/**
+ * A highlight in the highlights list (HL-8): the whole verse or verses it's in ([text], numbered
+ * when there are several), with [marked] the highlighted words' place in that text.
+ */
+data class HighlightEntry(
+    val highlight: Highlight,
+    val verse: Int,
+    val words: String,
+    val endVerse: Int = verse,
+    val text: String = words,
+    val marked: IntRange? = null,
+)
 
 /** A picture placed in a margin, anchored to a verse and shared across versions. */
 data class MarginImage(
@@ -94,7 +146,59 @@ data class MarginImage(
     val w: Float,
     val h: Float,
     val file: String,
+    /** Quarter turns clockwise, 0..3 (MRG-8); w and h are the box as shown. */
+    val rotation: Int = 0,
+    /** The part of the picture shown, as fractions of its width and height (MRG-8). */
+    val cropL: Float = 0f,
+    val cropT: Float = 0f,
+    val cropR: Float = 1f,
+    val cropB: Float = 1f,
 ) : Annotation
+
+/**
+ * A typed text box in a margin (MRG-12), anchored to a verse like other margin notes and shared
+ * across versions. [x], [y] and [w] are page units from the margin's left edge and the verse's top;
+ * the height follows the text. [size] is the text size in page units; [background] 0 = none.
+ */
+data class MarginText(
+    override val id: Long,
+    override val layerId: Long,
+    override val book: Int,
+    override val chapter: Int,
+    val region: Region,
+    val verse: Int,
+    val x: Float,
+    val y: Float,
+    val w: Float,
+    val text: String,
+    val size: Float = 20f,
+    val color: Int = 0xFF222222.toInt(),
+    val background: Int = 0,
+    /**
+     * Highlights on the box's own words (HL-11), "start-end-colour-u;…" (u = underline). A verse
+     * card's highlights are the Bible's, so they aren't kept here.
+     */
+    val marks: String = "",
+) : Annotation {
+    /** The highlights in [marks]. */
+    fun markList(): List<TextMark> = marks.split(';').mapNotNull { TextMark.parse(it) }
+
+    fun withMarks(list: List<TextMark>) = copy(marks = list.joinToString(";") { it.encode() })
+}
+
+/** A highlight on a text box's words (HL-11). */
+data class TextMark(val start: Int, val end: Int, val color: Int, val underline: Boolean) {
+    fun encode() = "$start-$end-${Integer.toHexString(color)}" + if (underline) "-u" else ""
+
+    companion object {
+        fun parse(s: String): TextMark? {
+            val f = s.split('-')
+            if (f.size < 3) return null
+            return TextMark(f[0].toIntOrNull() ?: return null, f[1].toIntOrNull() ?: return null,
+                f[2].toLongOrNull(16)?.toInt() ?: return null, f.getOrNull(3) == "u")
+        }
+    }
+}
 
 data class Layer(
     val id: Long,
@@ -103,6 +207,8 @@ data class Layer(
     val visible: Boolean,
     val locked: Boolean,
     val sort: Int,
+    /** How solid the layer's marks are drawn, 0.25 to 1 (LAY-8). */
+    val opacity: Float = 1f,
 )
 
 /** One undoable step: things that were added and things that were removed. */
@@ -112,15 +218,29 @@ data class BookInfo(val id: Int, val name: String, val osis: String, val chapter
 
 data class Verse(val verse: Int, val text: String)
 
-data class ChapterData(val version: String, val book: Int, val chapter: Int, val verses: List<Verse>)
+/** A section heading shown above [verse] (level 0 = major division, 1 = heading, 2 = subheading). */
+data class Heading(val verse: Int, val level: Int, val text: String, val refs: String)
+
+data class ChapterData(
+    val version: String,
+    val book: Int,
+    val chapter: Int,
+    val verses: List<Verse>,
+    val headings: List<Heading> = emptyList(),
+)
 
 data class SearchHit(val book: Int, val chapter: Int, val verse: Int, val text: String)
 
 data class CrossRef(val toStart: Int, val toEnd: Int, val votes: Int, val preview: String)
 
-data class Bookmark(val id: Long, val book: Int, val chapter: Int, val verse: Int, val created: Long)
+/** A bookmarked verse; [folder] is "" for bookmarks not in a folder (NOTE-3). */
+data class Bookmark(val id: Long, val book: Int, val chapter: Int, val verse: Int, val created: Long, val folder: String = "")
 
-data class VerseTarget(val book: Int, val chapter: Int, val verse: Int)
+/** A typed note on verses [verse]..[endVerse] of a chapter (NOTE-1); a one-verse note has endVerse == verse. */
+data class TypedNote(val verse: Int, val endVerse: Int, val text: String)
+
+/** A verse to open; [word] is the index of the tapped word in its text, or -1. */
+data class VerseTarget(val book: Int, val chapter: Int, val verse: Int, val word: Int = -1)
 
 enum class SearchScope(val label: String) {
     ALL("Whole Bible"), OT("Old Testament"), NT("New Testament"), BOOK("This book")
@@ -133,3 +253,58 @@ object VerseId {
     fun chapter(id: Int) = (id / 1_000) % 1_000
     fun verse(id: Int) = id % 1_000
 }
+
+/** Kinds of paper for a sketch page (SKT-1). */
+enum class Paper(val label: String) { BLANK("Blank"), LINED("Lined"), GRID("Grid"), DOTTED("Dotted") }
+
+/**
+ * A sketch page (SKT-1, SKT-2): a full page for drawing, linked to a passage. Its ink, pictures
+ * and text boxes are stored like margin notes, under the book number [book] (chapter 1).
+ */
+data class Sketch(
+    val id: Long,
+    val name: String,
+    val paper: Paper,
+    /** The passage it belongs to, where its marker shows. */
+    val linkBook: Int,
+    val linkChapter: Int,
+    val linkVerse: Int,
+    /** Page height in page units; "More space" makes it taller. */
+    val height: Float,
+    val created: Long,
+    /** A full-screen margin note for its verse (MRG-15): shown shrunk beside the verse. */
+    val note: Boolean = false,
+) {
+    val book get() = SKETCH_BOOK + id.toInt()
+
+    /** Linked to a verse, where its badge shows; otherwise free-standing, opened from My notes. */
+    val linked get() = linkBook in 1..66
+
+    /** One of the app's ready-made pages (they're made with [created] = their order, not a date). */
+    val readyMade get() = created in 1..999
+
+    companion object {
+        /** Sketch pages use book numbers from here up; Bible books are 1 to 66. */
+        const val SKETCH_BOOK = 1000
+        const val WIDTH = 1300f
+        const val START_HEIGHT = 1840f // A4-shaped
+
+        fun isSketch(book: Int) = book >= SKETCH_BOOK
+        fun idOf(book: Int) = (book - SKETCH_BOOK).toLong()
+    }
+}
+
+/** Ready-made drawing for a sketch page (STD-16, SKT-5), in page units; see StudyViewModel.placeOnSketch. */
+sealed interface Drawn
+
+/** A text box: [background] 0 = none. */
+data class DrawnBox(
+    val x: Float, val y: Float, val w: Float, val text: String,
+    val size: Float = 20f, val color: Int = 0xFF222222.toInt(), val background: Int = 0,
+) : Drawn
+
+/** A pen line through [points]. */
+data class DrawnLine(val points: List<Pair<Float, Float>>, val color: Int = 0xFF6D4C41.toInt(), val width: Float = 3f) : Drawn
+
+/** A verse card for [ref] ("John 3:16-18") in the version being read. */
+data class DrawnVerse(val x: Float, val y: Float, val w: Float, val ref: String) : Drawn

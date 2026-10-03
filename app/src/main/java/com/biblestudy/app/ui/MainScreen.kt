@@ -35,15 +35,19 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.testTag
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 
-private enum class DialogKind { PICKER, SEARCH, LAYERS, BOOKMARKS, ABOUT, RESTORE }
+private enum class DialogKind { PICKER, SEARCH, LAYERS, NOTES, ABOUT, RESTORE, SETTINGS, STATS, HELP }
 
 private val LightColors = lightColorScheme(
     primary = Color(0xFF7A5C2E),
@@ -69,8 +73,25 @@ fun StudyApp(vm: StudyViewModel) {
         val pickImage = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
             if (uri != null) vm.insertImage(uri)
         }
+        val openImageFile = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+            if (uri != null) vm.insertImage(uri)
+        }
+        var cameraUri by rememberSaveable { mutableStateOf<android.net.Uri?>(null) }
+        val takePhoto = rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()) { ok ->
+            cameraUri?.takeIf { ok }?.let { vm.insertImage(it) }
+        }
         val backupLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/zip")) { uri ->
             if (uri != null) vm.backup(uri)
+        }
+        // Chapter export (DATA-5): pick where to save, then the active panel draws it.
+        // Set when exporting one layer from the Layers window (LAY-11).
+        var exportLayer by remember { mutableStateOf<Long?>(null) }
+        val exportPdf = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/pdf")) { uri ->
+            if (uri != null) vm.exportRequest = ExportRequest(uri, pdf = true, layer = exportLayer)
+            exportLayer = null
+        }
+        val exportPng = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("image/png")) { uri ->
+            if (uri != null) vm.exportRequest = ExportRequest(uri, pdf = false)
         }
         val restoreLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
             if (uri != null) vm.restore(uri)
@@ -83,59 +104,87 @@ fun StudyApp(vm: StudyViewModel) {
                     vm = vm,
                     onLayers = { dialog = DialogKind.LAYERS },
                     onSearch = { dialog = DialogKind.SEARCH },
-                    onBookmarks = { dialog = DialogKind.BOOKMARKS },
-                    onInsertImage = {
-                        pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+                    onNotes = { dialog = DialogKind.NOTES },
+                    onInsertImage = { src ->
+                        when (src) {
+                            ImageSource.GALLERY ->
+                                pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+                            ImageSource.CAMERA -> {
+                                val uri = vm.newCameraUri()
+                                cameraUri = uri
+                                runCatching { takePhoto.launch(uri) }.onFailure { vm.message = "No camera app is available." }
+                            }
+                            ImageSource.FILES -> openImageFile.launch(arrayOf("image/*"))
+                            ImageSource.CLIPBOARD -> vm.pasteImage()
+                        }
                     },
                     onBackup = {
                         val stamp = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
-                        backupLauncher.launch("bible-study-backup-$stamp.zip")
+                        backupLauncher.launch("ink-and-word-backup-$stamp.zip")
                     },
-                    onRestore = { dialog = DialogKind.RESTORE },
+                    onExport = { pdf ->
+                        val name = vm.exportName() + if (pdf) ".pdf" else ".png"
+                        runCatching { (if (pdf) exportPdf else exportPng).launch(name) }.onFailure { vm.message = "No file app is available." }
+                    },
+                    onSettings = { dialog = DialogKind.SETTINGS },
+                    onStats = { dialog = DialogKind.STATS },
+                    onHelp = { dialog = DialogKind.HELP },
                     onAbout = { dialog = DialogKind.ABOUT },
                 )
             },
         ) { padding ->
-            BoxWithConstraints(
-                Modifier
-                    .padding(padding)
-                    .fillMaxSize()
-                    .background(vm.theme.surround)
-            ) {
-                val landscape = maxWidth >= maxHeight
-                SideEffect { vm.landscape = landscape }
-                val openPicker = { dialog = DialogKind.PICKER }
-                if (vm.panels.size == 1) {
-                    key(vm.panels[0]) {
-                        ReaderPanel(vm, 0, openPicker, Modifier.fillMaxSize())
-                    }
-                } else {
-                    // Side by side in landscape, stacked in portrait.
-                    val sideBySide = maxWidth >= maxHeight
-                    val totalPx = with(LocalDensity.current) { (if (sideBySide) maxWidth else maxHeight).toPx() }
-                    val drag = rememberDraggableState { delta ->
-                        vm.splitFraction = (vm.splitFraction + delta / totalPx).coerceIn(0.2f, 0.8f)
-                    }
-                    val f = vm.splitFraction
-                    if (sideBySide) {
-                        Row(Modifier.fillMaxSize()) {
-                            key(vm.panels[0]) { ReaderPanel(vm, 0, openPicker, Modifier.weight(f).fillMaxHeight()) }
-                            Box(
-                                Modifier.width(14.dp).fillMaxHeight()
-                                    .draggable(drag, Orientation.Horizontal),
-                                contentAlignment = Alignment.Center,
-                            ) { Handle(vertical = true) }
-                            key(vm.panels[1]) { ReaderPanel(vm, 1, openPicker, Modifier.weight(1f - f).fillMaxHeight()) }
+            Column(Modifier.padding(padding).fillMaxSize().background(vm.theme.surround)) {
+                // Tabs (TAB-1, TAB-2): the strip shows once there's a second tab.
+                if (vm.tabs.size > 1) TabStrip(vm)
+                BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
+                    val landscape = maxWidth >= maxHeight
+                    SideEffect { vm.landscape = landscape }
+                    val openPicker = { dialog = DialogKind.PICKER }
+                    val widthClass = WidthClass.of(maxWidth.value)
+                    SideEffect { vm.widthClass = widthClass }
+                    val tab = vm.tab
+                    // One or two panels (SPLIT-8), side by side or one above the other.
+                    val stacked = vm.isStacked(tab)
+                    val density = LocalDensity.current
+                    val totalPx = with(density) { (if (stacked) maxHeight else maxWidth).toPx() }
+                    val slots = tab.slots()
+
+                    @Composable
+                    fun Cell(slot: Slot, modifier: Modifier) {
+                        when (slot) {
+                            is Slot.Bible -> key(tab.panels[slot.index]) { ReaderPanel(vm, slot.index, openPicker, modifier) }
+                            is Slot.Study -> key(slot) { StudyPane(vm, slot, modifier) }
                         }
-                    } else {
-                        Column(Modifier.fillMaxSize()) {
-                            key(vm.panels[0]) { ReaderPanel(vm, 0, openPicker, Modifier.weight(f).fillMaxWidth()) }
-                            Box(
-                                Modifier.height(14.dp).fillMaxWidth()
-                                    .draggable(drag, Orientation.Vertical),
-                                contentAlignment = Alignment.Center,
-                            ) { Handle(vertical = false) }
-                            key(vm.panels[1]) { ReaderPanel(vm, 1, openPicker, Modifier.weight(1f - f).fillMaxWidth()) }
+                    }
+
+                    @Composable
+                    fun Divider() {
+                        val state = rememberDraggableState { d -> vm.dragDivider(0, d / totalPx) }
+                        Box(
+                            (if (stacked) Modifier.height(14.dp).fillMaxWidth() else Modifier.width(14.dp).fillMaxHeight())
+                                .draggable(state, if (stacked) Orientation.Vertical else Orientation.Horizontal)
+                                // Double-tap: both panels the same size.
+                                .pointerInput(tab) { detectTapGestures(onDoubleTap = { tab.split = 0.5f }) }
+                                .testTag("divider"),
+                            contentAlignment = Alignment.Center,
+                        ) { Handle(vertical = !stacked) }
+                    }
+
+                    key(tab) {
+                        if (slots.size < 2) {
+                            slots.firstOrNull()?.let { Cell(it, Modifier.fillMaxSize()) }
+                        } else if (stacked) {
+                            Column(Modifier.fillMaxSize()) {
+                                Cell(slots[0], Modifier.weight(tab.split).fillMaxWidth())
+                                Divider()
+                                Cell(slots[1], Modifier.weight(1f - tab.split).fillMaxWidth())
+                            }
+                        } else {
+                            Row(Modifier.fillMaxSize()) {
+                                Cell(slots[0], Modifier.weight(tab.split).fillMaxHeight())
+                                Divider()
+                                Cell(slots[1], Modifier.weight(1f - tab.split).fillMaxHeight())
+                            }
                         }
                     }
                 }
@@ -145,13 +194,30 @@ fun StudyApp(vm: StudyViewModel) {
         when (dialog) {
             DialogKind.PICKER -> BookPickerDialog(vm) { dialog = null }
             DialogKind.SEARCH -> SearchDialog(vm) { dialog = null }
-            DialogKind.LAYERS -> LayersDialog(vm) { dialog = null }
-            DialogKind.BOOKMARKS -> BookmarksDialog(vm) { dialog = null }
+            DialogKind.LAYERS -> LayersDialog(vm, onExportLayer = { id ->
+                dialog = null
+                exportLayer = id
+                val layer = vm.layers.firstOrNull { it.id == id }?.name ?: "layer"
+                runCatching { exportPdf.launch("${vm.exportName()} - $layer.pdf") }.onFailure { vm.message = "No file app is available." }
+            }) { dialog = null }
+            DialogKind.NOTES -> MyNotesDialog(vm) { dialog = null }
             DialogKind.ABOUT -> AboutDialog { dialog = null }
+            DialogKind.STATS -> ReadingStatsDialog(vm) { dialog = null }
+            DialogKind.HELP -> HelpDialog { dialog = null }
+            DialogKind.SETTINGS -> SettingsDialog(
+                vm,
+                onBackup = {
+                    val stamp = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
+                    backupLauncher.launch("ink-and-word-backup-$stamp.zip")
+                },
+                onRestore = { dialog = DialogKind.RESTORE },
+                onAbout = { dialog = DialogKind.ABOUT },
+                onDismiss = { dialog = null },
+            )
             DialogKind.RESTORE -> AlertDialog(
                 onDismissRequest = { dialog = null },
                 title = { Text("Restore from a backup?") },
-                text = { Text("This replaces all ink, highlights, images, notes, layers and bookmarks on this tablet with the ones in the backup file.") },
+                text = { Text("This replaces all ink, highlights, images, notes, sketch pages and layers on this tablet with the ones in the backup file.") },
                 confirmButton = {
                     TextButton(onClick = {
                         dialog = null
@@ -164,6 +230,14 @@ fun StudyApp(vm: StudyViewModel) {
         }
 
         vm.verseSheet?.let { t -> VerseDialog(vm, t) { vm.verseSheet = null } }
+        vm.wordStudy?.let { w -> WordStudyDialog(vm, w) { vm.wordStudy = null } }
+        vm.familyTree?.let { u -> FamilyTreeDialog(vm, u) { vm.familyTree = null } }
+        vm.introBook?.let { b ->
+            BookIntroDialog(vm, b) { navigated ->
+                vm.introBook = null
+                if (navigated) dialog = null
+            }
+        }
     }
 }
 

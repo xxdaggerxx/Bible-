@@ -47,8 +47,13 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 3
-        versionName = "0.3.0"
+        versionCode = 21
+        versionName = "1.5.0"
+    }
+
+    // The commentaries are already packed tightly (xz); don't zip them again.
+    androidResources {
+        noCompress += "xz"
     }
 
     signingConfigs {
@@ -90,6 +95,9 @@ android {
     }
     testOptions {
         unitTests.isIncludeAndroidResources = true
+        // The full suite keeps several Robolectric sandboxes, each with its own copies of the
+        // bundled databases; the default 512 MB heap leaves it starved and timing out.
+        unitTests.all { it.maxHeapSize = "2g" }
     }
 }
 
@@ -108,10 +116,22 @@ dependencies {
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")
+    // Front-buffered rendering for the lowest-latency pen ink (INK-4).
+    implementation("androidx.graphics:graphics-core:1.0.2")
+    // Unpacks the bundled commentaries (STD-17), stored as xz to keep the app small.
+    implementation("org.tukaani:xz:1.10")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.14.1")
     testImplementation("androidx.test:core:1.6.1")
     testImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+}
+
+// Print each test as it starts and finishes, so a stuck test is easy to spot.
+tasks.withType<Test>().configureEach {
+    testLogging {
+        events("started", "passed", "failed", "skipped")
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+    }
 }

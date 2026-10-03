@@ -33,16 +33,20 @@ object RefParser {
 
     private val pattern = Regex("^\\s*([1-3]?\\s*[A-Za-z][A-Za-z .]*?)\\s*(\\d+)(?:\\s*[:.]\\s*(\\d+))?\\s*$")
 
-    fun parse(input: String, books: List<BookInfo>): Ref? {
-        val m = pattern.find(input) ?: return null
-        val key = m.groupValues[1].lowercase()
+    /** The book a name or abbreviation refers to ("Rom", "1 cor", "Song of Solomon", "Psalms"), or null. */
+    fun bookId(name: String, books: List<BookInfo>): Int? {
+        val key = name.lowercase()
             .replace("iii ", "3").replace("ii ", "2").replace("i ", "1")
             .replace(Regex("[\\s.]"), "")
         if (key.isEmpty()) return null
-        val bookId = extra[key]
+        return extra[key]
             ?: books.firstOrNull { norm(it.name) == key }?.id
             ?: books.filter { norm(it.name).startsWith(key) }.singleOrNull()?.id
-            ?: return null
+    }
+
+    fun parse(input: String, books: List<BookInfo>): Ref? {
+        val m = pattern.find(input) ?: return null
+        val bookId = bookId(m.groupValues[1], books) ?: return null
         val book = books[bookId - 1]
         val chapter = m.groupValues[2].toIntOrNull() ?: return null
         if (chapter < 1 || chapter > book.chapters) return null
