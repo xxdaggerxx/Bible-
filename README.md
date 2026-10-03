@@ -437,7 +437,8 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 
 ## Next milestones
 
-- **Later:** search by meaning.
+- **Next: AI search and study (1.6 to 1.9).** Topic search that finds all the relevant passages (1.6), search by meaning and deeper word studies (1.7), events, timelines and lists (1.8), and study guides (1.9). All AI work is done before shipping, so the app stays fully offline. From 1.7, APKs are published as GitHub Release downloads, because the app will pass GitHub's 100 MB file limit. The plan is section 29 of the requirements document.
+- **Later:** sermons on a topic or passage, with summaries and links.
 - **Waiting on permission:** NIV and NLT. Once you have the files, *Settings → Bibles → Import a Bible…* adds them.
 
 ## Credits
