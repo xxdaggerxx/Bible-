@@ -927,6 +927,23 @@ class FeatureTest {
         assertFalse(asked.last().second[0].text.isEmpty())
         assertEquals(3, asked.size)
 
+        // Try again (AI-11): the last question is asked again and its reply replaced.
+        reply = com.biblestudy.app.data.ChatResult.Failed("Couldn't reach the AI. Check your internet connection.")
+        compose.onNodeWithTag("chatRetry").performClick()
+        compose.waitUntil(5_000) { !vm.chat.busy && asked.size == 4 }
+        compose.onNodeWithText("Couldn't reach the AI", substring = true).assertExists()
+        assertEquals(4, vm.chat.entries.size)
+        snap("133-ai-chat-retry")
+        reply = com.biblestudy.app.data.ChatResult.Answer("Leviticus calls God's people to be holy as he is holy.[1] See Leviticus 19:2.", listOf(com.biblestudy.app.data.ChatSource("Holiness", "https://www.gotquestions.org/holiness.html")))
+        compose.onNodeWithTag("chatRetry").performClick()
+        compose.waitUntil(5_000) { !vm.chat.busy && asked.size == 5 }
+        assertEquals(4, vm.chat.entries.size)
+        assertEquals("And in Leviticus?", vm.chat.entries[2].text)
+        assertEquals(asked[3].second, asked[4].second)
+        assertEquals(asked[3].third, asked[4].third)
+        assertNull(vm.chat.entries.last().note)
+        assertTrue(vm.chat.attached.isEmpty())
+
         assertTrue(vm.chatWindow)
         snap("132-ai-chat-window")
 
@@ -936,7 +953,7 @@ class FeatureTest {
         assertFalse(vm.chatWindow)
         assertEquals(PaneKind.CHAT, vm.sidePane)
         compose.onNodeWithTag("chatBubble").assertDoesNotExist()
-        compose.onNodeWithText("Searched for: \u201choliness in Leviticus\u201d", substring = true).assertExists()
+        compose.onNodeWithText("holy as he is holy", substring = true).assertExists()
 
         // Turned off: no bubble, no Ask AI, and the panel view leaves the menu.
         compose.runOnUiThread { vm.sidePane = null; vm.chat.changeEnabled(false); vm.openVerse(43, 3, 16) }

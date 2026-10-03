@@ -101,6 +101,21 @@ class ChatState(
 
     fun cancelEdit() { editing = null; attached.clear() }
 
+    /**
+     * Asks the last question again (AI-11), after a failure or to get a fresh answer: its reply is
+     * replaced. Passages waiting for the next question stay where they are.
+     */
+    fun retry() {
+        if (busy || apiKey.isBlank()) return
+        val i = entries.indexOfLast { it.user }.takeIf { it >= 0 } ?: return
+        val q = entries[i]
+        val pending = attached.toList()
+        editing = i
+        attached.clear(); attached.addAll(q.passages)
+        ask(q.text)
+        attached.addAll(pending.filter { it !in attached })
+    }
+
     /** Sends [question] with the attached passages; the reply is added when it comes. */
     fun ask(question: String) {
         val q = question.trim()

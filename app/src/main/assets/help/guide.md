@@ -198,6 +198,7 @@ The one part of the app that uses the internet. It works like a search summary: 
 - **Copy:** tap *Copy* under any message to copy it, with its sources. To copy part of a message, hold a finger on the words and drag.
 - **Edit:** tap *Edit* under one of your questions to change it, with its passages, and send it again. It replaces that question and everything after it. *Cancel* stops editing.
 - **Follow-up questions** keep the conversation. *New chat* starts again.
+- **Try again:** if a question fails (no internet, the service is busy) or finds nothing, tap *Try again* under the reply to ask it once more. It's also under the last answer, if you'd like a fresh one. If the app was closed while waiting, *Try again* appears under your question.
 - **Which sites:** the AI searches the whole web, with your sites searched first. To use nothing but your sites, turn on *Only search my sites* in *Settings → AI chat (online)*. The sites are listed there, one per line: add or remove sites, then *Save sites*. *Use the suggested sites* puts back the starting list.
 - **Turn it off** with the *AI chat* switch in Settings: the bubble and the *Ask AI* buttons go, and the app never goes online.
 - Answers can still be wrong. Check what they say against the verses.
