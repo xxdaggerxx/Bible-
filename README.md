@@ -1,4 +1,4 @@
-# Ink & Word — version 1.6.1
+# Ink & Word — version 1.6.2
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,13 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.6.2
+
+- **AI chat finds answers again.** Many questions came back with no answer. The new web search tool filtered results through a code step first, so answers came back without the citations the app requires, and were dropped. The chat now searches directly, so every statement can cite its page.
+- **Searches the whole web,** like a search summary, with your trusted sites searched first. *Settings → AI chat → Only search my sites* limits it to your list, as before.
+- **Answers read like a search overview:** a short overview first, then the main points, then the key verses.
+- **When nothing is found,** the chat shows what it searched for.
 
 ## New in version 1.6.1
 

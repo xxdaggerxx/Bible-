@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] a) throws Exception {
         MessageCreateParams p = MessageCreateParams.builder()
             .model("claude-opus-5-5").maxTokens(16000L).system("sys")
-            .addTool(WebSearchTool20260209.builder().maxUses(5L).allowedDomains(List.of("ligonier.org")).build())
+            .addTool(WebSearchTool20260209.builder().maxUses(5L).addAllowedCaller(WebSearchTool20260209.AllowedCaller.DIRECT).allowedDomains(List.of("ligonier.org")).build())
             .putAdditionalHeader("anthropic-beta", "server-side-fallback-2026-07-01")
             .putAdditionalBodyProperty("fallbacks", JsonValue.from("default"))
             .addUserMessage("Q1").addAssistantMessage("A1").addUserMessage("Q2").build();
@@ -19,6 +19,7 @@ public class Main {
           + "{\"type\":\"text\",\"text\":\"Holy.\",\"citations\":[{\"type\":\"web_search_result_location\",\"url\":\"https://ligonier.org/a\",\"title\":\"T\",\"encrypted_index\":\"x\",\"cited_text\":\"c\"}]}]}";
         Message m = ObjectMappers.jsonMapper().readValue(resp, Message.class);
         for (ContentBlock b : m.content()) {
+            b.serverToolUse().ifPresent(u -> System.out.println("QUERY " + ((java.util.Map<?, ?>) u._input().convert(java.util.Map.class)).get("query")));
             b.webSearchToolResult().ifPresent(r -> System.out.println("RESULTS " + r.content().resultBlocks().map(List::size).orElse(-1)));
             b.text().ifPresent(t -> System.out.println("TEXT " + t.text() + " CIT " + t.citations().map(c -> c.get(0).webSearchResultLocation().map(w -> w.url()).orElse("?")).orElse("none")));
         }

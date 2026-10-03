@@ -855,7 +855,7 @@ class FeatureTest {
             vm.chat.newChat()
             vm.chat.attached.clear()
             vm.chat.changeSites(com.biblestudy.app.data.AiChat.DEFAULT_SITES)
-            vm.chat.service = com.biblestudy.app.data.ChatService { _, sites, history, q, hasVerses -> asked += Triple(sites, history, q); assertTrue(hasVerses("see Rom 5:8")); reply }
+            vm.chat.service = com.biblestudy.app.data.ChatService { _, sites, _, history, q, hasVerses -> asked += Triple(sites, history, q); assertTrue(hasVerses("see Rom 5:8")); reply }
         }
         // The bubble opens the chat beside the text; first it asks for the key.
         compose.onNodeWithTag("chatBubble").performClick()
@@ -911,10 +911,11 @@ class FeatureTest {
         assertNull(vm.chat.editing)
 
         // Nothing found on the sites: no answer, just a note. The earlier turns go with it.
-        reply = com.biblestudy.app.data.ChatResult.NotFound
+        reply = com.biblestudy.app.data.ChatResult.NotFound(listOf("holiness in Leviticus"))
         compose.onNodeWithTag("chatInput").performTextInput("And in Leviticus?")
         compose.onNodeWithContentDescription("Send").performClick()
         compose.waitUntil(5_000) { compose.onAllNodesWithTag("chatNote").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Searched for: \u201choliness in Leviticus\u201d", substring = true).assertExists()
         assertEquals(2, asked.last().second.size)
         assertFalse(asked.last().second[0].text.isEmpty())
         assertEquals(3, asked.size)

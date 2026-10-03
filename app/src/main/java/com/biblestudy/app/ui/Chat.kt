@@ -87,7 +87,8 @@ fun ChatPane(vm: StudyViewModel, modifier: Modifier) {
         LazyColumn(Modifier.weight(1f).fillMaxWidth(), state = list) {
             if (chat.entries.isEmpty()) item {
                 Text(
-                    "Ask a question. The AI searches only your chosen sites (${chat.sites.size}) and sums up what they say, with links to the pages. " +
+                    (if (chat.onlySites) "Ask a question. The AI searches only your chosen sites (${chat.sites.size}) and sums up what they say, with links to the pages. "
+                    else "Ask a question. The AI searches the web, your chosen sites first, reads the best articles and sums them up, with links to the pages. ") +
                         "To ask about a passage, select it or hold a finger on a highlight, then tap Ask AI.",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.outline,
@@ -100,7 +101,7 @@ fun ChatPane(vm: StudyViewModel, modifier: Modifier) {
             if (chat.busy) item {
                 Row(Modifier.padding(vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
                     CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp)
-                    Text("Searching your chosen sites…", Modifier.padding(start = 10.dp), style = MaterialTheme.typography.bodyMedium)
+                    Text(if (chat.onlySites) "Searching your chosen sites…" else "Searching the web…", Modifier.padding(start = 10.dp), style = MaterialTheme.typography.bodyMedium)
                 }
             }
         }
@@ -150,7 +151,7 @@ fun ChatPane(vm: StudyViewModel, modifier: Modifier) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(Icons.Filled.Public, contentDescription = null, modifier = Modifier.size(14.dp), tint = MaterialTheme.colorScheme.outline)
             Text(
-                "Online. Answers come only from your chosen sites, and can still be wrong: check the verses.",
+                if (chat.onlySites) "Online. Answers come only from your chosen sites, and can still be wrong: check the verses." else "Online. Answers come only from the pages they cite, and can still be wrong: check the verses.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.outline,
                 modifier = Modifier.weight(1f).padding(start = 4.dp),

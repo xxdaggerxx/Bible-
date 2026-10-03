@@ -40,23 +40,34 @@ class AiChatTest {
     @Test
     fun noSearchOrNoCitationsMeansNoAnswer() {
         // Answered from its own knowledge, without searching.
-        assertEquals(ChatResult.NotFound, AiChat.read(message("{\"type\":\"text\",\"text\":\"Grace is favour.\"}").content(), sites))
+        assertEquals(ChatResult.NotFound(), AiChat.read(message("{\"type\":\"text\",\"text\":\"Grace is favour.\"}").content(), sites))
         // Searched, but cited nothing.
-        assertEquals(ChatResult.NotFound, AiChat.read(message("$search, {\"type\":\"text\",\"text\":\"Grace is favour.\"}").content(), sites))
+        assertEquals(ChatResult.NotFound(listOf("grace")), AiChat.read(message("$search, {\"type\":\"text\",\"text\":\"Grace is favour.\"}").content(), sites))
         // Cited a page that isn't on the chosen sites.
-        assertEquals(ChatResult.NotFound, AiChat.read(message("$search, " + cited("Grace is favour.", "https://example.com/g", "Elsewhere")).content(), sites))
+        assertEquals(ChatResult.NotFound(listOf("grace")), AiChat.read(message("$search, " + cited("Grace is favour.", "https://example.com/g", "Elsewhere")).content(), sites))
+        // Searching the whole web, any page it cites counts.
+        val web = AiChat.read(message("$search, " + cited("Grace is favour.", "https://example.com/g", "Elsewhere")).content(), sites, onlySites = false) as ChatResult.Answer
+        assertEquals("example.com", web.sources.single().site)
     }
 
     @Test
     fun requestSearchesOnlyTheChosenSites() {
-        val p = AiChat.params(sites, listOf(com.biblestudy.app.data.ChatTurn(true, "Q1"), com.biblestudy.app.data.ChatTurn(false, "A1")), "Q2")
+        val p = AiChat.params(sites, true, listOf(com.biblestudy.app.data.ChatTurn(true, "Q1"), com.biblestudy.app.data.ChatTurn(false, "A1")), "Q2")
         val json = jsonMapper().writeValueAsString(p._body())
+        // Searched directly, so the answer can cite each page.
+        assertTrue(json, json.contains("\"allowed_callers\":[\"direct\"]"))
         assertTrue(json, json.contains("\"type\":\"web_search_20260209\""))
         assertTrue(json, json.contains("\"allowed_domains\":[\"gotquestions.org\",\"ligonier.org\"]"))
         assertTrue(json, json.contains("\"model\":\"claude-opus-5-5\""))
         assertTrue(json, json.contains("\"fallbacks\":\"default\""))
         assertEquals(3, p.messages().size)
         assertEquals("server-side-fallback-2026-07-01", p._headers().values("anthropic-beta").single())
+
+        // The whole web, the chosen sites first: no domain limit, and the sites named in the instructions.
+        val web = jsonMapper().writeValueAsString(AiChat.params(sites, false, emptyList(), "Q")._body())
+        assertFalse(web, web.contains("allowed_domains"))
+        assertTrue(web, web.contains("Search these trusted sites first: gotquestions.org, ligonier.org"))
+        assertTrue(web, web.contains("Start with a short overview"))
     }
 
     /** A stand-in for the Claude API: answers with [replies] in turn and keeps each request's body. */
@@ -95,7 +106,7 @@ class AiChatTest {
             reply("$search, " + cited("Holiness means being set apart for God.", "https://www.gotquestions.org/grace.html", "What is grace?")),
             reply("$search, " + cited("Key verses: Leviticus 11:44; 1 Peter 1:15-16.", "https://www.ligonier.org/holy", "Be holy")),
         ).use { api ->
-            val r = AiChat.claude(api.url).ask("sk-test", sites, emptyList(), "What is holiness?", hasVerses) as ChatResult.Answer
+            val r = AiChat.claude(api.url).ask("sk-test", sites, false, emptyList(), "What is holiness?", hasVerses) as ChatResult.Answer
             assertEquals(2, api.bodies.size)
             assertTrue(api.bodies[1], api.bodies[1].contains(AiChat.VERSES_PLEASE) && api.bodies[1].contains("web_search_tool_result"))
             assertEquals("Holiness means being set apart for God.[1]\n\nKey verses: Leviticus 11:44; 1 Peter 1:15-16.[2]", r.text)
@@ -109,14 +120,14 @@ class AiChatTest {
             reply(search, stop = "pause_turn"),
             reply(cited("Holy means set apart (Leviticus 11:44).", "https://www.gotquestions.org/grace.html", "What is grace?")),
         ).use { api ->
-            val r = AiChat.claude(api.url).ask("sk-test", sites, listOf(ChatTurn(true, "Q1"), ChatTurn(false, "A1")), "Q2", hasVerses) as ChatResult.Answer
+            val r = AiChat.claude(api.url).ask("sk-test", sites, true, listOf(ChatTurn(true, "Q1"), ChatTurn(false, "A1")), "Q2", hasVerses) as ChatResult.Answer
             assertEquals(2, api.bodies.size)
             assertTrue(api.bodies[0], api.bodies[0].contains("\"allowed_domains\":[\"gotquestions.org\",\"ligonier.org\"]"))
             assertTrue(api.bodies[1], api.bodies[1].contains("server_tool_use") && !api.bodies[1].contains("null,\"type\":\"server"))
             assertEquals("Holy means set apart (Leviticus 11:44).[1]", r.text)
         }
         FakeApi(401 to """{"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"}}""").use { api ->
-            val r = AiChat.claude(api.url).ask("bad", sites, emptyList(), "Q", hasVerses) as ChatResult.Failed
+            val r = AiChat.claude(api.url).ask("bad", sites, true, emptyList(), "Q", hasVerses) as ChatResult.Failed
             assertTrue(r.message, r.message.contains("API key wasn't accepted"))
         }
     }

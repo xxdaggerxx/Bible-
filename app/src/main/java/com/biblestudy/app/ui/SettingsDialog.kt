@@ -395,7 +395,14 @@ private fun AiChatSettings(vm: StudyViewModel) {
             TextButton(onClick = { chat.changeKey(key); key = "" }, enabled = key.isNotBlank()) { Text("Save key") }
             if (chat.apiKey.isNotBlank()) TextButton(onClick = { chat.changeKey("") }) { Text("Forget key") }
         }
-        Text("Sites the AI may search, one per line. It answers only from these.", style = MaterialTheme.typography.bodyMedium)
+        Row(Modifier.fillMaxWidth().clickable { chat.changeOnlySites(!chat.onlySites) }, verticalAlignment = Alignment.CenterVertically) {
+            Column(Modifier.weight(1f)) {
+                Text("Only search my sites")
+                Text("Off: the whole web, with your sites searched first", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+            }
+            androidx.compose.material3.Switch(checked = chat.onlySites, onCheckedChange = { chat.changeOnlySites(it) })
+        }
+        Text("Your sites, one per line. ${if (chat.onlySites) "The AI answers only from these." else "The AI searches these first."}", style = MaterialTheme.typography.bodyMedium)
         OutlinedTextField(
             value = sites, onValueChange = { sites = it },
             minLines = 4, maxLines = 10,

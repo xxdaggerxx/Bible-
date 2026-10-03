@@ -55,6 +55,9 @@ class ChatState(
     val sites = mutableStateListOf<String>().apply {
         addAll(prefs.getString("sites", null)?.split('\n')?.filter { it.isNotBlank() } ?: AiChat.DEFAULT_SITES)
     }
+    /** Search only [sites]; otherwise the whole web, those first (AI-4). */
+    var onlySites by mutableStateOf(prefs.getBoolean("onlySites", false))
+        private set
     val entries = mutableStateListOf<ChatEntry>()
     /** Passages to go with the next question. */
     val attached = mutableStateListOf<ChatPassage>()
@@ -73,6 +76,8 @@ class ChatState(
     }
 
     fun changeEnabled(on: Boolean) { enabled = on; prefs.edit { putBoolean("enabled", on) } }
+
+    fun changeOnlySites(on: Boolean) { onlySites = on; prefs.edit { putBoolean("onlySites", on) } }
 
     fun changeKey(key: String) { apiKey = key.trim(); secret.edit { putString("key", apiKey) } }
 
@@ -112,14 +117,20 @@ class ChatState(
         save()
         val key = apiKey
         val siteList = sites.toList()
+        val only = onlySites
         scope.launch {
             val result = withContext(Dispatchers.IO) {
-                runCatching { service.ask(key, siteList, history, prompt(q, passages), hasVerses) }
+                runCatching { service.ask(key, siteList, only, history, prompt(q, passages), hasVerses) }
                     .getOrElse { ChatResult.Failed("Something went wrong: ${it.message ?: it.javaClass.simpleName}") }
             }
             entries += when (result) {
                 is ChatResult.Answer -> ChatEntry(false, result.text, sources = result.sources)
-                ChatResult.NotFound -> ChatEntry(false, "", note = "Nothing on your chosen sites answers this, so there's no answer. Try other words, or add sites in Settings → AI chat.")
+                is ChatResult.NotFound -> ChatEntry(false, "", note = buildString {
+                    append(if (only) "Nothing on your chosen sites answers this" else "The search found nothing it could cite for this")
+                    append(", so there's no answer.")
+                    if (result.queries.isNotEmpty()) append(" Searched for: ").append(result.queries.joinToString("; ") { "\u201c$it\u201d" }).append('.')
+                    append(if (only) " Try other words, or search the whole web in Settings \u2192 AI chat." else " Try asking another way.")
+                })
                 is ChatResult.Failed -> ChatEntry(false, "", note = result.message)
             }
             busy = false
