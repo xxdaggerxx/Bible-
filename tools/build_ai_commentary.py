@@ -20,6 +20,9 @@ Usage:
   ANTHROPIC_API_KEY=... python3 build_ai_commentary.py batch <work> <out> all|"Acts 2"|Ruth ... [--wait|--collect]
       Sends the parts through the Message Batches API (half price), collects finished batches and sends
       the next step. Run it again (or with --wait) until every part is done; it carries on where it left off.
+  OPENROUTER_API_KEY=... python3 build_ai_commentary.py openrouter <work> <out> all|"Acts 2"|Ruth ...
+      The same two steps through OpenRouter with cheaper models (DeepSeek V4 Pro researches, Gemini 3.8 Flash
+      writes), twelve parts at a time. Carries on where any earlier run left off.
   ANTHROPIC_API_KEY=... python3 build_ai_commentary.py chapter <work> <out> "Acts 2" ...
       Runs parts one at a time, straight away (full price), e.g. to redo ones the batch run couldn't finish.
   python3 build_ai_commentary.py pack <out> app/src/main/assets/commentaries/ai.db.xz
@@ -69,7 +72,8 @@ STYLE = """How to write (the readers are ordinary church members, not scholars):
 - Plain, everyday English. Short sentences. About the reading level of a 12-year-old.
 - Explain any church word (like "atonement" or "justified") in a few words the first time.
 - No Hebrew or Greek unless it really helps; then give the meaning simply.
-- Warm and clear, never preachy. Don't start with "This verse"."""
+- Warm and clear, never preachy. Don't start with "This verse".
+- First say what happens or what is said, and what it means; at most one short sentence of application."""
 
 RESEARCH_SYSTEM = f"""You research Bible chapters for a verse-by-verse commentary for lay readers.
 You may only use these sites (the search tool is limited to them):
@@ -545,6 +549,126 @@ def cmd_batch(work, out, refs, wait, collect_only=False):
             return
         time.sleep(120)
 
+# ---------- through OpenRouter (cheaper models) ----------
+#
+# Research with DeepSeek V4 Pro and OpenRouter's web search and fetch tools (limited to the same trusted
+# sites); writing with Gemini 3.8 Flash, which keeps to the citation rules. Same state files as the batch run.
+
+OR_RESEARCH = "deepseek/deepseek-v4-pro"
+OR_WRITE = "google/gemini-3.8-flash"
+
+
+def openrouter(body):
+    import urllib.error
+    import urllib.request
+    for attempt in range(5):
+        req = urllib.request.Request("https://openrouter.ai/api/v1/chat/completions", data=json.dumps(body).encode(),
+                                     headers={"Authorization": "Bearer " + os.environ["OPENROUTER_API_KEY"],
+                                              "Content-Type": "application/json"})
+        try:
+            r = json.load(urllib.request.urlopen(req, timeout=1800))
+            if "choices" in r:
+                return r
+            err = r.get("error")
+        except urllib.error.HTTPError as e:
+            if e.code in (400, 401, 402, 403):
+                raise RuntimeError(f"OpenRouter {e.code}: {e.read()[:300]}")
+            err = e.code
+        except Exception as e:  # network trouble: try again
+            err = e
+        time.sleep(10 * 2 ** attempt)
+    raise RuntimeError(f"OpenRouter failed: {err}")
+
+
+def or_research(p, names):
+    r = openrouter({
+        "model": OR_RESEARCH, "max_tokens": 20000, "usage": {"include": True},
+        "messages": [{"role": "system", "content": RESEARCH_SYSTEM}] + research_start(p, names),
+        "tools": [{"type": "openrouter:web_search", "parameters": {"engine": "exa", "allowed_domains": DOMAINS, "max_uses": 5, "max_results": 6}},
+                  {"type": "openrouter:web_fetch", "parameters": {"allowed_domains": DOMAINS, "max_uses": 4, "max_content_tokens": 6000}}],
+    })
+    m = r["choices"][0]["message"]
+    urls = {a["url_citation"]["url"] for a in m.get("annotations") or [] if a.get("type") == "url_citation"}
+    return (m.get("content") or "").strip(), urls, r["usage"].get("cost", 0)
+
+
+def or_write(p, names, bundled, research_notes):
+    wp = write_params(p, names, bundled, research_notes)
+    r = openrouter({
+        "model": OR_WRITE, "max_tokens": 60000, "usage": {"include": True},
+        "messages": [{"role": "system", "content": wp["system"]},
+                     {"role": "user", "content": "\n\n".join(x["text"] for x in wp["messages"][0]["content"])}],
+        "response_format": {"type": "json_schema", "json_schema": {"name": "notes", "strict": True, "schema": SCHEMA}},
+    })
+    return json.loads(r["choices"][0]["message"]["content"])["notes"], r["usage"].get("cost", 0)
+
+
+def cmd_openrouter(work, out, refs, workers=12):
+    import concurrent.futures
+    import threading
+    _, names = book_names()
+    st = State(work, out)
+    lock = threading.Lock()
+    logf = open(os.path.join(out, "log.txt"), "a")
+    todo = [p for p in select(refs) if not st.done(part_id(p))]
+    print(f"{len(todo)} parts to do", flush=True)
+
+    def log(line):
+        with lock:
+            print(line, flush=True)
+            logf.write(time.strftime("%Y-%m-%d %H:%M ") + line + "\n")
+            logf.flush()
+
+    def spend(dollars):
+        with lock:
+            st.usage["dollars"] = st.usage.get("dollars", 0) + dollars
+            st.usage["openrouter_dollars"] = st.usage.get("openrouter_dollars", 0) + dollars
+            st.save()
+
+    def one(p):
+        pid = part_id(p)
+        dbs = commentary_dbs(work)  # sqlite connections are per thread
+        try:
+            res = st.research(pid)
+            for _ in range(3):
+                if res and res.get("urls"):
+                    break
+                notes, urls, cost = or_research(p, names)
+                spend(cost)
+                res = {"notes": notes, "urls": sorted(urls), "model": OR_RESEARCH}
+                if urls:
+                    st.set_research(pid, res)
+            if not res or not res.get("urls"):
+                return log(f"{pid}: research read no pages; skipped")
+            bundled = part_notes(dbs, p)
+            for _ in range(2):
+                notes, cost = or_write(p, names, bundled, res["notes"])
+                spend(cost)
+                notes, problems = check(notes, p, bundled, set(res["urls"]))
+                gaps = missing(notes, p)
+                if not gaps:
+                    break
+            if gaps:
+                problems.append(f"no note for verses {gaps}")
+            st.finish(p, names, notes, problems)
+            with lock:
+                path = os.path.join(out, pid + ".json")
+                data = json.load(open(path))
+                data["model"] = OR_WRITE
+                json.dump(data, open(path, "w"), indent=1, ensure_ascii=False)
+            log(f"{pid}: {len(notes)} notes, {len(problems)} problems; ${st.usage['dollars']:.2f} so far")
+        except Exception as e:
+            log(f"{pid}: failed: {e}")
+            if "OpenRouter 402" in str(e) or "OpenRouter 401" in str(e):
+                raise
+
+    with concurrent.futures.ThreadPoolExecutor(workers) as ex:
+        for f in concurrent.futures.as_completed([ex.submit(one, p) for p in todo]):
+            if f.exception():
+                ex.shutdown(cancel_futures=True)
+                raise f.exception()
+    log(f"{sum(st.done(part_id(p)) for p in select(refs))}/{len(select(refs))} parts done")
+
 # ---------- one part at a time (for retries) ----------
 
 
@@ -632,6 +756,8 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     if len(args) >= 4 and args[0] == "batch":
         cmd_batch(args[1], args[2], [a for a in args[3:] if not a.startswith("--")], "--wait" in args, "--collect" in args)
+    elif len(args) >= 4 and args[0] == "openrouter":
+        cmd_openrouter(args[1], args[2], args[3:])
     elif len(args) >= 4 and args[0] == "chapter":
         cmd_chapter(args[1], args[2], args[3:])
     elif len(args) == 3 and args[0] == "pack":
