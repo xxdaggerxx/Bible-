@@ -17,7 +17,7 @@ Each note has three parts (see CLAUDE.md):
 Chapters longer than 40 verses are done in parts of about 30 verses.
 
 Usage:
-  ANTHROPIC_API_KEY=... python3 build_ai_commentary.py batch <work> <out> all|"Acts 2"|Ruth ... [--wait]
+  ANTHROPIC_API_KEY=... python3 build_ai_commentary.py batch <work> <out> all|"Acts 2"|Ruth ... [--wait|--collect]
       Sends the parts through the Message Batches API (half price), collects finished batches and sends
       the next step. Run it again (or with --wait) until every part is done; it carries on where it left off.
   ANTHROPIC_API_KEY=... python3 build_ai_commentary.py chapter <work> <out> "Acts 2" ...
@@ -38,7 +38,7 @@ import time
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 ASSETS = os.path.join(ROOT, "app", "src", "main", "assets")
-MODEL = "claude-opus-5-5"
+MODEL = "claude-sonnet-5-5"  # Claude Opus 5.5 wrote the first parts; Sonnet 5.5 (half the price) the rest
 
 # Bundled commentaries: id -> name as cited.
 BUNDLED = {
@@ -94,6 +94,7 @@ Find and write notes on:
    Catholic and Orthodox readings (newadvent.org, catholic.com, oca.org), and debated popular modern
    teaching (such as prosperity, word of faith or hyper-grace), described from what the sites say.
 
+Search first: the fetch tool can only open pages that came up in your searches. Then read the best pages.
 Write the notes verse by verse ("v. 4: ..."), each point followed by its URL. Leave out what you couldn't find."""
 
 WRITE_SYSTEM = f"""You write a verse-by-verse Bible commentary for lay readers, grounded only in the sources given.
@@ -303,7 +304,11 @@ def dump(content):
 
 # ---------- usage ----------
 
-PRICE = {"input": 4.0, "cache_write": 5.0, "output": 20.0, "cache_read": 0.2}  # $ per million tokens (Claude Opus 5.5)
+PRICES = {  # $ per million tokens
+    "claude-opus-5-5": {"input": 4.0, "cache_write": 5.0, "output": 20.0, "cache_read": 0.2},
+    "claude-sonnet-5-5": {"input": 2.0, "cache_write": 2.5, "output": 10.0, "cache_read": 0.2},
+}
+PRICE = PRICES[MODEL]
 
 
 def add_usage(total, usage, batch):
@@ -433,8 +438,8 @@ class State:
 
 def submit(c, st, kind, requests):
     from anthropic.types.messages.batch_create_params import Request
-    for i in range(0, len(requests), 500):
-        chunk = requests[i:i + 500]
+    for i in range(0, len(requests), 200):  # smaller batches: big ones hit the web search rate limit
+        chunk = requests[i:i + 200]
         batch = c.messages.batches.create(requests=[Request(custom_id=cid, params=params) for cid, params in chunk])
         st.batches.append({"id": batch.id, "kind": kind, "ids": [cid for cid, _ in chunk], "created": time.strftime("%Y-%m-%d %H:%M")})
         st.save()
@@ -492,7 +497,7 @@ def collect(c, st, parts, names, dbs, log):
         st.save()
 
 
-def cmd_batch(work, out, refs, wait):
+def cmd_batch(work, out, refs, wait, collect_only=False):
     import anthropic
     c = anthropic.Anthropic(max_retries=6)
     _, names = book_names()
@@ -508,6 +513,9 @@ def cmd_batch(work, out, refs, wait):
 
     while True:
         collect(c, st, parts, names, dbs, log)
+        if collect_only:
+            log(f"{sum(st.done(part_id(p)) for p in parts)}/{len(parts)} parts done; collected only")
+            return
         busy = st.open_ids()
         research, write, stuck = [], [], []
         for p in parts:
@@ -518,7 +526,7 @@ def cmd_batch(work, out, refs, wait):
             cid = ("w_" if res and "notes" in res else "r_") + pid
             if cid in busy:
                 continue
-            if st.tries(cid) - (res or {}).get("round", 0) >= 3 or (res or {}).get("round", 0) >= 6:
+            if st.tries(cid) - (res or {}).get("round", 0) >= 5 or (res or {}).get("round", 0) >= 6:
                 stuck.append(pid)
             elif res and "notes" in res:
                 write.append((cid, write_params(p, names, part_notes(dbs, p), res["notes"])))
@@ -623,7 +631,7 @@ def cmd_pack(out, target):
 if __name__ == "__main__":
     args = sys.argv[1:]
     if len(args) >= 4 and args[0] == "batch":
-        cmd_batch(args[1], args[2], [a for a in args[3:] if a != "--wait"], "--wait" in args)
+        cmd_batch(args[1], args[2], [a for a in args[3:] if not a.startswith("--")], "--wait" in args, "--collect" in args)
     elif len(args) >= 4 and args[0] == "chapter":
         cmd_chapter(args[1], args[2], args[3:])
     elif len(args) == 3 and args[0] == "pack":

@@ -2416,7 +2416,8 @@
    "r_42-006-025",
    "r_42-007-001"
   ],
-  "created": "2026-10-03 12:25"
+  "created": "2026-10-03 12:25",
+  "collected": true
  },
  {
   "id": "msgbatch_01PzqBzj9MJXwq6VHUc1oQXf",
@@ -3128,7 +3129,8 @@
    "r_17-002-001",
    "r_17-003-001"
   ],
-  "created": "2026-10-03 12:34"
+  "created": "2026-10-03 12:34",
+  "collected": true
  },
  {
   "id": "msgbatch_01K8hvrSceQpJgzkNekNVtVG",
@@ -3279,6 +3281,7 @@
    "w_33-004-001",
    "w_33-007-001"
   ],
-  "created": "2026-10-03 12:34"
+  "created": "2026-10-03 12:34",
+  "collected": true
  }
 ]
