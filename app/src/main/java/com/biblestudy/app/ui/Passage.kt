@@ -82,7 +82,7 @@ fun PassageCard(
     onClose: () -> Unit,
 ) {
     val verses by produceState<List<Pair<Int, String>>?>(null, passage, version) {
-        value = withContext(Dispatchers.IO) { vm.passageVerses(passage, version) }
+        value = background { vm.passageVerses(passage, version) }
     }
     Surface(
         Modifier.widthIn(max = 460.dp),

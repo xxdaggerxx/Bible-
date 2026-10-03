@@ -96,8 +96,8 @@ private val PIN = Color(0xFFC62828)
 @Composable
 fun PlaceMap(vm: StudyViewModel, place: NameEntry, modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val map by produceState<LandsMap?>(null) { value = withContext(Dispatchers.IO) { LandsMap.load(context) } }
-    val landmarks by produceState(emptyList<NameEntry>()) { value = withContext(Dispatchers.IO) { vm.study.landmarks() } }
+    val map by produceState<LandsMap?>(null) { value = background { LandsMap.load(context) } }
+    val landmarks by produceState(emptyList<NameEntry>()) { value = background { vm.study.landmarks() } }
     val lat0 = place.lat ?: return
     val lon0 = place.lon ?: return
     var span by remember(place.id) { mutableFloatStateOf(3f) } // degrees of latitude shown
@@ -177,10 +177,10 @@ fun NamesPane(vm: StudyViewModel, modifier: Modifier) {
     }
     var query by remember { mutableStateOf("") }
     val here by produceState(emptyList<NameEntry>() to emptyList<NameEntry>(), id) {
-        value = withContext(Dispatchers.IO) { vm.study.namesInVerse(id) to vm.study.namesInChapter(panel.book, panel.chapter) }
+        value = background { vm.study.namesInVerse(id) to vm.study.namesInChapter(panel.book, panel.chapter) }
     }
     val results by produceState(emptyList<NameEntry>(), query) {
-        value = if (query.isBlank()) emptyList() else withContext(Dispatchers.IO) { vm.study.nameSearch(query) }
+        value = if (query.isBlank()) emptyList() else background { vm.study.nameSearch(query) }
     }
     Column(modifier) {
         OutlinedTextField(
@@ -230,7 +230,7 @@ private fun NameRow(n: NameEntry, onClick: () -> Unit) {
 @Composable
 private fun NameView(vm: StudyViewModel, id: Long, modifier: Modifier) {
     val entry by produceState<Pair<NameEntry, List<Int>>?>(null, id) {
-        value = withContext(Dispatchers.IO) { vm.study.nameById(id)?.let { it to vm.study.nameVerses(id) } }
+        value = background { vm.study.nameById(id)?.let { it to vm.study.nameVerses(id) } }
     }
     var shown by remember { mutableStateOf<Passage?>(null) }
     val version = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)].version
@@ -294,7 +294,7 @@ private fun NameView(vm: StudyViewModel, id: Long, modifier: Modifier) {
 /** The people and places in a verse, as chips that open them in the study pane (verse window). */
 @Composable
 fun NamesInVerse(vm: StudyViewModel, verseId: Int, onOpen: () -> Unit) {
-    val names by produceState(emptyList<NameEntry>(), verseId) { value = withContext(Dispatchers.IO) { vm.study.namesInVerse(verseId) } }
+    val names by produceState(emptyList<NameEntry>(), verseId) { value = background { vm.study.namesInVerse(verseId) } }
     if (names.isEmpty()) return
     Row(
         Modifier.horizontalScroll(rememberScrollState()).padding(top = 4.dp),

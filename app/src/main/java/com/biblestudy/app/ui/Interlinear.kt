@@ -51,7 +51,7 @@ import kotlinx.coroutines.withContext
 @Composable
 fun OriginalVerse(vm: StudyViewModel, verseId: Int, version: String) {
     val words by produceState<List<OriginalWord>?>(null, verseId) {
-        value = withContext(Dispatchers.IO) { vm.study.original(verseId) }
+        value = background { vm.study.original(verseId) }
     }
     var picked by remember(verseId) { mutableIntStateOf(-1) }
     val ws = words ?: return

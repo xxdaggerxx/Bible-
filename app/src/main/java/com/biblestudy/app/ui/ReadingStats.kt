@@ -134,7 +134,7 @@ private val READ_SHADES = listOf(Color(0xFFC8E6C9), Color(0xFF81C784), Color(0xF
 @Composable
 fun ReadingStatsDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     val stats by produceState<ReadingStats?>(null, vm.readingGeneration) {
-        value = withContext(Dispatchers.IO) {
+        value = background {
             ReadingStats.compute(vm.user.readingDays(), vm.user.readingChapters(), vm.bible.books, LocalDate.now())
         }
     }

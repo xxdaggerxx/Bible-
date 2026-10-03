@@ -75,6 +75,7 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - Verses printed together ("\v 1-2") are kept under the first verse and tagged against both.
   - Bibles imported before this get all of it in the background the next time the app starts, and when restored from an older backup.
 - The import tests use short ESV and NLT passages (31 verses each, within the publishers' quotation allowances).
+- **Fixed:** the count of chapters still loading could slip below zero, which could stop *Expand to fit* from making room for margin notes until the app was reopened. Screens that load in the background (word studies, reading stats, the family tree, the Hebrew and Greek view) now always hand their results to the screen on the main thread.
 
 ## New in version 1.0.2
 
@@ -358,7 +359,6 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
 - Word tags in imported Bibles are worked out, not published ones: roughly 1 in 10 tagged words may point to a neighbouring Hebrew or Greek word, and loosely paraphrased words (common in the NLT, e.g. "meadows", "unfailing") have none. Footnotes in imported files are left out. Verses printed together ("1–2") show under the first verse number.
 - The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
-- The automated screen tests (Robolectric) still fail now and then, about one run in two, on one random test whose screen waits for data loaded in the background. The data itself is right each time; it's the emulated screen that sometimes doesn't refresh in time. Re-running passes.
 - Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
 
 ## Next milestones

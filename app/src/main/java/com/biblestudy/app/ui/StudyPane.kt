@@ -106,7 +106,7 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
     val id = VerseId.of(t.book, t.chapter, t.verse)
     val version = panel.version
     val refs by produceState<List<CrossRef>?>(null, id, version) {
-        value = withContext(Dispatchers.IO) {
+        value = background {
             val text = vm.text(version)
             vm.bible.crossRefs(id).map { r -> text.verseText(r.toStart)?.let { r.copy(preview = it) } ?: r }
         }

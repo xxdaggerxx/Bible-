@@ -163,7 +163,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         val headingsOn = vm.showHeadings
         val redOn = vm.redLetters
         val other = vm.diffVersionFor(panel)
-        val (data, paras, red) = withContext(Dispatchers.IO) {
+        val (data, paras, red) = background {
             val d = ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
             Triple(d, if (style.paragraphs) vm.study.paragraphStarts(v, b, c) else null,
                 if (redOn) vm.study.redLetters(v, b, c, d.verses.associate { it.verse to it.text }) else emptyMap())

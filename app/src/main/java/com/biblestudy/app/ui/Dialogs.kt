@@ -159,7 +159,7 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     val markers by produceState<MarkerIndex?>(null, version, vm.dataGeneration) { value = vm.loadMarkers(version) }
     // Chapters already read get a light tint (ANL-5).
     val readChapters by produceState(emptySet<Int>(), vm.readingGeneration) {
-        value = withContext(Dispatchers.IO) { vm.user.readingChapters().filter { it.timesRead > 0 }.mapTo(HashSet()) { it.book * 1000 + it.chapter } }
+        value = background { vm.user.readingChapters().filter { it.timesRead > 0 }.mapTo(HashSet()) { it.book * 1000 + it.chapter } }
     }
     val visible = vm.visibleLayerIds()
     val colors = vm.layers.associate { it.id to it.color }
@@ -211,7 +211,7 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                 else -> {
                     val info = vm.bible.book(b)
                     val verses by produceState(emptyList<Verse>(), b, c, version) {
-                        value = withContext(Dispatchers.IO) { vm.text(version).chapter(b, c) }
+                        value = background { vm.text(version).chapter(b, c) }
                     }
                     DialogTitle("${info.name} $c", onDismiss) {
                         IconButton(onClick = { chapter = null; if (info.chapters == 1) book = null }) {
@@ -355,7 +355,7 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
         co.launch {
             val v = version
             val notes = inNotes
-            results = withContext(Dispatchers.IO) {
+            results = background {
                 if (notes) {
                     val (lo, hi) = when (scope) {
                         SearchScope.ALL -> 1 to 66
@@ -560,7 +560,7 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
     var noteEnd by remember(t) { mutableStateOf(originalEnd) }
     val lastVerse = remember(t) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: t.verse }
     val refs by produceState(emptyList<CrossRef>(), t) {
-        value = withContext(Dispatchers.IO) {
+        value = background {
             // Previews in the version being read (the cross-reference list itself is shared).
             val text = vm.text(version)
             vm.bible.crossRefs(id).map { r -> text.verseText(r.toStart)?.let { r.copy(preview = it) } ?: r }
@@ -633,7 +633,7 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
             NamesInVerse(vm, id, onOpen = ::close)
             // The word tapped on the page, ready to study.
             val tapped by produceState<WordStudy?>(null, t, version) {
-                value = if (t.word < 0) null else withContext(Dispatchers.IO) {
+                value = if (t.word < 0) null else background {
                     val strong = vm.study.strongs(version, id).getOrNull(t.word)
                     val range = com.biblestudy.app.data.StudyRepository.words(verseText).getOrNull(t.word)
                     if (strong != null && range != null) WordStudy(strong, version, verseText.substring(range), id) else null

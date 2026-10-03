@@ -109,7 +109,7 @@ fun VerseCardDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     val version = vm.activeVersion
     val passage = remember(ref) { RefLinks.find(ref.trim(), vm.bible.books).firstOrNull()?.passage }
     val verses by produceState(emptyList<Pair<Int, String>>(), passage, version) {
-        value = passage?.let { withContext(Dispatchers.IO) { vm.passageVerses(it, version) } } ?: emptyList()
+        value = passage?.let { background { vm.passageVerses(it, version) } } ?: emptyList()
     }
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -157,7 +157,7 @@ fun verseCardText(vm: StudyViewModel, p: Passage, version: String, verses: List<
 fun NameCardDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     var q by remember { mutableStateOf("") }
     val results by produceState(emptyList<NameEntry>(), q) {
-        value = if (q.isBlank()) emptyList() else withContext(Dispatchers.IO) { vm.study.nameSearch(q, 50) }
+        value = if (q.isBlank()) emptyList() else background { vm.study.nameSearch(q, 50) }
     }
     AlertDialog(
         onDismissRequest = onDismiss,

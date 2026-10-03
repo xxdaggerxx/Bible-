@@ -123,7 +123,7 @@ fun PassagePopupHost(vm: StudyViewModel, passage: Passage?, version: String, onD
 @Composable
 fun StudyableVerse(vm: StudyViewModel, verseId: Int, version: String, text: String) {
     val strongs by produceState(emptyList<String?>(), verseId, version) {
-        value = withContext(Dispatchers.IO) { vm.study.strongs(version, verseId) }
+        value = background { vm.study.strongs(version, verseId) }
     }
     val ranges = remember(text) { StudyRepository.words(text) }
     val annotated = remember(text, strongs) {
@@ -157,20 +157,20 @@ fun WordStudyDialog(vm: StudyViewModel, start: WordStudy, onDismiss: () -> Unit)
     val trail = remember(start) { mutableStateListOf(start.strong) }
     val strong = trail.last()
     val version = start.version
-    val entry by produceState<LexEntry?>(null, strong) { value = withContext(Dispatchers.IO) { vm.study.lexicon(strong) } }
+    val entry by produceState<LexEntry?>(null, strong) { value = background { vm.study.lexicon(strong) } }
     val uses by produceState<List<Occurrence>?>(null, strong, version) {
         value = null
-        value = withContext(Dispatchers.IO) { vm.study.occurrences(version, strong, { vm.text(version).verseText(it) }) }
+        value = background { vm.study.occurrences(version, strong, { vm.text(version).verseText(it) }) }
     }
     var onlyBook by remember(strong) { mutableStateOf<Int?>(null) }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     // A dictionary article for the English word, if Easton's has one.
     val article by produceState<StudyEntry?>(null, start.word) {
-        value = start.word?.let { w -> withContext(Dispatchers.IO) { vm.study.dictionaryEntry(w) ?: vm.study.dictionaryEntry(w.trimEnd('s')) } }
+        value = start.word?.let { w -> background { vm.study.dictionaryEntry(w) ?: vm.study.dictionaryEntry(w.trimEnd('s')) } }
     }
 
     val person by produceState<com.biblestudy.app.data.NameEntry?>(null, strong, start.verseId) {
-        value = withContext(Dispatchers.IO) { vm.study.nameForStrong(strong, start.verseId) }
+        value = background { vm.study.nameForStrong(strong, start.verseId) }
     }
     BigDialog(onDismiss) {
         Column(Modifier.testTag("wordStudy")) {
@@ -304,7 +304,7 @@ private fun LookupPane(
     val version = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)].version
     PassagePopupHost(vm, shown, version, onDismiss = { shown = null })
     Column(modifier) {
-        val entry by produceState<StudyEntry?>(null, open) { value = open?.let { withContext(Dispatchers.IO) { load(it) } } }
+        val entry by produceState<StudyEntry?>(null, open) { value = open?.let { background { load(it) } } }
         val e = entry
         if (open != null && e != null) {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -326,7 +326,7 @@ private fun LookupPane(
             modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
         )
         val results by produceState(emptyList<StudyEntry>(), query) {
-            value = if (query.isBlank()) emptyList() else withContext(Dispatchers.IO) { search(query) }
+            value = if (query.isBlank()) emptyList() else background { search(query) }
         }
         val list = if (query.isBlank()) suggestions else results
         if (query.isBlank() && suggestionsLabel != null && suggestions.isNotEmpty()) {
@@ -351,7 +351,7 @@ private fun LookupPane(
 fun DictionaryPane(vm: StudyViewModel, modifier: Modifier) {
     val panel = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
     val suggestions by produceState(emptyList<StudyEntry>(), panel.book, panel.chapter, panel.version) {
-        value = withContext(Dispatchers.IO) { vm.chapterArticles(panel.version, panel.book, panel.chapter) }
+        value = background { vm.chapterArticles(panel.version, panel.book, panel.chapter) }
     }
     LookupPane(
         vm, modifier,
@@ -373,7 +373,7 @@ fun TopicsPane(vm: StudyViewModel, modifier: Modifier) {
     val verse = t?.verse ?: panel.topVerse
     val id = VerseId.of(panel.book, panel.chapter, verse)
     val suggestions by produceState(emptyList<StudyEntry>(), id) {
-        value = withContext(Dispatchers.IO) { vm.study.topicsFor(id) }
+        value = background { vm.study.topicsFor(id) }
     }
     LookupPane(
         vm, modifier,
@@ -392,7 +392,7 @@ fun TopicsPane(vm: StudyViewModel, modifier: Modifier) {
 fun CommentaryPane(vm: StudyViewModel, modifier: Modifier) {
     val panel = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
     val sections by produceState<List<CommentarySection>?>(null, panel.book, panel.chapter) {
-        value = withContext(Dispatchers.IO) { vm.study.commentary(panel.book, panel.chapter) }
+        value = background { vm.study.commentary(panel.book, panel.chapter) }
     }
     var shown by remember { mutableStateOf<Passage?>(null) }
     PassagePopupHost(vm, shown, panel.version, onDismiss = { shown = null })
@@ -440,9 +440,9 @@ fun CommentaryPane(vm: StudyViewModel, modifier: Modifier) {
 @Composable
 fun RelatedPassages(vm: StudyViewModel, verseId: Int, version: String, onShow: (Passage) -> Unit) {
     val related by produceState<Pair<List<Passage>, List<Triple<Int, Int, Int>>>?>(null, verseId) {
-        value = withContext(Dispatchers.IO) { vm.parallelAccounts(verseId) to vm.study.relatedByTopics(verseId) }
+        value = background { vm.parallelAccounts(verseId) to vm.study.relatedByTopics(verseId) }
     }
-    val topics by produceState(emptyList<StudyEntry>(), verseId) { value = withContext(Dispatchers.IO) { vm.study.topicsFor(verseId, 8) } }
+    val topics by produceState(emptyList<StudyEntry>(), verseId) { value = background { vm.study.topicsFor(verseId, 8) } }
     Column(Modifier.padding(top = 12.dp)) {
         if (topics.isNotEmpty()) {
             Text("Topics", style = MaterialTheme.typography.titleSmall)
@@ -480,7 +480,7 @@ fun RelatedPassages(vm: StudyViewModel, verseId: Int, version: String, onShow: (
 /** A Strong's search result header (SRCH-7): the word searched for, with a way into its word study. */
 @Composable
 fun StrongsHeader(vm: StudyViewModel, strong: String, version: String) {
-    val e by produceState<LexEntry?>(null, strong) { value = withContext(Dispatchers.IO) { vm.study.lexicon(strong) } }
+    val e by produceState<LexEntry?>(null, strong) { value = background { vm.study.lexicon(strong) } }
     val entry = e ?: return
     Row(
         Modifier.fillMaxWidth().padding(top = 8.dp).background(MaterialTheme.colorScheme.surfaceContainerHigh).padding(8.dp),
