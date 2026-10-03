@@ -1340,6 +1340,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 Text("\u2022 Hebrew and Greek word by word: STEPBible.org TAHOT and TAGNT (Tyndale House, Cambridge), licensed CC BY 4.0. Only the columns shown are kept.")
                 Text("\u2022 Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library.")
                 Text("\u2022 Commentaries (public domain): Matthew Henry's Complete, Jamieson-Fausset-Brown, Wesley, the Geneva notes, Barnes, Adam Clarke, Keil & Delitzsch, Robertson's Word Pictures, Calvin and Spurgeon's Treasury of David, from the CrossWire Bible Society's SWORD library.")
+                Text("\u2022 Writing sounds: \u201cPencil\u201d, \u201cMarker circle\u201d and \u201cDrawing\u201d by freesound_community, from Pixabay (Pixabay Content License).")
                 Text("\u2022 Bible text font: Gentium Book Plus \u00a9 SIL International, SIL Open Font License.")
                 Spacer(Modifier.height(12.dp))
                 Text("How to use", style = MaterialTheme.typography.titleMedium)

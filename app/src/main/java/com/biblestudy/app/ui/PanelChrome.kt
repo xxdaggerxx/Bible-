@@ -53,21 +53,28 @@ import androidx.compose.ui.unit.dp
 fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: () -> Unit) {
     DropdownMenu(expanded = expanded, onDismissRequest = onDismiss) {
         val current = (slot as? Slot.Study)?.kind
-        Text("Show in this panel", style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 4.dp))
-        DropdownMenuItem(
-            text = { Text("Bible") },
-            onClick = { onDismiss(); if (current != null) vm.setSlotView(slot, null) },
-            leadingIcon = if (current == null) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
-        )
-        for (k in PaneKind.entries) {
-            if (k == PaneKind.CHAT && !vm.chat.enabled && current != k) continue
-            val elsewhere = k != current && k in vm.tab.studies && k != PaneKind.COMMENTARY
-            DropdownMenuItem(
-                text = { Text(k.label) },
-                enabled = !elsewhere,
-                onClick = { onDismiss(); if (k != current) vm.setSlotView(slot, k) },
-                leadingIcon = if (k == current) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
+        // The views under a few headings (SPLIT-7), the Bible first.
+        for ((g, group) in PaneKind.groups.withIndex()) {
+            val (heading, kinds) = group
+            Text(
+                heading, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(start = 16.dp, top = if (g == 0) 8.dp else 12.dp, bottom = 2.dp),
             )
+            if (g == 0) DropdownMenuItem(
+                text = { Text("Bible") },
+                onClick = { onDismiss(); if (current != null) vm.setSlotView(slot, null) },
+                leadingIcon = if (current == null) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
+            )
+            for (k in kinds) {
+                if (k == PaneKind.CHAT && !vm.chat.enabled && current != k) continue
+                val elsewhere = k != current && k in vm.tab.studies && k != PaneKind.COMMENTARY
+                DropdownMenuItem(
+                    text = { Text(k.label) },
+                    enabled = !elsewhere,
+                    onClick = { onDismiss(); if (k != current) vm.setSlotView(slot, k) },
+                    leadingIcon = if (k == current) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
+                )
+            }
         }
         HorizontalDivider()
         if (vm.tab.shown < 2) {

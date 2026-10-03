@@ -21,7 +21,7 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 - **Undo and redo** are the curved arrows.
 - **Shapes.** Draw a line, arrow, box or circle and hold the pen still at the end. It snaps to a neat shape.
 - **Hover.** Hold the S Pen just above the screen and a small mark shows exactly where it will touch: a dot the size of the pen, a bar for the highlighter, a circle for the eraser.
-- **Writing sounds.** A soft pen-on-paper sound follows your writing: louder when you write fast or press hard, quiet when you stop. The pen, highlighter and eraser each sound different. Turn it off, or change the volume, in *Settings → Pen & ink → Writing sounds*. It plays through the tablet's media volume.
+- **Writing sounds.** A real pen-on-paper sound follows your writing: louder when you write fast or press hard, quiet when you stop. The pen sounds like a pencil, the highlighter like a marker, and the eraser like soft drawing. Turn it off, or change the volume, in *Settings → Pen & ink → Writing sounds*. It plays through the tablet's media volume.
 
 ## Highlighting and underlining
 
@@ -91,13 +91,11 @@ Layers are like clear sheets over the page. Tap the layers button (it shows the 
 
 ## Verse details
 
-Tap any verse with your finger. Its details open in a panel beside the text, called *Verse details*:
+Tap any verse with your finger. Its details open in a pop-up window. Tap outside it, or ×, to close it.
 
-- If the tab shows only the Bible, the panel opens beside it.
-- If the panel is already open, it moves to the verse you tapped. The arrows at its top go to the verse before and after.
-- If both panels are already in use (two Bibles, or the Bible and a commentary), the details open in a window instead, as before.
-- To always use the window, turn off *Settings → Verse details → Verse details in a panel*.
-- A word study opened from the panel shows in the same panel. *Back to the verse* returns.
+- **Prefer them beside the text?** Turn on *Settings → Verse details → Verse details in a panel*. Then the details open in a panel called *Verse details* next to the Bible, and move to each verse you tap. The arrows at its top go to the verse before and after. If both panels are already in use, the pop-up opens instead.
+- You can also choose *Verse details* from a panel's menu at any time.
+- In the panel, a word study shows in the same panel. *Back to the verse* returns.
 - Your typed note is kept as you type, and when you move to another verse.
 
 The details show:
@@ -146,7 +144,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 ## Panels and tabs
 
 - **One or two panels.** Each tab shows one panel, or two side by side or one above the other. Drag the divider between them to resize; double-tap it to make them equal.
-- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view: Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places, Sketch pages, Compare versions, Hebrew/Greek, Word study or About the book (the introduction to the book you're reading). The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
+- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. They're listed under four headings: **Reading** (the Bible, Sketch pages); **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references); **Study** (Commentary, Dictionary, Topics, Names & places, About the book, the introduction to the book you're reading); and **Notes, search and AI** (My notes, Search, AI chat). The panels button in the toolbar lists them under the same headings. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
 - **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
 - **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
 - **Link panels** with the link button in a Bible panel's header: two Bible panels scroll together verse by verse, even in different versions.

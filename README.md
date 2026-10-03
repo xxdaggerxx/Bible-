@@ -1,4 +1,4 @@
-# Ink & Word — version 1.6.2
+# Ink & Word — version 1.7.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,13 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.7
+
+- **Real writing sounds.** The pen sounds like a pencil, the highlighter like a marker, the eraser like soft drawing: recordings from Pixabay (freesound_community), made into seamless loops by `tools/build_sounds.py`. They still follow the pen: louder and a little faster when you write fast or press hard, silent when you stop. Each stroke starts at a different point in the loop. Adds about 0.8 MB.
+- **Tapping a verse opens the pop-up again,** as before 1.5: simpler for everyday use. The Verse details panel is still there: turn on *Settings → Verse details in a panel*, or choose *Verse details* from a panel's menu.
+- **The panel menu in groups:** *Reading*, *This verse*, *Study*, and *Notes, search and AI*, instead of one long list. The panels button in the toolbar uses the same headings.
+- Next: offline smart search (all versions at once, Hebrew and Greek word families, Nave's topics).
 
 ## New in version 1.6.2
 

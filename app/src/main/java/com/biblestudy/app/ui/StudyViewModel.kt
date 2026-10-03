@@ -185,6 +185,17 @@ enum class PaneKind(val label: String) {
     SKETCHES("Sketch pages"),
     VERSE("Verse details"), COMPARE("Compare versions"), ORIGINAL("Hebrew/Greek"), WORDSTUDY("Word study"), INTRO("About the book"),
     CHAT("AI chat"),
+    ;
+
+    companion object {
+        /** The views under headings, as the panel menus list them (SPLIT-7). The Bible itself goes first. */
+        val groups: List<Pair<String, List<PaneKind>>> = listOf(
+            "Reading" to listOf(SKETCHES),
+            "This verse" to listOf(VERSE, COMPARE, ORIGINAL, WORDSTUDY, CROSSREFS),
+            "Study" to listOf(COMMENTARY, DICTIONARY, TOPICS, NAMES, INTRO),
+            "Notes, search and AI" to listOf(NOTES, SEARCH, CHAT),
+        )
+    }
 }
 
 /** A spot to return to with Back / Forward. */
@@ -272,7 +283,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         highlightsAllVersions = true
         marginLeft = false; marginRight = true
         linkPanels = false
-        compareVersions = false; originalView = false; redLetters = false; verseInPanel = true
+        compareVersions = false; originalView = false; redLetters = false; verseInPanel = false
         changeWritingSounds(true); changeSoundVolume(0.6f)
         savePrefs()
         message = "Settings reset to their defaults."
@@ -331,7 +342,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         private set
 
     /** Pen-on-paper sounds while writing (INK-15), and how loud (0..1). */
-    val sound = WritingSound()
+    val sound = WritingSound { WritingSound.loadLoops(getApplication<Application>().assets) }
     var writingSounds by mutableStateOf(prefs.getBoolean("writingSounds", true))
         private set
     var soundVolume by mutableFloatStateOf(prefs.getFloat("soundVolume", 0.6f))
@@ -373,8 +384,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var compareVersions by mutableStateOf(prefs.getBoolean("compareVersions", false))
     /** The verse window shows the Hebrew or Greek word by word (STD-4). */
     var originalView by mutableStateOf(prefs.getBoolean("originalView", false))
-    /** Tapping a verse shows its details in a panel beside the text rather than a window (SPLIT-9). */
-    var verseInPanel by mutableStateOf(prefs.getBoolean("verseInPanel", true))
+    /**
+     * Tapping a verse shows its details in a panel beside the text rather than the pop-up window
+     * (SPLIT-9). Off by default from 1.7: the pop-up is simpler (a new key, so everyone starts off).
+     */
+    var verseInPanel by mutableStateOf(prefs.getBoolean("versePanel", false))
     var lineSpacing by mutableStateOf(
         runCatching { LineSpacing.valueOf(prefs.getString("lineSpacing", "NORMAL")!!) }.getOrDefault(LineSpacing.NORMAL)
     )
@@ -502,7 +516,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("verseInPanel", verseInPanel)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
@@ -957,9 +971,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /**
-     * Shows a verse's details (SPLIT-9): in the tab's Verse details panel, opening it beside the
-     * text when the tab has room; or, when both panels are in use or it's turned off in Settings,
-     * in the verse window.
+     * Shows a verse's details (SPLIT-9): in the pop-up verse window; or, with *Verse details in a
+     * panel* on in Settings, in the tab's Verse details panel, opened beside the text when the tab
+     * has room (the window still opens when both panels are in use).
      */
     fun openVerse(book: Int, chapter: Int, verse: Int, word: Int = -1) {
         paneVerse = VerseTarget(book, chapter, verse, word)

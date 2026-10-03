@@ -213,12 +213,19 @@ fun StudyToolbar(
                         })
                     }
                     HorizontalDivider()
-                    for (k in PaneKind.entries) {
-                        if (k == PaneKind.CHAT && !vm.chat.enabled) continue
-                        DropdownMenuItem(
-                            text = { Text("Beside the text: ${k.label}" + if (vm.sidePane == k) "  \u2713" else "") },
-                            onClick = { vm.togglePane(k); panelsMenu = false },
+                    // Beside the text: the views under the same headings as the panel menu.
+                    for ((heading, kinds) in PaneKind.groups) {
+                        Text(
+                            heading, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.padding(start = 16.dp, top = 10.dp, bottom = 2.dp),
                         )
+                        for (k in kinds) {
+                            if (k == PaneKind.CHAT && !vm.chat.enabled) continue
+                            DropdownMenuItem(
+                                text = { Text("Beside the text: ${k.label}" + if (vm.sidePane == k) "  \u2713" else "") },
+                                onClick = { vm.togglePane(k); panelsMenu = false },
+                            )
+                        }
                     }
                     HorizontalDivider()
                     // Saved layouts (SPLIT-6).

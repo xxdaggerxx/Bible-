@@ -155,7 +155,7 @@ fun SettingsDialog(
                 Toggle("Link panels", "Panels scroll together, verse by verse", vm.linkPanels) { vm.linkPanels = it }
 
                 Group("Verse details")
-                Toggle("Verse details in a panel", "Tapping a verse shows it beside the text. Off: in a window", vm.verseInPanel) { vm.verseInPanel = it }
+                Toggle("Verse details in a panel", "Tapping a verse shows it beside the text. Off: in a pop-up (simplest)", vm.verseInPanel) { vm.verseInPanel = it }
                 Toggle("Compare versions", "Show the verse in every version when it opens", vm.compareVersions) { vm.compareVersions = it }
 
                 Group("AI chat (online)")

@@ -1479,7 +1479,7 @@ class FeatureTest {
         }
         waitForLoaded()
         compose.onNodeWithContentDescription("Panels").performClick()
-        compose.onNodeWithText("Save this layout\u2026").performClick()
+        compose.onNodeWithText("Save this layout\u2026").performScrollTo().performClick()
         compose.onNodeWithText("e.g. Gospels side by side").performTextInput("Baptism of Jesus")
         compose.onNodeWithText("Save").performClick()
         compose.waitForIdle()
