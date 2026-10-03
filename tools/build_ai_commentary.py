@@ -25,8 +25,8 @@ Usage:
   python3 build_ai_commentary.py pack <out> app/src/main/assets/commentaries/ai.db.xz
       Turns the finished notes into the commentary database the app reads: entries(start, end, body).
 
-<work> holds the bundled commentaries unpacked and the research notes. <out> holds the finished notes
-(<book>-<chapter>-<first verse>.json), batches.json, usage.json and log.txt.
+<work> holds the bundled commentaries unpacked. <out> holds the finished notes
+(<book>-<chapter>-<first verse>.json), the research notes (research/), batches.json, usage.json and log.txt.
 """
 import json
 import lzma
@@ -373,7 +373,7 @@ def missing(notes, p):
 
 # ---------- state ----------
 #
-# <work>/state/research/<part>.json  {"notes", "urls"}, or while paused {"messages", "round"}
+# <out>/research/<part>.json         {"notes", "urls"}, or while paused {"messages", "round"}
 # <out>/<part>.json                  the finished notes
 # <out>/batches.json                 every batch sent, so results can be fetched again (kept 29 days)
 # <out>/usage.json                   tokens, searches and dollars so far
@@ -382,7 +382,7 @@ def missing(notes, p):
 class State:
     def __init__(self, work, out):
         self.work, self.out = work, out
-        self.rdir = os.path.join(work, "state", "research")
+        self.rdir = os.path.join(out, "research")  # in <out> so it is kept with the notes
         os.makedirs(self.rdir, exist_ok=True)
         os.makedirs(out, exist_ok=True)
         self.batches = self._load("batches.json", [])
