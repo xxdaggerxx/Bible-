@@ -250,8 +250,9 @@ def covered(notes, cid, verse, end):
 # ---------- requests ----------
 
 TOOLS = [
-    {"type": "web_search_20260209", "name": "web_search", "allowed_domains": DOMAINS, "max_uses": 8},
-    {"type": "web_fetch_20260209", "name": "web_fetch", "allowed_domains": DOMAINS, "max_uses": 6, "max_content_tokens": 8000},
+    # The basic tool versions: the newer ones run a hidden code-execution step that ran out of calls in large batches.
+    {"type": "web_search_20250305", "name": "web_search", "allowed_domains": DOMAINS, "max_uses": 5},
+    {"type": "web_fetch_20250910", "name": "web_fetch", "allowed_domains": DOMAINS, "max_uses": 4, "max_content_tokens": 6000},
 ]
 
 
@@ -406,6 +407,11 @@ class State:
         with open(os.path.join(self.rdir, pid + ".json"), "w") as f:
             json.dump(data, f, ensure_ascii=False)
 
+    def drop_research(self, pid):
+        path = os.path.join(self.rdir, pid + ".json")
+        if os.path.exists(path):
+            os.remove(path)
+
     def done(self, pid):
         return os.path.exists(os.path.join(self.out, pid + ".json"))
 
@@ -463,12 +469,18 @@ def collect(c, st, parts, names, dbs, log):
                                           "round": prev["round"] + 1, "content": prev.get("content", []) + dump(msg.content)})
                 else:
                     notes, urls = read_research(prev.get("content", []) + dump(msg.content))
-                    st.set_research(pid, {"notes": notes, "urls": sorted(urls)})
+                    if urls:
+                        st.set_research(pid, {"notes": notes, "urls": sorted(urls)})
+                    else:  # no page was read (a tool failure): research it again
+                        st.drop_research(pid)
+                        log(f"{pid} research: no pages read")
             else:
                 if msg.stop_reason == "max_tokens":
                     log(f"{pid} write: ran out of room")
                     continue
                 res = st.research(pid)
+                if not res or not res.get("urls"):
+                    continue
                 bundled = part_notes(dbs, p)
                 notes = json.loads(next(x.text for x in msg.content if x.type == "text"))["notes"]
                 notes, problems = check(notes, p, bundled, set(res["urls"]))
