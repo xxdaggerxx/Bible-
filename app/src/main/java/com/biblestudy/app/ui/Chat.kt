@@ -20,6 +20,9 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.material.icons.filled.VerticalSplit
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Public
@@ -96,7 +99,12 @@ fun ChatPane(vm: StudyViewModel, modifier: Modifier) {
                 )
             }
             itemsIndexed(chat.entries) { i, e ->
-                ChatBubble(vm, e, onPassage = { shown = it }, onEdit = { chat.startEdit(i)?.let { question = it } })
+                // The last reply can be asked for again; so can a question left without one.
+                val retry = i == chat.entries.lastIndex && !chat.busy
+                ChatBubble(
+                    vm, e, onPassage = { shown = it }, onEdit = { chat.startEdit(i)?.let { question = it } },
+                    onRetry = if (retry) ({ chat.retry() }) else null,
+                )
             }
             if (chat.busy) item {
                 Row(Modifier.padding(vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -171,6 +179,33 @@ fun ChatPane(vm: StudyViewModel, modifier: Modifier) {
     }
 }
 
+/**
+ * The chat in its own little window (AI-10), floating over the text above the chat bubble, so
+ * you can keep reading and tapping verses while it's open. It can move into a panel beside the text.
+ */
+@Composable
+fun ChatWindow(vm: StudyViewModel, modifier: Modifier) {
+    androidx.compose.material3.Surface(
+        modifier.imePadding().testTag("chatWindow"),
+        shape = androidx.compose.foundation.shape.RoundedCornerShape(20.dp),
+        tonalElevation = 3.dp,
+        shadowElevation = 12.dp,
+    ) {
+        Column(Modifier.padding(start = 16.dp, end = 8.dp, top = 4.dp, bottom = 8.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text("AI chat", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
+                IconButton(onClick = { vm.chatBeside() }) {
+                    Icon(Icons.Filled.VerticalSplit, contentDescription = "Open the chat beside the text")
+                }
+                IconButton(onClick = { vm.chatWindow = false }) {
+                    Icon(Icons.Filled.Close, contentDescription = "Close the chat")
+                }
+            }
+            ChatPane(vm, Modifier.weight(1f).padding(end = 8.dp))
+        }
+    }
+}
+
 /** Asks for the Claude API key the first time (AI-5). */
 @Composable
 private fun KeyCard(vm: StudyViewModel) {
@@ -196,7 +231,7 @@ private fun KeyCard(vm: StudyViewModel) {
 
 @OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
 @Composable
-private fun ChatBubble(vm: StudyViewModel, e: ChatEntry, onPassage: (Passage) -> Unit, onEdit: () -> Unit) {
+private fun ChatBubble(vm: StudyViewModel, e: ChatEntry, onPassage: (Passage) -> Unit, onEdit: () -> Unit, onRetry: (() -> Unit)? = null) {
     val context = LocalContext.current
     val clipboard = LocalClipboardManager.current
     Column(
@@ -245,9 +280,19 @@ private fun ChatBubble(vm: StudyViewModel, e: ChatEntry, onPassage: (Passage) ->
                 }
             }
         }
-        if (e.note == null || e.user) Row {
-            TextButton(onClick = { clipboard.setText(AnnotatedString(copyText(e))); vm.message = "Copied." }) { Text("Copy") }
-            if (e.user) TextButton(onClick = onEdit, enabled = !vm.chat.busy) { Text("Edit") }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            if (e.note == null || e.user) {
+                TextButton(onClick = { clipboard.setText(AnnotatedString(copyText(e))); vm.message = "Copied." }) { Text("Copy") }
+                if (e.user) TextButton(onClick = onEdit, enabled = !vm.chat.busy) { Text("Edit") }
+            }
+            // Ask the last question again (AI-11): a clear button when it failed or found nothing.
+            if (onRetry != null) {
+                if (e.note != null || e.user) androidx.compose.material3.FilledTonalButton(onClick = onRetry, enabled = !vm.chat.busy, modifier = Modifier.padding(top = 4.dp).testTag("chatRetry")) {
+                    Icon(Icons.Filled.Refresh, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Text("Try again", Modifier.padding(start = 6.dp))
+                }
+                else TextButton(onClick = onRetry, enabled = !vm.chat.busy, modifier = Modifier.testTag("chatRetry")) { Text("Try again") }
+            }
         }
     }
 }

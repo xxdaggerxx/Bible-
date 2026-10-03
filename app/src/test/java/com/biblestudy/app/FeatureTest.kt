@@ -247,6 +247,8 @@ class FeatureTest {
             vm.paneVerse = null
             vm.compareVersions = false
             vm.verseInPanel = false // the older tests use the verse window
+            vm.showVerseCommentary(false)
+            vm.chatWindow = false
             vm.verseWordStudy = null
             vm.chat.changeEnabled(false) // no chat bubble over the page in the older tests
             vm.readMode = false
@@ -857,14 +859,19 @@ class FeatureTest {
             vm.chat.changeSites(com.biblestudy.app.data.AiChat.DEFAULT_SITES)
             vm.chat.service = com.biblestudy.app.data.ChatService { _, sites, _, history, q, hasVerses -> asked += Triple(sites, history, q); assertTrue(hasVerses("see Rom 5:8")); reply }
         }
-        // The bubble opens the chat beside the text; first it asks for the key.
+        // The bubble opens the chat in its own little window over the text; first it asks for the key.
         compose.onNodeWithTag("chatBubble").performClick()
         compose.waitForIdle()
-        assertEquals(PaneKind.CHAT, vm.sidePane)
+        assertTrue(vm.chatWindow)
+        assertNull(vm.sidePane)
+        compose.onNodeWithTag("chatWindow").assertExists()
         compose.onNodeWithTag("chatKey").performTextInput("sk-test-key")
         compose.onNodeWithText("Save key").performClick()
         assertEquals("sk-test-key", vm.chat.apiKey)
-        compose.onNodeWithTag("chatBubble").assertDoesNotExist()
+        // The bubble closes it again; Ask AI below opens it.
+        compose.onNodeWithTag("chatBubble").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithTag("chatWindow").assertDoesNotExist()
 
         // A verse goes to the chat from its window.
         compose.runOnUiThread { vm.openVerse(43, 3, 16) }
@@ -920,12 +927,79 @@ class FeatureTest {
         assertFalse(asked.last().second[0].text.isEmpty())
         assertEquals(3, asked.size)
 
+        // Try again (AI-11): the last question is asked again and its reply replaced.
+        reply = com.biblestudy.app.data.ChatResult.Failed("Couldn't reach the AI. Check your internet connection.")
+        compose.onNodeWithTag("chatRetry").performClick()
+        compose.waitUntil(5_000) { !vm.chat.busy && asked.size == 4 }
+        compose.onNodeWithText("Couldn't reach the AI", substring = true).assertExists()
+        assertEquals(4, vm.chat.entries.size)
+        snap("133-ai-chat-retry")
+        reply = com.biblestudy.app.data.ChatResult.Answer("Leviticus calls God's people to be holy as he is holy.[1] See Leviticus 19:2.", listOf(com.biblestudy.app.data.ChatSource("Holiness", "https://www.gotquestions.org/holiness.html")))
+        compose.onNodeWithTag("chatRetry").performClick()
+        compose.waitUntil(5_000) { !vm.chat.busy && asked.size == 5 }
+        assertEquals(4, vm.chat.entries.size)
+        assertEquals("And in Leviticus?", vm.chat.entries[2].text)
+        assertEquals(asked[3].second, asked[4].second)
+        assertEquals(asked[3].third, asked[4].third)
+        assertNull(vm.chat.entries.last().note)
+        assertTrue(vm.chat.attached.isEmpty())
+
+        assertTrue(vm.chatWindow)
+        snap("132-ai-chat-window")
+
+        // The chat can move into a panel beside the text; the bubble makes way.
+        compose.onNodeWithContentDescription("Open the chat beside the text").performClick()
+        compose.waitForIdle()
+        assertFalse(vm.chatWindow)
+        assertEquals(PaneKind.CHAT, vm.sidePane)
+        compose.onNodeWithTag("chatBubble").assertDoesNotExist()
+        compose.onNodeWithText("holy as he is holy", substring = true).assertExists()
+
         // Turned off: no bubble, no Ask AI, and the panel view leaves the menu.
         compose.runOnUiThread { vm.sidePane = null; vm.chat.changeEnabled(false); vm.openVerse(43, 3, 16) }
         compose.waitForIdle()
         compose.onNodeWithText("Ask AI").assertDoesNotExist()
         compose.onNodeWithTag("chatBubble").assertDoesNotExist()
         compose.runOnUiThread { vm.verseSheet = null; vm.chat.newChat(); vm.chat.changeKey(""); vm.chat.service = com.biblestudy.app.data.AiChat.claude }
+        compose.waitForIdle()
+    }
+
+    @Test
+    fun theVersePopUpShowsWhatACommentarySaysOnTheVerse() {
+        compose.runOnUiThread { vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE); vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.waitForIdle()
+        // Cross-references first; the Commentary tab shows Matthew Henry's note on the verse (STD-20).
+        compose.onNodeWithText("Cross-references (", substring = true).assertExists()
+        compose.onNodeWithTag("verseCommentaryTab").performClick()
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(vm.verseCommentary)
+        compose.onNodeWithText("Verses 1\u201321").assertExists()
+        snap("131-verse-commentary")
+
+        // Another commentary is chosen right here, and remembered.
+        compose.onNodeWithContentDescription("Choose a commentary").performClick()
+        compose.onNodeWithText("Jamieson-Fausset-Brown").performClick()
+        compose.waitUntil(60_000) {
+            vm.lastCommentary == "jfb" && compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty()
+        }
+        compose.onNodeWithText("Jamieson-Fausset-Brown", substring = true).assertExists()
+
+        // A New Testament verse in an Old Testament commentary says so.
+        compose.runOnUiThread { vm.chooseCommentary("kd") }
+        compose.waitForIdle()
+        compose.onNodeWithText("Choose another commentary for John", substring = true).assertExists()
+        compose.runOnUiThread { vm.chooseCommentary("jfb") }
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty() }
+
+        // The whole chapter opens beside the text, at this verse.
+        compose.onNodeWithText("Whole chapter beside the text").performClick()
+        compose.waitForIdle()
+        assertNull(vm.verseSheet)
+        assertEquals(PaneKind.COMMENTARY, vm.sidePane)
+        assertEquals("jfb", vm.commentaryAt(0))
+        compose.runOnUiThread { vm.sidePane = null; vm.showVerseCommentary(false); vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE) }
         compose.waitForIdle()
     }
 

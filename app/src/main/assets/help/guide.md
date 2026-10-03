@@ -106,6 +106,7 @@ The details show:
 - **People and places** in the verse. Tap one to read about them.
 - **Your typed note.**
 - **Cross-references.** Tap one to read it in a small pop-over without losing your place, then *Go to* or *Open beside*.
+- **Commentary.** Tap the *Commentary* tab (next to *Cross-references*) to read what a commentary says on this verse. Tap the commentary's name to choose another, such as Jamieson-Fausset-Brown or Calvin. *Whole chapter beside the text* opens it in a panel for the whole chapter. The app remembers which tab and commentary you used last.
 - **Related passages:** topics, parallel accounts (other Gospels, Kings and Chronicles) and passages on the same topics.
 
 ## Hebrew and Greek word by word
@@ -188,7 +189,8 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 
 The one part of the app that uses the internet. It works like a search summary: ask a question, and the AI searches the web (your trusted sites first), reads the best articles and sums them up. It doesn't answer from its own knowledge: if the search finds nothing it can cite, it says so and shows what it searched for.
 
-- **Open it** with the round chat bubble at the bottom right. The chat opens in a panel beside the text.
+- **Open it** with the round chat bubble at the bottom right. The chat opens in its own little window over the text. You can keep reading and tapping verses while it's open. Tap × (or the bubble) to close it; your conversation stays.
+- **Want it beside the text instead?** Tap the panel button at the top of the chat window. It moves into a panel next to the Bible. You can also choose *AI chat* from a panel's menu.
 - **The first time,** paste your Claude API key (from console.anthropic.com) and tap *Save key*. It's kept on this tablet only, and isn't in your backups. Each question costs a few cents on your Claude account.
 - **Ask about a passage:** select words with a long press, or hold a finger on a highlight, and tap *Ask AI*. In *Verse details*, tap *Ask AI* to send the whole verse. The passages wait above the question box; tap × on one to leave it out.
 - **Answers** start with a short overview, then the main points, then the key verses. They must cite the pages they use: an answer without citations isn't shown. They show a number like [1] after each part, matching the *Sources* listed under the answer. Tap a source to read the page in your browser. Bible references in an answer are links: tap one to read the passage.
@@ -196,6 +198,7 @@ The one part of the app that uses the internet. It works like a search summary: 
 - **Copy:** tap *Copy* under any message to copy it, with its sources. To copy part of a message, hold a finger on the words and drag.
 - **Edit:** tap *Edit* under one of your questions to change it, with its passages, and send it again. It replaces that question and everything after it. *Cancel* stops editing.
 - **Follow-up questions** keep the conversation. *New chat* starts again.
+- **Try again:** if a question fails (no internet, the service is busy) or finds nothing, tap *Try again* under the reply to ask it once more. It's also under the last answer, if you'd like a fresh one. If the app was closed while waiting, *Try again* appears under your question.
 - **Which sites:** the AI searches the whole web, with your sites searched first. To use nothing but your sites, turn on *Only search my sites* in *Settings → AI chat (online)*. The sites are listed there, one per line: add or remove sites, then *Save sites*. *Use the suggested sites* puts back the starting list.
 - **Turn it off** with the *AI chat* switch in Settings: the bubble and the *Ask AI* buttons go, and the app never goes online.
 - Answers can still be wrong. Check what they say against the verses.
@@ -229,7 +232,7 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
 - **Every pen tool works** on a sketch page, plus shapes, the lasso, layers, pictures and text boxes.
 - **Verse cards:** *Insert → Verse card…*, type a reference like *John 3:16-18*, and the verses go on the page as a card. A card works like the Bible page:
   - tap its reference to read the passage in a pop-over;
-  - tap a verse to open its details (word study, *Compare versions*, *Hebrew/Greek*, notes, cross-references);
+  - tap a verse to open its details (word study, *Compare versions*, *Hebrew/Greek*, notes, cross-references, commentary);
   - highlight it with the highlighter, and the words of Jesus show in red when that's on;
   - hold a finger on the card for its bar: switch it to another version (*KJV*, *BSB*, *WEB*…), *Copy*, *Share*, change its size or background, or delete it.
 - **Person or place cards:** *Insert → Person or place card…*.

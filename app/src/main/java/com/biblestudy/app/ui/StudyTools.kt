@@ -605,7 +605,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
 }
 
 /** "Verses 14–16", "Introduction to Romans" or "Introduction to chapter 3". */
-private fun commentaryHeading(vm: StudyViewModel, s: CommentarySection, chapter: Int): String = when {
+internal fun commentaryHeading(vm: StudyViewModel, s: CommentarySection, chapter: Int): String = when {
     VerseId.chapter(s.start) == 0 -> "Introduction to ${vm.bible.book(VerseId.book(s.start)).name}"
     VerseId.verse(s.start) == 0 -> "Introduction to chapter ${VerseId.chapter(s.start)}"
     VerseId.chapter(s.start) != VerseId.chapter(s.end) || VerseId.chapter(s.start) != chapter -> vm.refLabel(s.start, s.end)
