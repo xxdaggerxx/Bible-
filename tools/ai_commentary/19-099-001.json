@@ -1,0 +1,158 @@
+{
+ "book": 19,
+ "chapter": 99,
+ "first": 1,
+ "last": 9,
+ "ref": "Psalms 99",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The Lord rules as King over all the earth, so every nation should stand before Him in reverent fear. He sits enthroned between the cherubim—winged heavenly beings—above the mercy seat where He meets with His people. While those who fight against Him tremble in dread, His kingdom remains completely steady and unshakable.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early Latin and Greek texts read 'let the peoples be angry,' which Catholic tradition views as predicting how idol worshippers would rage when Christ was first preached.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801099.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God shows His special power and favor among His people in Zion, the place where they gathered to worship. Although He fills the entire world, He chooses to dwell closely with His church. He towers far above all earthly rulers, nations, and human thoughts.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "All people are called to praise God's great and awesome name. His name represents His whole character, which is entirely holy, meaning completely pure and set apart from evil. His flawless holiness makes Him worthy of our deepest love and reverence.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/psalm-99/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The Lord is a mighty King whose power is always guided by His love for justice. Unlike human rulers who often abuse their strength, God uses His supreme authority only to do what is right and fair. He set up honest laws for His people Jacob and faithfully carried them out.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-99/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Believers are urged to praise the Lord our God and bow down low before His footstool. In ancient Israel, His footstool meant the sacred chest called the ark of the covenant, where God's presence rested among them. The lower we humble ourselves before Him, the higher we lift up His holy name.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Calling the sanctuary God's footstool was intended to lift worshippers' thoughts above physical things, guarding against superstitious attachment to earthly places.",
+     "sources": [
+      "https://www.studylight.org/commentary/psalms/99-5.html"
+     ]
+    },
+    {
+     "tradition": "Baptist",
+     "view": "Worship is directed at the footstool rather than to it, pointing to the ark as a symbol of Christ's human nature united with His divinity.",
+     "sources": [
+      "https://www.studylight.org/commentary/psalms/99-5.html"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine explained the footstool as the earth, understanding this worship as adoration of Christ's true human body taken from earthly flesh.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801099.htm"
+     ]
+    },
+    {
+     "label": "Modern scholarship",
+     "view": "Because the ark was missing after the return from Babylon, modern interpreters suggest the footstool refers to the temple building or the hill of Zion.",
+     "sources": [
+      "https://biblehub.com/commentaries/psalms/99-5.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The writer points back to Moses, Aaron, and Samuel as godly leaders who spoke with God on behalf of Israel. They regularly called upon the Lord in prayer instead of relying on their own wisdom. God showed His faithfulness by hearing their cries and answering them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "God spoke to these leaders from the pillar of cloud that guided Israel through the desert. Moses, Aaron, and Samuel lived in genuine obedience, carefully keeping the laws and teachings God delivered to them. Their obedience showed that sincere prayer goes hand in hand with a faithful life.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The Lord heard the cries of these intercessors—men who pleaded with God for others—and showed great mercy to the nation. He pardoned Israel's sins and kept them from being completely wiped out. Yet because He is holy, He still disciplined them for their wrong actions so they would turn back to Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The psalm ends with a joyful call to lift up the Lord and worship Him at His holy mountain in Jerusalem. Calling Him 'our God' reminds us that the supreme King has entered into a close, loving promise with His people. His pure and perfect holiness is the great reason we offer Him our deepest adoration.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://biblehub.com/commentaries/expositors/psalms/99.htm"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

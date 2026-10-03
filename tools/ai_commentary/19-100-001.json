@@ -1,0 +1,107 @@
+{
+ "book": 19,
+ "chapter": 100,
+ "first": 1,
+ "last": 5,
+ "ref": "Psalms 100",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "All the nations of the earth are called to shout aloud with joy to the Lord, just as loyal subjects cheer for their king. This summons reaches far beyond ancient Israel to every land, looking forward to the time when all peoples hear about God. A cheerful spirit honors Him, because a happy God should be praised by a happy people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine explained this joyful shout as wordless praise pouring straight from the heart, like harvest workers singing in the fields, and applied the call to the Church spreading throughout the whole world.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801100.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Worship and obedience are meant to be filled with deep happiness, not gloom or dread. Coming before God is like being invited to a great feast rather than a funeral. Singing is one of the clearest and sweetest ways for God's family to show their delight in His presence.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that serving God carries no bitter burden because believers are redeemed; the Christian serves as a servant by nature, yet with the freedom and gladness of love.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801100.htm",
+      "https://ccel.org/ccel/schaff/npnf108.ii.C.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "True worship begins with understanding who God is and who we are. He is the only true God and the Creator of all life, which means we belong entirely to Him and cannot claim to have made ourselves. He treats His people like a gentle shepherd, guiding, protecting, and providing for His flock.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine applied the words to Jesus Christ, explaining that believers must recognize the One who was scourged and crucified as the true God and Creator through whom all things were made.",
+     "sources": [
+      "https://ccel.org/ccel/schaff/npnf108.ii.C.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Worshipers are invited to pass through the gates and enter the courtyards where God meets with His people. Being allowed into His presence is a high honor, and believers should bring songs of thanks as their offering. Gratitude should run through all of our worship, leading us to speak nothing but good of His holy name.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Praise is built on the rock-solid character of God Himself. He is fundamentally good, and His mercy is like a fountain that never runs dry. Because He is faithful, not a single promise He makes will ever fail, from our ancestors down to our children.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that God's enduring mercy does not merely rescue believers from past sins, but stays with them to guard and preserve them all the way to eternal life.",
+     "sources": [
+      "https://ccel.org/ccel/schaff/npnf108.ii.C.html"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

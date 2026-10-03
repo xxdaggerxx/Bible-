@@ -1,0 +1,134 @@
+{
+ "book": 19,
+ "chapter": 12,
+ "first": 1,
+ "last": 8,
+ "ref": "Psalms 12",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David cries out to the Lord because people who are godly and true seem to have disappeared. Dishonesty has spread so widely that reliable, promise-keeping neighbors cannot be found. When human help completely fails, believers are driven to bring their desperate cries straight to God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "People tell empty lies to one another instead of speaking the truth. They use smooth praise to win favor while hiding selfish and hateful thoughts underneath. Having a double heart means pretending to be a friend while secretly planning harm.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "David asks the Lord to cut off and silence all deceitful lips and arrogant speakers. Flattery and boasting are closely linked sins, because one deceives neighbors while the other deceives oneself. God will eventually bring an end to all who use their words to cheat and intimidate others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Arrogant people boast that their smooth and forceful speech will always help them win. They claim that their tongues belong entirely to themselves, asking who could ever be their master. This attitude proudly denies that God created their mouths and has the right to hold them accountable.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The Lord Himself speaks up and promises to take action for the weak and needy. Even when oppressed people can do nothing more than quietly sigh, God hears their distress and decides the time has come to act. He steps into the battle to place the humble in safety away from those who sneer at them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "In contrast to the false and hollow talk of men, the words of the Lord are entirely pure. They are like silver melted in a furnace seven times until all the useless dirt is gone and only the precious metal remains. Believers can rely completely on God's promises because they contain no deception or mistake.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "David expresses full confidence that God will guard His faithful followers from the corrupt culture around them. The Lord keeps them safe so that the wickedness of the day cannot ruin their faith or wipe them out. His care is constant, preserving His people through every age.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The promise to preserve 'them' refers to God guarding His poor and faithful people from being crushed or corrupted by evil.",
+     "sources": [
+      "Calvin",
+      "https://ccel.org/c/calvin/comment3/comm_vol08/htm/xviii.iv.htm"
+     ]
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The promise refers to God preserving His spoken words and promises pure and unchanged through all generations.",
+     "sources": [
+      "Wesley",
+      "https://enduringword.com/bible-commentary/psalm-12/"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Traditional Latin and Greek translations read 'preserve us,' applying the promise directly to the protection of believers.",
+     "sources": [
+      "Adam Clarke",
+      "https://biblehub.com/kjv/psalms/12-7.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The psalm ends with a realistic look at a disordered world where wicked people strut about freely without shame. When dishonorable and base men are promoted to high positions, evil behavior spreads everywhere in society. Even in such dark times, the righteous remain secure under God's watchful eye.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Keil & Delitzsch']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

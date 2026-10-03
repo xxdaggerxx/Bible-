@@ -1,0 +1,71 @@
+{
+ "book": 19,
+ "chapter": 43,
+ "first": 1,
+ "last": 5,
+ "ref": "Psalms 43",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The writer asks God to act as his righteous judge and defender. Unkind and dishonest people are attacking him, so he appeals his case to the court of heaven. He trusts that God knows the truth and will rescue him from their wicked schemes.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The writer declares that God is his only true fortress and source of strength. Even so, he wrestles with why God feels so distant while his enemies make his life miserable. He does not turn away in bitterness, but brings his painful questions straight to the Lord.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The writer prays for God's loving favor and faithful promises to guide him like two bright lights. He knows he cannot find the right path on his own wisdom. His deepest wish is to be led back to God's holy mountain so he can worship in the Lord's presence again.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "When God brings him back, the writer promises to go directly to the altar with thankful offerings. He treasures God Himself as his highest and greatest joy, not just the safety or gifts God provides. He plans to play his harp and pour out music in grateful praise.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The writer challenges his own downcast heart and refuses to give in to sadness. His outward troubles have not vanished yet, but he commands his soul to keep hoping in God. He looks forward in faith to the day when he will praise his Savior once again.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

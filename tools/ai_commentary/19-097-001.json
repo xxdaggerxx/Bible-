@@ -1,0 +1,155 @@
+{
+ "book": 19,
+ "chapter": 97,
+ "first": 1,
+ "last": 12,
+ "ref": "Psalms 97",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The Lord rules over the whole world as its supreme King. This great truth brings joy not only to Israel, but also to far-off lands and islands across the sea. Because God's rule is good and wise, everyone on earth has reason to be glad.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Thick clouds and darkness show God's deep mystery and greatness, reminding us that humans cannot fully grasp His ways. Even when we do not understand what He is doing, His throne stands firm on righteousness and justice. He never acts unfairly or departs from what is right.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Fire moves ahead of the Lord like a royal guard, clearing a path before Him. In Scripture, fire shows God's pure power that destroys sin and sweeps away His enemies. No obstacle or rebel can hold out against His holy advance.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God flashes lightning across the sky, lighting up the entire world in a single instant. The earth sees this awesome display of majesty and trembles with fear. It shows that no place on earth can stay hidden from His powerful presence.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The towering mountains, which seem solid and unmovable to people, melt like wax before the Lord. He is the master of all creation, and the greatest hurdles dissolve simply because He is near. We can trust that no trouble in our lives is too hard for Him to overcome.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The heavens openly announce that God's ways are right and fair. People from every nation are given eyes to witness His royal splendor and power. All of creation joins together to bear witness to His righteous rule.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Anyone who bows to carved statues and boasts in empty idols is left completely embarrassed. All unseen spiritual beings and heavenly angels are commanded to fall down and worship the Lord alone. The New Testament points to this moment as the angels worshiping Christ as King.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "While idol worshipers are put to shame, God's people in Jerusalem and the nearby towns of Judah overflow with happiness. They rejoice because they hear that the Lord has stepped in to judge evil and set things right. God's righteous acts bring great relief to those who trust Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The psalmist speaks straight to God, praising Him as the Most High ruler over the whole earth. The Lord stands far above every human ruler, angel, or false god that people invent. Believers can rest easy knowing that their God holds the highest place over everything.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "People who truly love the Lord are called to turn away from sin and hate what is evil. God watches over the inner lives of His faithful followers and rescues them from the power of wicked foes. Even if they face hard times, their souls remain completely secure in His hands.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Light and gladness are planted like seeds along the pathway of those who do right. Even when believers must walk through dark and difficult days, God's joy is quietly growing and will soon burst into a full harvest. Lasting happiness belongs to everyone whose heart is sincere toward God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Godly people are invited to find their deepest joy in the Lord and give thanks to His holy name. God's pure holiness makes wrongdoers afraid, but it brings gladness and hope to those who love Him. We can praise Him because His perfect goodness will one day remove all evil from the world.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)', 'The Pulpit Commentary']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 10: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 11: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 12: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

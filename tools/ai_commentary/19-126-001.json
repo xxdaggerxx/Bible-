@@ -1,0 +1,93 @@
+{
+ "book": 19,
+ "chapter": 126,
+ "first": 1,
+ "last": 6,
+ "ref": "Psalms 126",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "When God brought His people back home to Jerusalem from exile in Babylon, the news seemed too good to be true. It felt like a dream because mighty empires of that day never let captive nations return. The people were filled with wonder as they saw the Lord keep His ancient promise to deliver them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "https://enduringword.com/bible-commentary/psalm-126/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The returned people burst into loud laughter and songs of praise because their joy was too big to keep inside. Even the surrounding nations had to admit that the Lord had done wonderful things for Israel. God showed His great power to the whole world by rescuing a people who had been defeated and despised.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-126/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God's people eagerly repeated the words of the nations and claimed the blessing for themselves. While the neighbouring peoples watched from the outside, the Israelites rejoiced because they were the ones who received God's personal kindness. Their gladness was not just a passing mood, but deep gratitude for what the Lord had done.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://biblehub.com/commentaries/expositors/psalms/126.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Although a group of exiles had come home, many of their brothers and sisters were still scattered in Babylon. The singer prays for the rest of the people to return, just as sudden rain fills dry riverbeds in the southern desert. God could quickly pour out new life and bring His whole family back together in the land.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "https://biblehub.com/commentaries/ellicott/psalms/126.htm"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early Christian writers like Augustine connected these desert streams to the warm south wind, explaining that the Holy Spirit melts human hearts that were once frozen by sin.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801126.htm",
+      "https://biblehub.com/commentaries/ellicott/psalms/126.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Planting crops or rebuilding a broken nation under hard conditions brings real sorrow and grief. Even so, the Lord promises that faithful labour done in times of suffering will end in a happy harvest. God uses times of trouble to prepare His people for a great day of rejoicing.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "A poor farmer might cry as he scatters his precious, limited grain into the dry dirt, fearing it will be lost. God gives a firm promise that this hard-working sower will return celebrating, carrying heavy bundles of ripe grain. Everyone who keeps serving God through pain and heartache will certainly see a joyful reward from Him.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,138 @@
+{
+ "book": 19,
+ "chapter": 129,
+ "first": 1,
+ "last": 8,
+ "ref": "Psalms 129",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Israel is called to look back over its long history and remember its past hardships. The nation's youth points to its earliest days, such as the bitter time of slavery in Egypt. From the very beginning, enemies have repeatedly attacked and harassed God's people. Remembering these trials reminds believers that hardship is not new to the family of God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown",
+    "https://biblehub.com/commentaries/psalms/129-1.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The song repeats the cry about repeated attacks to show how constant the trouble was. Yet, despite every attack, the enemies never succeeded in wiping out or conquering Israel. God stayed with His people and made sure they survived every storm. Believers can take heart that evil will never have the final victory over God's people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early church father Augustine taught that enemies could not prevail because a godly person refuses to consent to their evil ways.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801129.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The writer paints a painful picture of farmers dragging a heavy plough across someone's back. This cruel image describes the deep cuts and welts left by severe whipping or intense oppression. The enemies showed no mercy, making their furrows long and thorough. It shows how brutally the foes tried to break down God's people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The Lord stepped in and cut through the cords that tied the plough to the oxen. This means God broke the power of the oppressors and snapped the chains holding His people in slavery. Because God is righteous, meaning He is always fair and keeps His promises, He will never let evil people completely ruin His servants.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://enduringword.com/bible-commentary/psalm-129/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Following an ancient Latin translation, Augustine understood the cut cords as God cutting the necks of proud sinners who refuse to confess their sins.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801129.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The psalmist asks God to defeat and shame anyone who hates Zion, the place where God's people worshiped Him. This is not a selfish wish for personal revenge, but a plea to defend God's church and stop those who oppose His kingdom. God will ensure that those who fight against His plans end up empty-handed and disgraced.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic theologian Robert Bellarmine suggested this prayer could ask for a good kind of shame that leads enemies to repent and turn to God, as the apostle Paul did.",
+     "sources": [
+      "https://www.blueletterbible.org/Comm/spurgeon_charles/tod/ps129.cfm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The enemies of God are compared to weeds and grass sprouting on flat, dirt-covered rooftops. Because the soil on the roof is thin, the grass dries up in the hot sun before it can ever grow tall or produce grain. The wicked may look prominent and strong for a little while, but their power has no deep roots and soon fades away.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Adam Clarke",
+    "https://www.studylight.org/commentaries/eng/teb/psalms-129.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Rooftop grass is so useless that a harvester cannot gather even a handful, and no one can bind it into a bundle. This shows that the plots of the wicked produce nothing good or lasting. Their cruel efforts end in complete waste and failure.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://www.studylight.org/commentary/psalms/129-8.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "In ancient times, travelers walking past a harvest field would cheer the workers with a blessing in the Lord's name. But the work of the wicked has no true harvest, so no passerby gives them a blessing or wishes them well. God's people cannot wish success to those who fight against the Lord and His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch",
+    "https://biblehub.com/commentaries/psalms/129-8.htm"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)', 'Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

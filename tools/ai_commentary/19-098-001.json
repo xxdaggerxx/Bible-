@@ -1,0 +1,104 @@
+{
+ "book": 19,
+ "chapter": 98,
+ "first": 1,
+ "last": 9,
+ "ref": "Psalms 98",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God's people are called to offer fresh, heartfelt praise because the Lord has won a mighty victory. His own power and holy arm accomplished salvation without any human help. In Christ, this victory overthrew sin, death, and evil on our behalf.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Lord did not keep His saving work a secret. Through the good news of the gospel, He openly showed His righteousness—His perfect justice and way of making people right with Himself—to all nations. People could never have discovered this rescue on their own, so God revealed it plainly.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God stayed true to the promises He made long ago to Abraham and the people of Israel. His free mercy moved Him to make the promise, and His faithfulness caused Him to keep it. Through this fulfilled promise, salvation has spread beyond Israel to reach the farthest corners of the earth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Everyone on earth is invited to shout and sing out loud with unrestrained gladness. When God reveals His saving rule, worship should not be dull or half-hearted. Believers are encouraged to lift their voices boldly to welcome the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 6,
+   "meaning": "Worshippers are urged to bring their best musical skill to celebrate the Lord as King. Sweet melodies from harps join with the powerful blasts of horns and trumpets to show both beauty and royal honor. Earthly monarchs receive loud fanfares at their coronations, and the King of all kings deserves even greater celebration.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Some in this tradition taught that musical instruments belonged only to Old Testament temple ceremonies and should not be used in Christian church services.",
+     "sources": [
+      "Calvin"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 8,
+   "meaning": "The call to praise reaches out to include the physical creation itself. The roaring sea sounds like deep thunderous praise, while rivers and mountains are pictured as clapping and singing for joy. Nature rejoices because Christ's saving rule brings healing and blessing to the entire world.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "All creation celebrates because the Lord is coming to govern and set things right. Human rulers are often unfair or corrupt, but God will judge every person and nation with pure justice and fairness. For those who trust Him, His coming as Judge is not a terrifying threat, but a day of comfort and glad hope.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

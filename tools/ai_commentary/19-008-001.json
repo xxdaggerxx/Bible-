@@ -1,0 +1,132 @@
+{
+ "book": 19,
+ "chapter": 8,
+ "first": 1,
+ "last": 9,
+ "ref": "Psalms 8",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David begins with an exclamation of wonder at the majesty of God. God is not only the ruler of the universe, but His people can call Him 'our Lord' because He cares for them and protects them personally. His glory is clearly displayed across the earth, yet His true greatness reaches far higher than the visible heavens.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God reveals His strength through the most helpless people, using the voices of small children to silence His proud enemies. When Jesus walked the earth, children shouted praises to Him in the temple, proving that God uses what the world calls weak to defeat those who oppose Him. The Lord does this so that all the credit for His victory belongs to Him alone.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Some Baptists understand the babes not as literal children, but as the apostles and early preachers of the gospel whom God used in their human weakness.",
+     "sources": [
+      "https://www.studylight.org/commentary/psalms/8-2.html"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed teachers often take the words literally, seeing God's praise displayed in the speech and physical care of real infants.",
+     "sources": [
+      "Calvin",
+      "https://www.studylight.org/commentary/psalms/8-2.html"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Looking up at the night sky, David gazes at the moon and the vast spread of stars. God placed all these glowing worlds in their exact spots as easily and skillfully as an artist shaping craftwork with his fingers. Taking time to quietly study the night sky fills a person with deep reverence for how wise and powerful the Creator is.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Standing under the huge starry heavens makes human beings seem tiny, fragile, and full of flaws. David is not doubting God's love, but expressing joyful amazement that the Lord of all creation constantly thinks about humans and comes near to care for them. This loving care reaches its highest point in Jesus, who took on human flesh to redeem us.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "At creation, God placed human beings in a position of royal honor, making them only a little lower in rank than the heavenly angels. Humans were given a spiritual soul to reflect God's image and act as His earthly rulers. This passage also looks ahead to Jesus, who humbled Himself by becoming a mortal man to suffer death, and was then crowned with supreme heavenly glory.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern translators render the Hebrew word as 'God' or 'divine beings' rather than 'angels,' reading the verse as saying humans were made just beneath God Himself.",
+     "sources": [
+      "https://biblehub.com/commentaries/psalms/8-5.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God appointed humanity to serve as His caretakers over the earth, giving people the duty to manage and care for His creation. Even though human sin damaged this perfect rule, the New Testament explains that Jesus Christ holds complete authority over all created things. Everything in heaven and earth is now placed under His feet as the risen King.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 8,
+   "meaning": "David provides a list of the earthly creatures placed under human stewardship, starting with domestic animals like sheep and oxen, and moving on to wild beasts of the open field. This responsibility also covers the birds flying through the sky and all the marine life swimming through the ocean currents. This broad range of animals shows that God entrusted the land, air, and sea to human care, picturing Christ's ultimate rule over all things.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The psalm ends by repeating the opening line of praise, completing the song with deep worship. After meditating on the stars, the honor given to humanity, and the coming Saviour, David speaks the same words with even greater awe. God's name is famous and wonderful throughout the entire world, and He is fully worthy of our loving obedience.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

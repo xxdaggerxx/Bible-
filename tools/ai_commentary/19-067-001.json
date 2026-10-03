@@ -1,0 +1,142 @@
+{
+ "book": 19,
+ "chapter": 67,
+ "first": 1,
+ "last": 7,
+ "ref": "Psalms 67",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The psalmist asks God for mercy, blessing, and the warm favor of his presence. This prayer echoes the priestly blessing given to Israel in the book of Numbers. God's people must first experience his pardoning mercy before they can shine his light to the rest of the world.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Jamieson-Fausset-Brown",
+    "https://biblehub.com/psalms/67-1.htm"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that God's face shines on us when hidden truth is revealed, or when God renews his image that was stamped on the human heart.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801067.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God blesses his people so that the rest of the world can discover who he is. His 'way' refers to his holy truth and his plan to rescue sinners, which is his salvation. Believers receive God's goodness not to keep it to themselves, but to share it with every nation.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/psalm-67/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine interpreted both God's 'way' and God's 'salvation' as direct names for Jesus Christ, who called himself the Way and brings God's saving help.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801067.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The psalmist urges all peoples, not just Israel, to lift up thanks and honor to the true God. Once nations learn about his saving grace, joyful praise naturally follows. This prayer looks forward to the day when people from every land worship the Lord together.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Reading the word 'praise' as 'confess,' Augustine used this verse to urge believers to remain in the one worldwide Catholic Church instead of splitting into local groups.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801067.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The nations have good reason to sing for joy because God rules the world with complete fairness and truth. Unlike harsh human masters, he leads the nations gently, just as a caring shepherd guides his sheep. Those who trust his mercy do not dread his judgment, but welcome his good and fair rule.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://bible.org/seriespage/psalm-67-why-seek-god%E2%80%99s-blessing"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine explained that people need not fear the coming Judge, because he comes first to correct and straighten their hearts through mercy.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801067.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Repeating the chorus shows how deeply the singer longs to see every nation honor God. It emphasizes that true worship belongs only to the Lord and not to false idols. Such repetition highlights the great joy and abounding mercies God wants all people to share.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/psalm-67/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "A rich harvest from the land shows that God is actively caring for his people and keeping his promises. This physical blessing of food serves as a picture of even greater spiritual blessings for the world. God's people take special comfort in knowing that the Lord of heaven is their very own God.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine understood the earth's fruit spiritually as people confessing their faith, which grows after the rain of gospel preaching calls them to repent.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801067.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "God continues to pour out his favor so that people to the farthest ends of the earth will fear him. In the Bible, fearing God means honoring him with deep respect, loving awe, and obedience. The psalm closes with confident faith that the Lord's kingdom will reach every corner of the world.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

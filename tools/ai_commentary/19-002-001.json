@@ -1,0 +1,165 @@
+{
+ "book": 19,
+ "chapter": 2,
+ "first": 1,
+ "last": 12,
+ "ref": "Psalms 2",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "People and rulers across the world gather together in noisy rebellion against God. Their schemes are completely empty because no human power can ever stop what God has purposed. Both Jewish leaders and foreign rulers opposed Jesus, yet their plots could not defeat Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Earthly rulers unite their power and carefully plan their war against God and His King. Anointed means the Messiah, or Christ, the One specially chosen by God to lead and save. Resisting Christ is the same as declaring war against God Himself.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Rebellious leaders complain that God's holy rules and commandments hold them back like heavy chains. They want to throw off all moral restraints so they can live however they please. But what sinners hate as slavery is actually God's loving rule, which brings real peace.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God sits at complete rest on His heavenly throne, untouched by human threats and anger. He laughs at the rebels because He sees how powerless and foolish their schemes really are. Nothing frail humans do can ever worry the almighty King of heaven.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "When the rebellion reaches its limit, God speaks out in holy anger against His enemies. He does not need mighty armies to defeat them, because the breath of His voice is enough to shatter their confidence. Those who will not listen to His mercy are left terrified by His justice.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Despite every plot of wicked leaders, God firmly places His King upon Mount Zion. Zion was the holy hill in Jerusalem where Israel's kings ruled, picturing Christ's eternal throne over His church. God Himself appointed Jesus, and no power on earth can remove Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The King steps forward to announce the eternal plan and promise given to Him by God the Father. God declares Him to be His unique Son, a truth shown with mighty power when Jesus was raised from the dead. Because Christ is God's beloved Son, all authority belongs to Him by right.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God the Father promises to give His Son the whole world simply for the asking. Christ's kingdom is not limited to one land, but reaches all nations and all peoples. Jesus continually prays for His people, drawing men and women from every nation into His family.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "An iron rod can easily smash a clay pot into pieces that cannot be put back together. In the same way, those who stubbornly fight against Christ's rule will face total and unavoidable destruction. Those who refuse His gentle scepter of grace must eventually face the rod of His judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The psalm urges rulers and judges to show true wisdom while they still have time to repent. Since no one can defeat God, the only sensible choice is to stop rebelling and listen to His instruction. Even the greatest earthly leaders must humble themselves before the King of kings.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Serving God means showing deep reverence and awe toward His holy majesty. Believers are called to rejoice in His goodness, but with a humble fear that keeps them from becoming proud or careless. True faith always blends heartfelt joy with deep respect for God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Kissing the Son was an ancient sign of loyalty, love, and willing surrender to a king. Turning away from Jesus leads to sudden ruin, because rejecting God's only Savior leaves no other way to be saved. But everyone who runs to Christ for safety finds lasting blessing and peace.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars translate the phrase as offering pure homage rather than kissing the Son, noting that ancient Greek and Latin translations understood the Hebrew word to mean discipline or purity.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ebc/psalms-2.html",
+      "Adam Clarke"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 10: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 12: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

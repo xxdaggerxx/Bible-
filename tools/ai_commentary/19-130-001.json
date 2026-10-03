@@ -1,0 +1,147 @@
+{
+ "book": 19,
+ "chapter": 130,
+ "first": 1,
+ "last": 8,
+ "ref": "Psalms 130",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The writer cries out to the Lord from deep distress, feeling overwhelmed like someone sinking in deep water. While people suffer many kinds of trouble, the deepest pit here is the heavy guilt of sin before God. Even from the lowest place of sorrow, an honest cry of faith reaches right into heaven.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/psalm-130/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "In Roman Catholic tradition, this psalm is often prayed for the faithful departed, understanding the depths to represent the sufferings of souls in purgatory.",
+     "sources": [
+      "Calvin",
+      "Spurgeon (Treasury of David)"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The psalmist pleads with God to listen closely to his desperate cry for mercy. He addresses God as his Sovereign Master, trusting that the Lord has total authority to overcome every barrier in order to rescue him. Crying out aloud helps focus our whole heart when sorrow feels too heavy to carry.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-130/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "If the Lord kept a strict record of every sin and brought us to trial, not a single person could survive the judgment. Every human being has broken God's law, and no one can plead innocent on their own merits before a holy Judge. Realizing this strips away all pride and points us directly to our need for mercy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God does not keep a record to destroy us, because He is ready and willing to pardon repenting sinners. This undeserved forgiveness is not an excuse to take sin lightly. Instead, receiving such wonderful grace fills the heart with deep love and childlike respect, making believers fear ever grieving Him again.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Lutheran",
+     "view": "Lutherans emphasize that this verse completely eliminates all human merit, showing that pardon rests wholly on God's free grace without any human works or penance.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://www.studylight.org/commentaries/eng/gtb/psalms-130.html"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The psalmist waits patiently and sincerely for the Lord with his entire being. This waiting is not inactive daydreaming; it rests completely on the promises God has spoken in His word. Because God cannot break His word, believers can wait through dark seasons with quiet confidence.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/psalm-130/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The writer longs for the Lord even more eagerly than tired guards wait for daybreak at the end of a long, cold night. Sentinels never doubt that the morning sun will rise, but they still watch the horizon with intense longing. In the exact same way, the believer waits with certainty for the warm light of God's favour.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-130/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The psalmist turns from his own waiting to urge the whole community of faith to hope in the Lord. He gives two solid grounds: God is rich in faithful love, and He has abundant redemption—a full buying back from sin and its penalties. Anyone who has tasted God's pardon naturally wants to encourage others to run to the same fountain.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/psalm-130/"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed interpreters understand this promise of mercy and plenteous redemption to belong specifically to the elect church, rather than to the reprobate.",
+     "sources": [
+      "Geneva Notes"
+     ]
+    },
+    {
+     "tradition": "Methodist",
+     "view": "Methodists teach that this abundant redemption is fully sufficient and available for all persons who accept God's terms of grace.",
+     "sources": [
+      "Wesley"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God Himself will completely redeem His people from every single iniquity, wiping away both the guilt and the power of sin. No flaw or failure is too great for His rescuing price to cover. Believers can rest assured that God's salvation leaves not a single trace of sin unpardoned.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/psalm-130/"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

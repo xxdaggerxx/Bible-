@@ -1,0 +1,168 @@
+{
+ "book": 19,
+ "chapter": 21,
+ "first": 1,
+ "last": 13,
+ "ref": "Psalms 21",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "King David praises the Lord for giving him victory and deliverance. He knows his royal success comes entirely from God's power rather than his own military strength. Believers share in this same joy whenever they see God work mightily on behalf of His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God answered the king's silent heart desires as well as the spoken requests of his lips. Nothing David asked for in faith was held back by the Lord. True prayer begins deep within the heart before it is ever spoken aloud.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-21/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God did not wait for the king to earn favor, but met him with rich and unexpected blessings. The Lord placed a golden crown upon his head, confirming his royal authority and honoring him before the people. God often outdoes our hopes by giving us good gifts before we even think to ask for them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "David prayed for his life to be spared in battle, and God answered with far more than he asked. The Lord promised him a long life and an enduring royal line that would continue into the distant future. Christians see this promise fully realized in Christ, who rose from the dead to live and reign forever.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The king's renown and honor are great because the Lord rescued him from danger. God clothed him with royal dignity, majesty, and lasting splendor. Any genuine honor we receive is a gift of God's saving grace.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "https://biblehub.com/commentaries/pulpit/psalms/21.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God made the king a lasting source of blessing to others and gave him continuous favor. What brought David the greatest happiness was not his crown, but the delight of God's presence. Fellowship with the Lord brings a deep joy that worldly success can never give.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/psalm-21/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The king stands secure because he puts his full confidence in the Lord. He knows that God's faithful, loving devotion keeps him from being shaken by any enemy. When we rest on God's unchanging love, our hearts can remain steady in every trouble.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God's powerful right hand will track down and seize every enemy who resists Him and His king. No foe can hide in secret places or escape His reaching grasp. Those who hate God and His ways will ultimately be held accountable.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "When the Lord appears in judgment, His enemies will be consumed like wood inside a blazing furnace. Their own guilty consciences will become a fire of inner torment under God's righteous anger. This serious warning reminds us to turn to God while His day of grace is still open.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The punishment coming on God's enemies will cut off their legacy and remove their offspring from the earth. Their evil influence and proud names will fade away into ruin. Opposing the Lord ultimately robs future generations of His blessing.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Wicked people plot harmful schemes against God and His people, but their plans will completely fail. God judges the evil thoughts of the heart even when enemies lack the power to carry them out. We can be confident that no plot against the Lord's kingdom can ever succeed.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://enduringword.com/bible-commentary/psalm-21/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "When God aims His bow directly at His enemies, they will turn around and run away in terror. Opponents who boldly challenged the Lord will scatter when His judgments fly like sharp arrows. No human army can stand against the Lord when He marches into battle.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "https://biblehub.com/commentaries/pulpit/psalms/21.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "The psalm ends with a joyful call for the Lord to show His supreme strength and be honored above all. As God displays His power to save His people, they respond with thankful songs of praise. All the credit for every spiritual victory belongs to God alone.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 1: removed sources ['Spurgeon']",
+  "v. 2: removed sources ['Spurgeon']",
+  "v. 3: removed sources ['Spurgeon']",
+  "v. 5: removed sources ['Spurgeon']",
+  "v. 7: removed sources ['Spurgeon']",
+  "v. 8: removed sources ['Spurgeon']",
+  "v. 9: removed sources ['Spurgeon']",
+  "v. 10: removed sources ['Spurgeon']",
+  "v. 12: removed sources ['Spurgeon']",
+  "v. 13: removed sources ['Spurgeon']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

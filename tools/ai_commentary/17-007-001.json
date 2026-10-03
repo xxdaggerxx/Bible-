@@ -1,0 +1,137 @@
+{
+ "book": 17,
+ "chapter": 7,
+ "first": 1,
+ "last": 10,
+ "ref": "Esther 7",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The king and Haman arrive at the private banquet prepared by Queen Esther. This was the second meal she hosted for them in two days. Haman came directly from publicly honoring Mordecai, completely unaware that his own downfall was about to begin.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "As they drink their wine, the king asks Esther once more what she desires, promising to give her up to half the kingdom. By repeating his royal pledge a third time, he gave Esther full reassurance to speak freely. His question opened the door for her to reveal the real purpose of the feast.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Esther answers with great respect, asking first for her own life and then for the lives of her people. She makes the appeal personal, showing the king that his own beloved queen is marked for death. Her request reveals that she does not seek riches or power, only survival.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://enduringword.com/bible-commentary/esther-7/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Esther explains that she and her people have been sold to be wiped out, repeating the harsh wording of the extermination decree. She notes that if they were merely sold into slavery, she would have kept quiet, because that hardship would not justify troubling the king. But because total destruction is planned, she must speak out.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The traditional Catholic Douay-Rheims version renders the end of the verse as a warning that the enemy's cruelty would directly harm the king himself.",
+     "sources": [
+      "https://biblehub.com/esther/7-4.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "King Xerxes demands to know who would dare to plot such a horrible crime against the queen. His rapid, startled questions show shock and anger. Even though he had carelessly agreed to Haman's decree earlier, he now sees its true cruelty for the first time.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/esther-7/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Esther points directly at Haman, naming him as the wicked enemy behind the plot. Haman is instantly terrified in the presence of the king and queen. With the queen as his accuser and the king as his judge, Haman realizes his life is in grave danger.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "In a blaze of fury, the king gets up from the table and walks out into the palace garden to calm down and decide what to do. Haman stays behind to beg Queen Esther for mercy. He recognizes that the king's sudden exit in rage means a death sentence is already decided against him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "When the king steps back inside, he finds Haman falling across the dining couch where Esther is resting, desperately pleading for his life. The king angrily accuses Haman of trying to assault the queen right in the royal palace. As soon as the king speaks, the attendants cover Haman's face, marking him as a condemned criminal.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Harbonah, one of the king's personal attendants, points out the seventy-five-foot gallows standing at Haman's house. He explains that Haman built it to execute Mordecai, the very man who had saved the king from assassination. Hearing this, the king immediately orders Haman to be hanged on it.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The palace guards hang Haman on the very gallows he had set up to destroy Mordecai. Once the sentence is carried out, the king's fierce anger is finally satisfied. Haman's downfall shows how evil plots often trap the very people who design them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

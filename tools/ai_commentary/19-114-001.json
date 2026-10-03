@@ -1,0 +1,96 @@
+{
+ "book": 19,
+ "chapter": 114,
+ "first": 1,
+ "last": 8,
+ "ref": "Psalms 114",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The psalm opens by looking back to when Israel marched out of Egypt as a free people. Even though they had lived there for hundreds of years, Egypt remained an alien land with an unfamiliar language. This great rescue was the birth of Israel as God's special nation.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "When God brought His people out of slavery, He set up His dwelling place and His royal rule among them. The names Judah and Israel stand for the entire family of tribes, chosen to worship the Lord and obey Him as their true King. The writer simply says 'His' without naming God yet, because his thoughts are completely fixed on the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Creation itself stepped aside when God led His people on their journey. The Red Sea opened at the beginning of their march, and the Jordan River stopped flowing at the end when they entered the promised land forty years later. Because the Lord was at their head, neither deep waters nor rushing currents could block their way.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "When God came down on Mount Sinai to give His laws, the earth shook with power. Great mountains and smaller hills trembled and leaped as easily as rams and lambs playing or fleeing in fright. The most solid parts of the earth move at once when their Maker appears.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 6,
+   "meaning": "The poet speaks directly to the waters and the hills, asking why they acted in such strange ways. He asks why the sea ran away, why the river rolled backward, and why the solid peaks jumped like sheep. These playful questions build dramatic suspense before the real reason is revealed.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The answer is finally given: the whole earth trembles because the Master, the God of Jacob, has arrived. Nature was not running from ordinary trouble, but bowing in reverence before its Creator. In the same way, all people should honor God and stand in holy awe of His power.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The same mighty God who shakes the world also provides tender care for His thirsty people. In the dry wilderness, the Lord miraculously brought pools and flowing streams out of solid rock. This shows that God's power is able to bring life and refreshing out of places that seem hard and dry.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

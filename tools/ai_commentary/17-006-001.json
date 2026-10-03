@@ -1,0 +1,160 @@
+{
+ "book": 17,
+ "chapter": 6,
+ "first": 1,
+ "last": 14,
+ "ref": "Esther 6",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "King Xerxes could not sleep that night, so he ordered the royal history records to be brought and read to him. Sleep is a gift from God, and the Lord kept the king awake for His own special purpose. Instead of calling for music or other entertainment, the king chose to listen to the kingdom's official chronicles.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Matthew Henry (Concise)",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "As the servant read the record, he came to the report of how Mordecai had exposed a plot by two royal guards to kill the king. God's quiet control guided the reader to the exact story of Mordecai's past loyalty. Mordecai had saved the king's life, and the deed was safely written down in the royal book.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The king asked what honor or reward had been given to Mordecai for saving his life. His attendants answered that nothing at all had been done for him. Worldly rulers often forget the faithful service of humble people, but God never forgets.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The king asked who was waiting in the palace court to help him decide on a fitting reward. Haman had just arrived early in the morning to ask the king to hang Mordecai on the gallows he had built. While Haman was hurrying to destroy Mordecai, God was arranging for Mordecai to be honored.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The attendants told the king that Haman was standing outside, and the king told them to bring him in. The king did not know about Haman's wicked plot or his hatred of Mordecai. God brought Haman into the room at the exact right moment to hear the king's question.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The king asked Haman what should be done for a man whom the king delighted to honor. Haman was so full of pride that he assumed the king must be talking about him. His proud heart blinded him, leading him straight into a trap.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Matthew Henry (Concise)",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 9,
+   "meaning": "Haman suggested the highest honors he could imagine for the man the king wanted to reward. He proposed dressing the man in a royal robe the king had personally worn and placing him on the king's own horse. Then one of the empire's greatest nobles was to lead the horse through the city square, loudly shouting praises in front of him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The king commanded Haman to hurry and do every single thing he had suggested for Mordecai the Jew. The king specifically noted that Mordecai was sitting at the palace gate and told Haman not to leave out a detail. Haman was stunned to discover that his worst enemy was the one receiving the royal favor.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Haman had no choice but to obey the king's command. He put the royal clothes on Mordecai, placed him on the horse, and led him through the city streets calling out the king's praise. Mordecai received public honor, while proud Haman suffered a painful and humiliating defeat.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "After the parade, Mordecai went straight back to his regular duties at the palace gate. Haman, however, rushed home in deep shame and sorrow, covering his head to hide his disgrace. A humble person is not spoiled by praise, but a proud person is crushed when forced to stoop.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Matthew Henry (Concise)",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "Haman told his wife and his close advisers everything that had happened to him. His wife and wise men warned him that if Mordecai was Jewish, Haman could never defeat him and would surely fall. Even these pagan advisers recognized that the God of the Jews defended His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Matthew Henry (Concise)",
+    "Keil & Delitzsch",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "While they were still talking, the king's servants arrived to rush Haman to Queen Esther's banquet. He had to go right away with a heavy and anxious heart instead of feeling joyful. God's perfect timing was moving quickly toward the rescue of His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 11: removed sources ['Adam Clarke']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,127 @@
+{
+ "book": 19,
+ "chapter": 54,
+ "first": 1,
+ "last": 7,
+ "ref": "Psalms 54",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David cries out for rescue when all human help has failed him. He appeals to God's name, which means God's holy character and power, as his only ground for help. He asks the Lord to vindicate him, which means to clear his name and prove that his cause is right. When we are treated unfairly, we can ask God to defend us with His mighty strength.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early Latin teaching reads David here as a figure of Christ and His church, where asking God to judge means separating the saved from the wicked rather than condemning them.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801054.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David pleads with God to listen closely to his spoken words. Praying out loud helps him stay focused and pour out his deepest fears while running for his life. He knows that prayer is a weapon no enemy can take away from him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "David explains his great danger to the Lord. Fellow Israelites from Ziph are acting like foreign enemies by betraying him, and King Saul's army is hunting his life like beasts. These men act with no thought of God, living as if the Lord will never call them to account.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "David turns his attention from his attackers to the living God. He sees that the Lord is his true helper and the One who keeps his soul alive. Even when faithful friends stand by us, it is God who gives them the power to help.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "David trusts that God will cause the harm his enemies planned to bounce back upon them. He does not take personal revenge, but leaves their punishment in God's hands. He calls on God's truth to destroy them, knowing that God is faithful to His promises to protect the innocent and judge evil.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "David promises to bring offerings to God with a glad and willing heart once he is saved. He resolves to praise the Lord's name openly because God's character is good and delightful. Giving thanks to God is a joyful duty for everyone who has tasted His mercy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Freely sacrificing refers both to a cheerful attitude of heart and to the literal animal offerings commanded by the Law of Moses.",
+     "sources": [
+      "Calvin"
+     ]
+    },
+    {
+     "tradition": "Baptist",
+     "view": "This sacrifice does not refer to the old ceremonial animal offerings, but to the spiritual sacrifice of praise from the heart and lips.",
+     "sources": [
+      "https://biblehub.com/commentaries/psalms/54-6.htm"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "David speaks of his deliverance as already accomplished because his faith makes him completely sure of God's answer. He looks upon his retreating enemies without terror, knowing that God's justice has triumphed. Remembering how God rescued us in the past gives us courage for whatever trouble lies ahead.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some modern interpreters translate the phrase as gloating over defeated foes and see it as an expression of personal revenge.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/bcc/psalms-54.html"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

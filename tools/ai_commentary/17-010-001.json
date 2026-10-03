@@ -1,0 +1,57 @@
+{
+ "book": 17,
+ "chapter": 10,
+ "first": 1,
+ "last": 3,
+ "ref": "Esther 10",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "King Xerxes placed a tax or forced service across his entire empire, reaching all the way to distant coasts and islands. This showed that orderly government and daily life had returned after the upheaval of Haman's plot. God's quiet care guides regular rulers and ordinary laws just as much as dramatic rescues.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "https://www.thegospelcoalition.org/commentary/esther/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The royal history books of Media and Persia recorded all the king's powerful deeds and Mordecai's rise to greatness. Even a pagan empire had to write down how much good Mordecai accomplished as the king's chief helper. While those ancient government records have long been lost, God's Word endures to tell the story.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://studylight.org/commentaries/eng/phc/esther-10.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Mordecai served as prime minister of the empire, second in command only to the king. Instead of seeking his own wealth, he used his high office to protect his people, listen kindly to them, and work for their lasting peace. His fellow Jews respected and loved him because he governed with fairness and care.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic and Orthodox",
+     "view": "Catholic and Orthodox Bibles include ten extra verses after this verse and six more chapters from the ancient Greek text, in which Mordecai recalls a prophetic dream that explains these events.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.newadvent.org/cathen/03267a.htm",
+      "https://wesley.nnu.edu/sermons-essays-books/noncanonical-literature/noncanonical-literature-ot-apocrypha/additions-to-esther/"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

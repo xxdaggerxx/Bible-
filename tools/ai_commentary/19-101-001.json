@@ -1,0 +1,122 @@
+{
+ "book": 19,
+ "chapter": 101,
+ "first": 1,
+ "last": 8,
+ "ref": "Psalms 101",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David resolves to praise God for both His loving mercy and His justice. God's rule over the world joins love and righteousness together, and David desires to reflect those same traits as king. Praise looks back on all of God's dealings—both the blessings and the trials—and offers every song to the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early church father Augustine understood the order of mercy and justice as a timeline: the present life is the season for God's mercy, while the age to come brings His judgment.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801101.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David commits himself to living a blameless and wise life, but he knows he cannot do it without God's help. He cries out for the Lord's presence and blessing upon his home. Genuine faith must show itself in private family life before it can truly shine in public.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The king promises not to fix his gaze on anything shameful, worthless, or corrupt. He refuses to follow the example of people who wander away from God's good laws. If sinful practices touch his life, he wants them wiped away at once so nothing evil clings to him.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "David determines to keep his own heart straight and drive away twisted, stubborn attitudes. He also refuses to be close friends with wicked people or approve of their ways. Knowing evil here means giving it a home in one's life, which a godly leader must never do.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Secret slanderers use cruel gossip behind people's backs, so David vows to silence them and remove them from power. He will also refuse to tolerate proud, arrogant men who push others down to advance themselves. A good magistrate uses his authority to defend the innocent from lies and greed.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "David looks across the land to find faithful, God-fearing people to be his companions and officers. He values quiet moral character much more than worldly charm or cleverness. Those who live honest lives before God are the ones chosen to help him govern.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Dishonest people and liars are banned from David's personal home and court. Even if an untruthful person manages to get in, he will be put out the moment his deceit is discovered. A leader who fails to keep order and honesty in his own household cannot guide a kingdom well.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://biblehub.com/library/calvin/commentary_on_psalms_volume_4/psalm_101_6-8.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "David promises to carry out justice promptly every day, holding court to stop criminals from harming the nation. His goal is to keep Jerusalem, the city of the Lord, pure and free from public wickedness. This earthly duty also points forward to Christ, who will one day remove all evil when He returns in judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine viewed the 'morning' as the dawn of the final judgment, when Christ will remove all wicked doers from His heavenly city after the dark night of this present world.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801101.htm"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}
