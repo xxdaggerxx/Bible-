@@ -596,7 +596,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                         Text(k, style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 10.dp))
                         Text(v, style = MaterialTheme.typography.bodyMedium)
                     }
-                    Text("Public domain.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(top = 10.dp))
+                    Text(if (info.id == com.biblestudy.app.data.Commentaries.AI) "Written for this app. Each note names its sources." else "Public domain.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(top = 10.dp))
                 }
             },
             confirmButton = { androidx.compose.material3.TextButton(onClick = { about = false }) { Text("Close") } },
