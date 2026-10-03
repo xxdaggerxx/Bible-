@@ -1,4 +1,4 @@
-# Ink & Word — version 1.7.3
+# Ink & Word — version 1.8.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,17 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.8
+
+- **AI Commentary: a plain-English note on every verse,** the twelfth choice in the commentary menu. It was written by AI (Claude) when the app was built, so it works offline like the other commentaries.
+  - **Grounded in sources.** Each note draws on the eleven bundled commentaries and on a fixed list of trusted websites from many Protestant traditions: Reformed, Baptist, Methodist and Wesleyan, Pentecostal and charismatic (Enduring Word, Assemblies of God, Pneuma Review, Sam Storms), Lutheran, Anglican and evangelical. Every point names its sources. A check removed any source that couldn't be confirmed: a bundled commentary had to have a note on that verse, and a web page had to have come up in the research.
+  - **The traditional reading first,** in short, simple sentences for lay readers.
+  - **Where Christians differ:** on verses where churches disagree (baptism, spiritual gifts, election and so on), each tradition's view in a line, fairly and without taking sides.
+  - **Other views:** where well known, modern scholarship, Catholic and Orthodox readings, and debated popular teaching, labelled and kept apart from the main note.
+  - It shows in the verse pop-up's *Commentary* tab too, when chosen there.
+- **How it's made:** `tools/build_ai_commentary.py` researches each chapter (long chapters in parts) with web search limited to the trusted sites, writes the notes, checks the sources and packs them into `assets/commentaries/ai.db.xz` (about 4 MB). The notes and research are kept in `tools/ai_commentary/`. The whole Bible cost about $840 through the Claude Batch API.
+- Known gaps: the sources are shown as names and website names, not links; notes were checked by script and spot-read, not read in full by a person.
 
 ## New in version 1.7.3
 

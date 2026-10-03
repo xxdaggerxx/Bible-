@@ -172,7 +172,12 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 
 ## Commentaries
 
-- **Eleven commentaries.** Tap the commentary's name at the top of the panel to choose one: Matthew Henry (Concise or Complete), Jamieson-Fausset-Brown, Wesley's Notes, Geneva Notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin, and Spurgeon's Treasury of David (Psalms). The panel remembers the last one you chose.
+- **Twelve commentaries.** Tap the commentary's name at the top of the panel to choose one: Matthew Henry (Concise or Complete), Jamieson-Fausset-Brown, Wesley's Notes, Geneva Notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin, Spurgeon's Treasury of David (Psalms), and the AI Commentary. The panel remembers the last one you chose.
+- **AI Commentary:** a short note on every verse in plain, everyday English. An AI (Claude) wrote it when the app was made, from the commentaries in the app and from trusted Christian websites. It works offline like the others.
+- **Its notes:** the main note gives the traditional reading. Under it, *Sources* names where each point comes from.
+- **Where Christians differ** appears on verses where churches read it differently (for example on baptism or spiritual gifts). It gives the Baptist, Methodist, Pentecostal, Reformed, Lutheran or other view in a line each, without taking sides.
+- **Other views** appears where another view is well known: modern scholarship, Catholic and Orthodox readings, or debated popular teaching. These are kept apart from the main note.
+- The AI Commentary was written by AI, so check anything important against the other commentaries.
 - **The first time** you open a commentary it takes a few seconds to get ready; after that it opens straight away.
 - **About this commentary:** tap the ⓘ for who wrote it, when, their background, and what it's best for.
 - **Linked to the Bible:** with the link button on (it is at first), the commentary and the Bible scroll together both ways. Scroll the Bible and the note on the verse at the top stays in view; scroll the commentary and the Bible moves to the verses it's on. Tap the link button to scroll them separately.

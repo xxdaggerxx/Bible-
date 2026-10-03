@@ -33,11 +33,13 @@ data class CommentaryInfo(
 
 /**
  * The commentaries that come with the app (STD-17). They are public domain, and all hold the
- * traditional view. Except the Concise (in study.db), each is stored tightly packed (xz) and
+ * traditional view; the AI commentary (STD-21, made by tools/build_ai_commentary.py) adds labelled
+ * "Where Christians differ" and "Other views" sections after its traditional note. Except the Concise (in study.db), each is stored tightly packed (xz) and
  * unpacked into app storage the first time it is opened, which takes a few seconds.
  */
 object Commentaries {
     const val CONCISE = "mhcc"
+    const val AI = "ai"
 
     val all = listOf(
         CommentaryInfo(
@@ -137,6 +139,16 @@ object Commentaries {
                 "What" to "His work on the Psalms, which took twenty years: an overview of each psalm, his exposition, and gathered comments from many older writers, with hints for preachers.",
                 "Best for" to "Reading the Psalms devotionally and preaching from them. Each psalm is one long note.",
                 "Approach" to "Reformed Baptist.",
+            ),
+        ),
+        CommentaryInfo(
+            AI, "AI Commentary in Plain English", "AI Commentary", "Written by AI (Claude) from trusted sources", "2026", "Whole Bible", null,
+            listOf(
+                "Who" to "Written by an AI (Anthropic's Claude) when the app was built, not by a person. Every point names its sources, and a check removed any point whose source couldn't be confirmed.",
+                "What" to "A short note on every verse in plain, everyday English, drawn from the commentaries in this app and from trusted websites: Reformed, Baptist, Methodist, Pentecostal and charismatic, Lutheran and evangelical teachers (such as Ligonier, Desiring God, Grace to You, Enduring Word, the Wesley Center and the Assemblies of God).",
+                "Where Christians differ" to "On verses where Protestant churches disagree (on baptism or spiritual gifts, for example), a short section gives each church's view, fairly and without taking sides.",
+                "Other views" to "Where well known, a short section gives other views: modern scholarship, Catholic and Orthodox readings, and debated popular teaching. They're labelled and kept apart from the main note, which always gives the traditional reading.",
+                "Best for" to "A quick, simple explanation of a verse, and seeing where Christians read it differently. Check anything important against the other commentaries and the sources it names.",
             ),
         ),
     )

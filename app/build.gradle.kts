@@ -47,8 +47,8 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 28
-        versionName = "1.7.3"
+        versionCode = 29
+        versionName = "1.8.0"
     }
 
     // The commentaries are already packed tightly (xz); don't zip them again.

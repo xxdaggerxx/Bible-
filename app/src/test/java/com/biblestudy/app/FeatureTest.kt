@@ -1813,6 +1813,31 @@ class FeatureTest {
     }
 
     @Test
+    fun aiCommentaryHasASourcedNoteOnEachVerse() {
+        // The AI commentary (STD-21) is one of the choices, with a plain-English note on each verse.
+        compose.runOnUiThread { vm.goTo(0, 8, 1, 16, remember = false); vm.setCommentary(0, com.biblestudy.app.data.Commentaries.CONCISE); vm.sidePane = PaneKind.COMMENTARY }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("Choose a commentary").performClick()
+        compose.onNodeWithText("AI Commentary").performClick()
+        runCatching { compose.waitUntil(60_000) { compose.onAllNodesWithText("Verse 16").fetchSemanticsNodes().isNotEmpty() } }
+            .onFailure { snap("148-ai-commentary-failed"); throw AssertionError("message=${vm.message} commentary=${vm.commentaryAt(0)}", it) }
+        assertEquals(com.biblestudy.app.data.Commentaries.AI, vm.commentaryAt(0))
+        // Every note names its sources.
+        val notes = com.biblestudy.app.data.Commentaries.chapter(vm.getApplication(), com.biblestudy.app.data.Commentaries.AI, 8, 1)
+        assertTrue(notes.size >= 15)
+        assertTrue(notes.all { "(Sources: " in it.body })
+        assertEquals(22, notes.flatMap { (it.start % 1000)..(it.end % 1000) }.toSet().size)
+        snap("148-ai-commentary")
+        // About says it is written by AI, and how other views are kept apart.
+        compose.onNodeWithContentDescription("About this commentary").performClick()
+        assertTrue(compose.onAllNodesWithText("Written by an AI", substring = true).fetchSemanticsNodes().isNotEmpty())
+        assertTrue(compose.onAllNodesWithText("Where Christians differ").fetchSemanticsNodes().isNotEmpty())
+        snap("149-ai-commentary-about")
+        compose.onNodeWithText("Close").performClick()
+        compose.runOnUiThread { vm.sidePane = null }
+    }
+
+    @Test
     fun compareHebrewGreekAndWordStudyAsPanelViews() {
         // Compare versions beside the text, on the verse tapped.
         compose.runOnUiThread { vm.paneVerse = VerseTarget(43, 3, 16); vm.sidePane = PaneKind.COMPARE }
