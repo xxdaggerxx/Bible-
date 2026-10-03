@@ -1830,7 +1830,7 @@ class FeatureTest {
         snap("148-ai-commentary")
         // About says it is written by AI, and how other views are kept apart.
         compose.onNodeWithContentDescription("About this commentary").performClick()
-        assertTrue(compose.onAllNodesWithText("Written by an AI", substring = true).fetchSemanticsNodes().isNotEmpty())
+        assertTrue(compose.onAllNodesWithText("Written by AI", substring = true).fetchSemanticsNodes().isNotEmpty())
         assertTrue(compose.onAllNodesWithText("Where Christians differ").fetchSemanticsNodes().isNotEmpty())
         snap("149-ai-commentary-about")
         compose.onNodeWithText("Close").performClick()

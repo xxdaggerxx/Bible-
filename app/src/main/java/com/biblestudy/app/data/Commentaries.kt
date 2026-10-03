@@ -142,9 +142,9 @@ object Commentaries {
             ),
         ),
         CommentaryInfo(
-            AI, "AI Commentary in Plain English", "AI Commentary", "Written by AI (Claude) from trusted sources", "2026", "Whole Bible", null,
+            AI, "AI Commentary in Plain English", "AI Commentary", "Written by AI from trusted sources", "2026", "Whole Bible", null,
             listOf(
-                "Who" to "Written by an AI (Anthropic's Claude) when the app was built, not by a person. Every point names its sources, and a check removed any point whose source couldn't be confirmed.",
+                "Who" to "Written by AI when the app was built, not by a person: Anthropic's Claude for the first part, then Google's Gemini (writing) and DeepSeek (research). Every point names its sources, and a check removed any point whose source couldn't be confirmed.",
                 "What" to "A short note on every verse in plain, everyday English, drawn from the commentaries in this app and from trusted websites: Reformed, Baptist, Methodist, Pentecostal and charismatic, Lutheran and evangelical teachers (such as Ligonier, Desiring God, Grace to You, Enduring Word, the Wesley Center and the Assemblies of God).",
                 "Where Christians differ" to "On verses where Protestant churches disagree (on baptism or spiritual gifts, for example), a short section gives each church's view, fairly and without taking sides.",
                 "Other views" to "Where well known, a short section gives other views: modern scholarship, Catholic and Orthodox readings, and debated popular teaching. They're labelled and kept apart from the main note, which always gives the traditional reading.",
