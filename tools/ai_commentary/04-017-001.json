@@ -1,0 +1,152 @@
+{
+ "book": 4,
+ "chapter": 17,
+ "first": 1,
+ "last": 13,
+ "ref": "Numbers 17",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 2,
+   "meaning": "God told Moses to collect twelve wooden staffs, one from the leader of each tribe of Israel. Each prince had his own name carved on his staff, which served as a symbol of his tribal authority. Instead of sending another painful punishment after Korah's rebellion, God kindly offered a peaceful test to settle who should lead.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God commanded that Aaron's name be written on the staff representing the tribe of Levi. Writing Aaron's personal name, rather than just the name of Levi, made it clear which specific family was chosen for the priesthood. This prevented any further arguments, both from the other eleven tribes and from other Levites who wanted the high priest's role.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Moses was instructed to place all twelve staffs inside the tabernacle in front of the ark containing God's law. This sacred tent was the place where the Lord met with Moses to make His will known. Leaving the rods alone before God showed that the choice belonged entirely to Him, without any human interference or favoritism.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The Lord promised that the staff belonging to the man He chose would sprout new life overnight. This visible miracle would decisively silence the continuous complaints of the Israelites against Moses and Aaron. God designed this gracious sign to stop their rebellion before it brought more destruction upon the camp.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Moses gathered the twelve staffs from the tribal leaders, and Aaron's staff was placed right among them. All the rods were kept together so that everyone could see them and know the test was fair. No leader could claim that Moses hid Aaron's rod or gave his brother an unfair advantage.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://biblehub.com/commentaries/pulpit/numbers/17.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Moses carried all the staffs into the tabernacle and laid them before the Lord. Even though Moses already knew God had chosen Aaron, he did not try to settle the dispute by his own power. He committed the entire problem into God's hands and waited for Him to act.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The next morning, Moses found that Aaron's dry wooden rod had miraculously sprouted, budded, blossomed, and produced ripe almonds. Seeing buds, flowers, and mature fruit all on the same branch at once was completely impossible by nature. This demonstrated that Aaron's authority came directly from God's life-giving power and grace, not from human strength.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholic tradition often sees Aaron's miraculous rod bearing fruit without soil or water as a picture of Mary giving birth to Jesus while remaining a virgin.",
+     "sources": [
+      "https://biblehub.com/commentaries/haydock/numbers/17.htm",
+      "Calvin"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Moses brought all the rods out of the sanctuary and presented them to the entire assembly. Each tribal leader examined the sticks and took his own back, finding it just as dry and lifeless as before. This open inspection gave undeniable proof that God alone had caused Aaron's staff to flourish.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "God told Moses to place Aaron's flourishing staff back in front of the ark to serve as a lasting reminder against rebellion. It was preserved to warn the people against future grumbling so they would not bring deadly judgment on themselves. In this way, God used a memorial of His grace to protect the people from spiritual ruin.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Moses obeyed the Lord completely and returned the staff to its place before the Testimony. His quiet obedience showed that the matter was settled and God's decision was final. When God speaks, trusting obedience brings peace and ends controversy.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 13,
+   "meaning": "Frightened by God's holiness and the recent judgments, the Israelites cried out in panic that they were all going to die. They swung from pride, thinking anyone could approach God, to total despair, believing that coming anywhere near the tabernacle meant instant death. Their outcry showed that dramatic warnings can produce deep fear of judgment, but only God's grace can bring genuine, peaceful faith.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 3: removed sources ['Calvin']",
+  "v. 6: removed sources ['Calvin']",
+  "v. 7: removed sources ['Calvin']",
+  "v. 9: removed sources ['Adam Clarke']",
+  "v. 11: removed sources ['Calvin']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}
