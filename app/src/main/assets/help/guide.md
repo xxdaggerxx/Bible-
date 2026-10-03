@@ -6,6 +6,8 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 
 - **Pick a passage.** Tap the chapter name at the top of a panel (e.g. *John 3*). Choose a book, then a chapter, then a verse. Small coloured dots show where you have notes.
 - **Next and previous chapter.** Tap the ‹ and › arrows beside the chapter name, or just keep scrolling: the next chapter follows on.
+- **Recently read.** Tap the chapter name, then *Recently read*. It lists the chapters you've read lately, newest first, with the verse you were at. Tap one to go straight back there. *Clear this list* empties it.
+- **Bookmarks.** Tap a verse, then *Bookmark*. A red ribbon shows beside it. To find your bookmarks, tap the chapter name, then *Bookmarks*. Tap one to go there, or × to take the bookmark off. Tapping *Bookmarked* in the verse's pop-up takes it off too.
 - **Back and forward.** The ← and → arrows at the left of the header return to where you were before a jump. The tablet's Back gesture does the same.
 - **Zoom.** Pinch with two fingers. *Fit width* makes the page fill the panel. Double-tap with a finger to switch between fit-width and your last zoom.
 - **Change the version.** Tap the version name (e.g. *KJV ▾*) and pick another. You stay on the same verse.

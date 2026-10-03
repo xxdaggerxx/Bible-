@@ -289,7 +289,11 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     // A linked commentary scrolled by hand (STD-18): the panel in use follows it.
     val commentaryPos = vm.commentaryPos
     LaunchedEffect(commentaryPos) {
-        if (commentaryPos != null && vm.activePanel.coerceIn(0, vm.panels.lastIndex) == index) ctl.follow(commentaryPos)
+        if (commentaryPos != null && vm.activePanel.coerceIn(0, vm.panels.lastIndex) == index) {
+            ctl.follow(commentaryPos)
+            // Followed once: a panel shown later (a new tab) mustn't jump back to it.
+            vm.commentaryFollowed(commentaryPos)
+        }
     }
     LaunchedEffect(vm.linkPanels, vm.panels.size) {
         if (vm.linked && vm.activePanel == index) ctl.announceScroll()
@@ -912,6 +916,15 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
             drawCircle(Color.White, 3f, c + Offset(-8f, 6f))
         }
     }
+    // A ribbon beside each bookmarked verse (NOTE-3).
+    if (sketch == null) for (v in vm.bookmarkedVerses(layout.book, layout.chapter)) {
+        val y = layout.verseTop(v.coerceAtLeast(1)) + 4f
+        val x = g.textLeft - 26f
+        val ribbon = androidx.compose.ui.graphics.Path().apply {
+            moveTo(x, y); lineTo(x + 16f, y); lineTo(x + 16f, y + 30f); lineTo(x + 8f, y + 23f); lineTo(x, y + 30f); close()
+        }
+        drawPath(ribbon, BOOKMARK_RIBBON)
+    }
     if (sketch == null) for ((first, last, dy) in layout.segments) {
         val (clipTop, clipBottom) = layout.segmentClip(first, last)
         translate(g.textLeft, Page.TEXT_TOP + dy) {
@@ -1368,3 +1381,6 @@ private fun DrawScope.drawNotePreview(vm: StudyViewModel, measurer: TextMeasurer
     drawRoundRect(SKETCH_BADGE, topLeft = Offset(r.right - 28f, r.top + 4f), size = Size(24f, 20f), cornerRadius = androidx.compose.ui.geometry.CornerRadius(5f))
     drawLine(Color.White, Offset(r.right - 22f, r.top + 19f), Offset(r.right - 10f, r.top + 9f), strokeWidth = 2.5f)
 }
+
+/** The bookmark ribbon's colour (NOTE-3). */
+private val BOOKMARK_RIBBON = Color(0xFFC0392B)

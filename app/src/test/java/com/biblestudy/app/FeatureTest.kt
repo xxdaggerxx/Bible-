@@ -1080,16 +1080,65 @@ class FeatureTest {
     }
 
     @Test
-    fun oldBookmarksBecomeWholeVerseHighlights() {
-        // A bookmark saved by 0.8, in a folder.
-        vm.user.addBookmark(com.biblestudy.app.model.Bookmark(77L, 43, 3, 16, 1L, "Gospel"))
-        compose.runOnUiThread { vm.convertBookmarks(); vm.dataGeneration++ }
-        assertTrue(vm.user.bookmarks().isEmpty())
-        val h = vm.user.allHighlights().single { it.book == 43 && it.chapter == 3 }
-        val verse = vm.text("KJV").verseText(43003016)!!
-        assertEquals(verse.length, h.end - h.start) // the whole verse, without its number
-        assertEquals(setOf("bookmark", "Gospel"), vm.user.tags()["h:${h.id}"])
-        compose.runOnUiThread { vm.removeHighlight(h) }
+    fun bookmarksAndRecentlyReadAreInTheBookPicker() {
+        compose.runOnUiThread {
+            vm.bookmarks.toList().forEach { vm.removeBookmark(it) }
+            vm.clearRecent()
+            vm.goTo(0, 43, 3, 16, remember = false)
+        }
+        waitForLoaded()
+        // Bookmark John 3:16 from its pop-up (NOTE-3); a ribbon shows beside it.
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.onNodeWithTag("bookmarkChip").performClick()
+        compose.onNodeWithText("Bookmarked").assertExists()
+        assertEquals(listOf(Triple(43, 3, 16)), vm.bookmarks.map { Triple(it.book, it.chapter, it.verse) })
+        vm.awaitSaves()
+        assertEquals(1, vm.user.bookmarks().size)
+        compose.runOnUiThread { vm.verseSheet = null }
+        waitForLoaded()
+        snap("150-bookmark-ribbon")
+
+        // Reading John 3, then Romans 8 from verse 28 (READ-8).
+        var t = 20_000_000L
+        compose.runOnUiThread {
+            vm.foreground = true
+            vm.startReadingClock(t); vm.userActive(t)
+            repeat(2) { t += 10_000; vm.userActive(t); vm.readingTick(t) }
+            vm.goTo(0, 45, 8, 28, remember = false)
+        }
+        waitForLoaded()
+        compose.runOnUiThread { repeat(2) { t += 10_000; vm.userActive(t); vm.readingTick(t) } }
+        assertEquals(listOf(45 to 8, 43 to 3), vm.recent.map { it.book to it.chapter })
+        val romans = vm.recent.first().verse
+        assertTrue("Romans 8 at $romans", romans in 27..28)
+
+        // Back to Genesis, then the picker's Recently read tab takes you to Romans 8 where you were.
+        compose.runOnUiThread { vm.goTo(0, 1, 1, remember = false) }
+        waitForLoaded()
+        compose.onNodeWithText("Genesis 1").performClick()
+        compose.onNodeWithTag("pickerTab1").performClick()
+        compose.onNodeWithTag("recentList").assertExists()
+        snap("151-recently-read")
+        compose.onNodeWithText("Romans 8:$romans").performClick()
+        waitForLoaded()
+        assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
+        compose.onNodeWithText("Choose a book").assertDoesNotExist()
+
+        // Bookmarks tab: open one, or take it off.
+        compose.onNodeWithText("Romans 8").performClick()
+        compose.onNodeWithTag("pickerTab2").performClick()
+        compose.onNodeWithText("For God so loved the world", substring = true).assertExists()
+        snap("152-bookmarks")
+        compose.onNodeWithText("John 3:16").performClick()
+        waitForLoaded()
+        assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        compose.onNodeWithText("John 3").performClick()
+        compose.onNodeWithTag("pickerTab2").performClick()
+        compose.onNodeWithContentDescription("Remove bookmark on John 3:16").performClick()
+        compose.onNodeWithText("No bookmarks yet", substring = true).assertExists()
+        assertTrue(vm.bookmarks.isEmpty())
+        compose.onNodeWithContentDescription("Close").performClick()
+        compose.runOnUiThread { vm.clearRecent(); vm.foreground = false }
     }
 
     @Test
@@ -1790,6 +1839,14 @@ class FeatureTest {
         waitForLoaded()
         assertTrue("Bible at ${vm.panels[0].topVerse}", vm.panels[0].topVerse > 16)
         snap("144-commentary-leads")
+        // A link's New tab opens at its passage, not where the commentary last led the Bible.
+        compose.runOnUiThread { vm.followCommentary(43, 3, 30); vm.newTab(40, 13, 12, "WEB") }
+        waitForLoaded()
+        assertEquals(2, vm.tabs.size)
+        assertEquals(40 to 13, vm.panels[0].book to vm.panels[0].chapter)
+        assertTrue("New tab at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 11..12)
+        compose.runOnUiThread { vm.closeTab(1) }
+        waitForLoaded()
         // Unlinked, the two scroll on their own.
         compose.onNodeWithContentDescription("Unlink from the Bible").performClick()
         assertFalse(vm.commentaryLinked(0))

@@ -201,6 +201,9 @@ enum class PaneKind(val label: String) {
 /** A spot to return to with Back / Forward. */
 data class Place(val book: Int, val chapter: Int, val verse: Int)
 
+/** A chapter read lately (READ-8): where you were in it, and when. */
+data class RecentRead(val book: Int, val chapter: Int, val verse: Int, val at: Long)
+
 class StudyViewModel(app: Application) : AndroidViewModel(app) {
     private val prefs = app.getSharedPreferences("study", Context.MODE_PRIVATE)
     init { BibleRepository.loadImported(app) } // before panels restore their versions
@@ -496,7 +499,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             layers.add(l); user.saveLayer(l)
         }
         if (layers.none { it.id == activeLayerId }) activeLayerId = layers.first().id
-        convertBookmarks()
         for (k in listOf("mw_L_land", "mw_R_land", "mw_L_port", "mw_R_port")) {
             if (prefs.contains(k)) marginWidths[k] = prefs.getFloat(k, Page.MARGIN_W)
         }
@@ -905,6 +907,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun selectTab(i: Int) {
+        commentaryPos = null // a commentary scrolled in the old tab doesn't move the new one
         if (i !in tabs.indices || i == activeTab) { activeTab = i.coerceIn(0, tabs.lastIndex); return }
         selection = null
         passagePop = null
@@ -1367,8 +1370,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun readingTick(now: Long = android.os.SystemClock.uptimeMillis()) {
         val since = (now - lastTick).coerceIn(0L, 30_000L)
         lastTick = now
-        if (!trackReading || !foreground || now - lastActive > IDLE_MS || since < 1000) return
+        if (!foreground || now - lastActive > IDLE_MS || since < 1000) return
         val p = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex)) ?: return
+        if (!Sketch.isSketch(p.book)) noteRecent(p.book, p.chapter, p.topVerse, since / 1000)
+        if (!trackReading) return
         val book = p.book; val chapter = p.chapter
         if (Sketch.isSketch(book)) {
             // Time on a sketch page counts as study time for its passage's day, not as reading.
@@ -1562,6 +1567,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun followCommentary(book: Int, chapter: Int, verse: Int) {
         commentaryPos = ScrollPos(-1, book, chapter, verse, 0f)
     }
+
+    fun commentaryFollowed(pos: ScrollPos) { if (commentaryPos === pos) commentaryPos = null }
 
     /** Easton's articles for the names and words of a chapter, in the order they first appear (STD-5). */
     fun chapterArticles(version: String, book: Int, chapter: Int): List<StudyEntry> {
@@ -2527,34 +2534,71 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         io { user.setNote(t.book, t.chapter, t.verse, text, endVerse) }
     }
 
-    // ---------- bookmarks become highlights (0.9) ----------
+    // ---------- bookmarks (NOTE-3) and recently read (READ-8) ----------
 
-    /**
-     * Bookmarks were replaced by highlights in 0.9: each saved bookmark becomes a yellow highlight
-     * over its whole verse in the KJV, tagged "bookmark" (and its folder's name), on the first
-     * layer. Runs at start-up and after restoring an older backup; nothing happens once done.
-     */
-    fun convertBookmarks() {
-        val old = user.bookmarks()
-        if (old.isEmpty()) return
-        val layer = layers.firstOrNull()?.id ?: 1L
-        for (b in old) {
-            val verses = text(bible.code).chapter(b.book, b.chapter)
-            var offset = 0
-            for (v in verses) {
-                val numberLen = v.verse.toString().length + 1
-                if (v.verse == b.verse) {
-                    val h = Highlight(newId(), layer, bible.code, b.book, b.chapter, offset + numberLen, offset + numberLen + v.text.length, HIGHLIGHT_COLORS[0])
-                    user.insert(h)
-                    user.setTags("h:${h.id}", (setOf("bookmark") + listOfNotNull(b.folder.ifEmpty { null })).toSortedSet())
-                    break
-                }
-                offset += numberLen + v.text.length + 1 // the verse, then the line break or space after it
-            }
-            user.deleteBookmark(b.id)
+    /** Bookmarked verses, newest first (NOTE-3). Back in 1.8, after highlights stood in for them from 0.9. */
+    val bookmarks = mutableStateListOf<com.biblestudy.app.model.Bookmark>().apply { addAll(user.bookmarks()) }
+
+    fun bookmarkAt(book: Int, chapter: Int, verse: Int) = bookmarks.firstOrNull { it.book == book && it.chapter == chapter && it.verse == verse }
+
+    /** The bookmarked verses of a chapter, for the ribbons beside them. */
+    fun bookmarkedVerses(book: Int, chapter: Int): List<Int> = bookmarks.filter { it.book == book && it.chapter == chapter }.map { it.verse }
+
+    /** Bookmarks a verse, or takes its bookmark off. */
+    fun toggleBookmark(book: Int, chapter: Int, verse: Int) {
+        val old = bookmarkAt(book, chapter, verse)
+        if (old != null) removeBookmark(old)
+        else {
+            val b = com.biblestudy.app.model.Bookmark(newId(), book, chapter, verse, System.currentTimeMillis(), "")
+            bookmarks.add(0, b)
+            io { user.addBookmark(b) }
         }
+        dataGeneration++
     }
 
+    fun removeBookmark(b: com.biblestudy.app.model.Bookmark) {
+        bookmarks.remove(b)
+        io { user.deleteBookmark(b.id) }
+        dataGeneration++
+    }
+
+    /** Chapters read lately, newest first, each with the verse you were at (READ-8). Kept on this tablet. */
+    val recent = mutableStateListOf<RecentRead>().apply {
+        runCatching { org.json.JSONArray(prefs.getString("recent", "[]")) }.getOrNull()?.let { a ->
+            for (i in 0 until a.length()) a.optJSONObject(i)?.let { o -> add(RecentRead(o.getInt("b"), o.getInt("c"), o.getInt("v"), o.getLong("t"))) }
+        }
+    }
+    private var recentKey = -1
+    private var recentSeconds = 0L
+
+    /**
+     * Adds the chapter in front to the recently read list once it has been read for a few seconds,
+     * and keeps its verse up to date while you stay.
+     */
+    fun noteRecent(book: Int, chapter: Int, verse: Int, seconds: Long) {
+        val key = book * 1000 + chapter
+        if (key != recentKey) { recentKey = key; recentSeconds = 0 }
+        recentSeconds += seconds
+        if (recentSeconds < RECENT_AFTER_S) return
+        val top = recent.firstOrNull()
+        val now = System.currentTimeMillis()
+        if (top != null && top.book == book && top.chapter == chapter) {
+            if (top.verse == verse && now - top.at < 60_000) return
+            recent[0] = top.copy(verse = verse, at = now)
+        } else {
+            recent.removeAll { it.book == book && it.chapter == chapter }
+            recent.add(0, RecentRead(book, chapter, verse, now))
+            while (recent.size > MAX_RECENT) recent.removeAt(recent.lastIndex)
+        }
+        saveRecent()
+    }
+
+    fun clearRecent() { recent.clear(); recentKey = -1; saveRecent() }
+
+    private fun saveRecent() {
+        val a = org.json.JSONArray(recent.map { org.json.JSONObject().put("b", it.book).put("c", it.chapter).put("v", it.verse).put("t", it.at) })
+        prefs.edit { putString("recent", a.toString()) }
+    }
 
     // ---------- backup & restore ----------
 
@@ -2733,7 +2777,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             undoStack.clear(); redoStack.clear(); editVersion++
             layers.clear(); layers.addAll(result.first)
             if (layers.none { it.id == activeLayerId }) activeLayerId = layers.firstOrNull()?.id ?: 1L
-            convertBookmarks() // an older backup may still have bookmarks
+            bookmarks.clear(); bookmarks.addAll(user.bookmarks())
             tags.clear(); tags.putAll(user.tags())
             meanings.clear(); meanings.putAll(user.meanings())
             workspaces.clear(); workspaces.addAll(user.workspaces().mapNotNull { (n, j) -> Workspace.fromJson(n, j) })
@@ -2764,6 +2808,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         )
         private const val COPY_SHIFT = 30f
         private const val MAX_HISTORY = 100
+        /** Seconds on a chapter before it counts as read lately (READ-8), and how many are kept. */
+        const val RECENT_AFTER_S = 5L
+        const val MAX_RECENT = 50
         const val PASSAGE_LIMIT = 80
         /** How many automatic backups are kept (DATA-6). */
         const val KEEP_BACKUPS = 5
