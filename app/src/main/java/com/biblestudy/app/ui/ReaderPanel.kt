@@ -712,6 +712,11 @@ private fun TextSelectionBar(vm: StudyViewModel, ctl: ReaderController, ts: Text
                 vm.openVerse(l.book, l.chapter, l.verseAtOffset(ts.start))
                 ctl.clearTextSelect()
             }) { Text("Note") }
+            // Send the words to the AI chat, to ask about them (AI-6).
+            if (vm.chat.enabled) TextButton(onClick = {
+                vm.sendToChat(ctl.selectionLabel(ts), ts.layout.textOf(ts.start, ts.end).replace('\u2009', ' '))
+                ctl.clearTextSelect()
+            }) { Text("Ask AI") }
             IconButton(onClick = ctl::clearTextSelect) { Icon(Icons.Filled.Close, contentDescription = "Clear selection") }
         }
     }

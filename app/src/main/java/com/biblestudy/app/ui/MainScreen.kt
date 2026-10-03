@@ -1,5 +1,9 @@
 package com.biblestudy.app.ui
 
+import androidx.compose.material.icons.automirrored.filled.Chat
+import androidx.compose.material.icons.Icons
+import androidx.compose.material3.Icon
+
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
@@ -186,6 +190,13 @@ fun StudyApp(vm: StudyViewModel) {
                                 Cell(slots[1], Modifier.weight(1f - tab.split).fillMaxHeight())
                             }
                         }
+                    }
+                    // The AI chat bubble (AI-1): opens the chat beside the text.
+                    if (vm.chat.enabled && PaneKind.CHAT !in tab.studies) {
+                        androidx.compose.material3.SmallFloatingActionButton(
+                            onClick = { vm.openChat() },
+                            modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp).testTag("chatBubble"),
+                        ) { Icon(Icons.AutoMirrored.Filled.Chat, contentDescription = "AI chat") }
                     }
                 }
             }

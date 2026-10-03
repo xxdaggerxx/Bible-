@@ -1,4 +1,4 @@
-# Ink & Word — version 1.5.0
+# Ink & Word — version 1.6.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,14 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.6
+
+- **AI chat (online):** a chat bubble at the bottom right opens a chat beside the text. Ask a question and the AI (Claude, with web search) searches only a list of trusted sites you choose and sums up what they say, with numbered sources you can open. It may not answer from its own knowledge: if your sites have nothing on it, it says so. Bible references in answers are links.
+- **Ask AI** sends selected words, a highlight, or a verse from *Verse details* into the chat, to ask about them.
+- **Settings → AI chat (online):** your Claude API key (kept on the tablet only, not in backups), the sites to search, and a switch that turns the chat off so the app never goes online.
+- **This is the app's first online feature since 1.1.2.** Everything else still works offline. Each question costs a few cents on your Claude account.
+- Known gaps: answers can't be written on yet; the bubble sits over the bottom-right corner of the page.
 
 ## New in version 1.5
 
@@ -437,7 +445,8 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 
 ## Next milestones
 
-- **Later:** search by meaning.
+- **Next: offline smart search:** all versions at once, every verse with the same Hebrew or Greek word, grouped by Nave's topics. No AI and no internet needed.
+- **On hold:** the AI search and study plan (section 29 of the requirements), replaced for now by the online AI chat (1.6) and offline smart search.
 - **Waiting on permission:** NIV and NLT. Once you have the files, *Settings → Bibles → Import a Bible…* adds them.
 
 ## Credits

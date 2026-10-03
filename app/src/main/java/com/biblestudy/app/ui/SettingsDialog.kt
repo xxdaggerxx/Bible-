@@ -158,6 +158,12 @@ fun SettingsDialog(
                 Toggle("Verse details in a panel", "Tapping a verse shows it beside the text. Off: in a window", vm.verseInPanel) { vm.verseInPanel = it }
                 Toggle("Compare versions", "Show the verse in every version when it opens", vm.compareVersions) { vm.compareVersions = it }
 
+                Group("AI chat (online)")
+                Toggle("AI chat", "The chat bubble and Ask AI buttons. Off: the app never goes online", vm.chat.enabled) { vm.chat.changeEnabled(it) }
+                if (vm.chat.enabled) Matches("AI chat", "API key", "Claude", "sites", "websites", "search") {
+                    AiChatSettings(vm)
+                }
+
                 Group("Bibles")
                 // The version manager (BIB-5) and importing (BIB-4).
                 Matches("Bibles", "versions", "import a Bible", "translations", *BibleRepository.ALL.map { it.code + " " + it.name }.toTypedArray()) {
@@ -367,3 +373,37 @@ private fun displayName(context: android.content.Context, uri: android.net.Uri):
             if (c.moveToFirst()) c.getString(0) else null
         }
     }.getOrNull() ?: uri.lastPathSegment?.substringAfterLast('/') ?: "file"
+
+/** The AI chat's key and the sites it may search (AI-4, AI-5). */
+@Composable
+private fun AiChatSettings(vm: StudyViewModel) {
+    val chat = vm.chat
+    var key by remember { mutableStateOf("") }
+    var sites by remember(chat.sites.toList()) { mutableStateOf(chat.sites.joinToString("\n")) }
+    Column(Modifier.fillMaxWidth().padding(vertical = 6.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Text(
+            if (chat.apiKey.isBlank()) "No Claude API key yet." else "Claude API key saved (ends \u2026${chat.apiKey.takeLast(4)}).",
+            style = MaterialTheme.typography.bodyMedium,
+        )
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            OutlinedTextField(
+                value = key, onValueChange = { key = it }, singleLine = true,
+                label = { Text(if (chat.apiKey.isBlank()) "API key" else "New API key") },
+                visualTransformation = androidx.compose.ui.text.input.PasswordVisualTransformation(),
+                modifier = Modifier.weight(1f),
+            )
+            TextButton(onClick = { chat.changeKey(key); key = "" }, enabled = key.isNotBlank()) { Text("Save key") }
+            if (chat.apiKey.isNotBlank()) TextButton(onClick = { chat.changeKey("") }) { Text("Forget key") }
+        }
+        Text("Sites the AI may search, one per line. It answers only from these.", style = MaterialTheme.typography.bodyMedium)
+        OutlinedTextField(
+            value = sites, onValueChange = { sites = it },
+            minLines = 4, maxLines = 10,
+            modifier = Modifier.fillMaxWidth().testTag("chatSites"),
+        )
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            TextButton(onClick = { chat.changeSites(sites.lines()) }) { Text("Save sites") }
+            TextButton(onClick = { chat.changeSites(com.biblestudy.app.data.AiChat.DEFAULT_SITES) }) { Text("Use the suggested sites") }
+        }
+    }
+}

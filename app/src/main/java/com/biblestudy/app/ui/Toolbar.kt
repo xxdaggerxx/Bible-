@@ -214,6 +214,7 @@ fun StudyToolbar(
                     }
                     HorizontalDivider()
                     for (k in PaneKind.entries) {
+                        if (k == PaneKind.CHAT && !vm.chat.enabled) continue
                         DropdownMenuItem(
                             text = { Text("Beside the text: ${k.label}" + if (vm.sidePane == k) "  \u2713" else "") },
                             onClick = { vm.togglePane(k); panelsMenu = false },

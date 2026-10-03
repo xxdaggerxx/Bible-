@@ -669,6 +669,12 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
             tapped?.let { w ->
                 FilledTonalButton(onClick = { vm.openWordStudy(w) }) { Text("Word study: “${w.word}”") }
             }
+            // Ask the AI chat about this verse (AI-6).
+            if (vm.chat.enabled) TextButton(onClick = {
+                draft.save(vm)
+                vm.sendToChat("${vm.refLabel(id)} ($version)", verseText)
+                if (!inPanel) onDone()
+            }) { Text("Ask AI") }
         }
         OutlinedTextField(
             value = draft.text,

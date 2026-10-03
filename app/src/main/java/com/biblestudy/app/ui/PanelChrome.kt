@@ -60,6 +60,7 @@ fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: 
             leadingIcon = if (current == null) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
         )
         for (k in PaneKind.entries) {
+            if (k == PaneKind.CHAT && !vm.chat.enabled && current != k) continue
             val elsewhere = k != current && k in vm.tab.studies && k != PaneKind.COMMENTARY
             DropdownMenuItem(
                 text = { Text(k.label) },

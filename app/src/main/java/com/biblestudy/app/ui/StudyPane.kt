@@ -113,6 +113,7 @@ fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
                 )
             }
             PaneKind.INTRO -> BookIntroPane(vm, inner)
+            PaneKind.CHAT -> ChatPane(vm, inner.padding(bottom = 6.dp))
         }
     }
 }

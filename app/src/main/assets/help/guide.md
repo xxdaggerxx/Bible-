@@ -186,6 +186,19 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 - They follow the verse you tap in the Bible, or the verse at the top of the page. The arrows step to the verse before or after.
 - With a *Word study* panel open, tapping a word in the Bible or *Word study* on a Hebrew or Greek word shows its study there instead of in a window.
 
+## AI chat (online)
+
+The one part of the app that uses the internet. Ask a question, and the AI searches a list of trusted websites and sums up what they say. It doesn't answer from its own knowledge: if your sites don't answer the question, it says so.
+
+- **Open it** with the round chat bubble at the bottom right. The chat opens in a panel beside the text.
+- **The first time,** paste your Claude API key (from console.anthropic.com) and tap *Save key*. It's kept on this tablet only, and isn't in your backups. Each question costs a few cents on your Claude account.
+- **Ask about a passage:** select words with a long press, or hold a finger on a highlight, and tap *Ask AI*. In *Verse details*, tap *Ask AI* to send the whole verse. The passages wait above the question box; tap × on one to leave it out.
+- **Answers** show a number like [1] after each part, matching the *Sources* listed under the answer. Tap a source to read the page in your browser. Bible references in an answer are links: tap one to read the passage.
+- **Follow-up questions** keep the conversation. *New chat* starts again.
+- **Which sites:** *Settings → AI chat (online)* lists them, one per line. Add or remove sites, then *Save sites*. *Use the suggested sites* puts back the starting list.
+- **Turn it off** with the *AI chat* switch in Settings: the bubble and the *Ask AI* buttons go, and the app never goes online.
+- Answers can still be wrong. Check what they say against the verses.
+
 ## Names and places
 
 - In a panel's menu choose *Names & places*, or tap a name in Verse details.

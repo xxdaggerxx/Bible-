@@ -47,8 +47,8 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 21
-        versionName = "1.5.0"
+        versionCode = 22
+        versionName = "1.6.0"
     }
 
     // The commentaries are already packed tightly (xz); don't zip them again.
@@ -120,6 +120,8 @@ dependencies {
     implementation("androidx.graphics:graphics-core:1.0.2")
     // Unpacks the bundled commentaries (STD-17), stored as xz to keep the app small.
     implementation("org.tukaani:xz:1.10")
+    // The Claude API, for the online AI chat (AI-1).
+    implementation("com.anthropic:anthropic-java:2.68.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.14.1")

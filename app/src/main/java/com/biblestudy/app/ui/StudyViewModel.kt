@@ -184,6 +184,7 @@ enum class PaneKind(val label: String) {
     DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), NAMES("Names & places"),
     SKETCHES("Sketch pages"),
     VERSE("Verse details"), COMPARE("Compare versions"), ORIGINAL("Hebrew/Greek"), WORDSTUDY("Word study"), INTRO("About the book"),
+    CHAT("AI chat"),
 }
 
 /** A spot to return to with Back / Forward. */
@@ -1412,6 +1413,20 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             else -> wordStudy = w
         }
     }
+    // ---------- AI chat, online (AI-1 to AI-7) ----------
+
+    val chat by lazy { ChatState(getApplication(), viewModelScope) }
+
+    /** Opens the AI chat in a panel beside the text. */
+    fun openChat() { if (chat.enabled) showStudy(PaneKind.CHAT) }
+
+    /** Adds Bible text to the next question and opens the chat (AI-6). */
+    fun sendToChat(label: String, text: String) {
+        if (!chat.enabled) return
+        chat.attach(ChatPassage(label, text.trim()))
+        openChat()
+    }
+
     /** A word study opened from the Verse details panel, shown in it until Back (SPLIT-9). */
     var verseWordStudy by mutableStateOf<WordStudy?>(null)
     /** The dictionary article and topic open in the study pane, if any. */

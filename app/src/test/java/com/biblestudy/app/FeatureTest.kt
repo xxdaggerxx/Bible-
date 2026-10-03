@@ -247,6 +247,7 @@ class FeatureTest {
             vm.compareVersions = false
             vm.verseInPanel = false // the older tests use the verse window
             vm.verseWordStudy = null
+            vm.chat.changeEnabled(false) // no chat bubble over the page in the older tests
             vm.readMode = false
             vm.underlineMode = false
             vm.changeTextFont(com.biblestudy.app.model.TextFont.BOOK)
@@ -835,6 +836,72 @@ class FeatureTest {
         compose.waitForIdle()
         compose.onNodeWithText("Deuteronomy \u2014 4").assertExists()
         compose.onNodeWithText("Genesis \u2014 8").assertDoesNotExist()
+    }
+
+    @Test
+    fun aiChatAnswersFromTheChosenSitesWithLinks() {
+        val asked = ArrayList<Triple<List<String>, List<com.biblestudy.app.data.ChatTurn>, String>>()
+        var reply: com.biblestudy.app.data.ChatResult = com.biblestudy.app.data.ChatResult.Answer(
+            "The sites say God showed his love in giving his Son.[1]\n\n- See also **Romans 5:8**.[2]",
+            listOf(
+                com.biblestudy.app.data.ChatSource("God so loved the world", "https://www.gotquestions.org/John-3-16.html"),
+                com.biblestudy.app.data.ChatSource("The love of God", "https://www.ligonier.org/learn/love"),
+            ),
+        )
+        compose.runOnUiThread {
+            vm.chat.changeEnabled(true)
+            vm.chat.changeKey("")
+            vm.chat.newChat()
+            vm.chat.attached.clear()
+            vm.chat.changeSites(com.biblestudy.app.data.AiChat.DEFAULT_SITES)
+            vm.chat.service = com.biblestudy.app.data.ChatService { _, sites, history, q -> asked += Triple(sites, history, q); reply }
+        }
+        // The bubble opens the chat beside the text; first it asks for the key.
+        compose.onNodeWithTag("chatBubble").performClick()
+        compose.waitForIdle()
+        assertEquals(PaneKind.CHAT, vm.sidePane)
+        compose.onNodeWithTag("chatKey").performTextInput("sk-test-key")
+        compose.onNodeWithText("Save key").performClick()
+        assertEquals("sk-test-key", vm.chat.apiKey)
+        compose.onNodeWithTag("chatBubble").assertDoesNotExist()
+
+        // A verse goes to the chat from its window.
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.onNodeWithText("Ask AI").performClick()
+        compose.waitForIdle()
+        assertEquals(listOf("John 3:16 (KJV)"), vm.chat.attached.map { it.label })
+        compose.onNodeWithTag("chatInput").performTextInput("What does this teach about God's love?")
+        compose.onNodeWithContentDescription("Send").performClick()
+        compose.waitUntil(5_000) { compose.onAllNodesWithTag("chatAnswer").fetchSemanticsNodes().isNotEmpty() }
+        val (sites, history, q) = asked.single()
+        assertEquals(com.biblestudy.app.data.AiChat.DEFAULT_SITES, sites)
+        assertTrue(history.isEmpty())
+        assertTrue(q, q.contains("John 3:16 (KJV): For God so loved the world") && q.endsWith("What does this teach about God's love?"))
+        compose.onNodeWithText("God so loved the world").assertExists()
+        compose.onNodeWithText("ligonier.org").assertExists()
+        snap("131-ai-chat")
+
+        // Bible references in the answer open the passage pop-over.
+        val answer = compose.onNodeWithTag("chatAnswer").fetchSemanticsNode()
+            .config[androidx.compose.ui.semantics.SemanticsProperties.Text].first()
+        assertTrue(answer.text, answer.text.contains("\u2022 See also Romans 5:8."))
+        assertTrue(answer.getLinkAnnotations(0, answer.length).isNotEmpty())
+
+        // Nothing found on the sites: no answer, just a note. The earlier turns go with it.
+        reply = com.biblestudy.app.data.ChatResult.NotFound
+        compose.onNodeWithTag("chatInput").performTextInput("And in Leviticus?")
+        compose.onNodeWithContentDescription("Send").performClick()
+        compose.waitUntil(5_000) { compose.onAllNodesWithTag("chatNote").fetchSemanticsNodes().isNotEmpty() }
+        assertEquals(2, asked.last().second.size)
+        assertFalse(asked.last().second[0].text.isEmpty())
+
+        // Turned off: no bubble, no Ask AI, and the panel view leaves the menu.
+        compose.runOnUiThread { vm.sidePane = null; vm.chat.changeEnabled(false); vm.openVerse(43, 3, 16) }
+        compose.waitForIdle()
+        compose.onNodeWithText("Ask AI").assertDoesNotExist()
+        compose.onNodeWithTag("chatBubble").assertDoesNotExist()
+        compose.runOnUiThread { vm.verseSheet = null; vm.chat.newChat(); vm.chat.changeKey(""); vm.chat.service = com.biblestudy.app.data.AiChat.claude }
+        compose.waitForIdle()
     }
 
     @Test
