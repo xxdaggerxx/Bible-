@@ -22,7 +22,10 @@ import java.io.File
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @Config(qualifiers = "w1280dp-h800dp-land-xhdpi")
 class AppScreenshotTest {
-    @get:Rule
+    @get:Rule(order = 0)
+    val flusher = SnapshotFlusher()
+
+    @get:Rule(order = 1)
     val compose = createAndroidComposeRule<MainActivity>()
 
     private fun snap(name: String) {

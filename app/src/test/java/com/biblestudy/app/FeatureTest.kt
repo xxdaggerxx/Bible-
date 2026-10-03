@@ -73,28 +73,20 @@ import java.io.File
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @Config(qualifiers = "w1280dp-h800dp-land-xhdpi")
 class FeatureTest {
-    @get:Rule
+    /** Applies state changes made outside composition (see [SnapshotFlusher]). */
+    @get:Rule(order = 0)
+    val flusher = SnapshotFlusher()
+
+    @get:Rule(order = 1)
     val compose = createAndroidComposeRule<MainActivity>()
 
     /** On failure, prints the state objects written most often during the test (to find update loops). */
-    @get:Rule
+    @get:Rule(order = 2)
     val writes = object : org.junit.rules.TestWatcher() {
         val counts = java.util.concurrent.ConcurrentHashMap<String, Int>()
         var handle: androidx.compose.runtime.snapshots.ObserverHandle? = null
-        var flusher: androidx.compose.runtime.snapshots.ObserverHandle? = null
         override fun starting(d: org.junit.runner.Description) {
             counts.clear()
-            // Apply state changes made outside composition, as Compose's GlobalSnapshotManager does
-            // on a device. In a long Robolectric run that manager stops doing it after a few tests,
-            // leaving changes pending so Compose never reports idle.
-            val main = android.os.Handler(android.os.Looper.getMainLooper())
-            val posted = java.util.concurrent.atomic.AtomicBoolean(false)
-            flusher = androidx.compose.runtime.snapshots.Snapshot.registerGlobalWriteObserver {
-                if (posted.compareAndSet(false, true)) main.post {
-                    posted.set(false)
-                    androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications()
-                }
-            }
             handle = androidx.compose.runtime.snapshots.Snapshot.registerApplyObserver { changed, _ ->
                 for (c in changed) {
                     val k = c.toString().take(160)
@@ -200,7 +192,7 @@ class FeatureTest {
             }
             File("build/state-writes.txt").appendText(out.toString())
         }
-        override fun finished(d: org.junit.runner.Description) { handle?.dispose(); flusher?.dispose() }
+        override fun finished(d: org.junit.runner.Description) { handle?.dispose() }
     }
 
     private val vm: StudyViewModel get() = ViewModelProvider(compose.activity)[StudyViewModel::class.java]
@@ -1450,8 +1442,8 @@ class FeatureTest {
             compose.runOnUiThread { vm.openVerse(43, 3, 16, word = 3) }
             compose.waitUntil(10_000) { compose.onAllNodesWithText("Word study: \u201cloved\u201d").fetchSemanticsNodes().isNotEmpty() }
             compose.onNodeWithText("Word study: \u201cloved\u201d").performClick()
-            compose.waitUntil(10_000) { compose.onAllNodesWithText("Used in", substring = true).fetchSemanticsNodes().isNotEmpty() }
-            compose.onNodeWithText("Greek \u00b7 Strong's G25", substring = true).assertExists()
+            compose.waitUntil(10_000) { compose.onAllNodesWithText("Greek \u00b7 Strong's G25", substring = true).fetchSemanticsNodes().isNotEmpty() }
+            // Its list of uses comes from the ESV's own tags.
             assertTrue(vm.study.occurrences("ESV", "G25", { vm.text("ESV").verseText(it) }).any { it.id == 43003016 })
             snap("88-imported-word-study")
         } finally {
@@ -1545,7 +1537,9 @@ class FeatureTest {
 
     @Test
     fun readingIsCountedAndShownInReadingStats() {
-        compose.runOnUiThread { vm.clearReadingStats(); vm.trackReading = true; vm.foreground = true }
+        // The activity's own 15-second reading clock keeps running; only the ticks below should count,
+        // so the app counts as in the background except while they're given.
+        compose.runOnUiThread { vm.clearReadingStats(); vm.trackReading = true; vm.foreground = false }
         waitForLoaded()
         // Scroll through John 3.
         // Down to the end of John 3.
@@ -1557,12 +1551,15 @@ class FeatureTest {
         // Five quarter-minutes of reading, touching now and then: the chapter counts as read.
         var t = 10_000_000L
         compose.runOnUiThread {
+            vm.foreground = true
             vm.startReadingClock(t); vm.userActive(t)
             repeat(5) { t += 15_000; vm.userActive(t - 5_000); vm.readingTick(t) }
+            // Three idle minutes later nothing more is counted.
+            vm.readingTick(t + 180_000)
+            vm.foreground = false
         }
-        // Three idle minutes later nothing more is counted.
-        compose.runOnUiThread { vm.readingTick(t + 180_000) }
-        runCatching { compose.waitUntil(10_000) { vm.user.readingChapters().any { it.book == 43 && it.chapter == ch && it.timesRead == 1 } } }
+        // "Read" is saved after the fourth tick, before the fifth tick's seconds: wait for both.
+        runCatching { compose.waitUntil(10_000) { vm.user.readingChapters().any { it.book == 43 && it.chapter == ch && it.timesRead == 1 && it.seconds >= 75 } } }
             .onFailure { throw AssertionError("${vm.user.readingChapters()} at ${vm.panels[0].chapter} seen ${vm.panels[0].seenTo}", it) }
         val john3 = vm.user.readingChapters().single { it.book == 43 && it.chapter == ch }
         assertEquals(75, john3.seconds)
@@ -1584,7 +1581,7 @@ class FeatureTest {
                 .config[androidx.compose.ui.semantics.SemanticsProperties.StateDescription],
         )
         snap("93-picker-read")
-        compose.runOnUiThread { vm.clearReadingStats() }
+        compose.runOnUiThread { vm.clearReadingStats(); vm.foreground = true }
     }
 
     @Test

@@ -358,6 +358,7 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
 - Word tags in imported Bibles are worked out, not published ones: roughly 1 in 10 tagged words may point to a neighbouring Hebrew or Greek word, and loosely paraphrased words (common in the NLT, e.g. "meadows", "unfailing") have none. Footnotes in imported files are left out. Verses printed together ("1–2") show under the first verse number.
 - The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
+- The automated screen tests (Robolectric) still fail now and then, about one run in two, on one random test whose screen waits for data loaded in the background. The data itself is right each time; it's the emulated screen that sometimes doesn't refresh in time. Re-running passes.
 - Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
 
 ## Next milestones

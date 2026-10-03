@@ -1279,6 +1279,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** How many chapters' annotations are still being read from the database. */
     var pendingLoads by mutableIntStateOf(0)
         private set
+    // The count itself; pendingLoads is set from it, so a state write lost between coroutines
+    // can't leave it stuck above or below zero.
+    private val loadCount = java.util.concurrent.atomic.AtomicInteger()
 
     /**
      * Loads a chapter's annotations. [plainLayout] builds the chapter's layout in a font at normal
@@ -1288,7 +1291,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun ensureLoaded(version: String, book: Int, chapter: Int, plainLayout: (TextStyleKey) -> ChapterLayout) {
         val t = tk(version, book, chapter)
         if (loaded.add("t$t")) {
-            pendingLoads++
+            pendingLoads = loadCount.incrementAndGet()
             viewModelScope.launch {
                 try {
                     val (loadedStrokes, h) = withContext(dbDispatcher) { user.loadText(version, book, chapter) }
@@ -1316,14 +1319,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                     merge(textStrokesFor(version, book, chapter), s)
                     merge(highlightsFor(version, book, chapter), h)
                 } finally {
-                    pendingLoads--
+                    pendingLoads = loadCount.decrementAndGet()
                 }
             }
         }
         val m = mk(book, chapter)
         if (loaded.add("h$m")) {
             // Highlights made in the other translations, shown here over whole verses (HL-10).
-            pendingLoads++
+            pendingLoads = loadCount.incrementAndGet()
             viewModelScope.launch {
                 try {
                     val all = withContext(dbDispatcher) {
@@ -1337,12 +1340,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                         target.addAll(list.filter { it.id !in have })
                     }
                 } finally {
-                    pendingLoads--
+                    pendingLoads = loadCount.decrementAndGet()
                 }
             }
         }
         if (loaded.add("m$m")) {
-            pendingLoads++
+            pendingLoads = loadCount.incrementAndGet()
             viewModelScope.launch {
                 try {
                     val (s, i) = withContext(dbDispatcher) { user.loadMargin(book, chapter) }
@@ -1351,7 +1354,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                     merge(imagesFor(book, chapter), i)
                     merge(textsFor(book, chapter), t)
                 } finally {
-                    pendingLoads--
+                    pendingLoads = loadCount.decrementAndGet()
                 }
             }
         }
