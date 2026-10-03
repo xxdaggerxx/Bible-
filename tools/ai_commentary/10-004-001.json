@@ -1,0 +1,145 @@
+{
+ "book": 10,
+ "chapter": 4,
+ "first": 1,
+ "last": 12,
+ "ref": "2 Samuel 4",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Ish-bosheth heard that his general Abner had been killed, and his courage completely failed. He had leaned on Abner to hold up his throne, so without him he felt helpless. The northern tribes of Israel were also thrown into confusion and fear about what would happen next.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 3,
+   "meaning": "Two brothers named Baanah and Rechab led raiding bands for Ish-bosheth. They came from Beeroth, a town counted as part of Benjamin whose original inhabitants had fled to Gittaim. Because they were from Saul's own tribe, their betrayal of Ish-bosheth was especially shameful.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Jonathan's young son Mephibosheth had been dropped by his nurse as she fled when Saul and Jonathan died in battle, leaving him crippled in both feet. This note shows how weak Saul's royal line had become. With Jonathan's son unable to fight or lead, Ish-bosheth's death would leave the family with no capable heir to the throne.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Rechab and Baanah arrived at Ish-bosheth's house at noon while he was resting during the hottest part of the day. Taking a midday rest was standard in that warm climate. However, Ish-bosheth rested without proper guards, leaving himself exposed to danger.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The two brothers entered the house pretending they were there to pick up wheat. Military captains regularly drew grain from royal stores to feed and pay their troops. Because their errand seemed ordinary, nobody stopped them, and they stabbed Ish-bosheth in the stomach and slipped away.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Wesley",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The men attacked Ish-bosheth while he lay defenseless on his bed, murdered him, and cut off his head. They took the head as physical proof for David and fled through the Jordan valley all night. They hurried in secret so they could reach Hebron before anyone could stop them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The brothers presented Ish-bosheth's head to David, claiming that the Lord had finally given David vengeance against Saul and his family. They assumed David would be thrilled to see his rival eliminated and would reward them handsomely. They used pious talk about God's justice merely to hide their own selfish ambition.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "David answered them with a solemn promise made in the name of the living Lord. He affirmed that God had always rescued his life out of every trouble. Because he trusted God to establish his kingdom, David refused to use or reward evil deeds to gain power.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "David reminded the men of the messenger who brought news of Saul's death, expecting praise and a reward. Instead of rewarding that man, David had him executed at Ziklag. David used this past judgment to show these brothers that they had completely misjudged his character.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "David declared that Ish-bosheth was an innocent man who had done these captains no harm. Murdering him in his own home and on his own bed was a cowardly and wicked act. Since they had shed innocent blood, David felt bound by duty to hold them accountable and execute them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "David ordered his men to kill Rechab and Baanah, cut off their hands and feet, and hang their remains by the pool in Hebron as a public warning. Then he gave Ish-bosheth's head an honorable burial in Abner's tomb. By doing this, David showed all Israel that he had no part in the assassination and would not tolerate murder.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

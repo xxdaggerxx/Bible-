@@ -1,0 +1,132 @@
+{
+ "book": 6,
+ "chapter": 16,
+ "first": 1,
+ "last": 10,
+ "ref": "Joshua 16",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The family of Joseph received their territory right after the tribe of Judah. Their southern boundary began at the Jordan River near Jericho and climbed through the desert into the hills around Bethel. This gave Joseph's descendants a fertile, central portion in the heart of the land.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The border continued past Bethel to the town of Luz, moving along toward the Archite border at Ataroth. Bethel and Luz were neighboring sites tied to Jacob's famous dream of God. The Archites were an ancient local clan, later known as the family of King David's wise friend Hushai.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The boundary sloped westward down through Japhletite territory toward Lower Beth-horon. It then passed near Gezer and ended at the Mediterranean Sea. This marked the southern edge of Joseph's lands, spanning the whole distance from the Jordan River to the western waters.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Joseph's two sons, Manasseh and Ephraim, received this land as their shared inheritance. Because Joseph had protected his brothers during a great famine, his family received two tribal portions instead of one. They took their territory early to help protect the rest of the Israelite camp.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The description turns to the land given specifically to the clans of Ephraim. Their southern line ran from Ataroth-addar all the way to Upper Beth-horon. Although Ephraim was younger than Manasseh, his border is listed first because Jacob had given him the greater blessing.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The border ran toward the sea, while the northern line passed Michmethath near Shechem. It then turned east toward Taanath-shiloh and passed by Janoah. These specific boundary points gave each family a clear and recognized home.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "From Janoah, the border descended to Ataroth and Naarah, reaching the district around Jericho and ending at the Jordan River. It included the lands near Jericho without taking the city itself, which belonged to Benjamin. This completed the eastern side of Ephraim's boundary.",
+   "meaning_sources": [
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The northern line continued westward from Tappuah along the Kanah ravine until it reached the Mediterranean Sea. This marked the complete territory assigned to the clans of Ephraim. It provided them with a rich area reaching all the way across central Canaan.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Ephraim also received extra towns and villages that sat inside the border of Manasseh. Because Ephraim had a large population, extra settlements were set aside to give them enough room. Since both tribes were descended from Joseph, they shared these places in brotherly peace.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Ephraim failed to drive out the Canaanite people living in the city of Gezer. Instead of obeying God's command to clear them out, the Israelites put them to forced labor and collected taxes. Sparing these idolaters for easy profit weakened Israel and opened the door to dangerous temptation.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars suggest that the phrase 'to this day' reflects the voice of a later editor writing long after the conquest occurred.",
+     "sources": [
+      "https://bible.org/seriespage/joshua-16"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 9: removed sources ['Calvin']",
+  "v. 10: removed sources ['Calvin']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

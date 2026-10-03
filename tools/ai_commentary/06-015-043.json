@@ -1,0 +1,143 @@
+{
+ "book": 6,
+ "chapter": 15,
+ "first": 43,
+ "last": 63,
+ "ref": "Joshua 15:43-63",
+ "notes": [
+  {
+   "verse": 43,
+   "end": 44,
+   "meaning": "These verses list towns in the rolling foothills between the coastal plain and the mountains of Judah. Keilah later became famous as a walled town that David rescued from the Philistines, and Mareshah was the home of the prophet Micah. Recording every town ensured that the families of Judah knew the exact borders God had given them to inherit.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 45,
+   "end": 47,
+   "meaning": "This passage describes the coastal territory of the Philistines, including the major cities of Ekron, Ashdod, and Gaza. God assigned this land to Judah all the way south to the Brook of Egypt and west to the Mediterranean Sea. Even though this fertile coast was given to Judah by God's promise, the Israelites did not fully conquer or control it during this period.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://www.studylight.org/commentaries/eng/kdo/joshua-15.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 48,
+   "end": 49,
+   "meaning": "The list moves into the rugged hill country of Judah, which rose thousands of feet above sea level. Kiriath-sannah is another name for Debir, the city earlier captured by Caleb's nephew Othniel. These rocky highlands had fertile valleys where many communities were able to thrive.",
+   "meaning_sources": [
+    "Wesley",
+    "Keil & Delitzsch",
+    "https://www.studylight.org/commentaries/eng/kdo/joshua-15.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 50,
+   "end": 51,
+   "meaning": "This section finishes the first group of eleven mountain cities in southern Judah. Giloh is famous in the Old Testament as the hometown of Ahithophel, the royal adviser who later betrayed King David. God counted each town and village to show that every family's inheritance was important in His sight.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 52,
+   "end": 54,
+   "meaning": "Here are nine cities located in the central mountains near Hebron. Kiriath-arba was the older name for Hebron, the chief city given to Caleb and the place where David would later begin his reign as king. Beth-tappuah means 'house of apples,' pointing to the fruit orchards that grew well on these terraced hillsides.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "https://www.studylight.org/commentaries/eng/dcc/joshua-15.html",
+    "https://www.studylight.org/commentaries/eng/kdo/joshua-15.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 55,
+   "end": 57,
+   "meaning": "These ten cities were located in the southern and eastern hill country facing the wilderness. Towns like Maon, Carmel, and Ziph became well known as places where David hid while running from King Saul. Carmel was also the home of the wealthy sheep owner Nabal.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke",
+    "https://biblehub.com/commentaries/barnes/joshua/15.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 58,
+   "end": 59,
+   "meaning": "This group names six mountain towns situated north of Hebron. Beth-zur was a natural strongpoint on the main north-south road that later became an important fortress to defend the hill country. These boundary lists established clear borders between Judah and its neighbors.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://www.studylight.org/commentaries/eng/ebc/joshua-15.html"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Ancient Greek copies of the Old Testament contain eleven additional towns here, including Bethlehem and Tekoa, which scholars believe were accidentally skipped in Hebrew copies when a scribe's eye jumped between identical closing phrases.",
+     "sources": [
+      "Adam Clarke",
+      "Keil & Delitzsch"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 60,
+   "end": 60,
+   "meaning": "Only two towns are listed in this northern district along the border with Benjamin. Kiriath-baal, also called Kiriath-jearim, was the place where the sacred ark of the covenant was kept for many years before David brought it to Jerusalem. It stood as a key landmark between the northern and southern tribes.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://www.studylight.org/commentaries/eng/ebc/joshua-15.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 61,
+   "end": 62,
+   "meaning": "These six towns sat in the dry, chalky wilderness of Judah sloping down to the Dead Sea. En-gedi was a well-known desert oasis fed by a freshwater spring, where David found shelter in nearby caves. Even in this barren region, people settled where springs and salt harvesting made life possible.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 63,
+   "end": 63,
+   "meaning": "Judah was unable to drive the Canaanite Jebusites completely out of the mountain stronghold of Jerusalem. As a result, the Jebusites continued living alongside the Israelites until King David finally conquered the citadel centuries later. The failure did not come from a lack of God's power, but from the people's lack of faith and willingness to finish the hard work God commanded.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry",
+    "Wesley",
+    "https://biblehub.com/commentaries/joshua/15-63.htm"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 43: removed sources ['https://biblehub.com/commentaries/joshua/15-44.htm']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}
