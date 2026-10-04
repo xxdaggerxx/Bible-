@@ -726,7 +726,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary); putBoolean("glance", showGlance); putBoolean("hardWords", hardWords)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary); putBoolean("glance", showGlance); putString("lastBibleVersion", lastBibleVersion); putBoolean("hardWords", hardWords)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
@@ -925,13 +925,23 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         selection = null
         p.pendingVerse = p.topVerse
         p.version = validVersion(code)
+        if (!Sketch.isSketch(p.book)) lastBibleVersion = p.version
     }
+
+    /** The version last chosen for a Bible panel: what a sketch page on its own uses for verse cards. */
+    var lastBibleVersion by mutableStateOf(prefs.getString("lastBibleVersion", null) ?: "KJV")
+        private set
 
     /** Section headings for a chapter. Only the BSB has them; being public domain, they are shown in every version. */
     fun headings(book: Int, chapter: Int): List<Heading> = text(BibleRepository.BSB.code).headings(book, chapter)
 
     /** The version shown in the active panel (used by search and the verse popup). */
-    val activeVersion: String get() = panels.getOrNull(activePanel)?.version ?: bible.code
+    val activeVersion: String get() {
+        val p = panels.getOrNull(activePanel) ?: return bible.code
+        if (!Sketch.isSketch(p.book)) return p.version
+        // A sketch page has no version of its own: the Bible beside it, else the one read last.
+        return panels.firstOrNull { !Sketch.isSketch(it.book) }?.version ?: validVersion(lastBibleVersion)
+    }
 
     /** The chapter before (dir = -1) or after (dir = 1), or null at either end of the Bible. */
     fun neighbor(book: Int, chapter: Int, dir: Int): Pair<Int, Int>? = when {

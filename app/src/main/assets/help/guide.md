@@ -244,7 +244,7 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
 - **Linked or on its own.** In the same window, *Link to …* ties the page to the verse you're reading: a small badge in that verse's margin opens it. Turn the switch off for a page that stands on its own, such as a topic study; open it from *My notes*.
 - **No edges.** A sketch page grows as you use it: there's always at least a page's width of room to the right and a page's height below whatever you've drawn. Drag with a finger to move around, and pinch out to see the whole page at once.
 - **Every pen tool works** on a sketch page, plus shapes, the lasso, layers, pictures and text boxes.
-- **Verse cards:** *Insert → Verse card…*, type a reference like *John 3:16-18*, and the verses go on the page as a card. A card works like the Bible page:
+- **Verse cards:** *Insert → Verse card…*, type a reference like *John 3:16-18*, and the verses go on the page as a card, in the version you're reading (on a sketch page: the version of the Bible beside it, or the one you chose last). A card works like the Bible page:
   - tap its reference to read the passage in a pop-over;
   - tap a verse to open its details (word study, *Compare versions*, *Hebrew/Greek*, notes, cross-references, commentary);
   - highlight it with the highlighter, and the words of Jesus show in red when that's on;

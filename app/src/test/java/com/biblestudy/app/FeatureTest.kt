@@ -3264,4 +3264,32 @@ class FeatureTest {
             compose.waitForIdle()
         }
     }
+
+    @Test
+    fun aVerseCardOnASketchPageBesideUsesTheVersionBeingRead() {
+        // Reported: after switching to the NIV and back, verse cards sometimes came out in the
+        // earlier version. A sketch page opened beside the text kept the version its panel had.
+        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        lateinit var sk: com.biblestudy.app.model.Sketch
+        compose.runOnUiThread { sk = vm.createSketch("Cards", com.biblestudy.app.model.Paper.BLANK, open = false); vm.openSketchBeside(sk) }
+        waitForLoaded()
+        assertTrue(com.biblestudy.app.model.Sketch.isSketch(vm.panels[1].book))
+        // Switch the Bible to the BSB, then add a card on the sketch page.
+        compose.runOnUiThread { vm.setVersion(0, "BSB"); vm.activePanel = 1 }
+        waitForLoaded()
+        assertEquals("BSB", vm.activeVersion)
+        compose.onNodeWithContentDescription("Insert").performScrollTo().performClick()
+        compose.onNodeWithText("Verse card\u2026").performClick()
+        compose.onNodeWithText("Reference, e.g. John 3:16-18").performTextInput("John 3:16")
+        waitFor(10_000) { compose.onAllNodesWithTag("cardPreview").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Add card").performClick()
+        compose.waitForIdle()
+        assertTrue(vm.textsFor(sk.book, 1).map { it.text }.toString(), vm.textsFor(sk.book, 1).any { it.text.startsWith("John 3:16 (BSB)") })
+        // And back to the KJV.
+        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.activePanel = 1 }
+        assertEquals("KJV", vm.activeVersion)
+        compose.runOnUiThread { vm.deleteSketch(sk); vm.closePanel(1) }
+        compose.waitForIdle()
+    }
 }
