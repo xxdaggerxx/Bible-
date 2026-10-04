@@ -1,0 +1,120 @@
+{
+ "book": 23,
+ "chapter": 15,
+ "first": 1,
+ "last": 9,
+ "ref": "Isaiah 15",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "A heavy message of doom from God is declared against the neighboring nation of Moab. Its two main fortress cities, Ar and Kir, are suddenly ruined and silenced in the middle of a single night. This shows how quickly destruction can fall on those who feel safe and secure without God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The people of Moab rush up to their pagan temples and high outdoor shrines to weep and plead for help. Their false gods cannot rescue them, which only adds to their grief and invites more of God's anger. To show their utter despair, the men shave their heads and cut off their beards, which was an ancient eastern custom for deep mourning.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Grief covers the whole country. In the streets people put on rough scratchy sackcloth, and crowds gather on flat housetops and in town squares to wail and weep. Despair leaves them completely broken down, with nowhere left to hide from their sorrow.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The panic spreads between the northern towns of Heshbon and Elealeh, and their shouting is heard far away at Jahaz. Even Moab's trained soldiers lose their courage, screaming in terror as their hearts melt within them. God easily takes away the strength of the bravest fighters when judgment arrives.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The prophet's own heart breaks as he watches the terrible ruin falling on Moab. Refugees flee for their lives toward the southern border town of Zoar, weeping aloud as they climb the slope of Luhith and hurry along the road to Horonaim. God's servants feel real sorrow over human suffering, even when it falls on an enemy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The fresh streams and springs of Nimrim are choked with debris or dried up, leaving the land barren. The fertile green pastures wither away until no plant life or grass remains. The devastation of war brings severe famine, turning a rich land into a wasteland.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://blueletterbible.org/Comm/guzik_david/StudyGuide_Isa/Isa_15.cfm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The fleeing people gather whatever personal goods, food, and savings they have left and carry them across the Brook of the Willows. Having no safe house or fortress left behind, they try to hide their possessions in lonely stream beds or carry them into exile. Worldly wealth cannot protect its owners in times of crisis.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The sound of wailing circles the entire perimeter of the nation. The cries of pain echo from Eglaim on one border all the way across to Beer-elim on the other. Because disaster has swept the whole land, not a single corner escapes the grief.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The river waters of Dimon run red with the blood of the slain. Yet God declares that still more trouble will come, sending lions and predators against any who escape the enemy army. There is no hiding place from God's hand when judgment must be carried out.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Jamieson-Fausset-Brown']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

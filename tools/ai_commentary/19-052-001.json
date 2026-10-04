@@ -1,0 +1,124 @@
+{
+ "book": 19,
+ "chapter": 52,
+ "first": 1,
+ "last": 9,
+ "ref": "Psalms 52",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David challenges a powerful enemy, traditionally identified as Doeg, who betrayed the priests to King Saul. Calling him a mighty man is sarcastic, because slaughtering defenseless people takes no true bravery. Human pride cannot defeat the righteous, because God's steady love and mercy never run out.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that true strength is meant for doing good, whereas even a scorpion or a poisonous mushroom has the power to kill.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801052.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Evil speech reveals a corrupt heart. The deceitful person uses his tongue like a sharp razor, doing deep and deadly harm while pretending to be harmless. A smooth lie can destroy someone just as easily as an open attack.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The wicked man actively prefers evil over good. He is far more comfortable telling lies that harm others than speaking the truth that protects them. The pause word, Selah, invites the reader to stop and consider how destructive such a heart really is.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The cruel schemer takes delight in words that swallow up and ruin other people. He loves speech that stirs up hatred and causes bloodshed. Even when he pretends to act out of duty, his real goal is deceit and destruction.",
+   "meaning_sources": [
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "God will bring complete and lasting judgment on the violent man. The Lord will pull him down like a demolished house, sweep him away like dead coals from a fireplace, and tear him from his home. Like an evil tree pulled up by its roots, he will be removed from life on earth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Godly people will see God's justice at work and respond with holy awe. This fear is not terror, but a deep reverence for the Lord as the righteous Judge of all things. Their laughter is not petty spite, but serious joy that evil has finally been broken and God's justice has won.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The righteous point out what happens to someone who refuses to depend on the Lord. The wicked man placed his confidence in piles of money and tried to secure his position through violence. Wealth without God cannot protect anyone, and evil plans collapse in the end.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "While the wicked are uprooted like dying trees, the believer remains secure and flourishing like an evergreen olive tree. Olive trees live long and produce rich fruit, picturing a person who thrives in close fellowship with God. True peace comes from resting in God's unending mercy rather than trusting in human power or riches.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "David promises to praise the Lord forever, trusting God's deliverance as if it were already accomplished. God's name stands for His character, power, and faithfulness to His people. Waiting on the Lord brings calm to a troubled soul, especially when believers gather together to worship Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

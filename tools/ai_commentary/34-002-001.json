@@ -1,0 +1,170 @@
+{
+ "book": 34,
+ "chapter": 2,
+ "first": 1,
+ "last": 13,
+ "ref": "Nahum 2",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "An enemy army marches forward to break Nineveh into pieces. The prophet tells the city to guard its walls, watch the roads, and gather all its strength, but he is speaking with biting sarcasm. No amount of human effort can defend against God's judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Lord will restore the honor and dignity of His people, the descendants of Jacob. The Assyrians had stripped Israel bare like enemies who tear up a fruitful vineyard. God allowed His people to be humbled for a time, but now He will punish the cruel nation that harmed them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Nahum describes the terrifying army advancing against Nineveh. The soldiers carry red shields, wear scarlet uniforms, brandish sharp wooden spears, and drive chariots that gleam with polished metal like fire. Their warlike appearance shows that judgment will be swift and deadly.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "War chariots race wildly through the streets and open spaces outside the walls. They speed around so fast and shine so brightly in the sun that they look like torches and flashing lightning. This shows the unstoppable fury of the coming assault.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The Assyrian king frantically calls upon his bravest officers to save the city. Overcome with fear and panic, the officers stumble as they rush toward the walls. When they arrive, they see that the attackers have already put up covered wooden shelters to protect their battering rams.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The river gates burst open, and water pours into the city. Flooding weakens the foundations of the royal palace until it collapses in ruin. The very rivers the city relied on for defense become the means of its destruction.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "God has decreed that Nineveh will be stripped bare and carried into exile, which means being forced away from home into a foreign land. Her servant girls follow in mourning, groaning like doves and beating their chests in grief. The once-proud capital is treated like a helpless, disgraced captive.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Nineveh was once crowded with people and undisturbed for centuries, like water resting in a deep pool. Now her people panic and drain away like water from a broken dam. Officers shout for everyone to stand firm, but not a single person looks back.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The attacking soldiers are told to plunder all the silver and gold stored in Nineveh. The city holds endless treasures and beautiful goods taken from conquered nations over many generations. God ensures that wealth gained through violence will ultimately be taken away by others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Nineveh is left completely ransacked, ruined, and stripped bare. The sight of such total destruction fills the defenders with sheer terror. Their courage melts away, their knees shake, their bodies twist in pain, and their faces lose all color.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The prophet taunts the fallen city by asking what happened to the fearsome lions' den. Assyria's kings had lived like fierce lions, prowling safely in their lair and terrifying the whole ancient world. Now that secure home has completely vanished under God's judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Assyrian kings had acted like savage beasts, tearing apart neighboring nations to feed their families and nobles. They filled their palaces and treasure rooms with loot stolen through cruel bloodshed. Ill-gotten gain brought no lasting security to those who hoarded it.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "The Lord of heaven's armies declares that He Himself is against Nineveh. He will burn up their war chariots, kill their young fighters in battle, and end their cruel plunder forever. The proud messengers who once demanded surrender and spoke insults against God will never be heard again.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 4: dropped other point (Popular modern teaching): no checkable source",
+  "v. 4: removed sources ['enduringword.com']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

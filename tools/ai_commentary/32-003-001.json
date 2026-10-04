@@ -1,0 +1,155 @@
+{
+ "book": 32,
+ "chapter": 3,
+ "first": 1,
+ "last": 10,
+ "ref": "Jonah 3",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 2,
+   "meaning": "God gave Jonah a second chance to carry out His mission. Giving Jonah his work back showed that the Lord had fully pardoned his past disobedience. Jonah was told to go to the great city of Nineveh and proclaim only the message God would give him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://enduringword.com/bible-commentary/jonah-3/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Jonah promptly obeyed God's command this time and traveled to Nineveh. God's discipline had softened Jonah's stubbornness into willing obedience. Nineveh was an enormous city, taking three full days to walk through its streets and neighborhoods.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Jonah entered the city and openly announced that Nineveh would be overthrown in forty days. This gave the people an urgent warning of God's coming judgment against their sins. Giving forty days showed God's patience, giving a guilty people time to reflect and turn from evil.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/jonah-3/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The people of Nineveh took Jonah's preaching to heart and believed the message came from the true God. From the most important leaders to the humblest citizens, they put on rough cloth and went without food to show their deep sorrow. Their swift response showed that true faith begins by hearing and accepting God's word.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://enduringword.com/bible-commentary/jonah-3/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "When the news reached the king of Nineveh, he stepped down from his royal throne and laid aside his fine robe. He dressed in coarse sackcloth and sat in the dust as a sign of complete humility. Even this powerful ruler knew he was guilty before God and needed mercy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 8,
+   "meaning": "The king and his leaders ordered a total fast where neither people nor farm animals were allowed food or water. Everyone was told to wear rough cloth, pray earnestly to God, and give up violence and wickedness. Involving the animals in this mourning stressed how serious the crisis was and how human sin affects the world around us.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Calvin",
+    "https://enduringword.com/bible-commentary/jonah-3/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars see the king's extreme decree and the dressing of farm animals in mourning clothes as humorous exaggeration or satire rather than historical fact.",
+     "sources": [
+      "https://www.bibleodyssey.org/articles/humor-in-the-book-of-jonah/"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The king hoped that God might turn from His burning anger and spare them all from destruction. The Ninevites had no definite promise of safety, but they dared to hope in God's goodness. True repentance always looks toward the possibility of God's kindness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://enduringword.com/bible-commentary/jonah-3/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "God saw their actions and noted that they had genuinely abandoned their evil ways. Because they repented, the Lord showed mercy and did not bring the destruction He had threatened. God's warnings of judgment are meant to lead people to change so they can be saved.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God's eternal purpose never changes; His relenting describes a change in His outward dealings toward Nineveh once they repented, with their changed lives being the fruit rather than the earning cause of His free pardon.",
+     "sources": [
+      "Calvin",
+      "https://www.studylight.org/bible/eng/amp/jonah/3-10.html"
+     ]
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God's warnings of judgment are conditional, meaning God truly changed His announced purpose to destroy the city once the people met the condition of repentance.",
+     "sources": [
+      "Adam Clarke",
+      "https://biblehub.com/commentaries/clarke/jonah/3.htm"
+     ]
+    },
+    {
+     "tradition": "Baptist",
+     "view": "God did not change at all; instead, Nineveh changed, and God's consistent character always shows mercy to those who repent.",
+     "sources": [
+      "https://www.gty.org/library/blog/B170209/our-unchanging-god"
+     ]
+    },
+    {
+     "tradition": "Lutheran",
+     "view": "God genuinely responds to human prayer and repentance by changing His heart and mind toward sinners, rather than merely carrying out an unbending plan.",
+     "sources": [
+      "https://witness.lcms.org/2024/do-our-prayers-change-anything/"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Ancient church teachers noted that the Ninevites pleased God and received salvation through humble prayer, even though they were outsiders to the covenant.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1010.htm"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

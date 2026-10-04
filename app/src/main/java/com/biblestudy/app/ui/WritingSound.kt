@@ -11,26 +11,89 @@ import kotlin.math.min
 import kotlin.math.sqrt
 
 /**
- * Writing sounds (INK-15): a soft pen-on-paper sound made on the tablet as you write, so it follows
- * every stroke. It gets louder and brighter as the pen moves faster or presses harder, and fades
- * out when the pen stops or lifts. Each tool has its own texture:
- *  - pen: fine, bright scratching with the grain of the paper;
- *  - highlighter: a broader, softer felt-tip swish;
- *  - eraser: a low rubbing.
+ * Writing sounds (INK-15): a pen-on-paper sound that follows every stroke. It gets louder and
+ * brighter as the pen moves faster or presses harder, and fades out when the pen stops or lifts.
+ * Each tool has its own sound:
+ *  - pen: a pencil scratching;
+ *  - highlighter: a marker's felt-tip swish;
+ *  - eraser: a softer drawing sound.
  *
- * The sound is filtered noise shaped by [Synth]; an [AudioTrack] plays it on a background thread
- * through media volume, and only while the pen is on the page.
+ * The sounds are recordings (free sounds from Pixabay, made into seamless loops by
+ * tools/build_sounds.py), played by [Sampler]. If they can't be loaded, [Synth] makes a similar
+ * sound from filtered noise. An [AudioTrack] plays it on a background thread through media volume,
+ * and only while the pen is on the page.
+ *
+ * @param loadLoops reads the recorded loops (called once, off the main thread).
  */
-class WritingSound {
+class WritingSound(private val loadLoops: () -> Map<Texture, FloatArray>? = { null }) {
     enum class Texture { PEN, HIGHLIGHTER, ERASER }
 
     /** The sound itself, kept apart from the audio output so it can be tested. */
-    class Synth(private val rate: Int = RATE, seed: Long = 1L) {
-        @Volatile var texture = Texture.PEN
+    interface Voice {
+        var texture: Texture
         /** Loudness the sound moves towards, 0..1 (speed, pressure and the volume setting). */
-        @Volatile var target = 0f
+        var target: Float
         /** 0..1: how bright (fast) the stroke is. */
-        @Volatile var brightness = 0f
+        var brightness: Float
+        /** A new stroke begins. */
+        fun restart() {}
+        /** Fills [out] with the next samples (-1..1). */
+        fun render(out: FloatArray)
+    }
+
+    /**
+     * Plays the recorded [loops] (at [srcRate]) round and round while the pen moves. Faster strokes
+     * play them a little faster and brighter; slow ones are softer and duller.
+     */
+    class Sampler(
+        private val loops: Map<Texture, FloatArray>,
+        private val srcRate: Int = LOOP_RATE,
+        private val rate: Int = RATE,
+        seed: Long = 1L,
+    ) : Voice {
+        @Volatile override var texture = Texture.PEN
+        @Volatile override var target = 0f
+        @Volatile override var brightness = 0f
+
+        private var level = 0f
+        private var pos = 0.0
+        private var low = 0f
+        private val random = java.util.Random(seed)
+
+        /** Each stroke starts somewhere new in the loop, so strokes don't all sound the same. */
+        override fun restart() {
+            val loop = loops[texture] ?: return
+            pos = random.nextInt(loop.size.coerceAtLeast(1)).toDouble()
+        }
+
+        override fun render(out: FloatArray) {
+            val loop = loops[texture]
+            if (loop == null || loop.size < 2) { out.fill(0f); return }
+            val attack = 1f - exp(-1f / (rate * 0.012f))
+            val release = 1f - exp(-1f / (rate * 0.06f))
+            val b = brightness.coerceIn(0f, 1f)
+            val step = srcRate.toDouble() / rate * (0.9 + 0.2 * b)
+            val cut = 0.3f + 0.7f * b
+            val n = loop.size
+            for (i in out.indices) {
+                val goal = target
+                level += (goal - level) * if (goal > level) attack else release
+                val at = pos.toInt()
+                val frac = (pos - at).toFloat()
+                val x = loop[at % n] * (1f - frac) + loop[(at + 1) % n] * frac
+                low += (x - low) * cut
+                out[i] = (low * level * GAIN).coerceIn(-1f, 1f)
+                pos += step
+                if (pos >= n) pos -= n
+            }
+        }
+    }
+
+    /** The made-up sound, used when the recordings can't be loaded. */
+    class Synth(private val rate: Int = RATE, seed: Long = 1L) : Voice {
+        @Volatile override var texture = Texture.PEN
+        @Volatile override var target = 0f
+        @Volatile override var brightness = 0f
 
         private var level = 0f
         private var low = 0f
@@ -46,8 +109,7 @@ class WritingSound {
             return ((rnd ushr 40).toInt() and 0xFFFF) / 32768f - 1f
         }
 
-        /** Fills [out] with the next samples (-1..1). */
-        fun render(out: FloatArray) {
+        override fun render(out: FloatArray) {
             // The level glides towards its target so the sound never clicks on or off.
             val attack = 1f - exp(-1f / (rate * 0.012f))
             val release = 1f - exp(-1f / (rate * 0.06f))
@@ -91,7 +153,10 @@ class WritingSound {
     /** 0..1, from Settings. */
     @Volatile var volume = 0.6f
 
-    private val synth = Synth()
+    /** The recordings once loaded (on the audio thread, on the first stroke), else the made-up sound. */
+    @Volatile private var voice: Voice = Synth()
+    @Volatile private var loaded = false
+    private val synth: Voice get() = voice
     private var track: AudioTrack? = null
     private var thread: Thread? = null
     @Volatile private var running = false
@@ -106,6 +171,7 @@ class WritingSound {
         if (!enabled || volume <= 0f) return
         synth.texture = texture
         synth.target = 0f
+        synth.restart()
         lastX = x; lastY = y; lastT = timeMs; speed = 0f
         lastMove = now()
         ensureRunning()
@@ -164,6 +230,13 @@ class WritingSound {
     private fun loop(t: AudioTrack) {
         val f = FloatArray(CHUNK)
         val pcm = ShortArray(CHUNK)
+        if (!loaded) {
+            loaded = true
+            runCatching { loadLoops() }.getOrNull()?.takeIf { it.isNotEmpty() }?.let { loops ->
+                val old = voice
+                voice = Sampler(loops).apply { texture = old.texture; target = old.target; brightness = old.brightness; restart() }
+            }
+        }
         try {
             while (running) {
                 // Silence while the pen rests; after a second of it, the audio stops until the next stroke.
@@ -190,6 +263,30 @@ class WritingSound {
 
     companion object {
         const val RATE = 44100
+        /** The recorded loops' sample rate (tools/build_sounds.py). */
+        const val LOOP_RATE = 32000
+        /** The loops are about -16 dBFS; this brings them level with the made-up sound. */
+        private const val GAIN = 2.2f
         private const val CHUNK = 256
+
+        /** The recorded loops in assets/sounds, one per tool. */
+        fun loadLoops(assets: android.content.res.AssetManager): Map<Texture, FloatArray> =
+            Texture.entries.associateWith { t -> assets.open("sounds/${t.name.lowercase()}.wav").use { readWav(it.readBytes()) } }
+
+        /** The samples (-1..1) of a 16-bit mono WAV file. */
+        fun readWav(bytes: ByteArray): FloatArray {
+            val b = java.nio.ByteBuffer.wrap(bytes).order(java.nio.ByteOrder.LITTLE_ENDIAN)
+            var at = 12
+            while (at + 8 <= bytes.size) {
+                val id = String(bytes, at, 4, Charsets.US_ASCII)
+                val size = b.getInt(at + 4)
+                if (id == "data") {
+                    val n = minOf(size, bytes.size - at - 8) / 2
+                    return FloatArray(n) { b.getShort(at + 8 + it * 2) / 32768f }
+                }
+                at += 8 + size + (size and 1)
+            }
+            return FloatArray(0)
+        }
     }
 }

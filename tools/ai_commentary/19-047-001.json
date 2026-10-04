@@ -1,0 +1,118 @@
+{
+ "book": 19,
+ "chapter": 47,
+ "first": 1,
+ "last": 9,
+ "ref": "Psalms 47",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "All nations are called to celebrate the true God with joyful clapping and loud shouts of victory. These outward actions express genuine delight from the heart for all that the Lord has accomplished. The invitation reaches far beyond Israel, welcoming every people group to join in praising the King.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Lord is high above everything in creation and deserves our deepest reverence and awe. His great power brings terror to evil, but it brings safety and comfort to everyone who belongs to Him. He is not a local tribal deity, but the supreme ruler over the whole world.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God gave ancient Israel victory over surrounding nations and secured their peace. In a spiritual sense, this points ahead to the spread of the gospel, where Christ brings stubborn human hearts into willing obedience. People from all nations are brought to sit and learn at the feet of God's messengers as eager students.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God chose the land of Canaan for His people because of His free, undeserved love for them. For Christians today, this shows the peace of letting God choose our daily path and our eternal home in heaven. We find true rest when we stop striving for self and let Him decide what is best for us.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "This scene recalls the Ark of the Covenant, the gold-covered chest representing God's presence, being carried up to Mount Zion with trumpets and loud shouts after a victory. Christians also understand this as a picture of Jesus ascending back into heaven after conquering sin and death on the cross. Angels and believers alike welcome the triumphant Savior back to His royal throne.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The command to sing praises is repeated over and over to wake up our hearts to worship. People are often slow to give God the thanks He deserves, so the song urges repeated, enthusiastic praise. Joyful singing is the natural response of loyal subjects to a gracious and loving King.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "God's rule extends over the entire planet, giving every nation a reason to honor Him. The call to sing with understanding means we should pay close attention to the meaning of our worship songs, not just the tune. Worship honors God only when our minds and hearts are actively engaged in what we sing.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God actively governs the affairs of all nations from His throne in heaven. His rule is completely pure, just, and fair, never tainted by evil or favoritism. Even when people do not acknowledge Him, He remains in sovereign control over world history.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "World rulers and their citizens assemble together to worship the God of Abraham. Earthly rulers are called shields because their job is to protect their people, but they themselves are under God's supreme authority. This gathering fulfills God's ancient covenant promise that all the families of the earth would be blessed through Abraham.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

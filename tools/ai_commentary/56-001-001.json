@@ -1,0 +1,155 @@
+{
+ "book": 56,
+ "chapter": 1,
+ "first": 1,
+ "last": 16,
+ "ref": "Titus 1",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Paul introduces himself as a servant of God and an apostle, a messenger chosen and sent by Jesus Christ. His purpose was to help God's chosen people come to faith and learn the truth. This truth is not just head knowledge, but teaching that leads people to godliness, which means living a life that honors and pleases God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://www.preceptaustin.org/titus_11-9"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Paul explains that Christian faith rests on the solid hope of eternal life, which means living forever in God's presence. God planned and promised this salvation before the world began. Believers can rest completely in this promise because God cannot lie.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "https://enduringword.com/bible-commentary/titus-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "At just the right time, God made His saving message clear to the world through preaching. Paul was trusted with this work by the direct command of God our Savior. Preaching remains God's chosen way to share His truth with people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/titus-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Paul writes to Titus, calling him his genuine child in the faith because Paul had led him to Christ. They shared a common faith, which unites believers of every background into one spiritual family. Paul prays that Titus will receive grace, which is God's free and unearned favor, and the deep peace that comes from the Father and Christ.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/titus-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Paul reminds Titus why he left him on the island of Crete: to finish setting things in order and to appoint elders in every town. Elders are mature leaders chosen to guide, care for, and protect local churches. Strong, godly leadership was necessary to help these young congregations grow in a healthy way.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "https://learn.ligonier.org/devotionals/elders-church-crete"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Paul lists the family qualities required for an elder. A church leader must be blameless, meaning he has a good reputation and no open scandal against him. If married, he must be completely faithful to his wife, and his children must be respectful believers rather than wild or rebellious.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "https://enduringword.com/bible-commentary/titus-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 8,
+   "meaning": "A church overseer is a steward, a person trusted by God to care for His spiritual household. For this reason, he must not be stubborn, easily angered, drunk, violent, or greedy for dishonest money. Instead, he must welcome guests into his home, love what is good, and live with self-control, fairness, and pure devotion to God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/titus-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "An elder must hold firmly to the trustworthy message taught by the apostles. This steady grasp on truth allows him to encourage believers with sound doctrine, meaning healthy biblical teaching that strengthens the soul. It also gives him the ability to answer and correct those who speak against the truth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "https://learn.ligonier.org/devotionals/foundation-for-instruction"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 11,
+   "meaning": "Paul warns that many people were unruly, deceiving others with empty and meaningless talk. This was especially true of Jewish teachers who tried to force circumcision and old ceremonies onto Christians. These false teachers had to be silenced with the truth because they were upsetting entire families just to make dishonest money.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/titus-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Paul quotes a well-known poet from Crete named Epimenides, who wrote that Cretans were always liars, vicious beasts, and lazy gluttons. The people of the island had a long reputation for dishonesty and out-of-control appetites. Paul highlights this quote to show the difficult cultural habits the Cretan Christians needed to overcome.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/titus-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 14,
+   "meaning": "Paul confirms that this harsh description of Cretan character was true. Because the people were stubborn, Titus had to correct them firmly so they would become sound and healthy in their faith. Clear correction would keep them from getting distracted by man-made rules and Jewish myths that turn people away from the truth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "https://enduringword.com/bible-commentary/titus-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 16,
+   "meaning": "For believers whose hearts are made clean by faith, external things like food are clean and acceptable to enjoy. But to people who are corrupted and without faith, nothing is truly pure, because their minds and consciences are stained with sin. Such people claim to know God, but their wicked actions show they really reject Him, making them unfit for any good work.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

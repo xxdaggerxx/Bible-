@@ -47,8 +47,13 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 13
-        versionName = "1.0.2"
+        versionCode = 34
+        versionName = "1.13.0"
+    }
+
+    // The commentaries are already packed tightly (xz); don't zip them again.
+    androidResources {
+        noCompress += "xz"
     }
 
     signingConfigs {
@@ -68,7 +73,7 @@ android {
             // from ~47 MB to about a third of that.
             isMinifyEnabled = true
             isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             signingConfig = if (releaseKey != null) {
                 signingConfigs.getByName("release")
             } else {
@@ -113,6 +118,10 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     // Front-buffered rendering for the lowest-latency pen ink (INK-4).
     implementation("androidx.graphics:graphics-core:1.0.2")
+    // Unpacks the bundled commentaries (STD-17), stored as xz to keep the app small.
+    implementation("org.tukaani:xz:1.10")
+    // The Claude API, for the online AI chat (AI-1).
+    implementation("com.anthropic:anthropic-java:2.68.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.14.1")

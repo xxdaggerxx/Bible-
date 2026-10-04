@@ -4,6 +4,7 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,6 +32,8 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Sell
 import androidx.compose.material.icons.filled.VerticalSplit
 import androidx.compose.material3.InputChip
@@ -69,9 +72,14 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRow
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -151,6 +159,7 @@ internal fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composab
 
 @Composable
 fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
+    var pickerTab by remember { mutableStateOf(0) }
     var book by remember { mutableStateOf<Int?>(null) }
     var chapter by remember { mutableStateOf<Int?>(null) }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
@@ -173,6 +182,20 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             when {
                 b == null -> {
                     DialogTitle("Choose a book", onDismiss)
+                    // Books, the chapters read lately (READ-8) and bookmarks (NOTE-3).
+                    TabRow(selectedTabIndex = pickerTab, modifier = Modifier.padding(bottom = 8.dp)) {
+                        for ((i, name) in listOf("Books", "Recently read", "Bookmarks").withIndex()) {
+                            Tab(selected = pickerTab == i, onClick = { pickerTab = i }, text = { Text(name) }, modifier = Modifier.testTag("pickerTab$i"))
+                        }
+                    }
+                    if (pickerTab == 1) {
+                        RecentList(vm, version, Modifier.weight(1f)) { r -> vm.goTo(panelIndex, r.book, r.chapter, r.verse); onDismiss() }
+                        return@Column
+                    }
+                    if (pickerTab == 2) {
+                        BookmarkList(vm, version, Modifier.weight(1f)) { m -> vm.goTo(panelIndex, m.book, m.chapter, m.verse); onDismiss() }
+                        return@Column
+                    }
                     MarkerLegend()
                     LazyVerticalGrid(columns = GridCells.Adaptive(150.dp), modifier = Modifier.weight(1f)) {
                         for ((label, range) in listOf("Old Testament" to 1..39, "New Testament" to 40..66)) {
@@ -233,6 +256,68 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             }
         }
     }
+}
+
+/** The chapters read lately (READ-8), newest first: tap one to go back to where you were. */
+@Composable
+private fun RecentList(vm: StudyViewModel, version: String, modifier: Modifier, onOpen: (RecentRead) -> Unit) {
+    val items = vm.recent.toList()
+    Column(modifier) {
+        if (items.isEmpty()) {
+            Text("The chapters you read show here, newest first, so you can go back to where you were.", modifier = Modifier.padding(vertical = 12.dp))
+            return@Column
+        }
+        LazyColumn(Modifier.weight(1f).testTag("recentList")) {
+            items(items, key = { "${it.book}-${it.chapter}" }) { r ->
+                PlaceRow(vm, version, r.book, r.chapter, r.verse, whenText(r.at)) { onOpen(r) }
+            }
+        }
+        TextButton(onClick = { vm.clearRecent() }) { Text("Clear this list") }
+    }
+}
+
+/** Bookmarked verses (NOTE-3), newest first. */
+@Composable
+private fun BookmarkList(vm: StudyViewModel, version: String, modifier: Modifier, onOpen: (com.biblestudy.app.model.Bookmark) -> Unit) {
+    val items = vm.bookmarks.toList()
+    Column(modifier) {
+        if (items.isEmpty()) {
+            Text("No bookmarks yet. Tap a verse, then tap Bookmark.", modifier = Modifier.padding(vertical = 12.dp))
+            return@Column
+        }
+        LazyColumn(Modifier.weight(1f).testTag("bookmarkList")) {
+            items(items, key = { it.id }) { m ->
+                PlaceRow(vm, version, m.book, m.chapter, m.verse, "Bookmarked " + whenText(m.created), onRemove = { vm.removeBookmark(m) }) { onOpen(m) }
+            }
+        }
+    }
+}
+
+/** A place in the Bible: its reference, the start of the verse, and when. */
+@Composable
+private fun PlaceRow(vm: StudyViewModel, version: String, book: Int, chapter: Int, verse: Int, time: String, onRemove: (() -> Unit)? = null, onOpen: () -> Unit) {
+    val id = VerseId.of(book, chapter, verse)
+    val text by produceState("", id, version) {
+        value = background { vm.text(version).verseText(id) ?: vm.bible.verseText(id) ?: "" }
+    }
+    Row(Modifier.fillMaxWidth().clickable(onClick = onOpen).padding(vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
+        Column(Modifier.weight(1f)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(vm.refLabel(id), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
+                Text("  $time", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+            }
+            Text(text, maxLines = 2, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.bodyMedium)
+        }
+        if (onRemove != null) IconButton(onClick = onRemove) { Icon(Icons.Filled.Close, contentDescription = "Remove bookmark on ${vm.refLabel(id)}") }
+    }
+    HorizontalDivider()
+}
+
+/** "Just now", "5 minutes ago", "Yesterday", "3 Oct". */
+private fun whenText(at: Long): String {
+    val now = System.currentTimeMillis()
+    if (now - at < 60_000) return "Just now"
+    return android.text.format.DateUtils.getRelativeTimeSpanString(at, now, android.text.format.DateUtils.MINUTE_IN_MILLIS).toString()
 }
 
 /** What a picker cell has: colours of layers with ink, highlights or images; a typed note. */
@@ -333,6 +418,7 @@ fun SearchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
  * Search box, options and results. In the dialog, opening a result closes it; in the study pane
  * beside the text (SPLIT-2) the results stay while the Bible panel moves.
  */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
 fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inPane: Boolean) {
     var query by remember { mutableStateOf(vm.lastSearch) }
@@ -476,7 +562,7 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                             FilterChip(
                                 selected = onlyBook == b,
                                 onClick = { onlyBook = if (onlyBook == b) null else b },
-                                label = { Text("${vm.bible.book(b).name} ${hits.size}") },
+                                label = { Text("${vm.bookLabel(b)} ${hits.size}") },
                             )
                         }
                     }
@@ -487,7 +573,7 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                         if (onlyBook != null && onlyBook != b) continue
                         item(key = "book$b") {
                             Text(
-                                "${vm.bible.book(b).name} \u2014 ${hits.size}",
+                                "${vm.bookLabel(b)} \u2014 ${hits.size}",
                                 style = MaterialTheme.typography.titleSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 modifier = Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainerHigh)
@@ -499,11 +585,15 @@ fun SearchPane(vm: StudyViewModel, modifier: Modifier, onOpened: () -> Unit, inP
                                 Column(
                                     Modifier
                                         .weight(1f)
-                                        .clickable { vm.goTo(panelIndex, hit.book, hit.chapter, hit.verse); onOpened() }
+                                        // Tap to go there; hold a finger to open it in a new tab (TAB-3).
+                                        .combinedClickable(
+                                            onClick = { vm.goTo(panelIndex, hit.book, hit.chapter, hit.verse); onOpened() },
+                                            onLongClick = { vm.newTab(hit.book, hit.chapter, hit.verse); onOpened() },
+                                        )
                                         .padding(vertical = 8.dp)
                                 ) {
                                     Text(
-                                        vm.refLabel(VerseId.of(hit.book, hit.chapter, hit.verse)),
+                                        vm.hitLabel(hit.book, hit.chapter, hit.verse),
                                         style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary,
                                     )
                                     val words = strongWords[VerseId.of(hit.book, hit.chapter, hit.verse)]
@@ -550,16 +640,53 @@ private fun markTerms(text: String, terms: List<String>, style: SpanStyle): Anno
 fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
     val id = VerseId.of(t.book, t.chapter, t.verse)
     val version = vm.activeVersion
-    val verseText = remember(t, version) { vm.text(version).verseText(id) ?: vm.bible.verseText(id) ?: "" }
+    BigDialog(onDismiss) {
+        Column {
+            DialogTitle("${vm.refLabel(id)} ($version)", onDismiss)
+            // The note is saved when the window closes (the details leave the screen).
+            VerseDetails(vm, t, version, inPanel = false, onDone = onDismiss, modifier = Modifier.weight(1f))
+        }
+    }
+}
+
+/** A typed note being written in [VerseDetails]; saved when the verse changes or it closes. */
+private class NoteDraft(val book: Int, val chapter: Int, val start: Int, original: String, originalEnd: Int) {
+    var text by mutableStateOf(original)
+    var end by mutableStateOf(originalEnd)
+    private var saved = original
+    private var savedEnd = originalEnd
+
+    fun save(vm: StudyViewModel) {
+        if (text == saved && end == savedEnd) return
+        vm.setNote(VerseTarget(book, chapter, start), text, end)
+        saved = text; savedEnd = end
+    }
+}
+
+/**
+ * Everything about one verse (STD-3, STD-4, SPLIT-4, NOTE-1, LINK-5): the verse with its words to
+ * study, the other versions or the Hebrew or Greek, the people and places in it, a typed note, and
+ * its cross-references. Shown in the verse window, or in the Verse details panel ([inPanel], SPLIT-9),
+ * where it all scrolls as one.
+ *
+ * @param onDone called after something here takes you elsewhere (a version, a person, a passage).
+ */
+@Composable
+fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: Boolean, onDone: () -> Unit, modifier: Modifier = Modifier) {
+    val id = VerseId.of(t.book, t.chapter, t.verse)
+    val verseText = remember(id, version) { vm.text(version).verseText(id) ?: vm.bible.verseText(id) ?: "" }
     // The note on this verse, or on a range of verses that includes it (NOTE-1).
-    val existing = remember(t) { vm.user.noteCovering(t.book, t.chapter, t.verse) }
-    val noteStart = existing?.verse ?: t.verse
-    val original = existing?.text ?: ""
-    val originalEnd = existing?.endVerse ?: t.verse
-    var note by remember(t) { mutableStateOf(original) }
-    var noteEnd by remember(t) { mutableStateOf(originalEnd) }
-    val lastVerse = remember(t) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: t.verse }
-    val refs by produceState(emptyList<CrossRef>(), t) {
+    val draft = remember(id) {
+        val existing = vm.user.noteCovering(t.book, t.chapter, t.verse)
+        NoteDraft(t.book, t.chapter, existing?.verse ?: t.verse, existing?.text ?: "", existing?.endVerse ?: t.verse)
+    }
+    DisposableEffect(draft) { onDispose { draft.save(vm) } }
+    if (inPanel) {
+        // In a panel the note is kept as you type, in case the app is closed.
+        LaunchedEffect(draft, draft.text, draft.end) { kotlinx.coroutines.delay(1500); draft.save(vm) }
+    }
+    val lastVerse = remember(t.book, t.chapter) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: t.verse }
+    val refs by produceState(emptyList<CrossRef>(), id, version) {
         value = background {
             // Previews in the version being read (the cross-reference list itself is shared).
             val text = vm.text(version)
@@ -567,178 +694,263 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
         }
     }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
-
-    fun save() {
-        if (note != original || noteEnd != originalEnd) vm.setNote(VerseTarget(t.book, t.chapter, noteStart), note, noteEnd)
+    var notePassage by remember(id) { mutableStateOf<Passage?>(null) }
+    var noteOpen by remember(id) { mutableStateOf(false) }
+    val noteFocus = remember { androidx.compose.ui.focus.FocusRequester() }
+    // The commentary's note on this verse (STD-20), loaded once the Commentary tab is chosen.
+    val cid = vm.lastCommentary
+    val cInfo = com.biblestudy.app.data.Commentaries.info(cid)
+    val note by produceState<VerseNote?>(null, cid, id, vm.verseCommentary) {
+        value = null
+        if (vm.verseCommentary) value = VerseNote(vm.commentaryOnVerse(cid, id))
     }
 
-    fun close() {
-        save()
-        onDismiss()
-    }
+    fun done() { draft.save(vm); onDone() }
 
-    BigDialog(::close) {
-        Column {
-            DialogTitle("${vm.refLabel(id)} ($version)", ::close)
-            if (vm.compareVersions) {
-                // Parallel view: the verse in every version, stacked (SPLIT-4). Tap one to read it.
-                Column(Modifier.heightIn(max = 320.dp).verticalScroll(rememberScrollState())) {
-                    for (v in BibleRepository.ALL) {
-                        val text = remember(t, v) { vm.text(v.code).verseText(id) }
-                        Column(
-                            Modifier.fillMaxWidth().clickable {
-                                save()
-                                vm.setVersion(panelIndex, v.code)
-                                vm.goTo(panelIndex, t.book, t.chapter, t.verse, remember = false)
-                                onDismiss()
-                            }.padding(vertical = 4.dp)
-                        ) {
-                            Text(
-                                v.code + if (v.code == version) "  (reading)" else "",
-                                style = MaterialTheme.typography.labelLarge,
-                                color = MaterialTheme.colorScheme.primary,
-                            )
-                            // Words that differ from the version being read are lightly marked (SPLIT-5).
-                            val shown = remember(text, verseText, v) {
-                                androidx.compose.ui.text.buildAnnotatedString {
-                                    append(text ?: "Not in this version (see its footnotes).")
-                                    if (text != null && v.code != version && verseText.isNotEmpty()) {
-                                        for (r in com.biblestudy.app.data.WordDiff.changed(text, verseText)) {
-                                            addStyle(androidx.compose.ui.text.SpanStyle(background = DIFF_MARK), r.first, r.last + 1)
-                                        }
-                                    }
+    @Composable
+    fun CommentaryChoice() {
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+            var menu by remember { mutableStateOf(false) }
+            Box(Modifier.weight(1f)) {
+                TextButton(onClick = { menu = true }, modifier = Modifier.semantics { contentDescription = "Choose a commentary" }) {
+                    Text(cInfo.short, style = MaterialTheme.typography.titleMedium, maxLines = 1)
+                    Icon(Icons.Filled.ArrowDropDown, contentDescription = null)
+                }
+                DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                    for (c in com.biblestudy.app.data.Commentaries.menu) {
+                        DropdownMenuItem(
+                            text = {
+                                Column {
+                                    Text(c.short)
+                                    Text("${c.covers} · ${c.years}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
                                 }
-                            }
-                            Text(
-                                shown,
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = if (text == null) MaterialTheme.colorScheme.outline else Color.Unspecified,
-                                modifier = Modifier.testTag("compare_${v.code}"),
-                            )
-                        }
-                    }
-                    Text(
-                        "Words that differ from the ${version} are marked.",
-                        style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
-                    )
-                }
-            } else if (vm.originalView) {
-                // The Hebrew or Greek, word by word (STD-4).
-                OriginalVerse(vm, id, version)
-            } else {
-                // Each word with Hebrew or Greek behind it opens a word study (STD-3).
-                StudyableVerse(vm, id, version, verseText)
-            }
-            // People and places in the verse open in the study pane (STD-10, STD-11).
-            NamesInVerse(vm, id, onOpen = ::close)
-            // The word tapped on the page, ready to study.
-            val tapped by produceState<WordStudy?>(null, t, version) {
-                value = if (t.word < 0) null else background {
-                    val strong = vm.study.strongs(version, id).getOrNull(t.word)
-                    val range = com.biblestudy.app.data.StudyRepository.words(verseText).getOrNull(t.word)
-                    if (strong != null && range != null) WordStudy(strong, version, verseText.substring(range), id) else null
-                }
-            }
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                modifier = Modifier.padding(vertical = 8.dp),
-            ) {
-                FilterChip(
-                    selected = vm.compareVersions,
-                    onClick = { vm.compareVersions = !vm.compareVersions; vm.originalView = false },
-                    label = { Text("Compare versions") },
-                )
-                FilterChip(
-                    selected = vm.originalView && !vm.compareVersions,
-                    onClick = { vm.originalView = !(vm.originalView && !vm.compareVersions); vm.compareVersions = false },
-                    label = { Text(if (t.book < 40) "Hebrew" else "Greek") },
-                    modifier = Modifier.testTag("originalChip"),
-                )
-                // Tags on this verse's note (NOTE-4).
-                if (original.isNotBlank()) TagButton(vm, vm.noteKey(t.book, t.chapter, noteStart))
-                tapped?.let { w ->
-                    FilledTonalButton(onClick = { vm.wordStudy = w }) { Text("Word study: \u201c${w.word}\u201d") }
-                }
-            }
-            OutlinedTextField(
-                value = note,
-                onValueChange = { note = it },
-                label = { Text("Typed note (shows in every version)") },
-                supportingText = { Text("References like Rom 8:28 or Psalm 23 become links.") },
-                minLines = 2,
-                maxLines = 5,
-                modifier = Modifier.fillMaxWidth(),
-            )
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    "Note on " + vm.refLabel(VerseId.of(t.book, t.chapter, noteStart), VerseId.of(t.book, t.chapter, noteEnd)),
-                    style = MaterialTheme.typography.labelLarge,
-                )
-                IconButton(onClick = { noteEnd-- }, enabled = noteEnd > noteStart) {
-                    Icon(Icons.Filled.Remove, contentDescription = "Note on one verse fewer")
-                }
-                IconButton(onClick = { noteEnd++ }, enabled = noteEnd < lastVerse) {
-                    Icon(Icons.Filled.Add, contentDescription = "Note on one more verse")
-                }
-            }
-            // References typed in the note, as links to their passages (LINK-4).
-            val noteLinks = remember(note) { RefLinks.find(note, vm.bible.books) }
-            var notePassage by remember(t) { mutableStateOf<Passage?>(null) }
-            if (noteLinks.isNotEmpty()) {
-                Row(
-                    Modifier.horizontalScroll(rememberScrollState()).padding(top = 4.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    Text("Links in this note:", style = MaterialTheme.typography.labelLarge)
-                    for (l in noteLinks) {
-                        AssistChip(
-                            onClick = { notePassage = l.passage },
-                            label = { Text(vm.passageLabel(l.passage)) },
-                            leadingIcon = { Icon(Icons.Filled.Link, contentDescription = null, modifier = Modifier.size(16.dp)) },
+                            },
+                            onClick = { menu = false; vm.chooseCommentary(c.id) },
+                            leadingIcon = if (c.id == cid) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
                         )
                     }
                 }
             }
-            notePassage?.let { p ->
-                Popup(alignment = Alignment.Center, onDismissRequest = { notePassage = null }, properties = PopupProperties(focusable = true)) {
-                    PassageCard(
-                        vm, p, version,
-                        onGoTo = { save(); vm.openPassage(p, panelIndex, beside = false); onDismiss() },
-                        onOpenBeside = { save(); vm.openPassage(p, panelIndex, beside = true); onDismiss() },
-                        onClose = { notePassage = null },
-                    )
-                }
-            }
+            // The whole chapter's commentary, beside the Bible text.
+            if (!inPanel) TextButton(onClick = { done(); vm.openCommentaryBeside() }) { Text("Whole chapter beside the text") }
+        }
+        val n = note
+        val status = when {
+            !cInfo.covers(t.book) -> "${cInfo.short} covers the ${cInfo.covers}. Choose another commentary for ${vm.bible.book(t.book).name}."
+            n == null -> if (com.biblestudy.app.data.Commentaries.isUnpacked(vm.getApplication(), cid)) "Loading…"
+                else "Getting ${cInfo.short} ready (the first time only)…"
+            n.section == null -> "${cInfo.short} has no notes on this verse. Try another commentary."
+            else -> null
+        }
+        if (status != null) Text(status, modifier = Modifier.padding(vertical = 8.dp))
+        n?.section?.let { s ->
             Text(
-                "Cross-references (${refs.size})",
-                style = MaterialTheme.typography.titleMedium,
-                modifier = Modifier.padding(top = 16.dp, bottom = 4.dp),
-            )
-            LazyColumn(Modifier.weight(1f)) {
-                items(refs) { r ->
-                    // A cross-reference opens the passage pop-over (LINK-5): read it here, then
-                    // Go to or Open beside.
-                    Column(
-                        Modifier
-                            .fillMaxWidth()
-                            .clickable { notePassage = r.passage() }
-                            .padding(vertical = 8.dp)
-                    ) {
-                        Text(vm.refLabel(r.toStart, r.toEnd), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                        Text(r.preview, maxLines = 2, overflow = TextOverflow.Ellipsis)
-                    }
-                    HorizontalDivider()
-                }
-            }
-            Text(
-                "Cross-references: OpenBible.info (CC BY)",
-                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                commentaryHeading(vm, s, t.chapter),
+                style = MaterialTheme.typography.titleSmall,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(top = 4.dp),
             )
         }
     }
+
+    @Composable
+    fun Top() {
+        if (vm.compareVersions) {
+            // Parallel view: the verse in every version, stacked (SPLIT-4). Tap one to read it.
+            CompareVersions(vm, id, version, verseText, Modifier.heightIn(max = if (inPanel) 480.dp else 320.dp)) { code ->
+                draft.save(vm)
+                if (inPanel) {
+                    vm.showBible(); vm.setVersion(panelIndex, code)
+                } else {
+                    vm.setVersion(panelIndex, code)
+                    vm.goTo(panelIndex, t.book, t.chapter, t.verse, remember = false)
+                    onDone()
+                }
+            }
+        } else if (vm.originalView) {
+            // The Hebrew or Greek, word by word (STD-4).
+            OriginalVerse(vm, id, version)
+        } else {
+            // Each word with Hebrew or Greek behind it opens a word study (STD-3).
+            StudyableVerse(vm, id, version, verseText)
+        }
+        // People and places in the verse open in the study pane (STD-10, STD-11).
+        NamesInVerse(vm, id, onOpen = ::done)
+        // The word tapped on the page, ready to study.
+        val tapped by produceState<WordStudy?>(null, t, version) {
+            value = if (t.word < 0) null else background {
+                val strong = vm.study.strongs(version, id).getOrNull(t.word)
+                val range = com.biblestudy.app.data.StudyRepository.words(verseText).getOrNull(t.word)
+                if (strong != null && range != null) WordStudy(strong, version, verseText.substring(range), id) else null
+            }
+        }
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            modifier = Modifier.horizontalScroll(rememberScrollState()).padding(vertical = 8.dp),
+        ) {
+            // Bookmark the verse (NOTE-3): it shows a ribbon and is listed under Bookmarks in the book picker.
+            val marked = vm.bookmarkAt(t.book, t.chapter, t.verse) != null
+            FilterChip(
+                selected = marked,
+                onClick = { vm.toggleBookmark(t.book, t.chapter, t.verse) },
+                label = { Text(if (marked) "Bookmarked" else "Bookmark") },
+                leadingIcon = { Icon(if (marked) Icons.Filled.Bookmark else Icons.Filled.BookmarkBorder, contentDescription = null, modifier = Modifier.size(18.dp)) },
+                modifier = Modifier.testTag("bookmarkChip"),
+            )
+            FilterChip(
+                selected = vm.compareVersions,
+                onClick = { vm.compareVersions = !vm.compareVersions; vm.originalView = false },
+                label = { Text("Compare versions") },
+            )
+            FilterChip(
+                selected = vm.originalView && !vm.compareVersions,
+                onClick = { vm.originalView = !(vm.originalView && !vm.compareVersions); vm.compareVersions = false },
+                label = { Text(if (t.book < 40) "Hebrew" else "Greek") },
+                modifier = Modifier.testTag("originalChip"),
+            )
+            // Write at length about the verse on a full page (MRG-15).
+            TextButton(onClick = { done(); vm.openNotePage(t.book, t.chapter, t.verse) }) { Text("Write full screen") }
+            // Tags on this verse's note (NOTE-4).
+            if (vm.notesFor(t.book, t.chapter)[draft.start]?.text?.isNotBlank() == true) TagButton(vm, vm.noteKey(t.book, t.chapter, draft.start))
+            tapped?.let { w ->
+                FilledTonalButton(onClick = { vm.openWordStudy(w) }) { Text("Word study: “${w.word}”") }
+            }
+            // Ask the AI chat about this verse (AI-6).
+            if (vm.chat.enabled) TextButton(onClick = {
+                draft.save(vm)
+                vm.sendToChat("${vm.refLabel(id)} ($version)", verseText)
+                if (!inPanel) onDone()
+            }) { Text("Ask AI") }
+        }
+        // The typed note: a small button until there is one, so the commentary below has the room.
+        if (draft.text.isBlank() && !noteOpen) {
+            TextButton(onClick = { noteOpen = true }, modifier = Modifier.testTag("addNote")) {
+                Icon(Icons.Filled.EditNote, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.width(6.dp))
+                Text("Add a note")
+            }
+        } else {
+            OutlinedTextField(
+                value = draft.text,
+                onValueChange = { draft.text = it },
+                label = { Text("Typed note (shows in every version)") },
+                supportingText = { Text("References like Rom 8:28 or Psalm 23 become links.") },
+                minLines = 2,
+                maxLines = 5,
+                modifier = Modifier.fillMaxWidth().focusRequester(noteFocus),
+            )
+            // Opened with Add a note: ready to type.
+            LaunchedEffect(noteOpen) { if (noteOpen) runCatching { noteFocus.requestFocus() } }
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    "Note on " + vm.refLabel(VerseId.of(t.book, t.chapter, draft.start), VerseId.of(t.book, t.chapter, draft.end)),
+                    style = MaterialTheme.typography.labelLarge,
+                )
+                IconButton(onClick = { draft.end-- }, enabled = draft.end > draft.start) {
+                    Icon(Icons.Filled.Remove, contentDescription = "Note on one verse fewer")
+                }
+                IconButton(onClick = { draft.end++ }, enabled = draft.end < lastVerse) {
+                    Icon(Icons.Filled.Add, contentDescription = "Note on one more verse")
+                }
+            }
+        }
+        // References typed in the note, as links to their passages (LINK-4).
+        val noteLinks = remember(draft.text) { RefLinks.find(draft.text, vm.bible.books) }
+        if (noteLinks.isNotEmpty()) {
+            Row(
+                Modifier.horizontalScroll(rememberScrollState()).padding(top = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Text("Links in this note:", style = MaterialTheme.typography.labelLarge)
+                for (l in noteLinks) {
+                    AssistChip(
+                        onClick = { notePassage = l.passage },
+                        label = { Text(vm.passageLabel(l.passage)) },
+                        leadingIcon = { Icon(Icons.Filled.Link, contentDescription = null, modifier = Modifier.size(16.dp)) },
+                    )
+                }
+            }
+        }
+        // Below: the cross-references, or what a commentary says on the verse (STD-20).
+        // The commentary comes first: it helps most in understanding the verse.
+        TabRow(selectedTabIndex = if (vm.verseCommentary) 0 else 1, modifier = Modifier.padding(top = 12.dp, bottom = 4.dp)) {
+            Tab(
+                selected = vm.verseCommentary, onClick = { vm.showVerseCommentary(true) },
+                text = { Text("Commentary") }, modifier = Modifier.testTag("verseCommentaryTab"),
+            )
+            Tab(
+                selected = !vm.verseCommentary, onClick = { vm.showVerseCommentary(false) },
+                text = { Text("Cross-references (${refs.size})") }, modifier = Modifier.testTag("verseRefsTab"),
+            )
+        }
+        if (vm.verseCommentary) CommentaryChoice()
+    }
+
+    @Composable
+    fun Paragraph(text: String) {
+        StudyText(text, onPassage = { notePassage = it }, modifier = Modifier.padding(vertical = 4.dp).testTag("verseCommentary"))
+    }
+
+    @Composable
+    fun Ref(r: CrossRef) {
+        // A cross-reference opens the passage pop-over (LINK-5): read it here, then Go to or Open beside.
+        Column(
+            Modifier
+                .fillMaxWidth()
+                .clickable { notePassage = r.passage() }
+                .padding(vertical = 8.dp)
+        ) {
+            Text(vm.refLabel(r.toStart, r.toEnd), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+            Text(r.preview, maxLines = 2, overflow = TextOverflow.Ellipsis)
+        }
+        HorizontalDivider()
+    }
+
+    @Composable
+    fun Credit() {
+        Text(
+            when {
+                !vm.verseCommentary -> "Cross-references: OpenBible.info (CC BY)"
+                cid == com.biblestudy.app.data.Commentaries.AI -> "Written by AI from trusted sources. Check anything important against the other commentaries."
+                else -> "${cInfo.name}, ${cInfo.author} (public domain)"
+            },
+            style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+        )
+    }
+
+    notePassage?.let { p ->
+        Popup(alignment = Alignment.Center, onDismissRequest = { notePassage = null }, properties = PopupProperties(focusable = true)) {
+            PassageCard(
+                vm, p, version,
+                onGoTo = { notePassage = null; draft.save(vm); vm.openPassage(p, panelIndex, beside = false); if (!inPanel) onDone() },
+                onOpenBeside = { notePassage = null; draft.save(vm); vm.openPassage(p, panelIndex, beside = true); if (!inPanel) onDone() },
+                onClose = { notePassage = null },
+            )
+        }
+    }
+    val paragraphs = remember(note) { note?.section?.body?.split("\n\n")?.filter { it.isNotBlank() }.orEmpty() }
+    if (inPanel) {
+        LazyColumn(modifier.testTag("verseDetails")) {
+            item(key = "top") { Column { Top() } }
+            if (vm.verseCommentary) items(paragraphs.size, key = { "c$it" }) { Paragraph(paragraphs[it]) }
+            else items(refs, key = { "r${it.toStart}-${it.toEnd}" }) { Ref(it) }
+            item(key = "credit") { Credit() }
+        }
+    } else {
+        Column(modifier) {
+            Top()
+            LazyColumn(Modifier.weight(1f)) {
+                if (vm.verseCommentary) items(paragraphs) { Paragraph(it) } else items(refs) { Ref(it) }
+            }
+            Credit()
+        }
+    }
 }
+
+/** A commentary's note on a verse, once loaded: [section] is null when it has none. */
+private class VerseNote(val section: com.biblestudy.app.data.CommentarySection?)
 
 // ---------------------------------------------------------------------------------------------
 // Layers
@@ -1296,7 +1508,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
     AlertDialog(
         onDismissRequest = onDismiss,
         confirmButton = { TextButton(onClick = onDismiss) { Text("Close") } },
-        title = { Text("Bible Study \u2014 version ${BuildConfig.VERSION_NAME}") },
+        title = { Text("Ink & Word \u2014 version ${BuildConfig.VERSION_NAME}") },
         text = {
             Column(Modifier.verticalScroll(rememberScrollState())) {
                 Text("Works completely offline. Your notes stay on this tablet unless you make a backup.")
@@ -1309,6 +1521,8 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 Text("\u2022 People and places: STEPBible.org TIPNR, licensed CC BY 4.0. Map outline: Natural Earth (public domain).")
                 Text("\u2022 Hebrew and Greek word by word: STEPBible.org TAHOT and TAGNT (Tyndale House, Cambridge), licensed CC BY 4.0. Only the columns shown are kept.")
                 Text("\u2022 Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library.")
+                Text("\u2022 Commentaries (public domain): Matthew Henry's Complete, Jamieson-Fausset-Brown, Wesley, the Geneva notes, Barnes, Adam Clarke, Keil & Delitzsch, Robertson's Word Pictures, Calvin and Spurgeon's Treasury of David, from the CrossWire Bible Society's SWORD library.")
+                Text("\u2022 Writing sounds: \u201cPencil\u201d, \u201cMarker circle\u201d and \u201cDrawing\u201d by freesound_community, from Pixabay (Pixabay Content License).")
                 Text("\u2022 Bible text font: Gentium Book Plus \u00a9 SIL International, SIL Open Font License.")
                 Spacer(Modifier.height(12.dp))
                 Text("How to use", style = MaterialTheme.typography.titleMedium)
@@ -1351,88 +1565,7 @@ fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolea
                 Text("No introduction for this book yet.")
                 return@Column
             }
-            Column(Modifier.weight(1f).verticalScroll(rememberScrollState())) {
-                @Composable
-                fun Fact(label: String, text: String) {
-                    if (text.isBlank()) return
-                    Row(Modifier.padding(vertical = 3.dp)) {
-                        Text(label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary, modifier = Modifier.width(110.dp))
-                        Text(text, modifier = Modifier.weight(1f))
-                    }
-                }
-
-                @Composable
-                fun Heading(text: String) {
-                    Text(text, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(top = 16.dp, bottom = 4.dp))
-                }
-
-                /** Text with Bible references made into links (LINK-4 style). */
-                @Composable
-                fun Linked(text: String) {
-                    val links = remember(text) { RefLinks.find(text, vm.bible.books) }
-                    Text(buildAnnotatedString {
-                        append(text)
-                        for (l in links) {
-                            addLink(
-                                LinkAnnotation.Clickable("ref", TextLinkStyles(SpanStyle(color = linkColor, textDecoration = TextDecoration.Underline))) {
-                                    shown = l.passage
-                                },
-                                l.start, l.end,
-                            )
-                        }
-                    })
-                }
-
-                Fact("Author", intro.author)
-                Fact("Written", intro.date)
-                Fact("Where", intro.place)
-                Fact("Written to", intro.audience)
-                Fact("Type", intro.type)
-
-                Heading("Historical background")
-                Linked(intro.background)
-                Heading("Purpose")
-                Linked(intro.purpose)
-                Heading("Main themes")
-                Text(intro.themes)
-
-                Heading("Outline")
-                for (o in intro.outline) {
-                    Row(
-                        Modifier.fillMaxWidth().clip(RoundedCornerShape(8.dp)).clickable { open(o.passage) }.padding(vertical = 6.dp, horizontal = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        Text(o.title, modifier = Modifier.weight(1f))
-                        Text(vm.passageLabel(o.passage).removePrefix(info.name + " "), color = linkColor, style = MaterialTheme.typography.labelLarge)
-                    }
-                }
-
-                Heading("Key people")
-                Text(intro.people)
-                Heading("Key places")
-                Text(intro.places)
-
-                Heading("Key verses")
-                Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    for (p in intro.keyVerses) {
-                        AssistChip(
-                            onClick = { shown = p },
-                            label = { Text(vm.passageLabel(p)) },
-                            leadingIcon = { Icon(Icons.Filled.Link, contentDescription = null, modifier = Modifier.size(16.dp)) },
-                        )
-                    }
-                }
-
-                Heading("Connections")
-                Linked(intro.connections)
-
-                Text(
-                    "Authorship and dates follow the traditional view.",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.outline,
-                    modifier = Modifier.padding(top = 16.dp),
-                )
-            }
+            BookIntroBody(vm, book, intro, Modifier.weight(1f), onOpen = ::open, onShow = { shown = it })
             Row(Modifier.padding(top = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(onClick = { open(Passage(book, 1, 1, 1, 1)) }) { Text("Read from chapter 1") }
             }
@@ -1450,7 +1583,149 @@ fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolea
     }
 }
 
+/** A book's introduction (STD-12): facts, background, outline and key verses, in a window or a panel. */
+@Composable
+fun BookIntroBody(vm: StudyViewModel, book: Int, intro: com.biblestudy.app.data.BookIntro, modifier: Modifier = Modifier, onOpen: (Passage) -> Unit, onShow: (Passage) -> Unit) {
+    Column(modifier.verticalScroll(rememberScrollState())) {
+                @Composable
+        fun Fact(label: String, text: String) {
+            if (text.isBlank()) return
+            Row(Modifier.padding(vertical = 3.dp)) {
+                Text(label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary, modifier = Modifier.width(110.dp))
+                Text(text, modifier = Modifier.weight(1f))
+            }
+        }
+
+        @Composable
+        fun Heading(text: String) {
+            Text(text, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(top = 16.dp, bottom = 4.dp))
+        }
+
+        /** Text with Bible references made into links (LINK-4 style), which can be written on (INK-16). */
+        @Composable
+        fun Linked(text: String, part: Int) {
+            val links = remember(text) { RefLinks.find(text, vm.bible.books) }
+            val annotated = buildAnnotatedString {
+                append(text)
+                for (l in links) {
+            addLink(
+                LinkAnnotation.Clickable("ref", TextLinkStyles(SpanStyle(color = LINK_COLOR, textDecoration = TextDecoration.Underline))) {
+                    onShow(l.passage)
+                },
+                l.start, l.end,
+            )
+                }
+            }
+            InkableText(vm, InkDoc(StudyInk.INTRO, book, part), annotated, style = MaterialTheme.typography.bodyLarge)
+        }
+
+        Fact("Author", intro.author)
+        Fact("Written", intro.date)
+        Fact("Where", intro.place)
+        Fact("Written to", intro.audience)
+        Fact("Type", intro.type)
+
+        Heading("Historical background")
+        Linked(intro.background, 0)
+        Heading("Purpose")
+        Linked(intro.purpose, 1)
+        Heading("Main themes")
+        Linked(intro.themes, 3)
+
+        Heading("Outline")
+        for (o in intro.outline) {
+            Row(
+                Modifier.fillMaxWidth().clip(RoundedCornerShape(8.dp)).clickable { onOpen(o.passage) }.padding(vertical = 6.dp, horizontal = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(o.title, modifier = Modifier.weight(1f))
+                Text(vm.passageLabel(o.passage).removePrefix(vm.bible.book(book).name + " "), color = LINK_COLOR, style = MaterialTheme.typography.labelLarge)
+            }
+        }
+
+        Heading("Key people")
+        Linked(intro.people, 4)
+        Heading("Key places")
+        Linked(intro.places, 5)
+
+        Heading("Key verses")
+        Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            for (p in intro.keyVerses) {
+                AssistChip(
+            onClick = { onShow(p) },
+            label = { Text(vm.passageLabel(p)) },
+            leadingIcon = { Icon(Icons.Filled.Link, contentDescription = null, modifier = Modifier.size(16.dp)) },
+                )
+            }
+        }
+
+        Heading("Connections")
+        Linked(intro.connections, 2)
+
+        Text(
+            "Authorship and dates follow the traditional view.",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.outline,
+            modifier = Modifier.padding(top = 16.dp),
+        )
+                }
+}
+
+/** The introduction to the book being read, beside the text (SPLIT-7). */
+@Composable
+fun BookIntroPane(vm: StudyViewModel, modifier: Modifier) {
+    val context = LocalContext.current
+    val panel = vm.studyPanel()
+    val book = panel.book.coerceIn(1, 66)
+    val intro = remember(book) { BookIntros.get(context, book) }
+    var shown by remember(book) { mutableStateOf<Passage?>(null) }
+    val index = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
+    Column(modifier) {
+        Text("About ${vm.bible.book(book).name}", style = MaterialTheme.typography.titleLarge, modifier = Modifier.padding(vertical = 8.dp))
+        if (intro == null) { Text("No introduction for this book yet."); return@Column }
+        BookIntroBody(vm, book, intro, Modifier.weight(1f), onOpen = { p -> vm.showBible(); vm.goTo(index, p.book, p.chapter, p.verse) }, onShow = { shown = it })
+    }
+    PassagePopupHost(vm, shown, panel.version, onDismiss = { shown = null })
+}
+
 /** The passage a cross-reference points to (LINK-5). */
 fun CrossRef.passage() = Passage(
     VerseId.book(toStart), VerseId.chapter(toStart), VerseId.verse(toStart), VerseId.chapter(toEnd), VerseId.verse(toEnd),
 )
+
+/**
+ * One verse in every version, stacked (SPLIT-4), with the words that differ from [version] lightly
+ * marked (SPLIT-5). Used in the verse window and as a panel view (SPLIT-7).
+ */
+@Composable
+fun CompareVersions(vm: StudyViewModel, id: Int, version: String, verseText: String, modifier: Modifier = Modifier, onPick: (String) -> Unit) {
+    Column(modifier.verticalScroll(rememberScrollState())) {
+        for (v in BibleRepository.ALL) {
+            val text = remember(id, v) { vm.text(v.code).verseText(id) }
+            Column(Modifier.fillMaxWidth().clickable { onPick(v.code) }.padding(vertical = 4.dp)) {
+                Text(
+                    v.code + if (v.code == version) "  (reading)" else "",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.primary,
+                )
+                val shown = remember(text, verseText, v) {
+                    androidx.compose.ui.text.buildAnnotatedString {
+                        append(text ?: "Not in this version (see its footnotes).")
+                        if (text != null && v.code != version && verseText.isNotEmpty()) {
+                            for (r in com.biblestudy.app.data.WordDiff.changed(text, verseText)) {
+                                addStyle(androidx.compose.ui.text.SpanStyle(background = DIFF_MARK), r.first, r.last + 1)
+                            }
+                        }
+                    }
+                }
+                Text(
+                    shown,
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = if (text == null) MaterialTheme.colorScheme.outline else Color.Unspecified,
+                    modifier = Modifier.testTag("compare_${v.code}"),
+                )
+            }
+        }
+        Text("Words that differ from the $version are marked.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+    }
+}

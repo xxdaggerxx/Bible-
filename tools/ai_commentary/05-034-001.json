@@ -1,0 +1,132 @@
+{
+ "book": 5,
+ "chapter": 34,
+ "first": 1,
+ "last": 12,
+ "ref": "Deuteronomy 34",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Moses obeyed the Lord and climbed Mount Nebo all the way to its highest ridge to prepare for his death. Even though he had to die alone on the heights, he went willingly and without fear because he trusted God. The Lord then gave him a sweeping view of the land of Canaan, miraculously strengthening his eyes to see across great distances.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 3,
+   "meaning": "God guided Moses' eyes across the regions that the tribes of Israel would later inherit, stretching from the northern territories all the way down to the southern desert and the western sea. Moses looked down upon the fertile valley around Jericho, known as the city of palm trees, and followed the land toward the southern end of the Dead Sea. Even though the conquest had not yet started, God showed that this land belonged by promise to His chosen people.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The Lord reminded Moses of the covenant promise He had sworn centuries earlier to Abraham, Isaac, and Jacob. Moses was allowed to see the fulfillment of that promise with his own eyes, but he was forbidden to cross over the river because of his past disobedience in the wilderness. It was a bittersweet moment that revealed both God's perfect faithfulness to His people and His serious discipline toward His servant.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/deuteronomy-34/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Moses died peacefully on the mountain in Moab, exactly as the Lord had declared. He received the title of the servant of the Lord, which was his greatest honor because he had spent his life doing God's work. Having finished his assigned task on earth, he rested from his labors in the care of his Master.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The Lord Himself buried Moses in an unmarked valley, keeping the exact location of his grave a secret from everyone. This concealment protected the Israelites from turning Moses' burial place into a shrine or worshiping his remains. God showed great honor to Moses by taking charge of his body, reminding readers that the dust of His people is precious in His sight.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Moses lived to be one hundred and twenty years old, yet his eyesight remained clear and his natural vigor never faded. His unusual strength was a gift from God, who preserved his health so he could lead the nation through years of heavy burden. He did not die because his body broke down from old age, but because his earthly mission had reached its appointed end.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The Israelites camped on the plains of Moab and mourned Moses for thirty days, observing the traditional period of deep grief for an honored leader. Even those who had argued with Moses during the wilderness journey now felt the heavy weight of their loss. When the month of sorrow was over, the nation dried their tears and prepared to move forward under God's continued direction.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "https://enduringword.com/bible-commentary/deuteronomy-34/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Joshua was filled with the spirit of wisdom to govern and lead Israel because Moses had laid his hands on him and prayed for him. The people accepted Joshua's authority and followed his direction just as the Lord had commanded. This peaceful transfer of power showed that God does not abandon His church, but always raises up new workers to carry on His plans.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Moses held a unique place above every other Old Testament prophet because the Lord spoke with him directly and intimately, as a friend speaks face to face. While other prophets received messages through dreams or visions, Moses enjoyed free and calm communion with God as the mediator of the old covenant. This praise reminds Christians of Jesus Christ, the Son who brings an even greater revelation of the Father.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 12,
+   "meaning": "No later prophet in Israel ever performed the vast array of miracles that Moses carried out before Pharaoh and the Egyptian court. He led Israel through the Red Sea and displayed God's mighty power in the presence of the entire nation at Mount Sinai. These awesome acts proved that his divine calling was genuine and established his words as the standard of truth for generations to come.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Calvin']",
+  "v. 4: removed sources ['Calvin']",
+  "v. 6: removed sources ['Calvin']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

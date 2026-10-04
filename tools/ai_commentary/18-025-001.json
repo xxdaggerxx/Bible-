@@ -1,0 +1,123 @@
+{
+ "book": 18,
+ "chapter": 25,
+ "first": 1,
+ "last": 6,
+ "ref": "Job 25",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Bildad begins his third and final speech to Job. He gives a very short reply, no longer trying to answer Job's proof that wicked people often prosper in this life. Instead, he falls back on the familiar claim that God is infinitely great and man cannot argue with Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://biblehub.com/commentaries/job/25-1.htm"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern scholars rearrange the text and add verses from chapter 26 to make Bildad's speech longer, though other scholars see no good reason to alter the text.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/job-25/"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Bildad declares that God has total sovereign rule over all things and inspires holy awe. He explains that God maintains perfect order and peace in the heights of heaven. Because the angels and heavenly bodies cheerfully obey God without strife, it is foolish for a person on earth to complain against Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Bildad asks who can count the armies of God, referring to the countless angels and stars that serve Him. He also asks where God's light does not shine, pointing to God's care and goodness that reach across the whole earth. Since God sees and governs everything, no one can hide from Him or resist His will.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Bildad asks how any frail human being can be declared righteous, or justified, before God's court. He believes that anyone born of a woman shares in human weakness and uncleanness from birth. In Bildad's view, a person has no right to stand before God and claim to be innocent.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Job was seeking to have his earthly case cleared rather than his eternal soul justified, and true justification takes place in God's court, in the believer's conscience by faith, and publicly at the final judgment.",
+     "sources": [
+      "https://biblehub.com/commentaries/job/25-4.htm"
+     ]
+    },
+    {
+     "tradition": "Methodist",
+     "view": "A sinner is justified by faith in the sacrifice of Jesus Christ, and a believer who senses inner sin can also be sanctified and made clean by the Holy Spirit.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.studylight.org/commentary/job/25-4.html"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "People face a double problem before God: their actual sins make them guilty before His justice, and their inherited corrupt nature makes them unfit for His holy presence.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.studylight.org/commentary/job/25-4.html"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Bildad points up to the skies to show that even the bright moon and stars lose their shine when compared to God. The heavenly lights change and have flaws, but God's purity is perfect and unchangeable. If the brightest parts of creation seem dark before the Creator, human beings have no ground for pride.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Bildad concludes by comparing mortal man to a maggot and a crawling worm. These harsh words describe human beings as frail, easily crushed, and subject to physical decay. Because people are so lowly and morally tainted in themselves, Bildad insists Job should stop defending his own goodness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The terms maggot and worm are used here as vivid poetry to describe human nature at its lowest and most shameful state.",
+     "sources": [
+      "https://classic.net.bible.org/verse.php?book=job&chapter=25&verse=6"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

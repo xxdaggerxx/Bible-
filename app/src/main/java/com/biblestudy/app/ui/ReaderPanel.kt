@@ -1,7 +1,6 @@
 package com.biblestudy.app.ui
 
 import android.content.Intent
-import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.AnimationState
 import androidx.compose.animation.core.animateDecay
 import androidx.compose.animation.splineBasedDecay
@@ -30,6 +29,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.viewinterop.AndroidView
 import com.biblestudy.app.model.Region
@@ -150,7 +150,13 @@ private const val MAX_LAYOUTS = 7
 @Composable
 fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifier: Modifier = Modifier) {
     val panel = vm.panels[index]
-    val ctl = remember(panel) { ReaderController(vm, panel) }
+    val ctl = remember(panel) {
+        ReaderController(vm, panel).also { c ->
+            // Shown again (another tab was in front): back to exactly where it was, unless it was sent somewhere.
+            val r = panel.resume
+            if (r != null && panel.pendingVerse == null && r.book == panel.book && r.chapter == panel.chapter) c.pendingFollow = r
+        }
+    }
     val resolver = LocalFontFamilyResolver.current
     val measurer = remember(resolver) { TextMeasurer(resolver, Density(1f, 1f), LayoutDirection.Ltr) }
     val density = LocalDensity.current.density
@@ -285,6 +291,15 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     LaunchedEffect(linkPos) {
         if (linkPos != null && vm.linked) ctl.follow(linkPos)
     }
+    // A linked commentary scrolled by hand (STD-18): the panel in use follows it.
+    val commentaryPos = vm.commentaryPos
+    LaunchedEffect(commentaryPos) {
+        if (commentaryPos != null && vm.activePanel.coerceIn(0, vm.panels.lastIndex) == index) {
+            ctl.follow(commentaryPos)
+            // Followed once: a panel shown later (a new tab) mustn't jump back to it.
+            vm.commentaryFollowed(commentaryPos)
+        }
+    }
     LaunchedEffect(vm.linkPanels, vm.panels.size) {
         if (vm.linked && vm.activePanel == index) ctl.announceScroll()
     }
@@ -320,7 +335,6 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     }
 
     // The tablet's Back gesture steps back through this panel's history when it is the active one.
-    BackHandler(enabled = vm.activePanel == index && panel.back.isNotEmpty()) { vm.goBack(index) }
 
     val active = vm.activePanel == index && vm.panels.size > 1
     Column(
@@ -472,15 +486,8 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
         // Narrow panels (e.g. three side by side) move the less-used buttons into a menu.
         val compact = maxWidth < 620.dp
         Row(Modifier.fillMaxWidth().padding(horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-            if (!compact) {
-                IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                }
-                IconButton(onClick = { vm.activePanel = index; vm.goForward(index) }, enabled = panel.forward.isNotEmpty()) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Forward")
-                }
-                VerticalDivider(Modifier.height(24.dp).padding(horizontal = 4.dp))
-            }
+            // What this panel shows, the tab's arrangement, new tab and close (SPLIT-7).
+            PanelViewButton(vm, Slot.Bible(index)) { vm.activePanel = index }
             IconButton(onClick = { vm.activePanel = index; vm.prevChapter(index) }) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous chapter")
             }
@@ -497,26 +504,21 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
             }
             VersionPicker(vm, index)
             Spacer(Modifier.weight(1f))
-            if (!compact) TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
-            if (vm.panels.size > 1 && !compact) {
-                IconButton(onClick = { vm.activePanel = index; vm.linkPanels = !vm.linkPanels }) {
-                    Icon(
-                        if (vm.linkPanels) Icons.Filled.Link else Icons.Filled.LinkOff,
-                        contentDescription = if (vm.linkPanels) "Unlink panels" else "Link panels",
-                        tint = if (vm.linkPanels) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
-                    )
+            // Linked panels show it, and a tap unlinks them; linking is in the menu.
+            if (vm.panels.size > 1 && vm.linkPanels) {
+                IconButton(onClick = { vm.activePanel = index; vm.linkPanels = false }) {
+                    Icon(Icons.Filled.Link, contentDescription = "Unlink panels", tint = MaterialTheme.colorScheme.primary)
                 }
             }
-            if (compact) {
+            // The less-used buttons, in one menu so the header stays simple.
+            run {
                 var menu by remember { mutableStateOf(false) }
                 Box {
                     IconButton(onClick = { vm.activePanel = index; menu = true }) {
                         Icon(Icons.Filled.MoreVert, contentDescription = "Panel menu")
                     }
                     DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                        DropdownMenuItem(text = { Text("Back") }, enabled = panel.back.isNotEmpty(), onClick = { menu = false; vm.goBack(index) })
-                        DropdownMenuItem(text = { Text("Forward") }, enabled = panel.forward.isNotEmpty(), onClick = { menu = false; vm.goForward(index) })
-                        DropdownMenuItem(text = { Text("About this book") }, onClick = { menu = false; vm.introBook = panel.book })
+                        if (compact) DropdownMenuItem(text = { Text("About this book") }, onClick = { menu = false; vm.introBook = panel.book })
                         DropdownMenuItem(text = { Text("Fit width") }, onClick = { menu = false; ctl.fitWidth() })
                         if (vm.panels.size > 1) {
                             DropdownMenuItem(
@@ -524,14 +526,7 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
                                 onClick = { menu = false; vm.activePanel = index; vm.linkPanels = !vm.linkPanels },
                             )
                         }
-                        if (vm.panels.size > 1) {
-                            DropdownMenuItem(text = { Text("Close panel") }, onClick = { menu = false; vm.closePanel(index) })
-                        }
                     }
-                }
-            } else if (vm.panels.size > 1) {
-                IconButton(onClick = { vm.closePanel(index) }) {
-                    Icon(Icons.Filled.Close, contentDescription = "Close panel")
                 }
             }
         }
@@ -553,9 +548,7 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
         Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer).padding(horizontal = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
-            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-        }
+        PanelViewButton(vm, Slot.Bible(index)) { vm.activePanel = index }
         Text(sk.name, style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(horizontal = 6.dp))
         if (sk.linked) TextButton(onClick = { vm.goTo(index, sk.linkBook, sk.linkChapter, sk.linkVerse) }) {
             Text("on " + vm.refLabel(com.biblestudy.app.model.VerseId.of(sk.linkBook, sk.linkChapter, sk.linkVerse)), maxLines = 1)
@@ -573,7 +566,6 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
                     )
                 }
                 HorizontalDivider()
-                DropdownMenuItem(text = { Text("More space below") }, onClick = { vm.updateSketch(sk.copy(height = sk.height + com.biblestudy.app.model.Sketch.START_HEIGHT / 2)); menu = false })
                 DropdownMenuItem(text = { Text("Rename\u2026") }, onClick = { renaming = true; menu = false })
                 DropdownMenuItem(
                     text = { Text(if (sk.linked) "Link to another passage\u2026" else "Link to a passage\u2026") },
@@ -584,7 +576,6 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
                     onClick = { menu = false; vm.updateSketch(sk.copy(linkBook = 0, linkChapter = 0, linkVerse = 0)) },
                 )
                 DropdownMenuItem(text = { Text("Delete sketch page\u2026") }, onClick = { deleting = true; menu = false })
-                if (vm.panels.size > 1) DropdownMenuItem(text = { Text("Close panel") }, onClick = { menu = false; vm.closePanel(index) })
             }
         }
     }
@@ -712,6 +703,11 @@ private fun TextSelectionBar(vm: StudyViewModel, ctl: ReaderController, ts: Text
                 vm.openVerse(l.book, l.chapter, l.verseAtOffset(ts.start))
                 ctl.clearTextSelect()
             }) { Text("Note") }
+            // Send the words to the AI chat, to ask about them (AI-6).
+            if (vm.chat.enabled) TextButton(onClick = {
+                vm.sendToChat(ctl.selectionLabel(ts), ts.layout.textOf(ts.start, ts.end).replace('\u2009', ' '))
+                ctl.clearTextSelect()
+            }) { Text("Ask AI") }
             IconButton(onClick = ctl::clearTextSelect) { Icon(Icons.Filled.Close, contentDescription = "Clear selection") }
         }
     }
@@ -800,28 +796,30 @@ private val SKETCH_BADGE = Color(0xFF6A8CAF)
 private fun sameSpacers(a: Map<Int, Float>, b: Map<Int, Float>): Boolean =
     (a.keys + b.keys).all { kotlin.math.abs((a[it] ?: 0f) - (b[it] ?: 0f)) < 8f }
 
-/** Lines, a grid or dots on a sketch page (SKT-1). */
-private fun DrawScope.drawPaper(paper: com.biblestudy.app.model.Paper, g: PageGeometry, theme: PageTheme) {
+/** Lines, a grid or dots on a sketch page (SKT-1), only where it's in [view] (the page has no limit). */
+private fun DrawScope.drawPaper(paper: com.biblestudy.app.model.Paper, g: PageGeometry, theme: PageTheme, view: Rect) {
     val c = theme.rule.copy(alpha = 0.55f)
     val step = 48f
     val top = Page.TEXT_TOP
+    val x0 = maxOf(0f, kotlin.math.floor(view.left / step) * step); val x1 = minOf(g.width, view.right + step)
+    val y0 = maxOf(top, top + kotlin.math.floor((view.top - top) / step) * step); val y1 = minOf(g.height, view.bottom + step)
     when (paper) {
         com.biblestudy.app.model.Paper.BLANK -> {}
         com.biblestudy.app.model.Paper.LINED -> {
-            var y = top + step
-            while (y < g.height) { drawLine(c, Offset(40f, y), Offset(g.width - 40f, y), strokeWidth = 1.2f); y += step }
+            var y = y0 + step
+            while (y < y1) { drawLine(c, Offset(maxOf(40f, x0), y), Offset(minOf(g.width - 40f, x1), y), strokeWidth = 1.2f); y += step }
         }
         com.biblestudy.app.model.Paper.GRID -> {
-            var y = top
-            while (y < g.height) { drawLine(c, Offset(0f, y), Offset(g.width, y), strokeWidth = 1f); y += step }
-            var x = 0f
-            while (x < g.width) { drawLine(c, Offset(x, top), Offset(x, g.height), strokeWidth = 1f); x += step }
+            var y = y0
+            while (y < y1) { drawLine(c, Offset(x0, y), Offset(x1, y), strokeWidth = 1f); y += step }
+            var x = x0
+            while (x < x1) { drawLine(c, Offset(x, y0), Offset(x, y1), strokeWidth = 1f); x += step }
         }
         com.biblestudy.app.model.Paper.DOTTED -> {
-            var y = top
-            while (y < g.height) {
-                var x = step / 2
-                while (x < g.width) { drawCircle(c, 2.2f, Offset(x, y)); x += step }
+            var y = y0
+            while (y < y1) {
+                var x = x0 + step / 2
+                while (x < x1) { drawCircle(c, 2.2f, Offset(x, y)); x += step }
                 y += step
             }
         }
@@ -854,7 +852,7 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     // Paper and margins
     drawRect(theme.page, size = Size(g.width, g.height))
     val sketch = vm.sketchOf(layout.book)
-    if (sketch != null) drawPaper(sketch.paper, g, theme)
+    if (sketch != null) drawPaper(sketch.paper, g, theme, view)
     if (g.left && sketch == null) {
         drawRect(theme.margin, topLeft = Offset.Zero, size = Size(g.leftW, g.height))
         drawLine(theme.rule, Offset(g.leftW, 0f), Offset(g.leftW, g.height), strokeWidth = 1.5f)
@@ -893,11 +891,26 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     // Sketch pages linked to this chapter: a badge beside the verse (SKT-2).
     if (sketch == null) {
         for (sk in vm.sketchesIn(layout.book, layout.chapter)) {
+            // A full-screen margin note (MRG-15) shows shrunk to fit beside its verse.
+            val note = if (sk.note) ReaderController.notePreviewRect(g, layout, sk, vm.noteContentBottom(sk)) else null
+            if (note != null) {
+                drawNotePreview(vm, measurer, sk, note, theme)
+                continue
+            }
             val c = ReaderController.sketchBadgeCenter(g, layout, sk)
             drawRoundRect(SKETCH_BADGE, topLeft = c - Offset(16f, 13f), size = Size(32f, 26f), cornerRadius = androidx.compose.ui.geometry.CornerRadius(6f))
             drawLine(Color.White, c + Offset(-8f, 6f), c + Offset(8f, -6f), strokeWidth = 3f)
             drawCircle(Color.White, 3f, c + Offset(-8f, 6f))
         }
+    }
+    // A ribbon beside each bookmarked verse (NOTE-3).
+    if (sketch == null) for (v in vm.bookmarkedVerses(layout.book, layout.chapter)) {
+        val y = layout.verseTop(v.coerceAtLeast(1)) + 4f
+        val x = g.textLeft - 26f
+        val ribbon = androidx.compose.ui.graphics.Path().apply {
+            moveTo(x, y); lineTo(x + 16f, y); lineTo(x + 16f, y + 30f); lineTo(x + 8f, y + 23f); lineTo(x, y + 30f); close()
+        }
+        drawPath(ribbon, BOOKMARK_RIBBON)
     }
     if (sketch == null) for ((first, last, dy) in layout.segments) {
         val (clipTop, clipBottom) = layout.segmentClip(first, last)
@@ -1325,3 +1338,36 @@ private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawHover(vm: Study
         else -> drawCircle(Color.Gray.copy(alpha = 0.6f), 3f, at)
     }
 }
+
+/** A note page drawn small in [r] (MRG-15): its ink and text boxes, scaled to the margin's width. */
+private fun DrawScope.drawNotePreview(vm: StudyViewModel, measurer: TextMeasurer, sk: com.biblestudy.app.model.Sketch, r: Rect, theme: PageTheme) {
+    vm.ensureSketchLoaded(sk)
+    val k = r.width / com.biblestudy.app.model.Sketch.WIDTH
+    drawRoundRect(theme.surround.copy(alpha = 0.35f), topLeft = r.topLeft, size = r.size, cornerRadius = androidx.compose.ui.geometry.CornerRadius(8f))
+    drawRoundRect(SKETCH_BADGE, topLeft = r.topLeft, size = r.size, cornerRadius = androidx.compose.ui.geometry.CornerRadius(8f), style = androidx.compose.ui.graphics.drawscope.Stroke(1.5f))
+    clipRect(r.left, r.top, r.right, r.bottom) {
+        translate(r.left, r.top) {
+            scale(k, k, pivot = Offset.Zero) {
+                for (st in vm.marginStrokesFor(sk.book, 1)) {
+                    val p = st.points
+                    if (p.size < 6) continue
+                    val path = androidx.compose.ui.graphics.Path().apply {
+                        moveTo(p[0], p[1])
+                        for (i in 3 until p.size step 3) lineTo(p[i], p[i + 1])
+                    }
+                    drawPath(
+                        path, Color(st.color).copy(alpha = if (st.highlighter) HIGHLIGHT_ALPHA else 1f),
+                        style = androidx.compose.ui.graphics.drawscope.Stroke(st.width, cap = androidx.compose.ui.graphics.StrokeCap.Round, join = androidx.compose.ui.graphics.StrokeJoin.Round),
+                    )
+                }
+                for (t in vm.textsFor(sk.book, 1)) drawTextBox(vm, measurer, t, t.x, t.y, selected = false, editing = false)
+            }
+        }
+    }
+    // A small corner tab says it opens.
+    drawRoundRect(SKETCH_BADGE, topLeft = Offset(r.right - 28f, r.top + 4f), size = Size(24f, 20f), cornerRadius = androidx.compose.ui.geometry.CornerRadius(5f))
+    drawLine(Color.White, Offset(r.right - 22f, r.top + 19f), Offset(r.right - 10f, r.top + 9f), strokeWidth = 2.5f)
+}
+
+/** The bookmark ribbon's colour (NOTE-3). */
+private val BOOKMARK_RIBBON = Color(0xFFC0392B)

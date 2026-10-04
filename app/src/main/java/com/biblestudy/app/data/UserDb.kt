@@ -29,7 +29,7 @@ data class ChapterReading(val book: Int, val chapter: Int, val seconds: Int, val
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
+class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
@@ -101,12 +101,15 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
         if (oldVersion < 6) createReading(db) // 0.9: reading analytics (ANL-1 to ANL-6)
         if (oldVersion < 7) createSketches(db) // 0.9: sketch pages (SKT-1 to SKT-4)
         if (oldVersion in 4..7) db.execSQL("ALTER TABLE texts ADD COLUMN marks TEXT NOT NULL DEFAULT ''") // 1.1: highlights in text boxes (HL-11)
+        if (oldVersion == 7) db.execSQL("ALTER TABLE sketches ADD COLUMN note INTEGER NOT NULL DEFAULT 0") // 1.1: full-screen margin notes (MRG-15)
+        db.execSQL("DROP TABLE IF EXISTS ink_text") // 1.1.2: handwriting reading removed (1.1.0 and 1.1.1 kept read text here)
     }
 
     private fun createSketches(db: SQLiteDatabase) {
         db.execSQL(
             "CREATE TABLE IF NOT EXISTS sketches(id INTEGER PRIMARY KEY, name TEXT NOT NULL, paper TEXT NOT NULL, " +
-                "book INTEGER NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, height REAL NOT NULL, created INTEGER NOT NULL)"
+                "book INTEGER NOT NULL, chapter INTEGER NOT NULL, verse INTEGER NOT NULL, height REAL NOT NULL, created INTEGER NOT NULL, " +
+                "note INTEGER NOT NULL DEFAULT 0)"
         )
     }
 
@@ -141,13 +144,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
     // ---------- sketch pages (SKT) ----------
 
     fun sketches(): List<com.biblestudy.app.model.Sketch> =
-        readableDatabase.rawQuery("SELECT id, name, paper, book, chapter, verse, height, created FROM sketches ORDER BY created", null).use { c ->
+        readableDatabase.rawQuery("SELECT id, name, paper, book, chapter, verse, height, created, note FROM sketches ORDER BY created", null).use { c ->
             buildList {
                 while (c.moveToNext()) add(
                     com.biblestudy.app.model.Sketch(
                         c.getLong(0), c.getString(1),
                         runCatching { com.biblestudy.app.model.Paper.valueOf(c.getString(2)) }.getOrDefault(com.biblestudy.app.model.Paper.BLANK),
-                        c.getInt(3), c.getInt(4), c.getInt(5), c.getFloat(6), c.getLong(7),
+                        c.getInt(3), c.getInt(4), c.getInt(5), c.getFloat(6), c.getLong(7), c.getInt(8) == 1,
                     )
                 )
             }
@@ -156,7 +159,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
     fun saveSketch(s: com.biblestudy.app.model.Sketch) {
         val v = ContentValues().apply {
             put("id", s.id); put("name", s.name); put("paper", s.paper.name); put("book", s.linkBook)
-            put("chapter", s.linkChapter); put("verse", s.linkVerse); put("height", s.height); put("created", s.created)
+            put("chapter", s.linkChapter); put("verse", s.linkVerse); put("height", s.height); put("created", s.created); put("note", if (s.note) 1 else 0)
         }
         writableDatabase.insertWithOnConflict("sketches", null, v, SQLiteDatabase.CONFLICT_REPLACE)
     }
@@ -491,7 +494,7 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 8) {
             }
         }
         // Sketch pages (books from 1000) aren't Bible chapters.
-        return rows("SELECT DISTINCT book, chapter, verse, layer_id FROM strokes WHERE (region != 0 OR version = ?) AND book < 1000", arrayOf(version), false) +
+        return rows("SELECT DISTINCT book, chapter, verse, layer_id FROM strokes WHERE (region != 0 OR version = ?) AND book BETWEEN 1 AND 999" /* not sketch pages or study articles */, arrayOf(version), false) +
             rows("SELECT DISTINCT book, chapter, verse, layer_id FROM images WHERE book < 1000", emptyArray(), false) +
             rows("SELECT DISTINCT book, chapter, verse, layer_id FROM texts WHERE book < 1000", emptyArray(), false) +
             rows("SELECT book, chapter, start_off, layer_id FROM highlights WHERE version = ?", arrayOf(version), true)

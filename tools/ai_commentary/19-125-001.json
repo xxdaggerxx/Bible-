@@ -1,0 +1,89 @@
+{
+ "book": 19,
+ "chapter": 125,
+ "first": 1,
+ "last": 5,
+ "ref": "Psalms 125",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Believers who put their trust in the Lord are compared to Mount Zion, the hill in Jerusalem where the temple stood. Just as that holy mountain cannot be shaken or moved, those who rely on God stand firm and secure. Their faith rests on God's unchanging promises rather than their own power. We can face life's storms with calm assurance because God keeps those who depend on Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "https://enduringword.com/bible-commentary/psalm-125/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Hills and ridges encircle Jerusalem, acting as natural barriers to shelter and defend the city. In the same way, the Lord Himself surrounds His people on every side to protect them from harm. This divine guard is not temporary, but continues now and into eternity. Believers can rest in peace knowing that nothing can reach them unless God permits it.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-125/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine interpreted the mountains surrounding Jerusalem as a figure of the holy Scriptures, through which God provides guidance and protection to believers.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801125.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God promises that oppressive rulers will not hold permanent power over the land given to His people. Wicked leaders may trouble God's people for a season, but God will not allow that heavy burden to remain indefinitely. He limits the trial so that the righteous are not driven by despair to commit evil themselves. God carefully measures our trials so they do not crush our faith.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Many modern scholars interpret the scepter of wickedness as foreign imperial rule, such as Persian or Samaritan domination over Judea during the rebuilding after the exile.",
+     "sources": [
+      "https://classic.net.bible.org/bible.php/d/xml/bible.php?book=Psa&chapter=125",
+      "https://biblehub.com/commentaries/psalms/125-3.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The psalmist prays for the Lord to pour out His kindness on people who are sincere and devoted to Him. Being upright in heart means having genuine faith and honesty before God, rather than merely putting on an outward show. This prayer reminds believers that God delights to support those whose lives are aligned with His truth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://biblehub.com/commentaries/pulpit/psalms/125.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Those who abandon the straight path of obedience to follow dishonest, crooked ways will face the same judgment as open evildoers. The Lord will lead away hypocrites and pretenders, removing them from among His flock. The psalm concludes with a warm blessing of lasting peace upon all who belong to God's true family.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

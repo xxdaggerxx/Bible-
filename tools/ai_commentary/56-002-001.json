@@ -1,0 +1,170 @@
+{
+ "book": 56,
+ "chapter": 2,
+ "first": 1,
+ "last": 15,
+ "ref": "Titus 2",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Paul tells Titus to teach what agrees with sound, healthy doctrine. False teachers in Crete were spreading silly stories and human rules that made souls spiritually sick. Titus had to feed the believers with wholesome truth that leads to clean living.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Older men in the church should live with self-control, dignity, and wise restraint. As their physical bodies grow weaker, their inner life should remain healthy and strong in faith, love, and patience. Their years of experience should produce a calm, steady godliness that guides younger believers.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Older women must act like people devoted to God, showing quiet reverence in how they dress, speak, and live. They must not slander others with careless gossip or let themselves become enslaved to wine. Instead, their lives and words should teach what is good and honorable.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 5,
+   "meaning": "Older women are to mentor the younger women to love their husbands and children and to manage their homes well. They should guide them to be pure, kind, and respectfully submissive to their own husbands. When Christian homes are peaceful and well run, outsiders have no reason to speak evil of God's message.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Young men need to be urged to practice self-control and clear thinking. Youth is easily swept away by wild pleasures, quick tempers, and thoughtless pride. Learning to govern desires early in life builds a firm foundation for a steady, useful future.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 8,
+   "meaning": "Titus was a younger man himself, so he had to lead by being a living pattern of good works. His teaching had to be serious, pure, and filled with healthy speech that could not be proved wrong. When critics can find nothing bad to say about a leader's life or words, their opposition is put to shame.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 10,
+   "meaning": "Christian bondservants were directed to obey their masters, work to please them, and avoid talking back. They were never to pilfer or steal, but to prove themselves completely honest and trustworthy. By working faithfully, even people in the lowest social position can make the message about God our Savior look beautiful to others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "God's saving grace—His free, unearned favor toward sinners—has now shone out openly in the world through Jesus Christ. This wonderful salvation is not limited to a single nation or class of people, but is offered to all. It reaches masters and servants alike.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Barnes"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The phrase 'all men' means all kinds and classes of people, whether rich or poor, rather than every individual person without exception.",
+     "sources": [
+      "Matthew Henry"
+     ]
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God's saving grace shines out upon every human being, offering eternal life freely to all who do not wilfully reject it.",
+     "sources": [
+      "Adam Clarke"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "God's grace acts like a caring teacher, training believers how to live. It instructs Christians to turn away from ungodly habits and selfish cravings, and to live sensible, fair, and devout lives in the present world. Real grace never encourages sin; it leads directly to holy living.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "Christians live godly lives while eagerly waiting for their joyful hope to arrive. That hope is the glorious return of Jesus Christ, whom Scripture here calls our great God and Savior. His first arrival on earth was in humble weakness, but His second coming will display His full, divine majesty.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "Jesus gave His very self on the cross to redeem us, paying the price to buy us out of slavery to sin. He did this to cleanse our hearts and claim us as His very own special people. Those who belong to Him are called to be eager and energetic about doing good deeds.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 15,
+   "meaning": "Paul charges Titus to declare these duties boldly, encouraging the obedient and correcting those who stray, using the full authority God gave him. He was not giving mere personal opinions, but the commands of the Lord. Titus was to live with such upright character and steady courage that no one could look down on him or brush his message aside.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Robertson"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

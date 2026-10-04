@@ -1,0 +1,153 @@
+{
+ "book": 13,
+ "chapter": 4,
+ "first": 23,
+ "last": 43,
+ "ref": "1 Chronicles 4:23-43",
+ "notes": [
+  {
+   "verse": 23,
+   "end": 23,
+   "meaning": "These men from the tribe of Judah worked as skilled potters and royal helpers in the towns of Netaim and Gederah. They lived on royal land and served the king with their daily craft. Their humble manual work was recorded as an honorable service to the kingdom.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 24,
+   "end": 24,
+   "meaning": "The record turns to the tribe of Simeon and lists his five sons who founded the main family lines. Simeon's lands lay inside the borders of Judah, so their family records are placed right beside Judah's. Some of the names differ slightly in spelling from earlier lists in Genesis and Numbers.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 25,
+   "end": 26,
+   "meaning": "This family tree follows the descendants of Shaul through six generations down to a man named Shimei. Shaul was one of Simeon's sons, and his line became the most prominent branch of the tribe. The names trace the family line faithfully down through the years.",
+   "meaning_sources": [
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 27,
+   "end": 27,
+   "meaning": "Shimei was blessed with a large household of sixteen sons and six daughters. However, the other households in Simeon had far fewer children, so the tribe never grew as large as Judah. This small population matches the numbers seen in the wilderness counts in the book of Numbers.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Adam Clarke",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 28,
+   "end": 31,
+   "meaning": "These verses name thirteen cities in the dry southern territory that Joshua first gave to the tribe of Simeon. The list notes that they held these towns until the time of King David. Under David's rule, some towns like Ziklag were added to Judah because Simeon had not held them firmly.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 32,
+   "end": 33,
+   "meaning": "Five additional towns and their surrounding settlements belonged to Simeon, reaching as far as the town of Baal. Even though they were a smaller tribe living surrounded by Judah, they maintained their own separate family registers. These records proved their tribal identity and inheritance.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "https://www.biblehub.com/commentaries/ellicott/1_chronicles/4.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 34,
+   "end": 37,
+   "meaning": "These verses list thirteen Simeonite leaders by name along with their family trees. These men served as clan chiefs during the reign of King Hezekiah. They stepped forward to lead their people when the tribe needed more land.",
+   "meaning_sources": [
+    "Keil & Delitzsch",
+    "https://www.biblehub.com/commentaries/ellicott/1_chronicles/4.htm",
+    "https://www.studylight.org/commentaries/eng/kpc/1-chronicles-4.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 38,
+   "end": 38,
+   "meaning": "The men named in the previous verses were chieftains over their family groups. Their households had grown rapidly, and their livestock had multiplied. Because of this growth, they needed to find new territory to support their people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://www.biblehub.com/commentaries/ellicott/1_chronicles/4.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 39,
+   "end": 40,
+   "meaning": "The Simeonite leaders led their people to the edge of Gedor to search for grazing lands. They discovered a wide, peaceful, and fertile valley that had plenty of grass for their flocks. The people living there quietly as nomads were descendants of Ham.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars note that the ancient Greek translation reads Gerar instead of Gedor, pointing to the rich valley near the desert where Isaac once dug wells.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://www.biblehub.com/commentaries/ellicott/1_chronicles/4.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 41,
+   "end": 41,
+   "meaning": "During the reign of King Hezekiah of Judah, these Simeonite chiefs attacked the Hamite and Meunite dwellers living in the valley. They completely wiped them out and settled in their land to graze their animals. This victory showed that God blessed families who stepped out to claim needed pasture during Hezekiah's good reign.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 42,
+   "end": 43,
+   "meaning": "Another band of five hundred Simeonites marched to Mount Seir under the command of four brothers. They destroyed the last surviving Amalekites who had fled into the mountains after the earlier wars of Saul and David. The Simeonites then settled in Mount Seir and remained there for generations.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Adam Clarke",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 41: removed sources ['Wesley']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

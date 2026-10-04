@@ -166,7 +166,7 @@ private fun DrawScope.drawLabel(t: androidx.compose.ui.text.TextLayoutResult, x:
  */
 @Composable
 fun NamesPane(vm: StudyViewModel, modifier: Modifier) {
-    val panel = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)]
+    val panel = vm.studyPanel()
     val t = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
     val verse = t?.verse ?: panel.topVerse
     val id = VerseId.of(panel.book, panel.chapter, verse)
@@ -233,7 +233,7 @@ private fun NameView(vm: StudyViewModel, id: Long, modifier: Modifier) {
         value = background { vm.study.nameById(id)?.let { it to vm.study.nameVerses(id) } }
     }
     var shown by remember { mutableStateOf<Passage?>(null) }
-    val version = vm.panels[vm.activePanel.coerceIn(0, vm.panels.lastIndex)].version
+    val version = vm.studyPanel().version
     PassagePopupHost(vm, shown, version, onDismiss = { shown = null })
     val (n, verses) = entry ?: run { Text("Loading…", modifier); return }
     LazyColumn(modifier.testTag("nameView")) {
@@ -257,7 +257,7 @@ private fun NameView(vm: StudyViewModel, id: Long, modifier: Modifier) {
             if (n.place && n.lat != null) PlaceMap(vm, n, Modifier.padding(vertical = 8.dp))
             // References written out in the article ("Genesis 35:19") become links too.
             val article = remember(n.id) { linkPlainRefs(n.article, vm.bible.books) }
-            StudyText(article, onPassage = { shown = it })
+            StudyText(article, onPassage = { shown = it }, vm = vm, doc = InkDoc(StudyInk.NAME, n.id.toInt()))
             // Family, or for a place its founder and people who lived there (each a link).
             for ((label, field) in family) {
                 val ids = NameEntry.ids(field)

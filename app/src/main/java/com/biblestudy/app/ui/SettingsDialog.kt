@@ -154,8 +154,15 @@ fun SettingsDialog(
                 Toggle("Margins in every panel", "Off: only the first Bible panel has margins", vm.marginsAllPanels) { vm.marginsAllPanels = it }
                 Toggle("Link panels", "Panels scroll together, verse by verse", vm.linkPanels) { vm.linkPanels = it }
 
-                Group("Verse window")
+                Group("Verse details")
+                Toggle("Verse details in a panel", "Tapping a verse shows it beside the text. Off: in a pop-up (simplest)", vm.verseInPanel) { vm.verseInPanel = it }
                 Toggle("Compare versions", "Show the verse in every version when it opens", vm.compareVersions) { vm.compareVersions = it }
+
+                Group("AI chat (online)")
+                Toggle("AI chat", "The chat bubble and Ask AI buttons. Off: the app never goes online", vm.chat.enabled) { vm.chat.changeEnabled(it) }
+                if (vm.chat.enabled) Matches("AI chat", "API key", "Claude", "sites", "websites", "search") {
+                    AiChatSettings(vm)
+                }
 
                 Group("Bibles")
                 // The version manager (BIB-5) and importing (BIB-4).
@@ -213,7 +220,7 @@ fun SettingsDialog(
 
                 Group("About")
                 Matches("About", "version", "credits", "licences") {
-                Text("Bible Study, version ${BuildConfig.VERSION_NAME}. Works completely offline.")
+                Text("Ink & Word, version ${BuildConfig.VERSION_NAME}. Works completely offline.")
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
                     TextButton(onClick = { versions = true }) { Text("About these versions") }
                     TextButton(onClick = onAbout) { Text("Credits") }
@@ -366,3 +373,44 @@ private fun displayName(context: android.content.Context, uri: android.net.Uri):
             if (c.moveToFirst()) c.getString(0) else null
         }
     }.getOrNull() ?: uri.lastPathSegment?.substringAfterLast('/') ?: "file"
+
+/** The AI chat's key and the sites it may search (AI-4, AI-5). */
+@Composable
+private fun AiChatSettings(vm: StudyViewModel) {
+    val chat = vm.chat
+    var key by remember { mutableStateOf("") }
+    var sites by remember(chat.sites.toList()) { mutableStateOf(chat.sites.joinToString("\n")) }
+    Column(Modifier.fillMaxWidth().padding(vertical = 6.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Text(
+            if (chat.apiKey.isBlank()) "No Claude API key yet." else "Claude API key saved (ends \u2026${chat.apiKey.takeLast(4)}).",
+            style = MaterialTheme.typography.bodyMedium,
+        )
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            OutlinedTextField(
+                value = key, onValueChange = { key = it }, singleLine = true,
+                label = { Text(if (chat.apiKey.isBlank()) "API key" else "New API key") },
+                visualTransformation = androidx.compose.ui.text.input.PasswordVisualTransformation(),
+                modifier = Modifier.weight(1f),
+            )
+            TextButton(onClick = { chat.changeKey(key); key = "" }, enabled = key.isNotBlank()) { Text("Save key") }
+            if (chat.apiKey.isNotBlank()) TextButton(onClick = { chat.changeKey("") }) { Text("Forget key") }
+        }
+        Row(Modifier.fillMaxWidth().clickable { chat.changeOnlySites(!chat.onlySites) }, verticalAlignment = Alignment.CenterVertically) {
+            Column(Modifier.weight(1f)) {
+                Text("Only search my sites")
+                Text("Off: the whole web, with your sites searched first", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+            }
+            androidx.compose.material3.Switch(checked = chat.onlySites, onCheckedChange = { chat.changeOnlySites(it) })
+        }
+        Text("Your sites, one per line. ${if (chat.onlySites) "The AI answers only from these." else "The AI searches these first."}", style = MaterialTheme.typography.bodyMedium)
+        OutlinedTextField(
+            value = sites, onValueChange = { sites = it },
+            minLines = 4, maxLines = 10,
+            modifier = Modifier.fillMaxWidth().testTag("chatSites"),
+        )
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            TextButton(onClick = { chat.changeSites(sites.lines()) }) { Text("Save sites") }
+            TextButton(onClick = { chat.changeSites(com.biblestudy.app.data.AiChat.DEFAULT_SITES) }) { Text("Use the suggested sites") }
+        }
+    }
+}

@@ -182,10 +182,12 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
     private fun geoFor(book: Int, chapter: Int): PageGeometry? {
         val layout = layouts[layoutKey(panel.version, book, chapter)] ?: return null
         vm.sketchOf(book)?.let { sk ->
-            // A sketch page: all drawing space, no text column or margins (SKT-1).
+            // A sketch page: all drawing space, no text column or margins (SKT-1). It has no limit:
+            // there is always at least a page's width and height of room beyond what's on it.
+            val (w, h) = vm.sketchSize(sk)
             val cached = geoCache[layout]
-            if (cached != null && cached.height == sk.height) return cached
-            return PageGeometry(layout, 0f, Sketch.WIDTH, colW = 0f, fixedHeight = sk.height).also { geoCache[layout] = it }
+            if (cached != null && cached.height == h && cached.width == w) return cached
+            return PageGeometry(layout, 0f, w, colW = 0f, fixedHeight = h).also { geoCache[layout] = it }
         }
         // Margins in every panel, or only the first (MRG-13).
         val margins = vm.marginsAllPanels || panelIndex == 0
@@ -258,7 +260,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     private fun fitZoom(g: PageGeometry): Float {
         if (panel.viewW <= 0f) return 1f
-        val w = if (drawerMode && (g.left || g.right)) Page.COL_W else g.width
+        // A sketch page fits its first page's width, however far it has grown.
+        val w = if (g.sketch) Sketch.WIDTH else if (drawerMode && (g.left || g.right)) Page.COL_W else g.width
         return panel.viewW / w
     }
 
@@ -334,7 +337,10 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val g = geo ?: return
         val fit = fitZoom(g)
         val old = panel.zoom
-        val new = (old * zoomChange).coerceIn(fit * 0.6f, max(fit * 6f, 3f))
+        // A big sketch page can be zoomed out until all of it is in view.
+        val g0 = geo
+        val least = if (g0 != null && g0.sketch) minOf(fit * 0.6f, panel.viewW / g0.width, panel.viewH / g0.height) else fit * 0.6f
+        val new = (old * zoomChange).coerceIn(least, max(fit * 6f, 3f))
         val k = new / old
         panel.panX = centroid.x - (centroid.x - panel.panX) * k + pan.x
         panel.panY = centroid.y - (centroid.y - panel.panY) * k + pan.y
@@ -416,7 +422,14 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             if (mode == null && lasso == null) reanchor(cur)
         }
         val topY = -panel.panY / z
-        pageAt(topY)?.let { panel.topVerse = it.layout.verseAtY(topY - it.top + 80f) }
+        pageAt(topY)?.let { pg ->
+            panel.topVerse = pg.layout.verseAtY(topY - pg.top + 80f)
+            // The exact point being read, to come back to when this tab is shown again.
+            val y = topY - pg.top
+            val v = pg.layout.verseAtY(y)
+            val (t, b) = pg.layout.verseSpan(v)
+            panel.resume = ScrollPos(-1, pg.layout.book, pg.layout.chapter, v, if (b > t) ((y - t) / (b - t)).coerceIn(0f, 1f) else 0f)
+        }
         // How far into the current chapter the reader has seen (ANL-2).
         val bottomY = topY + panel.viewH / z
         val cur2 = pages.firstOrNull { it.top == 0f }
@@ -594,7 +607,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         if (!g.sketch) {
             val local = Offset(s.x, s.y - page.top)
             vm.sketchesIn(g.layout.book, g.layout.chapter).firstOrNull {
-                (sketchBadgeCenter(g, g.layout, it) - local).getDistance() < 30f
+                val note = if (it.note) notePreviewRect(g, g.layout, it, vm.noteContentBottom(it)) else null
+                note?.contains(local) ?: ((sketchBadgeCenter(g, g.layout, it) - local).getDistance() < 30f)
             }?.let { vm.openSketch(it, panelIndex); return }
         }
         if (g.regionAt(s.x) != Region.TEXT) return
@@ -1362,6 +1376,26 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
          * Where a sketch page's badge sits on its passage's page: in the right margin beside its
          * verse when the margin is shown, otherwise just left of the text.
          */
+        /**
+         * Where a full-screen margin note (MRG-15) shows shrunk beside its verse: across the right
+         * margin (or the left one), at most [NOTE_PREVIEW_MAX] tall. Null if no margin is shown.
+         */
+        fun notePreviewRect(g: PageGeometry, layout: ChapterLayout, s: Sketch, contentBottom: Float): Rect? {
+            val (x, w) = when {
+                g.right -> g.colRight + 12f to g.rightW - 24f
+                g.left -> 12f to g.leftW - 24f
+                else -> return null
+            }
+            if (w < 60f) return null
+            val scale = w / Sketch.WIDTH
+            // Only as tall as what's written on it.
+            val h = ((contentBottom + 40f) * scale).coerceIn(60f, NOTE_PREVIEW_MAX)
+            val top = layout.verseTop(s.linkVerse.coerceAtLeast(1))
+            return Rect(x, top, x + w, top + h)
+        }
+
+        const val NOTE_PREVIEW_MAX = 360f
+
         fun sketchBadgeCenter(g: PageGeometry, layout: ChapterLayout, s: Sketch): Offset {
             val y = layout.verseTop(s.linkVerse.coerceAtLeast(1)) + 22f
             return if (g.right) Offset(g.colRight + 26f, y) else Offset(g.textLeft - 34f, y + 34f)

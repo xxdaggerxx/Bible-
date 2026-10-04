@@ -1,0 +1,226 @@
+{
+ "book": 2,
+ "chapter": 5,
+ "first": 1,
+ "last": 23,
+ "ref": "Exodus 5",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Moses and Aaron boldly enter Pharaoh's court to deliver God's message. They call God 'the God of Israel' for the first time in Scripture, showing that the slaves belong to Him and not to Pharaoh. They ask for the people to travel into the wilderness to hold a feast and worship the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Ancient records show that Egyptian workmen often received time off for religious feasts, making the form of this request familiar to Pharaoh even though he rejected the God who asked it.",
+     "sources": [
+      "https://www.preceptaustin.org/exodus-5-commentary"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Pharaoh arrogantly dismisses the message, declaring that he does not know or answer to the Lord. Since Egyptian religion worshipped many local gods, Pharaoh judged Israel's God by the weakness of His enslaved people and assumed He had no power. Pharaoh's proud defiance sets the stage for God to prove His supreme rule over Egypt.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Pharaoh's open refusal to know the Lord was his own deliberate choice, marking the first step in his downward path toward a hardened heart.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/ghb/exodus-5.html"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Moses and Aaron repeat their request in a gentler way, asking politely for a three-day journey into the desert. They warn Pharaoh that if Israel fails to offer the sacrifices God requires, He might punish them with sickness or war. They were also pointing out that if Israel suffered, Pharaoh would lose his workforce.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 5,
+   "meaning": "Pharaoh ignores their religious reasons and accuses Moses and Aaron of stirring up rebellion among the workers. He argues that stopping such a huge population from their daily labor will bring great financial loss to the kingdom. He orders the two leaders to drop their talk and get back to their slave duties.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Pharaoh wastes no time in clamping down on the people and gives immediate orders to the overseers that very day. The Egyptian taskmasters managed the projects, while Hebrew foremen under them kept count of the work. This organized system ensured that Pharaoh's harsh new rules would be carried out quickly.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 8,
+   "meaning": "Pharaoh cuts off the daily supply of chopped straw that workers mixed into the clay to make bricks strong and durable. The slaves must now gather their own straw from the fields while still producing the exact same daily number of bricks. Pharaoh claims the people are merely lazy, using worship as an excuse to avoid work.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Pharaoh orders the work to be made so exhausting that the Israelites will have no energy left to think about anything else. He calls the promises of God spoken by Moses and Aaron 'lying words.' The king hopes that crushing labor will turn the people away from trusting God's message of freedom.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 11,
+   "meaning": "The Egyptian taskmasters and Hebrew foremen announce Pharaoh's harsh new decree directly to the people. They inform the slaves that no more straw will be provided and they must search wherever they can to find it. At the same time, their daily brick quota will remain entirely unchanged.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "The Israelites are forced to scatter across Egypt's harvested fields to gather dry stubble left in the ground. Egyptian reapers cut only the grain heads, leaving the tall stalks behind for anyone to pick. Collecting and chopping this leftover stubble took extra hours and made their labor far heavier.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "The Egyptian overseers push the people without mercy, demanding that each day's quota be met. They give no allowance for the many hours the slaves spent hunting for materials. Cruel rulers often demand the impossible from those they oppress.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "The Hebrew foremen are beaten by the Egyptian taskmasters when the brick quotas fall short. As the leaders placed directly over their own brothers, they were held personally responsible for the missing bricks. This physical beating was a common, painful punishment meant to force them to drive the people even harder.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 16,
+   "meaning": "The beaten Hebrew foremen bring an appeal directly to Pharaoh to plead for fair treatment. They point out that they are being punished for failing to do what is physically impossible without straw. They respectfully argue that the real fault lies with Pharaoh's own officers who cut off the supplies.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 18,
+   "meaning": "Pharaoh shows no sympathy and repeats his insult that the Israelites are lazy slackers. He insists that their desire to sacrifice to the Lord is only a cover for their unwillingness to work. He sends the foremen away with orders to get back to work under the exact same impossible quota.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 19,
+   "meaning": "The Israelite foremen realize that their situation is completely desperate after hearing Pharaoh's firm refusal. They see that they can expect neither justice nor mercy from the king. Their hope of relief is crushed, leaving them trapped under unbearable burdens.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 20,
+   "end": 21,
+   "meaning": "Coming out from Pharaoh's palace, the foremen confront Moses and Aaron, who were waiting to hear the outcome. The foremen bitterly call down God's judgment on them, saying they have ruined Israel's standing with Pharaoh and given him an excuse to wipe them out. Instead of turning to God in their pain, they attack the very men sent to deliver them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 22,
+   "end": 23,
+   "meaning": "Grieved and confused, Moses takes his deep distress directly to the Lord in prayer. He asks why God allowed more suffering to fall on the people and why he was sent in the first place, since Pharaoh only became crueler and no deliverance had occurred. When our work for God seems to make things worse, the right response is to lay our honest doubts and pain before Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Moses' passionate and almost blunt questioning shows the honest, raw reality of his humanity, which he recorded with absolute truthfulness about himself under divine inspiration.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/whe/exodus-5.html"
+     ]
+    }
+   ],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 7: removed sources ['Calvin']",
+  "v. 15: removed sources ['Calvin']",
+  "v. 17: removed sources ['Calvin']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

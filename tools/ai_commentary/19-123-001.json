@@ -1,0 +1,95 @@
+{
+ "book": 19,
+ "chapter": 123,
+ "first": 1,
+ "last": 4,
+ "ref": "Psalms 123",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The speaker looks away from earthly trouble and turns his gaze toward God in heaven. Looking up shows quiet trust and hope when no help can be found around us. Because God sits on His heavenly throne, His power never fails, and He sees everything His people suffer.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)",
+    "https://enduringword.com/bible-commentary/psalm-123/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine explained heaven here as the holy souls in whom God lives, teaching that lifting one's eyes means drawing near to God in heart rather than proudly looking at oneself.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801123.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "In ancient times, servants watched their masters' hands very closely to catch every small sign and command. In the same way, God's people wait on Him with patience, looking to His hand to provide their food, protect them, and guide their steps. They do not run away in hard times, but keep their eyes on Him until He gives them relief.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine saw believers as both servant and maid, viewing Christ as both Master and divine Wisdom, while the maid represents the Church longing for her Lord during her earthly journey.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801123.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The cry for mercy is repeated because the people's pain is heavy and their need is urgent. They do not claim that they have earned God's help, but ask purely for His loving kindness. Cruel mockery and disrespect have flooded their lives until they can bear no more.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine noted that anyone trying to live a godly life will face contempt from those who only care about earthly happiness, because worldly people look down on hoping for what cannot be seen.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801123.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The people doing the mocking are comfortable, wealthy, and free from trouble. Because they have plenty and feel secure in themselves, they treat humble believers like nothing. Even when the proud look down on us, God's servants can trust that His mercy will outlast the world's scorn.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine wrote that the proud are those who boast in wealth, worldly honors, or their own righteousness, warning that they will eventually regret looking down on God's humble servants.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801123.htm"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

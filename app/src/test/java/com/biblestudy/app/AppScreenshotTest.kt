@@ -28,6 +28,27 @@ class AppScreenshotTest {
     @get:Rule(order = 1)
     val compose = createAndroidComposeRule<MainActivity>()
 
+    /**
+     * Applies state changes made outside composition, as Compose's GlobalSnapshotManager does on a
+     * device. After other test classes in the same run that manager stops doing it, and Compose
+     * never reports idle (the same fix as in FeatureTest).
+     */
+    @get:Rule
+    val flush = object : org.junit.rules.TestWatcher() {
+        var handle: androidx.compose.runtime.snapshots.ObserverHandle? = null
+        override fun starting(d: org.junit.runner.Description) {
+            val main = android.os.Handler(android.os.Looper.getMainLooper())
+            val posted = java.util.concurrent.atomic.AtomicBoolean(false)
+            handle = androidx.compose.runtime.snapshots.Snapshot.registerGlobalWriteObserver {
+                if (posted.compareAndSet(false, true)) main.post {
+                    posted.set(false)
+                    androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications()
+                }
+            }
+        }
+        override fun finished(d: org.junit.runner.Description) { handle?.dispose() }
+    }
+
     private fun snap(name: String) {
         compose.waitForIdle()
         val dir = File("build/screenshots").apply { mkdirs() }

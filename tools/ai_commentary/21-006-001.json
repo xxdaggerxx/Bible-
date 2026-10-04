@@ -1,0 +1,165 @@
+{
+ "book": 21,
+ "chapter": 6,
+ "first": 1,
+ "last": 12,
+ "ref": "Ecclesiastes 6",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Solomon points out a painful trouble he has seen in daily life on earth. A person can have many good things, yet a heavy burden still hangs over mankind. This grief presses hard on human beings everywhere.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "https://biblehub.com/commentaries/ellicott/ecclesiastes/6.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God may give someone riches, wealth, and honor so that he has everything his heart could want. Yet God does not give him the inner heart or ability to enjoy what he owns, and a stranger ends up with it instead. Having possessions is not the same as enjoying them, which makes this an empty and sickening tragedy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Geneva Notes",
+    "https://enduringword.com/bible-commentary/ecclesiastes-6/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some modern interpreters see this as showing that true human ownership is an illusion, because all material wealth remains entirely in God's hands to give or take away.",
+     "sources": [
+      "https://www.preceptaustin.org/ecclesiastes-6-commentary"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "A person might father a hundred children and live for many years, which were both seen as supreme blessings. Yet if he never finds real joy in his prosperity and does not even receive a proper, caring burial, his life is empty. Solomon says a stillborn child is actually in a better position than this unhappy man.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "A stillborn child arrives into the world without accomplishing earthly tasks and slips quietly away into the dark. Its name is never celebrated and is soon forgotten in the grave. Even so, it never has to suffer through a long life of disappointment and empty greed.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "That child never saw the light of the sun and never experienced the troubles of this world. Because it was spared all of life's painful struggles, it finds more peace and rest than the unsatisfied rich man. The greedy person lives in endless turmoil, while the child rests quietly.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://enduringword.com/bible-commentary/ecclesiastes-6/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Even if someone lived two thousand years, that long life is empty if he never tastes true joy. In the end, death comes to all people alike, whether their time was very long or over before it started. Rich and poor alike simply return to the dust of the grave.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "People work all their lives just to put food in their mouths and stay alive. Yet earthly meals and physical goods can never fill the deeper hunger of the human soul. Working only for physical comfort leaves the heart wanting more.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://biblehub.com/commentaries/gill/ecclesiastes/6.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "A wise man faces the very same daily needs and dangers as a fool. Both must eat to live, and both face disease and death in the end. Even a poor man who knows how to behave well before others still has to walk through the common hardships of life.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "It is far better to enjoy what you can see and hold today than to let your heart chase after endless cravings. Running after imaginary pleasures is as foolish as trying to catch the wind. Being thankful for present blessings brings genuine peace to the mind.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "https://biblehub.com/commentaries/gill/ecclesiastes/6.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Everything that exists was determined long ago by God, and mankind was named to remind us that we are made from weak dust. A human being cannot argue against God, who is far stronger and wiser than any creature. Peace comes from accepting our humble place under God's control instead of fighting against Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://biblehub.com/commentaries/ellicott/ecclesiastes/6.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Multiplying words, arguments, and worldly pursuits only adds to life's emptiness. Piling up complaints against God or chasing more earthly things does not truly help anyone. Endless arguing cannot solve the puzzle of our mortal lives.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "No person truly knows what is best for human beings during this short life that vanishes like a shadow. What looks pleasant to us often turns out to bring trouble, and no one can see what will happen on earth after he dies. Because our vision is so limited, we must trust the unknown future to God alone.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/ecclesiastes-6/"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 4: removed sources ['Adam Clarke']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

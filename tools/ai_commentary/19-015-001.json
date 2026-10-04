@@ -1,0 +1,150 @@
+{
+ "book": 19,
+ "chapter": 15,
+ "first": 1,
+ "last": 5,
+ "ref": "Psalms 15",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David asks the Lord who is truly allowed to enter His presence and dwell with Him. The tent and holy mountain speak of finding shelter, safety, and deep fellowship with God. Outward religious activity is not enough on its own, because God sees who truly belongs to Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "The tent refers specifically to the local church on earth where believers journey as pilgrims, distinct from their final home in heaven.",
+     "sources": [
+      "https://biblehub.com/commentaries/gill/psalms/15.htm"
+     ]
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The tent represents the church in this present world, while the holy mountain represents the church at rest in heavenly glory.",
+     "sources": [
+      "Adam Clarke"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "The tent pictures a soldier's shelter, where Christians take refuge through faith in the Incarnation while they fight against spiritual evil in this life.",
+     "sources": [
+      "https://www.ccel.org/ccel/schaff/npnf108.ii.XV.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Lord answers that the true worshiper lives an honest, blameless life in daily practice. This person treats others fairly and obeys God's commands as a constant habit. What they say out loud matches what they truly believe and intend in their inner heart.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [
+    {
+     "tradition": "Baptist",
+     "view": "Good works do not make a person right with God; believers are justified only by faith in Christ, and these righteous deeds are the outward fruit of that saving faith.",
+     "sources": [
+      "https://biblehub.com/commentaries/gill/psalms/15.htm"
+     ]
+    },
+    {
+     "tradition": "Charismatic",
+     "view": "Under the Old Covenant righteous living was the condition required for fellowship with God, but under the New Covenant it is the natural result of fellowship received through faith.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/psalm-15/"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "A person fit for God's presence refuses to use their words to tear others down. They do not invent gossip, nor do they listen to or spread bad reports about their friends. Because they genuinely love their neighbor, they are careful never to harm another person's body, property, or good name.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The godly person evaluates others by their character and reverence for God, not by money or social rank. They refuse to flatter powerful people who do evil, but they show deep respect to faithful believers even when they are poor. When they make a serious promise, they keep their word even if it costs them money or causes them hardship.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Following ancient translations like the Latin Vulgate, this line is understood as making a promise to one's neighbor and refusing to deceive him.",
+     "sources": [
+      "https://biblehub.com/psalms/15-4.htm",
+      "https://www.ccel.org/ccel/schaff/npnf108.ii.XV.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "This person does not take advantage of needy neighbors by charging harsh interest when lending them money. They also refuse bribes that would cheat innocent people out of justice. Anyone who walks in this honest and faithful way is held secure by the Lord and will never be destroyed.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The promise of never being shaken means that true believers are kept by God's power and will never totally or finally fall away from grace.",
+     "sources": [
+      "Geneva Notes",
+      "https://biblehub.com/commentaries/psalms/15-5.htm"
+     ]
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The promise belongs to those who steadily persevere in holiness, showing that a continuous life of practical obedience is necessary to reach eternal glory.",
+     "sources": [
+      "Adam Clarke",
+      "https://biblehub.com/commentaries/psalms/15-5.htm"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars view the promise of never being shaken as meaning continuous security and outward stability under divine protection in this life.",
+     "sources": [
+      "https://biblehub.com/commentaries/psalms/15-5.htm"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: dropped differ point (Baptist): no checkable source",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)', 'Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,148 @@
+{
+ "book": 2,
+ "chapter": 11,
+ "first": 1,
+ "last": 10,
+ "ref": "Exodus 11",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God tells Moses that only one final disaster remains before Pharaoh lets the Israelites go. This last stroke will break Pharaoh's stubborn resistance completely. Instead of bargaining or holding anyone back, the king will urgently drive the people out of Egypt.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/exodus-11/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God commands the Israelites to ask their Egyptian neighbors for valuables of silver and gold. This was not borrowing under false pretenses or stealing. It was the rightful payment owed to the Israelites for many years of unpaid slave labor.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://enduringword.com/bible-commentary/exodus-11/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The Lord makes the Egyptian people feel kindly toward the Israelites so they freely hand over their treasures. The Egyptians, including Pharaoh's royal court, also look upon Moses with deep awe because of the mighty works God performed through him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://www.preceptaustin.org/exodus-11-commentary"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Moses delivers God's final warning to Pharaoh, announcing that the Lord Himself will pass through Egypt around midnight. Earlier disasters came through Moses stretching out his staff, but the Lord Himself will carry out this decisive judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://www.preceptaustin.org/exodus-11-commentary"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Every firstborn son throughout Egypt will die, from the prince heir to the throne down to the child of the humblest servant girl grinding grain. The firstborn represented the pride and strength of every household, and even the firstborn of the livestock will perish.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/exodus-11/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "An overwhelming cry of anguish will rise across the whole land of Egypt. The grief will be unlike anything ever witnessed before or seen again. Egypt had made the Israelites cry out under cruel oppression, and now the Egyptians face bitter grief of their own.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "https://www.preceptaustin.org/exodus-11-commentary"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "While Egypt is plunged into panic, the Israelites will dwell in perfect peace, so quiet that not even a dog will growl at any person or animal. This undisturbed rest proves that the Lord protects His own people and puts a clear boundary between them and Egypt.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/exodus-11/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Moses declares that Pharaoh's own high officials will soon bow before him and beg the Israelites to depart. After delivering this message, Moses leaves Pharaoh's presence with holy anger over the king's defiant refusal to submit to God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The Lord had already warned Moses that Pharaoh would close his ears to the message. The king's rebellion did not catch God by surprise, but provided the opportunity for God to multiply His miraculous wonders across Egypt.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://www.preceptaustin.org/exodus-11-commentary"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Moses and Aaron did all these miraculous signs before Pharaoh, yet he refused to release the Israelites. Because Pharaoh repeatedly shut his heart against God's warnings, the Lord confirmed him in his stubbornness as a righteous punishment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/exodus-11/",
+    "https://www.studylight.org/commentaries/eng/ebc/exodus-11.html"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "God sovereignly ordained the hardening of Pharaoh's heart to showcase His supreme power and glory in the deliverance of His people.",
+     "sources": [
+      "https://www.monergism.com/blog/%E2%80%9Ci-will-harden-his-heart-so-he-will-not-let-people-go%E2%80%9D"
+     ]
+    },
+    {
+     "tradition": "Methodist",
+     "view": "God's warnings were genuinely meant to lead Pharaoh to repentance, but because Pharaoh repeatedly chose to resist, God gave him over to his obstinacy.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/whe/exodus-11.html"
+     ]
+    }
+   ],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 10: removed sources ['Calvin', 'Adam Clarke']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,137 @@
+{
+ "book": 19,
+ "chapter": 13,
+ "first": 1,
+ "last": 6,
+ "ref": "Psalms 13",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David cries out in deep distress, asking how long his trials must last. He feels as though God has abandoned him and hidden His face, though God never truly forgets His children. Even while his emotions sink toward despair, his faith keeps him talking directly to the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)",
+    "https://enduringword.com/bible-commentary/psalm-13/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine explained that God does not literally forget or look away, but Scripture speaks in human terms to show that the soul does not yet have full knowledge of God.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801013.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David wrestles in his thoughts, making plan after plan to rescue himself, but none of them work. This constant inward churning only fills his heart with daily grief. Meanwhile, his enemy stands over him and proudly boasts of victory.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Calvin",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that the enemy can mean the devil, or sinful physical habits that try to overcome the soul.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801013.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "David turns from complaining to earnest prayer, begging the Lord his God to look upon him and answer. He asks God to lighten his eyes, which are growing dim from grief and weakness. Without God's quick relief, he fears he will sink into the sleep of death.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine interpreted the eyes as the eyes of the heart, praying they will not be shut in death by taking delight in sin.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801013.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "David warns of what will happen if God leaves him to die: his foes will boast that they have beaten him. Ungodly enemies would celebrate his downfall and mock his trust in God. David uses the danger of God's name being dishonored as a strong plea for help.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine viewed the gloating enemies as the devil and his demons, who celebrate whenever a believer is shaken from steadfast faith.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801013.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "A sudden change takes place as David anchors himself in God's faithful, covenant love. Even before his troubles end, he chooses to rely on God's mercy rather than his own schemes. That trust fills his heart with the certainty of coming rescue and joy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "Keil & Delitzsch",
+    "https://biblehub.com/commentaries/ellicott/psalms/13.htm"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine understood salvation here as pointing to Christ, warning that believers must not give themselves credit for standing firm.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801013.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "David finishes his prayer with a song of praise instead of a cry of despair. He speaks of God's generous goodness as if it has already arrived, because his faith is entirely sure of it. Looking back on God's past mercies gives him confidence that the Lord will always treat him well.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://biblehub.com/commentaries/pulpit/psalms/13.htm"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Following an added line in the ancient Latin text, Augustine taught that singing is done with the heart, while chanting is done through good works.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801013.htm"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

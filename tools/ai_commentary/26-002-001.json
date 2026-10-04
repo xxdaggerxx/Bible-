@@ -1,0 +1,132 @@
+{
+ "book": 26,
+ "chapter": 2,
+ "first": 1,
+ "last": 10,
+ "ref": "Ezekiel 2",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God calls Ezekiel \"son of man,\" which reminds him that he is a frail, mortal human being before the majesty of God. The Lord commands him to stand up off his face so that he is ready to listen and serve. Falling down showed reverence, but standing up showed readiness for God's work.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "As God spoke the command, the Holy Spirit entered Ezekiel and gave him the strength to stand on his feet. People do not have the power in themselves to obey God's commands without His help. The Spirit gave him both the strength to stand and the ability to truly hear God's voice.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God sends Ezekiel to his own people, the Israelites, who were living as captives in Babylon. The Lord calls them a rebellious nation, using a word usually saved for heathen nations because they had broken their covenant with Him. This rebellion was not new, as their ancestors had been disobeying God for generations.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God describes the people as shameless in their faces and stubborn in their hearts. Even so, Ezekiel is sent to speak to them with God's authority, telling them, \"This is what the Lord GOD says.\" He is not to preach his own opinions, but only the exact message that God gives him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "God warns Ezekiel that the people may refuse to listen because of their stubbornness. Even if they reject his words, when the warnings come to pass, they will know that a true prophet was among them. Ezekiel's duty was to be faithful to speak, leaving the results entirely in God's hands.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God tells Ezekiel not to fear the threats, insults, or angry faces of the people. The Lord compares these hostile neighbors to sharp thorns that scratch and scorpions that carry a painful sting. Those who serve God must depend on His protection and refuse to let the hostility of others frighten them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "God repeats that Ezekiel must deliver His words no matter how the people respond. Their deep rebellion meant they would likely ignore him, but that was no reason for him to stay silent. God's truth must be shared faithfully whether people welcome it or reject it.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God warns Ezekiel not to follow the bad example of the stubborn people around him by refusing to obey. Instead, he is told to open his mouth and eat what God hands him. This command means Ezekiel must take God's word deep into his heart and fully digest it before sharing it with others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "In his vision, Ezekiel sees a hand reaching out toward him holding a rolled-up book, or scroll. The outstretched hand showed that the message came with divine power straight from God. Ancient books were made of parchment rolled around wood rather than bound pages like modern books.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "When the scroll was unrolled, Ezekiel saw that it was written on both the front and the back. Ancient scrolls were usually written on one side only, so writing on both sides showed that God's message of coming judgment was full and complete. The words were filled with sorrow and grief because the people had chosen sin and faced severe punishment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Calvin']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,159 @@
+{
+ "book": 19,
+ "chapter": 3,
+ "first": 1,
+ "last": 8,
+ "ref": "Psalms 3",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David cries out to God in deep grief as huge crowds turn against him during his son Absalom's rebellion. Many of his close friends and subjects had deserted him and joined the revolt. Instead of running away from God in fear, David brings all his sorrow straight to Him in prayer.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "https://enduringword.com/bible-commentary/psalm-3/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine interprets this verse as Christ speaking about the growing crowds that rejected Him, including His own disciple Judas.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801003.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David's enemies claimed that God had completely abandoned him and would never rescue him. This was the most painful insult David faced, because it attacked his trust in God. The word Selah marks a pause, inviting the listener to stop and think carefully about what was just said.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-3/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine takes this as the mockery thrown at Christ during His crucifixion, when His enemies believed He could never rise again.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801003.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "David answers the insults of his enemies by declaring his firm trust in the Lord. God protects him completely on every side like a large shield and gives him true honor even in exile. Even though David is bowed down with sorrow, he knows God will lift his head and restore his joy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/psalm-3/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine explains the shield as God taking on human nature in Christ, keeping Jesus' human mind steadfast throughout the suffering of the cross.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801003.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "David calls out earnestly to God, knowing that the Lord always hears and answers His servants. Even though David had to flee from Jerusalem, God answers him from His holy dwelling place on Mount Zion. Physical distance cannot prevent the Lord from answering our earnest prayers.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine writes that the voice in this verse is not an outward physical sound, but the silent, heartfelt prayer of the inner soul that Jesus taught.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801003.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "David was able to lie down and sleep peacefully even while surrounded by enemies hunting his life. He woke up safe and refreshed because the Lord continually supported and watched over him. Trust in God brings deep rest of mind even in dangerous times.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "https://enduringword.com/bible-commentary/psalm-3/"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine reads this as a prophecy of Christ, where sleeping refers to His death on the cross and waking refers to His resurrection from the grave.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801003.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "David declares that he will not fear, even if tens of thousands of armed enemies surround him on every side. He does not ignore the real danger, but he knows God is far greater than any army. A believer who rests in God's care can stand brave against overwhelming odds.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "David calls on God to act and rescue him, echoing Israel's ancient marching prayer. He compares his violent foes to wild animals whose jaws and teeth God has broken, taking away their power to destroy. David leaves judgment in God's hands rather than seeking his own revenge.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://biblehub.com/psalms/3-7.htm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "David confesses that true rescue and victory belong only to the Lord. Instead of cursing the rebellious people who drove him out, he asks God to bless them. Real faith leads a person to seek God's favor for others even after being deeply wronged.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/psalm-3/"
+   ],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "Salvation comes entirely from God's mercy, but His continued blessing keeps people saved as they continue to ask and trust Him in faith.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.studylight.org/commentary/psalms/3-8.html"
+     ]
+    }
+   ],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: dropped differ point (Baptist): no checkable source",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

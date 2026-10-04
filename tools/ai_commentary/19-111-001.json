@@ -1,0 +1,172 @@
+{
+ "book": 19,
+ "chapter": 111,
+ "first": 1,
+ "last": 10,
+ "ref": "Psalms 111",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "The writer calls everyone to praise the Lord and makes a personal promise to join in. He resolves to thank God with his whole heart, holding nothing back. He will do this both among close, godly friends and in the large public worship gathering.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Spurgeon (Treasury of David)",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine explained that giving thanks here refers to praising God for healing our souls, and he saw the council of the upright as the apostles who will sit on heavenly thrones.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801111.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "All the things the Lord does in creation, history, and caring for his people are magnificent. Those who love God find great joy in studying his actions and thinking deeply about them. The more carefully someone looks into God's works, the more beauty and power they discover.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Every work of God reveals his royal majesty and honor, especially the way he saves his people. Righteousness means doing what is completely fair and good, and God always treats his creatures justly. Because his character never fails, his goodness and praise will last forever.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine taught that God's most glorious work is justifying the ungodly, which means making sinners righteous through his grace.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801111.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God performed his great miracles in history so that people would never forget them. He gave Israel sacred feasts like the Passover to pass these memories down to their children. In all these wonders, the Lord proves that he is full of tenderness and mercy toward human weakness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The Lord supplies daily food and every necessity for those who honor and obey him. A covenant is a solemn promise and agreement between God and his people. Just as God fed Israel in the wilderness, he will never forget his promise to protect and care for his family.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early Christian writers connected the gift of food in this verse with the Eucharist, or the Lord's Supper.",
+     "sources": [
+      "https://biblehub.com/commentaries/psalms/111-4.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God demonstrated his unstoppable strength when he gave the land of Canaan to Israel as an inheritance. He showed that he has authority over all nations and the power to keep his word. Seeing how God worked in the past helps believers trust him in times of great need.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine understood the inheritance of the nations as the victory of the gospel won through the suffering and deaths of Christian martyrs.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801111.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "All of God's deeds are marked by perfect truth and fairness. Precepts are his divine rules and directions, and they can be trusted completely because they never lead anyone astray. Believers can rest assured that God's ways are always just.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God's plans and commands stand firm and cannot be shaken or overturned. They are formed in honesty and goodness, with no deceit or flaws in them. Because they are grounded in eternal truth, what God sets in place will last forever.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The Lord rescued his people from slavery in Egypt, pointing ahead to how Christ rescues believers from sin. Redemption means being bought back and set completely free from bondage. God's covenant is established for all time, and his name is so holy and majestic that it calls for deep reverence.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine saw this redemption as our deliverance from the captivity of earthly life, establishing the New Covenant rather than earthly wealth.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801111.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Revering the Lord with holy respect is the true starting point and crown of all wisdom. A person proves they have genuine understanding by actually obeying God's laws, not just talking about them. Living in humble obedience to God brings a life of everlasting praise.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 10: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

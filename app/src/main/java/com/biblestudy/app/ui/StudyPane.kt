@@ -6,6 +6,7 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -17,6 +18,7 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.foundation.layout.Box
@@ -54,30 +56,32 @@ import kotlinx.coroutines.withContext
  * verse being read, or the notes in the chapter being read. It works with the active Bible panel.
  */
 @Composable
-fun StudyPane(vm: StudyViewModel, kind: PaneKind, modifier: Modifier) {
+fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
+    val kind = slot.kind
     Column(modifier.background(MaterialTheme.colorScheme.surface).testTag("pane")) {
         Row(
             Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer).padding(start = 8.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            // One menu rather than a row of six buttons: what the pane shows.
+            // One menu rather than a row of buttons: what the panel shows, its arrangement and tab (SPLIT-7).
             var menu by remember { mutableStateOf(false) }
             Box(Modifier.weight(1f)) {
                 TextButton(onClick = { menu = true }, modifier = Modifier.semantics { contentDescription = "Choose what the pane shows" }) {
                     Text(kind.label, style = MaterialTheme.typography.titleMedium)
                     Icon(Icons.Filled.ArrowDropDown, contentDescription = null)
                 }
-                DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                    for (k in PaneKind.entries) {
-                        DropdownMenuItem(
-                            text = { Text(k.label) },
-                            onClick = { vm.sidePane = k; menu = false },
-                            leadingIcon = if (k == kind) { { Icon(Icons.Filled.Check, contentDescription = null) } } else null,
-                        )
-                    }
+                PanelViewMenu(vm, slot, menu) { menu = false }
+            }
+            vm.tab.pinned?.let { p ->
+                // Pinned: the view stays on this passage; tap to follow your reading again.
+                TextButton(onClick = { vm.togglePin() }) {
+                    Icon(Icons.Filled.PushPin, contentDescription = "Unpin", modifier = Modifier.padding(end = 4.dp))
+                    Text("${vm.bible.book(p.book.coerceIn(1, 66)).name} ${p.chapter}", maxLines = 1)
                 }
             }
-            IconButton(onClick = { vm.sidePane = null }) { Icon(Icons.Filled.Close, contentDescription = "Close side pane") }
+            if (vm.tab.shown > 1 || vm.tabs.size > 1) {
+                IconButton(onClick = { vm.closeSlot(slot) }) { Icon(Icons.Filled.Close, contentDescription = "Close side pane") }
+            }
         }
         val inner = Modifier.weight(1f).fillMaxWidth().padding(horizontal = 12.dp)
         when (kind) {
@@ -86,9 +90,30 @@ fun StudyPane(vm: StudyViewModel, kind: PaneKind, modifier: Modifier) {
             PaneKind.NOTES -> NotesPane(vm, inner)
             PaneKind.DICTIONARY -> DictionaryPane(vm, inner)
             PaneKind.TOPICS -> TopicsPane(vm, inner)
-            PaneKind.COMMENTARY -> CommentaryPane(vm, inner.padding(top = 4.dp))
+            PaneKind.COMMENTARY -> CommentaryPane(vm, slot.pos, inner.padding(top = 4.dp))
             PaneKind.NAMES -> NamesPane(vm, inner)
             PaneKind.SKETCHES -> SketchesPane(vm, inner)
+            PaneKind.COMPARE -> VersePane(vm, inner) { id, version, text ->
+                CompareVersions(vm, id, version, text, Modifier.fillMaxWidth()) { code ->
+                    // Tap a version to read it in the Bible panel.
+                    val i = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
+                    vm.showBible(); vm.setVersion(i, code)
+                }
+            }
+            PaneKind.ORIGINAL -> VersePane(vm, inner) { id, version, _ -> OriginalVerse(vm, id, version, maxHeight = 4000.dp) }
+            PaneKind.WORDSTUDY -> WordStudyPane(vm, inner)
+            PaneKind.VERSE -> vm.verseWordStudy?.let { w ->
+                // A word study opened from here, with Back to the verse.
+                WordStudyPane(vm, inner, w, onBack = { vm.verseWordStudy = null })
+            } ?: VersePane(vm, inner) { id, version, _ ->
+                val word = vm.paneVerse?.takeIf { VerseId.of(it.book, it.chapter, it.verse) == id }?.word ?: -1
+                VerseDetails(
+                    vm, VerseTarget(VerseId.book(id), VerseId.chapter(id), VerseId.verse(id), word), version,
+                    inPanel = true, onDone = {}, modifier = Modifier.fillMaxSize(),
+                )
+            }
+            PaneKind.INTRO -> BookIntroPane(vm, inner)
+            PaneKind.CHAT -> ChatPane(vm, inner.padding(bottom = 6.dp))
         }
     }
 }
@@ -100,7 +125,7 @@ private fun StudyViewModel.readerIndex() = activePanel.coerceIn(0, panels.lastIn
 @Composable
 private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
     val index = vm.readerIndex()
-    val panel = vm.panels[index]
+    val panel = vm.studyPanel()
     val chosen = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
     val t = chosen ?: VerseTarget(panel.book, panel.chapter, panel.topVerse)
     val id = VerseId.of(t.book, t.chapter, t.verse)
@@ -114,11 +139,11 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
     val lastVerse = remember(t.book, t.chapter) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: 1 }
     Column(modifier) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse - 1) }, enabled = t.verse > 1) {
+            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse - 1, word = -1) }, enabled = t.verse > 1) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous verse")
             }
             Text(vm.refLabel(id), style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
-            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse + 1) }, enabled = t.verse < lastVerse) {
+            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse + 1, word = -1) }, enabled = t.verse < lastVerse) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next verse")
             }
         }
@@ -156,7 +181,12 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
                         .padding(vertical = 8.dp)
                 ) {
                     Text(vm.refLabel(x.toStart, x.toEnd), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                    Text(x.preview, maxLines = 3, overflow = TextOverflow.Ellipsis)
+                    // Writing on a cross-reference stays with it (INK-16): this verse to that passage.
+                    InkableText(
+                        vm, InkDoc(StudyInk.CROSSREF, x.toStart, id),
+                        androidx.compose.ui.text.AnnotatedString(x.preview.let { if (it.length > 240) it.take(240).trimEnd() + "\u2026" else it }),
+                        style = MaterialTheme.typography.bodyLarge,
+                    )
                 }
                 HorizontalDivider()
             }
@@ -170,7 +200,7 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
 /** Typed notes and highlighted verses in the chapter shown in the active panel. */
 @Composable
 private fun NotesPane(vm: StudyViewModel, modifier: Modifier) {
-    val panel = vm.panels[vm.readerIndex()]
+    val panel = vm.studyPanel()
     val book = panel.book
     val chapter = panel.chapter
     val notes = vm.notesFor(book, chapter).values.sortedBy { it.verse }
@@ -239,5 +269,37 @@ private fun SketchesPane(vm: StudyViewModel, modifier: Modifier) {
         items(mine, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketchBeside(s) } }
         item { Text("Ready-made pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 16.dp)) }
         items(ready, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketchBeside(s) } }
+    }
+}
+
+/**
+ * A view of one verse beside the text (SPLIT-7): the verse last tapped in this chapter, or the one at
+ * the top of the Bible panel, with arrows to the verse before and after.
+ */
+@Composable
+private fun VersePane(vm: StudyViewModel, modifier: Modifier, content: @Composable (Int, String, String) -> Unit) {
+    val panel = vm.studyPanel()
+    val chosen = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
+    val t = chosen ?: VerseTarget(panel.book, panel.chapter, panel.topVerse.coerceAtLeast(1))
+    val id = VerseId.of(t.book, t.chapter, t.verse)
+    val version = panel.version
+    val text = remember(id, version) { vm.text(version).verseText(id) ?: vm.bible.verseText(id) ?: "" }
+    val lastVerse = remember(t.book, t.chapter) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: 1 }
+    Column(modifier) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse - 1, word = -1) }, enabled = t.verse > 1) {
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous verse")
+            }
+            Text("${vm.refLabel(id)} ($version)", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
+            IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse + 1, word = -1) }, enabled = t.verse < lastVerse) {
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next verse")
+            }
+        }
+        if (chosen == null) {
+            Text("Follows the verse at the top of the page. Tap a verse to fix on it.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+        } else {
+            TextButton(onClick = { vm.paneVerse = null }) { Text("Follow the page as I read") }
+        }
+        Column(Modifier.weight(1f).padding(top = 6.dp)) { content(id, version, text) }
     }
 }

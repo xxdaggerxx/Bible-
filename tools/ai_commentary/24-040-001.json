@@ -1,0 +1,152 @@
+{
+ "book": 24,
+ "chapter": 40,
+ "first": 1,
+ "last": 16,
+ "ref": "Jeremiah 40",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Nebuzaradan, the Babylonian commander, found Jeremiah chained among the captives at Ramah and set him free. Jeremiah had been swept up in the confusion after Jerusalem fell. The mention of a word from the Lord serves as a heading for this whole historical section, which leads to God's later instructions to the surviving remnant.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 3,
+   "meaning": "Nebuzaradan told Jeremiah that the Lord brought this disaster because the people sinned and refused to obey His voice. A foreign conqueror clearly saw what Judah's own leaders had refused to admit. God used a pagan soldier to declare that His warnings had come to pass exactly as promised.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars view verses 2 and 3 as a later addition because they doubt a Babylonian general would speak of Israel's God, while others note he was simply repeating what he had learned of Jeremiah's message.",
+     "sources": [
+      "https://www.studylight.org/commentaries/eng/onr/jeremiah-40.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Nebuzaradan took the chains off Jeremiah's wrists and gave him complete freedom of choice. He offered to care for Jeremiah kindly in Babylon, or to let him stay anywhere he wished in Judah. While the rest of the people went into exile, God granted His faithful prophet liberty and safety.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "When Jeremiah hesitated to decide, Nebuzaradan advised him to go live with Gedaliah, the newly appointed governor of Judah. The commander also gave the prophet food and a parting gift before releasing him. God provided for Jeremiah's daily needs through a foreign army officer in a ruined land.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Jeremiah went to Gedaliah at Mizpah and made his home among the poor people left in the land. He chose hardship and grief alongside his own people rather than comfort and honor in a royal Babylonian palace. True devotion often chooses to suffer with God's people rather than enjoy the ease of the world.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 8,
+   "meaning": "Jewish army commanders and their men who were hiding in the countryside heard that Babylon had made Gedaliah governor over the remnant in the land. Officers like Ishmael, Johanan, Jonathan, and several others came to Mizpah to meet him. They came to see whether Gedaliah could offer them safety and a chance to rebuild.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 10,
+   "meaning": "Gedaliah swore an oath promising the officers and their men that they would be safe if they submitted to Babylonian rule. He promised to stay at Mizpah to represent them before visiting Babylonian officials. Meanwhile, they could settle peacefully in the towns and harvest grapes, summer fruit, and olive oil.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 12,
+   "meaning": "Jews who had fled into neighboring lands like Moab, Ammon, and Edom heard that a governor had been set over a remnant in Judah. They returned from their places of refuge to join Gedaliah at Mizpah. God showed mercy to this surviving group by giving them peace and an abundant harvest of wine and fruit.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 14,
+   "meaning": "Johanan and the other military leaders came to Gedaliah at Mizpah with an urgent warning. They told him that King Baalis of Ammon had hired Ishmael to murder him. Gedaliah was so honest and trusting himself that he refused to believe that Ishmael was plotting his death.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 15,
+   "meaning": "Johanan met secretly with Gedaliah and offered to kill Ishmael quietly before he could strike. He warned that if Gedaliah were killed, all the surviving Jews who had gathered around him would be scattered and perish. Johanan recognized that the future of the entire remnant rested on Gedaliah's life.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 16,
+   "end": 16,
+   "meaning": "Gedaliah rejected Johanan's offer and insisted that the report about Ishmael was a lie. He was right to forbid a secret assassination, but he was unwise to ignore the warning and leave himself unprotected. His refusal to believe evil of others ended up costing him his life and bringing ruin to his people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 4: removed sources ['Calvin']",
+  "v. 15: removed sources ['Calvin']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

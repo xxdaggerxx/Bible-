@@ -1,0 +1,142 @@
+{
+ "book": 19,
+ "chapter": 113,
+ "first": 1,
+ "last": 9,
+ "ref": "Psalms 113",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God's people are called to offer Him eager and repeated worship. As His servants, praising their Master is their glad duty and highest honor. Praising the Lord's name means praising who He is, including all His goodness and holy character.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine read the Latin translation of this verse as addressing \"children,\" teaching that all believers must become childlike in humility and lay aside pride to praise God properly.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801113.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Lord is worthy of blessing right now, without waiting for another moment. His praise is not meant to stop with one generation, but to carry on into eternity without end.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Praise belongs to God across the entire world, from the farthest east to the farthest west. It also belongs to Him through every hour of the day, from sunrise to sunset. God's goodness fills all creation, so worship should rise to Him everywhere.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine understood this as a prophecy of the Church spreading through every nation from east to west.",
+     "sources": [
+      "https://www.ccel.org/ccel/schaff/npnf108.ii.CXIII.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The Lord rules far above all earthly kingdoms, rulers, and empires. His splendor and majesty reach higher than the physical skies and surpass even the angels in heaven.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "No created being or false god can compare to the Lord. He sits on a majestic throne that is infinitely higher than anything in the universe.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God is so high that He must stoop down simply to look at the wonders of heaven. Yet in His great love, He bows down even lower to look upon the earth and care for frail human beings.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The Lord reaches down to rescue the poorest people from the dirt and the city garbage heap. While the world often ignores those who suffer, God notices them and personally lifts them out of their misery.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "God does not simply relieve the needy; He gives them honor and seats them beside leaders and rulers. He has often shown this power in history by taking humble people, like Joseph and David, and raising them to positions of royal dignity.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The Lord steps into personal grief by giving a childless woman a settled home filled with the joy of children. His mighty power is seen not only in ruling the nations, but in bringing new life and comfort to individual families.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Augustine viewed the barren woman as a picture of the Church, which was once desolate but became fruitful with countless spiritual children.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1801113.htm"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 6: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 9: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

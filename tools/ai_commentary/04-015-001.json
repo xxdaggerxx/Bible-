@@ -1,0 +1,119 @@
+{
+ "book": 4,
+ "chapter": 15,
+ "first": 1,
+ "last": 20,
+ "ref": "Numbers 15:1-20",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 2,
+   "meaning": "God tells Moses to instruct the people about what to do when they settle in Canaan. This message comes right after Israel refused to enter the land and was sentenced to wander in the desert. God shows that He has not canceled His promise, assuring the younger generation that they will truly inherit their new home.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 5,
+   "meaning": "Whenever someone brings an animal sacrifice from their herd or flock, they must also bring bread ingredients and wine. For a single lamb, the worshiper adds about two quarts of fine flour mixed with olive oil, along with about a quart of wine poured out before God. In ancient times, a meal included meat, bread, and wine, and God wanted His altar table furnished with all three.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 7,
+   "meaning": "When someone sacrifices a ram, the required grain and wine increase. The worshiper must bring about four quarts of flour mixed with oil, and about a third of a jug of wine. God sets a rule of proportion, so a larger animal gift is accompanied by a larger gift of bread and drink.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 10,
+   "meaning": "If a worshiper offers a young bull as a burnt offering or a peace offering to thank God, the accompanying gift is even greater. The person must bring about six quarts of fine flour mixed with oil, along with half a jug of wine. This complete meal offering rises to God as a pleasing aroma, showing sincere devotion.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 12,
+   "meaning": "These exact amounts of flour, oil, and wine must be added to every single bull, ram, lamb, or goat. No matter how many animals are offered, each one must have its own proper grain and drink offering. Worship must follow God's orderly plan rather than human guesswork.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 14,
+   "meaning": "Native-born Israelites must follow these rules, and any foreigner living among them who worships God must do the very same thing. A foreigner who embraced the God of Israel was welcomed to bring offerings just like a native citizen. This kept worship pure and prevented outside pagan customs from creeping into the community.",
+   "meaning_sources": [
+    "Calvin",
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 16,
+   "meaning": "The entire assembly has one set of rules for both native Israelites and resident foreigners. God treats both groups alike when they come to worship Him. This equal welcome foreshadowed the day when people from all nations would share equally in God's promises.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Matthew Henry (Concise)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 18,
+   "meaning": "The Lord speaks to Moses again, focusing on life after the people reach the promised land. In the wilderness, God gave them manna from heaven every day, but in Canaan they would grow their own crops. God reminds them that He is the one leading them into this fruitful home.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "https://www.studylight.org/commentaries/eng/geb/numbers-15.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 19,
+   "end": 20,
+   "meaning": "Before eating the grain of the land, the people must set aside a portion of their first batch of dough as a special gift to God. They were to bake a loaf from this first dough and give it to the priests, just as they gave the first grain from the harvest floor. This taught families to thank God for their daily bread before tasting it themselves.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 3: removed sources ['Calvin']",
+  "v. 8: removed sources ['Adam Clarke']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

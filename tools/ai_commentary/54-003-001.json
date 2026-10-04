@@ -1,0 +1,269 @@
+{
+ "book": 54,
+ "chapter": 3,
+ "first": 1,
+ "last": 16,
+ "ref": "1 Timothy 3",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Paul introduces an accepted truth about church leadership. Wanting to serve as an overseer—a pastor or elder caring for a congregation—is a desire for an honorable and demanding work, not just a title of prestige. It calls for hard labor, self-denial, and a sincere heart to help people grow in God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "An overseer must live in such a way that no one can bring a rightful charge of wrongdoing against him. He needs to be clear-headed, self-controlled, well-ordered in behavior, and welcoming to strangers. He must also have the ability and willingness to teach God's truth to others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "Church leaders must only be married once, so widowers who marry a second time should not be ordained.",
+     "sources": [
+      "https://biblehub.com/1_timothy/3-2.htm"
+     ]
+    },
+    {
+     "tradition": "Methodist",
+     "view": "The command forbids polygamy and improper divorce, but it does not prevent a minister from remarrying after his wife dies.",
+     "sources": [
+      "https://biblehub.com/commentaries/1_timothy/3-2.htm"
+     ]
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "The phrase means being a devoted 'one-woman man,' requiring strict moral faithfulness rather than demanding marriage.",
+     "sources": [
+      "https://www.gotquestions.org/husband-one-wife.html",
+      "https://www.samstorms.org/all-articles/post/1-timothy-3:2-12"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Traditional interpretations sometimes view the 'one wife' symbolically as the Church, supporting the requirement that priests remain celibate.",
+     "sources": [
+      "https://www.samstorms.org/all-articles/post/1-timothy-3:2-12",
+      "Jamieson-Fausset-Brown"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "A pastor must not drink too much wine or lose his temper and become violent. Instead, he must be gentle, calm, and ready to make peace rather than pick fights. He must also keep his heart free from greed and the love of money.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "An overseer must lead his own household well and guide his children so that they respect and obey him. He does this by maintaining calm, steady dignity rather than using harshness. A healthy home shows that a man has the patience and wisdom needed to guide others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Paul points out a practical rule of common sense. A local congregation is a large spiritual family made up of brothers and sisters. If a man cannot lovingly care for his own small household, he will not know how to shepherd God's church.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "A new Christian must not be rushed into church office. Like a young plant, a new believer needs time to grow deep roots through trials and experience. Moving someone into leadership too quickly can puff him up with pride, leading to the same fall and judgment that ruined the devil.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "https://enduringword.com/bible-commentary/1-timothy-3/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "A Christian leader must also have a good reputation among people who do not believe. If non-Christians see that his life lacks honesty, they will dismiss the gospel, and the leader will fall into public shame and Satan's traps.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Deacons assist the church by serving practical needs, such as caring for the poor and handling church funds. Because of this sacred trust, they must be serious, sincere, and trustworthy in what they say. They must not drink heavily or look for dishonest ways to make money.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Deacons must stand firm in the gospel truths that God has revealed in Christ. They must hold this faith with a clean conscience, meaning their daily lives must match the message they confess.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "https://classic.net.bible.org/bible.php?book=1Ti&chapter=3"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Prospective deacons must first have their character tested and observed over time. The church must look at their life and conduct to see if they are faithful and steady. Once they are proven to be blameless, they may step into the office and serve.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The women mentioned here must carry themselves with dignity and respect. They must never use their words to gossip, tear others down, or spread false reports. Instead, they need to be temperate and completely trustworthy in all their duties.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "These instructions describe the wives of church leaders, who must support their husbands with godly lives.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.studylight.org/commentary/1-timothy/3-11.html"
+     ]
+    },
+    {
+     "tradition": "Some evangelicals",
+     "view": "The verse refers to women appointed as deaconesses to carry out practical acts of service in the church.",
+     "sources": [
+      "Jamieson-Fausset-Brown",
+      "https://bible.org/seriespage/8-qualities-deacons-and-deaconesses-faithful-servants-1-timothy-38-13"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Just like overseers, deacons must be completely faithful to one wife. They must also show that they can lead and care for their children and their own households with godly order.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "Faithful service in humble tasks does not go unnoticed by God. Deacons who do their work well earn great respect and an honorable standing in the church family. Their faithful service also gives them deep confidence and courage in their own faith in Christ Jesus.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "Paul hoped to travel to Ephesus soon to see Timothy in person. Even so, he sent these written instructions right away so Timothy would not be left without clear guidance.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 15,
+   "meaning": "Paul wrote so Timothy would know how people ought to live and act in God's household. The church belongs to the living God and functions like a sturdy pillar, holding up and displaying God's revealed truth for the world to see.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The church displays and protects God's truth through preaching, but the authority of the truth comes from Scripture and Christ, not the church itself.",
+     "sources": [
+      "Matthew Henry",
+      "https://www.ccel.org/c/calvin/comment3/comm_vol43/htm/iii.v.iii.htm"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Christ gave his Church the Holy Spirit and an authoritative teaching office so that it preserves and teaches divine truth without error.",
+     "sources": [
+      "https://www.catholic.com/tract/pillar-of-fire-pillar-of-truth",
+      "https://www.studylight.org/commentary/1-timothy/3-15.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 16,
+   "end": 16,
+   "meaning": "Paul shares a joyful confession of faith celebrating the mystery of Christ. Jesus appeared in human flesh, was proved righteous by the Holy Spirit when he rose, was observed by angels, was preached among the nations, was trusted throughout the world, and was welcomed up into heavenly glory.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "The earliest Greek manuscripts read 'He who' rather than 'God,' showing that Paul was quoting an early Christian hymn about Christ's life and exaltation.",
+     "sources": [
+      "https://classic.net.bible.org/bible.php?book=1Ti&chapter=3",
+      "Robertson"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

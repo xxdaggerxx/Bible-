@@ -78,7 +78,7 @@ object ChapterExport {
 
     /** The line printed on every export: the version's copyright and where it came from (BIB-10). */
     fun footerFor(version: com.biblestudy.app.data.BibleVersion, reference: String): String =
-        "$reference (${version.code}) \u00b7 ${version.copyright.trimEnd('.')} \u00b7 Exported from Bible Study"
+        "$reference (${version.code}) \u00b7 ${version.copyright.trimEnd('.')} \u00b7 Exported from Ink & Word"
 
     private fun paint(c: android.graphics.Canvas, w: Float, h: Float, draw: DrawScope.() -> Unit) {
         CanvasDrawScope().draw(Density(1f, 1f), LayoutDirection.Ltr, Canvas(c), Size(w, h), draw)

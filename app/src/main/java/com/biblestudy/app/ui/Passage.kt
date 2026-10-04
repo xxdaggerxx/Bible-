@@ -17,6 +17,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -80,6 +81,12 @@ fun PassageCard(
     onGoTo: () -> Unit,
     onOpenBeside: () -> Unit,
     onClose: () -> Unit,
+    /** Opens the passage in a tab of its own (TAB-3). */
+    onNewTab: () -> Unit = {
+        vm.passagePop = null
+        vm.newTab(passage.book, passage.chapter, passage.verse, version)
+        onClose()
+    },
 ) {
     val verses by produceState<List<Pair<Int, String>>?>(null, passage, version) {
         value = background { vm.passageVerses(passage, version) }
@@ -134,6 +141,7 @@ fun PassageCard(
                 Modifier.fillMaxWidth().padding(top = 8.dp, end = 8.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.End),
             ) {
+                TextButton(onClick = onNewTab) { Text("New tab") }
                 OutlinedButton(onClick = onOpenBeside) { Text("Open beside") }
                 FilledTonalButton(onClick = onGoTo) { Text("Go to") }
             }

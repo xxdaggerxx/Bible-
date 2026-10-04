@@ -1,0 +1,125 @@
+{
+ "book": 19,
+ "chapter": 61,
+ "first": 1,
+ "last": 8,
+ "ref": "Psalms 61",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "David cries out to God in deep trouble and pleads for His attention. He is not just venting his grief, but asking God to listen and act. The repeated plea shows that believers should keep praying earnestly even when relief does not come right away.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Spurgeon (Treasury of David)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "David prays even when he feels far from God's sanctuary and his heart is fainting under heavy sorrow. He asks God to lead him up to a high rock of safety that he cannot reach by his own strength. Believers see this protective rock as pointing to Christ, who lifts helpless sinners into safety.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some modern interpreters see calling from the ends of the earth as poetic imagery for deep emotional despair or the realm of death, rather than physical exile.",
+     "sources": [
+      "https://bible.org/book/export/html/21560"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "David draws confidence for the present by remembering how God helped him in the past. The Lord has repeatedly served as a safe shelter and a strong defensive tower against his enemies. Because God never changes, past deliverances prove that He can be trusted today.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "David longs to dwell continually in God's presence, represented on earth by the sacred tent of worship. He seeks rest under God's protective wings, like a chick finding safety beneath its mother. This picture looks beyond earthly worship to an eternity of unbroken fellowship with God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "God listened to David's prayers and the promises he made while in distress. In response, God gave him the heritage belonging to everyone who honors His name with holy reverence. This blessed inheritance includes God's presence now and eternal life with Him hereafter.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The psalmist asks God to give the king a long life and a kingdom lasting through many generations. While this began with David and his royal line, it points directly to Christ the Messiah. Jesus lives forever, and His kingdom will never end.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars understand the request for years spanning many generations as royal exaggeration wishing a long life to an earthly monarch, rather than a Messianic prediction.",
+     "sources": [
+      "https://bible.org/book/export/html/21560",
+      "https://enduringword.com/bible-commentary/psalm-61/"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "David prays that the king will remain enthroned before God forever. He asks God to send His mercy and faithfulness like royal guardians to keep him safe. This is fulfilled in Christ, who now sits at God's right hand and constantly cares for His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Because God answers his prayer, David promises to spend his days singing praise to God's name. He commits to fulfilling his vows each day as new mercies arrive. Daily kindness from the Lord calls for daily thanksgiving from His servants.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 3: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 4: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 5: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 7: removed sources ['Spurgeon (Treasury of David)']",
+  "v. 8: removed sources ['Spurgeon (Treasury of David)']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

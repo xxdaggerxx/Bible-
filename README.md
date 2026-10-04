@@ -1,6 +1,6 @@
-# Bible Study — version 1.0.2
+# Ink & Word — version 1.13.0
 
-A personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
+**Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
 ## Install on your tablet (about 30 minutes the first time)
 
@@ -33,13 +33,13 @@ On a computer with Android Studio or the Android SDK and JDK 17+:
 ./gradlew assembleRelease
 ```
 
-The signed file appears at `app/build/outputs/apk/release/app-release.apk`. Nothing else to set up: Gradle finds `keystore.properties` on its own. If the build prints "No release signing key found", that file is missing and the APK is signed with a throwaway debug key instead. Don't install that one over your real copy.
+The signed file appears at `app/build/outputs/apk/release/app-release.apk` (about 38 MB; it runs on any Android 10+ tablet). Nothing else to set up: Gradle finds `keystore.properties` on its own. If the build prints "No release signing key found", that file is missing and the APK is signed with a throwaway debug key instead. Don't install that one over your real copy.
 
 In Android Studio you can also use *Build → Generate Signed App Bundle / APK → APK*, choose *Choose existing…*, and pick `signing/biblestudy-release.jks` with the password from `keystore.properties`.
 
 ### Install or update on the tablet
 
-1. Copy `app-release.apk` to the tablet (USB cable, cloud drive or email) and tap it in *My Files*.
+1. Copy the APK to the tablet (USB cable, cloud drive or email) and tap it in *My Files*.
 2. If Android warns about unknown sources, allow it for the app you opened the file from, go back, and tap **Install**.
 3. To update, build a new APK the same way, with a higher `versionCode` in `app/build.gradle.kts`, and install it over the old one. Your notes stay.
 
@@ -66,7 +66,7 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
-## New in version 1.1 (in progress)
+## New in version 1.13
 
 - **Imported Bibles work with every feature.** *Import a Bible…* now gives the version:
   - **Word studies.** The files publishers give out have no Strong's numbers, so the app works them out when importing: each English word is matched to a Hebrew or Greek word of the same verse, using the same word in the KJV, BSB and WEB, how those three translate each original word across the Bible (a table in `study.db`, made by `tools/build_glosses.py`), and the original word's English meaning. It takes a few seconds. Small words like "the" are only tagged when the match is a usual one. Tested on the BSB and WEB (each tagged from the other two), about 9 in 10 content words are tagged and about 9 in 10 of those agree with the published tags. In the ESV and NLT test passages, almost every important word is tagged (John 3:16 "loved" → G25 agapaō, Psalm 23:1 "shepherd" → H7462).
@@ -75,7 +75,166 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - Verses printed together ("\v 1-2") are kept under the first verse and tagged against both.
   - Bibles imported before this get all of it in the background the next time the app starts, and when restored from an older backup.
 - The import tests use short ESV and NLT passages (31 verses each, within the publishers' quotation allowances).
-- **Fixed:** the count of chapters still loading could slip below zero, which could stop *Expand to fit* from making room for margin notes until the app was reopened. Screens that load in the background (word studies, reading stats, the family tree, the Hebrew and Greek view) now always hand their results to the screen on the main thread.
+- **Size:** the word-matching table adds about 0.6 MB to the APK, now 100.5 MB, about 4.3 MB under GitHub's 100 MiB (104.9 MB) limit for a file in the repository (see 1.11).
+- **Fixed:** screens that load in the background (word studies, reading stats, the family tree, the Hebrew and Greek view, the AI chat) now always hand their results to the screen on the main thread, so a window can't be left showing *Loading…*.
+
+## New in version 1.12
+
+- **The AI Commentary comes first,** to help readers understand the Bible easily. It's first in every commentary menu and opens to start with, in commentary panels and in the verse pop-up (everyone is switched to it once, on updating; choose another any time).
+- **Tapping a verse opens on its commentary.** The pop-up's *Commentary* tab is now first and open by default; *Cross-references* is beside it. The app still remembers the tab you used last.
+- **More room for the commentary:** a verse with no typed note shows a small *Add a note* button instead of an empty box. Notes you've written still show straight away.
+- The AI Commentary's credit line in the pop-up now says it was written by AI, instead of "public domain".
+
+## New in version 1.11
+
+- **Jump back several steps:** hold the toolbar's ← (or →) for a list of the screens it goes to, nearest first, such as *Psalms 23 and Commentary* or *Romans 8 · 2 tabs*. Tap one to go straight there.
+- **Start fresh:** *Panels → Start fresh* leaves one tab with one Bible panel, at the passage you're reading. ← undoes it.
+- **Simpler panel headers:** *Fit width* and *Link panels* moved into the panel's ⋮ menu. While two panels are linked, a link button shows in the header to unlink them.
+- **Size warning:** the APK is 99.9 MB, about 5 MB under GitHub's 100 MiB (104.9 MB) limit for a file in the repository. It's still in `releases/`: these build sessions can't create GitHub Releases, so the next release that adds much data needs the APK uploaded to a release by hand, or the app made smaller.
+
+## New in version 1.10
+
+- **AI Commentary: a plain-English note on every verse,** the twelfth choice in the commentary menu. It was written by AI when the app was built, so it works offline like the other commentaries.
+  - **Grounded in sources.** Each note draws on the eleven bundled commentaries and on a fixed list of trusted websites from many Protestant traditions: Reformed, Baptist, Methodist and Wesleyan, Pentecostal and charismatic (Enduring Word, Assemblies of God, Pneuma Review, Sam Storms), Lutheran, Anglican and evangelical. Every point names its sources. A check removed any source that couldn't be confirmed: a bundled commentary had to have a note on that verse, and a web page had to have come up in the research.
+  - **The traditional reading first,** in short, simple sentences for lay readers.
+  - **Where Christians differ:** on verses where churches disagree (baptism, spiritual gifts, election and so on), each tradition's view in a line, fairly and without taking sides.
+  - **Other views:** where well known, modern scholarship, Catholic and Orthodox readings, and debated popular teaching, labelled and kept apart from the main note.
+  - It shows in the verse pop-up's *Commentary* tab too, when chosen there.
+- **How it's made:** `tools/build_ai_commentary.py` researches each chapter (long chapters in parts) with web search limited to the trusted sites, writes the notes, checks the sources and packs them into `assets/commentaries/ai.db.xz` (about 2.6 MB). The notes and research are kept in `tools/ai_commentary/`. The first part (about 5,250 verses) was written by Claude Opus 5.5 through the Claude Batch API; the rest by Gemini 3.8 Flash, with DeepSeek V4 Pro doing the research, through OpenRouter, which cost far less. Each part's file names the model that wrote it.
+- The APK is 99.9 MB, just under GitHub's 100 MiB limit for one file (see 1.11).
+- Known gaps: the sources are shown as names and website names, not links; ten notes have no source that passed the check and show none; notes were checked by script and spot-read, not read in full by a person.
+
+## New in version 1.9
+
+- **Back and Forward for the whole screen.** One pair of arrows, at the far left of the toolbar, replaces the arrows in each panel's header. Back undoes the last change to what's on screen: a jump to a passage, a panel opened, closed or changed to another view, a tab opened, switched or closed. Forward redoes it. The tablet's Back gesture is the same as Back.
+- **Fixed:** switching back to a tab showed the top of its chapter. Each tab's panels now come back exactly where they were scrolled to.
+
+## New in version 1.8
+
+- **Bookmarks are back.** Tap a verse, then *Bookmark*: a red ribbon shows beside the verse. Tap the chapter name, then *Bookmarks*, to see them all, newest first, with the start of each verse. Tap one to go there, or × to take it off. (Bookmarks from before 0.9 became highlights tagged "bookmark" then, and stay highlights.)
+- **Recently read.** Tap the chapter name, then *Recently read*: the chapters you've read lately, newest first, each with the verse you were at and when. Tap one to pick up where you left off. A chapter is added once it's been in front of you for a few seconds; the list keeps 50 and stays on this tablet.
+- **Fixed:** *New tab* in a link's pop-up opened at the wrong place after scrolling a linked commentary (for example Matthew 25 instead of Matthew 13:12). It now opens at the passage.
+
+## New in version 1.7.3
+
+- **Try again in the AI chat.** When a question fails (no internet, the service busy, a bad moment) or finds nothing, a *Try again* button under the reply asks it once more, with the same passages, and replaces the reply. It's also under the last answer for a fresh one, and under a question left unanswered if the app was closed while waiting.
+
+## New in version 1.7.2
+
+- **The AI chat has its own little window.** The chat bubble opens a small chat window over the text, above the bubble, instead of taking over a panel. Keep reading and tapping verses while it's open; close it with × or the bubble. The panel button at its top moves it beside the text, for anyone who prefers that.
+
+## New in version 1.7.1
+
+- **Commentary in the verse pop-up.** Next to *Cross-references* there's a *Commentary* tab: what Matthew Henry (or whichever commentary you choose there) says on the verse you tapped. *Whole chapter beside the text* opens the full commentary panel at that verse. The tab and commentary you used last are remembered.
+- Where a commentary's note runs on past its heading (Matthew Henry's Concise has a few, such as John 3:1–8 also covering 9–21), the pop-up shows the full range.
+
+## New in version 1.7
+
+- **Real writing sounds.** The pen sounds like a pencil, the highlighter like a marker, the eraser like soft drawing: recordings from Pixabay (freesound_community), made into seamless loops by `tools/build_sounds.py`. They still follow the pen: louder and a little faster when you write fast or press hard, silent when you stop. Each stroke starts at a different point in the loop. Adds about 0.8 MB.
+- **Tapping a verse opens the pop-up again,** as before 1.5: simpler for everyday use. The Verse details panel is still there: turn on *Settings → Verse details in a panel*, or choose *Verse details* from a panel's menu.
+- **The panel menu in groups:** *Reading*, *This verse*, *Study*, and *Notes, search and AI*, instead of one long list. The panels button in the toolbar uses the same headings.
+- Next: offline smart search (all versions at once, Hebrew and Greek word families, Nave's topics).
+
+## New in version 1.6.2
+
+- **AI chat finds answers again.** Many questions came back with no answer. The new web search tool filtered results through a code step first, so answers came back without the citations the app requires, and were dropped. The chat now searches directly, so every statement can cite its page.
+- **Searches the whole web,** like a search summary, with your trusted sites searched first. *Settings → AI chat → Only search my sites* limits it to your list, as before.
+- **Answers read like a search overview:** a short overview first, then the main points, then the key verses.
+- **When nothing is found,** the chat shows what it searched for.
+
+## New in version 1.6.1
+
+- **Fixed:** the AI chat failed on the tablet with "JsonMissing cannot be serialized". Shrinking the release build (R8) removed parts of the Claude API library it needs. New rules in `app/proguard-rules.pro` keep them, and `tools/r8check/check.sh` checks the shrunk library against the unshrunk one.
+- **Copy** any chat message (with its sources), or hold a finger on the words to select part of it.
+- **Edit** an earlier question, with its passages, and send it again; it replaces that question and the answers after it.
+- **Every answer names its verses**, listed under *Verses* as links. If the AI leaves them out, the app asks it once more for the verses its sources give. Answers without citations are still never shown.
+
+## New in version 1.6
+
+- **AI chat (online):** a chat bubble at the bottom right opens a chat beside the text. Ask a question and the AI (Claude, with web search) searches only a list of trusted sites you choose and sums up what they say, with numbered sources you can open. It may not answer from its own knowledge: if your sites have nothing on it, it says so. Bible references in answers are links.
+- **Ask AI** sends selected words, a highlight, or a verse from *Verse details* into the chat, to ask about them.
+- **Settings → AI chat (online):** your Claude API key (kept on the tablet only, not in backups), the sites to search, and a switch that turns the chat off so the app never goes online.
+- **This is the app's first online feature since 1.1.2.** Everything else still works offline. Each question costs a few cents on your Claude account.
+- Known gaps: answers can't be written on yet; the bubble sits over the bottom-right corner of the page.
+
+## New in version 1.5
+
+- **Verse details in a panel:** tapping a verse opens its details (the verse with its words to study, *Compare versions*, *Hebrew/Greek*, people and places, your typed note and cross-references) in a panel beside the text instead of a pop-up window. The panel follows each verse you tap. A word study opened from it shows in the same panel, with *Back to the verse*.
+- When both panels are already in use, the details open in the window as before. *Settings → Verse details in a panel* turns the panel off.
+- Known gap: the panel menu now lists 14 views and scrolls on smaller screens.
+
+## New in version 1.4
+
+- **About the book as a panel view:** the book's introduction beside the text, following the book you're reading. You can write on it.
+- **Lasso on study views:** draw round writing on an article or commentary, then *Colour*, *Layer* or *Delete*. Writing sounds now play on study views too.
+- **New tab from anywhere:** *New tab* in every passage pop-over (links, cross-references, references in notes), and holding a finger on a search result opens it in a new tab.
+- **Drag tabs** along the strip to reorder them (hold, then drag). Holding and letting go still opens the tab's menu.
+
+## New in version 1.3
+
+- **Eleven commentaries.** Besides Matthew Henry's Concise: Matthew Henry's Complete, Jamieson-Fausset-Brown, Wesley's Notes, the Geneva Bible notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin's Commentaries and Spurgeon's Treasury of David (Psalms). Choose one from the menu at the top of the commentary panel. Each is unpacked the first time it's opened (a few seconds).
+- **About this commentary:** the ⓘ gives the author, dates, background, what kind of commentary it is and what it's best for.
+- **Commentary linked to the Bible, both ways:** scroll the Bible and the commentary keeps the note on the verse at the top in view; scroll the commentary and the Bible follows. The link button turns it off.
+- **Two commentaries side by side,** each panel with its own.
+- **Three more panel views:** *Compare versions*, *Hebrew/Greek* and *Word study*. They follow the verse you tap; a Word study panel shows the word you tap.
+
+## New in version 1.2
+
+- **Tabs, like a browser.** *Panels → New tab*, or *Open in new tab* from a panel's menu. Once there are two tabs, a strip under the toolbar shows them: tap to switch, **+** for another, hold a finger on one to rename, move or close it. Each tab keeps its own panels, passages and arrangement, and tabs are kept when the app closes.
+- **Any panel shows anything.** A tab has one or two panels, side by side or top and bottom. The button at the top left of each panel (or a study view's name) picks what it shows: the Bible, or Search, Cross-references, My notes, Dictionary, Topics, Commentary, Names & places or Sketch pages. The same menu adds a panel beside, switches *Top and bottom* / *Side by side*, opens the panel in a new tab, or closes it. Double-tap the divider to make the panels equal.
+  - Study views follow the Bible panel beside them. *Keep on this passage* pins one where it is.
+  - Two study views can share a tab (e.g. the dictionary above topics); they stay on the passage you were reading.
+  - Two Bible panels can still be linked to scroll together.
+- **Write on study views.** The pen, highlighter and eraser work on dictionary articles, topics, the commentary, names & places and cross-references, over the text (no margins). Writing belongs to the article, comes back wherever it's opened, and moves with its words when a panel is resized. The highlighter snaps to whole words. Undo, layers and backups include it.
+- **Saved layouts keep every tab.** Opening one replaces your tabs. Layouts saved before 1.2 open as tabs of up to two panels.
+- **Your painted icon:** the open Bible with a quill now on a blue-to-gold background, replacing the drawn icon from 1.1.3. It fits round, square and rounded launcher shapes.
+- **Two panels per tab at most.** If you had three panels, or two panels and the study pane, the extra one moves to a second tab when you update, so nothing is lost.
+
+## New in version 1.1.3
+
+- **A new name: Ink & Word.** The app was called *Bible Study*. The new name shows on the home screen, in *Settings → About* and in the Credits window, and exported pages now say "Exported from Ink & Word". Backups you save yourself are named `ink-and-word-backup-…zip`.
+- **A new icon:** an open Bible with a quill writing on its right page, in cream and gold on deep ink blue.
+- Nothing else changes. It installs over 1.1.2 and keeps your notes, and old backups (including automatic ones) still restore.
+
+## New in version 1.1.2
+
+- **Handwriting reading is removed.** *Read my handwriting* (in Settings) and *Convert to text* (in the lasso bar) are gone, and *Search → My notes* searches typed notes and text boxes only. Your handwriting itself is untouched. Without Google's handwriting library the app is one 38 MB download that runs on any Android 10+ tablet, and it no longer asks for internet access at all.
+- **Fixed:** the app could occasionally lose count of chapters still loading, which stopped margin notes from getting extra room below their verse (expand to fit).
+
+## New in version 1.1.1
+
+- **Sketch pages have no edges.** A page grows with what's on it, keeping at least a page's width of room to the right and a page's height below. Move around with a finger, and pinch out until the whole page is in view. *More space below* is gone, since the page grows by itself. Paper lines, grids and dots are drawn only where you're looking, so big pages stay quick.
+
+## New in version 1.1
+
+- **Writing sounds.** A soft pen-on-paper sound follows your writing. It gets louder and brighter when you write fast or press hard, and stops when the pen rests or lifts. Each tool has its own sound:
+  - the pen, a fine scratch;
+  - the highlighter, a felt-tip swish;
+  - the eraser, a rubbing.
+
+  The sound is made on the tablet as you write, not from recordings. *Settings → Pen & ink → Writing sounds* turns it off and sets the volume. It plays through media volume.
+- **Pen hover.** With the S Pen just above the screen, a small mark shows where it will touch: a dot the size of the pen, a bar for the highlighter, a circle for the eraser. Tilt shading isn't included, because the Tab S9's S Pen doesn't report tilt.
+- **Verse cards work like the Bible page.**
+  - Tap a verse on a card for the verse window: word study, *Compare versions*, *Hebrew/Greek*, notes and cross-references.
+  - Tap its reference for the passage.
+  - Words of Jesus show in red.
+  - Hold a finger on a card for its bar: switch version, *Copy*, *Share*, size, background, delete.
+  - A highlight on a card is the Bible's own highlight on that verse. It shows on the card, in the Bible and in every version, and erasing it anywhere erases it everywhere.
+  - Existing cards, including those on the ready-made pages, work this way already.
+- **Highlights snap in text boxes.** The highlighter snaps to the words of a text box; the eraser takes them out.
+- **Your handwriting can be searched** (removed again in 1.1.2). Switch on *Settings → Pen & ink → Read my handwriting*. The first time, it downloads Google's handwriting model once (about 20 MB, Wi-Fi). After that it reads on the tablet and nothing is sent anywhere. This is the only time the app uses the internet.
+  - *Search → My notes* then finds handwritten words in the margins and on sketch pages.
+  - Lasso some handwriting and tap *Convert to text* to make it a text box. Undo brings the ink back.
+- **Full-screen margin notes.** Tap a verse, then *Write full screen*, for a whole page about that verse. It shows shrunk to fit beside the verse; tap it to open it again.
+- **Five more ready-made pages:**
+  - *Paul's missionary journeys* and *The Exodus and the wilderness*, drawn on the offline map;
+  - *The life of Christ*, with the four Gospels side by side;
+  - *The twelve tribes*;
+  - *Solomon's and Herod's temples*.
+
+  If you already have the first four, only the new ones are added.
+
+Your notes database is upgraded the first time 1.1 opens.
 
 ## New in version 1.0.2
 
@@ -202,7 +361,7 @@ The app is about 10 MB bigger because of the study library. Your notes database 
 - **Colour meanings and tags.** Give each highlight colour a meaning (*Settings → Highlights → Colour meanings*, e.g. yellow = promises). Notes and highlights can carry tags. *My notes* (the notes button) lists all notes, highlights and bookmarks, and filters by tag or meaning.
 - **Cross-reference pop-overs.** Tapping a cross-reference in a verse's window or the study pane shows the passage in a pop-over instead of leaving your place.
 - **Turn and crop pictures.** Select a margin picture with the Select tool, then *Turn* or *Crop*.
-- **Saved layouts.** *Panels → Save this layout…* keeps the open panels, their passages and versions, and the study pane. Open it again from the same menu.
+- **Saved layouts.** *Panels → Save this layout…* keeps the open panels, their passages and versions, and the study pane. Open it again from the same menu. (From 1.2 it keeps every tab.)
 - **Automatic backups.** *Settings → Backup → Automatic backup* makes a backup daily or weekly when you leave the app. It keeps the newest 5. Backups go to app storage, or to a folder you choose, such as a synced Google Drive or OneDrive folder.
 - **Export a chapter.** *⋮ → Export chapter as PDF…* or *as picture…* saves the chapter with your ink, highlights, pictures and text boxes, to share or print.
 
@@ -349,25 +508,29 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 
 ## Known limits
 
+- Behind the scenes the app keeps its old internal name (`com.biblestudy.app`, signing key alias `biblestudy`, automatic backups named `bible-study-auto-…`). Changing those would stop updates installing over your copy, so only the name you see has changed.
 - NIV and NLT are waiting on licensing (see above). Cross-references come from the KJV numbering, which the BSB and WEB share.
 - Rotating a lasso selection turns ink freely, but pictures only turn in quarter turns and text boxes stay upright.
 - Strong's numbers come from the tagged texts at eBible.org. In the KJV some small words ("the", "unto") have none, so they can't be tapped for a word study.
 - Matthew Henry's Concise Commentary skips some chapters (mostly lists and genealogies).
+- John Gill's Exposition isn't included: there's no clean public-domain digital edition to build from. Calvin's Commentaries and Spurgeon's Treasury of David were added instead. Barnes' Notes here cover the New Testament only.
+- Spurgeon's Treasury of David has one long note per psalm, and Matthew Henry comments on paragraphs, so linking moves them a psalm or a paragraph at a time.
+- Robertson's Word Pictures is marked by CrossWire as free for non-commercial use (its last two volumes' copyright has since expired); fine for this personal app.
 - Words of Jesus in the BSB are inferred from the WEB's markings and the BSB's quotation marks, so a few dialogue verses may be coloured slightly differently from a printed red-letter BSB.
 - The Hebrew and Greek view uses the Hebrew text (Leningrad Codex) and the amalgamated Greek editions; it doesn't follow an imported Bible's wording.
 - The performance pass for very long chapters (Psalm 119) and very large sketch pages still needs checking on the tablet itself.
+- Writing sounds and pen hover can only be judged on the tablet: the automated tests have no speaker or hovering pen. Tell me if the sounds are too scratchy, soft or loud.
+- A shrunk full-screen note shows its ink and text boxes; pictures on it show only when it's opened.
 - Imported Bibles are matched verse by verse to the KJV's numbering, so a version that numbers verses differently may line up a verse off in places.
 - Word tags in imported Bibles are worked out, not published ones: roughly 1 in 10 tagged words may point to a neighbouring Hebrew or Greek word, and loosely paraphrased words (common in the NLT, e.g. "meadows", "unfailing") have none. Footnotes in imported files are left out. Verses printed together ("1–2") show under the first verse number.
 - The map is a simple outline: coasts, lakes and rivers, with no roads or modern borders.
 - Fast ink can only be judged on the tablet itself. If strokes flicker or vanish, switch it off in Settings.
+- On study views the lasso can recolour, move to a layer or delete writing, but not drag it to a new place; fast ink isn't used there. A line drawn across two lines of an article stretches to follow its words when the panel's width changes.
 
 ## Next milestones
 
-- **Later:**
-  - turning handwriting into searchable text (needs Google's on-device handwriting model);
-  - search by meaning;
-  - pen tilt and hover;
-  - full-screen margin notes.
+- **Next: offline smart search:** all versions at once, every verse with the same Hebrew or Greek word, grouped by Nave's topics. No AI and no internet needed.
+- **On hold:** the AI search and study plan (section 29 of the requirements), replaced for now by the online AI chat (1.6) and offline smart search.
 - **Waiting on permission:** NIV and NLT. Once you have the files, *Settings → Bibles → Import a Bible…* adds them.
 
 ## Credits
@@ -381,5 +544,6 @@ The NIV (Biblica) and NLT (Tyndale House) are copyrighted, so they can't be incl
 - Hebrew and Greek word by word: STEPBible.org TAHOT (Translators Amalgamated Hebrew OT) and TAGNT (Translators Amalgamated Greek NT), Tyndale House Cambridge, CC BY 4.0. Only the columns shown are kept, and Greek words in neither the modern editions nor the KJV's text are left out; `tools/build_original_db.py` makes `assets/study/original.db`.
 - Words of Jesus: the red-letter markings in eBible.org's KJV and WEB USFM files (public domain).
 - People and places: STEPBible.org TIPNR (Translators Individualised Proper Names), CC BY 4.0. Map outline, lakes and rivers: Natural Earth (public domain); `tools/build_map.py` makes `assets/map/lands.bin`.
+- Commentaries (public domain): Matthew Henry's Complete, Jamieson-Fausset-Brown, Wesley, Geneva notes, Barnes, Clarke, Keil & Delitzsch, Robertson's Word Pictures, Calvin and Spurgeon's Treasury of David, from the CrossWire Bible Society's SWORD library (crosswire.org). `tools/build_commentaries.py` rebuilds them.
 - Easton's Bible Dictionary (1897), Nave's Topical Bible (1896) and Matthew Henry's Concise Commentary: public domain, from the Christian Classics Ethereal Library (ccel.org). `tools/build_study_db.py` rebuilds `study.db` from these.
 - Font: Gentium Book Plus © SIL International, SIL Open Font License 1.1 (see `licenses/Gentium-OFL.txt`).

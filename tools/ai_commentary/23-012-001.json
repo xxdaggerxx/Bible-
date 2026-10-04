@@ -1,0 +1,114 @@
+{
+ "book": 23,
+ "chapter": 12,
+ "first": 1,
+ "last": 6,
+ "ref": "Isaiah 12",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "When God brings about His great rescue, each believer personally gives thanks to the Lord. God was rightly angry because of human sin, but His anger has turned away and He now gives gentle comfort. Through Jesus Christ, God's displeasure is removed, giving His people lasting cause for joy.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://enduringword.com/bible-commentary/isaiah-12/"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some evangelicals believe this song will be sung specifically by the surviving remnant of Israel when the Messiah reigns on earth in the millennium.",
+     "sources": [
+      "https://www.preceptaustin.org/isaiah_12_commentary"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Reformed and Presbyterian Christians view this promised day as stretching across the entire reign of Christ over His church.",
+     "sources": [
+      "Calvin"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Believers openly confess that salvation comes entirely from God and not from their own good works. The eternal Lord gives complete strength, giving His people courage so they do not have to live in fear. When believers trust Him to save them, their hearts find deep rest and a reason to sing.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://enduringword.com/bible-commentary/isaiah-12/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God invites His thirsty people to drink freely from His never-ending supply of life and grace. Just as cool water revives someone in a dry land, the blessings found in Christ restore and satisfy the weary soul. By faith, believers gladly take from these living springs each day.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://biblehub.com/commentaries/isaiah/12-3.htm"
+   ],
+   "differ": [
+    {
+     "tradition": "Lutheran",
+     "view": "Some Lutherans connect this saving water drawn with joy to the gift of Holy Baptism.",
+     "sources": [
+      "https://www.1517.org/articles/old-testament-isaiah-121-6-lent-4-series-c"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Those who have received God's mercy encourage one another to praise Him together. They do not keep this joy secret, but openly tell other nations about the wonderful things God has done. Experiencing His salvation naturally leads God's people to spread His fame everywhere.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The people of God are urged to sing praises because the Lord has performed glorious acts of deliverance. His greatest work is sending His Son to rescue sinners from the power of death and evil. This good news is far too wonderful to stay hidden, so it must be shared across the entire earth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The church is called to shout and celebrate because the holy God lives right among His people. His presence is the greatest treasure believers have, bringing deep safety and unending joy. Because their mighty Redeemer is near, His followers can live without terror.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some modern scholars once viewed this chapter as a later hymn added to the book rather than a song written by the prophet Isaiah.",
+     "sources": [
+      "https://www.studylight.org/commentary/isaiah/12-6.html"
+     ]
+    }
+   ]
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}
