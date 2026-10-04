@@ -71,7 +71,7 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
 - **Jump back several steps:** hold the toolbar's ← (or →) for a list of the screens it goes to, nearest first, such as *Psalms 23 and Commentary* or *Romans 8 · 2 tabs*. Tap one to go straight there.
 - **Start fresh:** *Panels → Start fresh* leaves one tab with one Bible panel, at the passage you're reading. ← undoes it.
 - **Simpler panel headers:** *Fit width* and *Link panels* moved into the panel's ⋮ menu. While two panels are linked, a link button shows in the header to unlink them.
-- **Downloads move to GitHub Releases.** The APK is close to GitHub's 100 MiB limit for a file in the repository, so from this version it's attached to a release on the repository's *Releases* page instead of being kept in `releases/`.
+- **Size warning:** the APK is 99.9 MB, about 5 MB under GitHub's 100 MiB (104.9 MB) limit for a file in the repository. It's still in `releases/`: these build sessions can't create GitHub Releases, so the next release that adds much data needs the APK uploaded to a release by hand, or the app made smaller.
 
 ## New in version 1.10
 
@@ -82,7 +82,7 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - **Other views:** where well known, modern scholarship, Catholic and Orthodox readings, and debated popular teaching, labelled and kept apart from the main note.
   - It shows in the verse pop-up's *Commentary* tab too, when chosen there.
 - **How it's made:** `tools/build_ai_commentary.py` researches each chapter (long chapters in parts) with web search limited to the trusted sites, writes the notes, checks the sources and packs them into `assets/commentaries/ai.db.xz` (about 2.6 MB). The notes and research are kept in `tools/ai_commentary/`. The first part (about 5,250 verses) was written by Claude Opus 5.5 through the Claude Batch API; the rest by Gemini 3.8 Flash, with DeepSeek V4 Pro doing the research, through OpenRouter, which cost far less. Each part's file names the model that wrote it.
-- The APK is 99.9 MB, just under GitHub's 100 MiB limit for one file. From 1.11 it ships as a GitHub Release download.
+- The APK is 99.9 MB, just under GitHub's 100 MiB limit for one file (see 1.11).
 - Known gaps: the sources are shown as names and website names, not links; ten notes have no source that passed the check and show none; notes were checked by script and spot-read, not read in full by a person.
 
 ## New in version 1.9
