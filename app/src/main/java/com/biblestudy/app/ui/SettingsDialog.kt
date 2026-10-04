@@ -103,6 +103,8 @@ fun SettingsDialog(
                 Toggle("Mark word differences", "When two versions are side by side", vm.markDifferences) { vm.markDifferences = it }
                 Toggle("Words of Jesus in red", "In every version, imported ones too", vm.redLetters) { vm.redLetters = it }
                 Toggle("Section headings", "Headings and parallel-passage links from the BSB", vm.showHeadings) { vm.showHeadings = it }
+                Toggle("Chapter at a glance", "A short card under the header: what's happening, who and where, the key verse", vm.showGlance) { vm.showGlance = it }
+                Toggle("Hard words explained", "A dotted line under hard and old words; tap one for its meaning", vm.hardWords) { vm.hardWords = it }
                 Choices(
                     "New panels open in", listOf<String?>(null) + BibleRepository.ALL.map { it.code }, vm.newPanelVersion,
                     { it ?: "Same version" },

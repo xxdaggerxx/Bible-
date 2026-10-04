@@ -288,7 +288,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         highlightsAllVersions = true
         marginLeft = false; marginRight = true
         linkPanels = false
-        compareVersions = false; originalView = false; redLetters = false; verseInPanel = false; verseCommentary = true
+        compareVersions = false; originalView = false; redLetters = false; verseInPanel = false; verseCommentary = true; showGlance = true; hardWords = true
         changeWritingSounds(true); changeSoundVolume(0.6f)
         savePrefs()
         message = "Settings reset to their defaults."
@@ -367,6 +367,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         return panels.firstOrNull { it !== p && it.book == p.book && it.version != p.version }?.version
     }
 
+    /** Chapter at a glance (STD-22): the card under each Bible panel's header; on unless switched off. */
+    var showGlance by mutableStateOf(prefs.getBoolean("glance", true))
+    /** Whether the chapter cards are open (folded to one line to start with). */
+    var glanceOpen by mutableStateOf(false)
+
+    /** Hard words explained (STD-23): a dotted line under hard words; tap one for its meaning. */
+    var hardWords by mutableStateOf(prefs.getBoolean("hardWords", true))
+
     /** The words of Jesus in red (BIB-8); only colours change, so ink stays where it is. */
     var redLetters by mutableStateOf(prefs.getBoolean("redLetters", false))
 
@@ -418,6 +426,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var paneSearch by mutableStateOf<String?>(null)
     /** The verse the cross-references pane shows; null follows the top of the active panel. */
     var paneVerse by mutableStateOf<VerseTarget?>(null)
+    /** The verse at the top of the page when a verse was last tapped: a linked commentary follows the tap until the page moves (STD-18). */
+    var paneVerseTop by mutableStateOf(-1)
 
     /** Set by the UI; margin widths and zoom are remembered separately for landscape and portrait. */
     var landscape by mutableStateOf(true)
@@ -520,7 +530,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary); putBoolean("glance", showGlance); putBoolean("hardWords", hardWords)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
@@ -1133,6 +1143,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      */
     fun openVerse(book: Int, chapter: Int, verse: Int, word: Int = -1) {
         paneVerse = VerseTarget(book, chapter, verse, word)
+        paneVerseTop = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex))?.topVerse ?: -1
         verseWordStudy = null
         val t = tab
         if (verseInPanel && (PaneKind.VERSE in t.studies || (t.studies.isEmpty() && t.shown < 2))) {

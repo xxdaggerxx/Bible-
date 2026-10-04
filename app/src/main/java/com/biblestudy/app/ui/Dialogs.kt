@@ -104,7 +104,9 @@ import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -204,7 +206,8 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
                                 val m = markers?.let { idx ->
                                     marks(idx.layers(visible, bk.id), idx.hasNote(bk.id))
                                 }
-                                GridCell(bk.name, m, onInfo = { vm.introBook = bk.id }) { book = bk.id; if (bk.chapters == 1) chapter = 1 }
+                                // The book's introduction is on its chapter screen (About this book), not on every book here.
+                                GridCell(bk.name, m) { book = bk.id; if (bk.chapters == 1) chapter = 1 }
                             }
                         }
                     }
@@ -369,7 +372,7 @@ private fun SectionLabel(text: String) {
 }
 
 @Composable
-private fun GridCell(text: String, marks: Marks? = null, label: String = text, read: Boolean = false, onInfo: (() -> Unit)? = null, onClick: () -> Unit) {
+private fun GridCell(text: String, marks: Marks? = null, label: String = text, read: Boolean = false, onClick: () -> Unit) {
     Box(
         Modifier
             .padding(4.dp)
@@ -381,21 +384,12 @@ private fun GridCell(text: String, marks: Marks? = null, label: String = text, r
             Modifier
                 .fillMaxWidth()
                 .clickable(onClick = onClick)
-                .padding(horizontal = if (onInfo != null) 30.dp else 10.dp, vertical = 8.dp),
+                .padding(horizontal = 10.dp, vertical = 8.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(text, maxLines = 1, overflow = TextOverflow.Ellipsis)
             Spacer(Modifier.height(3.dp))
             MarkerRow(marks, label)
-        }
-        if (onInfo != null) {
-            // Opens the book's introduction (STD-13).
-            Icon(
-                Icons.Outlined.Info,
-                contentDescription = "About $label",
-                tint = MaterialTheme.colorScheme.outline,
-                modifier = Modifier.align(Alignment.CenterEnd).clip(CircleShape).clickable(onClick = onInfo).padding(6.dp).size(18.dp),
-            )
         }
     }
 }
@@ -649,6 +643,41 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
     }
 }
 
+/**
+ * The meaning of the hard word tapped (STD-23), in one line, with *Read more* opening its Bible
+ * dictionary article when there is one. Nothing when the word tapped isn't a hard word.
+ */
+@Composable
+private fun HardWordCard(vm: StudyViewModel, version: String, verseText: String, word: Int, onOpen: () -> Unit) {
+    if (!vm.hardWords || word < 0) return
+    val hard = remember(version, verseText, word) {
+        com.biblestudy.app.data.StudyRepository.words(verseText).getOrNull(word)
+            ?.let { com.biblestudy.app.data.HardWords.lookup(vm.getApplication(), version, verseText.substring(it)) }
+    } ?: return
+    val article by produceState<Long?>(null, hard.term) {
+        value = if (hard.term.isEmpty()) null else background { vm.study.dictionaryEntry(hard.term)?.id }
+    }
+    Surface(
+        color = MaterialTheme.colorScheme.secondaryContainer,
+        shape = MaterialTheme.shapes.medium,
+        modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp).testTag("hardWord"),
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(start = 12.dp, end = 4.dp, top = 4.dp, bottom = 4.dp)) {
+            Text(
+                buildAnnotatedString {
+                    withStyle(SpanStyle(fontWeight = FontWeight.Bold)) { append(hard.word) }
+                    if (hard.oldWord) withStyle(SpanStyle(fontStyle = FontStyle.Italic)) { append(" (old English)") }
+                    append(": ")
+                    append(hard.meaning)
+                },
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier.weight(1f).padding(vertical = 8.dp),
+            )
+            article?.let { a -> TextButton(onClick = { vm.openDictionary(a); onOpen() }) { Text("Read more") } }
+        }
+    }
+}
+
 /** A typed note being written in [VerseDetails]; saved when the verse changes or it closes. */
 private class NoteDraft(val book: Int, val chapter: Int, val start: Int, original: String, originalEnd: Int) {
     var text by mutableStateOf(original)
@@ -755,6 +784,8 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
 
     @Composable
     fun Top() {
+        // A hard word tapped on the page: its meaning first (STD-23).
+        HardWordCard(vm, version, verseText, t.word, onOpen = ::done)
         if (vm.compareVersions) {
             // Parallel view: the verse in every version, stacked (SPLIT-4). Tap one to read it.
             CompareVersions(vm, id, version, verseText, Modifier.heightIn(max = if (inPanel) 480.dp else 320.dp)) { code ->

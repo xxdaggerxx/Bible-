@@ -842,6 +842,30 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         mode = null
     }
 
+    /**
+     * The region most of a stroke's points lie in, and its points measured from that region's
+     * origin. A stroke that starts on the words but runs mostly into the margin becomes margin ink,
+     * and the other way round; a tie stays where it started.
+     */
+    private fun mainRegion(ink: LiveInk, pts: FloatArray): Pair<Region, FloatArray> {
+        val g = ink.page.geo
+        val counts = HashMap<Region, Int>()
+        for (i in pts.indices step 3) {
+            val r = g.regionAt(pts[i] + ink.ox)
+            counts[r] = (counts[r] ?: 0) + 1
+        }
+        val best = counts.maxByOrNull { it.value } ?: return ink.region to pts
+        if (best.key == ink.region || best.value <= (counts[ink.region] ?: 0)) return ink.region to pts
+        val nx = g.originX(best.key)
+        val ny = g.originY(best.key, ink.verse)
+        val out = pts.copyOf()
+        for (i in out.indices step 3) {
+            out[i] = pts[i] + ink.ox - nx
+            out[i + 1] = pts[i + 1] + ink.oy - ny
+        }
+        return best.key to out
+    }
+
     private fun finishStroke() {
         val ink = live ?: return
         live = null
@@ -852,9 +876,17 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         var pts = ink.toArray()
         if (pts.size == 3) pts = floatArrayOf(pts[0], pts[1], pts[2], pts[0] + 0.5f, pts[1], pts[2])
         val layout = ink.page.layout
+        // Filed by where most of the stroke lies: mostly in a margin, it shows in every version;
+        // mostly on the words, only in this one (ANCH-4, ANCH-9).
+        // (Snapped highlights already land on the words or box they cover, and a shape snapped by
+        // holding the pen stays where it was started: an arrow from a margin note across the words
+        // is part of the note, MRG-11.)
+        val keep = (ink.highlighter && vm.snapHighlights) || ink.frozen
+        val (region, regionPts) = if (keep) ink.region to pts else mainRegion(ink, pts)
+        pts = regionPts
 
-        if (ink.highlighter && vm.snapHighlights && ink.region != Region.TEXT && highlightBox(ink, pts)) return
-        if (ink.highlighter && vm.snapHighlights && ink.region == Region.TEXT) {
+        if (ink.highlighter && vm.snapHighlights && region != Region.TEXT && highlightBox(ink, pts)) return
+        if (ink.highlighter && vm.snapHighlights && region == Region.TEXT) {
             val h = snapHighlight(layout, pts, ink)
             if (h != null) {
                 vm.addItem(h)
@@ -864,11 +896,11 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         }
         val s = InkStroke(
             id = vm.newId(), layerId = ink.layerId,
-            version = if (ink.region == Region.TEXT) layout.version else null,
+            version = if (region == Region.TEXT) layout.version else null,
             book = layout.book, chapter = layout.chapter,
-            region = ink.region, verse = ink.verse,
+            region = region, verse = ink.verse,
             highlighter = ink.highlighter, color = ink.color, width = ink.width,
-            points = if (ink.region == Region.TEXT) layout.linePoints(pts) else pts,
+            points = if (region == Region.TEXT) layout.linePoints(pts) else pts,
             font = vm.styleKey().encode(),
         )
         vm.addItem(s)

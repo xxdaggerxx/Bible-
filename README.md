@@ -1,4 +1,4 @@
-# Ink & Word — version 1.13.0
+# Ink & Word — version 1.14.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,17 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.14
+
+- **Chapter at a glance** (STD-22): a slim bar under each Bible panel's header says in one line what's happening in the chapter. Tap it for *Who* and *Where* (from Names & places, tap to read about them), *Where it fits* in the Bible's story, and the *Key verse*. Written by AI for all 1,189 chapters (`tools/glance/`, built by `tools/build_glance.py`; about 180 KB), traditional view only. Off in *Settings → Reading*.
+- **Hard words explained** (STD-23): a faint dotted line under hard words, the first time each comes in a chapter. Bible words (*propitiation*, *Pharisee*, *cubit*) are marked in every version; old English words (*wist*, *froward*, *corn*) in the KJV only. Tapping one opens the verse pop-up with the meaning in one line at the top and *Read more* to its Bible dictionary article. About 1,500 words in 940 entries, written by AI (`tools/hardwords/`, built by `tools/build_hardwords.py`; 41 KB). Off in *Settings → Reading*.
+- **Renamed:** the AI commentary is now the *Ink & Word AI Commentary*.
+- **Margin or words:** a stroke is now kept where most of it lies. One that starts on the words but runs mostly into the margin is margin ink (every version), and the other way round. A shape snapped by holding the pen stays where it was started, so arrows from margin notes still reach across the words.
+- **Tidier book picker:** the ⓘ buttons are gone from the *Choose a book* grid. Book introductions open from ⓘ in the panel header, or from *About this book* at the top of a book's chapter list.
+- **Fixed:** a linked commentary followed a verse tapped earlier instead of the page (at Matthew 25:1 it stayed on verse 29). It now follows the page once you scroll.
+- **Size:** the APK is 100.6 MB, about 4.2 MB under GitHub's 100 MiB limit.
+- Known gaps: the glossary only explains single words, not phrases like *gird up your loins*; a few glossary words (*trinity*, *incarnation*) aren't in any of the three Bibles, so they are never marked; *Rabbi* and similar words are marked in every version, even where the version explains them in the text.
 
 ## New in version 1.13
 

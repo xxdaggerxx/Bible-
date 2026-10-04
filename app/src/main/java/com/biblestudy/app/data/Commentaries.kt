@@ -142,7 +142,7 @@ object Commentaries {
             ),
         ),
         CommentaryInfo(
-            AI, "AI Commentary in Plain English", "AI Commentary", "Written by AI from trusted sources", "2026", "Whole Bible", null,
+            AI, "Ink & Word AI Commentary", "Ink & Word AI Commentary", "Written by AI from trusted sources", "2026", "Whole Bible", null,
             listOf(
                 "Who" to "Written by AI when the app was built, not by a person: Anthropic's Claude for the first part, then Google's Gemini (writing) and DeepSeek (research). Every point names its sources, and a check removed any point whose source couldn't be confirmed.",
                 "What" to "A short note on every verse in plain, everyday English, drawn from the commentaries in this app and from trusted websites: Reformed, Baptist, Methodist, Pentecostal and charismatic, Lutheran and evangelical teachers (such as Ligonier, Desiring God, Grace to You, Enduring Word, the Wesley Center and the Assemblies of God).",
@@ -154,7 +154,7 @@ object Commentaries {
     )
 
     /**
-     * The commentaries in the order the menus show them: the AI Commentary first, the easiest for
+     * The commentaries in the order the menus show them: the Ink & Word AI Commentary first, the easiest for
      * lay readers (STD-21). [all] keeps its order, since writing on a commentary is filed by it.
      */
     val menu: List<CommentaryInfo> get() = all.sortedBy { if (it.id == AI) 0 else 1 }

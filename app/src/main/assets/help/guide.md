@@ -14,7 +14,9 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 - **Tabs remember where you were.** Switch to another tab and back, and each one is still scrolled to the same place.
 - **Zoom.** Pinch with two fingers. *Fit width* (in the panel's ⋮ menu) makes the page fill the panel. Double-tap with a finger to switch between fit-width and your last zoom.
 - **Change the version.** Tap the version name (e.g. *KJV ▾*) and pick another. You stay on the same verse.
-- **About a book.** Tap ⓘ in the header for the book's introduction: who wrote it, when, why, an outline you can tap, and key verses.
+- **About a book.** Tap ⓘ in the panel header for the book's introduction: who wrote it, when, why, an outline you can tap, and key verses. When choosing a book, tap its name, then *About this book* at the top of the chapter list.
+- **Chapter at a glance.** Under each Bible panel's header, a slim bar says in one line what's happening in the chapter. Tap it for the card: *Who* and *Where* (tap a name to read about them), *Where it fits* in the Bible's story, and the *Key verse* (tap it to open the verse). Tap the bar again to fold it. AI wrote these cards when the app was made. Turn them off in *Settings → Reading → Chapter at a glance*.
+- **Hard words explained.** A faint dotted line goes under hard words the first time they come in a chapter: Bible words like *propitiation*, *Pharisee* or *cubit* in every version, and old words like *wist*, *froward* or *corn* in the KJV. Tap one: the verse opens with the word's meaning in one line at the top. *Read more* opens its Bible dictionary article, when there is one. Old forms like *thee*, *hath* and *cometh* aren't marked: they mean *you*, *has* and *comes*. Turn the lines off in *Settings → Reading → Hard words explained*.
 
 ## The pen, fingers and the toolbar
 
@@ -53,6 +55,7 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 ## The margins
 
 - **Write in the margins.** Anything written or drawn in a margin belongs to its verse and shows in every version.
+- **Margin or words?** Ink written on the words themselves stays with that version only. Each stroke is kept where most of it lies: a stroke that starts on the words but runs mostly into the margin is margin ink, shown in every version, and the other way round. An arrow or line snapped by holding the pen stays with where you started it, so an arrow from a margin note to a word stays with the note.
 - **Left and right margins** are switched on or off in *Settings → Margins & panels*.
 - **Make a margin wider** by dragging the small grip on the line between the text and the margin.
 - **Write full screen.** For a longer note on a verse, tap the verse and choose *Write full screen*. A whole page opens for that verse. Back on the Bible page it shows shrunk to fit beside the verse; tap it to open it again.
@@ -111,7 +114,7 @@ The details show:
 - **People and places** in the verse. Tap one to read about them.
 - **Your typed note.** Tap *Add a note* to write one; once a verse has a note, it shows here.
 - **Cross-references.** Tap one to read it in a small pop-over without losing your place, then *Go to* or *Open beside*.
-- **Commentary.** The details open on the *Commentary* tab: what the AI Commentary says on this verse, in plain English. Tap the commentary's name to choose another, such as Jamieson-Fausset-Brown or Calvin. *Cross-references* is the tab beside it. *Whole chapter beside the text* opens it in a panel for the whole chapter. The app remembers which tab and commentary you used last.
+- **Commentary.** The details open on the *Commentary* tab: what the Ink & Word AI Commentary says on this verse, in plain English. Tap the commentary's name to choose another, such as Jamieson-Fausset-Brown or Calvin. *Cross-references* is the tab beside it. *Whole chapter beside the text* opens it in a panel for the whole chapter. The app remembers which tab and commentary you used last.
 - **Related passages:** topics, parallel accounts (other Gospels, Kings and Chronicles) and passages on the same topics.
 
 ## Hebrew and Greek word by word
@@ -178,15 +181,15 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 
 ## Commentaries
 
-- **Twelve commentaries.** Tap the commentary's name at the top of the panel to choose one. The AI Commentary is first and opens to start with; the others are Matthew Henry (Concise or Complete), Jamieson-Fausset-Brown, Wesley's Notes, Geneva Notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin, and Spurgeon's Treasury of David (Psalms). The panel remembers the last one you chose.
-- **AI Commentary:** a short note on every verse in plain, everyday English. AI wrote it when the app was made, from the commentaries in the app and from trusted Christian websites. It works offline like the others.
+- **Twelve commentaries.** Tap the commentary's name at the top of the panel to choose one. The Ink & Word AI Commentary is first and opens to start with; the others are Matthew Henry (Concise or Complete), Jamieson-Fausset-Brown, Wesley's Notes, Geneva Notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin, and Spurgeon's Treasury of David (Psalms). The panel remembers the last one you chose.
+- **Ink & Word AI Commentary:** a short note on every verse in plain, everyday English. AI wrote it when the app was made, from the commentaries in the app and from trusted Christian websites. It works offline like the others.
 - **Its notes:** the main note gives the traditional reading. Under it, *Sources* names where each point comes from.
 - **Where Christians differ** appears on verses where churches read it differently (for example on baptism or spiritual gifts). It gives the Baptist, Methodist, Pentecostal, Reformed, Lutheran or other view in a line each, without taking sides.
 - **Other views** appears where another view is well known: modern scholarship, Catholic and Orthodox readings, or debated popular teaching. These are kept apart from the main note.
-- The AI Commentary was written by AI, so check anything important against the other commentaries.
+- The Ink & Word AI Commentary was written by AI, so check anything important against the other commentaries.
 - **The first time** you open a commentary it takes a few seconds to get ready; after that it opens straight away.
 - **About this commentary:** tap the ⓘ for who wrote it, when, their background, and what it's best for.
-- **Linked to the Bible:** with the link button on (it is at first), the commentary and the Bible scroll together both ways. Scroll the Bible and the note on the verse at the top stays in view; scroll the commentary and the Bible moves to the verses it's on. Tap the link button to scroll them separately.
+- **Linked to the Bible:** with the link button on (it is at first), the commentary and the Bible scroll together both ways. Scroll the Bible and the note on the verse at the top stays in view, even after you've tapped another verse; scroll the commentary and the Bible moves to the verses it's on. Tap the link button to scroll them separately.
 - **Two at once:** choose *Commentary* in the other panel's menu too, and give each its own commentary.
 - You can write and highlight on any commentary, as on the dictionary.
 
@@ -266,6 +269,7 @@ In *Settings → Reading*:
 - **Line spacing:** more room to write between lines.
 - **Layout:** one verse per line, or paragraphs.
 - **Verse numbers** on or off.
+- **Chapter at a glance** and **Hard words explained** on or off (see *Getting around*).
 - **Section headings** on or off.
 
 Your ink and highlights stay on their words whatever you choose.

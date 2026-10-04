@@ -168,11 +168,16 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         val style = vm.styleKey()
         val headingsOn = vm.showHeadings
         val redOn = vm.redLetters
+        val hardOn = vm.hardWords
         val other = vm.diffVersionFor(panel)
         val (data, paras, red) = background {
             val d = ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
             Triple(d, if (style.paragraphs) vm.study.paragraphStarts(v, b, c) else null,
                 if (redOn) vm.study.redLetters(v, b, c, d.verses.associate { it.verse to it.text }) else emptyMap())
+        }
+        // Hard words explained (STD-23): the first time each comes in the chapter.
+        val hard = if (!hardOn) emptyMap() else background {
+            com.biblestudy.app.data.HardWords.marks(vm.getApplication(), v, data.verses.map { it.verse to it.text })
         }
         // Side by side with another version of this book: mark where the wording differs (SPLIT-5).
         val diffs = if (other == null) emptyMap() else withContext(Dispatchers.Default) {
@@ -181,18 +186,18 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         }
         buildChapterLayout(
             measurer, style.font.family(), vm.bible.book(b).name, data, vm.lineSpacing,
-            paragraphs = paras, numbers = style.numbers, spacers = spacers, red = red, diffs = diffs,
+            paragraphs = paras, numbers = style.numbers, spacers = spacers, red = red, diffs = diffs, hard = hard,
         ) { RefLinks.parseList(it, vm.bible.books) }
     }
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.hardWords, vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
         val font = vm.textFont
         val style = vm.styleKey()
-        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.diffVersionFor(panel)}"
+        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.hardWords}|${vm.diffVersionFor(panel)}"
         if (ctl.layoutSpec != spec) {
             // Headings, spacing or font changed: re-lay out every chapter, staying on the same verse.
             if (ctl.layoutSpec != null) panel.pendingVerse = panel.topVerse
@@ -343,6 +348,8 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         )
     ) {
         PanelHeader(vm, index, ctl, onOpenPicker)
+        // What's happening in this chapter, folded to one line (STD-22).
+        GlanceBar(vm, index)
         Box(
             Modifier
                 .weight(1f)
@@ -781,6 +788,18 @@ private fun DrawScope.drawUnderline(layout: ChapterLayout, start: Int, end: Int,
     }
 }
 
+/** A faint dotted line under each hard word (STD-23); tapping one explains it. */
+private fun DrawScope.drawHardWords(layout: ChapterLayout, theme: PageTheme) {
+    if (layout.hardWords.isEmpty()) return
+    val dots = PathEffect.dashPathEffect(floatArrayOf(2f, 6f))
+    val color = theme.text.copy(alpha = 0.45f)
+    for (r in layout.hardWords) {
+        for ((x0, x1, y) in layout.underlines(r.first, r.last + 1)) {
+            drawLine(color, Offset(x0, y + 1f), Offset(x1, y + 1f), strokeWidth = 2.5f, cap = StrokeCap.Round, pathEffect = dots)
+        }
+    }
+}
+
 /** Draws [block] see-through at [alpha] (a faded layer, LAY-8), or as it is when [alpha] is null. */
 private inline fun DrawScope.withOpacity(alpha: Float?, bounds: Rect, block: DrawScope.() -> Unit) {
     if (alpha == null) { block(); return }
@@ -863,6 +882,9 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
     }
     // Faint line between chapters in the continuous strip
     drawLine(theme.rule, Offset(0f, g.height), Offset(g.width, g.height), strokeWidth = 3f)
+
+    // Hard words (STD-23): a faint dotted line under them, beneath everything else.
+    if (vm.drawOnlyLayer == null) translate(g.textLeft, Page.TEXT_TOP) { drawHardWords(layout, theme) }
 
     // Highlights sit beneath the text.
     for (layerId in order) withOpacity(fade[layerId], pageRect) {

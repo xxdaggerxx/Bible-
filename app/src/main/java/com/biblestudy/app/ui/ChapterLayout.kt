@@ -92,6 +92,8 @@ class ChapterLayout(
     val headings: List<HeadingBlock> = emptyList(),
     /** The expand-to-fit gaps this layout was built with (MRG-10). */
     val spacers: Map<Int, Float> = emptyMap(),
+    /** Hard words to mark with a dotted line (STD-23), as character ranges in the text. */
+    val hardWords: List<IntRange> = emptyList(),
 ) {
 
     val textLength = text.layoutInput.text.length
@@ -443,11 +445,14 @@ fun buildChapterLayout(
     red: Map<Int, List<IntRange>> = emptyMap(),
     /** Words that differ from the version beside it (SPLIT-5): verse → character ranges. */
     diffs: Map<Int, List<IntRange>> = emptyMap(),
+    /** Hard words to mark (STD-23): verse → character ranges in its text. */
+    hard: Map<Int, List<IntRange>> = emptyMap(),
     linkify: (String) -> List<RefLink> = { emptyList() },
 ): ChapterLayout {
     val builder = AnnotatedString.Builder()
     val starts = IntArray(data.verses.size)
     val verseNos = IntArray(data.verses.size)
+    val hardWords = ArrayList<IntRange>()
     val numberStyle = SpanStyle(
         fontSize = 13.sp,
         fontWeight = FontWeight.Bold,
@@ -465,6 +470,7 @@ fun buildChapterLayout(
         builder.append(v.text)
         red[v.verse]?.forEach { r -> builder.addStyle(RED_LETTER, at + r.first, at + r.last + 1) }
         diffs[v.verse]?.forEach { r -> builder.addStyle(SpanStyle(background = DIFF_MARK), at + r.first, at + r.last + 1) }
+        hard[v.verse]?.forEach { r -> hardWords += (at + r.first)..(at + r.last) }
         // Between verses: a new line, or in paragraphs a space unless the next verse starts one.
         // Either way one character, so text positions are the same in every layout.
         if (i < data.verses.lastIndex) {
@@ -508,7 +514,7 @@ fun buildChapterLayout(
         val i = verseNos.indexOf(verse)
         if (i <= 0 || h <= 0f) null else HeadingBlock(text.getLineForOffset(starts[i]), emptyList(), h)
     }
-    return ChapterLayout(data.version, data.book, data.chapter, titleLayout, text, starts, verseNos, gaps + blocks, spacers)
+    return ChapterLayout(data.version, data.book, data.chapter, titleLayout, text, starts, verseNos, gaps + blocks, spacers, hardWords)
 }
 
 /**

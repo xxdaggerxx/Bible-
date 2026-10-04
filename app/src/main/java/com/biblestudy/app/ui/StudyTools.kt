@@ -427,6 +427,7 @@ fun DictionaryPane(vm: StudyViewModel, modifier: Modifier) {
 fun TopicsPane(vm: StudyViewModel, modifier: Modifier) {
     val panel = vm.studyPanel()
     val t = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
+    // A tapped verse leads only until the Bible is scrolled; then the page leads again (STD-18).
     val verse = t?.verse ?: panel.topVerse
     val id = VerseId.of(panel.book, panel.chapter, verse)
     val suggestions by produceState(emptyList<StudyEntry>(), id) {
@@ -476,7 +477,8 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
     }
     val firstLine = remember(lines) { lines.withIndex().filter { it.value.para == -1 }.associate { it.value.section to it.index } }
     val t = vm.paneVerse?.takeIf { it.book == panel.book && it.chapter == panel.chapter }
-    val verse = t?.verse ?: panel.topVerse
+    // A tapped verse leads only until the Bible is scrolled; then the page leads again (STD-18).
+    val verse = if (t != null && panel.topVerse == vm.paneVerseTop) t.verse else panel.topVerse
     // The section about a verse: the last one starting at or before it in this chapter.
     fun sectionFor(v: Int): Int = list?.indexOfLast { s ->
         VerseId.chapter(s.start) < panel.chapter || (VerseId.chapter(s.start) == panel.chapter && VerseId.verse(s.start) <= v)

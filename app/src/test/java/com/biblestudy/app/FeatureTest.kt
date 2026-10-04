@@ -354,6 +354,41 @@ class FeatureTest {
     }
 
     @Test
+    fun strokesAreFiledByWhereMostOfThemLie() {
+        compose.runOnUiThread { vm.marginRight = true; vm.marginLeft = false }
+        waitForLoaded()
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        val edge = vm.panels[0].panX + Page.COL_W * z // where the words end and the right margin begins (strokes start clear of its resize handle)
+        // Starts on the words, runs mostly into the margin: margin ink, in every version (ANCH-9).
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(edge - 70f, 600f)); repeat(18) { moveBy(Offset(14f, 2f)) }; up()
+        }
+        compose.waitForIdle()
+        assertEquals("text=${vm.textStrokesFor("KJV", 43, 3).map { it.region }} edge=$edge z=$z ch=${vm.panels[0].chapter} m2=${vm.marginStrokesFor(43, 2).size} m4=${vm.marginStrokesFor(43, 4).size} canUndo=${vm.canUndo} w=${readerSize().width} top=${vm.panels[0].topVerse} msg=${vm.message}", Region.RIGHT, vm.marginStrokesFor(43, 3).singleOrNull()?.region)
+        assertEquals(0, vm.textStrokesFor("KJV", 43, 3).size)
+        // Starts in the margin, runs mostly over the words: ink on the words, this version only (ANCH-4).
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(edge + 70f, 800f)); repeat(18) { moveBy(Offset(-14f, 1f)) }; up()
+        }
+        compose.waitForIdle()
+        assertEquals(1, vm.textStrokesFor("KJV", 43, 3).size)
+        assertEquals(1, vm.marginStrokesFor(43, 3).size)
+        // In the BSB: the margin ink is there, the ink on the KJV words isn't.
+        compose.runOnUiThread { vm.fingerDraw = false; vm.setVersion(0, "BSB") }
+        waitForLoaded()
+        assertEquals(0, vm.textStrokesFor("BSB", 43, 3).size)
+        assertEquals(1, vm.marginStrokesFor(43, 3).size)
+        snap("157-strokes-filed")
+        compose.runOnUiThread {
+            vm.setVersion(0, "KJV")
+            vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) }
+            vm.textStrokesFor("KJV", 43, 3).toList().forEach { vm.removeItem(it) }
+        }
+        waitForLoaded()
+    }
+
+    @Test
     fun switchingVersionsKeepsInkWithItsVersion() {
         compose.waitForIdle()
         // Draw on the KJV words.
@@ -910,7 +945,10 @@ class FeatureTest {
     @Test
     fun bookIntroductionsOpenFromThePickerAndHeader() {
         compose.onNodeWithText("John 3").performClick()
-        compose.onNodeWithContentDescription("About Romans").performClick()
+        // No ⓘ on each book; the introduction is on the book's chapter screen.
+        compose.onNodeWithContentDescription("About Romans").assertDoesNotExist()
+        compose.onNodeWithText("Romans").performClick()
+        compose.onNodeWithText("About this book").performClick()
         compose.waitForIdle()
         compose.onNodeWithText("About Romans").assertExists()
         compose.onNodeWithText("Historical background").assertExists()
@@ -1081,12 +1119,12 @@ class FeatureTest {
         waitForLoaded()
         compose.runOnUiThread { vm.openVerse(43, 3, 16) }
         waitFor(60_000) { compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty() }
-        compose.onNodeWithText("AI Commentary").assertExists()
+        compose.onNodeWithText("Ink & Word AI Commentary").assertExists()
         snap("155-ai-commentary-first")
         // Its menu lists the AI Commentary first.
         compose.onNodeWithContentDescription("Choose a commentary").performClick()
         val first = compose.onAllNodesWithText("Whole Bible", substring = true).fetchSemanticsNodes().first()
-        val aiRow = compose.onAllNodesWithText("AI Commentary").fetchSemanticsNodes().last()
+        val aiRow = compose.onAllNodesWithText("Ink & Word AI Commentary").fetchSemanticsNodes().last()
         assertTrue(aiRow.boundsInRoot.top <= first.boundsInRoot.top)
         compose.runOnUiThread { vm.verseSheet = null; vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE); vm.showVerseCommentary(false) }
         compose.waitForIdle()
@@ -2001,12 +2039,31 @@ class FeatureTest {
     }
 
     @Test
+    fun aLinkedCommentaryFollowsThePageAfterAVerseWasTapped() {
+        // Reported: at Matthew 25:1 the AI Commentary stayed on verse 29, tapped earlier (STD-18).
+        compose.runOnUiThread { vm.setCommentary(0, com.biblestudy.app.data.Commentaries.AI); vm.sidePane = PaneKind.COMMENTARY; vm.goTo(0, 40, 25, 29, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.openVerse(40, 25, 29) }
+        compose.waitForIdle()
+        compose.runOnUiThread { vm.verseSheet = null }
+        fun headingNearTop(text: String) = compose.onAllNodesWithText(text).fetchSemanticsNodes().any { it.boundsInRoot.top in 0f..700f }
+        compose.waitUntil(60_000) { headingNearTop("Verse 29") }
+        // Back up to verse 1 on the page: the commentary follows the page, not the earlier tap.
+        compose.runOnUiThread { vm.goTo(0, 40, 25, 1, remember = false) }
+        waitForLoaded()
+        runCatching { compose.waitUntil(10_000) { headingNearTop("Verse 1") } }
+            .onFailure { snap("156-commentary-follow-failed"); throw AssertionError("top=${vm.panels[0].topVerse} tapTop=${vm.paneVerseTop}", it) }
+        compose.runOnUiThread { vm.sidePane = null; vm.setCommentary(0, com.biblestudy.app.data.Commentaries.CONCISE) }
+        compose.waitForIdle()
+    }
+
+    @Test
     fun aiCommentaryHasASourcedNoteOnEachVerse() {
         // The AI commentary (STD-21) is one of the choices, with a plain-English note on each verse.
         compose.runOnUiThread { vm.goTo(0, 8, 1, 16, remember = false); vm.setCommentary(0, com.biblestudy.app.data.Commentaries.CONCISE); vm.sidePane = PaneKind.COMMENTARY }
         waitForLoaded()
         compose.onNodeWithContentDescription("Choose a commentary").performClick()
-        compose.onNodeWithText("AI Commentary").performClick()
+        compose.onNodeWithText("Ink & Word AI Commentary").performClick()
         runCatching { waitFor(60_000) { compose.onAllNodesWithText("Verse 16").fetchSemanticsNodes().isNotEmpty() } }
             .onFailure { snap("148-ai-commentary-failed"); throw AssertionError("message=${vm.message} commentary=${vm.commentaryAt(0)}", it) }
         assertEquals(com.biblestudy.app.data.Commentaries.AI, vm.commentaryAt(0))
@@ -2957,5 +3014,67 @@ class FeatureTest {
         assertTrue("x ${far.points[0]}", far.points[0] > 2500f)
         snap("135-sketch-far-side")
         compose.runOnUiThread { vm.deleteSketch(vm.sketches.first { it.id == sk.id }) }
+    }
+
+    @Test
+    fun chapterAtAGlanceOpensToWhoWhereAndTheKeyVerse() {
+        // STD-22: a slim bar under the header says what the chapter is about; tapping opens the card.
+        compose.runOnUiThread { vm.showGlance = true; vm.glanceOpen = false; vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        waitFor(10_000) { compose.onAllNodesWithTag("glance0").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(compose.onAllNodesWithText("Nicodemus", substring = true).fetchSemanticsNodes().isNotEmpty())
+        compose.onNodeWithTag("glance0").performClick()
+        waitFor(10_000) { compose.onAllNodesWithText("Key verse").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(compose.onAllNodesWithText("John 3:16").fetchSemanticsNodes().isNotEmpty())
+        assertTrue(compose.onAllNodesWithText("Where it fits").fetchSemanticsNodes().isNotEmpty())
+        runCatching { waitFor(10_000) { compose.onAllNodesWithText("Who").fetchSemanticsNodes().isNotEmpty() } }
+            .onFailure { throw AssertionError("names=${vm.study.namesInChapter(43, 3, 12).map { it.name }}", it) }
+        snap("157-chapter-at-a-glance")
+        // The key verse opens the verse pop-up.
+        compose.onNodeWithTag("glanceKey").performClick()
+        compose.waitForIdle()
+        assertEquals(Triple(43, 3, 16), vm.verseSheet?.let { Triple(it.book, it.chapter, it.verse) })
+        compose.runOnUiThread { vm.verseSheet = null; vm.glanceOpen = false; vm.showGlance = false }
+        compose.waitForIdle()
+        assertTrue(compose.onAllNodesWithTag("glance0").fetchSemanticsNodes().isEmpty())
+        compose.runOnUiThread { vm.showGlance = true }
+    }
+
+    @Test
+    fun hardWordsAreMarkedAndExplained() {
+        // STD-23: hard words get a dotted line the first time they come; tapping one explains it.
+        val app: android.content.Context = vm.getApplication()
+        val kjv = vm.text("KJV").chapter(43, 3).map { it.verse to it.text }
+        val marks = com.biblestudy.app.data.HardWords.marks(app, "KJV", kjv)
+        val marked = marks.flatMap { (v, rs) -> rs.map { r -> kjv.first { it.first == v }.second.substring(r).lowercase() } }
+        assertTrue(marked.toString(), "pharisees" in marked && "verily" in marked)
+        assertEquals("each word once a chapter", marked.size, marked.toSet().size)
+        // Old English words count in the KJV only; Bible words in every version.
+        assertNull(com.biblestudy.app.data.HardWords.lookup(app, "BSB", "verily"))
+        assertNotNull(com.biblestudy.app.data.HardWords.lookup(app, "BSB", "Pharisees"))
+        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        compose.waitForIdle()
+        snap("158-hard-words")
+        // Tapping "Pharisees" in verse 1: the verse pop-up opens with its meaning on top.
+        val v1 = kjv.first { it.first == 1 }.second
+        val word = com.biblestudy.app.data.StudyRepository.words(v1).indexOfFirst { v1.substring(it) == "Pharisees" }
+        compose.runOnUiThread { vm.openVerse(43, 3, 1, word) }
+        waitFor(10_000) { compose.onAllNodesWithTag("hardWord").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(compose.onAllNodesWithText("strict Jewish group", substring = true).fetchSemanticsNodes().isNotEmpty())
+        snap("159-hard-word-meaning")
+        // Read more opens the Bible dictionary.
+        waitFor(10_000) { compose.onAllNodesWithText("Read more").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Read more").performClick()
+        compose.waitForIdle()
+        assertNull(vm.verseSheet)
+        assertEquals(PaneKind.DICTIONARY, vm.sidePane)
+        compose.runOnUiThread { vm.sidePane = null; vm.dictionaryOpen = null }
+        // Switched off in Settings: no meaning.
+        compose.runOnUiThread { vm.hardWords = false; vm.openVerse(43, 3, 1, word) }
+        compose.waitForIdle()
+        assertTrue(compose.onAllNodesWithTag("hardWord").fetchSemanticsNodes().isEmpty())
+        compose.runOnUiThread { vm.verseSheet = null; vm.hardWords = true }
+        compose.waitForIdle()
     }
 }
