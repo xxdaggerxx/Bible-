@@ -1,4 +1,4 @@
-# Ink & Word — version 1.17.1
+# Ink & Word — version 1.18.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,11 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.18.0
+
+- **Link button in the header:** with two or more Bible panels, the link button now always shows in each panel's header. Tap it to link the panels (it turns coloured) and again to unlink them. It's no longer in the ⋮ menu.
+- **Fit width removed:** the *Fit width* button is gone from the panel menu and from sketch pages. Double-tap with a finger still makes the page fill the panel's width. The ⋮ menu now only appears on narrow panels, for *About this book*.
 
 ## New in version 1.17.1
 

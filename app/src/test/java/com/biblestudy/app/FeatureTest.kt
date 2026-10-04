@@ -727,9 +727,8 @@ class FeatureTest {
             vm.setVersion(1, "WEB")
         }
         waitForLoaded()
-        // Linking is in the panel's menu.
-        compose.onAllNodesWithContentDescription("Panel menu")[0].performClick()
-        compose.onNodeWithText("Link panels").performClick()
+        // The link button is in each Bible panel's header.
+        compose.onAllNodesWithContentDescription("Link panels")[0].performClick()
         waitForLoaded()
         assertTrue(vm.linked)
 

@@ -349,7 +349,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             if (active) Modifier.border(2.dp, MaterialTheme.colorScheme.primary) else Modifier
         )
     ) {
-        PanelHeader(vm, index, ctl, onOpenPicker)
+        PanelHeader(vm, index, onOpenPicker)
         // What's happening in this chapter, folded to one line (STD-22).
         GlanceBar(vm, index)
         Box(
@@ -487,9 +487,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
 }
 
 @Composable
-private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, onOpenPicker: () -> Unit) {
+private fun PanelHeader(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit) {
     val panel = vm.panels[index]
-    vm.sketchOf(panel.book)?.let { SketchHeader(vm, index, ctl, it); return }
+    vm.sketchOf(panel.book)?.let { SketchHeader(vm, index, it); return }
     val book = vm.bible.book(panel.book)
     BoxWithConstraints(Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surfaceContainer)) {
         // Narrow panels (e.g. three side by side) move the less-used buttons into a menu.
@@ -513,28 +513,22 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
             }
             VersionPicker(vm, index)
             Spacer(Modifier.weight(1f))
-            // Linked panels show it, and a tap unlinks them; linking is in the menu.
-            if (vm.panels.size > 1 && vm.linkPanels) {
-                IconButton(onClick = { vm.activePanel = index; vm.linkPanels = false }) {
-                    Icon(Icons.Filled.Link, contentDescription = "Unlink panels", tint = MaterialTheme.colorScheme.primary)
+            // Link panels: with two or more Bible panels, one tap links or unlinks them (lit while linked).
+            if (vm.panels.size > 1) {
+                IconButton(onClick = { vm.activePanel = index; vm.linkPanels = !vm.linkPanels }) {
+                    if (vm.linkPanels) Icon(Icons.Filled.Link, contentDescription = "Unlink panels", tint = MaterialTheme.colorScheme.primary)
+                    else Icon(Icons.Filled.LinkOff, contentDescription = "Link panels")
                 }
             }
-            // The less-used buttons, in one menu so the header stays simple.
-            run {
+            // Narrow panels: About this book moves into a menu so the header fits.
+            if (compact) {
                 var menu by remember { mutableStateOf(false) }
                 Box {
                     IconButton(onClick = { vm.activePanel = index; menu = true }) {
                         Icon(Icons.Filled.MoreVert, contentDescription = "Panel menu")
                     }
                     DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                        if (compact) DropdownMenuItem(text = { Text("About this book") }, onClick = { menu = false; vm.introBook = panel.book })
-                        DropdownMenuItem(text = { Text("Fit width") }, onClick = { menu = false; ctl.fitWidth() })
-                        if (vm.panels.size > 1) {
-                            DropdownMenuItem(
-                                text = { Text(if (vm.linkPanels) "Unlink panels" else "Link panels") },
-                                onClick = { menu = false; vm.activePanel = index; vm.linkPanels = !vm.linkPanels },
-                            )
-                        }
+                        DropdownMenuItem(text = { Text("About this book") }, onClick = { menu = false; vm.introBook = panel.book })
                     }
                 }
             }
@@ -547,7 +541,7 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
  * and one menu for paper, more space, renaming and deleting.
  */
 @Composable
-private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, sk: com.biblestudy.app.model.Sketch) {
+private fun SketchHeader(vm: StudyViewModel, index: Int, sk: com.biblestudy.app.model.Sketch) {
     val panel = vm.panels[index]
     var menu by remember { mutableStateOf(false) }
     var renaming by remember { mutableStateOf(false) }
@@ -563,7 +557,6 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
             Text("on " + vm.refLabel(com.biblestudy.app.model.VerseId.of(sk.linkBook, sk.linkChapter, sk.linkVerse)), maxLines = 1)
         }
         Spacer(Modifier.weight(1f))
-        TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
         Box {
             IconButton(onClick = { vm.activePanel = index; menu = true }) { Icon(Icons.Filled.MoreVert, contentDescription = "Sketch page menu") }
             DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
