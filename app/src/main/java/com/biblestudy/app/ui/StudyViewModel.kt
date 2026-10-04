@@ -585,6 +585,55 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     fun clearSteps() { backSteps.clear(); forwardSteps.clear() }
 
+    /** Back several steps at once, to [i] in [backSteps] (from the list under a held ←). */
+    fun backTo(i: Int) {
+        if (i !in backSteps.indices) return
+        forwardSteps.add(screenNow())
+        while (backSteps.size > i + 1) forwardSteps.add(backSteps.removeAt(backSteps.lastIndex))
+        restore(backSteps.removeAt(i))
+    }
+
+    /** Forward several steps at once, to [i] in [forwardSteps] (from the list under a held →). */
+    fun forwardTo(i: Int) {
+        if (i !in forwardSteps.indices) return
+        backSteps.add(screenNow())
+        while (forwardSteps.size > i + 1) backSteps.add(forwardSteps.removeAt(forwardSteps.lastIndex))
+        restore(forwardSteps.removeAt(i))
+    }
+
+    /** A screen in words, for the Back and Forward lists: "John 3 and Commentary · 2 tabs". */
+    fun screenLabel(s: Screen): String = runCatching {
+        val all = org.json.JSONArray(s.tabs)
+        val t = all.getJSONObject(s.active.coerceIn(0, all.length() - 1))
+        val parts = ArrayList<String>()
+        val hidden = t.optBoolean("hidden")
+        val ps = t.getJSONArray("panels")
+        if (!hidden) for (i in 0 until ps.length()) {
+            val p = ps.getJSONObject(i)
+            val b = p.optInt("b", 43)
+            parts += sketchOf(b)?.name ?: "${bible.book(b.coerceIn(1, 66)).name} ${p.optInt("c", 1)}"
+        }
+        val st = t.optJSONArray("studies") ?: org.json.JSONArray()
+        for (i in 0 until st.length()) PaneKind.entries.firstOrNull { it.name == st.optString(i) }?.let { parts += it.label }
+        parts.joinToString(" and ") + if (all.length() > 1) " \u00b7 ${all.length()} tabs" else ""
+    }.getOrDefault("Earlier screen")
+
+    /**
+     * Start fresh (NAV-2): one tab with one Bible panel, at the passage being read. Back undoes it.
+     */
+    fun startFresh() {
+        val p = panels.getOrNull(activePanel.coerceIn(0, panels.lastIndex)) ?: return
+        step {
+            selection = null; passagePop = null; linkPos = null; commentaryPos = null
+            chatWindow = false
+            val (b, c) = if (Sketch.isSketch(p.book)) biblePlaceBefore(p).let { it.first to it.second } else p.book to p.chapter
+            val t = TabState()
+            t.panels.add(PanelState(b, c).apply { version = p.version; pendingVerse = if (b == p.book) p.topVerse else null; navGen = p.navGen + 1 })
+            tabs.clear(); tabs.add(t)
+            activeTab = 0
+        }
+    }
+
     /** A saved place made valid; sketch pages that still exist stay sketch pages. */
     private fun screenPlace(book: Int, chapter: Int, version: String?): Triple<Int, Int, String> =
         if (Sketch.isSketch(book) && sketchOf(book) != null) Triple(book, 1, validVersion(version)) else validPlace(book, chapter, version)

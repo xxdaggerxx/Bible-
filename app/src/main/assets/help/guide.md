@@ -9,8 +9,10 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 - **Recently read.** Tap the chapter name, then *Recently read*. It lists the chapters you've read lately, newest first, with the verse you were at. Tap one to go straight back there. *Clear this list* empties it.
 - **Bookmarks.** Tap a verse, then *Bookmark*. A red ribbon shows beside it. To find your bookmarks, tap the chapter name, then *Bookmarks*. Tap one to go there, or × to take the bookmark off. Tapping *Bookmarked* in the verse's pop-up takes it off too.
 - **Back and forward.** The ← and → arrows at the far left of the toolbar take the whole screen back to how it was, one step at a time. That covers jumping to a passage, opening, closing or changing a panel, and opening, switching or closing a tab. Lost track of where you are? Tap ← until it looks familiar. → goes forward again. The tablet's Back gesture does the same as ←.
+- **Jump back several steps.** Hold ← (or →) for a list of the screens it goes to, such as *Psalms 23 and Commentary* or *Romans 8 · 2 tabs*. Tap one to go straight there.
+- **Start fresh.** In a muddle with panels and tabs? Tap the panels button in the toolbar, then *Start fresh*. You get one tab with one Bible panel, at the passage you're reading. ← brings everything back if you change your mind.
 - **Tabs remember where you were.** Switch to another tab and back, and each one is still scrolled to the same place.
-- **Zoom.** Pinch with two fingers. *Fit width* makes the page fill the panel. Double-tap with a finger to switch between fit-width and your last zoom.
+- **Zoom.** Pinch with two fingers. *Fit width* (in the panel's ⋮ menu) makes the page fill the panel. Double-tap with a finger to switch between fit-width and your last zoom.
 - **Change the version.** Tap the version name (e.g. *KJV ▾*) and pick another. You stay on the same verse.
 - **About a book.** Tap ⓘ in the header for the book's introduction: who wrote it, when, why, an outline you can tap, and key verses.
 
@@ -151,7 +153,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 - **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. They're listed under four headings: **Reading** (the Bible, Sketch pages); **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references); **Study** (Commentary, Dictionary, Topics, Names & places, About the book, the introduction to the book you're reading); and **Notes, search and AI** (My notes, Search, AI chat). The panels button in the toolbar lists them under the same headings. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
 - **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
 - **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
-- **Link panels** with the link button in a Bible panel's header: two Bible panels scroll together verse by verse, even in different versions.
+- **Link panels** from a Bible panel's ⋮ menu: two Bible panels scroll together verse by verse, even in different versions. While they're linked, a link button shows in the header; tap it to unlink.
 - **Mark word differences** (*Settings → Reading*): when two panels show the same book in different versions, the words that differ are lightly marked.
 - **Tabs, like a browser.** *New tab* is in the panels button (the split-page icon in the toolbar). Once you have two tabs, they show in a strip under the toolbar: tap one to switch, tap **+** for another. Each tab keeps its own panels and places.
 - **Rename, move or close a tab:** hold a finger on it and let go for its menu. To move it, hold and then drag it along the strip.

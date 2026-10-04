@@ -22,6 +22,8 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.RestartAlt
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
@@ -105,12 +107,15 @@ fun StudyToolbar(
             horizontalArrangement = Arrangement.spacedBy(2.dp),
         ) {
             // Back and Forward for the whole screen (NAV-1): passages, panels and tabs as they were.
-            IconButton(onClick = vm::back, enabled = vm.backSteps.isNotEmpty()) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-            }
-            IconButton(onClick = vm::forward, enabled = vm.forwardSteps.isNotEmpty()) {
-                Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Forward")
-            }
+            // Hold either one for a list of the screens it goes to.
+            StepButton(
+                vm, Icons.AutoMirrored.Filled.ArrowBack, "Back", vm.backSteps.toList().asReversed().take(10),
+                onStep = vm::back, onPick = { n -> vm.backTo(vm.backSteps.lastIndex - n) },
+            )
+            StepButton(
+                vm, Icons.AutoMirrored.Filled.ArrowForward, "Forward", vm.forwardSteps.toList().asReversed().take(10),
+                onStep = vm::forward, onPick = { n -> vm.forwardTo(vm.forwardSteps.lastIndex - n) },
+            )
             Divider()
             // Read mode (PEN-4): a lock that stops the pen marking the page.
             IconToggleButton(
@@ -207,6 +212,14 @@ fun StudyToolbar(
                     Icon(Icons.Filled.VerticalSplit, contentDescription = "Panels")
                 }
                 DropdownMenu(expanded = panelsMenu, onDismissRequest = { panelsMenu = false }) {
+                    // Lost? One tab, one Bible panel, at the passage being read (NAV-2).
+                    DropdownMenuItem(
+                        text = { Text("Start fresh") },
+                        leadingIcon = { Icon(Icons.Filled.RestartAlt, contentDescription = null) },
+                        enabled = vm.tabs.size > 1 || vm.tab.shown > 1,
+                        onClick = { vm.startFresh(); panelsMenu = false; vm.message = "One panel again. Back (\u2190) undoes it." },
+                    )
+                    HorizontalDivider()
                     // Tabs (TAB-1): each keeps its own one or two panels.
                     DropdownMenuItem(text = { Text("New tab") }, onClick = { vm.newTab(); panelsMenu = false })
                     DropdownMenuItem(
@@ -401,5 +414,47 @@ private fun Swatch(color: Int, selected: Boolean, onClick: () -> Unit) {
 private fun SizePicker(current: Int, onPick: (Int) -> Unit) {
     listOf("S", "M", "L").forEachIndexed { i, label ->
         FilterChip(selected = current == i, onClick = { onPick(i) }, label = { Text(label) })
+    }
+}
+
+/**
+ * Back or Forward (NAV-1): a tap goes one step; holding it lists the screens it goes to, nearest
+ * first, to jump straight to one.
+ */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
+@Composable
+private fun StepButton(
+    vm: StudyViewModel,
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    label: String,
+    steps: List<StudyViewModel.Screen>,
+    onStep: () -> Unit,
+    onPick: (Int) -> Unit,
+) {
+    var list by remember { mutableStateOf(false) }
+    val enabled = steps.isNotEmpty()
+    Box {
+        Box(
+            Modifier
+                .size(48.dp)
+                .clip(androidx.compose.foundation.shape.CircleShape)
+                .combinedClickable(enabled = enabled, role = androidx.compose.ui.semantics.Role.Button, onLongClick = { list = true }, onClick = onStep),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(
+                icon, contentDescription = label,
+                tint = if (enabled) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f),
+            )
+        }
+        DropdownMenu(expanded = list, onDismissRequest = { list = false }) {
+            Text(
+                if (label == "Back") "Go back to" else "Go forward to",
+                style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 4.dp),
+            )
+            steps.forEachIndexed { n, s ->
+                DropdownMenuItem(text = { Text(vm.screenLabel(s)) }, onClick = { list = false; onPick(n) })
+            }
+        }
     }
 }

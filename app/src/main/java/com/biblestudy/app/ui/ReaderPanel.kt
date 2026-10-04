@@ -504,24 +504,21 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
             }
             VersionPicker(vm, index)
             Spacer(Modifier.weight(1f))
-            if (!compact) TextButton(onClick = { ctl.fitWidth() }) { Text("Fit width") }
-            if (vm.panels.size > 1 && !compact) {
-                IconButton(onClick = { vm.activePanel = index; vm.linkPanels = !vm.linkPanels }) {
-                    Icon(
-                        if (vm.linkPanels) Icons.Filled.Link else Icons.Filled.LinkOff,
-                        contentDescription = if (vm.linkPanels) "Unlink panels" else "Link panels",
-                        tint = if (vm.linkPanels) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
-                    )
+            // Linked panels show it, and a tap unlinks them; linking is in the menu.
+            if (vm.panels.size > 1 && vm.linkPanels) {
+                IconButton(onClick = { vm.activePanel = index; vm.linkPanels = false }) {
+                    Icon(Icons.Filled.Link, contentDescription = "Unlink panels", tint = MaterialTheme.colorScheme.primary)
                 }
             }
-            if (compact) {
+            // The less-used buttons, in one menu so the header stays simple.
+            run {
                 var menu by remember { mutableStateOf(false) }
                 Box {
                     IconButton(onClick = { vm.activePanel = index; menu = true }) {
                         Icon(Icons.Filled.MoreVert, contentDescription = "Panel menu")
                     }
                     DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                        DropdownMenuItem(text = { Text("About this book") }, onClick = { menu = false; vm.introBook = panel.book })
+                        if (compact) DropdownMenuItem(text = { Text("About this book") }, onClick = { menu = false; vm.introBook = panel.book })
                         DropdownMenuItem(text = { Text("Fit width") }, onClick = { menu = false; ctl.fitWidth() })
                         if (vm.panels.size > 1) {
                             DropdownMenuItem(

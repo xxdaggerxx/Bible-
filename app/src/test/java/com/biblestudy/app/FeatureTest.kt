@@ -514,6 +514,51 @@ class FeatureTest {
     }
 
     @Test
+    fun startFreshAndTheBackList() {
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.goTo(0, 43, 3, 16, remember = false); vm.clearSteps() }
+        waitForLoaded()
+        // A busy screen: Psalm 23, the commentary beside it, and a second tab.
+        compose.runOnUiThread { vm.goTo(0, 19, 23) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.sidePane = PaneKind.COMMENTARY }
+        waitForLoaded()
+        compose.runOnUiThread { vm.newTab(45, 8, 28) }
+        waitForLoaded()
+        assertEquals(3, vm.backSteps.size)
+
+        // Hold Back: the screens it goes to, nearest first; pick the oldest (NAV-1).
+        compose.onNodeWithContentDescription("Back").performTouchInput { longClick() }
+        compose.onNodeWithText("Go back to").assertExists()
+        compose.onNodeWithText("Psalms 23 and Commentary").assertExists()
+        snap("154-back-list")
+        compose.onNodeWithText("John 3").performClick()
+        waitForLoaded()
+        assertEquals(1, vm.tabs.size)
+        assertNull(vm.sidePane)
+        assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        assertEquals(3, vm.forwardSteps.size)
+        // Hold Forward to come back to the second tab.
+        compose.onNodeWithContentDescription("Forward").performTouchInput { longClick() }
+        compose.onNodeWithText("Romans 8 \u00b7 2 tabs").performClick()
+        waitForLoaded()
+        assertEquals(2, vm.tabs.size)
+        assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
+
+        // Start fresh (NAV-2): one tab, one panel, where you're reading; Back undoes it.
+        compose.onNodeWithContentDescription("Panels").performClick()
+        compose.onNodeWithText("Start fresh").performClick()
+        waitForLoaded()
+        assertEquals(1, vm.tabs.size)
+        assertEquals(1, vm.tab.shown)
+        assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertEquals(2, vm.tabs.size)
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.sidePane = null; vm.clearSteps() }
+        waitForLoaded()
+    }
+
+    @Test
     fun doubleTapTogglesFitWidthAndLastZoom() {
         val fit = vm.panels[0].zoom
         compose.onNodeWithTag("reader0").performTouchInput { doubleClick(center) }
@@ -634,7 +679,9 @@ class FeatureTest {
             vm.setVersion(1, "WEB")
         }
         waitForLoaded()
-        compose.onAllNodesWithContentDescription("Link panels")[0].performClick()
+        // Linking is in the panel's menu.
+        compose.onAllNodesWithContentDescription("Panel menu")[0].performClick()
+        compose.onNodeWithText("Link panels").performClick()
         waitForLoaded()
         assertTrue(vm.linked)
 
