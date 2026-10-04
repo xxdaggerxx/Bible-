@@ -1,4 +1,4 @@
-# Ink & Word — version 1.8.0
+# Ink & Word — version 1.10.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -66,7 +66,7 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
-## New in version 1.8
+## New in version 1.10
 
 - **AI Commentary: a plain-English note on every verse,** the twelfth choice in the commentary menu. It was written by AI when the app was built, so it works offline like the other commentaries.
   - **Grounded in sources.** Each note draws on the eleven bundled commentaries and on a fixed list of trusted websites from many Protestant traditions: Reformed, Baptist, Methodist and Wesleyan, Pentecostal and charismatic (Enduring Word, Assemblies of God, Pneuma Review, Sam Storms), Lutheran, Anglican and evangelical. Every point names its sources. A check removed any source that couldn't be confirmed: a bundled commentary had to have a note on that verse, and a web page had to have come up in the research.
@@ -74,8 +74,19 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - **Where Christians differ:** on verses where churches disagree (baptism, spiritual gifts, election and so on), each tradition's view in a line, fairly and without taking sides.
   - **Other views:** where well known, modern scholarship, Catholic and Orthodox readings, and debated popular teaching, labelled and kept apart from the main note.
   - It shows in the verse pop-up's *Commentary* tab too, when chosen there.
-- **How it's made:** `tools/build_ai_commentary.py` researches each chapter (long chapters in parts) with web search limited to the trusted sites, writes the notes, checks the sources and packs them into `assets/commentaries/ai.db.xz` (about 4 MB). The notes and research are kept in `tools/ai_commentary/`. The first part (about 5,250 verses) was written by Claude Opus 5.5 through the Claude Batch API; the rest by Gemini 3.8 Flash, with DeepSeek V4 Pro doing the research, through OpenRouter, which cost far less. Each part's file names the model that wrote it.
+- **How it's made:** `tools/build_ai_commentary.py` researches each chapter (long chapters in parts) with web search limited to the trusted sites, writes the notes, checks the sources and packs them into `assets/commentaries/ai.db.xz` (about 2.6 MB). The notes and research are kept in `tools/ai_commentary/`. The first part (about 5,250 verses) was written by Claude Opus 5.5 through the Claude Batch API; the rest by Gemini 3.8 Flash, with DeepSeek V4 Pro doing the research, through OpenRouter, which cost far less. Each part's file names the model that wrote it.
 - Known gaps: the sources are shown as names and website names, not links; notes were checked by script and spot-read, not read in full by a person.
+
+## New in version 1.9
+
+- **Back and Forward for the whole screen.** One pair of arrows, at the far left of the toolbar, replaces the arrows in each panel's header. Back undoes the last change to what's on screen: a jump to a passage, a panel opened, closed or changed to another view, a tab opened, switched or closed. Forward redoes it. The tablet's Back gesture is the same as Back.
+- **Fixed:** switching back to a tab showed the top of its chapter. Each tab's panels now come back exactly where they were scrolled to.
+
+## New in version 1.8
+
+- **Bookmarks are back.** Tap a verse, then *Bookmark*: a red ribbon shows beside the verse. Tap the chapter name, then *Bookmarks*, to see them all, newest first, with the start of each verse. Tap one to go there, or × to take it off. (Bookmarks from before 0.9 became highlights tagged "bookmark" then, and stay highlights.)
+- **Recently read.** Tap the chapter name, then *Recently read*: the chapters you've read lately, newest first, each with the verse you were at and when. Tap one to pick up where you left off. A chapter is added once it's been in front of you for a few seconds; the list keeps 50 and stays on this tablet.
+- **Fixed:** *New tab* in a link's pop-up opened at the wrong place after scrolling a linked commentary (for example Matthew 25 instead of Matthew 13:12). It now opens at the passage.
 
 ## New in version 1.7.3
 

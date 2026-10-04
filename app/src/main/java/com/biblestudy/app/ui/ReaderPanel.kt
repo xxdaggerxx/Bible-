@@ -1,7 +1,6 @@
 package com.biblestudy.app.ui
 
 import android.content.Intent
-import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.AnimationState
 import androidx.compose.animation.core.animateDecay
 import androidx.compose.animation.splineBasedDecay
@@ -151,7 +150,13 @@ private const val MAX_LAYOUTS = 7
 @Composable
 fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifier: Modifier = Modifier) {
     val panel = vm.panels[index]
-    val ctl = remember(panel) { ReaderController(vm, panel) }
+    val ctl = remember(panel) {
+        ReaderController(vm, panel).also { c ->
+            // Shown again (another tab was in front): back to exactly where it was, unless it was sent somewhere.
+            val r = panel.resume
+            if (r != null && panel.pendingVerse == null && r.book == panel.book && r.chapter == panel.chapter) c.pendingFollow = r
+        }
+    }
     val resolver = LocalFontFamilyResolver.current
     val measurer = remember(resolver) { TextMeasurer(resolver, Density(1f, 1f), LayoutDirection.Ltr) }
     val density = LocalDensity.current.density
@@ -289,7 +294,11 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     // A linked commentary scrolled by hand (STD-18): the panel in use follows it.
     val commentaryPos = vm.commentaryPos
     LaunchedEffect(commentaryPos) {
-        if (commentaryPos != null && vm.activePanel.coerceIn(0, vm.panels.lastIndex) == index) ctl.follow(commentaryPos)
+        if (commentaryPos != null && vm.activePanel.coerceIn(0, vm.panels.lastIndex) == index) {
+            ctl.follow(commentaryPos)
+            // Followed once: a panel shown later (a new tab) mustn't jump back to it.
+            vm.commentaryFollowed(commentaryPos)
+        }
     }
     LaunchedEffect(vm.linkPanels, vm.panels.size) {
         if (vm.linked && vm.activePanel == index) ctl.announceScroll()
@@ -326,7 +335,6 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     }
 
     // The tablet's Back gesture steps back through this panel's history when it is the active one.
-    BackHandler(enabled = vm.activePanel == index && panel.back.isNotEmpty()) { vm.goBack(index) }
 
     val active = vm.activePanel == index && vm.panels.size > 1
     Column(
@@ -480,15 +488,6 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
         Row(Modifier.fillMaxWidth().padding(horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
             // What this panel shows, the tab's arrangement, new tab and close (SPLIT-7).
             PanelViewButton(vm, Slot.Bible(index)) { vm.activePanel = index }
-            if (!compact) {
-                IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                }
-                IconButton(onClick = { vm.activePanel = index; vm.goForward(index) }, enabled = panel.forward.isNotEmpty()) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Forward")
-                }
-                VerticalDivider(Modifier.height(24.dp).padding(horizontal = 4.dp))
-            }
             IconButton(onClick = { vm.activePanel = index; vm.prevChapter(index) }) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous chapter")
             }
@@ -522,8 +521,6 @@ private fun PanelHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, o
                         Icon(Icons.Filled.MoreVert, contentDescription = "Panel menu")
                     }
                     DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                        DropdownMenuItem(text = { Text("Back") }, enabled = panel.back.isNotEmpty(), onClick = { menu = false; vm.goBack(index) })
-                        DropdownMenuItem(text = { Text("Forward") }, enabled = panel.forward.isNotEmpty(), onClick = { menu = false; vm.goForward(index) })
                         DropdownMenuItem(text = { Text("About this book") }, onClick = { menu = false; vm.introBook = panel.book })
                         DropdownMenuItem(text = { Text("Fit width") }, onClick = { menu = false; ctl.fitWidth() })
                         if (vm.panels.size > 1) {
@@ -555,9 +552,6 @@ private fun SketchHeader(vm: StudyViewModel, index: Int, ctl: ReaderController, 
         verticalAlignment = Alignment.CenterVertically,
     ) {
         PanelViewButton(vm, Slot.Bible(index)) { vm.activePanel = index }
-        IconButton(onClick = { vm.activePanel = index; vm.goBack(index) }, enabled = panel.back.isNotEmpty()) {
-            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-        }
         Text(sk.name, style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(horizontal = 6.dp))
         if (sk.linked) TextButton(onClick = { vm.goTo(index, sk.linkBook, sk.linkChapter, sk.linkVerse) }) {
             Text("on " + vm.refLabel(com.biblestudy.app.model.VerseId.of(sk.linkBook, sk.linkChapter, sk.linkVerse)), maxLines = 1)
@@ -911,6 +905,15 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
             drawLine(Color.White, c + Offset(-8f, 6f), c + Offset(8f, -6f), strokeWidth = 3f)
             drawCircle(Color.White, 3f, c + Offset(-8f, 6f))
         }
+    }
+    // A ribbon beside each bookmarked verse (NOTE-3).
+    if (sketch == null) for (v in vm.bookmarkedVerses(layout.book, layout.chapter)) {
+        val y = layout.verseTop(v.coerceAtLeast(1)) + 4f
+        val x = g.textLeft - 26f
+        val ribbon = androidx.compose.ui.graphics.Path().apply {
+            moveTo(x, y); lineTo(x + 16f, y); lineTo(x + 16f, y + 30f); lineTo(x + 8f, y + 23f); lineTo(x, y + 30f); close()
+        }
+        drawPath(ribbon, BOOKMARK_RIBBON)
     }
     if (sketch == null) for ((first, last, dy) in layout.segments) {
         val (clipTop, clipBottom) = layout.segmentClip(first, last)
@@ -1368,3 +1371,6 @@ private fun DrawScope.drawNotePreview(vm: StudyViewModel, measurer: TextMeasurer
     drawRoundRect(SKETCH_BADGE, topLeft = Offset(r.right - 28f, r.top + 4f), size = Size(24f, 20f), cornerRadius = androidx.compose.ui.geometry.CornerRadius(5f))
     drawLine(Color.White, Offset(r.right - 22f, r.top + 19f), Offset(r.right - 10f, r.top + 9f), strokeWidth = 2.5f)
 }
+
+/** The bookmark ribbon's colour (NOTE-3). */
+private val BOOKMARK_RIBBON = Color(0xFFC0392B)

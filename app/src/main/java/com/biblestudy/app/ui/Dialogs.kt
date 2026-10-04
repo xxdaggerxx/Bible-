@@ -32,6 +32,8 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Sell
 import androidx.compose.material.icons.filled.VerticalSplit
 import androidx.compose.material3.InputChip
@@ -157,6 +159,7 @@ internal fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composab
 
 @Composable
 fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
+    var pickerTab by remember { mutableStateOf(0) }
     var book by remember { mutableStateOf<Int?>(null) }
     var chapter by remember { mutableStateOf<Int?>(null) }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
@@ -179,6 +182,20 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             when {
                 b == null -> {
                     DialogTitle("Choose a book", onDismiss)
+                    // Books, the chapters read lately (READ-8) and bookmarks (NOTE-3).
+                    TabRow(selectedTabIndex = pickerTab, modifier = Modifier.padding(bottom = 8.dp)) {
+                        for ((i, name) in listOf("Books", "Recently read", "Bookmarks").withIndex()) {
+                            Tab(selected = pickerTab == i, onClick = { pickerTab = i }, text = { Text(name) }, modifier = Modifier.testTag("pickerTab$i"))
+                        }
+                    }
+                    if (pickerTab == 1) {
+                        RecentList(vm, version, Modifier.weight(1f)) { r -> vm.goTo(panelIndex, r.book, r.chapter, r.verse); onDismiss() }
+                        return@Column
+                    }
+                    if (pickerTab == 2) {
+                        BookmarkList(vm, version, Modifier.weight(1f)) { m -> vm.goTo(panelIndex, m.book, m.chapter, m.verse); onDismiss() }
+                        return@Column
+                    }
                     MarkerLegend()
                     LazyVerticalGrid(columns = GridCells.Adaptive(150.dp), modifier = Modifier.weight(1f)) {
                         for ((label, range) in listOf("Old Testament" to 1..39, "New Testament" to 40..66)) {
@@ -239,6 +256,68 @@ fun BookPickerDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
             }
         }
     }
+}
+
+/** The chapters read lately (READ-8), newest first: tap one to go back to where you were. */
+@Composable
+private fun RecentList(vm: StudyViewModel, version: String, modifier: Modifier, onOpen: (RecentRead) -> Unit) {
+    val items = vm.recent.toList()
+    Column(modifier) {
+        if (items.isEmpty()) {
+            Text("The chapters you read show here, newest first, so you can go back to where you were.", modifier = Modifier.padding(vertical = 12.dp))
+            return@Column
+        }
+        LazyColumn(Modifier.weight(1f).testTag("recentList")) {
+            items(items, key = { "${it.book}-${it.chapter}" }) { r ->
+                PlaceRow(vm, version, r.book, r.chapter, r.verse, whenText(r.at)) { onOpen(r) }
+            }
+        }
+        TextButton(onClick = { vm.clearRecent() }) { Text("Clear this list") }
+    }
+}
+
+/** Bookmarked verses (NOTE-3), newest first. */
+@Composable
+private fun BookmarkList(vm: StudyViewModel, version: String, modifier: Modifier, onOpen: (com.biblestudy.app.model.Bookmark) -> Unit) {
+    val items = vm.bookmarks.toList()
+    Column(modifier) {
+        if (items.isEmpty()) {
+            Text("No bookmarks yet. Tap a verse, then tap Bookmark.", modifier = Modifier.padding(vertical = 12.dp))
+            return@Column
+        }
+        LazyColumn(Modifier.weight(1f).testTag("bookmarkList")) {
+            items(items, key = { it.id }) { m ->
+                PlaceRow(vm, version, m.book, m.chapter, m.verse, "Bookmarked " + whenText(m.created), onRemove = { vm.removeBookmark(m) }) { onOpen(m) }
+            }
+        }
+    }
+}
+
+/** A place in the Bible: its reference, the start of the verse, and when. */
+@Composable
+private fun PlaceRow(vm: StudyViewModel, version: String, book: Int, chapter: Int, verse: Int, time: String, onRemove: (() -> Unit)? = null, onOpen: () -> Unit) {
+    val id = VerseId.of(book, chapter, verse)
+    val text by produceState("", id, version) {
+        value = withContext(Dispatchers.IO) { vm.text(version).verseText(id) ?: vm.bible.verseText(id) ?: "" }
+    }
+    Row(Modifier.fillMaxWidth().clickable(onClick = onOpen).padding(vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
+        Column(Modifier.weight(1f)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(vm.refLabel(id), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
+                Text("  $time", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+            }
+            Text(text, maxLines = 2, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.bodyMedium)
+        }
+        if (onRemove != null) IconButton(onClick = onRemove) { Icon(Icons.Filled.Close, contentDescription = "Remove bookmark on ${vm.refLabel(id)}") }
+    }
+    HorizontalDivider()
+}
+
+/** "Just now", "5 minutes ago", "Yesterday", "3 Oct". */
+private fun whenText(at: Long): String {
+    val now = System.currentTimeMillis()
+    if (now - at < 60_000) return "Just now"
+    return android.text.format.DateUtils.getRelativeTimeSpanString(at, now, android.text.format.DateUtils.MINUTE_IN_MILLIS).toString()
 }
 
 /** What a picker cell has: colours of layers with ink, highlights or images; a typed note. */
@@ -708,6 +787,15 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             modifier = Modifier.horizontalScroll(rememberScrollState()).padding(vertical = 8.dp),
         ) {
+            // Bookmark the verse (NOTE-3): it shows a ribbon and is listed under Bookmarks in the book picker.
+            val marked = vm.bookmarkAt(t.book, t.chapter, t.verse) != null
+            FilterChip(
+                selected = marked,
+                onClick = { vm.toggleBookmark(t.book, t.chapter, t.verse) },
+                label = { Text(if (marked) "Bookmarked" else "Bookmark") },
+                leadingIcon = { Icon(if (marked) Icons.Filled.Bookmark else Icons.Filled.BookmarkBorder, contentDescription = null, modifier = Modifier.size(18.dp)) },
+                modifier = Modifier.testTag("bookmarkChip"),
+            )
             FilterChip(
                 selected = vm.compareVersions,
                 onClick = { vm.compareVersions = !vm.compareVersions; vm.originalView = false },
