@@ -8,13 +8,11 @@
   {
    "verse": 1,
    "end": 2,
-   "meaning": "God gives Ezekiel a new message, aimed at Mount Seir. Mount Seir is the rugged hill country where the Edomites lived. They came from Esau, the brother of Jacob. Edom is singled out because it hated God's people so bitterly, and it stands for all the enemies of God's people.",
+   "meaning": "The Lord gives Ezekiel a message to deliver against Mount Seir, the mountainous home of Edom. God tells His prophet to face that region and speak His warning out loud. The people of Edom came from Esau and had carried a long, bitter grudge against Jacob's family, the nation of Israel.",
    "meaning_sources": [
-    "Jamieson-Fausset-Brown",
-    "Geneva Notes",
-    "Wesley",
     "Matthew Henry",
-    "Keil & Delitzsch"
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
    ],
    "differ": [],
    "other": []
@@ -22,7 +20,7 @@
   {
    "verse": 3,
    "end": 4,
-   "meaning": "God says plainly, \"I am against you.\" He will reach out His hand and turn Edom's land into an empty waste, with its cities in ruins. Then Edom will learn by hard experience that He is the LORD. As Matthew Henry puts it, those who have God against them also have His word against them.",
+   "meaning": "God announces that He is standing directly against Mount Seir and will reach out His powerful hand to bring ruin upon it. Their towns will become broken heaps of stone, and the entire country will turn into an empty desert. When this happens, the Edomites will finally realize that the God of Israel is the true Lord.",
    "meaning_sources": [
     "Matthew Henry",
     "Adam Clarke",
@@ -34,15 +32,101 @@
   {
    "verse": 5,
    "end": 5,
-   "meaning": "",
-   "meaning_sources": [],
+   "meaning": "The Lord explains the reason for this severe judgment: Edom held an ancient, unbroken hatred against Israel for generations. When Jerusalem fell and God's people faced their darkest hour of discipline, the Edomites showed no mercy and handed fleeing survivors over to be killed by the sword. Taking cruel advantage of people in their distress is an evil God will not overlook.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
    "differ": [],
-   "other": [],
-   "unchecked": true
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God vows by His own life that Edom will experience the very violence they brought on others. Because they loved bloodshed and showed no horror at murder, slaughter will chase them down wherever they try to run. God ensures that people often reap the exact harm they deal out to their neighbors.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 8,
+   "meaning": "God promises to make Mount Seir an empty wasteland where normal travel stops completely. Enemy armies will strike the land and fill the hills, valleys, and ravines with slain bodies. When God removes His protection from an unrepentant nation, ruin reaches into every corner.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The Lord warns that Edom's ruin will be permanent, and their cities will never be rebuilt or lived in again. While Israel's exile had an end, Edom's perpetual hatred will be answered with perpetual desolation. This lasting ruin stands as proof of God's absolute justice and supreme authority.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Edom arrogantly plotted to take over both northern Israel and southern Judah once the Israelites were driven into exile. They treated the land as free for the taking, failing to realize that the Lord Himself was still there. Greed blinds people to the reality of God's presence and His enduring promises.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The Lord swears that He will deal with Edom using the very same anger and jealousy they unleashed against His people. When God judges Edom for their cruelty, Israel will see His saving power and know that He has not forgotten them. God shows His faithfulness by defending those who have been wronged.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 13,
+   "meaning": "The Lord tells Edom that He heard every insulting word they spoke against the mountains of Israel, including their boast that the land was theirs to devour. In mocking God's land and people, the Edomites were actually boasting against God Himself. God hears every proud remark, and no arrogant word ever escapes His notice.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 15,
+   "meaning": "God declares that when the rest of the earth experiences joy and restoration, Edom will be left entirely desolate. Because they cheered when Israel's inheritance was destroyed, the tables will turn and they will suffer the same total ruin. Through this righteous judgment, everyone will know that the Lord alone reigns.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
   }
  ],
- "problems": [
-  "v. 5: main note has no checkable source ([]); kept but flagged",
-  "no note for verses [6, 7, 8, 9, 10, 11, 12, 13, 14, 15]"
- ]
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
 }
