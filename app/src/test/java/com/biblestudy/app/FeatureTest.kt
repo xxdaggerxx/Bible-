@@ -3228,4 +3228,40 @@ class FeatureTest {
             compose.waitForIdle()
         }
     }
+
+    @Test
+    fun theNltComesFromTyndale() {
+        // BIB-12: the NLT from Tyndale's API, read and kept like the ESV (at most 500 verses).
+        val john3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
+        val realHttp = com.biblestudy.app.data.Nlt.http
+        val realKey = com.biblestudy.app.data.Nlt.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        com.biblestudy.app.data.Nlt.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        com.biblestudy.app.data.Nlt.http = { url -> if ("ref=John.3&" in url) 200 to john3 else 200 to "<html><body>No passage</body></html>" }
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.any { it.code == "NLT" } == true }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "NLT" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NLT" } }
+            assertTrue("Tyndale" in com.biblestudy.app.data.BibleRepository.ALL.single { it.code == "NLT" }.copyright)
+            compose.runOnUiThread { vm.setVersion(0, "NLT"); vm.goTo(0, 43, 3, 16, remember = false) }
+            waitForLoaded()
+            val repo = vm.text("NLT")
+            waitFor(20_000) { repo.online!!.isSaved(43, 3) }
+            waitForLoaded()
+            snap("164-nlt")
+            assertTrue(repo.online!!.limited)
+            val verses = repo.chapter(43, 3).associate { it.verse to it.text }
+            assertEquals(36, verses.size)
+            assertTrue(vm.study.redLetters("NLT", 43, 3, verses)[3]!!.isNotEmpty())
+            assertTrue(vm.study.strongs("NLT", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().size >= 4)
+        } finally {
+            com.biblestudy.app.data.Nlt.http = realHttp
+            com.biblestudy.app.data.Nlt.key = realKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NLT") }
+            compose.waitForIdle()
+        }
+    }
 }

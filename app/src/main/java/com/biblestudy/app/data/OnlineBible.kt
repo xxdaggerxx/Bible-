@@ -24,7 +24,7 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
      * Whether only a few chapters may be kept (the ESV: Crossway allows 500 verses, or half a book,
      * on the tablet). The chapters read least lately are dropped to stay within it; no Save for offline.
      */
-    val limited: Boolean get() = id == Esv.ID
+    val limited: Boolean get() = id == Esv.ID || id == Nlt.ID
 
     /** Verses in each book (index = book id), for the half-a-book limit; set by the app. */
     @Volatile var bookVerses: IntArray? = null
@@ -47,6 +47,7 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
         val usfm = when {
             book !in books -> null
             id == Esv.ID -> Esv.chapterUsfm(book, chapter)
+            id == Nlt.ID -> Nlt.chapterUsfm(book, chapter)
             else -> YouVersion.chapterHtml(id, book, chapter)?.let { YouVersion.toUsfm(it, book, chapter) }
         }
         val parsed = usfm?.let { BibleImport.parseUsfm(listOf(it)) }
@@ -125,7 +126,11 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
      * does; for YouVersion it's read from the chapter): (verse id, text or null).
      */
     fun searchRemote(query: String, books: List<BookInfo>): List<Pair<Int, String?>> =
-        if (id == Esv.ID) Esv.search(query, books) else YouVersion.searchVerses(id, query).map { it to null }
+        when (id) {
+            Esv.ID -> Esv.search(query, books)
+            Nlt.ID -> Nlt.search(query)
+            else -> YouVersion.searchVerses(id, query).map { it to null }
+        }
 
     /** Whether any chapter so far marked the words of Jesus (if none did, they're found as for imported Bibles). */
     fun marksRed(): Boolean = meta("marksRed") == "1"

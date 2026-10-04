@@ -79,4 +79,35 @@ class YouVersionTest {
         assertEquals("He makes me lie down in green pastures. He leads me beside still waters.", p.verses[BibleImport.vid(19, 23, 2)])
         assertTrue(p.verses.values.none { "A Psalm of David" in it })
     }
+
+    private fun nlt(name: String, book: Int, chapter: Int): BibleImport.Parsed =
+        BibleImport.parseUsfm(listOf(com.biblestudy.app.data.Nlt.toUsfm(javaClass.getResource("/youversion/$name")!!.readText(), book, chapter)))
+
+    @Test
+    fun readsTheNltFromTyndale() {
+        val j = nlt("nlt-JHN.3.html", 43, 3)
+        assertEquals(36, j.verses.size)
+        assertEquals(
+            "\u201cFor this is how God loved the world: He gave his one and only Son, so that everyone who believes in him will not perish but have eternal life.",
+            j.verses[BibleImport.vid(43, 3, 16)],
+        )
+        assertEquals("There was a man named Nicodemus, a Jewish religious leader who was a Pharisee.", j.verses[BibleImport.vid(43, 3, 1)])
+        // Footnotes are left out; Jesus' words are marked.
+        assertTrue(j.verses.values.joinToString(), j.verses.values.none { "born from above" in it || "3:3" in it })
+        assertTrue(j.marksRed)
+        assertTrue(j.red.toString(), j.red[BibleImport.vid(43, 3, 3)]!!.startsWith("2-"))
+        val p = nlt("nlt-PSA.23.html", 19, 23)
+        assertEquals(6, p.verses.size)
+        assertEquals("The LORD is my shepherd; I have all that I need.", p.verses[BibleImport.vid(19, 23, 1)])
+        assertTrue(p.verses.values.none { "A psalm of David" in it || "Is My Shepherd" in it })
+        // Search results come with their text.
+        val html = javaClass.getResource("/youversion/nlt-search.html")!!.readText()
+        val (realKey, realHttp) = com.biblestudy.app.data.Nlt.key to com.biblestudy.app.data.Nlt.http
+        com.biblestudy.app.data.Nlt.key = "test"
+        com.biblestudy.app.data.Nlt.http = { 200 to html }
+        val hits = try { com.biblestudy.app.data.Nlt.search("born again") } finally {
+            com.biblestudy.app.data.Nlt.key = realKey; com.biblestudy.app.data.Nlt.http = realHttp
+        }
+        assertTrue(hits.toString(), hits.any { it.first == BibleImport.vid(43, 3, 3) && "born again" in it.second })
+    }
 }

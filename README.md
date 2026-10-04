@@ -1,4 +1,4 @@
-# Ink & Word — version 1.16.0
+# Ink & Word — version 1.17.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,13 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.17
+
+- **The NLT**, from Tyndale's NLT API (api.nlt.to), as YouVersion doesn't offer it. In *Settings → Bibles → Add an online Bible…*, working like the ESV: each verse from the reply's `verse_export` elements, paragraphs and poetry lines, the words of Jesus, "LORD" in capitals, footnotes, titles and subheadings left out; word studies, red letters, hard words, Tyndale's search (with text) for chapters not on the tablet, and the NLT copyright notice under every chapter.
+- **Tyndale's terms:** non-commercial use, at most 500 verses a request and 5,000 requests a day. They say nothing about storage, but the NLT copyright statement allows quoting 500 verses, so the NLT keeps the same 500-verse rolling window as the ESV, with no *Save for offline*. If Tyndale confirms the whole text may be kept, this can be relaxed.
+- **The key** comes from `youversion.properties` (`nlt=…`, not committed) or `NLT_KEY`; a build without it shows an NLT key field in Settings. The released APK has it built in.
+- **Fixed in the repository:** the 1.16.0 release commit left out the ESV source code (the APK had it); it was committed separately.
 
 ## New in version 1.16
 

@@ -278,6 +278,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     init {
         com.biblestudy.app.data.YouVersion.key = prefs.getString("youversionKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.YOUVERSION_KEY
         com.biblestudy.app.data.Esv.key = prefs.getString("esvKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.ESV_KEY
+        com.biblestudy.app.data.Nlt.key = prefs.getString("nltKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.NLT_KEY
         BibleRepository.onlineEvents = onlineEvents
         // Back online: chapters that couldn't be fetched are tried again.
         runCatching {
@@ -306,6 +307,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         onlineBibles = null
     }
 
+    /** The NLT key typed in Settings, or empty for the one built in. */
+    var nltKey by mutableStateOf(prefs.getString("nltKey", "") ?: "")
+        private set
+
+    fun changeNltKey(k: String) {
+        nltKey = k.trim()
+        prefs.edit { putString("nltKey", nltKey) }
+        com.biblestudy.app.data.Nlt.key = nltKey.ifEmpty { com.biblestudy.app.BuildConfig.NLT_KEY }
+        onlineBibles = null
+    }
+
     /** The ESV key typed in Settings, or empty for the one built in. */
     var esvKey by mutableStateOf(prefs.getString("esvKey", "") ?: "")
         private set
@@ -328,7 +340,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             val r = withContext(Dispatchers.IO) { runCatching { com.biblestudy.app.data.YouVersion.bibles() } }
             // The ESV comes from Crossway, not YouVersion, when there's a key for it.
-            val esv = listOfNotNull(com.biblestudy.app.data.Esv.info.takeIf { com.biblestudy.app.data.Esv.key.isNotBlank() })
+            val esv = listOfNotNull(
+                com.biblestudy.app.data.Esv.info.takeIf { com.biblestudy.app.data.Esv.key.isNotBlank() },
+                com.biblestudy.app.data.Nlt.info.takeIf { com.biblestudy.app.data.Nlt.key.isNotBlank() },
+            )
             r.onSuccess { list ->
                 // Not the ones built in (the BSB and WEB are here already).
                 val builtIn = BibleRepository.BUNDLED.map { it.code }.toSet() + "WEBUS"
@@ -345,7 +360,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             val r = withContext(Dispatchers.IO) {
                 runCatching {
-                    val full = if (info.id == com.biblestudy.app.data.Esv.ID) info
+                    val full = if (info.id >= com.biblestudy.app.data.Esv.ID) info // the ESV and NLT carry their own
                         else com.biblestudy.app.data.YouVersion.bible(info.id) ?: info // with its copyright
                     val v = com.biblestudy.app.data.OnlineBible.create(getApplication(), full, bible.books)
                     synchronized(this@StudyViewModel) { texts.remove(v.code) }

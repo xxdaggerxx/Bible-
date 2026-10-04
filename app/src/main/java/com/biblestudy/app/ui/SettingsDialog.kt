@@ -181,10 +181,11 @@ fun SettingsDialog(
                                 // An online Bible (BIB-12): how much is on the tablet, and saving it all.
                                 val saved = remember(v.code, vm.onlineArrivals) { vm.onlineSaved(v.code) }
                                 val progress = vm.onlineDownloads[v.code]
-                                val limited = v.online == com.biblestudy.app.data.Esv.ID
+                                val publisher = when (v.online) { com.biblestudy.app.data.Esv.ID -> "Crossway"; com.biblestudy.app.data.Nlt.ID -> "Tyndale"; else -> null }
+                                val limited = publisher != null
                                 Text(
                                     when {
-                                        limited -> "Online, from Crossway \u00b7 keeps the last 500 verses you read, as Crossway allows"
+                                        limited -> "Online, from $publisher \u00b7 keeps the last 500 verses you read, as $publisher allows"
                                         progress != null -> "Saving for offline\u2026 ${(progress * 100).toInt()}%"
                                         saved != null && saved.first >= saved.second -> "Online, from YouVersion \u00b7 saved on this tablet, works offline"
                                         saved != null -> "Online, from YouVersion \u00b7 ${saved.first} of ${saved.second} chapters on this tablet"
@@ -202,7 +203,7 @@ fun SettingsDialog(
                         }
                         if (v.online > 0) {
                             if (v.code in vm.onlineDownloads) TextButton(onClick = { vm.stopSavingForOffline(v.code) }) { Text("Stop") }
-                            else if (v.online != com.biblestudy.app.data.Esv.ID && vm.onlineSaved(v.code)?.let { it.first < it.second } == true) TextButton(onClick = { vm.saveForOffline(v.code) }) { Text("Save for offline") }
+                            else if (v.online < com.biblestudy.app.data.Esv.ID && vm.onlineSaved(v.code)?.let { it.first < it.second } == true) TextButton(onClick = { vm.saveForOffline(v.code) }) { Text("Save for offline") }
                         }
                         if (v.imported) TextButton(onClick = { removing = v.code }) { Text("Remove") }
                         else Text("Built in", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.outline)
@@ -213,9 +214,18 @@ fun SettingsDialog(
                     Text("Add an online Bible\u2026")
                 }
                 Text(
-                    "NIV, ESV, NASB, Amplified and more, read online from YouVersion (the ESV from Crossway). Each chapter is kept on this tablet once read, so it opens instantly next time, also offline. Every feature works with them.",
+                    "NIV, ESV, NLT, NASB, Amplified and more, read online from YouVersion (the ESV from Crossway, the NLT from Tyndale). Each chapter is kept on this tablet once read, so it opens instantly next time, also offline. Every feature works with them.",
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                 )
+                if (com.biblestudy.app.BuildConfig.NLT_KEY.isEmpty() || vm.nltKey.isNotEmpty()) {
+                    var nlt by remember { mutableStateOf(vm.nltKey) }
+                    OutlinedTextField(
+                        value = nlt, onValueChange = { nlt = it; vm.changeNltKey(it) }, singleLine = true,
+                        label = { Text("NLT API key (Tyndale)") },
+                        supportingText = { Text(if (com.biblestudy.app.BuildConfig.NLT_KEY.isEmpty()) "For the NLT: from api.nlt.to" else "Leave empty to use the one built in") },
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                    )
+                }
                 if (com.biblestudy.app.BuildConfig.ESV_KEY.isEmpty() || vm.esvKey.isNotEmpty()) {
                     var esv by remember { mutableStateOf(vm.esvKey) }
                     OutlinedTextField(
