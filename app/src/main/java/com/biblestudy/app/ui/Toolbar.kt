@@ -22,6 +22,8 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.OutlinedTextField
@@ -102,6 +104,14 @@ fun StudyToolbar(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(2.dp),
         ) {
+            // Back and Forward for the whole screen (NAV-1): passages, panels and tabs as they were.
+            IconButton(onClick = vm::back, enabled = vm.backSteps.isNotEmpty()) {
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+            }
+            IconButton(onClick = vm::forward, enabled = vm.forwardSteps.isNotEmpty()) {
+                Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Forward")
+            }
+            Divider()
             // Read mode (PEN-4): a lock that stops the pen marking the page.
             IconToggleButton(
                 checked = vm.readMode,

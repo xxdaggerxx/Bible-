@@ -1,4 +1,4 @@
-# Ink & Word — version 1.8.0
+# Ink & Word — version 1.9.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,11 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.9
+
+- **Back and Forward for the whole screen.** One pair of arrows, at the far left of the toolbar, replaces the arrows in each panel's header. Back undoes the last change to what's on screen: a jump to a passage, a panel opened, closed or changed to another view, a tab opened, switched or closed. Forward redoes it. The tablet's Back gesture is the same as Back.
+- **Fixed:** switching back to a tab showed the top of its chapter. Each tab's panels now come back exactly where they were scrolled to.
 
 ## New in version 1.8
 

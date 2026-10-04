@@ -256,6 +256,7 @@ class FeatureTest {
             vm.changeTextFont(com.biblestudy.app.model.TextFont.BOOK)
             vm.panels[0].back.clear()
             vm.panels[0].forward.clear()
+            vm.clearSteps()
             vm.panels[0].zoomRel.keys.forEach { vm.panels[0].zoomRel[it] = 1f }
         }
         waitForLoaded()
@@ -464,7 +465,52 @@ class FeatureTest {
         assertEquals(19 to 23, vm.panels[0].book to vm.panels[0].chapter)
         // The chapter arrows don't add to history.
         compose.onNodeWithContentDescription("Next chapter").performClick()
-        assertEquals(1, vm.panels[0].back.size)
+        assertEquals(1, vm.backSteps.size)
+    }
+
+    @Test
+    fun backAndForwardUndoPanelsAndTabsAndTabsRememberWhereYouWere() {
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.goTo(0, 43, 3, 20, remember = false); vm.clearSteps() }
+        waitForLoaded()
+        // Open the commentary beside the text, then Romans 8:28 in a new tab (NAV-1).
+        compose.runOnUiThread { vm.sidePane = PaneKind.COMMENTARY }
+        waitForLoaded()
+        compose.runOnUiThread { vm.newTab(45, 8, 28) }
+        waitForLoaded()
+        assertEquals(2, vm.backSteps.size)
+        assertEquals(2, vm.tabs.size)
+
+        // Back: the new tab goes; Back again: the commentary goes. The screen is as it was.
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertEquals(1, vm.tabs.size)
+        assertEquals(PaneKind.COMMENTARY, vm.sidePane)
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertNull(vm.sidePane)
+        assertEquals(43 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        assertTrue("John 3 at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 19..21)
+        snap("153-back-to-start")
+
+        // Forward twice brings them back.
+        repeat(2) { compose.onNodeWithContentDescription("Forward").performClick(); waitForLoaded() }
+        assertEquals(2, vm.tabs.size)
+        assertEquals(1, vm.activeTab)
+        assertEquals(45 to 8, vm.panels[0].book to vm.panels[0].chapter)
+
+        // Switching tabs keeps each one where it was scrolled to.
+        compose.runOnUiThread { vm.selectTab(0) }
+        waitForLoaded()
+        assertTrue("John 3 at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 19..21)
+        compose.runOnUiThread { vm.selectTab(1) }
+        waitForLoaded()
+        assertTrue("Romans 8 at ${vm.panels[0].topVerse}", vm.panels[0].topVerse in 27..29)
+        // And Back goes back across the switch.
+        compose.onNodeWithContentDescription("Back").performClick()
+        waitForLoaded()
+        assertEquals(0, vm.activeTab)
+        compose.runOnUiThread { while (vm.tabs.size > 1) vm.closeTab(vm.tabs.lastIndex); vm.sidePane = null; vm.clearSteps() }
+        waitForLoaded()
     }
 
     @Test
@@ -2715,7 +2761,7 @@ class FeatureTest {
         assertEquals(1, vm.marginStrokesFor(note.book, 1).size)
         snap("128-note-full-screen")
         // Back on John 3 it shows shrunk beside verse 2; tapping it opens it again.
-        compose.runOnUiThread { vm.goBack(0) }
+        compose.runOnUiThread { vm.back() }
         waitForLoaded()
         assertEquals(43, vm.panels[0].book)
         snap("129-note-in-margin")

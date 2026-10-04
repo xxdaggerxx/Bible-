@@ -422,7 +422,14 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             if (mode == null && lasso == null) reanchor(cur)
         }
         val topY = -panel.panY / z
-        pageAt(topY)?.let { panel.topVerse = it.layout.verseAtY(topY - it.top + 80f) }
+        pageAt(topY)?.let { pg ->
+            panel.topVerse = pg.layout.verseAtY(topY - pg.top + 80f)
+            // The exact point being read, to come back to when this tab is shown again.
+            val y = topY - pg.top
+            val v = pg.layout.verseAtY(y)
+            val (t, b) = pg.layout.verseSpan(v)
+            panel.resume = ScrollPos(-1, pg.layout.book, pg.layout.chapter, v, if (b > t) ((y - t) / (b - t)).coerceIn(0f, 1f) else 0f)
+        }
         // How far into the current chapter the reader has seen (ANL-2).
         val bottomY = topY + panel.viewH / z
         val cur2 = pages.firstOrNull { it.top == 0f }
