@@ -1,4 +1,4 @@
-# Ink & Word — version 1.15.0
+# Ink & Word — version 1.16.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,13 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.16
+
+- **The ESV**, from Crossway's ESV API (api.esv.org), as YouVersion doesn't offer it to this key. It's in *Settings → Bibles → Add an online Bible…* and works like the YouVersion Bibles: verses, paragraphs, poetry lines and the words of Christ from Crossway's HTML; word studies, red letters, hard words, search (Crossway's search, with its text, for chapters not on the tablet) and the standard ESV copyright notice under every chapter.
+- **Crossway's limits are kept:** non-commercial use, and no more than 500 verses or half of any book (whichever is less) stored on the tablet. The ESV keeps a rolling window of the chapters read last; older ones (with their search entries, word tags and red letters) are dropped and download again when reopened. Only the next chapter is prefetched, and *Save for offline* isn't offered for it. A one-chapter book (Jude, Philemon) is kept whole while it's being read.
+- **The key** comes, like the YouVersion key, from `youversion.properties` (`esv=…`, not committed) or the `ESV_KEY` environment variable; a build without it shows an ESV key field in *Settings → Bibles*. The released APK has it built in.
+- Fixed: online Bibles' "read last" order now uses a counter rather than the clock.
 
 ## New in version 1.15
 

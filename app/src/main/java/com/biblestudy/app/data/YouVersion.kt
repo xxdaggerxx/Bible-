@@ -141,8 +141,8 @@ object YouVersion {
 
     // ---------- HTML → USFM ----------
 
-    private val TAG = Regex("<(/?)(\\w+)([^>]*)>")
-    private val CLASS = Regex("class=\"([^\"]*)\"")
+    internal val TAG = Regex("<(/?)(\\w+)([^>]*)>")
+    internal val CLASS = Regex("class=\"([^\"]*)\"")
     private val VERSE = Regex("\\bv=\"([^\"]+)\"")
 
     /** Classes of blocks that aren't verse text: headings, parallel references, titles. */
@@ -201,7 +201,7 @@ object YouVersion {
         return out.toString()
     }
 
-    private fun decode(s: String): String = s
+    internal fun decode(s: String): String = s
         .replace(Regex("&#(\\d+);")) { it.groupValues[1].toInt().toChar().toString() }
         .replace(Regex("&#x([0-9a-fA-F]+);")) { it.groupValues[1].toInt(16).toChar().toString() }
         .replace("&nbsp;", " ").replace("&quot;", "\"").replace("&#39;", "'").replace("&apos;", "'")

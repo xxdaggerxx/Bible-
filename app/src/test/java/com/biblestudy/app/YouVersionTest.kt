@@ -55,4 +55,28 @@ class YouVersionTest {
         assertEquals("GNV", YouVersion.codeOf("enggnv"))
         assertEquals("NASB1995", YouVersion.codeOf("NASB1995"))
     }
+
+    private fun esv(name: String, book: Int, chapter: Int): BibleImport.Parsed {
+        val html = JSONObject(javaClass.getResource("/youversion/$name")!!.readText()).getJSONArray("passages").getString(0)
+        return BibleImport.parseUsfm(listOf(com.biblestudy.app.data.Esv.toUsfm(html, book, chapter)))
+    }
+
+    @Test
+    fun readsTheEsvFromCrossway() {
+        val j = esv("esv-JHN.3.json", 43, 3)
+        assertEquals(36, j.verses.size)
+        assertEquals(
+            "\u201cFor God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.",
+            j.verses[BibleImport.vid(43, 3, 16)],
+        )
+        assertEquals("Now there was a man of the Pharisees named Nicodemus, a ruler of the Jews.", j.verses[BibleImport.vid(43, 3, 1)])
+        assertTrue(j.marksRed)
+        assertTrue(j.red.toString(), j.red[BibleImport.vid(43, 3, 3)]!!.startsWith("3-"))
+        assertTrue(BibleImport.vid(43, 3, 9) in j.paragraphs)
+        val p = esv("esv-PSA.23.json", 19, 23)
+        assertEquals(6, p.verses.size)
+        assertEquals("The LORD is my shepherd; I shall not want.", p.verses[BibleImport.vid(19, 23, 1)])
+        assertEquals("He makes me lie down in green pastures. He leads me beside still waters.", p.verses[BibleImport.vid(19, 23, 2)])
+        assertTrue(p.verses.values.none { "A Psalm of David" in it })
+    }
 }

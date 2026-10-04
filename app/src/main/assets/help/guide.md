@@ -290,6 +290,7 @@ Your ink and highlights stay on their words whatever you choose.
   - Search finds verses in the chapters on the tablet, and asks YouVersion for the rest when you're online.
   - Each chapter ends with the version's copyright line, as YouVersion asks.
   - Backups don't include online Bibles' text; after a restore they download again as you read.
+- **The ESV** comes from Crossway, its publisher, rather than YouVersion. It's in the same *Add an online Bible…* list and works the same way, with one difference: Crossway allows only 500 verses (and never more than half of a book) to be kept on the tablet. So the ESV keeps the chapters you read last and lets older ones go; they download again when you go back. It can't be saved for offline.
 - *Remove* takes an imported or online version off the tablet.
 - *About these versions* explains how the translations differ.
 

@@ -50,6 +50,13 @@ val youVersionKey: String = run {
     (fromFile ?: System.getenv("YOUVERSION_KEY") ?: "").trim()
 }
 
+/** The ESV API key (Crossway), the same way: `esv=…` in youversion.properties, or ESV_KEY. */
+val esvKey: String = run {
+    val f = rootProject.file("youversion.properties")
+    val fromFile = if (f.exists()) Properties().apply { f.inputStream().use { load(it) } }.getProperty("esv") else null
+    (fromFile ?: System.getenv("ESV_KEY") ?: "").trim()
+}
+
 android {
     namespace = "com.biblestudy.app"
     compileSdk = 35
@@ -58,9 +65,10 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 36
-        versionName = "1.15.0"
+        versionCode = 37
+        versionName = "1.16.0"
         buildConfigField("String", "YOUVERSION_KEY", "\"$youVersionKey\"")
+        buildConfigField("String", "ESV_KEY", "\"$esvKey\"")
     }
 
     // The commentaries are already packed tightly (xz); don't zip them again.

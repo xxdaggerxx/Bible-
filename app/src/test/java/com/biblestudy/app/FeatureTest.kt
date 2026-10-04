@@ -3161,4 +3161,71 @@ class FeatureTest {
             compose.waitForIdle()
         }
     }
+
+    @Test
+    fun theEsvComesFromCrosswayAndKeepsAtMost500Verses() {
+        // BIB-12: the ESV, from Crossway's API, works like other online Bibles but keeps only the
+        // chapters read last: at most 500 verses, and never more than half a book (Crossway's terms).
+        val esvJohn3 = javaClass.getResource("/youversion/esv-JHN.3.json")!!.readText()
+        val calls = java.util.Collections.synchronizedList(ArrayList<String>())
+        val realHttp = com.biblestudy.app.data.Esv.http
+        val realKey = com.biblestudy.app.data.Esv.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        com.biblestudy.app.data.Esv.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        com.biblestudy.app.data.Esv.http = { url ->
+            calls += url
+            val q = Regex("q=(\\d{8})").find(url)?.groupValues?.get(1)?.toInt()
+            when {
+                "/passage/search/" in url -> 200 to "{\"results\":[{\"reference\":\"John 3:7\",\"content\":\"Do not marvel that I said to you, \u2018You must be born again.\u2019\"}]}"
+                q == 43003001 -> 200 to esvJohn3
+                q != null -> {
+                    // Any other chapter: 30 made-up verses.
+                    val verses = (1..30).joinToString(" ") { v -> "<b class=\\\"verse-num\\\" id=\\\"v${q + v - 1}-1\\\">$v&nbsp;</b>Verse $v of the chapter." }
+                    200 to "{\"passages\":[\"<p>$verses</p>\"]}"
+                }
+                else -> 404 to "{}"
+            }
+        }
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.any { it.code == "ESV" } == true }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "ESV" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "ESV" } }
+            assertTrue("Crossway" in com.biblestudy.app.data.BibleRepository.ALL.single { it.code == "ESV" }.copyright)
+            compose.runOnUiThread { vm.setVersion(0, "ESV"); vm.goTo(0, 43, 3, 1, remember = false) }
+            waitForLoaded()
+            val repo = vm.text("ESV")
+            waitFor(20_000) { repo.online!!.isSaved(43, 3) }
+            waitForLoaded()
+            snap("163-esv")
+            val verses = repo.chapter(43, 3).associate { it.verse to it.text }
+            assertEquals(36, verses.size)
+            assertTrue(vm.study.redLetters("ESV", 43, 3, verses)[3]!!.isNotEmpty())
+            assertTrue(vm.study.strongs("ESV", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().size >= 5)
+            // Search uses Crossway's results (with their text) for chapters not on the tablet.
+            var hits = emptyList<com.biblestudy.app.model.SearchHit>()
+            Thread { hits = repo.search("marvel", com.biblestudy.app.model.SearchScope.ALL, 43) }.apply { start(); join() }
+            assertTrue(hits.any { it.verse == 7 })
+            // Reading on through John: the oldest chapters are dropped, keeping within the limits.
+            val o = repo.online!!
+            Thread { for (c in 4..21) repo.chapter(43, c) }.apply { start(); join() }
+            assertTrue("kept ${o.savedVerses()}", o.savedVerses() <= 500)
+            assertTrue("kept ${o.savedVerses()} of John", o.savedVerses() * 2 <= vm.bible.versesBetween(43_000_000, 43_999_999, 10_000).size)
+            assertTrue("saved: " + (1..21).filter { o.isSaved(43, it) } + " calls=" + calls.count { "passage/html" in it } + " msg=" + vm.message, o.isSaved(43, 21))
+            assertTrue(!o.isSaved(43, 3))
+            // The search index and word tags go with the dropped chapters.
+            var again = emptyList<com.biblestudy.app.model.SearchHit>()
+            com.biblestudy.app.data.Esv.http = { 503 to "" }
+            Thread { again = repo.search("Nicodemus", com.biblestudy.app.model.SearchScope.ALL, 43) }.apply { start(); join() }
+            assertTrue(again.isEmpty())
+            assertTrue(vm.study.strongs("ESV", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().isEmpty())
+        } finally {
+            com.biblestudy.app.data.Esv.http = realHttp
+            com.biblestudy.app.data.Esv.key = realKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("ESV") }
+            compose.waitForIdle()
+        }
+    }
 }

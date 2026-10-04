@@ -220,10 +220,16 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val v = BibleRepository.ALL.firstOrNull { it.code == code } ?: BibleRepository.KJV
         if (v.code == bible.code) bible else BibleRepository(getApplication(), v).also { r ->
             // An online Bible's chapters get word tags, words of Jesus and paragraphs as they come (BIB-12).
+            r.online?.bookVerses = bookVerses
             r.online?.study = { db, parsed ->
                 com.biblestudy.app.data.ImportStudy.addChapter(db, r.code, parsed, study, onlineTagger, guessRed = !r.online.marksRed(), web = text(BibleRepository.WEB.code))
             }
         }
+    }
+
+    /** Verses in each book of the KJV (index = book id), for the ESV's half-a-book limit. */
+    private val bookVerses: IntArray by lazy {
+        IntArray(67).also { a -> for (b in bible.books) a[b.id] = bible.versesBetween(b.id * 1_000_000, b.id * 1_000_000 + 999_999, 100_000).size }
     }
 
     /** Tags the words of online Bibles' chapters for word studies; made the first time one comes. */
@@ -271,6 +277,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     init {
         com.biblestudy.app.data.YouVersion.key = prefs.getString("youversionKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.YOUVERSION_KEY
+        com.biblestudy.app.data.Esv.key = prefs.getString("esvKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.ESV_KEY
         BibleRepository.onlineEvents = onlineEvents
         // Back online: chapters that couldn't be fetched are tried again.
         runCatching {
@@ -299,6 +306,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         onlineBibles = null
     }
 
+    /** The ESV key typed in Settings, or empty for the one built in. */
+    var esvKey by mutableStateOf(prefs.getString("esvKey", "") ?: "")
+        private set
+
+    fun changeEsvKey(k: String) {
+        esvKey = k.trim()
+        prefs.edit { putString("esvKey", esvKey) }
+        com.biblestudy.app.data.Esv.key = esvKey.ifEmpty { com.biblestudy.app.BuildConfig.ESV_KEY }
+        onlineBibles = null
+    }
+
     /** The online Bibles YouVersion offers (English), once looked up; null until then. */
     var onlineBibles by mutableStateOf<List<com.biblestudy.app.data.YouVersion.Info>?>(null)
         private set
@@ -309,11 +327,16 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         onlineListError = null
         viewModelScope.launch {
             val r = withContext(Dispatchers.IO) { runCatching { com.biblestudy.app.data.YouVersion.bibles() } }
+            // The ESV comes from Crossway, not YouVersion, when there's a key for it.
+            val esv = listOfNotNull(com.biblestudy.app.data.Esv.info.takeIf { com.biblestudy.app.data.Esv.key.isNotBlank() })
             r.onSuccess { list ->
                 // Not the ones built in (the BSB and WEB are here already).
                 val builtIn = BibleRepository.BUNDLED.map { it.code }.toSet() + "WEBUS"
-                onlineBibles = list.filter { it.code !in builtIn }.sortedBy { it.title }
-            }.onFailure { onlineListError = "Couldn't reach YouVersion: ${it.message ?: "no internet"}" }
+                onlineBibles = (esv + list.filter { it.code !in builtIn }).sortedBy { it.title }
+            }.onFailure {
+                if (esv.isNotEmpty()) onlineBibles = esv
+                onlineListError = "Couldn't reach YouVersion: ${it.message ?: "no internet"}"
+            }
         }
     }
 
@@ -322,7 +345,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             val r = withContext(Dispatchers.IO) {
                 runCatching {
-                    val full = com.biblestudy.app.data.YouVersion.bible(info.id) ?: info // with its copyright
+                    val full = if (info.id == com.biblestudy.app.data.Esv.ID) info
+                        else com.biblestudy.app.data.YouVersion.bible(info.id) ?: info // with its copyright
                     val v = com.biblestudy.app.data.OnlineBible.create(getApplication(), full, bible.books)
                     synchronized(this@StudyViewModel) { texts.remove(v.code) }
                     BibleRepository.addImported(getApplication(), v)
@@ -341,6 +365,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (code in onlineDownloads) return
         val repo = text(code)
         val o = repo.online ?: return
+        if (o.limited) return // the ESV may only keep 500 verses
         val chapters = bible.books.filter { it.id in o.books }.flatMap { b -> (1..b.chapters).map { b.id to it } }
         onlineDownloads[code] = o.savedChapters().toFloat() / chapters.size
         downloadJobs[code] = viewModelScope.launch {

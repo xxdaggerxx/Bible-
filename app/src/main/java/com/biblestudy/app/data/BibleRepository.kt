@@ -67,7 +67,8 @@ class BibleRepository(context: Context, val version: BibleVersion) {
      */
     fun ensure(book: Int, chapter: Int) {
         val o = online ?: return
-        if (book !in 1..66 || chapter < 1 || o.isSaved(book, chapter)) return
+        if (book !in 1..66 || chapter < 1) return
+        if (o.isSaved(book, chapter)) { o.touch(book, chapter); return }
         if (android.os.Looper.getMainLooper().isCurrentThread) { fetchLater(book, chapter); return }
         fetchNow(book, chapter)
     }
@@ -78,7 +79,7 @@ class BibleRepository(context: Context, val version: BibleVersion) {
             o.fetch(book, chapter)
             onlineEvents?.arrived(code, book, chapter)
             // Read on without waiting: the next two chapters come in the background.
-            for (n in 1..2) if (chapter + n <= book(book).chapters) fetchLater(book, chapter + n, quiet = true)
+            for (n in 1..(if (o.limited) 1 else 2)) if (chapter + n <= book(book).chapters) fetchLater(book, chapter + n, quiet = true)
             true
         } catch (e: Exception) {
             onlineEvents?.failed(code, book, chapter, e)
@@ -180,12 +181,12 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         val o = online ?: return found
         // An online Bible: also ask YouVersion, for chapters not on the tablet yet (not on the main thread).
         if (android.os.Looper.getMainLooper().isCurrentThread) return found
-        val ids = runCatching { YouVersion.searchVerses(o.id, wanted) }.getOrDefault(emptyList())
-            .filter { it / 1_000_000 in lo..hi }
+        val ids = runCatching { o.searchRemote(wanted, books) }.getOrDefault(emptyList())
+            .filter { it.first / 1_000_000 in lo..hi }
         if (ids.isEmpty()) return found
         val have = found.mapTo(HashSet()) { VerseId.of(it.book, it.chapter, it.verse) }
-        val extra = ids.filter { it !in have }.mapNotNull { id ->
-            val text = verseText(id) ?: return@mapNotNull null
+        val extra = ids.filter { it.first !in have }.mapNotNull { (id, given) ->
+            val text = given ?: verseText(id) ?: return@mapNotNull null
             if (containsAny(text, excluded)) null else SearchHit(id / 1_000_000, (id / 1000) % 1000, id % 1000, text)
         }
         return (found + extra).sortedBy { VerseId.of(it.book, it.chapter, it.verse) }
