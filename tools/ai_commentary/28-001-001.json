@@ -1,0 +1,141 @@
+{
+ "book": 28,
+ "chapter": 1,
+ "first": 1,
+ "last": 11,
+ "ref": "Hosea 1",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God gave His word to the prophet Hosea during the reigns of four kings of Judah and King Jeroboam II of Israel. Hosea's name means 'salvation,' reminding us that God sends His prophets to deliver people from spiritual ruin. Even though Israel was wealthy and militarily strong under Jeroboam, God called Hosea to warn the nation that their sins would bring disaster.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Lord gave Hosea a startling first command: to marry an unfaithful woman and raise children with her. This painful home life was a living picture of Israel's relationship with God, because the nation had turned away from Him to follow idols. In the Bible, worshipping false gods is called spiritual adultery, because it breaks the sacred covenant promises made to the Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Catholics often understand Hosea's marriage as an actual historical event rather than a vision or a parable, serving as a real-life sign of Israel's spiritual unfaithfulness.",
+     "sources": [
+      "https://www.catholic.com/encyclopedia/osee"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Hosea obeyed the Lord and married Gomer, the daughter of Diblaim, and she gave birth to a son. The names carried symbolic meaning for Israel: Gomer pointed to corruption, and Diblaim referred to rich fig cakes, showing a people given over to selfish luxury. Hosea trusted God completely, even when the Lord's command brought personal shame.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God told Hosea to name his first son Jezreel. This name recalled the city of Jezreel, where King Jehu had wiped out the wicked house of Ahab. Although God had ordered the end of Ahab's family, Jehu acted out of personal ambition and kept worshipping golden calves, so God promised to punish Jehu's dynasty and end the kingdom of Israel.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "God declared that He would shatter the bow of Israel in the Valley of Jezreel. In the ancient world, the bow was the primary symbol of an army's military strength and defense. God was showing Israel that all their human power, soldiers, and weapons would completely fail when His judgment arrived.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Gomer gave birth to a daughter, and God commanded Hosea to name her Lo-ruhamah, which means 'no mercy' or 'not pitied.' This showed that the Lord would no longer show compassion to the northern kingdom of Israel or hold back their punishment. Because the people refused to repent, God would no longer forgive them or protect them from their enemies.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "In contrast to Israel, God promised to show mercy to the southern kingdom of Judah and save them. He made it clear that their rescue would not come through human armies, bows, swords, or cavalry, but by the Lord Himself. This was fulfilled when God sent an angel to strike down the invading Assyrian army outside Jerusalem without Judah having to fight.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "After Gomer weaned Lo-ruhamah, she conceived and gave birth to another son. In the ancient world, weaning took several years, which reflected the Lord's great patience in giving Israel time to turn back before judgment fell. Even with this gracious delay, the people remained stubborn in their sins.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "God instructed Hosea to name the newborn son Lo-ammi, which means 'not My people.' By this name, the Lord formally declared that His covenant relationship with Israel was broken because of their unfaithfulness. Since the people had chosen idols over God, He would no longer treat them as His special possession or act as their protector.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "God immediately followed His warning with a promise of amazing grace. He promised that the true people of God would become as countless as the sand on the seashore, just as He had sworn to Abraham. In the very place where they were rejected as 'not My people,' they would be called the children of the living God, a promise the New Testament shows is fulfilled through Jesus Christ.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "The Lord foretold a day when the divided peoples of Judah and Israel would be gathered together as one family. They would appoint for themselves one leader, whom Christian teachers identify as Jesus Christ, the promised King. Jezreel, once a name of slaughter and scattering, would become a great day of harvest and joy when God plants His people again.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

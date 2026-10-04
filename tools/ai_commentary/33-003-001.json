@@ -1,0 +1,158 @@
+{
+ "book": 33,
+ "chapter": 3,
+ "first": 1,
+ "last": 12,
+ "ref": "Micah 3",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Micah speaks directly to the judges and rulers who govern God's people. As leaders, they are responsible to understand justice and protect the innocent. Instead of doing what is right, they neglect their duty and fail the people they were called to care for. Leaders have a serious duty before God to protect those under their care.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://enduringword.com/bible-commentary/micah-3/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 3,
+   "meaning": "Micah compares the cruel rulers to butchers or wild beasts tearing sheep apart. They strip away the people's possessions and livelihoods until it is like chopping up meat for a cooking pot. This shocking picture shows how extreme greed and violence had become among the nation's leaders. Those in power must never treat the people they lead as fuel for their own selfish gain.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://enduringword.com/bible-commentary/micah-3/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "A day of judgment is coming when these greedy rulers will cry out to God for help in their distress. The Lord will refuse to listen because they ignored the cries of the poor they oppressed. God turns His face away from those who stubbornly harm others and refuse to repent.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://www.studylight.org/commentary/micah/3-1.html"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Micah now turns to the false prophets who lead the people astray. If someone feeds them well and pays them, they promise peace and blessing, but if someone gives them nothing, they declare that God is sending war. They do not care about God's truth, only about feeding their own appetites.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God warns these deceitful prophets that deep darkness and calamity are about to fall on them. Their daylight will disappear, and they will receive no true visions or guidance from the Lord in their time of trouble. Because they chose to walk in lies, God will leave them completely blind to His will.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "The false seers and fortune-tellers will be humiliated when their predictions of peace fail to come true. They will cover their mouths in shame and sorrow because God gives them no answer at all. When disaster strikes, everyone will see that their pretended wisdom was completely empty.",
+   "meaning_sources": [
+    "Calvin",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "Micah stands in sharp contrast to these deceitful prophets. He is filled with power from the Spirit of the Lord, with sound judgment and moral courage, to speak the truth boldly. His God-given calling is to confront God's people with their rebellion and sin rather than tell them pleasant lies.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://biblehub.com/commentaries/micah/3-8.htm"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Any true minister of the gospel must be equipped with the Holy Spirit's power, wisdom, and courage to confront sin faithfully.",
+     "sources": [
+      "Calvin"
+     ]
+    },
+    {
+     "tradition": "Charismatic",
+     "view": "Prophecy under the new covenant is focused mainly on encouragement, comfort, and building up believers rather than primarily exposing sin.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/micah-3/"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Micah calls on the rulers and judges of Israel to pay close attention to God's charges against them. These leaders hate what is fair and twist everything that is honest and straight. True justice cannot survive when leaders despise what is right to serve their own ends.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "https://www.blueletterbible.org/Comm/mhc/Mic/Mic_003.cfm"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The rulers expand and beautify Jerusalem by taking wealth through violence, unfair trials, and murder. They might take pride in their new buildings, but in God's eyes the city is stained with innocent blood. God never accepts achievements that are built on the misery of others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "https://www.preceptaustin.org/micah_3_commentary"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "Bribery and greed have infected every office in Jerusalem: judges take bribes, priests teach for pay, and prophets divine for money. Even worse, these corrupt leaders still claim God is on their side and assume no disaster will ever strike them because the temple is among them. Presuming on God's protection while ignoring His commands is a dangerous trap.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Because of the leaders' wickedness, Jerusalem and Mount Zion are doomed to total ruin. The holy city will become a pile of rubble, and the ground where the temple stood will be plowed like a farm field and overgrown with brush. Places once honored by God's presence can still face destruction if the people pollute them with unrepented sin.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}
