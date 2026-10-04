@@ -293,8 +293,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Tries again the online chapters that couldn't be fetched: the pages waiting for them are laid out again. */
     fun retryOnline() {
+        cardFetches.clear()
         if (onlineFailed) { onlineFailed = false; onlineArrivals++ }
     }
+
+    /** Online chapters verse cards have asked for this session (see [cardVerses]). */
+    internal val cardFetches = HashSet<String>()
 
     /** The YouVersion key typed in Settings, or empty for the one built in. */
     var youVersionKey by mutableStateOf(prefs.getString("youversionKey", "") ?: "")
@@ -2695,7 +2699,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Changes when anything a verse card shows could have changed: highlights, settings, layers. */
     fun cardStamp(): Int = editCount * 31 + highlightLoads * 17 + (if (redLetters) 1 else 0) +
-        (if (highlightsAllVersions) 2 else 0) + layers.hashCode() * 7
+        (if (highlightsAllVersions) 2 else 0) + layers.hashCode() * 7 + onlineArrivals * 13
 
     /** Highlights read from the notes database for verse cards; counts up as they arrive. */
     var highlightLoads by mutableIntStateOf(0)

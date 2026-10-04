@@ -131,6 +131,11 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         if (online != null && fromId / 1_000_000 == toId / 1_000_000 && (toId / 1000) % 1000 - (fromId / 1000) % 1000 <= 3) {
             for (c in (fromId / 1000) % 1000..(toId / 1000) % 1000) ensure(fromId / 1_000_000, c)
         }
+        return savedVersesBetween(fromId, toId, limit)
+    }
+
+    /** Verses from [fromId] to [toId] that are on the tablet, without downloading (see [versesBetween]). */
+    fun savedVersesBetween(fromId: Int, toId: Int, limit: Int): List<Pair<Int, String>> {
         return db.rawQuery(
             "SELECT id, text FROM verses WHERE id BETWEEN ? AND ? ORDER BY id LIMIT $limit",
             arrayOf(fromId.toString(), toId.toString()),

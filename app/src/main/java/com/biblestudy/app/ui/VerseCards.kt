@@ -59,8 +59,17 @@ fun StudyViewModel.cardSavedText(spec: CardSpec, version: String): String? {
 fun StudyViewModel.cardText(t: MarginText, spec: CardSpec): CardText {
     val version = spec.version
     val p = spec.passage
-    val verses = passageVerses(p, version)
+    val verses = cardVerses(p, version)
     val header = "${passageLabel(p)} ($version)"
+    // An online Bible's chapter not on the tablet (yet, or any more): show the verses saved with the card.
+    if (verses.isEmpty()) {
+        val saved = t.text.substringAfter('\n', "").trim()
+        val text = buildAnnotatedString {
+            withStyle(SpanStyle(color = LINK_COLOR, textDecoration = TextDecoration.Underline, fontWeight = FontWeight.SemiBold)) { append(header) }
+            if (saved.isNotEmpty()) { append("\n"); append(saved) }
+        }
+        return CardText(text, header.length, emptyList())
+    }
     val out = ArrayList<CardVerse>()
     var headerEnd = 0
     val text = buildAnnotatedString {
@@ -103,6 +112,20 @@ fun StudyViewModel.cardText(t: MarginText, spec: CardSpec): CardText {
         }
     }
     return CardText(text, headerEnd, out)
+}
+
+/**
+ * A card's verses. For an online Bible each chapter is asked for at most once a session (and again
+ * after [StudyViewModel.retryOnline]): the ESV and NLT keep only 500 verses, so cards on chapters
+ * that push each other out would otherwise download them over and over on every redraw.
+ */
+fun StudyViewModel.cardVerses(p: Passage, version: String): List<Pair<Int, String>> {
+    val repo = text(version)
+    val online = repo.online ?: return passageVerses(p, version)
+    for (ch in p.chapter..minOf(p.endChapter, p.chapter + 3)) {
+        if (online.isSaved(p.book, ch) || cardFetches.add("$version ${p.book} $ch")) repo.ensure(p.book, ch)
+    }
+    return repo.savedVersesBetween(p.startId, p.endId, StudyViewModel.PASSAGE_LIMIT)
 }
 
 /** A highlight or underline as a text style, [strength] lighter for highlights from other versions. */

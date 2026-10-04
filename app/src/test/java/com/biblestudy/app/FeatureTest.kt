@@ -57,6 +57,8 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.Assert.assertFalse
 import com.biblestudy.app.ui.Slot
+import com.biblestudy.app.ui.cardSpec
+import com.biblestudy.app.ui.cardText
 import androidx.compose.ui.graphics.asImageBitmap
 import com.biblestudy.app.ui.HIGHLIGHT_COLORS
 import com.biblestudy.app.model.Region
@@ -3290,5 +3292,60 @@ class FeatureTest {
         assertEquals("KJV", vm.activeVersion)
         compose.runOnUiThread { vm.deleteSketch(sk); vm.closePanel(1) }
         compose.waitForIdle()
+    }
+    @Test
+    fun nltVerseCardsShowWhileTheirChapterIsNotOnTheTablet() {
+        // Reported: some NLT verse cards didn't appear. Only 500 NLT verses are kept, so a card's
+        // chapter may have been dropped; the card showed just its reference until something else
+        // redrew it, and cards from chapters that push each other out fetched them again and again.
+        val john3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
+        val realHttp = com.biblestudy.app.data.Nlt.http
+        val realKey = com.biblestudy.app.data.Nlt.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        var online = false
+        var requests = 0
+        com.biblestudy.app.data.Nlt.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        com.biblestudy.app.data.Nlt.http = { url ->
+            requests++
+            if (!online) throw java.io.IOException("offline")
+            if ("ref=John.3&" in url) 200 to john3 else 200 to "<html><body>No passage</body></html>"
+        }
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.any { it.code == "NLT" } == true }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "NLT" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NLT" } }
+            val card = com.biblestudy.app.model.MarginText(
+                9_000_001L, 1L, 43, 3, com.biblestudy.app.model.Region.RIGHT, 16, 0f, 0f, 300f,
+                "John 3:16 (NLT)\nFor this is how God loved the world.",
+            )
+            val spec = vm.cardSpec(card)!!
+            // Offline, chapter not kept: the card shows the verses saved with it.
+            lateinit var shown: com.biblestudy.app.ui.CardText
+            compose.runOnUiThread { shown = vm.cardText(card, spec) }
+            assertTrue(shown.text.text, "For this is how God loved the world." in shown.text.text)
+            waitFor(10_000) { requests >= 1 }
+            // Laid out again and again (every redraw), it asks for the chapter only once.
+            compose.runOnUiThread { repeat(5) { vm.cardText(card, spec) } }
+            Thread.sleep(500)
+            assertEquals(1, requests)
+            // Back online: the chapter comes, and the card is redrawn from it, live.
+            online = true
+            val before = vm.cardStamp()
+            compose.runOnUiThread { vm.retryOnline(); vm.cardText(card, spec) }
+            waitFor(20_000) { vm.text("NLT").online!!.isSaved(43, 3) }
+            compose.waitForIdle()
+            assertTrue(vm.cardStamp() != before)
+            compose.runOnUiThread { shown = vm.cardText(card, spec) }
+            assertEquals(1, shown.verses.size)
+            assertTrue(shown.verses.single().text, "loved the world" in shown.verses.single().text)
+        } finally {
+            com.biblestudy.app.data.Nlt.http = realHttp
+            com.biblestudy.app.data.Nlt.key = realKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NLT") }
+            compose.waitForIdle()
+        }
     }
 }
