@@ -1,0 +1,128 @@
+{
+ "book": 23,
+ "chapter": 31,
+ "first": 1,
+ "last": 9,
+ "ref": "Isaiah 31",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God warns the leaders of Judah against traveling to Egypt for military help against Assyria. They put their trust in large numbers of horses and chariots instead of praying to God and seeking His direction. Looking to human power while ignoring the Lord always leads to ruin.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Geneva Notes",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Judah thought its secret political plans were clever, but God is wiser than any human ruler. He does not take back His words of judgment, and He will carry out everything He promised. He will rise up against both the wicked leaders of Judah and the Egyptian allies they hired.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The Egyptians are only human beings, not God, and their warhorses are weak flesh rather than spirit. They have no lasting strength to stand against the Almighty. When the Lord reaches out His hand to judge, both the helper and the one receiving help will stumble and fall together.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "God compares Himself to a fierce lion growling over its food, not bothered in the least by a crowd of shouting shepherds. In the same way, the Lord of Hosts will come down to Mount Zion, and no enemy can scare Him away from defending His city. His absolute power means His people never have to depend on human allies.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars read this verse to mean God would march down like a lion to fight against Jerusalem in judgment, rather than to defend it.",
+     "sources": [
+      "https://biblehub.com/commentaries/isaiah/31-4.htm",
+      "Keil & Delitzsch"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "After picturing His power as a lion, God describes His tender care as a mother bird flying over her nest to protect her young. He promises to hover over Jerusalem to shield it and carry it to safety. Just like during the first Passover in Egypt, the Lord will pass over the city to spare it from destruction.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God invites the people to return to Him in repentance, which means turning away from wrongdoing and coming back to God. Even though their rebellion ran very deep, God's grace was still open to forgive them. Remembering that they belong to the Lord gives them every reason to leave their sins behind.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "When the people turn back to God, every person will throw away their silver and gold idols. They will see that these handmade statues are worthless and have only brought them guilt. True change of heart always shows itself when people cast away whatever took God's rightful place.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The invading Assyrian army will be struck down, but not by ordinary human weapons or soldier strength. God will send an unseen angel to destroy their forces, forcing their proud king to flee for his life. God alone receives the glory whenever He rescues His people from danger.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "The Assyrian king and his commanders will panic at the sight of the Lord's battle standard and abandon their strongholds in fear. The Lord is like a holy fire in Jerusalem that warms and protects His people while burning up His enemies. No earthly power can survive against the presence of God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

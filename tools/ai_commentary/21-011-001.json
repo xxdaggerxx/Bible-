@@ -1,0 +1,149 @@
+{
+ "book": 21,
+ "chapter": 11,
+ "first": 1,
+ "last": 10,
+ "ref": "Ecclesiastes 11",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "People are encouraged to give freely to those in need, even when it looks as if the gift is lost or thrown away. Like grain sown on flooded ground or a ship sent across the sea, acts of kindness will bring a certain reward from God in due time. Wealth does no true good unless it is used to help others.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars understand this verse as practical advice for overseas trade, encouraging merchants to invest grain in shipping ventures to gain a profit later.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://enduringword.com/bible-commentary/ecclesiastes-11/"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Generosity should be spread widely to as many people as possible rather than held back. Trouble and loss can strike the land without warning, leaving anyone in sudden need. Giving while you have the means is the wisest way to prepare for hard times ahead.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Natural events follow fixed rules beyond human control, just as full clouds must drop their rain and a fallen tree stays right where it lands. Hard times come whether we plan for them or not, and death will suddenly fix our earthly story in place. Because life ends so quickly and decisively, we should do good without delay.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": [
+    {
+     "label": "Catholic",
+     "view": "Early teachers like Jerome understood the fallen tree as a picture of a person's eternal state, teaching that the soul's destiny in heaven or hell is settled permanently at death.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.studylight.org/commentaries/eng/tpc/ecclesiastes-11.html"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "A farmer who waits for the weather to be completely perfect will never plant seeds or bring in the harvest. In the same way, people who constantly look for excuses or wait for ideal circumstances will never accomplish any good. Faith requires stepping forward and doing our duty even when the future seems uncertain.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Humans cannot trace the invisible movement of the wind or explain how bones grow in a mother's womb. Since basic mysteries in nature remain hidden from us, we cannot expect to grasp all the workings of God's providence. We can safely trust His promises and care, even when we cannot see how He is working.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Work steadily from morning until evening, seizing every chance to do good and fulfill your tasks. Since no one knows which specific venture will succeed or whether all will bear fruit, constant effort is best. Trusting God means persevering faithfully without worrying over what we cannot predict.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Life is a sweet and beautiful gift, and it is a pleasant thing to see the light of the sun each day. God made the world to be enjoyed, especially by those who walk in His ways. A cheerful and thankful heart receives each day of life with gratitude.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "If a person is blessed with many years, he should enjoy them all with thanksgiving. Yet he must also remember that the dark days of trouble, old age, and the grave will be many. Keeping the end in mind prevents us from clinging too tightly to earthly comforts that quickly pass away.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Young people are welcomed to enjoy the energy, cheerfulness, and opportunities of their youth. Yet this call comes with a strong caution: God will bring every thought, desire, and action into judgment. True joy in youth stays within the boundaries of God's holy law rather than chasing sinful pleasures.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The writer urges the young to drive out anger and anxiety from their minds and keep their bodies free from harmful, sinful practices. Chasing wild desires may feel pleasant for a moment, but it leads to physical pain and bitter regret. Because youth and physical prime pass away like a vapor, life is best lived in purity before God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,83 @@
+{
+ "book": 23,
+ "chapter": 20,
+ "first": 1,
+ "last": 6,
+ "ref": "Isaiah 20",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Sargon, the king of Assyria, sent his supreme military commander to attack and capture the Philistine city of Ashdod. Ashdod stood along the coast on the main road toward Egypt, so taking it cleared the way for the Assyrian army to march south. This victory warned the neighboring lands, including Judah, that Assyria's terrifying power was right at their doorstep.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "God commanded Isaiah to take off his rough sackcloth and sandals and walk around stripped and barefoot, and Isaiah promptly obeyed. The sackcloth was likely his normal, simple prophet's clothing or a garment of mourning. In the ancient world, being called naked often meant wearing only a light undergarment, dressing like a mistreated slave or a prisoner of war.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "God honored Isaiah as His faithful servant and explained that the prophet's unusual condition was a living sign against Egypt and Cush. Isaiah's humbled appearance acted as an ongoing visual sermon for the people of Judah. It warned them over a span of three years that these two mighty southern allies would soon suffer a terrible downfall.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The king of Assyria would defeat Egypt and Cush and march their people away into exile. Captives of all generations, both young and old, would be stripped of their fine garments and forced to walk barefoot in humiliating exposure. This harsh treatment was meant to break their pride and bring deep shame upon Egypt.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "All who relied on the armies of Cush and bragged about the greatness of Egypt would be struck with fear and utter disappointment. Many in Judah had pinned their hopes on an alliance with these empires instead of relying on the Lord. When those worldly protectors collapsed, everyone who trusted in them was left disgraced.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "The people living along the coastland, including the people of Judah, would cry out in utter dismay when they saw their allies fall. They had counted on Egypt to deliver them from the Assyrian threat, but now their trusted rescuer was broken. This showed them that leaning on human help is useless and that only God could truly save them.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}

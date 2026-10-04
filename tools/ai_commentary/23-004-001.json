@@ -1,0 +1,101 @@
+{
+ "book": 23,
+ "chapter": 4,
+ "first": 1,
+ "last": 6,
+ "ref": "Isaiah 4",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "War will sweep away so many men that few will be left alive. In their desperation, seven women will plead with one man to marry them, offering to buy their own food and clothes just to take his name. In ancient Israel, being unmarried and childless was considered a painful disgrace, and these women want to remove that shame at any cost.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The tone shifts from dark judgment to bright hope in the coming Messiah, God's promised Savior and King. He is called the Branch of the Lord, growing up to bring beauty, honor, and spiritual life to the survivors. Those who are spared through God's judgment will find their true joy and dignity in Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "This prophecy foretells Christ's future thousand-year earthly reign, when He will physically rule and restore the Jewish survivors after the Great Tribulation.",
+     "sources": [
+      "https://www.preceptaustin.org/isaiah_42-6_commentary",
+      "https://www.studylight.org/commentaries/eng/dcc/isaiah-4.html"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "This promise is fulfilled spiritually in Christ's kingdom and the gathering of the Christian church, rather than in an earthly political realm.",
+     "sources": [
+      "Calvin",
+      "Geneva Notes"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The survivors left behind in Jerusalem are called holy, which means set apart for God and cleansed from sin. Their names are written in God's book of life, meaning God has chosen and recorded them for life and safety. True membership among God's people is shown not by large numbers, but by this holiness and devotion to Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "This holiness arrives only after God cleanses His people from their wickedness. The Lord washes away their moral filth and removes the guilt of violent bloodshed through severe judgment. Like a purifying fire, God burns away the sin while refining the hearts of those who remain.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The Lord promises to protect His gathered people with visible signs of His presence, just as He guarded Israel in the desert. He creates a pillar of cloud and smoke by day and a glowing fire by night over their homes and worship gatherings. Over all His glorious people, God places a protective covering, like a canopy shielding a royal wedding.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God will provide a secure booth or shelter against all harsh elements. Just as a desert tent protects a traveler from scorching midday heat and sudden rainstorms, God shelters His people from trials and divine wrath. Believers find true rest and safety when they take refuge in Him.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 1: removed sources ['Jamieson-Fausset-Brown']",
+  "v. 6: removed sources ['Jamieson-Fausset-Brown']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

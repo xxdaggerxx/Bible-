@@ -1,0 +1,138 @@
+{
+ "book": 24,
+ "chapter": 24,
+ "first": 1,
+ "last": 10,
+ "ref": "Jeremiah 24",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "King Nebuchadnezzar of Babylon carried away King Jeconiah, the royal leaders, and Judah's skilled metalworkers and builders as prisoners. After this deportation, the Lord gave Jeremiah a vision of two baskets of figs placed right in front of the temple. God set Judah's people before His own sanctuary to evaluate them and show what lay ahead. Hard times often arrive suddenly, but God remains in control of history.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "One basket held choice, early-ripening figs, the kind most prized as a sweet delicacy. The other basket contained rotten, ruined figs that were completely unfit to eat. This contrast set up God's surprising verdict about the exiles compared to those who stayed in Jerusalem. Outward circumstances do not always show who has God's favor.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The Lord asked Jeremiah what he saw, and the prophet answered that he saw both very good figs and very bad figs. The question made Jeremiah look closely at the sharp difference between the two baskets. There was no middle ground between fruit that was delightfully good and fruit that was totally ruined.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "The Lord spoke again to explain the meaning of the baskets. Jeremiah did not need to guess the answer, because God Himself revealed the interpretation. God makes His purposes plain to His servants when it is time to understand.",
+   "meaning_sources": [
+    "https://www.preceptaustin.org/jeremiah-24-commentary"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "God revealed that the good figs represented the captives already taken to Babylon. The people who stayed in Jerusalem looked down on the exiles, but God declared that He had sent them away for their own benefit. Their painful discipline was designed to shield them from worse destruction and bring them to repentance.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "God promised to keep a watchful eye on the exiles in Babylon and bring them safely back to their homeland. Instead of tearing them down, He pledged to rebuild their lives and plant them securely. Even in times of heavy discipline, God prepares a way to restore His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "God promised to give the exiles a new heart so they would truly know Him as the Lord. They would return to Him with their whole being, renewing their covenant relationship as His special people. Genuine repentance and spiritual renewal begin with God's work inside the human heart.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Repentance is seen as entirely God's sovereign gift, meaning people are spiritually unable to turn to God until He first gives them a renewed heart.",
+     "sources": [
+      "Calvin"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "The rotten figs represented King Zedekiah, his royal court, and the remnant of people still living in Judah or sheltering in Egypt. Those remaining at home thought they were safe and superior to the exiles, but God saw them as corrupt and unrepentant. Depending on political allies like Egypt could never shield them from divine judgment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "God warned that the rebellious remnant would be scattered across the earth to suffer shame and trouble. Other nations would mock them, turning their name into a proverb and a curse. This terrible fate fulfilled the ancient curses written in God's law for breaking His covenant.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "The Lord declared that war, starvation, and deadly disease would pursue the stubborn remnant until they vanished from the land. Even though God had granted this country to their ancestors, their ongoing disobedience forfeited their right to live there. God is deeply patient, but persistent rebellion ultimately brings ruin.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Calvin",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 2: removed sources ['Adam Clarke']",
+  "v. 4: removed sources ['Calvin']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,275 @@
+{
+ "book": 21,
+ "chapter": 1,
+ "first": 1,
+ "last": 18,
+ "ref": "Ecclesiastes 1",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "Solomon introduces himself as the Teacher and son of David, who reigned as king in Jerusalem. Having strayed into foolish choices earlier in life, he now speaks out of deep repentance to gather God's people and teach them true wisdom. His goal is to warn others against making the painful mistakes that cost him his own peace.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Anglican",
+     "view": "Some read the book as Solomon's genuine repentance in old age, while others see no evidence for his recovery and conclude the author used Solomon's name as a literary figure.",
+     "sources": [
+      "https://biblehub.com/commentaries/ellicott/ecclesiastes/1.htm",
+      "https://www.preceptaustin.org/pdf/62049/"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Most modern scholars view the book as a late, post-exilic work by an unnamed author who wrote in the royal persona of Solomon to explore life's deepest questions.",
+     "sources": [
+      "Keil & Delitzsch",
+      "https://biblehub.com/commentaries/ellicott/ecclesiastes/1.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Teacher announces his main message: apart from God, all earthly pursuits are entirely empty and temporary. The phrase 'futility of futilities' uses repetition to describe the highest possible degree of emptiness, like a puff of breath or vapor that disappears. Earthly life cannot satisfy the human soul because only the Creator can give lasting purpose.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "The word for futility points to something fleeting and hard to grasp like vapor, rather than declaring that existence itself has no meaning.",
+     "sources": [
+      "https://learn.ligonier.org/devotionals/vanity-vanities"
+     ]
+    },
+    {
+     "tradition": "Baptist",
+     "view": "The Teacher is emphasizing the brevity and transience of earthly life rather than teaching total meaninglessness.",
+     "sources": [
+      "https://www.desiringgod.org/articles/is-all-really-vanity"
+     ]
+    },
+    {
+     "tradition": "Many evangelicals",
+     "view": "Any life lived apart from God is truly empty and meaningless, leaving people without real purpose until they turn to Him.",
+     "sources": [
+      "https://www.gotquestions.org/all-is-vanity.html"
+     ]
+    }
+   ],
+   "other": [
+    {
+     "label": "Modern scholarship",
+     "view": "Some scholars translate the key word as 'absurd,' pointing to the frustrating clash between human expectations and the broken realities of the world.",
+     "sources": [
+      "https://www.bibleodyssey.org/articles/vanity-of-vanities/"
+     ]
+    },
+    {
+     "label": "Catholic",
+     "view": "Created things are good in themselves because God made them, but they become empty to humans when people sinfully put them above God.",
+     "sources": [
+      "https://www.newadvent.org/fathers/1401.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The Teacher asks what real, lasting profit people gain from all their hard work during life. The phrase 'under the sun' means earthly life viewed strictly within the borders of this visible world without looking to eternity. Daily labor can feed the body for a moment, but it cannot cure sin, satisfy the soul, or buy eternal life.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Generations of human beings are born, live briefly, and pass away, while the earth remains through it all. Even though people act as if they own the world, each person stays only a short time as a passing traveler. This sharp contrast reminds us how small and fragile our earthly lives really are.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 7,
+   "meaning": "Creation moves in ceaseless, repeating loops that never bring permanent change or true rest. The sun rises and sets only to rush back to its starting point; the wind shifts endlessly across the compass; and rivers run into the sea without ever filling it. In the same way, human labor repeats itself continually without finding lasting satisfaction anywhere on earth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "All things in this world are caught up in wearisome work that words cannot fully express. Human beings look and listen constantly, yet the eye is never satisfied with seeing and the ear is never filled with hearing. Curiosity keeps people striving, but the material world can never bring the human heart to complete rest.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "Human history and everyday life run along the very same tracks century after century. People may think they have found something brand new, but the basic human conditions, desires, and struggles remain unchanged. Looking to earthly novelties for permanent happiness will always end in disappointment.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Whenever someone points to an invention or experience and calls it entirely new, earlier generations have already known something like it. What feels modern to us only seems that way because old records and memories have faded. True, lasting renewal cannot be manufactured by this world, but comes only from God.",
+   "meaning_sources": [
+    "Matthew Henry"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 11,
+   "end": 11,
+   "meaning": "People quickly forget the ancestors who lived long ago, and future generations will forget those living today. Even the greatest earthly achievements and famous names eventually sink into silence. Trying to build a lasting identity on human praise is therefore an empty pursuit.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 12,
+   "end": 12,
+   "meaning": "Solomon reminds his listeners that he ruled over a united Israel from its capital in Jerusalem. His royal station gave him supreme wealth, power, and the finest learning of his day to test what brings true happiness. If any king on earth had the resources to find satisfaction in worldly things, it was he.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 13,
+   "end": 13,
+   "meaning": "The Teacher applied his mind to examine everything done by human beings under heaven. He found that God has given humanity a painful, exhausting task in this unending search for answers through human wisdom. This hard toil humbles human pride and reminds us of our total need for God's guidance.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown",
+    "Geneva Notes"
+   ],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "The painful, wearisome search for knowledge is God's just punishment for humanity eating from the forbidden tree of knowledge.",
+     "sources": [
+      "https://biblehub.com/commentaries/ecclesiastes/1-13.htm"
+     ]
+    },
+    {
+     "tradition": "Baptist",
+     "view": "The difficult burden of searching is a loving discipline from the Father to lead His children toward holiness.",
+     "sources": [
+      "https://biblehub.com/commentaries/ecclesiastes/1-13.htm"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 14,
+   "end": 14,
+   "meaning": "Solomon surveyed all human endeavors and found them to be empty and like chasing after the wind. Just as a person cannot catch or hold the wind in their hands, earthly work cannot hold onto real peace. Striving for satisfaction apart from God only leaves the human spirit weary and distressed.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 15,
+   "end": 15,
+   "meaning": "Human wisdom alone cannot straighten out the brokenness and moral corruptions of this world. What is lacking in human life and understanding cannot simply be counted up and supplied by human effort. Searching into life without God only exposes how helpless we are to cure our own flaws.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 16,
+   "end": 16,
+   "meaning": "Solomon looked within himself and recognized that he had gathered far more wisdom and knowledge than any ruler in Jerusalem before him. God had given him immense mental ability, and he had tested it through broad study and observation. Yet reaching the highest peak of human learning still left his soul restless and unsatisfied.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 17,
+   "end": 17,
+   "meaning": "The Teacher set out to study both wisdom and foolishness so he could see their differences and outcomes clearly. He investigated wild living and senseless pleasures alongside serious philosophy to test if either could produce true contentment. In the end, he discovered that analyzing human folly was just as futile as grasping for the wind.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 18,
+   "end": 18,
+   "meaning": "Acquiring greater worldly insight and secular knowledge only adds to a person's inner sorrow and grief. The more someone understands human nature and earthly life, the more clearly they see human suffering, sin, and weakness. We should seek our rest not in mere information, but in knowing and loving God.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [
+  "v. 4: removed sources ['Pulpit Commentary']",
+  "v. 8: removed sources ['Pulpit Commentary']",
+  "v. 10: removed sources ['Wesley', 'Pulpit Commentary']",
+  "v. 11: removed sources ['Pulpit Commentary']"
+ ],
+ "model": "google/gemini-3.8-flash"
+}
