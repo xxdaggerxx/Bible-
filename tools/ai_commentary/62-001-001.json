@@ -1,0 +1,164 @@
+{
+ "book": 62,
+ "chapter": 1,
+ "first": 1,
+ "last": 10,
+ "ref": "1 John 1",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "John begins by pointing to Jesus Christ, the living Word who brings eternal life. The apostles did not rely on secondhand rumors; they heard Jesus speak, watched Him with their own eyes, and touched Him with their hands. These physical proofs showed that God really took on human flesh and walked on earth.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Robertson"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "Jesus, who is eternal life, existed with the Father from all eternity and became visible in human history. The apostles witnessed His life firsthand and announced this good news so others could know Him. Because He was revealed, we can share in the eternal life that comes only through Him.",
+   "meaning_sources": [
+    "Calvin",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "The apostles shared what they saw and heard so that their hearers could join with them in one spiritual family. True fellowship means having a close, shared life together, united with God the Father and His Son, Jesus Christ. When we believe their testimony, we enter into this friendship with God and His people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "https://enduringword.com/bible-commentary/1-john-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "John writes this letter so that believers can experience complete and overflowing joy. This joy does not depend on outward circumstances, but comes from knowing God and being in fellowship with Him. Walking closely with the Lord gives us a deep, lasting peace.",
+   "meaning_sources": [
+    "Barnes",
+    "Matthew Henry",
+    "https://enduringword.com/bible-commentary/1-john-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "Jesus gave the apostles a clear message about God's nature: God is light, and there is no darkness in Him at all. Light stands for complete goodness, truth, and holiness, while darkness means evil and deceit. Because God is completely pure, He can have nothing to do with sin.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Barnes",
+    "Matthew Henry (Concise)"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "Fellowship with God requires living in agreement with who He is. If people claim to be close friends with God while choosing a lifestyle of sin, their actions show that their words are false. A person cannot stay in close communion with the God of light while walking in darkness.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Barnes",
+    "Calvin"
+   ],
+   "differ": [
+    {
+     "tradition": "Pentecostal",
+     "view": "Walking in darkness describes a genuine believer who is temporarily out of fellowship with God rather than someone who has lost salvation.",
+     "sources": [
+      "https://enduringword.com/bible-commentary/1-john-1/"
+     ]
+    },
+    {
+     "tradition": "Baptist",
+     "view": "A habitual lifestyle of walking in darkness shows that a person has never truly experienced new life in Christ.",
+     "sources": [
+      "https://www.gty.org/sermons/62-4/the-certainty-of-sin-part-1",
+      "https://www.desiringgod.org/messages/let-us-walk-in-the-light-of-god"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "Walking in the light means living an honest, obedient life guided by God's holiness and truth. When Christians live this way, they enjoy real community and love with one another. Even though believers still stumble, the blood of Jesus continuously washes away all their sins.",
+   "meaning_sources": [
+    "Jamieson-Fausset-Brown",
+    "Barnes",
+    "https://enduringword.com/bible-commentary/1-john-1/"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "People deceive themselves if they claim they have no sin living within them. Even after turning to Christ, human beings still struggle with a fallen nature and imperfect hearts. Being honest about our moral failings is necessary if we want God's truth to guide our lives.",
+   "meaning_sources": [
+    "Calvin",
+    "Barnes",
+    "Jamieson-Fausset-Brown"
+   ],
+   "differ": [
+    {
+     "tradition": "Methodist",
+     "view": "This warning applies before being cleansed by Christ, because His blood and Spirit can fully remove sin from the believer's heart in this life.",
+     "sources": [
+      "Wesley",
+      "Adam Clarke"
+     ]
+    },
+    {
+     "tradition": "Reformed and Presbyterian",
+     "view": "Every believer continues to carry an inner sinful nature throughout this life, so claiming to be entirely sinless is always self-deception.",
+     "sources": [
+      "Calvin",
+      "Barnes"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "When we openly admit our wrongs to God with a humble heart, He promises to pardon us. God is faithful to His promises, and He is just to forgive because Jesus already paid the penalty for our sins on the cross. He not only pardons our past guilt but also works in us to clean our hearts from wrongdoing.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Wesley",
+    "Barnes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 10,
+   "end": 10,
+   "meaning": "Claiming that we have never committed acts of sin is an insult to God, because His Word plainly says that everyone has sinned. Making such a boast rejects the Bible's message and proves that God's truth does not live in our hearts. We honor the Lord when we honestly admit our need for His saving grace.",
+   "meaning_sources": [
+    "Calvin",
+    "Barnes",
+    "https://enduringword.com/bible-commentary/1-john-1/"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}
