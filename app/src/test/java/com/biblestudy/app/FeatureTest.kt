@@ -754,6 +754,7 @@ class FeatureTest {
         compose.runOnUiThread { vm.openVerse(43, 3, 16) }
         compose.waitForIdle()
         // (References chosen so they aren't also in this verse's cross-reference list.)
+        compose.onNodeWithTag("addNote").performClick()
         compose.onNode(hasSetTextAction()).performTextInput("Like Ruth 1:16, and Ps 23.")
         compose.onNodeWithText("Ruth 1:16").assertExists()
         compose.onNodeWithText("Psalms 23").performClick()
@@ -1058,6 +1059,27 @@ class FeatureTest {
     }
 
     @Test
+    fun theAiCommentaryComesFirstAndOpensWithTheVerse() {
+        // First in the menus; the stored order (which files writing on commentaries) is unchanged.
+        assertEquals(com.biblestudy.app.data.Commentaries.AI, com.biblestudy.app.data.Commentaries.menu.first().id)
+        assertEquals(com.biblestudy.app.data.Commentaries.CONCISE, com.biblestudy.app.data.Commentaries.all.first().id)
+        // As for a new reader: the AI Commentary, and the pop-up on its Commentary tab.
+        compose.runOnUiThread { vm.chooseCommentary(com.biblestudy.app.data.Commentaries.AI); vm.showVerseCommentary(true); vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.waitUntil(60_000) { compose.onAllNodesWithTag("verseCommentary").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("AI Commentary").assertExists()
+        snap("155-ai-commentary-first")
+        // Its menu lists the AI Commentary first.
+        compose.onNodeWithContentDescription("Choose a commentary").performClick()
+        val first = compose.onAllNodesWithText("Whole Bible", substring = true).fetchSemanticsNodes().first()
+        val aiRow = compose.onAllNodesWithText("AI Commentary").fetchSemanticsNodes().last()
+        assertTrue(aiRow.boundsInRoot.top <= first.boundsInRoot.top)
+        compose.runOnUiThread { vm.verseSheet = null; vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE); vm.showVerseCommentary(false) }
+        compose.waitForIdle()
+    }
+
+    @Test
     fun theVersePopUpShowsWhatACommentarySaysOnTheVerse() {
         compose.runOnUiThread { vm.chooseCommentary(com.biblestudy.app.data.Commentaries.CONCISE); vm.goTo(0, 43, 3, remember = false) }
         waitForLoaded()
@@ -1121,6 +1143,7 @@ class FeatureTest {
         assertNull(vm.verseWordStudy)
 
         // A typed note is kept when another verse is tapped; the panel moves to that verse.
+        compose.onNodeWithTag("addNote").performClick()
         compose.onNodeWithText("Typed note", substring = true).performTextInput("Written in the panel")
         compose.runOnUiThread { vm.openVerse(43, 3, 17) }
         compose.waitForIdle()
@@ -1151,6 +1174,7 @@ class FeatureTest {
     fun aNoteCanCoverSeveralVerses() {
         compose.runOnUiThread { vm.setNote(VerseTarget(43, 3, 16), "") }
         compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+        compose.onNodeWithTag("addNote").performClick()
         compose.onNodeWithText("Typed note", substring = true).performTextInput("God's love for the world")
         compose.onNodeWithContentDescription("Note on one more verse").performClick()
         compose.onNodeWithContentDescription("Note on one more verse").performClick()

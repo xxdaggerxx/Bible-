@@ -288,7 +288,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         highlightsAllVersions = true
         marginLeft = false; marginRight = true
         linkPanels = false
-        compareVersions = false; originalView = false; redLetters = false; verseInPanel = false; verseCommentary = false
+        compareVersions = false; originalView = false; redLetters = false; verseInPanel = false; verseCommentary = true
         changeWritingSounds(true); changeSoundVolume(0.6f)
         savePrefs()
         message = "Settings reset to their defaults."
@@ -520,7 +520,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary", verseCommentary)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
@@ -1640,8 +1640,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     // ---------- commentaries (STD-17 to STD-19) ----------
 
-    /** The commentary a new commentary panel opens with: the last one chosen. */
-    var lastCommentary by mutableStateOf(prefs.getString("commentary", null) ?: com.biblestudy.app.data.Commentaries.CONCISE)
+    /**
+     * The commentary a new commentary panel and the verse pop-up open with: the last one chosen,
+     * the AI Commentary to start with (from 1.12 for everyone; the key changed so it's the default again).
+     */
+    var lastCommentary by mutableStateOf(prefs.getString("commentary2", null) ?: com.biblestudy.app.data.Commentaries.AI)
         private set
 
     /** The commentary shown by study view [pos] of the tab in front. */
@@ -1657,16 +1660,19 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** Makes [id] the commentary shown in the verse pop-up and in new commentary panels. */
     fun chooseCommentary(id: String) {
         lastCommentary = id
-        prefs.edit { putString("commentary", id) }
+        prefs.edit { putString("commentary2", id) }
     }
 
-    /** Whether the verse details show the commentary rather than the cross-references (STD-20); remembered. */
-    var verseCommentary by mutableStateOf(prefs.getBoolean("verseCommentary", false))
+    /**
+     * Whether the verse details show the commentary rather than the cross-references (STD-20);
+     * remembered. The commentary first, to help readers understand the verse (from 1.12).
+     */
+    var verseCommentary by mutableStateOf(prefs.getBoolean("verseCommentary2", true))
         private set
 
     fun showVerseCommentary(on: Boolean) {
         verseCommentary = on
-        prefs.edit { putBoolean("verseCommentary", on) }
+        prefs.edit { putBoolean("verseCommentary2", on) }
     }
 
     /**

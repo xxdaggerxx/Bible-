@@ -522,7 +522,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                     Icon(Icons.Filled.ArrowDropDown, contentDescription = null)
                 }
                 androidx.compose.material3.DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                    for (c in com.biblestudy.app.data.Commentaries.all) {
+                    for (c in com.biblestudy.app.data.Commentaries.menu) {
                         androidx.compose.material3.DropdownMenuItem(
                             text = {
                                 Column {

@@ -695,6 +695,8 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
     }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     var notePassage by remember(id) { mutableStateOf<Passage?>(null) }
+    var noteOpen by remember(id) { mutableStateOf(false) }
+    val noteFocus = remember { androidx.compose.ui.focus.FocusRequester() }
     // The commentary's note on this verse (STD-20), loaded once the Commentary tab is chosen.
     val cid = vm.lastCommentary
     val cInfo = com.biblestudy.app.data.Commentaries.info(cid)
@@ -715,7 +717,7 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
                     Icon(Icons.Filled.ArrowDropDown, contentDescription = null)
                 }
                 DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                    for (c in com.biblestudy.app.data.Commentaries.all) {
+                    for (c in com.biblestudy.app.data.Commentaries.menu) {
                         DropdownMenuItem(
                             text = {
                                 Column {
@@ -821,25 +823,36 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
                 if (!inPanel) onDone()
             }) { Text("Ask AI") }
         }
-        OutlinedTextField(
-            value = draft.text,
-            onValueChange = { draft.text = it },
-            label = { Text("Typed note (shows in every version)") },
-            supportingText = { Text("References like Rom 8:28 or Psalm 23 become links.") },
-            minLines = 2,
-            maxLines = 5,
-            modifier = Modifier.fillMaxWidth(),
-        )
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                "Note on " + vm.refLabel(VerseId.of(t.book, t.chapter, draft.start), VerseId.of(t.book, t.chapter, draft.end)),
-                style = MaterialTheme.typography.labelLarge,
-            )
-            IconButton(onClick = { draft.end-- }, enabled = draft.end > draft.start) {
-                Icon(Icons.Filled.Remove, contentDescription = "Note on one verse fewer")
+        // The typed note: a small button until there is one, so the commentary below has the room.
+        if (draft.text.isBlank() && !noteOpen) {
+            TextButton(onClick = { noteOpen = true }, modifier = Modifier.testTag("addNote")) {
+                Icon(Icons.Filled.EditNote, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.width(6.dp))
+                Text("Add a note")
             }
-            IconButton(onClick = { draft.end++ }, enabled = draft.end < lastVerse) {
-                Icon(Icons.Filled.Add, contentDescription = "Note on one more verse")
+        } else {
+            OutlinedTextField(
+                value = draft.text,
+                onValueChange = { draft.text = it },
+                label = { Text("Typed note (shows in every version)") },
+                supportingText = { Text("References like Rom 8:28 or Psalm 23 become links.") },
+                minLines = 2,
+                maxLines = 5,
+                modifier = Modifier.fillMaxWidth().focusRequester(noteFocus),
+            )
+            // Opened with Add a note: ready to type.
+            LaunchedEffect(noteOpen) { if (noteOpen) runCatching { noteFocus.requestFocus() } }
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    "Note on " + vm.refLabel(VerseId.of(t.book, t.chapter, draft.start), VerseId.of(t.book, t.chapter, draft.end)),
+                    style = MaterialTheme.typography.labelLarge,
+                )
+                IconButton(onClick = { draft.end-- }, enabled = draft.end > draft.start) {
+                    Icon(Icons.Filled.Remove, contentDescription = "Note on one verse fewer")
+                }
+                IconButton(onClick = { draft.end++ }, enabled = draft.end < lastVerse) {
+                    Icon(Icons.Filled.Add, contentDescription = "Note on one more verse")
+                }
             }
         }
         // References typed in the note, as links to their passages (LINK-4).
@@ -861,14 +874,15 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
             }
         }
         // Below: the cross-references, or what a commentary says on the verse (STD-20).
-        TabRow(selectedTabIndex = if (vm.verseCommentary) 1 else 0, modifier = Modifier.padding(top = 12.dp, bottom = 4.dp)) {
-            Tab(
-                selected = !vm.verseCommentary, onClick = { vm.showVerseCommentary(false) },
-                text = { Text("Cross-references (${refs.size})") },
-            )
+        // The commentary comes first: it helps most in understanding the verse.
+        TabRow(selectedTabIndex = if (vm.verseCommentary) 0 else 1, modifier = Modifier.padding(top = 12.dp, bottom = 4.dp)) {
             Tab(
                 selected = vm.verseCommentary, onClick = { vm.showVerseCommentary(true) },
                 text = { Text("Commentary") }, modifier = Modifier.testTag("verseCommentaryTab"),
+            )
+            Tab(
+                selected = !vm.verseCommentary, onClick = { vm.showVerseCommentary(false) },
+                text = { Text("Cross-references (${refs.size})") }, modifier = Modifier.testTag("verseRefsTab"),
             )
         }
         if (vm.verseCommentary) CommentaryChoice()
@@ -897,7 +911,11 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
     @Composable
     fun Credit() {
         Text(
-            if (vm.verseCommentary) "${cInfo.name}, ${cInfo.author} (public domain)" else "Cross-references: OpenBible.info (CC BY)",
+            when {
+                !vm.verseCommentary -> "Cross-references: OpenBible.info (CC BY)"
+                cid == com.biblestudy.app.data.Commentaries.AI -> "Written by AI from trusted sources. Check anything important against the other commentaries."
+                else -> "${cInfo.name}, ${cInfo.author} (public domain)"
+            },
             style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
         )
     }

@@ -109,9 +109,9 @@ The details show:
 - **Compare versions:** the verse in every version, one under another. Words that differ from the version you're reading are lightly marked. Tap a version to read in it.
 - **Hebrew / Greek:** the verse in the original language, word by word. See *Hebrew and Greek word by word* below.
 - **People and places** in the verse. Tap one to read about them.
-- **Your typed note.**
+- **Your typed note.** Tap *Add a note* to write one; once a verse has a note, it shows here.
 - **Cross-references.** Tap one to read it in a small pop-over without losing your place, then *Go to* or *Open beside*.
-- **Commentary.** Tap the *Commentary* tab (next to *Cross-references*) to read what a commentary says on this verse. Tap the commentary's name to choose another, such as Jamieson-Fausset-Brown or Calvin. *Whole chapter beside the text* opens it in a panel for the whole chapter. The app remembers which tab and commentary you used last.
+- **Commentary.** The details open on the *Commentary* tab: what the AI Commentary says on this verse, in plain English. Tap the commentary's name to choose another, such as Jamieson-Fausset-Brown or Calvin. *Cross-references* is the tab beside it. *Whole chapter beside the text* opens it in a panel for the whole chapter. The app remembers which tab and commentary you used last.
 - **Related passages:** topics, parallel accounts (other Gospels, Kings and Chronicles) and passages on the same topics.
 
 ## Hebrew and Greek word by word
@@ -177,7 +177,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in the KJV, BSB 
 
 ## Commentaries
 
-- **Twelve commentaries.** Tap the commentary's name at the top of the panel to choose one: Matthew Henry (Concise or Complete), Jamieson-Fausset-Brown, Wesley's Notes, Geneva Notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin, Spurgeon's Treasury of David (Psalms), and the AI Commentary. The panel remembers the last one you chose.
+- **Twelve commentaries.** Tap the commentary's name at the top of the panel to choose one. The AI Commentary is first and opens to start with; the others are Matthew Henry (Concise or Complete), Jamieson-Fausset-Brown, Wesley's Notes, Geneva Notes, Barnes' Notes (New Testament), Adam Clarke, Keil & Delitzsch (Old Testament), Robertson's Word Pictures (New Testament), Calvin, and Spurgeon's Treasury of David (Psalms). The panel remembers the last one you chose.
 - **AI Commentary:** a short note on every verse in plain, everyday English. AI wrote it when the app was made, from the commentaries in the app and from trusted Christian websites. It works offline like the others.
 - **Its notes:** the main note gives the traditional reading. Under it, *Sources* names where each point comes from.
 - **Where Christians differ** appears on verses where churches read it differently (for example on baptism or spiritual gifts). It gives the Baptist, Methodist, Pentecostal, Reformed, Lutheran or other view in a line each, without taking sides.

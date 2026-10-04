@@ -153,6 +153,12 @@ object Commentaries {
         ),
     )
 
+    /**
+     * The commentaries in the order the menus show them: the AI Commentary first, the easiest for
+     * lay readers (STD-21). [all] keeps its order, since writing on a commentary is filed by it.
+     */
+    val menu: List<CommentaryInfo> get() = all.sortedBy { if (it.id == AI) 0 else 1 }
+
     fun info(id: String): CommentaryInfo = all.firstOrNull { it.id == id } ?: all.first()
 
     /** Where a packed commentary is unpacked; the version changes when the bundled data does. */
