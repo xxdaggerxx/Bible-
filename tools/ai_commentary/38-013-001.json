@@ -1,0 +1,128 @@
+{
+ "book": 38,
+ "chapter": 13,
+ "first": 1,
+ "last": 9,
+ "ref": "Zechariah 13",
+ "notes": [
+  {
+   "verse": 1,
+   "end": 1,
+   "meaning": "God promises a flowing fountain to cleanse the royal family and all Jerusalem from their sins and moral uncleanness. Unlike an earthly washbasin that constantly needs refilling, this fountain never runs dry and pictures the blood and grace of Christ. Those who turn from their sins in sorrow are freely pardoned and washed clean.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Calvin"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 2,
+   "end": 2,
+   "meaning": "The Lord declares that He will wipe out every trace of idol worship so thoroughly that false gods will be forgotten. He also promises to banish lying prophets and the demonic spirits that inspire them. When God renews His people, He removes both the guilt of sin and the false teachings that lead them astray.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 3,
+   "end": 3,
+   "meaning": "Devotion to God's truth will become so strong that even parents will refuse to shield a child who spreads religious lies. Following God's ancient law, they will execute the deceiver rather than let him lead others away from the Lord. Love for God and His honor must stand above even the dearest family relationships.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Geneva Notes"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 4,
+   "end": 4,
+   "meaning": "Exposed deceivers will become deeply ashamed of the fake visions they used to brag about. They will stop wearing the rough hairy coats that true prophets like Elijah wore as a sign of a simple, humble life. Hypocrites will no longer be able to put on the uniform of God's servants to trick the people.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 5,
+   "end": 5,
+   "meaning": "The caught impostor will quickly deny that he ever claimed to speak for God. To save himself, he will insist that he is just an ordinary farmhand who was put to work tending cattle from his youth. Genuine repentance means confessing past falsehood and returning to honest, quiet labor.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Adam Clarke",
+    "Keil & Delitzsch"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 6,
+   "end": 6,
+   "meaning": "When someone notices cuts or scars on the man's body, the exposed deceiver tries to cover up the truth. The marks likely came from pagan rituals where false prophets cut themselves, but he claims he simply got hurt while visiting friends. People who are trapped in their lies often offer clumsy excuses to hide the physical evidence of their past sins.",
+   "meaning_sources": [
+    "Adam Clarke",
+    "Keil & Delitzsch",
+    "https://enduringword.com/bible-commentary/zechariah-13/"
+   ],
+   "differ": [
+    {
+     "tradition": "Some evangelicals",
+     "view": "Some read this as a picture of Christ, where the Savior speaks of the nail marks from His crucifixion received among His own people.",
+     "sources": [
+      "Adam Clarke",
+      "https://www.studylight.org/commentaries/eng/ghb/zechariah-13.html"
+     ]
+    }
+   ],
+   "other": []
+  },
+  {
+   "verse": 7,
+   "end": 7,
+   "meaning": "God commands the sword of justice to strike His chosen Shepherd, whom He calls His equal Companion. Jesus quoted these words on the night He was betrayed to explain why His disciples would scatter in fear when He was arrested. By smiting the Shepherd as a sacrifice for sins, God made a way to extend His merciful protection to the humble and weak.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 8,
+   "end": 8,
+   "meaning": "A terrible judgment is announced across the land, leaving two-thirds of the people to perish while one-third survives. This pointed to the devastating ruin brought upon the nation after rejecting the Messiah, such as during the Roman wars. Even in seasons of overwhelming judgment, God always preserves a remnant of survivors.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Wesley"
+   ],
+   "differ": [],
+   "other": []
+  },
+  {
+   "verse": 9,
+   "end": 9,
+   "meaning": "God leads the surviving third through intense suffering to purify them, just as intense heat melts down silver and gold to remove impurities. In the middle of their hardships they call out to the Lord, and He answers with His covenant promise: they will be His people, and He will be their God. Hard trials are not meant to destroy believers, but to refine their faith and draw them close to their Lord.",
+   "meaning_sources": [
+    "Matthew Henry",
+    "Jamieson-Fausset-Brown",
+    "Adam Clarke"
+   ],
+   "differ": [],
+   "other": []
+  }
+ ],
+ "problems": [],
+ "model": "google/gemini-3.8-flash"
+}
