@@ -22,7 +22,7 @@ Usage:
       the next step. Run it again (or with --wait) until every part is done; it carries on where it left off.
   OPENROUTER_API_KEY=... python3 build_ai_commentary.py openrouter <work> <out> all|"Acts 2"|Ruth ...
       The same two steps through OpenRouter with cheaper models (DeepSeek V4 Pro researches, Gemini 3.8 Flash
-      writes), twelve parts at a time. Carries on where any earlier run left off.
+      writes), eight parts at a time. Carries on where any earlier run left off.
   ANTHROPIC_API_KEY=... python3 build_ai_commentary.py chapter <work> <out> "Acts 2" ...
       Runs parts one at a time, straight away (full price), e.g. to redo ones the batch run couldn't finish.
   python3 build_ai_commentary.py pack <out> app/src/main/assets/commentaries/ai.db.xz
@@ -603,7 +603,7 @@ def or_write(p, names, bundled, research_notes):
     return json.loads(r["choices"][0]["message"]["content"])["notes"], r["usage"].get("cost", 0)
 
 
-def cmd_openrouter(work, out, refs, workers=12):
+def cmd_openrouter(work, out, refs, workers=8):
     import concurrent.futures
     import threading
     _, names = book_names()
