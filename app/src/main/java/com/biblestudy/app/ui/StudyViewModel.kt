@@ -55,6 +55,7 @@ import com.biblestudy.app.model.VerseTarget
 import com.biblestudy.app.model.translated
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asCoroutineDispatcher
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -217,7 +218,162 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     @Synchronized
     fun text(code: String): BibleRepository = texts.getOrPut(code) {
         val v = BibleRepository.ALL.firstOrNull { it.code == code } ?: BibleRepository.KJV
-        if (v.code == bible.code) bible else BibleRepository(getApplication(), v)
+        if (v.code == bible.code) bible else BibleRepository(getApplication(), v).also { r ->
+            // An online Bible's chapters get word tags, words of Jesus and paragraphs as they come (BIB-12).
+            r.online?.study = { db, parsed ->
+                com.biblestudy.app.data.ImportStudy.addChapter(db, r.code, parsed, study, onlineTagger, guessRed = !r.online.marksRed(), web = text(BibleRepository.WEB.code))
+            }
+        }
+    }
+
+    /** Tags the words of online Bibles' chapters for word studies; made the first time one comes. */
+    private val onlineTagger by lazy { com.biblestudy.app.data.ImportStudy.tagger(study, BibleRepository.BUNDLED.map { text(it.code) }) }
+
+    // ---------- online Bibles (BIB-12) ----------
+
+    /** Goes up when an online Bible's chapter has come, so pages waiting for it are laid out again. */
+    var onlineArrivals by mutableIntStateOf(0)
+        private set
+
+    /**
+     * A verse's text for the screen, without waiting: an online Bible's verse not downloaded yet
+     * shows "Loading…" (and comes in the background); else the KJV's when a version lacks it.
+     */
+    fun verseTextNow(version: String, id: Int): String =
+        text(version).verseText(id) ?: if (isOnline(version)) "Loading\u2026" else bible.verseText(id) ?: ""
+
+    /** Whether [code] is an online Bible. */
+    fun isOnline(code: String) = BibleRepository.ALL.any { it.code == code && it.online > 0 }
+
+    /** Chapters that couldn't be fetched (no internet): tried again when the tablet is back online. */
+    private var onlineFailed = false
+    private var lastOnlineWarning = 0L
+
+    private val onlineEvents = object : BibleRepository.OnlineEvents {
+        override fun arrived(code: String, book: Int, chapter: Int) {
+            viewModelScope.launch(Dispatchers.Main) { onlineArrivals++ }
+        }
+        override fun failed(code: String, book: Int, chapter: Int, error: Exception) {
+            viewModelScope.launch(Dispatchers.Main) {
+                onlineFailed = true
+                val now = System.currentTimeMillis()
+                if (now - lastOnlineWarning < 30_000) return@launch
+                lastOnlineWarning = now
+                val where = "$code ${bible.book(book).name} $chapter"
+                message = when {
+                    error is com.biblestudy.app.data.YouVersion.HttpException -> "Couldn't load $where: ${error.message}."
+                    error.message?.startsWith("No YouVersion key") == true -> error.message
+                    else -> "$where isn't on this tablet yet and there's no internet. It will show when you're back online."
+                }
+            }
+        }
+    }
+
+    init {
+        com.biblestudy.app.data.YouVersion.key = prefs.getString("youversionKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.YOUVERSION_KEY
+        BibleRepository.onlineEvents = onlineEvents
+        // Back online: chapters that couldn't be fetched are tried again.
+        runCatching {
+            val cm = app.getSystemService(android.net.ConnectivityManager::class.java)
+            cm?.registerDefaultNetworkCallback(object : android.net.ConnectivityManager.NetworkCallback() {
+                override fun onAvailable(network: android.net.Network) {
+                    viewModelScope.launch(Dispatchers.Main) { retryOnline() }
+                }
+            })
+        }
+    }
+
+    /** Tries again the online chapters that couldn't be fetched: the pages waiting for them are laid out again. */
+    fun retryOnline() {
+        if (onlineFailed) { onlineFailed = false; onlineArrivals++ }
+    }
+
+    /** The YouVersion key typed in Settings, or empty for the one built in. */
+    var youVersionKey by mutableStateOf(prefs.getString("youversionKey", "") ?: "")
+        private set
+
+    fun changeYouVersionKey(k: String) {
+        youVersionKey = k.trim()
+        prefs.edit { putString("youversionKey", youVersionKey) }
+        com.biblestudy.app.data.YouVersion.key = youVersionKey.ifEmpty { com.biblestudy.app.BuildConfig.YOUVERSION_KEY }
+        onlineBibles = null
+    }
+
+    /** The online Bibles YouVersion offers (English), once looked up; null until then. */
+    var onlineBibles by mutableStateOf<List<com.biblestudy.app.data.YouVersion.Info>?>(null)
+        private set
+    var onlineListError by mutableStateOf<String?>(null)
+        private set
+
+    fun loadOnlineBibles() {
+        onlineListError = null
+        viewModelScope.launch {
+            val r = withContext(Dispatchers.IO) { runCatching { com.biblestudy.app.data.YouVersion.bibles() } }
+            r.onSuccess { list ->
+                // Not the ones built in (the BSB and WEB are here already).
+                val builtIn = BibleRepository.BUNDLED.map { it.code }.toSet() + "WEBUS"
+                onlineBibles = list.filter { it.code !in builtIn }.sortedBy { it.title }
+            }.onFailure { onlineListError = "Couldn't reach YouVersion: ${it.message ?: "no internet"}" }
+        }
+    }
+
+    /** Adds online Bible [info] to the version list; its chapters download as they're read. */
+    fun addOnlineBible(info: com.biblestudy.app.data.YouVersion.Info) {
+        viewModelScope.launch {
+            val r = withContext(Dispatchers.IO) {
+                runCatching {
+                    val full = com.biblestudy.app.data.YouVersion.bible(info.id) ?: info // with its copyright
+                    val v = com.biblestudy.app.data.OnlineBible.create(getApplication(), full, bible.books)
+                    synchronized(this@StudyViewModel) { texts.remove(v.code) }
+                    BibleRepository.addImported(getApplication(), v)
+                    v
+                }
+            }
+            message = r.fold({ "${it.code} added. Pick it from the version menu; chapters download as you read." }, { "Couldn't add ${info.code}: ${it.message}" })
+        }
+    }
+
+    /** Save for offline: every chapter of an online Bible, downloading; [code] → done (0–1). */
+    val onlineDownloads = mutableStateMapOf<String, Float>()
+    private val downloadJobs = HashMap<String, kotlinx.coroutines.Job>()
+
+    fun saveForOffline(code: String) {
+        if (code in onlineDownloads) return
+        val repo = text(code)
+        val o = repo.online ?: return
+        val chapters = bible.books.filter { it.id in o.books }.flatMap { b -> (1..b.chapters).map { b.id to it } }
+        onlineDownloads[code] = o.savedChapters().toFloat() / chapters.size
+        downloadJobs[code] = viewModelScope.launch {
+            var failed: Throwable? = null
+            withContext(Dispatchers.IO) {
+                var done = 0
+                for ((b, c) in chapters) {
+                    if (!isActive) break
+                    val r = runCatching { o.fetch(b, c) }
+                    if (r.isFailure) { failed = r.exceptionOrNull(); break }
+                    if (++done % 10 == 0) withContext(Dispatchers.Main) { onlineDownloads[code] = done.toFloat() / chapters.size }
+                }
+            }
+            onlineDownloads.remove(code)
+            downloadJobs.remove(code)
+            onlineArrivals++
+            message = when {
+                failed != null -> "Saving $code stopped: ${failed?.message ?: "no internet"}. Tap Save for offline to carry on."
+                o.savedChapters() >= chapters.size -> "$code is saved on this tablet and works offline."
+                else -> null
+            }
+        }
+    }
+
+    fun stopSavingForOffline(code: String) {
+        downloadJobs.remove(code)?.cancel()
+        onlineDownloads.remove(code)
+    }
+
+    /** How much of online Bible [code] is on the tablet: saved chapters, out of all. */
+    fun onlineSaved(code: String): Pair<Int, Int>? {
+        val o = text(code).online ?: return null
+        return o.savedChapters() to bible.books.filter { it.id in o.books }.sumOf { it.chapters }
     }
     val user = UserDb(app)
     private val imagesDir = File(app.filesDir, "images").apply { mkdirs() }
@@ -1216,7 +1372,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * their word tags, words of Jesus and paragraphs now, in the background.
      */
     fun prepareImported() {
-        val todo = BibleRepository.ALL.filter { it.imported }
+        val todo = BibleRepository.ALL.filter { it.imported && it.online == 0 }
         if (todo.isEmpty() || importing) return
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
@@ -1235,6 +1391,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Removes an imported version; panels reading it go back to the KJV. */
     fun removeBible(code: String) {
+        stopSavingForOffline(code)
         panels.forEachIndexed { i, p -> if (p.version == code) setVersion(i, "KJV") }
         if (newPanelVersion == code) newPanelVersion = null
         synchronized(this) { texts.remove(code) }
@@ -2838,6 +2995,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 zip.write(BibleRepository.importedJson().toByteArray())
                 zip.closeEntry()
                 for (v in imported) {
+                    if (v.online > 0) continue // online Bibles are downloaded again, not backed up (BIB-12)
                     val f = File(v.asset)
                     if (!f.exists()) continue
                     zip.putNextEntry(ZipEntry("bibles/${f.name}"))
@@ -2971,7 +3129,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                     imagesDir.listFiles()?.forEach { it.delete() }
                     File(tmp, "images").listFiles()?.forEach { it.copyTo(File(imagesDir, it.name), overwrite = true) }
                     File(tmp, "bibles/imported.json").takeIf { it.exists() }?.let {
-                        BibleRepository.restoreImported(app, it.readText(), File(tmp, "bibles"))
+                        BibleRepository.restoreImported(app, it.readText(), File(tmp, "bibles"), bible.books)
                     }
                     tmp.deleteRecursively()
                     user.layers() to Unit

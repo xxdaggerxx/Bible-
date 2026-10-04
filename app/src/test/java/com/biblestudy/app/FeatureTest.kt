@@ -3077,4 +3077,88 @@ class FeatureTest {
         compose.runOnUiThread { vm.verseSheet = null; vm.hardWords = true }
         compose.waitForIdle()
     }
+
+    @Test
+    fun onlineBiblesComeFromYouVersionAndStayOnTheTablet() {
+        // BIB-12: an online Bible (here the NIV, served from saved YouVersion replies) works like any other.
+        fun res(n: String) = javaClass.getResource("/youversion/$n")!!.readText()
+        val calls = java.util.Collections.synchronizedList(ArrayList<String>())
+        val offlineFlag = java.util.concurrent.atomic.AtomicBoolean(false)
+        val realHttp = com.biblestudy.app.data.YouVersion.http
+        val realKey = com.biblestudy.app.data.YouVersion.key
+        com.biblestudy.app.data.YouVersion.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { url ->
+            calls += url
+            when {
+                offlineFlag.get() -> throw java.io.IOException("offline")
+                "/passages/JHN.3?" in url -> 200 to res("niv-JHN.3.json")
+                "/passages/PSA.23?" in url -> 200 to res("niv-PSA.23.json")
+                "/passages/" in url -> 404 to "{\"message\":\"not found\"}"
+                "/search-verses" in url -> 200 to "{\"verses\":[{\"reference\":\"JHN.3.7\"}],\"next_page_token\":null}"
+                "/bibles/111" in url -> 200 to res("niv.json")
+                "/bibles?" in url -> 200 to "{\"data\":[${res("niv.json")}],\"next_page_token\":null}"
+                else -> 404 to "{}"
+            }
+        }
+        try {
+            // Settings → Bibles → Add an online Bible.
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles != null }
+            val niv = vm.onlineBibles!!.single { it.code == "NIV" }
+            compose.runOnUiThread { vm.addOnlineBible(niv) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NIV" } }
+            val version = com.biblestudy.app.data.BibleRepository.ALL.single { it.code == "NIV" }
+            assertTrue(version.copyright, "Biblica" in version.copyright)
+            // Reading it downloads the chapter.
+            compose.runOnUiThread { vm.setVersion(0, "NIV"); vm.goTo(0, 43, 3, 16, remember = false) }
+            waitForLoaded()
+            val repo = vm.text("NIV")
+            waitFor(20_000) { repo.online!!.isSaved(43, 3) }
+            waitForLoaded()
+            snap("160-online-bible")
+            assertEquals(36, repo.chapter(43, 3).size)
+            val v16 = repo.verseText(com.biblestudy.app.model.VerseId.of(43, 3, 16))!!
+            assertTrue(v16.startsWith("For God so loved the world that he gave his one and only Son"))
+            // Every feature: words of Jesus, paragraphs, word studies, hard words, search, the verse pop-up.
+            val verses = repo.chapter(43, 3).associate { it.verse to it.text }
+            assertTrue(vm.study.redLetters("NIV", 43, 3, verses)[3]!!.isNotEmpty())
+            assertTrue(vm.study.paragraphStarts("NIV", 43, 3).containsAll(listOf(1, 3)))
+            assertTrue(vm.study.strongs("NIV", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().size >= 5)
+            val app: android.content.Context = vm.getApplication()
+            val hard = com.biblestudy.app.data.HardWords.marks(app, "NIV", verses.toList())
+            assertTrue(hard.isNotEmpty())
+            var hits = emptyList<com.biblestudy.app.model.SearchHit>()
+            val t = Thread { hits = repo.search("one and only Son", com.biblestudy.app.model.SearchScope.ALL, 43) }
+            t.start(); t.join()
+            assertTrue(hits.any { it.verse == 16 })
+            compose.runOnUiThread { vm.openVerse(43, 3, 16) }
+            waitFor(10_000) { compose.onAllNodesWithText("one and only Son", substring = true).fetchSemanticsNodes().isNotEmpty() }
+            snap("161-online-verse")
+            compose.runOnUiThread { vm.verseSheet = null }
+            // Kept on the tablet: going away and back doesn't download it again.
+            val before = calls.count { "/passages/JHN.3?" in it }
+            compose.runOnUiThread { vm.goTo(0, 1, 1, 1, remember = false) }
+            waitForLoaded()
+            compose.runOnUiThread { vm.goTo(0, 43, 3, 1, remember = false) }
+            waitForLoaded()
+            assertEquals(1, before)
+            assertEquals(1, calls.count { "/passages/JHN.3?" in it })
+            // Offline: a chapter not saved yet says so, and comes when the tablet is back online.
+            offlineFlag.set(true)
+            compose.runOnUiThread { vm.message = null; vm.goTo(0, 19, 23, 1, remember = false) }
+            waitFor(20_000) { vm.message?.contains("no internet") == true }
+            assertTrue(!repo.online!!.isSaved(19, 23))
+            offlineFlag.set(false)
+            compose.runOnUiThread { vm.retryOnline() }
+            waitFor(20_000) { repo.online!!.isSaved(19, 23) }
+            assertEquals("The LORD is my shepherd, I lack nothing.", repo.verseText(com.biblestudy.app.model.VerseId.of(19, 23, 1)))
+            waitForLoaded()
+            snap("162-online-psalm")
+        } finally {
+            com.biblestudy.app.data.YouVersion.http = realHttp
+            com.biblestudy.app.data.YouVersion.key = realKey
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NIV") }
+            compose.waitForIdle()
+        }
+    }
 }

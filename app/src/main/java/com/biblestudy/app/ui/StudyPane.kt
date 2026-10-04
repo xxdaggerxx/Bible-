@@ -133,7 +133,7 @@ private fun CrossRefsPane(vm: StudyViewModel, modifier: Modifier) {
     val refs by produceState<List<CrossRef>?>(null, id, version) {
         value = background {
             val text = vm.text(version)
-            vm.bible.crossRefs(id).map { r -> text.verseText(r.toStart)?.let { r.copy(preview = it) } ?: r }
+            vm.bible.crossRefs(id).map { r -> text.savedVerseText(r.toStart)?.let { r.copy(preview = it) } ?: r }
         }
     }
     val lastVerse = remember(t.book, t.chapter) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: 1 }
@@ -283,7 +283,7 @@ private fun VersePane(vm: StudyViewModel, modifier: Modifier, content: @Composab
     val t = chosen ?: VerseTarget(panel.book, panel.chapter, panel.topVerse.coerceAtLeast(1))
     val id = VerseId.of(t.book, t.chapter, t.verse)
     val version = panel.version
-    val text = remember(id, version) { vm.text(version).verseText(id) ?: vm.bible.verseText(id) ?: "" }
+    val text = remember(id, version, vm.onlineArrivals) { vm.verseTextNow(version, id) }
     val lastVerse = remember(t.book, t.chapter) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: 1 }
     Column(modifier) {
         Row(verticalAlignment = Alignment.CenterVertically) {

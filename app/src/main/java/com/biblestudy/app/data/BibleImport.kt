@@ -356,10 +356,14 @@ object BibleImport {
     }
 
     fun toJson(v: BibleVersion): JSONObject = JSONObject().put("code", v.code).put("name", v.name).put("file", v.asset).put("copyright", v.copyright)
+        .apply { if (v.online > 0) put("youversion", v.online).put("description", v.description) }
 
     fun fromJson(a: JSONArray): List<BibleVersion> = List(a.length()) { i ->
         a.getJSONObject(i).let {
-            BibleVersion(it.getString("code"), it.getString("name"), it.getString("file"), it.getString("copyright"),
+            val online = it.optInt("youversion", 0)
+            if (online > 0) BibleVersion(it.getString("code"), it.getString("name"), it.getString("file"), it.getString("copyright"),
+                summary = "Online, from YouVersion", description = it.optString("description"), imported = true, online = online)
+            else BibleVersion(it.getString("code"), it.getString("name"), it.getString("file"), it.getString("copyright"),
                 summary = "Imported", description = "Imported from a file on this tablet.", imported = true)
         }
     }

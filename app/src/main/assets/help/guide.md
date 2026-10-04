@@ -282,7 +282,15 @@ Your ink and highlights stay on their words whatever you choose.
   - Importing takes a few seconds while the button shows *Preparing word studies…*. After that the version has word studies, words of Jesus in red and paragraphs, like the built-in ones. Footnotes in the file are left out.
   - Verses printed together (such as "1–2") are shown under the first verse number.
   - Versions you imported before this get word studies the next time the app starts.
-- *Remove* takes an imported version off the tablet.
+- **Online Bibles.** Versions that can't be built in, such as the NIV, NASB, Amplified or NIrV, come from YouVersion. Tap *Settings → Bibles → Add an online Bible…*, then *Add* beside the one you want. It joins the version menu like any other.
+  - Each chapter downloads the first time you open it, and the next two come in the background, so reading on doesn't wait. Once read, a chapter stays on the tablet: it opens straight away next time, even with no internet.
+  - Everything works with them: ink and highlights, margin notes, word studies, words of Jesus in red, paragraphs, hard words, search, compare versions and the verse pop-up.
+  - No internet and a chapter that isn't saved yet? A message says so, and the chapter appears by itself when the tablet is back online.
+  - **Save for offline** downloads the whole Bible, for trips with no internet. The Bibles list shows how many chapters are saved; *Stop* pauses it.
+  - Search finds verses in the chapters on the tablet, and asks YouVersion for the rest when you're online.
+  - Each chapter ends with the version's copyright line, as YouVersion asks.
+  - Backups don't include online Bibles' text; after a restore they download again as you read.
+- *Remove* takes an imported or online version off the tablet.
 - *About these versions* explains how the translations differ.
 
 ## Export, backup and restore

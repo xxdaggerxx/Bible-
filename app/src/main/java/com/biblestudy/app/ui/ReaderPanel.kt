@@ -191,7 +191,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     }
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.hardWords, vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.hardWords, vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name, vm.onlineArrivals) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
@@ -225,7 +225,9 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         for ((b, c) in wanted) {
             val key = ctl.layoutKey(v, b, c)
             val name = vm.bible.book(b).name
-            if (ctl.layouts[key] == null) {
+            // An online Bible's chapter shown empty while it downloaded (or offline) is laid out again (BIB-12).
+            val waiting = ctl.layouts[key]?.let { it.textLength == 0 && vm.isOnline(v) } == true
+            if (ctl.layouts[key] == null || waiting) {
                 ctl.layouts[key] = buildChapter(v, b, c, ctl.spacers[key] ?: emptyMap())
             }
             vm.ensureLoaded(v, b, c) { k ->
@@ -788,6 +790,24 @@ private fun DrawScope.drawUnderline(layout: ChapterLayout, start: Int, end: Int,
     }
 }
 
+/** Laid-out copyright lines of online Bibles, by version code. */
+private val onlineCredits = HashMap<String, androidx.compose.ui.text.TextLayoutResult>()
+
+/** The copyright line shown under an online Bible's chapters (BIB-12), at most three lines; null for other versions. */
+private fun onlineCredit(version: String, measurer: TextMeasurer): androidx.compose.ui.text.TextLayoutResult? {
+    val v = BibleRepository.ALL.firstOrNull { it.code == version && it.online > 0 } ?: return null
+    if (v.copyright.isBlank()) return null
+    return onlineCredits.getOrPut(version + v.copyright) {
+        measurer.measure(
+            androidx.compose.ui.text.AnnotatedString(v.copyright.replace('\n', ' ') + " Text from YouVersion."),
+            androidx.compose.ui.text.TextStyle(fontSize = androidx.compose.ui.unit.TextUnit(15f, androidx.compose.ui.unit.TextUnitType.Sp)),
+            maxLines = 3, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+            constraints = androidx.compose.ui.unit.Constraints(maxWidth = Page.TEXT_W.toInt()),
+            density = PAGE_DENSITY,
+        )
+    }
+}
+
 /** A faint dotted line under each hard word (STD-23); tapping one explains it. */
 private fun DrawScope.drawHardWords(layout: ChapterLayout, theme: PageTheme) {
     if (layout.hardWords.isEmpty()) return
@@ -910,6 +930,10 @@ private fun DrawScope.drawPage(vm: StudyViewModel, ctl: ReaderController, page: 
 
     // Scripture text, drawn in runs between section headings
     drawText(layout.title, color = theme.text, topLeft = Offset(g.textLeft, Page.TITLE_TOP))
+    // An online Bible's copyright, under its text as YouVersion asks (BIB-12).
+    if (sketch == null && layout.textLength > 0) onlineCredit(layout.version, measurer)?.let { credit ->
+        drawText(credit, color = theme.text.copy(alpha = 0.55f), topLeft = Offset(g.textLeft, Page.TEXT_TOP + layout.displayHeight + 48f))
+    }
     // Sketch pages linked to this chapter: a badge beside the verse (SKT-2).
     if (sketch == null) {
         for (sk in vm.sketchesIn(layout.book, layout.chapter)) {

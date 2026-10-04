@@ -1,4 +1,4 @@
-# Ink & Word — version 1.14.0
+# Ink & Word — version 1.15.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,18 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.15
+
+- **Online Bibles from YouVersion** (BIB-12): versions that can't be built in, such as the NIV, NASB 1995 and 2020, Amplified, NIrV, NIV (Anglicised), LSV, Geneva and more, read through the [YouVersion Platform](https://platform.youversion.com/) Bible API. *Settings → Bibles → Add an online Bible…* lists what the app key may read.
+  - **Every feature works with them.** Chapters come as HTML and are turned into USFM for the same reader as imported Bibles, so verses, paragraphs and poetry lines, and the words of Jesus come through. Each chapter gets word tags (for word studies), red letters and paragraphs as it arrives, the way imported Bibles do. Ink, highlights, notes, hard words, search, compare versions and the verse pop-up then work as for the built-in versions.
+  - **Caching:** each chapter is stored on the tablet the first time it's read, in a database like an imported Bible's (`files/bibles/yv-<id>.db`), and read from there afterwards, also offline. The next two chapters download in the background. *Save for offline* downloads the whole Bible, with progress and *Stop*. With no internet, a chapter not saved yet shows a message and appears by itself when the tablet is back online. Busy replies (429) wait and try again.
+  - **Search** covers the saved chapters, plus YouVersion's verse search for the rest when online.
+  - **Copyright:** each chapter ends with the version's copyright line from YouVersion; it's also in the Bibles list.
+  - Backups keep the list of online Bibles but not their text, which downloads again.
+- **The app key** is not in the repository (it is public). Builds read it from `youversion.properties` in the project root (`key=…`, ignored by git) or the `YOUVERSION_KEY` environment variable, into `BuildConfig`. A build without it asks for a key in *Settings → Bibles*. The released APK has the key built in, as a YouVersion app key is meant to be.
+- Cross-reference previews in an online Bible use saved chapters (else the KJV), so tapping a verse doesn't download twenty chapters.
+- Known gaps: English Bibles only; the section headings shown are still the BSB's; footnotes are left out; *Save for offline* fetches about 1,189 chapters one by one, which takes several minutes; check each version's licence terms before sharing exported pages.
 
 ## New in version 1.14
 

@@ -39,6 +39,17 @@ val releaseKey: ReleaseKey? = run {
     null
 }
 
+/**
+ * The YouVersion Platform app key for online Bibles (BIB-12). Not committed (the repository is
+ * public): it comes from youversion.properties in the project root (key=…), or the environment
+ * variable YOUVERSION_KEY. Without it the app builds fine and asks for a key in Settings → Bibles.
+ */
+val youVersionKey: String = run {
+    val f = rootProject.file("youversion.properties")
+    val fromFile = if (f.exists()) Properties().apply { f.inputStream().use { load(it) } }.getProperty("key") else null
+    (fromFile ?: System.getenv("YOUVERSION_KEY") ?: "").trim()
+}
+
 android {
     namespace = "com.biblestudy.app"
     compileSdk = 35
@@ -47,8 +58,9 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 35
-        versionName = "1.14.0"
+        versionCode = 36
+        versionName = "1.15.0"
+        buildConfigField("String", "YOUVERSION_KEY", "\"$youVersionKey\"")
     }
 
     // The commentaries are already packed tightly (xz); don't zip them again.

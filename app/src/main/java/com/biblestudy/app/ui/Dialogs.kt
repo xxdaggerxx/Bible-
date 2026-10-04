@@ -703,7 +703,7 @@ private class NoteDraft(val book: Int, val chapter: Int, val start: Int, origina
 @Composable
 fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: Boolean, onDone: () -> Unit, modifier: Modifier = Modifier) {
     val id = VerseId.of(t.book, t.chapter, t.verse)
-    val verseText = remember(id, version) { vm.text(version).verseText(id) ?: vm.bible.verseText(id) ?: "" }
+    val verseText = remember(id, version, vm.onlineArrivals) { vm.verseTextNow(version, id) }
     // The note on this verse, or on a range of verses that includes it (NOTE-1).
     val draft = remember(id) {
         val existing = vm.user.noteCovering(t.book, t.chapter, t.verse)
@@ -719,7 +719,7 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
         value = background {
             // Previews in the version being read (the cross-reference list itself is shared).
             val text = vm.text(version)
-            vm.bible.crossRefs(id).map { r -> text.verseText(r.toStart)?.let { r.copy(preview = it) } ?: r }
+            vm.bible.crossRefs(id).map { r -> text.savedVerseText(r.toStart)?.let { r.copy(preview = it) } ?: r }
         }
     }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
@@ -1732,7 +1732,7 @@ fun CrossRef.passage() = Passage(
 fun CompareVersions(vm: StudyViewModel, id: Int, version: String, verseText: String, modifier: Modifier = Modifier, onPick: (String) -> Unit) {
     Column(modifier.verticalScroll(rememberScrollState())) {
         for (v in BibleRepository.ALL) {
-            val text = remember(id, v) { vm.text(v.code).verseText(id) }
+            val text = remember(id, v, vm.onlineArrivals) { vm.text(v.code).verseText(id) }
             Column(Modifier.fillMaxWidth().clickable { onPick(v.code) }.padding(vertical = 4.dp)) {
                 Text(
                     v.code + if (v.code == version) "  (reading)" else "",

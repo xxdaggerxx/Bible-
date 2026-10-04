@@ -39,8 +39,7 @@ object ImportStudy {
                 java.util.TreeMap<Int, String>().apply { while (c.moveToNext()) put(c.getInt(0), c.getString(1)) }
             }
         progress(0f)
-        val refs = references.map { reference(it, study) }
-        val tagger = WordTagger(study.translations, refs, { id -> study.original(id) }, { id -> study.lexicon(id)?.let { it.kjv + " " + it.def } })
+        val tagger = tagger(study, references)
         progress(0.1f)
 
         val paragraphs = parsed?.paragraphs?.takeIf { it.isNotEmpty() }
@@ -51,9 +50,7 @@ object ImportStudy {
         db.beginTransaction()
         try {
             db.execSQL("CREATE TABLE IF NOT EXISTS meta(key TEXT PRIMARY KEY, value TEXT)")
-            db.execSQL("CREATE TABLE IF NOT EXISTS tags(version TEXT NOT NULL, id INTEGER NOT NULL, words TEXT NOT NULL, PRIMARY KEY(version, id))")
-            db.execSQL("CREATE TABLE IF NOT EXISTS red(version TEXT NOT NULL, id INTEGER NOT NULL, words TEXT NOT NULL, PRIMARY KEY(version, id))")
-            db.execSQL("CREATE TABLE IF NOT EXISTS paragraphs(version TEXT NOT NULL, id INTEGER NOT NULL, PRIMARY KEY(version, id))")
+            createTables(db)
             for (t in listOf("tags", "red", "paragraphs")) db.execSQL("DELETE FROM $t")
             for (id in paragraphs) db.execSQL("INSERT INTO paragraphs VALUES(?, ?)", arrayOf<Any>(code, id))
             for ((id, words) in red) db.execSQL("INSERT INTO red VALUES(?, ?, ?)", arrayOf<Any>(code, id, words))
@@ -70,6 +67,38 @@ object ImportStudy {
             db.endTransaction()
         }
         progress(1f)
+    }
+
+    /** The tables this fills (also made empty in an online Bible's new database). */
+    fun createTables(db: SQLiteDatabase) {
+        db.execSQL("CREATE TABLE IF NOT EXISTS tags(version TEXT NOT NULL, id INTEGER NOT NULL, words TEXT NOT NULL, PRIMARY KEY(version, id))")
+        db.execSQL("CREATE TABLE IF NOT EXISTS red(version TEXT NOT NULL, id INTEGER NOT NULL, words TEXT NOT NULL, PRIMARY KEY(version, id))")
+        db.execSQL("CREATE TABLE IF NOT EXISTS paragraphs(version TEXT NOT NULL, id INTEGER NOT NULL, PRIMARY KEY(version, id))")
+    }
+
+    /** The word tagger, matching words against the bundled [references] (KJV, BSB, WEB). Slow to make: keep it. */
+    fun tagger(study: StudyRepository, references: List<BibleRepository>): WordTagger =
+        WordTagger(study.translations, references.map { reference(it, study) }, { id -> study.original(id) }, { id -> study.lexicon(id)?.let { it.kjv + " " + it.def } })
+
+    /**
+     * Adds word tags, the words of Jesus and paragraph starts for the verses of one downloaded
+     * chapter of online Bible [code] (BIB-12), inside the caller's transaction. [guessRed]: find the
+     * words of Jesus as for an imported Bible, because this Bible hasn't marked them so far.
+     */
+    fun addChapter(
+        db: SQLiteDatabase, code: String, parsed: BibleImport.Parsed, study: StudyRepository, tagger: WordTagger,
+        guessRed: Boolean, web: BibleRepository?,
+    ) {
+        val verses = parsed.verses.toSortedMap()
+        val paragraphs = parsed.paragraphs.ifEmpty { study.paragraphIds(BibleRepository.BSB.code).filterTo(HashSet()) { it in verses } }
+        val red = if (parsed.marksRed || !guessRed) parsed.red else guessRed(verses, study, web)
+        for (id in paragraphs) db.execSQL("INSERT OR REPLACE INTO paragraphs VALUES(?, ?)", arrayOf<Any>(code, id))
+        for ((id, words) in red) db.execSQL("INSERT OR REPLACE INTO red VALUES(?, ?, ?)", arrayOf<Any>(code, id, words))
+        for ((id, text) in verses) {
+            val ids = (id..(id - id % 1000 + (parsed.bridges[id] ?: id % 1000))).toList()
+            val strongs = tagger.tag(ids, text)
+            if (strongs.any { it != null }) db.execSQL("INSERT OR REPLACE INTO tags VALUES(?, ?, ?)", arrayOf<Any>(code, id, WordTagger.encode(id, strongs)))
+        }
     }
 
     private fun reference(bible: BibleRepository, study: StudyRepository) = WordTagger.Reference { id ->

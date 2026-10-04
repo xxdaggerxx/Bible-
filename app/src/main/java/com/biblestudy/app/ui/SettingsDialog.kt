@@ -18,7 +18,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -66,6 +68,7 @@ fun SettingsDialog(
     var meaningsOpen by remember { mutableStateOf(false) }
     var confirmClearStats by remember { mutableStateOf(false) }
     var removing by remember { mutableStateOf<String?>(null) }
+    var addingOnline by remember { mutableStateOf(false) }
     var picked by remember { mutableStateOf<List<android.net.Uri>>(emptyList()) }
     val pickBible = rememberLauncherForActivityResult(ActivityResultContracts.OpenMultipleDocuments()) { uris -> picked = uris }
     val context = LocalContext.current
@@ -170,18 +173,55 @@ fun SettingsDialog(
                 // The version manager (BIB-5) and importing (BIB-4).
                 Matches("Bibles", "versions", "import a Bible", "translations", *BibleRepository.ALL.map { it.code + " " + it.name }.toTypedArray()) {
                 for (v in BibleRepository.ALL) {
-                    val size = remember(v.code) { BibleRepository.fileOf(context, v).length() }
+                    val size = remember(v.code, vm.onlineArrivals) { BibleRepository.fileOf(context, v).length() }
                     Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
                             Text("${v.code} \u2014 ${v.name}")
+                            if (v.online > 0) {
+                                // An online Bible (BIB-12): how much is on the tablet, and saving it all.
+                                val saved = remember(v.code, vm.onlineArrivals) { vm.onlineSaved(v.code) }
+                                val progress = vm.onlineDownloads[v.code]
+                                Text(
+                                    when {
+                                        progress != null -> "Saving for offline\u2026 ${(progress * 100).toInt()}%"
+                                        saved != null && saved.first >= saved.second -> "Online, from YouVersion \u00b7 saved on this tablet, works offline"
+                                        saved != null -> "Online, from YouVersion \u00b7 ${saved.first} of ${saved.second} chapters on this tablet"
+                                        else -> "Online, from YouVersion"
+                                    },
+                                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary,
+                                )
+                                if (progress != null) androidx.compose.material3.LinearProgressIndicator(progress = { progress }, modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp))
+                            }
                             Text(
                                 (if (size > 0) "%.1f MB \u00b7 ".format(size / 1e6) else "") + v.copyright,
                                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                                maxLines = 3, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                             )
+                        }
+                        if (v.online > 0) {
+                            if (v.code in vm.onlineDownloads) TextButton(onClick = { vm.stopSavingForOffline(v.code) }) { Text("Stop") }
+                            else if (vm.onlineSaved(v.code)?.let { it.first < it.second } == true) TextButton(onClick = { vm.saveForOffline(v.code) }) { Text("Save for offline") }
                         }
                         if (v.imported) TextButton(onClick = { removing = v.code }) { Text("Remove") }
                         else Text("Built in", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.outline)
                     }
+                }
+                // Online Bibles (BIB-12): versions that can't be built in, read from YouVersion.
+                OutlinedButton(onClick = { addingOnline = true; vm.loadOnlineBibles() }, modifier = Modifier.padding(bottom = 4.dp)) {
+                    Text("Add an online Bible\u2026")
+                }
+                Text(
+                    "NIV, NASB, Amplified and more, read online from YouVersion. Each chapter is kept on this tablet once read, so it opens instantly next time, also offline. Every feature works with them.",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                )
+                if (com.biblestudy.app.BuildConfig.YOUVERSION_KEY.isEmpty() || vm.youVersionKey.isNotEmpty()) {
+                    var key by remember { mutableStateOf(vm.youVersionKey) }
+                    OutlinedTextField(
+                        value = key, onValueChange = { key = it; vm.changeYouVersionKey(it) }, singleLine = true,
+                        label = { Text("YouVersion app key") },
+                        supportingText = { Text(if (com.biblestudy.app.BuildConfig.YOUVERSION_KEY.isEmpty()) "Needed for online Bibles: from platform.youversion.com" else "Leave empty to use the one built in") },
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                    )
                 }
                 OutlinedButton(onClick = { runCatching { pickBible.launch(arrayOf("*/*")) } }, enabled = !vm.importing) {
                     Text(if (vm.importing) vm.importStatus ?: "Importing\u2026" else "Import a Bible\u2026")
@@ -222,7 +262,7 @@ fun SettingsDialog(
 
                 Group("About")
                 Matches("About", "version", "credits", "licences") {
-                Text("Ink & Word, version ${BuildConfig.VERSION_NAME}. Works completely offline.")
+                Text("Ink & Word, version ${BuildConfig.VERSION_NAME}. Works offline; only online Bibles and the AI chat use the internet.")
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
                     TextButton(onClick = { versions = true }) { Text("About these versions") }
                     TextButton(onClick = onAbout) { Text("Credits") }
@@ -239,6 +279,7 @@ fun SettingsDialog(
         }
     }
     if (versions) VersionsDialog { versions = false }
+    if (addingOnline) OnlineBiblesDialog(vm) { addingOnline = false }
     if (meaningsOpen) {
         AlertDialog(
             onDismissRequest = { meaningsOpen = false },
@@ -416,3 +457,52 @@ private fun AiChatSettings(vm: StudyViewModel) {
         }
     }
 }
+
+/**
+ * The Bibles YouVersion offers (BIB-12), to add as online Bibles. Ones already added are ticked.
+ */
+@Composable
+private fun OnlineBiblesDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
+    val list = vm.onlineBibles
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Add an online Bible") },
+        text = {
+            Column(Modifier.heightIn(max = 520.dp).verticalScroll(rememberScrollState())) {
+                Text(
+                    "Read online from YouVersion. Chapters download as you read them and stay on this tablet. Show its copyright with any text you share.",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                )
+                when {
+                    vm.onlineListError != null -> {
+                        Text(vm.onlineListError!!, color = MaterialTheme.colorScheme.error, modifier = Modifier.padding(vertical = 8.dp))
+                        TextButton(onClick = { vm.loadOnlineBibles() }) { Text("Try again") }
+                    }
+                    list == null -> Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 12.dp)) {
+                        androidx.compose.material3.CircularProgressIndicator(Modifier.size(20.dp), strokeWidth = 2.dp)
+                        Text("Looking up the Bibles\u2026", modifier = Modifier.padding(start = 12.dp))
+                    }
+                    else -> for (info in list) {
+                        val added = BibleRepository.ALL.any { it.online == info.id }
+                        Row(
+                            Modifier.fillMaxWidth().padding(vertical = 4.dp).testTag("online-${info.code}"),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Column(Modifier.weight(1f)) {
+                                Text(info.title)
+                                Text(
+                                    info.code + if (info.books.size < 66) " \u00b7 ${info.books.size} books" else "",
+                                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                                )
+                            }
+                            if (added) Icon(androidx.compose.material.icons.Icons.Filled.Check, contentDescription = "Added")
+                            else TextButton(onClick = { vm.addOnlineBible(info) }) { Text("Add") }
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = onDismiss) { Text("Done") } },
+    )
+}
+
