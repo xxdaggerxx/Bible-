@@ -10,7 +10,8 @@ import java.net.URLEncoder
  * The ESV, read online from Crossway's ESV API (api.esv.org) (BIB-12), as YouVersion doesn't offer it.
  *
  * Crossway's terms are stricter than YouVersion's: non-commercial use, the ESV copyright notice
- * shown, and no more than 500 verses, or half of any book (whichever is less), kept on the tablet.
+ * shown, and no more than 500 verses, or half of any book (whichever is less), kept on the tablet:
+ * kept so until 1.20, now only with [OnlineBible.limitPublishers] on (users bring their own keys).
  * So the ESV keeps a rolling window of the chapters read last ([OnlineBible.trim]) and can't be
  * saved for offline.
  */
@@ -27,7 +28,7 @@ object Esv {
     val info = YouVersion.Info(
         ID, "ESV", "English Standard Version", (1..66).toSet(), COPYRIGHT,
         "An \u201cessentially literal\u201d, word-for-word translation (2001, revised 2016), popular in evangelical " +
-            "churches and for close study. Read online from Crossway; the last 500 verses read stay on this tablet, as Crossway allows.",
+            "churches and for close study. Read online from Crossway and kept on this tablet as you read.",
     )
 
     /** The API key: built in (BuildConfig) or typed in Settings. */

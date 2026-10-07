@@ -182,14 +182,15 @@ fun SettingsDialog(
                                 val saved = remember(v.code, vm.onlineArrivals) { vm.onlineSaved(v.code) }
                                 val progress = vm.onlineDownloads[v.code]
                                 val publisher = when (v.online) { com.biblestudy.app.data.Esv.ID -> "Crossway"; com.biblestudy.app.data.Nlt.ID -> "Tyndale"; else -> null }
-                                val limited = publisher != null
+                                val limited = publisher != null && com.biblestudy.app.data.OnlineBible.limitPublishers
+                                val source = publisher ?: "YouVersion"
                                 Text(
                                     when {
                                         limited -> "Online, from $publisher \u00b7 keeps the last 500 verses you read, as $publisher allows"
                                         progress != null -> "Saving for offline\u2026 ${(progress * 100).toInt()}%"
-                                        saved != null && saved.first >= saved.second -> "Online, from YouVersion \u00b7 saved on this tablet, works offline"
-                                        saved != null -> "Online, from YouVersion \u00b7 ${saved.first} of ${saved.second} chapters on this tablet"
-                                        else -> "Online, from YouVersion"
+                                        saved != null && saved.first >= saved.second -> "Online, from $source \u00b7 saved on this tablet, works offline"
+                                        saved != null -> "Online, from $source \u00b7 ${saved.first} of ${saved.second} chapters on this tablet"
+                                        else -> "Online, from $source"
                                     },
                                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary,
                                 )
@@ -221,7 +222,7 @@ fun SettingsDialog(
                 if (BibleRepository.ALL.any { it.online > 0 }) {
                     Choices("Keep downloaded chapters", CACHE_DAYS, vm.cacheDays, { if (it == 0) "Always" else "$it days" }) { vm.changeCacheDays(it) }
                     Text(
-                        "Chapters you haven't read for this long are removed and download again when you read them. Bibles saved for offline and the verses of your verse cards always stay.",
+                        "Chapters you haven't read for this long are removed and download again when you read them. Bibles saved for offline always stay.",
                         style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                     )
                     var clearing by remember { mutableStateOf(false) }

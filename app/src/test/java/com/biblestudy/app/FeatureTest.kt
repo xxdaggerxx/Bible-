@@ -3188,6 +3188,8 @@ class FeatureTest {
                 else -> 404 to "{}"
             }
         }
+        // With the publishers' 500-verse limit on (off by default from 1.20).
+        com.biblestudy.app.data.OnlineBible.limitPublishers = true
         try {
             compose.runOnUiThread { vm.loadOnlineBibles() }
             waitFor(10_000) { vm.onlineBibles?.any { it.code == "ESV" } == true }
@@ -3222,6 +3224,7 @@ class FeatureTest {
             assertTrue(again.isEmpty())
             assertTrue(vm.study.strongs("ESV", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().isEmpty())
         } finally {
+            com.biblestudy.app.data.OnlineBible.limitPublishers = false
             com.biblestudy.app.data.Esv.http = realHttp
             com.biblestudy.app.data.Esv.key = realKey
             com.biblestudy.app.data.YouVersion.http = realYv
@@ -3239,7 +3242,17 @@ class FeatureTest {
         val realYv = com.biblestudy.app.data.YouVersion.http
         com.biblestudy.app.data.Nlt.key = "test"
         com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
-        com.biblestudy.app.data.Nlt.http = { url -> if ("ref=John.3&" in url) 200 to john3 else 200 to "<html><body>No passage</body></html>" }
+        val calls = java.util.Collections.synchronizedList(ArrayList<String>())
+        // Every chapter is served John 3's verses, relabelled, so reading a few passes 500 verses.
+        com.biblestudy.app.data.Nlt.http = { url ->
+            calls += url
+            val ch = Regex("ref=[^.&]+\\.(\\d+)&").find(url)?.groupValues?.get(1)
+            when {
+                "/search?" in url -> 200 to javaClass.getResource("/youversion/nlt-search.html")!!.readText()
+                ch != null -> 200 to john3.replace("ch=\"3\"", "ch=\"$ch\"")
+                else -> 200 to "<html><body>No passage</body></html>"
+            }
+        }
         try {
             compose.runOnUiThread { vm.loadOnlineBibles() }
             waitFor(10_000) { vm.onlineBibles?.any { it.code == "NLT" } == true }
@@ -3252,7 +3265,20 @@ class FeatureTest {
             waitFor(20_000) { repo.online!!.isSaved(43, 3) }
             waitForLoaded()
             snap("164-nlt")
-            assertTrue(repo.online!!.limited)
+            // Kept like the other online Bibles (users bring their own keys): no 500-verse window.
+            val o = repo.online!!
+            assertFalse(o.limited)
+            for (b in 1..15) assertTrue(o.fetch(b, 1))
+            assertTrue(o.isSaved(43, 3))
+            assertTrue("${o.savedVerses()} verses", o.savedVerses() > 500)
+            val asked = calls.size
+            assertTrue(o.fetch(43, 3)); assertTrue(o.fetch(1, 1))
+            assertEquals(asked, calls.size)
+            // A search is asked once, then kept with its verses' text.
+            val first = o.searchRemote("eternal life", vm.bible.books)
+            assertTrue(first.isNotEmpty() && first.all { it.second != null })
+            assertEquals(first, o.searchRemote("Eternal life ", vm.bible.books))
+            assertEquals(1, calls.count { "/search?" in it })
             val verses = repo.chapter(43, 3).associate { it.verse to it.text }
             assertEquals(36, verses.size)
             assertTrue(vm.study.redLetters("NLT", 43, 3, verses)[3]!!.isNotEmpty())
@@ -3314,6 +3340,8 @@ class FeatureTest {
             if (ch != null) 200 to john3.replace("ch=\"3\"", "ch=\"$ch\"") else 200 to "<html><body>No passage</body></html>"
         }
         lateinit var sk: com.biblestudy.app.model.Sketch
+        // With the publishers' 500-verse limit on (off by default from 1.20).
+        com.biblestudy.app.data.OnlineBible.limitPublishers = true
         try {
             compose.runOnUiThread { vm.loadOnlineBibles() }
             waitFor(10_000) { vm.onlineBibles?.any { it.code == "NLT" } == true }
@@ -3365,6 +3393,7 @@ class FeatureTest {
             compose.runOnUiThread { vm.keepCardVerses("NLT") }
             waitFor(10_000) { vm.text("NLT").savedVerseText(43_003_016) == null }
         } finally {
+            com.biblestudy.app.data.OnlineBible.limitPublishers = false
             com.biblestudy.app.data.Nlt.http = realHttp
             com.biblestudy.app.data.Nlt.key = realKey
             com.biblestudy.app.data.YouVersion.http = realYv

@@ -16,8 +16,9 @@ import java.util.concurrent.Executors
  * in the background so reading on never waits. Once saved it's read from the tablet, also
  * offline. *Save for offline* downloads every chapter.
  *
- * A limited Bible (ESV, NLT) keeps at most 500 verses: the chapters read last, plus the verses of
- * verse cards ([keep]), which stay while chapters come and go so cards always work.
+ * The ESV and NLT are kept like the others (from 1.20; users bring their own keys). With
+ * [limitPublishers] on, they're "limited" instead: at most 500 verses, the chapters read last plus
+ * the verses of verse cards ([keep]), which stay while chapters come and go so cards always work.
  */
 class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase) {
     /** Book ids this Bible has. */
@@ -27,7 +28,7 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
      * Whether only a few chapters may be kept (the ESV: Crossway allows 500 verses, or half a book,
      * on the tablet). The chapters read least lately are dropped to stay within it; no Save for offline.
      */
-    val limited: Boolean get() = id == Esv.ID || id == Nlt.ID
+    val limited: Boolean get() = limitPublishers && (id == Esv.ID || id == Nlt.ID)
 
     /** Verses in each book (index = book id), for the half-a-book limit; set by the app. */
     @Volatile var bookVerses: IntArray? = null
@@ -43,6 +44,18 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
             var found = false
             while (c.moveToNext()) if (c.getString(1) == "read_at") found = true
             found
+        }
+        // No longer limited: verse cards' kept verses become ordinary text (whole chapters download as read).
+        if (!limited && db.rawQuery("SELECT 1 FROM kept LIMIT 1", null).use { it.moveToFirst() }) {
+            synchronized(LOCK) {
+                db.execSQL("DELETE FROM kept")
+                // Card verses outside the chapters read go, so every chapter is whole or not there.
+                db.rawQuery(
+                    "SELECT DISTINCT v.book, v.chapter FROM verses v WHERE NOT EXISTS " +
+                        "(SELECT 1 FROM fetched f WHERE f.book = v.book AND f.chapter = v.chapter)",
+                    null,
+                ).use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getInt(1)) } }.forEach { (b, ch) -> drop(b, ch) }
+            }
         }
         if (!hasReadAt) {
             db.execSQL("ALTER TABLE fetched ADD COLUMN read_at INTEGER NOT NULL DEFAULT 0")
@@ -310,23 +323,27 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
      * Verses matching [query] from the online service, with their text where it gives it (the ESV
      * does; for YouVersion it's read from the chapter): (verse id, text or null).
      */
-    fun searchRemote(query: String, books: List<BookInfo>): List<Pair<Int, String?>> =
-        when (id) {
-            // Not kept: their results carry the verses' text, which would count toward the 500.
+    fun searchRemote(query: String, books: List<BookInfo>): List<Pair<Int, String?>> {
+        fun ask(): List<Pair<Int, String?>> = when (id) {
             Esv.ID -> Esv.search(query, books)
             Nlt.ID -> Nlt.search(query)
-            else -> {
-                // YouVersion gives verse ids only: kept, so the same search doesn't ask again.
-                val q = query.trim().lowercase()
-                val cached = db.rawQuery("SELECT ids FROM searches WHERE q = ?", arrayOf(q)).use { c -> if (c.moveToFirst()) c.getString(0) else null }
-                val ids = cached?.split(',')?.mapNotNull { it.toIntOrNull() } ?: YouVersion.searchVerses(id, query).also { found ->
-                    synchronized(LOCK) {
-                        db.execSQL("INSERT OR REPLACE INTO searches VALUES(?, ?, ?)", arrayOf<Any>(q, System.currentTimeMillis(), found.joinToString(",")))
-                    }
-                }
-                ids.map { it to null }
+            else -> YouVersion.searchVerses(id, query).map { it to null }
+        }
+        // Limited, a search isn't kept: its results carry verse text, which would count toward the 500.
+        if (limited) return ask()
+        // Kept, so the same search doesn't ask again: "id" or "id<tab>text" a line.
+        val q = query.trim().lowercase()
+        db.rawQuery("SELECT ids FROM searches WHERE q = ?", arrayOf(q)).use { c -> if (c.moveToFirst()) c.getString(0) else null }?.let { saved ->
+            return saved.lines().filter { it.isNotEmpty() }.flatMap { l ->
+                if ('\t' in l) listOfNotNull(l.substringBefore('\t').toIntOrNull()?.let { it to l.substringAfter('\t') })
+                else l.split(',').mapNotNull { it.trim().toIntOrNull()?.let { v -> v to null } } // 1.19 kept ids with commas
             }
         }
+        val found = ask()
+        val text = found.joinToString("\n") { (v, t) -> if (t == null) "$v" else "$v\t" + t.replace('\t', ' ').replace('\n', ' ') }
+        synchronized(LOCK) { db.execSQL("INSERT OR REPLACE INTO searches VALUES(?, ?, ?)", arrayOf<Any>(q, System.currentTimeMillis(), text)) }
+        return found
+    }
 
     /** Whether any chapter so far marked the words of Jesus (if none did, they're found as for imported Bibles). */
     fun marksRed(): Boolean = meta("marksRed") == "1"
@@ -336,6 +353,13 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
 
     companion object {
         private val LOCK = Any()
+
+        /**
+         * Keep only 500 ESV and NLT verses, as Crossway's API terms ask (1.16 to 1.19). Off from
+         * 1.20, at the owner's request: users bring their own keys, and keeping the text spares the
+         * servers. One switch, so it can be turned back on.
+         */
+        @Volatile var limitPublishers = false
 
         /** At most this many verse cards' verses are kept by a limited Bible, leaving room to read. */
         const val MAX_KEPT = 300

@@ -9,8 +9,8 @@ import java.net.URLEncoder
  * The NLT, read online from Tyndale's NLT API (api.nlt.to) (BIB-12), as YouVersion doesn't offer it.
  *
  * Tyndale's terms for a key: non-commercial use, at most 500 verses a request and 5,000 requests a
- * day. Its copyright statement allows 500 verses to be quoted, so like the ESV the NLT keeps a
- * rolling window of at most 500 verses on the tablet ([OnlineBible.limited]) and can't be saved for offline.
+ * day. Kept on the tablet as it's read, like the other online Bibles (a 500-verse window until
+ * 1.20: see [OnlineBible.limitPublishers]).
  */
 object Nlt {
     /** The NLT's id among online Bibles (not a YouVersion id). */
@@ -22,7 +22,7 @@ object Nlt {
     val info = YouVersion.Info(
         ID, "NLT", "New Living Translation", (1..66).toSet(), COPYRIGHT,
         "A thought-for-thought translation (1996, revised 2015) in natural, everyday English, good for daily reading and " +
-            "newcomers. Read online from Tyndale; the last 500 verses read stay on this tablet.",
+            "newcomers. Read online from Tyndale and kept on this tablet as you read.",
     )
 
     /** The API key: built in (BuildConfig) or typed in Settings. */
