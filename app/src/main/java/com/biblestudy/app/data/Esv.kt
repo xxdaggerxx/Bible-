@@ -9,18 +9,15 @@ import java.net.URLEncoder
 /**
  * The ESV, read online from Crossway's ESV API (api.esv.org) (BIB-12), as YouVersion doesn't offer it.
  *
- * Crossway's terms are stricter than YouVersion's: non-commercial use, the ESV copyright notice
- * shown, and no more than 500 verses, or half of any book (whichever is less), kept on the tablet:
- * kept so until 1.20, now only with [OnlineBible.limitPublishers] on (users bring their own keys).
- * So the ESV keeps a rolling window of the chapters read last ([OnlineBible.trim]) and can't be
- * saved for offline.
+ * Kept on the tablet like every online Bible ([OnlineBible]). Crossway's terms: non-commercial use
+ * and the ESV copyright notice shown. They also allow an app to store at most 500 verses (or half a
+ * book); the app kept to that until 1.20, and now keeps the ESV like the others at the owner's
+ * request, users bringing their own keys. Requests are limited to 60 a minute and 1,000 an hour,
+ * so saving it all for offline is paced ([OnlineBible.pace]).
  */
 object Esv {
     /** The ESV's id among online Bibles (not a YouVersion id). */
     const val ID = 1_000_001
-
-    /** Crossway's limit on verses kept on the tablet. */
-    const val MAX_VERSES = 500
 
     const val COPYRIGHT = "Scripture quotations are from the ESV\u00ae Bible (The Holy Bible, English Standard Version\u00ae), " +
         "\u00a9 2001 by Crossway, a publishing ministry of Good News Publishers. Used by permission. All rights reserved."
@@ -47,14 +44,6 @@ object Esv {
     fun chapterUsfm(book: Int, chapter: Int): String? {
         val first = BibleImport.vid(book, chapter, 1)
         val json = JSONObject(call("$BASE/passage/html/?q=$first-${first + 998}&$OPTIONS"))
-        val passages = json.optJSONArray("passages") ?: return null
-        if (passages.length() == 0) return null
-        return toUsfm(passages.getString(0), book, chapter)
-    }
-
-    /** Verses [from] to [to] of a chapter as USFM, for verse cards (see [OnlineBible.keep]); null if none. */
-    fun versesUsfm(book: Int, chapter: Int, from: Int, to: Int): String? {
-        val json = JSONObject(call("$BASE/passage/html/?q=${BibleImport.vid(book, chapter, from)}-${BibleImport.vid(book, chapter, to)}&$OPTIONS"))
         val passages = json.optJSONArray("passages") ?: return null
         if (passages.length() == 0) return null
         return toUsfm(passages.getString(0), book, chapter)

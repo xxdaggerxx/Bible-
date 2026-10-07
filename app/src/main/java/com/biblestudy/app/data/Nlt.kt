@@ -40,14 +40,6 @@ object Nlt {
         return toUsfm(html, book, chapter)
     }
 
-    /** Verses [from] to [to] of a chapter as USFM, for verse cards (see [OnlineBible.keep]); null if none. */
-    fun versesUsfm(book: Int, chapter: Int, from: Int, to: Int): String? {
-        val osis = BibleImport.OSIS[book - 1]
-        val html = call("$BASE/passages?ref=$osis.$chapter.$from-$osis.$chapter.$to&version=NLT&key=${enc(key)}")
-        if ("verse_export" !in html) return null
-        return toUsfm(html, book, chapter)
-    }
-
     private val RESULT = Regex("<td><a[^>]*>([1-3]?[A-Za-z]+)\\.(\\d+)\\.(\\d+)</a></td>\\s*<td>(.*?)</td>", RegexOption.DOT_MATCHES_ALL)
 
     /** Verses matching [query], with their text: (verse id, text). */

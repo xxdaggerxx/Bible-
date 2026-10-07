@@ -716,11 +716,8 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
     }
     val lastVerse = remember(t.book, t.chapter) { vm.bible.chapter(t.book, t.chapter).lastOrNull()?.verse ?: t.verse }
     val refs by produceState(emptyList<CrossRef>(), id, version) {
-        value = background {
-            // Previews in the version being read (the cross-reference list itself is shared).
-            val text = vm.text(version)
-            vm.bible.crossRefs(id).map { r -> text.savedVerseText(r.toStart)?.let { r.copy(preview = it) } ?: r }
-        }
+        // Previews in the version being read, also an online one (the cross-reference list itself is shared).
+        vm.crossRefsIn(version, id) { value = it }
     }
     val panelIndex = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
     var notePassage by remember(id) { mutableStateOf<Passage?>(null) }

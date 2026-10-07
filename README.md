@@ -1,4 +1,4 @@
-# Ink & Word — version 1.20.0
+# Ink & Word — version 1.21.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,14 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.21.0
+
+- **One cache for every online Bible.** YouVersion's Bibles, the ESV and the NLT are now kept exactly the same way: each chapter is kept once read, for as long as *Keep downloaded chapters* says, searches are kept, and *Clear downloaded text…* clears them all.
+  - *Save for offline* now works for the ESV and NLT too, paced to each service's limits (the ESV about 75 minutes, as Crossway allows 60 requests a minute).
+  - The ESV and NLT's old 500-verse code is removed; caches from earlier versions carry over.
+- **Fixed:** cross-references showed the King James words while reading an online Bible, for verses whose chapter wasn't on the tablet yet. They now show that Bible's own words: "…" while the chapter downloads (once, then kept; up to 40 chapters a verse), then the text.
+- Known gap: Crossway's ESV API terms allow an app to store at most 500 verses (or half a book); keeping more is at each key holder's risk unless Crossway agrees.
 
 ## New in version 1.20.0
 

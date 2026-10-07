@@ -79,7 +79,7 @@ class BibleRepository(context: Context, val version: BibleVersion) {
             o.fetch(book, chapter)
             onlineEvents?.arrived(code, book, chapter)
             // Read on without waiting: the next two chapters come in the background.
-            for (n in 1..(if (o.limited) 1 else 2)) if (chapter + n <= book(book).chapters) fetchLater(book, chapter + n, quiet = true)
+            for (n in 1..2) if (chapter + n <= book(book).chapters) fetchLater(book, chapter + n, quiet = true)
             true
         } catch (e: Exception) {
             onlineEvents?.failed(code, book, chapter, e)

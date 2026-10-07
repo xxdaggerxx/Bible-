@@ -181,12 +181,9 @@ fun SettingsDialog(
                                 // An online Bible (BIB-12): how much is on the tablet, and saving it all.
                                 val saved = remember(v.code, vm.onlineArrivals) { vm.onlineSaved(v.code) }
                                 val progress = vm.onlineDownloads[v.code]
-                                val publisher = when (v.online) { com.biblestudy.app.data.Esv.ID -> "Crossway"; com.biblestudy.app.data.Nlt.ID -> "Tyndale"; else -> null }
-                                val limited = publisher != null && com.biblestudy.app.data.OnlineBible.limitPublishers
-                                val source = publisher ?: "YouVersion"
+                                val source = when (v.online) { com.biblestudy.app.data.Esv.ID -> "Crossway"; com.biblestudy.app.data.Nlt.ID -> "Tyndale"; else -> "YouVersion" }
                                 Text(
                                     when {
-                                        limited -> "Online, from $publisher \u00b7 keeps the last 500 verses you read, as $publisher allows"
                                         progress != null -> "Saving for offline\u2026 ${(progress * 100).toInt()}%"
                                         saved != null && saved.first >= saved.second -> "Online, from $source \u00b7 saved on this tablet, works offline"
                                         saved != null -> "Online, from $source \u00b7 ${saved.first} of ${saved.second} chapters on this tablet"
@@ -204,7 +201,7 @@ fun SettingsDialog(
                         }
                         if (v.online > 0) {
                             if (v.code in vm.onlineDownloads) TextButton(onClick = { vm.stopSavingForOffline(v.code) }) { Text("Stop") }
-                            else if (v.online < com.biblestudy.app.data.Esv.ID && vm.onlineSaved(v.code)?.let { it.first < it.second } == true) TextButton(onClick = { vm.saveForOffline(v.code) }) { Text("Save for offline") }
+                            else if (vm.onlineSaved(v.code)?.let { it.first < it.second } == true) TextButton(onClick = { vm.saveForOffline(v.code) }) { Text("Save for offline") }
                         }
                         if (v.imported) TextButton(onClick = { removing = v.code }) { Text("Remove") }
                         else Text("Built in", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.outline)

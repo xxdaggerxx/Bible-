@@ -3164,9 +3164,9 @@ class FeatureTest {
     }
 
     @Test
-    fun theEsvComesFromCrosswayAndKeepsAtMost500Verses() {
-        // BIB-12: the ESV, from Crossway's API, works like other online Bibles but keeps only the
-        // chapters read last: at most 500 verses, and never more than half a book (Crossway's terms).
+    fun theEsvComesFromCrosswayAndIsKeptLikeTheOthers() {
+        // BIB-12: the ESV, from Crossway's API, works and is kept on the tablet like every other
+        // online Bible (from 1.21 the same cache for all).
         val esvJohn3 = javaClass.getResource("/youversion/esv-JHN.3.json")!!.readText()
         val calls = java.util.Collections.synchronizedList(ArrayList<String>())
         val realHttp = com.biblestudy.app.data.Esv.http
@@ -3188,8 +3188,6 @@ class FeatureTest {
                 else -> 404 to "{}"
             }
         }
-        // With the publishers' 500-verse limit on (off by default from 1.20).
-        com.biblestudy.app.data.OnlineBible.limitPublishers = true
         try {
             compose.runOnUiThread { vm.loadOnlineBibles() }
             waitFor(10_000) { vm.onlineBibles?.any { it.code == "ESV" } == true }
@@ -3210,21 +3208,25 @@ class FeatureTest {
             var hits = emptyList<com.biblestudy.app.model.SearchHit>()
             Thread { hits = repo.search("marvel", com.biblestudy.app.model.SearchScope.ALL, 43) }.apply { start(); join() }
             assertTrue(hits.any { it.verse == 7 })
-            // Reading on through John: the oldest chapters are dropped, keeping within the limits.
+            // Reading on through John keeps every chapter (no 500-verse window), and reading one
+            // again, or searching again, doesn't go to Crossway.
             val o = repo.online!!
             Thread { for (c in 4..21) repo.chapter(43, c) }.apply { start(); join() }
-            assertTrue("kept ${o.savedVerses()}", o.savedVerses() <= 500)
-            assertTrue("kept ${o.savedVerses()} of John", o.savedVerses() * 2 <= vm.bible.versesBetween(43_000_000, 43_999_999, 10_000).size)
-            assertTrue("saved: " + (1..21).filter { o.isSaved(43, it) } + " calls=" + calls.count { "passage/html" in it } + " msg=" + vm.message, o.isSaved(43, 21))
-            assertTrue(!o.isSaved(43, 3))
-            // The search index and word tags go with the dropped chapters.
+            assertTrue((3..21).all { o.isSaved(43, it) })
+            assertTrue("kept ${o.savedVerses()}", o.savedVerses() > 500)
+            val asked = calls.size
+            Thread { repo.chapter(43, 3); repo.search("marvel", com.biblestudy.app.model.SearchScope.ALL, 43) }.apply { start(); join() }
+            assertEquals(calls.drop(asked).toString(), asked, calls.size)
+            // Kept for the days chosen, as the others: let go when not read for longer.
+            assertTrue(o.expire(30, System.currentTimeMillis() + 40 * 86_400_000L) >= 19) // and chapters fetched ahead
+            assertEquals(0, o.savedChapters())
+            // The search index and word tags go with the chapters.
             var again = emptyList<com.biblestudy.app.model.SearchHit>()
             com.biblestudy.app.data.Esv.http = { 503 to "" }
             Thread { again = repo.search("Nicodemus", com.biblestudy.app.model.SearchScope.ALL, 43) }.apply { start(); join() }
             assertTrue(again.isEmpty())
             assertTrue(vm.study.strongs("ESV", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().isEmpty())
         } finally {
-            com.biblestudy.app.data.OnlineBible.limitPublishers = false
             com.biblestudy.app.data.Esv.http = realHttp
             com.biblestudy.app.data.Esv.key = realKey
             com.biblestudy.app.data.YouVersion.http = realYv
@@ -3235,7 +3237,7 @@ class FeatureTest {
 
     @Test
     fun theNltComesFromTyndale() {
-        // BIB-12: the NLT from Tyndale's API, read and kept like the ESV (at most 500 verses).
+        // BIB-12: the NLT from Tyndale's API, read and kept like every other online Bible.
         val john3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
         val realHttp = com.biblestudy.app.data.Nlt.http
         val realKey = com.biblestudy.app.data.Nlt.key
@@ -3267,7 +3269,6 @@ class FeatureTest {
             snap("164-nlt")
             // Kept like the other online Bibles (users bring their own keys): no 500-verse window.
             val o = repo.online!!
-            assertFalse(o.limited)
             for (b in 1..15) assertTrue(o.fetch(b, 1))
             assertTrue(o.isSaved(43, 3))
             assertTrue("${o.savedVerses()} verses", o.savedVerses() > 500)
@@ -3320,10 +3321,10 @@ class FeatureTest {
         compose.waitForIdle()
     }
     @Test
-    fun nltVerseCardsKeepTheirVersesWhileChaptersComeAndGo() {
-        // Reported: some NLT verse cards didn't appear. Only 500 NLT verses are kept, so a card's
-        // chapter could be let go. Now the NLT keeps every card's verses on the tablet, fetching
-        // just those verses, while the chapters read come and go around them.
+    fun nltVerseCardsWorkLikeOtherOnlineBibles() {
+        // Reported: some NLT verse cards didn't appear. A card shows the verses saved with it until
+        // its chapter is on the tablet, asks for the chapter once (not on every redraw), and then
+        // works like the page; the chapter stays like any online Bible's.
         val john3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
         val realHttp = com.biblestudy.app.data.Nlt.http
         val realKey = com.biblestudy.app.data.Nlt.key
@@ -3332,7 +3333,7 @@ class FeatureTest {
         val requests = java.util.Collections.synchronizedList(ArrayList<String>())
         com.biblestudy.app.data.Nlt.key = "test"
         com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
-        // Every chapter is served John 3's 36 verses, so reading a few chapters fills the 500.
+        // Every chapter is served John 3's 36 verses, relabelled.
         com.biblestudy.app.data.Nlt.http = { url ->
             requests += url
             if (!online) throw java.io.IOException("offline")
@@ -3340,8 +3341,6 @@ class FeatureTest {
             if (ch != null) 200 to john3.replace("ch=\"3\"", "ch=\"$ch\"") else 200 to "<html><body>No passage</body></html>"
         }
         lateinit var sk: com.biblestudy.app.model.Sketch
-        // With the publishers' 500-verse limit on (off by default from 1.20).
-        com.biblestudy.app.data.OnlineBible.limitPublishers = true
         try {
             compose.runOnUiThread { vm.loadOnlineBibles() }
             waitFor(10_000) { vm.onlineBibles?.any { it.code == "NLT" } == true }
@@ -3350,7 +3349,7 @@ class FeatureTest {
             val nlt = vm.text("NLT").online!!
             compose.runOnUiThread { sk = vm.createSketch("Cards", com.biblestudy.app.model.Paper.BLANK, open = false); vm.openSketchBeside(sk); vm.activePanel = 1 }
             waitForLoaded()
-            // Offline: a new card shows the verses saved with it, and asks for them only once.
+            // Offline: a new card shows the verses saved with it, and asks for its chapter only once.
             compose.runOnUiThread { vm.insertCard("John 3:16 (NLT)\nFor this is how God loved the world.", 0) }
             vm.awaitSaves()
             val card = vm.textsFor(sk.book, 1).single { it.text.startsWith("John 3:16 (NLT)") }
@@ -3363,47 +3362,36 @@ class FeatureTest {
             Thread.sleep(500)
             assertEquals(requests.toString(), 1, requests.size)
 
-            // Back online: just the card's verse is fetched (not its chapter), and the card is live.
+            // Back online: the chapter comes, and the card is live.
             online = true
             compose.runOnUiThread { vm.retryOnline(); vm.cardText(card, spec) }
-            waitFor(20_000) { nlt.missingKept().isEmpty() && vm.text("NLT").savedVerseText(43_003_016) != null }
-            assertTrue(requests.last(), "ref=John.3.16-John.3.16&" in requests.last())
-            assertFalse(nlt.isSaved(43, 3))
+            waitFor(20_000) { nlt.isSaved(43, 3) }
             compose.waitForIdle()
             compose.runOnUiThread { shown = vm.cardText(card, spec) }
             assertEquals(1, shown.verses.size)
             assertTrue(shown.verses.single().text, "loved the world" in shown.verses.single().text)
 
-            // Read John 3, then the first chapter of 15 books (36 verses each): John 3 is let go to stay
-            // within 500 verses, but the card's verse stays, and the card still works.
-            assertTrue(nlt.fetch(43, 3))
+            // Reading 15 more chapters (over 500 verses) lets nothing go: the card keeps working.
             for (b in 1..15) nlt.fetch(b, 1)
-            assertFalse("${nlt.savedVerses()} verses", nlt.isSaved(43, 3))
-            assertTrue(nlt.savedVerses() <= 500)
-            assertNotNull(vm.text("NLT").savedVerseText(43_003_016))
-            assertNull(vm.text("NLT").savedVerseText(43_003_017))
+            assertTrue(nlt.isSaved(43, 3))
+            assertTrue(nlt.savedVerses() > 500)
+            val asked = requests.size
             compose.runOnUiThread { shown = vm.cardText(card, spec) }
             assertEquals(1, shown.verses.size)
-            // Search finds the kept verse once (its search entry was replaced, not doubled).
-            assertEquals(1, vm.text("NLT").search("loved", com.biblestudy.app.model.SearchScope.BOOK, 43).count { it.chapter == 3 && it.verse == 16 })
-
-            // The card deleted: its verse is let go the next time the cards are counted.
-            compose.runOnUiThread { vm.deleteSketch(sk); vm.closePanel(1) }
-            vm.awaitSaves()
-            compose.runOnUiThread { vm.keepCardVerses("NLT") }
-            waitFor(10_000) { vm.text("NLT").savedVerseText(43_003_016) == null }
+            assertEquals(asked, requests.size)
         } finally {
-            com.biblestudy.app.data.OnlineBible.limitPublishers = false
             com.biblestudy.app.data.Nlt.http = realHttp
             com.biblestudy.app.data.Nlt.key = realKey
             com.biblestudy.app.data.YouVersion.http = realYv
             compose.runOnUiThread {
-                vm.sketches.filter { it.name == "Cards" }.forEach { vm.deleteSketch(it) } // if the test stopped early
+                vm.sketches.filter { it.name == "Cards" }.forEach { vm.deleteSketch(it) }
+                vm.closePanel(1)
                 vm.setVersion(0, "KJV"); vm.removeBible("NLT")
             }
             compose.waitForIdle()
         }
     }
+
     @Test
     fun onlineChaptersStayForTheChosenDaysAndCanBeCleared() {
         // Online Bibles are kept on the tablet to spare the servers: for as long as Settings says
@@ -3480,6 +3468,54 @@ class FeatureTest {
             com.biblestudy.app.data.YouVersion.http = realHttp
             com.biblestudy.app.data.YouVersion.key = realKey
             compose.runOnUiThread { vm.changeCacheDays(0); vm.setVersion(0, "KJV"); vm.removeBible("NIV") }
+            compose.waitForIdle()
+        }
+    }
+    @Test
+    fun crossReferencesShowTheOnlineBibleBeingRead() {
+        // Reported: cross-references showed the KJV's words while reading an online Bible. Their
+        // previews are now in that Bible: "…" while a chapter downloads, then its own words.
+        val john3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
+        val realHttp = com.biblestudy.app.data.Nlt.http
+        val realKey = com.biblestudy.app.data.Nlt.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        com.biblestudy.app.data.Nlt.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        // Every chapter is served John 3's verses, relabelled, so each preview is easy to check.
+        com.biblestudy.app.data.Nlt.http = { url ->
+            val ch = Regex("ref=[^.&]+\\.(\\d+)").find(url)?.groupValues?.get(1)
+            if (ch != null) 200 to john3.replace("ch=\"3\"", "ch=\"$ch\"") else 200 to "<html><body>No passage</body></html>"
+        }
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.any { it.code == "NLT" } == true }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "NLT" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NLT" } }
+            val id = com.biblestudy.app.model.VerseId.of(43, 3, 16)
+            val kjv = vm.bible.crossRefs(id)
+            assertTrue(kjv.size >= 5)
+            val shown = ArrayList<List<com.biblestudy.app.model.CrossRef>>()
+            kotlinx.coroutines.runBlocking { vm.crossRefsIn("NLT", id) { shown += it } }
+            // First nothing is on the tablet: "…", never the KJV's words.
+            assertTrue(shown.first().all { it.preview == "\u2026" })
+            // Then each preview is the NLT's own text.
+            val nlt = vm.text("NLT")
+            val last = shown.last()
+            val filled = last.filter { it.preview != "\u2026" }
+            assertTrue("${filled.size} of ${last.size}", filled.size >= minOf(last.size, 20))
+            for (r in filled) {
+                assertEquals(nlt.savedVerseText(r.toStart), r.preview)
+                assertFalse(r.preview, kjv.any { it.toStart == r.toStart && it.preview == r.preview })
+            }
+            // Opened again: straight from the tablet, in one go.
+            shown.clear()
+            kotlinx.coroutines.runBlocking { vm.crossRefsIn("NLT", id) { shown += it } }
+            assertEquals(last, shown.first())
+        } finally {
+            com.biblestudy.app.data.Nlt.http = realHttp
+            com.biblestudy.app.data.Nlt.key = realKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NLT") }
             compose.waitForIdle()
         }
     }

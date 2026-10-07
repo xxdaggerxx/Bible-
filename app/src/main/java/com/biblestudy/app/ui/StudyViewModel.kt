@@ -34,6 +34,7 @@ import com.biblestudy.app.model.DrawnBox
 import com.biblestudy.app.model.DrawnLine
 import com.biblestudy.app.model.DrawnVerse
 import com.biblestudy.app.model.CrossHighlight
+import com.biblestudy.app.model.CrossRef
 import com.biblestudy.app.model.HighlightEntry
 import com.biblestudy.app.model.Edit
 import com.biblestudy.app.model.Heading
@@ -220,16 +221,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val v = BibleRepository.ALL.firstOrNull { it.code == code } ?: BibleRepository.KJV
         if (v.code == bible.code) bible else BibleRepository(getApplication(), v).also { r ->
             // An online Bible's chapters get word tags, words of Jesus and paragraphs as they come (BIB-12).
-            r.online?.bookVerses = bookVerses
             r.online?.study = { db, parsed ->
                 com.biblestudy.app.data.ImportStudy.addChapter(db, r.code, parsed, study, onlineTagger, guessRed = !r.online.marksRed(), web = text(BibleRepository.WEB.code))
             }
         }
-    }
-
-    /** Verses in each book of the KJV (index = book id), for the ESV's half-a-book limit. */
-    private val bookVerses: IntArray by lazy {
-        IntArray(67).also { a -> for (b in bible.books) a[b.id] = bible.versesBetween(b.id * 1_000_000, b.id * 1_000_000 + 999_999, 100_000).size }
     }
 
     /** Tags the words of online Bibles' chapters for word studies; made the first time one comes. */
@@ -247,6 +242,30 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      */
     fun verseTextNow(version: String, id: Int): String =
         text(version).verseText(id) ?: if (isOnline(version)) "Loading\u2026" else bible.verseText(id) ?: ""
+
+    /**
+     * The cross-references from verse [id] with their previews in [version], given to [show] as
+     * they're ready. An online Bible's previews come from the chapters on the tablet; the others
+     * show "…" while their chapters download (each once, then kept, at most [XREF_FETCH]), and
+     * [show] is called again as they come. Never another version's text.
+     */
+    suspend fun crossRefsIn(version: String, id: Int, show: (List<CrossRef>) -> Unit) {
+        val text = text(version)
+        val refs = background { bible.crossRefs(id) }
+        // A version that lacks a verse (not an online one) shows the KJV's, as before.
+        fun previews() = refs.map { r -> r.copy(preview = text.savedVerseText(r.toStart) ?: if (text.online != null) "\u2026" else r.preview) }
+        show(background { previews() })
+        val o = text.online ?: return
+        val missing = background {
+            refs.map { VerseId.book(it.toStart) to VerseId.chapter(it.toStart) }.distinct()
+                .filter { (b, c) -> !o.isSaved(b, c) }.take(XREF_FETCH)
+        }
+        for (batch in missing.chunked(6)) {
+            val ok = background { batch.all { (b, c) -> runCatching { o.fetch(b, c) }.isSuccess } }
+            show(background { previews() })
+            if (!ok) break // no internet: the rest show "…" until the list is opened again
+        }
+    }
 
     /** Whether [code] is an online Bible. */
     fun isOnline(code: String) = BibleRepository.ALL.any { it.code == code && it.online > 0 }
@@ -301,41 +320,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** Online chapters verse cards have asked for this session (see [cardVerses]). */
     internal val cardFetches = HashSet<String>()
 
-    /** Keeps verse cards' verses one version at a time, so two runs don't fetch the same verses. */
-    private val cardKeeper = java.util.concurrent.Executors.newSingleThreadExecutor { r -> Thread(r, "card-verses").apply { isDaemon = true } }
-        .asCoroutineDispatcher()
-
-    /**
-     * The ESV and NLT keep at most 500 verses (BIB-12), so the verses of every verse card in
-     * [version] are kept on the tablet while chapters come and go (SKT-6), and those missing are
-     * downloaded by themselves. Runs in the background; cards are redrawn when they come.
-     */
-    fun keepCardVerses(version: String) {
-        val online = text(version).online ?: return
-        if (!online.limited) return
-        viewModelScope.launch {
-            // After the notes waiting to be saved, so a card just made is included.
-            val bodies = withContext(dbDispatcher) { user.allTextBodies() }
-            val ok = withContext(cardKeeper) {
-                try {
-                    val ids = bodies.mapNotNull { cardSpecOf(it) }.filter { it.version == version }
-                        .flatMap { s -> bible.versesBetween(s.passage.startId, s.passage.endId, PASSAGE_LIMIT).map { it.first } }
-                    online.keep(ids)
-                    val missing = online.missingKept()
-                    if (missing.isNotEmpty()) online.fetchVerses(missing)
-                    missing.isNotEmpty()
-                } catch (e: Exception) {
-                    null // no internet: tried again when the tablet is back online (retryOnline)
-                }
-            }
-            when (ok) {
-                null -> onlineFailed = true
-                true -> onlineArrivals++
-                false -> {}
-            }
-        }
-    }
-
     /**
      * How long downloaded chapters of online Bibles are kept after they were last read, in days
      * (0 = always, the default). Chapters not read for that long are let go when the app starts
@@ -371,12 +355,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             onlineArrivals++
             message = "Downloaded Bible text cleared. Chapters download again as you read them."
         }
-    }
-
-    /** A verse card was made or changed: its verses are kept from now on. */
-    private fun cardChanged(body: String) {
-        val spec = cardSpecOf(body) ?: return
-        if (text(spec.version).online?.limited == true) { cardFetches.remove("keep ${spec.version}") }
     }
 
     /** The YouVersion key typed in Settings, or empty for the one built in. */
@@ -463,7 +441,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         if (code in onlineDownloads) return
         val repo = text(code)
         val o = repo.online ?: return
-        if (o.limited) return // the ESV may only keep 500 verses
         viewModelScope.launch(Dispatchers.IO) { o.savedForOffline = true } // kept however long ago it was read
         val chapters = bible.books.filter { it.id in o.books }.flatMap { b -> (1..b.chapters).map { b.id to it } }
         onlineDownloads[code] = o.savedChapters().toFloat() / chapters.size
@@ -473,6 +450,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 var done = 0
                 for ((b, c) in chapters) {
                     if (!isActive) break
+                    // Paced to the service's limits (Crossway: 60 a minute); chapters already here cost nothing.
+                    if (o.pace > 0 && !o.isSaved(b, c)) kotlinx.coroutines.delay(o.pace)
                     val r = runCatching { o.fetch(b, c) }
                     if (r.isFailure) { failed = r.exceptionOrNull(); break }
                     if (++done % 10 == 0) withContext(Dispatchers.Main) { onlineDownloads[code] = done.toFloat() / chapters.size }
@@ -1833,7 +1812,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val card = t.copy(text = text, background = background)
         replaceItem(card)
         record(Edit(listOf(card), emptyList()))
-        cardChanged(text)
     }
 
     // ---------- reading analytics (ANL-1 to ANL-6) ----------
@@ -2773,10 +2751,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** The card a text box is, if any, worked out once per text. */
     fun cardSpecCached(t: MarginText): CardSpec? {
-        val old = cardSpecs[t.id]
-        old?.let { (text, spec) -> if (text == t.text) return spec }
+        cardSpecs[t.id]?.let { (text, spec) -> if (text == t.text) return spec }
         val spec = cardSpec(t)
-        if (old != null) cardChanged(t.text) // edited, or its version changed
         cardSpecs[t.id] = t.text to spec
         return spec
     }
@@ -3326,6 +3302,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         const val RECENT_AFTER_S = 5L
         const val MAX_RECENT = 50
         const val PASSAGE_LIMIT = 80
+        /** At most this many chapters are downloaded for one verse's cross-reference previews. */
+        const val XREF_FETCH = 40
         /** How many automatic backups are kept (DATA-6). */
         const val KEEP_BACKUPS = 5
     }
@@ -3341,6 +3319,5 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         sound.release()
         super.onCleared()
         dbDispatcher.close()
-        cardKeeper.close()
     }
 }
