@@ -3639,13 +3639,85 @@ class FeatureTest {
         compose.waitForIdle()
         assertEquals(PaneKind.NAMES, vm.sidePane)
         // The Symbols & numbers view lists the chapter's symbols first.
-        compose.runOnUiThread { vm.sidePane = PaneKind.SYMBOLS; vm.goTo(0, 66, 5, 1, remember = false) }
+        // (The view follows the Bible panel in use, unless an earlier test pinned it to a passage.)
+        compose.runOnUiThread {
+            if (vm.tab.pinned != null) vm.togglePin()
+            vm.sidePane = PaneKind.SYMBOLS; vm.goTo(vm.activePanel, 66, 5, 1, remember = false)
+        }
         waitForLoaded()
-        waitFor(10_000) { compose.onAllNodesWithText("The Lamb").fetchSemanticsNodes().isNotEmpty() }
-        // In the order they come in Revelation 5: the throne (verse 1) first.
-        waitFor(10_000) { runCatching { compose.onAllNodesWithTag("entry")[0].assertTextEquals("The throne") }.isSuccess }
+        // (Only the rows that fit are laid out, so this waits for the list, not a particular entry.)
+        waitFor(10_000) { compose.onAllNodesWithTag("entry").fetchSemanticsNodes().isNotEmpty() }
+        // In the order they come in the chapter (in Revelation 5 in the KJV, the throne of verse 1 first).
+        val sp = vm.studyPanel()
+        assertEquals(66 to 5, sp.book to sp.chapter)
+        val firstHere = com.biblestudy.app.data.Aids.marks(
+            app, vm.study, sp.version, 66, 5, vm.text(sp.version).chapter(66, 5).map { it.verse to it.text },
+            com.biblestudy.app.data.AidSwitches(hard = false, names = false, customs = false, symbols = true),
+        ).toSortedMap().values.flatten().first().key
+        val expected = com.biblestudy.app.data.Aids.byId(app, firstHere)!!.title
+        waitFor(10_000) { runCatching { compose.onAllNodesWithTag("entry")[0].assertTextEquals(expected) }.isSuccess }
         snap("173-symbols-view")
         compose.runOnUiThread { vm.sidePane = null; vm.nameOpen = null; vm.goTo(0, 43, 3, 1, remember = false) }
         compose.waitForIdle()
+    }
+    @Test
+    fun bibleAidsWorkInTheNltAndEsv() {
+        // AID-12: the aids in online Bibles, whose word tags are worked out on the tablet as each
+        // chapter comes: John 3 in the NLT (Tyndale) and the ESV (Crossway).
+        val nltJohn3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
+        val esvJohn3 = javaClass.getResource("/youversion/esv-JHN.3.json")!!.readText()
+        val realNlt = com.biblestudy.app.data.Nlt.http
+        val realEsv = com.biblestudy.app.data.Esv.http
+        val realNltKey = com.biblestudy.app.data.Nlt.key
+        val realEsvKey = com.biblestudy.app.data.Esv.key
+        val realYv = com.biblestudy.app.data.YouVersion.http
+        com.biblestudy.app.data.Nlt.key = "test"
+        com.biblestudy.app.data.Esv.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        com.biblestudy.app.data.Nlt.http = { url -> if ("ref=John.3&" in url) 200 to nltJohn3 else 200 to "<html><body>No passage</body></html>" }
+        com.biblestudy.app.data.Esv.http = { url -> if ("q=43003001" in url) 200 to esvJohn3 else 404 to "{}" }
+        val app: android.content.Context = vm.getApplication()
+        val all = com.biblestudy.app.data.AidSwitches(hard = true, names = true, customs = true, symbols = true)
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles?.map { it.code }?.containsAll(listOf("NLT", "ESV")) == true }
+            compose.runOnUiThread { for (c in listOf("NLT", "ESV")) vm.addOnlineBible(vm.onlineBibles!!.single { it.code == c }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.map { it.code }.containsAll(listOf("NLT", "ESV")) }
+            for (version in listOf("NLT", "ESV")) {
+                assertTrue(vm.text(version).online!!.fetch(43, 3))
+                val verses = vm.text(version).chapter(43, 3).map { it.verse to it.text }
+                val marks = com.biblestudy.app.data.Aids.marks(app, vm.study, version, 43, 3, verses, all)
+                val marked = marks.flatMap { (v, l) -> l.map { m -> verses.first { it.first == v }.second.substring(m.range) to m.kind } }
+                val kinds = marked.groupBy({ it.second }, { it.first })
+                val say = "$version: $marked"
+                // A group of Jesus' day (John 3:1), people and places, and symbols.
+                assertTrue(say, kinds[com.biblestudy.app.data.AidKind.CUSTOM].orEmpty().any { it.startsWith("Pharisee") })
+                assertTrue(say, "Nicodemus" in kinds[com.biblestudy.app.data.AidKind.NAME].orEmpty())
+                assertTrue(say, "Moses" in kinds[com.biblestudy.app.data.AidKind.NAME].orEmpty())
+                val symbols = kinds[com.biblestudy.app.data.AidKind.SYMBOL].orEmpty().map { it.lowercase() }
+                assertTrue(say, "born again" in symbols)
+                assertTrue(say, "wind" in symbols)
+                assertTrue(say, "light" in symbols)
+                // The bronze serpent of John 3:14, in each version's words ("serpent", "bronze snake").
+                assertTrue(say, symbols.any { it == "serpent" || it == "snake" || it == "bronze" })
+                // The bridegroom's wedding vows (NLT, John 3:29) aren't vows to God.
+                assertTrue(say, kinds[com.biblestudy.app.data.AidKind.CUSTOM].orEmpty().none { it.startsWith("vow") })
+                // "LORD" or "God" is never taken for a person or place.
+                assertTrue(say, kinds[com.biblestudy.app.data.AidKind.NAME].orEmpty().none { it == "LORD" || it == "God" })
+                // Tapping "Nicodemus" explains who he was.
+                val (v1, t1) = verses.first { (_, t) -> "Nicodemus" in t }
+                val word = com.biblestudy.app.data.StudyRepository.words(t1).indexOfFirst { t1.substring(it) == "Nicodemus" }
+                val cards = com.biblestudy.app.data.Aids.at(app, vm.study, version, com.biblestudy.app.model.VerseId.of(43, 3, v1), t1, word, all)
+                assertTrue(say, cards.any { (it.second as? com.biblestudy.app.data.NameEntry)?.name == "Nicodemus" })
+            }
+        } finally {
+            com.biblestudy.app.data.Nlt.http = realNlt
+            com.biblestudy.app.data.Esv.http = realEsv
+            com.biblestudy.app.data.Nlt.key = realNltKey
+            com.biblestudy.app.data.Esv.key = realEsvKey
+            com.biblestudy.app.data.YouVersion.http = realYv
+            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NLT"); vm.removeBible("ESV") }
+            compose.waitForIdle()
+        }
     }
 }

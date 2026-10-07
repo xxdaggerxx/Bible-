@@ -1,4 +1,4 @@
-# Ink & Word — version 1.22.0
+# Ink & Word — version 1.22.1
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,11 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.22.1
+
+- **Bible aids tested in the online NLT and ESV.** In John 3, both versions mark the Pharisees and Rabbi (customs), Nicodemus, Moses, John and the places (people and places, through the word tags worked out on the tablet), and *born again*, water, wind, light and the bronze serpent (symbols; the NLT's "bronze snake"). Tapping Nicodemus explains who he was.
+- **Fixed:** the NLT's "the bridegroom's... vows" (John 3:29) was marked as a vow to God. That verse is now left out.
 
 ## New in version 1.22.0
 
