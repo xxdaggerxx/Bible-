@@ -384,6 +384,12 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
             }
         }
 
+    /** The words of every text box, margins and sketch pages, newest first (for verse cards' verses, SKT-6). */
+    fun allTextBodies(): List<String> =
+        readableDatabase.rawQuery("SELECT body FROM texts ORDER BY id DESC", null).use { c ->
+            buildList { while (c.moveToNext()) add(c.getString(0)) }
+        }
+
     /** Every margin text box, for the notes browser. */
     fun allTexts(): List<MarginText> =
         readableDatabase.rawQuery(

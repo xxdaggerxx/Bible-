@@ -15,6 +15,9 @@ import java.util.concurrent.Executors
  * A chapter is downloaded the first time anything asks for it, with the two after it fetched
  * in the background so reading on never waits. Once saved it's read from the tablet, also
  * offline. *Save for offline* downloads every chapter.
+ *
+ * A limited Bible (ESV, NLT) keeps at most 500 verses: the chapters read last, plus the verses of
+ * verse cards ([keep]), which stay while chapters come and go so cards always work.
  */
 class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase) {
     /** Book ids this Bible has. */
@@ -28,6 +31,11 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
 
     /** Verses in each book (index = book id), for the half-a-book limit; set by the app. */
     @Volatile var bookVerses: IntArray? = null
+
+    init {
+        // Verse cards' verses (added in 1.18.2; older databases get the table now).
+        db.execSQL("CREATE TABLE IF NOT EXISTS kept(id INTEGER PRIMARY KEY)")
+    }
 
     /** Adds what [ImportStudy] gives an imported Bible (word tags, words of Jesus, paragraphs) for new verses. */
     @Volatile var study: ((SQLiteDatabase, BibleImport.Parsed) -> Unit)? = null
@@ -53,23 +61,106 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
         val parsed = usfm?.let { BibleImport.parseUsfm(listOf(it)) }
         synchronized(LOCK) {
             if (isSaved(book, chapter)) return true
-            db.beginTransaction()
-            try {
-                for ((vid, text) in parsed?.verses?.toSortedMap().orEmpty()) {
-                    db.execSQL("INSERT OR REPLACE INTO verses VALUES(?, ?, ?, ?, ?)", arrayOf<Any>(vid, book, chapter, vid % 1000, text))
-                    db.execSQL("INSERT INTO verses_fts(docid, text) VALUES(?, ?)", arrayOf<Any>(vid, text))
-                }
-                if (parsed != null && parsed.verses.isNotEmpty()) study?.invoke(db, parsed)
-                if (parsed?.marksRed == true) db.execSQL("INSERT OR REPLACE INTO meta VALUES('marksRed', '1')")
+            store(book, chapter, parsed, whole = true)
+        }
+        return true
+    }
+
+    /**
+     * Saves downloaded verses, in one transaction: a [whole] chapter (listed in `fetched`), or a
+     * verse card's verses. Verses already there (a card's) are replaced.
+     */
+    private fun store(book: Int, chapter: Int, parsed: BibleImport.Parsed?, whole: Boolean) {
+        db.beginTransaction()
+        try {
+            val lo = BibleImport.vid(book, chapter, 0)
+            // A whole chapter sets its own paragraph starts (a card's verses may have marked one wrongly).
+            if (whole) db.execSQL("DELETE FROM paragraphs WHERE id BETWEEN ? AND ?", arrayOf<Any>(lo, lo + 999))
+            for ((vid, text) in parsed?.verses?.toSortedMap().orEmpty()) {
+                val had = db.rawQuery("SELECT 1 FROM verses WHERE id = ?", arrayOf(vid.toString())).use { it.moveToFirst() }
+                if (had) db.execSQL("DELETE FROM verses_fts WHERE docid = ?", arrayOf<Any>(vid)) // reads the old words, so first
+                db.execSQL("INSERT OR REPLACE INTO verses VALUES(?, ?, ?, ?, ?)", arrayOf<Any>(vid, book, chapter, vid % 1000, text))
+                db.execSQL("INSERT INTO verses_fts(docid, text) VALUES(?, ?)", arrayOf<Any>(vid, text))
+            }
+            if (parsed != null && parsed.verses.isNotEmpty()) study?.invoke(db, parsed)
+            if (parsed?.marksRed == true) db.execSQL("INSERT OR REPLACE INTO meta VALUES('marksRed', '1')")
+            if (whole) {
                 // "at" orders chapters by when they were last read: a counter that goes up.
                 db.execSQL("INSERT OR REPLACE INTO fetched VALUES(?, ?, (SELECT COALESCE(MAX(at), 0) + 1 FROM fetched))", arrayOf<Any>(book, chapter))
-                if (limited) trim(book, chapter)
+            }
+            if (limited) trim(if (whole) book else -1, chapter)
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+    }
+
+    /**
+     * Verse cards' verses to keep on the tablet (SKT-6), most wanted first. A limited Bible keeps
+     * them while the chapters around them come and go, within the limits: at most [MAX_KEPT]
+     * verses and less than half of any book, so there's always room to read. Others are dropped
+     * from the list. Returns the verses kept.
+     */
+    fun keep(ids: List<Int>): Set<Int> {
+        if (!limited) return emptySet()
+        val sizes = bookVerses
+        val perBook = HashMap<Int, Int>()
+        val out = LinkedHashSet<Int>()
+        for (id in ids) {
+            if (out.size >= MAX_KEPT || id in out) continue
+            val b = id / 1_000_000
+            val n = perBook[b] ?: 0
+            if (sizes != null && b < sizes.size && (n + 1) * 2 > sizes[b]) continue
+            out += id
+            perBook[b] = n + 1
+        }
+        synchronized(LOCK) {
+            db.beginTransaction()
+            try {
+                db.execSQL("DELETE FROM kept")
+                for (id in out) db.execSQL("INSERT INTO kept VALUES(?)", arrayOf<Any>(id))
+                trim(-1, -1)
                 db.setTransactionSuccessful()
             } finally {
                 db.endTransaction()
             }
         }
-        return true
+        return out
+    }
+
+    /** Verses to keep that aren't on the tablet. */
+    fun missingKept(): List<Int> =
+        db.rawQuery("SELECT id FROM kept WHERE id NOT IN (SELECT id FROM verses) ORDER BY id", null)
+            .use { c -> buildList { while (c.moveToNext()) add(c.getInt(0)) } }
+
+    /**
+     * Downloads just these verses (a limited Bible's verse cards), a run of verses per request.
+     * Throws if they couldn't be fetched.
+     */
+    fun fetchVerses(ids: List<Int>) {
+        if (!limited) return
+        val runs = ArrayList<IntArray>() // book, chapter, from, to
+        for (id in ids.sorted()) {
+            val b = id / 1_000_000; val c = (id / 1000) % 1000; val v = id % 1000
+            val last = runs.lastOrNull()
+            if (last != null && last[0] == b && last[1] == c && last[3] == v - 1) last[3] = v else runs += intArrayOf(b, c, v, v)
+        }
+        for ((b, c, from, to) in runs) {
+            if (b !in books) continue
+            val usfm = when (id) {
+                Esv.ID -> Esv.versesUsfm(b, c, from, to)
+                Nlt.ID -> Nlt.versesUsfm(b, c, from, to)
+                else -> null
+            } ?: continue
+            val parsed = BibleImport.parseUsfm(listOf(usfm))
+            val lo = BibleImport.vid(b, c, from); val hi = BibleImport.vid(b, c, to)
+            val r = lo..hi
+            val wanted = BibleImport.Parsed(
+                parsed.verses.filterKeys { it in r }, parsed.bookNames, parsed.title, parsed.red.filterKeys { it in r },
+                parsed.marksRed, parsed.paragraphs.filterTo(HashSet()) { it in r }, parsed.bridges.filterKeys { it in r },
+            )
+            synchronized(LOCK) { store(b, c, wanted, whole = false) }
+        }
     }
 
     /** A limited Bible: marks a chapter as just read, so it's kept longest. */
@@ -88,17 +179,24 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
 
     /**
      * Drops the chapters read least lately until at most [Esv.MAX_VERSES] verses are kept and no
-     * book has more than half of its verses kept. The chapter just fetched is always kept (a
-     * one-chapter book can't be read otherwise).
+     * book has more than half of its verses kept. Verse cards' verses ([keep]) stay, and count.
+     * The chapter just fetched is always kept (a one-chapter book can't be read otherwise).
      */
     private fun trim(keepBook: Int, keepChapter: Int) {
-        val counts = HashMap<Int, Int>() // book → verses kept
-        val chapters = ArrayList<Triple<Int, Int, Int>>() // book, chapter, verses; oldest first
+        // Verses no longer kept for a card, outside the chapters read: gone first.
         db.rawQuery(
-            "SELECT f.book, f.chapter, (SELECT COUNT(*) FROM verses v WHERE v.book = f.book AND v.chapter = f.chapter) FROM fetched f ORDER BY f.at",
+            "SELECT DISTINCT v.book, v.chapter FROM verses v WHERE v.id NOT IN (SELECT id FROM kept) " +
+                "AND NOT EXISTS (SELECT 1 FROM fetched f WHERE f.book = v.book AND f.chapter = v.chapter)",
+            null,
+        ).use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getInt(1)) } }.forEach { (b, ch) -> drop(b, ch) }
+        val counts = HashMap<Int, Int>() // book → verses kept
+        db.rawQuery("SELECT book, COUNT(*) FROM verses GROUP BY book", null).use { c -> while (c.moveToNext()) counts[c.getInt(0)] = c.getInt(1) }
+        val chapters = ArrayList<Triple<Int, Int, Int>>() // book, chapter, verses that would go; oldest first
+        db.rawQuery(
+            "SELECT f.book, f.chapter, (SELECT COUNT(*) FROM verses v WHERE v.book = f.book AND v.chapter = f.chapter " +
+                "AND v.id NOT IN (SELECT id FROM kept)) FROM fetched f ORDER BY f.at",
             null,
         ).use { c -> while (c.moveToNext()) chapters += Triple(c.getInt(0), c.getInt(1), c.getInt(2)) }
-        for ((b, _, n) in chapters) counts.merge(b, n, Int::plus)
         var total = counts.values.sum()
         val sizes = bookVerses
         for ((b, ch, n) in chapters) {
@@ -111,13 +209,14 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
         }
     }
 
-    /** Removes a chapter's text, search entries, word tags, red letters and paragraphs. */
+    /** Removes a chapter's text, search entries, word tags, red letters and paragraphs, except verse cards' verses. */
     private fun drop(book: Int, chapter: Int) {
         val lo = BibleImport.vid(book, chapter, 0)
         val args = arrayOf<Any>(lo, lo + 999)
+        val notKept = "NOT IN (SELECT id FROM kept)"
         // The search index first: it reads the words to remove from the verses still there.
-        db.execSQL("DELETE FROM verses_fts WHERE docid BETWEEN ? AND ?", args)
-        for (t in listOf("verses", "tags", "red", "paragraphs")) db.execSQL("DELETE FROM $t WHERE id BETWEEN ? AND ?", args)
+        db.execSQL("DELETE FROM verses_fts WHERE docid BETWEEN ? AND ? AND docid $notKept", args)
+        for (t in listOf("verses", "tags", "red", "paragraphs")) db.execSQL("DELETE FROM $t WHERE id BETWEEN ? AND ? AND id $notKept", args)
         db.execSQL("DELETE FROM fetched WHERE book = ? AND chapter = ?", arrayOf<Any>(book, chapter))
     }
 
@@ -140,6 +239,9 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
 
     companion object {
         private val LOCK = Any()
+
+        /** At most this many verse cards' verses are kept by a limited Bible, leaving room to read. */
+        const val MAX_KEPT = 300
 
         /** Background downloads: a chapter asked for on the main thread, and the chapters after it. */
         val background = Executors.newFixedThreadPool(2) { r -> Thread(r, "online-bible").apply { isDaemon = true } }

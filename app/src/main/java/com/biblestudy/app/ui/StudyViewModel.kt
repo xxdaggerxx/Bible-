@@ -300,6 +300,47 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** Online chapters verse cards have asked for this session (see [cardVerses]). */
     internal val cardFetches = HashSet<String>()
 
+    /** Keeps verse cards' verses one version at a time, so two runs don't fetch the same verses. */
+    private val cardKeeper = java.util.concurrent.Executors.newSingleThreadExecutor { r -> Thread(r, "card-verses").apply { isDaemon = true } }
+        .asCoroutineDispatcher()
+
+    /**
+     * The ESV and NLT keep at most 500 verses (BIB-12), so the verses of every verse card in
+     * [version] are kept on the tablet while chapters come and go (SKT-6), and those missing are
+     * downloaded by themselves. Runs in the background; cards are redrawn when they come.
+     */
+    fun keepCardVerses(version: String) {
+        val online = text(version).online ?: return
+        if (!online.limited) return
+        viewModelScope.launch {
+            // After the notes waiting to be saved, so a card just made is included.
+            val bodies = withContext(dbDispatcher) { user.allTextBodies() }
+            val ok = withContext(cardKeeper) {
+                try {
+                    val ids = bodies.mapNotNull { cardSpecOf(it) }.filter { it.version == version }
+                        .flatMap { s -> bible.versesBetween(s.passage.startId, s.passage.endId, PASSAGE_LIMIT).map { it.first } }
+                    online.keep(ids)
+                    val missing = online.missingKept()
+                    if (missing.isNotEmpty()) online.fetchVerses(missing)
+                    missing.isNotEmpty()
+                } catch (e: Exception) {
+                    null // no internet: tried again when the tablet is back online (retryOnline)
+                }
+            }
+            when (ok) {
+                null -> onlineFailed = true
+                true -> onlineArrivals++
+                false -> {}
+            }
+        }
+    }
+
+    /** A verse card was made or changed: its verses are kept from now on. */
+    private fun cardChanged(body: String) {
+        val spec = cardSpecOf(body) ?: return
+        if (text(spec.version).online?.limited == true) { cardFetches.remove("keep ${spec.version}") }
+    }
+
     /** The YouVersion key typed in Settings, or empty for the one built in. */
     var youVersionKey by mutableStateOf(prefs.getString("youversionKey", "") ?: "")
         private set
@@ -1752,6 +1793,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val card = t.copy(text = text, background = background)
         replaceItem(card)
         record(Edit(listOf(card), emptyList()))
+        cardChanged(text)
     }
 
     // ---------- reading analytics (ANL-1 to ANL-6) ----------
@@ -2691,8 +2733,10 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** The card a text box is, if any, worked out once per text. */
     fun cardSpecCached(t: MarginText): CardSpec? {
-        cardSpecs[t.id]?.let { (text, spec) -> if (text == t.text) return spec }
+        val old = cardSpecs[t.id]
+        old?.let { (text, spec) -> if (text == t.text) return spec }
         val spec = cardSpec(t)
+        if (old != null) cardChanged(t.text) // edited, or its version changed
         cardSpecs[t.id] = t.text to spec
         return spec
     }
@@ -3257,5 +3301,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         sound.release()
         super.onCleared()
         dbDispatcher.close()
+        cardKeeper.close()
     }
 }

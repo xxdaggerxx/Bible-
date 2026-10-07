@@ -34,8 +34,11 @@ class CardText(val text: AnnotatedString, val headerEnd: Int, val verses: List<C
 private val CARD_HEADER = Regex("^(.+) \\(([A-Za-z0-9]{2,8})\\)$")
 
 /** The passage and version a text box shows, if it's a verse card. */
-fun StudyViewModel.cardSpec(t: MarginText): CardSpec? {
-    val first = t.text.substringBefore('\n').trim()
+fun StudyViewModel.cardSpec(t: MarginText): CardSpec? = cardSpecOf(t.text)
+
+/** The passage and version a text box's words make it show, if they're a verse card's. */
+fun StudyViewModel.cardSpecOf(body: String): CardSpec? {
+    val first = body.substringBefore('\n').trim()
     val m = CARD_HEADER.find(first) ?: return null
     val version = m.groupValues[2].uppercase()
     if (BibleRepository.ALL.none { it.code == version }) return null
@@ -115,13 +118,18 @@ fun StudyViewModel.cardText(t: MarginText, spec: CardSpec): CardText {
 }
 
 /**
- * A card's verses. For an online Bible each chapter is asked for at most once a session (and again
- * after [StudyViewModel.retryOnline]): the ESV and NLT keep only 500 verses, so cards on chapters
- * that push each other out would otherwise download them over and over on every redraw.
+ * A card's verses. The ESV and NLT keep only 500 verses, so they keep the verses of every card
+ * on the tablet ([StudyViewModel.keepCardVerses]). For other online Bibles each chapter is asked
+ * for at most once a session (and again after [StudyViewModel.retryOnline]), not on every redraw.
  */
 fun StudyViewModel.cardVerses(p: Passage, version: String): List<Pair<Int, String>> {
     val repo = text(version)
     val online = repo.online ?: return passageVerses(p, version)
+    if (online.limited) {
+        // The ESV and NLT keep a card's verses on the tablet for it, fetched by themselves.
+        if (cardFetches.add("keep $version")) keepCardVerses(version)
+        return repo.savedVersesBetween(p.startId, p.endId, StudyViewModel.PASSAGE_LIMIT)
+    }
     for (ch in p.chapter..minOf(p.endChapter, p.chapter + 3)) {
         if (online.isSaved(p.book, ch) || cardFetches.add("$version ${p.book} $ch")) repo.ensure(p.book, ch)
     }

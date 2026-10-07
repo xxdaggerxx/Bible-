@@ -3294,57 +3294,84 @@ class FeatureTest {
         compose.waitForIdle()
     }
     @Test
-    fun nltVerseCardsShowWhileTheirChapterIsNotOnTheTablet() {
+    fun nltVerseCardsKeepTheirVersesWhileChaptersComeAndGo() {
         // Reported: some NLT verse cards didn't appear. Only 500 NLT verses are kept, so a card's
-        // chapter may have been dropped; the card showed just its reference until something else
-        // redrew it, and cards from chapters that push each other out fetched them again and again.
+        // chapter could be let go. Now the NLT keeps every card's verses on the tablet, fetching
+        // just those verses, while the chapters read come and go around them.
         val john3 = javaClass.getResource("/youversion/nlt-JHN.3.html")!!.readText()
         val realHttp = com.biblestudy.app.data.Nlt.http
         val realKey = com.biblestudy.app.data.Nlt.key
         val realYv = com.biblestudy.app.data.YouVersion.http
         var online = false
-        var requests = 0
+        val requests = java.util.Collections.synchronizedList(ArrayList<String>())
         com.biblestudy.app.data.Nlt.key = "test"
         com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+        // Every chapter is served John 3's 36 verses, so reading a few chapters fills the 500.
         com.biblestudy.app.data.Nlt.http = { url ->
-            requests++
+            requests += url
             if (!online) throw java.io.IOException("offline")
-            if ("ref=John.3&" in url) 200 to john3 else 200 to "<html><body>No passage</body></html>"
+            val ch = Regex("ref=[^.&]+\\.(\\d+)").find(url)?.groupValues?.get(1)
+            if (ch != null) 200 to john3.replace("ch=\"3\"", "ch=\"$ch\"") else 200 to "<html><body>No passage</body></html>"
         }
+        lateinit var sk: com.biblestudy.app.model.Sketch
         try {
             compose.runOnUiThread { vm.loadOnlineBibles() }
             waitFor(10_000) { vm.onlineBibles?.any { it.code == "NLT" } == true }
             compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "NLT" }) }
             waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NLT" } }
-            val card = com.biblestudy.app.model.MarginText(
-                9_000_001L, 1L, 43, 3, com.biblestudy.app.model.Region.RIGHT, 16, 0f, 0f, 300f,
-                "John 3:16 (NLT)\nFor this is how God loved the world.",
-            )
+            val nlt = vm.text("NLT").online!!
+            compose.runOnUiThread { sk = vm.createSketch("Cards", com.biblestudy.app.model.Paper.BLANK, open = false); vm.openSketchBeside(sk); vm.activePanel = 1 }
+            waitForLoaded()
+            // Offline: a new card shows the verses saved with it, and asks for them only once.
+            compose.runOnUiThread { vm.insertCard("John 3:16 (NLT)\nFor this is how God loved the world.", 0) }
+            vm.awaitSaves()
+            val card = vm.textsFor(sk.book, 1).single { it.text.startsWith("John 3:16 (NLT)") }
             val spec = vm.cardSpec(card)!!
-            // Offline, chapter not kept: the card shows the verses saved with it.
             lateinit var shown: com.biblestudy.app.ui.CardText
             compose.runOnUiThread { shown = vm.cardText(card, spec) }
             assertTrue(shown.text.text, "For this is how God loved the world." in shown.text.text)
-            waitFor(10_000) { requests >= 1 }
-            // Laid out again and again (every redraw), it asks for the chapter only once.
+            waitFor(10_000) { requests.isNotEmpty() }
             compose.runOnUiThread { repeat(5) { vm.cardText(card, spec) } }
             Thread.sleep(500)
-            assertEquals(1, requests)
-            // Back online: the chapter comes, and the card is redrawn from it, live.
+            assertEquals(requests.toString(), 1, requests.size)
+
+            // Back online: just the card's verse is fetched (not its chapter), and the card is live.
             online = true
-            val before = vm.cardStamp()
             compose.runOnUiThread { vm.retryOnline(); vm.cardText(card, spec) }
-            waitFor(20_000) { vm.text("NLT").online!!.isSaved(43, 3) }
+            waitFor(20_000) { nlt.missingKept().isEmpty() && vm.text("NLT").savedVerseText(43_003_016) != null }
+            assertTrue(requests.last(), "ref=John.3.16-John.3.16&" in requests.last())
+            assertFalse(nlt.isSaved(43, 3))
             compose.waitForIdle()
-            assertTrue(vm.cardStamp() != before)
             compose.runOnUiThread { shown = vm.cardText(card, spec) }
             assertEquals(1, shown.verses.size)
             assertTrue(shown.verses.single().text, "loved the world" in shown.verses.single().text)
+
+            // Read John 3, then the first chapter of 15 books (36 verses each): John 3 is let go to stay
+            // within 500 verses, but the card's verse stays, and the card still works.
+            assertTrue(nlt.fetch(43, 3))
+            for (b in 1..15) nlt.fetch(b, 1)
+            assertFalse("${nlt.savedVerses()} verses", nlt.isSaved(43, 3))
+            assertTrue(nlt.savedVerses() <= 500)
+            assertNotNull(vm.text("NLT").savedVerseText(43_003_016))
+            assertNull(vm.text("NLT").savedVerseText(43_003_017))
+            compose.runOnUiThread { shown = vm.cardText(card, spec) }
+            assertEquals(1, shown.verses.size)
+            // Search finds the kept verse once (its search entry was replaced, not doubled).
+            assertEquals(1, vm.text("NLT").search("loved", com.biblestudy.app.model.SearchScope.BOOK, 43).count { it.chapter == 3 && it.verse == 16 })
+
+            // The card deleted: its verse is let go the next time the cards are counted.
+            compose.runOnUiThread { vm.deleteSketch(sk); vm.closePanel(1) }
+            vm.awaitSaves()
+            compose.runOnUiThread { vm.keepCardVerses("NLT") }
+            waitFor(10_000) { vm.text("NLT").savedVerseText(43_003_016) == null }
         } finally {
             com.biblestudy.app.data.Nlt.http = realHttp
             com.biblestudy.app.data.Nlt.key = realKey
             com.biblestudy.app.data.YouVersion.http = realYv
-            compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.removeBible("NLT") }
+            compose.runOnUiThread {
+                vm.sketches.filter { it.name == "Cards" }.forEach { vm.deleteSketch(it) } // if the test stopped early
+                vm.setVersion(0, "KJV"); vm.removeBible("NLT")
+            }
             compose.waitForIdle()
         }
     }

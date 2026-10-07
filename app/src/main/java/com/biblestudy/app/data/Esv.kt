@@ -51,6 +51,14 @@ object Esv {
         return toUsfm(passages.getString(0), book, chapter)
     }
 
+    /** Verses [from] to [to] of a chapter as USFM, for verse cards (see [OnlineBible.keep]); null if none. */
+    fun versesUsfm(book: Int, chapter: Int, from: Int, to: Int): String? {
+        val json = JSONObject(call("$BASE/passage/html/?q=${BibleImport.vid(book, chapter, from)}-${BibleImport.vid(book, chapter, to)}&$OPTIONS"))
+        val passages = json.optJSONArray("passages") ?: return null
+        if (passages.length() == 0) return null
+        return toUsfm(passages.getString(0), book, chapter)
+    }
+
     /** Verses matching [query], with their text, best first: (verse id, text). */
     fun search(query: String, books: List<com.biblestudy.app.model.BookInfo>, max: Int = 100): List<Pair<Int, String>> {
         val q = query.trim()
