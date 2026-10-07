@@ -16,7 +16,12 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 - **Change the version.** Tap the version name (e.g. *KJV ▾*) and pick another. You stay on the same verse.
 - **About a book.** Tap ⓘ in the panel header for the book's introduction: who wrote it, when, why, an outline you can tap, and key verses. When choosing a book, tap its name, then *About this book* at the top of the chapter list.
 - **Chapter at a glance.** Under each Bible panel's header, a slim bar says in one line what's happening in the chapter. Tap it for the card: *Who* and *Where* (tap a name to read about them), *Where it fits* in the Bible's story, and the *Key verse* (tap it to open the verse). Tap the bar again to fold it. AI wrote these cards when the app was made. Turn them off in *Settings → Reading → Chapter at a glance*.
-- **Hard words explained.** A faint dotted line goes under hard words the first time they come in a chapter: Bible words like *propitiation*, *Pharisee* or *cubit* in every version, and old words like *wist*, *froward* or *corn* in the KJV. Tap one: the verse opens with the word's meaning in one line at the top. *Read more* opens its Bible dictionary article, when there is one. Old forms like *thee*, *hath* and *cometh* aren't marked: they mean *you*, *has* and *comes*. Turn the lines off in *Settings → Reading → Hard words explained*.
+- **Hard words explained.** A faint dotted line goes under hard words the first time they come in a chapter: Bible words like *propitiation*, *Pharisee* or *cubit* in every version, and old words like *wist*, *froward* or *corn* in the KJV. Tap one: the verse opens with the word's meaning in one line at the top. *Read more* opens its Bible dictionary article, when there is one. Old forms like *thee*, *hath* and *cometh* aren't marked: they mean *you*, *has* and *comes*. Turn the lines off in *Settings → Bible aids → Hard words explained*.
+- **Bible aids.** The same faint dotted line marks more than hard words, the first time each comes in a chapter. Tap one: the verse opens with a short explanation at the top, and *More* for the whole entry.
+  - **People & places:** who someone was, or where a place is and why it matters (*Nicodemus: Pharisee who visited Jesus*). The right person is meant, even when two share a name. *More* opens *Names & places* with the family tree and map. In long family lists only the best-known names are marked.
+  - **Customs & feasts:** about 130 Jewish customs, feasts and holy days, from the Sabbath, Passover and the Day of Atonement to betrothal, the kinsman-redeemer, the city gate, the Pharisees and Samaritans, and Roman crucifixion. Each is marked in the words each version uses (*Feast of Tabernacles*, *Feast of Booths*), and where a custom is described without being named (the sandal in Ruth 4:7).
+  - **Symbols & numbers:** about 120 symbols (the Lamb, the lampstand, horns, water, bread, leaven, oil, colours and more) and the Bible's numbers (seven, twelve, forty, 666, 144,000, a thousand years). They're marked only where the Bible uses them as symbols, mostly in prophecy, Revelation, parables and poetry, not every time the word comes. Where the Bible explains a symbol itself, that comes first; otherwise the traditional reading.
+  - Each kind has its own switch in *Settings → Bible aids*. All are on at first.
 
 ## The pen, fingers and the toolbar
 
@@ -155,7 +160,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 ## Panels and tabs
 
 - **One or two panels.** Each tab shows one panel, or two side by side or one above the other. Drag the divider between them to resize; double-tap it to make them equal.
-- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. They're listed under four headings: **Reading** (the Bible, Sketch pages); **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references); **Study** (Commentary, Dictionary, Topics, Names & places, About the book, the introduction to the book you're reading); and **Notes, search and AI** (My notes, Search, AI chat). The panels button in the toolbar lists them under the same headings. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
+- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. They're listed under four headings: **Reading** (the Bible, Sketch pages); **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references); **Study** (Commentary, Dictionary, Topics, Names & places, Customs & feasts, Symbols & numbers, About the book, the introduction to the book you're reading); and **Notes, search and AI** (My notes, Search, AI chat). The panels button in the toolbar lists them under the same headings. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
 - **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
 - **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
 - **Link panels** with the link button in a Bible panel's header (it shows when two or more Bible panels are open): they scroll together verse by verse, even in different versions. The button is coloured while they're linked; tap it again to unlink.
@@ -218,6 +223,13 @@ The one part of the app that uses the internet. It works like a search summary: 
 - **Turn it off** with the *AI chat* switch in Settings: the bubble and the *Ask AI* buttons go, and the app never goes online.
 - Answers can still be wrong. Check what they say against the verses.
 
+## Customs & feasts, Symbols & numbers
+
+- In a panel's menu choose *Customs & feasts* or *Symbols & numbers*, or tap *More* on a marked word.
+- Those in the chapter you're reading come first, in the order they come; then all of them A to Z. Search by name or by any word in the entry.
+- Each entry gives its explanation, its key verses (tap one to read it) and the books it's drawn from (Easton's Bible Dictionary, Edersheim's books on the temple and Jewish life). You can write on them like the other study views.
+- *The feasts of Israel* among the ready-made sketch pages shows the year's feasts in order.
+
 ## Names and places
 
 - In a panel's menu choose *Names & places*, or tap a name in Verse details.
@@ -270,7 +282,7 @@ In *Settings → Reading*:
 - **Line spacing:** more room to write between lines.
 - **Layout:** one verse per line, or paragraphs.
 - **Verse numbers** on or off.
-- **Chapter at a glance** and **Hard words explained** on or off (see *Getting around*).
+- **Chapter at a glance** on or off, and the **Bible aids**: *Hard words explained*, *People & places*, *Customs & feasts*, *Symbols & numbers* (see *Getting around*).
 - **Section headings** on or off.
 
 Your ink and highlights stay on their words whatever you choose.

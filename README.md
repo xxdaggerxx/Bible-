@@ -1,4 +1,4 @@
-# Ink & Word — version 1.21.1
+# Ink & Word — version 1.22.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
 
@@ -65,6 +65,20 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 1.22.0
+
+- **Bible aids.** More words get the faint dotted line hard words have, the first time each comes in a chapter. Tap one for a short explanation at the top of the verse pop-up, and *More* for the whole entry.
+  - **People & places:** the one-line description of each of 4,130 people and places from Names & places. They're found through the word tags, so the right person is meant (Judas Iscariot, not the other Judas), in every version. Genealogies mark only their 10 best-known names.
+  - **Customs & feasts:** 128 entries on feasts and holy days, worship and the temple, daily life and law, the groups of Jesus' day and Roman rule. They're marked wherever named, in each version's wording, and in the verses that describe them unnamed.
+  - **Symbols & numbers:** 119 symbols and 17 Bible numbers, marked only in the verses that use them symbolically (about 2,000 verses chosen by hand). Where the Bible explains a symbol, that comes first; otherwise the traditional reading. There's no number-mysticism: 666 and the thousand years give the traditional readings.
+  - Where an aid explains a hard word (*Pharisees*, *Passover*), its fuller card takes the hard word's place.
+  - One switch for each kind in *Settings → Bible aids*, all on at first.
+- **New study views:** *Customs & feasts* and *Symbols & numbers*. The chapter's entries come first, then A to Z, each with linked key verses and sources.
+- The entries were written by AI in the build session, from public-domain works (Easton's Bible Dictionary; Edersheim, *The Temple* and *Sketches of Jewish Social Life*). They were checked by script (every entry is marked somewhere in the KJV, BSB or WEB) and spot-read, not read in full by a person. The source is in `tools/aids/` and `tools/build_aids.py` builds them.
+- Known gaps:
+  - Customs and symbols are found by wording. A version that words a custom differently from all the listed forms won't mark it there.
+  - Symbol verses are chosen by KJV verse numbers.
 
 ## New in version 1.21.1
 

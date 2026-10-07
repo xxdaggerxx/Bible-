@@ -297,6 +297,29 @@ class StudyRepository(private val context: Context) {
         )
     }
 
+    /**
+     * The people and places in each verse of a chapter, by the Strong's numbers that name them
+     * (AID-1): verse → (Strong's number → name). Only the names the verse is known to mention.
+     */
+    fun chapterNameStrongs(book: Int, chapter: Int): Map<Int, Map<String, NameEntry>> {
+        val lo = book * 1_000_000 + chapter * 1000
+        val rows = ArrayList<Triple<Int, String, Long>>()
+        db.rawQuery(
+            "SELECT r.verse, s.strong, n.id FROM name_refs r JOIN names n ON n.id = r.name JOIN name_strongs s ON s.name = n.id " +
+                "WHERE r.verse BETWEEN ? AND ?",
+            arrayOf(lo.toString(), (lo + 999).toString()),
+        ).use { c -> while (c.moveToNext()) rows += Triple(c.getInt(0), c.getString(1), c.getLong(2)) }
+        if (rows.isEmpty()) return emptyMap()
+        val byId = names("SELECT $NAME_COLS FROM names WHERE id IN (${rows.map { it.third }.distinct().joinToString(",")})", null).associateBy { it.id }
+        val out = HashMap<Int, HashMap<String, NameEntry>>()
+        for ((v, strong, id) in rows) {
+            val n = byId[id] ?: continue
+            val key = normalizeStrong(strong) ?: continue
+            out.getOrPut(v) { HashMap() }.merge(key, n) { a, b -> if (b.refCount > a.refCount) b else a }
+        }
+        return out
+    }
+
     /** The person or place a Strong's number names, preferring the one mentioned in [verseId]. */
     fun nameForStrong(strong: String, verseId: Int): NameEntry? {
         val s = normalizeStrong(strong) ?: return null

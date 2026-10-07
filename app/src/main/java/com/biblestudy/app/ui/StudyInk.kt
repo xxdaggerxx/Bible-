@@ -56,6 +56,9 @@ object StudyInk {
     const val CROSSREF = -5
     /** A book introduction: chapter is the book, verse the part (background, purpose and so on). */
     const val INTRO = -6
+    /** Bible aids (AID-11): a custom or feast, or a symbol or number; chapter is the entry's key. */
+    const val CUSTOM = -8
+    const val SYMBOL = -9
 
     /** The third value of a highlight's single point: marks it as a character range. */
     const val RANGE = -7777f

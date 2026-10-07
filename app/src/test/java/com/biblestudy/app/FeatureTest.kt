@@ -3053,7 +3053,8 @@ class FeatureTest {
         // Old English words count in the KJV only; Bible words in every version.
         assertNull(com.biblestudy.app.data.HardWords.lookup(app, "BSB", "verily"))
         assertNotNull(com.biblestudy.app.data.HardWords.lookup(app, "BSB", "Pharisees"))
-        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, 1, remember = false) }
+        // (Customs off here: "Pharisees" is also a custom, whose card would take the hard word's place.)
+        compose.runOnUiThread { vm.aidCustoms = false; vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, 1, remember = false) }
         waitForLoaded()
         compose.waitForIdle()
         snap("158-hard-words")
@@ -3075,7 +3076,7 @@ class FeatureTest {
         compose.runOnUiThread { vm.hardWords = false; vm.openVerse(43, 3, 1, word) }
         compose.waitForIdle()
         assertTrue(compose.onAllNodesWithTag("hardWord").fetchSemanticsNodes().isEmpty())
-        compose.runOnUiThread { vm.verseSheet = null; vm.hardWords = true }
+        compose.runOnUiThread { vm.verseSheet = null; vm.hardWords = true; vm.aidCustoms = true }
         compose.waitForIdle()
     }
 
@@ -3570,6 +3571,81 @@ class FeatureTest {
             assertEquals(15f, m.points[0], 0.01f)
         }
         compose.runOnUiThread { vm.clearSelection(); vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) } }
+        compose.waitForIdle()
+    }
+    @Test
+    fun bibleAidsMarkPeoplePlacesCustomsAndSymbols() {
+        // AID-1 to AID-12: people and places, customs and feasts, symbols and numbers, marked like
+        // hard words (first mention in a chapter) and explained at the top of the verse pop-up.
+        val app: android.content.Context = vm.getApplication()
+        val all = com.biblestudy.app.data.AidSwitches(hard = true, names = true, customs = true, symbols = true)
+        fun marked(version: String, b: Int, c: Int, on: com.biblestudy.app.data.AidSwitches = all): List<Pair<String, com.biblestudy.app.data.AidKind>> {
+            val verses = vm.text(version).chapter(b, c).map { it.verse to it.text }
+            return com.biblestudy.app.data.Aids.marks(app, vm.study, version, b, c, verses, on)
+                .flatMap { (v, l) -> l.map { m -> verses.first { it.first == v }.second.substring(m.range) to m.kind } }
+        }
+        val john3 = marked("KJV", 43, 3)
+        // John 3:1: the Pharisees (a group) and Nicodemus (a person); the hard word gives way to the custom.
+        assertTrue(john3.toString(), "Pharisees" to com.biblestudy.app.data.AidKind.CUSTOM in john3)
+        assertTrue(john3.toString(), "Nicodemus" to com.biblestudy.app.data.AidKind.NAME in john3)
+        assertEquals(john3.toString(), 1, john3.count { it.first == "Pharisees" })
+        // John 3:14: the bronze serpent, a symbol here; marked once.
+        assertTrue(john3.toString(), john3.any { it.first == "serpent" && it.second == com.biblestudy.app.data.AidKind.SYMBOL })
+        // Revelation 5: the Lamb and the number seven.
+        val rev5 = marked("KJV", 66, 5)
+        assertTrue(rev5.toString(), "Lamb" to com.biblestudy.app.data.AidKind.SYMBOL in rev5)
+        assertTrue(rev5.toString(), rev5.any { it.first.startsWith("seven") && it.second == com.biblestudy.app.data.AidKind.NUMBER })
+        // A lamb in an ordinary story isn't a symbol (Genesis 30 has no lamb marked; 1 Samuel 17:34 is literal).
+        assertTrue(marked("KJV", 9, 17).none { it.first.lowercase() == "lamb" })
+        // Psalm 23: the shepherd is a symbol; "LORD" is never taken for a person or place.
+        val ps23 = marked("KJV", 19, 23)
+        assertTrue(ps23.toString(), "shepherd" to com.biblestudy.app.data.AidKind.SYMBOL in ps23)
+        assertTrue(ps23.toString(), ps23.none { it.first == "LORD" })
+        // Each version's own wording: the Feast of Tabernacles is "Feast of Booths" in the BSB (John 7:2).
+        assertTrue(marked("BSB", 43, 7).toString(), marked("BSB", 43, 7).any { it.first == "Feast of Booths" || it.first == "Feast of Tabernacles" })
+        // A genealogy marks only the best-known names.
+        assertTrue(marked("KJV", 13, 1).count { it.second == com.biblestudy.app.data.AidKind.NAME } <= 10)
+        // Each kind can be switched off.
+        val noNames = marked("KJV", 43, 3, all.copy(names = false))
+        assertTrue(noNames.none { it.second == com.biblestudy.app.data.AidKind.NAME })
+        assertTrue(marked("KJV", 66, 5, all.copy(symbols = false)).none { it.second == com.biblestudy.app.data.AidKind.SYMBOL || it.second == com.biblestudy.app.data.AidKind.NUMBER })
+        // Every entry has text, key verses and sources; numbers and symbols are never marked "anywhere".
+        val entries = com.biblestudy.app.data.Aids.all(app)
+        assertTrue(entries.size >= 250)
+        assertTrue(entries.all { it.text.isNotBlank() && it.refs.isNotBlank() && it.sources.isNotBlank() })
+        assertTrue(entries.filter { it.kind != com.biblestudy.app.data.AidKind.CUSTOM }.none { it.anywhere })
+
+        // On the page: tapping "Pharisees" in John 3:1 explains the custom; More opens Customs & feasts.
+        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        compose.waitForIdle()
+        snap("170-bible-aids")
+        val v1 = vm.text("KJV").chapter(43, 3).first { it.verse == 1 }.text
+        val words = com.biblestudy.app.data.StudyRepository.words(v1)
+        compose.runOnUiThread { vm.openVerse(43, 3, 1, words.indexOfFirst { v1.substring(it) == "Pharisees" }) }
+        waitFor(10_000) { compose.onAllNodesWithTag("aid").fetchSemanticsNodes().isNotEmpty() }
+        assertTrue(compose.onAllNodesWithText("strictest religious party", substring = true).fetchSemanticsNodes().isNotEmpty())
+        assertTrue(compose.onAllNodesWithTag("hardWord").fetchSemanticsNodes().isEmpty())
+        snap("171-custom-card")
+        compose.onAllNodesWithText("More")[0].performClick()
+        compose.waitForIdle()
+        assertEquals(PaneKind.CUSTOMS, vm.sidePane)
+        waitFor(10_000) { compose.onAllNodesWithText("Key verses", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        snap("172-customs-view")
+        // Tapping "Nicodemus": who he was; More opens Names & places.
+        compose.runOnUiThread { vm.sidePane = null; vm.aidOpen = null; vm.openVerse(43, 3, 1, words.indexOfFirst { v1.substring(it) == "Nicodemus" }) }
+        waitFor(10_000) { compose.onAllNodesWithText("Pharisee who visited Jesus", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onAllNodesWithText("More")[0].performClick()
+        compose.waitForIdle()
+        assertEquals(PaneKind.NAMES, vm.sidePane)
+        // The Symbols & numbers view lists the chapter's symbols first.
+        compose.runOnUiThread { vm.sidePane = PaneKind.SYMBOLS; vm.goTo(0, 66, 5, 1, remember = false) }
+        waitForLoaded()
+        waitFor(10_000) { compose.onAllNodesWithText("The Lamb").fetchSemanticsNodes().isNotEmpty() }
+        // In the order they come in Revelation 5: the throne (verse 1) first.
+        waitFor(10_000) { runCatching { compose.onAllNodesWithTag("entry")[0].assertTextEquals("The throne") }.isSuccess }
+        snap("173-symbols-view")
+        compose.runOnUiThread { vm.sidePane = null; vm.nameOpen = null; vm.goTo(0, 43, 3, 1, remember = false) }
         compose.waitForIdle()
     }
 }

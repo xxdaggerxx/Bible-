@@ -644,6 +644,55 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
 }
 
 /**
+ * What the Bible aids say about the word tapped (AID-9): a person or place, a custom or feast, a
+ * symbol or number, each with *More* for the whole entry. Returns whether there was any.
+ */
+@Composable
+private fun AidCards(vm: StudyViewModel, version: String, verseId: Int, verseText: String, word: Int, onOpen: () -> Unit): Boolean {
+    val on = vm.aidSwitches()
+    if (word < 0 || !(on.names || on.customs || on.symbols)) return false
+    val found by produceState<List<Pair<com.biblestudy.app.data.AidMark, Any>>?>(null, version, verseId, verseText, word, on) {
+        value = background { com.biblestudy.app.data.Aids.at(vm.getApplication(), vm.study, version, verseId, verseText, word, on) }
+    }
+    val list = found ?: return false
+    if (list.isEmpty()) return false
+    for ((_, what) in list) {
+        val (title, label, text) = when (what) {
+            is com.biblestudy.app.data.NameEntry -> Triple(what.name, if (what.place) "Place" else "Person", what.brief)
+            is com.biblestudy.app.data.AidEntry -> Triple(what.title, what.group, what.text)
+            else -> continue
+        }
+        Surface(
+            color = MaterialTheme.colorScheme.secondaryContainer,
+            shape = MaterialTheme.shapes.medium,
+            modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp).testTag("aid"),
+        ) {
+            Column(Modifier.padding(start = 12.dp, end = 4.dp, top = 8.dp, bottom = 4.dp)) {
+                Text(
+                    buildAnnotatedString {
+                        withStyle(SpanStyle(fontWeight = FontWeight.Bold)) { append(title) }
+                        withStyle(SpanStyle(fontStyle = FontStyle.Italic, color = MaterialTheme.colorScheme.onSurfaceVariant)) { append("  $label") }
+                    },
+                    style = MaterialTheme.typography.bodyLarge,
+                )
+                Text(text, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.padding(top = 2.dp, end = 8.dp))
+                TextButton(
+                    onClick = {
+                        when (what) {
+                            is com.biblestudy.app.data.NameEntry -> vm.openName(what.id)
+                            is com.biblestudy.app.data.AidEntry -> vm.openAid(what)
+                        }
+                        onOpen()
+                    },
+                    modifier = Modifier.align(Alignment.End),
+                ) { Text("More") }
+            }
+        }
+    }
+    return true
+}
+
+/**
  * The meaning of the hard word tapped (STD-23), in one line, with *Read more* opening its Bible
  * dictionary article when there is one. Nothing when the word tapped isn't a hard word.
  */
@@ -781,8 +830,8 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
 
     @Composable
     fun Top() {
-        // A hard word tapped on the page: its meaning first (STD-23).
-        HardWordCard(vm, version, verseText, t.word, onOpen = ::done)
+        // A Bible aid tapped on the page (AID-9), or a hard word (STD-23): explained first.
+        if (!AidCards(vm, version, id, verseText, t.word, onOpen = ::done)) HardWordCard(vm, version, verseText, t.word, onOpen = ::done)
         if (vm.compareVersions) {
             // Parallel view: the verse in every version, stacked (SPLIT-4). Tap one to read it.
             CompareVersions(vm, id, version, verseText, Modifier.heightIn(max = if (inPanel) 480.dp else 320.dp)) { code ->

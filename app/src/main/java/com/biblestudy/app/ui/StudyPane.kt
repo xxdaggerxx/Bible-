@@ -92,6 +92,8 @@ fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
             PaneKind.TOPICS -> TopicsPane(vm, inner)
             PaneKind.COMMENTARY -> CommentaryPane(vm, slot.pos, inner.padding(top = 4.dp))
             PaneKind.NAMES -> NamesPane(vm, inner)
+            PaneKind.CUSTOMS -> AidsPane(vm, symbols = false, inner)
+            PaneKind.SYMBOLS -> AidsPane(vm, symbols = true, inner)
             PaneKind.SKETCHES -> SketchesPane(vm, inner)
             PaneKind.COMPARE -> VersePane(vm, inner) { id, version, text ->
                 CompareVersions(vm, id, version, text, Modifier.fillMaxWidth()) { code ->

@@ -422,6 +422,42 @@ fun DictionaryPane(vm: StudyViewModel, modifier: Modifier) {
     )
 }
 
+/**
+ * Customs & feasts, or Symbols & numbers (AID-11): those in the chapter being read first, then all
+ * of them A to Z; each opens as an article with its key verses as links.
+ */
+@Composable
+fun AidsPane(vm: StudyViewModel, symbols: Boolean, modifier: Modifier) {
+    val panel = vm.studyPanel()
+    val context = vm.getApplication<android.app.Application>()
+    fun mine(e: com.biblestudy.app.data.AidEntry) = (e.kind == com.biblestudy.app.data.AidKind.CUSTOM) != symbols
+    fun entry(e: com.biblestudy.app.data.AidEntry) = StudyEntry(e.key, e.title, e.article)
+    val suggestions by produceState(emptyList<StudyEntry>(), panel.book, panel.chapter, panel.version, symbols) {
+        value = background {
+            val all = com.biblestudy.app.data.Aids.all(context).filter(::mine)
+            val verses = vm.text(panel.version).chapter(panel.book, panel.chapter).map { it.verse to it.text }
+            val on = com.biblestudy.app.data.AidSwitches(hard = false, names = false, customs = !symbols, symbols = symbols)
+            // In the order they come in the chapter, then the rest A to Z.
+            val here = com.biblestudy.app.data.Aids.marks(context, vm.study, panel.version, panel.book, panel.chapter, verses, on)
+                .toSortedMap().values.flatten().map { it.key }.distinct()
+            val byId = all.associateBy { it.id }
+            (here.mapNotNull { byId[it] } + all.filter { it.id !in here }.sortedBy { it.title.removePrefix("The ") }).map(::entry)
+        }
+    }
+    // A new chapter starts the list from the top.
+    androidx.compose.runtime.key(panel.book, panel.chapter) { LookupPane(
+        vm, modifier,
+        hint = if (symbols) "Find a symbol or number, e.g. Lamb or Seven" else "Find a custom or feast, e.g. Passover",
+        open = vm.aidOpen?.takeIf { k -> com.biblestudy.app.data.Aids.byKey(context, k)?.let(::mine) == true },
+        onOpen = { vm.aidOpen = it },
+        load = { k -> com.biblestudy.app.data.Aids.byKey(context, k)?.let(::entry) },
+        search = { q -> com.biblestudy.app.data.Aids.all(context).filter { mine(it) && (it.title.contains(q, true) || it.text.contains(q, true)) }.map(::entry) },
+        suggestions = suggestions,
+        suggestionsLabel = "In ${vm.bible.book(panel.book).name} ${panel.chapter} first, then A to Z",
+        inkBook = if (symbols) StudyInk.SYMBOL else StudyInk.CUSTOM,
+    ) }
+}
+
 /** Nave's Topical Bible (STD-6), suggesting the topics that list the verse being read. */
 @Composable
 fun TopicsPane(vm: StudyViewModel, modifier: Modifier) {

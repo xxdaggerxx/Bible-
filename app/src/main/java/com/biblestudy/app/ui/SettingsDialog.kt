@@ -107,7 +107,6 @@ fun SettingsDialog(
                 Toggle("Words of Jesus in red", "In every version, imported ones too", vm.redLetters) { vm.redLetters = it }
                 Toggle("Section headings", "Headings and parallel-passage links from the BSB", vm.showHeadings) { vm.showHeadings = it }
                 Toggle("Chapter at a glance", "A short card under the header: what's happening, who and where, the key verse", vm.showGlance) { vm.showGlance = it }
-                Toggle("Hard words explained", "A dotted line under hard and old words; tap one for its meaning", vm.hardWords) { vm.hardWords = it }
                 Choices(
                     "New panels open in", listOf<String?>(null) + BibleRepository.ALL.map { it.code }, vm.newPanelVersion,
                     { it ?: "Same version" },
@@ -116,6 +115,13 @@ fun SettingsDialog(
                 Matches("Clear reading statistics", "reading stats") {
                     TextButton(onClick = { confirmClearStats = true }) { Text("Clear reading statistics\u2026") }
                 }
+
+                Group("Bible aids")
+                Toggle("Hard words explained", "A dotted line under hard and old words; tap one for its meaning", vm.hardWords) { vm.hardWords = it }
+                // Bible aids (AID-10): marked the same way; each can be switched off.
+                Toggle("People & places", "Who someone was, or where a place is, from a dotted line under the name", vm.aidNames) { vm.aidNames = it }
+                Toggle("Customs & feasts", "Jewish customs, feasts and holy days explained", vm.aidCustoms) { vm.aidCustoms = it }
+                Toggle("Symbols & numbers", "What a symbol or number stands for, where the Bible uses it so", vm.aidSymbols) { vm.aidSymbols = it }
 
                 Group("Pen & ink")
                 Toggle("Draw with finger", "Off: fingers scroll and tap; only the pen draws", vm.fingerDraw) { vm.fingerDraw = it }

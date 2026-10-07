@@ -168,16 +168,17 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         val style = vm.styleKey()
         val headingsOn = vm.showHeadings
         val redOn = vm.redLetters
-        val hardOn = vm.hardWords
+        val aidsOn = vm.aidSwitches()
         val other = vm.diffVersionFor(panel)
         val (data, paras, red) = background {
             val d = ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
             Triple(d, if (style.paragraphs) vm.study.paragraphStarts(v, b, c) else null,
                 if (redOn) vm.study.redLetters(v, b, c, d.verses.associate { it.verse to it.text }) else emptyMap())
         }
-        // Hard words explained (STD-23): the first time each comes in the chapter.
-        val hard = if (!hardOn) emptyMap() else background {
-            com.biblestudy.app.data.HardWords.marks(vm.getApplication(), v, data.verses.map { it.verse to it.text })
+        // Hard words (STD-23) and Bible aids (AID-1 to AID-12): the first mention of each in the chapter.
+        val hard = if (!aidsOn.any) emptyMap() else background {
+            com.biblestudy.app.data.Aids.marks(vm.getApplication(), vm.study, v, b, c, data.verses.map { it.verse to it.text }, aidsOn)
+                .mapValues { (_, l) -> l.map { it.range } }
         }
         // Side by side with another version of this book: mark where the wording differs (SPLIT-5).
         val diffs = if (other == null) emptyMap() else withContext(Dispatchers.Default) {
@@ -191,13 +192,13 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
     }
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.hardWords, vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name, vm.onlineArrivals) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.aidSwitches(), vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name, vm.onlineArrivals) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
         val font = vm.textFont
         val style = vm.styleKey()
-        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.hardWords}|${vm.diffVersionFor(panel)}"
+        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.aidSwitches()}|${vm.diffVersionFor(panel)}"
         if (ctl.layoutSpec != spec) {
             // Headings, spacing or font changed: re-lay out every chapter, staying on the same verse.
             if (ctl.layoutSpec != null) panel.pendingVerse = panel.topVerse
@@ -801,7 +802,7 @@ private fun onlineCredit(version: String, measurer: TextMeasurer): androidx.comp
     }
 }
 
-/** A faint dotted line under each hard word (STD-23); tapping one explains it. */
+/** A faint dotted line under each hard word and Bible aid (STD-23, AID-8); tapping one explains it. */
 private fun DrawScope.drawHardWords(layout: ChapterLayout, theme: PageTheme) {
     if (layout.hardWords.isEmpty()) return
     val dots = PathEffect.dashPathEffect(floatArrayOf(2f, 6f))
