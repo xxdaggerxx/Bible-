@@ -3375,4 +3375,83 @@ class FeatureTest {
             compose.waitForIdle()
         }
     }
+    @Test
+    fun onlineChaptersStayForTheChosenDaysAndCanBeCleared() {
+        // Online Bibles are kept on the tablet to spare the servers: for as long as Settings says
+        // after they were last read (Always at first), searches included, and can be cleared.
+        fun res(n: String) = javaClass.getResource("/youversion/$n")!!.readText()
+        val calls = java.util.Collections.synchronizedList(ArrayList<String>())
+        val realHttp = com.biblestudy.app.data.YouVersion.http
+        val realKey = com.biblestudy.app.data.YouVersion.key
+        com.biblestudy.app.data.YouVersion.key = "test"
+        com.biblestudy.app.data.YouVersion.http = { url ->
+            calls += url
+            when {
+                "/passages/JHN.3?" in url -> 200 to res("niv-JHN.3.json")
+                "/passages/PSA.23?" in url -> 200 to res("niv-PSA.23.json")
+                "/passages/" in url -> 404 to "{\"message\":\"not found\"}"
+                "/search-verses" in url -> 200 to "{\"verses\":[{\"reference\":\"JHN.3.7\"}],\"next_page_token\":null}"
+                "/bibles/111" in url -> 200 to res("niv.json")
+                "/bibles?" in url -> 200 to "{\"data\":[${res("niv.json")}],\"next_page_token\":null}"
+                else -> 404 to "{}"
+            }
+        }
+        val day = 86_400_000L
+        try {
+            compose.runOnUiThread { vm.loadOnlineBibles() }
+            waitFor(10_000) { vm.onlineBibles != null }
+            compose.runOnUiThread { vm.addOnlineBible(vm.onlineBibles!!.single { it.code == "NIV" }) }
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NIV" } }
+            val o = vm.text("NIV").online!!
+            assertEquals(0, vm.cacheDays) // Always, at first
+            assertTrue(o.fetch(43, 3)); assertTrue(o.fetch(19, 23))
+            val now = System.currentTimeMillis()
+            // Read again: no new request.
+            val before = calls.size
+            assertTrue(o.fetch(43, 3))
+            assertEquals(before, calls.size)
+            // Kept always: nothing goes, however long ago.
+            assertEquals(0, o.expire(0, now + 1000 * day))
+            // Kept 30 days: still there after 10, let go after 40 (and download again when read).
+            assertEquals(0, o.expire(30, now + 10 * day))
+            assertTrue(o.isSaved(43, 3))
+            assertEquals(2, o.expire(30, now + 40 * day))
+            assertFalse(o.isSaved(43, 3)); assertFalse(o.isSaved(19, 23))
+            assertEquals(0, o.savedVerses())
+            // A Bible saved for offline stays.
+            assertTrue(o.fetch(43, 3))
+            o.savedForOffline = true
+            assertEquals(0, o.expire(30, now + 40 * day))
+            assertTrue(o.isSaved(43, 3))
+            o.savedForOffline = false
+
+            // A search is asked once, then kept; it's asked again once it's older than the days kept.
+            val searches = { calls.count { "/search-verses" in it } }
+            val books = vm.bible.books
+            assertEquals(listOf(43_003_007), o.searchRemote("Born Again", books).map { it.first })
+            assertEquals(listOf(43_003_007), o.searchRemote("born again ", books).map { it.first })
+            assertEquals(1, searches())
+            o.expire(30, now + 40 * day)
+            o.searchRemote("born again", books)
+            assertEquals(2, searches())
+
+            // The setting is remembered.
+            compose.runOnUiThread { vm.changeCacheDays(30) }
+            assertEquals(30, vm.cacheDays)
+
+            // Settings → Bibles → Clear downloaded text: everything goes, the search index too.
+            assertTrue(o.fetch(19, 23))
+            compose.runOnUiThread { vm.clearOnlineCache() }
+            waitFor(10_000) { o.savedVerses() == 0 }
+            assertFalse(o.isSaved(43, 3)); assertFalse(o.isSaved(19, 23))
+            assertEquals(0, o.savedChapters())
+            com.biblestudy.app.data.YouVersion.http = { _ -> throw java.io.IOException("offline") }
+            assertTrue(vm.text("NIV").search("shepherd", com.biblestudy.app.model.SearchScope.ALL, 19).isEmpty())
+        } finally {
+            com.biblestudy.app.data.YouVersion.http = realHttp
+            com.biblestudy.app.data.YouVersion.key = realKey
+            compose.runOnUiThread { vm.changeCacheDays(0); vm.setVersion(0, "KJV"); vm.removeBible("NIV") }
+            compose.waitForIdle()
+        }
+    }
 }

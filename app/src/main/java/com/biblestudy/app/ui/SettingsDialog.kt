@@ -217,6 +217,23 @@ fun SettingsDialog(
                     "NIV, ESV, NLT, NASB, Amplified and more, read online from YouVersion (the ESV from Crossway, the NLT from Tyndale). Each chapter is kept on this tablet once read, so it opens instantly next time, also offline. Every feature works with them.",
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                 )
+                // How long downloaded chapters stay, and clearing them (1.19).
+                if (BibleRepository.ALL.any { it.online > 0 }) {
+                    Choices("Keep downloaded chapters", CACHE_DAYS, vm.cacheDays, { if (it == 0) "Always" else "$it days" }) { vm.changeCacheDays(it) }
+                    Text(
+                        "Chapters you haven't read for this long are removed and download again when you read them. Bibles saved for offline and the verses of your verse cards always stay.",
+                        style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                    )
+                    var clearing by remember { mutableStateOf(false) }
+                    OutlinedButton(onClick = { clearing = true }, modifier = Modifier.padding(vertical = 4.dp)) { Text("Clear downloaded text\u2026") }
+                    if (clearing) AlertDialog(
+                        onDismissRequest = { clearing = false },
+                        title = { Text("Clear downloaded text?") },
+                        text = { Text("The text of every online Bible is removed from this tablet, including Bibles saved for offline. Your notes, highlights and ink stay. Chapters download again when you read them, so you'll need the internet.") },
+                        confirmButton = { TextButton(onClick = { clearing = false; vm.clearOnlineCache() }) { Text("Clear") } },
+                        dismissButton = { TextButton(onClick = { clearing = false }) { Text("Cancel") } },
+                    )
+                }
                 if (com.biblestudy.app.BuildConfig.NLT_KEY.isEmpty() || vm.nltKey.isNotEmpty()) {
                     var nlt by remember { mutableStateOf(vm.nltKey) }
                     OutlinedTextField(
@@ -418,6 +435,9 @@ private fun Toggle(title: String, detail: String?, checked: Boolean, onChange: (
         Switch(checked = checked, onCheckedChange = onChange)
     }
 }
+
+/** Choices for how long online Bibles' chapters are kept, in days (0 = always). */
+private val CACHE_DAYS = listOf(7, 30, 90, 365, 0)
 
 @Composable
 private fun <T> Choices(title: String, options: List<T>, selected: T, label: (T) -> String, onPick: (T) -> Unit) =

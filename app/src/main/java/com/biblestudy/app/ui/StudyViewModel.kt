@@ -280,6 +280,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         com.biblestudy.app.data.Esv.key = prefs.getString("esvKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.ESV_KEY
         com.biblestudy.app.data.Nlt.key = prefs.getString("nltKey", null)?.takeIf { it.isNotBlank() } ?: com.biblestudy.app.BuildConfig.NLT_KEY
         BibleRepository.onlineEvents = onlineEvents
+        viewModelScope.launch(Dispatchers.Main) { expireOnline() } // posted: runs once the whole model is set up
         // Back online: chapters that couldn't be fetched are tried again.
         runCatching {
             val cm = app.getSystemService(android.net.ConnectivityManager::class.java)
@@ -332,6 +333,43 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 true -> onlineArrivals++
                 false -> {}
             }
+        }
+    }
+
+    /**
+     * How long downloaded chapters of online Bibles are kept after they were last read, in days
+     * (0 = always, the default). Chapters not read for that long are let go when the app starts
+     * and download again when read. Bibles saved for offline and verse cards' verses stay.
+     */
+    var cacheDays by mutableIntStateOf(prefs.getInt("cacheDays", 0))
+        private set
+
+    fun changeCacheDays(days: Int) {
+        cacheDays = days.coerceAtLeast(0)
+        prefs.edit { putInt("cacheDays", cacheDays) }
+        expireOnline()
+    }
+
+    /** Lets go of online chapters not read within [cacheDays] (in the background). */
+    fun expireOnline() {
+        val days = cacheDays
+        if (days <= 0) return
+        viewModelScope.launch {
+            val all = BibleRepository.ALL.filter { it.online > 0 }.mapNotNull { text(it.code).online }
+            val dropped = withContext(Dispatchers.IO) { all.sumOf { o -> runCatching { o.expire(days) }.getOrDefault(0) } }
+            if (dropped > 0) onlineArrivals++
+        }
+    }
+
+    /** Removes every online Bible's downloaded text (Settings → Bibles → Clear downloaded text). */
+    fun clearOnlineCache() {
+        for (code in downloadJobs.keys.toList()) stopSavingForOffline(code)
+        viewModelScope.launch {
+            val all = BibleRepository.ALL.filter { it.online > 0 }.mapNotNull { text(it.code).online }
+            withContext(Dispatchers.IO) { all.forEach { runCatching { it.clear() } } }
+            cardFetches.clear() // verse cards ask for their verses again
+            onlineArrivals++
+            message = "Downloaded Bible text cleared. Chapters download again as you read them."
         }
     }
 
@@ -426,6 +464,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val repo = text(code)
         val o = repo.online ?: return
         if (o.limited) return // the ESV may only keep 500 verses
+        viewModelScope.launch(Dispatchers.IO) { o.savedForOffline = true } // kept however long ago it was read
         val chapters = bible.books.filter { it.id in o.books }.flatMap { b -> (1..b.chapters).map { b.id to it } }
         onlineDownloads[code] = o.savedChapters().toFloat() / chapters.size
         downloadJobs[code] = viewModelScope.launch {
@@ -453,6 +492,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun stopSavingForOffline(code: String) {
         downloadJobs.remove(code)?.cancel()
         onlineDownloads.remove(code)
+        text(code).online?.let { o -> viewModelScope.launch(Dispatchers.IO) { o.savedForOffline = false } }
     }
 
     /** How much of online Bible [code] is on the tablet: saved chapters, out of all. */

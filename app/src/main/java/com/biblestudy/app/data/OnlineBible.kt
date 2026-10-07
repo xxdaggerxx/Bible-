@@ -35,7 +35,31 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
     init {
         // Verse cards' verses (added in 1.18.2; older databases get the table now).
         db.execSQL("CREATE TABLE IF NOT EXISTS kept(id INTEGER PRIMARY KEY)")
+        // Searches already asked (1.19).
+        db.execSQL("CREATE TABLE IF NOT EXISTS searches(q TEXT PRIMARY KEY, at INTEGER NOT NULL, ids TEXT NOT NULL)")
+        // When each chapter was last read, for how long chapters are kept (1.19). Chapters saved
+        // earlier start their clock now.
+        val hasReadAt = db.rawQuery("PRAGMA table_info(fetched)", null).use { c ->
+            var found = false
+            while (c.moveToNext()) if (c.getString(1) == "read_at") found = true
+            found
+        }
+        if (!hasReadAt) {
+            db.execSQL("ALTER TABLE fetched ADD COLUMN read_at INTEGER NOT NULL DEFAULT 0")
+            db.execSQL("UPDATE fetched SET read_at = ?", arrayOf<Any>(System.currentTimeMillis()))
+        }
     }
+
+    /** Chapters marked as read this session, so reading doesn't write to the database every time. */
+    private val readNow = java.util.Collections.synchronizedSet(HashSet<Int>())
+
+    /**
+     * Whether the whole Bible was saved for offline on purpose: then nothing of it is let go when
+     * chapters haven't been read for a while ([expire]).
+     */
+    var savedForOffline: Boolean
+        get() = meta("offline") == "1"
+        set(v) { synchronized(LOCK) { db.execSQL("INSERT OR REPLACE INTO meta VALUES('offline', ?)", arrayOf<Any>(if (v) "1" else "0")) } }
 
     /** Adds what [ImportStudy] gives an imported Bible (word tags, words of Jesus, paragraphs) for new verses. */
     @Volatile var study: ((SQLiteDatabase, BibleImport.Parsed) -> Unit)? = null
@@ -86,7 +110,11 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
             if (parsed?.marksRed == true) db.execSQL("INSERT OR REPLACE INTO meta VALUES('marksRed', '1')")
             if (whole) {
                 // "at" orders chapters by when they were last read: a counter that goes up.
-                db.execSQL("INSERT OR REPLACE INTO fetched VALUES(?, ?, (SELECT COALESCE(MAX(at), 0) + 1 FROM fetched))", arrayOf<Any>(book, chapter))
+                db.execSQL(
+                    "INSERT OR REPLACE INTO fetched(book, chapter, at, read_at) VALUES(?, ?, (SELECT COALESCE(MAX(at), 0) + 1 FROM fetched), ?)",
+                    arrayOf<Any>(book, chapter, System.currentTimeMillis()),
+                )
+                readNow += book * 1000 + chapter
             }
             if (limited) trim(if (whole) book else -1, chapter)
             db.setTransactionSuccessful()
@@ -163,14 +191,72 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
         }
     }
 
-    /** A limited Bible: marks a chapter as just read, so it's kept longest. */
+    /**
+     * Marks a chapter as just read: its clock for [expire] starts again (once a session), and a
+     * limited Bible keeps it longest.
+     */
     fun touch(book: Int, chapter: Int) {
-        if (!limited) return
+        val first = readNow.add(book * 1000 + chapter)
+        if (!first && !limited) return
         synchronized(LOCK) {
-            db.execSQL(
+            if (first) db.execSQL("UPDATE fetched SET read_at = ? WHERE book = ? AND chapter = ?", arrayOf<Any>(System.currentTimeMillis(), book, chapter))
+            if (limited) db.execSQL(
                 "UPDATE fetched SET at = (SELECT MAX(at) + 1 FROM fetched) WHERE book = ? AND chapter = ? AND at < (SELECT MAX(at) FROM fetched)",
                 arrayOf<Any>(book, chapter),
             )
+        }
+    }
+
+    /**
+     * Lets go of the chapters not read for [days] days (they download again when read), and
+     * searches older than that. Not a Bible saved for offline, nor verse cards' verses. 0 = keep
+     * them always. Returns how many chapters were let go.
+     */
+    fun expire(days: Int, now: Long = System.currentTimeMillis()): Int {
+        if (days <= 0) return 0
+        val before = now - days * 86_400_000L
+        synchronized(LOCK) {
+            db.execSQL("DELETE FROM searches WHERE at < ?", arrayOf<Any>(before))
+            if (savedForOffline || complete()) return 0
+            val old = db.rawQuery("SELECT book, chapter FROM fetched WHERE read_at < ?", arrayOf(before.toString()))
+                .use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getInt(1)) } }
+            if (old.isEmpty()) return 0
+            db.beginTransaction()
+            try {
+                for ((b, c) in old) drop(b, c)
+                db.setTransactionSuccessful()
+            } finally {
+                db.endTransaction()
+            }
+            for ((b, c) in old) readNow -= b * 1000 + c
+            return old.size
+        }
+    }
+
+    /** Whether every chapter is on the tablet (a Bible saved for offline before 1.19 isn't marked so). */
+    private fun complete(): Boolean {
+        val all = db.rawQuery("SELECT id, chapters FROM books", null).use { c ->
+            var n = 0
+            while (c.moveToNext()) if (c.getInt(0) in books) n += c.getInt(1)
+            n
+        }
+        return all > 0 && savedChapters() >= all
+    }
+
+    /** Removes everything downloaded: every chapter, verse cards' verses and searches. */
+    fun clear() {
+        synchronized(LOCK) {
+            db.beginTransaction()
+            try {
+                for (t in listOf("verses", "tags", "red", "paragraphs", "fetched", "kept", "searches")) db.execSQL("DELETE FROM $t")
+                db.execSQL("INSERT INTO verses_fts(verses_fts) VALUES('rebuild')") // the search index, now empty
+                db.execSQL("INSERT OR REPLACE INTO meta VALUES('offline', '0')")
+                db.setTransactionSuccessful()
+            } finally {
+                db.endTransaction()
+            }
+            readNow.clear()
+            runCatching { db.execSQL("VACUUM") } // give the space back
         }
     }
 
@@ -226,9 +312,20 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
      */
     fun searchRemote(query: String, books: List<BookInfo>): List<Pair<Int, String?>> =
         when (id) {
+            // Not kept: their results carry the verses' text, which would count toward the 500.
             Esv.ID -> Esv.search(query, books)
             Nlt.ID -> Nlt.search(query)
-            else -> YouVersion.searchVerses(id, query).map { it to null }
+            else -> {
+                // YouVersion gives verse ids only: kept, so the same search doesn't ask again.
+                val q = query.trim().lowercase()
+                val cached = db.rawQuery("SELECT ids FROM searches WHERE q = ?", arrayOf(q)).use { c -> if (c.moveToFirst()) c.getString(0) else null }
+                val ids = cached?.split(',')?.mapNotNull { it.toIntOrNull() } ?: YouVersion.searchVerses(id, query).also { found ->
+                    synchronized(LOCK) {
+                        db.execSQL("INSERT OR REPLACE INTO searches VALUES(?, ?, ?)", arrayOf<Any>(q, System.currentTimeMillis(), found.joinToString(",")))
+                    }
+                }
+                ids.map { it to null }
+            }
         }
 
     /** Whether any chapter so far marked the words of Jesus (if none did, they're found as for imported Bibles). */
@@ -264,7 +361,7 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
                     db.execSQL("CREATE INDEX verses_bc ON verses(book, chapter)")
                     db.execSQL("CREATE VIRTUAL TABLE verses_fts USING fts4(text, content=\"verses\")")
                     db.execSQL("CREATE TABLE xrefs(from_id INTEGER NOT NULL, to_start INTEGER NOT NULL, to_end INTEGER NOT NULL, votes INTEGER NOT NULL)")
-                    db.execSQL("CREATE TABLE fetched(book INTEGER NOT NULL, chapter INTEGER NOT NULL, at INTEGER NOT NULL, PRIMARY KEY(book, chapter))")
+                    db.execSQL("CREATE TABLE fetched(book INTEGER NOT NULL, chapter INTEGER NOT NULL, at INTEGER NOT NULL, read_at INTEGER NOT NULL DEFAULT 0, PRIMARY KEY(book, chapter))")
                     ImportStudy.createTables(db)
                     for ((k, v) in listOf(
                         "code" to info.code, "name" to info.title, "copyright" to info.copyright, "schema" to "1",
