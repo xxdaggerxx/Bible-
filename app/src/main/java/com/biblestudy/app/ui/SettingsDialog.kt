@@ -124,7 +124,7 @@ fun SettingsDialog(
                 Toggle("Symbols & numbers", "What a symbol or number stands for, where the Bible uses it so", vm.aidSymbols) { vm.aidSymbols = it }
 
                 Group("Pen & ink")
-                Toggle("Draw with finger", "Off: fingers scroll and tap; only the pen draws", vm.fingerDraw) { vm.fingerDraw = it }
+                Toggle("Draw with finger", "On: one finger draws, two fingers scroll. Off: only the pen draws", vm.fingerDraw) { vm.fingerDraw = it }
                 Choices("S Pen button", SideButton.entries, vm.sideButton, { it.label }) { vm.sideButton = it }
                 Choices("Eraser", listOf(false, true), vm.partialEraser, { if (it) "Partial" else "Whole strokes" }) { vm.partialEraser = it }
                 Toggle("Snap highlighter to words", "Highlights follow the lines of text", vm.snapHighlights) { vm.snapHighlights = it }

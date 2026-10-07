@@ -100,9 +100,15 @@ fun StudyToolbar(
         Row(
             Modifier
                 .fillMaxWidth()
-                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal))
+                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal)),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+        // The buttons scroll sideways where they don't fit (a phone, PH-1); the ⋮ menu stays in reach.
+        Row(
+            Modifier
+                .weight(1f)
                 .horizontalScroll(rememberScrollState())
-                .padding(horizontal = 8.dp, vertical = 4.dp),
+                .padding(start = 8.dp, top = 4.dp, bottom = 4.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(2.dp),
         ) {
@@ -137,8 +143,8 @@ fun StudyToolbar(
             for (t in Tool.entries) {
                 IconToggleButton(
                     checked = vm.tool == t && !vm.readMode,
-                    enabled = !vm.readMode,
-                    onCheckedChange = { vm.tool = t },
+                    // Picking a tool in read mode ends it, ready to draw (PH-3: phones start in read mode).
+                    onCheckedChange = { if (vm.readMode) { vm.readMode = false; vm.message = "Read mode off." }; vm.tool = t },
                     colors = IconButtonDefaults.iconToggleButtonColors(
                         checkedContainerColor = MaterialTheme.colorScheme.secondaryContainer,
                         checkedContentColor = MaterialTheme.colorScheme.onSecondaryContainer,
@@ -278,8 +284,9 @@ fun StudyToolbar(
             IconButton(onClick = onSearch) { Icon(Icons.Filled.Search, contentDescription = "Search") }
             IconButton(onClick = onNotes) { Icon(Icons.Filled.EditNote, contentDescription = "My notes") }
 
+        }
             var menu by remember { mutableStateOf(false) }
-            Box {
+            Box(Modifier.padding(end = 8.dp)) {
                 IconButton(onClick = { menu = true }) { Icon(Icons.Filled.MoreVert, contentDescription = "More") }
                 DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
                     DropdownMenuItem(

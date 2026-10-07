@@ -135,13 +135,15 @@ import kotlinx.coroutines.withContext
 /** A large dialog sized for tablets. */
 @Composable
 internal fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
+    // On a phone the window fills the screen (PH-7).
+    val phone = androidx.compose.ui.platform.LocalConfiguration.current.smallestScreenWidthDp in 1 until 600
     Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
         Surface(
-            shape = RoundedCornerShape(20.dp),
+            shape = RoundedCornerShape(if (phone) 0.dp else 20.dp),
             tonalElevation = 6.dp,
-            modifier = Modifier.fillMaxWidth(0.92f).widthIn(max = 820.dp).fillMaxHeight(0.88f),
+            modifier = if (phone) Modifier.fillMaxWidth().fillMaxHeight() else Modifier.fillMaxWidth(0.92f).widthIn(max = 820.dp).fillMaxHeight(0.88f),
         ) {
-            Box(Modifier.padding(20.dp)) { content() }
+            Box(Modifier.padding(if (phone) 12.dp else 20.dp)) { content() }
         }
     }
 }
@@ -328,18 +330,22 @@ private class Marks(val layerColors: List<Int>, val note: Boolean) {
     val any get() = layerColors.isNotEmpty() || note
 }
 
+@OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
 @Composable
 private fun MarkerLegend() {
-    Row(
+    // Wraps onto two lines on a phone rather than squeezing (PH-7).
+    androidx.compose.foundation.layout.FlowRow(
         Modifier.padding(bottom = 4.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        horizontalArrangement = Arrangement.spacedBy(14.dp),
     ) {
-        Box(Modifier.size(8.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary))
-        Text("Ink, highlights or images (one dot per visible layer)", style = MaterialTheme.typography.bodySmall)
-        Spacer(Modifier.width(8.dp))
-        Icon(Icons.Filled.EditNote, contentDescription = null, modifier = Modifier.size(14.dp))
-        Text("Typed note", style = MaterialTheme.typography.bodySmall)
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            Box(Modifier.size(8.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary))
+            Text("Ink, highlights or images (one dot per visible layer)", style = MaterialTheme.typography.bodySmall)
+        }
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            Icon(Icons.Filled.EditNote, contentDescription = null, modifier = Modifier.size(14.dp))
+            Text("Typed note", style = MaterialTheme.typography.bodySmall)
+        }
     }
 }
 

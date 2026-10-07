@@ -1,6 +1,6 @@
-# Ink & Word — version 1.22.1
+# Ink & Word — version 2.0.0
 
-**Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet.
+**Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger.
 
 ## Install on your tablet (about 30 minutes the first time)
 
@@ -65,6 +65,18 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.0.0
+
+- **Phones.** Ink & Word now works on Android phones (any screen under 600 dp across) as well as tablets. It keeps the tablet's look, fitted to the smaller screen:
+  - **Drawing with a finger.** *Draw with finger* is on at first on a phone. One finger draws; two fingers scroll and zoom; a tap makes a dot. This also applies on a tablet with *Draw with finger* on.
+  - **Phones start in read mode**, so one finger scrolls. Picking any drawing tool turns read mode off.
+  - **The toolbar slides** sideways when its buttons don't fit, and the ⋮ menu always stays in reach at the right end.
+  - **One panel at a time.** With a study view beside the Bible, the other panel folds into a bar at the bottom; tap it to swap.
+  - **Margins fold away** at the side of the page, as on a narrow tablet; the ‹ tab slides them in.
+  - **Settings, the book picker and other big windows fill the screen**; the picker's colour key wraps.
+- **Fixed:** going to a passage could be pulled back to an earlier chapter when the panel was still waiting to follow a commentary or a linked panel to it.
+- Known gaps (for 2.1): the toolbars don't hide while scrolling in landscape; sketch pages aren't fitted to phones yet; pen-only settings (S Pen button, hover) still show on phones without a pen.
 
 ## New in version 1.22.1
 

@@ -290,7 +290,10 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             jumped = true
         }
         ctl.clamp()
-        ctl.pendingFollow?.let { ctl.follow(it) }
+        // A follow still waiting for its chapter, unless a jump has since gone somewhere else.
+        ctl.pendingFollow?.let {
+            if (it.book == panel.book && it.chapter == panel.chapter) ctl.follow(it) else ctl.pendingFollow = null
+        }
         if (jumped) ctl.announceScroll() // a linked panel jumps along
     }
 
@@ -1178,19 +1181,34 @@ private suspend fun PointerInputScope.readerGestures(
             }
         }
         // In read mode (PEN-4) the pen scrolls and taps like a finger.
-        if (!readMode() && (down.isPen() || (down.type == PointerType.Touch && fingerDraw()))) {
+        if (!readMode() && down.isPen()) {
             trackPen(down, ctl)
             return@awaitEachGesture
         }
-        if (ctl.recentlyPenned()) {
-            consumeUntilUp() // palm resting while writing
+        // A finger draws too when drawing with a finger (a phone, PH-3), but two fingers still scroll and zoom.
+        var twoFingers = false
+        if (!readMode() && down.type == PointerType.Touch && fingerDraw()) {
+            val seen = ArrayList<Offset>()
+            when (fingerStart(down, viewConfiguration.touchSlop, seen)) {
+                FingerStart.DRAW -> { trackPen(down, ctl, seen); return@awaitEachGesture }
+                FingerStart.DOT -> {
+                    ctl.penStart(down.position, down.pressure, penToolOverride(down, ctl))
+                    ctl.penEnd()
+                    return@awaitEachGesture
+                }
+                FingerStart.SCROLL -> twoFingers = true
+            }
+        }
+        // A palm resting while writing with the pen; not when fingers are what draw.
+        if (ctl.recentlyPenned() && !(fingerDraw() && !readMode())) {
+            consumeUntilUp()
             return@awaitEachGesture
         }
         var travelled = 0f
-        var multiTouch = false
+        var multiTouch = twoFingers
         var penDown: PointerInputChange? = null
         var lastTime = down.uptimeMillis
-        var waitingForLongPress = true
+        var waitingForLongPress = !twoFingers
         val velocity = VelocityTracker()
         velocity.addPosition(down.uptimeMillis, down.position)
         while (true) {
@@ -1299,10 +1317,38 @@ private fun penToolOverride(first: PointerInputChange, ctl: ReaderController): T
 /** How long the pen is held still to snap a stroke to a shape (INK-12). */
 private const val SHAPE_HOLD_MS = 600L
 
+/** How a finger that may draw begins (PH-3). */
+private enum class FingerStart { DRAW, DOT, SCROLL }
+
+/** How long a finger may rest before it starts drawing, waiting for a second finger to scroll. */
+private const val FINGER_WAIT_MS = 150L
+
+/**
+ * A finger that may draw: it draws once it moves or rests; a second finger landing first means
+ * the two scroll and zoom; lifted without moving, it makes a dot, as the pen does.
+ */
 @OptIn(ExperimentalComposeUiApi::class)
-private suspend fun AwaitPointerEventScope.trackPen(first: PointerInputChange, ctl: ReaderController) {
+private suspend fun AwaitPointerEventScope.fingerStart(down: PointerInputChange, slop: Float, seen: MutableList<Offset>): FingerStart {
+    while (true) {
+        val e = withTimeoutOrNull(FINGER_WAIT_MS) { awaitPointerEvent() } ?: return FingerStart.DRAW
+        if (e.changes.count { it.pressed } > 1) return FingerStart.SCROLL
+        val c = e.changes.firstOrNull { it.id == down.id } ?: return FingerStart.DRAW
+        if (!c.pressed) return FingerStart.DOT
+        for (h in c.historical) seen += h.position
+        seen += c.position
+        c.consume()
+        if ((c.position - down.position).getDistance() > slop) return FingerStart.DRAW
+    }
+}
+
+@OptIn(ExperimentalComposeUiApi::class)
+private suspend fun AwaitPointerEventScope.trackPen(
+    first: PointerInputChange, ctl: ReaderController, already: List<Offset> = emptyList(),
+) {
     ctl.penStart(first.position, first.pressure, penToolOverride(first, ctl))
     first.consume()
+    // The moves a finger made while it was still deciding to draw (PH-3).
+    for (o in already) ctl.penMove(o, first.pressure)
     // Holding the pen still at the end of a stroke snaps it to a shape (INK-12). A resting pen still
     // jitters, so "still" means within a few pixels since the last real movement.
     var stillAt = first.position

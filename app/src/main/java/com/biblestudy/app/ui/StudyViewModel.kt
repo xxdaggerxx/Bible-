@@ -493,7 +493,17 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var penSize by mutableIntStateOf(prefs.getInt("penSize", 1))
     var highlightSize by mutableIntStateOf(prefs.getInt("hlSize", 1))
     var snapHighlights by mutableStateOf(prefs.getBoolean("snap", true))
-    var fingerDraw by mutableStateOf(prefs.getBoolean("fingerDraw", false))
+    /**
+     * A phone (PH-1): the device's shorter side is under 600 dp. Kept up to date from the screen, so
+     * a foldable opened out becomes a tablet. Phones draw with a finger, start in read mode, and
+     * show margins and a second panel collapsed.
+     */
+    var phone by mutableStateOf(app.resources.configuration.smallestScreenWidthDp in 1 until 600)
+
+    /** On a phone, which of the tab's two panels is shown; the other is a bar to tap (PH-6). */
+    var phoneShown by mutableIntStateOf(0)
+
+    var fingerDraw by mutableStateOf(prefs.getBoolean("fingerDraw", phone))
     var showHeadings by mutableStateOf(prefs.getBoolean("headings", true))
     /** The tab's two Bible panels scroll together (SPLIT-3); each tab has its own setting. */
     var linkPanels: Boolean
@@ -514,7 +524,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     /** The snapping highlighter draws a line under the words instead of a fill (HL-4). */
     var underlineMode by mutableStateOf(prefs.getBoolean("underline", false))
     /** Read mode (PEN-4): the pen scrolls and taps like a finger, so nothing is marked by accident. */
-    var readMode by mutableStateOf(prefs.getBoolean("readMode", false))
+    var readMode by mutableStateOf(prefs.getBoolean("readMode", phone)) // phones start reading (PH-2)
     /** The version a new Bible panel opens in; null = the same as the panel it comes from. */
     var newPanelVersion by mutableStateOf(prefs.getString("newPanelVersion", null))
     /**
@@ -981,6 +991,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             p.navGen++
             return
         }
+        // Going somewhere replaces any commentary position not yet followed (STD-18).
+        commentaryPos = null
         val b = book.coerceIn(1, 66)
         p.book = b
         p.chapter = chapter.coerceIn(1, bible.book(b).chapters)

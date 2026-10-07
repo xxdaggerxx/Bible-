@@ -25,7 +25,7 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 
 ## The pen, fingers and the toolbar
 
-- **The S Pen writes; fingers scroll, pinch and tap.** To draw with a finger too, turn on *Settings → Pen & ink → Draw with finger*.
+- **The S Pen writes; fingers scroll, pinch and tap.** To draw with a finger too, turn on *Settings → Pen & ink → Draw with finger*. Then one finger draws and two fingers scroll and zoom. A quick tap with one finger still makes a dot.
 - **Your palm is ignored** while you write.
 - **Tools** along the toolbar: pen, highlighter, eraser, lasso and select. Tap the round colour button for colours and sizes.
 - **S Pen button.** Hold the side button while the pen touches the page to erase, whatever tool is picked. *Settings → Pen & ink → S Pen button* can make it the lasso instead.
@@ -34,6 +34,17 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 - **Shapes.** Draw a line, arrow, box or circle and hold the pen still at the end. It snaps to a neat shape.
 - **Hover.** Hold the S Pen just above the screen and a small mark shows exactly where it will touch: a dot the size of the pen, a bar for the highlighter, a circle for the eraser.
 - **Writing sounds.** A real pen-on-paper sound follows your writing: louder when you write fast or press hard, quiet when you stop. The pen sounds like a pencil, the highlighter like a marker, and the eraser like soft drawing. Turn it off, or change the volume, in *Settings → Pen & ink → Writing sounds*. It plays through the tablet's media volume.
+
+## On a phone
+
+Ink & Word works on phones too, with or without a pen. It looks like it does on a tablet, made to fit.
+
+- **Phones start in read mode.** One finger scrolls and taps, so you can read straight away. Pick the pen, highlighter or another tool in the toolbar and read mode turns off by itself; tap the lock to read again.
+- **Drawing with a finger.** On a phone, *Draw with finger* is on at first. One finger draws; put two fingers down to scroll and pinch to zoom. Lift without moving for a dot.
+- **The toolbar slides.** Buttons that don't fit slide sideways; swipe along the toolbar to reach them. The ⋮ menu always stays at the right end, with *Settings* in it.
+- **One panel at a time.** With a study view open beside the Bible, the phone shows one and folds the other into a slim bar at the bottom (*John 3 (KJV)*). Tap the bar (*Show*) to swap them.
+- **Margins fold away.** The margins are hidden at the side of the page. Tap the ‹ tab at the edge to slide them in, and again to put them away.
+- **Big windows fill the screen**, such as Settings and the book picker.
 
 ## Highlighting and underlining
 

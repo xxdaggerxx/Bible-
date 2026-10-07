@@ -48,6 +48,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import androidx.compose.ui.test.assertTextEquals
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.filter
 import org.junit.Assert.assertTrue
@@ -3642,7 +3643,7 @@ class FeatureTest {
         // (The view follows the Bible panel in use, unless an earlier test pinned it to a passage.)
         compose.runOnUiThread {
             if (vm.tab.pinned != null) vm.togglePin()
-            vm.sidePane = PaneKind.SYMBOLS; vm.goTo(vm.activePanel, 66, 5, 1, remember = false)
+            vm.sidePane = PaneKind.SYMBOLS; vm.goTo(vm.activePanel.coerceIn(0, vm.panels.lastIndex), 66, 5, 1, remember = false)
         }
         waitForLoaded()
         // (Only the rows that fit are laid out, so this waits for the list, not a particular entry.)
@@ -3720,4 +3721,84 @@ class FeatureTest {
             compose.waitForIdle()
         }
     }
+    /** A phone (PH-1 to PH-14): the screen, the ⋮ menu in reach, Settings, panels and margins collapsed. */
+    private fun phoneChecks(name: String) {
+        waitForLoaded()
+        assertTrue(vm.phone)
+        // Phones start reading, and a finger draws once a tool is picked (PH-2, PH-3). (The test set-up
+        // resets both for every test, so they're set here as a phone starts.)
+        compose.runOnUiThread { vm.readMode = true; vm.fingerDraw = true }
+        compose.onNodeWithText("John 3").assertIsDisplayed()
+        snap("180-phone-$name")
+        // The ⋮ menu stays on screen however many buttons don't fit; Settings fills the screen.
+        compose.onNodeWithContentDescription("More").assertIsDisplayed()
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Settings").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithText("Bible aids").assertExists()
+        snap("181-phone-$name-settings")
+        compose.onAllNodesWithContentDescription("Close")[0].performClick()
+        compose.waitForIdle()
+        // The book picker fits.
+        compose.onNodeWithText("John 3").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithText("Genesis").assertExists()
+        snap("182-phone-$name-picker")
+        compose.onAllNodesWithContentDescription("Close")[0].performClick()
+        compose.waitForIdle()
+        // A study view comes to the front; the Bible is a bar to tap, and back again (PH-6).
+        compose.runOnUiThread { vm.sidePane = PaneKind.CROSSREFS }
+        waitForLoaded()
+        compose.onNodeWithTag("pane").assertIsDisplayed()
+        compose.onNodeWithTag("collapsedPanel").assertIsDisplayed()
+        compose.onNodeWithText("John 3 (KJV)", substring = true).assertExists()
+        snap("183-phone-$name-study")
+        compose.onNodeWithTag("collapsedPanel").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithTag("reader0").assertIsDisplayed()
+        compose.onNodeWithText("Cross-references", substring = true).assertExists()
+        compose.runOnUiThread { vm.sidePane = null }
+        waitForLoaded()
+        assertTrue(compose.onAllNodesWithTag("collapsedPanel").fetchSemanticsNodes().isEmpty())
+    }
+
+    @Test
+    @Config(qualifiers = "w393dp-h851dp-port-xxhdpi")
+    fun aPhoneShowsEverythingAndDrawsWithAFinger() {
+        phoneChecks("393")
+        // Margins are tucked away at the edge (PH-5).
+        compose.runOnUiThread { vm.marginRight = true }
+        waitForLoaded()
+        snap("184-phone-margin-drawer")
+        // Picking the pen ends read mode; one finger draws on the words.
+        compose.onNodeWithContentDescription("Pen").performClick()
+        assertFalse(vm.readMode)
+        val before = vm.textStrokesFor("KJV", 43, 3).size
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset(200f, 900f)); repeat(12) { moveBy(Offset(20f, 4f)) }; up()
+        }
+        compose.waitForIdle()
+        assertEquals(before + 1, vm.textStrokesFor("KJV", 43, 3).size)
+        // Two fingers scroll the page and draw nothing.
+        val panY = vm.panels[0].panY
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(0, Offset(300f, 1400f)); down(1, Offset(600f, 1400f))
+            repeat(10) { moveBy(0, Offset(0f, -60f)); moveBy(1, Offset(0f, -60f)) }
+            up(0); up(1)
+        }
+        compose.waitForIdle()
+        assertEquals(before + 1, vm.textStrokesFor("KJV", 43, 3).size)
+        assertTrue("panY $panY -> ${vm.panels[0].panY}", vm.panels[0].panY < panY - 100f)
+        snap("185-phone-finger-ink")
+        compose.runOnUiThread { vm.textStrokesFor("KJV", 43, 3).toList().forEach { vm.removeItem(it) }; vm.readMode = true }
+        compose.waitForIdle()
+    }
+
+    @Test
+    @Config(qualifiers = "w360dp-h640dp-port-xhdpi")
+    fun aSmallPhoneShowsEverything() = phoneChecks("360")
+
+    @Test
+    @Config(qualifiers = "w851dp-h393dp-land-xxhdpi")
+    fun aPhoneOnItsSideShowsEverything() = phoneChecks("851")
 }

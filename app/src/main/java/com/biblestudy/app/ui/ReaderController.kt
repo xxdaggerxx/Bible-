@@ -257,7 +257,8 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
      * A narrow panel in portrait (MRG-14): fit-width fits just the text column, and the margins
      * slide in from the side like drawers instead of shrinking the text.
      */
-    val drawerMode: Boolean get() = !Sketch.isSketch(panel.book) && !vm.landscape && panel.viewW > 0f && panel.viewW / density < DRAWER_BELOW_DP
+    val drawerMode: Boolean get() = !Sketch.isSketch(panel.book) && panel.viewW > 0f &&
+        (vm.phone || (!vm.landscape && panel.viewW / density < DRAWER_BELOW_DP)) // phones: margins tucked away (PH-5)
 
     private fun fitZoom(g: PageGeometry): Float {
         if (panel.viewW <= 0f) return 1f

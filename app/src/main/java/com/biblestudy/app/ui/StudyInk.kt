@@ -171,6 +171,11 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
                         val ev = awaitPointerEvent(PointerEventPass.Initial)
                         val c = ev.changes.firstOrNull { it.id == down.id } ?: break
                         if (!c.pressed) break
+                        // A second finger before the first moves: they scroll the article instead (PH-3).
+                        if (!pen && !moved && ev.changes.count { it.pressed } > 1) {
+                            live.clear(); vm.sound.stop()
+                            return@awaitEachGesture
+                        }
                         if (!moved && (c.position - down.position).getDistance() < viewConfiguration.touchSlop / 2f) continue
                         moved = true
                         c.consume()

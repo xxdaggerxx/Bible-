@@ -16,6 +16,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.clickable
+import androidx.compose.material.icons.filled.KeyboardArrowUp
+import androidx.compose.material3.Surface
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -147,6 +150,9 @@ fun StudyApp(vm: StudyViewModel) {
                     val openPicker = { dialog = DialogKind.PICKER }
                     val widthClass = WidthClass.of(maxWidth.value)
                     SideEffect { vm.widthClass = widthClass }
+                    // A phone, or a foldable opened into a tablet (PH-1, PH-11).
+                    val phone = androidx.compose.ui.platform.LocalConfiguration.current.smallestScreenWidthDp in 1 until 600
+                    SideEffect { vm.phone = phone }
                     val tab = vm.tab
                     // One or two panels (SPLIT-8), side by side or one above the other.
                     val stacked = vm.isStacked(tab)
@@ -175,9 +181,18 @@ fun StudyApp(vm: StudyViewModel) {
                         ) { Handle(vertical = !stacked) }
                     }
 
+                    // On a phone a second panel opened (a study view, say) comes to the front.
+                    LaunchedEffect(tab, slots.size, slots.lastOrNull()) { if (slots.size == 2) vm.phoneShown = 1 }
                     key(tab) {
                         if (slots.size < 2) {
                             slots.firstOrNull()?.let { Cell(it, Modifier.fillMaxSize()) }
+                        } else if (phone) {
+                            // Phones show one panel at a time; the other is a bar to tap (PH-6).
+                            val shown = vm.phoneShown.coerceIn(0, 1)
+                            Column(Modifier.fillMaxSize()) {
+                                Cell(slots[shown], Modifier.weight(1f).fillMaxWidth())
+                                CollapsedPanel(vm, slots[1 - shown]) { vm.phoneShown = 1 - shown }
+                            }
                         } else if (stacked) {
                             Column(Modifier.fillMaxSize()) {
                                 Cell(slots[0], Modifier.weight(tab.split).fillMaxWidth())
@@ -273,4 +288,25 @@ private fun Handle(vertical: Boolean) {
             .clip(RoundedCornerShape(3.dp))
             .background(MaterialTheme.colorScheme.outline)
     )
+}
+
+/** The panel not shown on a phone (PH-6): a slim bar naming it; tap to show it instead. */
+@Composable
+private fun CollapsedPanel(vm: StudyViewModel, slot: Slot, onShow: () -> Unit) {
+    val label = when (slot) {
+        is Slot.Bible -> vm.panels.getOrNull(slot.index)?.let { p ->
+            vm.sketchOf(p.book)?.name ?: "${vm.bible.book(p.book).name} ${p.chapter} (${p.version})"
+        } ?: "Bible"
+        is Slot.Study -> slot.kind.label
+    }
+    Surface(
+        tonalElevation = 4.dp, shadowElevation = 4.dp,
+        modifier = Modifier.fillMaxWidth().clickable(onClick = onShow).testTag("collapsedPanel"),
+    ) {
+        Row(Modifier.padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+            Icon(Icons.Filled.KeyboardArrowUp, contentDescription = null)
+            Text(label, style = MaterialTheme.typography.titleSmall, maxLines = 1, modifier = Modifier.padding(start = 8.dp).weight(1f))
+            Text("Show", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+        }
+    }
 }
