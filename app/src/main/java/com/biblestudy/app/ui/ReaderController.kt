@@ -10,6 +10,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Path
+import com.biblestudy.app.model.translated
 import com.biblestudy.app.model.Annotation
 import com.biblestudy.app.model.Edit
 import com.biblestudy.app.model.Highlight
@@ -884,6 +885,18 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val keep = (ink.highlighter && vm.snapHighlights) || ink.frozen
         val (region, regionPts) = if (keep) ink.region to pts else mainRegion(ink, pts)
         pts = regionPts
+        // Margin ink joins the sketch it's drawn beside: pinned to the same verse, so the drawing
+        // stays in one piece in every version.
+        var verse = ink.verse
+        if (region != Region.TEXT) {
+            val g = ink.page.geo
+            val ox = g.originX(region); val oy = g.originY(region, verse)
+            var l = Float.MAX_VALUE; var t = Float.MAX_VALUE; var r = -Float.MAX_VALUE; var b = -Float.MAX_VALUE
+            for (i in pts.indices step 3) { l = minOf(l, pts[i]); r = maxOf(r, pts[i]); t = minOf(t, pts[i + 1]); b = maxOf(b, pts[i + 1]) }
+            vm.marginGroupVerse(g, region, Rect(ox + l, oy + t, ox + r, oy + b))?.let { v ->
+                if (v != verse) { pts = pts.translated(0f, oy - g.originY(region, v)); verse = v }
+            }
+        }
 
         if (ink.highlighter && vm.snapHighlights && region != Region.TEXT && highlightBox(ink, pts)) return
         if (ink.highlighter && vm.snapHighlights && region == Region.TEXT) {
@@ -898,7 +911,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             id = vm.newId(), layerId = ink.layerId,
             version = if (region == Region.TEXT) layout.version else null,
             book = layout.book, chapter = layout.chapter,
-            region = region, verse = ink.verse,
+            region = region, verse = verse,
             highlighter = ink.highlighter, color = ink.color, width = ink.width,
             points = if (region == Region.TEXT) layout.linePoints(pts) else pts,
             font = vm.styleKey().encode(),

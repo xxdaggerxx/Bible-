@@ -63,6 +63,7 @@ class InkStroke(
         lineAnchored: Boolean = this.lineAnchored,
         font: String = this.font,
         width: Float = this.width,
+        verse: Int = this.verse,
     ) = InkStroke(id, layerId, version, book, chapter, region, verse, highlighter, color, width, points, lineAnchored, font)
 
     fun withPoints(p: FloatArray) = copyAs(points = p)

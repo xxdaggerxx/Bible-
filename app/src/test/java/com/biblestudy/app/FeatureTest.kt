@@ -3519,4 +3519,57 @@ class FeatureTest {
             compose.waitForIdle()
         }
     }
+    @Test
+    fun aMarginSketchStaysInOnePieceInEveryVersion() {
+        // Reported: margin sketches got jumbled when changing versions. Each stroke was pinned to
+        // the verse the pen came down at, and verses sit at different heights in each version.
+        compose.runOnUiThread { vm.marginRight = true; vm.marginLeft = false; vm.goTo(0, 43, 3, 1, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        val x = vm.panels[0].panX + Page.COL_W * z + 90f
+        // A long stroke, then one starting where it ends (lower down, beside a later verse).
+        compose.onNodeWithTag("reader0").performTouchInput { down(Offset(x, 150f)); repeat(35) { moveBy(Offset(0f, 20f)) }; up() }
+        compose.waitForIdle()
+        compose.onNodeWithTag("reader0").performTouchInput { down(Offset(x + 4f, 855f)); repeat(5) { moveBy(Offset(3f, 10f)) }; up() }
+        compose.waitForIdle()
+        val (a, b) = vm.marginStrokesFor(43, 3).toList().also { assertEquals(2, it.size) }
+        // Pinned to one verse, so the drawing moves as one in every version.
+        assertEquals("h=${readerSize().height}", a.verse, b.verse)
+        // A stroke far below keeps its own verse.
+        val low = readerSize().height - 120f
+        assertTrue("screen $low", low > 900f)
+        compose.onNodeWithTag("reader0").performTouchInput { down(Offset(x, low)); repeat(5) { moveBy(Offset(10f, 4f)) }; up() }
+        compose.waitForIdle()
+        val c = vm.marginStrokesFor(43, 3).single { it.id != a.id && it.id != b.id }
+        assertTrue("${c.verse} vs ${a.verse}", c.verse > a.verse)
+        compose.runOnUiThread { vm.fingerDraw = false; vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) } }
+
+        // A sketch already split across verses: moving it with the lasso puts it back in one piece,
+        // pinned to its topmost verse, without moving it more than asked.
+        val measurer = TextMeasurer(createFontFamilyResolver(compose.activity), Density(1f, 1f), LayoutDirection.Ltr)
+        val font = FontFamily(Font(R.font.gentium_book_plus_regular), Font(R.font.gentium_book_plus_bold, FontWeight.Bold))
+        val layout = buildChapterLayout(
+            measurer, font, "John", ChapterData("KJV", 43, 3, vm.text("KJV").chapter(43, 3), vm.headings(43, 3)), vm.lineSpacing,
+        ) { RefLinks.parseList(it, vm.bible.books) }
+        val layer = vm.layers.first { it.visible }.id
+        fun stroke(id: Long, verse: Int) = com.biblestudy.app.model.InkStroke(
+            id, layer, null, 43, 3, Region.RIGHT, verse, false, 0xFF000000.toInt(), 3f, floatArrayOf(10f, 5f, 1f, 30f, 25f, 1f),
+        )
+        val split = listOf(stroke(9_100_001L, 2), stroke(9_100_002L, 6))
+        val before = split.associate { it.id to it.points[1] + layout.verseTop(it.verse) }
+        compose.runOnUiThread {
+            split.forEach { vm.addItem(it) }
+            vm.select(com.biblestudy.app.ui.Selection("KJV", 43, 3, split.map { it.id }.toSet()))
+            vm.moveSelection(Offset(5f, 0f), layout)
+        }
+        val moved = vm.marginStrokesFor(43, 3).filter { it.id in before }
+        assertEquals(listOf(2, 2), moved.map { it.verse })
+        for (m in moved) {
+            assertEquals(before[m.id]!!, m.points[1] + layout.verseTop(m.verse), 0.01f)
+            assertEquals(15f, m.points[0], 0.01f)
+        }
+        compose.runOnUiThread { vm.clearSelection(); vm.marginStrokesFor(43, 3).toList().forEach { vm.removeItem(it) } }
+        compose.waitForIdle()
+    }
 }

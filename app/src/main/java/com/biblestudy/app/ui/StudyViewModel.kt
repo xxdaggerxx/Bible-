@@ -1797,6 +1797,48 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** A text box's height before it has been laid out: wrapped lines at about half an em per letter. */
+    /**
+     * The verse a new margin stroke covering [box] (page units on [g]'s page) is pinned to, so a
+     * sketch stays in one piece in every version (ANCH-4): the verse of the margin stroke, text box
+     * or picture it touches or comes within [GROUP_GAP] of, nearest first. null: nothing near.
+     * (Each verse sits at a different height in each version, so strokes of one drawing pinned to
+     * different verses would drift apart.)
+     */
+    fun marginGroupVerse(g: PageGeometry, region: Region, box: androidx.compose.ui.geometry.Rect): Int? {
+        val layout = g.layout
+        val near = box.inflate(GROUP_GAP)
+        val visible = visibleLayerIds().toSet()
+        val ox = g.originX(region)
+        var best: Int? = null
+        var bestD = Float.MAX_VALUE
+        fun consider(verse: Int, r: androidx.compose.ui.geometry.Rect) {
+            if (!r.overlaps(near)) return
+            val d = (r.center - box.center).getDistance()
+            if (d < bestD) { bestD = d; best = verse }
+        }
+        for (s in marginStrokesFor(layout.book, layout.chapter)) {
+            if (s.region != region || s.layerId !in visible || s.points.size < 3) continue
+            val oy = g.originY(region, s.verse)
+            var l = Float.MAX_VALUE; var t = Float.MAX_VALUE; var r = -Float.MAX_VALUE; var b = -Float.MAX_VALUE
+            for (i in s.points.indices step 3) {
+                l = minOf(l, s.points[i]); r = maxOf(r, s.points[i])
+                t = minOf(t, s.points[i + 1]); b = maxOf(b, s.points[i + 1])
+            }
+            consider(s.verse, androidx.compose.ui.geometry.Rect(ox + l, oy + t, ox + r, oy + b))
+        }
+        for (x in textsFor(layout.book, layout.chapter)) {
+            if (x.region != region || x.layerId !in visible) continue
+            val oy = g.originY(region, x.verse)
+            consider(x.verse, androidx.compose.ui.geometry.Rect(ox + x.x, oy + x.y, ox + x.x + x.w, oy + x.y + (textHeights[x.id] ?: estimateTextHeight(x))))
+        }
+        for (x in imagesFor(layout.book, layout.chapter)) {
+            if (x.region != region || x.layerId !in visible) continue
+            val oy = g.originY(region, x.verse)
+            consider(x.verse, androidx.compose.ui.geometry.Rect(ox + x.x, oy + x.y, ox + x.x + x.w, oy + x.y + x.h))
+        }
+        return best
+    }
+
     private fun estimateTextHeight(t: MarginText): Float {
         val perLine = ((t.w - 16f) / (t.size * 0.5f)).coerceAtLeast(1f)
         val lines = t.text.lines().sumOf { kotlin.math.ceil((it.length.coerceAtLeast(1)) / perLine).toInt() }
@@ -2535,11 +2577,27 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             message = "Highlights stay on their words; only ink and images can be moved."
             return
         }
+        // What's moved together in a margin is pinned to one verse (the topmost), so it stays
+        // together in every version: moving a sketch that came apart puts it back in one piece.
+        val pin = HashMap<Region, Int>()
+        for (a in items) {
+            val (r, v) = when (a) {
+                is InkStroke -> a.region to a.verse
+                is MarginImage -> a.region to a.verse
+                is MarginText -> a.region to a.verse
+                is Highlight -> continue
+            }
+            if (r != Region.TEXT) pin[r] = minOf(pin[r] ?: v, v)
+        }
+        // Moving from verse [v] to the region's pinned verse: the same place on the page.
+        fun dy(r: Region, v: Int) = pin[r]?.let { layout.verseTop(v) - layout.verseTop(it) } ?: 0f
+        fun to(r: Region, v: Int) = pin[r] ?: v
         changeSelection { a ->
             when (a) {
-                is InkStroke -> a.withPoints(shifted(a, off.x, off.y, layout))
-                is MarginImage -> a.copy(x = a.x + off.x, y = a.y + off.y)
-                is MarginText -> a.copy(x = a.x + off.x, y = a.y + off.y)
+                is InkStroke -> if (a.region == Region.TEXT) a.withPoints(shifted(a, off.x, off.y, layout))
+                    else a.copyAs(points = a.points.translated(off.x, off.y + dy(a.region, a.verse)), verse = to(a.region, a.verse))
+                is MarginImage -> a.copy(x = a.x + off.x, y = a.y + off.y + dy(a.region, a.verse), verse = to(a.region, a.verse))
+                is MarginText -> a.copy(x = a.x + off.x, y = a.y + off.y + dy(a.region, a.verse), verse = to(a.region, a.verse))
                 is Highlight -> null
             }
         }
@@ -3302,6 +3360,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         const val RECENT_AFTER_S = 5L
         const val MAX_RECENT = 50
         const val PASSAGE_LIMIT = 80
+        /** How near (page units) a new margin stroke must be to a sketch to join it. */
+        const val GROUP_GAP = 24f
         /** At most this many chapters are downloaded for one verse's cross-reference previews. */
         const val XREF_FETCH = 40
         /** How many automatic backups are kept (DATA-6). */

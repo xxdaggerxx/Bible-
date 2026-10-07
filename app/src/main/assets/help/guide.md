@@ -55,6 +55,7 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 ## The margins
 
 - **Write in the margins.** Anything written or drawn in a margin belongs to its verse and shows in every version.
+- **Drawings stay in one piece.** Each verse sits a little higher or lower in each version, so a margin drawing moves with its verse. A stroke drawn on or next to a drawing, note or picture in the margin joins it, so the whole drawing moves together. A drawing that came apart in an earlier version: draw round it with the lasso and move it a little; it's put back together where it was.
 - **Margin or words?** Ink written on the words themselves stays with that version only. Each stroke is kept where most of it lies: a stroke that starts on the words but runs mostly into the margin is margin ink, shown in every version, and the other way round. An arrow or line snapped by holding the pen stays with where you started it, so an arrow from a margin note to a word stays with the note.
 - **Left and right margins** are switched on or off in *Settings → Margins & panels*.
 - **Make a margin wider** by dragging the small grip on the line between the text and the margin.
