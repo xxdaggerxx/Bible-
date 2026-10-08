@@ -966,6 +966,24 @@ class FeatureTest {
         // The chapter header opens the current book's introduction.
         compose.onNodeWithContentDescription("About this book").performClick()
         compose.onNodeWithText("About Romans").assertExists()
+
+        // A key verse opens its card over the window, not behind it on the screen underneath.
+        val key = com.biblestudy.app.data.BookIntros.get(compose.activity, 45)!!.keyVerses.first()
+        compose.onNodeWithText("Connections").performScrollTo() // just below the key verses
+        compose.onNodeWithText(vm.passageLabel(key)).performClick()
+        compose.waitForIdle()
+        compose.onNodeWithContentDescription("Close passage").assertExists()
+        val global = Class.forName("android.view.WindowManagerGlobal")
+        @Suppress("UNCHECKED_CAST")
+        val roots = global.getDeclaredField("mViews").apply { isAccessible = true }
+            .get(global.getMethod("getInstance").invoke(null)) as List<android.view.View>
+        val card = roots.last().layoutParams as android.view.WindowManager.LayoutParams
+        val window = roots[roots.size - 2]
+        assertEquals(window.windowToken, card.token)
+        assertTrue(compose.activity.window.decorView.windowToken != card.token)
+        snap("44b-book-intro-key-verse")
+        compose.onNodeWithContentDescription("Close passage").performClick()
+        compose.onNodeWithText("About Romans").assertExists()
     }
 
     @Test

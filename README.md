@@ -72,6 +72,10 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.5.2
+
+- **Fixed:** in a book's introduction (*About this book*, from the book list or the chapter header), tapping a key verse or a reference in the text showed nothing. The verse card was opened on the screen behind the introduction window, out of sight; it now opens on top of it. The introduction shown as a panel wasn't affected.
+
 ## New in version 2.5.1
 
 - **Fixed:** the NLT showed nothing in 1 and 2 Thessalonians and 1, 2 and 3 John. Tyndale's NLT API doesn't know those books by their standard names (`1Thess`, `1John`), so it sent back no verses; the app now asks for `1Thes`, `2Thes`, `1Jn`, `2Jn` and `3Jn`, and search results in them are found too. Chapters of these books already kept empty (by reading them or *Save for offline*) download again the next time they're read.

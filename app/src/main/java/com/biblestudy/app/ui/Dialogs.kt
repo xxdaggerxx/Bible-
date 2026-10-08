@@ -1653,15 +1653,16 @@ fun BookIntroDialog(vm: StudyViewModel, book: Int, onDismiss: (navigated: Boolea
                 Button(onClick = { open(Passage(book, 1, 1, 1, 1)) }) { Text("Read from chapter 1") }
             }
         }
-    }
-    shown?.let { p ->
-        Popup(alignment = Alignment.Center, onDismissRequest = { shown = null }, properties = PopupProperties(focusable = true)) {
-            PassageCard(
-                vm, p, version,
-                onGoTo = { vm.openPassage(p, panelIndex, beside = false); onDismiss(true) },
-                onOpenBeside = { vm.openPassage(p, panelIndex, beside = true); onDismiss(true) },
-                onClose = { shown = null },
-            )
+        // Inside the window: a pop-up opened from outside it would sit behind it, out of sight.
+        shown?.let { p ->
+            Popup(alignment = Alignment.Center, onDismissRequest = { shown = null }, properties = PopupProperties(focusable = true)) {
+                PassageCard(
+                    vm, p, version,
+                    onGoTo = { vm.openPassage(p, panelIndex, beside = false); onDismiss(true) },
+                    onOpenBeside = { vm.openPassage(p, panelIndex, beside = true); onDismiss(true) },
+                    onClose = { shown = null },
+                )
+            }
         }
     }
 }
