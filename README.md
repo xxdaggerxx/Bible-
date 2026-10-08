@@ -2,7 +2,13 @@
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger.
 
-## Install on your tablet (about 30 minutes the first time)
+## Download the app
+
+Each version is on the repository's **Releases** page (on GitHub, *Releases* on the right of the main page). Open the latest one and download **InkAndWord-x.y.z.apk** on your tablet or phone, then tap it to install (Android asks you to allow installing from that source). It installs over the previous version and keeps your notes.
+
+Releases are built by GitHub itself: pushing a tag like `v2.0.0` runs the *Release* workflow (`.github/workflows/release.yml`), which builds the signed APK and publishes it. The online Bible keys come from the repository's Actions secrets `YOUVERSION_KEY`, `ESV_KEY` and `NLT_KEY` (*Settings → Secrets and variables → Actions*); the workflow stops if any is missing. APKs are no longer kept in the repository's `releases/` folder: at about 100 MB they hit GitHub's limit for one file.
+
+## Build and install it yourself (about 30 minutes the first time)
 
 1. **Install Android Studio** on a Windows, Mac or Linux computer: https://developer.android.com/studio. Accept the defaults; it installs the Android SDK for you.
 2. **Open this project.** Unzip `BibleStudy.zip`, start Android Studio, choose **Open**, and select the `BibleStudy` folder. The first sync downloads Gradle and the libraries, which takes 5–10 minutes. If Android Studio offers to upgrade the Android Gradle Plugin, you can say *Not now*. The project builds as it is.
@@ -76,6 +82,7 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - **Margins fold away** at the side of the page, as on a narrow tablet; the ‹ tab slides them in.
   - **Settings, the book picker and other big windows fill the screen**; the picker's colour key wraps.
 - **Fixed:** going to a passage could be pulled back to an earlier chapter when the panel was still waiting to follow a commentary or a linked panel to it.
+- **Releases move to GitHub Releases.** The APK is no longer committed to `releases/` (it was 96 MB, near GitHub's 100 MB limit per file, and each one stayed in the history). Tagging a version builds and publishes it; see *Download the app* at the top.
 - Known gaps (for 2.1): the toolbars don't hide while scrolling in landscape; sketch pages aren't fitted to phones yet; pen-only settings (S Pen button, hover) still show on phones without a pen.
 
 ## New in version 1.22.1
