@@ -417,8 +417,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
-    /** Adds online Bible [info] to the version list; its chapters download as they're read. */
-    fun addOnlineBible(info: com.biblestudy.app.data.YouVersion.Info) {
+    /**
+     * Adds online Bible [info] to the version list; its chapters download as they're read. Picked
+     * from a panel's version menu, that panel ([showIn]) switches to it once it's added.
+     */
+    fun addOnlineBible(info: com.biblestudy.app.data.YouVersion.Info, showIn: Int? = null) {
         viewModelScope.launch {
             val r = withContext(Dispatchers.IO) {
                 runCatching {
@@ -430,7 +433,11 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                     v
                 }
             }
-            message = r.fold({ "${it.code} added. Pick it from the version menu; chapters download as you read." }, { "Couldn't add ${info.code}: ${it.message}" })
+            r.onSuccess { v -> if (showIn != null) setVersion(showIn, v.code) }
+            message = r.fold(
+                { if (showIn != null) "${it.code} added. Chapters download as you read." else "${it.code} added. Pick it from the version menu; chapters download as you read." },
+                { "Couldn't add ${info.code}: ${it.message}" },
+            )
         }
     }
 

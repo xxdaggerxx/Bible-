@@ -3104,16 +3104,25 @@ class FeatureTest {
             }
         }
         try {
-            // Settings → Bibles → Add an online Bible.
-            compose.runOnUiThread { vm.loadOnlineBibles() }
-            waitFor(10_000) { vm.onlineBibles != null }
-            val niv = vm.onlineBibles!!.single { it.code == "NIV" }
-            compose.runOnUiThread { vm.addOnlineBible(niv) }
-            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NIV" } }
+            // The version menu lists the online Bibles not added yet; tapping one adds it and shows it.
+            compose.runOnUiThread { vm.goTo(0, 43, 3, 16, remember = false) }
+            waitForLoaded()
+            compose.onAllNodesWithContentDescription("Change Bible version")[0].performClick()
+            waitFor(10_000) { compose.onAllNodesWithTag("addOnline-NIV").fetchSemanticsNodes().isNotEmpty() }
+            snap("186-version-menu-online")
+            compose.onNodeWithTag("addOnline-NIV").performClick()
+            waitFor(10_000) { com.biblestudy.app.data.BibleRepository.ALL.any { it.code == "NIV" } && vm.panels[0].version == "NIV" }
             val version = com.biblestudy.app.data.BibleRepository.ALL.single { it.code == "NIV" }
             assertTrue(version.copyright, "Biblica" in version.copyright)
+            // Once added, it's with the others at the top of the menu, not in the online list.
+            compose.onAllNodesWithContentDescription("Change Bible version")[0].performClick()
+            compose.waitForIdle()
+            assertTrue(compose.onAllNodesWithTag("addOnline-NIV").fetchSemanticsNodes().isEmpty())
+            compose.onAllNodesWithText("NIV", substring = true)[0].assertExists()
+            compose.activity.onBackPressedDispatcher.onBackPressed()
+            compose.waitForIdle()
             // Reading it downloads the chapter.
-            compose.runOnUiThread { vm.setVersion(0, "NIV"); vm.goTo(0, 43, 3, 16, remember = false) }
+            compose.runOnUiThread { vm.goTo(0, 43, 3, 16, remember = false) }
             waitForLoaded()
             val repo = vm.text("NIV")
             waitFor(20_000) { repo.online!!.isSaved(43, 3) }

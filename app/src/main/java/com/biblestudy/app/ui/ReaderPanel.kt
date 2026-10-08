@@ -657,6 +657,40 @@ private fun VersionPicker(vm: StudyViewModel, index: Int) {
                     onClick = { open = false; vm.setVersion(index, v.code) },
                 )
             }
+            // The online Bibles not added yet (BIB-12): one tap adds it and switches to it.
+            LaunchedEffect(open) { if (open && vm.onlineBibles == null) vm.loadOnlineBibles() }
+            HorizontalDivider()
+            Text(
+                "Online Bibles \u00b7 tap to add",
+                style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+            )
+            val more = vm.onlineBibles?.filter { o -> BibleRepository.ALL.none { it.online == o.id } }
+            when {
+                more != null -> for (info in more) {
+                    val source = when (info.id) { com.biblestudy.app.data.Esv.ID -> "Crossway"; com.biblestudy.app.data.Nlt.ID -> "Tyndale"; else -> "YouVersion" }
+                    DropdownMenuItem(
+                        text = {
+                            Column(Modifier.padding(vertical = 2.dp)) {
+                                Text("${info.code} \u2014 ${info.title}", style = MaterialTheme.typography.titleSmall)
+                                Text("Online, from $source", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                            }
+                        },
+                        onClick = { open = false; vm.addOnlineBible(info, index) },
+                        modifier = Modifier.testTag("addOnline-${info.code}"),
+                    )
+                }
+                vm.onlineListError != null -> Text(
+                    "Online Bibles need the internet.",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+                )
+                else -> Text(
+                    "Looking up online Bibles\u2026",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+                )
+            }
             HorizontalDivider()
             DropdownMenuItem(text = { Text("About these versions\u2026") }, onClick = { open = false; about = true })
         }

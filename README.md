@@ -1,4 +1,4 @@
-# Ink & Word — version 2.1.0
+# Ink & Word — version 2.2.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger.
 
@@ -71,6 +71,10 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.2.0
+
+- **Online Bibles in the version menu.** Tapping the version name (*KJV ▾*) now also lists, under *Online Bibles · tap to add*, the online Bibles not added yet: the ESV (Crossway), NLT (Tyndale) and YouVersion's English Bibles such as the NIV. One tap adds it and switches the panel to it. Without the internet the list says so; *Settings → Bibles* still works as before.
 
 ## New in version 2.1.0
 
