@@ -290,6 +290,7 @@ In *Settings → Reading*:
 
 - **Page:** dark (at first), light or sepia.
 - **Font:** Gentium Book, Serif or Sans-serif.
+- **Text size:** Small, Normal, Large, Larger or Largest, in *Settings → Reading → Text size*. Phones start at *Larger*, tablets at *Normal*. Bigger text puts fewer words on each line. Your writing on the words moves with them and grows or shrinks to match, as it does when you change the font. Highlights, margin notes, text boxes and sketch pages aren't affected. (Pinching still zooms the whole page, notes and all.)
 - **Line spacing:** more room to write between lines.
 - **Layout:** one verse per line, or paragraphs.
 - **Verse numbers** on or off.

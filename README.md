@@ -1,4 +1,4 @@
-# Ink & Word — version 2.2.0
+# Ink & Word — version 2.3.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger.
 
@@ -71,6 +71,12 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.3.0
+
+- **Text size** in *Settings → Reading*: Small, Normal, Large, Larger or Largest (85% to 175%). Phones start at *Larger*, since the page is fitted to a narrow screen; tablets at *Normal*. The page keeps its width, so bigger text wraps onto more lines, like changing the font.
+- **Notes and ink:** ink on the words is moved onto the same words and scaled by the change in size (saved with the size it was drawn at, e.g. `BOOK|s145`). Highlights are tied to the words and margin notes and text boxes to their verses, so they follow without change. Sketch pages, study views and zoom aren't affected. *Reset settings* goes back to the device's default size.
+- Known gaps: as with changing the font, a long stroke across several words (a sentence underlined, a note written between lines) moves with the word under its middle; where the new lines break differently, its ends may not line up with the words any more. The menus and windows follow the phone's own font size setting (Android *Settings → Display → Font size*), not this one.
 
 ## New in version 2.2.0
 

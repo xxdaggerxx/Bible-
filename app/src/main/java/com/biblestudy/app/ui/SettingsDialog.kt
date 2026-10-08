@@ -100,6 +100,7 @@ fun SettingsDialog(
                 Group("Reading")
                 Choices("Page", PageTheme.entries, vm.theme, { it.label }) { vm.theme = it }
                 Choices("Font", TextFont.entries, vm.textFont, { it.label }) { vm.changeTextFont(it) }
+                Choices("Text size", com.biblestudy.app.model.TextSize.entries, vm.textSize, { it.label }) { vm.changeTextSize(it) }
                 Choices("Line spacing", LineSpacing.entries, vm.lineSpacing, { it.label }) { vm.lineSpacing = it }
                 Choices("Layout", listOf(false, true), vm.paragraphMode, { if (it) "Paragraphs" else "Verse per line" }) { vm.changeParagraphs(it) }
                 Toggle("Verse numbers", null, vm.verseNumbers) { vm.changeVerseNumbers(it) }

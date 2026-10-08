@@ -548,6 +548,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun resetSettings() {
         theme = PageTheme.DARK
         changeTextFont(TextFont.BOOK)
+        changeTextSize(defaultTextSize())
         changeParagraphs(false)
         changeVerseNumbers(true)
         expandToFit = false
@@ -575,6 +576,21 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun changeTextFont(f: TextFont) {
         if (f == textFont) return
         textFont = f
+        relayout()
+    }
+
+    /**
+     * The Bible text's size (READ-3). Phones start larger, since the page is fitted to a narrow
+     * screen. Like the font, changing it reflows the lines; ink on the words moves and resizes with them.
+     */
+    var textSize by mutableStateOf(com.biblestudy.app.model.TextSize.of(prefs.getInt("textSize", defaultTextSize().percent)))
+        private set
+
+    private fun defaultTextSize() = if (phone) com.biblestudy.app.model.TextSize.LARGER else com.biblestudy.app.model.TextSize.NORMAL
+
+    fun changeTextSize(s: com.biblestudy.app.model.TextSize) {
+        if (s == textSize) return
+        textSize = s
         relayout()
     }
 
@@ -668,7 +684,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun changeVerseNumbers(on: Boolean) { if (on != verseNumbers) { verseNumbers = on; relayout() } }
 
     /** The layout ink on the words is drawn in now. */
-    fun styleKey() = TextStyleKey(textFont, paragraphMode, verseNumbers)
+    fun styleKey() = TextStyleKey(textFont, paragraphMode, verseNumbers, textSize.percent)
 
     /** The words move to new lines: ink on them is reloaded and moved along (READ-3, READ-6). */
     private fun relayout() {
@@ -816,7 +832,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary); putBoolean("glance", showGlance); putString("lastBibleVersion", lastBibleVersion); putBoolean("hardWords", hardWords); putBoolean("aidNames", aidNames); putBoolean("aidCustoms", aidCustoms); putBoolean("aidSymbols", aidSymbols)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putInt("textSize", textSize.percent); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary); putBoolean("glance", showGlance); putString("lastBibleVersion", lastBibleVersion); putBoolean("hardWords", hardWords); putBoolean("aidNames", aidNames); putBoolean("aidCustoms", aidCustoms); putBoolean("aidSymbols", aidSymbols)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }
@@ -2351,7 +2367,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                             if (c.font != now) {
                                 // Drawn in another font or layout: onto the same words here.
                                 val from = TextStyleKey.decode(c.font)
-                                c = c.copyAs(points = reflowPoints(c.points, plain(from), plain(key)), font = now)
+                                c = c.copyAs(points = reflowPoints(c.points, plain(from), plain(key), key.scale / from.scale), font = now)
                             }
                             if (c !== st) io { user.insert(c) }
                             c

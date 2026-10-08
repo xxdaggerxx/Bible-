@@ -270,6 +270,7 @@ class FeatureTest {
             vm.readMode = false
             vm.underlineMode = false
             vm.changeTextFont(com.biblestudy.app.model.TextFont.BOOK)
+            vm.changeTextSize(com.biblestudy.app.model.TextSize.NORMAL)
             vm.panels[0].back.clear()
             vm.panels[0].forward.clear()
             vm.clearSteps()
@@ -1444,6 +1445,38 @@ class FeatureTest {
         val back = vm.textStrokesFor("KJV", 43, 3).single()
         assertEquals(before.points[0], back.points[0], 6f)
         assertEquals(before.points[1], back.points[1], 0.05f)
+    }
+
+    @Test
+    fun changingTheTextSizeKeepsInkOnTheWordsAndResizesIt() {
+        // READ-3: a bigger text size reflows the lines; ink on the words moves with them and grows.
+        compose.runOnUiThread { vm.fingerDraw = true; vm.tool = Tool.PEN }
+        val z = zoom()
+        compose.onNodeWithTag("reader0").performTouchInput {
+            down(Offset((Page.COL_PAD + 200f) * z, 620f))
+            repeat(6) { moveBy(Offset(15f, 0f)) }
+            up()
+        }
+        compose.waitForIdle()
+        val before = vm.textStrokesFor("KJV", 43, 3).single()
+        fun width(p: FloatArray) = (p.indices step 3).maxOf { p[it] } - (p.indices step 3).minOf { p[it] }
+        compose.runOnUiThread { vm.fingerDraw = false; vm.changeTextSize(com.biblestudy.app.model.TextSize.LARGER) }
+        waitForLoaded()
+        waitFor(5_000) { vm.textStrokesFor("KJV", 43, 3).isNotEmpty() }
+        val after = vm.textStrokesFor("KJV", 43, 3).single()
+        assertEquals(before.id, after.id)
+        assertEquals("BOOK|s145", after.font)
+        assertEquals(width(before.points) * 1.45f, width(after.points), 1f)
+        snap("187-text-size-larger")
+        // Back to normal: the stroke comes back to (about) where and how big it was.
+        compose.runOnUiThread { vm.changeTextSize(com.biblestudy.app.model.TextSize.NORMAL) }
+        waitForLoaded()
+        waitFor(5_000) { vm.textStrokesFor("KJV", 43, 3).isNotEmpty() }
+        val back = vm.textStrokesFor("KJV", 43, 3).single()
+        assertEquals("BOOK", back.font)
+        assertEquals(before.points[0], back.points[0], 6f)
+        assertEquals(before.points[1], back.points[1], 0.05f)
+        assertEquals(width(before.points), width(back.points), 1f)
     }
 
     // ---------- screen sizes (ADP-6): small 8" and large 14.6" tablets, both ways round ----------
@@ -3736,7 +3769,8 @@ class FeatureTest {
         assertTrue(vm.phone)
         // Phones start reading, and a finger draws once a tool is picked (PH-2, PH-3). (The test set-up
         // resets both for every test, so they're set here as a phone starts.)
-        compose.runOnUiThread { vm.readMode = true; vm.fingerDraw = true }
+        compose.runOnUiThread { vm.readMode = true; vm.fingerDraw = true; vm.changeTextSize(com.biblestudy.app.model.TextSize.LARGER) }
+        waitForLoaded()
         // The app starts dark.
         assertEquals(com.biblestudy.app.ui.PageTheme.DARK, vm.theme)
         compose.onNodeWithText("John 3").assertIsDisplayed()

@@ -188,11 +188,12 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         buildChapterLayout(
             measurer, style.font.family(), vm.bible.book(b).name, data, vm.lineSpacing,
             paragraphs = paras, numbers = style.numbers, spacers = spacers, red = red, diffs = diffs, hard = hard,
+            scale = style.scale,
         ) { RefLinks.parseList(it, vm.bible.books) }
     }
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.aidSwitches(), vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name, vm.onlineArrivals) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.textSize, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.aidSwitches(), vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name, vm.onlineArrivals) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
@@ -237,6 +238,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
                 buildChapterLayout(
                     measurer, k.font.family(), name, ChapterData(v, b, c, vm.text(v).chapter(b, c)),
                     paragraphs = if (k.paragraphs) vm.study.paragraphStarts(v, b, c) else null, numbers = k.numbers,
+                    scale = k.scale,
                 )
             }
         }
