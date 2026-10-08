@@ -6,7 +6,7 @@
 
 Each version is on the repository's **Releases** page (on GitHub, *Releases* on the right of the main page). Open the latest one and download **InkAndWord-x.y.z.apk** on your tablet or phone, then tap it to install (Android asks you to allow installing from that source). It installs over the previous version and keeps your notes.
 
-Releases are built by GitHub itself: when a push changes the version in `app/build.gradle.kts`, the *Release* workflow (`.github/workflows/release.yml`) builds the signed APK and publishes it as the release `vX.Y.Z` (it skips versions already released). It can also be run by hand from the *Actions* tab. The online Bible keys come from the repository's Actions secrets `YOUVERSION_KEY`, `ESV_KEY` and `NLT_KEY` (*Settings → Secrets and variables → Actions*); the workflow stops if any is missing. APKs are no longer kept in the repository's `releases/` folder: at about 100 MB they hit GitHub's limit for one file.
+Releases are built by GitHub itself: when a push changes the version in `app/build.gradle.kts`, the *Release* workflow (`.github/workflows/release.yml`) builds the signed APK and publishes it as the release `vX.Y.Z` (it skips versions already released). It can also be run by hand from the *Actions* tab. The online Bible keys come from `youversion.properties` in the repository (or the Actions secrets `YOUVERSION_KEY`, `ESV_KEY` and `NLT_KEY`); the workflow stops if any is missing. APKs are no longer kept in the repository's `releases/` folder: at about 100 MB they hit GitHub's limit for one file.
 
 ## Build and install it yourself (about 30 minutes the first time)
 
@@ -82,6 +82,7 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - **Margins fold away** at the side of the page, as on a narrow tablet; the ‹ tab slides them in.
   - **Settings, the book picker and other big windows fill the screen**; the picker's colour key wraps.
 - **Fixed:** going to a passage could be pulled back to an earlier chapter when the panel was still waiting to follow a commentary or a linked panel to it.
+- **The online Bible keys are now in the repository** (`youversion.properties`), so GitHub can build releases. Make the repository private to keep them from being copied.
 - **Releases move to GitHub Releases.** The APK is no longer committed to `releases/` (it was 96 MB, near GitHub's 100 MB limit per file, and each one stayed in the history). Each version bump is built and published by GitHub; see *Download the app* at the top.
 - Known gaps (for 2.1): the toolbars don't hide while scrolling in landscape; sketch pages aren't fitted to phones yet; pen-only settings (S Pen button, hover) still show on phones without a pen.
 
@@ -159,14 +160,14 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
 
 - **The NLT**, from Tyndale's NLT API (api.nlt.to), as YouVersion doesn't offer it. In *Settings → Bibles → Add an online Bible…*, working like the ESV: each verse from the reply's `verse_export` elements, paragraphs and poetry lines, the words of Jesus, "LORD" in capitals, footnotes, titles and subheadings left out; word studies, red letters, hard words, Tyndale's search (with text) for chapters not on the tablet, and the NLT copyright notice under every chapter.
 - **Tyndale's terms:** non-commercial use, at most 500 verses a request and 5,000 requests a day. They say nothing about storage, but the NLT copyright statement allows quoting 500 verses, so the NLT keeps the same 500-verse rolling window as the ESV, with no *Save for offline*. If Tyndale confirms the whole text may be kept, this can be relaxed.
-- **The key** comes from `youversion.properties` (`nlt=…`, not committed) or `NLT_KEY`; a build without it shows an NLT key field in Settings. The released APK has it built in.
+- **The key** comes from `youversion.properties` (`nlt=…`) or `NLT_KEY`; a build without it shows an NLT key field in Settings. The released APK has it built in.
 - **Fixed in the repository:** the 1.16.0 release commit left out the ESV source code (the APK had it); it was committed separately.
 
 ## New in version 1.16
 
 - **The ESV**, from Crossway's ESV API (api.esv.org), as YouVersion doesn't offer it to this key. It's in *Settings → Bibles → Add an online Bible…* and works like the YouVersion Bibles: verses, paragraphs, poetry lines and the words of Christ from Crossway's HTML; word studies, red letters, hard words, search (Crossway's search, with its text, for chapters not on the tablet) and the standard ESV copyright notice under every chapter.
 - **Crossway's limits are kept:** non-commercial use, and no more than 500 verses or half of any book (whichever is less) stored on the tablet. The ESV keeps a rolling window of the chapters read last; older ones (with their search entries, word tags and red letters) are dropped and download again when reopened. Only the next chapter is prefetched, and *Save for offline* isn't offered for it. A one-chapter book (Jude, Philemon) is kept whole while it's being read.
-- **The key** comes, like the YouVersion key, from `youversion.properties` (`esv=…`, not committed) or the `ESV_KEY` environment variable; a build without it shows an ESV key field in *Settings → Bibles*. The released APK has it built in.
+- **The key** comes, like the YouVersion key, from `youversion.properties` (`esv=…`) or the `ESV_KEY` environment variable; a build without it shows an ESV key field in *Settings → Bibles*. The released APK has it built in.
 - Fixed: online Bibles' "read last" order now uses a counter rather than the clock.
 
 ## New in version 1.15
@@ -177,7 +178,7 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - **Search** covers the saved chapters, plus YouVersion's verse search for the rest when online.
   - **Copyright:** each chapter ends with the version's copyright line from YouVersion; it's also in the Bibles list.
   - Backups keep the list of online Bibles but not their text, which downloads again.
-- **The app key** is not in the repository (it is public). Builds read it from `youversion.properties` in the project root (`key=…`, ignored by git) or the `YOUVERSION_KEY` environment variable, into `BuildConfig`. A build without it asks for a key in *Settings → Bibles*. The released APK has the key built in, as a YouVersion app key is meant to be.
+- **The app key**: builds read it from `youversion.properties` in the project root (`key=…`; committed from 2.0.0 so GitHub can build releases) or the `YOUVERSION_KEY` environment variable, into `BuildConfig`. A build without it asks for a key in *Settings → Bibles*. The released APK has the key built in, as a YouVersion app key is meant to be.
 - Cross-reference previews in an online Bible use saved chapters (else the KJV), so tapping a verse doesn't download twenty chapters.
 - Known gaps: English Bibles only; the section headings shown are still the BSB's; footnotes are left out; *Save for offline* fetches about 1,189 chapters one by one, which takes several minutes; check each version's licence terms before sharing exported pages.
 

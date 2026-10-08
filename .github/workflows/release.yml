@@ -5,8 +5,8 @@
 # yet: the release and its tag vX.Y.Z are made here, because the build sessions can't push tags.
 # It can also be run by hand (Actions -> Release -> Run workflow), or by pushing a tag vX.Y.Z.
 #
-# The online Bible keys come from the repository's Actions secrets YOUVERSION_KEY, ESV_KEY and NLT_KEY
-# (Settings -> Secrets and variables -> Actions). They are never written to the repository.
+# The online Bible keys come from youversion.properties in the repository (key=, esv=, nlt=), or else
+# from the repository's Actions secrets YOUVERSION_KEY, ESV_KEY and NLT_KEY.
 name: Release
 
 on:
@@ -60,12 +60,14 @@ jobs:
           ESV_KEY: ${{ secrets.ESV_KEY }}
           NLT_KEY: ${{ secrets.NLT_KEY }}
         run: |
+          # The build reads youversion.properties first, then these variables.
+          prop() { [ -f youversion.properties ] && sed -n "s/^$1=//p" youversion.properties | tr -d '[:space:]'; }
           missing=""
-          [ -n "$YOUVERSION_KEY" ] || missing="$missing YOUVERSION_KEY"
-          [ -n "$ESV_KEY" ] || missing="$missing ESV_KEY"
-          [ -n "$NLT_KEY" ] || missing="$missing NLT_KEY"
+          [ -n "$(prop key)" ] || [ -n "$YOUVERSION_KEY" ] || missing="$missing key/YOUVERSION_KEY"
+          [ -n "$(prop esv)" ] || [ -n "$ESV_KEY" ] || missing="$missing esv/ESV_KEY"
+          [ -n "$(prop nlt)" ] || [ -n "$NLT_KEY" ] || missing="$missing nlt/NLT_KEY"
           if [ -n "$missing" ]; then
-            echo "::error::Missing Actions secrets:$missing. Add them in Settings -> Secrets and variables -> Actions, then re-run this workflow."
+            echo "::error::Missing online Bible keys:$missing. Put them in youversion.properties or the Actions secrets, then re-run this workflow."
             exit 1
           fi
 
