@@ -14,6 +14,7 @@ import com.biblestudy.app.model.MarginImage
 import com.biblestudy.app.model.MarginText
 import com.biblestudy.app.model.Region
 import com.biblestudy.app.model.SearchHit
+import com.biblestudy.app.model.Sketch
 import com.biblestudy.app.model.TypedNote
 import com.biblestudy.app.model.VerseId
 import java.nio.ByteBuffer
@@ -29,7 +30,7 @@ data class ChapterReading(val book: Int, val chapter: Int, val seconds: Int, val
 data class MarkRow(val book: Int, val chapter: Int, val verse: Int, val layerId: Long, val start: Int = -1)
 
 /** All of the user's own data: layers, ink, highlights, images, notes and bookmarks. */
-class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
+class UserDb(context: Context, name: String = NAME) : SQLiteOpenHelper(context, name, null, 10) {
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
@@ -70,6 +71,8 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
         createReading(db)
         createSketches(db)
         db.execSQL("INSERT INTO layers(id, name, color, visible, locked, sort) VALUES(1, 'My Notes', ${DEFAULT_LAYER_COLOR}, 1, 0, 0)")
+        db.execSQL("ALTER TABLE sketches ADD COLUMN uid TEXT NOT NULL DEFAULT ''")
+        Sync.createTables(db)
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -103,6 +106,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
         if (oldVersion in 4..7) db.execSQL("ALTER TABLE texts ADD COLUMN marks TEXT NOT NULL DEFAULT ''") // 1.1: highlights in text boxes (HL-11)
         if (oldVersion == 7) db.execSQL("ALTER TABLE sketches ADD COLUMN note INTEGER NOT NULL DEFAULT 0") // 1.1: full-screen margin notes (MRG-15)
         db.execSQL("DROP TABLE IF EXISTS ink_text") // 1.1.2: handwriting reading removed (1.1.0 and 1.1.1 kept read text here)
+        if (oldVersion < 10) {
+            // 2.4: sync between devices (SYNC-1). Sketch pages get an id that's the same on every
+            // device ("ready-<n>" for the ready-made ones); their local number can differ.
+            db.execSQL("ALTER TABLE sketches ADD COLUMN uid TEXT NOT NULL DEFAULT ''")
+            db.execSQL("UPDATE sketches SET uid = CASE WHEN created BETWEEN 1 AND 999 THEN 'ready-' || created ELSE lower(hex(randomblob(16))) END")
+            Sync.createTables(db)
+        }
     }
 
     private fun createSketches(db: SQLiteDatabase) {
@@ -144,13 +154,13 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
     // ---------- sketch pages (SKT) ----------
 
     fun sketches(): List<com.biblestudy.app.model.Sketch> =
-        readableDatabase.rawQuery("SELECT id, name, paper, book, chapter, verse, height, created, note FROM sketches ORDER BY created", null).use { c ->
+        readableDatabase.rawQuery("SELECT id, name, paper, book, chapter, verse, height, created, note, uid FROM sketches ORDER BY created", null).use { c ->
             buildList {
                 while (c.moveToNext()) add(
                     com.biblestudy.app.model.Sketch(
                         c.getLong(0), c.getString(1),
                         runCatching { com.biblestudy.app.model.Paper.valueOf(c.getString(2)) }.getOrDefault(com.biblestudy.app.model.Paper.BLANK),
-                        c.getInt(3), c.getInt(4), c.getInt(5), c.getFloat(6), c.getLong(7), c.getInt(8) == 1,
+                        c.getInt(3), c.getInt(4), c.getInt(5), c.getFloat(6), c.getLong(7), c.getInt(8) == 1, c.getString(9) ?: "",
                     )
                 )
             }
@@ -160,9 +170,16 @@ class UserDb(context: Context) : SQLiteOpenHelper(context, NAME, null, 9) {
         val v = ContentValues().apply {
             put("id", s.id); put("name", s.name); put("paper", s.paper.name); put("book", s.linkBook)
             put("chapter", s.linkChapter); put("verse", s.linkVerse); put("height", s.height); put("created", s.created); put("note", if (s.note) 1 else 0)
+            put("uid", s.uid.ifEmpty { sketchUid(s.id) ?: Sketch.newUid(s.created) })
         }
         writableDatabase.insertWithOnConflict("sketches", null, v, SQLiteDatabase.CONFLICT_REPLACE)
     }
+
+    /** The shared id of sketch page [id], if it has been saved. */
+    private fun sketchUid(id: Long): String? =
+        readableDatabase.rawQuery("SELECT uid FROM sketches WHERE id = ?", arrayOf(id.toString())).use { c ->
+            if (c.moveToFirst()) c.getString(0)?.ifEmpty { null } else null
+        }
 
     /** Deletes a sketch page and everything on it; returns its pictures' files to remove. */
     fun deleteSketch(s: com.biblestudy.app.model.Sketch): List<String> {

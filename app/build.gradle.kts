@@ -78,8 +78,8 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 52
-        versionName = "2.3.0"
+        versionCode = 53
+        versionName = "2.4.0"
         buildConfigField("String", "YOUVERSION_KEY", "\"$youVersionKey\"")
         buildConfigField("String", "ESV_KEY", "\"$esvKey\"")
         buildConfigField("String", "NLT_KEY", "\"$nltKey\"")
@@ -161,6 +161,8 @@ dependencies {
     implementation("androidx.graphics:graphics-core:1.0.2")
     // Unpacks the bundled commentaries (STD-17), stored as xz to keep the app small.
     implementation("org.tukaani:xz:1.10")
+    // Google sign-in for syncing through the user's Google Drive (SYNC-1).
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
     // The Claude API, for the online AI chat (AI-1).
     implementation("com.anthropic:anthropic-java:2.68.0")
 

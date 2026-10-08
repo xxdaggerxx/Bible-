@@ -294,6 +294,8 @@ data class Sketch(
     val created: Long,
     /** A full-screen margin note for its verse (MRG-15): shown shrunk beside the verse. */
     val note: Boolean = false,
+    /** The same on every device, for sync (SYNC-1): "ready-<n>" for ready-made pages, otherwise random. */
+    val uid: String = "",
 ) {
     val book get() = SKETCH_BOOK + id.toInt()
 
@@ -311,6 +313,9 @@ data class Sketch(
 
         fun isSketch(book: Int) = book >= SKETCH_BOOK
         fun idOf(book: Int) = (book - SKETCH_BOOK).toLong()
+
+        /** A shared id for a new page: ready-made pages ([created] 1 to 999) have the same one on every device. */
+        fun newUid(created: Long) = if (created in 1..999) "ready-$created" else java.util.UUID.randomUUID().toString().replace("-", "")
     }
 }
 

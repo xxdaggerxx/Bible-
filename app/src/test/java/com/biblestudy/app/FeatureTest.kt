@@ -2875,6 +2875,72 @@ class FeatureTest {
     }
 
     @Test
+    fun syncBringsTheOtherDevicesNotesHereAndSendsThisOnes() {
+        val store = MemoryStore()
+        compose.runOnUiThread { vm.testSyncStore = store }
+        // The phone has notes, ink, a bookmark and a sketch page, and has synced already.
+        val phone = com.biblestudy.app.data.UserDb(compose.activity, "phone-device.db")
+        val phoneImages = File(compose.activity.cacheDir, "phone-images").apply { mkdirs() }
+        val engine = com.biblestudy.app.data.SyncEngine(phone, store, "phonedevice", phoneImages)
+        try {
+            val now = System.currentTimeMillis()
+            phone.setNote(43, 3, 16, "Written on the phone")
+            phone.insert(
+                com.biblestudy.app.model.InkStroke(
+                    now * 1000, 1L, "KJV", 43, 3, com.biblestudy.app.model.Region.TEXT, 16, false, 0xFFB71C1C.toInt(), 3f,
+                    floatArrayOf(0f, 0f, 0.5f, 40f, 0f, 0.5f),
+                )
+            )
+            phone.addBookmark(com.biblestudy.app.model.Bookmark(now * 1000 + 1, 19, 23, 1, now, ""))
+            phone.saveSketch(com.biblestudy.app.model.Sketch(1, "From the phone", com.biblestudy.app.model.Paper.LINED, 0, 0, 0, 1840f, now, uid = "phonepage"))
+            engine.sync()
+
+            // This tablet bookmarks a verse, then turns sync on in Settings.
+            compose.runOnUiThread { vm.toggleBookmark(1, 1, 1) }
+            compose.onNodeWithContentDescription("More").performClick()
+            compose.onNodeWithText("Settings").performClick()
+            compose.onNodeWithText("Sync with Google Drive").performScrollTo()
+            snap("188-settings-sync-off")
+            compose.onNodeWithText("Sync with Google Drive").performClick()
+            waitFor(15_000) { vm.syncOn && !vm.syncing && vm.lastSync > 0 }
+            assertEquals(null, vm.syncError)
+            compose.onNodeWithTag("syncNow").performScrollTo()
+            snap("189-settings-sync-on")
+            compose.onNodeWithContentDescription("Close").performClick()
+            waitForLoaded()
+
+            // The phone's notes are here, on screen.
+            assertTrue(vm.bookmarks.any { it.book == 19 && it.chapter == 23 })
+            assertTrue(vm.sketches.any { it.name == "From the phone" })
+            waitFor(10_000) { compose.runOnIdle { vm.notesFor(43, 3)[16]?.text } == "Written on the phone" }
+            waitFor(10_000) { vm.textStrokesFor("KJV", 43, 3).any { it.id == now * 1000 } }
+            snap("190-synced-from-phone")
+
+            // And the phone gets the tablet's, with the ready-made pages once each.
+            engine.sync()
+            assertTrue(phone.bookmarks().any { it.book == 1 && it.chapter == 1 && it.verse == 1 })
+            val ready = phone.sketches().filter { it.uid.startsWith("ready-") }
+            assertEquals(vm.sketches.count { it.readyMade }, ready.size)
+            assertEquals(ready.size, ready.map { it.uid }.toSet().size)
+            val tab = ready.first { it.name == "The tabernacle" }
+            assertTrue(phone.loadTexts(tab.book, 1).all { it.id >= 8_000_000_000_000_000_000L })
+
+            // A change on the phone arrives with the next sync.
+            phone.setNote(43, 3, 16, "Changed on the phone")
+            engine.sync()
+            compose.runOnUiThread { vm.syncNow() }
+            waitFor(15_000) { compose.runOnIdle { vm.notesFor(43, 3)[16]?.text } == "Changed on the phone" }
+
+            // Turning sync off leaves the notes here.
+            compose.runOnUiThread { vm.turnOffSync() }
+            assertTrue(!vm.syncOn && vm.sketches.any { it.name == "From the phone" })
+        } finally {
+            compose.runOnUiThread { vm.turnOffSync(); vm.testSyncStore = null; vm.toggleBookmark(1, 1, 1) }
+            phone.close()
+        }
+    }
+
+    @Test
     fun anySketchPageOpensBesideTheText() {
         compose.runOnUiThread { vm.addReadyMadePages() }
         waitForLoaded()

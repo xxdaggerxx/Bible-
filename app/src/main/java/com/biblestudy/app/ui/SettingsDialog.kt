@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
@@ -273,6 +274,34 @@ fun SettingsDialog(
                     "USFM files (or a .zip of them), OSIS XML, or this app's own database. Word studies, words of Jesus in red and paragraphs work in it too. Only import versions you have the right to use.",
                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                 )
+                }
+
+                Group("Sync")
+                // Notes on all the user's devices, through their own Google Drive (SYNC-1).
+                val signIn = rememberLauncherForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { r ->
+                    if (r.resultCode == android.app.Activity.RESULT_OK) vm.onSyncSignIn(r.data) else vm.onSyncSignIn(null)
+                }
+                val launchSignIn: (android.content.IntentSender) -> Unit = { sender ->
+                    signIn.launch(androidx.activity.result.IntentSenderRequest.Builder(sender).build())
+                }
+                Toggle(
+                    "Sync with Google Drive",
+                    when {
+                        !vm.syncOn -> "Your notes, ink, highlights, pictures, bookmarks and sketch pages on all your devices, through your own Google Drive. Each device keeps its own panels and settings."
+                        vm.syncError != null -> vm.syncError
+                        vm.syncing -> "Syncing\u2026"
+                        else -> listOfNotNull(
+                            vm.syncAccount,
+                            if (vm.lastSync > 0) "last synced " + java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT).format(java.util.Date(vm.lastSync)) else null,
+                        ).joinToString(" \u00b7 ").ifEmpty { "On" }
+                    },
+                    vm.syncOn,
+                ) { on -> if (on) vm.turnOnSync(launchSignIn) else vm.turnOffSync() }
+                if (vm.syncOn) Matches("Sync now", "Google Drive", "sign in") {
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
+                        if (vm.syncNeedsSignIn) Button(onClick = { vm.turnOnSync(launchSignIn) }) { Text("Sign in again") }
+                        OutlinedButton(onClick = { vm.syncNow(announce = true) }, enabled = !vm.syncing, modifier = Modifier.testTag("syncNow")) { Text("Sync now") }
+                    }
                 }
 
                 Group("Backup")

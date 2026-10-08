@@ -1,4 +1,4 @@
-# Ink & Word — version 2.3.0
+# Ink & Word — version 2.4.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger.
 
@@ -71,6 +71,13 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.4.0
+
+- **Sync between devices** (*Settings → Sync → Sync with Google Drive*). Ink, highlights, text boxes, pictures, typed notes, bookmarks, tags, colour meanings, layers and sketch pages are the same on your phone and tablet, through your own Google Drive. Panels, tabs, saved layouts, settings and reading stats stay per device. It syncs when the app opens and closes and every 3 minutes while it's open, and *Sync now* does it at once.
+- How it works: each change is recorded per item. A device sends its changes as a small file to Drive's hidden app folder (permission `drive.appdata`) and reads the other devices' files. For each item the later change wins; a typed note changed on two devices before syncing keeps both texts. Sketch pages carry an id shared by all devices, and the ready-made pages and what's drawn on them have the same ids everywhere, so they aren't doubled. After 30 change files, one device folds them into a single full copy.
+- Setup (once, by the app's owner): a Google Cloud project with the Google Drive API, an OAuth consent screen and an Android OAuth client for `com.biblestudy.app` with the release key's SHA-1 `27:A9:6F:94:D5:AD:06:C3:D5:86:02:B7:38:14:90:CA:D2:12:0B:F8`. While the project is in *Testing*, only its test users can sync, and Google may ask them to sign in again after about a week.
+- Known gaps: it needs Google Play services on the device. Reading stats don't sync. When the same item is changed on two devices, the later change wins by the devices' clocks. Text boxes, ink and pictures changed on both devices keep only one version; only typed notes keep both. Deleted items leave a small mark in the sync folder.
 
 ## New in version 2.3.0
 

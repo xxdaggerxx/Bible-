@@ -798,6 +798,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     val bitmaps = mutableStateMapOf<String, ImageBitmap>()
     private val requestedBitmaps = HashSet<String>()
     private var lastId = 0L
+    private val idSalt: Long = prefs.getLong("idSalt", -1L).takeIf { it >= 0 }
+        ?: kotlin.random.Random.nextLong(1000).also { prefs.edit { putLong("idSalt", it) } }
 
     init {
         val saved = prefs.getString("tabs", null)?.let { TabState.listFromJson(it, ::validPlace) }.orEmpty()
@@ -818,8 +820,12 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
+    /**
+     * A new item's id: the time in microseconds. The last three digits differ from device to device
+     * (SYNC-1), so two devices making an item in the same millisecond don't pick the same id.
+     */
     fun newId(): Long {
-        val t = System.currentTimeMillis() * 1000
+        val t = System.currentTimeMillis() * 1000 + idSalt
         lastId = if (t > lastId) t else lastId + 1
         return lastId
     }
@@ -1596,7 +1602,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val s = Sketch(
             id, name.trim().ifEmpty { "Sketch" }, paper,
             link?.first ?: 0, link?.second ?: 0, link?.third ?: 0,
-            Sketch.START_HEIGHT, created,
+            Sketch.START_HEIGHT, created, uid = Sketch.newUid(created),
         )
         sketches.add(s)
         io { user.saveSketch(s) }
@@ -1689,6 +1695,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      */
     fun addReadyMadePages(announce: Boolean = false, onlyNew: Boolean = false) {
         val layer = layers.firstOrNull() ?: return
+        val startedAt = System.currentTimeMillis() - 1000
         var added = 0
         // Pages made before (by name), so a new version adds its new pages but not ones you deleted.
         val made = prefs.getStringSet("readyMadeNames", null)?.toMutableSet()
@@ -1698,11 +1705,14 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             if (sketches.any { it.readyMade && it.name == t.name }) { made += t.name; return@forEachIndexed }
             if (onlyNew && t.name in made) return@forEachIndexed
             val s = createSketch(t.name, t.paper, link = null, open = false, created = (i + 1).toLong())
-            placeOnSketch(s, t.items(env), layerId = layer.id, undoable = false)
+            placeOnSketch(s, t.items(env), layerId = layer.id, undoable = false, ids = { n -> readyMadeId(i + 1, n) })
             made += t.name
             added++
         }
         prefs.edit { putBoolean("readyMadeAdded", true); putStringSet("readyMadeNames", made) }
+        // Every device makes these pages for itself, the same: dated long ago, so they don't count as
+        // changes to sync (a page deleted on another device stays deleted). Putting them back does.
+        if (!announce && added > 0) io { com.biblestudy.app.data.Sync.markAsOriginal(user.writableDatabase, startedAt) }
         if (announce) message = when (added) {
             0 -> "All the ready-made pages are already here."
             1 -> "1 ready-made page put back."
@@ -1781,7 +1791,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * (STD-16, SKT-5). [items] are in page units from the top-left of the page's drawing area; they
      * go below anything already there, and the page grows to fit. Returns false if the layer is locked.
      */
-    fun placeOnSketch(s: Sketch, items: List<Drawn>, layerId: Long? = null, undoable: Boolean = true): Boolean {
+    fun placeOnSketch(s: Sketch, items: List<Drawn>, layerId: Long? = null, undoable: Boolean = true, ids: ((Int) -> Long)? = null): Boolean {
         val layer = (if (layerId != null) layers.firstOrNull { it.id == layerId } else activeLayer()) ?: return false
         if (layerId == null && layer.locked) { message = "Layer \u201c${layer.name}\u201d is locked."; return false }
         if (layerId == null && !layer.visible) setLayerVisible(layer.id, true)
@@ -1792,7 +1802,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         val top = (existing.maxOrNull()?.let { it + 60f } ?: 40f)
         val added = ArrayList<Annotation>()
         var bottom = top
-        for (d in items) when (d) {
+        for ((n, d) in items.withIndex()) {
+            fun newId() = ids?.invoke(n) ?: this.newId()
+            when (d) {
             is DrawnBox -> {
                 val t = MarginText(newId(), layer.id, book, 1, Region.RIGHT, 1, d.x, top + d.y, d.w, d.text, d.size, d.color, d.background)
                 added += t
@@ -1821,6 +1833,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                     bottom = maxOf(bottom, top + y)
                 }
                 added += InkStroke(newId(), layer.id, null, book, 1, Region.RIGHT, 1, false, d.color, d.width, pts.toFloatArray())
+            }
             }
         }
         added.forEach { addItem(it) }
@@ -3357,6 +3370,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                         BibleRepository.restoreImported(app, it.readText(), File(tmp, "bibles"), bible.books)
                     }
                     tmp.deleteRecursively()
+                    com.biblestudy.app.data.Sync.markAllChanged(user.writableDatabase) // restored notes win when syncing
                     user.layers() to Unit
                 }
             }
@@ -3365,26 +3379,215 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 message = "Restore failed: ${ok.exceptionOrNull()?.message ?: "unknown error"}"
                 return@launch
             }
-            textStrokes.values.forEach { it.clear() }
-            highlights.values.forEach { it.clear() }
-            marginStrokes.values.forEach { it.clear() }
-            images.values.forEach { it.clear() }
-            marginTexts.values.forEach { it.clear() }
-            notes.values.forEach { it.clear() }
-            loaded.clear(); renders.clear(); bitmaps.clear(); requestedBitmaps.clear()
-            selection = null
-            undoStack.clear(); redoStack.clear(); editVersion++
-            layers.clear(); layers.addAll(result.first)
-            if (layers.none { it.id == activeLayerId }) activeLayerId = layers.firstOrNull()?.id ?: 1L
-            bookmarks.clear(); bookmarks.addAll(user.bookmarks())
-            tags.clear(); tags.putAll(user.tags())
-            meanings.clear(); meanings.putAll(user.meanings())
+            reloadUserData(result.first)
             workspaces.clear(); workspaces.addAll(user.workspaces().mapNotNull { (n, j) -> Workspace.fromJson(n, j) })
-            sketches.clear(); sketches.addAll(user.sketches()) // sketch pages (SKT)
             readingGeneration++ // reading stats came with the backup
-            dataGeneration++
             message = "Notes restored."
             prepareImported() // versions in an older backup have no word tags yet
+            syncNow() // the restored notes go to the other devices
+        }
+    }
+
+    /** Reads the notes again after the database changed underneath (a restore, or a sync). */
+    private fun reloadUserData(newLayers: List<com.biblestudy.app.model.Layer> = user.layers(), keepUndo: Boolean = false) {
+        textStrokes.values.forEach { it.clear() }
+        highlights.values.forEach { it.clear() }
+        marginStrokes.values.forEach { it.clear() }
+        images.values.forEach { it.clear() }
+        marginTexts.values.forEach { it.clear() }
+        notes.values.forEach { it.clear() }
+        loaded.clear(); renders.clear(); bitmaps.clear(); requestedBitmaps.clear()
+        selection = null
+        if (!keepUndo) { undoStack.clear(); redoStack.clear() }
+        editVersion++
+        layers.clear(); layers.addAll(newLayers)
+        if (layers.none { it.id == activeLayerId }) activeLayerId = layers.firstOrNull()?.id ?: 1L
+        bookmarks.clear(); bookmarks.addAll(user.bookmarks())
+        tags.clear(); tags.putAll(user.tags())
+        meanings.clear(); meanings.putAll(user.meanings())
+        sketches.clear(); sketches.addAll(user.sketches()) // sketch pages (SKT)
+        // A panel showing a sketch page deleted on another device goes back to the Bible.
+        for (i in panels.indices) if (Sketch.isSketch(panels[i].book) && sketchOf(panels[i].book) == null) {
+            val (b, c) = biblePlaceBefore(panels[i])
+            goTo(i, b, c)
+        }
+        dataGeneration++
+    }
+
+    // ---------- sync between devices (SYNC-1) ----------
+
+    /** Notes, ink, highlights, pictures, bookmarks and sketch pages sync through the user's Google Drive. */
+    var syncOn by mutableStateOf(prefs.getBoolean("syncOn", false))
+        private set
+    /** The Google account synced with, once known. */
+    var syncAccount by mutableStateOf(prefs.getString("syncAccount", null))
+        private set
+    var lastSync by mutableLongStateOf(prefs.getLong("lastSync", 0L))
+        private set
+    var syncing by mutableStateOf(false)
+        private set
+    /** Why the last sync failed (shown in Settings), or null. */
+    var syncError by mutableStateOf<String?>(null)
+        private set
+    /** Google wants the user to allow access again: Settings shows a button for it. */
+    var syncNeedsSignIn by mutableStateOf(false)
+        private set
+
+    /** This install, for naming its change files. A backup restored here doesn't bring another device's. */
+    private val syncDevice: String = prefs.getString("syncDevice", null)
+        ?: java.util.UUID.randomUUID().toString().replace("-", "").take(12).also { prefs.edit { putString("syncDevice", it) } }
+
+    /** The tests' stand-in for Google Drive; null in the app. */
+    var testSyncStore: com.biblestudy.app.data.SyncStore? = null
+
+    /** Where sync asks Google for access; the screen shows Google's sign-in when it's needed. */
+    private val drive by lazy { DriveAuth(getApplication()) }
+
+    /**
+     * Turns sync on from Settings: asks for access to the app's own Drive folder ([signIn] shows
+     * Google's screen the first time), then syncs.
+     */
+    fun turnOnSync(signIn: (android.content.IntentSender) -> Unit) {
+        if (testSyncStore != null) { syncConnected(null); return }
+        viewModelScope.launch {
+            when (val r = runCatching { drive.authorize() }.getOrElse { DriveAuth.Result.Failed(it.message ?: "unknown error") }) {
+                is DriveAuth.Result.Token -> syncConnected(r.token)
+                is DriveAuth.Result.NeedsSignIn -> signIn(r.intent)
+                is DriveAuth.Result.Failed -> { syncError = "Couldn't connect to Google Drive: ${r.reason}"; message = syncError }
+            }
+        }
+    }
+
+    /** Google's sign-in screen came back. */
+    fun onSyncSignIn(data: android.content.Intent?) {
+        val token = runCatching { drive.tokenFrom(data) }.getOrNull()
+        if (token == null) {
+            message = "Google Drive wasn't connected."
+            return
+        }
+        syncConnected(token)
+    }
+
+    private fun syncConnected(token: String?) {
+        syncOn = true; syncNeedsSignIn = false; syncError = null
+        prefs.edit { putBoolean("syncOn", true) }
+        if (token != null) viewModelScope.launch {
+            val email = withContext(Dispatchers.IO) { com.biblestudy.app.data.DriveStore(token).email() }
+            if (email != null) { syncAccount = email; prefs.edit { putString("syncAccount", email) } }
+        }
+        syncNow(token, announce = true)
+        startSyncTimer()
+    }
+
+    /** Stops syncing. What's on this device stays; so does the copy in Drive, for the other devices. */
+    fun turnOffSync() {
+        syncOn = false; syncNeedsSignIn = false; syncError = null; syncAccount = null
+        syncTimer?.cancel(); syncTimer = null
+        prefs.edit { putBoolean("syncOn", false); remove("syncAccount") }
+    }
+
+    private var syncJob: kotlinx.coroutines.Job? = null
+
+    /**
+     * Sends this device's changes and reads the other devices' (SYNC-1): when the app opens, when it's
+     * left, every few minutes while it's open, and from Settings' "Sync now".
+     */
+    fun syncNow(token: String? = null, announce: Boolean = false): kotlinx.coroutines.Job? {
+        if (!syncOn || syncJob?.isActive == true) return null
+        syncJob = viewModelScope.launch {
+            syncing = true
+            try {
+                val store = testSyncStore ?: run {
+                    val t = token ?: when (val r = runCatching { drive.authorize() }.getOrElse { DriveAuth.Result.Failed(it.message ?: "offline") }) {
+                        is DriveAuth.Result.Token -> r.token
+                        is DriveAuth.Result.NeedsSignIn -> { syncNeedsSignIn = true; syncError = "Google needs you to allow access again."; return@launch }
+                        is DriveAuth.Result.Failed -> { syncError = "Couldn't reach Google Drive (${r.reason})."; return@launch }
+                    }
+                    com.biblestudy.app.data.DriveStore(t)
+                }
+                val engine = com.biblestudy.app.data.SyncEngine(user, store, syncDevice, imagesDir, newSketchId = ::syncSketchId)
+                // Off the database thread, so pages keep loading while it waits for Google Drive.
+                val result = withContext(Dispatchers.IO) { engine.sync() }
+                syncError = null; syncNeedsSignIn = false
+                lastSync = System.currentTimeMillis()
+                prefs.edit { putLong("lastSync", lastSync) }
+                if (result.changed) reloadUserData(keepUndo = true)
+                if (announce) message = when {
+                    result.received > 0 -> "Synced: changes from your other devices are here."
+                    else -> "Synced with Google Drive."
+                }
+            } catch (e: com.biblestudy.app.data.DriveAuthException) {
+                syncNeedsSignIn = true; syncError = "Google needs you to allow access again."
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                syncError = "Sync didn't finish: ${e.message ?: e.javaClass.simpleName}. It will try again."
+                if (announce) message = syncError
+            } finally {
+                syncing = false
+            }
+        }
+        return syncJob
+    }
+
+    /** A local number for a sketch page from another device, never one this device has used. */
+    private fun syncSketchId(db: android.database.sqlite.SQLiteDatabase): Long {
+        val id = maxOf(prefs.getLong("nextSketch", 1L), com.biblestudy.app.data.Sync.maxSketchId(db) + 1)
+        prefs.edit { putLong("nextSketch", id + 1) }
+        return id
+    }
+
+    private var syncTimer: kotlinx.coroutines.Job? = null
+
+    /** Every few minutes while the app is on screen. */
+    private fun startSyncTimer() {
+        if (syncTimer?.isActive == true || testSyncStore != null) return
+        syncTimer = viewModelScope.launch {
+            while (isActive) {
+                kotlinx.coroutines.delay(SYNC_EVERY_MS)
+                if (foreground) syncNow()
+            }
+        }
+    }
+
+    /** How many changes here are still to be sent (for Settings). */
+    suspend fun syncWaiting(): Int = withContext(dbDispatcher) { com.biblestudy.app.data.Sync.waitingCount(user.readableDatabase) }
+
+    /**
+     * The ready-made pages made before 2.4 got random ids on each device. Gives what the app drew
+     * on them the same ids everywhere (matched by where it sits), so syncing doesn't show it twice.
+     */
+    private fun adoptReadyMadeIds() {
+        if (prefs.getBoolean("readyIdsAdopted", false)) return
+        prefs.edit { putBoolean("readyIdsAdopted", true) }
+        val ready = sketches.filter { it.readyMade }
+        if (ready.isEmpty()) return
+        val env = TemplateEnv(runCatching { LandsMap.load(getApplication()) }.getOrNull())
+        val top = 40f // where placeOnSketch starts on an empty page
+        for (s in ready) runCatching {
+            val t = SketchTemplates.all.getOrNull((s.created - 1).toInt()) ?: return@runCatching
+            val items = t.items(env)
+            val strokes = user.loadMargin(s.book, 1).first.toMutableList()
+            val texts = user.loadTexts(s.book, 1).toMutableList()
+            for ((n, d) in items.withIndex()) {
+                val id = readyMadeId(s.created.toInt(), n)
+                when (d) {
+                    is DrawnBox, is DrawnVerse -> {
+                        val (x, y) = if (d is DrawnBox) d.x to d.y else (d as DrawnVerse).x to d.y
+                        val m = texts.filter { kotlin.math.abs(it.x - x) < 0.5f && kotlin.math.abs(it.y - (top + y)) < 0.5f }.minByOrNull { it.id } ?: continue
+                        texts.remove(m)
+                        if (m.id != id) { user.delete(m); user.insert(m.copy(id = id)) }
+                    }
+                    is DrawnLine -> {
+                        val (x, y) = d.points.firstOrNull() ?: continue
+                        val m = strokes.filter {
+                            it.points.size >= 2 && it.color == d.color && kotlin.math.abs(it.points[0] - x) < 0.5f && kotlin.math.abs(it.points[1] - (top + y)) < 0.5f
+                        }.minByOrNull { it.id } ?: continue
+                        strokes.remove(m)
+                        if (m.id != id) { user.delete(m); user.insert(m.copyAs(id, m.points)) }
+                    }
+                }
+            }
         }
     }
 
@@ -3393,11 +3596,19 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     // everything they use is set up.
     init {
         // The first start makes them all; after an update, only pages new in that version.
+        runCatching { adoptReadyMadeIds() }
         runCatching { addReadyMadePages(onlyNew = true) }
         prepareImported()
+        if (syncOn) { syncNow(); startSyncTimer() }
     }
 
     companion object {
+        /** How often the app syncs while it's on screen (SYNC-1). */
+        const val SYNC_EVERY_MS = 3 * 60_000L
+
+        /** The same id on every device for item [n] the app draws on ready-made page [created] (SYNC-1). */
+        fun readyMadeId(created: Int, n: Int): Long = 8_000_000_000_000_000_000L + created * 100_000L + n
+
         /** Reading time pauses after this long without a touch (ANL-1). */
         const val IDLE_MS = 120_000L
 

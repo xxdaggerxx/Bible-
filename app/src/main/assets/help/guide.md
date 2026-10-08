@@ -322,12 +322,25 @@ Your ink and highlights stay on their words whatever you choose.
 - *Remove* takes an imported or online version off the tablet.
 - *About these versions* explains how the translations differ.
 
+## Sync between your devices
+
+Your notes can be the same on your phone and your tablet, through your own Google Drive.
+
+- **Turn it on:** *Settings → Sync → Sync with Google Drive*. Choose your Google account and tap *Allow*. Do this once on each device, with the same Google account.
+- **What syncs:** ink, highlights, text boxes, pictures, typed notes, bookmarks, tags, colour meanings, layers and sketch pages.
+- **What stays on each device:** panels, tabs, saved layouts, settings (page colour, text size, font, finger drawing) and reading stats. So the phone can show one panel in large text while the tablet shows three.
+- **When:** when you open the app, when you leave it, and every few minutes while it's open. *Sync now* does it straight away. Without the internet everything still works; it catches up later.
+- **Two devices, one change:** when the same item is changed on both, the later change wins. A typed note changed on both before they synced keeps both texts, one under the other, so nothing is lost.
+- Your notes go into a hidden folder in your Google Drive that only this app can see. It doesn't show among your files and uses a little of your Drive space.
+- If Google asks you to allow access again, *Settings → Sync* shows *Sign in again*.
+- Turning sync off keeps everything on this device and in Drive.
+
 ## Export, backup and restore
 
 - **Export a chapter:** *⋮ → Export chapter as PDF…* or *as picture…* saves it with your notes, to print or share. To export one layer only, use that layer's ⋮ menu in Layers.
 - **Back up:** *⋮ → Back up my notes…* saves everything (ink, highlights, pictures, notes, sketch pages, layers, reading stats and imported Bibles) in one .zip file.
 - **Automatic backups:** *Settings → Backup* makes one daily or weekly, keeping the newest 5, in a folder you choose (e.g. a synced Google Drive folder).
-- **Restore:** *Settings → Backup → Restore from backup…* puts a backup back on this tablet or a new one. It replaces what's there.
+- **Restore:** *Settings → Backup → Restore from backup…* puts a backup back on this tablet or a new one. It replaces what's there. With sync on, the restored notes then go to your other devices too.
 
 ## Settings
 

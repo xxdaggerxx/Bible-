@@ -54,6 +54,7 @@ class MainActivity : ComponentActivity() {
         vm.userActive()
         vm.startReadingClock() // time spent away isn't counted
         ticks.postDelayed(tick, 15_000)
+        vm.syncNow() // SYNC-1: what was done on the other devices
     }
 
     override fun onStop() {
@@ -62,5 +63,6 @@ class MainActivity : ComponentActivity() {
         ticks.removeCallbacks(tick)
         vm.savePrefs()
         vm.autoBackupIfDue() // DATA-6: a backup each day or week, when the app goes to the background
+        vm.syncNow() // SYNC-1: send what was done here
     }
 }
