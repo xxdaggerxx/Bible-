@@ -42,7 +42,7 @@ Ink & Word works on phones too, with or without a pen. It looks like it does on 
 - **Phones start in read mode.** One finger scrolls and taps, so you can read straight away. Pick the pen, highlighter or another tool in the toolbar and read mode turns off by itself; tap the lock to read again.
 - **Drawing with a finger.** On a phone, *Draw with finger* is on at first. One finger draws; put two fingers down to scroll and pinch to zoom. Lift without moving for a dot.
 - **The toolbar slides.** Buttons that don't fit slide sideways; swipe along the toolbar to reach them. The ⋮ menu always stays at the right end, with *Settings* in it.
-- **One panel at a time.** With a study view open beside the Bible, the phone shows one and folds the other into a slim bar at the bottom (*John 3 (KJV)*). Tap the bar (*Show*) to swap them.
+- **Two panels, top and bottom.** Held upright, a phone shows a study view below the Bible, as a tablet can. Drag the bar between them to give one more room; double-tap it to make them equal. Turned on its side, the phone shows one panel and folds the other into a slim bar at the bottom (*John 3 (KJV)*); tap the bar (*Show*) to swap them.
 - **Margins fold away.** The margins are hidden at the side of the page. Tap the ‹ tab at the edge to slide them in, and again to put them away.
 - **Big windows fill the screen**, such as Settings and the book picker.
 
@@ -288,7 +288,7 @@ The notes button (a page with a pencil) lists your **Notes**, **Highlights** and
 
 In *Settings → Reading*:
 
-- **Page:** light, sepia or dark.
+- **Page:** dark (at first), light or sepia.
 - **Font:** Gentium Book, Serif or Sans-serif.
 - **Line spacing:** more room to write between lines.
 - **Layout:** one verse per line, or paragraphs.

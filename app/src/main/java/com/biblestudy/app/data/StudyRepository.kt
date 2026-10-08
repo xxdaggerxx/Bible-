@@ -91,10 +91,7 @@ class StudyRepository(private val context: Context) {
         val file = context.getDatabasePath("${name}_v$version.db")
         if (!file.exists()) {
             file.parentFile?.listFiles()?.filter { it.name.startsWith("${name}_v") && it.name != file.name }?.forEach { it.delete() }
-            file.parentFile?.mkdirs()
-            val tmp = File(file.path + ".tmp")
-            context.assets.open("study/$name.db").use { input -> tmp.outputStream().use { input.copyTo(it) } }
-            tmp.renameTo(file)
+            PackedAssets.copy(context, "study/$name.db", file)
         }
         return SQLiteDatabase.openDatabase(file.path, null, SQLiteDatabase.OPEN_READONLY)
     }

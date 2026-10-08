@@ -1,6 +1,12 @@
 import java.util.Base64
 import java.util.Properties
 
+buildscript {
+    repositories { mavenCentral() }
+    // Packs the bundled databases as xz at build time (see packAssets below).
+    dependencies { classpath("org.tukaani:xz:1.10") }
+}
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -72,8 +78,8 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 49
-        versionName = "2.0.0"
+        versionCode = 50
+        versionName = "2.1.0"
         buildConfigField("String", "YOUVERSION_KEY", "\"$youVersionKey\"")
         buildConfigField("String", "ESV_KEY", "\"$esvKey\"")
         buildConfigField("String", "NLT_KEY", "\"$nltKey\"")
@@ -82,6 +88,13 @@ android {
     // The commentaries are already packed tightly (xz); don't zip them again.
     androidResources {
         noCompress += "xz"
+    }
+
+    // The big databases ship packed as xz from packAssets (below), not as they are in src/main/assets.
+    // (The first part of the pattern is Android's default list of files to leave out.)
+    androidResources {
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~:" +
+            "!kjv.db:!bsb.db:!web.db:!study.db:!original.db"
     }
 
     signingConfigs {
@@ -156,6 +169,50 @@ dependencies {
     testImplementation("androidx.test:core:1.6.1")
     testImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+}
+
+/**
+ * The Bibles, study data and Hebrew/Greek text are kept as plain SQLite files in src/main/assets,
+ * where the tools in tools/ build and read them. The app ships them packed as xz, about a third
+ * smaller than the APK's own zip compression (roughly 21 MB instead of 33 MB), and unpacks each
+ * once on first use, as it already does for the commentaries (data/PackedAssets.kt).
+ */
+val packedAssetPaths = listOf("bibles/kjv.db", "bibles/bsb.db", "bibles/web.db", "study/study.db", "study/original.db")
+
+abstract class PackAssets : DefaultTask() {
+    @get:InputFiles @get:PathSensitive(PathSensitivity.RELATIVE)
+    abstract val sources: ConfigurableFileCollection
+    @get:Input
+    abstract val paths: ListProperty<String>
+    @get:Internal
+    abstract val root: DirectoryProperty
+    @get:OutputDirectory
+    abstract val outDir: DirectoryProperty
+
+    @TaskAction
+    fun pack() {
+        val out = outDir.get().asFile
+        out.deleteRecursively()
+        val root = root.get().asFile
+        for (rel in paths.get()) {
+            val dest = File(out, "$rel.xz").apply { parentFile.mkdirs() }
+            File(root, rel).inputStream().buffered(1 shl 16).use { input ->
+                dest.outputStream().buffered(1 shl 16).use { raw ->
+                    org.tukaani.xz.XZOutputStream(raw, org.tukaani.xz.LZMA2Options(9)).use { input.copyTo(it, 1 shl 16) }
+                }
+            }
+        }
+    }
+}
+
+val packAssets = tasks.register<PackAssets>("packAssets") {
+    paths.set(packedAssetPaths)
+    root.set(layout.projectDirectory.dir("src/main/assets"))
+    sources.from(packedAssetPaths.map { "src/main/assets/$it" })
+}
+
+androidComponents {
+    onVariants { variant -> variant.sources.assets?.addGeneratedSourceDirectory(packAssets, PackAssets::outDir) }
 }
 
 // Print each test as it starts and finishes, so a stuck test is easy to spot.

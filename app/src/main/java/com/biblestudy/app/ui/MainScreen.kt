@@ -181,13 +181,14 @@ fun StudyApp(vm: StudyViewModel) {
                         ) { Handle(vertical = !stacked) }
                     }
 
-                    // On a phone a second panel opened (a study view, say) comes to the front.
+                    // On a phone on its side a second panel opened (a study view, say) comes to the front.
                     LaunchedEffect(tab, slots.size, slots.lastOrNull()) { if (slots.size == 2) vm.phoneShown = 1 }
                     key(tab) {
                         if (slots.size < 2) {
                             slots.firstOrNull()?.let { Cell(it, Modifier.fillMaxSize()) }
-                        } else if (phone) {
-                            // Phones show one panel at a time; the other is a bar to tap (PH-6).
+                        } else if (phone && !stacked) {
+                            // A phone on its side shows one panel at a time; the other is a bar to tap (PH-6).
+                            // Upright, it splits top and bottom like a tablet.
                             val shown = vm.phoneShown.coerceIn(0, 1)
                             Column(Modifier.fillMaxSize()) {
                                 Cell(slots[shown], Modifier.weight(1f).fillMaxWidth())

@@ -1,4 +1,4 @@
-# Ink & Word — version 2.0.0
+# Ink & Word — version 2.1.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger.
 
@@ -71,6 +71,13 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.1.0
+
+- **Dark by default.** New installs start with the dark page; light and sepia are in *Settings → Reading → Page*. *Reset settings to defaults* goes back to dark (and, on a phone, to finger drawing and read mode).
+- **Phones split top and bottom.** Held upright, a phone shows two panels one above the other (the Bible and a study view, say), with the bar between them to drag. On its side, it still shows one panel and folds the other into a bar. The *Side by side / Top and bottom* choice is hidden on phones, which choose by how they're held.
+- **A smaller download: 88.7 MB, down from 100.8 MB.** The three built-in Bibles, the study data and the Hebrew and Greek text now ship packed as xz, like the commentaries, and are unpacked once when first needed. The build packs them (`packAssets` in `app/build.gradle.kts`); the plain files stay in `src/main/assets` for the tools in `tools/`.
+- Known gaps: the first start unpacks about 100 MB of data, a few seconds longer than before on a slow phone. Most of the app's code (about 16 MB) is the Claude API library for the AI chat; a smaller client could cut that later.
 
 ## New in version 2.0.0
 

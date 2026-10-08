@@ -3728,6 +3728,8 @@ class FeatureTest {
         // Phones start reading, and a finger draws once a tool is picked (PH-2, PH-3). (The test set-up
         // resets both for every test, so they're set here as a phone starts.)
         compose.runOnUiThread { vm.readMode = true; vm.fingerDraw = true }
+        // The app starts dark.
+        assertEquals(com.biblestudy.app.ui.PageTheme.DARK, vm.theme)
         compose.onNodeWithText("John 3").assertIsDisplayed()
         snap("180-phone-$name")
         // The ⋮ menu stays on screen however many buttons don't fit; Settings fills the screen.
@@ -3746,10 +3748,20 @@ class FeatureTest {
         snap("182-phone-$name-picker")
         compose.onAllNodesWithContentDescription("Close")[0].performClick()
         compose.waitForIdle()
-        // A study view comes to the front; the Bible is a bar to tap, and back again (PH-6).
+        // Upright, a study view opens below the Bible (top and bottom); on its side, the study view
+        // comes to the front and the Bible is a bar to tap, and back again (PH-6).
         compose.runOnUiThread { vm.sidePane = PaneKind.CROSSREFS }
         waitForLoaded()
         compose.onNodeWithTag("pane").assertIsDisplayed()
+        if (!vm.landscape) {
+            compose.onNodeWithTag("reader0").assertIsDisplayed()
+            assertTrue(vm.isStacked())
+            assertTrue(compose.onAllNodesWithTag("collapsedPanel").fetchSemanticsNodes().isEmpty())
+            snap("183-phone-$name-study")
+            compose.runOnUiThread { vm.sidePane = null }
+            waitForLoaded()
+            return
+        }
         compose.onNodeWithTag("collapsedPanel").assertIsDisplayed()
         compose.onNodeWithText("John 3 (KJV)", substring = true).assertExists()
         snap("183-phone-$name-study")

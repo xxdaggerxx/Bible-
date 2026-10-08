@@ -42,12 +42,7 @@ class BibleRepository(context: Context, val version: BibleVersion) {
         if (!version.imported && !file.exists()) {
             // Remove copies of older bundled databases.
             file.parentFile?.listFiles()?.filter { it.name.startsWith(base) && it.name != file.name }?.forEach { it.delete() }
-            file.parentFile?.mkdirs()
-            val tmp = File(file.path + ".tmp")
-            context.assets.open("bibles/${version.asset}").use { input ->
-                tmp.outputStream().use { output -> input.copyTo(output) }
-            }
-            tmp.renameTo(file)
+            PackedAssets.copy(context, "bibles/${version.asset}", file)
         }
         db = SQLiteDatabase.openDatabase(file.path, null, if (version.online > 0) SQLiteDatabase.OPEN_READWRITE else SQLiteDatabase.OPEN_READONLY)
         books = db.rawQuery("SELECT id, name, osis, chapters FROM books ORDER BY id", null).use { c ->

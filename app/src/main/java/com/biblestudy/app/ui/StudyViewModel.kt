@@ -539,7 +539,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * the open passages are not touched.
      */
     fun resetSettings() {
-        theme = PageTheme.LIGHT
+        theme = PageTheme.DARK
         changeTextFont(TextFont.BOOK)
         changeParagraphs(false)
         changeVerseNumbers(true)
@@ -548,13 +548,13 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         lineSpacing = LineSpacing.NORMAL
         showHeadings = true
         newPanelVersion = null
-        fingerDraw = false
+        fingerDraw = phone // a phone draws with a finger (PH-3)
         sideButton = SideButton.entries.first()
         partialEraser = false
         snapHighlights = true
         fastInk = true
         underlineMode = false
-        readMode = false
+        readMode = phone // and starts reading (PH-2)
         penSize = 1; highlightSize = 1
         highlightsAllVersions = true
         marginLeft = false; marginRight = true
@@ -689,7 +689,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     )
     var marginLeft by mutableStateOf(prefs.getBoolean("marginLeft", false))
     var marginRight by mutableStateOf(prefs.getBoolean("marginRight", true))
-    var theme by mutableStateOf(runCatching { PageTheme.valueOf(prefs.getString("theme", "LIGHT")!!) }.getOrDefault(PageTheme.LIGHT))
+    var theme by mutableStateOf(runCatching { PageTheme.valueOf(prefs.getString("theme", "DARK")!!) }.getOrDefault(PageTheme.DARK)) // dark at first
     /** A tab holds at most two panels (SPLIT-8); more go in other tabs. */
     val maxPanels = 2
     /** The window's width class (ADP-1). */
@@ -1174,7 +1174,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Top and bottom (true) or side by side (false), as chosen for the tab in front. */
-    fun isStacked(t: TabState = tab): Boolean = t.stacked ?: !landscape
+    /** Phones always split top and bottom when upright (PH-6). */
+    fun isStacked(t: TabState = tab): Boolean = if (phone) !landscape else t.stacked ?: !landscape
 
     fun setStacked(stacked: Boolean) { tab.stacked = stacked }
 

@@ -79,8 +79,8 @@ fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: 
         HorizontalDivider()
         if (vm.tab.shown < 2) {
             DropdownMenuItem(text = { Text("Add a panel beside") }, onClick = { onDismiss(); vm.addPanel() })
-        } else {
-            // One item: switch to the other arrangement.
+        } else if (!vm.phone) {
+            // One item: switch to the other arrangement. (Phones choose by how they're held.)
             val stacked = vm.isStacked()
             DropdownMenuItem(
                 text = { Text(if (stacked) "Side by side" else "Top and bottom") },
