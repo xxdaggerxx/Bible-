@@ -6,7 +6,7 @@
 
 Each version is on the repository's **Releases** page (on GitHub, *Releases* on the right of the main page). Open the latest one and download **InkAndWord-x.y.z.apk** on your tablet or phone, then tap it to install (Android asks you to allow installing from that source). It installs over the previous version and keeps your notes.
 
-Releases are built by GitHub itself: pushing a tag like `v2.0.0` runs the *Release* workflow (`.github/workflows/release.yml`), which builds the signed APK and publishes it. The online Bible keys come from the repository's Actions secrets `YOUVERSION_KEY`, `ESV_KEY` and `NLT_KEY` (*Settings → Secrets and variables → Actions*); the workflow stops if any is missing. APKs are no longer kept in the repository's `releases/` folder: at about 100 MB they hit GitHub's limit for one file.
+Releases are built by GitHub itself: when a push changes the version in `app/build.gradle.kts`, the *Release* workflow (`.github/workflows/release.yml`) builds the signed APK and publishes it as the release `vX.Y.Z` (it skips versions already released). It can also be run by hand from the *Actions* tab. The online Bible keys come from the repository's Actions secrets `YOUVERSION_KEY`, `ESV_KEY` and `NLT_KEY` (*Settings → Secrets and variables → Actions*); the workflow stops if any is missing. APKs are no longer kept in the repository's `releases/` folder: at about 100 MB they hit GitHub's limit for one file.
 
 ## Build and install it yourself (about 30 minutes the first time)
 
@@ -82,7 +82,7 @@ Then update `keystore.properties` with the new password, add `keystore.propertie
   - **Margins fold away** at the side of the page, as on a narrow tablet; the ‹ tab slides them in.
   - **Settings, the book picker and other big windows fill the screen**; the picker's colour key wraps.
 - **Fixed:** going to a passage could be pulled back to an earlier chapter when the panel was still waiting to follow a commentary or a linked panel to it.
-- **Releases move to GitHub Releases.** The APK is no longer committed to `releases/` (it was 96 MB, near GitHub's 100 MB limit per file, and each one stayed in the history). Tagging a version builds and publishes it; see *Download the app* at the top.
+- **Releases move to GitHub Releases.** The APK is no longer committed to `releases/` (it was 96 MB, near GitHub's 100 MB limit per file, and each one stayed in the history). Each version bump is built and published by GitHub; see *Download the app* at the top.
 - Known gaps (for 2.1): the toolbars don't hide while scrolling in landscape; sketch pages aren't fitted to phones yet; pen-only settings (S Pen button, hover) still show on phones without a pen.
 
 ## New in version 1.22.1
