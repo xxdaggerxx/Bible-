@@ -110,4 +110,28 @@ class YouVersionTest {
         }
         assertTrue(hits.toString(), hits.any { it.first == BibleImport.vid(43, 3, 3) && "born again" in it.second })
     }
+
+    @Test
+    fun asksTyndaleForThessaloniansAndJohnsLettersByItsOwnNames() {
+        val nlt = com.biblestudy.app.data.Nlt
+        // Tyndale returns no verses for "1Thess", "2Thess", "1John", "2John" or "3John".
+        assertEquals(listOf("1Thes", "2Thes", "1Jn", "2Jn", "3Jn"), listOf(52, 53, 62, 63, 64).map(nlt::code))
+        assertEquals("John", nlt.code(43))
+        assertEquals("Col", nlt.code(51))
+        assertEquals(52, nlt.bookOf("1Thes"))
+        assertEquals(64, nlt.bookOf("3Jn"))
+        assertEquals(43, nlt.bookOf("John"))
+        val (realKey, realHttp) = nlt.key to nlt.http
+        val asked = ArrayList<String>()
+        nlt.key = "test"
+        nlt.http = { url -> asked += url; 200 to "<table><tr><td><a href=\"x\">1Thes.4.9</a></td><td>Now concerning brotherly love</td></tr></table>" }
+        val hits = try {
+            nlt.chapterUsfm(52, 1)
+            nlt.search("brotherly love")
+        } finally {
+            nlt.key = realKey; nlt.http = realHttp
+        }
+        assertTrue(asked.toString(), "ref=1Thes.1&" in asked.first())
+        assertEquals(listOf(BibleImport.vid(52, 4, 9)), hits.map { it.first })
+    }
 }

@@ -72,6 +72,10 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.5.1
+
+- **Fixed:** the NLT showed nothing in 1 and 2 Thessalonians and 1, 2 and 3 John. Tyndale's NLT API doesn't know those books by their standard names (`1Thess`, `1John`), so it sent back no verses; the app now asks for `1Thes`, `2Thes`, `1Jn`, `2Jn` and `3Jn`, and search results in them are found too. Chapters of these books already kept empty (by reading them or *Save for offline*) download again the next time they're read.
+
 ## New in version 2.5.0
 
 - **Reading stats sync** with *Sync with Google Drive*: each device keeps its own counts, and the stats add up all devices (time, chapters opened and read; the last read is the latest anywhere). Clearing reading stats clears them on every device. Existing stats are kept (database version 11).

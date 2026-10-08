@@ -35,10 +35,22 @@ object Nlt {
 
     /** A chapter as USFM (see [toUsfm]); null if the NLT doesn't have it. */
     fun chapterUsfm(book: Int, chapter: Int): String? {
-        val html = call("$BASE/passages?ref=${BibleImport.OSIS[book - 1]}.$chapter&version=NLT&key=${enc(key)}")
+        val html = call("$BASE/passages?ref=${code(book)}.$chapter&version=NLT&key=${enc(key)}")
         if ("verse_export" !in html) return null
         return toUsfm(html, book, chapter)
     }
+
+    /**
+     * Tyndale's name for a book: the OSIS name, except Thessalonians and the letters of John, which
+     * the NLT API doesn't know by their OSIS names (it answers "1Thess.1" with no verses).
+     */
+    private val CODES = mapOf(52 to "1Thes", 53 to "2Thes", 62 to "1Jn", 63 to "2Jn", 64 to "3Jn")
+
+    fun code(book: Int): String = CODES[book] ?: BibleImport.OSIS[book - 1]
+
+    /** The book a Tyndale or OSIS name stands for; 0 if none. */
+    fun bookOf(name: String): Int =
+        CODES.entries.firstOrNull { it.value == name }?.key ?: (BibleImport.OSIS.indexOf(name) + 1)
 
     private val RESULT = Regex("<td><a[^>]*>([1-3]?[A-Za-z]+)\\.(\\d+)\\.(\\d+)</a></td>\\s*<td>(.*?)</td>", RegexOption.DOT_MATCHES_ALL)
 
@@ -48,7 +60,7 @@ object Nlt {
         if (q.isEmpty()) return emptyList()
         val html = call("$BASE/search?text=${enc(q)}&version=NLT&key=${enc(key)}")
         return RESULT.findAll(html).mapNotNull { m ->
-            val book = BibleImport.OSIS.indexOf(m.groupValues[1]) + 1
+            val book = bookOf(m.groupValues[1])
             if (book == 0) return@mapNotNull null
             val text = YouVersion.decode(m.groupValues[4].replace(Regex("<[^>]*>"), "")).replace(Regex("\\s+"), " ").trim()
             BibleImport.vid(book, m.groupValues[2].toInt(), m.groupValues[3].toInt()) to text

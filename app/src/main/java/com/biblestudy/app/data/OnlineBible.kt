@@ -56,6 +56,15 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
                 null,
             ).use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getInt(1)) } }.forEach { (b, ch) -> drop(b, ch) }
         }
+        // Until 2.5.1 the NLT asked Tyndale for Thessalonians and John's letters by names it
+        // doesn't know, and kept their chapters with no verses: those download again.
+        if (id == Nlt.ID && meta("nltNamesFixed") == null) synchronized(LOCK) {
+            db.execSQL(
+                "DELETE FROM fetched WHERE book IN (52, 53, 62, 63, 64) AND NOT EXISTS " +
+                    "(SELECT 1 FROM verses v WHERE v.book = fetched.book AND v.chapter = fetched.chapter)",
+            )
+            db.execSQL("INSERT OR REPLACE INTO meta VALUES('nltNamesFixed', '1')")
+        }
     }
 
     /** Chapters marked as read this session, so reading doesn't write to the database every time. */
