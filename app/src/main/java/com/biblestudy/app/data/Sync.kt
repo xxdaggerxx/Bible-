@@ -174,8 +174,12 @@ class SyncEngine(
     }
 
     /** Applies one row if it's newer than what's here. Returns whether anything changed. */
-    private fun applyRow(db: SQLiteDatabase, row: Row): Boolean {
-        val table = Sync.TABLES.firstOrNull { it.name == row.table } ?: return false
+    private fun applyRow(db: SQLiteDatabase, sent: Row): Boolean {
+        val table = Sync.TABLES.firstOrNull { it.name == sent.table } ?: return false
+        // This device's own reading stats, coming back (from a full copy): kept as '' here.
+        val row = if (table.perDevice && sent.key.startsWith("$device|")) {
+            Row(sent.table, sent.key.removePrefix(device), sent.at, sent.dev, sent.deleted, sent.values + ("dev" to ""))
+        } else sent
         val meta = Sync.meta(db, table.name, row.key)
         // A typed note changed here and on another device before either synced: keep both texts.
         if (table.name == "notes" && meta != null && meta.pending && row.at > meta.base && !row.deleted) {
@@ -282,13 +286,14 @@ class SyncEngine(
         val cols: Map<String, Any?>? = if (k.deleted) null else Sync.readRow(db, t, k.key)
         w.beginObject()
         w.name("t").value(t.name)
-        w.name("k").value(k.key)
+        w.name("k").value(if (t.perDevice && k.key.startsWith("|")) device + k.key else k.key)
         w.name("at").value(k.at)
         w.name("dev").value(k.dev.ifEmpty { device })
         w.name("del").value(cols == null)
         if (cols != null) {
             w.name("v").beginObject()
-            for ((c, v) in cols) {
+            for ((c, v0) in cols) {
+                val v = if (t.perDevice && c == "dev" && v0 == "") device else v0
                 w.name(c)
                 when (v) {
                     null -> w.nullValue()
@@ -330,8 +335,12 @@ class SyncEngine(
 
 /** The synced tables and the bookkeeping the [SyncEngine] keeps in the notes database. */
 object Sync {
-    /** A synced table: rows are matched across devices by [keys]; [hasBook] rows may sit on a sketch page. */
-    class Table(val name: String, val keys: List<String>, val hasBook: Boolean)
+    /**
+     * A synced table: rows are matched across devices by [keys]; [hasBook] rows may sit on a sketch
+     * page. [perDevice] tables (reading stats) have a `dev` column, '' for this device's own rows,
+     * which is sent as the device's id; each device only adds to its own rows.
+     */
+    class Table(val name: String, val keys: List<String>, val hasBook: Boolean, val perDevice: Boolean = false)
 
     /** In the order they're applied: layers and sketch pages before what's on them. */
     val TABLES = listOf(
@@ -345,6 +354,8 @@ object Sync {
         Table("bookmarks", listOf("id"), true),
         Table("tags", listOf("item", "tag"), false),
         Table("meanings", listOf("color"), false),
+        Table("reading_days", listOf("dev", "day"), false, perDevice = true),
+        Table("reading_chapters", listOf("dev", "book", "chapter"), false, perDevice = true),
     )
 
     const val SKETCH_BOOK = 1000
@@ -384,7 +395,7 @@ object Sync {
      * long ago so that a newer change from another device wins.
      */
     fun seed(db: SQLiteDatabase) {
-        val done = db.rawQuery("SELECT v FROM sync_state WHERE k = 'seeded'", null).use { it.moveToFirst() }
+        val done = db.rawQuery("SELECT v FROM sync_state WHERE k = 'seeded11'", null).use { it.moveToFirst() }
         if (done) return
         db.beginTransaction()
         try {
@@ -394,7 +405,7 @@ object Sync {
                         "SELECT '${t.name}', ${keyExpr(t, t.name)}, 1, '', 1, 0 FROM ${t.name}"
                 )
             }
-            db.execSQL("INSERT OR REPLACE INTO sync_state(k, v) VALUES('seeded', '1')")
+            db.execSQL("INSERT OR REPLACE INTO sync_state(k, v) VALUES('seeded11', '1')")
             db.setTransactionSuccessful()
         } finally {
             db.endTransaction()
@@ -406,7 +417,7 @@ object Sync {
      * over older copies on other devices.
      */
     fun markAllChanged(db: SQLiteDatabase) {
-        db.execSQL("DELETE FROM sync_state WHERE k = 'seeded'")
+        db.execSQL("DELETE FROM sync_state WHERE k = 'seeded11'")
         db.execSQL("DELETE FROM sync_meta")
         seed(db)
         db.execSQL("UPDATE sync_meta SET at = $NOW")

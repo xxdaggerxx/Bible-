@@ -5,6 +5,14 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.gestures.animateScrollBy
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material3.surfaceColorAtElevation
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.platform.testTag
+import kotlinx.coroutines.launch
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -104,10 +112,22 @@ fun StudyToolbar(
             verticalAlignment = Alignment.CenterVertically,
         ) {
         // The buttons scroll sideways where they don't fit (a phone, PH-1); the ⋮ menu stays in reach.
+        // An arrow at the edge shows there are more (PH-15), and the first time the row slides a little.
+        val toolScroll = rememberScrollState()
+        val scope = rememberCoroutineScope()
+        LaunchedEffect(toolScroll.maxValue > 0) {
+            if (toolScroll.maxValue > 0 && vm.takeToolbarHint()) {
+                kotlinx.coroutines.delay(800)
+                toolScroll.animateScrollTo(minOf(toolScroll.maxValue, 160))
+                kotlinx.coroutines.delay(400)
+                toolScroll.animateScrollTo(0)
+            }
+        }
+        Box(Modifier.weight(1f)) {
         Row(
             Modifier
-                .weight(1f)
-                .horizontalScroll(rememberScrollState())
+                .fillMaxWidth()
+                .horizontalScroll(toolScroll)
                 .padding(start = 8.dp, top = 4.dp, bottom = 4.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(2.dp),
@@ -284,6 +304,14 @@ fun StudyToolbar(
             IconButton(onClick = onSearch) { Icon(Icons.Filled.Search, contentDescription = "Search") }
             IconButton(onClick = onNotes) { Icon(Icons.Filled.EditNote, contentDescription = "My notes") }
 
+        }
+        val edge = MaterialTheme.colorScheme.surfaceColorAtElevation(3.dp)
+        if (toolScroll.canScrollBackward) ScrollHint(
+            Modifier.align(Alignment.CenterStart), edge, left = true,
+        ) { scope.launch { toolScroll.animateScrollBy(-toolScroll.viewportSize * 0.7f) } }
+        if (toolScroll.canScrollForward) ScrollHint(
+            Modifier.align(Alignment.CenterEnd), edge, left = false,
+        ) { scope.launch { toolScroll.animateScrollBy(toolScroll.viewportSize * 0.7f) } }
         }
             var menu by remember { mutableStateOf(false) }
             Box(Modifier.padding(end = 8.dp)) {
@@ -463,5 +491,26 @@ private fun StepButton(
                 DropdownMenuItem(text = { Text(vm.screenLabel(s)) }, onClick = { list = false; onPick(n) })
             }
         }
+    }
+}
+
+/** An arrow fading in at the toolbar's edge when more buttons are that way (PH-15); tap it to slide. */
+@Composable
+private fun ScrollHint(modifier: Modifier, edge: Color, left: Boolean, onClick: () -> Unit) {
+    val fade = if (left) listOf(edge, edge, edge.copy(alpha = 0f)) else listOf(edge.copy(alpha = 0f), edge, edge)
+    Box(
+        modifier
+            .width(40.dp)
+            .height(48.dp)
+            .background(androidx.compose.ui.graphics.Brush.horizontalGradient(fade))
+            .clickable(onClick = onClick)
+            .testTag(if (left) "toolbarScrollLeft" else "toolbarScrollRight"),
+        contentAlignment = if (left) Alignment.CenterStart else Alignment.CenterEnd,
+    ) {
+        Icon(
+            if (left) Icons.AutoMirrored.Filled.KeyboardArrowLeft else Icons.AutoMirrored.Filled.KeyboardArrowRight,
+            contentDescription = if (left) "Earlier buttons" else "More buttons",
+            tint = MaterialTheme.colorScheme.primary,
+        )
     }
 }

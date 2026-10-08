@@ -225,4 +225,59 @@ class SyncTest {
         }
         assertNull(tablet.db.note(2, 1, 1))
     }
+
+    @Test
+    fun readingStatsFromBothDevicesAddUp() {
+        val tablet = Device("tablet"); val phone = Device("phone")
+        tablet.db.addReading("2026-10-08", 43, 3, 300, study = false)
+        tablet.db.addOpen(43, 3)
+        tablet.db.markRead(43, 3, 1000L)
+        phone.db.addReading("2026-10-08", 43, 3, 200, study = true)
+        phone.db.addOpen(43, 3)
+        phone.db.markRead(43, 3, 2000L)
+        phone.db.addStudy("2026-10-09", 60)
+        tablet.sync(); phone.sync(); tablet.sync()
+        for (d in listOf(tablet, phone)) {
+            assertEquals(listOf(Triple("2026-10-08", 500, 200), Triple("2026-10-09", 0, 60)), d.db.readingDays())
+            val ch = d.db.readingChapters().single()
+            assertEquals(500, ch.seconds); assertEquals(2, ch.opens); assertEquals(2, ch.timesRead); assertEquals(2000L, ch.lastRead)
+        }
+        // More reading on the tablet adds to its own count only.
+        tablet.db.addReading("2026-10-08", 43, 3, 100, study = false)
+        tablet.sync(); phone.sync()
+        assertEquals(600, phone.db.readingDays().first().second)
+        // A full copy brings a device's own counts back to it unchanged.
+        val fresh = Device("phone2")
+        fresh.sync()
+        assertEquals(600, fresh.db.readingDays().first().second)
+        // Clearing the stats clears them everywhere.
+        phone.db.clearReading()
+        phone.sync(); tablet.sync()
+        assertTrue(tablet.db.readingDays().isEmpty())
+        assertTrue(tablet.db.readingChapters().isEmpty())
+    }
+
+    @Test
+    fun readingStatsFromBeforeVersion11AreKept() {
+        val name = "sync-old.db"
+        app.deleteDatabase(name)
+        UserDb(app, name).writableDatabase.apply {
+            // Version 10's reading tables, without the device column.
+            execSQL("DROP TABLE reading_days"); execSQL("DROP TABLE reading_chapters")
+            execSQL("CREATE TABLE reading_days(day TEXT PRIMARY KEY, read_s INTEGER NOT NULL, study_s INTEGER NOT NULL)")
+            execSQL(
+                "CREATE TABLE reading_chapters(book INTEGER NOT NULL, chapter INTEGER NOT NULL, seconds INTEGER NOT NULL, opens INTEGER NOT NULL, " +
+                    "times_read INTEGER NOT NULL, last_read INTEGER NOT NULL, PRIMARY KEY(book, chapter))"
+            )
+            execSQL("INSERT INTO reading_days VALUES('2026-01-01', 120, 30)")
+            execSQL("INSERT INTO reading_chapters VALUES(19, 23, 120, 2, 1, 5)")
+            version = 10
+            close()
+        }
+        val db = UserDb(app, name).also { opened += it }
+        assertEquals(listOf(Triple("2026-01-01", 120, 30)), db.readingDays())
+        assertEquals(120, db.readingChapters().single().seconds)
+        db.addReading("2026-01-01", 19, 23, 15, study = false)
+        assertEquals(135, db.readingDays().single().second)
+    }
 }

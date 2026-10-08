@@ -3406,6 +3406,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         tags.clear(); tags.putAll(user.tags())
         meanings.clear(); meanings.putAll(user.meanings())
         sketches.clear(); sketches.addAll(user.sketches()) // sketch pages (SKT)
+        readingGeneration++ // reading stats come from every device (SYNC-11)
         // A panel showing a sketch page deleted on another device goes back to the Bible.
         for (i in panels.indices) if (Sketch.isSketch(panels[i].book) && sketchOf(panels[i].book) == null) {
             val (b, c) = biblePlaceBefore(panels[i])
@@ -3528,6 +3529,13 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             }
         }
         return syncJob
+    }
+
+    /** Whether to slide the toolbar once to show it scrolls (PH-15): only the first time it doesn't fit. */
+    fun takeToolbarHint(): Boolean {
+        if (prefs.getBoolean("toolbarHinted", false)) return false
+        prefs.edit { putBoolean("toolbarHinted", true) }
+        return true
     }
 
     /** A local number for a sketch page from another device, never one this device has used. */

@@ -1525,6 +1525,8 @@ class FeatureTest {
         val width = compose.activity.window.decorView.width
         assertTrue("More button at ${more.boundsInRoot.right} of $width", more.boundsInRoot.right <= width)
         snap("70-toolbar")
+        // Everything fits on the tablet, so no scroll arrows (PH-15).
+        assertTrue(compose.onAllNodesWithTag("toolbarScrollRight").fetchSemanticsNodes().isEmpty())
 
         // Colours and sizes open from one button.
         compose.onNodeWithContentDescription("Pen colour and size").performClick()
@@ -3841,6 +3843,20 @@ class FeatureTest {
         assertEquals(com.biblestudy.app.ui.PageTheme.DARK, vm.theme)
         compose.onNodeWithText("John 3").assertIsDisplayed()
         snap("180-phone-$name")
+        // The toolbar shows it has more buttons: an arrow at its edge slides it along (PH-15).
+        val more = compose.onAllNodesWithTag("toolbarScrollRight").fetchSemanticsNodes().isNotEmpty()
+        if (!vm.landscape) assertTrue("upright, the toolbar doesn't fit", more)
+        if (more) {
+        assertTrue(compose.onAllNodesWithTag("toolbarScrollLeft").fetchSemanticsNodes().isEmpty())
+        compose.onNodeWithTag("toolbarScrollRight").performClick()
+        compose.waitForIdle()
+        compose.onNodeWithTag("toolbarScrollLeft").assertIsDisplayed()
+        snap("191-phone-$name-toolbar-slid")
+        while (compose.onAllNodesWithTag("toolbarScrollLeft").fetchSemanticsNodes().isNotEmpty()) {
+            compose.onNodeWithTag("toolbarScrollLeft").performClick()
+            compose.waitForIdle()
+        }
+        }
         // The ⋮ menu stays on screen however many buttons don't fit; Settings fills the screen.
         compose.onNodeWithContentDescription("More").assertIsDisplayed()
         compose.onNodeWithContentDescription("More").performClick()

@@ -41,7 +41,7 @@ Ink & Word works on phones too, with or without a pen. It looks like it does on 
 
 - **Phones start in read mode.** One finger scrolls and taps, so you can read straight away. Pick the pen, highlighter or another tool in the toolbar and read mode turns off by itself; tap the lock to read again.
 - **Drawing with a finger.** On a phone, *Draw with finger* is on at first. One finger draws; put two fingers down to scroll and pinch to zoom. Lift without moving for a dot.
-- **The toolbar slides.** Buttons that don't fit slide sideways; swipe along the toolbar to reach them. The ⋮ menu always stays at the right end, with *Settings* in it.
+- **The toolbar slides.** Buttons that don't fit slide sideways: a › arrow at the toolbar's edge shows there are more. Tap the arrow, or swipe along the toolbar, to reach them; a ‹ arrow takes you back. The first time, the toolbar slides a little by itself to show this. The ⋮ menu always stays at the right end, with *Settings* in it.
 - **Two panels, top and bottom.** Held upright, a phone shows a study view below the Bible, as a tablet can. Drag the bar between them to give one more room; double-tap it to make them equal. Turned on its side, the phone shows one panel and folds the other into a slim bar at the bottom (*John 3 (KJV)*); tap the bar (*Show*) to swap them.
 - **Margins fold away.** The margins are hidden at the side of the page. Tap the ‹ tab at the edge to slide them in, and again to put them away.
 - **Big windows fill the screen**, such as Settings and the book picker.
@@ -282,7 +282,7 @@ The notes button (a page with a pencil) lists your **Notes**, **Highlights** and
 
 ## Reading stats
 
-*⋮ → Reading stats* shows how much of the Bible you've read, time spent, days in a row, your last 30 days, your most-read chapters and a grid of every chapter. A chapter counts as read after a minute in it, scrolled through most of the way. It's kept only on this tablet. Turn counting off or clear it in *Settings → Reading*.
+*⋮ → Reading stats* shows how much of the Bible you've read, time spent, days in a row, your last 30 days, your most-read chapters and a grid of every chapter. A chapter counts as read after a minute in it, scrolled through most of the way. It's kept on this device, and with *Sync with Google Drive* on, your devices' times are added together. Turn counting off or clear it in *Settings → Reading* (with sync on, clearing clears it on every device).
 
 ## Reading layout and page look
 
@@ -327,8 +327,8 @@ Your ink and highlights stay on their words whatever you choose.
 Your notes can be the same on your phone and your tablet, through your own Google Drive.
 
 - **Turn it on:** *Settings → Sync → Sync with Google Drive*. Choose your Google account and tap *Allow*. Do this once on each device, with the same Google account.
-- **What syncs:** ink, highlights, text boxes, pictures, typed notes, bookmarks, tags, colour meanings, layers and sketch pages.
-- **What stays on each device:** panels, tabs, saved layouts, settings (page colour, text size, font, finger drawing) and reading stats. So the phone can show one panel in large text while the tablet shows three.
+- **What syncs:** ink, highlights, text boxes, pictures, typed notes, bookmarks, tags, colour meanings, layers, sketch pages and reading stats (the time read on each device is added up).
+- **What stays on each device:** panels, tabs, saved layouts and settings (page colour, text size, font, finger drawing). So the phone can show one panel in large text while the tablet shows three.
 - **When:** when you open the app, when you leave it, and every few minutes while it's open. *Sync now* does it straight away. Without the internet everything still works; it catches up later.
 - **Two devices, one change:** when the same item is changed on both, the later change wins. A typed note changed on both before they synced keeps both texts, one under the other, so nothing is lost.
 - Your notes go into a hidden folder in your Google Drive that only this app can see. It doesn't show among your files and uses a little of your Drive space.
