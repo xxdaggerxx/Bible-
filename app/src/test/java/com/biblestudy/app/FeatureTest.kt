@@ -3414,13 +3414,16 @@ class FeatureTest {
             assertEquals(36, verses.size)
             assertTrue(vm.study.redLetters("NLT", 43, 3, verses)[3]!!.isNotEmpty())
             assertTrue(vm.study.strongs("NLT", com.biblestudy.app.model.VerseId.of(43, 3, 16)).filterNotNull().size >= 4)
-            // 1 Thessalonians kept empty before 2.5.1 (asked for as "1Thess") downloads again; John 3 stays.
+            // Chapters kept empty before 2.5.3 (1 Thessalonians asked for as "1Thess", Hebrews 4 when
+            // Tyndale was busy) download again; John 3 stays.
             val file = com.biblestudy.app.data.BibleRepository.ALL.single { it.code == "NLT" }.asset
             android.database.sqlite.SQLiteDatabase.openDatabase(file, null, android.database.sqlite.SQLiteDatabase.OPEN_READWRITE).use { db ->
-                db.execSQL("DELETE FROM meta WHERE key = 'nltNamesFixed'")
+                db.execSQL("DELETE FROM meta WHERE key = 'nltEmptyFixed'")
                 db.execSQL("INSERT OR REPLACE INTO fetched(book, chapter, at, read_at) VALUES(52, 1, 1, 1)")
+                db.execSQL("INSERT OR REPLACE INTO fetched(book, chapter, at, read_at) VALUES(58, 4, 1, 1)")
                 val old = com.biblestudy.app.data.OnlineBible("NLT", com.biblestudy.app.data.Nlt.ID, db)
                 assertFalse(old.isSaved(52, 1))
+                assertFalse(old.isSaved(58, 4))
                 assertTrue(old.isSaved(43, 3))
             }
         } finally {

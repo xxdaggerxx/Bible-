@@ -72,6 +72,10 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.5.3
+
+- **Fixed:** an NLT chapter could stay blank for good (Hebrews 4, for one). Tyndale's NLT API sends back an empty page, marked OK, for any problem: busy for a moment, a key it doesn't accept or a book name it doesn't know. The app took that as "this chapter has no verses" and kept it empty. Now an empty page is tried twice more, a second or two apart, and otherwise shows as a download error to be tried again next time, like having no internet. NLT chapters already kept empty download again the next time they're read.
+
 ## New in version 2.5.2
 
 - **Fixed:** in a book's introduction (*About this book*, from the book list or the chapter header), tapping a key verse or a reference in the text showed nothing. The verse card was opened on the screen behind the introduction window, out of sight; it now opens on top of it. The introduction shown as a panel wasn't affected.

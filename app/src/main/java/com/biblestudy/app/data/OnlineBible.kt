@@ -56,14 +56,14 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
                 null,
             ).use { c -> buildList { while (c.moveToNext()) add(c.getInt(0) to c.getInt(1)) } }.forEach { (b, ch) -> drop(b, ch) }
         }
-        // Until 2.5.1 the NLT asked Tyndale for Thessalonians and John's letters by names it
-        // doesn't know, and kept their chapters with no verses: those download again.
-        if (id == Nlt.ID && meta("nltNamesFixed") == null) synchronized(LOCK) {
+        // Until 2.5.3 the NLT kept a chapter with no verses when Tyndale sent back an empty page
+        // (asked for by a name it doesn't know, or busy for a moment): those download again.
+        if (id == Nlt.ID && meta("nltEmptyFixed") == null) synchronized(LOCK) {
             db.execSQL(
-                "DELETE FROM fetched WHERE book IN (52, 53, 62, 63, 64) AND NOT EXISTS " +
+                "DELETE FROM fetched WHERE NOT EXISTS " +
                     "(SELECT 1 FROM verses v WHERE v.book = fetched.book AND v.chapter = fetched.chapter)",
             )
-            db.execSQL("INSERT OR REPLACE INTO meta VALUES('nltNamesFixed', '1')")
+            db.execSQL("INSERT OR REPLACE INTO meta VALUES('nltEmptyFixed', '1')")
         }
     }
 

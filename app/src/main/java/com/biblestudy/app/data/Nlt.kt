@@ -33,11 +33,19 @@ object Nlt {
 
     private const val BASE = "https://api.nlt.to/api"
 
-    /** A chapter as USFM (see [toUsfm]); null if the NLT doesn't have it. */
-    fun chapterUsfm(book: Int, chapter: Int): String? {
-        val html = call("$BASE/passages?ref=${code(book)}.$chapter&version=NLT&key=${enc(key)}")
-        if ("verse_export" !in html) return null
-        return toUsfm(html, book, chapter)
+    /**
+     * A chapter as USFM (see [toUsfm]). Tyndale answers every problem (busy, a key it doesn't
+     * accept, a name it doesn't know) with an empty page and "OK", and the NLT has every chapter,
+     * so an empty page is an error to try again later, never a chapter kept with no verses.
+     */
+    fun chapterUsfm(book: Int, chapter: Int): String {
+        var wait = 1000L
+        repeat(3) { tryNo ->
+            val html = call("$BASE/passages?ref=${code(book)}.$chapter&version=NLT&key=${enc(key)}")
+            if ("verse_export" in html) return toUsfm(html, book, chapter)
+            if (tryNo < 2) { Thread.sleep(wait); wait *= 2 }
+        }
+        throw IOException("The NLT didn't send this chapter. Check the NLT key, or try again in a minute.")
     }
 
     /**

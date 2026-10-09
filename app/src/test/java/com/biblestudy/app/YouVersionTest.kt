@@ -126,12 +126,36 @@ class YouVersionTest {
         nlt.key = "test"
         nlt.http = { url -> asked += url; 200 to "<table><tr><td><a href=\"x\">1Thes.4.9</a></td><td>Now concerning brotherly love</td></tr></table>" }
         val hits = try {
-            nlt.chapterUsfm(52, 1)
+            runCatching { nlt.chapterUsfm(52, 1) }
             nlt.search("brotherly love")
         } finally {
             nlt.key = realKey; nlt.http = realHttp
         }
         assertTrue(asked.toString(), "ref=1Thes.1&" in asked.first())
         assertEquals(listOf(BibleImport.vid(52, 4, 9)), hits.map { it.first })
+    }
+
+    @Test
+    fun anEmptyPageFromTyndaleIsTriedAgainNotKeptEmpty() {
+        val nlt = com.biblestudy.app.data.Nlt
+        // Hebrews 4 as Tyndale sends it: all 16 verses.
+        val heb = BibleImport.parseUsfm(listOf(nlt.toUsfm(javaClass.getResource("/youversion/nlt-HEB.4.html")!!.readText(), 58, 4)))
+        assertEquals((1..16).map { BibleImport.vid(58, 4, it) }, heb.verses.keys.sorted())
+        assertTrue(heb.verses[BibleImport.vid(58, 4, 12)]!!.startsWith("For the word of God is alive and powerful."))
+        // Busy, or a key it doesn't take: an empty page with "OK". That's an error, not a chapter with no verses.
+        val (realKey, realHttp) = nlt.key to nlt.http
+        nlt.key = "test"
+        var asked = 0
+        nlt.http = { asked++; 200 to "" }
+        val failed = try { runCatching { nlt.chapterUsfm(58, 4) } } finally { nlt.key = realKey; nlt.http = realHttp }
+        assertTrue(failed.exceptionOrNull() is java.io.IOException)
+        assertEquals(3, asked)
+        // A moment's hiccup: the second try brings the chapter.
+        val page = javaClass.getResource("/youversion/nlt-HEB.4.html")!!.readText()
+        var n = 0
+        nlt.key = "test"
+        nlt.http = { if (n++ == 0) 200 to "" else 200 to page }
+        val usfm = try { nlt.chapterUsfm(58, 4) } finally { nlt.key = realKey; nlt.http = realHttp }
+        assertTrue("\\v 16 " in usfm)
     }
 }
