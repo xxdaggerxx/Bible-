@@ -1,0 +1,66 @@
+{
+ "id": "07-003-007",
+ "title": "Othniel",
+ "refs": [
+  "Judges 3:7-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7003007,
+   "end": 7003011,
+   "ref": "Judges 3:7-11",
+   "ranges": [
+    [
+     7003007,
+     7003011
+    ]
+   ],
+   "title": "A Model Leader Raised by God",
+   "key_verse": [
+    7003009,
+    7003009
+   ],
+   "reflect": [
+    {
+     "text": "God allowed enemy nations to remain around Israel to test their loyalty and train their children for battle. Sadly, the people soon forgot the Lord and served false gods. When harsh oppression followed, the Israelites turned back and cried out in repentance, and God heard them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord answered their cry by raising up Caleb's nephew, Othniel. He became Israel's first judge and a model for others to follow. While later leaders would seek personal praise and glory, Othniel served humbly to bring honour to God alone. When the Holy Spirit came upon him, he led Israel to victory and gave the land rest.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Othniel shows us that we cannot live faithfully in our own strength. Any spiritual fruit we bear and every step of obedience we take depends entirely on the Holy Spirit. When we humble ourselves and rely on God, he works through us for his glory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hardship or turn away from God, do you quickly cry out to him for help?",
+    "In what areas of your daily service do you need to rely more on the Holy Spirit rather than your own strength?"
+   ],
+   "prayer": "Lord, thank you that you hear our cries when we repent and call on you. Help us to serve you with humble hearts, seeking your honour rather than praise for ourselves. Fill us with your Holy Spirit today so that we may walk in faithful obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Model Judge",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/model-judge"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "03-026-014",
+ "title": "Punishments for Disobedience",
+ "refs": [
+  "Leviticus 26:14-39"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3026014,
+   "end": 3026039,
+   "ref": "Leviticus 26:14-39",
+   "ranges": [
+    [
+     3026014,
+     3026039
+    ]
+   ],
+   "title": "God's Patient Discipline and Call to Repent",
+   "key_verse": [
+    3026023,
+    3026023
+   ],
+   "reflect": [
+    {
+     "text": "Leviticus 26 reads much like an ancient treaty between a king and his people, spelling out the real, painful consequences for breaking God's covenant. These warnings were given to the whole community to protect their shared life with Him. They remind us that even under the new covenant, genuine faith is meant to show itself in a life of willing obedience.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Notice how God increases the punishments step by step rather than all at once. When His people refuse to listen, He intensifies their hardships sevenfold, eventually warning them of exile away from His blessings. This slow ratcheting up of consequences shows God's immense patience and forbearance. He does not delight in punishment; He disciplines His people so they will stop their rebellion and turn back to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God still uses difficulties in our lives to train us and draw our wandering hearts back to Himself. When we experience His loving correction, the only right answer is not to harden ourselves in stubborn pride. Instead, we are called to confess our sins honestly and renew our commitment to walk with Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does seeing God's patience in discipline change the way you view hardships in your life?",
+    "Is there any area of your life where God is asking you to turn from disobedience and renew your walk with Him?"
+   ],
+   "prayer": "Heavenly Father, thank You for Your great patience toward us even when we wander. When You correct us, help us not to grow stubborn or bitter, but to see Your loving hand at work. Give us humble hearts to confess our sins quickly and walk in faithful obedience to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Covenant Curses",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/covenant-curses"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Leviticus 26",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/leviticus-26-psalm-33-eccl-9-titus-1/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

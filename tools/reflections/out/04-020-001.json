@@ -1,0 +1,96 @@
+{
+ "id": "04-020-001",
+ "title": "Water from the Rock",
+ "refs": [
+  "Numbers 20:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4020001,
+   "end": 4020013,
+   "ref": "Numbers 20:1-13",
+   "ranges": [
+    [
+     4020001,
+     4020013
+    ]
+   ],
+   "title": "God's Faithfulness and God's Holiness",
+   "key_verse": [
+    4020012,
+    4020012
+   ],
+   "reflect": [
+    {
+     "text": "When the Israelites ran out of water in the wilderness, they complained bitterly against Moses. God told Moses to gather the assembly and simply speak to the rock to provide drink. But Moses was worn down and let anger take over. Instead of quietly speaking to the rock, he preached a harsh sermon, called the people rebels, and took credit for the miracle. Then he struck the rock twice with his staff.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "At its root, Moses failed to trust God and honor His holiness in front of Israel. Because he dishonored God, the Lord told Moses he would not lead the people into the Promised Land. This painful loss was real discipline. Yet it was also a severe mercy, showing God's loving protection rather than total destruction.",
+     "sources": [
+      "D2",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Despite Moses' outburst and unbelief, God still opened the rock. Water gushed out in great streams for the thirsty people and their animals. As F. B. Meyer wrote, \"the sin of the servant did not annul the love and faithfulness of God.\" Even when leaders fail, God remains faithful, pouring out His grace—His kindness that we do not deserve.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When frustration builds up, how can you guard against speaking hastily or dishonoring God?",
+    "How does God's faithfulness to provide for His people despite human failure give you peace?"
+   ],
+   "prayer": "Lord, forgive us when anger tempts us to speak hastily and forget Your holiness. Thank You for Your faithful grace that supplies our needs even when we fall short. Teach us to trust Your loving discipline and rest in Your mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 20:11",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "Miracle at Meribah",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/miracle-at-meribah-one-year-devotions-for-men-july-27.html"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Anger’s Bitter Fruit",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-apr-22-2008-11573880.html"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Numbers 20",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numb-20-psalms-58-59-isa-98-104-james-3/"
+    },
+    "D5": {
+     "author": "John Piper",
+     "work": "Great Losses, Severe Mercies, Tearful Joy",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/great-losses-severe-mercies-tearful-joy"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

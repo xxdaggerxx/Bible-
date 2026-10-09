@@ -1,0 +1,83 @@
+{
+ "id": "01-023-001",
+ "title": "The Death and Burial of Sarah",
+ "refs": [
+  "Genesis 23:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1023001,
+   "end": 1023020,
+   "ref": "Genesis 23:1-20",
+   "ranges": [
+    [
+     1023001,
+     1023020
+    ]
+   ],
+   "title": "A Pledge in the Promised Land",
+   "key_verse": [
+    1023004,
+    1023004
+   ],
+   "reflect": [
+    {
+     "text": "Grieving and weeping over the loss of a spouse is natural and fully appropriate for God's people. After many years of shared life and patient waiting, Abraham openly wept for Sarah. Yet even in his deep sorrow, he confessed that he was an outsider and a traveler, looking beyond this earthly life to the heavenly city God had prepared.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Rather than taking Sarah back to his ancestral homeland, Abraham chose to bury her in Canaan. He refused informal gifts and insisted on paying the full, steep price for the cave and field of Machpelah. By purchasing it properly, he avoided being indebted to his neighbors and conducted his business with fairness and honor.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "This burial site was the only land Abraham legally owned during his lifetime, but purchasing it was a bold step of faith. It stood as a down payment showing that physical death cannot overturn God's covenant promises. Abraham was willing to wait on God's timing, holding loosely to the present world while investing his resources in what God had pledged.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that our true home is in heaven bring comfort when you face grief or loss?",
+    "How can your daily business dealings and use of money show that you trust God's promises?"
+   ],
+   "prayer": "Lord God, thank You that physical death cannot overturn Your covenant promises to Your people. Help us to live with open hands in this present world, remembering that we are travelers on our way to the city You have prepared for us. Grant us grace to deal with our neighbors in honesty, fairness, and love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 23:4",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Derek Thomas",
+     "work": "Dying Well",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/dying-well"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Field of Ephron",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/field-ephron"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,142 @@
+{
+ "id": "03-004-001",
+ "title": "Laws for Sin Offerings",
+ "refs": [
+  "Leviticus 4:1-35"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 3004002,
+   "end": 3004002,
+   "ref": "Leviticus 4:2",
+   "ranges": [
+    [
+     3004002,
+     3004002
+    ]
+   ],
+   "title": "\"Sins Unintentionally\"",
+   "key_verse": [
+    3004002,
+    3004002
+   ],
+   "reflect": [
+    {
+     "text": "We often think we only do wrong when we knowingly break a rule. Yet our conscience is not perfect. It can make excuses for us or fail to see our flaws. We fail to love God with our whole heart, mind, and strength every moment. As F. B. Meyer notes, \"there is more sin in us than any of us know.\" Even when we do not realize our faults right away, they still fall short of God's holiness and need to be forgiven.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God made a gracious way for his people when their hidden wrongs came to light. The person brought an animal and laid hands on its head, showing that guilt was transferred to the sacrifice. They came before God not just as joyful worshipers, but as convicted sinners seeking mercy. Because leaders carried great influence, their mistakes carried even greater weight and required larger offerings. The body was burned outside the camp, pointing ahead to how Jesus would suffer outside the city gate for us.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "All of this shows us God's grand plan to rescue us. Through Jesus, our Mediator who stands between us and God, all divine grace is poured out to help us. The old animal sacrifices were temporary signs pointing to Christ's full work. Because he took our guilt, we are called to live dedicated lives for him.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there blind spots or hidden habits in your life where you might be falling short of God's love?",
+    "How does knowing Jesus carried your guilt outside the camp change how you view your daily failures?"
+   ],
+   "prayer": "Lord, forgive us for the wrongs we know and for the faults we fail to notice. Thank you for sending Jesus to carry our guilt completely. Help us to walk humbly with you and live lives set apart for your glory. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 4:2",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 4:2",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Feb. 2, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-feb-2-2008-11566585.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 3004001,
+   "end": 3004035,
+   "ref": "Leviticus 4:1-35",
+   "ranges": [
+    [
+     3004001,
+     3004035
+    ]
+   ],
+   "title": "Cleansing for God's Dwelling",
+   "key_verse": [
+    3004007,
+    3004007
+   ],
+   "reflect": [
+    {
+     "text": "Sin is more than a broken rule; it creates real moral pollution. In ancient Israel, sin stained the worshiper and contaminated the sanctuary where God lived among his people. The sin offering acted as a purification offering. It wiped away this defilement so that a holy God could continue to dwell with his people. God provided this mercy for those who stumbled and turned back to him, distinguishing them from those in open rebellion.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Part of the blood was put onto the horns of the incense altar inside the tent. This was the place where holy prayers and praise were offered. Even our best prayers, repentance, and thanks are touched by human imperfection. By putting the blood on the altar, God showed that sacrifice makes our worship acceptable. When God sees the atoning sacrifice, he welcomes our worship.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, Christ has fulfilled this cleansing once and for all. He removes all our moral stain when we come to him with sincere hearts. Because his blood has already made the way clear, we can pray with bold confidence, knowing our imperfect prayers are made sweet and pleasing to the Father.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel your prayers are too weak or imperfect for God to accept?",
+    "How does the complete cleansing of Jesus give you confidence to draw near to God today?"
+   ],
+   "prayer": "Heavenly Father, thank you for removing the stain of our sin through Christ. We praise you that our imperfect prayers are welcomed by your grace. Give us bold confidence to approach your throne of grace each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 9",
+     "on": "Leviticus 4:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Sin Offering",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sin-offering"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

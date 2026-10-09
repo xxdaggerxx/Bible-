@@ -1,0 +1,80 @@
+{
+ "id": "01-043-016",
+ "title": "Joseph’s Hospitality to His Brothers",
+ "refs": [
+  "Genesis 43:16-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1043016,
+   "end": 1043034,
+   "ref": "Genesis 43:16-34",
+   "ranges": [
+    [
+     1043016,
+     1043034
+    ]
+   ],
+   "title": "Feasting at the Table of Grace",
+   "key_verse": [
+    1043023,
+    1043023
+   ],
+   "reflect": [
+    {
+     "text": "The brothers entered Joseph's house full of fear. They worried they would be punished and forced into slavery because of the silver returned in their sacks. Instead, Joseph's steward calmed their fears and spoke of God's care. They were welcomed inside, given water to wash their feet, and invited to a feast. As F. B. Meyer notes, this reminds us that God's gifts are \"all of grace.\" We cannot buy God's pardon or earn His favor with our own efforts. Like a loving Father, He simply invites us in and freely meets our deepest hunger.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When Joseph saw his younger brother Benjamin, deep love and long-buried sorrow overwhelmed him. Even as a powerful ruler, he did not hide behind a cold mask. He hurried to a private room to weep. True strength does not mean pretending we never feel pain. Our faith gives us the freedom to be honest with our tears and our tender feelings before God.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "At the meal, Joseph gave Benjamin five times more food than the others. This served as a test to see if the older brothers still held the bitter jealousy that had once ruined their home. Instead of resenting Benjamin, they feasted and enjoyed the meal together. They showed real spiritual growth by celebrating the blessing given to their brother.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone around you receives a special blessing, is it easy or hard for you to celebrate with them?",
+    "Are you trying to earn God's kindness, or can you rest in His free gift of grace today?"
+   ],
+   "prayer": "Heavenly Father, thank you for welcoming us with your free grace when we bring nothing to pay for it. Give us genuine joy when you choose to bless others around us. Teach us to bring our honest tears and feelings to you in quiet trust. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 43:21",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Lunch in Egypt",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lunch-egypt"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Strength to Weep - Today's Insight - September 29, 2023",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-september-29-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

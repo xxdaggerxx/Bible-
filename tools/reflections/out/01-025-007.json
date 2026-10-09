@@ -1,0 +1,67 @@
+{
+ "id": "01-025-007",
+ "title": "The Death of Abraham",
+ "refs": [
+  "Genesis 25:7-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1025007,
+   "end": 1025011,
+   "ref": "Genesis 25:7-11",
+   "ranges": [
+    [
+     1025007,
+     1025011
+    ]
+   ],
+   "title": "Old, Contented, and Blessed by God",
+   "key_verse": [
+    1025008,
+    1025008
+   ],
+   "reflect": [
+    {
+     "text": "Abraham lived to be 175 years old and died contented. Growing old often brings illness, weakness, and fears of being lonely or useless. Yet Abraham shows us that a believer can reach the end of life feeling peaceful and blessed. A lifetime of trusting God's promises and walking in steady obedience prepares us for the hardships of later years. Knowing God walked with us gives us a clear conscience and the quiet certainty that He will not abandon us as we age.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "After Abraham died, God blessed Isaac, who went to live near Beer-lahai-roi, the well of the living God who sees. Some people only cry out to God when trouble comes and forget Him when things go well. Isaac chose to settle by the well and make God his steady supply. As Charles Spurgeon wrote, \"the well of the Creator never fails.\" Living in close fellowship with God each day fills our souls and provides the comfort we need through every stage of life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you seeking God only when trouble comes, or are you learning to live in daily fellowship with Him?",
+    "How can trusting God's promises today help you face the changes and hardships of growing older?"
+   ],
+   "prayer": "Lord, thank you for your faithfulness across every season of our lives. Help us to walk with you each day and draw comfort from your unfailing presence. Keep our hearts close to you so that we may finish our days in quiet peace.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 17",
+     "on": "Genesis 25:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Augustus Lopes",
+     "work": "Elderly, but Happy",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/elderly-but-happy"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,79 @@
+{
+ "id": "09-022-001",
+ "title": "David Flees to Adullam and Mizpeh",
+ "refs": [
+  "1 Samuel 22:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9022001,
+   "end": 9022005,
+   "ref": "1 Samuel 22:1-5",
+   "ranges": [
+    [
+     9022001,
+     9022005
+    ]
+   ],
+   "title": "What God Does in the Cave",
+   "key_verse": [
+    9022001,
+    9022001
+   ],
+   "reflect": [
+    {
+     "text": "David lost his position, his safety, and his relationships, ending up in a dark cave instead of a palace. When our own comforts collapse, discouragement can test our faith and cloud our vision. Yet God often does His deepest, changing work in hard places. In our own cave seasons, He shows us that He alone is enough.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In that cave, David did not attract comfortable leaders. Instead, people who were in debt, distressed, and bitter in soul gathered around him. People who are satisfied with ordinary life rarely look for change. In the same way, Jesus welcomes anyone who comes to Him empty-handed and broken. He turns no one away who seeks Him in desperation.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Even while hiding, David trusted God for what was ahead. As F. B. Meyer notes, we will never see the end of what God will do for us if we surrender fully to Him. God wants to treat us as His own children, set us free from sin, and guide us by His Spirit in partnership with Jesus. Even when we cannot see the future, we can safely trust His purpose.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What comforts or crutches might God be asking you to release so you can depend on Him?",
+    "How can your present distress lead you to turn more fully to Jesus?"
+   ],
+   "prayer": "Lord, when our comforts fall away and we find ourselves in hard places, help us remember that You are enough. We bring our brokenness and distress to Jesus, trusting that He welcomes us. Teach us to give our whole lives to You and to rest in Your good plans. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 22:3",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Robin Dugall",
+     "work": "God Does His Best Work in Caves",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/god-does-his-best-work-in-caves-homeword-april-10.html"
+    },
+    "D3": {
+     "author": "Ray Ortlund",
+     "work": "Desperate",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/ray-ortlund/desperate/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

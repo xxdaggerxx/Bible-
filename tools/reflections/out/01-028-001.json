@@ -1,0 +1,67 @@
+{
+ "id": "01-028-001",
+ "title": "Jacob’s Departure",
+ "refs": [
+  "Genesis 28:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1028001,
+   "end": 1028005,
+   "ref": "Genesis 28:1-5",
+   "ranges": [
+    [
+     1028001,
+     1028005
+    ]
+   ],
+   "title": "How God Brings Us Back",
+   "key_verse": [
+    1028003,
+    1028003
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes life leads us into places of worry, anxiety, or waywardness, almost like being taken away captive. In this passage, Isaac blesses Jacob and sends him on his journey, calling on God Almighty to make him fruitful. Even when we wander or face difficult departures, God has wonderful ways of bringing us back to Himself when we are trapped by our fears or sins.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God often rescues us through very gentle means. As F. B. Meyer writes, God's work acts upon our souls \"as the sunbeams on frost,\" melting our stubbornness and coldness. He might use a quiet nudge inside us, a small word spoken by another person, or a story from someone else's life. These simple moments help us confess our wandering and ask God to renew our former joy with Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We are also reminded to look out for other people who might be trapped or struggling. In the same way that Abraham went to rescue Lot, caring for someone else in need can be the very path God uses to bring relief to our own hearts. When we turn toward God and help others, He meets us and fills our deepest needs with His presence.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you carrying anxieties or wandering from God in a way that makes you feel distant from Him?",
+    "Is there someone facing trouble right now whom you could reach out to help?"
+   ],
+   "prayer": "Lord, draw us close to You whenever worries or temptations make our hearts feel far from home. Soften our spirits and restore the simple joy of walking with You. Give us eyes to notice others in need and love them well. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 28:3",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

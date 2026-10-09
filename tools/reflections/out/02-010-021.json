@@ -1,0 +1,74 @@
+{
+ "id": "02-010-021",
+ "title": "The Ninth Plague: Darkness",
+ "refs": [
+  "Exodus 10:21-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2010021,
+   "end": 2010029,
+   "ref": "Exodus 10:21-29",
+   "ranges": [
+    [
+     2010021,
+     2010029
+    ]
+   ],
+   "title": "Light in Darkness and No Compromise",
+   "key_verse": [
+    2010023,
+    2010023
+   ],
+   "reflect": [
+    {
+     "text": "Thick darkness fell over Egypt, so deep that people could not see each other or move. Yet God gave light to the dwellings of His people. We often measure our lives by the obstacles in front of us and slip into anxiety, forgetting how faithful the Lord has always been. Even when trouble surrounds us, God does not let the darkness consume us. His presence fills our hearts with light, bringing His purity, divine wisdom, and gentle love into our daily lives.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Pharaoh then tried to strike a compromise by telling Moses to leave their flocks and herds behind. He wanted leverage to keep the Israelites tied to Egypt. Moses refused to negotiate, insisting that not a single hoof would be left behind. Believers cannot draw others to Christ by lowering standards or trying to live in two worlds. True spiritual freedom requires a clean break from sin and walking closely with Jesus.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you currently focusing more on the obstacles around you than on God's faithful presence?",
+    "Is there any area of your life where you are tempted to compromise instead of making a clean break from sin?"
+   ],
+   "prayer": "Lord, thank You for being our light when darkness and difficulties surround us. Help us to fix our eyes on Your faithfulness instead of our problems. Give us strength to follow You completely and refuse any compromise with sin. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 10:23",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Not a Hoof",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-august-21-2021.html"
+    },
+    "D3": {
+     "author": "Chelsey DeMatteis",
+     "work": "A Prayer for the Obstacles in Your Way",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-the-obstacles-in-your-way.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

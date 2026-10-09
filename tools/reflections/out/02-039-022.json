@@ -1,0 +1,67 @@
+{
+ "id": "02-039-022",
+ "title": "Additional Priestly Garments",
+ "refs": [
+  "Exodus 39:22-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2039022,
+   "end": 2039031,
+   "ref": "Exodus 39:22-31",
+   "ranges": [
+    [
+     2039022,
+     2039031
+    ]
+   ],
+   "title": "Holy to the Lord Everywhere",
+   "key_verse": [
+    2039030,
+    2039030
+   ],
+   "reflect": [
+    {
+     "text": "The high priest wore a pure gold plate on his forehead, engraved with the words \"Holy to the Lord.\" This crown showed that he was set apart completely for God. F. B. Meyer reminds us that this sacred call is not just for ancient priests in a tabernacle. God calls us to be His priests wherever we go, whether in our homes, schools, or jobs. Even our most ordinary tasks can become holy acts when we do them for God's glory.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Being set apart means keeping ourselves free from sin. While we live in a fallen world, we must guard our hearts against evil and turn quickly to the protecting presence of Christ. Just as the craftsmen made every piece of clothing exactly as the Lord commanded Moses, obeying God's word should guide the way we live each day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Aaron carried his holy calling openly on his forehead where anyone could read it. In the same way, our faith should not need an artificial label. The way we speak, work, and treat others ought to show clearly that we belong to Jesus. When people look at our daily lives, our actions should quietly point them to our Master.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what part of your daily routine can you remember to serve God today?",
+    "Does your everyday behavior show others that you belong to the Lord without you having to say it?"
+   ],
+   "prayer": "Lord, help us to live as your servants in everything we do today. Keep our hearts clean from sin and surround us with the presence of Christ. May our daily words and work quietly show the world that we belong to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 39:30",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

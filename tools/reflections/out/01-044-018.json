@@ -1,0 +1,80 @@
+{
+ "id": "01-044-018",
+ "title": "Judah Pleads for Benjamin",
+ "refs": [
+  "Genesis 44:18-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1044018,
+   "end": 1044034,
+   "ref": "Genesis 44:18-34",
+   "ranges": [
+    [
+     1044018,
+     1044034
+    ]
+   ],
+   "title": "Judah Steps Forward for Benjamin",
+   "key_verse": [
+    1044033,
+    1044033
+   ],
+   "reflect": [
+    {
+     "text": "Judah faced extreme danger when he stepped forward to speak with the ruler of Egypt. Years earlier, Judah had suggested selling Joseph into slavery. Now, instead of feeling bitter about his father's special love for Benjamin, Judah spoke with deep humility. He honored his father by defending the favored brother rather than giving in to jealousy.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When Benjamin was in danger of being kept behind, Judah offered to take his place as a slave. He was willing to lay down his own freedom so that the boy could return safely to their father. This selfless sacrifice showed that Judah was truly transformed by genuine repentance.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Judah also remembered his father's sorrow over Joseph, whom Jacob assumed was torn to pieces. Yet things were not as hopeless as they appeared, because Joseph was alive and standing right before them. When our circumstances look dark, we are often tempted to judge by appearances, but we can trust that God is quietly working for our good.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding onto any lingering jealousy or resentment toward someone else?",
+    "How can you trust that God is at work for your good when life looks dark?"
+   ],
+   "prayer": "Lord, forgive us when we let past hurt or jealousy control our actions. Transform our hearts so we are ready to care for others with humility and love. Help us to rest in your care, trusting that you are working for our good even when we cannot see the full picture. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 44:28",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Final Exam, Part 2",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-june-7-2016.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Judah Steps Forward",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/judah-steps-forward"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

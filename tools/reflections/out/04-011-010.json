@@ -1,0 +1,81 @@
+{
+ "id": "04-011-010",
+ "title": "The Complaint of Moses",
+ "refs": [
+  "Numbers 11:10-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4011010,
+   "end": 4011015,
+   "ref": "Numbers 11:10-15",
+   "ranges": [
+    [
+     4011010,
+     4011015
+    ]
+   ],
+   "title": "When the Burden Feels Too Heavy",
+   "key_verse": [
+    4011014,
+    4011014
+   ],
+   "reflect": [
+    {
+     "text": "Moses felt completely crushed by the constant complaints of the people around him. Israel forgot God's daily care and miraculous presence, choosing instead to weep over their temporary food cravings. Their ungrateful grumbling turned leadership into an exhausting trial, driving Moses to despair until he felt he would rather die than keep carrying the load alone.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Our heavenly Father often allows deep troubles to test and refine our faith. True faith does not simply praise God when life is smooth, but clings to his faithfulness when our bodies are weary and our spirits are depressed. In the words of Charles Spurgeon, \"the wisdom and power of the great Workman are discovered by the trials\" his people endure.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Leadership can be spiritually and emotionally draining when carried alone. God does not rebuke Moses for his honest cry, but offers a practical answer by giving elders to share the load. Knowing how heavy spiritual leadership can be, we are called to encourage our leaders and bring them joy rather than draining them through grumbling.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you bringing grief to your leaders by complaining, or are you encouraging them and lightening their load?",
+    "When hard trials test your faith, do you run to God with your honest struggles and trust his refining care?"
+   ],
+   "prayer": "Lord, help us to be grateful for your daily care rather than complaining about minor wants. Comfort our leaders who feel worn down and lonely in their work. Strengthen our faith through every trial, and teach us to bear one another's burdens in love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 7",
+     "on": "Numbers 11:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Jill Briscoe",
+     "work": "A Butcher’s Shop in the Middle of a Desert - One Year Devotions for Women",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/a-butcher-s-shop-in-the-middle-of-a-desert-one-year-devotions-for-women-january-22.html"
+    },
+    "D3": {
+     "author": "Jon Bloom",
+     "work": "Kill Me at Once!",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/kill-me-at-once"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

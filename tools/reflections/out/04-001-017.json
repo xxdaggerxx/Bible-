@@ -1,0 +1,68 @@
+{
+ "id": "04-001-017",
+ "title": "The Number of Every Tribe",
+ "refs": [
+  "Numbers 1:17-46"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4001017,
+   "end": 4001046,
+   "ref": "Numbers 1:17-46",
+   "ranges": [
+    [
+     4001017,
+     4001046
+    ]
+   ],
+   "title": "Numbered and Ordered by God",
+   "key_verse": [
+    4001019,
+    4001019
+   ],
+   "reflect": [
+    {
+     "text": "In the wilderness, every Israelite had to show his family line before being counted for service. In the same way, it brings deep comfort to know that you are truly a child of God. Some believers worry because they cannot point to the exact day or time they were born again into God's family. Yet if you are trusting Jesus, loving other believers, and desiring to please your heavenly Father, you can be confident that you belong to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God gave specific instructions for organizing the camp, and Moses carried them out with complete obedience. Our God is a God of order, and each believer has an assigned place in His family and service. Later on, Israel let fear and doubt trap them in the desert because they stopped trusting God. When we grumble about our circumstances or blame God, we also get stuck spiritually. Instead of giving in to fear, we can overcome our difficulties by trusting Christ and remaining faithful right where God has placed us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you resting in the quiet assurance that you belong to God through faith in Jesus?",
+    "In what area of your life can you choose obedience and contentment today instead of complaining?"
+   ],
+   "prayer": "Heavenly Father, thank You for adopting us into Your family through faith in Jesus. Help us to know that we belong to You and to follow Your word with complete obedience. Give us strength in every trial so that we do not fall into fear or grumbling, but remain faithful right where You have placed us. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 1:18",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 02/12/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-02-or-12-or-2002-1127444.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

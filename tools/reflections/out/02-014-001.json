@@ -1,0 +1,122 @@
+{
+ "id": "02-014-001",
+ "title": "Pharaoh Pursues the Israelites",
+ "refs": [
+  "Exodus 14:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2014014,
+   "end": 2014014,
+   "ref": "Exodus 14:14",
+   "ranges": [
+    [
+     2014014,
+     2014014
+    ]
+   ],
+   "title": "\"The Lord will fight for you\"",
+   "key_verse": [
+    2014014,
+    2014014
+   ],
+   "reflect": [
+    {
+     "text": "When hard times or painful moments hit, panic can quickly take hold. We might feel abandoned or forgotten by God, just like the Israelites did when they were backed up against the sea. In our distress, we often rush to friends to complain or seek quick validation. Speaking out of hurt can easily stir up gossip and create more trouble, when what we really need is to bring our pain quietly to God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Moses told the frightened people to be silent and watch God act. God never truly forgets His children, even when life looks bleak. The only thing Scripture says He chooses to forget is our confessed sin. Bringing our wounds to the Lord in quiet prayer gives us a safe refuge and real peace. Waiting quietly shows that we know the battle belongs to Him, and He will fight for us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel hurt or forgotten, do you run to complain to other people, or do you bring your pain to God first?",
+    "What personal battle do you need to place quietly into the Lord's hands today?"
+   ],
+   "prayer": "Lord, when fear and hurt make me want to panic or complain, help me to be still. Remind me that You have never forgotten me and that the battle belongs to You. Give me Your comfort and teach me to rest in Your peace. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Betsy St. Amant Haddox",
+     "work": "How to Handle Your Hurt",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-march-21.html"
+    },
+    "D3": {
+     "author": "Cindi McMenamin",
+     "work": "When You Feel Forgotten",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/when-you-feel-forgotten-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2014001,
+   "end": 2014014,
+   "ref": "Exodus 14:1-14",
+   "ranges": [
+    [
+     2014001,
+     2014014
+    ]
+   ],
+   "title": "Standing Firm in Difficult Times",
+   "key_verse": [
+    2014013,
+    2014013
+   ],
+   "reflect": [
+    {
+     "text": "The Israelites found themselves completely trapped, with Pharaoh's chariots closing in behind them and the deep sea blocking the path ahead. Many of us know what it feels like to face extraordinary difficulties where we cannot move forward, cannot go backward, and see no way of escape. In those helpless moments, God gives us an unexpected command: we are told to stand still.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When trouble shuts us in, dangerous advisers begin to whisper. Despair tells us to give up and lie down. Cowardice urges us to retreat and abandon our faith. Impatience insists that we must do something right away, while presumption pushes us to run ahead recklessly. Faith refuses to heed those voices. As Charles Spurgeon wrote, faith \"hears God say, 'Stand still,' and immovable as a rock it stands.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Standing still is not laziness or quitting. It means standing upright with courage, calm and ready for action, trusting that God will do everything that is needed. When we patiently wait on Him, He renews our strength and prepares us for the moment when He commands us to go forward.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Which voice—despair, fear, or impatience—do you struggle with most when you feel trapped?",
+    "How can choosing to stand still help you wait for God's clear direction?"
+   ],
+   "prayer": "Father, when trouble surrounds me and I do not know which way to turn, teach me to stand still. Silence the voices of fear and hurry in my heart. Give me strength to wait patiently for Your voice and follow where You lead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 24",
+     "on": "Exodus 14:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

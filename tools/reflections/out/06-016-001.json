@@ -1,0 +1,67 @@
+{
+ "id": "06-016-001",
+ "title": "Ephraim’s Inheritance",
+ "refs": [
+  "Joshua 16:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6016001,
+   "end": 6016010,
+   "ref": "Joshua 16:1-10",
+   "ranges": [
+    [
+     6016001,
+     6016010
+    ]
+   ],
+   "title": "Taking What God Has Given",
+   "key_verse": [
+    6016004,
+    6016004
+   ],
+   "reflect": [
+    {
+     "text": "The sons of Joseph were given a rich land filled with good things from the hills and streams. This inheritance did not come from their own strength or weapons, but was a free gift of God's love. In the same way, God has blessed us with rich spiritual gifts in Jesus. His promises, the price He paid to rescue us, and Jesus Himself are all deeply precious to everyone who trusts Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even so, as F. B. Meyer notes, we often live like beggars simply because we do not take what God gives. It is not enough to ask for His help. Real faith reaches out, accepts what He offers, and uses it every day. When we open our hearts to Christ, we can stop feeling empty and start enjoying the fullness He has already provided.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At times our lives feel steep and hard, like forest-covered hills that seem impossible to clear. God does not give us these challenges to defeat us, but to show us what His power can do. When ordinary paths seem blocked, we can turn our hearts toward prayer and trust God to give us the strength we need to grow.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there promises from God that you need to actively accept and put into practice today?",
+    "When life feels steep and difficult, how can turning to prayer help you see God's strength at work?"
+   ],
+   "prayer": "Lord Jesus, thank You for all the rich gifts and promises You have freely given to us. Forgive us for living as though we are empty, when You have already supplied what we need. Help us to take hold of Your grace in faith and to rely on Your power in every hard place. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 16:4",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "03-017-001",
+ "title": "The Place of Sacrifice",
+ "refs": [
+  "Leviticus 17:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3017001,
+   "end": 3017009,
+   "ref": "Leviticus 17:1-9",
+   "ranges": [
+    [
+     3017001,
+     3017009
+    ]
+   ],
+   "title": "Worshiping God on His Own Terms",
+   "key_verse": [
+    3017005,
+    3017005
+   ],
+   "reflect": [
+    {
+     "text": "In the wilderness, God commanded the Israelites to bring their animals to the entrance of the tabernacle. They were no longer allowed to offer sacrifices out in the open fields. This strict rule protected God's people from mixing true worship with pagan customs. It kept them away from superstitious rituals meant to manipulate God, placing them instead under the wise guidance of the priests.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Gathering at the tabernacle also kept the whole community united in God's covenant, which was his special agreement with them. By appointing specific mediators and exact offerings, God showed his absolute holiness and revealed the true ugliness of sin. Sin is a grave matter, and we cannot simply deal with it in our own private ways.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This whole system pointed forward to the ultimate sacrifice. It taught Israel that sin must be atoned for—its debt paid and forgiven—only on God's terms. We cannot invent our own route to peace with him; we must receive the forgiveness he provides in the way he commands.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life might you be tempted to approach God on your own terms rather than his?",
+    "How does God's holiness help you see the seriousness of your sin?"
+   ],
+   "prayer": "Holy God, thank you for showing us that we can only approach you on your own terms. Forgive us when we treat sin lightly or try to invent our own ways to please you. Help us to walk in unity and trust fully in the sacrifice you have provided. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Leviticus 17, Psalms 20-21, Proverbs 31, and 1 Timothy 2",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/leviticus-17-psalms-20-21-proverbs-31-1-timothy-2/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

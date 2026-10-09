@@ -1,0 +1,129 @@
+{
+ "id": "05-014-022",
+ "title": "Giving Tithes",
+ "refs": [
+  "Deuteronomy 14:22-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5014022,
+   "end": 5014023,
+   "ref": "Deuteronomy 14:22-23",
+   "ranges": [
+    [
+     5014022,
+     5014023
+    ]
+   ],
+   "title": "\"Learn to Fear the Lord Your God\"",
+   "key_verse": [
+    5014023,
+    5014023
+   ],
+   "reflect": [
+    {
+     "text": "God commanded His people to set aside a tenth of their harvest each year and eat it in His presence. God does not need our grain, our herds, or our money for His own physical needs. Instead, He asks for our giving because He wants what our money represents: our hearts and our complete trust.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Setting aside this portion from the start teaches us to put God first in our everyday lives. It creates an unhurried rhythm of abiding in God's presence, rather than rushing past His daily goodness. Bringing our giving directly to Him protects our souls from chasing worldly things for comfort.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Surrendering part of what we earn back to God is a quiet, personal act of worship. When we intentionally give Him top priority in our resources, we learn reverence for Him. In that posture of trust, we discover that the Lord is always faithful to supply our needs.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What does your current giving say about who holds first place in your daily life?",
+    "How can setting aside time and resources for God help keep you from relying on worldly comforts?"
+   ],
+   "prayer": "Father, thank You for providing everything we need each day. Help us to gladly give You first place with our finances and our hearts. Teach us to slow down, worship You with reverence, and rest in Your loving care. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Lysa TerKeurst",
+     "work": "Three Areas We Can Trust God With Today",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-december-19-2024.html"
+    },
+    "D3": {
+     "author": "Rick Warren",
+     "work": "Putting God First in Every Area",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-september-7-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5014022,
+   "end": 5014029,
+   "ref": "Deuteronomy 14:22-29",
+   "ranges": [
+    [
+     5014022,
+     5014029
+    ]
+   ],
+   "title": "Serving God with Delight and Relief",
+   "key_verse": [
+    5014024,
+    5014024
+   ],
+   "reflect": [
+    {
+     "text": "When the road to the place of worship was too long to carry heavy harvests, God provided a practical solution. The traveler could exchange crops for money and make the journey with ease. God never meant for His service to become an exhausting, overwhelming burden.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our worship and service to God should bring us true delight rather than feeling like a crushing toil. As F. B. Meyer observed, \"Christian work should not be carried to the point of exhaustion.\" When duties or routines break down our health and spirits, God invites us to use the help and relief He provides.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The feasts and tithes were meant to bring joy to households and care to those in need. In our prayers and Christian service, God wants us to be refreshed in His presence. We honor Him best when we draw near with gladness and enjoy simple fellowship with our Father.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have your habits of prayer and serving God felt like heavy burdens rather than refreshing delights?",
+    "Where might you need to accept God's practical help so you do not carry your duties to exhaustion?"
+   ],
+   "prayer": "Lord God, thank You for Your tender care and for lifting heavy burdens from our shoulders. Guard us from turning devotion into an exhausting chore or an empty routine. Fill our homes and our service with the quiet joy of being near You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 14:24",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,84 @@
+{
+ "id": "09-019-001",
+ "title": "Saul Tries to Kill David",
+ "refs": [
+  "1 Samuel 19:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9019001,
+   "end": 9019024,
+   "ref": "1 Samuel 19:1-24",
+   "ranges": [
+    [
+     9019001,
+     9019024
+    ]
+   ],
+   "title": "Standing Up for the Innocent",
+   "key_verse": [
+    9019004,
+    9019004
+   ],
+   "reflect": [
+    {
+     "text": "King Saul allowed jealousy to take over his heart. What began as envy of David's success quickly turned into paranoia, wild mood swings, and violent hatred. Envy blinds people to the good in others and twists innocent actions into imagined threats. Yet Scripture reminds us that we do not have to be ruled by such volatile emotions, because God is greater than our hearts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In the middle of Saul's anger, Jonathan and Michal chose courage. Jonathan could have stayed quiet to protect his own safety and reputation. Instead, he boldly spoke up to his father to defend his innocent friend. Michal also risked herself to help David escape. Their actions show that love and spiritual integrity are stronger than fear of earthly power.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We often face moments when someone we know is falsely accused or treated unfairly. Remaining silent may feel safe, but stepping up to speak the truth puts our faith into practice. When we stand up for those who are misunderstood, we follow Christ's own example of interceding for others, trusting that God's power will ultimately triumph over wickedness.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone in your life who is being unfairly criticized or misunderstood whom you could defend?",
+    "What fears might keep you from speaking up for others, and how can trusting God help you overcome them?"
+   ],
+   "prayer": "Lord, guard our hearts against envy and bitter anger. Give us the courage to speak up for those who are treated unjustly, even when it costs us. Help us to love others faithfully and to trust your protective power in every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 19:6",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 24: 1 Samuel 19:9–18",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-24-1-samuel-19-918.html"
+    },
+    "D3": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 04/07/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-04-or-07-or-2002-1133356.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

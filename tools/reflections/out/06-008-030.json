@@ -1,0 +1,73 @@
+{
+ "id": "06-008-030",
+ "title": "Joshua Renews the Covenant",
+ "refs": [
+  "Joshua 8:30-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6008030,
+   "end": 6008035,
+   "ref": "Joshua 8:30-35",
+   "ranges": [
+    [
+     6008030,
+     6008035
+    ]
+   ],
+   "title": "Renewing God's Covenant in Worship",
+   "key_verse": [
+    6008035,
+    6008035
+   ],
+   "reflect": [
+    {
+     "text": "After their victories at Jericho and Ai, Israel paused their military campaign to worship the Lord between Mount Ebal and Mount Gerizim. In doing this, they obeyed what Moses had commanded in the very land promised to Abraham. The entire community stood together, including little children and foreigners. Joshua read the whole law out loud so everyone could hear the blessings of obeying God and the warnings against turning away from Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This gathering was a time to renew the covenant, which is God's sacred agreement with His people. Today, when we gather with our church family for weekly worship, we do something similar. We listen to God's Word, remember His promises, and recommit ourselves to Christ as our Lord.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Joshua carved the law onto uncut stones, but God does something even deeper for us. In the new covenant, as F. B. Meyer writes, God writes His law \"on the tablets of the heart, where we shall love it.\" We cannot keep God's commands by our own effort alone. Yet when we yield to the Holy Spirit, He gives us both the desire and the power to obey God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does gathering with other believers each week help you renew your commitment to Christ?",
+    "In what areas of your life do you need the Holy Spirit to help you obey God from the heart?"
+   ],
+   "prayer": "Lord God, thank You for Your Word and for the gift of the Holy Spirit. Help us pause our busy lives to worship You and listen to Your voice. Write Your truth on our hearts so we may love Your commands and gladly follow Jesus our Lord. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 8:32",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Covenant Renewal on Ebal",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/covenant-renewal-on-ebal"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

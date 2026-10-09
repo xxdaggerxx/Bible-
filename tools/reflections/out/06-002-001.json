@@ -1,0 +1,73 @@
+{
+ "id": "06-002-001",
+ "title": "Rahab Welcomes the Spies",
+ "refs": [
+  "Joshua 2:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6002001,
+   "end": 6002001,
+   "ref": "Joshua 2:1",
+   "ranges": [
+    [
+     6002001,
+     6002001
+    ]
+   ],
+   "title": "\"Entered the House of Rahab\"",
+   "key_verse": [
+    6002001,
+    6002001
+   ],
+   "reflect": [
+    {
+     "text": "When the two spies arrived at Rahab's house in Jericho, it was not an accident. God arranged this meeting through his providence, which means his caring and purposeful guidance over all things. The Lord was already moving on both sides of this encounter. He was softening Rahab's heart to seek him, while at the exact same time preparing the messengers who would arrive at her door.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God chose someone that society looked down on. Rahab had a troubled past as a prostitute, but God does not reserve his kingdom work only for people with spotless lives. Instead of judging her old reputation, God saw her open heart and potential. In fact, Rahab's grit and quick thinking made her uniquely suited to protect the spies during a dangerous crisis. We do not need to disqualify ourselves because our history is messy. God can use our whole story when we surrender it to him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This shows us that God actively orchestrates our daily lives. He prepares people to hear the truth, and he guides us to cross their paths. You do not need a flawless background to serve God. We simply need to watch for his guidance and obey his promptings, trusting that he can use anyone who is willing.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways have you let past mistakes or weaknesses make you feel unusable by God?",
+    "How might God be arranging people and circumstances in your life today to carry out his purposes?"
+   ],
+   "prayer": "Lord, thank you that you do not demand a flawless background before you use us in your kingdom. Open our eyes to see the appointments you are quietly arranging in our daily routines. Give us receptive hearts to obey your promptings and share your grace with others.",
+   "sources": {
+    "D1": {
+     "author": "Glynnis Whitwer",
+     "work": "Sometimes God Doesn't Choose the \"Perfect\" Girl for the Job",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/sometimes-god-doesn-t-choose-the-perfect-girl-for-the-job-encouragement-for-today-june-25-2014.html"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "No Such Thing as Coincidence",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-august-11-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "06-023-001",
+ "title": "Joshua’s Charge to Leaders",
+ "refs": [
+  "Joshua 23:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6023001,
+   "end": 6023016,
+   "ref": "Joshua 23:1-16",
+   "ranges": [
+    [
+     6023001,
+     6023016
+    ]
+   ],
+   "title": "Holding Fast in Faith and Love",
+   "key_verse": [
+    6023011,
+    6023011
+   ],
+   "reflect": [
+    {
+     "text": "Joshua reminded the leaders of Israel that God fought for them. When God is on our side, numbers do not matter. As Charles Spurgeon wrote, \"one man with God is a majority,\" even when facing a thousand enemies. Throughout history, the Lord often worked through single faithful people like Abraham, Moses, or David rather than huge armies. We do not need to fear the odds against us. When God calls us, His strength will carry out His purpose.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God is so faithful, Joshua urged the people to watch themselves and love the Lord. Loving God is not just an emotion. We can love Him through our will by choosing Christ as King, through our strength by serving Him with our daily energy, and through our mind by focusing our thoughts on Him. Love begins with God Himself. When we remember how much He loved us by giving Himself for us, our love for Him grows naturally.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Holding fast to the Lord requires daily care. We must watch our words, actions, and desires so nothing pulls us away from Him. By relying on His promises and staying close to His love, we find both the courage to stand strong and the peace to remain faithful.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Which part of your life—your thoughts, your choices, or your daily energy—can you use today to show love to God?",
+    "When you feel outnumbered or overwhelmed by a challenge, how does knowing God fights for you change your perspective?"
+   ],
+   "prayer": "Lord God, thank You for fighting for us and keeping every good promise You have made. Teach us to love You with our minds, our wills, and all our strength. Help us to watch our hearts carefully each day and rely on Your mighty power. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 24",
+     "on": "Joshua 23:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 23:11",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

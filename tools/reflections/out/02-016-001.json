@@ -1,0 +1,142 @@
+{
+ "id": "02-016-001",
+ "title": "Manna and Quail from Heaven",
+ "refs": [
+  "Exodus 16:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2016004,
+   "end": 2016004,
+   "ref": "Exodus 16:4",
+   "ranges": [
+    [
+     2016004,
+     2016004
+    ]
+   ],
+   "title": "\"Bread from Heaven\"",
+   "key_verse": [
+    2016004,
+    2016004
+   ],
+   "reflect": [
+    {
+     "text": "In the dry and tiring wilderness, the people of Israel felt exhausted and hungry. They began to lose heart and wonder if God was truly leading them. God answered their cries not by giving them months of stored food all at once, but by sending bread from heaven outside their tents each morning. He told them to gather only what they needed for that single day. This daily routine showed them their human limits and trained them to rely on His care step by step.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "God guides our daily lives in the very same way. Each day brings its own work, its own troubles, and its own supply. As F. B. Meyer noted, God gives difficulties only as we can bear them, like carrying coal \"a coal-scuttle full at a time.\" We do not have to stockpile strength for the whole year or worry about tomorrow's burdens. When we read the Bible, we also need just a daily portion to feed our hearts instead of wearing ourselves out trying to master everything at once.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Needing God day by day keeps us close to Him. It strips away our proud self-reliance and invites us into constant friendship with our Creator. Jesus is the true bread of life, giving us fresh strength for every situation. We do not need to panic or hoard, because we know God will provide again when tomorrow comes.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what part of your life are you worrying about tomorrow instead of trusting God for today?",
+    "How can focusing on a simple daily portion of God's Word bring peace to your routine?"
+   ],
+   "prayer": "Lord God, thank You for giving us exactly what we need for each day. Teach us not to fret about tomorrow or try to carry burdens before they arrive. Help us to rest in Jesus, our bread of life, and trust Your faithful care day by day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 16:4",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Kelly McFadden",
+     "work": "Manna for Today",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-may-16-2017.html"
+    },
+    "D4": {
+     "author": "Greg Morse",
+     "work": "The Trial of Daily Bread",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-trial-of-daily-bread"
+    },
+    "D5": {
+     "author": "David Mathis",
+     "work": "Gather a Day’s Portion: Faithful Realism in Everyday Devotions",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/gather-a-days-portion"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2016001,
+   "end": 2016021,
+   "ref": "Exodus 16:1-21",
+   "ranges": [
+    [
+     2016001,
+     2016021
+    ]
+   ],
+   "title": "Gathering Fresh Grace Every Morning",
+   "key_verse": [
+    2016021,
+    2016021
+   ],
+   "reflect": [
+    {
+     "text": "Every morning, the Israelites had to go out and collect fresh food. Yesterday's supply could not sustain them for a new day. In our walk with God, we face the same reality. As Charles Spurgeon warned, we cannot live on \"old manna\" from the past. Yesterday's blessings, past prayers, or old spiritual feelings are not enough for today. Nor can we turn back to the world for real comfort. We need fresh grace from Jesus every single morning.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God wants us to recognize our ongoing, hourly dependence on Him. Our peace, joy, and spiritual strength stand firm only because He holds them in place. If the Lord were to withdraw His comforting presence, our hearts would quickly sink. Realizing that we cannot manage on our own is a gift, because it prompts us to turn often to His throne of grace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is a wonderful mercy that God designed our lives this way. Having to seek Him daily reminds us of His deep and steady love. Even when we are ungrateful, His kindness never stops flowing toward us. Knowing our utter helplessness without Christ leads us to bow before Him and praise His endless goodness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on past spiritual experiences rather than seeking the Lord afresh today?",
+    "How does remembering your constant need for Jesus draw you to pray more often?"
+   ],
+   "prayer": "Lord Jesus, we confess that we cannot live faithfully without Your presence and strength. Keep us from relying on past victories or looking to worldly comforts for help. Thank You for Your unfailing grace that meets us new every morning, and teach our hearts to praise You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 16",
+     "on": "Exodus 16:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

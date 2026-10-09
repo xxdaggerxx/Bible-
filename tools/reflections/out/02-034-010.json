@@ -1,0 +1,149 @@
+{
+ "id": "02-034-010",
+ "title": "The LORD Renews the Covenant",
+ "refs": [
+  "Exodus 34:10-35"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2034014,
+   "end": 2034014,
+   "ref": "Exodus 34:14",
+   "ranges": [
+    [
+     2034014,
+     2034014
+    ]
+   ],
+   "title": "\"The LORD... Is a Jealous God\"",
+   "key_verse": [
+    2034014,
+    2034014
+   ],
+   "reflect": [
+    {
+     "text": "When we hear the word jealous, we often picture petty human envy. But God's jealousy is completely holy. As the sole Creator of all things, He alone has the rightful claim to our worship. His jealousy is an expression of deep, burning love that refuses to share our devotion with modern idols, such as money, intellect, or personal achievement.",
+     "sources": [
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "Giving our greatest affection to the things of this world is like being unfaithful in a marriage. Yet God does not turn away indifferently; He actively pursues wandering hearts. For believers who trust Him, God's jealousy brings deep comfort, because He uses His almighty power to protect the good of those who belong to Him.",
+     "sources": [
+      "D3",
+      "D6"
+     ]
+    },
+    {
+     "text": "True spiritual change begins when we let go of self-centered desires and worship the Lord completely. Knowing how passionately He cares for us calls us to turn away from competing loves. It also encourages us to pray faithfully for family members and friends who are being pursued by His love.",
+     "sources": [
+      "D3",
+      "D5",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly things are currently competing with God for your deepest affection?",
+    "How does knowing that God actively pursues your heart bring you hope?"
+   ],
+   "prayer": "Lord, thank You for loving us with a holy and protective jealousy. Forgive us for the times we look to worldly things for satisfaction instead of You. Help us surrender our whole hearts to You today, and draw our wandering loved ones back into Your grace. Amen.",
+   "sources": {
+    "D3": {
+     "author": "John Piper",
+     "work": "Fear and Hope in God’s Jealousy",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/fear-and-hope-in-gods-jealousy"
+    },
+    "D5": {
+     "author": "Adrian Rogers",
+     "work": "Do We Have a Jealous God?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-october-17-2020.html"
+    },
+    "D6": {
+     "author": "Ann Spangler",
+     "work": "Praying the Names of God - August 20",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/prayingnamesgod/praying-the-names-of-god-september-1.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2034010,
+   "end": 2034035,
+   "ref": "Exodus 34:10-35",
+   "ranges": [
+    [
+     2034010,
+     2034035
+    ]
+   ],
+   "title": "The Renewal of the Covenant",
+   "key_verse": [
+    2034010,
+    2034010
+   ],
+   "reflect": [
+    {
+     "text": "In His renewed covenant, God required the firstborn of every creature. An unclean donkey could not be offered as a holy sacrifice, so a spotless lamb had to die in its place, or the donkey's neck was broken. In the same way, we are spiritually unclean and cannot save ourselves. As Charles Spurgeon wrote, \"the Lamb of God must stand in thy stead.\" Jesus died in our place, redeeming us from judgment by His boundless love.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord also commanded His people to stop and rest on the seventh day, even during the demanding seasons of plowing and harvest. God gave the Sabbath to guard us against physical and spiritual exhaustion. Honoring a regular rhythm of rest, worship, and emotional renewal shows that we trust God's provision instead of depending only on our own striving.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Finally, after spending forty days on the mountain with God, Moses came down with a shining face, yet he was completely unaware of his own glow. True goodness does not boast or seek attention. Deep, quiet time spent in God's presence shapes our hearts, helping us reflect His holiness without any pride.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your life do you find it hard to stop working and trust God to provide?",
+    "How can spending unhurried time alone with God protect you from spiritual pride?"
+   ],
+   "prayer": "Heavenly Father, thank You for Jesus, the Lamb who took our place and paid the penalty for our sins. Teach us to rest and trust Your care, even during our busiest seasons of work. Help us spend unhurried time with You so that our lives quietly reflect Your goodness to others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 15",
+     "on": "Exodus 34:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 34:29",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D4": {
+     "author": "Rick Warren",
+     "work": "God Created the Sabbath for You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-january-6-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

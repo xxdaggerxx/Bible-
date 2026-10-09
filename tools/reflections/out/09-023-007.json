@@ -1,0 +1,75 @@
+{
+ "id": "09-023-007",
+ "title": "Saul Pursues David",
+ "refs": [
+  "1 Samuel 23:7-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9023007,
+   "end": 9023029,
+   "ref": "1 Samuel 23:7-29",
+   "ranges": [
+    [
+     9023007,
+     9023029
+    ]
+   ],
+   "title": "God Delivers David in the Wilderness",
+   "key_verse": [
+    9023014,
+    9023014
+   ],
+   "reflect": [
+    {
+     "text": "David's journey toward the throne was full of serious danger as he fled from a hostile and unpredictable king. Even when panic could have taken over and others urged quick action, David refused to rely on his own unaided wisdom. Instead, he repeatedly paused to ask the Lord for direction before taking his next step. When hard times push us to react in a hurry, God calls us to seek His counsel first rather than leaning on our own plans.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God faithfully sustained David in the lonely wilderness. He provided divine guidance and sent Jonathan to refresh David's heart with loving friendship. Later, when Saul's troops were surrounding the mountain and closing in to capture him, God brought an unexpected enemy raid to divert Saul away. As F. B. Meyer observed, God's answer comes \"not so late as to permit us to be overwhelmed.\" The place was named the Rock of Escape to remember how God saved David right on time.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we face severe trials, we do not need to despair. God is still sovereign over our circumstances, and He provides the help we need. We can open the Scriptures and find sure promises of His power, His presence, and His protection.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When trouble presses in, do you pause to ask God for direction, or do you rush ahead on your own?",
+    "What promises in the Bible help remind you of God's power and protection when life feels overwhelming?"
+   ],
+   "prayer": "Lord God, thank You that You see us in our hardest trials and never abandon us. Teach us to seek Your guidance and wait on Your timing rather than rushing ahead in our own strength. Remind us of Your constant presence and protect our hearts with the sure promises of Your Word. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 23:9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "David Escapes Saul",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/david-escapes-saul"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

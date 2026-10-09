@@ -1,0 +1,82 @@
+{
+ "id": "02-020-018",
+ "title": "Moses Comforts the People",
+ "refs": [
+  "Exodus 20:18-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2020018,
+   "end": 2020021,
+   "ref": "Exodus 20:18-21",
+   "ranges": [
+    [
+     2020018,
+     2020021
+    ]
+   ],
+   "title": "Drawing Near in the Darkness",
+   "key_verse": [
+    2020021,
+    2020021
+   ],
+   "reflect": [
+    {
+     "text": "When God showed His power with smoke and thunder, the people shrank back in fear. Fear and intimidation often tempt us to keep a safe distance from God. Yet Moses explained that a healthy fear of the Lord does not mean running away in dread. True reverence actually draws us to Him. The real danger we should fear is turning away from God in unbelief, rather than drawing near to the One who is our true security and joy.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "While the crowd stayed far off, Moses walked forward into the deep darkness where God was. We also face moments when life leads us out of our comfort zones into trials or confusing situations. Yet as F. B. Meyer wrote, \"God dwells in the thick darkness.\" A dark cloud in our life does not mean God has left. God is right there in the mystery, concealing His kindness and waiting for us to meet Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Entering hard seasons stretches our faith and teaches us to depend on the Lord instead of our own understanding. Even when we feel lonely or cannot make sense of what is happening, we do not need to pull back. We can step forward into the unknown, trusting that God is present and ready to reveal His goodness to us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficult or uncertain situation currently tempts you to pull back and keep your distance from God?",
+    "How can remembering that God is present in the dark places give you courage to move toward Him today?"
+   ],
+   "prayer": "Lord God, forgive us for letting fear push us away from You when life feels frightening. Teach us to dread leaving Your side more than we dread hardship. Give us courage to step forward into the unknown, trusting that You are waiting for us in the darkness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 20:21",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "The Fear That Draws Us In",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/the-fear-that-draws-us-in"
+    },
+    "D3": {
+     "author": "Cindi McMenamin",
+     "work": "5 Questions to Ask if That ‘Open Door’ Looks Uncertain",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/women/5-questions-to-ask-if-that-open-door-looks-uncertain.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

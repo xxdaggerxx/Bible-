@@ -1,0 +1,67 @@
+{
+ "id": "04-018-008",
+ "title": "Offerings for Priests and Levites",
+ "refs": [
+  "Numbers 18:8-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4018008,
+   "end": 4018032,
+   "ref": "Numbers 18:8-32",
+   "ranges": [
+    [
+     4018008,
+     4018032
+    ]
+   ],
+   "title": "The Lord Is Your Portion",
+   "key_verse": [
+    4018020,
+    4018020
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God provided for the priests and Levites through the offerings brought by the people, but He gave them no share of the land. Instead, God told Aaron that He Himself was their portion and inheritance. As F. B. Meyer notes, God gives Himself to His people, and we belong entirely to Him. All that He is and has is open to us, and all that we have belongs to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Meyer compares our life with God to a settler on a vast tract of land. At first, the settler only lives on the edge of his plot and knows very little about what is there. But over time, he pushes his fences farther out to farm more of the rich soil. In the same way, we do not know everything about God at once. Each year we are invited to learn more about who He is and receive more of His grace, which is His kindness that we do not deserve.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "How deeply we experience God depends on how much of ourselves we yield to Him. Meyer writes, \"If you would have all from God, you must give all to God.\" When we hold back parts of our lives, we miss out on knowing Him fully. Everything we need is stored up for us in Jesus, so we never need to live spiritually poor or fearful.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there parts of your life that you are holding back from God instead of trusting Him with them?",
+    "What is one practical step you can take this week to push your fences out and know God more deeply?"
+   ],
+   "prayer": "Lord God, thank You for being our portion and our greatest treasure. Forgive us for the times we hold back parts of our hearts out of fear or doubt. Help us to give our whole lives to You today, so that we may grow in the knowledge of Your love and grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 18:20",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

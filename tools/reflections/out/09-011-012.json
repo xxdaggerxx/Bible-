@@ -1,0 +1,81 @@
+{
+ "id": "09-011-012",
+ "title": "Saul Confirmed as King",
+ "refs": [
+  "1 Samuel 11:12-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9011012,
+   "end": 9011015,
+   "ref": "1 Samuel 11:12-15",
+   "ranges": [
+    [
+     9011012,
+     9011015
+    ]
+   ],
+   "title": "Renewing Our Devotion to the King",
+   "key_verse": [
+    9011014,
+    9011014
+   ],
+   "reflect": [
+    {
+     "text": "After Saul led Israel to victory, the people gathered at Gilgal with great joy. They offered peace offerings, which were sacrifices to celebrate peace and fellowship with God, and confirmed Saul as their king. Even though the people had asked for a king for flawed reasons, God still worked through Saul by His Spirit. This initial victory showed how much God's people can achieve when they stand united under an obedient leader.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "At the same time, this public celebration was a turning point. From God's point of view, Israel had turned away from Him in favor of an earthly ruler. This coronation was the highest point of Saul's life before pride and jealousy began to ruin his reign. True and lasting leadership does not chase the spotlight, but relies humbly on the Lord.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Israel's journey to Gilgal also reminds us to check our own hearts. Jesus is our rightful King, but our devotion to Him can easily fade as time passes. We often drift from living as His devoted followers. We need regular times to renew our commitment and submit every part of our lives to His rule. God's kingdom moves forward when we unite in truth under Christ.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine has your devotion to King Jesus begun to drift?",
+    "How can you practice humble reliance on God today instead of seeking praise from other people?"
+   ],
+   "prayer": "Lord Jesus, You are our true and lasting King. Forgive us when our loyalty grows cold and we seek our own praise. Renew our devotion to You, and help us walk together in humble obedience to Your Word. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 11:14",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Sad Day",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-august-24-2024.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Saul’s Initial Success",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sauls-initial-success"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,123 @@
+{
+ "id": "03-016-001",
+ "title": "The Day of Atonement",
+ "refs": [
+  "Leviticus 16:1-34"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 3016020,
+   "end": 3016022,
+   "ref": "Leviticus 16:20-22",
+   "ranges": [
+    [
+     3016020,
+     3016022
+    ]
+   ],
+   "title": "\"Send It Away into the Wilderness\"",
+   "key_verse": [
+    3016022,
+    3016022
+   ],
+   "reflect": [
+    {
+     "text": "On the Day of Atonement, the high priest placed his hands on the head of a live goat and confessed the people's sins over it. Then a designated man led the goat far out into the lonely desert. God gave Israel this ritual to show that their sin was not merely covered up, but completely removed. The scapegoat carried their guilt far away so it would never return to the community. Watching the goat disappear into the wilderness gave the people a clear reason to celebrate with great relief.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This picture finds its true meaning in Jesus. On the cross, Christ acted as our true sin-bearer by taking our real guilt and shame onto Himself. His sacrifice was made once and for all, ending the need for repeated yearly ceremonies. Because of what He did, our sins have been carried away as far as the east is from the west. When memories of past failures linger and trouble your mind, you do not have to carry that burden. You can stand firm in the freedom of Christ's complete forgiveness.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there past sins or failures that you still struggle to let go of?",
+    "How does knowing that Jesus carried your guilt away help you walk in freedom today?"
+   ],
+   "prayer": "Lord Jesus, thank You for bearing my sins and carrying my guilt completely away on the cross. Help me to trust Your full forgiveness whenever old regrets trouble my mind. Teach me to rest and walk each day in the freedom You have given me. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jennifer Waddle",
+     "work": "The Purpose of the Old Testament Scapegoat",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/the-purpose-of-the-old-testament-scapegoat-bible-study-minute-january-10-2018.html"
+    },
+    "D3": {
+     "author": "Mike DeVries",
+     "work": "Free",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-nov-27-2007-11560313.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 3016001,
+   "end": 3016034,
+   "ref": "Leviticus 16:1-34",
+   "ranges": [
+    [
+     3016001,
+     3016034
+    ]
+   ],
+   "title": "Entering the Presence of God",
+   "key_verse": [
+    3016030,
+    3016030
+   ],
+   "reflect": [
+    {
+     "text": "God chose to dwell among His people in the wilderness tabernacle, but human sinfulness regularly contaminated that holy space. Approaching God was serious and dangerous because of His holiness. Throughout Israel's history, attempting to come near to God without His chosen mediator brought death. Once every year, the anointed high priest had to bathe, put on sacred linen garments, and enter the Most Holy Place with sacrificial blood. This blood made atonement to cleanse the sanctuary, the priests, and the entire assembly.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "That ancient ceremonial system served a vital purpose, but it also pointed ahead to Christ. Jesus is our ultimate High Priest. Through His sacrificial death and resurrection, He secured lasting forgiveness and made it possible for us to approach God's presence. We no longer rely on repeated animal offerings to cleanse our record. Because Jesus justifies our approach, we can now enter God's presence in worship with confident assurance, profound awe, and joyful reverence.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it important to remember God's holiness when we come to Him in prayer?",
+    "How does Jesus serving as your High Priest give you confidence to draw near to God?"
+   ],
+   "prayer": "Heavenly Father, You are holy, yet You made a way for us to live in Your presence. Thank You for Jesus, our true High Priest, who shed His blood to bring us lasting forgiveness. Grant us confident hearts and deep reverence as we draw near to worship You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Yom Kippur",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/yom-kippur-one-year-devotions-for-men-september-28.html"
+    },
+    "D4": {
+     "author": "L. Michael Morales",
+     "work": "Entering the Holy Place",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/entering-holy-place"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

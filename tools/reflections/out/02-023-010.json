@@ -1,0 +1,66 @@
+{
+ "id": "02-023-010",
+ "title": "Sabbath Laws",
+ "refs": [
+  "Exodus 23:10-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2023010,
+   "end": 2023013,
+   "ref": "Exodus 23:10-13",
+   "ranges": [
+    [
+     2023010,
+     2023013
+    ]
+   ],
+   "title": "God's Gift of Rest",
+   "key_verse": [
+    2023012,
+    2023012
+   ],
+   "reflect": [
+    {
+     "text": "God gave his people clear instructions to pause their work and rest. In Exodus 23, he commanded a regular rhythm of rest for the land, the workers, and even the animals. This weekly pause was not just a helpful suggestion or an optional idea for busy lives. God established it as an essential command. When we stop our labour, we show reverence toward God and demonstrate humble trust in his daily care.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Constant busyness and overwork take a heavy toll on our physical, mental, and emotional health. God knows our limits, which is why he designed regular times for renewal. Genuine rest means deliberately stepping back. We need times to disconnect from our daily work and our screens so our bodies and minds can reboot.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often struggle to stop working because we worry about what comes next. Real peace does not come from finishing every single task. We find lasting calm when we focus on our responsibilities for today while trusting tomorrow's problems to the Lord.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What work or devices do you find hardest to step away from when you try to rest?",
+    "How can taking a regular day of rest help you trust God with the future?"
+   ],
+   "prayer": "Lord, thank you for giving us permission and command to rest. Forgive us when we let overwork and hurry harm our bodies and minds. Teach us to disconnect from our labour and entrust all our tomorrows to your faithful care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Max Lucado",
+     "work": "Catch Your Breath",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-november-2-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

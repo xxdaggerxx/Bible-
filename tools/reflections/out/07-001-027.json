@@ -1,0 +1,66 @@
+{
+ "id": "07-001-027",
+ "title": "The Failure to Complete the Conquest",
+ "refs": [
+  "Judges 1:27-36"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7001028,
+   "end": 7001028,
+   "ref": "Judges 1:28",
+   "ranges": [
+    [
+     7001028,
+     7001028
+    ]
+   ],
+   "title": "\"They Never Drove Them Out Completely\"",
+   "key_verse": [
+    7001028,
+    7001028
+   ],
+   "reflect": [
+    {
+     "text": "When Israel grew strong, they put the Canaanites to forced labor instead of driving them out as God had commanded. On the surface, this looked like a smart political move and an impressive military success. Yet this choice masked deep spiritual disobedience and revealed a lack of trust in the Lord. Israel chose what was convenient and useful for themselves instead of doing what God said. Real faithfulness is never measured by outward achievements, but by wholehearted obedience to God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Failing to finish what God started brought severe trouble down the road. Unaddressed sin works like an old tree stump left in the ground; if the roots stay alive, it will quickly sprout back and grow stronger. We often hand over big areas of our lives to God, yet we still keep secret rooms locked away from Him. Tolerating small compromises gives room for what we thought was defeated to rise up again. What seems like a minor compromise will soon become a major spiritual defeat.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there small areas or compromises in your life that you have kept hidden from God rather than dealing with them fully?",
+    "How can you measure your success today by sincere obedience to God rather than by outward achievements?"
+   ],
+   "prayer": "Lord, help us to trust You with all our hearts rather than settling for what feels easy or convenient. Show us any lingering compromises or hidden sins that we have allowed to stay rooted in our lives. Give us the courage to obey You completely each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Trouble in Canaan",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/trouble-in-canaan"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "The Subtle Destruction of Compromise",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/the-subtle-destruction-of-compromise-greg-laurie-daily-devotion-september-9-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

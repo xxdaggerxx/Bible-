@@ -1,0 +1,126 @@
+{
+ "id": "04-012-001",
+ "title": "The Complaint of Miriam and Aaron",
+ "refs": [
+  "Numbers 12:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4012001,
+   "end": 4012003,
+   "ref": "Numbers 12:1-3",
+   "ranges": [
+    [
+     4012001,
+     4012003
+    ]
+   ],
+   "title": "\"Does the LORD Speak Only Through Moses?\"",
+   "key_verse": [
+    4012003,
+    4012003
+   ],
+   "reflect": [
+    {
+     "text": "Miriam and Aaron criticized Moses because he had married a woman from Cush. That choice might seem surprising, but as Charles Spurgeon noted, it reminds us of Jesus choosing to love us. We are guilty and unfaithful, yet Christ sets His affection on us anyway. His love does not come from any goodness in us, but entirely from His own grace, which is God's undeserved kindness. The world often objects when God welcomes sinners, but Christ loves to show mercy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Beneath Miriam and Aaron's complaints was a deep root of jealousy. When God gives people spiritual gifts and leadership roles, pride can easily slip in. Miriam disguised her envy behind religious-sounding questions about whether God spoke only through Moses. People often try to make their jealousy look holy, but the Lord sees right through our words and knows what is really in our hearts.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Moses did not fire back with harsh words or try to prove his authority. People often think being meek means being weak, but true meekness takes great inner strength. Moses had a quiet confidence in God, which gave him self-control. Instead of reacting with anger, he trusted the Lord to handle the situation.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone else receives recognition or responsibility, do you ever feel jealous inside?",
+    "How can trusting God give you the quiet confidence to stay calm instead of defending yourself?"
+   ],
+   "prayer": "Lord, search our hearts and help us put away all hidden envy and pride. Thank You that Jesus chose to love us by pure grace when we had nothing good to offer. Grant us the meekness and self-control we need to trust You rather than reacting in anger. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 6",
+     "on": "Numbers 12:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Meekness and Self-Control",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/meekness-and-self-control"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Feb. 18, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-18-2010-11626381.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 4012001,
+   "end": 4012016,
+   "ref": "Numbers 12:1-16",
+   "ranges": [
+    [
+     4012001,
+     4012016
+    ]
+   ],
+   "title": "God Defends His Faithful Servant",
+   "key_verse": [
+    4012007,
+    4012007
+   ],
+   "reflect": [
+    {
+     "text": "Rebellion among believers rarely looks selfish at first. Aaron and Miriam asked questions that sounded fair and reasonable, wondering why God could not speak through everyone equally. Yet underneath their sensible words was selfish ambition and a desire for more influence. Because Moses was deeply humble, he refused to fight back or protect his own position.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Moses did not need to defend his own honor because God personally stepped in. The Lord summoned all three of them to the Tent of Meeting and made Moses' special standing clear. Moses was a faithful servant who spoke with God directly, not merely through dreams or riddles. Miriam's punishment of leprosy and her week of shame outside the camp showed that grasping for power invites divine discipline. God watches over His people, and He will defend His faithful servants in His own time.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself dressing up selfish ambition in fair-sounding arguments?",
+    "How does knowing that God defends His faithful servants help you let go of the urge to protect your own status?"
+   ],
+   "prayer": "Father, guard us against chasing after power and making our selfish desires sound righteous. Teach us to rest quietly in Your care without feeling the need to defend our own importance. Keep our hearts faithful to You, and help us honor the leaders You place over us. Amen.",
+   "sources": {
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Numbers 12-13",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-12-13-psalm-49-isaiah-2-hebrews-10/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

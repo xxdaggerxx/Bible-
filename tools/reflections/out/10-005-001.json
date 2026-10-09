@@ -1,0 +1,66 @@
+{
+ "id": "10-005-001",
+ "title": "David Anointed King of All Israel",
+ "refs": [
+  "2 Samuel 5:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10005001,
+   "end": 10005005,
+   "ref": "2 Samuel 5:1-5",
+   "ranges": [
+    [
+     10005001,
+     10005005
+    ]
+   ],
+   "title": "God Fulfills His Promise to David",
+   "key_verse": [
+    10005003,
+    10005003
+   ],
+   "reflect": [
+    {
+     "text": "David being crowned king of Israel was the exciting fulfillment of a promise God had made long before. Human wisdom would never have picked an ordinary shepherd boy to rule a nation, but God chose him anyway. Before David ever wore the crown, he spent years waiting and enduring difficult trials. God used those hardships to shape his character. The protective care and honest heart David showed while guarding literal sheep prepared him well to shepherd the nation of Israel.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The elders of Israel recognized David because of his kinship with them, his faithful leadership in past battles, and God's clear choice. Leaders among God's people cannot simply name themselves to high office; they must be accepted and affirmed by the community. David's rule in Jerusalem even pointed back to ancient promises God gave centuries earlier to Abraham. His story reminds us to remain patient and stay persistent in faith, because the Lord always fulfills His promises in His own good time.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life is God calling you to be patient while you wait on His timing?",
+    "How can you show faithful care to the people around you today, right where God has placed you?"
+   ],
+   "prayer": "Lord, thank You for always keeping Your promises, even when the wait is long. Teach us to stay patient and trust Your timing when our circumstances feel uncertain. Help us to serve others with integrity wherever You place us today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 44: 2 Samuel 5:1–5",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-44-2-samuel-5-15.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Israel Anoints David",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/israel-anoints-david"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

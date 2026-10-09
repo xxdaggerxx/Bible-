@@ -1,0 +1,66 @@
+{
+ "id": "03-014-033",
+ "title": "Signs of Home Contamination",
+ "refs": [
+  "Leviticus 14:33-47"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3014033,
+   "end": 3014047,
+   "ref": "Leviticus 14:33-47",
+   "ranges": [
+    [
+     3014033,
+     3014047
+    ]
+   ],
+   "title": "The High Cost of Cleansing",
+   "key_verse": [
+    3014034,
+    3014034
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God speaks of putting mildew into a house in the land of Canaan. This reminds us of God's complete control and providence over all things in His world. Even though detailed laws about mold on stone walls might seem unusual to us, these Old Testament purity rules provide essential background for understanding Jesus Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The spreading mildew served as a vivid picture of how destructive sin is. Dealing with it was painful and expensive. Stones had to be pulled out, walls were scraped bare, and sometimes the whole house had to be torn down. Removing uncleanness came at a high personal cost to the owner, but having the holy God live among His people was worth every expense.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This points us forward to what Jesus did. Sin ruins what is good, and removing it requires a tremendous price. On the cross, Christ paid the ultimate cost for our sin so that God could dwell with us forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the damage caused by mildew help you see the danger of sin in daily life?",
+    "Why is it comforting to remember that Jesus already paid the full price to cleanse us?"
+   ],
+   "prayer": "Holy God, You rule over all things and call us to be clean before You. Thank You for showing us the serious danger of sin and the great cost required to remove it. We thank You that Jesus paid the ultimate price on the cross so You can dwell with us today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Kevin Gardner",
+     "work": "Mildew and the Cost of Sin",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/mildew-and-cost-of-sin"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

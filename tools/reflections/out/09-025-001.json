@@ -1,0 +1,66 @@
+{
+ "id": "09-025-001",
+ "title": "The Death of Samuel",
+ "refs": [
+  "1 Samuel 25:1"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9025001,
+   "end": 9025001,
+   "ref": "1 Samuel 25:1",
+   "ranges": [
+    [
+     9025001,
+     9025001
+    ]
+   ],
+   "title": "A Faithful Life and God's Wisdom",
+   "key_verse": [
+    9025001,
+    9025001
+   ],
+   "reflect": [
+    {
+     "text": "Samuel was a spiritual giant who guided the people of Israel for many years. Yet Scripture records the end of his earthly journey in just a single sentence. All the people gathered together to mourn him and lay him to rest. From a human point of view, both David and King Saul still urgently needed Samuel's wise counsel during those difficult times.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when it seems like the people we rely on are taken away too soon, God in His sovereign wisdom knows what is best. Losing someone we love brings deep sorrow and pain. Yet God promises to stay close to the brokenhearted, offering His tender comfort and presence in our grief.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "For every believer, physical death is never the end or an abandonment. Instead, it is an entrance into eternal life and a peaceful homecoming with the Lord. While we miss those who have gone before us, we can rest knowing God remains in control and watches over our steps.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can trusting God's wisdom bring you peace when you lose someone you relied on for guidance?",
+    "In what ways can the promise of eternal life comfort you when you face times of grief?"
+   ],
+   "prayer": "Lord, thank You for the faithful guides and mentors You bring into our lives. When we experience loss and heartache, draw near and comfort our broken hearts. Help us trust Your wise timing and find hope in the eternal homecoming You promise. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 04/09/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-04-or-09-or-2002-1133360.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

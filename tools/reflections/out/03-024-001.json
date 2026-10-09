@@ -1,0 +1,74 @@
+{
+ "id": "03-024-001",
+ "title": "The Oil for the Lamps",
+ "refs": [
+  "Leviticus 24:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3024001,
+   "end": 3024004,
+   "ref": "Leviticus 24:1-4",
+   "ranges": [
+    [
+     3024001,
+     3024004
+    ]
+   ],
+   "title": "Keeping the Light Burning Before the Lord",
+   "key_verse": [
+    3024004,
+    3024004
+   ],
+   "reflect": [
+    {
+     "text": "God commanded Aaron to tend the golden lampstand so that its light would shine continually. This sacred fire came from God, not from human effort. In the same way, we cannot produce spiritual life or grasp God's truth through our own natural wisdom. We depend on the Holy Spirit to give us spiritual understanding and keep our faith alive.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God calls His people to shine like lights in a dark world. Like a lighthouse guiding ships near a rocky shore, a faithful life gently points others through the darkness. Even if people do not seem to notice our testimony, our primary goal is to please the Lord. The quiet light of a holy life is lived before Him first.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The lampstand simply held the flame and directed attention to the light, not to itself. In that same way, believers should point all attention to Christ. We cannot keep shining by our own power. As F. B. Meyer noted, our lives can only burn steadily through the \"pure oil of the Holy Ghost.\"",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you seeking to point others to Christ rather than drawing attention to yourself?",
+    "Where do you need the Holy Spirit to renew your strength and guide your steps today?"
+   ],
+   "prayer": "Lord, thank You for the Holy Spirit, who opens our minds to Your Word and gives us life. Help us to live quietly and faithfully before You, even when no one else notices. Keep our hearts burning with love for You so that our lives always point others to Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 24:4",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Feb. 10, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-10-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

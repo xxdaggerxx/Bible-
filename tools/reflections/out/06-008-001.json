@@ -1,0 +1,86 @@
+{
+ "id": "06-008-001",
+ "title": "The Conquest of Ai",
+ "refs": [
+  "Joshua 8:1-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6008001,
+   "end": 6008002,
+   "ref": "Joshua 8:1-2",
+   "ranges": [
+    [
+     6008001,
+     6008002
+    ]
+   ],
+   "title": "\"Do Not Be Afraid or Discouraged\"",
+   "key_verse": [
+    6008001,
+    6008001
+   ],
+   "reflect": [
+    {
+     "text": "When we face past failures or heavy responsibilities, fear and discouragement can leave us frozen. Joshua knew the sting of defeat at Ai, and stepping back into the fight naturally brought anxiety. Yet God told him not to be afraid. The Lord never expects us to handle difficult tasks in our own strength. Instead, He calls us to look with eyes of faith, trust His faithfulness, and take the next step of obedience.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Hard battles and dark valleys are an inescapable part of our walk with God. Fear tempts us to run away when life feels overwhelming or painful. But Joshua followed God's plan and stepped directly into the valley. We can move forward with courage because God Himself goes with us as our guide and defender. Even when we feel trapped, He works behind the scenes to lead us into His victory.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Israel had suffered earlier because of sin, but when they repented, God did not meet them with harsh limits. We often think God will hold back His goodness after we fail. Instead, God showed abundant mercy and grace, which is His kindness that we do not earn. He gave them the city and allowed them to keep the plunder. When we turn back to God, His heart is generous and full of mercy toward us.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is past failure or fear keeping you from taking an obedient step forward with God today?",
+    "How does remembering God's generous mercy help you trust Him when you face a hard duty?"
+   ],
+   "prayer": "Lord, thank You that You do not leave us to fight in our own strength or hold back Your mercy when we turn to You. Please take away our fear and give us eyes of faith to trust Your guidance. Help us walk forward in obedience, knowing that You are our defender in every valley. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Carolyn Dale Newell",
+     "work": "Through the Valley to the Victory",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/through-the-valley-to-the-victory-encouragement-caf-july-22-2019.html"
+    },
+    "D2": {
+     "author": "Daily Disciples Ministries",
+     "work": "The Spiritual Fight Against Fear",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-may-18.html"
+    },
+    "D3": {
+     "author": "Tyler Kenney",
+     "work": "Spoiled by the Grace of God",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/spoiled-by-the-grace-of-god"
+    },
+    "D4": {
+     "author": "Gwen Smith",
+     "work": "Are You Afraid or Discouraged?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-july-4-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

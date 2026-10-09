@@ -1,0 +1,75 @@
+{
+ "id": "09-008-001",
+ "title": "Israel Demands a King",
+ "refs": [
+  "1 Samuel 8:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9008007,
+   "end": 9008009,
+   "ref": "1 Samuel 8:7-9",
+   "ranges": [
+    [
+     9008007,
+     9008009
+    ]
+   ],
+   "title": "\"They Have Rejected Me as Their King\"",
+   "key_verse": [
+    9008007,
+    9008007
+   ],
+   "reflect": [
+    {
+     "text": "Israel looked at the pagan nations around them and envied what they saw. They wanted visible military power, easier religions, and a ruler just like everyone else. Instead of remaining set apart under God's care, they trusted their own instincts rather than His instructions. By insisting on an earthly ruler, they abandoned quiet faith in God and chose human self-reliance instead.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Lord told Samuel that the people were not really turning away from him, but from God as their true King. God told Samuel to warn them about the heavy cost of a human monarch, yet He still allowed them to have their way. Sin often becomes its own punishment when God lets us experience the painful weight of our stubborn demands, turning our own desires into a form of judgment.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We need to submit our personal wants to God's wise rule instead of putting our confidence in earthly substitutes. It is actually God's mercy when He holds back the harmful things we ask for. In the end, God displays His true mercy not by giving in to our foolish cravings, but by providing the King we truly need in Jesus Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to trust your own instincts rather than God's Word?",
+    "How can remembering that Jesus is our true King help you accept God's answers when He says no to your requests?"
+   ],
+   "prayer": "Lord, forgive us for the times we follow our own instincts and look to earthly things for security instead of resting in Your care. Teach us to yield our wants to Your perfect rule and thank You when You withhold what would hurt us. We praise You for giving us the King we truly need in Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe (One Year Devotions for Men)",
+     "work": "Trusting Your Own Instincts",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/trusting-your-own-instincts-one-year-devotions-for-men-september-9.html"
+    },
+    "D2": {
+     "author": "Alistair Begg (Truth For Life)",
+     "work": "Be Careful What You Ask For",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-may-29-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

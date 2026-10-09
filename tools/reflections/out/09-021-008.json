@@ -1,0 +1,75 @@
+{
+ "id": "09-021-008",
+ "title": "David Flees to Gath",
+ "refs": [
+  "1 Samuel 21:8-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9021008,
+   "end": 9021015,
+   "ref": "1 Samuel 21:8-15",
+   "ranges": [
+    [
+     9021008,
+     9021015
+    ]
+   ],
+   "title": "God's Care When Trouble Surrounds Us",
+   "key_verse": [
+    9021010,
+    9021010
+   ],
+   "reflect": [
+    {
+     "text": "David was running for his life from Saul's deadly anger. When he arrived at Nob without food or weapons, God provided for him with holy bread and the sword of Goliath. Yet when David tried to hide in enemy territory at Gath, the Philistines quickly recognized him. Hearing what they said about his past victories made David deeply afraid.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "To escape the trap, David used quick street-smarts and acted like a madman. He scratched on the city gates and let drool run down his beard. The king sent David away because superstitious pagans feared harming insane people. David relied on his own wits to survive, and his difficult journey was just beginning, but God was the one faithfully keeping him safe.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Whatever we think of David's trick, God's plan to establish him as king could never be stopped. God watched over David through every danger. Our lives can also feel chaotic and uncertain at times. Even then, we are invited to rest in God's presence, confident in his providential care—his loving, purposeful control over every detail of our lives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When life feels chaotic or scary, do you tend to rely only on your own wits or do you turn to God?",
+    "How can trusting in God's unstoppable plans help you feel peaceful today?"
+   ],
+   "prayer": "Lord, thank you that your good plans for us can never be ruined by trouble or fear. When our lives feel chaotic, remind us that you are watching over every step. Help us to rest in your presence and trust your loving care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 27: 1 Samuel 21:10–15",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-27-1-samuel-21-1015.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "David on the Run",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/david-on-the-run"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

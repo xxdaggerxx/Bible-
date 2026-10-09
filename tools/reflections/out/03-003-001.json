@@ -1,0 +1,66 @@
+{
+ "id": "03-003-001",
+ "title": "Laws for Peace Offerings",
+ "refs": [
+  "Leviticus 3:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3003001,
+   "end": 3003017,
+   "ref": "Leviticus 3:1-17",
+   "ranges": [
+    [
+     3003001,
+     3003017
+    ]
+   ],
+   "title": "A Shared Meal of Peace",
+   "key_verse": [
+    3003003,
+    3003003
+   ],
+   "reflect": [
+    {
+     "text": "The peace offering was a voluntary gift given out of thanksgiving to God. It was a special sacrifice that brought people together in fellowship. The meal was shared between the altar, the priests, and the worshiper's family. Before anyone else took part, God's portion was always honored first. This shared offering showed true harmony and friendship between the Lord and His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, believers who have faith are declared right with God and have peace with Him. Even so, many people still fail to feel God's inner peace in their daily lives. Experiencing that quiet peace requires handing over our mind and whole thought life to Christ. We cannot walk in His calm if we hold onto our own anxious thinking.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just as the worshiper brought their gift to the altar, we can present our own bodies as living sacrifices to God. That total surrender serves as our peace offering today. When we give Him first place in our daily lives, we can walk in harmony with Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What areas of your thought life do you still need to surrender to Christ?",
+    "How can you offer your body and daily actions to God as a living sacrifice today?"
+   ],
+   "prayer": "Lord God, thank You for welcoming us into fellowship with You through faith. We surrender our minds and our daily thoughts to Your care. Help us give our bodies as living sacrifices so we can walk in Your peace each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 02/01/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-02-or-01-or-2002-1127422.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

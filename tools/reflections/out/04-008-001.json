@@ -1,0 +1,66 @@
+{
+ "id": "04-008-001",
+ "title": "The Lampstand",
+ "refs": [
+  "Numbers 8:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4008001,
+   "end": 4008004,
+   "ref": "Numbers 8:1-4",
+   "ranges": [
+    [
+     4008001,
+     4008004
+    ]
+   ],
+   "title": "God Cares About the Details",
+   "key_verse": [
+    4008004,
+    4008004
+   ],
+   "reflect": [
+    {
+     "text": "When God gave instructions for the lampstand, He did not rush the work. The lampstand was crafted from hammered gold, with careful attention paid from its base all the way to its blossoms. God cared about its practical function, but He also cared about its beauty and intricate design.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often live our days in a hurried rush. Packing our schedules too full leads to exhaustion, stress, and mistakes we could have avoided. If God attended to every detail of the tabernacle furnishings, we can be sure He cares just as deeply about the details of our everyday lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Taking time to pray through our daily schedules helps us see the difference between God's priorities and the busyness we bring upon ourselves. When we surrender our agenda to Him, we can trade our chaotic hurry for His calm peace and purposeful timing.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What parts of your schedule today might be self-imposed busyness rather than God's priorities?",
+    "How can knowing God cares about the small details of your life help you slow down?"
+   ],
+   "prayer": "Lord, thank You for caring about every detail of my life. Forgive me for rushing through my days and letting stress take over. Help me to bring my daily schedule to You in prayer, and grant me Your peace as I follow Your timing. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lynn Cowell",
+     "work": "Why Am I in Such a Hurry?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-september-30-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

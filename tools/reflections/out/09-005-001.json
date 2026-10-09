@@ -1,0 +1,116 @@
+{
+ "id": "09-005-001",
+ "title": "The Ark Afflicts the Philistines",
+ "refs": [
+  "1 Samuel 5:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9005004,
+   "end": 9005004,
+   "ref": "1 Samuel 5:4",
+   "ranges": [
+    [
+     9005004,
+     9005004
+    ]
+   ],
+   "title": "\"Dagon, Fallen on His Face\"",
+   "key_verse": [
+    9005004,
+    9005004
+   ],
+   "reflect": [
+    {
+     "text": "In the ancient world, people believed that winning a battle proved their own god was stronger than the god of the defeated nation. When the Philistines captured the ark, they placed it right beside the statue of Dagon. They hoped to absorb Israel's God into their own group of gods. But the Lord is not a mere local god who can be captured or mixed with pagan worship. While the Philistines slept and thought they had won, the God who never slumbers was quietly at work.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The next morning revealed Dagon smashed on the threshold, with his head and hands cut off. This broken statue showed that false gods have no real power before the true God. Dagon lying flat on his face before the ark also points forward to the day when every knee will bow before Jesus Christ. Seeing God's supreme power gives us courage, because no dark force can defeat Him. It also reminds us to guard against religious syncretism, which means mixing true faith with false beliefs or putting anything ahead of God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there things or desires in your life that you are tempted to place alongside or above God?",
+    "How does knowing that all false powers will fall before Christ bring you peace today?"
+   ],
+   "prayer": "Lord God, you alone are sovereign over the whole earth, and no false power can stand before you. Keep our hearts from mixing your truth with worldly ideas or loving anything more than you. Help us to rest in the comfort that every knee will one day bow to Jesus. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Yahweh Versus Dagon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/yahweh-versus-dagon"
+    },
+    "D3": {
+     "author": "Emma Danzey",
+     "work": "What Does the Story of Dagon Tell Us about Our Idols Today?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/story-dagon-idol-god-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 9005001,
+   "end": 9005012,
+   "ref": "1 Samuel 5:1-12",
+   "ranges": [
+    [
+     9005001,
+     9005012
+    ]
+   ],
+   "title": "The Lord Defends His Own Honor",
+   "key_verse": [
+    9005003,
+    9005003
+   ],
+   "reflect": [
+    {
+     "text": "The Philistines worshiped a carved idol, but the ark of Israel had no physical image of God at all. It was built with a mercy seat, an empty throne where God's Spirit dwelt. When the Philistines placed the ark in their temple, God's presence confronted the false god, and the inferior idol crashed to the ground. God was teaching the Philistines His superior greatness, just as He had done long before during the plagues of Egypt.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Throughout all the Philistine cities, the Lord proved that He is supreme and can defend His own honor without human help. This was a deep comfort to Israel, and it carries a message for us today. F. B. Meyer wrote, \"Let Christ in — that is the one need of the soul.\" When we welcome Christ to take full control of our hearts, any sinful patterns or false loyalties that once ruled us will collapse before His light.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does it encourage you to know that God is capable of defending His own honor and truth?",
+    "What would it look like for you to let Christ take full possession of your heart today?"
+   ],
+   "prayer": "Heavenly Father, thank you that you are supreme over every false god and power in this world. Enter into our hearts and take full possession of our lives. Sweep away every sinful habit and idol, so that your light may shine brightly in us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 5:3",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

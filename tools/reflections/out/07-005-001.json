@@ -1,0 +1,67 @@
+{
+ "id": "07-005-001",
+ "title": "The Song of Deborah and Barak",
+ "refs": [
+  "Judges 5:1-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7005001,
+   "end": 7005031,
+   "ref": "Judges 5:1-31",
+   "ranges": [
+    [
+     7005001,
+     7005031
+    ]
+   ],
+   "title": "Shining Like the Sun",
+   "key_verse": [
+    7005031,
+    7005031
+   ],
+   "reflect": [
+    {
+     "text": "Deborah ends her victory song with a prayer that those who love God would shine like the sun at its brightest. We should desire this first for God's honor. When believers are steady and full of life, others see God's true power. If our faith is always wavering and dim, people may wrongly assume God's light is fading. We do not want to cause grief to the Lord who has given so much care to our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We also want to shine brightly for our own happiness. The sun does great good wherever it shines, waking blossoms, ripening fruit, and bringing cheer to everyone. Living a life that warms others brings deep joy to our own souls. Sharing the good things God gives us is always far more rewarding than keeping them to ourselves.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finally, we desire this brightness for the people around us. As F. B. Meyer reminds us, \"The world is sunless enough.\" Many people are living in cold darkness and need hope. When we reflect the Lord's goodness, we help brighten the shadowy paths of others and turn their dark clouds into light.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can the steady warmth of your life help someone see God's goodness this week?",
+    "Why does actively helping and blessing others bring greater joy than just focusing on yourself?"
+   ],
+   "prayer": "Lord, help us to love You with steady hearts that shine brightly each day. Keep our faith from wavering, so that people around us may see Your power and goodness. Use our lives to bring warmth, comfort, and hope to a dark world. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 5:31",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "06-014-001",
+ "title": "Land Division West of the Jordan",
+ "refs": [
+  "Joshua 14:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6014001,
+   "end": 6014005,
+   "ref": "Joshua 14:1-5",
+   "ranges": [
+    [
+     6014001,
+     6014005
+    ]
+   ],
+   "title": "God's Blueprint for His People",
+   "key_verse": [
+    6014005,
+    6014005
+   ],
+   "reflect": [
+    {
+     "text": "When the Israelites divided the land of Canaan, they carefully followed the instructions God had given through Moses. For centuries, God had guided history to prepare each tribe for its home. Assigning the land by lot kept stronger tribes from grabbing the best territory, showing God's fairness and His care for the needs of every family.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Human wisdom often chases what looks best on the surface, but only God truly knows what is best for us. Even though dividing the land was a complex task, God sovereignly guided every outcome. His sovereign plan worked hand in hand with the prompt and willing obedience of His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our lives are not ruled by random chance. God orders our days with purpose and deep care. We can safely trust His direction for our lives today, resting in the eternal inheritance He has given us in Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God is in control help you trust Him with the details of your life?",
+    "In what ways can you choose God's wisdom over what only looks good on the outside?"
+   ],
+   "prayer": "Heavenly Father, thank You for guiding every part of our lives with wisdom and care. Help us to follow Your Word with willing and prompt obedience. Teach us to trust Your good purposes and rejoice in the inheritance we have received through Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Following the Blueprint",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/following-the-blueprint"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Mar. 18, 2011",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-18-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

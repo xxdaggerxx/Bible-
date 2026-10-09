@@ -1,0 +1,66 @@
+{
+ "id": "01-031-043",
+ "title": "Jacob’s Covenant with Laban",
+ "refs": [
+  "Genesis 31:43-55"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1031043,
+   "end": 1031055,
+   "ref": "Genesis 31:43-55",
+   "ranges": [
+    [
+     1031043,
+     1031055
+    ]
+   ],
+   "title": "Watching Over Those We Love",
+   "key_verse": [
+    1031049,
+    1031049
+   ],
+   "reflect": [
+    {
+     "text": "When Laban and Jacob parted ways, Laban asked the Lord to keep watch between them. He cared deeply about his daughters and grandchildren, even though he had to let them go. In a similar way, parents and caregivers today want to protect their young people. We need to stay watchful because peer pressure can quickly pull young people toward destructive habits.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Staying alert means paying close attention to the youth in our lives. We can help protect them by getting to know their friends and watching for changes in their behavior. When trouble like substance abuse begins, warning signs often appear through sudden shifts in mood, declining physical health, or changing values. Paying attention allows us to notice these shifts early.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even with our best efforts, we cannot be everywhere at once. Like Laban at Mizpah, we must trust God when our loved ones are out of our sight. Through daily prayer, we can ask the Lord to watch over our children and guard them from evil temptations.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What changes in mood, health, or friendships might show that a young person in your life needs support?",
+    "How can you bring the young people you care about before God in daily prayer?"
+   ],
+   "prayer": "Lord, please keep watch over our children and young people whenever they are away from our sight. Guard their hearts against bad influences and evil temptations. Give us watchful eyes and wisdom to care for them well. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Dr. James Dobson",
+     "work": "Keeping Watch",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobsons-parenting-devotional-july-10.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

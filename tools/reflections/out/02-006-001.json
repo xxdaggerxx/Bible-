@@ -1,0 +1,135 @@
+{
+ "id": "02-006-001",
+ "title": "God Promises Deliverance",
+ "refs": [
+  "Exodus 6:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2006001,
+   "end": 2006003,
+   "ref": "Exodus 6:1-3",
+   "ranges": [
+    [
+     2006001,
+     2006003
+    ]
+   ],
+   "title": "\"I Am the LORD\"",
+   "key_verse": [
+    2006002,
+    2006002
+   ],
+   "reflect": [
+    {
+     "text": "Moses and the people of Israel felt deep despair when Pharaoh made their slavery even harsher. All their hopes in human help had collapsed. Yet it was in this dark moment of exhaustion that God drew near to speak. As F. B. Meyer observed, God allows human help to fail so that we seek in Him what we used to seek in people and things.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God met their discouragement by revealing His names. He reminded Moses that He is God Almighty, possessing supreme power to do whatever He wills. He also gave His covenant name, the LORD, showing His personal bond with His people. He promised that Pharaoh would not only release them, but would eventually drive them out under God's compelling power.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Affliction often teaches us to turn away from pride and self-reliance. Through hard trials, God teaches us patience and humility so that our hearts rest in Him alone. In Jesus Christ, this same Almighty God has drawn near to comfort us, proving that He has supreme power to save.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you currently tempted to rely on human strength or self-effort instead of God?",
+    "How does knowing God as both all-powerful and personally committed to you bring comfort in your trials?"
+   ],
+   "prayer": "Lord God, when human help fails and our strength is gone, remind us of who You are. Teach us to let go of self-reliance and find our true satisfaction in You. Thank You for drawing near to us in Christ with Your almighty power and covenant love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 6:2-3",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Donny Friederichsen",
+     "work": "The Names of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-names-of-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 2006006,
+   "end": 2006006,
+   "ref": "Exodus 6:6",
+   "ranges": [
+    [
+     2006006,
+     2006006
+    ]
+   ],
+   "title": "\"I Will Redeem You\"",
+   "key_verse": [
+    2006006,
+    2006006
+   ],
+   "reflect": [
+    {
+     "text": "When circumstances worsen and trials seem impossible to explain, we often struggle with painful questions. God did not answer every question Moses and the Israelites had about their suffering. Instead, the Lord pointed them to His character and repeated His covenant promise to free them from their heavy burdens. God never fails to keep His word, even though His promises rarely unfold on our human timetable.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "The Lord pledged to redeem His people with an outstretched arm. To redeem means to buy someone back from slavery and set them free. Israel's bitter bondage in Egypt serves as a picture of humanity's deeper exile under sin. True rescue required the Israelites to abandon all self-rescue efforts and place their trust entirely in God.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "This ancient promise of deliverance finds its ultimate fulfillment in Jesus Christ. Jesus rescues believers from eternal bondage, releasing us from our sin through His shed blood. We cannot save ourselves from sin, but through faith in Christ our Deliverer, we are restored to God.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficult circumstances or unanswered questions do you need to place in God's hands and timing today?",
+    "Are you trying to handle the burden of your sin on your own, or are you resting entirely in Christ's rescue?"
+   ],
+   "prayer": "Father, thank You that You never fail to keep Your promises, even when we do not understand Your timing. Deliver us from the foolish hope that we can save ourselves. Thank You for sending Jesus Christ to redeem us from the bondage of sin through His blood. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "God the Deliverer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-deliverer"
+    },
+    "D4": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - January 19, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-january-19-2006-1373894.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

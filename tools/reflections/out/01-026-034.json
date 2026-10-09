@@ -1,0 +1,66 @@
+{
+ "id": "01-026-034",
+ "title": "Esau’s Wives",
+ "refs": [
+  "Genesis 26:34-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1026034,
+   "end": 1026035,
+   "ref": "Genesis 26:34-35",
+   "ranges": [
+    [
+     1026034,
+     1026035
+    ]
+   ],
+   "title": "Grief and Grace in Family Life",
+   "key_verse": [
+    1026035,
+    1026035
+   ],
+   "reflect": [
+    {
+     "text": "When Esau married two Hittite women, his choice brought deep sorrow to his parents, Isaac and Rebekah. Difficult relationships can easily become a steady source of grief, stress, and frustration. Most of us know what it is like to deal with family members or coworkers whose choices and attitudes cause daily pain.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet God often allows challenging people into our lives for a purpose. Through these hard relationships, he teaches us genuine mercy, kindness, and unselfish love. Loving difficult people is impossible in our own human strength. We must depend on the Holy Spirit every day to give us patience and love that we do not have on our own.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot force someone else to change their ways, but God can change our hearts and attitudes. Choosing to pray before we spend time with someone difficult helps protect us from reacting in anger. Prayer softens our hearts so we can respond with God's kindness instead.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Which relationship in your life currently brings you grief or frustration?",
+    "How might praying before you interact with that person help you respond with love rather than anger?"
+   ],
+   "prayer": "Lord, you know the relationships in our lives that bring tension and grief. Please fill us with your Holy Spirit so we can show genuine kindness and unselfish love. Change our hearts when we cannot change others, and help us turn to you in prayer before we react. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Daily Disciples Ministries",
+     "work": "Daily Disciples Devotional - January 12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-january-12-11564680.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

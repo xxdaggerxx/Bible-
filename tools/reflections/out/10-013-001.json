@@ -1,0 +1,92 @@
+{
+ "id": "10-013-001",
+ "title": "Amnon and Tamar",
+ "refs": [
+  "2 Samuel 13:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10013001,
+   "end": 10013022,
+   "ref": "2 Samuel 13:1-22",
+   "ranges": [
+    [
+     10013001,
+     10013022
+    ]
+   ],
+   "title": "The Tragedy of Sin and the True King",
+   "key_verse": [
+    10013014,
+    10013014
+   ],
+   "reflect": [
+    {
+     "text": "Amnon claimed to love his half-sister Tamar, but his selfish desire was actually predatory lust. Encouraged by his shrewd friend Jonadab, Amnon faked an illness to lure Tamar into his room. Tamar bravely tried to stop him by appealing to God's law, her brother's conscience, and the disgrace of doing such evil. Yet Amnon refused to listen. He overpowered her, and his pretended affection quickly turned into cruel hatred as he threw her out into desolate grief.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The tragedy deepened through the silence and inaction of the men around Tamar. King David was furious, yet he did nothing to discipline Amnon or uphold justice. David's past moral compromises dulled his discernment and left him passive when his family needed protection. Meanwhile, Absalom told Tamar to stay quiet, nursing a bitter hatred instead of seeking open truth. The painful fallout shows how unrepented sin damages families and numbs the conscience to wrong.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "While earthly leaders and families fail tragically, God does not abandon the wounded. He stays close to the brokenhearted and reminds victims of abuse that their pain does not define who they are. Earthly kings like David fall short, but Jesus is our true and faithful King. In Christ, we find a righteous ruler who defends the vulnerable, brings hidden sins to light, and offers true healing and forgiveness.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in our lives where unrepented compromises are dulling our sense of right and wrong?",
+    "How can we turn to Jesus, our true King, for healing and protection when human leaders let us down?"
+   ],
+   "prayer": "Lord, we thank you that you stay close to the brokenhearted and never forget those who suffer. Guard our hearts against selfish desires, and forgive us where we have compromised or looked away from injustice. Help us look to Jesus, our true King, who loves righteousness and brings true healing to our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Like Father, Like Son",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/like-father-like-son"
+    },
+    "D2": {
+     "author": "Glen Scrivener",
+     "work": "When It Comes to Abuse, It Takes a Village",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/abuse-takes-village/"
+    },
+    "D3": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways 04/15/2003",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-04-or-15-or-2003-1195302.html"
+    },
+    "D4": {
+     "author": "Eva Marie Everson",
+     "work": "What Women Today Can Learn from the Tragic Story of David’s Daughter, Tamar",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-women-today-can-learn-from-the-tragic-story-of-davids-daughter-tamar.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

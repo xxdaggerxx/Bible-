@@ -1,0 +1,66 @@
+{
+ "id": "02-023-014",
+ "title": "The Three Feasts of Pilgrimage",
+ "refs": [
+  "Exodus 23:14-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2023014,
+   "end": 2023019,
+   "ref": "Exodus 23:14-19",
+   "ranges": [
+    [
+     2023014,
+     2023019
+    ]
+   ],
+   "title": "Celebrating God's Faithfulness and Provision",
+   "key_verse": [
+    2023014,
+    2023014
+   ],
+   "reflect": [
+    {
+     "text": "God gave Israel three annual festivals to help them continually celebrate His rescue and care. The Feast of Unleavened Bread remembered their deliverance from Egypt and pointed forward to Jesus as the true, sinless Passover Lamb. The Feast of Harvest recognized their initial crops and pointed ahead to the coming of the Holy Spirit. In the same way, the Feast of Ingathering looked back on how God sheltered them in the wilderness while looking forward to Jesus offering living water. Thinking about these feasts strengthens our trust in Jesus and His complete work of salvation.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "At these gatherings, the Lord commanded His people to bring the very best of their harvest. Giving back to God is an act of honoring Him as the true owner of everything we possess. It is not like paying an ordinary bill with whatever change remains. Instead, God asks for our first and finest gifts. Offering Him our firstfruits shows active faith that He will continue to provide for our needs in the days ahead.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to give God your first and best resources, or do you offer Him what happens to be left over?",
+    "How can remembering Jesus and His gift of salvation help you give joyfully to God today?"
+   ],
+   "prayer": "Lord God, thank You for providing everything we need and for saving us through Jesus. Teach us to honor You as the owner of all things by gladly bringing You our first and best gifts. Deepen our trust that You will faithfully take care of all our needs each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jessica Brodie",
+     "work": "No More Leftovers: A Gift for My God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/no-more-leftovers-a-gift-for-my-god-wholly-loved-october-29.html"
+    },
+    "D2": {
+     "author": "Emma Danzey",
+     "work": "What Are the 3 Annual Feasts in the Bible?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-are-the-3-annual-feasts-in-the-bible.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,146 @@
+{
+ "id": "07-021-001",
+ "title": "Wives for the Benjamites",
+ "refs": [
+  "Judges 21:1-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7021025,
+   "end": 7021025,
+   "ref": "Judges 21:25",
+   "ranges": [
+    [
+     7021025,
+     7021025
+    ]
+   ],
+   "title": "\"Right in His Own Eyes\"",
+   "key_verse": [
+    7021025,
+    7021025
+   ],
+   "reflect": [
+    {
+     "text": "The Book of Judges ends with a heartbreaking picture of moral confusion. People were not necessarily trying to be evil; instead, they were simply doing whatever seemed right to them. Following our own opinions and gut feelings often feels sincere, but it inevitably produces disaster and ruin.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "When we let our emotions dictate our choices instead of God's truth, we end up carrying the crushing weight of trying to be our own god. Trapped by their own foolish choices, the Israelites invented brutal workarounds to justify their actions. Self-guided morality always twists into self-deception.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "True spiritual stability requires honest humility and repentance. We desperately need King Jesus to reign in our hearts. By grounding our lives in Scripture, we allow Him to shepherd our thinking away from self-destructive choices and into genuine righteousness.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to follow your feelings rather than God's Word?",
+    "How can you let King Jesus guide your decisions today instead of doing what merely feels right?"
+   ],
+   "prayer": "Lord Jesus, please be the true King of my heart and mind. Forgive me for the times I trust my own feelings and opinions above Your truth. Ground me in Your Word, and lead me in ways that honor You.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Wives for Benjamin",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/wives-benjamin"
+    },
+    "D3": {
+     "author": "Lysa TerKeurst",
+     "work": "When Our Opinions and Feelings Get Us in Trouble",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-january-28-2021.html"
+    },
+    "D5": {
+     "author": "Ray Ortlund",
+     "work": "Our disastrous rightness",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/ray-ortlund/judges-2125_06/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 7021001,
+   "end": 7021025,
+   "ref": "Judges 21:1-25",
+   "ranges": [
+    [
+     7021001,
+     7021025
+    ]
+   ],
+   "title": "A Broken People and a Faithful God",
+   "key_verse": [
+    7021007,
+    7021007
+   ],
+   "reflect": [
+    {
+     "text": "After a devastating civil war, Israel faced a national crisis with an entire tribe nearly wiped out. Bound by a rash vow made at Mizpah, they felt they could not give their daughters to Benjamin. Even in this dark time, they were strictly tenacious about their vows, fearing God's judgment if they broke an oath made in His presence.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Instead of turning back to God in true repentance, the leaders devised violent and coercive schemes to solve their problem. They attacked Jabesh-gilead and ambushed young women at Shiloh. These cruel, self-serving solutions inflicted deep generational grief and exposed the nation's ongoing spiritual rebellion against God's covenant.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Yet while human promises and schemes lead to pain, God's oaths remain completely steadfast. As Scripture reminds us, God confirmed His promise with an oath so that we might have absolute confidence in Him. Unlike broken human rulers, the King of kings offers an unchanging covenant of love that will never fail.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face the painful fallout of foolish choices, do you turn to human schemes or to God in humble repentance?",
+    "How does the unshakable faithfulness of God's covenant bring you comfort when human leaders fail?"
+   ],
+   "prayer": "Heavenly Father, human wisdom so easily leads to cruelty and pain. Thank You that Your covenant promises never fail and that Your word is completely reliable. Point our hearts to Christ, our righteous King, whose love is steadfast forever.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 21:7",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D4": {
+     "author": "D.A. Carson",
+     "work": "Devotional: Judges 21",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/judges-21-acts-25-jeremiah-35-psalms-7-8/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

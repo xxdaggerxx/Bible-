@@ -1,0 +1,66 @@
+{
+ "id": "02-016-022",
+ "title": "The Sabbath Observed",
+ "refs": [
+  "Exodus 16:22-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2016022,
+   "end": 2016030,
+   "ref": "Exodus 16:22-30",
+   "ranges": [
+    [
+     2016022,
+     2016030
+    ]
+   ],
+   "title": "Learning to Rest and Trust",
+   "key_verse": [
+    2016029,
+    2016029
+   ],
+   "reflect": [
+    {
+     "text": "In the desert, God commanded His people to rest on the Sabbath even before He gave the Ten Commandments on Mount Sinai. For generations, the Israelites had lived as slaves in Egypt, where work never ended. By giving them a double portion of food on the sixth day, God began to break that slave mindset and teach them freedom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Still, some people went out on the seventh day to look for food. Trying to work or hoard manna revealed a deep distrust in God's care. Setting aside our work requires real faith. We have to believe that God will supply what we need, even when our own labor comes to a complete stop.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God uses the Sabbath as a trust-training exercise. When we choose to stop striving, we remind ourselves that our lives depend on Him rather than our own efforts. Honoring this rest deepens our relationship with God and teaches our hearts to rely on His faithful provision.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What makes it difficult for you to stop working and trust God to supply what you need?",
+    "How can practicing regular rest help deepen your relationship with God?"
+   ],
+   "prayer": "Lord, thank You for the gift of rest and for promising to provide for us. Forgive us when we struggle to stop working because we rely on our own strength rather than Your care. Teach us to rest in faith, trusting that You will supply all we need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Glynnis Whitwer",
+     "work": "Did You Know Rest Is Both a Gift and Command?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-september-24-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

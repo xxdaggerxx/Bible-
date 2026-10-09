@@ -1,0 +1,127 @@
+{
+ "id": "02-014-015",
+ "title": "Parting the Red Sea",
+ "refs": [
+  "Exodus 14:15-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2014015,
+   "end": 2014015,
+   "ref": "Exodus 14:15",
+   "ranges": [
+    [
+     2014015,
+     2014015
+    ]
+   ],
+   "title": "\"Tell the Israelites to Go Forward\"",
+   "key_verse": [
+    2014015,
+    2014015
+   ],
+   "reflect": [
+    {
+     "text": "When we face hard situations, fear and past pain often make us demand clear, easy answers from God. The Israelites were trapped between Pharaoh's army and the water. Instead of seeing that God was actively giving them freedom, they panicked. When an answer to prayer brings unexpected troubles, it is easy to get caught up in fear rather than praising God for what He is doing.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God told Moses to stop crying out and tell the people to move ahead. Walking straight toward an impossible sea went against all human logic, but God already saw what lay on the other side. As Suzanne Eller reminds us, we must trust that God is \"present at every step.\" Instead of focusing on what frightens us, we are called to step forward in faith and trust His ongoing rescue.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you letting fear keep you from noticing how God is already answering your prayers?",
+    "Where might God be asking you to move forward in faith instead of waiting for an easier path?"
+   ],
+   "prayer": "Lord, forgive us when we panic and forget how You are already working in our lives. Help us look away from our fears and listen to Your guidance. Give us the courage to step forward in faith, knowing You are with us all the way. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lorraine Edwards",
+     "work": "Answers That Don’t Seem Like Answers",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-september-1-2020.html"
+    },
+    "D2": {
+     "author": "Suzanne Eller",
+     "work": "Crying Over Answered Prayer",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-september-27-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2014015,
+   "end": 2014031,
+   "ref": "Exodus 14:15-31",
+   "ranges": [
+    [
+     2014015,
+     2014031
+    ]
+   ],
+   "title": "Deliverance at the Red Sea",
+   "key_verse": [
+    2014031,
+    2014031
+   ],
+   "reflect": [
+    {
+     "text": "We often try to arrange our own tidy solutions to life's troubles. Even so, God sometimes allows us to feel completely cornered. Standing before a deep sea with nowhere to run strips away our self-reliance. Being placed in an overwhelming spot is often God's way of breaking our old habits and teaching us to wait on His timing.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "At the water's edge, the Lord revealed His supreme power over nature to save His people. He sent darkness to confuse the Egyptian army while providing light for Israel's path. Israel's safe passage through the dry sea bed points toward conversion, which is turning to God for new life. At the same time, the defeat of Pharaoh's army pictures God's final, righteous judgment.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "When the Israelites saw the Lord's great strength and His judgment over their enemies, they were filled with holy reverence and faith. Watching God defeat evil and protect His people reminds us that we can fully trust every promise He has made.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need to let go of self-reliance and wait on God?",
+    "How does seeing God's victory over evil help you trust His promises today?"
+   ],
+   "prayer": "Heavenly Father, help us give up our own control when we find ourselves cornered. Thank You for Your mighty power to deliver us from harm. Fill our hearts with holy reverence for You, and teach us to depend fully on Your promises. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "The Highway to the Promised Land",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-apr-10-2008-11572900.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Crossing the Red Sea",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/crossing-the-red-sea"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

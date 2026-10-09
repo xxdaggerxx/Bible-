@@ -1,0 +1,73 @@
+{
+ "id": "07-002-001",
+ "title": "Israel Rebuked at Bochim",
+ "refs": [
+  "Judges 2:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7002001,
+   "end": 7002005,
+   "ref": "Judges 2:1-5",
+   "ranges": [
+    [
+     7002001,
+     7002005
+    ]
+   ],
+   "title": "Remembering God's Faithfulness and Turning from Compromise",
+   "key_verse": [
+    7002001,
+    7002001
+   ],
+   "reflect": [
+    {
+     "text": "The angel of the Lord traveled from Gilgal, a place that marked God's past rescue, to Bochim, a place of weeping. God had faithfully delivered His people and promised never to break His covenant with them. A covenant is a sacred promise of relationship. Yet Israel compromised by failing to tear down false altars, welcoming the very things God told them to reject.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Sin usually moves in a harmful cycle. It begins with misplaced desires, turns into disobedience, and brings painful results. Spiritual decline took root in Israel when a generation grew up without knowing God's past works. Because the people failed to pass down the stories of what God had done, the next generation was left open to self-reliance and drifted into idolatry.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal desires do you need to surrender to God before they lead to disobedience?",
+    "How can you share the story of God's faithfulness with the next generation?"
+   ],
+   "prayer": "Lord, thank You for Your unbreakable promises, even when we struggle with compromise. Help us to hand our desires over to You before they lead us away from Your ways. Teach us to remember all You have done and to pass Your truth on to others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lysa TerKeurst",
+     "work": "Stopping Sin in Its Tracks",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-october-30-2018.html"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Telling the Next Generation",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-july-1-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "Even when Israel faced the bitter fruit of their choices, God's covenant promises remained unbreakable. Breaking the cycle of sin means we must surrender our selfish desires to God before they grow into open rebellion. When we remember His faithfulness, we can stay anchored in His care and walk in obedience.",
+     "problem": "The teaching that believers can stay anchored in God's care (or provision) is drawn from D2, which is not cited for this paragraph, and is not found in D1 or the biblical passage."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

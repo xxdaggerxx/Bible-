@@ -1,0 +1,74 @@
+{
+ "id": "02-035-004",
+ "title": "Offerings for the Tabernacle",
+ "refs": [
+  "Exodus 35:4-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2035004,
+   "end": 2035009,
+   "ref": "Exodus 35:4-9",
+   "ranges": [
+    [
+     2035004,
+     2035009
+    ]
+   ],
+   "title": "Giving with a Willing Heart",
+   "key_verse": [
+    2035005,
+    2035005
+   ],
+   "reflect": [
+    {
+     "text": "When Moses asked the people for offerings to build the tabernacle, he did not use pressure or guilt. He simply invited anyone with a willing heart to bring what they had. True giving does not come from fear or mere duty. It grows out of gratitude for God's grace, His undeserved kindness. When we remember that everything we possess comes from God, we are freed to give with joy.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Among the gifts brought by the people were fine spices for the anointing oil. In the Old Testament, this special oil was poured out to prepare people and items for God's service. For us, this points to the Holy Spirit. Just as sweet spices were blended to make the fragrant oil, the Holy Spirit gives rich gifts to our lives, including comfort, wisdom, strength, and holiness. Without His help, our worship and efforts to serve God are lifeless.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God does not lack anything, yet He kindly receives what we offer in time, money, and ability. Thinking about His generous grace in Jesus changes our reluctant hearts into cheerful ones. As we ask the Holy Spirit to empower our lives, our humble offerings become a sweet fragrance that brings glory to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering God's goodness in Jesus change the way you share what you have?",
+    "In what areas of your daily service do you need to ask the Holy Spirit for fresh strength and help?"
+   ],
+   "prayer": "Lord, thank you for giving us all that we have through your abundant grace in Jesus. Fill us with your Holy Spirit so that our service to you is alive and pleasing in your sight. Give us willing hearts that delight in offering our gifts for your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 29",
+     "on": "Exodus 35:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Overflowing With Generosity - Truth For Life - September 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-september-1-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

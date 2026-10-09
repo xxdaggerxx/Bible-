@@ -1,0 +1,128 @@
+{
+ "id": "05-006-001",
+ "title": "The Greatest Commandment",
+ "refs": [
+  "Deuteronomy 6:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5006004,
+   "end": 5006005,
+   "ref": "Deuteronomy 6:4-5",
+   "ranges": [
+    [
+     5006004,
+     5006005
+    ]
+   ],
+   "title": "\"Love the LORD Your God\"",
+   "key_verse": [
+    5006005,
+    5006005
+   ],
+   "reflect": [
+    {
+     "text": "Moses begins with a clear truth: the Lord our God is one. In a world full of false gods, Israel needed to know that the Lord stands completely alone. Learning who God is marks the start of our journey, but Moses shows that our full response is love. As Pastor Chuck Swindoll notes, loving God is our ultimate response to who He is. Wholehearted devotion begins by recognizing that the Lord alone is God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because the Lord alone is God, He asks for our exclusive devotion. Real obedience does not come from cold duty or merely going through the motions. It flows out of deep love for Him with all our heart, soul, and strength. Yet none of us loves God perfectly every day. When we see where our love falls short, our weakness points us straight to our need for Jesus, who died to pay for our sins and reconcile us to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Does your obedience to God come more from sincere love or from cold duty?",
+    "How does seeing your failure to love God perfectly remind you of your need for Jesus?"
+   ],
+   "prayer": "Lord, thank you for revealing that you alone are the true God. Teach us to love you with all our heart, soul, and strength rather than merely going through the motions. When our love falls short, keep our eyes fixed on the grace of Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "The Ultimate Response to God",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/the-ultimate-response-to-god"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Hear, O Israel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/hear-o-israel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5006001,
+   "end": 5006019,
+   "ref": "Deuteronomy 6:1-19",
+   "ranges": [
+    [
+     5006001,
+     5006019
+    ]
+   ],
+   "title": "Building on an Enduring Foundation",
+   "key_verse": [
+    5006007,
+    5006007
+   ],
+   "reflect": [
+    {
+     "text": "Every household needs an enduring foundation to withstand the pressures and storms of life. If we build our homes on worldly habits and assumptions, our families inevitably begin to unravel. God's design is different. He calls us to anchor our homes in devotion to His Word. Before we can guide others, we must carefully examine the true foundation of our daily lives.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Passing on God's truth does not require us to have flawless answers to every question. Instead, God calls parents to steady discipleship across ordinary routines. We teach His ways naturally throughout the day, whether sitting at home, sharing a meal, or walking along the road.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "When children ask difficult spiritual questions that leave us stumped, we do not need to panic. We can pray, seek wisdom, and rest in God's character. Honestly admitting our limitations humbles us and helps direct our children to place their trust in Christ rather than in human wisdom.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What foundation are you building your daily home life upon?",
+    "How can you use ordinary, everyday moments to talk about God with those around you?"
+   ],
+   "prayer": "Heavenly Father, help us build our homes and relationships on your truth. Give us patience to guide the next generation through ordinary, daily moments. When we do not have all the answers, keep us humble and help us point others to trust in Christ. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Laura Bailey",
+     "work": "Hope When You Feel Spiritually Stumped",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/hope-when-you-feel-spiritually-stumped-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "The Most Valuable Family Foundation",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-february-6-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

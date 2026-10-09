@@ -1,0 +1,76 @@
+{
+ "id": "06-004-019",
+ "title": "The Camp at Gilgal",
+ "refs": [
+  "Joshua 4:19-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6004019,
+   "end": 6004024,
+   "ref": "Joshua 4:19-24",
+   "ranges": [
+    [
+     6004019,
+     6004024
+    ]
+   ],
+   "title": "Memorial Stones at Gilgal",
+   "key_verse": [
+    6004024,
+    6004024
+   ],
+   "reflect": [
+    {
+     "text": "People often keep tangible keepsakes to remember the most important moments of their lives. At Gilgal, God instructed Israel to set up twelve stones taken from the riverbed. These stones were a lasting sign of what God had done. When children in years to come asked what the stones meant, parents were to tell them how the Lord dried up the Jordan so His people could cross over on dry ground.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Telling these true stories was meant to engrave God's mighty rescues on young hearts, teaching them to revere Him. Looking back at God's historical faithfulness continually strengthens our trust in Him. The stones showed the Israelites where they had come from and where God had placed them. As F. B. Meyer notes, they stood as a reminder of the \"grace which had brought them forth.\"",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Today, believers are given visible signs in baptism and the Lord's Supper to remember and proclaim God's salvation. Just as Israel was brought out of the river, God has brought us out of spiritual death and raised us with Christ. Remembering His resurrection reminds us of our secure standing before God and keeps us from turning back to the empty patterns of the world.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What reminders or memories help you recall God's faithfulness in your own life?",
+    "How can you share the story of God's saving power with the next generation?"
+   ],
+   "prayer": "Lord God, thank You for Your mighty power and for raising us to new life in Jesus Christ. Help us remember Your faithfulness whenever our trust begins to waver. Give us willing hearts to share what You have done with those who come after us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 4:20",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Memorial Stones",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/memorial-stones"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

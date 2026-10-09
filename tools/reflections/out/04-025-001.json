@@ -1,0 +1,84 @@
+{
+ "id": "04-025-001",
+ "title": "Moab Seduces Israel",
+ "refs": [
+  "Numbers 25:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4025001,
+   "end": 4025005,
+   "ref": "Numbers 25:1-5",
+   "ranges": [
+    [
+     4025001,
+     4025005
+    ]
+   ],
+   "title": "The Trap of Compromise",
+   "key_verse": [
+    4025003,
+    4025003
+   ],
+   "reflect": [
+    {
+     "text": "Israel was resting peacefully at Shittim, but they let down their guard. When spiritual curses failed against them, their enemies tried a different approach. Moab intentionally tempted the men of Israel into sexual sin and the worship of false gods. What seemed like pleasure was actually a deadly trap designed to break their covenant with God and draw down His anger. Instead of staying set apart as God's special people, they chose to blend in with their pagan neighbors.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "F. B. Meyer reminds us that \"sin is slavery.\" What the people entered for pleasure became a heavy yoke around them. Sin always makes big promises of enjoyment, but it quickly turns into bondage. The severe judgment in this story shows that God takes our loyalty seriously. Because God's judgment misses no one, we cannot afford half-measures when dealing with sin.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This passage stands as a solemn warning for us today. Our culture constantly pressures us to compromise and abandon our calling to be holy. We cannot overcome this pull by our own strength. We need to turn to our High Priest, Jesus, and rely on the Holy Spirit. By walking in the Spirit, we find true freedom and power to turn away from every idol.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you have lowered your guard and begun to blend in with the culture around you?",
+    "What compromises do you need to bring to Jesus today so His Spirit can set you free?"
+   ],
+   "prayer": "Lord, forgive us for the times we have let down our guard and chosen worldly pleasure over loyalty to You. Help us to remember our calling to be holy and set apart. By Your Holy Spirit, break any hold that sin has on our hearts, and keep us faithful to You alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 25:3",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Feb. 23, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-23-2010-11626546.html"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Numbers 25, Psalm 68, Isaiah 15, 1 Peter 3",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-25-psalm-68-isaiah-15-1-peter-3/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

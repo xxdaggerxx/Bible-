@@ -1,0 +1,75 @@
+{
+ "id": "01-024-062",
+ "title": "Isaac Marries Rebekah",
+ "refs": [
+  "Genesis 24:62-67"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1024062,
+   "end": 1024067,
+   "ref": "Genesis 24:62-67",
+   "ranges": [
+    [
+     1024062,
+     1024067
+    ]
+   ],
+   "title": "Seeking the Lord in the Quiet",
+   "key_verse": [
+    1024063,
+    1024063
+   ],
+   "reflect": [
+    {
+     "text": "Isaac went out into the open field at sunset to pray and meditate quietly. Spending time alone with the Lord helps our souls rest from daily cares. As Charles Spurgeon observed, we would \"grow in grace, if we were more alone.\" When we set aside peaceful moments to turn our thoughts toward our Maker, God meets us and directs our steps.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God faithfully guides people who seek Him and fulfill their covenant duties. While Isaac prayed, the servant returned with Rebekah. Isaac stepped forward to lead God's people in place of his father Abraham, and Rebekah joined him as a mother in this covenant family. Important choices, including marriage, are not just about pleasing ourselves. They are meant to advance God's kingdom.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We need these regular, intentional times of solitary prayer if we desire God's guidance. Pausing at the end of the day or looking at creation reminds us of our Creator. When we step away from distractions to seek Him first, the Lord blesses us and orders our lives for His glory.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you make regular time to be alone with God and listen for His guidance?",
+    "How can your life choices focus on advancing God's kingdom rather than just your own comfort?"
+   ],
+   "prayer": "Lord, teach us to step away from busy distractions and spend quiet time with You. Guide our steps and give us wisdom for every decision we face. May our lives and our relationships help build Your kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 15",
+     "on": "Genesis 24:63",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Isaac Marries Rebekah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/isaac-marries-rebekah"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

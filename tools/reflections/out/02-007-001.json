@@ -1,0 +1,75 @@
+{
+ "id": "02-007-001",
+ "title": "God Commands Moses and Aaron",
+ "refs": [
+  "Exodus 7:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2007001,
+   "end": 2007007,
+   "ref": "Exodus 7:1-7",
+   "ranges": [
+    [
+     2007001,
+     2007007
+    ]
+   ],
+   "title": "Spokesmen for the Living God",
+   "key_verse": [
+    2007005,
+    2007005
+   ],
+   "reflect": [
+    {
+     "text": "God gave Moses and Aaron a clear job: to be His spokesmen before Pharaoh. Many people think prophets only told the future, but their main work was simply speaking God's message. Moses stood in the place of God before Pharaoh, and Aaron spoke the words. In a similar way, believers today represent God before a watching world. To people who do not read Scripture, our lives may be the only picture of Jesus they ever see.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Even when proud people refuse to listen, the Lord is in control. Charles Spurgeon reminded believers that \"the Lord can take care of His own name.\" God made Egypt know who He was through His mighty judgments and by keeping His own people safe through every trial. Today, pastors still speak for God when they faithfully teach the Bible, and the Holy Spirit uses that truth to show everyone that the Lord is the one true God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can your daily actions and words show others what Jesus is like?",
+    "When people ignore or reject God, how does knowing that He protects His own name bring you peace?"
+   ],
+   "prayer": "Lord, help us to be faithful representatives of Your truth in the way we live and speak. When the world opposes You, give us peace knowing that You will show Your power and care for Your people. Use our words and actions to point others to Jesus today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 21",
+     "on": "Exodus 7:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Spokesmen for God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/spokesmen-god"
+    },
+    "D3": {
+     "author": "Walk Thru the Bible",
+     "work": "Quiet Walk - Feb. 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/quiet-walk/quiet-walk-feb-1-1126372.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,141 @@
+{
+ "id": "03-011-001",
+ "title": "Clean and Unclean Animals",
+ "refs": [
+  "Leviticus 11:1-47"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 3011044,
+   "end": 3011045,
+   "ref": "Leviticus 11:44-45",
+   "ranges": [
+    [
+     3011044,
+     3011045
+    ]
+   ],
+   "title": "\"Be Holy, Because I Am Holy\"",
+   "key_verse": [
+    3011044,
+    3011044
+   ],
+   "reflect": [
+    {
+     "text": "Holiness begins with God Himself, and it applies to whatever is set apart exclusively for Him. When the Lord tells His people to be holy, He calls them to belong completely to Him and live on His terms. In Leviticus, this call came right alongside practical rules about what to eat. It reminded Israel that honoring God touches ordinary daily activities and that sin is defiling.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Living a holy life is a call to moral excellence and beauty in our thoughts, speech, and habits. Yet trying to achieve pure holiness entirely by our own effort quickly proves impossible, much like trying to keep a busy floor constantly clean. Spiritual growth takes patience, especially when the enemy works to discourage our walk with God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "These detailed requirements ultimately show that we cannot save ourselves. We need a Savior. God declares believers holy through the sacrifice of Christ, not our own perfection. We are invited to present our lives to Him each day, resting in His grace and depending on His strength.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily habits or thoughts do you need to ask God to purify today?",
+    "Are you relying on your own willpower to live right, or are you resting in Christ's grace?"
+   ],
+   "prayer": "Lord God, You are holy, and You call us to belong entirely to You. Forgive us for trying to make ourselves pure by our own strength. Thank You for cleansing us through the sacrifice of Jesus. Help us to depend on Your grace and honor You in every ordinary part of our lives today. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Laura MacCorkle",
+     "work": "Oh Lord, It’s Hard to Be Holy",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/oh-lord-it-s-hard-to-be-holy-crosswalk-the-devotional-feb-23-2012.html"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "A Holy Life",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-august-24-2015.html"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Leviticus 11-12, Psalms 13-14, Prov. 26, and 1 Thess. 5",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/leviticus-11-12-psalms-13-14-prov-26-1-thess-5/"
+    },
+    "D5": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways 02/05/05",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-02-or-05-or-05-1309504.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 3011001,
+   "end": 3011047,
+   "ref": "Leviticus 11:1-47",
+   "ranges": [
+    [
+     3011001,
+     3011047
+    ]
+   ],
+   "title": "Clean and Unclean Animals",
+   "key_verse": [
+    3011003,
+    3011003
+   ],
+   "reflect": [
+    {
+     "text": "Under the law given to Israel, clean animals had to both divide the hoof and chew the cud. This specific command pointed beyond a mealtime diet. It illustrates two essential habits that must always go together in our daily walk with God: meditation and separation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Chewing the cud represents quiet meditation on Scripture. It is not enough to quickly read our portion for the day. We are invited to ponder God's truth, comparing spiritual things with spiritual things, as the Holy Spirit reveals Christ to us. True meditation allows the sharp edge of God's Word to search our inner thoughts and motives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The divided hoof pictures separation from evil. If someone claims to love the Bible but continues in wrongdoing, their walk is incomplete. Likewise, avoiding wrong actions without an inner heart for God is only an outward show. Real turning from the world must flow from an inner attachment to Christ, joining together a thoughtful mind and an obedient life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you give yourself unhurried time today to ponder God's Word instead of rushing through it?",
+    "Does your daily life show that you are turning away from evil out of love for Christ?"
+   ],
+   "prayer": "Father, teach us to love Your Word and quietly ponder it each day. Let the Holy Spirit reveal Christ to us and search our inner thoughts. Guard our steps so that our outward actions match our inward devotion to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 11:3",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

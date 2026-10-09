@@ -1,0 +1,66 @@
+{
+ "id": "02-040-034",
+ "title": "The Cloud and the Glory",
+ "refs": [
+  "Exodus 40:34-38"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2040034,
+   "end": 2040038,
+   "ref": "Exodus 40:34-38",
+   "ranges": [
+    [
+     2040034,
+     2040038
+    ]
+   ],
+   "title": "God Dwelling with His People",
+   "key_verse": [
+    2040034,
+    2040034
+   ],
+   "reflect": [
+    {
+     "text": "The cloud also guided the Israelites day by day. They moved forward only when the cloud lifted, and they stayed in camp whenever it settled. At night, fire shone within the cloud through the darkness to show that God was there. Today, God places His Holy Spirit upon every believer, home, and church assembly. As F. B. Meyer wrote, \"We should march only when He lifts up His enfolding presence.\" We can rely on the Spirit to lead our choices, protect us, and fill our daily lives with His peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you practice waiting for the Holy Spirit to guide your daily decisions instead of rushing ahead?",
+    "How does knowing that Jesus opened the way for you to approach God change how you pray?"
+   ],
+   "prayer": "Heavenly Father, thank You for sending Jesus to bring us into direct communion with You. Guide our daily steps by Your Holy Spirit, just as You guided Your people through the wilderness. Help our homes and church gatherings to rest peacefully under Your loving presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 40:38",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "God Enters the Tabernacle",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-enters-tabernacle"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "When the tabernacle was finished, God's glory filled the tent as a visible cloud. In the garden of Eden, human sin broke our close relationship with God. By coming to dwell among Israel, the Lord began restoring that lost fellowship. Instead of remaining on Mount Sinai, His presence traveled with His people on their journey toward Canaan. Still, because of ongoing sin, even Moses was not able to enter the tent. This tabernacle was a temporary arrangement until Jesus Christ came to secure direct, open fellowship with the Father for all who believe.",
+     "problem": "The reflection claims that Moses was unable to enter the tent 'because of ongoing sin.' Neither the passage nor D2 teaches this; D2 states that ongoing sin barred ordinary people, while Exodus 40:35 explains that Moses could not enter because the cloud had settled on the tent and the glory of the Lord filled it."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

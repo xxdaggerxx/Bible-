@@ -1,0 +1,66 @@
+{
+ "id": "02-038-001",
+ "title": "The Bronze Altar",
+ "refs": [
+  "Exodus 38:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2038001,
+   "end": 2038007,
+   "ref": "Exodus 38:1-7",
+   "ranges": [
+    [
+     2038001,
+     2038007
+    ]
+   ],
+   "title": "The Altar of Sacrifice",
+   "key_verse": [
+    2038001,
+    2038001
+   ],
+   "reflect": [
+    {
+     "text": "Bezalel built the altar of burnt offering as the place where sacrifices were made to cover human sin. The altar was covered in bronze, a metal that points to God's holy judgment against our wrongdoing. On this altar, offerings were given so that the people could find peace and forgiveness with God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The fire on the altar was kept burning continually. This ongoing fire shows us that sinners may come to God through Christ at any time. We never have to worry that the door is shut or that God is unavailable when we need his mercy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Every animal sacrifice offered on this bronze altar pointed ahead to Jesus Christ, the true Lamb of God who died for our sins. He is both our High Priest who brings us to God and the final, complete offering who restores our broken relationship with Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Christ took God's judgment for you change how you view your sin?",
+    "Since God is always ready to receive you through Jesus, what holds you back from coming to Him right now?"
+   ],
+   "prayer": "Lord God, thank You for providing a way for us to be forgiven. Thank You for Jesus, who took the judgment we deserved and opened the way for us to come to You at any time. Help us to rest in His complete sacrifice and walk closely with You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Jan. 30, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-jan-30-2008-11566288.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "06-022-009",
+ "title": "The Altar of Witness",
+ "refs": [
+  "Joshua 22:9-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6022009,
+   "end": 6022034,
+   "ref": "Joshua 22:9-34",
+   "ranges": [
+    [
+     6022009,
+     6022034
+    ]
+   ],
+   "title": "True Unity and the Altar of Witness",
+   "key_verse": [
+    6022034,
+    6022034
+   ],
+   "reflect": [
+    {
+     "text": "When the eastern tribes returned home across the Jordan, they built a large altar. Israel's leaders feared this was a rebellion that would bring God's judgment on the whole nation. Out of a commendable desire to protect pure worship, they confronted their brothers. The eastern tribes explained that the altar was never meant for offerings. It was only an outward witness to remind future generations that they had a rightful share in the Lord.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Living across the river brought spiritual risks, and the tribes tried to protect themselves with a physical memorial. Yet physical monuments cannot create or preserve true fellowship. As F. B. Meyer observed, they mistakenly tried \"to erect an outward symbol of unity.\" True unity cannot be manufactured through human systems. It is an inward spiritual bond created by the Holy Spirit, centered on Christ, and grounded in pure worship that obeys God's truth.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because believers belong to Jesus, we already belong to one another. We do not need to invent outward systems to create unity. Instead, we are called to show the unity we already have. We do this by avoiding harsh judgments, forgiving each other, and walking together in sincere worship and love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on outward church routines to feel connected, or on the inward bond given by the Holy Spirit?",
+    "How can you actively show love and forgiveness to another believer this week?"
+   ],
+   "prayer": "Lord, thank you for making us one family through Jesus Christ and your Holy Spirit. Forgive us when we rely on outward forms or judge our brothers and sisters too quickly. Help us to protect true worship and to show our oneness through love, patience, and forgiveness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 22:27",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Unity of God’s People under True Worship",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/unity-of-gods-people-under-true-worship"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Mar. 21, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-mar-21-2008-11571301.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

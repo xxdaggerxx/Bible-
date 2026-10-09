@@ -1,0 +1,68 @@
+{
+ "id": "03-026-001",
+ "title": "Additional Blessings of Obedience",
+ "refs": [
+  "Leviticus 26:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3026001,
+   "end": 3026013,
+   "ref": "Leviticus 26:1-13",
+   "ranges": [
+    [
+     3026001,
+     3026013
+    ]
+   ],
+   "title": "Walking with God in Safety and Peace",
+   "key_verse": [
+    3026012,
+    3026012
+   ],
+   "reflect": [
+    {
+     "text": "God promised His people rich harvests, safety, and deep peace in their land when they followed His commands. These earthly gifts gave Israel a small foretaste of the world to come. When we walk closely with the Lord, we do not need to live in dread of people or scary circumstances. As F. B. Meyer wrote, our fears yield before \"a deep sense of God's perfect faithfulness.\" We can rest knowing He will never abandon us to our own limited strength.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The greatest blessing of all was not simply physical security or plenty of food. The true peak of God's promise was His personal presence, walking among His people and being their God. Today, we do not obey His commands to earn salvation, which is God's gift of rescue from sin. Instead, we follow Him with joyful gratitude because Christ kept the covenant perfectly in our place.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face scary situations, how does remembering God's faithfulness help ease your fear?",
+    "In what ways can you show thankfulness today for the gift of God living with His people?"
+   ],
+   "prayer": "Lord God, thank You for Your faithfulness and for promising to dwell among us. When we feel afraid, help us trust Your protection and remember that You are with us. Lead us to follow Your ways with joyful and thankful hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 26:6",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Covenant Blessings",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/covenant-blessings"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

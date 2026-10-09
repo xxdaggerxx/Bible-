@@ -1,0 +1,146 @@
+{
+ "id": "09-015-010",
+ "title": "Samuel Denounces Saul",
+ "refs": [
+  "1 Samuel 15:10-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9015022,
+   "end": 9015022,
+   "ref": "1 Samuel 15:22",
+   "ranges": [
+    [
+     9015022,
+     9015022
+    ]
+   ],
+   "title": "\"Obedience Is Better Than Sacrifice\"",
+   "key_verse": [
+    9015022,
+    9015022
+   ],
+   "reflect": [
+    {
+     "text": "When King Saul spared the best animals, he claimed he kept them to sacrifice to the Lord. But Samuel told him that God cares far more about our listening than about religious gifts. It is easy to deceive ourselves into thinking that outward religious acts make up for disobeying God's Word.",
+     "sources": [
+      "D1",
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "We often fall into the same trap. We might give our time, money, and energy at church, yet excuse ourselves when we lose our temper or ignore a clear command. F. B. Meyer reminds us that one sin resisted is dearer to God than the most costly sacrifices. God desires straightforward obedience in both large and small things, not empty rituals that cover up our sins.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Animal sacrifices could never fix willful rebellion, and they pointed forward to the complete sacrifice of Jesus Christ. Today, God looks at our hearts. Through the help of the Holy Spirit, we can turn away from mere religious show and offer our whole lives in faithful, loving obedience to Him.",
+     "sources": [
+      "D2",
+      "D3",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas where you rely on outward religious habits rather than simply obeying God's Word?",
+    "What is one small step of obedience God might be asking you to take today?"
+   ],
+   "prayer": "Lord, thank You for caring about our hearts and not just our outward actions. Help us by Your Holy Spirit to listen closely to Your voice and obey Your commands in both small and big ways. Teach us to live in true love and faithfulness to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 18",
+     "on": "1 Samuel 15:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 15:22",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Bayless Conley",
+     "work": "Answers for Each Day: Obedience",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/answers/answers-for-each-day-oct-23-11583294.html"
+    },
+    "D5": {
+     "author": "Truth For Life",
+     "work": "Truth For Life: Resist Deceit",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-oct-18-2010-11639620.html"
+    },
+    "D6": {
+     "author": "Jessica Udall",
+     "work": "Why Does Samuel Say Obedience Is Better Than Sacrifice?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/why-does-samuel-say-obedience-is-better-than-sacrifice.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 9015010,
+   "end": 9015023,
+   "ref": "1 Samuel 15:10-23",
+   "ranges": [
+    [
+     9015010,
+     9015023
+    ]
+   ],
+   "title": "The Cost of Rejecting God's Word",
+   "key_verse": [
+    9015023,
+    9015023
+   ],
+   "reflect": [
+    {
+     "text": "When Samuel came to confront Saul, he reminded the king of where he started. God had chosen Saul and raised him up to lead Israel when Saul was still humble and small in his own eyes. Yet when Saul was caught disobeying the command to destroy the plunder, he contradicted himself and made excuses, placing the blame on his soldiers instead of owning his failure.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Samuel pointed out that God views stubborn rebellion just as seriously as witchcraft and idolatry, which is the worship of false gods. Saul thought he could replace total obedience to God's authority with religious habits. But God wants our honest submission and a listening ear above any outward ritual. Because Saul rejected the Lord's word, he lost his place as king.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you make a mistake, do you make excuses and blame others, or do you humbly take responsibility before God?",
+    "In what ways can stubbornness keep you from submitting fully to God's authority?"
+   ],
+   "prayer": "Father, keep our hearts humble before You, remembering that all we have comes from Your hand. Forgive us when we make excuses or resist Your guidance. Grant us willing hearts that honor Your authority and listen to Your Word each day. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Good and the Better",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-good-and-the-better"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

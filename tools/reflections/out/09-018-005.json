@@ -1,0 +1,73 @@
+{
+ "id": "09-018-005",
+ "title": "Saul Envies David",
+ "refs": [
+  "1 Samuel 18:5-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9018008,
+   "end": 9018009,
+   "ref": "1 Samuel 18:8-9",
+   "ranges": [
+    [
+     9018008,
+     9018009
+    ]
+   ],
+   "title": "\"Saul Kept a Jealous Eye on David\"",
+   "key_verse": [
+    9018009,
+    9018009
+   ],
+   "reflect": [
+    {
+     "text": "When David won a great victory, Saul did not rejoice. Hearing the crowds praise David made the king angry and resentful. Saul viewed David's success as a personal loss, and bitter envy took root in his mind. Pride often makes us hide our jealousy, but comparing ourselves to others quietly poisons our thoughts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Constant comparison always brings trouble. It makes us either puffed up with pride or weighed down with discouragement. We are not called to compete or try to be better than everyone else. God simply asks us to do our best with what He has given us. When our main goal is to please Him, our hearts stay safe from bitterness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When God blesses your life, you might face surprising envy, even from other believers. Saul lost his inner peace because he welcomed suspicious thoughts. If people push back against you with jealousy, do not let it derail you. Keep praising God, stay faithful, and trust Him to take care of your critics.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone around you succeeds, do you feel tempted to compare yourself to them?",
+    "How can focusing on pleasing God protect your heart when others resent your blessings?"
+   ],
+   "prayer": "Lord, search our hearts and remove any hidden jealousy or pride. Teach us to be glad when others succeed, and give us contentment to serve You faithfully with the gifts You have provided. Keep our eyes fixed on pleasing You rather than worrying about what people say. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jeff Schreve",
+     "work": "Who Me?! Jealous?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-april-24-11602713.html"
+    },
+    "D2": {
+     "author": "Jack Graham",
+     "work": "Preparing for Opposition",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-july-16-2010-11634823.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

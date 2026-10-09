@@ -1,0 +1,66 @@
+{
+ "id": "01-041-053",
+ "title": "The Famine Begins",
+ "refs": [
+  "Genesis 41:53-57"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1041053,
+   "end": 1041057,
+   "ref": "Genesis 41:53-57",
+   "ranges": [
+    [
+     1041053,
+     1041057
+    ]
+   ],
+   "title": "Using Abundance for God's Glory",
+   "key_verse": [
+    1041056,
+    1041056
+   ],
+   "reflect": [
+    {
+     "text": "When the severe famine arrived, Egypt was ready because God had guided them. Joseph held immense power over the entire food supply. Yet instead of hoarding the grain for himself or keeping it only for the wealthy elite, Joseph opened the storehouses to feed everyone who came in need.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Joseph gives us a clear picture of quiet integrity under pressure. Even with massive influence and authority, he remained humble before God. Spiritual maturity shows itself when we pair authority with accountability, popularity with humility, and prosperity with integrity.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When God gives us resources, influence, or comfort, He does not intend for us to keep them to ourselves. We are called to be faithful stewards, or trusted managers, of what belongs to Him. When we use our positions and blessings generously to care for others, we bring glory to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you use the resources or influence God has given you to help someone in need this week?",
+    "In what areas of your life do you need to balance your success with humility and integrity?"
+   ],
+   "prayer": "Lord, thank You for the blessings and resources You place into our hands. Help us to stay humble, honest, and accountable when You give us influence or abundance. Teach us to open our hearts and share generously with others for Your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Giving for His Glory",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-september-21-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

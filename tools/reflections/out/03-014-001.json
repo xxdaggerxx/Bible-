@@ -1,0 +1,67 @@
+{
+ "id": "03-014-001",
+ "title": "Cleansing from Skin Diseases",
+ "refs": [
+  "Leviticus 14:1-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3014001,
+   "end": 3014032,
+   "ref": "Leviticus 14:1-32",
+   "ranges": [
+    [
+     3014001,
+     3014032
+    ]
+   ],
+   "title": "Set Free to Live with God",
+   "key_verse": [
+    3014007,
+    3014007
+   ],
+   "reflect": [
+    {
+     "text": "In this ceremony, two birds were brought for the person who had been healed. One bird was killed in a clay pot over fresh water. This points us to Jesus, who came in human nature—like a simple earthen vessel—and gave His life for us. Through His death, we are cleansed from the guilt and penalty of our sin, just as the sick person was cleansed from disease.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The second bird was dipped in the blood of the first bird and then set loose into the open sky. Before this cleansing, our hearts can feel trapped like a bird beating its wings against the bars of a cage, longing to be free from the power of sin. When Jesus died and rose again, He opened that cage. As F. B. Meyer writes, we are \"made free from the power of sin through the grace of Him who rose.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Once pronounced clean, the healed person was welcomed back into the community and could worship with God's people again. In the same way, Jesus brings us all the way into God's presence. Because we share in Christ's risen life, we do not have to live under sin's control anymore. We are free to set our hearts on God and live close to Him each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways have you experienced Jesus setting you free from the burden or control of sin?",
+    "How does knowing that you are welcomed into God's presence change how you approach Him today?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving Your life in human flesh to cleanse us from sin. Thank You that You rose from the dead so that we can walk in true freedom and draw near to God. Help us today to live in the joy of Your presence and keep our hearts set on You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 14:7",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

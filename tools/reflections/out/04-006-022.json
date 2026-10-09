@@ -1,0 +1,82 @@
+{
+ "id": "04-006-022",
+ "title": "Aaron’s Blessing",
+ "refs": [
+  "Numbers 6:22-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4006024,
+   "end": 4006026,
+   "ref": "Numbers 6:24-26",
+   "ranges": [
+    [
+     4006024,
+     4006026
+    ]
+   ],
+   "title": "\"The Lord Bless You and Keep You\"",
+   "key_verse": [
+    4006024,
+    4006024
+   ],
+   "reflect": [
+    {
+     "text": "God Himself is the true giver behind this ancient prayer. When the words speak of \"you,\" they mean each of us personally. Like a loving father beaming with joy over his child, God turns His face toward you. He reaches down to offer Himself and His grace, which is His free and unearned kindness.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When the Lord blesses us, His goodness touches all that happens to us. As Charles Spurgeon wrote, \"our losses and crosses, and even our disappointments are blessed.\" Along with this blessing comes God's steady protection. He guards us from evil, keeps us close to Himself, and makes His favor last.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "The blessing leads to true peace. In the Bible, peace means far more than simply having no fights. It means complete wholeness, safety, and thriving in God's presence. By placing His holy name on us, the Lord marks us as His own and promises never to let us go.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does it comfort you to know that God notices you and blesses you as an individual?",
+    "In what area of your life right now do you need to receive God's gift of peace and wholeness?"
+   ],
+   "prayer": "Lord God, thank You for turning Your face toward us with warmth and grace. Keep us safe in Your care and let Your goodness reach into our joys and our sorrows. Grant us Your deep peace today, and help us live as people who carry Your name.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 4",
+     "on": "Numbers 6:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Lisa Appelo",
+     "work": "5 Truths About God's Blessings Over You (Numbers 6:24-26) - Your Daily Bible Verse - December 26",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/5-truths-about-god-s-blessings-over-you-bible-study-minute-december-20-2017.html"
+    },
+    "D3": {
+     "author": "David Mathis",
+     "work": "The Lord Bless You and Keep You",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-lord-bless-you-and-keep-you"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

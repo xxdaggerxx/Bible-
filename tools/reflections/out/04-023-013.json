@@ -1,0 +1,80 @@
+{
+ "id": "04-023-013",
+ "title": "Balaam’s Second Oracle",
+ "refs": [
+  "Numbers 23:13-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4023013,
+   "end": 4023030,
+   "ref": "Numbers 23:13-30",
+   "ranges": [
+    [
+     4023013,
+     4023030
+    ]
+   ],
+   "title": "God Keeps His Promise to Bless",
+   "key_verse": [
+    4023019,
+    4023019
+   ],
+   "reflect": [
+    {
+     "text": "Human beings often let us down. People make promises they cannot keep, wear disguises, or change their minds. When we rely on people to do what only God can do, we end up disappointed. God is completely different. He never pretends to be someone He is not, and He always fulfills what He says. When people fail us, we can give them grace and take our hurts straight to God in prayer.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God does not change His mind, His blessing upon His people cannot be broken. Balak tried hard to hire Balaam to curse Israel, but Balaam was powerless to alter God's purpose. In the words of F. B. Meyer, \"the current of blessing was running too strong for him to stem.\" Through Jesus Christ, God has brought us into His family and bound us to Himself with a promise that no enemy can undo.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This unchanging blessing brings peace to our hearts. We do not need to live in fear of evil schemes, bad omens, or unseen spiritual enemies. People may plot against God's people, but their plans will fail. Those whom God has blessed cannot be cursed, because no power can harm those who put their trust in the living Lord.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you been looking to other people for the peace and security that only God can give?",
+    "How does knowing that God's blessing cannot be reversed help calm your fears today?"
+   ],
+   "prayer": "Faithful Lord, thank You that You never change Your mind or break Your word. Help us to rest in the secure blessing You have given us in Christ. Keep our hearts from fear, and teach us to trust Your protection in every season of life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 26",
+     "on": "Numbers 23:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 23:20",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Dawn Mast",
+     "work": "He is the One He Says He Is",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/he-is-the-one-he-says-he-is-encouragement-caf-jan-13-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

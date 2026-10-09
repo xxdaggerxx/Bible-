@@ -1,0 +1,66 @@
+{
+ "id": "02-025-023",
+ "title": "The Table of Showbread",
+ "refs": [
+  "Exodus 25:23-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2025023,
+   "end": 2025030,
+   "ref": "Exodus 25:23-30",
+   "ranges": [
+    [
+     2025023,
+     2025030
+    ]
+   ],
+   "title": "God's Presence at the Table",
+   "key_verse": [
+    2025030,
+    2025030
+   ],
+   "reflect": [
+    {
+     "text": "God told Moses to make a golden table to hold the Bread of the Presence at all times. This table reminds us that God prepares a rich place of blessing and fellowship—warm friendship with Him—for His people. Just as that bread stayed before the Lord continually, God's enduring presence belongs at the center of our thoughts every day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet anxious thoughts often try to crowd in. When we dwell on our worries and pick apart our fears, we end up giving fear center stage instead of God. Focusing on our anxieties invites fear to invade our hearts, which disrupts the peaceful fellowship God wants us to enjoy with Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We do not have to let fear control our minds. As Kristina Seymour reminds us, believers can tell fear to leave in the name of Jesus and rest in God's love. When we turn our attention back to God, we find safety at His table and let faith take its rightful place.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you been giving your worries center stage instead of focusing on God's presence?",
+    "How can you choose to rest in God's love today when anxious thoughts appear?"
+   ],
+   "prayer": "Lord, thank You for inviting us to a table filled with Your blessings and enduring presence. Help us not to dwell on anxious thoughts or let fear take over our minds. Give us strength to turn away from worry and rest peacefully in Your love today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Kristina Seymour",
+     "work": "The Banquet Table - Warrior Mom Wisdom - Week of July 30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/warrior-mom-wisdom/the-banquet-table-warrior-mom-wisdom-week-of-july-30.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

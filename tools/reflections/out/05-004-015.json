@@ -1,0 +1,71 @@
+{
+ "id": "05-004-015",
+ "title": "A Warning against Idolatry",
+ "refs": [
+  "Deuteronomy 4:15-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5004029,
+   "end": 5004030,
+   "ref": "Deuteronomy 4:29-30",
+   "ranges": [
+    [
+     5004029,
+     5004030
+    ]
+   ],
+   "title": "\"You Will Find Him\"",
+   "key_verse": [
+    5004029,
+    5004029
+   ],
+   "reflect": [
+    {
+     "text": "When hard times, disappointment, or mistakes hit our lives, our first instinct is often to pull back and hide. We feel lonely in our trouble and think that God is far away from us. But the truth is that God never abandons His children. Even when life feels dark, He stays close and wants us to come to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God made us to have a close friendship with Him. Simply knowing facts about God in our heads is not enough. He wants us to know His real heart and character. We discover who He is day by day as we read the Bible, listen to His words, and walk with Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding anything back or hiding from God during a hard time?",
+    "What is one practical way you can seek the Lord with your whole heart today?"
+   ],
+   "prayer": "Lord God, thank You for promising that I will find You when I seek You with all my heart. Please forgive me for pulling away or looking to other things when life gets hard. Teach me to listen to Your voice and help me to know Your loving heart more each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Megan J. Conner",
+     "work": "Hide and Seek - The Crosswalk Devotional - October 6",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/hide-and-seek-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "In Touch Ministries",
+     "work": "Knowing God’s Heart",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/knowing-gods-heart"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "Tough times can be a wake-up call to turn around and give God our full attention. When our affections are divided, we miss out on His peace. But God promises that whenever we stop hiding and seek Him with all our heart and soul, we will surely find Him.",
+     "problem": "Neither the passage nor the devotionals mention missing out on God's peace when our affections are divided."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

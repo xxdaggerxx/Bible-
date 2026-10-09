@@ -1,0 +1,73 @@
+{
+ "id": "09-018-001",
+ "title": "Jonathan Befriends David",
+ "refs": [
+  "1 Samuel 18:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9018001,
+   "end": 9018004,
+   "ref": "1 Samuel 18:1-4",
+   "ranges": [
+    [
+     9018001,
+     9018004
+    ]
+   ],
+   "title": "A Kindred Spirit and Generous Heart",
+   "key_verse": [
+    9018001,
+    9018001
+   ],
+   "reflect": [
+    {
+     "text": "God often brings close friends into our lives to help us make it through hard valleys. When David met Jonathan, their souls were knit together in true companionship. Genuine friends like Jonathan love generously. They share what is precious to them and serve without keeping score or demanding anything in return.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "As the king's son, Jonathan was next in line for the throne. Yet he felt no jealousy or resentment toward David as David became popular. Instead of letting pride take root, Jonathan took off his royal robe and weapons and gave them to David. He set aside his own position to honor David and align with God's purpose.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We are called to love others in God's family with this same unselfish heart. It is easy to let envy spoil relationships when someone else is blessed, but God invites us to celebrate their victories. When we stand loyally with our friends, we choose to support them even when it costs us our own comfort.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone in your life whose success you find difficult to celebrate without feeling envious?",
+    "How can you show unselfish generosity to a friend this week without keeping score?"
+   ],
+   "prayer": "Lord, thank you for giving us friends who walk with us through hard seasons. Help us put away envy and pride so we can celebrate the blessings of others. Give us generous and loyal hearts that seek to serve rather than keep score. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jack Graham",
+     "work": "Rejoice with others!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-july-12-2010-11634591.html"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "A Kindred Spirit",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/a-kindred-spirit2"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

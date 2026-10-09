@@ -1,0 +1,66 @@
+{
+ "id": "02-028-015",
+ "title": "The Breastpiece",
+ "refs": [
+  "Exodus 28:15-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2028015,
+   "end": 2028030,
+   "ref": "Exodus 28:15-30",
+   "ranges": [
+    [
+     2028015,
+     2028030
+    ]
+   ],
+   "title": "Carried Over His Heart",
+   "key_verse": [
+    2028029,
+    2028029
+   ],
+   "reflect": [
+    {
+     "text": "When a loved one is missing, family members sometimes wear a picture badge close to their chest. It keeps that person near their heart and reminds everyone that they are not forgotten. In a similar way, God told Aaron the high priest to wear a breastpiece set with twelve precious stones. Each gemstone had the name of one of the tribes engraved on it. Whenever Aaron stepped into the Holy Place, he carried the names of God's people over his heart as an ongoing reminder before the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This points us forward to Jesus, our High Priest. In his eyes, believers are like precious jewels. He continually carries you over his heart before the Father. Even when you wander or drift away, Jesus never loses sight of you. He still brings you before God with steadfast care.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "You can rest in the quiet assurance that you are deeply valued by God. Because Christ holds you so close, you are invited to respond with the same love. We can hold him close in our own lives through daily devotion and worship.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus carries you over his heart comfort you when you feel distant from God?",
+    "What is one practical way you can hold Christ close in your worship and devotion this week?"
+   ],
+   "prayer": "Lord Jesus, thank you for carrying me over your heart before the Father. Even when I drift, you never forget me or stop caring for me. Help me to rest in your great love and to keep you close in my daily devotion. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Daily Disciples",
+     "work": "He Wears Your Picture Badge",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-may-20-11575813.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

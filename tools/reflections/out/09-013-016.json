@@ -1,0 +1,79 @@
+{
+ "id": "09-013-016",
+ "title": "Israel without Weapons",
+ "refs": [
+  "1 Samuel 13:16-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9013016,
+   "end": 9013023,
+   "ref": "1 Samuel 13:16-23",
+   "ranges": [
+    [
+     9013016,
+     9013023
+    ]
+   ],
+   "title": "Armed by God in Every Season",
+   "key_verse": [
+    9013022,
+    9013022
+   ],
+   "reflect": [
+    {
+     "text": "Israel found itself in a helpless spot. King Saul had acted rashly and disobediently, leaving his troops in retreat without divine direction. To keep them under control, the Philistines removed all the blacksmiths from the land and charged steep fees just to sharpen farm tools. When battle arrived, no soldier except Saul and Jonathan carried a sword or spear. God permitted this desperate vulnerability to remind his people that trusting in a human king or worldly power brings only weakness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In peacetime, Israel had grown comfortable depending on their enemies for essential tools, which left them completely disarmed when conflict began. In a similar way, we can quietly slip into relying on secular culture for our news, education, and entertainment. When that happens, our spiritual edge becomes dull. Because we are in a real spiritual battle, we must guard our hearts and ensure our minds are guarded and armed by God's truth.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Even when our resources seem modest, God calls us to step forward with whatever we have. As Charles Spurgeon observed, \"rough tools may deal hard blows.\" Simple actions like praying, teaching, and giving can be used mightily against evil. Seeing how hard the world works for its own causes can also wake us up, sharpening our zeal and prompting us to serve the Lord with all our energy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life might you be leaning on worldly ideas rather than resting on God's truth?",
+    "What simple, everyday gifts has God given you that you can use to serve him right now?"
+   ],
+   "prayer": "Lord God, forgive us when we put our confidence in human strength instead of relying entirely on you. Protect our minds from being dulled by the world, and sharpen our understanding through your word. Take the small abilities and humble tools we have, and use them to advance your kingdom today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 2",
+     "on": "1 Samuel 13:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "A Helpless People",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/a-helpless-people"
+    },
+    "D3": {
+     "author": "John Piper",
+     "work": "Has the Church Been Disarmed by the World?",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/has-the-church-been-disarmed-by-the-world"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

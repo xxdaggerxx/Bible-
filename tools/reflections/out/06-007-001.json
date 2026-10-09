@@ -1,0 +1,143 @@
+{
+ "id": "06-007-001",
+ "title": "The Defeat at Ai",
+ "refs": [
+  "Joshua 7:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6007001,
+   "end": 6007001,
+   "ref": "Joshua 7:1",
+   "ranges": [
+    [
+     6007001,
+     6007001
+    ]
+   ],
+   "title": "\"The Israelites Acted Unfaithfully\"",
+   "key_verse": [
+    6007001,
+    6007001
+   ],
+   "reflect": [
+    {
+     "text": "After the great victory at Jericho, Israel felt confident. Achan secretly took treasures that were devoted to the Lord, breaking God's covenant. The leaders then prepared to attack the city of Ai using human planning, without asking the Lord for His guidance. They assumed God's blessing would continue, unaware that His favor had departed from their camp.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Achan's hidden theft was not an isolated matter. Even though one man sinned in secret, the entire community suffered the painful consequences of his choice. Working hard in God's service can never take the place of humble prayer and faithful obedience. God required the devoted items to be removed so that His people could be restored to purity.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "When Achan was finally exposed, he confessed only because he was singled out. Fear drove his words rather than true sorrow for breaking faith with God. The Lord extends His mercy to those who truly repent, but unrepentant defiance leads to ruin. Apart from God's presence, human effort accomplishes nothing.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to rely on past success instead of asking God for guidance today?",
+    "Is there any area of your life where you are holding back full obedience to God?"
+   ],
+   "prayer": "Lord God, remind us that we can accomplish nothing without Your presence. Keep us from depending on our own strength while forgetting to seek Your will in prayer. Forgive us for the times we treat Your commands lightly, and grant us hearts that desire true obedience. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Seriousness of Sin",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/seriousness-sin/"
+    },
+    "D5": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Mar. 15, 2011",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-15-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 6007001,
+   "end": 6007015,
+   "ref": "Joshua 7:1-15",
+   "ranges": [
+    [
+     6007001,
+     6007015
+    ]
+   ],
+   "title": "Stand Up and Deal with Sin",
+   "key_verse": [
+    6007010,
+    6007010
+   ],
+   "reflect": [
+    {
+     "text": "When the army fled in defeat at Ai, Joshua fell facedown before the ark in deep sorrow. He feared for the safety of Israel and for the honor of God's great name among the nations. Yet the Lord told him to stand up. As F. B. Meyer wrote, believers are sometimes called to \"cut out some source of failure and defeat\" rather than remaining on their faces in prayer. Devotion is good, but it cannot replace taking action against sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The setback at Ai happened because unconfessed sin had entered the camp. Hidden wrongdoing clouds our judgment, cuts off clear communication with the Lord, and leaves us to fight in our own strength. We may think private choices affect only ourselves, but concealed sin ripples outward to hurt families and communities. God's commands are holy boundaries meant to guard us, not optional suggestions.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we encounter defeat, we must examine our hearts honestly before God. Instead of rushing forward on human advice, we need to wait on the Lord and turn away from whatever displeases Him. Bringing hidden sin into God's light removes its power and leads to real freedom and redemption through Jesus Christ.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is God calling you to stop only worrying or praying and take real steps to put something right?",
+    "How might hidden disobedience in your life be affecting the people around you?"
+   ],
+   "prayer": "Heavenly Father, search our hearts and show us anything that hinders our walk with You. Give us courage to bring our hidden struggles into Your light and turn away from all disobedience. Teach us to wait on Your guidance rather than charging ahead in our own strength. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 7:10",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Chelsey DeMatteis",
+     "work": "A Prayer to Obey When Faced with Temptations",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-obey-when-faced-with-temptations.html"
+    },
+    "D3": {
+     "author": "Charles F. Stanley",
+     "work": "A Time to Wait in Prayer",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/a-time-to-wait-in-prayer"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

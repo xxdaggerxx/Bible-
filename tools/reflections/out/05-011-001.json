@@ -1,0 +1,73 @@
+{
+ "id": "05-011-001",
+ "title": "Obedience and Discipline",
+ "refs": [
+  "Deuteronomy 11:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5011001,
+   "end": 5011007,
+   "ref": "Deuteronomy 11:1-7",
+   "ranges": [
+    [
+     5011001,
+     5011007
+    ]
+   ],
+   "title": "Remembering God's Mighty Works",
+   "key_verse": [
+    5011002,
+    5011002
+   ],
+   "reflect": [
+    {
+     "text": "Moses reminded the people that they had seen God's great power with their own eyes. Their children had not witnessed the wonders in Egypt, the rescue at the Red Sea, or God's discipline in the desert. Because the parents had seen God's mighty acts firsthand, they had no excuse for turning away from Him. Their personal experience gave them the serious duty to obey God and carefully teach their children about Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God desires to use all our life experiences, both the good and the painful, for our spiritual good. When we try to ignore our past or feel bitter about hard times, we keep God from redeeming those moments. Instead, we need to intentionally remember the spiritual lessons He taught us through those trials. Writing down what God has shown us in a journal can help us hold on to those valuable truths.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Remembering how faithful God was in the past gives us fresh courage during dark and difficult seasons. It also reminds us that enjoying God's continued blessings depends on our willingness to obey Him and teach the truth to others. When we hold on to what God has done in our lives, we can help the next generation learn to trust Him as well.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What spiritual lessons from your past, both in good times and hard times, can you thank God for today?",
+    "How can you share what God has taught you with someone in the next generation?"
+   ],
+   "prayer": "Lord God, thank You for walking with us through every season of life and teaching us along the way. Please help us not to forget Your past faithfulness when we face dark or difficult moments. Give us hearts that love and obey You, and give us words to pass on Your truth to the next generation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "Embrace Your Past Experiences—Good and Bad",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-may-31-2024.html"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Deut. 11",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/deut-11-psalms-95-96-isaiah-39-revelation-9/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "01-035-021",
+ "title": "The Sons of Jacob",
+ "refs": [
+  "Genesis 35:21-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1035021,
+   "end": 1035026,
+   "ref": "Genesis 35:21-26",
+   "ranges": [
+    [
+     1035021,
+     1035026
+    ]
+   ],
+   "title": "God's Purpose and Jacob's Sons",
+   "key_verse": [
+    1035022,
+    1035022
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Jacob's oldest son, Reuben, made a terrible choice. He slept with Bilhah, his father's concubine. This action was a severe sin that broke God's covenant rules and crossed boundaries condemned even in pagan societies. Through this act, Reuben tried to tear down Jacob's authority and place his own mother Leah's family above Rachel's family.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Reuben's envy brought heavy consequences upon him. Because of his rebellion, he lost the special rights and leadership belonging to the firstborn son. That place of leadership later passed to his brother Judah. Reuben's destructive jealousy serves as a serious warning to us about how dangerous it is to resist God-given authority.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Remarkably, human failure did not ruin God's redemptive plan—His work to save and bless His people. God's purpose remained steadfast, and He preserved Reuben as one of the twelve tribes of Israel. God's grace is greater than human failure, and He faithfully carries out His promises.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can jealousy or a desire for control harm our relationships with others?",
+    "How does God's faithfulness to Reuben's family remind you of His grace toward imperfect people?"
+   ],
+   "prayer": "Lord, guard our hearts from jealousy and from rebelling against the authority you place in our lives. Forgive us when we let selfish desires guide our actions. Thank you that your saving purposes remain steadfast even in the face of human failure. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "One Sin, Twelve Sons",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/one-sin-twelve-sons"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

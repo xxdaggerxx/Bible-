@@ -1,0 +1,66 @@
+{
+ "id": "10-005-006",
+ "title": "David Conquers Jerusalem",
+ "refs": [
+  "2 Samuel 5:6-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10005006,
+   "end": 10005011,
+   "ref": "2 Samuel 5:6-11",
+   "ranges": [
+    [
+     10005006,
+     10005011
+    ]
+   ],
+   "title": "Established by the Lord of Hosts",
+   "key_verse": [
+    10005010,
+    10005010
+   ],
+   "reflect": [
+    {
+     "text": "David waited through about fifteen confusing and dangerous years before God's promise to make him king was fulfilled. Taking the fortress of Zion and gaining royal favor showed David that God had firmly established him. In our own painful seasons, remembering what we know about God's faithful character restores our strength. Personal hardships teach us from real experience that God is our rock, fortress, and refuge. We may not understand why difficult events happen, but we can always trust who God is.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Jebusite fortress had to be captured before God's dwelling place could be set up in Jerusalem. In the same way, this stronghold pictures hidden, stubborn areas deep within our own hearts and minds. Secret selfish impulses quietly push back against letting Christ be total Lord over our time, talents, and gifts. We overcome these inner strongholds day by day as we read the Scriptures and actively obey God's will.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What hidden thoughts or habits might be resisting God's gentle rule in your life today?",
+    "How can remembering God's character help you trust Him during a confusing or painful season?"
+   ],
+   "prayer": "Lord God, thank You for being our faithful fortress and refuge through every hardship. Please reveal and break down any stubborn strongholds within our hearts that keep us from obeying You. Help us to read Your Word daily and yield all our time, talents, and resources to Your good purpose. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 45: 2 Samuel 5:6–12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-45-2-samuel-5-612.html"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - April 12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-1323754.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

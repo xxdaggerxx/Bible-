@@ -1,0 +1,89 @@
+{
+ "id": "05-012-001",
+ "title": "One Place for Worship",
+ "refs": [
+  "Deuteronomy 12:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5012001,
+   "end": 5012028,
+   "ref": "Deuteronomy 12:1-28",
+   "ranges": [
+    [
+     5012001,
+     5012028
+    ]
+   ],
+   "title": "Worship on God's Terms",
+   "key_verse": [
+    5012028,
+    5012028
+   ],
+   "reflect": [
+    {
+     "text": "God told His people not to worship Him in whatever way felt right in their own eyes, nor to copy the practices of the nations around them. Worship is never something we design according to our own tastes. Just as Israel was called to destroy every altar to false gods, we are called to clear away every idol from our own hearts and abandon sinful habits that rob us of peace.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Instead of scattering to any place they chose, Israel was invited to meet God in the one dwelling He appointed, sharing meals and rejoicing in His goodness. Today, we come into God's presence through Jesus Christ, who accepts us and carries our burdens. Meeting God on His terms brings genuine, reverent joy into our worship and moves us to care for those around us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The Lord also reminds us that true blessing comes from listening to His voice. Charles Spurgeon reminded readers that there must be \"no picking and choosing\" when it comes to God's commands. When we walk before Him with honesty and follow His word with our whole hearts, it goes well with us and our children, because what pleases God brings true good to us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there personal preferences or habits in your life that you need to set aside to honor God's desires?",
+    "How does trusting Jesus with your burdens help you experience genuine joy when you worship?"
+   ],
+   "prayer": "Lord God, help us not to follow our own opinions, but to seek and worship You on Your terms. Thank You for welcoming us through Jesus Christ and lifting the heavy burdens from our hearts. Give us grace to obey Your word with honest lives, so that we and our families may walk in Your lasting blessing. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 29",
+     "on": "Deuteronomy 12:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 12:18",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Josh Philpot",
+     "work": "Worship Is Not Made-to-Order",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/worship-is-not-made-to-order"
+    },
+    "D4": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways 03/05/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-03-or-05-or-2002-1127486.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

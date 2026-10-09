@@ -1,0 +1,127 @@
+{
+ "id": "08-004-001",
+ "title": "Boaz Redeems Ruth",
+ "refs": [
+  "Ruth 4:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 8004009,
+   "end": 8004010,
+   "ref": "Ruth 4:9-10",
+   "ranges": [
+    [
+     8004009,
+     8004010
+    ]
+   ],
+   "title": "\"I Have Acquired Ruth\"",
+   "key_verse": [
+    8004010,
+    8004010
+   ],
+   "reflect": [
+    {
+     "text": "When Boaz stepped forward at the city gate, he chose to care for Ruth and Naomi out of a sincere desire to honor God. In a difficult and lawless time, he showed selfless faith by protecting the name and inheritance of his deceased relatives. The unnamed relative before him guarded his own wealth and was forgotten. Boaz, however, gave freely and is remembered forever in the family line of Jesus Christ.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This story of redemption points us straight to Jesus. Christ did not purchase us with gold or silver, but with His own blood. Just as Boaz bought the land and took Ruth to be his wife, Jesus bought the church to be united with Him forever. Furthermore, we are not saved just for our own ease. We are redeemed so that Christ's name and lordship are honored across the world.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The story that began with grief and famine ends in joy. As F. B. Meyer wrote, God shows us that our \"darkest night shall end in brightest day.\" Jesus holds all authority and loves us deeply. We can trust Him completely as both our Lord and our Redeemer.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus bought you with His blood change how you live each day?",
+    "In what ways can you seek to honor Christ's name rather than just protecting your own comfort?"
+   ],
+   "prayer": "Lord Jesus, thank You for paying the ultimate price to redeem us and make us Your own. Help us not to live only for our personal comfort, but to honor Your name in everything we do. Give us selfless faith like Boaz so that others may see Your love through us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ruth 4:10",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Jared C. Wilson",
+     "work": "Redeemed to Perpetuate the Name",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/redeemed-to-perpetuate-the-name-3/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 8004001,
+   "end": 8004012,
+   "ref": "Ruth 4:1-12",
+   "ranges": [
+    [
+     8004001,
+     8004012
+    ]
+   ],
+   "title": "Our Willing and Able Redeemer",
+   "key_verse": [
+    8004006,
+    8004006
+   ],
+   "reflect": [
+    {
+     "text": "In the town gate, Boaz offered the first chance of redemption to a closer relative. That man refused because he feared harming his own property. This closer kinsman represents Adam, the first father of the human race. Through our connection to Adam, all of us inherited spiritual ruin, weakness, and an inability to save ourselves. Our human family line cannot rescue us from our broken state.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Where our first family line failed, Boaz points us to someone greater. Boaz was both able and willing to step in and pay the full cost to redeem Naomi and Ruth. In this way, Boaz paints a clear picture of Jesus Christ. Jesus is the true Redeemer who took on our human nature and possessed the power and love needed to rescue us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "We are invited to pause and worship God for what Christ has done. Through His life and sacrifice, Jesus completely overcame the ruin and helplessness that we inherited from Adam. We can rest with deep gratitude, knowing our salvation does not depend on our own weak efforts, but on the finished work of our Savior.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it comforting to know that our salvation does not depend on our own human strength?",
+    "How can you praise Jesus today for rescuing you from the helplessness of sin?"
+   ],
+   "prayer": "Heavenly Father, we thank You that Jesus succeeded where our human family line failed. We praise You that He was both willing and able to rescue us from spiritual ruin. May our hearts be full of worship today as we remember His complete and loving redemption. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Adrian Rogers",
+     "work": "Who is Our Close Relative?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-september-9-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

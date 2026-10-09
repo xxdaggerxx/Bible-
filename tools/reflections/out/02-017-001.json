@@ -1,0 +1,74 @@
+{
+ "id": "02-017-001",
+ "title": "Water from the Rock",
+ "refs": [
+  "Exodus 17:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2017001,
+   "end": 2017007,
+   "ref": "Exodus 17:1-7",
+   "ranges": [
+    [
+     2017001,
+     2017007
+    ]
+   ],
+   "title": "Water from the Rock in the Wilderness",
+   "key_verse": [
+    2017006,
+    2017006
+   ],
+   "reflect": [
+    {
+     "text": "Following God does not always lead along smooth or predictable paths. Israel traveled through the desert by the Lord's direct command, yet they arrived at a campsite with no water to drink. Instead of trusting the Lord who brought them there, the people panicked and quarreled with Moses. They assumed God was distant simply because their surroundings were uncomfortable.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "These hard places in life are not accidental mistakes. God often uses wilderness trials to teach us to depend on him rather than our own neat plans. Yet instead of remembering his proven faithfulness, Israel complained and put God on trial, questioning whether he was truly among them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even in the face of their bitter complaints, God answered with great mercy. He stood before the rock at Horeb and commanded Moses to strike it, bringing forth life-giving water for everyone. This miraculous event points forward to Jesus Christ, who took divine judgment on himself so that spiritual life could flow freely to his people.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face unexpected difficulties, do you tend to complain or do you turn to God in trust?",
+    "How does remembering that Christ took our judgment help you trust God's care in hard times?"
+   ],
+   "prayer": "Lord, thank you that you lead us even when our path feels dry and uncertain. Forgive us when we doubt your presence and grumble about our circumstances. Help us to rest in your faithfulness and trust in Jesus, who gave his life so we could be filled with your living water. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Water from the Rock",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/water-from-the-rock"
+    },
+    "D2": {
+     "author": "Kyle Norman",
+     "work": "A Prayer for When the Path is Unknown",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-when-the-path-is-unknown.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

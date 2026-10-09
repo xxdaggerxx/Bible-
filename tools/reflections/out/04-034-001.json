@@ -1,0 +1,67 @@
+{
+ "id": "04-034-001",
+ "title": "The Boundaries of Canaan",
+ "refs": [
+  "Numbers 34:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4034001,
+   "end": 4034015,
+   "ref": "Numbers 34:1-15",
+   "ranges": [
+    [
+     4034001,
+     4034015
+    ]
+   ],
+   "title": "Knowing the Boundaries of God's Gifts",
+   "key_verse": [
+    4034013,
+    4034013
+   ],
+   "reflect": [
+    {
+     "text": "When God gave the land of Canaan to Israel, he set clear borders around it. F. B. Meyer explains that we also need to understand the limits and possibilities of our spiritual life. We must know both how far we may go and where we must stop. God invites us to step into all the good things he has prepared for us. Through the power of the risen Jesus, we can be kept from giving in to known sin, stand strong against temptation, and grow in sincere love for God and others.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the same time, we need to recognize where our borders stop in this life. As Meyer notes, we can expect to walk blamelessly before God, but we will not be completely faultless until we see him. God delivers us from the power of temptation, but we are not freed from its attacks. He gives us peace, yet he does not promise an easy life without hardship. We are freed from the spirit of this present evil world, but God still calls us to live within it as salt and light.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing these boundaries keeps us from two mistakes. We do not shrink back from enjoying all that God has promised us in Jesus, and we do not despair when struggles still come. We can gladly receive every inch of territory God provides while staying humble about our human limits.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Which gifts and promises from God do you need to step into more fully today?",
+    "Are you expecting a life free from all struggle, or are you looking to God for peace in the middle of trials?"
+   ],
+   "prayer": "Lord, thank you for the generous inheritance you give us in Christ. Help us to walk boldly in your love and to turn away from sin each day. Keep us humble when trials press upon us, and grant us your peace as we live for you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 34:13",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

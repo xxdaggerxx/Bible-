@@ -1,0 +1,66 @@
+{
+ "id": "04-016-041",
+ "title": "Murmuring and Plague",
+ "refs": [
+  "Numbers 16:41-50"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4016041,
+   "end": 4016050,
+   "ref": "Numbers 16:41-50",
+   "ranges": [
+    [
+     4016041,
+     4016050
+    ]
+   ],
+   "title": "Standing Between the Living and the Dead",
+   "key_verse": [
+    4016048,
+    4016048
+   ],
+   "reflect": [
+    {
+     "text": "Right after surviving God's judgment during the rebellion of Korah, the people of Israel turned around and complained again. They wrongly accused Moses and Aaron of killing the Lord's people. It would have been easy for Moses and Aaron to become angry, give up, or strike back at those unfair words.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead, they chose to seek God and step in for the crowd. When God's anger broke out as a deadly sickness, Moses told Aaron to act at once. Aaron did not hesitate. He ran right into the middle of the danger with burning incense to make atonement, which means turning away God's anger and restoring peace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Aaron stood bravely between the living and the dead until the plague stopped. Stuart Briscoe points out that godly leaders keep serving through criticism. Even when people are ungrateful and the situation is risky, true leadership seeks to protect and help others rather than defend itself.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually respond when others criticize you unfairly?",
+    "Who in your life needs you to step forward and pray for them right now?"
+   ],
+   "prayer": "Lord, help us not to grow bitter or quit when people blame us or treat us unfairly. Give us the courage to act quickly and pray for those around us, even when it is hard. Teach us to serve others with humble, selfless hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Between the Living and the Dead - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/between-the-living-and-the-dead-one-year-devotions-for-men-july-25.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

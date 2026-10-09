@@ -1,0 +1,123 @@
+{
+ "id": "10-001-017",
+ "title": "David’s Song for Saul and Jonathan",
+ "refs": [
+  "2 Samuel 1:17-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 10001019,
+   "end": 10001019,
+   "ref": "2 Samuel 1:19",
+   "ranges": [
+    [
+     10001019,
+     10001019
+    ]
+   ],
+   "title": "\"How the mighty have fallen\"",
+   "key_verse": [
+    10001019,
+    10001019
+   ],
+   "reflect": [
+    {
+     "text": "When King Saul died, David did not celebrate. Saul had hunted him with jealousy for years, but David refused to take advantage of his rival's death for selfish ambition. Instead, he wept with honest grief and chose to honor Saul. Scripture teaches us that mourning the terrible sadness of death is both fitting and necessary for believers. David's tender heart showed he held no bitterness, proving he was ready to be Israel's true leader.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "David's lament was also driven by his concern for the Lord. It pained him to think that pagan enemies would boast over God's people. He also carried the ache of losing Jonathan, his dearest friend. Jonathan had shown remarkable, selfless devotion, giving up his own claim to the throne to support David. Grieving such an irreplaceable companion is a slow and painful journey that takes time. His covenant loyalty urges us to show the same steadfast love to our brothers and sisters in Christ.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone who has opposed you experiences hardship, is your first reaction sympathy or quiet satisfaction?",
+    "How can you show steadfast loyalty to your fellow believers this week, just as Jonathan did for David?"
+   ],
+   "prayer": "Lord, take away any hidden bitterness from our hearts when those who oppose us stumble. Give us patience and comfort as we walk through seasons of grief, and help us love our brothers and sisters with faithful devotion. In Jesus' name, Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Lament for Saul and Jonathan",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lament-for-saul-and-jonathan"
+    },
+    "D4": {
+     "author": "Beth Moore",
+     "work": "Day 40: 2 Samuel 1:1–27",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-40-2-samuel-1-127.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 10001017,
+   "end": 10001027,
+   "ref": "2 Samuel 1:17-27",
+   "ranges": [
+    [
+     10001017,
+     10001027
+    ]
+   ],
+   "title": "A Love That Forgives and Restores",
+   "key_verse": [
+    10001023,
+    10001023
+   ],
+   "reflect": [
+    {
+     "text": "In this song, David praised the strengths of Saul and Jonathan together. It was astonishing that David spoke kindly of Saul, who had wronged him so often. Yet true love covers past injuries and chooses to dwell on the good rather than on past failures. God gives His children this forgiving love so they can bless their enemies and pray for those who mistreat them. As our lives unfold, this same love calls us to crown Jesus as King over every new responsibility and step we take.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "David's memory of Jonathan's devotion also points our hearts to the wonderful love of Jesus. While we were wandering far from God in our sins, Christ loved us and held back judgment. He convicted our hearts of guilt, washed our stained souls until they were clean as white snow, and offered us true rest. When we remember what the Lord has done for us, we can enter into sweet fellowship with Him and rejoice in His extraordinary grace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone who has hurt you whom God is asking you to forgive and view with kindness today?",
+    "How does remembering the way Jesus washed away your sins inspire you to surrender every area of your life to Him?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your wonderful love that sought us out when we were lost and washed our sins away. Pour Your love into our hearts so we can forgive those who harm us and hold no grudges. Rule over every part of our lives as our true King. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 1",
+     "on": "2 Samuel 1:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 1:23",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

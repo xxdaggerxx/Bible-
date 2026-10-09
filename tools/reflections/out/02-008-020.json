@@ -1,0 +1,133 @@
+{
+ "id": "02-008-020",
+ "title": "The Fourth Plague: Flies",
+ "refs": [
+  "Exodus 8:20-32"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2008023,
+   "end": 2008023,
+   "ref": "Exodus 8:23",
+   "ranges": [
+    [
+     2008023,
+     2008023
+    ]
+   ],
+   "title": "\"I Will Put a Division\"",
+   "key_verse": [
+    2008023,
+    2008023
+   ],
+   "reflect": [
+    {
+     "text": "God declared that He would set a clear boundary between His own people and Pharaoh's people. Even when believers live alongside everyone else, God marks them as His treasured possession. This separation began in God's eternal choice and was secured through the cross of Jesus. By turning to Christ, our sins are taken away, and we are brought under God's loving rule. While the world faces judgment, God becomes a peaceful sanctuary for His chosen family.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This difference is also worked out each day by the Holy Spirit inside us. He changes our tastes, desires, and aims so that we begin to think and live differently from the culture. In Goshen there was light, and in the quiet soul God speaks His love and peace. At the same time, God spares us from the destructive swarms of guilt, hatred, and constant worry that ruin worldly lives. Because God made this difference, we are called to follow Spurgeon's advice to \"keep up the division in spirit, aim, character and company.\"",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you see the Holy Spirit changing your desires and aims to be different from the world?",
+    "How can you maintain this God-given distinction in your daily friendships and choices?"
+   ],
+   "prayer": "Lord, thank You for setting us apart through the cross and giving us new life in Christ. Fill our hearts with Your peace, and let Your Holy Spirit reshape our desires each day. Help us to live faithfully as Your people, reflecting Your goodness and truth to everyone around us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 29",
+     "on": "Exodus 8:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 8:23",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 2008028,
+   "end": 2008028,
+   "ref": "Exodus 8:28",
+   "ranges": [
+    [
+     2008028,
+     2008028
+    ]
+   ],
+   "title": "\"You Must Not Go Very Far\"",
+   "key_verse": [
+    2008028,
+    2008028
+   ],
+   "reflect": [
+    {
+     "text": "When Pharaoh felt the pressure of the plague, he tried to bargain with Moses. He agreed to let Israel sacrifice, but added a catch: they must not travel far away. Pharaoh wanted to keep them within his reach and under his control. In the same way, the world and Satan urge believers to adopt a lukewarm faith. We are tempted to compromise God's clear word and serve Him on our own convenient terms rather than giving Him full obedience.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Compromise always leads to spiritual defeat. The culture often tells us to practice moderation in our faith and not be too strict or separate from worldly ways. Yet we cannot win anyone to Christ by lowering our convictions to fit in. As Charles Spurgeon wrote, \"the further from worldly conformity the better.\" Following the Lord requires decisive obedience without half measures. When God calls us to leave sin behind, we must go all the way, stepping completely away from the habits and pressures that pull us back.",
+     "sources": [
+      "D1",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you are tempted to compromise God's commands to avoid standing out?",
+    "What steps can you take this week to obey the Lord fully instead of settling for half measures?"
+   ],
+   "prayer": "Lord, guard our hearts against the temptation to compromise Your truth. Give us courage to stand firm against secular pressure and follow Your commands with our whole heart. Keep us from settling for a lukewarm faith, and draw us into complete obedience to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 27",
+     "on": "Exodus 8:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Greg Laurie",
+     "work": "Stand Your Ground",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/stand-your-ground-greg-laurie-daily-devotion-june-26-2015.html"
+    },
+    "D5": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 01/20/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-01-or-20-or-2002-1127398.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

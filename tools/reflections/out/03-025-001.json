@@ -1,0 +1,66 @@
+{
+ "id": "03-025-001",
+ "title": "The Seventh Year",
+ "refs": [
+  "Leviticus 25:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3025001,
+   "end": 3025007,
+   "ref": "Leviticus 25:1-7",
+   "ranges": [
+    [
+     3025001,
+     3025007
+    ]
+   ],
+   "title": "Resting to Receive God's Care",
+   "key_verse": [
+    3025004,
+    3025004
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God commanded His people to give the land a full year of rest every seven years. When soil is pushed to exhaustion without any break, it becomes barren and cannot produce. People are very much the same way. Both the ground and human beings need intentional rest to regain their strength. The agricultural work of George Washington Carver proved how giving tired earth rest and replenishment brings renewed life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God gave His people Sabbath rhythms because we have an ongoing need for healing, justice, and release from life's heavy burdens. Resting requires us to stop our nonstop striving. When we pause our work, we acknowledge that God alone is God and that He is the one who sustains us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To experience this renewal, we often need to cut out unnecessary busyness. Clearing away extra distractions creates space for us to be still and receive the Lord's restorative care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What unnecessary busyness might you need to remove to make room for rest?",
+    "How does pausing your daily striving help you remember that God is in control?"
+   ],
+   "prayer": "Lord, thank You for giving us rhythms of rest so our weary bodies and minds can recover strength. Help us lay down our nonstop striving and trust that You alone are God. Teach us to quiet our busy lives so we can receive Your restoring care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Mel Lawrenz",
+     "work": "How to Live the Bible — God Brings Restoration",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/blog/2022/02/how-to-live-the-bible-god-brings-restoration/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

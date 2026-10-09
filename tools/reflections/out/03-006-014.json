@@ -1,0 +1,66 @@
+{
+ "id": "03-006-014",
+ "title": "The Grain Offering",
+ "refs": [
+  "Leviticus 6:14-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3006014,
+   "end": 3006023,
+   "ref": "Leviticus 6:14-23",
+   "ranges": [
+    [
+     3006014,
+     3006023
+    ]
+   ],
+   "title": "Dedicating Our Daily Lives to God",
+   "key_verse": [
+    3006015,
+    3006015
+   ],
+   "reflect": [
+    {
+     "text": "In ancient Israel, the grain offering was brought as a humble tribute to God. Offering this gift before the altar showed that the people recognized the Lord as their King and wanted to keep a right relationship with Him. The gift of fine, crushed flour served as a clear reminder that God is the one who provides our daily food, strength, and life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The priest also burned frankincense along with the flour, which represented prayers and intercession rising up as a pleasing aroma to God. While other offerings stood for giving one's whole self to the Lord, the grain offering specifically stood for the dedication of our daily service and regular work to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The crushed grain also points us forward to Jesus Christ. Just as the wheat was broken and crushed, Jesus was bruised and suffered on the cross to provide atonement for our sins. Because of His sacrifice, we can gladly give our daily routines, work, and prayers back to our King.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you honor God as your King through the ordinary tasks and work you do today?",
+    "In what ways can your daily prayers show gratitude for the food and care God provides?"
+   ],
+   "prayer": "Lord God, thank You for providing everything we need each day, and thank You for Jesus, who suffered to forgive our sins. Please accept our daily work and our prayers as gifts that please You. Help us to gladly serve You as our King in all we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - February 2, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-february-2-2006-1375716.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "10-001-001",
+ "title": "Saul’s Death Reported to David",
+ "refs": [
+  "2 Samuel 1:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10001001,
+   "end": 10001016,
+   "ref": "2 Samuel 1:1-16",
+   "ranges": [
+    [
+     10001001,
+     10001016
+    ]
+   ],
+   "title": "Honoring God Above Selfish Gain",
+   "key_verse": [
+    10001014,
+    10001014
+   ],
+   "reflect": [
+    {
+     "text": "A young Amalekite arrived at David's camp carrying King Saul's crown and armband. He claimed that he had killed Saul on the battlefield, expecting this report to win him favor and a rich reward. But the messenger completely misjudged David. He assumed David harbored malice toward Saul and would be glad to celebrate his enemy's death.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead of celebrating, David and his men tore their clothes and wept. Throughout his years of being hunted, David had deeply respected Saul's appointment by God and had refused to lift his own hand against him. Because this messenger confessed with his own mouth to striking down the Lord's anointed, David ordered him executed rather than rewarding him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This event shows us that trying to advance ourselves through deceit never works before the Lord. The messenger thought dishonest scheming would bring him success, but God sees every hidden motive. We are called to live with honest hearts, knowing that God holds us accountable for the truth.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever been tempted to shade the truth or flatter someone to get ahead?",
+    "How can we learn from David to honor God rather than celebrate when an enemy falls?"
+   ],
+   "prayer": "Lord, help us to love the truth and turn away from all deceit. Teach us to honor You in how we treat others, even those who oppose us. Guard our hearts from selfish ambition, and keep our motives pure in Your sight. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Lying Amalekite",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lying-amalekite"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

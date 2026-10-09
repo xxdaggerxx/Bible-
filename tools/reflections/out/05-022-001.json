@@ -1,0 +1,74 @@
+{
+ "id": "05-022-001",
+ "title": "Various Laws",
+ "refs": [
+  "Deuteronomy 22:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5022001,
+   "end": 5022012,
+   "ref": "Deuteronomy 22:1-12",
+   "ranges": [
+    [
+     5022001,
+     5022012
+    ]
+   ],
+   "title": "Caring for the Good of Others",
+   "key_verse": [
+    5022001,
+    5022001
+   ],
+   "reflect": [
+    {
+     "text": "God called His people to care for their neighbours in very practical ways. If an animal wandered away or an item was lost, they were not allowed to look away and pretend they did not see it. Faithful stewardship means seeing all property as belonging to God. It calls us to show practical, sacrificial compassion by returning what was lost and helping lift a heavy burden, even if the person in trouble is an enemy.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God also instructed the Israelites to build a railing around the edge of a new roof. As F. B. Meyer noted, the homeowner was not to think only of what was safe for himself, but to set up a guard for \"the protection and safety of young and feeble life.\" In our homes and personal habits, we are called to look after those who might stumble, putting safeguards in place to protect the weak and tempted from harm.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Both commands show us that true faith reaches beyond basic rule-keeping. God asks us to inspect our daily habits and homes to ensure we are actively shielding others from danger. Instead of living only for our own comfort, we are called to watch over the lives and needs of those around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a situation right now where you have been tempted to look away instead of helping a neighbour in need?",
+    "What protective boundaries can you build in your daily life or home to keep others from stumbling?"
+   ],
+   "prayer": "Lord God, help us not to turn away when our neighbours face difficulty or loss. Give us eyes to see where others are vulnerable, and grant us the willingness to help them. Guide us to build healthy safeguards in our homes and habits so that no one stumbles because of our carelessness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 22:8",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Mar. 8, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-8-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

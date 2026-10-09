@@ -1,0 +1,82 @@
+{
+ "id": "04-009-001",
+ "title": "The Second Passover",
+ "refs": [
+  "Numbers 9:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4009001,
+   "end": 4009014,
+   "ref": "Numbers 9:1-14",
+   "ranges": [
+    [
+     4009001,
+     4009014
+    ]
+   ],
+   "title": "Remembering God's Deliverance",
+   "key_verse": [
+    4009013,
+    4009013
+   ],
+   "reflect": [
+    {
+     "text": "One year after leaving Egypt, God told the Israelites to keep the Passover. This meal was a vital reminder of how the Lord rescued them from slavery so they could obey and follow Him. However, a problem arose when some men had touched a dead body. They were ceremonially unclean, which meant they were temporarily not allowed to take part. Rather than guessing what to do, Moses turned to the Lord to ask for divine guidance.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The Lord gave a gracious answer. Anyone who was unclean or away on a journey could celebrate the feast one month later. God did not allow people to delay the meal for simple convenience, but He showed that His laws are not rigid legalism. At the same time, anyone who was clean and able to attend but chose to ignore the feast was cut off from the community. Remembering God's rescue was a solemn duty for every covenant member.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Passover lamb pointed forward to Jesus Christ, who died to deliver us from our sin. Today, Christians look back on that rescue when we share the Lord's Supper. Partaking in this meal in faith strengthens our bond with Christ, builds unity in the church, and prepares us for our daily walk with God.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering Christ's sacrifice help you follow Him more faithfully in your daily life?",
+    "Why is it important to come to the Lord's Supper with reverence and unity alongside other believers?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus Christ to free us from the power of sin. Forgive us when we treat Your mercy lightly or forget what You have done. Strengthen our faith as we remember Christ's sacrifice, and help us walk together in humble obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Centrality of Passover",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/centrality-passover"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Numbers 9, Psalm 45, Song of Songs 7, Hebrews 7",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-9-psalm-45-song-of-songs-7-hebrews-7/"
+    },
+    "D3": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways 02/16/2003",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-02-or-16-or-2003-1184778.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "04-031-001",
+ "title": "Vengeance on Midian",
+ "refs": [
+  "Numbers 31:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4031001,
+   "end": 4031024,
+   "ref": "Numbers 31:1-24",
+   "ranges": [
+    [
+     4031001,
+     4031024
+    ]
+   ],
+   "title": "Cleansed and Made Ready for God",
+   "key_verse": [
+    4031023,
+    4031023
+   ],
+   "reflect": [
+    {
+     "text": "The Midianites had harmed Israel through compromise and false worship rather than open battle. Because of this, God commanded judgment against them. Balaam had chased after wealth and honor among the Midianites, and he ended up dying in their defeat. Wishing to die the death of the righteous means nothing when our daily choices are guided by greed. This victory points ahead to the day when Christ will execute true judgment against all wickedness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Before the items taken from Midian could be used, they had to be purified. Things that could endure the heat were put through fire, while other items were washed in water. God calls us to be thoroughly cleansed so we can belong to him. As F. B. Meyer wrote, \"Not cleverness, but cleanliness, is the prime condition of service.\" God wants pure vessels that are fit for his use.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The way God cleanses his people fits what we can bear. He will not allow our faith to be tested beyond what we can endure, because our faith is deeply precious to him. Whether God refines us through difficult trials or shapes us with a more gentle discipline, his purpose is to make us clean and ready for the Savior.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there compromises or selfish desires in your life that you need God to cleanse?",
+    "How can remembering that God never tests you beyond what you can bear bring you peace during hard times?"
+   ],
+   "prayer": "Lord, search our hearts and cleanse us from any sinful compromise or greed. Thank you for guarding our faith and walking with us through every trial. Refine us and make us clean vessels who are ready to serve Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 31:23",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - February 26, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-february-26-2006-1380109.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

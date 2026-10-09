@@ -1,0 +1,115 @@
+{
+ "id": "05-031-001",
+ "title": "Joshua to Succeed Moses",
+ "refs": [
+  "Deuteronomy 31:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5031008,
+   "end": 5031008,
+   "ref": "Deuteronomy 31:8",
+   "ranges": [
+    [
+     5031008,
+     5031008
+    ]
+   ],
+   "title": "\"The Lord Himself Goes Before You\"",
+   "key_verse": [
+    5031008,
+    5031008
+   ],
+   "reflect": [
+    {
+     "text": "Big changes in life can feel like stepping into an unfamiliar, dark place. When the people of Israel prepared to cross into the Promised Land, they were facing a major shift in leadership. It was natural for them to feel nervous and uncertain. Yet Moses reminded them where true security is found. Their hope did not rest on a human leader, but on the living God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Moses told them that God travels ahead of them and stays right beside them. As Charles Spurgeon noted, \"If Jehovah Himself goes before us, it must be safe to follow.\" God is around us and with us at all times. He will never fail to supply the strength we need, nor will He ever leave our side. He takes on the brunt of the battle Himself and brings the victory. Because our Lord leads the way, we do not have to hold back. We can move forward into the future with steady peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What unfamiliar season or change are you facing that makes you feel uncertain?",
+    "How does knowing that God goes ahead of you give you comfort today?"
+   ],
+   "prayer": "Lord, thank You for going ahead of us into every unknown place. When human leaders change and our path seems unclear, remind us that You are always by our side. Help us to follow You boldly today, trusting that You will never leave us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 30",
+     "on": "Deuteronomy 31:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Jessica Brodie",
+     "work": "God, Our Ultimate Trail Guide",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/wholly-loved-feb-21.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5031001,
+   "end": 5031008,
+   "ref": "Deuteronomy 31:1-8",
+   "ranges": [
+    [
+     5031001,
+     5031008
+    ]
+   ],
+   "title": "Courageous Because of Who God Is",
+   "key_verse": [
+    5031006,
+    5031006
+   ],
+   "reflect": [
+    {
+     "text": "Taking on a huge task can easily stir up deep dread in our hearts. As Moses gathered all Israel to announce Joshua as their new leader, the nation stood before a daunting assignment in an unfamiliar land. God knows that stepping into the unknown naturally provokes fear. He completely understands our human weakness. That is why Scripture repeatedly records His command to His people not to give in to terror.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When God tells us to be courageous, He does not expect us to rely on our own fragile strength. Left to ourselves, we quickly run out of power and resolve. Instead, God offers His own personal presence as the true remedy for our fear. We can walk forward boldly into whatever difficult duty lies ahead because the Lord Himself goes with us. He will never abandon His people, and knowing who He is gives us all the courage we need.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What daunting duty or unknown path is causing you to feel afraid right now?",
+    "How does relying on God's presence rather than your own strength change the way you face this task?"
+   ],
+   "prayer": "Father, You know how weak we feel when we face hard assignments. Forgive us for trying to be brave in our own strength. Thank You for promising to go with us and never abandon us. Give us courage today because of who You are. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Trillia J. Newbell",
+     "work": "Courageous Because of Who God Is",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-february-3-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

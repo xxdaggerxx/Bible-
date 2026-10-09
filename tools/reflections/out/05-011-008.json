@@ -1,0 +1,74 @@
+{
+ "id": "05-011-008",
+ "title": "God’s Great Blessings",
+ "refs": [
+  "Deuteronomy 11:8-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5011011,
+   "end": 5011012,
+   "ref": "Deuteronomy 11:11-12",
+   "ranges": [
+    [
+     5011011,
+     5011012
+    ]
+   ],
+   "title": "\"The Eyes of the Lord Are Always on It\"",
+   "key_verse": [
+    5011012,
+    5011012
+   ],
+   "reflect": [
+    {
+     "text": "Stepping into an unknown season can make us feel unsure, but God gives us a comforting promise. He constantly watches over His people from the beginning of the year to the end. Unlike places where people rely entirely on their own hard work, this new ground depends directly on heaven's supply. We do not have to carry our future alone because God's divine resources never run dry.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The journey often includes rugged hills and difficult circumstances, yet these steep places serve a purpose. Just as high mountains catch the rain to water the fruitful valleys below, hard trials can provide shelter and protect us from greater dangers. Waiting for relief is not God punishing us. God uses seasons of waiting to prepare us before we enter new spiritual territory.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When waiting stretches on, old insecurities and fears of failure can easily return. We might even wonder if God has forgotten us. Instead of giving in to fear, we can stand firm in our identity as God's children. When we treat these times as faith-building opportunities, we begin to notice daily blessings and trust the Father's loving guidance through every sorrow.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What rugged hills or long seasons of waiting are you facing right now?",
+    "How does knowing God never takes His eyes off you help you trust His provision today?"
+   ],
+   "prayer": "Father, thank You that Your eyes are always on us from the start of the year to the end. Help us trust Your loving care when we face steep hills and long seasons of waiting. Teach us to depend on Your unfailing resources and to notice Your blessings each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Kelly Balarie",
+     "work": "Five Tips for When You’re Tired of Waiting",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-october-24-2018.html"
+    },
+    "D2": {
+     "author": "L. B. Cowman (Streams in the Desert)",
+     "work": "Streams in the Desert - January 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/desert/streams-in-the-desert-january-1st.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "04-015-022",
+ "title": "Offerings for Unintentional Sins",
+ "refs": [
+  "Numbers 15:22-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4015022,
+   "end": 4015031,
+   "ref": "Numbers 15:22-31",
+   "ranges": [
+    [
+     4015022,
+     4015031
+    ]
+   ],
+   "title": "Pardon for Sins We Did Not See",
+   "key_verse": [
+    4015025,
+    4015025
+   ],
+   "reflect": [
+    {
+     "text": "We often fail to realize how many times we fall short. Because we do not understand everything, there are many sins we do not even notice. These include wrong things we do and good things we leave undone. We might even do something in total sincerity, thinking we are serving God, when He never asked it of us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It can feel scary to realize that God sees every single one of these hidden wrongs. Yet faith finds deep comfort here. God sees our unseen stains so that He can wash them away and put them behind His back. Through Jesus, our true priest, atonement—a sacrifice that brings us back to God—has been made. His sacrifice covers even the sins we never knew we committed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God sees the sin, Christ has paid for it, and the Holy Spirit assures us of pardon. This gives us true peace. As Charles Spurgeon said, God provides an offering that delivers us \"even before I know that I am guilty.\" We can rest knowing His grace reaches further than our own knowledge.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does it comfort you to know that Jesus forgives sins you are not even aware of?",
+    "How does God's complete pardon help you trust Him with your mistakes?"
+   ],
+   "prayer": "Lord, thank You for knowing all my faults and still providing a way for me to be forgiven. Thank You that the blood of Jesus covers every sin, even those I never noticed. Help me to rest today in the peace of Your complete pardon. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 28",
+     "on": "Numbers 15:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

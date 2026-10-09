@@ -1,0 +1,80 @@
+{
+ "id": "10-007-001",
+ "title": "God’s Covenant with David",
+ "refs": [
+  "2 Samuel 7:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10007001,
+   "end": 10007017,
+   "ref": "2 Samuel 7:1-17",
+   "ranges": [
+    [
+     10007001,
+     10007017
+    ]
+   ],
+   "title": "God's Everlasting Promise to David",
+   "key_verse": [
+    10007016,
+    10007016
+   ],
+   "reflect": [
+    {
+     "text": "King David wanted to build a magnificent house for God, and the prophet Nathan thought it was a fine idea. Yet good intentions and noble ideas from godly people are not always God's actual direction. God spoke to Nathan that night, showing that even chosen leaders need accountability to His word and cannot simply assume their plans are right.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of David building a temple, God told him that his son Solomon would build it later. David hoped to make a house for God, but God turned things around by promising to build an enduring family line for David. This covenant—God's sacred, binding promise—was rooted purely in God's grace, His kindness that we do not earn, rather than human achievement.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God promised rest for His people and assured David of His steadfast love, even when fatherly discipline was needed. God often uses seasons of waiting to shape His servants. Most of all, this promise of an everlasting throne was fulfilled in Jesus Christ, who reigns forever as our true King.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When have your own good intentions differed from what God actually wanted you to do?",
+    "How does knowing that Jesus is the eternal King bring peace to your life today?"
+   ],
+   "prayer": "Lord God, thank You for Your loving grace and for guiding us by Your word. Help us to hold our plans loosely and trust Your wisdom, even when You call us to wait. We thank You for Jesus Christ, our King whose throne will never end. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "God’s Promise to David",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-march-11-2025.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 49: 2 Samuel 7:17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-49-2-samuel-7-17.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Building David's House",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/building-davids-house"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

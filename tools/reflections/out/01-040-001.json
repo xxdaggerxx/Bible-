@@ -1,0 +1,141 @@
+{
+ "id": "01-040-001",
+ "title": "The Cupbearer and the Baker",
+ "refs": [
+  "Genesis 40:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1040005,
+   "end": 1040007,
+   "ref": "Genesis 40:5-7",
+   "ranges": [
+    [
+     1040005,
+     1040007
+    ]
+   ],
+   "title": "\"Why Are Your Faces So Downcast?\"",
+   "key_verse": [
+    1040007,
+    1040007
+   ],
+   "reflect": [
+    {
+     "text": "When we go through painful trials, it is easy to become wrapped up in our own misfortunes and sink into despair. Joseph had lost his freedom, but he refused to spend his days in sullen, lonely brooding. His faith in God was not quenched by captivity. Because he stayed closely connected to God, he kept his eyes open to the people around him and noticed when his cellmates were troubled.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Joseph did not ignore their pain. Instead of dwelling on his own struggles, he actively asked why they were downcast. Our own hardships can train us to see the brokenness of others. Joseph could offer true sympathy because he had already walked through deep sorrow himself. God comforts us in our suffering so that we can pass that care along to others.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Reaching out to help someone else brings real purpose and comfort to our own heavy hearts. When we serve those who hurt, we often find our own burdens lifting. As F. B. Meyer wrote, \"Light a fire in another's heart, and your own heart will be warmed.\"",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you are going through a hard time, how can you look past your own pain to notice others who are hurting?",
+    "In what ways can God use your past struggles to bring comfort to someone near you?"
+   ],
+   "prayer": "Lord, when life is hard, help us not to turn inward in despair. Comfort us in our sorrows so we can notice and care for the people around us. Use our experiences to bring your kindness and hope to those who need it. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 40:7",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Jennifer Slattery",
+     "work": "Being Light in Dark Places",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/being-light-in-dark-places-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "PowerPoint Ministries",
+     "work": "PowerPoint - June 14, 2007",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-june-14-2007-11543964.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1040001,
+   "end": 1040023,
+   "ref": "Genesis 40:1-23",
+   "ranges": [
+    [
+     1040001,
+     1040023
+    ]
+   ],
+   "title": "Trusting God When Forgotten",
+   "key_verse": [
+    1040023,
+    1040023
+   ],
+   "reflect": [
+    {
+     "text": "Joseph had every reason to become bitter and resentful. His brothers had hated him because of dreams, yet he did not allow that past pain to stop him from caring about the dreams of others. When our hearts are aligned with God, we can let go of personal anger. A good attitude opens up unexpected doors to serve those around us, even in tough settings.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Joseph kindly served the cupbearer and asked him for help in return, hoping to be freed. But when the cupbearer was restored to Pharaoh's court, he forgot Joseph entirely. This failure left Joseph trapped in prison for two more years. People often let us down, and when relief does not come quickly, we may struggle with feeling forgotten.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "Joseph survived this long delay by trusting the unseen, sovereign hand of God. Human helpers may prove unreliable, but the Lord is faithful. Even when our wait is prolonged and we feel overlooked by the world, Scripture assures us that God never forgets His children.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How can trusting God's control help you let go of bitterness when others let you down?",
+    "When you feel forgotten during a long trial, what helps you remember that God has not abandoned you?"
+   ],
+   "prayer": "Father, protect our hearts from bitterness when people disappoint us or forget our kindness. Teach us to trust your sovereign timing even when answers take longer than we hope. Help us rest in the assurance that you will never leave or forget us. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "A Positive Attitude",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-jan-16-2008-11564851.html"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "Joseph Forgotten?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/joseph-forgotten"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "07-012-001",
+ "title": "Jephthah Defeats Ephraim",
+ "refs": [
+  "Judges 12:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7012001,
+   "end": 7012007,
+   "ref": "Judges 12:1-7",
+   "ranges": [
+    [
+     7012001,
+     7012007
+    ]
+   ],
+   "title": "Trusting Christ Beyond Perfect Words",
+   "key_verse": [
+    7012006,
+    7012006
+   ],
+   "reflect": [
+    {
+     "text": "In this tragic conflict, the men of Gilead used a single spoken word to decide who lived and who died. Because the men of Ephraim could not pronounce the sound correctly, forty-two thousand men lost their lives. As F. B. Meyer observed, missing one little letter meant that \"the whole wonder and beauty of a human life was forfeited.\" People often copy this harsh spirit by creating strict tests to decide who is allowed to belong in their group.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "How thankful we should be that God does not treat us like that. Our entrance into the kingdom of God does not depend on getting every word right or giving flawless theological answers. The woman who touched Jesus' clothes had an imperfect understanding of faith, yet she was healed. The dying thief on the cross knew very little about Jesus, yet the Lord welcomed him into paradise that very day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God does not measure our acceptance by how much we know or how smoothly we recite a creed. Real faith means putting our trust in Christ Himself. Coming to Him with a sincere heart is all that is needed to pass safely into His rest.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever worried that your faith was too weak or that you did not know enough to be accepted by God?",
+    "How does it bring you peace to know that Jesus asks for simple trust rather than flawless knowledge?"
+   ],
+   "prayer": "Lord Jesus, thank You that our salvation does not depend on passing harsh human tests or knowing all the right answers. We come to You today with simple, honest trust in who You are. Please help us rest in Your grace and welcome others with the same kindness You have shown to us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 12:6",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

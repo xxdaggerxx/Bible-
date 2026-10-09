@@ -1,0 +1,123 @@
+{
+ "id": "06-024-014",
+ "title": "Choose Whom You Will Serve",
+ "refs": [
+  "Joshua 24:14-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6024015,
+   "end": 6024015,
+   "ref": "Joshua 24:15",
+   "ranges": [
+    [
+     6024015,
+     6024015
+    ]
+   ],
+   "title": "\"Choose for Yourselves This Day\"",
+   "key_verse": [
+    6024015,
+    6024015
+   ],
+   "reflect": [
+    {
+     "text": "Joshua challenged the people of Israel with an unavoidable choice. We cannot remain neutral, nor can we try to live with one foot in the world and one foot in faith. The movements and promises of this world often sound appealing, but they ultimately leave people empty and dissatisfied. Because God has delivered us and shown us great mercy, He asks for our whole heart. He is holy, so He cannot accept half-hearted or divided devotion.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Following God requires an active step of our personal will. We cannot just drift along into faithfulness or wait for convenient feelings. Choosing to serve the Lord means deciding between our own soul and God that we will turn away from worthless idols. That decision demands real and practical changes in our daily lives. When God calls us forward, remembering what Christ has done to rescue us gives us the desire to answer Him with fresh obedience.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there parts of your life where you have tried to hold onto the world while still following God?",
+    "What practical change can you make today to show that your loyalty belongs to the Lord?"
+   ],
+   "prayer": "Lord God, thank You for Your mercy and for rescuing us from sin. Help us not to drift through life or offer You divided loyalty. Give us the courage to choose You each day and serve You with our whole heart. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Which Side Are You On?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-with-greg-laurie-nov-13-2006-1447333.html"
+    },
+    "D3": {
+     "author": "Oswald Chambers",
+     "work": "Will To Be Faithful",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/updated/will-to-be-faithful/"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Joshua’s Farewell",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/joshua-farewell"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 6024014,
+   "end": 6024028,
+   "ref": "Joshua 24:14-28",
+   "ranges": [
+    [
+     6024014,
+     6024028
+    ]
+   ],
+   "title": "Serving a Holy God",
+   "key_verse": [
+    6024019,
+    6024019
+   ],
+   "reflect": [
+    {
+     "text": "When the people of Israel eagerly promised to serve God, Joshua seemed to push back against their excitement. He warned them that they were not able to serve the Lord on their own, because He is holy. F. B. Meyer noticed that Joshua sounded like he was crying, \"Back, back! This is no place for you.\" Jesus gave a similar warning when He told Peter that Peter could not follow Him yet. In both moments, people made bold promises in their own strength, but failure soon followed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often overestimate our own power to obey God. Our human nature has been deeply weakened by past sin, leaving us prone to stumble and fall away. We may truly want to do what is good, but our own strength fails when measured against God's holiness. Recognizing our weakness keeps us from foolish self-confidence. Instead of trusting in ourselves, we need God to uphold us with His steadfast Spirit so we do not turn aside.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas have you relied on your own willpower rather than asking God for help?",
+    "How does admitting your weakness help you depend more on God's Holy Spirit?"
+   ],
+   "prayer": "Holy Father, we know that our own strength is never enough to serve You as we should. Forgive us for our pride and our repeated failures. Please uphold us by Your steadfast Spirit and give us the power to walk faithfully with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 24:19",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

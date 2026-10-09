@@ -1,0 +1,75 @@
+{
+ "id": "01-029-031",
+ "title": "Reuben, Simeon, Levi, and Judah",
+ "refs": [
+  "Genesis 29:31-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1029031,
+   "end": 1029035,
+   "ref": "Genesis 29:31-35",
+   "ranges": [
+    [
+     1029031,
+     1029035
+    ]
+   ],
+   "title": "God Remembers the Overlooked",
+   "key_verse": [
+    1029031,
+    1029031
+   ],
+   "reflect": [
+    {
+     "text": "Leah knew the deep ache of being loved less than her sister. Yet the Lord noticed her sorrow and acted on her behalf. When people around us overlook us or cast us aside, God sees our pain. He often chooses to lift up and honor those whom the world rejects.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "At first, Leah hoped each newborn son would finally win her husband's affection. Her boys' names showed her constant longing to be loved by Jacob. But with the birth of her fourth son, Judah, her focus shifted. Instead of striving for human approval, she praised the Lord. We find true contentment when we stop fretting over what we lack and thank God for what He has given us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God gave this overlooked woman a place of great honor. Leah became the mother of Israel's royal and priestly tribes. Even more, God placed unloved Leah directly into the family line of Jesus Christ, pointing ahead to His great rescue of His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you currently seeking human approval rather than resting in God's love?",
+    "How can turning your attention to praise help you find contentment today?"
+   ],
+   "prayer": "Lord, thank You that You see and care for us when we feel forgotten or unloved. Turn our hearts away from chasing the approval of others, and help us to praise You with grateful hearts. Thank You for lifting up the lowly and showing us Your redeeming love in Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Liz Curtis Higgs",
+     "work": "God Sees You, Beloved",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/god-sees-you-beloved-encouragement-for-today-january-13-2015.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Favor Upon Leah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/favor-upon-leah"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

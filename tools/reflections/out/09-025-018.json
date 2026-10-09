@@ -1,0 +1,130 @@
+{
+ "id": "09-025-018",
+ "title": "Abigail Intercedes for Nabal",
+ "refs": [
+  "1 Samuel 25:18-38"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9025032,
+   "end": 9025034,
+   "ref": "1 Samuel 25:32-34",
+   "ranges": [
+    [
+     9025032,
+     9025034
+    ]
+   ],
+   "title": "\"Blessed Is Your Discernment\"",
+   "key_verse": [
+    9025033,
+    9025033
+   ],
+   "reflect": [
+    {
+     "text": "When someone treats us poorly after we have helped them, we are often tempted to react in the flesh and strike back. David was deeply insulted by Nabal and prepared to destroy his entire household in hot anger. Scripture honestly records David's flaws here, showing us that even chosen leaders need God's restraining hand. In His quiet providence, God guided Abigail to meet David on the road before he carried out his dangerous plans.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "David showed true wisdom by stopping to listen to Abigail's appeal. Instead of pressing ahead in pride, he praised the Lord God of Israel for sending her and thanked her for her good sense. He recognized that the Lord had stepped in to keep him from shedding innocent blood. When God sends someone to interrupt our angry impulses, we should humbly listen and leave justice in His capable hands.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually react when someone tries to stop you from making an angry choice?",
+    "Who has God used recently to help you calm down and trust Him with unfair treatment?"
+   ],
+   "prayer": "Father, thank You for stopping us when we are tempted to strike back in anger. Give us humble hearts to receive wise counsel when our feelings are hurt. Help us to trust Your perfect justice instead of taking matters into our own hands. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Abigail Saves David",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/abigail-saves-david"
+    },
+    "D3": {
+     "author": "Daily Disciples Ministries",
+     "work": "Daily Disciples Devotional - Apr. 14, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-apr-14-2009-11602198.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 9025018,
+   "end": 9025038,
+   "ref": "1 Samuel 25:18-38",
+   "ranges": [
+    [
+     9025018,
+     9025038
+    ]
+   ],
+   "title": "Abigail Intercedes for Her Household",
+   "key_verse": [
+    9025031,
+    9025031
+   ],
+   "reflect": [
+    {
+     "text": "Rising anger can easily push us into reckless actions. David was so consumed by fury over an insult that he set out to wipe out Nabal and everyone in his house. In that tense moment, Abigail courageously stepped out unarmed to meet a band of armed men. She offered humble words to turn David away from violence and protect a household that did not deserve it. Her selfless mediation points us to Jesus Christ, the true Mediator who stepped into the path of wrath to reconcile sinners to God.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Abigail also helped David think about tomorrow. F. B. Meyer reminds us to look at choices from \"the view-point of the future, when our passion shall have subsided.\" She urged David to protect his conscience and remember that God held his life safely. Within days, the Lord dealt with Nabal Himself, showing that David did not need to take personal vengeance. When we are mistreated, walking by faith means responding thoughtfully and trusting God to make things right.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel your temper rising, how can thinking about the future help you keep a clean conscience?",
+    "How does knowing that Jesus took God's wrath for you change the way you respond to people who treat you poorly?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus to stand between us and the judgment we deserved. Teach us to pause when we feel wronged, so we do not react out of sinful passion. Help us to keep a clear conscience and trust that You will care for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 25:31",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D4": {
+     "author": "Nana Dolce",
+     "work": "How Abigail's Story in 1 Samuel 25 Reveals God's Saving Work",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/abigail-point-christ/"
+    },
+    "D5": {
+     "author": "Joe Rigney",
+     "work": "Beware the Anger of Your Soul: How to Restrain Ungodly Passion",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/beware-the-anger-of-your-soul"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,88 @@
+{
+ "id": "09-002-001",
+ "title": "Hannah’s Prayer of Thanksgiving",
+ "refs": [
+  "1 Samuel 2:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9002001,
+   "end": 9002011,
+   "ref": "1 Samuel 2:1-11",
+   "ranges": [
+    [
+     9002001,
+     9002011
+    ]
+   ],
+   "title": "Our Holy God and Faithful Rock",
+   "key_verse": [
+    9002002,
+    9002002
+   ],
+   "reflect": [
+    {
+     "text": "Hannah praises God with her whole being, engaging her mind, heart, and will. She sees how God's personal kindness to her fits into His greater work of deliverance for His people. Instead of offering routine or distant worship, she rejoices boldly. She places her trust in God because there is no Rock like Him. His holiness and perfection make Him completely reliable, giving us a stable foundation in an unstable world.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Hannah also reminds us that every change in our circumstances comes from God's hand. The Lord brings low and lifts up, sending seasons of both poverty and wealth. When we are humbled, we can take it patiently and remember that God never changes. As Charles Spurgeon wrote, it is God's way \"to lower those whom He means to raise.\" Experiencing our own weakness prepares us to receive His grace and honor.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "As we walk through life, God personally protects our steps. The path can be slippery, rough, and long, but He preserves our goings. He keeps our feet from wandering into foolish ways and frees us from hidden snares. Because God is all-powerful, all-knowing, and always present, we can release our anxiety and walk forward without fear.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need to let go of worry and lean on God as your unchanging Rock?",
+    "How can remembering that God guides both our low and high seasons help you praise Him today?"
+   ],
+   "prayer": "Lord God, thank You for being our unchanging Rock when everything around us shifts. Guard our feet from falling into sin, and keep us from wandering from Your truth. When You bring us low, help us trust Your wise care and rely entirely on Your strength. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 24",
+     "on": "1 Samuel 2:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 10",
+     "on": "1 Samuel 2:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "A Joyful Heart",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-september-6-2023.html"
+    },
+    "D4": {
+     "author": "Whitney Hopler",
+     "work": "There Is No Rock Like God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/there-is-no-rock-like-god-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

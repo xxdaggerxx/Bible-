@@ -1,0 +1,73 @@
+{
+ "id": "09-024-016",
+ "title": "David’s Oath to Saul",
+ "refs": [
+  "1 Samuel 24:16-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9024016,
+   "end": 9024022,
+   "ref": "1 Samuel 24:16-22",
+   "ranges": [
+    [
+     9024016,
+     9024022
+    ]
+   ],
+   "title": "Repaying Evil with Good",
+   "key_verse": [
+    9024017,
+    9024017
+   ],
+   "reflect": [
+    {
+     "text": "When David spared Saul's life, Saul wept and admitted the truth. Saul confessed that David was more righteous because David repaid evil with kindness instead of revenge. By speaking directly with integrity, David left the final judgment to the Lord. Facing an adversary with honesty and mercy gives us the lasting reward of a clear conscience.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In that moment, Saul also recognized that David would certainly become king of Israel. David had refused to kill Saul because he honored the Lord's chosen leader and waited for God's perfect timing. Instead of seizing the kingdom through sinful means, David rested in God's sovereignty. Showing mercy to his enemy showed that divine grace was truly at work in his heart.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Treating an enemy righteously can disarm them, even if we cannot guarantee that every opponent will change. We are responsible to speak the truth in love no matter how others react. Like David, believers are called to leave vengeance to God rather than taking justice into our own hands.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone treats you unfairly, do you try to get even or do you trust God to handle justice?",
+    "How does choosing kindness over revenge help you keep a clear conscience?"
+   ],
+   "prayer": "Lord, help us to trust your timing instead of taking matters into our own hands. Give us grace to repay evil with kindness, even when it is hard. Teach us to leave all judgment to you so that we may live with a clean conscience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "David Spares Saul’s Life",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/david-spares-sauls-life"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "A Clear Conscience",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/a-clear-conscience"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

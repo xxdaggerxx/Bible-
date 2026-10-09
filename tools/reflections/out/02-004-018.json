@@ -1,0 +1,66 @@
+{
+ "id": "02-004-018",
+ "title": "Moses Leaves for Egypt",
+ "refs": [
+  "Exodus 4:18-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2004018,
+   "end": 2004026,
+   "ref": "Exodus 4:18-26",
+   "ranges": [
+    [
+     2004018,
+     2004026
+    ]
+   ],
+   "title": "Choosing God's Call Over Comfort",
+   "key_verse": [
+    2004020,
+    2004020
+   ],
+   "reflect": [
+    {
+     "text": "Years before this journey, Moses had made a choice to stand with God's hurting people instead of enjoying the luxury of Egypt's palace. But an impulsive action forced him into the desert for forty long years. Out in Midian, his life had become quiet and settled. Then God spoke to him from the burning bush and called him to make another major decision: return to Egypt.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Moses felt afraid and hesitated, but he chose to seek God's glory instead of keeping his comfortable life. When he put his wife and sons on a donkey and took the staff of God in his hand, he closed the door on other options. He stepped onto the road back to Egypt, fully committed to obeying the Lord's call.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Like Moses, we often face moments where we must choose between our own comfort and God's direction. Saying yes to God can feel hard, and it might ask us to leave behind what feels safe and familiar. Yet true obedience begins when we set aside our fear and commit to walking in the way He sets before us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area in your life where God is asking you to choose His will over your own comfort?",
+    "What helps you commit fully to following the Lord when you feel hesitant or afraid?"
+   ],
+   "prayer": "Lord, give us courage to choose Your glory rather than our own ease. Help us set aside our fears and trust You when You call us to step out in obedience. Guide our path as we commit our lives into Your hands. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michael Youssef, Ph.D.",
+     "work": "Moses Decides",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-february-22.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

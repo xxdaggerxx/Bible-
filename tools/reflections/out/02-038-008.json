@@ -1,0 +1,74 @@
+{
+ "id": "02-038-008",
+ "title": "The Bronze Basin",
+ "refs": [
+  "Exodus 38:8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2038008,
+   "end": 2038008,
+   "ref": "Exodus 38:8",
+   "ranges": [
+    [
+     2038008,
+     2038008
+    ]
+   ],
+   "title": "Giving Up the Mirror",
+   "key_verse": [
+    2038008,
+    2038008
+   ],
+   "reflect": [
+    {
+     "text": "The women who served at the entrance to the Tent of Meeting had brought polished bronze mirrors out of Egypt. In worldly culture, those mirrors were prized objects of personal beauty and pride. Yet these women willingly gave away their mirrors to make the basin for God's sacred tent. Their gift showed hearts that chose to honor God above themselves, leaving behind an enduring example of humble worship.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "A mirror naturally draws our gaze back onto our own appearance and thoughts. F. B. Meyer cautioned against turning our attention constantly inward, because digging into our own motives can distract us from Christ and duty. Pondering ourselves only leads to confusion, but the women broke free from self-focus by getting caught up in God's holy work. As Meyer advised, \"for every look at self, take ten at Christ.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we give ourselves to God's work, our pride and vanity begin to lose their grip. We do not need to spend our days constantly examining our own image or trying to fix our own souls. Instead, we can let go of self-centered habits and find our place in serving God and others, allowing Christ to increase in our lives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What habits of focusing on your own image or feelings might you need to give up to God?",
+    "How can turning your attention toward serving others help you keep your eyes on Christ today?"
+   ],
+   "prayer": "Lord, forgive us when we become trapped in pride and constant self-examination. Take away our vanity and teach us to find our joy in your presence and your work. Help us to fix our eyes on Jesus, so that He may increase as we humbly serve others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 38:8",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Barbara Latta",
+     "work": "Why Did the Women in Exodus 38:8 Give Their Mirrors for the Brazen Altar?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/why-did-the-women-in-exodus-388-give-their-mirrors.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

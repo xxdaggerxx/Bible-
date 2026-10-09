@@ -1,0 +1,66 @@
+{
+ "id": "02-012-029",
+ "title": "The Tenth Plague: Death of the Firstborn",
+ "refs": [
+  "Exodus 12:29-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2012029,
+   "end": 2012030,
+   "ref": "Exodus 12:29-30",
+   "ranges": [
+    [
+     2012029,
+     2012030
+    ]
+   ],
+   "title": "Facing God's Judgment",
+   "key_verse": [
+    2012030,
+    2012030
+   ],
+   "reflect": [
+    {
+     "text": "Pharaoh stubbornly refused to obey God's commands for a long time. Yet constantly resisting God finally brings divine judgment that no one can avoid. At midnight, God struck down every firstborn in Egypt. The devastation fell universally across the land, reaching from the royal palace of Pharaoh to the lowest dungeon. Every family felt the bitter sting of loss.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Coming face-to-face with death shattered Pharaoh's pride. His arrogance was broken, prompting him to finally release God's people and even ask for a blessing. Death provides a sobering reminder of our human limits. It shows us that we are not in total control and that God actively intervenes in human history.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "While physical death is painful and bitter, it points us toward our need for God. Even in the face of judgment and mortality, there is genuine hope. We find redemption—being rescued from sin and death—through the death and resurrection of Jesus Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering our human limits help us turn away from pride and listen to God?",
+    "In what ways does the resurrection of Jesus give you hope when facing the reality of death?"
+   ],
+   "prayer": "Lord God, remind us of our human limits and keep our hearts from stubborn pride. Forgive us when we resist your will, and teach us to honor you. Thank you for giving us hope and redemption through the death and resurrection of Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "The Message of Death",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/the-message-of-death-one-year-devotions-for-men-may-20.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

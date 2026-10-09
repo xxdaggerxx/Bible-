@@ -1,0 +1,82 @@
+{
+ "id": "09-006-001",
+ "title": "The Ark Returned to Israel",
+ "refs": [
+  "1 Samuel 6:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9006001,
+   "end": 9006021,
+   "ref": "1 Samuel 6:1-21",
+   "ranges": [
+    [
+     9006001,
+     9006021
+    ]
+   ],
+   "title": "Who Can Stand Before This Holy God?",
+   "key_verse": [
+    9006020,
+    9006020
+   ],
+   "reflect": [
+    {
+     "text": "The Philistines tried to test God by using two mother cows separated from their calves, wondering if their plagues were His doing or just an accident. We often fall into the same trap of trying to manipulate circumstances rather than simply trusting the Lord. Yet creation obeys its Maker. Even though the cows longed for their calves, they walked straight down the road without turning aside. God overpowered their natural instincts to accomplish His own purpose, proving that all circumstances rest firmly in His hands.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When the ark reached Beth-shemesh, the people were glad, but their joy soon turned to sorrow. Some of the men treated the sacred chest carelessly and peered inside. God showed them that He cannot be handled like a good-luck charm or managed by human rules. He is holy, which means He is completely pure and set apart from sin. Because of who He is, we must never treat Him casually, but always approach Him with reverent awe.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "As F. B. Meyer observed, walking in God's ways means that \"against our natural inclinations\" we must honor Him first. God directs all things toward His good plans. When we remember His mighty power and holiness, we can willingly lay aside our own comfort and follow where He leads.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of life are you tempted to treat God casually instead of honoring Him with holy reverence?",
+    "When has following God required you to go against your own natural desires?"
+   ],
+   "prayer": "Lord God, You rule over all creation and guide all things according to Your will. Forgive us when we treat You carelessly or try to manipulate our circumstances instead of trusting You. Teach us to approach You with humble reverence, and grant us grace to follow You even when our own desires pull us away. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 6:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Ark Returns to Israel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ark-returns-to-israel"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 9: 1 Samuel 6:1–12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-9-1-samuel-6-112.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

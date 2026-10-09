@@ -1,0 +1,66 @@
+{
+ "id": "01-028-018",
+ "title": "The Stone of Bethel",
+ "refs": [
+  "Genesis 28:18-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1028018,
+   "end": 1028022,
+   "ref": "Genesis 28:18-22",
+   "ranges": [
+    [
+     1028018,
+     1028022
+    ]
+   ],
+   "title": "Meeting God at Bethel",
+   "key_verse": [
+    1028022,
+    1028022
+   ],
+   "reflect": [
+    {
+     "text": "The morning after his dream, Jacob took the stone he had rested his head on and set it up as a pillar. He poured oil on top of it to mark the spot and remember where he had met the Lord. He named the place Bethel, which means the house of God, creating a lasting reminder of God's presence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jacob then made a vow, but his promise sounded a lot like a business deal. He told God that if He kept him safe, fed him, clothed him, and brought him back home, then the Lord would truly be his God. Jacob's attempt to bargain showed an immature, self-centered faith that was focused mainly on his own needs and safety.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even with Jacob's flaws, God showed wonderful grace—His undeserved kindness—by patiently working with him. Our worship and promises to God should never be attempts to barter with Him. Instead, they are meant to be joyful acts of submission and gratitude. God does not wait for us to be perfect; He patiently calls and guides ordinary, growing people.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever catch yourself trying to make deals with God rather than simply trusting Him?",
+    "How does God's patience with Jacob encourage you in your own walk of faith?"
+   ],
+   "prayer": "Lord, thank You for being so patient with us when our faith is weak and self-focused. Please forgive us for the times we try to make bargains with You instead of trusting Your goodness. Teach us to offer our lives to You with humble and thankful hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The House of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/house-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

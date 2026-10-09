@@ -1,0 +1,74 @@
+{
+ "id": "10-006-012",
+ "title": "The Ark Brought to Jerusalem",
+ "refs": [
+  "2 Samuel 6:12-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10006012,
+   "end": 10006015,
+   "ref": "2 Samuel 6:12-15",
+   "ranges": [
+    [
+     10006012,
+     10006015
+    ]
+   ],
+   "title": "Praising God with All Our Might",
+   "key_verse": [
+    10006014,
+    10006014
+   ],
+   "reflect": [
+    {
+     "text": "When David brought the ark of God to Jerusalem, he celebrated with pure joy. True worship flows naturally from our love for God. When we remember that the Lord is our rock, protector, and savior, our hearts want to thank Him with praise. Even when we have walked through confusing losses or grief, growing in our understanding of God's holiness and rule can turn our mourning into gladness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "David also stopped after just six steps to offer sacrifices. True worship is always grounded in sacrifice. For us today, these ancient offerings point forward to Jesus Christ. His sacrifice on the cross opens the way for us to approach a holy God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Wearing a simple linen vest, David danced before the Lord with all his strength. He did not let embarrassment or fear of what onlookers might think hold him back. People may misunderstand or criticize deep devotion, but worship is an intimate act meant for God alone. His perspective is the only standard that matters, so we should never let timidity keep us from praising Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Does the worry of what other people think ever hold you back from praising God openly?",
+    "How does remembering the sacrifice of Jesus give you confidence to approach God with joy?"
+   ],
+   "prayer": "Lord God, thank You for being our protector, rock, and savior. We praise You for Jesus, whose sacrifice welcomes us into Your holy presence. Help us look only to what pleases You, and free our hearts to worship You without fear or holding back. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 47: 2 Samuel 6:12–23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-47-2-samuel-6-1223.html"
+    },
+    "D2": {
+     "author": "In Touch Ministries",
+     "work": "Praise: An Expression of Love",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/praise-an-expression-of-love-2"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

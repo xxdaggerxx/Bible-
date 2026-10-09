@@ -1,0 +1,157 @@
+{
+ "id": "03-001-001",
+ "title": "Laws for Burnt Offerings",
+ "refs": [
+  "Leviticus 1:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 3001002,
+   "end": 3001004,
+   "ref": "Leviticus 1:2-4",
+   "ranges": [
+    [
+     3001002,
+     3001004
+    ]
+   ],
+   "title": "\"Accepted for Him to Make Atonement\"",
+   "key_verse": [
+    3001004,
+    3001004
+   ],
+   "reflect": [
+    {
+     "text": "God invited His people to bring an offering from their herd or flock with a willing heart. He graciously accepted different kinds of animals so that anyone could give, regardless of their financial means. Bringing our very best to God shows that we want to put Him first in our lives, giving Him our primary attention and strength rather than merely our leftovers.",
+     "sources": [
+      "D4",
+      "D7"
+     ]
+    },
+    {
+     "text": "When a worshipper brought an unblemished animal, he placed his hand firmly on its head. As Charles Spurgeon explained, this action carried the meaning of \"leaning heavily\" with the full weight of one's guilt. The innocent animal stood in the person's place, showing how sin was transferred away from the sinner to a blameless substitute.",
+     "sources": [
+      "D1",
+      "D2",
+      "D7"
+     ]
+    },
+    {
+     "text": "This ancient rite points us directly to the Lord Jesus. Through faith, we can lean all our spiritual weight upon Christ, trusting that His sacrifice is fully accepted by God on our behalf. When we place our trust in Him, our guilt is removed, and we are reconciled to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you giving God the best of your time and focus, or are you offering Him what is left over?",
+    "Have you leaned the full weight of your guilt and trust upon Jesus as your substitute?"
+   ],
+   "prayer": "Lord God, thank You for providing Jesus as the perfect substitute for my sins. Help me to rest fully upon His finished work instead of my own efforts. Teach me to honor You by giving You first place in all that I do today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 13",
+     "on": "Leviticus 1:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 23",
+     "on": "Leviticus 1:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Lysa TerKeurst",
+     "work": "Why Should I Be Excited About Leviticus?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/why-should-i-be-excited-about-leviticus-encouragement-for-today-february-18-2016.html"
+    },
+    "D7": {
+     "author": "Dr. John A. Hash",
+     "work": "Bible Pathways - February 1, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-february-1-2006-1375714.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 3001001,
+   "end": 3001017,
+   "ref": "Leviticus 1:1-17",
+   "ranges": [
+    [
+     3001001,
+     3001017
+    ]
+   ],
+   "title": "A Pleasing Aroma to the Lord",
+   "key_verse": [
+    3001009,
+    3001009
+   ],
+   "reflect": [
+    {
+     "text": "In the burnt offering, the entire animal was consumed upon the altar fire. This total burning demonstrated the serious cost of true worship and pointed to the satisfaction of God's holy wrath so that His people could stay in fellowship with Him. Most of all, it foreshadowed Jesus Christ, who offered Himself completely to the Father's will on the cross.",
+     "sources": [
+      "D3",
+      "D6"
+     ]
+    },
+    {
+     "text": "God also gave detailed directions for how the priests were to arrange the wood and the pieces on the altar. This careful instruction shows that God values order and purpose. When we ask God to bring biblical order to our homes, thoughts, and daily routines, we discover true peace and contentment.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "As the offering burned, it rose as a soothing aroma pleasing to the Lord. God takes that same delight when we hold nothing back and offer our entire lives to Him. When we surrender our plans to His direction, our humble obedience brings joy to His heart.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What areas of your daily routine or schedule need God's order and peace?",
+    "Is there any part of your life you are holding back from total surrender to God?"
+   ],
+   "prayer": "Father in heaven, You deserve my whole heart and life. Help me to surrender every part of myself to Your good will and bring order to my days. May my thoughts, words, and actions be a sweet and pleasing offering to You. Amen.",
+   "sources": {
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 1:9",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D5": {
+     "author": "Daily Disciples Ministries",
+     "work": "In Order",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-feb-7-2009-11599163.html"
+    },
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "The Burnt Offering",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/burnt-offering"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

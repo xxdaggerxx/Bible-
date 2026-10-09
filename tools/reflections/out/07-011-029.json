@@ -1,0 +1,75 @@
+{
+ "id": "07-011-029",
+ "title": "Jephthah’s Tragic Vow",
+ "refs": [
+  "Judges 11:29-40"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7011030,
+   "end": 7011031,
+   "ref": "Judges 11:30-31",
+   "ranges": [
+    [
+     7011030,
+     7011031
+    ]
+   ],
+   "title": "\"Whatever Comes Out of My House\"",
+   "key_verse": [
+    7011031,
+    7011031
+   ],
+   "reflect": [
+    {
+     "text": "Before leading Israel to victory over the Ammonites, Jephthah made a vow to the Lord. He promised that whatever first came out of the doors of his house to meet him would belong to God. When he returned home in triumph, his only child, his daughter, came out to celebrate. Jephthah believed he was bound to carry out what he had promised.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This moment reminds us that our words and actions before God carry immense weight. Scripture teaches that God strictly forbids human sacrifice, and His people must never break His holy commandments. Even faithful believers can face great distress when vows are made without considering God's law.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God calls His people to obey His will above all else. True faith seeks to honor the Lord, but God's grace never excuses disobedience to His Word. We are called to submit to God's commandments with wholehearted obedience.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it important to make sure our promises always align with God's commandments?",
+    "How does remembering that God's grace never excuses disobedience shape the way we live for Him?"
+   ],
+   "prayer": "Heavenly Father, help us to speak carefully and honor You in all our promises. Teach us to love Your commandments and seek Your will above all else. Thank You for Your forgiving grace, and guide us each day to walk in faithful obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jephthah’s Rash Vow",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jephthahs-rash-vow"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 03/26/05",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-03-or-26-or-05-1315869.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

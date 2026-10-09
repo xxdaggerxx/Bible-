@@ -1,0 +1,74 @@
+{
+ "id": "07-003-031",
+ "title": "Shamgar",
+ "refs": [
+  "Judges 3:31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7003031,
+   "end": 7003031,
+   "ref": "Judges 3:31",
+   "ranges": [
+    [
+     7003031,
+     7003031
+    ]
+   ],
+   "title": "God Uses What Is in Your Hand",
+   "key_verse": [
+    7003031,
+    7003031
+   ],
+   "reflect": [
+    {
+     "text": "Shamgar seemed like an unlikely rescuer. He was an ordinary man facing six hundred formidable Philistine warriors. Instead of a soldier's sword, he held only an oxgoad, a wooden tool used for driving cattle. Yet God displayed His sovereign power through that common farm tool, using Shamgar to bring deliverance to Israel.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We often look at our own limitations and disqualify ourselves. We might think we need different talents or special positions to serve God. But God does not expect us to become someone else. He calls us to obey Him just as He made us. We are invited to offer our willingness and sharpen whatever tools or abilities are already in our hands.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, we are called to stand against spiritual enemies in our everyday lives. God asks us to submit what we have to Him so He can use it for His glory. When we give Him our ordinary work, simple gifts, and daily tools, He can accomplish an extraordinary and lasting impact through us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What everyday gifts or tools has God placed in your hands right now?",
+    "Are there ways you have counted yourself out instead of offering God your willingness?"
+   ],
+   "prayer": "Lord, thank You for using ordinary people to do Your work. Please forgive us when we look at our weaknesses and hold back. We offer You the simple gifts and tools in our hands today, and we ask You to use them for Your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lysa TerKeurst",
+     "work": "A Life with Extraordinary Impact - Encouragement for Today - July 20, 2017",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-20-2017.html"
+    },
+    "D2": {
+     "author": "Beloved Women",
+     "work": "God Can Use What's in Your Hand - Beloved Women - April 11, 2019",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/beloved-women/beloved-women-april-11-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

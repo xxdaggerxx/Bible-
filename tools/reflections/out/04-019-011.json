@@ -1,0 +1,67 @@
+{
+ "id": "04-019-011",
+ "title": "Purification of the Unclean",
+ "refs": [
+  "Numbers 19:11-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4019011,
+   "end": 4019022,
+   "ref": "Numbers 19:11-22",
+   "ranges": [
+    [
+     4019011,
+     4019022
+    ]
+   ],
+   "title": "Fresh Cleansing for Daily Life",
+   "key_verse": [
+    4019017,
+    4019017
+   ],
+   "reflect": [
+    {
+     "text": "In ancient Israel, it was very easy to become unclean without even planning to. Walking near a grave, being in a tent where someone died, or touching a dead body made a person unclean for seven days. This kept them from coming near God's holy tent. As F. B. Meyer notes, this shows how easily sin spreads. In our daily lives, hearing corrupt speech, reading harmful ideas, or being surrounded by spiritual death can rub off on us and leave us feeling unable to pray or enjoy time with God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because this happens so easily, we need the Holy Spirit to guard and protect our hearts. We also need to turn to Jesus again and again for fresh cleansing. The ashes mixed with running water point directly to Christ. If the water of purification could make a person ceremonially clean, the blood of Jesus does far more. It cleanses our inner conscience so we can draw near to God with full confidence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just as someone who was clean had to sprinkle the purification water on others, we are called to help one another. Jesus washed His disciples' feet and told them to wash each other's feet as well. When we encourage fellow believers and point each other back to the forgiveness found in Christ, we help carry that cleansing love into each other's lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you noticed how things you see or hear during the day can make it hard to pray?",
+    "How can you turn to Jesus today for fresh cleansing and also encourage a friend who feels weighed down?"
+   ],
+   "prayer": "Lord Jesus, thank You for washing our sins away through Your sacrifice. Please protect our hearts by Your Holy Spirit as we live in this world. Cleanse our consciences today so we may talk with You in peace, and help us serve others with Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 19:17",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

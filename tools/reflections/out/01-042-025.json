@@ -1,0 +1,81 @@
+{
+ "id": "01-042-025",
+ "title": "Joseph’s Brothers Return to Canaan",
+ "refs": [
+  "Genesis 42:25-38"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1042025,
+   "end": 1042038,
+   "ref": "Genesis 42:25-38",
+   "ranges": [
+    [
+     1042025,
+     1042038
+    ]
+   ],
+   "title": "When Everything Seems Against Us",
+   "key_verse": [
+    1042036,
+    1042036
+   ],
+   "reflect": [
+    {
+     "text": "Joseph treated his brothers sternly and secretly returned their silver, yet behind his rough words was deep care. God sometimes allows rough providences in our lives to awaken a sleeping conscience. When the brothers saw the money, their buried guilt came rushing back. God often uses stressful events to bring hidden sin to light so that we can turn away from it and confess our wrongs.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "These trials also tested the brothers' hearts. Years earlier, they had shown bitter jealousy, but now they began showing emerging care and gentleness toward their aging father. Even Reuben's desperate pledge to risk his own sons showed real concern, despite his poor judgment. When God leads us over stony paths, He tests our love and gives us opportunities to care for one another and cling together.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jacob, however, looked only at his troubles and cried that everything was going against him. Deep grief tempted him to turn inward with self-pity and forget God's covenant promises. What felt like hostility was actually God's gracious way of preserving his entire family. When painful seasons blind us, we must interpret our circumstances through God's promises rather than our feelings.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When hard times make you feel that everything is against you, which of God's promises can steady your heart?",
+    "How might God be using difficult circumstances right now to soften your heart toward others?"
+   ],
+   "prayer": "Heavenly Father, when life feels harsh and overwhelming, help us trust Your faithful promises rather than our fearful feelings. Search our hearts, wake our consciences when we stray, and teach us to love one another with genuine care. Thank You that even in dark seasons, You are quietly working to preserve and bless us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 42:30",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Derek Thomas",
+     "work": "Everything Is Against Me!",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/everything-against-me"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Father and Sons",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/father-and-sons"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

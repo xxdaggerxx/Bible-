@@ -1,0 +1,76 @@
+{
+ "id": "02-007-008",
+ "title": "Aaron’s Staff",
+ "refs": [
+  "Exodus 7:8-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2007012,
+   "end": 2007012,
+   "ref": "Exodus 7:12",
+   "ranges": [
+    [
+     2007012,
+     2007012
+    ]
+   ],
+   "title": "\"Aaron's Staff Swallowed Up Their Staffs\"",
+   "key_verse": [
+    2007012,
+    2007012
+   ],
+   "reflect": [
+    {
+     "text": "When Pharaoh's magicians copied Aaron's sign, their staffs also became serpents. But Aaron's staff swallowed up all the others. This shows us that God's true work always overcomes every false copy and opponent. When God works in you through grace—His undeserved kindness—He captures your heart. Instead of living only for worldly things that fade, you begin to look toward heaven and live for what lasts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In our daily lives, we also face many threatening opponents. We struggle with the guilt of old sins, painful trials, sudden temptations, and nagging doubts. Yet Christ's work on the cross decisively conquers our sins. As Charles Spurgeon wrote, \"faith in Jesus is more than a match for them.\" Trusting in Him gives us the strength we need to face every battle.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Real faith cannot remain half-hearted. When love for Jesus becomes the supreme passion of your life, difficult duties become pleasures and sacrifices bring joy. We must look honestly at our own hearts today. If Christ is anything to us, He must be everything.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What sins, doubts, or temptations are you facing that Christ can help you overcome today?",
+    "Is your love for Jesus the strongest desire in your heart, or are worldly things crowding Him out?"
+   ],
+   "prayer": "Lord God, thank You that Your power wins over every enemy and sin. Help us trust in the cross of Jesus whenever guilt, trials, or doubts press against us. Turn our hearts away from empty worldly pursuits, and make our love for Christ our greatest passion. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 28",
+     "on": "Exodus 7:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth for Life",
+     "work": "God's Is the Victory - Truth for Life - June 28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-june-28.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

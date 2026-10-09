@@ -1,0 +1,116 @@
+{
+ "id": "09-013-008",
+ "title": "Saul’s Unlawful Sacrifice",
+ "refs": [
+  "1 Samuel 13:8-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9013013,
+   "end": 9013013,
+   "ref": "1 Samuel 13:13",
+   "ranges": [
+    [
+     9013013,
+     9013013
+    ]
+   ],
+   "title": "\"You Have Acted Foolishly\"",
+   "key_verse": [
+    9013013,
+    9013013
+   ],
+   "reflect": [
+    {
+     "text": "Saul found himself under heavy pressure. Enemy soldiers were gathering, and his own men were deserting him out of fear. Instead of relying on God with patient trust, Saul let panic take over. He leaned on his own ability to handle the crisis and hurried to offer the sacrifice himself, treating it almost like a good-luck charm to win God's favor.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When Samuel arrived and confronted him, Saul did not show true sorrow or repent. Instead, he made excuses and tried to justify what he had done. Yet scary and difficult circumstances never make it right to disobey God's clear word. By choosing self-reliance over obedience, Saul threw away a royal dynasty that could have lasted forever.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When pressure mounts in your life, do you turn to your own quick fixes or wait on God?",
+    "Are you making excuses for any disobedience instead of turning back to God in repentance?"
+   ],
+   "prayer": "Lord, forgive us when fear makes us rush ahead in our own strength. Help us to obey your Word even when our circumstances feel overwhelming. Teach our hearts to trust you rather than making excuses for our sins. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Deidre Braley",
+     "work": "Passing the Test in the Moment of Truth",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/passing-the-test-in-the-moment-of-truth-the-crosswalk-devotional.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Acting Without God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/acting-without-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 9013008,
+   "end": 9013015,
+   "ref": "1 Samuel 13:8-15",
+   "ranges": [
+    [
+     9013008,
+     9013015
+    ]
+   ],
+   "title": "Waiting for God's Appointed Time",
+   "key_verse": [
+    9013008,
+    9013008
+   ],
+   "reflect": [
+    {
+     "text": "Saul stepped into a sacred role that did not belong to him. He had been called to serve as king, not priest. As the seven days drew to an end, his hasty nature won out, and he pushed aside God's established order. While taking charge might have seemed practical, it revealed a serious inner failure. Saul acted on what seemed convenient rather than on faith, showing he was not ready to be God's ruler.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The hurry and restlessness of our world often tempt us to do the same thing and rush ahead of God. Yet as F. B. Meyer reminds us, \"We must learn to wait for God.\" The Lord might delay until the allotted time has almost expired, but He will not fail to come. He knows the exact moment to bring help, strengthening our patience without letting us be overwhelmed.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you currently tempted to take matters into your own hands instead of trusting God's ways?",
+    "How does knowing that God keeps you secure help you stay patient when time feels short?"
+   ],
+   "prayer": "Father in heaven, quiet our restless hearts when we want to take control. Give us the patience to stay in our calling and honor your ways. We trust that you will step in at the right moment to help us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 13:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

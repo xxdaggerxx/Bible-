@@ -1,0 +1,68 @@
+{
+ "id": "03-010-008",
+ "title": "Restrictions for Priests",
+ "refs": [
+  "Leviticus 10:8-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3010008,
+   "end": 3010020,
+   "ref": "Leviticus 10:8-20",
+   "ranges": [
+    [
+     3010008,
+     3010020
+    ]
+   ],
+   "title": "Distinguishing the Holy and the Common",
+   "key_verse": [
+    3010010,
+    3010010
+   ],
+   "reflect": [
+    {
+     "text": "Leviticus shows us the supreme majesty and absolute holiness of God. Even though Jesus fulfilled the Old Testament rituals for us, God still calls His people to honor and revere Him. Right after the solemn judgment on Aaron's sons, God told the priests to clearly know the difference between what is sacred and what is ordinary, between clean and unclean. We need that same discernment in our own lives today. We are called to look closely at everyday things, like our work, our marriages, and how we use social media, so we do not settle for what is common or impure.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Learning God's ways takes a quiet and humble spirit. As F. B. Meyer writes, this wisdom is \"not to be acquired by the intellect, but by the heart.\" Sometimes the lessons feel difficult, and the world outside pulls at our attention. Yet God loves us too much to let us walk away before we truly learn. Pursuing holiness begins when we humbly ask God in prayer to guide our thoughts, words, and daily actions. In time, walking in His truth becomes not a burden, but our song and delight.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What everyday areas of your life, such as your work or media use, need God's wisdom to choose what is holy?",
+    "How can you make time today to sit humbly before God and learn from Him?"
+   ],
+   "prayer": "Lord God, You are holy and majestic, and we ask You to teach us Your ways. Help us to tell the difference between what honors You and what is merely common. Guide our thoughts, words, and actions today so that we may live lives that please You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 10:11",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Gwen Smith",
+     "work": "Why Holiness Matters",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-october-26-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

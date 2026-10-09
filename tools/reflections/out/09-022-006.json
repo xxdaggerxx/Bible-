@@ -1,0 +1,60 @@
+{
+ "id": "09-022-006",
+ "title": "Saul Slays the Priests of Nob",
+ "refs": [
+  "1 Samuel 22:6-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9022006,
+   "end": 9022023,
+   "ref": "1 Samuel 22:6-23",
+   "ranges": [
+    [
+     9022006,
+     9022023
+    ]
+   ],
+   "title": "Blind Paranoia and Godly Integrity",
+   "key_verse": [
+    9022014,
+    9022014
+   ],
+   "reflect": [
+    {
+     "text": "King Saul was consumed by deep paranoia. His suspicion blinded him to reality, causing him to treat loyal servants as dangerous enemies. Ahimelech the priest had helped David in good faith, completely unaware of the king's murderous hostility. Yet Saul refused to listen to the truth. This terrible moment shows us that human sinfulness knows no limits when God gives people over to the unrestrained desires of their hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "By ordering the slaughter of the priests and the destruction of their town, Saul showed that he had no fear of God—no reverent awe or respect for the Lord. In contrast, David demonstrated true godly integrity. When young Abiathar escaped the massacre, David did not offer excuses. Instead, he honestly took responsibility for what happened and promised to protect the survivor. While unrestrained power destroys, true godliness owns its faults and offers safety to the vulnerable.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When anger or suspicion rises in your heart, how can you seek God's truth instead of giving in to fear?",
+    "How can David's willingness to take responsibility inspire you when your actions cause unexpected harm?"
+   ],
+   "prayer": "Lord God, guard our hearts from uncontrolled anger, suspicion, and pride. Help us to live with a holy reverence and respect for You each day. Give us the integrity to admit when we are wrong, and make us a refuge of kindness and safety for those who are hurting. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Saul Kills the Priests at Nob",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/saul-kills-the-priests-nob"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

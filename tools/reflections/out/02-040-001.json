@@ -1,0 +1,73 @@
+{
+ "id": "02-040-001",
+ "title": "Setting Up the Tabernacle",
+ "refs": [
+  "Exodus 40:1-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2040001,
+   "end": 2040033,
+   "ref": "Exodus 40:1-33",
+   "ranges": [
+    [
+     2040001,
+     2040033
+    ]
+   ],
+   "title": "Setting Up the Tabernacle with God",
+   "key_verse": [
+    2040016,
+    2040016
+   ],
+   "reflect": [
+    {
+     "text": "Life often pushes us into constant busyness and exhaustion. We can easily become weary when we try to do everything in our own strength. Moses had a massive assignment when he set up the tabernacle, but he did not panic or carry a chaotic burden. God had already given him the blueprints, the resources, and the skilled helpers. Because Moses followed the Lord's instructions step by step, the work was finished peacefully. Striving without God brings burnout, but letting Him lead our daily schedule brings rest.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Inside the sacred tent, Moses placed the tablets of the Law into the ark and covered them with the mercy seat. The commandments showed people where they failed God's standards, while the mercy seat showed His covering and forgiveness. In the Old Testament, the high priest brought sacrificial blood into that holy room to make atonement, making peace between God and the people. Jesus fulfilled this pattern once for all by offering His own blood, winning our eternal redemption, which is our complete rescue from sin.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Moses finished the work because he yielded completely to God's directions. In our own lives, God calls us to surrender our plans to His will and meditate on His Word every day. Instead of wearing ourselves out trying to manage everything alone, we can trust the Lord's guidance and walk in faithful obedience.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine do you feel worn out from striving in your own strength?",
+    "How can meditating on God's Word help you surrender your plans to Him today?"
+   ],
+   "prayer": "Lord, thank You for providing everything we need to do Your will. Forgive us for the times we rush ahead on our own and end up weary. Help us to rest in the complete forgiveness Jesus secured for us and invite You into our work each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Daily Disciples Ministries",
+     "work": "Working Weary or Working With the Lord?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-feb-6-2010-11625886.html"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Jan. 31, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-jan-31-2010-11625604.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

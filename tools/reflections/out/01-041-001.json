@@ -1,0 +1,73 @@
+{
+ "id": "01-041-001",
+ "title": "The Dreams of Pharaoh",
+ "refs": [
+  "Genesis 41:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1041001,
+   "end": 1041013,
+   "ref": "Genesis 41:1-13",
+   "ranges": [
+    [
+     1041001,
+     1041013
+    ]
+   ],
+   "title": "Remembered in God's Perfect Timing",
+   "key_verse": [
+    1041001,
+    1041001
+   ],
+   "reflect": [
+    {
+     "text": "God's people are never promised an easy road. We often face hard trials and prolonged seasons of waiting. Joseph spent two full years forgotten in an Egyptian prison after helping the cupbearer. Yet God was still watching over him. At the exact right moment, God gave Pharaoh troubling dreams about cows and scorched grain that none of Egypt's wise men could explain.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Pharaoh watched sickly cows devour the well-fed ones. Charles Spurgeon noted that this dream can mirror our spiritual lives when lazy habits, cold hearts, or worldly distractions eat away our peace and past growth. If we neglect prayer and draw no fresh help from heaven, our souls become lean and empty. To stay spiritually nourished, we must spend our days walking closely with the Lord and feeding on his goodness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The failure of Egypt's magicians finally pushed the cupbearer to confess his neglect and mention Joseph to Pharaoh. God's rescue often arrives at what feels like the midnight hour, perfectly set according to his plan. God never forgot Joseph in prison, and he worked through every quiet year to accomplish his purpose.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you trust God's timing when your prayers seem unanswered and your waiting feels long?",
+    "Are there habits or distractions in your life that are draining your spiritual peace and time with the Lord?"
+   ],
+   "prayer": "Lord, help us to trust your perfect timing when we feel forgotten or stuck in hard seasons. Guard our hearts from spiritual coldness, and draw us close to you every day in prayer. Thank you that you see where we are and that you never fail to care for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 3",
+     "on": "Genesis 41:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Joseph Remembered",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/joseph-remembered"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

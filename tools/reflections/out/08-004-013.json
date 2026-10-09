@@ -1,0 +1,73 @@
+{
+ "id": "08-004-013",
+ "title": "Boaz Marries Ruth",
+ "refs": [
+  "Ruth 4:13-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 8004013,
+   "end": 8004017,
+   "ref": "Ruth 4:13-17",
+   "ranges": [
+    [
+     8004013,
+     8004017
+    ]
+   ],
+   "title": "God Restores and Redeems Our Lives",
+   "key_verse": [
+    8004014,
+    8004014
+   ],
+   "reflect": [
+    {
+     "text": "Naomi had lost her husband and sons, returning home to Bethlehem in deep grief. Yet God never truly left her alone. Even when earthly family and friends depart, the Lord stays steadfastly present with His children. He brought Ruth and Boaz together in marriage, and through their newborn baby boy, God restored Naomi's joy and gave her a bright future.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Boaz acted as a kinsman-redeemer, a family protector who stepped in to care for Naomi and Ruth. In a far greater way, God deeply treasures us. He met our deepest spiritual need by sending Jesus, who redeemed us with His own life, paid our debt, and welcomed us into His eternal home.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God worked through two vulnerable widows and an ordinary household to carry forward His grand story. This family line led directly to King David and ultimately to Jesus Christ. The Lord still accomplishes His greatest plans through regular people doing everyday tasks with quiet faithfulness, kindness, and love.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God never leaves you bring comfort when you face loneliness or grief?",
+    "What are some ordinary ways you can show faithful love and kindness to others today?"
+   ],
+   "prayer": "Lord, thank You for staying with us and for caring about every part of our lives. Thank You for redeeming us through Jesus and bringing us home into Your family. Help us to serve You faithfully in our everyday moments and to share Your kindness with those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rebecca Barlow Jordan",
+     "work": "Daily in Your Presence - April 22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/dailypresence/daily-in-your-presence-april-22-1391514.html"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Glory in the Ordinary - Truth For Life - November 4",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-november-4-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,129 @@
+{
+ "id": "10-002-012",
+ "title": "The Battle of Gibeon",
+ "refs": [
+  "2 Samuel 2:12-32"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 10002026,
+   "end": 10002026,
+   "ref": "2 Samuel 2:26",
+   "ranges": [
+    [
+     10002026,
+     10002026
+    ]
+   ],
+   "title": "\"It Will Only End in Bitterness\"",
+   "key_verse": [
+    10002026,
+    10002026
+   ],
+   "reflect": [
+    {
+     "text": "In the middle of the fighting, Abner called out that continued conflict would only lead to a bitter end. That warning speaks directly to anyone whose religion is merely on the outside. A person might attend church faithfully just because friends and family do, without ever having a heart that truly loves God. Going through religious routines without spiritual life in Christ is a dangerous road.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Hearing the good news about Jesus week after week can make a person comfortable and sleepy in spirit. We can become so familiar with gospel words that we never actually turn to Christ for forgiveness. As Charles Spurgeon warned, one can be a mere \"professor, and not a possessor of the faith.\" Such complacency blinds us to our true condition.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Coming to the end of earthly life without Christ brings terrible regret and lasting separation from God. That is why we are urged to examine ourselves today while there is still time. Do not settle for outward habits. Put your trust fully in Jesus so that your journey ends in His eternal peace.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Am I trusting in Jesus from the heart, or am I just following an outward church routine?",
+    "Has hearing the gospel often made me complacent instead of eager to follow Christ?"
+   ],
+   "prayer": "Lord Jesus, please keep me from settling for an empty routine. Search my heart and give me genuine, living faith in You. Lead me so that my life ends in Your everlasting peace.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 30",
+     "on": "2 Samuel 2:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "Anticipate the End",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-dec-30-2010-11643352.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 10002012,
+   "end": 10002032,
+   "ref": "2 Samuel 2:12-32",
+   "ranges": [
+    [
+     10002012,
+     10002032
+    ]
+   ],
+   "title": "Yielding to God's Clear Purpose",
+   "key_verse": [
+    10002023,
+    10002023
+   ],
+   "reflect": [
+    {
+     "text": "The tragic battle at the pool of Gibeon happened because Abner fought against God's revealed plan. God had already chosen David to rule, but Abner rebelled by putting Ish-bosheth on the throne instead. This refusal to accept God's will sparked a terrible civil conflict where fellow Israelites attacked and slaughtered one another.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The conflict brought deep sorrow to both sides. Asahel chased Abner and stubbornly refused repeated warnings to stop, resulting in his sudden death. By evening, hundreds of men lay dead. Opposing what God has declared never leads to lasting success. Defying His purpose produces only devastation, grief, and painful regret.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This account urges us not to fight against what the Lord has made known. When we insist on our own agenda rather than God's truth, we bring harm to ourselves and those around us. Believers must turn away from stubborn denial and ask for the courage to yield humbly to God's will.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any part of my life where I am resisting what God has clearly commanded in His Word?",
+    "What helps you lay down your own plans and submit gladly to God's purpose?"
+   ],
+   "prayer": "Father in heaven, forgive me when I stubbornly cling to my own way. Give me a humble heart that accepts Your truth without fighting back. Grant me courage to follow Your plan with peace and trust.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "War between the Houses of David and Saul",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/war-between-houses-david-and-saul"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

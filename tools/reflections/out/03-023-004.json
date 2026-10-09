@@ -1,0 +1,68 @@
+{
+ "id": "03-023-004",
+ "title": "Passover and the Feast of Unleavened Bread",
+ "refs": [
+  "Leviticus 23:4-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3023004,
+   "end": 3023008,
+   "ref": "Leviticus 23:4-8",
+   "ranges": [
+    [
+     3023004,
+     3023008
+    ]
+   ],
+   "title": "Set Apart and Ready for the Lord",
+   "key_verse": [
+    3023006,
+    3023006
+   ],
+   "reflect": [
+    {
+     "text": "God gave Israel special feasts at the start of their sacred year to remember how He rescued them from slavery. During Passover and the Feast of Unleavened Bread, the people rested from their normal work and gathered together. Eating bread baked without yeast for seven days recalled their hurried flight from Egypt, when there was no time to let dough rise. This bread served as a visible reminder that they depended entirely on God and were set apart as His special people. It trained their hearts to be thankful for His daily provision instead of grumbling.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "These feasts also point us to Jesus. The bread made without yeast pictures the pure and sinless life of Christ, the true Bread of God. Because Jesus fulfilled the Passover through His sacrifice, believers are now called to clear away the old yeast of sin and live with sincerity and truth. As we remember our redemption, we are encouraged to stay watchful, living each day ready for Christ to return.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can remembering God's rescue help you choose gratitude instead of discontentment today?",
+    "How does keeping your heart ready for Jesus shape the way you live each day?"
+   ],
+   "prayer": "Lord, thank You for rescuing us through Jesus, our pure and sinless Savior. Help us to put away sin and walk before You in sincerity and truth. Keep our hearts grateful for Your daily care, and help us stay watchful and ready for Christ's return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 02/09/05",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-02-or-09-or-05-1309516.html"
+    },
+    "D2": {
+     "author": "J. Michael Thigpen",
+     "work": "Feast of Unleavened Bread: How a Hasty Escape Prepares Us to Wait for Christ",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/feast-unleavened-bread/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

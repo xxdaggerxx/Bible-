@@ -1,0 +1,75 @@
+{
+ "id": "05-034-001",
+ "title": "The Death of Moses",
+ "refs": [
+  "Deuteronomy 34:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5034001,
+   "end": 5034012,
+   "ref": "Deuteronomy 34:1-12",
+   "ranges": [
+    [
+     5034001,
+     5034012
+    ]
+   ],
+   "title": "Looking Forward to God's Promise",
+   "key_verse": [
+    5034004,
+    5034004
+   ],
+   "reflect": [
+    {
+     "text": "At the end of his life, God called the 120-year-old Moses to climb Mount Nebo. Even in his old age, Moses did not pull back spiritually, but obeyed the Lord. From the top of the mountain, God showed him the Promised Land. The Lord did not do this to discourage him. Instead, God showed him mercy and proved that he is completely faithful to every promise he makes.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Moses viewed the land from a distance, trusting what God had spoken. Even though Moses did not walk into earthly Canaan, his life of faith and hope was never wasted. He finished his earthly race well and faced the end of his life without fear. When Moses died, he entered the true Promised Land and came directly into the presence of the Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "As believers, we walk through this life as pilgrims, or travelers on a journey toward our true home. We can hold tightly to God's promises even when we only see them from afar. We do not need to fear the end of our lives, because our eternal rest is secure in Jesus Christ. When our race on earth is finished, we too will enter God's presence.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does God's faithfulness help you stay spiritually engaged as you grow older or face new limitations?",
+    "How does knowing that your eternal rest is secure in Jesus change the way you view the end of life?"
+   ],
+   "prayer": "Lord God, thank you for being completely faithful to all your promises. Help us to run our earthly race with trust and obedience until the very end. Grant us peace and courage, knowing our true home is secure in Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "Into God’s Presence",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-january-6-2022.html"
+    },
+    "D2": {
+     "author": "Sean Michael Lucas",
+     "work": "Looking into the Promised Land",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/looking-promised-land"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

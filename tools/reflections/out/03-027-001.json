@@ -1,0 +1,67 @@
+{
+ "id": "03-027-001",
+ "title": "Rules about Valuations",
+ "refs": [
+  "Leviticus 27:1-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3027001,
+   "end": 3027029,
+   "ref": "Leviticus 27:1-29",
+   "ranges": [
+    [
+     3027001,
+     3027029
+    ]
+   ],
+   "title": "Belonging Wholly to the Lord",
+   "key_verse": [
+    3027028,
+    3027028
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, God gives instructions about vows and gifts dedicated to Him. When an Israelite set apart a person, an animal, or a piece of land to the Lord, that gift could not be taken back or treated as ordinary. As F. B. Meyer explains, once something was solemnly dedicated, it became God's property and could not be used for any lesser purpose.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This points to how we give our lives to God. We already belong to Christ because He bought us with His own blood, yet there comes a moment when we consciously offer ourselves to Him. We tell the Lord that our whole being—our mind, heart, and body—is completely His. Once we make that commitment, God accepts us. We cannot keep taking back what belongs to Him. Instead, we live out that surrender in every new part of life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Sometimes we stumble and pull back from our devotion to God. When that happens, we can return to Him with honest sorrow. Jesus is our merciful High Priest who welcomes us back. He forgives our wandering and restores us to the place of full surrender.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you surrendered every part of your life to God, or are there areas you still try to hold back?",
+    "When you realize you have wandered away from your commitment to Christ, what helps you turn back to Him?"
+   ],
+   "prayer": "Lord, thank You for buying us with the blood of Christ and making us Your own. Please help us never to hold back what we have dedicated to You. When our hearts wander, forgive us and restore us by Your mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 27:28",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

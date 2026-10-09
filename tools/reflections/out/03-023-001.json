@@ -1,0 +1,66 @@
+{
+ "id": "03-023-001",
+ "title": "Feasts and Sabbaths",
+ "refs": [
+  "Leviticus 23:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3023001,
+   "end": 3023003,
+   "ref": "Leviticus 23:1-3",
+   "ranges": [
+    [
+     3023001,
+     3023003
+    ]
+   ],
+   "title": "Gathering Together for Worship and Rest",
+   "key_verse": [
+    3023003,
+    3023003
+   ],
+   "reflect": [
+    {
+     "text": "When God commanded His people to keep the Sabbath, He gave them more than just time off from daily labor. The seventh day was set apart as a sacred assembly. God called the Israelites to stop their work and join together for joyful worship, turning their eyes to Him each week as a united community.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Meeting together gave Israel their sense of identity and kept their shared focus on the Lord. When they stopped gathering, problems quickly followed. Without these shared times of worship, the people drifted into division, conflict, and spiritual weakness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, our culture understands the value of taking a break from hard work, but it easily overlooks our deep need to worship with other believers. We cannot thrive in faith on our own. Gathering with God's people is essential for our spiritual health and for keeping us united in Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you treat church gatherings merely as an option, or as an essential need for your spiritual health?",
+    "How has regular worship with other Christians helped protect you from drifting away from God?"
+   ],
+   "prayer": "Lord God, thank You for the gift of rest and the blessing of Your gathered church. Help us make meeting together a regular priority, so we do not grow divided or spiritually weak. Keep our hearts focused on You as we worship side by side. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Hanging Together - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/hanging-together-one-year-devotions-for-men-september-30.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

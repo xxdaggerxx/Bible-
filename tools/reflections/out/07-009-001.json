@@ -1,0 +1,69 @@
+{
+ "id": "07-009-001",
+ "title": "Abimelech’s Conspiracy",
+ "refs": [
+  "Judges 9:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7009001,
+   "end": 7009006,
+   "ref": "Judges 9:1-6",
+   "ranges": [
+    [
+     7009001,
+     7009006
+    ]
+   ],
+   "title": "The Danger of Selfish Ambition",
+   "key_verse": [
+    7009003,
+    7009003
+   ],
+   "reflect": [
+    {
+     "text": "Abimelech used his family connection to gain power. God gives us families as a special gift, and people naturally want to support a relative. As F. B. Meyer observed, people are easily drawn to someone when they can say, 'He is our brother.' Yet Abimelech twisted this bond. Driven by selfish ambition, he exploited his kinship and took silver from an idol temple to seize control and harm his own brothers. Pride quickly corrupts relationships, leadership, and money when we seek power for ourselves.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This story warns us never to put our hope in corrupt leaders or try to solve our problems without God. Family ties are a precious gift meant to be used for good, especially to introduce others to Christ. Jesus is the true brother who entered our world not to destroy others for power, but to show us mercy and lead us back to God. True renewal begins when we confess our own pride and trust the Lord to bring healing.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How are you using your relationships with family and friends to point others toward God rather than serving yourself?",
+    "In what areas of your life do you need to confess personal pride and trust God rather than human power?"
+   ],
+   "prayer": "Lord, forgive us when pride tempts us to misuse our relationships for selfish gain. Help us never to put our hope in corrupt leaders or worldly schemes. Thank You for Jesus, our true brother, who offers us mercy and brings true renewal. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 9:3",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "When You Have Ungodly Leaders",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-july-20-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "04-022-022",
+ "title": "The Angel and Balaam’s Donkey",
+ "refs": [
+  "Numbers 22:22-41"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4022022,
+   "end": 4022041,
+   "ref": "Numbers 22:22-41",
+   "ranges": [
+    [
+     4022022,
+     4022041
+    ]
+   ],
+   "title": "God's Roadblocks in Our Path",
+   "key_verse": [
+    4022031,
+    4022031
+   ],
+   "reflect": [
+    {
+     "text": "Balaam set out on a journey that went directly against God's will. Even though Balaam was a prophet, he was completely blind to what was happening around him. His donkey could see the Angel of the Lord standing in the road with a drawn sword, but Balaam could not see the danger at all.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When God miraculously gave the donkey the ability to speak, Balaam was so blinded by frustration that he argued back with the animal. He failed to see God's hand at work. Only when the Lord finally opened Balaam's eyes to see the heavenly messenger did the prophet fall facedown in surrender.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord often works through angels and unexpected roadblocks to protect us. When we start heading toward spiritual ruin, God can graciously step in our way to hold us back. What feels like an annoying obstacle might actually be God's mercy saving our lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Has God ever used an unexpected roadblock or delay to keep you from walking down the wrong path?",
+    "How can you respond with surrender rather than anger when your plans are interrupted?"
+   ],
+   "prayer": "Lord, forgive us when we become stubborn and blind to Your guidance. Open our eyes to see the ways You are protecting us from spiritual harm. Help us to surrender our plans and walk in Your will every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "Arguing with a Donkey",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-daily-devotion-july-14-2009-11605919.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

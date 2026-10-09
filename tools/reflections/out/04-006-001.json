@@ -1,0 +1,116 @@
+{
+ "id": "04-006-001",
+ "title": "The Nazirite Vow",
+ "refs": [
+  "Numbers 6:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4006004,
+   "end": 4006004,
+   "ref": "Numbers 6:4",
+   "ranges": [
+    [
+     4006004,
+     4006004
+    ]
+   ],
+   "title": "\"Eat Nothing That Comes from the Grapevine\"",
+   "key_verse": [
+    4006004,
+    4006004
+   ],
+   "reflect": [
+    {
+     "text": "Under the vow of a Nazirite, a person was forbidden not only from wine and strong drink, but from everything connected to the grapevine. They were not allowed to eat fresh grapes, dried raisins, or even the seeds and skins. God set this strict boundary so that they would stay far away from breaking their promise. In the same way, we are taught to flee from sin in every form. Rather than playing with tempting things, we must avoid even the appearance or hint of evil.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yielding to worldly ways even in small matters puts our souls in great danger. As Charles Spurgeon warned, a tiny crack in a sea wall soon lets the water through until an entire province is drowned. Giving in to compromise clouds our conscience, leaving us spiritually divided and unsure of our walk. Choosing careful, disciplined obedience might invite criticism from others, but it produces true spiritual safety and deep, lasting joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there small compromises in your life that could slowly pull you into greater danger?",
+    "What helps you value the quiet joy of a clean conscience over the approval of the world?"
+   ],
+   "prayer": "Lord, help us to turn away from sin in every shape and form. Protect our hearts from small compromises that can lead us into ruin, and keep our consciences clear before You. Grant us the courage to walk carefully, so we may know the lasting peace and safety of Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 29",
+     "on": "Numbers 6:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth For Life (Alistair Begg)",
+     "work": "The Reward of Careful Walking",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-aug-29-2010-11637115.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 4006001,
+   "end": 4006021,
+   "ref": "Numbers 6:1-21",
+   "ranges": [
+    [
+     4006001,
+     4006021
+    ]
+   ],
+   "title": "Set Apart for the Lord",
+   "key_verse": [
+    4006002,
+    4006002
+   ],
+   "reflect": [
+    {
+     "text": "The Nazirite vow was an entirely voluntary commitment. Any ordinary Israelite man or woman could choose to make this promise, setting themselves apart exclusively for the Lord for a period of time. Consecration—being dedicated as holy to God—required them to give up things that were otherwise completely normal and good. They learned to step away even from lawful pleasures whenever those gifts threatened to take the place of God Himself.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "At the end of their vow, or if their dedication was interrupted, the Nazirites had to bring animal sacrifices, including a sin offering. This requirement was an important reminder that even our best human efforts and personal discipline can never produce moral perfection. Believers today are likewise invited to offer themselves to God as holy, living sacrifices. We are called to reject the mold of the world and gladly follow God's will instead.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any good and lawful pleasure in your life that is taking the place God should have?",
+    "How does remembering that our own efforts cannot make us perfect help you depend on God?"
+   ],
+   "prayer": "Heavenly Father, thank You for inviting us to belong completely to You. Give us the grace to offer our whole lives as living sacrifices, freely laying aside anything that competes with Your love. Keep us humble, knowing that our right standing comes from Your mercy and not our own perfection. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 02/14/2003",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-02-or-14-or-2003-1184776.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

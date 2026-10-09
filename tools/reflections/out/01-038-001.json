@@ -1,0 +1,66 @@
+{
+ "id": "01-038-001",
+ "title": "Judah and Tamar",
+ "refs": [
+  "Genesis 38:1-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1038001,
+   "end": 1038026,
+   "ref": "Genesis 38:1-26",
+   "ranges": [
+    [
+     1038001,
+     1038026
+    ]
+   ],
+   "title": "She Is More Righteous Than I",
+   "key_verse": [
+    1038026,
+    1038026
+   ],
+   "reflect": [
+    {
+     "text": "Judah failed to keep his word to Tamar. He neglected his duty to give her his youngest son in marriage, leaving her alone without a family or a future. To secure children within God's covenant family line, Tamar took a daring step in faith. Although her method was desperate, Scripture places the main blame on Judah for pushing her into that corner.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At first, Judah only cared about his public image. When he thought his secret encounter might be discovered, he wanted to avoid being laughed at. Then, when he heard Tamar was pregnant, he condemned her with harsh hypocrisy. He was ready to have her put to death while overlooking his own failure and secret sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Everything changed when Tamar showed Judah his own seal, cord, and staff. Instead of making more excuses or protecting his pride, Judah admitted the truth. He confessed that Tamar was more righteous than he was. When God shows us our wrongdoing, we are called to follow Judah's example of honest confession and true repentance.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself judging the faults of others while excusing your own?",
+    "How do you respond when God reveals your sin: do you try to protect your reputation, or do you honestly confess?"
+   ],
+   "prayer": "Lord, forgive us for the times we judge others while hiding our own sin. Keep us from caring more about our public image than about being right with You. Give us humble hearts that are quick to confess our wrongdoing and turn to You in true repentance.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Judah Repents",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/judah-repents"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

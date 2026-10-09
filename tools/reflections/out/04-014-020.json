@@ -1,0 +1,74 @@
+{
+ "id": "04-014-020",
+ "title": "God’s Forgiveness and Judgment",
+ "refs": [
+  "Numbers 14:20-35"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4014024,
+   "end": 4014024,
+   "ref": "Numbers 14:24",
+   "ranges": [
+    [
+     4014024,
+     4014024
+    ]
+   ],
+   "title": "\"Caleb Has a Different Spirit\"",
+   "key_verse": [
+    4014024,
+    4014024
+   ],
+   "reflect": [
+    {
+     "text": "Life often brings huge obstacles that can feel like impossible mountains. When the other spies gave in to panic and complaining, Caleb chose to see those challenges through eyes of faith. God noticed that Caleb had a different spirit. Instead of following the crowd in their anxiety and discontent, he held on firmly to what God had promised.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Having that kind of spirit means choosing complete trust over worry. Caleb spent decades in the wilderness, yet he remained spiritually strong into his older years. Rather than demanding comfort and ease, he sought deep fellowship with the Lord and was ready to tackle difficult challenges. When we face fear, stepping forward means relying on God's limitless power rather than our own strength.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Trusting the Lord through hard trials leaves a lasting legacy for others. Caleb showed that God is far greater than any giant or obstacle in our way. By following Him wholeheartedly, our lives can encourage the people around us to trust Him too.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to follow the crowd's anxiety instead of trusting God?",
+    "How can you choose wholehearted faith in God's promises when facing a difficult challenge today?"
+   ],
+   "prayer": "Lord, help us to have a different spirit like Caleb. When trials look like impassable mountains, teach us to rest in your promises instead of complaining or giving in to fear. Draw us into close fellowship with you and give us strength to trust your limitless power. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Whitney Hopler",
+     "work": "A Prayer for Faith Like Caleb to Climb Your New Mountain",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-faith-like-caleb-to-climb-your-new-mountain.html"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "A Different Attitude",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-february-1-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

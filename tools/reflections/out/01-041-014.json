@@ -1,0 +1,74 @@
+{
+ "id": "01-041-014",
+ "title": "Joseph Interprets Pharaoh’s Dreams",
+ "refs": [
+  "Genesis 41:14-36"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1041016,
+   "end": 1041016,
+   "ref": "Genesis 41:16",
+   "ranges": [
+    [
+     1041016,
+     1041016
+    ]
+   ],
+   "title": "\"I Myself Cannot Do It\"",
+   "key_verse": [
+    1041016,
+    1041016
+   ],
+   "reflect": [
+    {
+     "text": "When Pharaoh asked Joseph to explain his troubled dreams, Joseph did not take credit for having special wisdom. He showed true humility by pointing straight to the Lord. F. B. Meyer wrote that speaking of God becomes \"easy and natural as flowers in May\" when our hearts are full of Him. Joseph acted like a mirror reflecting God rather than himself. In the same way, Jesus said His words came from the Father, and the apostle Paul confessed that he lived only by God's grace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Facing tasks that are too big for our weak strength can be overwhelming. But great comfort comes when we admit our limits and look to God to provide what is needed. Distinguishing our daily calling from God's supreme work gives us peace and freedom to serve without fear.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When people praise you for a good outcome, how quickly do you give the credit to God?",
+    "Are you carrying anxiety today over results that belong to God rather than to your own obedience?"
+   ],
+   "prayer": "Lord, forgive us when we take credit for Your gifts or worry over outcomes we cannot control. Help us to serve You faithfully and point others to Your grace. Grant us the peace of knowing that You will provide what we lack. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 41:16",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Walk Thru the Bible",
+     "work": "Quiet Walk - Jan. 20",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/quiet-walk/quiet-walk-jan-20-1126348.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "We often feel tempted to draw attention to ourselves or pretend that we can meet every need. Yet confusing our human duty with outcomes that belong only to God brings either arrogance or deep anxiety. Joseph reminds us that we are simply called to faithful obedience. The results belong entirely to God, not to our own cleverness.",
+     "problem": "The opening thought about feeling tempted to draw attention to ourselves and pretend that we can meet every need comes from D1 (F. B. Meyer), but paragraph 2 only cites D2."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

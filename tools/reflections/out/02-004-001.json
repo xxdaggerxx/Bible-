@@ -1,0 +1,75 @@
+{
+ "id": "02-004-001",
+ "title": "Moses’ Staff",
+ "refs": [
+  "Exodus 4:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2004001,
+   "end": 2004005,
+   "ref": "Exodus 4:1-5",
+   "ranges": [
+    [
+     2004001,
+     2004005
+    ]
+   ],
+   "title": "What Is in Your Hand?",
+   "key_verse": [
+    2004002,
+    2004002
+   ],
+   "reflect": [
+    {
+     "text": "When God called Moses to lead His people, Moses responded with fear, hesitation, and excuses. He felt completely inadequate and worried that nobody would listen to him. In his own eyes, Moses thought God had picked the wrong man for such a huge task.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God did not tell Moses to go buy new supplies or hunt for a mighty weapon. Instead, the Lord asked about what Moses already had with him: a shepherd's staff. That simple wooden stick stood for Moses' daily work, his regular livelihood, and his natural abilities.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Before God can use our natural talents and resources, we must yield and surrender them to Him. Moses threw down what was in his hand in obedience, and God demonstrated His power through it. When we feel we do not have enough, stepping out in faith lets God work through what we already possess for His greater purposes.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What ordinary tools, talents, or daily routines do you have that God could use?",
+    "What fears or feelings of inadequacy keep you from stepping out in faith?"
+   ],
+   "prayer": "Lord, thank You for using ordinary people and everyday things. Forgive us when we hold back in fear or believe we are not good enough to serve You. Help us surrender our talents and work to You, trusting Your power to work through our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Jeff Schreve",
+     "work": "What's in Your Hand?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-september-10-11637792.html"
+    },
+    "D2": {
+     "author": "Kelly McFadden",
+     "work": "Just What You Have",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/just-what-you-have-homeword-january-16.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

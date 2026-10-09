@@ -1,0 +1,80 @@
+{
+ "id": "09-031-011",
+ "title": "Jabesh-gilead’s Tribute to Saul",
+ "refs": [
+  "1 Samuel 31:11-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9031011,
+   "end": 9031013,
+   "ref": "1 Samuel 31:11-13",
+   "ranges": [
+    [
+     9031011,
+     9031013
+    ]
+   ],
+   "title": "Remembering Kindness and Living Faithfully",
+   "key_verse": [
+    9031012,
+    9031012
+   ],
+   "reflect": [
+    {
+     "text": "When the brave men of Jabesh-gilead heard that the Philistines had desecrated Saul's body on the wall of Beth-shan, they marched through the night at great risk to bring his remains home. They did not wait for anyone else to do the right thing. Decades before, Saul had rescued their town, and their gratitude had never faded. As God's people, we should keep long memories for kindness and short memories for offenses, always ready to honor our debts of love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In the same way, we are called to be careful with the honor and name of Jesus. He has done far more for us than Saul did for that city, rescuing our souls from death and keeping our feet from falling. When there is a need to right a wrong or stand up for Christ, we must not hold back and wait for someone else. When we see the need, we should act.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Saul's final burial under the tamarisk tree is a sad reminder of wasted potential and the certainty of death. Our physical bodies will eventually pass away, but in Christ our inward spirit is renewed. Facing our own mortality urges us to examine our daily walk with God, making sure our lives leave a true and faithful legacy.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a past kindness someone showed you that you can still honor or thank them for today?",
+    "How does knowing that earthly life is short help you focus on honoring Christ right now?"
+   ],
+   "prayer": "Lord, thank You for saving our souls from death and renewing our spirits each day. Help us to remember the kindness shown to us and never delay when we have an opportunity to do what is right. Guide our daily walk so that our lives bring true honor to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 31:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 39: 1 Samuel 31:1–13",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-39-1-samuel-31-113.html"
+    },
+    "D3": {
+     "author": "Chuck Swindoll",
+     "work": "Your Epitaph - Today's Insight - January 10, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-january-10-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

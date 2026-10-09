@@ -1,0 +1,66 @@
+{
+ "id": "02-030-034",
+ "title": "The Incense",
+ "refs": [
+  "Exodus 30:34-38"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2030034,
+   "end": 2030038,
+   "ref": "Exodus 30:34-38",
+   "ranges": [
+    [
+     2030034,
+     2030038
+    ]
+   ],
+   "title": "Holy Fragrance for God Alone",
+   "key_verse": [
+    2030037,
+    2030037
+   ],
+   "reflect": [
+    {
+     "text": "In Exodus, God gave Moses a recipe for a special, sacred perfume. It was blended from fine spices, including pure frankincense, and placed before the Lord in the Tent of Meeting. The people were strictly told never to make this mixture for their own pleasure. It was set apart exclusively for the worship of God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The frankincense in this holy blend points ahead to Jesus Christ. It reminds us of his pure, sinless deity, his spiritual beauty, and his ongoing work of praying for believers. Later, wise men brought frankincense and myrrh to Jesus as a child, gifts that pointed to his divine nature and his coming death and burial.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we see who Jesus is and what he sacrificed for us, our calling is clear. Truly wise followers do not keep their best for themselves. Instead, we respond to his holy identity and sacrifice through wholehearted worship, generous giving, and loving service.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what practical ways can you keep God first in your worship rather than seeking your own pleasure?",
+    "How can your daily generosity and service reflect the beauty of Christ's sacrifice?"
+   ],
+   "prayer": "Lord God, thank you for the pure beauty of Jesus and his sacrifice on our behalf. Help us to hold your name as holy and to worship you alone. May our lives honor you each day through humble service and generous hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Why Frankincense and Myrrh?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-december-23-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

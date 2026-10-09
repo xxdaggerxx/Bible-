@@ -1,0 +1,75 @@
+{
+ "id": "07-008-022",
+ "title": "Gideon’s Ephod",
+ "refs": [
+  "Judges 8:22-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7008022,
+   "end": 7008027,
+   "ref": "Judges 8:22-27",
+   "ranges": [
+    [
+     7008022,
+     7008027
+    ]
+   ],
+   "title": "A Trap of Gold",
+   "key_verse": [
+    7008027,
+    7008027
+   ],
+   "reflect": [
+    {
+     "text": "Gideon had seen God work wonders and had torn down pagan altars to rescue Israel. When the people asked him to rule over them, he spoke the right words by saying that only the Lord should be their king. Yet underneath, lingering insecurities and a desire for control were still at work. Even though he outwardly refused a crown, his actions began to point toward self-promotion.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Gideon asked for gold earrings from the battle plunder and made a sacred vest, called an ephod. He placed it in his own hometown, centralizing worship around himself. Instead of pointing people to the Lord, this golden vest drew everyone's attention to Gideon. Soon the whole nation worshiped it as an idol, and it became a destructive trap for Gideon and his family.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Gideon's life reminds us that faithful service in the past does not protect us from stumbling later. When we begin to trust in human strength or seek our own recognition, we can easily compromise. To avoid finishing poorly, we must stay watchful and keep our lives grounded in God's Word, relying on His power rather than our own.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there past successes or gifts in your life that you are tempted to use for your own honor?",
+    "How can you stay humble and grounded in Scripture each day so you do not drift into compromise?"
+   ],
+   "prayer": "Lord God, thank You for the victories and blessings You give us in life. Guard our hearts against pride, and keep us from seeking our own honor. Teach us to rely fully on Your strength and remain faithful to Your Word all our days. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Gideon’s Short-Lived Revival",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gideons-short-lived-revival"
+    },
+    "D2": {
+     "author": "Tod Twist",
+     "work": "The Child Who Raised an Army",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/the-child-that-raised-an-army.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

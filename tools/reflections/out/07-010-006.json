@@ -1,0 +1,73 @@
+{
+ "id": "07-010-006",
+ "title": "Oppression by the Philistines and Ammonites",
+ "refs": [
+  "Judges 10:6-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7010006,
+   "end": 7010018,
+   "ref": "Judges 10:6-18",
+   "ranges": [
+    [
+     7010006,
+     7010018
+    ]
+   ],
+   "title": "True Repentance and God's Tender Mercy",
+   "key_verse": [
+    7010016,
+    7010016
+   ],
+   "reflect": [
+    {
+     "text": "When hard times arrive, it can be tempting to slide back into old, familiar sins. Israel turned away from the Lord to worship the false gods around them, and their disobedience brought exhausting misery and deep distress. Continual wandering from God grieves His heart. Often, when trouble strikes, we plead for quick relief just to escape the pain. Crying out only to avoid suffering is merely lip service, not true surrender.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Genuine biblical repentance requires more than wanting out of a hard situation. It calls for a complete turnabout, laying down our wrong choices and letting God transform our hearts. The Israelites showed real repentance when they confessed their guilt, rid themselves of foreign idols, and returned to serving the Lord.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Israel's suffering came directly from leaving God's care. Even so, the Lord could not bear to see His people crushed by misery. When our own mistakes and sins leave us surrounded by trouble, God still looks on us with tender compassion. He does not abandon us to our pain. When we truly turn away from our sin and return to Him, He gladly gives us His help and deliverance out of His loving heart.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there old habits or sins you are tempted to run back to when life becomes stressful?",
+    "When you pray in difficult times, are you simply asking for relief, or are you truly turning your heart back to God?"
+   ],
+   "prayer": "Lord, forgive us for the times we wander away from You and seek comfort in the wrong places. Thank You for Your tender mercy that grieves over our distress, even when our pain comes from our own mistakes. Help us turn away from our sins completely and rest in Your faithful love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 10:16",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Wendy Pope",
+     "work": "Repent, Rescue, Repeat",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-aug-26-2009-11607722.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

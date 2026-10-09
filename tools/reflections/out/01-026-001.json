@@ -1,0 +1,73 @@
+{
+ "id": "01-026-001",
+ "title": "God’s Promise to Isaac",
+ "refs": [
+  "Genesis 26:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1026001,
+   "end": 1026005,
+   "ref": "Genesis 26:1-5",
+   "ranges": [
+    [
+     1026001,
+     1026005
+    ]
+   ],
+   "title": "God Confirms His Promise to Isaac",
+   "key_verse": [
+    1026003,
+    1026003
+   ],
+   "reflect": [
+    {
+     "text": "When famine struck the land, God spoke directly to Isaac and renewed His covenant with him. A covenant is a sacred promise and binding agreement that God makes with His people. God showed care for Isaac's daily life, giving promises about physical land and children alongside spiritual hope. Yet the greatest gift God offered was His own personal presence: 'I will be with you and bless you.' For us today, these promises look forward to the worldwide inheritance believers share in Christ.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God also remembered Abraham's faith, passing the blessings of that relationship on to Isaac. As F. B. Meyer wrote, 'The legacy of a good man's prayers is of priceless worth.' The prayers and faithful walk of a godly parent do not end with their death. Like a flowing stream, their faith continues to bring God's favor and guidance into the lives of the next generation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even so, Isaac could not simply rely on his father's relationship with God. Every child of believers must personally turn from sin and place their own trust in the Lord. Abraham's obedience did not earn God's salvation, but it proved that his faith was real. God calls each of us to hear His voice, follow Him, and trust His faithful presence today.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God is personally with you bring comfort during difficult times?",
+    "Are you relying on the faith of family members, or are you personally trusting and following the Lord yourself?"
+   ],
+   "prayer": "Lord, thank You for the comfort of Your presence and Your faithfulness that reaches across generations. Help us never to rely on someone else's faith, but to trust and follow You with our whole hearts. Teach us to walk in genuine obedience and to leave a lasting blessing of prayer for those who follow us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 26:5",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Promise to Isaac, Part 1",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/promise-isaac"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "07-007-009",
+ "title": "The Sword of Gideon",
+ "refs": [
+  "Judges 7:9-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7007009,
+   "end": 7007014,
+   "ref": "Judges 7:9-14",
+   "ranges": [
+    [
+     7007009,
+     7007014
+    ]
+   ],
+   "title": "God's Strength in Our Weakness",
+   "key_verse": [
+    7007013,
+    7007013
+   ],
+   "reflect": [
+    {
+     "text": "Fear can often tempt us to hold back when God calls us to step out in faith. When Gideon hesitated, God did not scold him. Instead, the Lord showed gentle patience and offered reassurance. He invited Gideon to slip down to the enemy camp in the dark to hear proof of what God was already doing.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "What Gideon overheard was both strange and humbling. In an enemy soldier's dream, a simple loaf of barley bread rolled into camp and knocked down a tent. As F. B. Meyer noted, God showed Gideon he was \"only a cake of barley bread\" on his own. Barley bread was cheap, common, and weak. God humbles us and empties us of pride so we do not rely on our own ability.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even so, the dream was filled with hope. A piece of bread cannot flatten a tent by itself, but it can when the Almighty is behind it. True boldness does not come from our own self-confidence, but from humble reliance on God's power. Seeing God at work turns our fearful hearts toward quiet worship and trusting obedience.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to hold back because you feel weak or afraid?",
+    "How does knowing that God works through small and humble things give you peace today?"
+   ],
+   "prayer": "Lord, thank You for meeting our hesitation with gentle patience rather than anger. Teach us to let go of self-reliance and rest completely in Your power. Take our weak lives and use them for Your glory as we trust You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 7:13",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Spirit-Filled Boldness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-october-5-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

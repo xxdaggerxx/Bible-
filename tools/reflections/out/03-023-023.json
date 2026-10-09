@@ -1,0 +1,75 @@
+{
+ "id": "03-023-023",
+ "title": "The Feast of Trumpets",
+ "refs": [
+  "Leviticus 23:23-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3023023,
+   "end": 3023025,
+   "ref": "Leviticus 23:23-25",
+   "ranges": [
+    [
+     3023023,
+     3023025
+    ]
+   ],
+   "title": "The Sound of the Trumpet",
+   "key_verse": [
+    3023024,
+    3023024
+   ],
+   "reflect": [
+    {
+     "text": "God told the Israelites to set aside a special day of rest and gather together when the trumpets sounded. These sacred feasts helped God's people stop their regular labor and remember His goodness and salvation. The loud blast of the ram's horn also reminded them of the mountain where God provided a ram to take Isaac's place.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "That substitute ram pointed ahead to an even greater sacrifice. Jesus came as the ultimate Lamb of God, offering Himself to secure our eternal forgiveness once and for all. Because of His sacrifice, we can celebrate that our names are written in the Book of Life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The trumpet blast also pointed forward to what is still to come. Christ has begun the last days, and the sound of the horn builds anticipation for His return as King of Kings. While we wait for that final trumpet to sound, we are called to look eagerly for Jesus and faithfully share the gospel with others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus secured your forgiveness help you rest in God's goodness?",
+    "Who in your life needs to hear the good news of Jesus before He returns?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus as the ultimate sacrifice to rescue us from our sins. Help us to remember Your goodness and rest in the salvation You have given us. Give us courage to share Your gospel faithfully as we wait for Christ to return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Feast of Trumpets",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/feast-trumpets"
+    },
+    "D2": {
+     "author": "Dallas Paetzold",
+     "work": "Happy New Year! …In September?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/happy-new-year-in-september-encouragement-caf-october-13-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

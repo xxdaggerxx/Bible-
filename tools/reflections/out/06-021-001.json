@@ -1,0 +1,142 @@
+{
+ "id": "06-021-001",
+ "title": "Forty-Eight Cities for the Levites",
+ "refs": [
+  "Joshua 21:1-45"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6021045,
+   "end": 6021045,
+   "ref": "Joshua 21:45",
+   "ranges": [
+    [
+     6021045,
+     6021045
+    ]
+   ],
+   "title": "\"Not One of All the Lord's Good Promises Failed\"",
+   "key_verse": [
+    6021045,
+    6021045
+   ],
+   "reflect": [
+    {
+     "text": "After years of wandering in the desert, Israel arrived safely in the land and saw God fulfill everything He had spoken. Our faith grows stronger when we look at these real historical events, not just vague ideas. God often takes centuries to bring His plans to completion, showing His patient rule across generations. Even when we wait a long time for our own hopes to be answered, His past record gives us strength to endure.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Our lives often take unexpected turns that do not match what we imagined. In seasons of trouble or waiting, it is easy to wonder if God has forgotten us. Yet as F. B. Meyer reminds us, \"delays are not denials.\" God's love does not depend on our performance or our feelings. When we fill our minds with Scripture, we can remember that our small story is held inside God's larger purpose, and every obstacle will yield to His will in time.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "One day, when we look back over our whole journey, we will see that God never failed to do what He promised. Even our own weaknesses and faltering faith cannot overturn His goodness. Every promise secured for us in Jesus will be fully realized, and we will marvel at how faithful the Lord has always been.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What unexpected turns in your life make it difficult to trust God's promises right now?",
+    "How can remembering God's concrete acts of faithfulness in the past help you wait patiently today?"
+   ],
+   "prayer": "Father, thank You that not one of Your good promises has ever failed. When my life takes unexpected turns, help me trust Your patient timing instead of giving in to doubt. Remind me of Your faithfulness across history, and teach me to rest in Your unchanging love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 21:45",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Christine F. Perry",
+     "work": "A Prayer for Celebrating God's Faithfulness in Hard Times",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-celebrating-gods-faithfulness-in-hard-times.html"
+    },
+    "D4": {
+     "author": "Sharon Jaynes",
+     "work": "This is Not How I Thought My Story Would Go",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-december-4-2020.html"
+    },
+    "D5": {
+     "author": "David Mathis",
+     "work": "Not One of God’s Words Will Fail",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/not-one-of-gods-words-will-fail"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 6021001,
+   "end": 6021045,
+   "ref": "Joshua 21:1-45",
+   "ranges": [
+    [
+     6021001,
+     6021045
+    ]
+   ],
+   "title": "Cities for the Levites and God's Faithfulness",
+   "key_verse": [
+    6021043,
+    6021043
+   ],
+   "reflect": [
+    {
+     "text": "Joshua 21 brings the conquest and division of the land to a peaceful conclusion. Instead of receiving one large territory of their own, the Levites were given forty-eight cities scattered throughout the entire nation. By living among all the other tribes, the Levites were placed right where they could teach God's law to the whole community and help them stay faithful.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The chapter closes by celebrating how the Lord gave Israel the land He had sworn to their ancestors. Pockets of land still remained to be taken, but the victory was already real in substance. Seeing the land divided and settled proved that God was completely trustworthy, and it gave the people the courage they needed to persevere.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our Christian faith rests upon this same unchanging reliability. God does not change His mind, and He never leaves His work half done. Just as He brought Israel into their rest, we can be confident that He will faithfully bring every one of His promises to completion.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the placement of the Levites across all the tribes show God's care for His people's daily spiritual life?",
+    "When you face unfinished struggles, how does knowing God's victory is already certain encourage you to keep going?"
+   ],
+   "prayer": "Lord, thank You for providing for Your people and giving them teachers of Your word. Thank You that our faith rests on Your unchanging character and Your reliable promises. When we face unfinished challenges, give us courage to persevere, trusting that You will complete all You have begun. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Our Promise-Keeping Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-promise-keeping-lord"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "10-002-001",
+ "title": "David Anointed King of Judah",
+ "refs": [
+  "2 Samuel 2:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10002001,
+   "end": 10002007,
+   "ref": "2 Samuel 2:1-7",
+   "ranges": [
+    [
+     10002001,
+     10002007
+    ]
+   ],
+   "title": "Seeking God for the Next Step",
+   "key_verse": [
+    10002001,
+    10002001
+   ],
+   "reflect": [
+    {
+     "text": "David had spent years on the run as a fugitive. When King Saul died, the throne was suddenly open, but David did not aggressively rush in to grab power. Sudden promotion and success can often be harder to handle faithfully than suffering. Instead of taking matters into his own hands, David waited on God's timing.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "David asked the Lord directly if he should go up to Judah, and then asked exactly where he should go. He kept asking until he had clear, specific direction rather than just a general idea. David was not merely trying to reach the throne; he wanted to arrive there strictly in God's way.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When new opportunities appear in our lives, we also need to pace our first steps carefully. It is easy to rush ahead and assume our first thoughts match God's plan. Believers must learn patience, asking the Lord for direction before moving forward. Today, God gives us this guidance through His written Word, the Bible, and confirms it by the Holy Spirit.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When an exciting door opens, do you pause to seek God or do you tend to rush ahead?",
+    "How can you look to Scripture for guidance before making your next big decision?"
+   ],
+   "prayer": "Lord, help us to wait on your timing whenever new opportunities come our way. Give us patience to pace our steps and seek your clear direction in your Word instead of relying on our own ideas. Guide us by your Holy Spirit so we may walk strictly in your ways. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 41: 2 Samuel 2:1–2",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-41-2-samuel-2-12.html"
+    },
+    "D2": {
+     "author": "Charles Swindoll",
+     "work": "From Fugitive to Monarch",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-january-12-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

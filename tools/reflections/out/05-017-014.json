@@ -1,0 +1,82 @@
+{
+ "id": "05-017-014",
+ "title": "Guidelines for a King",
+ "refs": [
+  "Deuteronomy 17:14-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5017018,
+   "end": 5017020,
+   "ref": "Deuteronomy 17:18-20",
+   "ranges": [
+    [
+     5017018,
+     5017020
+    ]
+   ],
+   "title": "\"Write for Himself a Copy\"",
+   "key_verse": [
+    5017019,
+    5017019
+   ],
+   "reflect": [
+    {
+     "text": "Israel's kings were told to sit down and write out their own copy of God's law before leading the nation. God wanted them to keep this scroll close and read it every day. Copying the words by hand forced these leaders to slow down. In our own busy lives, full of hurry and distraction, taking time with Scripture allows God's truth to take deep root in our hearts and gives us daily wisdom and moral strength.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Daily reading was also meant to protect the king from pride. When people rise to positions of influence or power, it is easy to become arrogant and think too highly of themselves. Pride pushes God away and tries to secure safety through human strength alone. But reading God's Word acts like a mirror that shows us who we really are. It reminds us of God's supreme holiness, beside which any human status looks tiny.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Staying in the Scriptures teaches us to revere the Lord and see every good thing as a gift of His grace. As F. B. Meyer noted, meditating on God's Word keeps a person \"in the lowlands of humility.\" When we let the Bible guide us daily, we learn not to look down on others, and our steps remain steady on the right path.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can slowing down to spend time in Scripture protect you from pride and distraction this week?",
+    "In what ways does remembering God's holiness help you stay humble toward the people around you?"
+   ],
+   "prayer": "Lord, teach us to slow down each day and listen carefully to Your Word. Help us see Your greatness so that our hearts do not become proud or self-reliant. Keep us humble and faithful, walking closely in Your ways.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 17:20",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Nik Ripkin",
+     "work": "Making the Words Our Own",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/blog/2020/05/making-the-words-our-own/"
+    },
+    "D3": {
+     "author": "David Jeremiah",
+     "work": "God’s Word… Written on Your Heart",
+     "site": "Turning Point",
+     "url": "https://www.davidjeremiah.org/magazine/article/gods-word-written-on-your-heart-265"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

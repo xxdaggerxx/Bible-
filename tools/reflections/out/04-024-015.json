@@ -1,0 +1,66 @@
+{
+ "id": "04-024-015",
+ "title": "Balaam’s Fourth Oracle",
+ "refs": [
+  "Numbers 24:15-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4024015,
+   "end": 4024019,
+   "ref": "Numbers 24:15-19",
+   "ranges": [
+    [
+     4024015,
+     4024019
+    ]
+   ],
+   "title": "Seeking the Star and King",
+   "key_verse": [
+    4024017,
+    4024017
+   ],
+   "reflect": [
+    {
+     "text": "Long before Jesus was born, Balaam gave a prophecy of a coming ruler. He described a star coming out of Jacob and a royal scepter rising from Israel. Many centuries later, wise scholars from the east who studied ancient scrolls were likely familiar with this very promise. When they saw a special sign in the sky, they knew it pointed to the newborn King.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "That heavenly sign moved them to leave behind what was familiar and set out on a journey to find Him. Real wisdom is much more than simply collecting information or studying ancient history. Genuine wisdom means recognizing God's truth when we encounter it and holding on to it with our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Whenever we truly seek ultimate truth, our search will always take us to the same destination. Pursuing God's truth always leads us to bow down and worship at the feet of Jesus.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God's truth change the way you live each day, rather than just being information in your head?",
+    "Where is God leading you to bow down and honor Jesus in your life today?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus as the promised King and the light of the world. Give us hearts that seek Your truth and hold tightly to it. Lead us every day to bow before Jesus and worship Him with all that we are. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jack Graham (PowerPoint Ministries)",
+     "work": "How You Can Search for Truth the Wise Way - Powerpoint - December 30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-december-24-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

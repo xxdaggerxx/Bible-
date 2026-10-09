@@ -1,0 +1,80 @@
+{
+ "id": "01-030-025",
+ "title": "Jacob Prospers",
+ "refs": [
+  "Genesis 30:25-43"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1030025,
+   "end": 1030043,
+   "ref": "Genesis 30:25-43",
+   "ranges": [
+    [
+     1030025,
+     1030043
+    ]
+   ],
+   "title": "God's Blessing and Faithful Service",
+   "key_verse": [
+    1030027,
+    1030027
+   ],
+   "reflect": [
+    {
+     "text": "Laban recognized that the Lord had blessed his household because Jacob was there. When we follow God, we carry His presence into our daily work and families. Even when people around us do not share our faith, living faithfully can bring genuine peace, stability, and good to those we live and work with.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "At the same time, the story reminds us of human weakness. Jacob used peeled tree branches to breed the flocks, following an ancient folk idea rather than facts. His dealings also warn us against misusing someone else's trust. When employers or friends rely on us, we should always do our best for them honestly, remembering that we ultimately serve God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Despite human schemes and unfair treatment, Jacob's wealth grew through God's providence—His quiet, sovereign rule over all events. Jacob did not succeed because of tree bark, but because God chose to bless him. We can take comfort knowing that God's grace overcomes both the opposition of others and our own mistakes.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can your work and attitude bring God's blessing to the people around you today?",
+    "In what areas of your life do you need to trust God's provision instead of relying on your own schemes?"
+   ],
+   "prayer": "Lord, help us to be honest and faithful stewards in everything entrusted to our care. Let our lives reflect your goodness so that others are blessed by our presence. Thank you that your sovereign grace guides and provides for us, even through our weaknesses. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 30:27",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Jacob Outwits Laban",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jacob-outwits-laban"
+    },
+    "D3": {
+     "author": "Daily Disciples Ministries",
+     "work": "A Blessing For Others",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-nov-13-2010-11640851.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

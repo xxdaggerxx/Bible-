@@ -1,0 +1,67 @@
+{
+ "id": "05-019-015",
+ "title": "The Testimony of Two or Three Witnesses",
+ "refs": [
+  "Deuteronomy 19:15-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5019015,
+   "end": 5019021,
+   "ref": "Deuteronomy 19:15-21",
+   "ranges": [
+    [
+     5019015,
+     5019021
+    ]
+   ],
+   "title": "What We Plan Returns to Us",
+   "key_verse": [
+    5019019,
+    5019019
+   ],
+   "reflect": [
+    {
+     "text": "God gave Israel strict rules for the courtroom. If a person lied to harm a brother, the judges gave that liar the exact punishment he wanted for his neighbor. God made sure that the harm a person planned against someone else came right back upon his own head.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer reminds us that in God's moral world, \"evil comes home to roost.\" What we plan against others often returns to ourselves. Those who hurt others will find that their wrongdoing bears bitter fruit in their own lives. We do not have to wait for the end of time to know that God sees our deeds and judges them right now.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Every unkind word or cruel choice carries its own punishment within it. Because the Lord watches over everything behind the scenes, we can be sure that justice is real. Knowing this should make us very careful with our words and actions toward our neighbors.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever noticed how speaking ill of others or planning harm brings trouble back to yourself?",
+    "How can remembering that God sees your deeds today help you speak the truth in love?"
+   ],
+   "prayer": "Lord God, you are a just and righteous judge who sees every thought and action. Keep my tongue from telling lies, and guard my heart from wishing harm on anyone. Teach me to love my neighbor and to walk in your truth today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 19:19",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

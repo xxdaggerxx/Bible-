@@ -1,0 +1,66 @@
+{
+ "id": "09-025-039",
+ "title": "David Marries Abigail",
+ "refs": [
+  "1 Samuel 25:39-44"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9025039,
+   "end": 9025044,
+   "ref": "1 Samuel 25:39-44",
+   "ranges": [
+    [
+     9025039,
+     9025044
+    ]
+   ],
+   "title": "Letting Go of Vengeance",
+   "key_verse": [
+    9025039,
+    9025039
+   ],
+   "reflect": [
+    {
+     "text": "Anger is a powerful emotion that can quickly get out of hand. When someone insults us or treats us badly, we often feel an urge to strike back. Yet biblically, justice requires strict limits so that punishment never exceeds the actual offense. Uncontrolled fury brings terrible consequences. In Scripture, Simeon and Levi lost their place of family leadership because they gave in to violent wrath.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David faced a similar temptation when Nabal treated him with contempt. Left to himself, David was ready to take violent revenge. But God was merciful and used Abigail to restrain him. By stopping David from shedding innocent blood, the Lord protected him from self-destruction. When Nabal died, David praised the Lord for keeping His servant from evil.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This passage reminds us that we do not have to fight our own battles through revenge. Believers are called to give up retaliatory impulses and renounce personal payback. When we are tempted to strike back, we can trust God to handle justice in His own way and timing.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel angry or insulted, do you look for ways to pay the person back, or do you bring your anger to God?",
+    "How can trusting God's justice help you let go of retaliatory feelings today?"
+   ],
+   "prayer": "Lord, thank You for being patient and merciful with us when our emotions run high. Guard our hearts from seeking revenge, and stop us when we want to retaliate in anger. Help us to release our hurts into Your hands and trust Your righteous justice. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "When Anger Destroys",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/when-anger-destroys"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

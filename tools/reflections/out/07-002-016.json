@@ -1,0 +1,66 @@
+{
+ "id": "07-002-016",
+ "title": "Judges Raised Up",
+ "refs": [
+  "Judges 2:16-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7002016,
+   "end": 7002023,
+   "ref": "Judges 2:16-23",
+   "ranges": [
+    [
+     7002016,
+     7002023
+    ]
+   ],
+   "title": "Breaking the Tragic Cycle",
+   "key_verse": [
+    7002018,
+    7002018
+   ],
+   "reflect": [
+    {
+     "text": "Israel thought they were strong enough to live alongside pagan nations without copying them. Instead, they quickly forgot the mighty things God had done for their ancestors. This spiritual forgetfulness led the next generation straight into turning away from the Lord and worshipping false gods.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When foreign enemies oppressed them, the Lord heard their groaning and felt pity. He raised up leaders called judges to deliver them while each judge was alive. Yet as soon as the leader died, the people rushed back to their stubborn sins and became even more corrupt. God did not abandon His people completely, but He left those foreign nations in the land to test whether Israel would stay faithful to His covenant, His sacred agreement with them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We face a similar danger in our own lives today. The world around us tempts us to trust other things instead of God. When we forget what He has done, we easily drift away. We need to actively remember His goodness every day so we can stand firm and resist the idols of our culture.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What helps you remember what God has done so you do not drift away from Him?",
+    "Where might you be relying on your own strength instead of turning to God for help?"
+   ],
+   "prayer": "Lord, thank You for Your mercy toward us when we face trouble. Please forgive us when we forget Your mighty deeds and wander away. Help us remember Your goodness each day and stay faithful to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Tragic Cycle",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/tragic-cycle"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

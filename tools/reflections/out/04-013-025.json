@@ -1,0 +1,73 @@
+{
+ "id": "04-013-025",
+ "title": "The Reports of the Spies",
+ "refs": [
+  "Numbers 13:25-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4013025,
+   "end": 4013033,
+   "ref": "Numbers 13:25-33",
+   "ranges": [
+    [
+     4013025,
+     4013033
+    ]
+   ],
+   "title": "Seeing Giants Through Eyes of Faith",
+   "key_verse": [
+    4013030,
+    4013030
+   ],
+   "reflect": [
+    {
+     "text": "When the spies returned from exploring the land, ten of them focused only on the obstacles. They saw fortified walls and tall giants, and fear took over. That fear caused them to spread a discouraging report that weakened the hearts of the people. Approaching the future with fear leads us to underestimate our God-given abilities and hide the talents He has given us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Unbelief blinded those ten spies to God's strength, and they even began to view themselves as tiny grasshoppers. When we hold a small view of God, our troubles look giant and we shrink in our own eyes. Putting ourselves down and ignoring the role God has given us is not true humility. Instead, it reveals a lack of faith in His power.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Caleb chose a different path by looking at the land through eyes of faith. He trusted God's promise and knew they could move forward. As children of the King, we do not need to let fear define who we are. When we rely on God rather than our own weaknesses, we find the courage to step forward and follow His call.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you looking at your current challenges through fear or through faith in God's promises?",
+    "Where might you be viewing yourself as a helpless grasshopper instead of a child of the King?"
+   ],
+   "prayer": "Lord, forgive us when we focus on our obstacles instead of your great power. Help us not to shrink back in fear or underestimate what you can do through our lives. Give us eyes of faith so we can step forward with courage and trust your promises. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "Share a Vision of Faith, Not Fear",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-february-2-2022.html"
+    },
+    "D2": {
+     "author": "Trevin Wax",
+     "work": "Faithlessness Shrinks You Down To a Grasshopper",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/trevin-wax/faithlessness-shrinks-you-down-to-a-grasshopper/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

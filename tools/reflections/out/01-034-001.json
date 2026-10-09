@@ -1,0 +1,75 @@
+{
+ "id": "01-034-001",
+ "title": "The Defiling of Dinah",
+ "refs": [
+  "Genesis 34:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1034001,
+   "end": 1034012,
+   "ref": "Genesis 34:1-12",
+   "ranges": [
+    [
+     1034001,
+     1034012
+    ]
+   ],
+   "title": "The Danger of Worldly Compromise",
+   "key_verse": [
+    1034002,
+    1034002
+   ],
+   "reflect": [
+    {
+     "text": "Jacob settled near the city and allowed his family to blend into the surrounding culture instead of remaining distinct. Because he failed to provide proper spiritual protection, Dinah was left exposed to serious danger. Driven by naive curiosity, she went out to visit the women of the region, stepping into an environment that did not honor God's ways.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When Shechem saw Dinah, he acted on unrestrained lust. He violated God's moral law and harmed someone made in God's image, bringing shame upon Jacob's household. Dwelling on sinful desires in the heart can quickly escalate into outward acts that cause deep and lasting damage to others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This painful account reveals how easily sin multiplies. We face a similar temptation to suspect God is holding back worldly pleasures, which leads to careless compromise. Jacob's neglect, Dinah's curiosity, and Shechem's wickedness set off a chain of sorrow that brought widespread grief and dishonored God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there careless curiosities or worldly compromises that are pulling your heart away from God?",
+    "How can you guard your thoughts today so that sinful desires do not grow into hurtful actions?"
+   ],
+   "prayer": "Lord, help us to guard our hearts against careless desires and worldly influences. Protect our families from spiritual compromise, and teach us to trust that your boundaries are good. Give us the wisdom to honor you and care for others in all we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jill Briscoe",
+     "work": "Off to See the World",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/off-to-see-the-world-one-year-devotions-for-women-january-12.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Dinah's Humiliation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/dinahs-humiliation"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

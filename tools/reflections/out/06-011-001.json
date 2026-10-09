@@ -1,0 +1,66 @@
+{
+ "id": "06-011-001",
+ "title": "Conquest of the Northern Cities",
+ "refs": [
+  "Joshua 11:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6011001,
+   "end": 6011015,
+   "ref": "Joshua 11:1-15",
+   "ranges": [
+    [
+     6011001,
+     6011015
+    ]
+   ],
+   "title": "Wholehearted Obedience and Victory",
+   "key_verse": [
+    6011015,
+    6011015
+   ],
+   "reflect": [
+    {
+     "text": "Israel stood before a terrifying alliance of northern kings. This massive army seemed as endless as the sand on the seashore, and they were equipped with powerful horses and chariots. Even so, God had shown generations of patience toward these nations, and the time for His judgment had arrived. When fear could have taken over, Joshua stood firm on God's clear promise of victory.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Israel's triumph did not come from military might or clever tactics. God directed Joshua to disable the enemy horses and burn their chariots so the people would rely on His divine strength alone instead of conventional weapons. Joshua followed every instruction, leaving nothing undone of all the Lord had commanded Moses.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In our own lives, we face battles that are spiritual rather than physical. Deeply rooted enemies such as bitterness and resentment can establish strongholds in our hearts. God calls us to trust His strength and drive out these sins through genuine forgiveness, walking in full obedience to Him each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any area of your life where God is asking for complete obedience rather than relying on your own strength?",
+    "Are you holding on to any bitterness or resentment that you need God's help to drive out through forgiveness?"
+   ],
+   "prayer": "Lord, teach us to trust in Your strength rather than our own abilities. Help us to obey Your Word completely, leaving nothing undone. Give us the grace to forgive others and remove all bitterness from our hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways 03/17/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-03-or-17-or-2002-1127510.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

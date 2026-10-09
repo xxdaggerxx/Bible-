@@ -1,0 +1,116 @@
+{
+ "id": "09-001-009",
+ "title": "Hannah Prays for a Son",
+ "refs": [
+  "1 Samuel 1:9-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 9001015,
+   "end": 9001015,
+   "ref": "1 Samuel 1:15",
+   "ranges": [
+    [
+     9001015,
+     9001015
+    ]
+   ],
+   "title": "\"I Have Poured Out My Soul\"",
+   "key_verse": [
+    9001015,
+    9001015
+   ],
+   "reflect": [
+    {
+     "text": "When deep sorrow hits, we are often tempted to pretend that everything is fine. Other times, we vent our frustration to people around us first. Hannah chose a different path. In her ongoing grief, she took her distress directly to God. She did not offer a quick, casual prayer and move on. Instead, she spent unhurried, honest time before the Lord, opening up her entire heart to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Hannah described this as pouring out her soul before the Lord. God already knows everything we are carrying, but He still invites us to empty out every worry, bitter feeling, and crushed hope into His hands. As F. B. Meyer observed, \"As we pour out our bitterness, God pours in His peace.\" Releasing our heavy grief to God makes room for His calm presence. That gift of divine peace lifted Hannah's downcast face and refreshed her spirit, even before she saw any change in her situation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burdens or hurt feelings do you need to pour out honestly to God today?",
+    "How might spending unhurried, quiet time in God's presence help you receive His peace?"
+   ],
+   "prayer": "Lord, help us to be completely honest with You instead of hiding our pain or venting to others. We lay our sorrow and disappointments at Your feet today. Please take away our bitterness and fill our hearts with Your steady peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 1:15",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Gwen Smith",
+     "work": "A Soul Poured Out",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/a-soul-poured-out-girlfriends-in-god-june-21-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 9001009,
+   "end": 9001018,
+   "ref": "1 Samuel 1:9-18",
+   "ranges": [
+    [
+     9001009,
+     9001018
+    ]
+   ],
+   "title": "Releasing the Weight of Grief",
+   "key_verse": [
+    9001018,
+    9001018
+   ],
+   "reflect": [
+    {
+     "text": "Hannah faced deep personal grief alongside painful treatment from others. Instead of letting bitterness grow or trying to strike back in anger, she turned her pain into prayer. She came before God recognizing who He is: the almighty Ruler of heaven and earth. Hannah did not try to manipulate God or force His hand with a bargain. Instead, she stood humbly before Him as His servant, asking for His mercy and dedicating whatever He might give back to Him.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "After laying her burdens down, Hannah went on her way. She began eating again, and her face was no longer clouded with grief. This relief came well before she knew whether she would ever hold a child. She found rest simply because she placed her anxieties into God's hands. Today, through Jesus Christ, we can also bring our deepest cries directly to God. When life feels heavy, we can come to our heavenly Father with confidence, trusting His goodness and resting in His care.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When others provoke or hurt you, do you tend to hold onto anger, or do you bring it to God in prayer?",
+    "What worry can you release to God's care right now, trusting His goodness before you see the outcome?"
+   ],
+   "prayer": "Heavenly Father, thank You that we can come boldly to You through Jesus whenever we are hurting. Guard our hearts from bitterness and the urge to strike back when trials come. Teach us to trust Your sovereign care and leave our worries in Your hands. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "The Weight of Grief",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-june-14-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,135 @@
+{
+ "id": "07-011-001",
+ "title": "Jephthah Delivers Israel",
+ "refs": [
+  "Judges 11:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7011001,
+   "end": 7011001,
+   "ref": "Judges 11:1",
+   "ranges": [
+    [
+     7011001,
+     7011001
+    ]
+   ],
+   "title": "\"A Mighty Man of Valor\"",
+   "key_verse": [
+    7011001,
+    7011001
+   ],
+   "reflect": [
+    {
+     "text": "Jephthah began life with deep pain and dishonor. His mother was a prostitute, and his family looked down on him. People often judge others by their family background or social standing, but God looks directly at the heart. Even though Jephthah was driven away unfairly into exile, he kept his faith in the God of Israel.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Long periods of hardship and obscurity are often God's way of training His people. The Lord frequently humbles His servants through trials before lifting them up to lead. Difficult beginnings can serve as the dark velvet background that makes God's grace—His unearned kindness—shine even brighter.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "You may carry memories of a painful past or feel held back by things you could not choose. God calls us not to live as victims of our circumstances. Instead, trust Him to redeem your story and prepare your heart for when He calls you to serve.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you letting a painful past or other people's opinions define your worth?",
+    "How might God be using your current quiet season to prepare you for the future?"
+   ],
+   "prayer": "Lord, thank You that You look at our hearts and not our background. Help us to keep our faith in You during seasons of hardship and obscurity. Please redeem our painful experiences and prepare us to do Your work. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "The Diamond of Grace on Black Velvet",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-july-9-2025.html"
+    },
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Mar. 26, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-mar-26-2008-11571642.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 7011001,
+   "end": 7011028,
+   "ref": "Judges 11:1-28",
+   "ranges": [
+    [
+     7011001,
+     7011028
+    ]
+   ],
+   "title": "God Delivers His People",
+   "key_verse": [
+    7011009,
+    7011009
+   ],
+   "reflect": [
+    {
+     "text": "When the Ammonites attacked, the leaders of Gilead found themselves in great distress. They were forced to humble themselves and beg Jephthah, the outcast warrior they had rejected, to lead them. Before fighting, Jephthah carefully used diplomacy. He explained Israel's history and showed that God had given them the land, but the enemy king refused to listen.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God's grace delights in taking broken outcasts and using them to bring rescue. Every Christian shares this story. We were all spiritual misfits facing ruin before God reached out to save us purely by His free favor.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God delivered Israel not because their repentance was flawless, but out of His tender compassion for their misery. We must never think our own goodness earns God's help. We simply lean on His steadfast mercy to rescue and guide us.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel too broken or overlooked for God to use you?",
+    "Are you relying on your own efforts to please God, or resting in His mercy?"
+   ],
+   "prayer": "Father, thank You for Your tender compassion toward us when we are in distress. We praise You that You rescue us by Your grace alone and not because we are worthy. Help us to trust Your mercy every day and follow where You lead. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "A Message for Misfits",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-sept-18-2009-11607801.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Jephthah Rises to Lead Israel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jephthah-rises-to-lead-israel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

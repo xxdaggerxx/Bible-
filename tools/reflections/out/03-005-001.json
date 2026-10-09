@@ -1,0 +1,67 @@
+{
+ "id": "03-005-001",
+ "title": "Sins Requiring a Sin Offering",
+ "refs": [
+  "Leviticus 5:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3005001,
+   "end": 3005013,
+   "ref": "Leviticus 5:1-13",
+   "ranges": [
+    [
+     3005001,
+     3005013
+    ]
+   ],
+   "title": "Uncovering Hidden Sins and Finding Forgiveness",
+   "key_verse": [
+    3005005,
+    3005005
+   ],
+   "reflect": [
+    {
+     "text": "In the daily rush of life, we can easily sin without even noticing. Just like a soldier leaving a battle with an unseen wound, we might speak thoughtlessly or touch unclean things. These hidden wrongs leave a stain before God. Often, this quiet guilt is why we feel distant from God when we try to pray or read the Bible at night. A thick cloud seems to block our view of Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we sense that distance, we need to examine our hearts and uncover the cause. Once we see our wrong, we must openly admit it. As F. B. Meyer notes, confession means taking God's side against ourselves. It is like carefully unpacking a box, starting with the smaller things on top and digging down to the heavier burdens underneath until all hidden wrongs are exposed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God provides a sure way back to Himself. When our sin is confessed and brought to the offering, God removes the barrier. He blots out our offenses like a passing cloud, giving complete pardon so we can turn around and walk with Him once again.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel a quiet distance from God when you sit down to pray?",
+    "What hidden attitudes or hasty words do you need to unpack and confess to God today?"
+   ],
+   "prayer": "Lord, show me any quiet or forgotten wrongs that cloud my fellowship with You. Help me to agree with Your truth and honestly confess my sins. Thank You for clearing away my guilt and granting me full forgiveness.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 5:5-6",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

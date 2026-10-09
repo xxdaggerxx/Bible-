@@ -1,0 +1,60 @@
+{
+ "id": "03-024-017",
+ "title": "An Eye for an Eye",
+ "refs": [
+  "Leviticus 24:17-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3024017,
+   "end": 3024023,
+   "ref": "Leviticus 24:17-23",
+   "ranges": [
+    [
+     3024017,
+     3024023
+    ]
+   ],
+   "title": "True Justice and the Cross",
+   "key_verse": [
+    3024020,
+    3024020
+   ],
+   "reflect": [
+    {
+     "text": "We all have a deep desire for things to be made right when wrong is done. That longing is not an accident. God created us as moral creatures who care about fairness. In this passage, God gave rules like an eye for an eye to put a healthy limit on vengeance. Instead of allowing hurt people to lash out with unchecked retaliation, these laws ensured that punishments fit the exact offense and that true restitution was made.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These laws also remind us of God's perfect standard. Our wrongdoing deserves a real penalty, but God did not leave us without hope. On the cross, divine justice was completely satisfied when Jesus took upon Himself the punishment that we earned. Because Jesus bore our penalty, we can live with humble and secure hearts today, knowing that our debt has been fully settled.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus bore the punishment for your sins help you trust God's fairness?",
+    "When someone treats you unfairly, how does Christ's sacrifice help you let go of unchecked retaliation?"
+   ],
+   "prayer": "Lord God, thank You for being completely fair and loving what is right. Thank You that Jesus took the punishment our sins deserved on the cross so we could be set free. Help us to live securely and humbly in Your mercy today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "Unexpected Justice - Truth For Life - July 8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-8-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

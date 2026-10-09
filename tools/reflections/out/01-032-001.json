@@ -1,0 +1,123 @@
+{
+ "id": "01-032-001",
+ "title": "Jacob Prepares to Meet Esau",
+ "refs": [
+  "Genesis 32:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1032012,
+   "end": 1032012,
+   "ref": "Genesis 32:12",
+   "ranges": [
+    [
+     1032012,
+     1032012
+    ]
+   ],
+   "title": "\"Thou Saidst, I Will Surely Do Thee Good\"",
+   "key_verse": [
+    1032012,
+    1032012
+   ],
+   "reflect": [
+    {
+     "text": "When Jacob faced the news of his brother Esau coming with armed men, he turned to God's exact promise. He held God to his word, reminding the Lord that he had promised to do him good. As Charles Spurgeon noted, \"God does not give his words merely to quiet us.\" The Lord is completely reliable and never fails to keep his word. When God gives a promise, we do not need to pray with doubtful ifs, because he always intends to fulfill what he speaks.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God never forgets what he has pledged, but he welcomes us coming to him and saying, \"You said.\" Reminding God of his promises is not for his benefit, but for ours. It revives our faith, brings comfort to our hearts, and refreshes our hope. The Lord promises to do his people lasting, true good in every circumstance. When we hold this assurance closely in our hearts, we do not have to live in fear of angry people or uncertain dangers.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Which promises of God can you bring before him when you feel anxious about the future?",
+    "How does reminding God of his own words help refresh your trust in him?"
+   ],
+   "prayer": "Lord, thank you that your word is completely trustworthy and that you never break your promises. Help us to bring your own words back to you in prayer whenever fear tempts us. Remind our hearts of your lasting goodness today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 18",
+     "on": "Genesis 32:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 28",
+     "on": "Genesis 32:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1032001,
+   "end": 1032021,
+   "ref": "Genesis 32:1-21",
+   "ranges": [
+    [
+     1032001,
+     1032021
+    ]
+   ],
+   "title": "Facing Fear with Prayer and Humility",
+   "key_verse": [
+    1032010,
+    1032010
+   ],
+   "reflect": [
+    {
+     "text": "Returning home after twenty years, Jacob faced the alarming news that his brother Esau was marching toward him with four hundred men. Jacob felt genuine fear and distress. Yet his response reveals a deeply transformed heart. In his youth, Jacob relied on tricks and tried to strike bargains with God. Now, his deceitful self-reliance was fading away. Real faith does not make us immune to fear, but it leads us to pray and obey God even when we are afraid.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Jacob bowed before God in deep humility, confessing that he did not deserve any of the steadfast love and faithfulness the Lord had shown him. At the same time, biblical faith does not mean sitting back and doing nothing. Jacob acted responsibly and showed practical wisdom by dividing his camp and sending generous gifts ahead to meet Esau. True trust in God does not cause passive surrender; instead, it moves us to take wise steps while knowing that rescue comes from the Lord alone.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you practice humility and honesty before God when facing a difficult situation?",
+    "What does it look like for you to take practical, wise steps while still trusting God for the outcome?"
+   ],
+   "prayer": "Father, we confess that we are unworthy of the constant love and kindness you show us each day. When fear threatens to overwhelm us, grant us the humility to seek your help rather than relying on our own schemes. Guide our actions with wisdom, and remind us that our true deliverance rests in your hands. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Jacob's Transformation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jacobs-transformation"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Genesis 32, Mark 3, Esther 8, and Romans 3",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/genesis-32-mark-3-esther-8-romans-3/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

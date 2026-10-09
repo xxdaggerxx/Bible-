@@ -1,0 +1,74 @@
+{
+ "id": "05-013-012",
+ "title": "Idolatrous Cities to Be Destroyed",
+ "refs": [
+  "Deuteronomy 13:12-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5013012,
+   "end": 5013018,
+   "ref": "Deuteronomy 13:12-18",
+   "ranges": [
+    [
+     5013012,
+     5013018
+    ]
+   ],
+   "title": "Leaving No Evil Behind",
+   "key_verse": [
+    5013017,
+    5013017
+   ],
+   "reflect": [
+    {
+     "text": "In ancient Israel, a report that an entire town had turned to idols could not be handled in a rush. The people had to investigate thoroughly to find out the truth. If the city was guilty, the whole place was destroyed and burned like a burnt offering to the Lord. Burning all the goods ensured that no one brought false charges just to become rich. This strict law showed how seriously God views false worship and broken promises to Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Today, God's people do not carry weapons against cities. Instead, we pray that those who serve false gods will turn to Christ and escape God's judgment. This passage also reminds us to take our personal sin just as seriously. Charles Spurgeon wrote that believers face a \"war to the knife with sins of all sorts and sizes.\" We are called to fight against every wrong habit of the body, mind, and spirit.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Putting away sin does not earn us God's favor, but it shows that His grace is working in our hearts. When we refuse to let any evil cling to our hands, the Lord meets us with compassion. As we turn away from sin, God replaces His anger with peace, growth, and joy in Jesus.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there any sinful habits in your life that you have allowed to remain instead of turning away from them?",
+    "How can you pray this week for people around you who do not yet follow Christ?"
+   ],
+   "prayer": "Lord, thank You for Your great compassion and grace toward us. Help us to put away every sin and evil habit without holding anything back. We pray that people who do not know You will hear the truth, turn to Jesus, and find Your mercy.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 7",
+     "on": "Deuteronomy 13:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "A City Offered Up to God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/city-offered-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,81 @@
+{
+ "id": "02-031-001",
+ "title": "Bezalel and Oholiab",
+ "refs": [
+  "Exodus 31:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2031001,
+   "end": 2031011,
+   "ref": "Exodus 31:1-11",
+   "ranges": [
+    [
+     2031001,
+     2031011
+    ]
+   ],
+   "title": "Called and Equipped for God's Work",
+   "key_verse": [
+    2031003,
+    2031003
+   ],
+   "reflect": [
+    {
+     "text": "God knows each of us by name and gives us a clear purpose. We often think only pastors or church leaders have a sacred calling, but God calls people to everyday work in offices, shops, and homes. In the wilderness, He called Bezalel and Oholiab to work with wood, stone, and metal. In the same way, our daily duties are assignments from our heavenly Father. The Holy Spirit empowers ordinary people with the wisdom and skill needed for each task.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Sometimes the duties God gives us feel far too heavy to carry alone. Moses was given detailed instructions for building the tabernacle, but God never intended him to do the work by himself. Instead, the Lord turned an overwhelming task into a shared effort. God provided other gifted workers so they could build it together. He often supplies what we lack by giving abilities to the people around us, teaching us to depend on one another.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When morning comes, we can trust God to guide our hands and minds. As F. B. Meyer wrote, God will provide \"all the strength, wisdom, and grace\" we need for our daily duties. We can stay faithful in the work we have been given without becoming restless. Walking with God means asking Him for help each day and trusting that He values our honest labor done for Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What everyday tasks has God placed in your life, and how can you ask the Holy Spirit for help in doing them?",
+    "Who has God placed alongside you to help carry responsibilities that feel too heavy to handle alone?"
+   ],
+   "prayer": "Lord, thank You for knowing our names and giving each of us meaningful work to do. Please fill us with Your Holy Spirit so we have the skill, patience, and wisdom we need for every duty. Help us to share our burdens and work together with others to honor You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 31:2",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "God Will Provide the Ability You Need",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/god-will-provide-the-ability-you-need"
+    },
+    "D3": {
+     "author": "Daily Disciples",
+     "work": "You Are Called by Name",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-october-31-11558261.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

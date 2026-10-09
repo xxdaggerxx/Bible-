@@ -1,0 +1,81 @@
+{
+ "id": "05-010-012",
+ "title": "A Call to Obedience",
+ "refs": [
+  "Deuteronomy 10:12-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5010012,
+   "end": 5010022,
+   "ref": "Deuteronomy 10:12-22",
+   "ranges": [
+    [
+     5010012,
+     5010022
+    ]
+   ],
+   "title": "Walking in Wholehearted Love and Reverence",
+   "key_verse": [
+    5010012,
+    5010012
+   ],
+   "reflect": [
+    {
+     "text": "God rules over all creation, yet He freely chose to set His love upon us by His grace. Because of this, He asks for our whole heart, calling us to unite deep reverence with genuine love. This is not about empty religious rituals or cold fear, nor is it mere sentimentalism. True faith turns away from false trust and lukewarm indifference, seeking instead a changed heart that knows God through Scripture and persistent prayer.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "A heart transformed by God shows itself in how we treat other people. The Lord is an impartial and mighty Judge who cares for the fatherless, the widow, and the foreigner. F. B. Meyer notes that God is \"waiting to answer every plea, and to avenge the innocent.\" When we face wrongs, we do not need to take revenge into our own hands. Instead, we trust our righteous Judge and actively love and protect the vulnerable around us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Continually remembering what God has done keeps us from focusing only on ourselves. When we look back at His mighty acts and His faithful care, our hearts are guarded against self-centeredness and filled with sincere praise.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any area of your life where you have grown indifferent toward God rather than serving Him wholeheartedly?",
+    "How can knowing that God defends the weak encourage you to show practical care to someone who needs help?"
+   ],
+   "prayer": "Lord God, You rule heaven and earth, yet You set Your affection on us in mercy. Give us changed hearts that love and revere You above all else. Teach us to trust You when we are wronged, and move us to care faithfully for the weak and vulnerable. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 10:18",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Wholehearted Love and Service",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/wholehearted-love-and-service"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Deuteronomy 10, Psalm 94, Isaiah 38, and Revelation 8",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/deut-10-psalm-94-isaiah-38-revelation-8/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

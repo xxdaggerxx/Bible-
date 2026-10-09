@@ -1,0 +1,73 @@
+{
+ "id": "10-008-001",
+ "title": "David’s Triumphs",
+ "refs": [
+  "2 Samuel 8:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10008001,
+   "end": 10008014,
+   "ref": "2 Samuel 8:1-14",
+   "ranges": [
+    [
+     10008001,
+     10008014
+    ]
+   ],
+   "title": "Giving the Honor and Spoils to God",
+   "key_verse": [
+    10008011,
+    10008011
+   ],
+   "reflect": [
+    {
+     "text": "In these battles, David did not sit back and passively wait for God's promises to come true. He stepped onto the battlefield to cooperate with the Lord. Along the way, he showed mercy by sparing a remnant of his enemies. When God granted him victory, David refused to take the glory. Instead, he dedicated all the captured silver, gold, and bronze directly to the Lord.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "David knew he would not be the one to build the temple, yet he still gathered rich stores for it. His hard work made it possible for Solomon to succeed later. God notices and values our labor, even when another person finishes the task, because He credits each person for their share of the work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These treasures gathered from Gentile nations also pointed forward to God's plan to welcome people from every nation into His spiritual family, the Church. Just as David took spoils from his foes to honor God, we can take what we learn through trials, temptations, and mistakes and use those lessons to help and guide others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you give God the credit for the successes and resources He has placed in your hands?",
+    "What lessons from your past struggles can you use to encourage and support someone else?"
+   ],
+   "prayer": "Lord, thank You for standing with us and giving us help in our daily battles. Keep us from taking the credit for what You have done, and teach us to dedicate our gifts and victories to You. Help us use our lessons and resources to build up others and serve Your kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 8:11",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 51: 2 Samuel 8:1–18",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-51-2-samuel-8-118.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

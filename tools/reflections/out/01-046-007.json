@@ -1,0 +1,74 @@
+{
+ "id": "01-046-007",
+ "title": "Those Who Went to Egypt",
+ "refs": [
+  "Genesis 46:7-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1046007,
+   "end": 1046027,
+   "ref": "Genesis 46:7-27",
+   "ranges": [
+    [
+     1046007,
+     1046027
+    ]
+   ],
+   "title": "God Keeps His Covenant Promises",
+   "key_verse": [
+    1046027,
+    1046027
+   ],
+   "reflect": [
+    {
+     "text": "Long lists of names in the Bible can be easy to skip, but this list tells an amazing story of God's faithfulness. Abraham and Isaac saw only the very start of God's covenant promise, each having just one son of the promise. Jacob, however, lived to see much more of it come true. He saw twelve sons and many grandchildren gathered around him. Listing each descendant shows how God was actively working to multiply Abraham's family just as He said He would.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The family traveling to Egypt counted sixty-six direct descendants, making seventy members in all once Jacob, Joseph, and Joseph's sons were included. This number of seventy points to completeness and the steady fulfillment of God's word. Long before this, God told Abraham that his offspring would live in a foreign land. Even though Jacob saw his family expand, he still had to trust God for promises that would happen long after his own lifetime.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Later on, this small group of seventy would grow into a mighty nation, showing that God's plans never fail. Today, we can take great courage as we see God's promises spread across the earth. People from every nation now follow Christ, and we can be completely confident that God will bring every one of His promises to final completion.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does seeing God faithfully keep His promises to Jacob help you trust Him today?",
+    "What promises of God are you waiting to see fully completed in your own life?"
+   ],
+   "prayer": "Faithful God, thank You for keeping every promise You have ever made. Help us to trust You patiently, even when we do not live to see the end of Your great plans. Strengthen our faith today as we watch people from every nation come to follow Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Promise Kept",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/promise-kept"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Seventy In Egypt",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/seventy-egypt"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

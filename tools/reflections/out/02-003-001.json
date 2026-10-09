@@ -1,0 +1,144 @@
+{
+ "id": "02-003-001",
+ "title": "Moses at the Burning Bush",
+ "refs": [
+  "Exodus 3:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2003014,
+   "end": 2003014,
+   "ref": "Exodus 3:14",
+   "ranges": [
+    [
+     2003014,
+     2003014
+    ]
+   ],
+   "title": "\"I AM WHO I AM\"",
+   "key_verse": [
+    2003014,
+    2003014
+   ],
+   "reflect": [
+    {
+     "text": "When Moses asked for God's name, God answered, \"I AM WHO I AM.\" In the Bible, a name is not just a label. God revealed this name so His people could know Him personally, speak of Him, and tell others about Him. Unlike human beings, God had no beginning, has no end, and never changes. He does not depend on anything else for His life, but instead holds all creation together.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Even though God is far greater than our minds can grasp, He chose to make Himself knowable to us. He revealed this sacred name alongside His promise to notice the pain of His people and rescue them. The Lord is not a distant idea, but the living God whose mercy and righteousness remain steady. Because He is always present, we are invited to walk with Him every day with quiet trust.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God never changes bring you comfort when your life feels uncertain?",
+    "In what ways can you practice being aware of God's personal presence in your everyday routine?"
+   ],
+   "prayer": "Lord God, thank You for making Yourself known to us as the eternal I AM. Help us remember that You never change and that You care for us in our hardships. Teach us to live each day trusting in Your constant presence and mercy. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Great I AM",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/great-i-am"
+    },
+    "D5": {
+     "author": "Sinclair Ferguson",
+     "work": "I Am Who I Am",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/podcasts/things-unseen-with-sinclair-ferguson/i-am-who-i-am"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2003001,
+   "end": 2003022,
+   "ref": "Exodus 3:1-22",
+   "ranges": [
+    [
+     2003001,
+     2003022
+    ]
+   ],
+   "title": "The God Who Is with Us",
+   "key_verse": [
+    2003012,
+    2003012
+   ],
+   "reflect": [
+    {
+     "text": "God often meets us in the middle of our daily routines, just as He met Moses while tending sheep. Moses saw an ordinary desert bush burning with fire, yet the branches were not consumed. That holy fire showed God's glorious presence, which needs nothing outside Himself to keep burning. Later in history, that same divine glory was revealed in human form through Jesus Christ.",
+     "sources": [
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "God also told Moses that He had seen the suffering of His people and knew their sorrow. Like a wise doctor who understands our illness, the Lord knows all our troubles even when we cannot see the outcome. When Moses felt small and questioned his own ability to help, God did not change the mission. God's purpose does not depend on our strength, and our doubts do not cancel His plan.",
+     "sources": [
+      "D1",
+      "D6"
+     ]
+    },
+    {
+     "text": "Instead of focusing on Moses' abilities, God gave one great promise: He would certainly be with him. As Charles Spurgeon observed, God sending us \"binds Him to back me up.\" Because the Lord goes with us, we do not need to face difficult tasks with hesitation. Mature faith looks past our weaknesses and rests in God's faithful presence.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel inadequate for what God asks of you, how does His promised presence help you move forward?",
+    "How does knowing that God sees and understands your sorrows change the way you face trials?"
+   ],
+   "prayer": "Heavenly Father, thank You for noticing our struggles and drawing near to us in ordinary life. Forgive us when we let our feelings of weakness keep us from following Your guidance. Remind us that You are always with us, and give us courage to obey You without fear. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 14",
+     "on": "Exodus 3:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 17",
+     "on": "Exodus 3:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "R.C. Sproul",
+     "work": "What Was the Burning Bush?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/what-was-the-burning-bush"
+    },
+    "D6": {
+     "author": "Aaron D'Anthony Brown",
+     "work": "What the Story of Moses and the Burning Bush Can Teach Us About Faith",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/important-faith-lessons-from-moses-and-the-burning-bush.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

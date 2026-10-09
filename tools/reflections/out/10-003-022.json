@@ -1,0 +1,66 @@
+{
+ "id": "10-003-022",
+ "title": "Joab Murders Abner",
+ "refs": [
+  "2 Samuel 3:22-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10003022,
+   "end": 10003030,
+   "ref": "2 Samuel 3:22-30",
+   "ranges": [
+    [
+     10003022,
+     10003030
+    ]
+   ],
+   "title": "The Duty to Uphold Justice",
+   "key_verse": [
+    10003028,
+    10003028
+   ],
+   "reflect": [
+    {
+     "text": "When Joab secretly took revenge and murdered Abner, King David acted quickly to protect his own reputation. David announced publicly that he and his kingdom were completely innocent before the Lord. He condemned the violent act and spoke severe curses over Joab and his household.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "However, David did not do what a king was supposed to do. God gives earthly rulers the duty to enforce justice and restrain evil by punishing those who break the law. Instead of putting Joab on trial or punishing him, David took no legal action. He likely let political fear and worry about his violent military commanders keep him from doing what was right.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "By choosing political compromise, David failed in his responsibility to administer justice. His words condemned the evil deed, but he failed to back them up with action. We are reminded that God calls those in authority to stand firm, resist compromise, and truly protect what is right.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When is it tempting for us to speak out against wrongdoing without taking the hard steps to stand up for justice?",
+    "Why is it important for leaders to follow God's law instead of letting fear or politics guide their choices?"
+   ],
+   "prayer": "Lord, give our leaders courage to restrain evil and uphold justice fairly. Help us not to compromise with what is wrong out of fear or convenience. Teach us to love what is right and to trust your ways in all that we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Justice Left to God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/justice-left-to-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

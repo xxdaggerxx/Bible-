@@ -1,0 +1,82 @@
+{
+ "id": "03-006-008",
+ "title": "The Burnt Offering",
+ "refs": [
+  "Leviticus 6:8-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 3006013,
+   "end": 3006013,
+   "ref": "Leviticus 6:13",
+   "ranges": [
+    [
+     3006013,
+     3006013
+    ]
+   ],
+   "title": "\"The Fire Must Be Kept Burning\"",
+   "key_verse": [
+    3006013,
+    3006013
+   ],
+   "reflect": [
+    {
+     "text": "God commanded that the fire on the altar must never go out. First, this shows us God's own everlasting work for us. His love does not depend on our effort to stay alive; like the burning bush Moses saw, it burns without fading. Even when people ignore or reject Him, His love never dies. Jesus also lives forever in heaven as our Priest, continually praying for us, while the Holy Spirit keeps the flame of faith alive in His church.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This never-ending fire also speaks to our private prayer life. Meeting quietly with God alone is the true heartbeat of our faith. When we let our personal prayers become cold or careless, worldly habits slowly begin to smother our hearts like gray ashes. Before long, that loss of warmth will dull our witness at home and in the church.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "If you feel your prayer life growing dim, do not give up. Turn back to God and ask Him for fresh grace. We can feed the flame in our hearts by feeding on Scripture, which Charles Spurgeon called \"live coals,\" and by spending regular, quiet time alone with Jesus.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Has your quiet time of private prayer been burning brightly, or has it grown cold and neglected?",
+    "What specific time can you set apart today to be alone with Jesus and pray for others?"
+   ],
+   "prayer": "Lord, thank You for Your unending love and for Jesus, who lives forever to intercede for us. Forgive us for the times we grow lukewarm and allow the world to crowd out our quiet moments with You. Stir our hearts again by Your Spirit, and use Your word each day to keep our love for You burning bright. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 15",
+     "on": "Leviticus 6:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 6:13",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Truth For Life",
+     "work": "Private Worship - Truth For Life - July 15",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-15-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

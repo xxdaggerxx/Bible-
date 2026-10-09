@@ -1,0 +1,74 @@
+{
+ "id": "07-016-023",
+ "title": "Samson’s Vengeance and Death",
+ "refs": [
+  "Judges 16:23-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7016028,
+   "end": 7016028,
+   "ref": "Judges 16:28",
+   "ranges": [
+    [
+     7016028,
+     7016028
+    ]
+   ],
+   "title": "\"Please Remember Me\"",
+   "key_verse": [
+    7016028,
+    7016028
+   ],
+   "reflect": [
+    {
+     "text": "Samson had lost his sight, his freedom, and his dignity because of his lack of discipline. The Philistines brought him out to mock him, bragging that their idol Dagon had defeated the God of Israel. Yet standing between the stone pillars, Samson turned back to the Lord. In his deep weakness, he recognized his estrangement and acknowledged that God was his only true source of strength.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Samson's prayer showed a renewal of faith, even though his request was still mixed with a desire for personal payback for his eyes. God answered his cry. Through Samson's final sacrifice, the Lord displayed His supreme majesty over false gods. Scripture even honors Samson in Hebrews 11 as a person of faith, showing that God achieves His divine plans through flawed people who admit their dependence on Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We can be grateful that God uses imperfect people to accomplish His will. At the same time, Samson's tragic life reminds us not to take disobedience lightly. While we rest in God's mercy, we must actively strive to put sin to death in our daily lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you experience weakness or failure, do you turn to God and admit your need for His strength?",
+    "How can you thank God for using flawed people while still taking your own fight against sin seriously?"
+   ],
+   "prayer": "Lord God, thank You for showing mercy to imperfect people like us. Forgive us when we wander away from You, and remind us that our true strength comes only from Your hand. Help us to put sin to death and rely completely on You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Samson Victorious",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/samson-victorious"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "Strength in Weakness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/strength-in-weakness-one-year-devotions-for-men-august-26.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

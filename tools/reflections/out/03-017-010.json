@@ -1,0 +1,82 @@
+{
+ "id": "03-017-010",
+ "title": "Laws against Eating Blood",
+ "refs": [
+  "Leviticus 17:10-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 3017011,
+   "end": 3017011,
+   "ref": "Leviticus 17:11",
+   "ranges": [
+    [
+     3017011,
+     3017011
+    ]
+   ],
+   "title": "\"It is the blood that makes atonement\"",
+   "key_verse": [
+    3017011,
+    3017011
+   ],
+   "reflect": [
+    {
+     "text": "In ancient Israel, God gave a clear way for broken fellowship to be restored. A holy God wanted to dwell among sinful people, but sin separated them from Him. To solve this, God showed that people could only approach Him through the sacrifice of another. A person brought an animal without defects to the altar and placed hands on it to symbolize transferring guilt to the substitute. The shed blood provided a covering so the sinner could be reconciled to God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God explained that the life of any creature is in its blood. Therefore, when blood was poured out, a life was offered. All the Old Testament sacrifices pointed forward to the cross. F. B. Meyer wrote that when Jesus gave His blood, He gave \"the life of His holy soul.\" Jesus offered His pure, sinless life as our substitute. Because He bore our sins away, His shed blood gives us complete assurance before God.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Scripture teaches that blood is the only true remedy for sin. We cannot approach God based on our own good works; we come only through what Christ accomplished. When we take the cup at the Lord's Table, we remember His death for us and ask to receive His life into our own hearts so that we may live in Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus gave His life as your substitute give you confidence when you pray to God?",
+    "In what ways are you tempted to rely on your own good deeds rather than the sacrifice of Christ?"
+   ],
+   "prayer": "Lord God, thank You for providing the only remedy for our sin through Jesus Christ. We thank You that He gave His pure life on the cross so we could be forgiven and brought near to You. Help us to rest in the assurance of His sacrifice and to live by His life today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 17:11",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "The Remedy for Sin",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-september-19-2026.html"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "The Day of Atonement",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-february-15-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

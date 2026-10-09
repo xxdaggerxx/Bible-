@@ -1,0 +1,68 @@
+{
+ "id": "07-001-008",
+ "title": "The Capture of Jerusalem and Hebron",
+ "refs": [
+  "Judges 1:8-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7001019,
+   "end": 7001019,
+   "ref": "Judges 1:19",
+   "ranges": [
+    [
+     7001019,
+     7001019
+    ]
+   ],
+   "title": "\"They Had Chariots of Iron\"",
+   "key_verse": [
+    7001019,
+    7001019
+   ],
+   "reflect": [
+    {
+     "text": "The men of Judah won victories in the hills, but they stopped when they reached the plains. The people living there had iron chariots. To foot soldiers, these heavy war wagons seemed as terrifying as modern tanks. Yet God had already promised to fight for His people and told them never to fear horses or chariots. The real problem was not the enemy's strong weapons, but a lack of faith in God's promises.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we do not know or remember what God has said in the Bible, our faith grows weak. We can easily shrink back when life feels overwhelming or when we face hard spiritual battles. But God has no limits to His power. Today, we can stand strong because Jesus has already won the final victory over our spiritual enemies. Reading God's Word regularly gives us the strength to trust Him when scary obstacles stand in our way.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What scary challenges make you want to shrink back instead of trusting God?",
+    "How can spending time in the Bible each day help build your faith when obstacles seem too big?"
+   ],
+   "prayer": "Lord God, forgive us for the times we look at our problems instead of Your power. Help us to read and trust Your promises every day so our faith stays strong. Thank You that Jesus has already defeated our spiritual enemies and that You fight for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Justin Estrada",
+     "work": "Chariots of Iron",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/chariots-of-iron"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Mar. 22, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-22-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

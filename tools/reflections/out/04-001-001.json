@@ -1,0 +1,66 @@
+{
+ "id": "04-001-001",
+ "title": "The First Census of Israel",
+ "refs": [
+  "Numbers 1:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4001001,
+   "end": 4001004,
+   "ref": "Numbers 1:1-4",
+   "ranges": [
+    [
+     4001001,
+     4001004
+    ]
+   ],
+   "title": "Counting God's Gifts, Not Our Problems",
+   "key_verse": [
+    4001002,
+    4001002
+   ],
+   "reflect": [
+    {
+     "text": "Counting names and making lists can feel like boring administrative work. Yet God used a census in the wilderness to prepare His people for what lay ahead. Instead of counting supplies or weapons, the Lord told Moses to count every person by name. This shows us how much God values each individual in His family.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Taking inventory of the camp helped the Israelites see how God had organized and strengthened them since leading them out of Egypt. It reminded them of what God had already done. We often do the opposite in our daily lives. We tend to tally our troubles, stress, and frustrations rather than noticing how God has cared for us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we pause to take stock of the people and resources God has given us, our hope grows. Looking at God's steady provision builds our faith for the battles ahead. Instead of measuring our difficulties, we can choose to count the good things God has placed right in front of us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What frustrations or problems do you find yourself tallying most often?",
+    "Who are the people God has placed in your life to strengthen your faith today?"
+   ],
+   "prayer": "Lord, forgive us when we spend our time counting our problems instead of your goodness. Thank you for valuing each of us by name and giving us the people and help we need. Strengthen our faith today as we remember how faithfully you provide for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Melissa Spoelstra",
+     "work": "Counting Provisions, Not Problems",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-april-28-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

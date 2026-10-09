@@ -1,0 +1,66 @@
+{
+ "id": "03-023-015",
+ "title": "The Feast of Weeks",
+ "refs": [
+  "Leviticus 23:15-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3023015,
+   "end": 3023022,
+   "ref": "Leviticus 23:15-22",
+   "ranges": [
+    [
+     3023015,
+     3023022
+    ]
+   ],
+   "title": "Resting in God's Generous Harvest",
+   "key_verse": [
+    3023022,
+    3023022
+   ],
+   "reflect": [
+    {
+     "text": "The Feast of Weeks called God's people to pause during the busy harvest season and gather together. Journeying to Jerusalem showed worshippers that God's faithful care reaches across every geographical boundary. Setting aside their regular work to observe a holy day taught the people to depend on God rather than their own self-reliance. It showed that God sustains our lives, not our own anxious striving.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The different offerings brought to the altar also reminded Israel that God provides spiritual reconciliation, making peace between Himself and His people. God even told farmers to leave the edges of their fields unharvested for the poor and the foreigner. By sharing their fields, God's people displayed His generous character to those in need.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus fulfills this feast completely. He gave His life like a grain of wheat and became the sacrifice that brings us forgiveness. Now, through His Holy Spirit, Jesus is gathering a great harvest of people from all nations. Because of what He has done, we can rest from trying to save ourselves and trust in His faithful care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering God's faithful provision help you rest instead of relying only on your own effort?",
+    "In what practical ways can you reflect God's generosity to people who are in need?"
+   ],
+   "prayer": "Lord God, thank You for providing for our needs and for bringing us peace through Jesus. Help us to rest in Your care rather than trusting in our own striving. Teach us to reflect Your generous heart by sharing what we have with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Joel Busby",
+     "work": "Feast of Weeks: Find Confidence in Christ’s Great Harvest",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/feast-weeks-harvest/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

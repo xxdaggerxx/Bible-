@@ -1,0 +1,81 @@
+{
+ "id": "04-023-001",
+ "title": "Balaam’s First Oracle",
+ "refs": [
+  "Numbers 23:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4023001,
+   "end": 4023012,
+   "ref": "Numbers 23:1-12",
+   "ranges": [
+    [
+     4023001,
+     4023012
+    ]
+   ],
+   "title": "God's Blessing Cannot Be Reversed",
+   "key_verse": [
+    4023008,
+    4023008
+   ],
+   "reflect": [
+    {
+     "text": "King Balak tried to use wealth and honor to buy a curse against Israel, treating God as someone who could be manipulated. But Balaam had to admit that God cannot be controlled by human wishes. No prophet or king can bring ruin on a people whom the Lord has determined to bless.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Looking down from the cliffs, Balaam saw a community set apart from the surrounding nations. As Charles Spurgeon noted, God calls His people to follow \"a separated path as to the world.\" Believers are bought and claimed by God, finding their safety not in fitting in with the crowd, but in resting under His sovereign protection.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Balaam wished that his final end would be peaceful like that of God's righteous people. Yet merely wishing for a good ending is hollow if we refuse to obey God with our lives. True peace belongs to those who trust the Lord and walk in His ways each day.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways are you tempted to fit in with the world instead of walking the distinct path God has given you?",
+    "Are you merely hoping for a good end with God, or are you actively obeying Him today?"
+   ],
+   "prayer": "Lord God, thank You that Your blessing over Your people can never be overturned. Keep us from trying to bend Your will to our own desires, and teach us to be content living apart from the ways of the world. Help us to follow You in daily obedience and trust in Your faithful care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 26",
+     "on": "Numbers 23:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 02/23/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-02-or-23-or-2002-1127466.html"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Numbers 23, Psalms 64-65, Isaiah 13, 1 Peter 1",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-23-psalms-64-65-isaiah-13-1-peter-1/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

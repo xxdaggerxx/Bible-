@@ -1,0 +1,66 @@
+{
+ "id": "06-013-008",
+ "title": "The Inheritance East of the Jordan",
+ "refs": [
+  "Joshua 13:8-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6013008,
+   "end": 6013014,
+   "ref": "Joshua 13:8-14",
+   "ranges": [
+    [
+     6013008,
+     6013014
+    ]
+   ],
+   "title": "God as Our Greatest Portion",
+   "key_verse": [
+    6013014,
+    6013014
+   ],
+   "reflect": [
+    {
+     "text": "When God gave the land east of the Jordan to Reuben, Gad, and half the tribe of Manasseh, He proved that He keeps His covenant promises. Each border and conquered city stood as a lasting reminder of God's mighty power and the way He had delivered His people in the past. God is always faithful to His word.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet the story also brings a gentle warning. Israel did not completely drive out the pagan people living among them. This compromise pointed to a loss of spiritual zeal and the beginning of a decline in their walk with God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finally, the tribe of Levi did not receive a plot of land. Instead, God and the sacred offerings made to Him were their true inheritance. In the same way, we are invited to treasure God Himself as our greatest reward. Earthly possessions come and go, but having the Lord is the best portion we could ever receive.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways might we be losing our spiritual zeal by settling for compromises that pull our hearts away from God?",
+    "How can you remind yourself today that the Lord Himself is your greatest reward rather than material possessions?"
+   ],
+   "prayer": "Lord, thank You for being faithful to keep every promise You have made to us. Guard our hearts from losing our zeal or holding on to things that pull us away from You. Teach us to treasure You as our greatest reward above all earthly things. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Eastern Heirs",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-eastern-heirs"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

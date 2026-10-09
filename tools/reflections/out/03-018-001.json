@@ -1,0 +1,68 @@
+{
+ "id": "03-018-001",
+ "title": "Unlawful Sexual Relations",
+ "refs": [
+  "Leviticus 18:1-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3018001,
+   "end": 3018030,
+   "ref": "Leviticus 18:1-30",
+   "ranges": [
+    [
+     3018001,
+     3018030
+    ]
+   ],
+   "title": "Called to Holy Living",
+   "key_verse": [
+    3018030,
+    3018030
+   ],
+   "reflect": [
+    {
+     "text": "God called Israel to live differently from the nations around them. His commands against harmful sexual practices and child sacrifice were not arbitrary rules. Instead, they were grounded in God's own holy character and His covenant relationship with His people. God gave these boundaries to guard the sanctity and health of the family. He warned that adopting the corrupt customs of neighboring lands would defile the people and cause the land itself to vomit them out.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The old covenant was built on demand, while the new covenant rests upon saving faith. Even so, God still expects His people to follow Him with whole hearts. As F. B. Meyer wrote, \"LITERAL obedience was God's perpetual demand of His chosen people.\" We should not treat the commands of Jesus as optional extras. Whether our Lord asks us to forgive someone who hurt us or to gather at His table, genuine faith reveals itself when we gladly submit to His instructions.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways are you tempted to copy the habits of the culture around you rather than following God's Word?",
+    "Are there specific commands of Jesus, such as forgiving others, that you find yourself treating as optional?"
+   ],
+   "prayer": "Lord God, You are holy and You call us to belong wholly to You. Forgive us for the times we treat Your commands lightly or make excuses for our disobedience. Work in our hearts by Your Spirit so that we love Your ways and honor You in every part of our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Leviticus 18:30",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Leviticus 18",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/leviticus-18-psalm-22-ecclesiastes-1-1-timothy-3/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

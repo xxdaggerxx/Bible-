@@ -1,0 +1,88 @@
+{
+ "id": "07-013-001",
+ "title": "The Birth of Samson",
+ "refs": [
+  "Judges 13:1-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7013001,
+   "end": 7013025,
+   "ref": "Judges 13:1-25",
+   "ranges": [
+    [
+     7013001,
+     7013025
+    ]
+   ],
+   "title": "Accepted by God",
+   "key_verse": [
+    7013023,
+    7013023
+   ],
+   "reflect": [
+    {
+     "text": "Even before Israel asked for help, God stepped forward with a plan to deliver His people. He promised a son to Manoah and his wife, setting the child apart for His work before birth. Manoah's wife was told to guard her diet and habits to honor that calling, and both parents were given the responsibility to guide and teach their boy.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When Manoah wondered and worried that seeing the angel meant they would die, his wife understood God's heart better. She realized God would not reveal such good news or receive their offering only to destroy them. As Charles Spurgeon wrote, \"the accepted sacrifice of Jesus puts an end to fear.\" When God accepts the sacrifice, we know we are safe in His grace.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God blessed Samson, and the Holy Spirit began to work in his life. Although Samson later struggled with selfish desires instead of living fully separated to God, his miraculous birth pointed ahead to someone greater. Samson foreshadows Jesus Christ, the true Savior who obeyed God perfectly in all things and rescued us completely.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God accepted Christ's sacrifice help quiet your fears when you doubt His love?",
+    "What is one area of your life where you can choose God's calling over your own desires today?"
+   ],
+   "prayer": "Lord God, thank You for stepping in to save us through Jesus when we could not save ourselves. Thank You that His sacrifice removes our fear and brings us into Your peace. Teach us to live holy lives that honor You, and guide our steps as we trust in Your promises. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 25",
+     "on": "Judges 13:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "Parental Limits",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/parental-limits-one-year-devotions-for-men-august-23.html"
+    },
+    "D3": {
+     "author": "Davy Ellison",
+     "work": "Samson’s Miracle Birth Points to the Incarnate Word",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/samsons-points-incarnate/"
+    },
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - March 27",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-27-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

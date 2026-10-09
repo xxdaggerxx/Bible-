@@ -1,0 +1,81 @@
+{
+ "id": "07-016-004",
+ "title": "Samson and Delilah",
+ "refs": [
+  "Judges 16:4-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7016005,
+   "end": 7016006,
+   "ref": "Judges 16:5-6",
+   "ranges": [
+    [
+     7016005,
+     7016006
+    ]
+   ],
+   "title": "\"The Source of Your Great Strength\"",
+   "key_verse": [
+    7016006,
+    7016006
+   ],
+   "reflect": [
+    {
+     "text": "Delilah wanted to uncover the secret of Samson's mighty power. His strength was not from his own physical build, but was supernatural, given to him through the Holy Spirit. Yet Samson lived with a divided heart, repeatedly giving in to selfish cravings while trying to hold on to God's power. We cannot live a double life. Entertaining compromise and divided loyalty will always chip away at our spiritual strength and point us toward ruin.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Delilah's question also makes us ask where our own spiritual strength comes from. The true power of our faith does not come from inside us. It comes from feeding every day on God's trustworthy promises. Faith looks at who made those promises: an all-powerful, unchanging God who never lies and who acts for His own glory. Because God loves us, His word cannot fail.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "When our faith needs courage, we also look to Jesus. God gave His own Son to die for us, proving how completely we can trust Him. We can also remember the times in the past when the Lord brought us through trouble. Because God has never failed any of His children, we can be confident that His goodness and mercy will keep holding us up today.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there compromises or selfish desires in your life that are dividing your heart?",
+    "How can remembering God's past faithfulness and the gift of Jesus strengthen your faith today?"
+   ],
+   "prayer": "Lord, forgive us for the times our hearts are divided by selfish desires and compromise. Teach us to feed on Your unchanging promises and to remember how You gave Your Son for us. Give us true spiritual strength to trust and honor You with all our heart. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 8",
+     "on": "Judges 16:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Do You Have a Divided Heart?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-july-18-2024.html"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "The Secret Strength of Faith",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-8-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

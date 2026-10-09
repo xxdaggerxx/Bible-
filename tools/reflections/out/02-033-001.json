@@ -1,0 +1,66 @@
+{
+ "id": "02-033-001",
+ "title": "The Command to Leave Sinai",
+ "refs": [
+  "Exodus 33:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2033001,
+   "end": 2033006,
+   "ref": "Exodus 33:1-6",
+   "ranges": [
+    [
+     2033001,
+     2033006
+    ]
+   ],
+   "title": "God's Presence Above All Else",
+   "key_verse": [
+    2033003,
+    2033003
+   ],
+   "reflect": [
+    {
+     "text": "God promised to lead Israel into the Promised Land and send an angel to protect them. Yet He said He would not go with them personally because of their rebellion. It is easy for believers to settle for safety, answers to prayer, or the assurance of heaven while missing God's active presence in everyday life. Material gifts and safety do not prove we are spiritually healthy, since even unbelievers receive basic earthly blessings. We should never be satisfied with God's gifts without God Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also confronted the people for being stiff-necked, which meant they were stubborn and obstinate. We can easily become rigid as well, choosing which of God's truths we want to believe and obey. If we stay obstinate, the sad result is being left to ourselves without close fellowship with God. To walk closely with Him, we need to ask the Lord to soften our harsh attitudes so our hearts stay moldable in His hands.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you seeking God Himself in your daily life, or are you just looking for His gifts and protection?",
+    "Is there any area of stubbornness in your heart that you need God to soften today?"
+   ],
+   "prayer": "Lord, please forgive us when we care more about Your blessings than about knowing You. Soften our stubborn attitudes and keep our hearts tender and moldable in Your hands. We do not want to walk through life without Your close presence with us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "God’s Presence Is All We Need",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-november-15-2023.html"
+    },
+    "D2": {
+     "author": "Luann Prater",
+     "work": "Stiff Neck",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/stiff-neck-encouragement-cafe-march-16.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

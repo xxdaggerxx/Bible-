@@ -1,0 +1,75 @@
+{
+ "id": "05-015-012",
+ "title": "Hebrew Servants",
+ "refs": [
+  "Deuteronomy 15:12-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5015012,
+   "end": 5015018,
+   "ref": "Deuteronomy 15:12-18",
+   "ranges": [
+    [
+     5015012,
+     5015018
+    ]
+   ],
+   "title": "Generous Love and Willing Service",
+   "key_verse": [
+    5015015,
+    5015015
+   ],
+   "reflect": [
+    {
+     "text": "In Israel, God commanded masters to free their servants after six years and provide for them generously. They were not to send them away empty-handed, but to share what God had given them with a cheerful heart. God reminded His people that they were once slaves in Egypt whom He had redeemed. Charles Spurgeon notes that because our Lord has dealt so graciously with us, we are called to treat those who work for us with kindness and fairness. God promises to bless such generosity with contentment and the assurance of His favor.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The law also provided for a servant who chose to stay for life because he loved his master and household. F. B. Meyer explains that this mirrors our own walk with Christ. Many of us first come to Jesus out of fear or desperate need, like a ship driven into harbor by a storm. Yet as we come to know our Master and experience His goodness, our hearts change. We choose to remain with Him not just for His gifts, but because we love Him dearly and never want to live apart from Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Remembering God's mercy shapes both how we serve Him and how we treat others. We give ourselves freely to Christ as our Master, and we share His goodness by dealing warmly and generously with the people around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show God's generosity and fairness to the people you work with this week?",
+    "What draws you to follow Jesus today: is it fear of trouble, or love for who He is?"
+   ],
+   "prayer": "Lord Jesus, thank You for redeeming us and bringing us into Your care. Help us to follow You gladly, not out of fear, but out of deep love for who You are. Teach us to be generous and kind toward others, just as You have shown great grace to us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 26",
+     "on": "Deuteronomy 15:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 15:15",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

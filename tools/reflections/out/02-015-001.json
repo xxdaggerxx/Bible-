@@ -1,0 +1,88 @@
+{
+ "id": "02-015-001",
+ "title": "The Song at the Sea",
+ "refs": [
+  "Exodus 15:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2015002,
+   "end": 2015002,
+   "ref": "Exodus 15:2",
+   "ranges": [
+    [
+     2015002,
+     2015002
+    ]
+   ],
+   "title": "\"The LORD Is My Strength and Song\"",
+   "key_verse": [
+    2015002,
+    2015002
+   ],
+   "reflect": [
+    {
+     "text": "Life often brings seasons that leave us completely worn out. Hard problems, stress, and worry can feel like giant battles that we cannot win on our own. Our own energy is limited, and we were never created to handle everything by ourselves. When we look only at our troubles, our fears seem to grow bigger and we lose sight of God.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Exodus 15:2 reminds us that God is our strength, our song, and our rescue. Instead of viewing Him through a narrow lens, we can see that He gives us everything we need. When we pause and choose to praise Him, our focus shifts. In worship, we trade our tired weakness and fear for His courage, letting Him fight for us while we rest in His care.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Just as God made a way through the sea when Israel was trapped, He has given us an even greater rescue through Jesus on the cross. Remembering how God saved us pulls us out of sadness. He does not just give us help; He becomes our joy. When we trust Him, we find that He is faithful in every season and truly becomes our song.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries or heavy duties are making you feel worn out today?",
+    "How can remembering God's rescue in Jesus turn your focus toward praise?"
+   ],
+   "prayer": "Lord God, thank You for being our strength when our own energy runs out. Remind us of the great rescue You gave us through Jesus whenever we feel trapped by worry. Help us to rest in Your presence and make You our daily song. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Clarence L. Haynes Jr.",
+     "work": "Strength When Your Social Battery Is Low",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/strength-when-your-social-battery-is-low.html"
+    },
+    "D2": {
+     "author": "Marshall Segal",
+     "work": "God Parted the Seas for You",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/god-parted-the-seas-for-you"
+    },
+    "D3": {
+     "author": "Luann Prater",
+     "work": "Superman",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-aug-20-2010-11636657.html"
+    },
+    "D4": {
+     "author": "Time with God",
+     "work": "Time with God - August 31",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-august-31-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

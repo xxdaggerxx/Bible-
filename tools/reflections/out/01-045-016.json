@@ -1,0 +1,66 @@
+{
+ "id": "01-045-016",
+ "title": "Pharaoh Invites Jacob to Egypt",
+ "refs": [
+  "Genesis 45:16-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1045016,
+   "end": 1045024,
+   "ref": "Genesis 45:16-24",
+   "ranges": [
+    [
+     1045016,
+     1045024
+    ]
+   ],
+   "title": "Do Not Quarrel on the Way",
+   "key_verse": [
+    1045024,
+    1045024
+   ],
+   "reflect": [
+    {
+     "text": "Joseph gave his brothers rich provisions, wagons, and new clothes to bring their father to Egypt. Yet as they set off, he warned them not to quarrel on the way. Joseph understood fallen human nature. He knew how quickly old rivalries and conflicts can resurface, even after reconciliation and relief.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Unequal gifts often spark trouble in our hearts. While each brother received new clothes, Benjamin received five sets of clothes and three hundred shekels of silver. Sudden windfalls and unequal honors easily bring up feelings of jealousy, inferiority, and superiority. Giving Benjamin extra gifts was a real temptation for the brothers to fall back into envy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Believers are called to love and trust one another. Still, true wisdom requires us to recognize the reality of human weakness. When we know how easily envy can creep in, we can guard our hearts and choose peace with those around us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone else receives a greater gift or honor, how do you handle feelings of envy?",
+    "How can being honest about human weakness help you keep peace with others?"
+   ],
+   "prayer": "Lord, thank you for your abundant goodness to us. Guard our hearts against jealousy and old conflicts when others receive more than we do. Help us to see our weaknesses clearly and choose peace with our brothers and sisters. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "The Nature Within",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-october-7-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

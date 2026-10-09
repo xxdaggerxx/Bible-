@@ -1,0 +1,66 @@
+{
+ "id": "04-027-018",
+ "title": "Joshua to Succeed Moses",
+ "refs": [
+  "Numbers 27:18-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4027018,
+   "end": 4027023,
+   "ref": "Numbers 27:18-23",
+   "ranges": [
+    [
+     4027018,
+     4027023
+    ]
+   ],
+   "title": "Passing the Lead with a Humble Heart",
+   "key_verse": [
+    4027022,
+    4027022
+   ],
+   "reflect": [
+    {
+     "text": "Moses faced deep disappointment because he would not enter the promised land of Canaan. Yet, instead of turning bitter, he kept a humble spirit. God told Moses to take Joshua and commission him before the priest and the entire congregation. Joshua was chosen for leadership because the Spirit of God lived inside him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Moses did not hold on to power. He willingly surrendered his authority and laid his hands on Joshua, doing exactly what the Lord commanded him to do. Even during this painful and stressful trial, Moses faithfully served God's people and God's plan rather than his own wishes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our daily circumstances often test us in similar ways. When hard trials or disappointments come, we are challenged to overcome our complaints and submit fully to God. Each situation shows whether we will choose to represent ourselves or represent Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face sudden disappointment, do your reactions represent Christ or yourself?",
+    "How can you practice submitting your plans to God when life does not go your way?"
+   ],
+   "prayer": "Lord, help us to keep a humble spirit when we face deep disappointment. Give us grace to overcome our complaints during stressful trials and yield to your will. Teach us to surrender our own desires so that our lives faithfully represent Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 02/24/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-02-or-24-or-2002-1127468.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

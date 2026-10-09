@@ -1,0 +1,66 @@
+{
+ "id": "02-019-016",
+ "title": "The LORD Visits Sinai",
+ "refs": [
+  "Exodus 19:16-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2019016,
+   "end": 2019025,
+   "ref": "Exodus 19:16-25",
+   "ranges": [
+    [
+     2019016,
+     2019025
+    ]
+   ],
+   "title": "Meeting God at the Mountain",
+   "key_verse": [
+    2019018,
+    2019018
+   ],
+   "reflect": [
+    {
+     "text": "When God came down on Mount Sinai in fire and smoke, the entire mountain trembled. God showed Israel His great power and majesty so they would know who He is. The strict boundaries around the mountain showed that God is completely holy, and that people need purification before Him. The thick smoke hid God's full glory from their eyes. He gave them only what they needed to know. In the same way, mature faith trusts God with what is hidden, without trying to look beyond what He has shared in His Word.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God spoke from the mountain to give His people a healthy, reverent fear, which means deep awe and respect for Him. This meeting at Sinai was the historic beginning of God delivering His written Word. We often take having the Bible for granted in our daily lives. Yet having God's complete message in our hands is an amazing gift that should fill our hearts with gratitude.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you treat reading the Bible as a precious privilege, or do you take it for granted?",
+    "Are you willing to trust God with questions He has chosen not to answer in Scripture?"
+   ],
+   "prayer": "Lord God, thank You for showing us Your power and holiness. Help us approach You with deep respect and humble trust. Teach us to be truly grateful for the gift of Your written Word and to follow what You have revealed. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Written Instructions",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-apr-18-2008-11573644.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "At the Foot of Sinai",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/foot-sinai"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

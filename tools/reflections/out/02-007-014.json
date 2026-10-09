@@ -1,0 +1,66 @@
+{
+ "id": "02-007-014",
+ "title": "The First Plague: Blood",
+ "refs": [
+  "Exodus 7:14-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2007014,
+   "end": 2007025,
+   "ref": "Exodus 7:14-25",
+   "ranges": [
+    [
+     2007014,
+     2007025
+    ]
+   ],
+   "title": "Be Careful How You Listen",
+   "key_verse": [
+    2007014,
+    2007014
+   ],
+   "reflect": [
+    {
+     "text": "When Moses struck the water and turned the Nile into blood, Pharaoh witnessed an extraordinary miracle from God. Yet despite seeing such clear proof of the Lord's power, Pharaoh stubbornly refused to submit. God permits people to make their own choices, but repeatedly ignoring His correction and rejecting truth puts a person on a path toward destruction. Over time, God simply confirms people in the stubborn resolve they have chosen.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We might assume that our hearts only turn away when we are far from church. Yet the easiest time to develop spiritual hardness is actually while hearing God's Word with an indifferent attitude. When we listen without caring or without intending to obey, our hearts quietly begin to close.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "How we receive God's message changes what it does inside us. Just as sunlight softens wax but hardens clay, Scripture impacts each person according to how they receive it. God's truth will either soften our hearts or leave us harder than before.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually respond when God's Word corrects you or asks you to change?",
+    "Is there any truth from God that you have been treating with an indifferent attitude?"
+   ],
+   "prayer": "Lord, protect us from developing a hard and indifferent heart when we hear Your truth. Forgive us for the times we have ignored Your correction or resisted Your guidance. Please soften our hearts like wax so that we gladly receive and follow Your Word.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "Be Careful How You Listen",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-daily-devotion-mar-1-2011-11646417.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

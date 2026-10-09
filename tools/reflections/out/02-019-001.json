@@ -1,0 +1,66 @@
+{
+ "id": "02-019-001",
+ "title": "Israel at Mount Sinai",
+ "refs": [
+  "Exodus 19:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2019001,
+   "end": 2019015,
+   "ref": "Exodus 19:1-15",
+   "ranges": [
+    [
+     2019001,
+     2019015
+    ]
+   ],
+   "title": "Grace Before the Call to Obey",
+   "key_verse": [
+    2019005,
+    2019005
+   ],
+   "reflect": [
+    {
+     "text": "Before God gave Israel His commands at Mount Sinai, He reminded them of what He had already done. He had carried them out of Egypt like an eagle carrying its young. As Alistair Begg notes, grace always comes before God's commands. God did not give His people rules so they could work to earn their rescue. He saved them freely first.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In our world today, people often push back against the idea of anyone telling them what to do. Yet rejecting God's authority separates us from our Creator and causes us to lose His blessing. Following and obeying God is an essential part of walking with Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's law is not a ladder we climb to win His favor. Instead, it is a loving guide showing us how to live in close friendship under His rule. Because God has already rescued us, we are called to answer Him with glad, trusting obedience.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to view God's commands as rules to earn His love, or as guidance from a Father who has already saved you?",
+    "In what area of your life is it hardest to trust and obey God's authority today?"
+   ],
+   "prayer": "Lord God, thank You for loving and saving us before we could do anything to earn it. Please soften our hearts when we are tempted to resist Your rule. Help us to follow Your commands with trust and joy each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "God’s Rule and Blessing - Truth For Life - April 5",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-april-5-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

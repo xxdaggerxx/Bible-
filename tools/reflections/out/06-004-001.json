@@ -1,0 +1,134 @@
+{
+ "id": "06-004-001",
+ "title": "Twelve Stones from the Jordan",
+ "refs": [
+  "Joshua 4:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 6004006,
+   "end": 6004007,
+   "ref": "Joshua 4:6-7",
+   "ranges": [
+    [
+     6004006,
+     6004007
+    ]
+   ],
+   "title": "\"What Do These Stones Mean to You?\"",
+   "key_verse": [
+    6004006,
+    6004006
+   ],
+   "reflect": [
+    {
+     "text": "We easily forget what God has done for us, especially when life becomes busy or anxious. Setting up physical reminders or regular traditions takes intentional effort, but these tangible markers help calm our fears. Remembering how the Lord delivered us in the past gives us real confidence that he will sustain us today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "These visible markers also redirect our attention away from past failures and trials, pointing us instead toward God's faithfulness and grace. Everyday objects can become personal signs of healing and answered prayer when we connect them to the story of what God has done.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Surrounding ourselves with these reminders creates natural opportunities to speak about the Lord. When children or others ask what these signs mean, we can pass on the truth of God's work. Sharing these personal testimonies keeps the knowledge of his goodness alive for the next generation.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What tangible reminders or habits help you remember God's faithfulness when you feel anxious?",
+    "Who is someone you can tell about a time the Lord answered your prayers?"
+   ],
+   "prayer": "Father, thank you for your steady care and faithfulness throughout our lives. Help us build habits and reminders that keep our hearts focused on your goodness. Give us ready words to share what you have done with those who come after us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Creating a Legacy: Preparing the Stones",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/article-library/creating-a-legacy-preparing-the-stones"
+    },
+    "D2": {
+     "author": "Jessica Smartt",
+     "work": "How Traditions Mend Anxiety",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-june-7-2019.html"
+    },
+    "D3": {
+     "author": "Robin Dugall",
+     "work": "Constructing Memorials",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-jan-12-2011-11643989.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 6004001,
+   "end": 6004018,
+   "ref": "Joshua 4:1-18",
+   "ranges": [
+    [
+     6004001,
+     6004018
+    ]
+   ],
+   "title": "Remembering Past Blessings",
+   "key_verse": [
+    6004003,
+    6004003
+   ],
+   "reflect": [
+    {
+     "text": "When the people finished crossing the Jordan on dry ground, God instructed them to take twelve stones from the riverbed. The Lord knew human nature and how quickly people forget divine help. When we fail to remember his past aid in hard times, we quickly fall into grumbling and become blind to his work.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "It is easy to treat God only as a provider of our latest requests. Approaching him only to ask for things weakens our prayer life and shows an ungrateful spirit. God wants us to recognize that he has already carried us through many difficulties.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Taking time to recall how God has provided in the past completely changes our attitude. Remembering his earlier help awakens genuine praise in our hearts and restores bold confidence in his care for the future.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Do your prayers focus mostly on asking for new things, or do you take time to thank God for past help?",
+    "How does recalling God's past provision restore your confidence when facing a new difficulty?"
+   ],
+   "prayer": "Lord, forgive us for how quickly we forget your past help and slip into complaining. Help us not to treat you simply as a giver of requests, but to come before you with genuine gratitude. Restore our confidence in you as we remember all you have provided. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Leading The Way",
+     "work": "Remember My Past Blessings",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-may-14.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

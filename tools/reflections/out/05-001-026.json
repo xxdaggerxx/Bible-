@@ -1,0 +1,75 @@
+{
+ "id": "05-001-026",
+ "title": "Israel’s Rebellion",
+ "refs": [
+  "Deuteronomy 1:26-33"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5001031,
+   "end": 5001031,
+   "ref": "Deuteronomy 1:31",
+   "ranges": [
+    [
+     5001031,
+     5001031
+    ]
+   ],
+   "title": "\"The LORD Your God Carried You\"",
+   "key_verse": [
+    5001031,
+    5001031
+   ],
+   "reflect": [
+    {
+     "text": "Life can bring seasons of heavy trouble, sudden disappointments, and endless busyness. In those times, we can feel like we are running on empty. It is easy to slide into self-reliance and try to handle every problem in our own power, but that only leads to exhaustion and discouragement. God never expects His children to navigate difficult roads by their own strength alone.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Moses reminded the people of Israel how God cared for them in the desert. God did not simply watch from far away or give directions from a distance. Instead, He personally lifted them up. Just as a loving earthly father carries a son who is tired, hurt, or afraid, the Lord bore their burdens and carried them through the wilderness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God invites you into that same loving embrace today. His sustaining love never changes, and He continues to supply the strength you lack in every season. When your path feels overwhelmingly heavy, you can rest in His care, knowing He promises to carry you the rest of the way.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what part of your life today are you trying to rely only on your own strength?",
+    "How does knowing that God carries you like a father help you rest when life feels heavy?"
+   ],
+   "prayer": "Heavenly Father, thank You for loving us and lifting us up when we are tired and weak. Forgive us when we forget Your care and try to carry heavy burdens on our own. Please hold us in Your gentle embrace and supply the strength we need for today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Sarah Frazer",
+     "work": "The Kind of Love That Carries You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-kind-of-love-that-carries-you-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Meredith Brock",
+     "work": "The Reminder You Need When Life Feels Heavy",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-may-27-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

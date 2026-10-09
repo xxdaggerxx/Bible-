@@ -1,0 +1,153 @@
+{
+ "id": "07-015-001",
+ "title": "Samson’s Revenge",
+ "refs": [
+  "Judges 15:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 7015018,
+   "end": 7015018,
+   "ref": "Judges 15:18",
+   "ranges": [
+    [
+     7015018,
+     7015018
+    ]
+   ],
+   "title": "\"Must I Now Die of Thirst?\"",
+   "key_verse": [
+    7015018,
+    7015018
+   ],
+   "reflect": [
+    {
+     "text": "After winning a huge victory over a thousand Philistines, Samson was suddenly brought down by a basic physical need. His throat went dry, and he felt like he was going to die. It often happens that after a great spiritual triumph, a small daily trouble suddenly feels completely overwhelming to us. Charles Spurgeon noted that the Lord often does this to \"teach us our littleness, our nothingness, in order to keep us within bounds.\" Feeling utterly weak right after a success is a normal part of walking with God.",
+     "sources": [
+      "D1",
+      "D6"
+     ]
+    },
+    {
+     "text": "Our busy days and heavy burdens can quickly drain us of all our energy. When we try to keep going on our own strength, we soon hit a wall and burn out. Samson had just boasted about his own strength, but his extreme thirst forced him to stop and turn to the Lord in prayer. He remembered that God was the true source of his deliverance.",
+     "sources": [
+      "D1",
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "When you reach the end of yourself and feel parched, God knows exactly what you need. As F. B. Meyer reminds us, God can cause living water to spring up even in the dry wilderness. The Lord who carried you through past battles will not abandon you to your present weakness. When you cry out to Him in your weariness, He provides the quiet refreshment your soul needs.",
+     "sources": [
+      "D1",
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what recent moments of exhaustion have you felt overwhelmed by ordinary daily needs?",
+    "How can turning to God in your weakness help keep you from relying on your own strength?"
+   ],
+   "prayer": "Lord, thank You for carrying us through our greatest struggles and for sustaining our lives. Forgive us when we boast in our own strength or panic when simple needs drain our energy. Refresh our thirsty hearts today, and teach us to depend fully on Your faithful care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 21",
+     "on": "Judges 15:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Judges 15:18",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D5": {
+     "author": "Luann Prater",
+     "work": "My Thirsty Heart",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/my-thirsty-heart-encouragement-caf-december-31-2018.html"
+    },
+    "D6": {
+     "author": "Alistair Begg",
+     "work": "Weakness in Triumph",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-january-21-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 7015001,
+   "end": 7015020,
+   "ref": "Judges 15:1-20",
+   "ranges": [
+    [
+     7015001,
+     7015020
+    ]
+   ],
+   "title": "God's Deliverance Through Flawed Hands",
+   "key_verse": [
+    7015014,
+    7015014
+   ],
+   "reflect": [
+    {
+     "text": "Samson was not motivated by a pure desire to honor God or rescue Israel. Instead, he was driven by anger and a personal vendetta against the Philistines. At the same time, the leaders of Judah had grown comfortable living under enemy oppression. Out of fear and spiritual compromise, they chose to bind their own deliverer and hand him over to maintain peace with their enemies. This tragic choice points ahead in Scripture to the day when religious leaders handed Jesus over to Rome to protect their own position.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Yet human sin and cowardice cannot stop God's redemptive purpose. When Samson was brought to Lehi in chains, the Spirit of the Lord came upon him with power, and his ropes broke like thread. Even though Samson fought for his own reasons, God sovereignly used the conflict to strike a blow against the oppressors of His people.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "This story shows us how merciful and sovereign our God truly is. He does not wait for perfect people or neat situations before He acts. Instead, God enters into our messy lives and accomplishes His good plans through deeply flawed servants. When our faith feels weak and our world feels broken, we can trust that the Lord is still working out His rescue.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When have you seen God bring about good results even through messy circumstances and imperfect people?",
+    "Are there areas in your life where you are tempted to compromise with the world just to keep the peace?"
+   ],
+   "prayer": "Heavenly Father, we praise You because Your saving plans never fail, even when our motives are mixed and our lives are messy. Forgive us for the times we choose comfort and compromise over standing firmly in faith. Thank You for sending Jesus, who was handed over for our sake so that we could be truly set free. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Samson Avenges Himself on the Philistines",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/samson-avenges-himself"
+    },
+    "D4": {
+     "author": "Davy Ellison",
+     "work": "When God’s Victory Hides Under the Mess",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/victory-under-mess/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

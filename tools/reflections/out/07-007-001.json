@@ -1,0 +1,74 @@
+{
+ "id": "07-007-001",
+ "title": "Gideon’s Army of Three Hundred",
+ "refs": [
+  "Judges 7:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7007001,
+   "end": 7007008,
+   "ref": "Judges 7:1-8",
+   "ranges": [
+    [
+     7007001,
+     7007008
+    ]
+   ],
+   "title": "God Works Through Our Weakness",
+   "key_verse": [
+    7007002,
+    7007002
+   ],
+   "reflect": [
+    {
+     "text": "Gideon faced a massive enemy army, but God told him he had too many soldiers. The Lord reduced his force from thousands down to just three hundred men. God did this on purpose so Israel could not boast that their own strength had saved them. Gideon's victory depended entirely on God's favor, not on human strategy or military size. By leaving only a helpless few, God made sure everyone would recognize His hand at work.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Today, we often feel outnumbered in a culture that opposes our faith. Yet the Lord often chooses human weakness and humble tools to display His great power. When we stop relying on our own self-sufficiency, we can step out in bold obedience.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of worrying about our numbers or our strength, we are called to stay faithful in spiritual battles. We can commit ourselves to prayer, reading Scripture, living pure lives, and sharing our faith with others. When we make obedience our priority, God will take care of the rest.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you relying on your own strength instead of trusting God?",
+    "How can you focus on simple obedience to God when you feel small or outnumbered?"
+   ],
+   "prayer": "Lord, forgive us when we rely on our own strength and forget our need for You. Help us to trust Your power when we feel small and outnumbered. Teach us to stay faithful in prayer and obedience, leaving the victory in Your hands. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "Strength in (Low) Numbers",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-july-29-2025.html"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "God, Gideon, and Glory",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-12-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

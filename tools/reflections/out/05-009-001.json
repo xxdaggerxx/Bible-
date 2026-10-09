@@ -1,0 +1,116 @@
+{
+ "id": "05-009-001",
+ "title": "Assurance of Victory",
+ "refs": [
+  "Deuteronomy 9:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5009004,
+   "end": 5009004,
+   "ref": "Deuteronomy 9:4",
+   "ranges": [
+    [
+     5009004,
+     5009004
+    ]
+   ],
+   "title": "\"Because of My Righteousness\"",
+   "key_verse": [
+    5009004,
+    5009004
+   ],
+   "reflect": [
+    {
+     "text": "Moses warns God's people never to believe their blessings come from their own goodness. When Israel entered the land, it was not because of their integrity or clean hearts. God drove out the nations of Canaan because of those nations' wickedness. We have no claim on God. Everything He gives us comes through His free grace, which is God's kindness to people who do not deserve it.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "The Lord steps in to rescue a stubborn people and confirm His ancient promises, not to reward our good deeds. As F. B. Meyer reminds us, \"we have no claim on God.\" We did not earn our salvation before coming to faith, and we do not earn His favor afterward. When we stumble, we might fear that God will cast us away. Yet because our standing with Him rests entirely on His mercy in Christ, our failures do not undo His love. This truth takes away all our pride and turns our hearts back to Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever catch yourself thinking God owes you blessings because of your good behavior?",
+    "How does knowing God's favor is an unearned gift give you peace when you fail?"
+   ],
+   "prayer": "Lord God, thank You for Your free grace that we could never earn. Forgive us for our pride and for ever thinking our goodness caught Your eye. Help us to rest in the mercy of Jesus Christ and to live with humble hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 9:4",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "W. Robert Godfrey",
+     "work": "Not Because of Your Righteousness",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/posts/not-because-your-righteousness"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5009001,
+   "end": 5009006,
+   "ref": "Deuteronomy 9:1-6",
+   "ranges": [
+    [
+     5009001,
+     5009006
+    ]
+   ],
+   "title": "Grounded in God's Mercy",
+   "key_verse": [
+    5009006,
+    5009006
+   ],
+   "reflect": [
+    {
+     "text": "When God gives great victories and provides for us lavishly, it is very easy to feel proud. Israel was about to defeat mighty nations with huge, fortified cities and powerful giants. In moments of great triumph, we can easily assume that God is blessing us because we are naturally good. Pride always sets people up for a dangerous fall, whereas humility honestly admits our natural tendency to go wrong.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Moses bluntly confronted the Israelites with their stubborn nature to keep them firmly grounded in reality. God reminds His people of their unworthiness to guard them against destructive self-satisfaction and foolish boasting. He does not want us to become blind to our faults. When we see our true need and receive God's undeserved mercy, genuine gratitude fills our hearts. That thankfulness produces a loving desire to follow and obey Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is pride so dangerous when God gives you success or answers your prayers?",
+    "How does remembering your own weakness help you live with thankfulness toward God?"
+   ],
+   "prayer": "Father in heaven, keep us from being proud and self-satisfied when things go well. Remind us of our weakness so that we do not fall into foolish pride. Fill our hearts with true gratitude for Your mercy, and guide us to obey You out of love. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "Humbling Reality",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/humbling-reality-one-year-devotions-for-men-october-11.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

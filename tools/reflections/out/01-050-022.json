@@ -1,0 +1,83 @@
+{
+ "id": "01-050-022",
+ "title": "The Death of Joseph",
+ "refs": [
+  "Genesis 50:22-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1050022,
+   "end": 1050026,
+   "ref": "Genesis 50:22-26",
+   "ranges": [
+    [
+     1050022,
+     1050026
+    ]
+   ],
+   "title": "Resting on God's Promise of Home",
+   "key_verse": [
+    1050024,
+    1050024
+   ],
+   "reflect": [
+    {
+     "text": "Joseph lived a long life and saw his great-grandchildren grow up. In Egypt, he enjoyed great honor and comfort, and he had protected his family for decades. Yet Joseph knew his death would change everything for them. Charles Spurgeon noted, \"All our Josephs die, and a thousand comforts die with them.\" The people we love and lean on in this world eventually pass away, and life here can quickly become difficult.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Even as death approached, Joseph did not focus on Egypt's temporary security or let fear rule his heart. Our feelings change and can easily mislead us, but God's word remains completely reliable. Joseph knew a better inheritance awaited God's people in Canaan. By asking his brothers to carry his bones with them when they left, he demonstrated real faith in God's promises and the hope of resurrection.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Joseph was certain that the Lord would visit His people, deliver them from hardship, and bring them home. God's faithfulness does not fail, even when the journey takes a very long time. Rather than trusting our own changeable feelings, we can rest knowing that God is steadily leading His people toward the final joy of His kingdom.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When your circumstances or feelings shift, what helps you anchor your trust in God's dependable word?",
+    "Are you holding tightly to temporary comforts, or is your hope set on the eternal home God has promised?"
+   ],
+   "prayer": "Lord God, thank You that Your promises never fail, even when earthly comforts pass away. Forgive us for the times we let changing emotions guide us instead of Your truth. Please give us steady faith to trust Your Word and to follow You all the way home. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 2",
+     "on": "Genesis 50:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Do Your Emotions Lie to You?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-november-14-2023.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Take Me Back to Canaan",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/take-me-back-canaan"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

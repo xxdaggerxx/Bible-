@@ -1,0 +1,66 @@
+{
+ "id": "09-010-017",
+ "title": "Saul Proclaimed King",
+ "refs": [
+  "1 Samuel 10:17-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9010017,
+   "end": 9010027,
+   "ref": "1 Samuel 10:17-27",
+   "ranges": [
+    [
+     9010017,
+     9010027
+    ]
+   ],
+   "title": "Stepping Out and Touched by God",
+   "key_verse": [
+    9010026,
+    9010026
+   ],
+   "reflect": [
+    {
+     "text": "When Samuel presented Saul as king, Saul was hiding among the baggage. God often calls us to duties and purposes that we never sought on our own. Even after God works within us, feelings of being inadequate can make us want to shrink back and hide. Closing the gap between God's inner call and our daily life takes patience and character growth. Facing everyday trials and practicing self-control prepares us to step out of hiding when God's timing arrives.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "After Saul was chosen, brave men went with him because God had touched their hearts. The infinite Almighty God humbles Himself to reach out and make direct, personal contact with human beings. His touch cuts through all our outer layers and reaches straight to the core of who we are, drawing close without destroying us. Because we need His ongoing work in our lives, we can continually pray for God to touch our hearts anew for His glory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are feelings of inadequacy causing you to hide from duties God has given you?",
+    "In what area of your life do you need God to touch your heart today?"
+   ],
+   "prayer": "Lord God, thank You for reaching down to touch our hearts at our very core without consuming us. Please help us not to hide when feelings of weakness tempt us to pull back from Your calling. Build our character through daily trials so we are ready to step forward in Your perfect timing. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "God, Touch Our Hearts",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/god-touch-our-hearts"
+    },
+    "D2": {
+     "author": "Tonilee Adamson and Bobbye Brooks (Daily Disciples Ministries)",
+     "work": "Are You Hiding by the Baggage?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-apirl-6-11572594.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

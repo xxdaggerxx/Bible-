@@ -1,0 +1,66 @@
+{
+ "id": "01-045-009",
+ "title": "Joseph Sends for His Father",
+ "refs": [
+  "Genesis 45:9-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1045009,
+   "end": 1045015,
+   "ref": "Genesis 45:9-15",
+   "ranges": [
+    [
+     1045009,
+     1045015
+    ]
+   ],
+   "title": "Forgiveness and Good News",
+   "key_verse": [
+    1045015,
+    1045015
+   ],
+   "reflect": [
+    {
+     "text": "Joseph had once been rejected by his brothers, but God lifted him up to rule Egypt. In the same way, Jesus was rejected by His own people, but God has exalted Him over all. Joseph wanted to provide for his family and share what he had with them, which illustrates how Jesus freely forgives us and shares His glory. The Christian life means coming to Jesus and then going out into the world. Just as Joseph sent his brothers to announce that he was alive and in power, we are called to share the good news of Christ with those around us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even though God used these human choices for good, the brothers still carried genuine guilt and distress over their past actions. They struggled at first to receive Joseph's pardon because their betrayal was so painful to remember. Joseph met them with gentle patience. Instead of continually bringing up their past offenses, he wept over them and embraced them. A clear sign of spiritual growth is the genuine desire to see broken relationships healed, meeting others with patience and grace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a strained relationship in your life where you need to offer patient forgiveness?",
+    "Who is someone you can tell about the good news of Jesus this week?"
+   ],
+   "prayer": "Heavenly Father, thank You for forgiving us and inviting us to share in the glory of Jesus. Give us hearts that seek peace and healing in our relationships rather than holding past wrongs against others. Help us to go out faithfully and share the good news of Your salvation with those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Talking and Weeping",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/talking-and-weeping"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Are You Going with the Gospel?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-november-10-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "05-031-009",
+ "title": "The Reading of the Law",
+ "refs": [
+  "Deuteronomy 31:9-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5031009,
+   "end": 5031013,
+   "ref": "Deuteronomy 31:9-13",
+   "ranges": [
+    [
+     5031009,
+     5031013
+    ]
+   ],
+   "title": "Gathering to Hear God's Word",
+   "key_verse": [
+    5031012,
+    5031012
+   ],
+   "reflect": [
+    {
+     "text": "Moses told the leaders of Israel to read God's law aloud every seven years during the Feast of Booths. This was a happy harvest festival. While the people stayed in small shelters, they remembered how God had rescued them from slavery by his grace, the free kindness they did not earn. Hearing the law during a festival helped them connect obeying God with joy. God did not give them his commands so they could earn their salvation, but so they could say thank you for his rescue.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Everyone was called to gather and listen, including men, women, foreigners, and little children. Sometimes children, or even adults, seem bored or distracted when Scripture is read. Yet God knows our human limits, and he still chose the reading of his word to shape hearts and minds. Even when we do not see immediate results, Scripture is full of divine power that does not fail. Parents and teachers can keep sharing God's truth patiently, trusting that it will take root.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We do not try to earn God's favor by our own efforts. Instead, true faith rests in Christ and responds with glad obedience. When we gather as a church community to hear Scripture, God teaches all of us, young and old alike, to revere him and follow his ways together in thankfulness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you view following God's word as a heavy duty or as a thankful response to his grace?",
+    "How can you encourage young people or those around you to listen to Scripture, even when results are not immediately visible?"
+   ],
+   "prayer": "Lord God, thank you for your word and for your unearned grace that rescues us. Help us to listen carefully to your truth and follow it with joyful hearts. Give us patience to share your word with others, trusting your power to make it grow. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Binu Samuel",
+     "work": "It Will Pierce Our Souls, Whether We Like It or Not",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-6-2021.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Old Covenant Law",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/old-covenant-law"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

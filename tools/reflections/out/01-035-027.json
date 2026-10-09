@@ -1,0 +1,66 @@
+{
+ "id": "01-035-027",
+ "title": "The Death of Isaac",
+ "refs": [
+  "Genesis 35:27-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1035027,
+   "end": 1035029,
+   "ref": "Genesis 35:27-29",
+   "ranges": [
+    [
+     1035027,
+     1035029
+    ]
+   ],
+   "title": "Isaac's Final Breath and Enduring Faith",
+   "key_verse": [
+    1035029,
+    1035029
+   ],
+   "reflect": [
+    {
+     "text": "Isaac lived a long life, and his death marks the end of his chapter in the biblical story. As his narrative closes, Scripture turns its attention toward the next generation, Jacob's sons. In this moment of loss, Jacob and Esau came together to bury their father. Their shared sorrow highlights the peaceful reconciliation that God had brought about between the two brothers.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Isaac was buried at Hebron, the land where Abraham had stayed. Choosing burial in this specific place was an act of steady faith. Isaac did not live to see the earthly fulfillment of everything God had pledged to do, but he still believed that Canaan was the inheritance God promised to his family.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Isaac's story reminds us that faith is meant to endure across generations. We are called to hold firmly to God's word, even when we must wait for its full completion in the future. We can trust that what God has promised, He will surely accomplish in His time.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does Isaac's steady trust encourage you to believe God's promises even when you cannot yet see the final outcome?",
+    "How can you seek peace and reconciliation with others in your family or community today?"
+   ],
+   "prayer": "Lord God, thank You for Your faithfulness across every generation. Teach us to trust Your word even when we do not yet see all of Your promises completely fulfilled. Grant us hearts that pursue peace and reconciliation with those around us. Keep our eyes fixed on Your enduring truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Isaac's Final Breath",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/isaacs-final-breath"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

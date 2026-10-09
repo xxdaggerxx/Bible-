@@ -1,0 +1,66 @@
+{
+ "id": "01-046-028",
+ "title": "Jacob Arrives in Egypt",
+ "refs": [
+  "Genesis 46:28-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1046028,
+   "end": 1046034,
+   "ref": "Genesis 46:28-34",
+   "ranges": [
+    [
+     1046028,
+     1046034
+    ]
+   ],
+   "title": "A Joyful Reunion in Goshen",
+   "key_verse": [
+    1046029,
+    1046029
+   ],
+   "reflect": [
+    {
+     "text": "After many painful years apart, Jacob and Joseph finally met again. Joseph prepared his royal chariot and went out to embrace his father with tears of relief and love. Even though Joseph held great power in Egypt, he showed deep humility and grace. He had fully forgiven the brothers who had mistreated him. Judah, who had also experienced personal restoration, led the family forward and helped bring them all together.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This tender moment shows the deep human joy of being reunited with those we love. Seeing Joseph alive brought Jacob complete peace, making him feel ready to face death without fear. This points us to the resurrected Christ. Because Jesus rose from the dead and lives, he removes the sting of death for everyone who trusts in him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The story also reminds us of how God heals broken families. As believers, we are called to reflect God's mercy in our daily lives. We can take active steps to pursue peace and reconciliation with estranged family members or friends.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus is alive give you peace when you think about death?",
+    "Is there a friend or family member you need to take steps to make peace with today?"
+   ],
+   "prayer": "Lord God, thank you for the joy of healing and reunion in your mercy. We praise you that Jesus is alive and has taken away the sting of death. Please give us humble hearts to forgive others and take steps toward peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Father and Son Reunited",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/father-and-son-reunited"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

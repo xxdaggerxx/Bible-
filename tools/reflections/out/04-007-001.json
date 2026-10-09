@@ -1,0 +1,66 @@
+{
+ "id": "04-007-001",
+ "title": "Offerings of Dedication",
+ "refs": [
+  "Numbers 7:1-89"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4007001,
+   "end": 4007089,
+   "ref": "Numbers 7:1-89",
+   "ranges": [
+    [
+     4007001,
+     4007089
+    ]
+   ],
+   "title": "Gifts for the Work of God",
+   "key_verse": [
+    4007005,
+    4007005
+   ],
+   "reflect": [
+    {
+     "text": "The tribal leaders were not allowed to serve as priests at the altar, but they found an important way to support God's house. They brought covered wagons and oxen to assist the Levites in moving the tabernacle. Moses distributed these gifts according to what each clan needed. Families carrying heavier frames and curtains received wagons, while the Kohathites received none because they were commanded to carry the most sacred furnishings reverently on their shoulders.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Each leader presented his offering on a separate day over twelve days. Even though every leader brought the exact same list of livestock, silver, gold, and grain, Scripture carefully lists each gift one by one. God did not group them together into a single summary. This reminds us that God sees, values, and remembers every single act of service his people offer.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Giving sacrificially to the Lord's work grows our hearts and stirs a deeper desire to keep serving him. Above all, these offerings point our eyes to Jesus Christ and the complete provision God has made for our salvation.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God notices every individual act of service encourage you today?",
+    "What practical resources or abilities can you offer to support the work of God's people?"
+   ],
+   "prayer": "Lord God, thank you that you see and remember every gift and act of service done for your name. Teach us to give cheerfully and generously to support your kingdom. Keep our eyes fixed on Christ, who provides everything we need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Feb. 15, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-feb-15-2010-11626209.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "02-035-020",
+ "title": "The People Offer Gifts",
+ "refs": [
+  "Exodus 35:20-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2035020,
+   "end": 2035029,
+   "ref": "Exodus 35:20-29",
+   "ranges": [
+    [
+     2035020,
+     2035029
+    ]
+   ],
+   "title": "Willing Hearts and Creative Gifts",
+   "key_verse": [
+    2035021,
+    2035021
+   ],
+   "reflect": [
+    {
+     "text": "God builds His kingdom by stirring the hearts of His people to give. When Moses shared the clear needs for the tent of meeting, the people responded with open hands. They gave willingly out of what they actually possessed, bringing gold, fine yarn, wood, and spices. Serving God was not just about material wealth, either. Skilled men and women freely gave their time and practical craftsmanship. When we trust God to provide for us, we can let go of anxiety and share our resources with joy.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even though God never changes in who He is, His methods remain fresh and creative. We often tend to settle into familiar routines rather than following God into change. Believers are called to imitate God by being flexible and open to new ideas. A heart that is stirred by God does not stay stuck. Instead, a willing spirit is ready to step out into new ventures wherever God leads us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What practical skills, time, or resources can you willingly offer to God today?",
+    "Is God asking you to step out of a comfortable routine into a new venture for Him?"
+   ],
+   "prayer": "Lord, thank You for providing everything we have and for working in fresh, creative ways. Please stir our hearts to share our resources and practical abilities gladly. Help us to stay flexible and ready to follow wherever You lead. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Creativity",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-feb-9-2009-11599190.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Israel's Generosity",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/israels-generosity"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

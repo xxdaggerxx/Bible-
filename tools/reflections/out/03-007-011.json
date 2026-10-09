@@ -1,0 +1,75 @@
+{
+ "id": "03-007-011",
+ "title": "The Peace Offering",
+ "refs": [
+  "Leviticus 7:11-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3007011,
+   "end": 3007021,
+   "ref": "Leviticus 7:11-21",
+   "ranges": [
+    [
+     3007011,
+     3007021
+    ]
+   ],
+   "title": "Joyful Fellowship and Peace with God",
+   "key_verse": [
+    3007012,
+    3007012
+   ],
+   "reflect": [
+    {
+     "text": "The peace offering was a special gift brought to God with a thankful heart. An Israelite could choose to bring this sacrifice willingly to praise God, celebrate being rescued, or thank Him for answered prayers and kept vows. It was a joyful way to show love and gratitude toward God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Unlike many other offerings, this sacrifice became a shared meal between God, the priest, and the worshipper. Eating together showed biblical peace, which means true wholeness, health, and friendship with the Lord. Yet, God gave strict rules about who could eat and how fresh the food had to be. These rules reminded the people that God is completely holy, so we must come to Him with deep reverence and clean hearts, even during times of happy celebration.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This ancient feast points us to Jesus Christ. Through Jesus, we are fully reconciled to God and enjoy lasting peace with Him. We can celebrate this wonderful peace each day, coming to God with both gladness and holy respect.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What blessings or answered prayers can you thank God for today?",
+    "How can you show both joyful celebration and deep respect when you worship God?"
+   ],
+   "prayer": "Heavenly Father, thank You for the peace and friendship we have with You through Jesus Christ. Help us to live with grateful hearts and to remember Your absolute holiness whenever we come to worship You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Peace Offering",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/peace-offering"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 2/3/2001",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-2-or-3-or-2001-550226.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

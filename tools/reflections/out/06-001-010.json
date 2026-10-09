@@ -1,0 +1,68 @@
+{
+ "id": "06-001-010",
+ "title": "Joshua Takes Charge",
+ "refs": [
+  "Joshua 1:10-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6001010,
+   "end": 6001018,
+   "ref": "Joshua 1:10-18",
+   "ranges": [
+    [
+     6001010,
+     6001018
+    ]
+   ],
+   "title": "Stepping Forward in Obedience and Unity",
+   "key_verse": [
+    6001016,
+    6001016
+   ],
+   "reflect": [
+    {
+     "text": "Big changes in life are not random accidents. God uses transitions with a clear purpose to guide His people forward. When it was time to enter the land, God gave Joshua clear directions and a three-day timeline. Joshua did not spend this time making complicated battle plans. Instead, he told the people to get their provisions ready, trusting completely that the Lord would keep His promise and deliver the land. God calls us to obey Him promptly, and seasons of preparation help equip us for each new assignment.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Moving forward also required faithfulness and unity among the tribes. Joshua reminded the Reubenites, Gadites, and Manasseh to keep their promise to fight alongside their brothers. Facing big changes can bring fear, but we find peace and clear direction by staying close to God and stepping out in faith. The people responded with ready obedience and gave their full support to Joshua. In the same way, we are called to stay united and support the leaders God places over us in the church.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you prepare your heart to obey God promptly when He leads you into a new season?",
+    "In what ways can you show support and unity toward the leaders God has placed in your church?"
+   ],
+   "prayer": "Lord God, thank You for guiding our steps through every transition in life. Help us to trust Your timing, prepare faithfully, and obey Your call without delay. Give us unity with our brothers and sisters, and teach us to support the leaders You have placed over us. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Margaret D. Mitchell",
+     "work": "God's Love at Work - Week of April 29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/a-womans-walk/god-s-love-at-work-week-of-april-29.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Israel Accepts Joshua’s Command",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/israel-accepts-joshuas-command"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

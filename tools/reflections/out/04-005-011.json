@@ -1,0 +1,88 @@
+{
+ "id": "04-005-011",
+ "title": "The Adultery Test",
+ "refs": [
+  "Numbers 5:11-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4005011,
+   "end": 4005031,
+   "ref": "Numbers 5:11-31",
+   "ranges": [
+    [
+     4005011,
+     4005031
+    ]
+   ],
+   "title": "God's Care in Times of Suspicion",
+   "key_verse": [
+    4005028,
+    4005028
+   ],
+   "reflect": [
+    {
+     "text": "In the ancient world, an accused wife faced terrible dangers, such as being thrown into rivers or cast out without proof. This law in Numbers protected a woman from a husband's unchecked jealousy and took the matter out of his hands. Because harmless dust and water could not hurt an innocent person, God provided divine protection and public vindication for her before the whole community.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Jealousy and suspicion can quickly damage a marriage. When doubts arise today, couples should not hide behind anger or defensiveness. God calls us to practice honest communication, voluntary accountability, and mutual prayer before Him. Bringing our fears into the open relieves anxiety and helps rebuild fractured trust.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This passage also points us forward to Jesus Christ. He is our great Priest who intercedes for His people and silences our accusers. When we are guilty of secret sins, we do not need to despair. On the cross, Jesus took the curse upon Himself so that we could find complete pardon and mercy.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When jealousy or suspicion enters a relationship, how can open prayer and honest conversation bring healing?",
+    "How does knowing that Jesus took the curse on the cross comfort you when dealing with guilt or accusations?"
+   ],
+   "prayer": "Lord, thank You for being a God of truth who protects the vulnerable. Help us to choose honesty, humility, and prayer whenever trust is tested in our relationships. Thank You that Jesus took our curse on the cross so that we can receive complete forgiveness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "One Year Devotions for Men",
+     "work": "Suspicion",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/suspicion-one-year-devotions-for-men-october-2.html"
+    },
+    "D2": {
+     "author": "Marian V. Liautaud",
+     "work": "Fidelity Check",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/niv-devotions-for-couples/niv-devotions-for-couples-week-of-apr-11.html"
+    },
+    "D3": {
+     "author": "Wendy Alsup",
+     "work": "Is Numbers 5 Unjust to Women?",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/numbers-5-women/"
+    },
+    "D4": {
+     "author": "Angie Velasquez Thornton",
+     "work": "The Case Study of the Jealous Husband of Numbers 5",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/femmes-scriptura/how-to-interpret-difficult-passages-of-scripture-the-case-study-of-the-jealous-husband-of-numbers-5/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

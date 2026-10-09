@@ -1,0 +1,66 @@
+{
+ "id": "01-030-009",
+ "title": "Gad and Asher",
+ "refs": [
+  "Genesis 30:9-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1030009,
+   "end": 1030016,
+   "ref": "Genesis 30:9-16",
+   "ranges": [
+    [
+     1030009,
+     1030016
+    ]
+   ],
+   "title": "Trusting God Rather Than Superstition",
+   "key_verse": [
+    1030014,
+    1030014
+   ],
+   "reflect": [
+    {
+     "text": "The rivalry between Leah and Rachel reached a painful point when Reuben brought home mandrakes from the field. Envy and tension had long troubled their home, and it boiled over during the harvest. Instead of turning to God for help, both sisters placed their hope in these plants, trusting in superstition about fertility. They looked to a wild plant to bring about what only God can give.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In their struggle, the sisters even treated marriage and marital intimacy like a commodity to be bought and traded. Rachel was willing to trade time with her husband to get the plants, while Leah hired Jacob for the night with her son's harvest. Their bargaining shows how easily envy and foolish trust can distort holy relationships and make people seek control through their own schemes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God proved that human superstitions are completely futile. He showed his power by giving a child to Leah, the sister who surrendered the plants. As believers, we must turn away from all superstitious habits and false hopes. Instead, we are called to put our full confidence in God's sovereign will, knowing that our lives and blessings rest in his hands alone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what subtle ways are you tempted to rely on human shortcuts rather than asking for God's blessing?",
+    "How can trusting in God's sovereign will protect your relationships from jealousy and bargaining?"
+   ],
+   "prayer": "Lord, forgive us when we look to worldly remedies and superstition instead of seeking you. Guard our hearts from envy and keep us from treating sacred gifts as things to barter. Help us to put our complete confidence in your sovereign care and to trust your good will.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Reuben's Mandrakes",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/reubens-mandrakes"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

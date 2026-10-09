@@ -1,0 +1,123 @@
+{
+ "id": "04-014-001",
+ "title": "Israel’s Rebellion",
+ "refs": [
+  "Numbers 14:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4014009,
+   "end": 4014009,
+   "ref": "Numbers 14:9",
+   "ranges": [
+    [
+     4014009,
+     4014009
+    ]
+   ],
+   "title": "\"The LORD Is with Us\"",
+   "key_verse": [
+    4014009,
+    4014009
+   ],
+   "reflect": [
+    {
+     "text": "When we come up against huge obstacles, fear quickly clouds our perspective and discourages us. It makes us forget God's proven track record of saving his people. Like Israel standing at the edge of the promised land, we may feel tempted to retreat into the comfort of familiar bondage rather than risk stepping forward in obedience. Yet faith and worry cannot live together in our hearts. In the end, one will always drive the other out.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Our life with God is a spiritual battleground rather than an easy playground. The Lord does not call us to flee from our giants, but to confront them in his name. To overcome daunting troubles, we must admit our own weakness and depend completely on his power. In his hands, terrifying enemies become as simple to consume as bread. Refusing to trust God's promises is far more dangerous than any earthly challenge, and running away only leaves us wandering in a wilderness of regret.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What giant obstacle is tempting you to retreat into old, comfortable habits?",
+    "How can admitting your own weakness help you rely on God's strength today?"
+   ],
+   "prayer": "Lord, help us to confront our fears instead of running back to familiar comforts. When obstacles look like giants, remind us that you are with us and that your power is greater than our weakness. Keep us from turning away from your promises into a wilderness of regret. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "When Fear Overwhelms",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-march-22-2022.html"
+    },
+    "D4": {
+     "author": "Rebekah Montgomery",
+     "work": "Bigger than Giants, Scarier than Fear",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/bigger-than-giants-scarier-than-fear-11552508.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 4014001,
+   "end": 4014012,
+   "ref": "Numbers 14:1-12",
+   "ranges": [
+    [
+     4014001,
+     4014012
+    ]
+   ],
+   "title": "Turning from Grumbling to Trust",
+   "key_verse": [
+    4014011,
+    4014011
+   ],
+   "reflect": [
+    {
+     "text": "When trouble strikes, it is easy for us to grumble just like Israel did in the desert. We complain against the hard things God allows, asking why we have to suffer. Yet as Charles Spurgeon asks, \"Can he treat thee more hardly than thou deservest?\" We were once rebels against God, but he graciously pardoned us. The trials our heavenly Father sends are not meant to harm us, but to act like a fire that burns away impurity from gold. God disciplines us in love as his children to draw us closer to himself, so we should accept his correction instead of murmuring against him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Behind our grumbling lies the deep sin of unbelief, which dishonors the Lord. When we doubt God after all the goodness he has shown us, our distrust is foolish and cruel. Christ has never given us a reason to suspect him, and his resources to care for us are endless. He is like an overflowing fountain that can never run dry. Unbelief is a dangerous traitor that cuts off our close walk with God. We must guard our hearts with diligence and strive with all our might to put this doubt to death.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering God's past mercy help you stop complaining when life is difficult?",
+    "In what area of your life do you need to replace distrust with confidence in God's endless supply?"
+   ],
+   "prayer": "Heavenly Father, forgive us for complaining when your loving correction feels painful. Help us to remember your great mercy in saving us, and keep our hearts from the poison of unbelief. Teach us to rest peacefully in your endless supply and faithful care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 30",
+     "on": "Numbers 14:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 27",
+     "on": "Numbers 14:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

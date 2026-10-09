@@ -1,0 +1,67 @@
+{
+ "id": "06-018-001",
+ "title": "The Remainder Divided",
+ "refs": [
+  "Joshua 18:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6018001,
+   "end": 6018010,
+   "ref": "Joshua 18:1-10",
+   "ranges": [
+    [
+     6018001,
+     6018010
+    ]
+   ],
+   "title": "Mapping Out God's Promises",
+   "key_verse": [
+    6018008,
+    6018008
+   ],
+   "reflect": [
+    {
+     "text": "Joshua sent men out to walk through the land, map it out, and bring back a record of their inheritance. In every generation, God does something similar in His church. As F. B. Meyer writes, God calls us to \"describe the land\" of our spiritual inheritance in Christ. He invites us to look beyond a small, limited faith and see the vast riches and possibilities He has prepared for our daily lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These discoveries are never meant for us alone. Everything we learn along the way, whether through seasons of quiet blessing or through difficult trials, prepares us to help others. When the Lord comforts us in our sorrow, He equips us to comfort those around us. When He shows us His truth and kindness, we can point a wandering friend back to the right path. God saves us and blesses us so that we may join Him in His work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "You do not need to write a book or give a great speech to share what God has provided. You simply need to tell others what the Lord has done for your soul. When we speak honestly about His goodness, we help our brothers and sisters trust God and claim the full life He offers them.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What is one comfort or lesson from God that you can share with someone who is struggling today?",
+    "Who in your life might be encouraged if you told them what God has done for your soul?"
+   ],
+   "prayer": "Lord, thank You for the rich blessings and promises You have given us in Christ. Help us not to keep Your goodness to ourselves, but to use what we have received to comfort and guide others. Give us open hearts and willing words to declare what You have done for our souls. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 18:8",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

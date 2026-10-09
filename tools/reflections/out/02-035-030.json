@@ -1,0 +1,74 @@
+{
+ "id": "02-035-030",
+ "title": "Bezalel and Oholiab",
+ "refs": [
+  "Exodus 35:30-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2035030,
+   "end": 2035035,
+   "ref": "Exodus 35:30-35",
+   "ranges": [
+    [
+     2035030,
+     2035035
+    ]
+   ],
+   "title": "Filled to Create and Serve",
+   "key_verse": [
+    2035031,
+    2035031
+   ],
+   "reflect": [
+    {
+     "text": "We often think of the Holy Spirit only when it comes to preaching or growing in holy living. Yet the very first people the Bible describes as being filled with the Spirit are craftsmen like Bezalel and Oholiab. God created human beings in his image, which includes the ability to make beautiful things. By giving these men artistic skill for the tabernacle, God showed that beauty matters deeply to him and belongs in our worship.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because of this, the church should welcome and encourage artistic gifts alongside teaching and preaching. In God's family, there is a task for each person, whether it seems grand or very quiet and ordinary. As F. B. Meyer wrote, God \"prepares the worker for the work.\" He gives us the exact abilities we need for what he asks us to do, and he always provides more than enough to fulfill his plans.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Israelites brought many different gifts to build God's tent, but they shared one purpose and spirit. God does not expect us to struggle in our own strength. Instead, we are called to place our natural skills and resources into his hands, like instruments waiting for their maker to play them. When we offer ourselves to him, he uses our different talents to accomplish his work together.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What practical skills or creative gifts has God given you to serve others?",
+    "How can you bring your everyday abilities to God this week to honor him?"
+   ],
+   "prayer": "Lord, thank you for making us creative and giving each of us a part to play in your kingdom. Help us to honor all kinds of gifts, including the work of our hands. We offer our skills to you today and ask you to use them for your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 35:31-32",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Holy Spirit and Beauty",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/holy-spirit-and-beauty"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "02-005-015",
+ "title": "The Cry of the Israelites",
+ "refs": [
+  "Exodus 5:15-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2005015,
+   "end": 2005023,
+   "ref": "Exodus 5:15-23",
+   "ranges": [
+    [
+     2005015,
+     2005023
+    ]
+   ],
+   "title": "When Things Get Harder",
+   "key_verse": [
+    2005022,
+    2005022
+   ],
+   "reflect": [
+    {
+     "text": "Moses obeyed God and spoke to Pharaoh, but things immediately became worse instead of better. The people suffered even more, and their leaders blamed Moses with bitter words. Doing what God asks can sometimes leave us feeling misunderstood, hurt, and deeply discouraged when our good intentions are questioned.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In his deep distress, Moses did not turn away from God. Instead, he took his raw, painful questions straight to the Lord. God understands our heavy burdens. He does not scold, shame, or push us away when we come to Him with honest confusion about why life hurts.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When circumstances grow harder, God calls us to hold on with greater patience and faith. Earthly powers are never truly in charge, because God is sovereign and rules over all. We can keep praying persistently and refuse to quit, knowing that Jesus has already won the final victory for us at the cross.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What honest struggles or questions do you need to share openly with God today?",
+    "How can remembering Jesus' victory at the cross help you stay patient when troubles get worse?"
+   ],
+   "prayer": "Lord, when obeying You feels painful or misunderstood, help us bring our honest cries to You. Give us the faith and patience to keep praying and standing firm when troubles increase. Thank You that You remain in control and that our ultimate victory is secure in Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michael Youssef, Ph.D.",
+     "work": "Persistence in the Battle",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-march-29.html"
+    },
+    "D2": {
+     "author": "Charles Swindoll",
+     "work": "Misunderstood",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-november-16-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

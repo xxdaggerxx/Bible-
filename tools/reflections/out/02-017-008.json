@@ -1,0 +1,82 @@
+{
+ "id": "02-017-008",
+ "title": "The Defeat of the Amalekites",
+ "refs": [
+  "Exodus 17:8-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2017012,
+   "end": 2017012,
+   "ref": "Exodus 17:12",
+   "ranges": [
+    [
+     2017012,
+     2017012
+    ]
+   ],
+   "title": "\"His Hands Remained Steady\"",
+   "key_verse": [
+    2017012,
+    2017012
+   ],
+   "reflect": [
+    {
+     "text": "Moses found that praying through a long battle was exhausting work. As Charles Spurgeon observed, holding up our petitions in private is often harder than fighting in public, and even the strongest leaders reach their physical limits. God never intended us to carry heavy burdens or spiritual battles all by ourselves.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When Moses could no longer lift his arms, Aaron and Hur brought a stone for him to sit on and held up his hands until sunset. God places faithful friends, family, and church members alongside us to sustain us. Complete victory came only when Moses let others step in to support him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "To receive help, we must set aside our pride and admit when we are tired. When we notice someone else losing strength, God may call us to be the practical answer to their prayers by holding them up until they persevere.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a burden you are trying to carry alone that you need to let a trusted friend help you bear?",
+    "Who in your church or family is growing weary right now, and how can you help hold up their hands?"
+   ],
+   "prayer": "Lord, thank You for the people You place around us to help us in our weakness. Teach us to be humble enough to accept support when we are tired. Make us ready to step in and encourage others until the battle is won. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 16",
+     "on": "Exodus 17:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Melanie Chitwood",
+     "work": "A Little Help from Friends",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragment-for-today-nov-23-2010-11641714.html"
+    },
+    "D3": {
+     "author": "Rachael Adams",
+     "work": "A Prayer for When You Are Losing Strength",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-when-you-are-losing-strength.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

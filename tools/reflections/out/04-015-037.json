@@ -1,0 +1,68 @@
+{
+ "id": "04-015-037",
+ "title": "The Law of Tassels",
+ "refs": [
+  "Numbers 15:37-41"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4015037,
+   "end": 4015041,
+   "ref": "Numbers 15:37-41",
+   "ranges": [
+    [
+     4015037,
+     4015041
+    ]
+   ],
+   "title": "Reminders to Obey God",
+   "key_verse": [
+    4015039,
+    4015039
+   ],
+   "reflect": [
+    {
+     "text": "Long ago, God told the Israelites to place tassels on the corners of their garments with a blue cord. These tassels were practical visual signs, much like tying a ribbon around a tree to help you remember something important. God knew how easily human eyes and hearts wander after their own desires. Looking down at these tassels reminded the people to listen to God right away, rather than delaying and missing out on His blessings and purposes.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We still face that same battle today between our own immediate wishes and what God asks of us. Our desires frequently pull us in the wrong direction. Setting up simple daily reminders, like verse cards or phone alarms, can help redirect our thoughts toward God. Most of all, believers now look to the cross. Jesus obeyed the law perfectly on our behalf. As we trust in Him, we find help for our daily fight against sin until God brings us to glory, where that struggle will finally be gone forever.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What simple reminder could you set up today to help turn your attention back to God?",
+    "When you feel pulled toward your own selfish desires, how does looking to Jesus help you choose obedience?"
+   ],
+   "prayer": "Lord God, thank You for giving us ways to remember Your truth when our hearts and eyes begin to wander. Please help us not to delay when You guide us to obey. Thank You for Jesus, who kept Your law perfectly for us and gives us strength each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jon Bloom",
+     "work": "No More Whoring",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/no-more-whoring"
+    },
+    "D2": {
+     "author": "Lynn Cowell",
+     "work": "Yellow Ribbon Round Your Tree",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-may-6-2009-11603208.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

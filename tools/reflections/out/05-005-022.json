@@ -1,0 +1,80 @@
+{
+ "id": "05-005-022",
+ "title": "Moses Intercedes for the People",
+ "refs": [
+  "Deuteronomy 5:22-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5005022,
+   "end": 5005033,
+   "ref": "Deuteronomy 5:22-33",
+   "ranges": [
+    [
+     5005022,
+     5005033
+    ]
+   ],
+   "title": "Walking Steadily in the Fear of God",
+   "key_verse": [
+    5005029,
+    5005029
+   ],
+   "reflect": [
+    {
+     "text": "When God revealed His glory in the fire and darkness, the people saw how great He is and how small they were. God often brings us through deep waters and hard roads so that we learn our own weakness. Charles Spurgeon noted that \"self must stand out of the way\" so that God can be exalted. Our trials teach us to see His greatness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The people truly meant to obey, but good intentions are not enough on their own. Like a sick person who wants to walk but lacks the strength, we cannot keep God's commands without His help. God desires our welfare and wants our hearts. To truly follow Him, we must ask the Holy Spirit to fill our hearts with His love.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "With renewed hearts, we are told not to turn to the right or to the left. Looking around at other people brings comparison and distraction from God's path. Like horses that wear blinders to keep from looking aside, we need to keep our eyes fixed on God's Word and on Jesus, walking straight ahead in His ways.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways have difficult times helped you see your own weakness and God's great power?",
+    "Are you letting comparison distract you from following God's Word with a whole heart?"
+   ],
+   "prayer": "Lord God, thank You for showing us Your majesty and for giving us Your Word for our good. Give us clean hearts through Your Holy Spirit, because we cannot obey You in our own strength. Keep our eyes fixed on Jesus so that we do not wander to the right or to the left. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 19",
+     "on": "Deuteronomy 5:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 5:29",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Gwen Smith",
+     "work": "Soul Blinders",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/soul-blinders-girlfriends-in-god-may-29-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

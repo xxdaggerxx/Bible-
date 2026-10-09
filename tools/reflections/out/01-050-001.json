@@ -1,0 +1,66 @@
+{
+ "id": "01-050-001",
+ "title": "Mourning and Burial for Jacob",
+ "refs": [
+  "Genesis 50:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1050001,
+   "end": 1050014,
+   "ref": "Genesis 50:1-14",
+   "ranges": [
+    [
+     1050001,
+     1050014
+    ]
+   ],
+   "title": "Buried in the Promised Land",
+   "key_verse": [
+    1050013,
+    1050013
+   ],
+   "reflect": [
+    {
+     "text": "When Jacob died, Joseph wept openly and mourned for his father. God proved faithful to His promise by letting Joseph be present at his father's death and carry his body back to Canaan. For believers today, the death of a loved one brings real sorrow over our earthly loss. Yet we also have deep joy because we know they are safe and alive in Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The journey to bury Jacob in Canaan was a massive procession out of Egypt. This trip served as an early picture of the future Exodus, when God would lead the whole nation of Israel back into the Promised Land. In an even greater way, it points to how a believer moves through death into the blessing of resurrection life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Grieving loved ones who die in faith gives us a meaningful moment to stop and remember God's truth. While we feel the sadness of separation, our mourning helps us reaffirm our trust that God will raise our bodies from the dead. We can face death with peace because our ultimate home is secure in Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can knowing Christ is our resurrection give you comfort when you face grief?",
+    "In what ways does remembering God's past faithfulness help you trust His future promises?"
+   ],
+   "prayer": "Heavenly Father, thank You for Your faithfulness in both life and death. When we mourn the loss of loved ones, please comfort our aching hearts. Strengthen our trust in the bodily resurrection and the eternal life we have in Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Last Respects for Jacob",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/last-respects-jacob"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

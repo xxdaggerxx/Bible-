@@ -1,0 +1,114 @@
+{
+ "id": "01-047-013",
+ "title": "The Famine Continues",
+ "refs": [
+  "Genesis 47:13-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1047025,
+   "end": 1047025,
+   "ref": "Genesis 47:25",
+   "ranges": [
+    [
+     1047025,
+     1047025
+    ]
+   ],
+   "title": "\"You Have Saved Our Lives\"",
+   "key_verse": [
+    1047025,
+    1047025
+   ],
+   "reflect": [
+    {
+     "text": "When famine threatened Egypt with starvation, Joseph provided the grain people needed to survive. Because he rescued them, the Egyptians gladly offered themselves in service to Pharaoh. F. B. Meyer notes that the people were entirely \"willing to serve their saviour.\" Their grateful reaction points us to Jesus Christ. Jesus does not seek power for its own sake, but to bless and restore us. When we meditate on how He gave His life at Calvary to rescue us from death, we gladly welcome His loving rule over our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Egyptians also showed a healthy pattern of cooperation with their earthly leader. Joseph created a manageable arrangement where the people kept eighty percent of the harvest and gave twenty percent to Pharaoh. Rather than resenting this law, the people expressed deep gratitude to Joseph for preserving their households. This provides a helpful model for how Christians should treat leaders who nourish them. Church leaders carry heavy duties as they shepherd the flock. We support them well when we avoid a critical spirit, cooperate with them, and use our own gifts to serve alongside them.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does reflecting on Christ's sacrifice make you more willing to follow His guidance?",
+    "What is one practical way you can show gratitude and cooperation to your church leaders this week?"
+   ],
+   "prayer": "Lord Jesus, thank You for rescuing us from sin and death through Your sacrifice. We gladly give You our hearts and surrender to Your good rule. Help us also to honor and encourage the pastors and leaders who care for our souls. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 47:25",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Beloved Leader",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/beloved-leader"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1047013,
+   "end": 1047026,
+   "ref": "Genesis 47:13-26",
+   "ranges": [
+    [
+     1047013,
+     1047026
+    ]
+   ],
+   "title": "Leadership with True Integrity",
+   "key_verse": [
+    1047020,
+    1047020
+   ],
+   "reflect": [
+    {
+     "text": "As the severe famine continued, the people of Egypt ran out of money, livestock, and food. In their desperation, they offered their land and their very freedom to survive. Joseph held absolute authority over people who were completely at his mercy. Yet he never abused his position to exploit them. Charles R. Swindoll explains that Joseph \"preserved their dignity and treated them with respect\" by establishing an equitable exchange rather than treating them with contempt.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Joseph understood what it felt like to be helpless. He had lived through betrayal, slavery, and prison before God lifted him to influence. Remembering his own deliverance from bondage reminded him that much is required of those who hold power. True integrity keeps people from taking unfair advantage of others during times of crisis. When God gives us influence over those in need, He calls us to act with fairness, humility, and restraint.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you treat people who are depending on you or are at your mercy?",
+    "How can remembering your own past struggles help you treat others with fairness and respect?"
+   ],
+   "prayer": "Father, thank You for delivering us when we were weak and needy. Guard our hearts so that we never take unfair advantage of others during difficult times. Give us integrity and humility whenever You grant us influence over those around us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "The Test of Integrity",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-october-12-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

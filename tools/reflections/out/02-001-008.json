@@ -1,0 +1,132 @@
+{
+ "id": "02-001-008",
+ "title": "Oppression by a New King",
+ "refs": [
+  "Exodus 1:8-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2001012,
+   "end": 2001012,
+   "ref": "Exodus 1:12",
+   "ranges": [
+    [
+     2001012,
+     2001012
+    ]
+   ],
+   "title": "\"The More They Were Oppressed\"",
+   "key_verse": [
+    2001012,
+    2001012
+   ],
+   "reflect": [
+    {
+     "text": "Pharaoh thought he could wear down God's people with cruel burdens, but his fight was really against the Lord. Earthly powers cannot stop God's sovereign plan to bless and multiply His family. Even under severe hardship in Egypt, the Israelites grew and spread so much that their oppressors began to dread them. Human opposition loses its power when God determines to establish His people.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Throughout history, the church has often seen its greatest growth not in wealth or comfort, but during seasons of hardship and trial. In the same way, we rarely make our deepest spiritual progress when life is completely smooth. As F. B. Meyer observed, \"we grow quickest in the dark.\" When troubles press against us, God works in secret to multiply our patience and holy character.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What hard season in your life has God used to help your faith grow?",
+    "How can you trust the Lord to bring spiritual fruit out of your current struggles?"
+   ],
+   "prayer": "Lord, thank You that no earthly trouble can stop Your good plans for Your people. Help us trust You when our lives feel heavy or difficult. Teach us to remain faithful in the dark, knowing that You are growing our faith and character through every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 1:12",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D4": {
+     "author": "Margaret D. Mitchell",
+     "work": "Magnificent Multiplicity - Part 1 - God's Love at Work - Week of July 5",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/a-womans-walk/magnificent-multiplicity-part1-gods-love-at-work-week-of-july-5.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "No matter how heavy your current struggles feel, God can bring spiritual fruitfulness out of them. When you entrust your painful seasons to the Lord and follow Him in obedience, worldly opposition cannot keep you from growing. God uses even our hardest days to draw us close to Himself and give us lasting joy.",
+     "problem": "Paragraph 3 claims that God uses our hardest days to draw us close to Himself and give us lasting joy, but neither D4 nor the Bible passage teaches this."
+    }
+   ],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 2001017,
+   "end": 2001017,
+   "ref": "Exodus 1:17",
+   "ranges": [
+    [
+     2001017,
+     2001017
+    ]
+   ],
+   "title": "\"The Midwives Feared God\"",
+   "key_verse": [
+    2001017,
+    2001017
+   ],
+   "reflect": [
+    {
+     "text": "Pharaoh gave a terrifying command to kill all newborn Hebrew boys, but Shiphrah and Puah chose to let them live. Their brave stand came from fearing God rather than the king of Egypt. True fear of God is not a dread of punishment. It is a deep, loving reverence that hates sin and desires to honor the Lord above everyone else.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We often feel tempted to give in to peer pressure or worldly expectations because we fear human disapproval. Real spiritual courage does not come from relying on our own strength. It begins when displeasing God matters far more to us than disappointing people. By honoring God instead of earthly power, these two women chose what was right despite the danger.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Their quiet courage started a chain reaction of faith that reached others. Their example helped inspire Jochebed to hide baby Moses and gave young Miriam courage to speak to royalty. When you choose to obey the Lord rather than give in to fear, your stand can strengthen your family and friends. We can build this same boldness by praying for help and learning from faithful believers in Scripture.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you feel tempted to fear people's opinions more than God's will?",
+    "Who in your family or community might be encouraged when you choose to obey God?"
+   ],
+   "prayer": "Heavenly Father, give us a deep reverence for You that drives away the fear of people. Grant us moral courage to stand for what is right, even when the world pressures us to compromise. May our quiet obedience encourage others to trust and follow You boldly. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Kevin DeYoung",
+     "work": "Oh to Have Faith Like a Hebrew Midwife",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/oh-to-have-faith-like-hebrew-midwife/"
+    },
+    "D3": {
+     "author": "Lynn Cowell",
+     "work": "A Chain of Courage - Encouragement for Today - April 15, 2016",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/a-chain-of-courage-encouragement-for-today-april-15-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

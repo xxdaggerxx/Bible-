@@ -1,0 +1,75 @@
+{
+ "id": "03-024-010",
+ "title": "Punishment for Blasphemy",
+ "refs": [
+  "Leviticus 24:10-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3024010,
+   "end": 3024016,
+   "ref": "Leviticus 24:10-16",
+   "ranges": [
+    [
+     3024010,
+     3024016
+    ]
+   ],
+   "title": "Honoring God's Holy Name",
+   "key_verse": [
+    3024016,
+    3024016
+   ],
+   "reflect": [
+    {
+     "text": "In Leviticus, a man in a fight cursed the name of the Lord. His words showed an audacious, hardened heart and open contempt for God right in the middle of the camp. The severe punishment of death shows that God takes His holiness and honor far more seriously than we often do.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We might feel far removed from this man, but by nature every person lives for self-glory instead of God's glory. Because of this, we all share in the guilt of dishonoring Him, and the law holds us accountable. Yet anyone who feels true sorrow for their sin and longs for pardon has not been left without hope.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our only answer is Jesus Christ. Though He was the only person who honored the Father perfectly, Jesus was condemned under a false charge of blasphemy. On the cross, He took the penalty meant for rebels, giving His righteousness and grace, which is God's undeserved kindness, to all who turn to Him in repentance.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does recognizing our tendency to seek our own glory help us see our need for Jesus?",
+    "What comfort do you find in knowing that Jesus bore the punishment meant for rebels?"
+   ],
+   "prayer": "Holy Father, Your name is worthy of all honor, yet we have often lived for ourselves. Thank You that Jesus took the punishment for our sin on the cross even though He honored You perfectly. Help us to rest in His grace and live for Your praise. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Penalty for Blasphemy",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-penalty-for-blasphemy"
+    },
+    "D2": {
+     "author": "Erik Raymond",
+     "work": "I am the Blasphemer!",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/i-am-the-blasphemer/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

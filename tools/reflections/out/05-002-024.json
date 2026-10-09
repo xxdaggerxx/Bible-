@@ -1,0 +1,67 @@
+{
+ "id": "05-002-024",
+ "title": "The Defeat of Sihon",
+ "refs": [
+  "Deuteronomy 2:24-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5002024,
+   "end": 5002037,
+   "ref": "Deuteronomy 2:24-37",
+   "ranges": [
+    [
+     5002024,
+     5002037
+    ]
+   ],
+   "title": "Stepping Forward within God's Limits",
+   "key_verse": [
+    5002031,
+    5002031
+   ],
+   "reflect": [
+    {
+     "text": "God told Israel to rise up and begin to possess the land before the battle was even won. We often miss out on God's blessings because we hesitate and wait too long. It is easy to hold back in fear when facing difficult territory. Yet many of God's promises require us to step out in active obedience before we see the outcome. When we trust Him and move forward, faith opens the door for God to fight beside us and grant the victory.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even as Israel advanced, God gave them clear limits. They took Sihon's territory, but God told them not to enter the land of the Ammonites. As F. B. Meyer noted, our lives also have \"temporary limitations.\" God sometimes closes doors to certain places of service or keeps us from understanding every mystery right away. Rather than forcing our way into closed paths, we are called to trust His wisdom. We can do our best in what is open to us right now, resting in God's perfect timing.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where is God asking you to step out in bold obedience instead of waiting in fear?",
+    "Are there closed doors or limitations in your life right now that you need to accept with trust?"
+   ],
+   "prayer": "Lord, give us courage to move forward when You tell us to go. Help us not to hesitate in fear, but to trust that You fight beside us. Teach us also to respect the limits You set in our lives, serving You faithfully right where we are. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Deuteronomy 2:37",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "J. R. Miller",
+     "work": "Streams in the Desert - January 26",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/desert/streams-in-the-desert-january-26th.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

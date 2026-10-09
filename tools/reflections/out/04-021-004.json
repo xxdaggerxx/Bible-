@@ -1,0 +1,126 @@
+{
+ "id": "04-021-004",
+ "title": "The Bronze Serpent",
+ "refs": [
+  "Numbers 21:4-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 4021008,
+   "end": 4021009,
+   "ref": "Numbers 21:8-9",
+   "ranges": [
+    [
+     4021008,
+     4021009
+    ]
+   ],
+   "title": "\"When He Looks upon It, He Shall Live\"",
+   "key_verse": [
+    4021008,
+    4021008
+   ],
+   "reflect": [
+    {
+     "text": "When deadly snakes bit the Israelites, God told Moses to make a bronze serpent and lift it up on a pole. Anyone who looked at it in faith lived. Jesus later explained that this event pointed straight to Him. Just as the serpent was lifted up in the desert, Jesus was lifted up on the cross so that anyone who looks to Him in faith is healed from the deadly poison of sin.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The bronze serpent was not made for healthy spectators. It was set up specifically for people who were bitten and dying. As Charles Spurgeon wrote, \"Jesus died as a real Saviour for real sinners.\" No matter how deeply sin has harmed us, a look of faith to Jesus brings life and restores our relationship with God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The healing came through trusting God's promise, not from the metal snake itself. Years later, Israel made the mistake of turning that pole into an idol and worshiping it. We must be careful to keep our faith in the living Lord rather than in symbols or rituals.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you looked to Jesus on the cross to save you from your sin?",
+    "Are you resting your faith in Jesus alone rather than in outside objects or routines?"
+   ],
+   "prayer": "Lord Jesus, thank You for hanging on the cross to heal us from the poison of sin. Help us to fix our eyes on You each day with simple trust. Keep our hearts from leaning on anything else for our salvation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 10",
+     "on": "Numbers 21:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "Serpent on a Pole - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/serpent-on-a-pole-one-year-devotions-for-men-july-29.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 4021004,
+   "end": 4021009,
+   "ref": "Numbers 21:4-9",
+   "ranges": [
+    [
+     4021004,
+     4021009
+    ]
+   ],
+   "title": "Turning Away from Grumbling",
+   "key_verse": [
+    4021007,
+    4021007
+   ],
+   "reflect": [
+    {
+     "text": "Tough journeys test our patience, and that is what happened to the Israelites. As they traveled through the desert, they grew tired and began speaking against Moses and against God. Instead of appreciating God's steady care, they rejected His gracious provision and complained about their hardships.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God sent venomous snakes as a judgment to show how serious grumbling really is. Complaining is not harmless talk. It is a toxic habit that harms our spiritual lives and spreads bitterness. The pain of the snakebites brought the people to their senses, leading them to confess their sin and ask Moses to pray for them.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When life feels exhausting, do you tend to complain or do you thank God for His care?",
+    "What is one area of your life where you can replace grumbling with contentment today?"
+   ],
+   "prayer": "Father, please forgive us for the times we grumble when the road gets difficult. Help us recognize our complaints as sin and turn back to You quickly. Give us thankful hearts, even in dry and trying seasons. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Jill Briscoe",
+     "work": "Snakebite - One Year Devotions for Women",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/snakebite-one-year-devotions-for-women-january-24.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "Even though God kindly gave them a way to be healed, this painful lesson reminds us to guard our speech. When we go through hard and exhausting seasons, we are called to put away our complaints. Choosing thankfulness protects us from falling into the trap of discontent.",
+     "problem": "Neither the passage nor the devotional mentions thankfulness or teaches that choosing thankfulness protects us from falling into discontent."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

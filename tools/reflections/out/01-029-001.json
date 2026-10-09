@@ -1,0 +1,66 @@
+{
+ "id": "01-029-001",
+ "title": "Jacob Meets Rachel",
+ "refs": [
+  "Genesis 29:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1029001,
+   "end": 1029013,
+   "ref": "Genesis 29:1-13",
+   "ranges": [
+    [
+     1029001,
+     1029013
+    ]
+   ],
+   "title": "God's Quiet Guidance at the Well",
+   "key_verse": [
+    1029010,
+    1029010
+   ],
+   "reflect": [
+    {
+     "text": "Jacob continued his long journey with new purpose and confidence. God had given him great covenant promises at Bethel, which gave him the courage to keep moving forward. When he arrived in the east, he came to a well. God is not mentioned by name in this story, but His quiet providence—His caring guidance over all events—directed Jacob to the exact right spot.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At that very moment, Rachel arrived to care for her father's flock. Her hard work as a shepherdess showed a diligence much like Rebekah's, signaling that the Lord was providing a fitting wife for Jacob. Seeing her, Jacob did not wait around. He took bold action, rolling the heavy stone away from the well's mouth to water his uncle's sheep.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our daily lives often bring unexpected turns, just like Jacob's journey. Even when God's hand seems hidden, we can trust in faith that He is actively guiding our steps and governing our circumstances to carry out His good plans.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering God's promises give you confidence when you face an unknown path?",
+    "In what recent event can you see God quietly working behind the scenes for your good?"
+   ],
+   "prayer": "Lord God, thank You for guiding our steps even when we cannot see what You are doing. Help us to trust Your quiet providence in every circumstance. Give us courage to step forward in faith and follow Your good plan for our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jacob and Rachel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jacob-and-rachel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

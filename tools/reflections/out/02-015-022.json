@@ -1,0 +1,81 @@
+{
+ "id": "02-015-022",
+ "title": "The Waters of Marah",
+ "refs": [
+  "Exodus 15:22-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2015022,
+   "end": 2015027,
+   "ref": "Exodus 15:22-27",
+   "ranges": [
+    [
+     2015022,
+     2015027
+    ]
+   ],
+   "title": "The Lord Who Heals Bitter Waters",
+   "key_verse": [
+    2015026,
+    2015026
+   ],
+   "reflect": [
+    {
+     "text": "Hard trials often arrive right after times of great spiritual victory. Just three days after celebrating God's great deliverance at the Red Sea, the people of Israel faced thirst beside undrinkable water. In our own lives, sudden hardships can tempt us to complain. Yet our genuine needs and anxieties are meant to move us to cry out to God in prayer rather than grumble.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "At Marah, God showed Moses a log that turned the bitter pool sweet, pointing forward to the cross. F. B. Meyer observed that \"the cross means the yielding up of the will.\" When we surrender our own wishes to our wise and loving Father, He makes our heaviest burdens bearable. God uses these desert trials to test our faith and teach us how to walk in faithful obedience.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "The Lord also revealed Himself there as our healer. Our human brokenness reaches far beyond bodily sickness to emotional and spiritual wounds. God's goodness remains steady even when relief does not arrive on our own timetable. Through Jesus, God gives us living water that washes away our sin and offers ultimate, eternal restoration.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When an unexpected difficulty touches your life, do you tend to grumble or take your needs to God in prayer?",
+    "What does it look like for you to surrender your will to God in a bitter or confusing situation right now?"
+   ],
+   "prayer": "Lord, thank You for being the God who heals and cares for all our brokenness. Forgive us when we murmur, and teach us to bring our honest needs to You in prayer. Help us trust Your goodness and yield our will to Yours in every wilderness season. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 15:25",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Melissa Spoelstra",
+     "work": "The Lord Who Heals You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-july-20-2021.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Bitter Made Sweet",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-bitter-made-sweet"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,91 @@
+{
+ "id": "02-032-001",
+ "title": "The Golden Calf",
+ "refs": [
+  "Exodus 32:1-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2032001,
+   "end": 2032035,
+   "ref": "Exodus 32:1-35",
+   "ranges": [
+    [
+     2032001,
+     2032035
+    ]
+   ],
+   "title": "The True Cost of Atonement",
+   "key_verse": [
+    2032031,
+    2032031
+   ],
+   "reflect": [
+    {
+     "text": "The people of Israel used the very gold God gave them to shape an idol. Aaron tried to call this celebration a feast to the Lord, but good intentions cannot excuse worship that ignores God's instructions. An idol is anything we place ahead of God, including our careers, relationships, or anxieties. Like Israel, we are easily tempted to take God's gifts and turn them toward our own desires.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Seeing the severe judgment falling on the camp, Moses stepped forward to plead for his people. He was willing to be blotted out of God's book if it meant Israel could be forgiven. Moses knew that ordinary animal sacrifices could never take away such great sin. Yet Moses' own life could not pay that debt. His selfless prayer points us forward to Jesus Christ, who gave His life on the cross to make true atonement, paying the penalty to bring sinners back to God.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Israel's failure reminds us of our own weakness and our ongoing need for grace, God's undeserved kindness. Because Jesus died in our place, we have full assurance of forgiveness. His finished work frees us from wandering after false gods so we can know Him and worship Him as He truly is.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What gifts or worries in your life are you tempted to place ahead of God?",
+    "How does knowing that Jesus made complete atonement for your sins bring you peace today?"
+   ],
+   "prayer": "Lord God, forgive us for turning Your good gifts into idols and trying to live on our own terms. Thank You for Jesus Christ, who gave Himself so our sins could be fully forgiven. Please clear away our distractions and help us to worship You with all our hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Exodus 32:30",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "On Our Behalf - Truth For Life - July 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-1-2024.html"
+    },
+    "D3": {
+     "author": "Vivian Bricker",
+     "work": "Forgetting Any False “Gods” - The Crosswalk Devotional - August 10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/forgetting-any-false-gods-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "Jon Pentecost",
+     "work": "Reexamining Idolatry: The Golden Calf and False Worship",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/golden-calf-false-worship/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

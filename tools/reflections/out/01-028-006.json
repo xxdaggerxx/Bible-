@@ -1,0 +1,66 @@
+{
+ "id": "01-028-006",
+ "title": "Esau Marries Mahalath",
+ "refs": [
+  "Genesis 28:6-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1028006,
+   "end": 1028009,
+   "ref": "Genesis 28:6-9",
+   "ranges": [
+    [
+     1028006,
+     1028009
+    ]
+   ],
+   "title": "Beyond Outward Appearances",
+   "key_verse": [
+    1028008,
+    1028008
+   ],
+   "reflect": [
+    {
+     "text": "When Esau saw that his father Isaac was displeased with Canaanite women, he tried to fix the problem on his own. Jacob had obeyed their parents and left, so Esau decided to take another wife from Ishmael's family. On the outside, this looked like an act of obedience. Yet Esau was merely trying to gain his father's favor without addressing the deeper issue.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy for outward religious actions to hide an unrepentant heart. Esau wanted the benefits of the covenant blessing, but he felt no real sorrow for turning away from God. When we pursue God's blessings without truly submitting to Him, our efforts become shallow and empty.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God does not want mere pretenses or quick fixes that leave our sins untouched. Instead of trying to satisfy the Lord with surface-level habits, we are called to deal with our sin at its root and give Him our whole heart.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you try to look good on the outside instead of truly turning from sin?",
+    "What does it look like for you to submit your heart genuinely to God today?"
+   ],
+   "prayer": "Lord, search our hearts and reveal where we rely on outward appearances. Forgive us for trying to satisfy You with surface-level changes while holding onto our own ways. Help us to root out sin from our hearts and submit to You with true humility. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Esau's False Piety",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/esaus-false-piety"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

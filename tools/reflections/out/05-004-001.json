@@ -1,0 +1,126 @@
+{
+ "id": "05-004-001",
+ "title": "An Exhortation to Obedience",
+ "refs": [
+  "Deuteronomy 4:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 5004009,
+   "end": 5004009,
+   "ref": "Deuteronomy 4:9",
+   "ranges": [
+    [
+     5004009,
+     5004009
+    ]
+   ],
+   "title": "\"Teach Them to Your Children\"",
+   "key_verse": [
+    5004009,
+    5004009
+   ],
+   "reflect": [
+    {
+     "text": "It is easy for our busy lives to crowd out what God has done. Moses warns us to guard our hearts carefully so we do not forget God's past works. When we make time to recall how God has cared for us, His faithfulness stays fresh and alive in our own hearts.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God also asks us to pass these truths on to the next generation. For parents and mentors, guiding the faith of young people is a sacred responsibility. We do this best by weaving God's Word into ordinary daily routines, living out our faith before them with consistency.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Children learn who God is when we tell them our real stories of His help. We can point out His hand in nature, pray with them over everyday worries, and celebrate when He answers. Sharing these moments helps children discover that God is active, trustworthy, and ready to walk with them too.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What answered prayer or act of God's care can you share with a younger person this week?",
+    "How can you make talking about God a normal part of your everyday family life?"
+   ],
+   "prayer": "Lord God, help me guard my heart so I never forget Your good works. Give me the courage and patience to share Your faithfulness with the next generation. May the children around us come to know and trust You for themselves. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Dr. James Dobson",
+     "work": "Diligent Training",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobsons-parenting-devotional-mar-29.html"
+    },
+    "D3": {
+     "author": "Glynnis Whitwer",
+     "work": "Witness the Work of God to your Children",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-june-8-2005-1334020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 5004001,
+   "end": 5004014,
+   "ref": "Deuteronomy 4:1-14",
+   "ranges": [
+    [
+     5004001,
+     5004014
+    ]
+   ],
+   "title": "A God Near to Us",
+   "key_verse": [
+    5004007,
+    5004007
+   ],
+   "reflect": [
+    {
+     "text": "Moses reminded the people of Israel of something truly special about their God. Other nations worshiped distant idols, but the Lord promised to be close to His people whenever they called on Him. That same promise belongs to us today.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Prayer is not just a way to ask for things we want. At its heart, prayer is simply being with God and enjoying His friendship. When we face times of worry or sorrow, God makes His comfort real and close to us as we speak to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As we spend quiet time in His presence, we begin to know Him more deeply. We learn by experience that He is gentle, patient, and full of fatherly love. He is always listening and ready to welcome us when we reach out.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you pray, do you spend more time asking for help or enjoying God's presence?",
+    "In what recent hard moment did you sense God being close to you?"
+   ],
+   "prayer": "Father, thank You for drawing close to me whenever I call on Your name. Teach me to value quiet fellowship with You above just asking for things. Help me to rest in Your loving presence today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lauren Fletcher",
+     "work": "His Nearness Is What I Needed",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/his-nearness-is-what-i-needed-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

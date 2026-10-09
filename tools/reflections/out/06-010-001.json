@@ -1,0 +1,68 @@
+{
+ "id": "06-010-001",
+ "title": "The Day the Sun Stood Still",
+ "refs": [
+  "Joshua 10:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6010001,
+   "end": 6010015,
+   "ref": "Joshua 10:1-15",
+   "ranges": [
+    [
+     6010001,
+     6010015
+    ]
+   ],
+   "title": "The Lord Fought for Israel",
+   "key_verse": [
+    6010014,
+    6010014
+   ],
+   "reflect": [
+    {
+     "text": "Joshua kept his promise to protect the city of Gibeon when five kings joined forces to attack it. God assured Joshua of victory and intervened with great power. He threw the enemy armies into panic and sent deadly hailstones down from the sky. In response to Joshua's bold prayer, God miraculously extended the daylight so Israel could finish the battle. The Lord showed that He fought for His people.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Scripture notes that there has been no other day like that one. In our everyday lives, we cannot pause time or stop the sun of our own life from setting. As F. B. Meyer points out, we need to faithfully finish the work our Father has given us within our days. Even though our earthly time is limited, God continues to fight for His people today through Jesus Christ. Christ is the light that never sets, holding us secure in His love as His kingdom advances.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What work has God given you to do today that you should not put off?",
+    "How does knowing that God fights for His church through Jesus give you courage?"
+   ],
+   "prayer": "Lord, thank You for hearing our prayers and fighting for Your people. Help us to use our limited time well and do the work You have given us today. Keep our eyes fixed on Jesus, our everlasting light, trusting that Your kingdom will always prevail. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 10:14",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Sun Stands Still",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-sun-stands-still"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "01-031-022",
+ "title": "Laban Pursues Jacob",
+ "refs": [
+  "Genesis 31:22-42"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1031022,
+   "end": 1031042,
+   "ref": "Genesis 31:22-42",
+   "ranges": [
+    [
+     1031022,
+     1031042
+    ]
+   ],
+   "title": "God's Shield Over Jacob",
+   "key_verse": [
+    1031024,
+    1031024
+   ],
+   "reflect": [
+    {
+     "text": "When Laban chased Jacob, he had the power to do him great harm. Yet God stepped in and spoke to Laban in a dream, stopping him in his tracks. Jacob was far from perfect and had often been deceitful. Even so, God guarded him because of His covenant promise to Jacob's family. As F. B. Meyer noted, God placed \"the mantle of His protection around this crafty and deceitful soul.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If God protected Jacob so faithfully, we can be confident He watches over His children today. God places a check on those who oppose us and sets clear limits on our hardships. He keeps His finger on our pulse, never letting our pain exceed what we can bear. He also restrains the evil one, guarding us like sheep entrusted to a faithful shepherd.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Believing in God's guarding care brings true calm. When we remember that our lives are in His hands, we do not have to panic, argue, or try to protect ourselves by our own cleverness. We can simply look past our troubles to the God who sees our affliction and guards our way.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God sets limits on your trials give you comfort today?",
+    "In what area of your life do you need to stop arguing in fear and trust God's protection instead?"
+   ],
+   "prayer": "Lord God, thank You for watching over us even when we are weak and undeserving. Help us remember that You place limits on our trials and keep us safe from harm. Give us quiet, trusting hearts so we can rest in Your care instead of reacting in fear. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 31:24",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

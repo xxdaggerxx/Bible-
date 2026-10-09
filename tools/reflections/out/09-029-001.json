@@ -1,0 +1,75 @@
+{
+ "id": "09-029-001",
+ "title": "The Philistines Reject David",
+ "refs": [
+  "1 Samuel 29:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9029001,
+   "end": 9029011,
+   "ref": "1 Samuel 29:1-11",
+   "ranges": [
+    [
+     9029001,
+     9029011
+    ]
+   ],
+   "title": "Rescued from a Dangerous Trap",
+   "key_verse": [
+    9029011,
+    9029011
+   ],
+   "reflect": [
+    {
+     "text": "David had put himself into a terrible predicament. After living deceitfully among Israel's enemies, he was marching out with the Philistines toward battle against his own people. As F. B. Meyer notes, the Philistine commanders rightly asked, \"What do these Hebrews here?\" David and his men had no business standing with the enemies of the Lord. Sometimes the people of the world notice our compromises and see that we do not belong there before we do.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "David was trapped in a problem of his own making. If he fought against Israel, he would harm God's people, but refusing to fight would turn the Philistines against him. Yet the Lord was already at work. Even though God is not directly mentioned in this chapter, His invisible hand directed human events. He used the suspicion and anger of the Philistine commanders to prompt Achish to dismiss David.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In His providence, God provided an escape for David before he could cause great harm. Even when David's faith had weakened and he had compromised, God did not abandon him. We can take comfort in knowing that the Lord quietly rules over every circumstance to care for His people and lead them out of dangerous situations.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there places or habits in your life where you have compromised and do not belong?",
+    "How does knowing that God's invisible hand directs all events bring you comfort when you face difficult choices?"
+   ],
+   "prayer": "Heavenly Father, forgive us for the times we wander into compromise out of fear or poor judgment. Thank You for Your unseen hand that guides our steps and provides a way of escape when we are trapped. Help us to walk faithfully with You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 29:3",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Philistines Reject David",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/philistines-reject-david"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

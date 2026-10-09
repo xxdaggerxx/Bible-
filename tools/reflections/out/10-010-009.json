@@ -1,0 +1,67 @@
+{
+ "id": "10-010-009",
+ "title": "David Defeats Ammon and Aram",
+ "refs": [
+  "2 Samuel 10:9-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10010009,
+   "end": 10010019,
+   "ref": "2 Samuel 10:9-19",
+   "ranges": [
+    [
+     10010009,
+     10010019
+    ]
+   ],
+   "title": "Leaving the Battle to God",
+   "key_verse": [
+    10010012,
+    10010012
+   ],
+   "reflect": [
+    {
+     "text": "Joab found his army surrounded by enemy battle lines on both sides. To anyone watching, the chances of holding his ground looked very small. Yet Joab did not give up in despair. He made the best plan he could, divided his soldiers wisely, and urged everyone to fight bravely for their people. Then he humbly placed the final result into the hands of the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often face moments when difficult trials seem to hem us in from every direction. Our patience wears thin, our energy fails, and we wonder how we can possibly keep going. In those overwhelming times, human help is not enough. We are invited to turn to God in prayer, trusting that He is ready to bring help when our own power is gone.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we serve God, we can mistakenly think that success depends entirely on how many resources or talents we bring. But as F. B. Meyer points out, God asks only for our faithfulness with what we command, and \"He will do all the rest.\" Our calling is simply to be courageous, do our duty, and trust Him with the outcome.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What hard situation in your life feels overwhelming right now?",
+    "How can you do your best today while trusting God to handle the final result?"
+   ],
+   "prayer": "Lord, when troubles surround me and my strength is small, help me not to lose heart. Teach me to be faithful with the tasks and resources You have given me. I put my worries into Your hands, trusting You to do what is good in Your sight. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 10:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

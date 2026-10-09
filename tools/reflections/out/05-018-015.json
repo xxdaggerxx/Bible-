@@ -1,0 +1,73 @@
+{
+ "id": "05-018-015",
+ "title": "A Prophet Like Moses",
+ "refs": [
+  "Deuteronomy 18:15-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5018015,
+   "end": 5018022,
+   "ref": "Deuteronomy 18:15-22",
+   "ranges": [
+    [
+     5018015,
+     5018022
+    ]
+   ],
+   "title": "A Prophet and Mediator Like Moses",
+   "key_verse": [
+    5018015,
+    5018015
+   ],
+   "reflect": [
+    {
+     "text": "At Mount Sinai, God's people were terrified by His holy fire and voice. They asked for a mediator, someone to stand between them and God so they would not die. God agreed with their request. Instead of letting them look for guidance in pagan practices and fortune-telling, God promised to speak to them through prophets. He also gave them clear tests to tell true prophets from false ones.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This promise was fulfilled in a line of messengers, but it pointed forward to someone far greater. Moses and Jesus belong to a special group of prophets who serve as covenant mediators. Both Moses and Jesus delivered God's revelation, established a covenant, and introduced atonement, which is the way God's people are made right with Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet Jesus is much greater than Moses. As the divine Son of God, Jesus unites God and humanity in Himself. Because He is our perfect mediator, we do not have to shrink back in terror before God. Through Jesus, we can enjoy real and lasting peace with God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways are you tempted to look for guidance outside of God's word?",
+    "How does knowing Jesus is your mediator give you peace as you come to God?"
+   ],
+   "prayer": "Lord God, thank You for speaking to us through Your word and giving us Jesus as our mediator. Thank You that He brought us atonement and reconciled us to You. Help us to listen carefully to His voice and rest in the peace He provides. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Prophet-Mediator",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/prophet-mediator"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible – Deuteronomy 18",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/deut-18-psalm-105-isaiah-45-revelation-15/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

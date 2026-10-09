@@ -1,0 +1,67 @@
+{
+ "id": "04-005-001",
+ "title": "Cleansing the Camps",
+ "refs": [
+  "Numbers 5:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4005001,
+   "end": 4005004,
+   "ref": "Numbers 5:1-4",
+   "ranges": [
+    [
+     4005001,
+     4005004
+    ]
+   ],
+   "title": "God Dwells in the Camp",
+   "key_verse": [
+    4005003,
+    4005003
+   ],
+   "reflect": [
+    {
+     "text": "In the wilderness, God lived right in the middle of Israel's camp. The tabernacle was His tent pitched among their own tents. He took on all the care and protection for their journey, just like a father caring for young children. Because the holy God lived in their midst, the camp had to be kept clean and free from defilement.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, God still dwells with His redeemed people through the Holy Spirit. He is not a distant ruler. He is our ever-present Friend who shares in our struggles, griefs, and daily experiences. The church has become the dwelling place where God lives and walks.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This truth calls us to be thoughtful about how we live together and as individuals. We should make sure nothing in our lives offends or grieves the Lord who stays with us. As F. B. Meyer noted, \"'What will the Holy Spirit think of this?' should be always our first inquiry.\"",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God dwells with you change the way you think about your daily habits?",
+    "Before you make a decision, do you pause to consider what the Holy Spirit thinks of it?"
+   ],
+   "prayer": "Holy Father, thank You for choosing to live among Your people through the Holy Spirit. Forgive us when we allow things into our lives or churches that grieve Your presence. Help us to walk carefully each day and bring honor to Your dwelling place. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 5:3",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

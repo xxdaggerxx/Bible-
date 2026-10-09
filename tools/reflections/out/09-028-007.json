@@ -1,0 +1,95 @@
+{
+ "id": "09-028-007",
+ "title": "Saul and the Medium of Endor",
+ "refs": [
+  "1 Samuel 28:7-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9028007,
+   "end": 9028025,
+   "ref": "1 Samuel 28:7-25",
+   "ranges": [
+    [
+     9028007,
+     9028025
+    ]
+   ],
+   "title": "Turning to God Instead of Compromise",
+   "key_verse": [
+    9028018,
+    9028018
+   ],
+   "reflect": [
+    {
+     "text": "When King Saul faced the Philistines, he was terrified and felt completely alone because God was silent. Instead of repenting of his past sins, Saul disguised himself and visited a medium. He hypocritically turned to the very dark practices he had once outlawed in the land. When our reverence for God shrinks, unconfessed sin clouds our thinking and tempts us to slip back into old compromises.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "God did not approve of Saul's sorcery, but He allowed Samuel to speak to announce the king's final judgment. Samuel reminded Saul that his failure to obey the Lord had brought this ruin. Yet, as F. B. Meyer writes, even then \"the gates of God's love stood open\" if Saul had only sought mercy. Instead of turning to God in humble faith, Saul remained trapped in fear and collapsed to the ground.",
+     "sources": [
+      "D1",
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel afraid or distant from God, do you turn back to old compromises or run to Him for mercy?",
+    "Is there an unconfessed sin you need to bring to the Lord today?"
+   ],
+   "prayer": "Lord, forgive us when we choose our own way and let unconfessed sin build a wall between us. Help us never to seek worldly substitutes when we feel afraid or alone. Draw our hearts back to You in honest repentance, trusting in Your mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 28:18",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Saul’s Final Rejection",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sauls-final-rejection"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 37: 1 Samuel 28:8–19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-37-1-samuel-28-819.html"
+    },
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - April 10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-april-10-2013.html"
+    },
+    "D5": {
+     "author": "Ann Spangler",
+     "work": "A Wicked Sorceress: The Story of the Medium of Endor",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/blog/2015/09/a-wicked-sorceress-the-story-of-the-medium-of-endor/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "Saul shows us the danger of relying on ourselves rather than God. When we face fear or feel cut off from God, looking for substitute guides only brings harm. We are called to wholehearted obedience and honest confession, knowing the Lord is ready to pardon those who return to Him.",
+     "problem": "The statement that Saul shows us the danger of relying on ourselves rather than God is drawn from D5 (which is not cited for this paragraph), and is not found in D1, D3, D4, or the passage itself."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

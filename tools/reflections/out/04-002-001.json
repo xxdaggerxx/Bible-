@@ -1,0 +1,67 @@
+{
+ "id": "04-002-001",
+ "title": "The Order of the Camps",
+ "refs": [
+  "Numbers 2:1-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4002001,
+   "end": 4002034,
+   "ref": "Numbers 2:1-34",
+   "ranges": [
+    [
+     4002001,
+     4002034
+    ]
+   ],
+   "title": "Serving God in the Last Place",
+   "key_verse": [
+    4002031,
+    4002031
+   ],
+   "reflect": [
+    {
+     "text": "When God arranged the tribes, Dan was placed at the very end of the line. It might seem like an unimportant spot compared to the tribes marching in front. Yet as Charles Spurgeon observed, those at the rear were just as truly part of God's people as the leaders. They followed the very same guiding pillar of cloud and fire, ate the same manna from heaven, and were journeying toward the same promised home. Even if our place in serving Jesus feels quiet or unnoticed, we share fully in his family and his care.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The rear guard had a very important job to do. They picked up stragglers who were falling behind and gathered lost property along the road. While some people are gifted to push forward into new places, others are needed to restore weary souls and remind the church of old truths. Every place in God's camp has real purpose, and everyday tasks bring rich blessings to the whole community.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Traveling at the back was also dangerous because enemies could attack from behind. In the Christian life, experienced believers are needed to help those who are struggling with doubts or fears. Protecting and encouraging those who trail behind is vital work. God calls us to stand faithfully wherever he places us, keeping watch over anyone who needs help along the way.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Has God placed you in a quiet or behind-the-scenes role, and how can you serve him cheerfully there?",
+    "Who around you is struggling or falling behind in faith, and how can you help protect and encourage them?"
+   ],
+   "prayer": "Lord, thank you that every member of your family is precious to you, no matter where we march in line. Keep us content to serve in humble, quiet places without seeking human praise. Give us tender hearts to look out for those who are weak or discouraged, so that together we reach the home you have promised. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 18",
+     "on": "Numbers 2:31",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

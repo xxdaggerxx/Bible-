@@ -1,0 +1,74 @@
+{
+ "id": "06-015-013",
+ "title": "Caleb’s Portion and Conquest",
+ "refs": [
+  "Joshua 15:13-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6015013,
+   "end": 6015019,
+   "ref": "Joshua 15:13-19",
+   "ranges": [
+    [
+     6015013,
+     6015019
+    ]
+   ],
+   "title": "Faith, Victory, and Living Water",
+   "key_verse": [
+    6015019,
+    6015019
+   ],
+   "reflect": [
+    {
+     "text": "God kept His promise to Caleb and gave him the hill country of Hebron because Caleb trusted Him. Relying on the Lord's presence, Caleb drove out the giants who lived there. He did not live only for himself. He wanted to help his tribe move forward, so he encouraged others to take the town of Debir. Othniel bravely took the challenge, showing the kind of bold faith that looks beyond selfish comfort to honor God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Caleb won his battles, he had good gifts to pass on. When his daughter Acsah asked for water for her dry land, he showed generous fatherly love by giving her both upper and lower springs. In a similar way, F. B. Meyer notes that because Jesus conquered death, He opened heaven and provides rich springs of life for His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We need God's life-giving help in every part of our day. We visit the upper springs during quiet moments of prayer, worship, and rest with God. Then, as we enter the daily rush of work, trials, and burdens, the lower springs are there to supply us with strength. Whether we are rejoicing on a mountain or walking through a hard valley, God gives us fresh water to keep going.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you need God's refreshing springs today, in your quiet prayer time or in your daily tasks?",
+    "How can you take bold risks for God's glory instead of focusing only on your own comfort?"
+   ],
+   "prayer": "Lord, thank You for being with us in every battle we face. Refresh our hearts with Your living water both in our quiet prayers and in our daily work. Help us to trust You boldly and share Your generous blessings with the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joshua 15:19",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Caleb’s Successes",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/calebs-successes"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

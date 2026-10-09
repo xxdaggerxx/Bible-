@@ -1,0 +1,142 @@
+{
+ "id": "08-001-006",
+ "title": "Ruth’s Loyalty to Naomi",
+ "refs": [
+  "Ruth 1:6-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 8001016,
+   "end": 8001017,
+   "ref": "Ruth 1:16-17",
+   "ranges": [
+    [
+     8001016,
+     8001017
+    ]
+   ],
+   "title": "\"Your God Will Be My God\"",
+   "key_verse": [
+    8001016,
+    8001016
+   ],
+   "reflect": [
+    {
+     "text": "Naomi tested Ruth by urging her to return to Moab, expecting her to seek ordinary security among its local gods. Yet during a dark period of history, God worked by His supernatural grace to awaken Ruth's heart. Although she grew up in a pagan culture, she answered Naomi with deep personal faith and made an unwavering, lifelong promise to worship the true God of Israel.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Ruth could only take part in God's redemption by turning her back on her homeland, familiar comforts, and old idols. Her crossroad mirrors Christ's call to each of us. Following Jesus means letting go of worldly ease and self-reliance. Genuine devotion resembles the exclusive love of a bride, living distinctly from the patterns of the surrounding world to stay close to the Lord.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Living by faith demands daily, conscious choices to risk our personal convenience for God's truth. Ruth gave up everything she knew and was brought safely under God's sheltering care. In the same way, we are invited to surrender our own small idols and put Christ above all earthly pursuits.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What familiar comforts or habits might be keeping you from following Christ with your whole heart?",
+    "How can you choose God's kingdom over your own convenience in your daily routine?"
+   ],
+   "prayer": "Lord God, thank You for drawing our hearts to Yourself by Your grace. Help us to turn away from false securities and quiet idols so we may follow Jesus with undivided love. Teach us to trust Your protection and put You first each day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "The Valley of Decision",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-may-12-2024.html"
+    },
+    "D3": {
+     "author": "John MacArthur",
+     "work": "Ruth: Godly Resolve",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B170214/ruth-godly-resolve"
+    },
+    "D4": {
+     "author": "Joan Walker Hahn",
+     "work": "Turning Your Back",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/turning-your-back-encouragement-caf-april-18-2019.html"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "Ruth and Naomi",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ruth-and-naomi"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 8001006,
+   "end": 8001018,
+   "ref": "Ruth 1:6-18",
+   "ranges": [
+    [
+     8001006,
+     8001018
+    ]
+   ],
+   "title": "Cleaving to the Lord in Trials",
+   "key_verse": [
+    8001014,
+    8001014
+   ],
+   "reflect": [
+    {
+     "text": "Both Orpah and Ruth loved Naomi and started on the road to Judah with her. But a real test arrived when Naomi pointed out the hard road ahead and urged them to choose comfort back in Moab. Orpah wept and gave Naomi an affectionate goodbye kiss, choosing ease and returning to her old idols. In contrast, Ruth held fast to Naomi and gave herself completely to the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy to profess love for God when life is pleasant, but trials reveal where our hearts truly rest. Charles Spurgeon wrote that \"the kiss of outward profession is very cheap and easy,\" while genuine loyalty requires a firm decision for truth and holiness. We must ask whether our hearts are truly fixed on Jesus. We are called to count the cost and be willing to face loss for His sake.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Orpah chose worldly ease, faded from the story, and is heard of no more. Ruth gave up everything for God and was brought by grace into the royal line of the King of kings. Any worldly comfort we give up for Christ is tiny compared to the eternal reward He gives. We need the Holy Spirit to help our hearts cling to our Savior rather than resting in outward religion.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to follow the Lord only when things are easy, or do you hold fast to Him in hard times?",
+    "What worldly ease might you need to give up so that your heart is fully devoted to Jesus?"
+   ],
+   "prayer": "Lord Jesus, do not let us settle for mere outward religion or empty words of devotion. By Your Holy Spirit, give us grace to cling to You through every difficulty and test. Help us to count the cost willingly, knowing that the reward of being Yours is greater than all the world offers. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 15",
+     "on": "Ruth 1:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

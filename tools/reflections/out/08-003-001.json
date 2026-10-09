@@ -1,0 +1,114 @@
+{
+ "id": "08-003-001",
+ "title": "Ruth’s Redemption Assured",
+ "refs": [
+  "Ruth 3:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 8003008,
+   "end": 8003009,
+   "ref": "Ruth 3:8-9",
+   "ranges": [
+    [
+     8003008,
+     8003009
+    ]
+   ],
+   "title": "\"Spread the Corner of Your Garment\"",
+   "key_verse": [
+    8003009,
+    8003009
+   ],
+   "reflect": [
+    {
+     "text": "Waiting on God does not mean we must sit by and do nothing. Ruth stepped forward with courage in the night. She asked Boaz to spread his garment over her to rescue Naomi's family line. By asking him to act as a kinsman-redeemer, a relative who buys back family land and protects impoverished relatives, she invited Boaz to become the very answer to the blessing he had spoken over her earlier. In the same way, when we pray for others, we should be ready for God to use our own hands to answer those prayers.",
+     "sources": [
+      "D3",
+      "D1"
+     ]
+    },
+    {
+     "text": "Boaz showed great mercy when he willingly agreed to take on this duty. He gave shelter and help to two poor and helpless widows. His kindness points us forward to Jesus, who is our ultimate Redeemer. Just as Ruth came with empty hands asking for help, we come to Jesus in our spiritual poverty. He welcomes us under His protective care, and we can rest peacefully knowing He has fully secured our redemption forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you pray for someone in need, are you willing to be the person God uses to help them?",
+    "How does knowing that Jesus protects and redeems you give you peace today?"
+   ],
+   "prayer": "Lord Jesus, thank You for welcoming us in our spiritual poverty and covering us with Your grace. Help us not to be passive, but to trust You with bold faith. Please use our lives to bring Your comfort and help to others in need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "The Kinsman-Redeemer",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-november-1-2024.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Ruth Asks Boaz to Redeem Her",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ruth-asks-boaz-to-redeem-her"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 8003001,
+   "end": 8003018,
+   "ref": "Ruth 3:1-18",
+   "ranges": [
+    [
+     8003001,
+     8003018
+    ]
+   ],
+   "title": "A Woman of Noble Character",
+   "key_verse": [
+    8003011,
+    8003011
+   ],
+   "reflect": [
+    {
+     "text": "Ruth's visit to the threshing floor at night was a risky and vulnerable step. Yet her actions were guided entirely by pure motives, honor, and loyal love. She did not choose a path of selfish independence or seek merely to protect herself. Instead, she had already built a name in the town through her quiet courage, hard work, and sacrificial devotion to Naomi.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because of her faithful track record, Boaz and the whole town knew her as a woman of noble character. Her bold initiative was not manipulative; it was a humble and godly invitation for Boaz to pursue her and fulfill his role. True godliness shows itself through steady, selfless love that gives others confidence in our integrity.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are your daily choices building a reputation for faithful, selfless love among those around you?",
+    "What helps you take courageous steps to care for others rather than focusing only on your own safety?"
+   ],
+   "prayer": "Heavenly Father, give us the kind of quiet courage and sacrificial love that Ruth showed. Guard our hearts so that our motives remain pure and honorable before You and others. Help us to work faithfully and live with godly integrity every day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Marshall Segal",
+     "work": "A Worthy Wife to Be: Tracing the Rare Beauty of Ruth",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/a-worthy-wife-to-be"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

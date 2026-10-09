@@ -1,0 +1,67 @@
+{
+ "id": "02-020-022",
+ "title": "Idolatry Forbidden",
+ "refs": [
+  "Exodus 20:22-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2020022,
+   "end": 2020026,
+   "ref": "Exodus 20:22-26",
+   "ranges": [
+    [
+     2020022,
+     2020026
+    ]
+   ],
+   "title": "No Human Tools on God's Altar",
+   "key_verse": [
+    2020025,
+    2020025
+   ],
+   "reflect": [
+    {
+     "text": "God told His people to build altars using earth or simple, uncut stones. He warned that using a tool or chisel on the stone would make the altar unclean. Charles Spurgeon explains that God wanted an altar with \"no trace of human skill or labour\" upon it. Human wisdom often wants to reshape God's truth to make it fit human tastes. When we do that, we do not improve God's message; we only spoil it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our proud hearts often want to have a hand in saving ourselves. We like to think our good deeds, our special feelings, or our deep sorrow for sin help make us acceptable to God. But trying to add our own efforts to what Jesus did is like striking God's altar with a hammer. Christ's sacrifice on the cross is already finished. We cannot add anything to what God already finds completely pleasing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We are also warned not to alter the truths taught in the Bible. It is easy to trim and adjust God's words so they fit neatly into our own ideas, but that shows a lack of trust. Instead of trying to smooth down the rough edges of Scripture with human cleverness, we are called to drop our tools, fall on our knees, and rest in Jesus alone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways are you tempted to rely on your own good deeds rather than resting completely in Jesus?",
+    "Are there teachings in God's Word that you find yourself trying to reshape to fit your own opinions?"
+   ],
+   "prayer": "Lord God, thank You for the finished work of Jesus on the cross. Forgive us for the times we try to add our own pride and effort to what You have made complete. Help us put down our own tools, accept Your truth as it is, and trust quietly in Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 14",
+     "on": "Exodus 20:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

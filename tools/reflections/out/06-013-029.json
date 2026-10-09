@@ -1,0 +1,66 @@
+{
+ "id": "06-013-029",
+ "title": "Manasseh’s Eastern Inheritance",
+ "refs": [
+  "Joshua 13:29-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 6013029,
+   "end": 6013033,
+   "ref": "Joshua 13:29-33",
+   "ranges": [
+    [
+     6013029,
+     6013033
+    ]
+   ],
+   "title": "The Lord Is Our Inheritance",
+   "key_verse": [
+    6013033,
+    6013033
+   ],
+   "reflect": [
+    {
+     "text": "When the land was divided east of the Jordan, the clans of Manasseh received many cities and wide regions of land. Yet the tribe of Levi received no physical territory at all. From a worldly point of view, it might have looked like they were left empty-handed. But God gave the Levites something far superior by giving them Himself as their portion.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Human consumerism pushes us into an endless cycle of always wanting just a little more. We are easily tempted to believe that owning more stuff will finally make us happy. Yet true contentment never comes from what we own. It comes only when we trust God's sovereign care and His perfect wisdom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As believers, we share in this exact same promise today. We do not need earthly riches to be secure or joyful. God gives us Himself as our greatest gift, and we can find our complete satisfaction in Him alone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever find yourself caught in the cycle of wanting just a little more to feel happy?",
+    "How does knowing that God Himself is your portion help you feel content today?"
+   ],
+   "prayer": "Lord, thank You for being our true portion and greatest treasure. Forgive us when we look to material things for happiness instead of resting in Your wisdom. Teach our hearts to find complete satisfaction in You alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Burk Parsons",
+     "work": "Our Glorious Inheritance in Christ",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-glorious-inheritance-christ"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

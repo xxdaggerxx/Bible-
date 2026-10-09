@@ -1,0 +1,81 @@
+{
+ "id": "04-004-001",
+ "title": "The Duties of the Kohathites",
+ "refs": [
+  "Numbers 4:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4004001,
+   "end": 4004020,
+   "ref": "Numbers 4:1-20",
+   "ranges": [
+    [
+     4004001,
+     4004020
+    ]
+   ],
+   "title": "Faithful in the Tasks God Gives",
+   "key_verse": [
+    4004019,
+    4004019
+   ],
+   "reflect": [
+    {
+     "text": "God gave the Kohathites a specific and holy duty. They were assigned to carry the sacred furnishings of the tabernacle after the priests carefully wrapped them. Because God is completely pure and holy, this work was solemn and could never be treated carelessly. Serving God remains a sacred calling, yet we can come near with confidence because Jesus serves as our covering who takes away judgment.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Each family had its own work, and no job given by God is small or unimportant. It can be tempting to look for visible status or to wish for someone else's leadership role, but division begins when we chase personal glory instead of doing what God asked. F. B. Meyer noted that our \"appointed place cannot be left vacant\" without putting our service in peril.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God gives each of us our own responsibilities that we cannot simply pass on to others. Whether our calling involves quiet, heavy lifting behind the scenes, caring for neighbors, or praying daily for the church, we are invited to serve as his helpers. True contentment comes when we gladly accept our place and carry our load with joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there times when you wish for a more visible role instead of the task God has given you?",
+    "How can you carry out your daily work and prayers for others with greater reverence and joy?"
+   ],
+   "prayer": "Lord, thank you for giving each of us a meaningful part to play in your kingdom. Help us to be content with our assigned tasks and to treat your holiness with deep reverence. Teach us to carry our daily responsibilities and our prayers for others with quiet faithfulness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 4:19",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Jill Briscoe",
+     "work": "Called to Carry",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/called-to-carry-one-year-devotions-for-women-january-20.html"
+    },
+    "D3": {
+     "author": "Zac Hicks",
+     "work": "Worship Leaders as Kohathites: Called to Serve in Most Holy Things",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/worship-leaders-as-kohathites-called-to-serve-in-most-holy-things/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "09-015-024",
+ "title": "Saul’s Confession",
+ "refs": [
+  "1 Samuel 15:24-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9015024,
+   "end": 9015035,
+   "ref": "1 Samuel 15:24-35",
+   "ranges": [
+    [
+     9015024,
+     9015035
+    ]
+   ],
+   "title": "True Repentance or Saving Face",
+   "key_verse": [
+    9015030,
+    9015030
+   ],
+   "reflect": [
+    {
+     "text": "When King Saul was confronted for disobeying God, he quickly admitted that he had sinned. Yet his confession did not come from genuine sorrow toward the Lord. Instead, Saul was driven by fear of the consequences. He made excuses for his failure by blaming his own people, and he asked Samuel for pardon rather than dealing directly with God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Saul was mainly focused on protecting his public reputation. He begged Samuel to return with him so that the elders and the nation would still respect him. When Saul grabbed Samuel's robe and tore it, Samuel used that torn hem as a clear lesson: God had permanently stripped the kingdom from Saul. Saul cared far more about saving face than about showing real brokenness over his sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This story reminds us what real spiritual health requires. True repentance is not about managing what other people think or trying to avoid trouble. Instead, it means recognizing that our sin is an offense against God and truly grieving over it before Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you do something wrong, are you more concerned with what others think or with how it affects your relationship with God?",
+    "What would it look like for you to approach God with honest sorrow instead of making excuses?"
+   ],
+   "prayer": "Lord God, help us to be honest when we disobey You. Keep us from making excuses or caring more about our reputation than about Your truth. Give us humble hearts that grieve over our sins and seek Your forgiveness directly. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A False Repentance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/a-false-repentance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

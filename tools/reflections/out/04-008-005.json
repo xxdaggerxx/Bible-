@@ -1,0 +1,66 @@
+{
+ "id": "04-008-005",
+ "title": "Cleansing the Levites",
+ "refs": [
+  "Numbers 8:5-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4008005,
+   "end": 4008022,
+   "ref": "Numbers 8:5-22",
+   "ranges": [
+    [
+     4008005,
+     4008022
+    ]
+   ],
+   "title": "Cleansed and Given to Serve",
+   "key_verse": [
+    4008019,
+    4008019
+   ],
+   "reflect": [
+    {
+     "text": "Before the Levites could begin their work at the tabernacle, God commanded Moses to cleanse them and set them apart. Water was sprinkled on them, their clothes were washed, and sacrifices were made for their sin. Long before this day, God had spared the firstborn sons of Israel during the Passover in Egypt. Because of that rescue, God claimed the firstborn as His own. Now, He took the Levites in their place as His special possession.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Something remarkable happened next. After claiming the Levites for Himself, God gave them back as gifts to Aaron and the community. Their task was to serve near the holy tent so that the rest of the people could remain safe. Under the new covenant, Jesus Christ works in a similar way. He redeems believers from sin, takes us as His own, and then gives us as gifts to build up the church.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This truth gives great dignity to every form of Christian service. When you help your brothers and sisters in faith, you are not simply doing chores. You are serving as someone Christ bought for Himself and placed among His people on purpose. Knowing that we belong to God turns our everyday serving into a holy privilege.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that you belong to Christ change the way you view helping others in the church?",
+    "What are some simple ways God has placed you to serve and care for those around you this week?"
+   ],
+   "prayer": "Lord God, thank You for redeeming us and claiming us as Your own through Jesus Christ. Help us to see that our lives are a gift given to serve and care for Your people. Give us humble hearts and quiet joy as we carry out the work You have set before us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Numbers 8",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/numbers-8-psalm-44-song-of-songs-6-hebrews-6/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

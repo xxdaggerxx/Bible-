@@ -1,0 +1,84 @@
+{
+ "id": "05-008-001",
+ "title": "Remember the LORD Your God",
+ "refs": [
+  "Deuteronomy 8:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5008001,
+   "end": 5008020,
+   "ref": "Deuteronomy 8:1-20",
+   "ranges": [
+    [
+     5008001,
+     5008020
+    ]
+   ],
+   "title": "Remembering the Giver in Every Season",
+   "key_verse": [
+    5008003,
+    5008003
+   ],
+   "reflect": [
+    {
+     "text": "In the desert, God led Israel through hunger and hardship just as a loving father disciplines his children. He provided manna each day to teach them that true life does not come from bread alone, but from every word that comes from the mouth of the Lord. That difficult wilderness was a divine classroom designed to expose what was in their hearts, training them to rely on God rather than their own human effort.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When life becomes comfortable and full of good things, we face a subtle danger. Our fallen nature easily focuses on the gifts while forgetting the Giver who provided them. We can become proud and tell ourselves that our own strength created our wealth. Moses warns us against this self-reliance, reminding us that God alone gives us the ability to produce wealth and keep His covenant promises.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Remembering God's past faithfulness protects us from pride during seasons of success and strengthens us to persevere during hard times. Jesus Himself used these verses to resist temptation, showing that we need God's truth more than physical food. When we store His Word in our hearts daily, we learn to walk with humble gratitude, treasuring Him above any earthly comfort.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In times of comfort or success, what helps you remember that God is the true provider of everything you have?",
+    "How can keeping God's Word in your heart each day protect you from self-reliance during trials and temptations?"
+   ],
+   "prayer": "Lord God, thank You for guiding us with a Father's care through both hardship and abundance. Please forgive us when we grow proud and act as though our blessings come from our own strength alone. Teach us to treasure Your Word above all earthly gifts and to depend humbly on You every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Deuteronomy 8",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/deut-8-psalm-91-isaiah-36-revelation-6/"
+    },
+    "D2": {
+     "author": "J. Reid",
+     "work": "Why Remember?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/why-remember"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Mar. 4, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-mar-4-2010-11627055.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

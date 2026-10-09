@@ -1,0 +1,75 @@
+{
+ "id": "09-002-012",
+ "title": "Eli’s Wicked Sons",
+ "refs": [
+  "1 Samuel 2:12-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 9002012,
+   "end": 9002026,
+   "ref": "1 Samuel 2:12-26",
+   "ranges": [
+    [
+     9002012,
+     9002026
+    ]
+   ],
+   "title": "Growing in Faith Amid Brokenness",
+   "key_verse": [
+    9002026,
+    9002026
+   ],
+   "reflect": [
+    {
+     "text": "Eli's sons abused their priestly authority and showed complete disregard for the Lord. When unfaithful leaders refuse to listen, God's voice can become rare among His people. Yet the failures of spiritual leaders never give us an excuse to compromise our own faith. God still preserves a path of faithful obedience even in times of corruption.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In His grace, God gave Eli an opportunity to mentor young Samuel. At the same time, Hannah provided a lasting influence by teaching her son to depend completely on the Lord. As F. B. Meyer observed, parents shape the inner lives of their children through everyday speech, actions, and prayers, creating lasting habits that stay with them for years.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Samuel grew in the Lord's presence, serving faithfully while others disgraced their calling. Habits of humility, love, and honesty are formed in the quiet routines of daily life. Even when the people around us make poor choices, we can choose to put on godly habits and grow in favor with God and others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you keep your faith strong when leaders or people around you fail to do what is right?",
+    "What daily habits of love and humility are you building in your home and routine today?"
+   ],
+   "prayer": "Lord, help us to honor You even when others around us turn away from Your truth. Teach us to build daily habits of humility, kindness, and obedience. Guard our hearts against compromise, and help us grow faithfully in Your presence each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Samuel 2:19",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 7: 1 Samuel 2:12–26",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-7-1-samuel-2-1226.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

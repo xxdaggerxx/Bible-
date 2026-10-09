@@ -1,0 +1,66 @@
+{
+ "id": "05-001-001",
+ "title": "The Command to Leave Horeb",
+ "refs": [
+  "Deuteronomy 1:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 5001001,
+   "end": 5001008,
+   "ref": "Deuteronomy 1:1-8",
+   "ranges": [
+    [
+     5001001,
+     5001008
+    ]
+   ],
+   "title": "Time to Move Forward",
+   "key_verse": [
+    5001006,
+    5001006
+   ],
+   "reflect": [
+    {
+     "text": "God told the people of Israel that they had stayed at Mount Horeb long enough. A journey that should have taken only eleven days had stretched into forty years of desert wandering because of their past rebellion. They were far behind where God wanted them to be. Even so, God spoke to them and told them it was time to pack up camp and resume their journey.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In our own lives, it is very easy to fall into spiritual ruts and stall in our walk with God. We can easily become comfortable staying right where we are instead of growing. Stepping forward in faith often means breaking old habits in our prayer life, our Bible reading, and our efforts to share the good news with others.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God graciously offers us new chances to make progress. Past delays do not mean our journey is over. When we choose to obey God's voice and move forward, we do not go alone. God promises to walk right beside us as we take our next steps toward what He has promised.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your walk with God, such as prayer or reading the Bible, have you felt stuck in a rut?",
+    "What is one step of obedience you can take today to keep moving forward with God?"
+   ],
+   "prayer": "Lord, forgive us for the times we have stayed comfortable instead of following where You lead. Help us break out of spiritual ruts in our prayer and study of Your word. Thank You for Your kindness in giving us fresh starts and for walking beside us each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jill Briscoe",
+     "work": "Breaking a Forty-Year Habit - One Year Devotions for Women",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/breaking-a-forty-year-habit-one-year-devotions-for-women-january-25.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

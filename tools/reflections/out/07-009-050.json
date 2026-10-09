@@ -1,0 +1,66 @@
+{
+ "id": "07-009-050",
+ "title": "Abimelech’s Punishment",
+ "refs": [
+  "Judges 9:50-57"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 7009050,
+   "end": 7009057,
+   "ref": "Judges 9:50-57",
+   "ranges": [
+    [
+     7009050,
+     7009057
+    ]
+   ],
+   "title": "God Brings Justice to the Wicked",
+   "key_verse": [
+    7009056,
+    7009056
+   ],
+   "reflect": [
+    {
+     "text": "Abimelech rose to power through brutal violence, murdering seventy of his own brothers. Often, corrupt leaders inside God's people create a far greater spiritual danger than enemies on the outside. When unchecked, public evil is tolerated within the community, it brings terrible ruin. Yet Abimelech's violent choices never escaped God's notice.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God orchestrated discord between Abimelech and his former allies, the men of Shechem. In the end, these evil partners destroyed each other. At the tower of Thebez, a woman dropped a heavy stone on Abimelech's head, giving him a humiliating death. This brought about the exact curse that Jotham had spoken over him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This account shows us that God remains completely in charge of history. Sin may seem to succeed for a short season, but divine justice will always have the final say. We can trust that God sees every wrong and will repay all wickedness in His own time.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is corrupt leadership inside a community often more harmful than trouble from the outside?",
+    "How does remembering that God will judge all wickedness help you trust Him today?"
+   ],
+   "prayer": "Lord God, help us to guard against sin within our own hearts and communities. Give us wisdom to reject ungodly leaders and unrighteous ways. Thank You that nothing escapes Your sight and that Your justice is always true. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Danger from Within",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/danger-from-within"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

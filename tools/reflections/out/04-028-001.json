@@ -1,0 +1,66 @@
+{
+ "id": "04-028-001",
+ "title": "The Daily Offerings",
+ "refs": [
+  "Numbers 28:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4028001,
+   "end": 4028008,
+   "ref": "Numbers 28:1-8",
+   "ranges": [
+    [
+     4028001,
+     4028008
+    ]
+   ],
+   "title": "Pleasing Offerings to the Lord",
+   "key_verse": [
+    4028002,
+    4028002
+   ],
+   "reflect": [
+    {
+     "text": "In Numbers 28, God commanded His people to present offerings to Him each day, both in the morning and at twilight. These regular sacrifices were not intended to be empty routines. God established them to guide His people toward a grateful recognition of His mercy, His daily protection, and His faithful provision for their lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord shows a gentle, personal interest in receiving worship that pleases Him. An acceptable gift to God is not about following an outward ceremony without any heart. Instead, God cares most about us growing into the people He created us to be, living lives shaped by His grace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we come to God with obedient love and genuine appreciation, we experience real fellowship with Him. Everyday worship becomes a meaningful time to walk closely with our Creator, thanking Him for who He is and what He has done.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show God genuine gratitude for His daily protection and care?",
+    "What helps you move past mere routine into true fellowship with God when you worship?"
+   ],
+   "prayer": "Dear Lord, thank You for Your faithful mercy, protection, and daily provision. Help us to give our lives to You in loving obedience rather than just going through the motions. Draw our hearts into close fellowship with You as we worship You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways - Feb. 25, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-feb-25-2008-11568985.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

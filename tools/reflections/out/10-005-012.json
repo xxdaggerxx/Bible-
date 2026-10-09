@@ -1,0 +1,82 @@
+{
+ "id": "10-005-012",
+ "title": "David’s Family Grows",
+ "refs": [
+  "2 Samuel 5:12-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10005012,
+   "end": 10005016,
+   "ref": "2 Samuel 5:12-16",
+   "ranges": [
+    [
+     10005012,
+     10005016
+    ]
+   ],
+   "title": "Established by God, Tested by Success",
+   "key_verse": [
+    10005012,
+    10005012
+   ],
+   "reflect": [
+    {
+     "text": "David spent fifteen confusing, difficult years on the run before becoming king. When he was finally established in Jerusalem, he knew that his security came entirely from God. David understood that God had not exalted him for personal glory, but for the good of His people. In this, the Lord proved faithful to His covenant promise, His sacred pledge to care for Israel.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Yet right in the middle of this blessing, David took more wives and concubines in Jerusalem. This went directly against God's law in Scripture, which told kings not to multiply wives so their hearts would not wander. While David had stayed strong when hunted in the wilderness, comfort and success brought moral compromise. As F. B. Meyer observed, David sowed seeds that later brought a terrible harvest of sorrow to his family.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Times of unbroken ease can test our hearts even more than seasons of trial. When God blesses us, we must walk carefully and depend on His grace every day. David's moral failures also remind us that earthly leaders always fall short. His weaknesses point us to Jesus Christ, the only sinless and eternal King.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When God gives you success or peace, how can you stay humble and guard against careless choices?",
+    "How does knowing that human leaders fall short lead you to put your ultimate trust in Jesus?"
+   ],
+   "prayer": "Lord God, thank You for Your faithfulness to us through every season. When life is comfortable, help us not to grow careless or forget our need for You. Forgive us when we wander, and keep our eyes fixed on Jesus, our true and perfect King. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 5:13",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 45: 2 Samuel 5:6–12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-45-2-samuel-5-612.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord Establishes David",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-establishes-david"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

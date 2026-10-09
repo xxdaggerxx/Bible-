@@ -1,0 +1,73 @@
+{
+ "id": "03-025-023",
+ "title": "The Law of Redemption",
+ "refs": [
+  "Leviticus 25:23-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 3025023,
+   "end": 3025034,
+   "ref": "Leviticus 25:23-34",
+   "ranges": [
+    [
+     3025023,
+     3025034
+    ]
+   ],
+   "title": "A Second Chance and Our Redeemer",
+   "key_verse": [
+    3025025,
+    3025025
+   ],
+   "reflect": [
+    {
+     "text": "In ancient Israel, hard times could force a poor family to sell their land. Unmanageable debt placed people in deep bondage and threatened their family inheritance. To protect them, God gave laws for property redemption and the Year of Jubilee. These laws kept families from losing everything permanently and offered them a fresh start.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When someone became poor and lost their property, God made a way for a close relative to step in and buy it back. This custom points us to Jesus as our ultimate Redeemer. He did not simply pay a financial cost. Instead, Jesus paid the moral debt of broken promises on the cross, securing an eternal inheritance for us through God's mercy.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because God provided redemption and freedom from debt, we are encouraged to show that same generosity to people around us. Christians can look for real, practical ways to give others a break and help lift the heavy burdens they carry.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus paid your moral debt bring you peace today?",
+    "What practical step can you take to help lift someone else's burden this week?"
+   ],
+   "prayer": "Lord Jesus, thank you for being our Redeemer and paying the debt we could not pay. Help us to rest in the eternal inheritance you bought for us. Teach us to show your kindness by lifting burdens and offering generous help to those in need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Mel Lawrenz",
+     "work": "How to Live the Bible — Forgiving Debt",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/blog/2021/09/how-to-live-the-bible-forgiving-debt/"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Our Kinsman Redeemer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-kinsman-redeemer"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

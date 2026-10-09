@@ -1,0 +1,74 @@
+{
+ "id": "04-014-013",
+ "title": "Moses Intercedes for Israel",
+ "refs": [
+  "Numbers 14:13-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 4014013,
+   "end": 4014019,
+   "ref": "Numbers 14:13-19",
+   "ranges": [
+    [
+     4014013,
+     4014019
+    ]
+   ],
+   "title": "Honoring God's Name and Great Patience",
+   "key_verse": [
+    4014018,
+    4014018
+   ],
+   "reflect": [
+    {
+     "text": "When the people rebelled, Moses had an opportunity to be honored and become the father of a new nation. Yet Moses cared far more about God's reputation than his own advantage. As F. B. Meyer observed, Moses showed a \"noble concern for the credit of God.\" Moses knew surrounding nations were watching. If God destroyed Israel, outsiders would claim the Lord lacked the power to keep His promise. People in the world are still watching our lives today, and our conduct can either draw them closer to God or give them a reason to doubt Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Rather than demanding quick control or an instant solution, Moses asked God to show His true character. The Lord is patient, slow to anger, and full of loyal love. God showed unmatched patience by sparing rebellious Israel, extending mercy while still standing for what is right. He continues to show that same patience with us today, giving people time to turn away from sin and find forgiveness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because God treats us with such patience, we are called to show that same patience to others. Instead of murmuring about our difficulties or making choices that put ourselves first, we can quietly endure tough circumstances. When we choose patience and honor, we help the world see the goodness of our God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How might your everyday actions and words help other people form a higher view of God?",
+    "In what difficult situation do you need to choose patient endurance instead of demanding a quick fix?"
+   ],
+   "prayer": "Lord God, thank You for being slow to anger and abounding in faithful love toward us. Forgive us when we look for quick control or care more about our own gain than Your honor. Help us to reflect Your patience and uphold Your good name in all we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Numbers 14:13",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D2": {
+     "author": "Crosswalk.com",
+     "work": "Patience Is a Virtue",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/patience-is-a-virtue-one-year-devotions-for-men-october-5.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

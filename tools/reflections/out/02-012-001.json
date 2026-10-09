@@ -1,0 +1,128 @@
+{
+ "id": "02-012-001",
+ "title": "The First Passover",
+ "refs": [
+  "Exodus 12:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 2012013,
+   "end": 2012013,
+   "ref": "Exodus 12:13",
+   "ranges": [
+    [
+     2012013,
+     2012013
+    ]
+   ],
+   "title": "\"When I See the Blood\"",
+   "key_verse": [
+    2012013,
+    2012013
+   ],
+   "reflect": [
+    {
+     "text": "The people of Israel were not safe from judgment on their own merits, because sin brings death to everyone. God provided a way out by establishing a substitute to die in their place. It is common to begin by viewing Jesus from a distance, perhaps as an inspiring teacher, or simply as the Lamb of God. True deliverance happens when you make Him your own lamb, trusting Him personally for the forgiveness of your sins.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "On that fearful night, safety did not depend on how brave the family felt inside the house. Charles Spurgeon noted, \"it is the Lord's sight of it which secures my safety.\" Even when your faith feels small or cloudy, your protection is firm because God's gaze never fails. He looks upon the completed sacrifice of His Son, and His justice is entirely satisfied.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you received Jesus as your own personal Savior, rather than just knowing about Him from a distance?",
+    "How does knowing that God looks at Christ's sacrifice bring you peace when your own feelings waver?"
+   ],
+   "prayer": "Lord God, thank You for providing Jesus as our substitute to bear the punishment for our sins. We are grateful that our safety rests on what You see in His sacrifice, and not on the strength of our own feelings. Help us to rest in the peace and pardon You have given us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 5",
+     "on": "Exodus 12:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Saved by Sacrifice",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/saved-by-sacrifice.html"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "The Lamb of God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-daily-devotion-dec-2-2008-11596278.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 2012001,
+   "end": 2012013,
+   "ref": "Exodus 12:1-13",
+   "ranges": [
+    [
+     2012001,
+     2012013
+    ]
+   ],
+   "title": "Sheltered by the Lamb",
+   "key_verse": [
+    2012007,
+    2012007
+   ],
+   "reflect": [
+    {
+     "text": "The final plague struck Egypt to break Pharaoh's stubborn resistance against the Lord. God instructed His people to sacrifice an unblemished lamb and place its blood on their doorframes. This mark showed that a death had already occurred for that household. Under this protection, the people were shielded from destruction, pointing ahead to how Jesus, the sinless Son of God, bore our judgment.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "God did not merely spare His people from death; He brought them out so they could be free to worship and walk with Him. Because we still stumble into sin each day, we cannot keep our relationship with God going by our own good deeds. Our daily walk with Him is sustained entirely because Jesus has already absorbed the curse of sin once and for all.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Christ has already paid your judgment give you freedom to serve God?",
+    "In what ways can you lean on Jesus' sacrifice when you stumble in your daily life?"
+   ],
+   "prayer": "Father, thank You for sending Your sinless Son to bear the death we deserved. Thank You that You have freed us from condemnation so we can walk with You and worship You. Keep our hearts resting in Christ each day, knowing that our judgment is completely behind us. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Michael Youssef",
+     "work": "The Real Battle Foreshadowed",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-may-19-2025.html"
+    },
+    "D5": {
+     "author": "Colin Smith",
+     "work": "Unlocking the Bible: Redemption (Exodus 12:1-13)",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/unlocking-the-bible-redemption-exodus-121-13/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}
