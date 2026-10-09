@@ -1,0 +1,74 @@
+{
+ "id": "01-015-001",
+ "title": "God’s Covenant with Abram",
+ "refs": [
+  "Genesis 15:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1015001,
+   "end": 1015007,
+   "ref": "Genesis 15:1-7",
+   "ranges": [
+    [
+     1015001,
+     1015007
+    ]
+   ],
+   "title": "Trusting God in the Dark",
+   "key_verse": [
+    1015006,
+    1015006
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes we face uncertain times where the path ahead feels completely dark. Abram knew this feeling well. He struggled with fear and doubt because his natural circumstances seemed impossible. He had no children, and he wondered how God's promises could ever come true. Yet the Lord met him in that place, promising to be his personal shield and his greatest reward.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "To help Abram see beyond his doubts, God led him outside into the night and told him to count the stars. Abram could not count them all, and God told him his offspring would be just as vast. Looking up reminded Abram of the Creator's immense power. Abram chose to take God at His word, and God counted his faith as righteousness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Believers can find great comfort knowing that God guards and preserves us through every trial. His promises are real, leading to lasting restoration rather than abstract ideas. Even when we cannot see what lies ahead, turning our eyes toward God gives us the perspective we need to trust Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When your circumstances seem impossible, what helps you remember God's power?",
+    "How does knowing God is your protector help you trust Him today?"
+   ],
+   "prayer": "Lord, thank You for being our shield and protector through every dark season. When we doubt or cannot see the way forward, help us look to Your power and trust Your word. Teach us to rest safely in Your faithful care each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Abram's Shield",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/abrams-shield"
+    },
+    "D2": {
+     "author": "Rachel Wojo",
+     "work": "When You Can’t See the Road Ahead",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-july-23-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

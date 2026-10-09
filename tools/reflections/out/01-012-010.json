@@ -1,0 +1,75 @@
+{
+ "id": "01-012-010",
+ "title": "Abram and Sarai in Egypt",
+ "refs": [
+  "Genesis 12:10-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1012010,
+   "end": 1012020,
+   "ref": "Genesis 12:10-20",
+   "ranges": [
+    [
+     1012010,
+     1012020
+    ]
+   ],
+   "title": "God's Grace When We Fall Short",
+   "key_verse": [
+    1012017,
+    1012017
+   ],
+   "reflect": [
+    {
+     "text": "Even a great person of faith like Abram can stumble. When a severe famine struck the land, Abram felt afraid. Instead of turning to God in prayer, he took matters into his own hands and went to Egypt. Fear led him to compromise his integrity and hide the fact that Sarai was his wife, hoping to protect his own life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Abram's deceptive plan quickly brought trouble. His lie placed Sarai in Pharaoh's palace, but God intervened by sending severe plagues on the royal household. When the deception was uncovered, Abram faced a sharp rebuke from an unbelieving ruler before being sent away. Like Abram, we also fall short and make poor choices when we let fear guide us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet Abram's lack of faith could not ruin God's overarching purpose. Our human failures cannot stop the Lord's plans or exhaust his grace, which is his kindness toward us that we do not deserve. When our shortcomings come to light, God invites us to confess our sins and receive his ready forgiveness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When hard times arrive, do you tend to pray first or try to fix things on your own?",
+    "How does knowing that God's plans cannot be ruined by our mistakes give you comfort today?"
+   ],
+   "prayer": "Lord, forgive us for the times fear leads us to take matters into our own hands instead of trusting you. Thank you that our failures cannot stop your faithful plans and enduring grace. Help us to bring our fears to you in prayer and walk in your truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Laura Bailey",
+     "work": "The Faithfulness of God When We Are Unfaithful",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-faithfulness-of-god-when-we-are-unfaithful-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "When We Fall Short",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-daily-devotion-november-9.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

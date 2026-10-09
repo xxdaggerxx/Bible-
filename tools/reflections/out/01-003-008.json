@@ -1,0 +1,127 @@
+{
+ "id": "01-003-008",
+ "title": "God Arraigns Adam and Eve",
+ "refs": [
+  "Genesis 3:8-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1003008,
+   "end": 1003008,
+   "ref": "Genesis 3:8",
+   "ranges": [
+    [
+     1003008,
+     1003008
+    ]
+   ],
+   "title": "\"The voice of the LORD God walking\"",
+   "key_verse": [
+    1003008,
+    1003008
+   ],
+   "reflect": [
+    {
+     "text": "When evening comes and the day cools down, God is ready to speak with us. Charles Spurgeon wrote that the Lord is always ready to talk with us whenever we are ready to listen. God delights to walk with His people and bring healing to our hearts. Even if our spiritual life needs correction or tender care, welcoming His presence is what restores us and helps good fruit grow.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet when we disobey, our first reaction is often to pull away. Just as Adam and Eve ducked behind the trees, we also try to run from God. Today, we might not hide in the bushes, but we hide through staying overly busy, shutting down our emotions, or giving God the cold shoulder. We act as if keeping our distance can shield us from our guilt.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Hiding from God never works. He already sees everything we do and understands every corner of our hearts. Genuine relief and peace only return when we stop running. Instead of avoiding our Lord, we are invited to quiet our racing minds, listen for His voice, and open our hearts honestly before Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do you tend to pull away or hide from God when you feel guilty?",
+    "How can you set aside quiet time at the end of the day to listen to God?"
+   ],
+   "prayer": "Lord God, forgive me for the times I try to avoid You and bury my wrongdoing. Quiet my busy thoughts and speak to my heart in tender kindness. Give me the courage to stop hiding and walk closely with You in peace.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 1",
+     "on": "Genesis 3:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Lindsay Tedder",
+     "work": "Hiding from God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/ibelieve-truth-a-devotional-for-women-august-7.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1003008,
+   "end": 1003013,
+   "ref": "Genesis 3:8-13",
+   "ranges": [
+    [
+     1003008,
+     1003013
+    ]
+   ],
+   "title": "God Calls Us to Confess",
+   "key_verse": [
+    1003009,
+    1003009
+   ],
+   "reflect": [
+    {
+     "text": "God is everywhere at all times. Because of this, any human attempt to keep secrets from Him is completely pointless. Yet sin blurs our spiritual sight. It tricks us into believing that our wrong choices can remain covered up, making us foolish enough to think we can conceal our guilt from our Maker.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When God asked Adam, \"Where are you?\", He was not asking for information He lacked. He already knew where Adam was and what had happened. Instead, God's question was a gentle, merciful invitation for Adam to step into the light and admit what he had done.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of being honest, Adam made excuses and pointed the blame at his wife, while Eve blamed the serpent. When God's Word questions us and exposes our sin, we should not harden our hearts or pass the blame. We are called to answer Him with real faith, sorrow for our wrongdoing, and honest confession.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When God exposes a wrong choice in your life, do you make excuses or confess it openly?",
+    "How does knowing God's questions are invitations of mercy help you come clean before Him?"
+   ],
+   "prayer": "Heavenly Father, You know every thought and action before I even speak. Thank You for seeking me out and inviting me to be honest when I fail. Please soften my heart so I do not make excuses, but turn to You in true repentance and faith.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Where Are You?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/where-are-you"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

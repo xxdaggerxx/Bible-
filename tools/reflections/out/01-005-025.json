@@ -1,0 +1,66 @@
+{
+ "id": "01-005-025",
+ "title": "From Methuselah to Noah",
+ "refs": [
+  "Genesis 5:25-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1005025,
+   "end": 1005032,
+   "ref": "Genesis 5:25-32",
+   "ranges": [
+    [
+     1005025,
+     1005032
+    ]
+   ],
+   "title": "Longing for Relief from the Curse",
+   "key_verse": [
+    1005029,
+    1005029
+   ],
+   "reflect": [
+    {
+     "text": "When Lamech had a son, he named him Noah. He hoped this boy would bring comfort from the painful work and toil on the ground God had cursed. From the beginning, God's people were waiting for a promised child who would undo that curse and bring true rest. Lamech's hope pointed toward that deep longing for rescue.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Noah did bring relief in an important way. He walked faithfully with God and built an ark that saved human life during the great flood. Yet Noah was not the ultimate rescuer. Even after surviving the judgment, he fell into sin, showing that he could not fully remove the curse from the world.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Centuries later, Jesus came as the true, blameless Son. He did not escape God's judgment, but endured it on the cross to break the curse once and for all. Today, we can rejoice because Christ has truly arrived to redeem us and bring real rest to our fallen world.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus took the curse upon Himself give you comfort in your daily work?",
+    "In what areas of your life are you resting in Christ's rescue rather than trying to save yourself?"
+   ],
+   "prayer": "Lord God, our world is heavy with the pain and toil of sin. Thank you for sending Jesus, the true Son who bore our judgment on the cross to set us free. Help us to find our rest and hope in Him alone each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jonathan Parnell",
+     "work": "Until the Son of God Appeared",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/until-the-son-of-god-appeared"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

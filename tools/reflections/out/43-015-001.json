@@ -1,0 +1,137 @@
+{
+ "id": "43-015-001",
+ "title": "Jesus the True Vine",
+ "refs": [
+  "John 15:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 43015007,
+   "end": 43015007,
+   "ref": "John 15:7",
+   "ranges": [
+    [
+     43015007,
+     43015007
+    ]
+   ],
+   "title": "\"If You Remain in Me and My Words Remain in You, Ask Whatever You Wish\"",
+   "key_verse": [
+    43015007,
+    43015007
+   ],
+   "reflect": [
+    {
+     "text": "Jesus gives an incredible promise about prayer, but it comes with a condition. We must stay closely joined to Him. Charles Spurgeon described this as remaining in a \"living, loving, conscious, willing union with Him.\" To remain in Jesus means we do not turn our hearts away to love other things more than Him. Our trust stays rooted in Him every day, like a branch drawing steady life from the main stem.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "To stay in Jesus also means His words must live inside us. If we want God to hear our voices when we pray, we must first listen to what Jesus says to us. His teachings and commands cannot merely sit in our heads; they need to guide how we live and act. When we gladly give up our own stubborn desires to follow His words, we begin to want what He wants.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When our lives are united with Christ in this way, our requests in prayer change. We no longer ask for selfish things that lead us away from God. Instead, we pray with confidence, knowing our desires match the heart of Jesus, and the Father is pleased to answer.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you have stopped listening closely to the words of Jesus?",
+    "How might filling your mind with Christ's teachings change what you ask for when you pray?"
+   ],
+   "prayer": "Lord Jesus, help us to stay close to You today and keep our hearts from wandering. Teach us to listen carefully to Your words and obey them. May our thoughts and desires match Your will, so that our prayers honor You and are answered by the Father. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 23",
+     "on": "John 15:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 24",
+     "on": "John 15:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 43015001,
+   "end": 43015008,
+   "ref": "John 15:1-8",
+   "ranges": [
+    [
+     43015001,
+     43015008
+    ]
+   ],
+   "title": "The True Vine and the Gardener",
+   "key_verse": [
+    43015001,
+    43015001
+   ],
+   "reflect": [
+    {
+     "text": "Jesus tells us that He is the true vine and we are the branches. When we first trusted in Him and rested on what He did for us, new spiritual fruit began to grow in our lives. Yet we quickly dry up whenever we try to live by our own strength. As Charles Spurgeon noted, \"from him all my fruit must be found.\" Fruitfulness fades when we drift away from simple trust and quiet prayer, because apart from Christ we can do nothing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In this vineyard, God the Father is the caring keeper who watches over every branch. When a branch is already bearing fruit, He prunes it so that it will bear even more. The knife of the gardener can feel sharp when God allows hard times or trials to trim away what harms us. Yet the Father also uses His Word to gently shape us and cleanse our hearts.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Pruning is never meant to harm us, but to make us more useful and spiritually healthy. Knowing that God is at work brings real comfort. Instead of relying on ourselves, we can lean fully on Jesus, trusting Him to produce lasting fruit that brings glory to the Father.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face difficult trials, how can remembering God's pruning help you trust Him?",
+    "In what ways have you tried to produce spiritual fruit in your own strength rather than depending on Jesus?"
+   ],
+   "prayer": "Father, thank You for caring for us as the wise keeper of the vineyard. When Your pruning feels painful, remind us that You are shaping us to bear more fruit. Keep us clinging to Jesus each day, trusting Him alone for our strength and spiritual life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 13",
+     "on": "John 15:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 9",
+     "on": "John 15:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

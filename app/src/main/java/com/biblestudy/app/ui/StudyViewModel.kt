@@ -185,7 +185,7 @@ data class ExportRequest(val uri: Uri, val pdf: Boolean, val layer: Long? = null
 /** What the study pane beside the Bible panels shows (SPLIT-2). */
 enum class PaneKind(val label: String) {
     SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
-    DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), NAMES("Names & places"),
+    DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), REFLECTIONS("Reflections"), NAMES("Names & places"),
     CUSTOMS("Customs & feasts"), SYMBOLS("Symbols & numbers"),
     SKETCHES("Sketch pages"),
     VERSE("Verse details"), COMPARE("Compare versions"), ORIGINAL("Hebrew/Greek"), WORDSTUDY("Word study"), INTRO("About the book"),
@@ -197,7 +197,7 @@ enum class PaneKind(val label: String) {
         val groups: List<Pair<String, List<PaneKind>>> = listOf(
             "Reading" to listOf(SKETCHES),
             "This verse" to listOf(VERSE, COMPARE, ORIGINAL, WORDSTUDY, CROSSREFS),
-            "Study" to listOf(COMMENTARY, DICTIONARY, TOPICS, NAMES, CUSTOMS, SYMBOLS, INTRO),
+            "Study" to listOf(COMMENTARY, REFLECTIONS, DICTIONARY, TOPICS, NAMES, CUSTOMS, SYMBOLS, INTRO),
             "Notes, search and AI" to listOf(NOTES, SEARCH, CHAT),
         )
     }
@@ -2151,7 +2151,9 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         }
 
     /** The "book" study writing on commentary [id] is kept under (INK-16): one per commentary. */
-    fun commentaryInkBook(id: String): Int = -100 - com.biblestudy.app.data.Commentaries.all.indexOfFirst { it.id == id }.coerceAtLeast(0)
+    fun commentaryInkBook(id: String): Int =
+        if (id == com.biblestudy.app.data.Commentaries.REFLECTIONS) StudyInk.REFLECTION
+        else -100 - com.biblestudy.app.data.Commentaries.all.indexOfFirst { it.id == id }.coerceAtLeast(0)
 
     /** Where a linked commentary was scrolled to by hand: the Bible panel follows it (STD-18). */
     var commentaryPos by mutableStateOf<ScrollPos?>(null)

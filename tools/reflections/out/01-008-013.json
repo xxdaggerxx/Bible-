@@ -1,0 +1,66 @@
+{
+ "id": "01-008-013",
+ "title": "Exiting the Ark",
+ "refs": [
+  "Genesis 8:13-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1008013,
+   "end": 1008019,
+   "ref": "Genesis 8:13-19",
+   "ranges": [
+    [
+     1008013,
+     1008019
+    ]
+   ],
+   "title": "Saved by Grace to Step Out",
+   "key_verse": [
+    1008016,
+    1008016
+   ],
+   "reflect": [
+    {
+     "text": "After many months inside the ark, the ground was dry and God told Noah to step outside. Noah, his family, and every animal walked back onto the earth. Their safe arrival was not because Noah was morally perfect or because he saved himself by his own strength. Instead, their rescue showed God's grace—His kindness and favour that we do not deserve.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our salvation always depends on divine mercy rather than our own good works. God faithfully kept this small remnant of people and animals alive to carry on His covenant promises and to bring honour to His name. It was God's initiative, not human effort, that provided an escape from judgment.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Seeing Noah step into a fresh world reminds us to give praise to God. When we look at our own lives, we can remember that the Lord is the one who took action to save us, and He remains faithful to keep every promise He makes.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to rely on your own effort instead of God's mercy?",
+    "How can you praise the Lord today for His kindness and faithfulness in keeping His promises?"
+   ],
+   "prayer": "Lord God, thank You for Your mercy that rescues us when we cannot save ourselves. We praise You because our deliverance comes from Your kindness alone, not from our own goodness. Help us to trust Your faithful promises each day and to live for Your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Out From the Ark",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/out-ark"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "01-009-018",
+ "title": "Noah’s Shame and Canaan’s Curse",
+ "refs": [
+  "Genesis 9:18-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1009018,
+   "end": 1009025,
+   "ref": "Genesis 9:18-25",
+   "ranges": [
+    [
+     1009018,
+     1009025
+    ]
+   ],
+   "title": "Staying Watchful and Honoring Others",
+   "key_verse": [
+    1009023,
+    1009023
+   ],
+   "reflect": [
+    {
+     "text": "Noah had faithfully walked through the great flood, but later he let his guard down. He planted a vineyard and drank too much wine. Wine can be a good gift from God, but drinking to excess is sinful. Noah lost his self-control and uncovered himself in his tent, opening the door to shame. This shows us that even faithful people can stumble after seasons of testing if they become careless.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When Noah was in this vulnerable state, his sons responded in very different ways. Ham dishonored his father by looking at his nakedness and gossiping to his brothers. In contrast, Shem and Japheth acted respectfully by walking in backward to cover their father. Ham chose to expose his father's weakness, while his brothers chose to protect his dignity.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Noah's lapse in judgment and Ham's disrespectful behavior brought painful consequences that lasted for generations. We must stay watchful in our own lives, especially after times of faithful endurance. God calls us to lean on the Holy Spirit to cultivate self-control and honor Him in everything we do.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you have let your guard down after a season of faithfulness?",
+    "When someone around you stumbles or is vulnerable, do you act with honor to protect them or do you share their mistakes with others?"
+   ],
+   "prayer": "Lord, help us to remain watchful and grant us self-control through Your Holy Spirit. Guard our hearts so that we do not love Your good gifts more than we love You. When others around us show weakness, teach us to treat them with kindness and respect. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Father of Canaan",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/father-canaan"
+    },
+    "D2": {
+     "author": "Melinda Eye Cooper",
+     "work": "3 Lessons We Can Learn from Noah’s Drunkenness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/lessons-we-can-learn-from-noahs-drunkenness.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

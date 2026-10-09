@@ -59,6 +59,8 @@ object StudyInk {
     /** Bible aids (AID-11): a custom or feast, or a symbol or number; chapter is the entry's key. */
     const val CUSTOM = -8
     const val SYMBOL = -9
+    /** A reflection (REF-10): chapter is its first verse, verse its last (chapter and verse) * 100 + paragraph. */
+    const val REFLECTION = -10
 
     /** The third value of a highlight's single point: marks it as a character range. */
     const val RANGE = -7777f

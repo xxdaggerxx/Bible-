@@ -1,0 +1,74 @@
+{
+ "id": "01-013-010",
+ "title": "Lot Proceeds toward Sodom",
+ "refs": [
+  "Genesis 13:10-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1013010,
+   "end": 1013013,
+   "ref": "Genesis 13:10-13",
+   "ranges": [
+    [
+     1013010,
+     1013013
+    ]
+   ],
+   "title": "Choosing by Sight or Faith",
+   "key_verse": [
+    1013012,
+    1013012
+   ],
+   "reflect": [
+    {
+     "text": "When Abram offered Lot first choice of the land, Abram showed peaceable generosity and faith in God. Lot, however, acted selfishly. He looked out and chose the green, well-watered plains of the Jordan simply because they looked appealing to the eyes. Yet outward beauty can easily hide spiritual danger. Sodom looked lush, but its people were corrupt and sinning greatly against the Lord.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Making choices purely by physical sight led Lot into serious trouble. Moving away from Abram's godly fellowship was a clear sign of spiritual drift. Lot did not leap into Sodom all at once. Instead, he made small compromises over time, gradually pitching his tents closer toward the city.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God gives us our conscience as an early alarm when we begin drifting into questionable places. While God does not force our will, He continually urges us to follow His guidance and even uses sudden obstacles to wake us up. We need to evaluate our life choices based on our spiritual well-being rather than superficial gains.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you making any decisions right now based only on what looks good rather than what is good for your faith?",
+    "Is your conscience warning you about any gradual steps you are taking toward unhealthy influences?"
+   ],
+   "prayer": "Lord, protect our hearts from choosing paths that only look good on the outside. Help us value godly fellowship and heed the early warnings of our conscience. Teach us to trust Your guidance in every choice we make. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "A Sure Sign of Spiritual Decline",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-october-20-2022.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Abram Settled",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/abram-settled"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

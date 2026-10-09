@@ -1,0 +1,66 @@
+{
+ "id": "01-011-010",
+ "title": "Genealogy from Shem to Abram",
+ "refs": [
+  "Genesis 11:10-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1011010,
+   "end": 1011026,
+   "ref": "Genesis 11:10-26",
+   "ranges": [
+    [
+     1011010,
+     1011026
+    ]
+   ],
+   "title": "God Preserves His Chosen Line",
+   "key_verse": [
+    1011026,
+    1011026
+   ],
+   "reflect": [
+    {
+     "text": "Right after the story of Babel, the Bible gives us a list of names tracing from Shem to Abram. This genealogy narrows its focus to the specific family line leading to Abram. It reminds us that God was actively preparing the way for his rescue plan, choosing this particular family by his own sovereign grace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Being born into this chosen family line did not mean every single person possessed personal saving faith. Even so, God was quietly at work through the generations. While false religion spread through the world around them, God remained completely faithful to preserve a remnant of people who loved the truth.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can take heart knowing that God still watches over and sustains his church today. Because he is faithful to keep his people, we are encouraged to trust him and faithfully support the teaching of his Word in our own time.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does seeing God's faithfulness across many generations bring you comfort today?",
+    "In what practical ways can you support the faithful teaching of God's Word in your church?"
+   ],
+   "prayer": "Lord God, thank you for being faithful through every generation. We trust you to preserve your church and keep your truth alive in our world. Please help us to stand firm in the faith and support the teaching of your Word. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Generations of Shem",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/generations-shem"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

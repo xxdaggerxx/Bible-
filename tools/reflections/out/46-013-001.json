@@ -1,0 +1,119 @@
+{
+ "id": "46-013-001",
+ "title": "Love",
+ "refs": [
+  "1 Corinthians 13:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46013004,
+   "end": 46013005,
+   "ref": "1 Corinthians 13:4-5",
+   "ranges": [
+    [
+     46013004,
+     46013005
+    ]
+   ],
+   "title": "\"Love is patient, love is kind\"",
+   "key_verse": [
+    46013004,
+    46013004
+   ],
+   "reflect": [
+    {
+     "text": "Real love changes how we speak and act toward those around us every day. Arrogance and jealousy stand completely opposed to godly love because both are totally consumed with self-interest. Boasting puffs up personal pride like a fireplace bellows, and it alienates the people in our lives. In contrast, true biblical love shows itself in tactful courtesy and a delightful demeanor. People are drawn toward Christlikeness through winsome kindness rather than through force or harsh demands.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Love also demonstrates mercy by actively choosing to overlook personal irritations and faults. It is easy to keep a mental scorecard of wrongs done against us, but that habit damages relationships and traps us in past bitterness. Rudeness often occurs when individuals react out of their own unhealed wounds from earlier experiences. Instead of seeking revenge, biblical love lets go of old grudges. Releasing those offenses reflects the forgiving mercy of Jesus Christ.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding onto a mental scorecard of someone's wrongs, and how can you release that grudge today?",
+    "How can you show winsome kindness instead of harshness to someone who irritates you?"
+   ],
+   "prayer": "Lord Jesus, thank you for your gentle mercy toward us. Help us set aside our pride and stop keeping score of other people's faults. Teach us to respond to others with winsome kindness and forgiveness today. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Love Is Charming",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/love-is-charming"
+    },
+    "D3": {
+     "author": "Rick Warren",
+     "work": "Don’t Let Grudges Hold You Hostage",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-april-27-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 46013001,
+   "end": 46013013,
+   "ref": "1 Corinthians 13:1-13",
+   "ranges": [
+    [
+     46013001,
+     46013013
+    ]
+   ],
+   "title": "The Greater Value of Love",
+   "key_verse": [
+    46013013,
+    46013013
+   ],
+   "reflect": [
+    {
+     "text": "Spiritual gifts and knowledge are impressive, but love holds far greater eternal value. We might understand deep mysteries, give away everything we own, or possess faith strong enough to move mountains. Yet if our hearts remain infected with malice, none of those things profit us anything. Outward sacrifices and good deeds have no true spiritual worth when detached from divine love. Experiencing the love of God should move us to actively share kindness and encouragement with others.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Genuine love also protects unity within the church community. Instead of letting minor offenses break relationships, mature love bears all things by overlooking petty slights. This does not mean we ignore grave sins when they must be addressed, nor does it mean being foolishly naive. Rather, it means we avoid undue suspicion and trust God at work in others. Mature love patiently gives people room to grow in grace, God's undeserved kindness, rather than demanding immediate perfection.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on knowledge or good deeds while neglecting genuine love for others?",
+    "How can you give someone room to grow in grace this week instead of expecting perfection?"
+   ],
+   "prayer": "Heavenly Father, thank you for showing us your divine love. Purify our hearts of malice and help us value love above knowledge or outward deeds. Teach us to protect unity by being patient with one another as we grow in grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Love Bears and Believes",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/love-bears-and-believes"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "Choose Love over Knowledge",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-february-3-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

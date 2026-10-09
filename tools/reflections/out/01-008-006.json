@@ -1,0 +1,142 @@
+{
+ "id": "01-008-006",
+ "title": "Noah Sends a Raven and a Dove",
+ "refs": [
+  "Genesis 8:6-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1008009,
+   "end": 1008009,
+   "ref": "Genesis 8:9",
+   "ranges": [
+    [
+     1008009,
+     1008009
+    ]
+   ],
+   "title": "\"No Place to Rest Her Foot\"",
+   "key_verse": [
+    1008009,
+    1008009
+   ],
+   "reflect": [
+    {
+     "text": "The dove could find nowhere in a drowned world to rest her foot, so she came back to the ark. In the same way, anyone who belongs to God cannot find lasting rest or satisfaction in sin or worldly pleasures. If you feel that nothing on earth can truly satisfy your soul, take comfort. A true child of God always longs for Christ and cannot be content without him.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When the dove flew back, she was exhausted and weak. She brought no prize with her, only her weariness. Yet Noah did not scold her for flying away. Instead, he reached out his hand and gently pulled her inside to safety. As Charles Spurgeon wrote, God says to the wanderer, \"only return.\"",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "We do not have to fix ourselves or clean up our lives before we come to Jesus. He does not ask us to make ourselves worthy first. He simply calls us to turn back to him just as we are. When we come to him with our weakness and failures, he welcomes us with open arms and gives our hearts a safe home.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to fix yourself before coming to Jesus, or are you ready to come to him just as you are?",
+    "Have you found that nothing in this world can give your soul true rest apart from Christ?"
+   ],
+   "prayer": "Lord Jesus, thank you for being the only true resting place for our weary souls. When we wander and grow tired, forgive us and draw us back to yourself. Help us to come to you just as we are, trusting in your gentle mercy. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 13",
+     "on": "Genesis 8:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 25",
+     "on": "Genesis 8:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Truth For Life",
+     "work": "Only Return",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-march-13-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1008006,
+   "end": 1008012,
+   "ref": "Genesis 8:6-12",
+   "ranges": [
+    [
+     1008006,
+     1008012
+    ]
+   ],
+   "title": "Waiting and Returning in Hope",
+   "key_verse": [
+    1008011,
+    1008011
+   ],
+   "reflect": [
+    {
+     "text": "Noah waited in seven-day intervals before sending out the birds to see if the ground was dry. This rhythm of seven days shows that he kept the weekly pattern of the Sabbath even while trapped inside the ark. Life on the ark was noisy, smelly, and cramped, yet Noah remained faithful in his worship and devotion. His example reminds us that difficult circumstances should never stop us from honoring God and gathering for worship.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "When the dove returned in the evening with a fresh olive leaf, Noah received a sign of God's kindness and a promise that the earth was being renewed. At the end of a long day of work and waiting, our spirits also need to return to the Lord. Earthly possessions and success cannot satisfy our souls, because God alone gives true rest to our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just as the olive leaf was a reminder of God's care and a pledge of future hope, each evening gives us a chance to thank God. We can look back on the tender mercies he provided during the day and look forward in faith to what he will do tomorrow.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Does a busy or difficult week keep you from worshiping God faithfully?",
+    "What reminders of God's daily mercy can you thank him for this evening?"
+   ],
+   "prayer": "Father, thank you for your constant mercy that meets us at the end of every day. Teach us to stay faithful in worship, even when our circumstances are cramped and uncomfortable. Give our hearts true peace in Christ as we trust your promises for tomorrow. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 29",
+     "on": "Genesis 8:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Another Seven Days",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/another-seven-days"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

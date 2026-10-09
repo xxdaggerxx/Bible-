@@ -1,0 +1,66 @@
+{
+ "id": "01-004-017",
+ "title": "The Descendants of Cain",
+ "refs": [
+  "Genesis 4:17-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1004017,
+   "end": 1004024,
+   "ref": "Genesis 4:17-24",
+   "ranges": [
+    [
+     1004017,
+     1004024
+    ]
+   ],
+   "title": "The Danger of Presuming on Grace",
+   "key_verse": [
+    1004024,
+    1004024
+   ],
+   "reflect": [
+    {
+     "text": "When Cain killed his brother Abel, God spared him to encourage repentance. Yet instead of turning back to God, Cain walked away to build his own worldly legacy. Over time, his family line drifted further from God and sank deeper into corruption.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This downward slide reached a peak with Lamech. He took two wives and openly boasted about his cruelty. When a young man merely wounded him, Lamech killed him in return. He threw away true justice, choosing unchecked vengeance and extreme violence over fairness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Lamech then twisted God's patience toward Cain, claiming seventy-sevenfold protection for himself. He treated God's forbearance as a license to keep sinning without fear. We must never take God's grace, his kindness that we do not deserve, for granted by pretending our sin carries no serious cost.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas might you be tempted to treat God's patience as an excuse to keep sinning?",
+    "When someone hurts you, how can you choose peace instead of payback?"
+   ],
+   "prayer": "Lord God, thank you for your immense patience and mercy toward us. Guard our hearts from pride, and help us never to take your grace for granted. Teach us to turn away from revenge and walk humbly before you each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Lamech's Arrogance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lamechs-arrogance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

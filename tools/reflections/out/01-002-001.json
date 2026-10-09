@@ -1,0 +1,75 @@
+{
+ "id": "01-002-001",
+ "title": "The Seventh Day",
+ "refs": [
+  "Genesis 2:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1002001,
+   "end": 1002003,
+   "ref": "Genesis 2:1-3",
+   "ranges": [
+    [
+     1002001,
+     1002003
+    ]
+   ],
+   "title": "Resting in God's Finished Work",
+   "key_verse": [
+    1002003,
+    1002003
+   ],
+   "reflect": [
+    {
+     "text": "When God finished making the heavens and the earth, He rested on the seventh day. He did not rest because He was tired, but because His creative design was complete and perfect. God stopped His work of creating, yet He never stops sustaining the world and actively redeeming His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Scripture does not mention an evening or morning for this seventh day, showing that God's rest is an ongoing invitation into relationship with Him. Setting apart one day in seven creates a healthy rhythm for our lives. It allows us to pause our ordinary labors and spend intentional time reflecting on God's gracious care.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This creation rest points ahead to the spiritual rest found in Jesus and the final resurrection. Today, believers celebrate this Sabbath pattern on the Lord's Day in honor of Christ rising from the dead. We use this time to gather for church worship, encourage one another in fellowship, and serve others through practical acts of love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you set aside time this week to pause your ordinary work and focus on God's care?",
+    "In what ways can you use the Lord's Day to worship with other believers and show love to people around you?"
+   ],
+   "prayer": "Lord God, thank You for completing creation and inviting us to share in Your rest. Help us to pause from our regular work and trust Your faithful care. Guide us to use the Lord's Day for worship, fellowship, and serving others in love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "God Rested",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/god-rested.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "God Rested",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-rested"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

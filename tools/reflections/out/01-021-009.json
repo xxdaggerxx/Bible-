@@ -1,0 +1,134 @@
+{
+ "id": "01-021-009",
+ "title": "Sarah Turns against Hagar",
+ "refs": [
+  "Genesis 21:9-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1021017,
+   "end": 1021019,
+   "ref": "Genesis 21:17-19",
+   "ranges": [
+    [
+     1021017,
+     1021019
+    ]
+   ],
+   "title": "\"God Has Heard\"",
+   "key_verse": [
+    1021017,
+    1021017
+   ],
+   "reflect": [
+    {
+     "text": "When Hagar ran out of water in the desert heat, she felt completely helpless. She could not bear to watch her child suffer, so she sat far away and wept. Deep grief and panic can easily overwhelm us, making us feel as though all hope is gone. Yet God was paying attention. He heard the cry of the boy right where he was lying, proving that Ishmael's name, which means \"God hears,\" remained true.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Our own frantic distress can sometimes blind us to the help God places right before us. When we stop our panic and listen, we find that God has not abandoned us. He gently spoke to Hagar and opened her eyes to see a well of water that was already there. We often forget how God, the One who sees us, has cared for us in the past. His promises may be tested by hard trials, but they never break.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "After God showed Hagar the well, she filled her water skin and gave her son a drink. When God meets us in our dry seasons, He does not just rescue us. He revives us so that we can carry His refreshment to the people around us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what moments has worry or distress blinded you to God's help right in front of you?",
+    "How can remembering God's past faithfulness bring you peace in your current struggles?"
+   ],
+   "prayer": "Lord, thank You for hearing our cries even when we feel entirely alone. Quiet our anxious minds so that we can listen to Your voice. Open our eyes to see Your provision, and help us bring Your refreshing care to those in need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jill Briscoe",
+     "work": "A Well of Water",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/a-well-of-water-one-year-devotions-for-women-january-9.html"
+    },
+    "D2": {
+     "author": "Sharon Jaynes",
+     "work": "When God Shows Up, Don't Forget It",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/when-god-shows-up-don-t-forget-it-girlfriends-in-god-july-21-2014.html"
+    },
+    "D4": {
+     "author": "Ann Spangler",
+     "work": "Praying the Names of God - June 25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/prayingnamesgod/praying-the-names-of-god-july-7-11578918.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1021009,
+   "end": 1021021,
+   "ref": "Genesis 21:9-21",
+   "ranges": [
+    [
+     1021009,
+     1021021
+    ]
+   ],
+   "title": "God's Care for the Afflicted",
+   "key_verse": [
+    1021020,
+    1021020
+   ],
+   "reflect": [
+    {
+     "text": "Sarah wanted Hagar and Ishmael cast out to protect Isaac's inheritance. Abraham sent them away into the wilderness with only a small amount of bread and water. Although God told Abraham to listen to Sarah regarding the family line, the Lord did not share Sarah's harsh attitude toward the mother and child.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Left alone in the wild with few supplies, Hagar and her son faced a hopeless situation. Yet God intervened with mercy. The Lord shows special concern for those who are afflicted and mistreated. Even though Ishmael was outside the covenant family line, God still watched over him with protective care and met his needs.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God stayed with the boy as he grew up and made a life in the wilderness. When your circumstances feel completely lost, you can still rely on the Lord. His sustaining grace reaches out to protect and provide for you, even in places where you feel cast aside.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God cares for the afflicted encourage you when you feel mistreated or forgotten?",
+    "When have you experienced God sustaining you through a situation that seemed impossible?"
+   ],
+   "prayer": "Father, thank You for Your tender mercy toward the weak and hurting. When outward circumstances seem lost and our own strength fails, remind us of Your watchful protection. Help us trust Your sustaining grace in every hard place. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "God Rescues Ishmael",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-rescues-ishmael"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

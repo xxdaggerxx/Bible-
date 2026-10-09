@@ -171,7 +171,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 ## Panels and tabs
 
 - **One or two panels.** Each tab shows one panel, or two side by side or one above the other. Drag the divider between them to resize; double-tap it to make them equal.
-- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. They're listed under four headings: **Reading** (the Bible, Sketch pages); **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references); **Study** (Commentary, Dictionary, Topics, Names & places, Customs & feasts, Symbols & numbers, About the book, the introduction to the book you're reading); and **Notes, search and AI** (My notes, Search, AI chat). The panels button in the toolbar lists them under the same headings. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
+- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. They're listed under four headings: **Reading** (the Bible, Sketch pages); **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references); **Study** (Commentary, Reflections, Dictionary, Topics, Names & places, Customs & feasts, Symbols & numbers, About the book, the introduction to the book you're reading); and **Notes, search and AI** (My notes, Search, AI chat). The panels button in the toolbar lists them under the same headings. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
 - **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
 - **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
 - **Link panels** with the link button in a Bible panel's header (it shows when two or more Bible panels are open): they scroll together verse by verse, even in different versions. The button is coloured while they're linked; tap it again to unlink.
@@ -209,6 +209,16 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 - **Linked to the Bible:** with the link button on (it is at first), the commentary and the Bible scroll together both ways. Scroll the Bible and the note on the verse at the top stays in view, even after you've tapped another verse; scroll the commentary and the Bible moves to the verses it's on. Tap the link button to scroll them separately.
 - **Two at once:** choose *Commentary* in the other panel's menu too, and give each its own commentary.
 - You can write and highlight on any commentary, as on the dictionary.
+
+## Reflections
+
+- **What they are:** short devotional reflections on the passage you're reading, for quiet time with it. Choose *Reflections* under **Study** in a panel's menu.
+- **On a passage or a saying.** Some are on a whole story or teaching (*The Good Shepherd*, John 10), some on a single saying (*"I am the vine"*). Each has **Read** (tap the passage or key verse to read it in your version), a few short paragraphs to reflect on, **Ask yourself** (one or two questions) and **Pray** (a short prayer).
+- **Grounded in real devotionals.** AI wrote them for Ink & Word, but only from existing devotionals, named under each one (*Written by AI from: …*): the classics of Charles Spurgeon and F. B. Meyer, and modern devotionals from ministries such as Desiring God, Ligonier and Our Daily Bread, put into Ink & Word's own words. Check anything important against Scripture and those sources.
+- **Overlapping, not repeating.** A saying with its own reflection is left to it by the reflection on the whole passage; **See also** links them. The same event in several Gospels shares one reflection (*Also in* lists the others).
+- **Follows your reading** like the commentary, with the same link button and *Keep on this passage*. Where a chapter has no reflection, it says so and links the nearest ones before and after.
+- **About Reflections:** tap the ⓘ for how they were written and checked.
+- You can write and highlight on reflections, as on the commentary. They work offline.
 
 ## Compare versions, Hebrew/Greek and word studies beside the text
 

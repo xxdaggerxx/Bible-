@@ -1,0 +1,148 @@
+{
+ "id": "01-007-001",
+ "title": "The Great Flood",
+ "refs": [
+  "Genesis 7:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1007001,
+   "end": 1007001,
+   "ref": "Genesis 7:1",
+   "ranges": [
+    [
+     1007001,
+     1007001
+    ]
+   ],
+   "title": "\"Go into the Ark\"",
+   "key_verse": [
+    1007001,
+    1007001
+   ],
+   "reflect": [
+    {
+     "text": "The Lord spoke directly to Noah and invited him and his family into the ark to escape the coming judgment. God provided the way to be saved, but Noah still needed to act. He took a bold step of faith by entering the vessel, showing that his trust in God was real.",
+     "sources": [
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "The ark gives us a clear picture of Jesus Christ. Just as the ark was the only safe place from the rising waters, Jesus is our only refuge from spiritual death. God invites us to come to Christ just as we are, where we find true shelter and grace, which is God's undeserved kindness.",
+     "sources": [
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "Judgment came suddenly on the ancient world, and the open door eventually closed. Because of this, God calls us to respond to His offer of mercy without waiting. We are urged to enter the safety found in Christ today while the door remains open.",
+     "sources": [
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you taken the step of faith to trust in Jesus as your safe refuge?",
+    "Is there anything in your life causing you to delay turning to Him completely?"
+   ],
+   "prayer": "Lord God, thank You for providing rescue from judgment through Jesus Christ. Give me faith to hear Your call and come to You just as I am. Help me never to delay in seeking Your mercy, and keep my heart secure in Your grace. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "Come Into the Ark - Love Worth Finding - June 16",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-june-16-devotional.html"
+    },
+    "D6": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - Jan. 3, 2007",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-jan-3-2007-1461324.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1007001,
+   "end": 1007024,
+   "ref": "Genesis 7:1-24",
+   "ranges": [
+    [
+     1007001,
+     1007024
+    ]
+   ],
+   "title": "Carried Safely Above the Waters",
+   "key_verse": [
+    1007016,
+    1007016
+   ],
+   "reflect": [
+    {
+     "text": "Walking with God required steady obedience from Noah. He followed unfamiliar commands without looking for shortcuts, and he waited patiently on God's timing. Even the animals quietly came aboard under divine guidance. Noah trusted the Lord's word, even when obedience meant waiting in the dark for seven quiet days before the rain began.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When the underground springs burst and the skies opened, the waters covered the highest mountains. This great flood reminded creation of the watery chaos that existed before the world was formed. God washed away a corrupt world so He could begin anew, demonstrating His supreme power over the surging waters without any opposition.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "Before the flood surged, the Lord shut Noah in. Noah was safely enclosed with God Himself, held fast by divine love away from the wickedness of the world. While the flood destroyed everything outside, Noah was safe inside. As Charles Spurgeon noted, \"inside all was rest and peace.\"",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When God asks you to obey or wait patiently, how do you handle the uncertainty?",
+    "How does knowing that God holds supreme power over creation give you peace during life's storms?"
+   ],
+   "prayer": "Almighty God, You rule over the heavens and the deep waters. Teach us to obey Your word completely, even when the path ahead seems dark or long. Thank You for shutting us into Your loving care, where our souls find safety and true peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 5",
+     "on": "Genesis 7:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 7:9",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Rick Warren",
+     "work": "Do Exactly What God Tells You to Do - Daily Hope with Rick Warren - February 1, 2025",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-february-1-2025.html"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "The Heavens Open",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/heavens-open"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

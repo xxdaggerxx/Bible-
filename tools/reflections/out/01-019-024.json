@@ -1,0 +1,127 @@
+{
+ "id": "01-019-024",
+ "title": "The Destruction of Sodom and Gomorrah",
+ "refs": [
+  "Genesis 19:24-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 1019027,
+   "end": 1019029,
+   "ref": "Genesis 19:27-29",
+   "ranges": [
+    [
+     1019027,
+     1019029
+    ]
+   ],
+   "title": "\"He Remembered Abraham\"",
+   "key_verse": [
+    1019029,
+    1019029
+   ],
+   "reflect": [
+    {
+     "text": "Early in the morning, Abraham returned to the exact spot where he had spoken with God. Looking down toward the plain, he saw thick smoke rising like smoke from a furnace. He may have feared that his nephew Lot had perished in the destruction. Yet God rescued Lot because He remembered Abraham. God sovereignly chooses to work through the persistent prayers of His people to rescue wayward loved ones.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Abraham did not merely offer a prayer and forget about it. As F. B. Meyer noted, he \"followed them to see how they sped.\" Like Abraham, we need a regular place where we stand before God. We go there not only to bring our requests, but to let Him examine our innermost lives and show us sin from His perspective. We look up to Him with patient expectation, knowing our prayers are secure in His hands.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we pray for friends and family members who do not know God, we must not lose heart. Our steadfast prayers matter deeply. Even more comforting, Jesus constantly intercedes for us in heaven. If God answered Abraham's plea, He will certainly answer the prayers that Christ offers on our behalf.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Who in your life needs you to pray for them with steady patience right now?",
+    "How can you set aside regular time to stand quietly before God and let Him search your heart?"
+   ],
+   "prayer": "Lord, thank You that You hear our prayers for the people we love. Give us faith to keep praying for them without giving up. Search our hearts each day and align our desires with Yours. We thank You that Jesus always speaks to You on our behalf. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Genesis 19:27",
+     "url": "https://archive.org/details/ourdailyhomily01meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Power of Prayer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/power-prayer"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 1019024,
+   "end": 1019029,
+   "ref": "Genesis 19:24-29",
+   "ranges": [
+    [
+     1019024,
+     1019029
+    ]
+   ],
+   "title": "Looking Forward to Grace",
+   "key_verse": [
+    1019026,
+    1019026
+   ],
+   "reflect": [
+    {
+     "text": "As God brought judgment on Sodom and Gomorrah, angels led Lot and his family away toward safety. Yet along the path, Lot's wife stopped and looked back. She did not just take a quick glance over her shoulder. Her heart still felt deep affection for the corrupt city she was leaving behind, preferring her old life to the rescue God offered.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In ancient times, salt was primarily used to preserve things rather than season food at the table. Becoming a pillar of salt preserved her condition forever, reflecting what she truly wanted. She wished to hold on to Sodom's corrupt influence. Her fate stands as a solemn warning against divided loyalties and holding affection for sin.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "True freedom from sin requires learning to hate it rather than missing it. We cannot grow in faith if we look back fondly at our past self-centered living. God calls us to turn away from our old ways completely and fix our eyes forward on His grace.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there past sins or worldly habits that you still look back on with fondness?",
+    "What does it mean for you to keep your gaze fixed forward on God's grace each day?"
+   ],
+   "prayer": "Father, help us to see sin as harmful and to turn away from it completely. Do not let our hearts long for things that lead to destruction. Give us the strength to keep our eyes fixed forward on Your mercy and walk in true freedom. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jen Wilkin",
+     "work": "Lessons from a Pillar of Salt",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/lessons-from-a-pillar-of-salt/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

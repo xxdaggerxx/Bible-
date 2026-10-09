@@ -1,0 +1,143 @@
+{
+ "id": "50-004-001",
+ "title": "Rejoice in the Lord",
+ "refs": [
+  "Philippians 4:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 50004006,
+   "end": 50004007,
+   "ref": "Philippians 4:6-7",
+   "ranges": [
+    [
+     50004006,
+     50004007
+    ]
+   ],
+   "title": "\"Be anxious for nothing\"",
+   "key_verse": [
+    50004006,
+    50004006
+   ],
+   "reflect": [
+    {
+     "text": "Life often presses on us with heavy burdens and hard circumstances. Worry quickly attaches itself to our real daily needs, such as food for our families or care for our health. Instead of trying to bury our fears or panicking in despair, we are invited to bring every need honestly to our Heavenly Father. We can speak to Him calmly and simply, knowing He already cares for the birds and numbers every hair on our heads.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "When we bring our requests, we also come with thanksgiving. Thanking God protects us from becoming demanding or doubtful, and it reminds us that He is already showing us His kindness. Charles Spurgeon urges, \"No care, but all prayer.\" We do not have to keep our troubles inside or run first to other people, but we can actively voice each specific concern to God.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "When we pray this way, God answers with His own peace. This peace is far deeper than our human minds can understand. It acts like a quiet guard standing watch over our hearts and thoughts, keeping the noise and storms of life outside while we rest safely in Christ Jesus.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific worry or daily need can you take to God in prayer today?",
+    "How does thanking God for His past help change the way you share your worries with Him?"
+   ],
+   "prayer": "Father, thank You that You know all our daily needs and care for us. Help us not to carry our worries alone, but to bring them to You with thankful hearts. Guard our minds and hearts with Your deep peace in Christ Jesus. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 30",
+     "on": "Philippians 4:6-7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Philippians 4:6",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Ryan Shelton",
+     "work": "Fight Anxiety Without Fear",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/fight-anxiety-without-fear"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 50004001,
+   "end": 50004009,
+   "ref": "Philippians 4:1-9",
+   "ranges": [
+    [
+     50004001,
+     50004009
+    ]
+   ],
+   "title": "Rejoice in the Lord",
+   "key_verse": [
+    50004004,
+    50004004
+   ],
+   "reflect": [
+    {
+     "text": "Rejoicing in the Lord is not just a passing mood or an easy personality trait. It is a command from God and a daily choice we make. Because this joy comes from the Holy Spirit inside us, it does not depend on having pleasant circumstances. It rests on God's unchanging goodness. Even in times of grief, true joy can live alongside our sorrow, acting as a strong fortress that protects us from cynicism and despair.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Paul also calls us to put into practice the truth we have heard and seen in his life. Real peace cannot be found by turning away from God's truth or righteous living. Instead, pure living comes before peaceful living. As we follow faithful Christian teaching and walk in God's ways, we learn how to be peacemakers among others when conflicts arise.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we follow this path, we receive a wonderful promise: the God of peace Himself will be with us. Having the God of peace is even greater than merely receiving a gift of peace. As Charles Spurgeon observed, we receive \"the fountain as well as the streams.\" The Lord who makes peace walks beside us, giving us His presence day by day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that joy comes from God's goodness help you choose joy on a hard day?",
+    "In what area of your life can you pursue truth and peace with others this week?"
+   ],
+   "prayer": "Lord, thank You for the deep joy that Your Holy Spirit gives us even during sorrow. Guide our steps so that we walk in Your truth and live as peacemakers. We thank You that You, the God of peace, are with us every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 16",
+     "on": "Philippians 4:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "John Sartelle",
+     "work": "Rejoice in the Lord Always",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/rejoice-lord-always"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

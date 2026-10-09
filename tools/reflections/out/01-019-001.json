@@ -1,0 +1,66 @@
+{
+ "id": "01-019-001",
+ "title": "Lot Welcomes the Angels",
+ "refs": [
+  "Genesis 19:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1019001,
+   "end": 1019011,
+   "ref": "Genesis 19:1-11",
+   "ranges": [
+    [
+     1019001,
+     1019011
+    ]
+   ],
+   "title": "Welcoming Strangers in a Troubled City",
+   "key_verse": [
+    1019003,
+    1019003
+   ],
+   "reflect": [
+    {
+     "text": "Two angels arrived at Sodom in the evening after leaving Abraham, and they met Lot at the entrance of the city. Lot was sitting in the city gateway. Sitting there meant he held a high standing among the local elders and leaders. Sadly, this position showed Lot's spiritual compromise. He had become deeply tangled in the sinful, corrupt culture of the city where he chose to live.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the same time, Lot knew the dangers that filled the streets of Sodom after dark. Knowing how risky it was to stay outside, he strongly urged the travelers to find safety and shelter inside his house rather than sleep in the open square. He welcomed them warmly, made a meal, and took care of their needs.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Offering generous hospitality to strangers and visitors is an essential mark of real faith in God. Even though Lot was compromised by living so close to the world's darkness, his desire to protect and care for these travelers showed a spark of true faith at work.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you have become too comfortable with the culture around you?",
+    "How can you show generous hospitality and care to others this week?"
+   ],
+   "prayer": "Lord, help us to keep our lives pure and guard us from compromising with the world around us. Give us hearts that are quick to show kindness, hospitality, and protection to people in need. Teach us to live out our faith with genuine love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Angels and Lot",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/angels-and-lot"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

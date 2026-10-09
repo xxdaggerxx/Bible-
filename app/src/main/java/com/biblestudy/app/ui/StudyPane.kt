@@ -91,6 +91,7 @@ fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
             PaneKind.DICTIONARY -> DictionaryPane(vm, inner)
             PaneKind.TOPICS -> TopicsPane(vm, inner)
             PaneKind.COMMENTARY -> CommentaryPane(vm, slot.pos, inner.padding(top = 4.dp))
+            PaneKind.REFLECTIONS -> CommentaryPane(vm, slot.pos, inner.padding(top = 4.dp), fixed = com.biblestudy.app.data.Commentaries.REFLECTIONS)
             PaneKind.NAMES -> NamesPane(vm, inner)
             PaneKind.CUSTOMS -> AidsPane(vm, symbols = false, inner)
             PaneKind.SYMBOLS -> AidsPane(vm, symbols = true, inner)

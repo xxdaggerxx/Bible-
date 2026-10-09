@@ -488,11 +488,12 @@ private data class CommentaryLine(val section: Int, val para: Int, val text: Str
 /**
  * A commentary on the chapter being read (STD-7, STD-17): the one chosen for this panel, with its
  * introduction (STD-19) and, when linked, scrolling together with the Bible panel both ways (STD-18).
+ * With [fixed], one set of notes without the commentary menu: Reflections (REF-1).
  */
 @Composable
-fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
+fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier, fixed: String? = null) {
     val panel = vm.studyPanel()
-    val id = vm.commentaryAt(pos)
+    val id = fixed ?: vm.commentaryAt(pos)
     val info = com.biblestudy.app.data.Commentaries.info(id)
     val canLink = vm.tab.pinned == null && !vm.tab.bibleHidden
     val linked = vm.commentaryLinked(pos) && canLink
@@ -551,7 +552,8 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
     Column(modifier) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             var menu by remember { mutableStateOf(false) }
-            androidx.compose.foundation.layout.Box(Modifier.weight(1f)) {
+            if (fixed != null) androidx.compose.foundation.layout.Spacer(Modifier.weight(1f)) // the panel menu names it
+            else androidx.compose.foundation.layout.Box(Modifier.weight(1f)) {
                 androidx.compose.material3.TextButton(
                     onClick = { menu = true },
                     modifier = Modifier.semantics { contentDescription = "Choose a commentary" },
@@ -575,7 +577,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                 }
             }
             IconButton(onClick = { about = true }) {
-                Icon(Icons.Outlined.Info, contentDescription = "About this commentary")
+                Icon(Icons.Outlined.Info, contentDescription = if (fixed != null) "About ${info.short}" else "About this commentary")
             }
             if (canLink) {
                 IconButton(onClick = { vm.toggleCommentaryLink(pos) }) {
@@ -599,6 +601,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                 else "Getting ${info.short} ready (the first time only)…",
             )
             !info.covers(panel.book) -> Text("${info.short} covers the ${info.covers}. Choose another commentary for ${vm.bible.book(panel.book).name}.")
+            list.isEmpty() && fixed != null -> NearestEntries(vm, id, panel.book, panel.chapter) { shown = it }
             list.isEmpty() -> Text("${info.short} has no notes on this chapter.")
         }
         val inkBook = vm.commentaryInkBook(id)
@@ -617,6 +620,7 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                 } else {
                     // Writing stays with its note and paragraph (INK-16); the Concise keeps its 1.2 key.
                     val doc = if (id == com.biblestudy.app.data.Commentaries.CONCISE) InkDoc(StudyInk.COMMENTARY, s.start, s.end)
+                    else if (fixed != null) InkDoc(inkBook, s.start, s.end % 1_000_000 * 100 + line.para)
                     else InkDoc(inkBook, s.start, line.para)
                     StudyText(line.text, onPassage = { shown = it }, modifier = Modifier.padding(vertical = 4.dp), vm = vm, doc = doc)
                 }
@@ -634,7 +638,11 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
                         Text(k, style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 10.dp))
                         Text(v, style = MaterialTheme.typography.bodyMedium)
                     }
-                    Text(if (info.id == com.biblestudy.app.data.Commentaries.AI) "Written for this app. Each note names its sources." else "Public domain.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(top = 10.dp))
+                    Text(when (info.id) {
+                        com.biblestudy.app.data.Commentaries.AI -> "Written for this app. Each note names its sources."
+                        com.biblestudy.app.data.Commentaries.REFLECTIONS -> "Written for this app. Each reflection names the devotionals it is drawn from."
+                        else -> "Public domain."
+                    }, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(top = 10.dp))
                 }
             },
             confirmButton = { androidx.compose.material3.TextButton(onClick = { about = false }) { Text("Close") } },
@@ -643,6 +651,23 @@ fun CommentaryPane(vm: StudyViewModel, pos: Int, modifier: Modifier) {
 }
 
 /** "Verses 14–16", "Introduction to Romans" or "Introduction to chapter 3". */
+/** Nothing on this chapter (REF-8): says so, and links the nearest entries before and after it. */
+@Composable
+private fun NearestEntries(vm: StudyViewModel, id: String, book: Int, chapter: Int, onPassage: (Passage) -> Unit) {
+    val near by produceState<Pair<CommentarySection?, CommentarySection?>?>(null, id, book, chapter) {
+        value = background {
+            runCatching { com.biblestudy.app.data.Commentaries.nearest(vm.getApplication(), id, VerseId.of(book, chapter, 0), VerseId.of(book, chapter, 999)) }
+                .getOrDefault(null to null)
+        }
+    }
+    val (before, after) = near ?: return
+    fun item(label: String, s: CommentarySection) =
+        "$label: [[${s.start}-${s.end}|${s.body.substringBefore('\n')} · ${vm.refLabel(s.start, s.end)}]]"
+    val body = listOfNotNull("No reflection on this chapter yet.", before?.let { item("Before", it) }, after?.let { item("After", it) })
+        .joinToString("\n\n")
+    StudyText(body, onPassage = onPassage)
+}
+
 internal fun commentaryHeading(vm: StudyViewModel, s: CommentarySection, chapter: Int): String = when {
     VerseId.chapter(s.start) == 0 -> "Introduction to ${vm.bible.book(VerseId.book(s.start)).name}"
     VerseId.verse(s.start) == 0 -> "Introduction to chapter ${VerseId.chapter(s.start)}"

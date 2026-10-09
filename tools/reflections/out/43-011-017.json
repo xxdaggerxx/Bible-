@@ -1,0 +1,67 @@
+{
+ "id": "43-011-017",
+ "title": "Jesus Comforts Martha and Mary",
+ "refs": [
+  "John 11:17-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43011017,
+   "end": 43011037,
+   "ref": "John 11:17-37",
+   "ranges": [
+    [
+     43011017,
+     43011037
+    ]
+   ],
+   "title": "Never Separated from God",
+   "key_verse": [
+    43011017,
+    43011017
+   ],
+   "reflect": [
+    {
+     "text": "Martha and Mary were mourning the loss of their brother when Jesus met them with a powerful promise. He told Martha that everyone who lives and believes in Him will never die. Our bodies may die one day, separating body and soul for a time. Yet, as Charles Spurgeon wrote, \"our soul shall never be separated from God.\" That separation from God would be the true death, but believers are rescued from it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we trust in Jesus, His life becomes our life. We are united to Him like parts of a body, and He will never lose any part of Himself. The Holy Spirit dwells within us, giving us a life that can never be cut off from God. Jesus already bore the penalty for our sin. Because He gave us God's righteousness, meaning we are made right with God, we receive the reward of life that never ends.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This truth gives us deep comfort in the face of sorrow and loss. We do not have to live in fear of death, because death cannot break our bond with Christ. Since Jesus rose and can never die again, our future is completely secure in Him. We can walk forward each day with calm assurance, knowing we are safely held in His love forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that you can never be separated from God change the way you think about physical death?",
+    "Where do you need the quiet comfort today that your life is secure in Jesus?"
+   ],
+   "prayer": "Lord Jesus, thank You that our lives are safely held in Your hands. Thank You for paying the price for our sin so that we will never be separated from God. When grief or fear touches us, help us to rest in the everlasting life You have given us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 11",
+     "on": "John 11:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

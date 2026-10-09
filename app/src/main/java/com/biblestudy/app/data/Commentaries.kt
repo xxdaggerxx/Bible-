@@ -40,6 +40,19 @@ data class CommentaryInfo(
 object Commentaries {
     const val CONCISE = "mhcc"
     const val AI = "ai"
+    /** Reflections (REF-1): stored like a commentary, but shown in a view of its own, not in the commentary menu. */
+    const val REFLECTIONS = "reflections"
+
+    val reflections = CommentaryInfo(
+        REFLECTIONS, "Reflections", "Reflections", "Written by AI from existing devotionals", "2026", "Whole Bible", null,
+        listOf(
+            "What" to "Short devotional reflections on Bible passages: a whole story or teaching, or a single saying such as \"I am the vine\". Each has Read, a few short paragraphs to reflect on, questions to ask yourself and a prayer.",
+            "Who" to "Written by AI for Ink & Word (Google's Gemini, through OpenRouter), not by a person. Every reflection is drawn only from existing devotionals, named under it: the classics of Charles Spurgeon (Morning and Evening, Faith's Checkbook) and F. B. Meyer (Our Daily Homily), and modern devotionals from ministries such as Desiring God, Ligonier, Our Daily Bread, In Touch, Grace to You and Crosswalk. Modern devotionals are summarised in Ink & Word's own words, not copied.",
+            "Checked" to "A second AI pass checks each paragraph against the devotionals it names; paragraphs it can't find there are removed. Sources are kept only if they really are on the passage.",
+            "No repeats" to "Reflections may overlap but don't repeat: a saying with its own reflection is left to it by the reflection on the whole passage, and they link to each other (See also). Parallel accounts in the Gospels share one reflection.",
+            "Best for" to "Quiet time with a passage you're reading. It is devotional, not a commentary: check anything important against Scripture and the sources named.",
+        ),
+    )
 
     val all = listOf(
         CommentaryInfo(
@@ -159,7 +172,19 @@ object Commentaries {
      */
     val menu: List<CommentaryInfo> get() = all.sortedBy { if (it.id == AI) 0 else 1 }
 
-    fun info(id: String): CommentaryInfo = all.firstOrNull { it.id == id } ?: all.first()
+    fun info(id: String): CommentaryInfo = if (id == REFLECTIONS) reflections else all.firstOrNull { it.id == id } ?: all.first()
+
+    /**
+     * The last entry before verse [lo] and the first after verse [hi] (REF-8), for a chapter with
+     * nothing on it: where the nearest ones are, rather than nothing.
+     */
+    fun nearest(context: Context, id: String, lo: Int, hi: Int): Pair<CommentarySection?, CommentarySection?> {
+        val db = open(context, id)
+        fun one(sql: String, at: Int) = db.rawQuery(sql, arrayOf(at.toString()))
+            .use { c -> if (c.moveToNext()) CommentarySection(c.getInt(0), c.getInt(1), c.getString(2)) else null }
+        return one("SELECT start, end, body FROM entries WHERE start < ? ORDER BY start DESC LIMIT 1", lo) to
+            one("SELECT start, end, body FROM entries WHERE start > ? ORDER BY start LIMIT 1", hi)
+    }
 
     /** Where a packed commentary is unpacked; the version changes when the bundled data does. */
     private fun file(context: Context, id: String) = File(context.filesDir, "commentaries/$id-v1.db")

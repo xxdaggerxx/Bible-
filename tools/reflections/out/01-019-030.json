@@ -1,0 +1,66 @@
+{
+ "id": "01-019-030",
+ "title": "Lot and His Daughters",
+ "refs": [
+  "Genesis 19:30-38"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1019030,
+   "end": 1019038,
+   "ref": "Genesis 19:30-38",
+   "ranges": [
+    [
+     1019030,
+     1019038
+    ]
+   ],
+   "title": "The Cost of Worldly Compromise",
+   "key_verse": [
+    1019030,
+    1019030
+   ],
+   "reflect": [
+    {
+     "text": "Lot had once chosen the fertile valley near Sodom, but his worldly choices led to a steady downward fall. In this passage, we find Lot impoverished, hiding in a dark cave because he was gripped by fear. He had lost his wealth, his home, and his standing. His sad retreat to the cave shows how worldly compromise invites God's discipline and brings deep loss.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Although Lot and his daughters physically escaped the fiery destruction of Sodom, the corrupt moral influence of that city still lived inside their hearts. Fearing that they would never marry, the daughters panicked. Instead of turning to God, they carried out an incestuous scheme. They got their father drunk with wine so they could sleep with him and preserve the family line through sinful means.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Lot ended up losing his wealth, his reputation, and the integrity of his family. His story shows that simply leaving a sinful place is not enough if we still hold on to its ways. Worldly thinking pushes us toward panic and shame, but God calls us to walk faithfully in his ways.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there worldly habits or attitudes that you still need God to clear out of your heart?",
+    "When you worry about the future, do you trust God or look for worldly shortcuts?"
+   ],
+   "prayer": "Lord, help us to guard our hearts against the corrupting influence of the world. Forgive us for the times we panic and rely on sinful choices rather than trusting you. Protect our integrity and lead us to walk faithfully before you.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Lot and His Daughters",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lot-and-his-daughters"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

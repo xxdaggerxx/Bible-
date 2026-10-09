@@ -2138,6 +2138,26 @@ class FeatureTest {
     }
 
     @Test
+    fun reflectionsFollowTheReadingAndNameTheirDevotionals() {
+        // Reflections (REF-1): a Study view of its own, on Psalm 23, each drawn from named devotionals.
+        compose.runOnUiThread { vm.goTo(0, 19, 23, 1, remember = false); vm.sidePane = PaneKind.REFLECTIONS }
+        waitForLoaded()
+        runCatching { waitFor(60_000) { compose.onAllNodesWithText("Ask yourself", substring = true).fetchSemanticsNodes().isNotEmpty() } }
+            .onFailure { snap("150-reflections-failed"); throw AssertionError("message=${vm.message}", it) }
+        val r = com.biblestudy.app.data.Commentaries.chapter(vm.getApplication(), com.biblestudy.app.data.Commentaries.REFLECTIONS, 19, 23)
+        assertTrue(r.isNotEmpty())
+        assertTrue(r.all { "Written by AI from: " in it.body && "\nPray\n" in it.body && "Read: [[" in it.body })
+        // Not in the commentary menu: it has a view of its own.
+        assertTrue(com.biblestudy.app.data.Commentaries.menu.none { it.id == com.biblestudy.app.data.Commentaries.REFLECTIONS })
+        snap("150-reflections")
+        compose.onNodeWithContentDescription("About Reflections").performClick()
+        assertTrue(compose.onAllNodesWithText("Written by AI", substring = true).fetchSemanticsNodes().isNotEmpty())
+        snap("151-reflections-about")
+        compose.onNodeWithText("Close").performClick()
+        compose.runOnUiThread { vm.sidePane = null }
+    }
+
+    @Test
     fun compareHebrewGreekAndWordStudyAsPanelViews() {
         // Compare versions beside the text, on the verse tapped.
         compose.runOnUiThread { vm.paneVerse = VerseTarget(43, 3, 16); vm.sidePane = PaneKind.COMPARE }

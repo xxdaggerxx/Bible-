@@ -1,0 +1,66 @@
+{
+ "id": "01-014-001",
+ "title": "The War of the Kings",
+ "refs": [
+  "Genesis 14:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1014001,
+   "end": 1014009,
+   "ref": "Genesis 14:1-9",
+   "ranges": [
+    [
+     1014001,
+     1014009
+    ]
+   ],
+   "title": "Peace Amid Worldly Conflict",
+   "key_verse": [
+    1014004,
+    1014004
+   ],
+   "reflect": [
+    {
+     "text": "This chapter gives us the Bible's very first historical account of war between human nations. God had recently promised to bring blessing to the world through Abram. Even so, fallen humanity continued to march into battle and fight for power. Four kings went to war against five, showing how quickly people turn to violence and conflict.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "King Chedorlaomer and his allies held great power over the smaller kingdoms around them. For years these smaller nations served him, and when they rebelled, his coalition marched in with crushing force. Worldly empires often look massive and terrifying. Yet earthly rulers and human armies are ultimately no match for God's covenant promises to His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "News of war and turmoil across the globe can easily make us feel afraid today. But just as God guided events in Abram's time, He is still sovereign over every nation now. Because God keeps His promises, Christians can lay down their worries and rest in the peace of Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When news of conflict or trouble in the world makes you anxious, how does remembering God's control help you?",
+    "In what ways can you look to Christ for peace instead of being overwhelmed by worldly fears?"
+   ],
+   "prayer": "Lord God, our world is often full of war, conflict, and unrest. Help us to remember that no earthly power can overcome Your promises or stop Your plans. Take away our anxiety and give us Your peace through Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Kingly Conflict",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/kingly-conflict"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}

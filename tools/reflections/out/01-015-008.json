@@ -1,0 +1,83 @@
+{
+ "id": "01-015-008",
+ "title": "God Confirms His Promise",
+ "refs": [
+  "Genesis 15:8-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1015008,
+   "end": 1015021,
+   "ref": "Genesis 15:8-21",
+   "ranges": [
+    [
+     1015008,
+     1015021
+    ]
+   ],
+   "title": "God's Covenant Pledge to Abram",
+   "key_verse": [
+    1015018,
+    1015018
+   ],
+   "reflect": [
+    {
+     "text": "Waiting on God can be hard. After years in Canaan with no land or child of his own, Abram asked God how he could be sure of His word. Even faithful believers sometimes wrestle with weak faith during long trials. Instead of turning away in unbelief, Abram took his honest questions directly to God. God did not get angry with Abram for asking. Instead, He answered him with great patience and tenderness.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God gave Abram certainty through a covenant ceremony that people in those days understood. Animals were cut in two, and usually both partners walked between the pieces to say that they would bear the curse if they broke the agreement. Yet when the darkness fell, only God passed through as smoke and fire. God bound Himself alone to keep the promise, taking the full penalty on Himself to make it certain. He turned His promise into a sworn oath so His people could have strong hope.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "This deep commitment points us forward to Jesus. On the cross, Christ took the curse so we could receive eternal salvation. God knows we still struggle with doubt today. Just as He met Abram, God meets us and strengthens our faith through His Word, Christian fellowship, and the bread and cup at the Lord's Table.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face long waits or doubts, do you bring them directly to God in prayer?",
+    "How does remembering Christ's sacrifice on the cross help you trust God's promises today?"
+   ],
+   "prayer": "Heavenly Father, thank You for Your patience with us when our faith feels weak. Thank You for making a sure covenant and for keeping Your promises through Jesus Christ on the cross. Help us to bring all our doubts to You and find our rest in Your unchanging love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michael A. Youssef, Ph.D.",
+     "work": "The Covenant-Making God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-january-19-2026.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Abram's Question",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/abrams-question"
+    },
+    "D3": {
+     "author": "Mark Ross",
+     "work": "Help for Our Unbelief",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/help-our-unbelief"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}
