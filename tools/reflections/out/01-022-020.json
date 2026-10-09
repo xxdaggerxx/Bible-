@@ -1,0 +1,66 @@
+{
+ "id": "01-022-020",
+ "title": "The Sons of Nahor",
+ "refs": [
+  "Genesis 22:20-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 1022020,
+   "end": 1022024,
+   "ref": "Genesis 22:20-24",
+   "ranges": [
+    [
+     1022020,
+     1022024
+    ]
+   ],
+   "title": "God Prepares the Way",
+   "key_verse": [
+    1022023,
+    1022023
+   ],
+   "reflect": [
+    {
+     "text": "Long ago in the garden of Eden, God pledged to preserve a holy family line. Through this line, He would one day crush the serpent and overcome the kingdom of darkness. Our daily human struggles and rivalries are not meaningless; they mirror this ongoing clash between God and evil.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Abraham had just passed the severe test of his faith when he offered Isaac. God spared his son, yet the covenant promises were far from complete. For those promises to go forward, Isaac still needed to marry and have children of his own.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This list of names from Abraham's brother Nahor seems ordinary at first glance, but it points to something vital. It quietly highlights the birth of Rebekah. Even before Isaac looked for a wife, God was providently preparing one for him. This list marks the quiet, steady continuation of God's promises across generations.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God works quietly behind the scenes encourage you in your daily struggles?",
+    "In what areas of your life do you need to trust God to prepare the future?"
+   ],
+   "prayer": "Heavenly Father, thank You for working quietly to keep Your promises alive. Help us trust You in our daily battles and uncertainties, knowing You are always preparing what is needed. Guide our steps as we follow You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Genesis, Continued",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/genesis-continued"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-09"
+}
