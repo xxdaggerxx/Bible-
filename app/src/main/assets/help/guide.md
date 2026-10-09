@@ -282,7 +282,17 @@ The notes button (a page with a pencil) lists your **Notes**, **Highlights** and
 
 ## Reading stats
 
-*⋮ → Reading stats* shows how much of the Bible you've read, time spent, days in a row, your last 30 days, your most-read chapters and a grid of every chapter. A chapter counts as read after a minute in it, scrolled through most of the way. It's kept on this device, and with *Sync with Google Drive* on, your devices' times are added together. Turn counting off or clear it in *Settings → Reading* (with sync on, clearing clears it on every device).
+*⋮ → Reading stats* shows your reading as cards, one under another on a phone and two side by side on a tablet:
+
+- **Through the Bible:** a ring with how much of the Bible you've read, and a bar each for the Old and New Testament.
+- **Daily reading:** how many days in a row you've read (a day counts with a minute of reading), your best run, and this week's days, each with a flame if you read that day.
+- **Time:** today, this week, the last 30 days and in all.
+- **Milestones:** eleven to reach, from *First step* (your first chapter) and *A week in the Word* (7 days in a row) to *A whole book*, *The Gospels*, the New and Old Testament and *The whole Bible*. Earned ones light up; the others show a ring with how far along you are. The card names your next one. Tap any milestone to see what it takes and how close you are.
+- **The last 30 days:** a bar for each day. Tap a bar for that day's time.
+- **Most read chapters** and **Books you've read in**, with a bar for each (on a phone the top five, on a tablet the top ten).
+- **Every chapter:** a square for each chapter, shaded by how often you've read it, with a ✓ by each book you've finished.
+
+A chapter counts as read after a minute in it, scrolled through most of the way. It's kept on this device, and with *Sync with Google Drive* on, your devices' times are added together. Turn counting off or clear it in *Settings → Reading* (with sync on, clearing clears it on every device).
 
 ## Reading layout and page look
 

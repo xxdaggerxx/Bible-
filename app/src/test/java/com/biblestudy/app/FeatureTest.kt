@@ -3968,4 +3968,58 @@ class FeatureTest {
     @Test
     @Config(qualifiers = "w851dp-h393dp-land-xxhdpi")
     fun aPhoneOnItsSideShowsEverything() = phoneChecks("851")
+
+    /** A few weeks of reading, as someone working through Matthew and Romans would have. */
+    private fun seedReading() {
+        compose.runOnUiThread { vm.foreground = false }
+        val u = vm.user
+        u.clearReading() // here and now, not in the background where it could clear what's added below
+        val today = java.time.LocalDate.now()
+        val minutes = listOf(25, 40, 0, 18, 32, 55, 12, 0, 30, 45, 22, 38, 50, 27)
+        for ((i, m) in minutes.withIndex()) {
+            val day = today.minusDays((minutes.size - 1 - i).toLong()).toString()
+            if (m > 0) u.addReading(day, 40, (i % 28) + 1, m * 60, false)
+        }
+        for (ch in 1..28) { u.addOpen(40, ch); u.markRead(40, ch, 1L) }
+        for (ch in 1..16) { u.addReading(today.toString(), 45, ch, 120 + ch * 30, false); u.markRead(45, ch, 1L) }
+        repeat(3) { u.markRead(45, 8, 1L) }
+        repeat(5) { u.markRead(40, 5, 1L) }
+        u.addReading(today.toString(), 43, 3, 900, false); u.markRead(43, 3, 1L)
+        u.addReading(today.toString(), 19, 23, 300, false); u.markRead(19, 23, 1L)
+    }
+
+    private fun readingStatsShowcase(name: String) {
+        seedReading()
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onNodeWithText("Reading stats").performClick()
+        waitFor(30_000) { compose.onAllNodesWithText("46 of 1189 chapters").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("days in a row").assertExists()
+        compose.onNodeWithText("Milestones · 3 of 11").assertExists()
+        compose.onNodeWithText("Read on 12 of 30 days", substring = true).assertExists()
+        // A whole book is earned (Matthew, Romans); the next aim is the one nearest done.
+        compose.onNodeWithContentDescription("A whole book, earned").assertExists()
+        compose.onNodeWithContentDescription("A hundred chapters, 46 of 100").assertExists()
+        snap("194-$name-stats-top")
+        compose.onNodeWithText("Most read chapters").performScrollTo()
+        snap("195-$name-stats-middle")
+        compose.onNodeWithText("Every chapter").performScrollTo()
+        snap("196-$name-stats-grid")
+        compose.onNodeWithText("Revelation").performScrollTo()
+        snap("197-$name-stats-grid-end")
+        // Tapping a locked milestone says what it takes.
+        compose.onNodeWithContentDescription("The whole Bible, 46 of 1189").performScrollTo().performClick()
+        compose.onNodeWithText("Read every chapter of the Bible").assertExists()
+        compose.onNodeWithContentDescription("Close").performClick()
+        compose.runOnUiThread { vm.clearReadingStats(); vm.foreground = true }
+    }
+
+    @Test
+    fun readingStatsOnATablet() = readingStatsShowcase("tablet")
+
+    @Test
+    @Config(qualifiers = "w393dp-h851dp-port-xxhdpi")
+    fun readingStatsOnAPhone() {
+        waitForLoaded()
+        readingStatsShowcase("phone")
+    }
 }

@@ -72,6 +72,17 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.6.0
+
+- **Reading stats, redesigned** for phones and tablets, as cards (one column on a phone, two on a tablet):
+  - *Through the Bible*: a progress ring for the whole Bible and a bar for each Testament.
+  - *Daily reading*: days in a row with a flame, the best run, and this week's seven days lit when read.
+  - Time tiles: today, this week, the last 30 days, in all.
+  - **Milestones** (new): eleven to earn, from *First step* and *A week in the Word* to *A whole book*, *The Gospels*, the Testaments and *The whole Bible*. Locked ones show a ring of how far along they are; the card names the next one, and tapping one shows what it takes.
+  - The 30-day chart with how many days were read and the daily average; most-read chapters and books as ranked bars (top 5 on a phone, 10 on a tablet).
+  - The every-chapter grid: on a phone the books flow along each line (names above their squares) instead of a narrow name column, so it's about a third as long; finished books get a ✓. On a dark page the greens go from dim to bright, so more reading always stands out more.
+- Known gaps: milestones are worked out from the reading stats, so clearing the stats clears them too. There's no reminder or notification to keep a run going.
+
 ## New in version 2.5.3
 
 - **Fixed:** an NLT chapter could stay blank for good (Hebrews 4, for one). Tyndale's NLT API sends back an empty page, marked OK, for any problem: busy for a moment, a key it doesn't accept or a book name it doesn't know. The app took that as "this chapter has no verses" and kept it empty. Now an empty page is tried twice more, a second or two apart, and otherwise shows as a download error to be tried again next time, like having no internet. NLT chapters already kept empty download again the next time they're read.
