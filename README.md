@@ -72,6 +72,15 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.8.0
+
+- **Points to Christ** (a new Bible aid): a soft gold line under every Old Testament verse that points to Jesus, about 380 verses in 145 passages, in every version.
+  - Two kinds: *prophecies* he fulfilled or that are traditionally read of the Messiah (Genesis 3:15, Psalm 22, Psalm 110, Isaiah 7:14, Isaiah 53, Micah 5:2, Zechariah 9:9...), and *pictures of Christ* (the Passover lamb, the bronze serpent, Melchizedek, the manna, the tabernacle, the Day of Atonement, Jonah...).
+  - Tapping such a verse puts a gold card at the top of the verse pop-up: the kind, the passage, a short title, what it shows of Christ, and the New Testament passages that fulfil or explain it, as links.
+  - *Points to Christ* is also a panel view (under *Study*): every passage in Bible order, filtered by kind; tap one to go there. Switch the line and card off in *Settings → Bible aids → Points to Christ*.
+  - Written by AI in the traditional view, in `tools/christ/*.txt`; `tools/build_christ.py` checks every reference (Old Testament verses only, New Testament references that exist, no verse in two entries) and writes `assets/study/christ.tsv`.
+- Known gaps: verses are chosen by KJV verse numbers, as with symbols; a version that numbers a verse differently marks it by its number. It's a chosen list, not every verse a commentator has linked to Christ.
+
 ## New in version 2.7.0
 
 - **Copy a verse** from the verse pop-up or the *Verse details* panel: a copy button by the × opens *Copy reference* ("Hebrews 13:21") and *Copy verse* (the words, then "— Hebrews 13:21 (NLT)"). Long-pressing words on the page still copies any part of the text.

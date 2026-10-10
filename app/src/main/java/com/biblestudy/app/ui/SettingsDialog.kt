@@ -124,6 +124,7 @@ fun SettingsDialog(
                 Toggle("People & places", "Who someone was, or where a place is, from a dotted line under the name", vm.aidNames) { vm.aidNames = it }
                 Toggle("Customs & feasts", "Jewish customs, feasts and holy days explained", vm.aidCustoms) { vm.aidCustoms = it }
                 Toggle("Symbols & numbers", "What a symbol or number stands for, where the Bible uses it so", vm.aidSymbols) { vm.aidSymbols = it }
+                Toggle("Points to Christ", "A gold line under Old Testament verses that point to Jesus; tap one to see where it's fulfilled", vm.aidChrist) { vm.aidChrist = it }
 
                 Group("Pen & ink")
                 Toggle("Draw with finger", "On: one finger draws, two fingers scroll. Off: only the pen draws", vm.fingerDraw) { vm.fingerDraw = it }

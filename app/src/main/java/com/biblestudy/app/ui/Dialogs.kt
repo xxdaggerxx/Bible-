@@ -733,6 +733,38 @@ private fun AidCards(vm: StudyViewModel, version: String, verseId: Int, verseTex
 }
 
 /**
+ * Points to Christ (AID-13): for a verse that points to Jesus, whether it's a prophecy or a picture
+ * of Christ, what it says of him, and the New Testament passages as links ([onPassage]).
+ */
+@Composable
+private fun ChristCard(vm: StudyViewModel, id: Int, onPassage: (com.biblestudy.app.data.Passage) -> Unit) {
+    val e by produceState<com.biblestudy.app.data.ChristEntry?>(null, id) {
+        value = background { com.biblestudy.app.data.Christ.at(vm.getApplication(), id) }
+    }
+    val entry = e ?: return
+    Surface(
+        color = CHRIST_LINE.copy(alpha = 0.16f),
+        shape = MaterialTheme.shapes.medium,
+        modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp).testTag("christCard"),
+    ) {
+        Column(Modifier.padding(horizontal = 12.dp, vertical = 10.dp)) {
+            Text(
+                "Points to Christ \u00b7 ${entry.kindLabel} \u00b7 ${entry.ref}",
+                style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Text(entry.title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, modifier = Modifier.padding(top = 2.dp))
+            Text(entry.note, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.padding(top = 4.dp))
+            StudyText(
+                (if (entry.prophecy) "Fulfilled in " else "See ") + entry.fulfilled,
+                onPassage = onPassage,
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.padding(top = 6.dp),
+            )
+        }
+    }
+}
+
+/**
  * The meaning of the hard word tapped (STD-23), in one line, with *Read more* opening its Bible
  * dictionary article when there is one. Nothing when the word tapped isn't a hard word.
  */
@@ -870,6 +902,8 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
 
     @Composable
     fun Top() {
+        // A verse that points to Christ (AID-13): how, and where the New Testament fulfils it.
+        if (vm.aidChrist && t.book < 40) ChristCard(vm, id) { notePassage = it }
         // A Bible aid tapped on the page (AID-9), or a hard word (STD-23): explained first.
         if (!AidCards(vm, version, id, verseText, t.word, onOpen = ::done)) HardWordCard(vm, version, verseText, t.word, onOpen = ::done)
         if (vm.compareVersions) {

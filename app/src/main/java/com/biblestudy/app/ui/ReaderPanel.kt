@@ -169,6 +169,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         val headingsOn = vm.showHeadings
         val redOn = vm.redLetters
         val aidsOn = vm.aidSwitches()
+        val christOn = vm.aidChrist
         val other = vm.diffVersionFor(panel)
         val (data, paras, red) = background {
             val d = ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
@@ -180,6 +181,8 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             com.biblestudy.app.data.Aids.marks(vm.getApplication(), vm.study, v, b, c, data.verses.map { it.verse to it.text }, aidsOn)
                 .mapValues { (_, l) -> l.map { it.range } }
         }
+        // Verses that point to Christ (AID-13), in the Old Testament.
+        val christ = if (!christOn || b >= 40) emptySet() else background { com.biblestudy.app.data.Christ.verses(vm.getApplication(), b, c) }
         // Side by side with another version of this book: mark where the wording differs (SPLIT-5).
         val diffs = if (other == null) emptyMap() else withContext(Dispatchers.Default) {
             val theirs = vm.text(other).chapter(b, c).associate { it.verse to it.text }
@@ -188,18 +191,18 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         buildChapterLayout(
             measurer, style.font.family(), vm.bible.book(b).name, data, vm.lineSpacing,
             paragraphs = paras, numbers = style.numbers, spacers = spacers, red = red, diffs = diffs, hard = hard,
-            scale = style.scale,
+            christ = christ, scale = style.scale,
         ) { RefLinks.parseList(it, vm.bible.books) }
     }
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.textSize, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.aidSwitches(), vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name, vm.onlineArrivals) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.textSize, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.aidSwitches(), vm.aidChrist, vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name, vm.onlineArrivals) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
         val font = vm.textFont
         val style = vm.styleKey()
-        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.aidSwitches()}|${vm.diffVersionFor(panel)}"
+        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.aidSwitches()}|${vm.aidChrist}|${vm.diffVersionFor(panel)}"
         if (ctl.layoutSpec != spec) {
             // Headings, spacing or font changed: re-lay out every chapter, staying on the same verse.
             if (ctl.layoutSpec != null) panel.pendingVerse = panel.topVerse
@@ -841,8 +844,19 @@ private fun onlineCredit(version: String, measurer: TextMeasurer): androidx.comp
     }
 }
 
-/** A faint dotted line under each hard word and Bible aid (STD-23, AID-8); tapping one explains it. */
+/** The soft gold of a verse that points to Christ (AID-13), on every page colour. */
+val CHRIST_LINE = Color(0xFFC9A23A)
+
+/**
+ * A faint dotted line under each hard word and Bible aid (STD-23, AID-8), and a soft gold line
+ * under each verse that points to Christ (AID-13), a little lower so both show; tapping explains them.
+ */
 private fun DrawScope.drawHardWords(layout: ChapterLayout, theme: PageTheme) {
+    for (r in layout.christVerses) {
+        for ((x0, x1, y) in layout.underlines(r.first, r.last + 1)) {
+            drawLine(CHRIST_LINE.copy(alpha = 0.6f), Offset(x0, y + 6f), Offset(x1, y + 6f), strokeWidth = 2.5f, cap = StrokeCap.Round)
+        }
+    }
     if (layout.hardWords.isEmpty()) return
     val dots = PathEffect.dashPathEffect(floatArrayOf(2f, 6f))
     val color = theme.text.copy(alpha = 0.45f)

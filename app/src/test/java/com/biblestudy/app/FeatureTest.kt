@@ -3224,6 +3224,51 @@ class FeatureTest {
     }
 
     @Test
+    fun oldTestamentVersesPointToChrist() {
+        // AID-13: a gold line under Old Testament verses that point to Christ; tap one for how.
+        val app: android.content.Context = vm.getApplication()
+        assertEquals((1..12).toSet(), com.biblestudy.app.data.Christ.verses(app, 23, 53))
+        assertEquals(setOf(14), com.biblestudy.app.data.Christ.verses(app, 23, 7))
+        assertTrue(com.biblestudy.app.data.Christ.verses(app, 43, 3).isEmpty()) // never in the New Testament
+        compose.runOnUiThread { vm.aidChrist = true; vm.setVersion(0, "KJV"); vm.goTo(0, 23, 53, 1, remember = false) }
+        waitForLoaded()
+        compose.waitForIdle()
+        snap("201-points-to-christ-isaiah-53")
+        // Tapping verse 5: the card says how it points to Christ, with the New Testament as links.
+        compose.runOnUiThread { vm.openVerse(23, 53, 5, -1) }
+        waitFor(10_000) { compose.onAllNodesWithTag("christCard").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Wounded for our transgressions").assertExists()
+        compose.onNodeWithText("Points to Christ \u00b7 Prophecy \u00b7 Isaiah 53:4-6").assertExists()
+        snap("202-points-to-christ-card")
+        compose.onNodeWithText("Fulfilled in", substring = true).performClick()
+        compose.waitForIdle()
+        compose.onNodeWithContentDescription("Close passage").assertExists()
+        compose.onNodeWithContentDescription("Close passage").performClick()
+        compose.runOnUiThread { vm.verseSheet = null }
+        // A picture of Christ: the bronze serpent.
+        compose.runOnUiThread { vm.openVerse(4, 21, 9, -1) }
+        waitFor(10_000) { compose.onAllNodesWithTag("christCard").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Points to Christ \u00b7 Picture of Christ \u00b7 Numbers 21:8-9").assertExists()
+        compose.runOnUiThread { vm.verseSheet = null }
+        // Switched off in Settings: no card.
+        compose.runOnUiThread { vm.aidChrist = false; vm.openVerse(23, 53, 5, -1) }
+        compose.waitForIdle()
+        assertTrue(compose.onAllNodesWithTag("christCard").fetchSemanticsNodes().isEmpty())
+        compose.runOnUiThread { vm.verseSheet = null; vm.aidChrist = true }
+        // Every one, in Bible order, as a panel view; tapping one goes there.
+        compose.runOnUiThread { vm.sidePane = PaneKind.CHRIST }
+        waitFor(10_000) { compose.onAllNodesWithText("The first promise of the gospel").fetchSemanticsNodes().isNotEmpty() }
+        snap("203-points-to-christ-pane")
+        compose.onNodeWithText("Pictures of Christ").performClick()
+        compose.onNodeWithText("The first promise of the gospel").assertDoesNotExist()
+        compose.onNodeWithText("Covered by a sacrifice").performClick()
+        waitForLoaded()
+        assertEquals(1 to 3, vm.panels[0].book to vm.panels[0].chapter)
+        compose.runOnUiThread { vm.sidePane = null; vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+    }
+
+    @Test
     fun hardWordsAreMarkedAndExplained() {
         // STD-23: hard words get a dotted line the first time they come; tapping one explains it.
         val app: android.content.Context = vm.getApplication()

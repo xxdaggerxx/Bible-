@@ -94,6 +94,7 @@ fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
             PaneKind.NAMES -> NamesPane(vm, inner)
             PaneKind.CUSTOMS -> AidsPane(vm, symbols = false, inner)
             PaneKind.SYMBOLS -> AidsPane(vm, symbols = true, inner)
+            PaneKind.CHRIST -> ChristPane(vm, inner)
             PaneKind.SKETCHES -> SketchesPane(vm, inner)
             PaneKind.COMPARE -> VersePane(vm, inner) { id, version, text ->
                 CompareVersions(vm, id, version, text, Modifier.fillMaxWidth()) { code ->
@@ -243,6 +244,66 @@ private fun NotesPane(vm: StudyViewModel, modifier: Modifier) {
             }
         }
     }
+}
+
+/**
+ * Points to Christ (AID-13): every Old Testament passage that points to Jesus, in Bible order, by
+ * book, with all, prophecies or pictures. Tap one to read it; its New Testament links open the passage.
+ */
+@Composable
+private fun ChristPane(vm: StudyViewModel, modifier: Modifier) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val all by produceState(emptyList<com.biblestudy.app.data.ChristEntry>()) {
+        value = background { com.biblestudy.app.data.Christ.all(context) }
+    }
+    var only by remember { mutableStateOf<Boolean?>(null) } // null: all; true: prophecies; false: pictures
+    var shown by remember { mutableStateOf<Passage?>(null) }
+    val panel = vm.studyPanel()
+    val index = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
+    val list = all.filter { only == null || it.prophecy == only }
+    LazyColumn(modifier.testTag("christPane")) {
+        item {
+            Text(
+                "Old Testament verses that point to Jesus: prophecies he fulfilled, and pictures of him. " +
+                    "In the Bible they have a gold line under them. Tap one to read it.",
+                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                modifier = Modifier.padding(vertical = 8.dp),
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                FilterChip(selected = only == null, onClick = { only = null }, label = { Text("All ${all.size}") })
+                FilterChip(selected = only == true, onClick = { only = true }, label = { Text("Prophecies") })
+                FilterChip(selected = only == false, onClick = { only = false }, label = { Text("Pictures of Christ") })
+            }
+        }
+        var lastBook = 0
+        for (e in list) {
+            val book = e.first / 1_000_000
+            if (book != lastBook) {
+                lastBook = book
+                item(key = "b$book") {
+                    Text(vm.bible.book(book).name, style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 14.dp, bottom = 2.dp))
+                }
+            }
+            item(key = e.first) {
+                Column(
+                    Modifier.fillMaxWidth().clickable {
+                        vm.showBible(); vm.goTo(index, book, (e.first / 1000) % 1000, e.first % 1000)
+                    }.padding(vertical = 8.dp)
+                ) {
+                    Text("${e.ref} \u00b7 ${e.kindLabel}", style = MaterialTheme.typography.labelMedium, color = CHRIST_LINE)
+                    Text(e.title, style = MaterialTheme.typography.titleMedium)
+                    Text(e.note, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    StudyText(
+                        (if (e.prophecy) "Fulfilled in " else "See ") + e.fulfilled,
+                        onPassage = { shown = it }, style = MaterialTheme.typography.bodySmall,
+                        modifier = Modifier.padding(top = 2.dp),
+                    )
+                }
+                HorizontalDivider()
+            }
+        }
+    }
+    PassagePopupHost(vm, shown, panel.version, onDismiss = { shown = null })
 }
 
 /**
