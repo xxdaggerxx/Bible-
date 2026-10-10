@@ -2987,6 +2987,43 @@ class FeatureTest {
     }
 
     @Test
+    fun bothListsOfSketchPagesMakeANewPage() {
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        // My notes \u2192 Sketch pages: the new page opens in the panel and My notes closes.
+        compose.onNodeWithContentDescription("My notes").performClick()
+        compose.onNodeWithText("Sketch pages").performClick()
+        compose.onNodeWithTag("newSketchPage").assertIsDisplayed()
+        snap("198-sketch-list-new-button")
+        compose.onNodeWithTag("newSketchPage").performClick()
+        assertEquals(2, compose.onAllNodesWithText("New sketch page").fetchSemanticsNodes().size) // the button and the window
+        compose.onNode(androidx.compose.ui.test.hasSetTextAction()).performTextInput("Timeline of Acts")
+        compose.onNodeWithText("Create").performClick()
+        waitForLoaded()
+        val first = vm.sketches.single { it.name == "Timeline of Acts" }
+        assertEquals(first.book, vm.panels[0].book)
+        assertTrue(compose.onAllNodesWithText("Ready-made pages").fetchSemanticsNodes().isEmpty())
+
+        // The Sketch pages panel: the new page opens beside the Bible.
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        compose.onNodeWithContentDescription("Panels").performClick()
+        compose.onNodeWithText("Beside the text: Sketch pages").performClick()
+        compose.onNodeWithTag("sketchesPane").assertExists()
+        compose.onNodeWithTag("newSketchPage").performClick()
+        compose.onNode(androidx.compose.ui.test.hasSetTextAction()).performTextInput("Map of Paul's journeys")
+        compose.onNodeWithText("Create").performClick()
+        waitForLoaded()
+        val second = vm.sketches.single { it.name == "Map of Paul's journeys" }
+        assertEquals(2, vm.panels.size)
+        assertEquals(43, vm.panels[0].book) // the Bible stays where it was
+        assertEquals(second.book, vm.panels[1].book)
+        snap("199-new-sketch-beside")
+        compose.runOnUiThread { vm.closePanel(1); vm.deleteSketch(first); vm.deleteSketch(second) }
+        waitForLoaded()
+    }
+
+    @Test
     fun erasingAHighlightInOneVersionErasesItInEvery() {
         val at = Offset((Page.COL_PAD + 250f) * zoom(), 600f)
         val h = highlightWordAt(at)

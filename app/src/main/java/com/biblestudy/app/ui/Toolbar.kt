@@ -189,7 +189,7 @@ fun StudyToolbar(
             var insertMenu by remember { mutableStateOf(false) }
             var insertDialog by remember { mutableStateOf<String?>(null) }
             when (insertDialog) {
-                "sketch" -> NewSketchDialog(vm) { insertDialog = null }
+                "sketch" -> NewSketchDialog(vm, onDismiss = { insertDialog = null })
                 "verse" -> VerseCardDialog(vm) { insertDialog = null }
                 "name" -> NameCardDialog(vm) { insertDialog = null }
             }

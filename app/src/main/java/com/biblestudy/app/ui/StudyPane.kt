@@ -261,9 +261,9 @@ private fun SketchesPane(vm: StudyViewModel, modifier: Modifier) {
                 modifier = Modifier.padding(vertical = 8.dp),
             )
         }
-        item { Text("My sketch pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary) }
+        item { MySketchesHeader(vm) { made -> vm.openSketchBeside(made) } }
         if (mine.isEmpty()) item {
-            Text("None yet. Make one from Insert \u2192 Sketch page.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(vertical = 8.dp))
+            Text("None yet. Tap New sketch page to make one.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(vertical = 8.dp))
         }
         items(mine, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketchBeside(s) } }
         item { Text("Ready-made pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 16.dp)) }

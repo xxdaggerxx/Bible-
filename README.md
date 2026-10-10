@@ -72,6 +72,10 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.6.1
+
+- **New sketch page button** at the top of both lists of sketch pages (*My notes → Sketch pages* and the *Sketch pages* panel). It opens the same *New sketch page* window as *Insert → Sketch page…*; the new page opens where tapping a page in that list would (in the panel from My notes, beside the text from the Sketch pages panel).
+
 ## New in version 2.6.0
 
 - **Reading stats, redesigned** for phones and tablets, as cards (one column on a phone, two on a tablet):

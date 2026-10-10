@@ -1251,10 +1251,10 @@ private fun SketchList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Uni
     val missing = SketchTemplates.all.size > ready.size
     Column(modifier) {
         LazyColumn(Modifier.weight(1f)) {
-            item { Text("My sketch pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 8.dp)) }
+            item { MySketchesHeader(vm, Modifier.padding(top = 8.dp)) { made -> vm.openSketch(made, panelIndex); onDismiss() } }
             if (mine.isEmpty()) item {
                 Text(
-                    "None yet. Make one from Insert \u2192 Sketch page, linked to a verse or on its own.",
+                    "None yet. Tap New sketch page to make one, linked to a verse or on its own.",
                     style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(vertical = 8.dp),
                 )
             }
@@ -1266,6 +1266,24 @@ private fun SketchList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Uni
             }
         }
     }
+}
+
+/**
+ * "My sketch pages" with a button to make a new one (SKT-2), at the top of both lists of sketch pages.
+ * [open] shows the new page the way tapping a page in that list would.
+ */
+@Composable
+internal fun MySketchesHeader(vm: StudyViewModel, modifier: Modifier = Modifier, open: (com.biblestudy.app.model.Sketch) -> Unit) {
+    var making by remember { mutableStateOf(false) }
+    Row(modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        Text("My sketch pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.weight(1f))
+        FilledTonalButton(onClick = { making = true }, modifier = Modifier.testTag("newSketchPage")) {
+            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+            Spacer(Modifier.width(6.dp))
+            Text("New sketch page")
+        }
+    }
+    if (making) NewSketchDialog(vm, onDismiss = { making = false }, open = open)
 }
 
 /** A sketch page in a list: its name, the verse it's on (or "On its own"), paper and date. */
