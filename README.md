@@ -72,6 +72,10 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.8.1
+
+- **Ink shows on the dark page.** The default black pen was nearly invisible on the dark page (it's the default page since 2.1). Now any ink too close to the page is shown so it stands out: black (or white) ink takes the page's text colour, and dark colours like navy, purple and brown are lightened, keeping their hue, until they're clear (contrast 4:1). On light pages white ink shows dark. The colour picker and the toolbar's colour dot show the colours as they'll look. Strokes are saved in the colour picked, so ink written on one page colour looks right on the other and on synced devices; ink already written on the dark page now shows.
+
 ## New in version 2.8.0
 
 - **Points to Christ** (a new Bible aid): a soft gold line under every Old Testament verse that points to Jesus, about 380 verses in 145 passages, in every version.

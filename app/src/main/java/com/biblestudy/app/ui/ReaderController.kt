@@ -642,7 +642,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
         val ink = live ?: return
         val f = fastInk ?: return
         val w = penWidth(ink.width, pressure) * panel.zoom
-        f.draw(InkSegment(lastPos.x, lastPos.y, to.x, to.y, w, ink.color))
+        f.draw(InkSegment(lastPos.x, lastPos.y, to.x, to.y, w, if (ink.highlighter) ink.color else inkOn(vm.theme, ink.color)))
         lastPos = to
     }
 

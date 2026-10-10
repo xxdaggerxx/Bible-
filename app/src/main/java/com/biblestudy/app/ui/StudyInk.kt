@@ -244,7 +244,7 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
                     val layer = visible[s.layerId] ?: continue
                     if (StudyInk.isRange(s)) continue
                     val alpha = (if (s.highlighter) 0.4f else 1f) * layer.opacity
-                    drawInk(l.drawnPoints(s), Color(s.color).copy(alpha = alpha), s.width * density / 2f)
+                    drawInk(l.drawnPoints(s), Color(inkOn(vm.theme, s.color)).copy(alpha = alpha), s.width * density / 2f)
                 }
                 // The picked writing is outlined.
                 if (l != null && picked.isNotEmpty()) for (st in mine) {
@@ -267,7 +267,7 @@ fun InkableText(vm: StudyViewModel, doc: InkDoc, text: AnnotatedString, modifier
                 }
                 if (liveTool == Tool.PEN || liveTool == Tool.HIGHLIGHTER) {
                     val hl = liveTool == Tool.HIGHLIGHTER
-                    drawInk(live.toList(), Color(if (hl) vm.highlightColor else vm.penColor).copy(alpha = if (hl) 0.4f else 1f), vm.currentWidth(hl) * density / 2f)
+                    drawInk(live.toList(), Color(if (hl) vm.highlightColor else inkOn(vm.theme, vm.penColor)).copy(alpha = if (hl) 0.4f else 1f), vm.currentWidth(hl) * density / 2f)
                 }
             },
     )

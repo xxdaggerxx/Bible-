@@ -28,7 +28,7 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
 
 - **The S Pen writes; fingers scroll, pinch and tap.** To draw with a finger too, turn on *Settings → Pen & ink → Draw with finger*. Then one finger draws and two fingers scroll and zoom. A quick tap with one finger still makes a dot.
 - **Your palm is ignored** while you write.
-- **Tools** along the toolbar: pen, highlighter, eraser, lasso and select. Tap the round colour button for colours and sizes.
+- **Tools** along the toolbar: pen, highlighter, eraser, lasso and select. Tap the round colour button for colours and sizes. Ink always shows on the page: on the dark page the black pen writes in light ink, like the print, and dark colours (navy, purple, brown) show as lighter shades. Your ink keeps its colour, so it looks right again on a light page and on your other devices.
 - **S Pen button.** Hold the side button while the pen touches the page to erase, whatever tool is picked. *Settings → Pen & ink → S Pen button* can make it the lasso instead.
 - **Read mode.** The lock at the far left stops the pen marking the page; the pen then scrolls like a finger. Tap it again to write.
 - **Undo and redo** are the curved arrows.

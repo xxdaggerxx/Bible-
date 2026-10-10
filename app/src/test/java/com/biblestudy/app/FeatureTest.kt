@@ -358,6 +358,39 @@ class FeatureTest {
     }
 
     @Test
+    fun everyPenColourShowsOnTheDarkPage() {
+        // INK-17: the default black pen writes light on the dark page; every colour shows.
+        compose.runOnUiThread { vm.theme = com.biblestudy.app.ui.PageTheme.DARK; vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, 1, remember = false); vm.fingerDraw = true; vm.tool = Tool.PEN }
+        waitForLoaded()
+        val before = vm.textStrokesFor("KJV", 43, 3).size
+        for ((i, c) in com.biblestudy.app.ui.PEN_COLORS.withIndex()) {
+            compose.runOnUiThread { vm.penColor = c; vm.penSize = 2 }
+            compose.onNodeWithTag("reader0").performTouchInput {
+                val y = 420f + i * 70f
+                down(Offset(260f, y)); repeat(20) { moveBy(Offset(22f, if (it % 2 == 0) -10f else 10f)) }; up()
+            }
+            compose.waitForIdle()
+        }
+        assertEquals(before + com.biblestudy.app.ui.PEN_COLORS.size, vm.textStrokesFor("KJV", 43, 3).size)
+        // Saved in the colour picked; only how it's shown changes.
+        assertEquals(com.biblestudy.app.ui.PEN_COLORS[0], vm.textStrokesFor("KJV", 43, 3)[before].color)
+        snap("204-pen-colours-dark")
+        compose.onNodeWithContentDescription("Pen colour and size").performClick()
+        compose.waitForIdle()
+        snap("205-pen-colours-dark-picker")
+        compose.runOnUiThread { vm.penColor = com.biblestudy.app.ui.PEN_COLORS[0] }
+        compose.onNodeWithContentDescription("Pen colour and size").performClick()
+        compose.runOnUiThread { vm.theme = com.biblestudy.app.ui.PageTheme.LIGHT }
+        compose.waitForIdle()
+        snap("206-pen-colours-light")
+        compose.runOnUiThread {
+            vm.textStrokesFor("KJV", 43, 3).drop(before).forEach { vm.removeItem(it) }
+            vm.theme = com.biblestudy.app.ui.PageTheme.DARK; vm.fingerDraw = false
+        }
+        waitForLoaded()
+    }
+
+    @Test
     fun strokesAreFiledByWhereMostOfThemLie() {
         compose.runOnUiThread { vm.marginRight = true; vm.marginLeft = false }
         waitForLoaded()

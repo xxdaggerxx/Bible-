@@ -1096,7 +1096,7 @@ private fun DrawScope.drawStrokes(
         val oy = Page.TEXT_TOP + d.y
         val r = g.layout.render(s)
         if (!ReaderController.overlaps(r.bounds.translate(ox, oy), view)) continue
-        drawStrokeRender(r, strokeColor(s.color, highlighter), ox, oy)
+        drawStrokeRender(r, strokeColor(vm.theme, s.color, highlighter), ox, oy)
     }
     for (s in marginStrokes) {
         if (s.layerId != layerId || s.highlighter != highlighter || !g.visible(s.region)) continue
@@ -1105,12 +1105,13 @@ private fun DrawScope.drawStrokes(
         val oy = g.originY(s.region, s.verse) + d.y
         val r = vm.render(s)
         if (!ReaderController.overlaps(r.bounds.translate(ox, oy), view)) continue
-        drawStrokeRender(r, strokeColor(s.color, highlighter), ox, oy)
+        drawStrokeRender(r, strokeColor(vm.theme, s.color, highlighter), ox, oy)
     }
 }
 
-private fun strokeColor(c: Int, highlighter: Boolean) =
-    Color(c).let { if (highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
+/** A stroke's colour on the page: pen ink made to show on it (INK-17); highlighters see-through. */
+private fun strokeColor(theme: PageTheme, c: Int, highlighter: Boolean) =
+    if (highlighter) Color(c).copy(alpha = HIGHLIGHT_ALPHA) else Color(inkOn(theme, c))
 
 private val SELECT_BLUE = Color(0xFF1E88E5)
 private val NOTE_COLOR = Color(0xFFA07B45)
@@ -1127,7 +1128,7 @@ private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, t
         ctl.live?.takeIf { !ctl.fastStroke }?.let { ink ->
             ink.tick // redraw on every new point
             val r = buildRender(ink.toArray(), ink.width, ink.highlighter)
-            val c = Color(ink.color).let { if (ink.highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
+            val c = strokeColor(theme, ink.color, ink.highlighter)
             drawStrokeRender(r, c, ink.ox, ink.page.top + ink.oy)
         }
 
@@ -1458,7 +1459,7 @@ private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawHover(vm: Study
     when (tool) {
         Tool.PEN -> {
             val r = (vm.currentWidth(false) * z / 2f).coerceAtLeast(2.5f)
-            drawCircle(Color(vm.penColor).copy(alpha = 0.55f), r, at)
+            drawCircle(Color(inkOn(vm.theme, vm.penColor)).copy(alpha = 0.55f), r, at)
             drawCircle(Color.White.copy(alpha = 0.8f), r + 1.5f, at, style = androidx.compose.ui.graphics.drawscope.Stroke(1.5f))
         }
         Tool.HIGHLIGHTER -> {
@@ -1492,7 +1493,7 @@ private fun DrawScope.drawNotePreview(vm: StudyViewModel, measurer: TextMeasurer
                         for (i in 3 until p.size step 3) lineTo(p[i], p[i + 1])
                     }
                     drawPath(
-                        path, Color(st.color).copy(alpha = if (st.highlighter) HIGHLIGHT_ALPHA else 1f),
+                        path, strokeColor(vm.theme, st.color, st.highlighter),
                         style = androidx.compose.ui.graphics.drawscope.Stroke(st.width, cap = androidx.compose.ui.graphics.StrokeCap.Round, join = androidx.compose.ui.graphics.StrokeJoin.Round),
                     )
                 }
