@@ -1,0 +1,66 @@
+{
+ "id": "10-018-001",
+ "title": "Absalom Killed",
+ "refs": [
+  "2 Samuel 18:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10018001,
+   "end": 10018018,
+   "ref": "2 Samuel 18:1-18",
+   "ranges": [
+    [
+     10018001,
+     10018018
+    ]
+   ],
+   "title": "The End of Absalom's Rebellion",
+   "key_verse": [
+    10018014,
+    10018014
+   ],
+   "reflect": [
+    {
+     "text": "Absalom tried to seize the kingdom from his father David, but his rebellion quickly crumbled. God sovereignly worked against the human advice Absalom followed so that judgment would come upon him. Absalom's vanity led him into the wilderness battle, where his head was caught fast in the branches of a large oak tree. He was left hanging helplessly in midair.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "King David had asked his men to treat Absalom gently, showing reluctance to punish his son. But Joab acted decisively and struck down the rebel prince. Instead of gaining the honor he sought, Absalom suffered the cursed death and disgraced burial of a rebellious traitor, cast into a pit and covered with stones.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Through these hard events, we see that God remains in complete control. Even during seasons of deep distress and exile, God faithfully provides for His people. When our lives feel uncertain, we can trust that God is working to protect His people and bring about what is right.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does Absalom's story remind us of the danger of following our own pride instead of God?",
+    "In what seasons of distress or uncertainty do you need to trust God's faithful care today?"
+   ],
+   "prayer": "Lord, thank you that you rule over all things and care for your people. Guard our hearts against pride, and help us not to rebel against your ways. When we walk through seasons of deep distress, teach us to rest in your faithful protection. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Absalom Defeated",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/absalom-defeated"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

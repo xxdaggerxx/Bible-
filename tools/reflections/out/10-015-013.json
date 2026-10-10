@@ -1,0 +1,75 @@
+{
+ "id": "10-015-013",
+ "title": "David Flees Jerusalem",
+ "refs": [
+  "2 Samuel 15:13-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10015013,
+   "end": 10015029,
+   "ref": "2 Samuel 15:13-29",
+   "ranges": [
+    [
+     10015013,
+     10015029
+    ]
+   ],
+   "title": "Crossing the Dark Valley",
+   "key_verse": [
+    10015023,
+    10015023
+   ],
+   "reflect": [
+    {
+     "text": "David had to flee from his own home when his son Absalom rebelled against him. Weighed down by deep sorrow and feeling crushed by his own failures, the king walked out of Jerusalem in tears alongside his loyal followers. Even though David was chosen and loved by God, he was never promised a life free from hardship.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon noted, Jesus also crossed this same valley of Kidron on the night He was betrayed. Jesus understands every grief we face, from broken friendships and shame to heavy fear about the future. When David reached the mountaintop in his lowest moment, he turned his despair into honest prayer. Looking to God gave David the inner strength to keep walking in faith instead of being paralyzed by fear.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We do not need to be surprised when troubles come our way. Our Savior has already traveled down these painful paths ahead of us. Just as David eventually returned home and Jesus rose in triumph from the grave, God will lead us through our darkest valleys into His victory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What painful situation or heavy sorrow feels like a dark valley for you right now?",
+    "How can turning your honest feelings into prayer help you move forward in faith today?"
+   ],
+   "prayer": "Lord, thank You that You understand our deepest sorrows and never abandon us in our darkest moments. When we feel overwhelmed or like failures, help us turn our pain into honest prayer. Give us quiet courage to walk forward in faith, knowing that Jesus has already walked this road and won the victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 31",
+     "on": "2 Samuel 15:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 65: 2 Samuel 15:13–31",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-65-2-samuel-15-1331.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "10-019-031",
+ "title": "David’s Kindness to Barzillai",
+ "refs": [
+  "2 Samuel 19:31-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10019031,
+   "end": 10019040,
+   "ref": "2 Samuel 19:31-40",
+   "ranges": [
+    [
+     10019031,
+     10019040
+    ]
+   ],
+   "title": "Never Too Old to Serve the King",
+   "key_verse": [
+    10019033,
+    10019033
+   ],
+   "reflect": [
+    {
+     "text": "When King David had to flee into the wilderness, Barzillai provided food and care for him. Hard times test our commitments. Hardship quickly exposes fair-weather followers, but it reveals genuine devotion in those who remain loyal. Barzillai showed true faithfulness when David was vulnerable and in exile.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When David returned in triumph, he remembered Barzillai's selfless kindness. The king invited him to come to Jerusalem and share in royal honour. Even though Barzillai was eighty years old, his life shows us that advanced age does not sideline God's people. No one is ever too old to serve the King.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In the same way, we are called to stand with King Jesus today. Much of the world does not yet recognise His rule, but we can still offer Him our devotion. Whatever our age or stage of life, we can faithfully honor and serve our King right now.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you stand faithfully with King Jesus today, even when those around you do not acknowledge Him?",
+    "In what ways can you serve the Lord right now, regardless of your age or limitations?"
+   ],
+   "prayer": "Lord Jesus, thank You that no one is too old or too weak to serve You in Your kingdom. Help us to stay loyal to You when following You is hard and unpopular. Teach us to offer what we have to bless others and honor Your name every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Morse",
+     "work": "None Too Old to Serve the King",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/none-too-old-to-serve-the-king"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

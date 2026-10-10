@@ -1,0 +1,74 @@
+{
+ "id": "10-019-041",
+ "title": "Contention over the King",
+ "refs": [
+  "2 Samuel 19:41-43"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10019041,
+   "end": 10019043,
+   "ref": "2 Samuel 19:41-43",
+   "ranges": [
+    [
+     10019041,
+     10019043
+    ]
+   ],
+   "title": "Our Kinsman and King",
+   "key_verse": [
+    10019042,
+    10019042
+   ],
+   "reflect": [
+    {
+     "text": "After David's victory, a sharp argument broke out between the tribes of Israel and the men of Judah over bringing the king home. Each side claimed a greater right to David. This heated conflict exposed deep cracks in the nation that David did not resolve cleanly. Those early signs of division pointed forward to the tragic split of the kingdom generations later. In the same way, we need to recognize early warning signs of friction in our own lives and address disputes before they grow worse.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "During the quarrel, the men of Judah defended their actions by saying the king was their near relative. This points us to a wonderful truth about Jesus. As F. B. Meyer observed, \"The King is our kinsman.\" Jesus is our King because He has power over our enemies, but He is also our brother because He took on our human flesh and blood. He shared in our weariness, our prayers to the Father, and our temptations, yet He never sinned.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Human rulers have flaws and often fail to heal disputes, but our Lord meets us with perfect sympathy. Because Jesus fought through human trials Himself, He draws near to strengthen us in our battles and keeps us united in His love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there early signs of disagreement or tension in your life that you need to address before they worsen?",
+    "How does knowing that Jesus shares your human nature and understands your struggles bring you comfort today?"
+   ],
+   "prayer": "Lord Jesus, thank You for taking on human flesh and understanding our weaknesses and trials. Forgive us when pride and rivalry stir up friction between us and others. Help us to notice early signs of division, and guide us to live in peace under Your loving care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 19:42",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Signs of Trouble to Come",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/signs-of-trouble-to-come"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

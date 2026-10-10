@@ -1,0 +1,76 @@
+{
+ "id": "10-014-001",
+ "title": "Absalom’s Return to Jerusalem",
+ "refs": [
+  "2 Samuel 14:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 10014014,
+   "end": 10014014,
+   "ref": "2 Samuel 14:14",
+   "ranges": [
+    [
+     10014014,
+     10014014
+    ]
+   ],
+   "title": "\"He Devises Ways\"",
+   "key_verse": [
+    10014014,
+    10014014
+   ],
+   "reflect": [
+    {
+     "text": "The woman from Tekoa reminded David that God devises ways to bring back those who are separated from Him. Yet David handled Absalom very poorly. He allowed his son to return to the city, but he refused to let Absalom see his face. David offered only a halfhearted pardon, letting his feelings rule without asking for any sorrow or confession.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "F. B. Meyer noted that when a father ignores sin without requiring repentance, it only confirms the wrongdoer in their stubborn path. David left his son at a distance without true reconciliation, and this cold compromise hardened Absalom even more. Sweeping wrongdoing under the rug without honest confession damages families and breaks trust.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This sad failure highlights the beauty of God's real forgiveness. God does not simply cancel our guilt while keeping us at arm's length. Instead, Christ gave His life to pay for our sins, and the Holy Spirit leads us to confess them. When we turn back to God, He does not offer a distant, partial welcome. He brings us all the way home into full relationship with Himself.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever tried to offer or receive a partial forgiveness that kept someone at a distance?",
+    "How does knowing that God desires full relationship with you encourage you to confess your sins honestly?"
+   ],
+   "prayer": "Heavenly Father, thank You for not leaving us far away in our sin. Thank You for Jesus, who died so we could be truly forgiven and brought near. Help us to confess our wrongs honestly and to receive the full warmth of Your welcome. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 14:14",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 63: 2 Samuel 14:1–33",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-63-2-samuel-14-133.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

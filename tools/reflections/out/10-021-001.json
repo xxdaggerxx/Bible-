@@ -1,0 +1,67 @@
+{
+ "id": "10-021-001",
+ "title": "David Avenges the Gibeonites",
+ "refs": [
+  "2 Samuel 21:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10021001,
+   "end": 10021014,
+   "ref": "2 Samuel 21:1-14",
+   "ranges": [
+    [
+     10021001,
+     10021014
+    ]
+   ],
+   "title": "Keeping Promises and Enduring in Love",
+   "key_verse": [
+    10021001,
+    10021001
+   ],
+   "reflect": [
+    {
+     "text": "When Israel faced three years of famine, David asked the Lord why it was happening. God showed him that King Saul had broken Israel's ancient covenant with the Gibeonites by putting them to death. God cares deeply about justice, and He holds His people accountable to keep their solemn promises even when circumstances change. David sought to make right this past sin, while also faithfully honoring his own prior oath to Jonathan by sparing Mephibosheth.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In the midst of this painful judgment, Rizpah stayed beside the bodies of her slain sons on the rock. She endured the heat, cold rains, and dangerous beasts day and night to guard them. As Charles Spurgeon observed, her deep devotion reminds us never to grow weary of remembering our Lord's sufferings. If Rizpah showed such persistent love, we can gladly endure trials and chase away sinful thoughts that distract us from staying near the cross.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there promises we have made to God or to other people that we need to keep more faithfully?",
+    "How can we guard our hearts and minds from distractions when we think about what Jesus suffered for us?"
+   ],
+   "prayer": "Lord God, help us to be faithful people who keep our vows and honor justice. Give us deep love for Jesus so that we do not shrink back from trials or grow tired of following Him. Keep our eyes fixed on our Savior and His cross today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 31",
+     "on": "2 Samuel 21:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Apr. 19, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-apr-19-2010-11629050.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

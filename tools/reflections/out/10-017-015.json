@@ -1,0 +1,67 @@
+{
+ "id": "10-017-015",
+ "title": "Hushai’s Warning Saves David",
+ "refs": [
+  "2 Samuel 17:15-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10017015,
+   "end": 10017029,
+   "ref": "2 Samuel 17:15-29",
+   "ranges": [
+    [
+     10017015,
+     10017029
+    ]
+   ],
+   "title": "Crossing Over to Life",
+   "key_verse": [
+    10017022,
+    10017022
+   ],
+   "reflect": [
+    {
+     "text": "When David received the urgent warning to cross the river Jordan, he did not delay. By daybreak, every single person with him had crossed over safely to the other side. Not one was left behind. David crossing the river points us to what Jesus has done for His people. Christ passed through the waters of death and brought all who trust in Him safely across. As F. B. Meyer writes, \"we are already standing on resurrection ground.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Many of us know that Jesus died in our place. Yet Scripture also shows that we are united with Him. When He died and rose again to new life, we were joined to Him. Because of this, death and sin no longer rule over us. We have left our old position behind on the other side of the water, and we belong to God's new world of life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This truth gives us a daily choice in how we live. There is always a choice between staying on the world's side or stepping over to Christ's side. We can act as the world does, or we can follow Jesus into life. Each day, God calls us to leave old, sinful ways behind and walk on the living side with our King.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you are joined to Christ in His new life give you comfort today?",
+    "What is one old habit or selfish reaction that God is asking you to leave behind?"
+   ],
+   "prayer": "Lord Jesus, thank You for passing through death and bringing us safely into Your new life. Help us remember that sin no longer has power over us. Teach us today to step away from the ways of the world and walk closely with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Samuel 17:21",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}
