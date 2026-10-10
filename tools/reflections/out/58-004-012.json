@@ -1,0 +1,72 @@
+{
+ "id": "58-004-012",
+ "title": "The Living Word",
+ "refs": [
+  "Hebrews 4:12-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58004012,
+   "end": 58004016,
+   "ref": "Hebrews 4:12-16",
+   "ranges": [
+    [
+     58004012,
+     58004016
+    ]
+   ],
+   "title": "Exposed by Truth, Welcomed by Grace",
+   "key_verse": [
+    58004016,
+    58004016
+   ],
+   "reflect": [
+    {
+     "text": "God's word is not like an ordinary book. It is alive and full of God's own power. Like a sharp blade cutting deep into a bone to reach the soft marrow, Scripture cuts through how we appear on the outside. It reveals what is truly happening in our hearts, showing whether we are living by our own human nature or by God's spiritual life. Even when this convicting truth stings, we can welcome it because it brings comfort and spiritual renewal.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God sees everything uncovered, we cannot come to Him based on our own good deeds. Instead, we approach Him entirely through Jesus, our sympathetic High Priest. Praying in Jesus' name is not just a routine habit or an empty phrase. It means relying on Christ alone as the reason we are allowed to enter God's presence.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Since Jesus understands our struggles, we can step forward with confidence. We do not have to hide our fears, heavy burdens, or personal failures. We can bring every need directly to God, knowing He hears and welcomes our cries just like a loving Father listening to His own children.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When God's word points out a hidden fault or weakness in your heart, do you welcome it or try to ignore it?",
+    "How does knowing Jesus welcomes you as a sympathetic High Priest change the way you bring your daily struggles to God?"
+   ],
+   "prayer": "Father, thank You for using Your living word to search our hearts and bring us true healing. We know we cannot stand before You on our own merit. Thank You for Jesus, who understands our weaknesses and allows us to bring all our burdens to You with confidence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "Pierced By the Word of God",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/pierced-by-the-word-of-god"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Praying in Jesus’ Name - Truth For Life - October 9",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-october-9-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "40-006-019",
+ "title": "Treasures in Heaven",
+ "refs": [
+  "Matthew 6:19-21",
+  "Luke 12:32-34"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40006019,
+   "end": 40006021,
+   "ref": "Matthew 6:19-21",
+   "ranges": [
+    [
+     40006019,
+     40006021
+    ]
+   ],
+   "title": "\"Store Up Treasures in Heaven\"",
+   "key_verse": [
+    40006021,
+    40006021
+   ],
+   "reflect": [
+    {
+     "text": "Many of us live with crowded homes and storage units filled with items we hardly touch. It is easy to gather worldly goods in the hope that they will make us feel safe and comfortable. While careful saving is sensible, trusting in physical wealth can quietly take the place of our faith in God. Everything we buy eventually wears out, breaks down, and fades. In contrast, what we give toward God's kingdom will last forever.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our culture often confuses a good life with buying more things. Yet the full life Jesus gives is spiritual rather than material. Earthly blessings are not status symbols meant to show off our success. Instead, God gives us resources so we can honor him and help others. What we choose to collect and protect shows what our hearts truly value.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We need to look honestly at where our focus lies and turn away from selfish materialism. When we ask the Holy Spirit to reshape our priorities, he helps us use our time and money for eternal purposes. Putting our treasure in heaven frees us from chasing things that cannot satisfy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What possessions or savings are you tempted to rely on for security instead of trusting God?",
+    "How can you use your resources this week to honor God and bless someone else?"
+   ],
+   "prayer": "Lord, show us where we have placed our trust in things that do not last. Forgive us for treating our possessions as symbols of status or security. Guide our hearts by your Spirit so we can use what you give us to honor you and bless others.",
+   "sources": {
+    "D1": {
+     "author": "Jim Liebelt",
+     "work": "Shop ‘Til We Drop?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/shop-til-we-drop-homeword-november-24.html"
+    },
+    "D2": {
+     "author": "Annie Yorty",
+     "work": "Heavenly Treasures",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/heavenly-treasures-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

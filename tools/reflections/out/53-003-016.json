@@ -1,0 +1,73 @@
+{
+ "id": "53-003-016",
+ "title": "Signature and Final Greetings",
+ "refs": [
+  "2 Thessalonians 3:16-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 53003016,
+   "end": 53003018,
+   "ref": "2 Thessalonians 3:16-18",
+   "ranges": [
+    [
+     53003016,
+     53003018
+    ]
+   ],
+   "title": "The Gift of True Peace",
+   "key_verse": [
+    53003016,
+    53003016
+   ],
+   "reflect": [
+    {
+     "text": "Paul ends his letter with a prayer for the believers in Thessalonica. These Christians were dealing with painful persecution, confusing teachings about faith, and disagreements within their church family. In the middle of those struggles, Paul directs their eyes to Jesus, calling Him the Lord of peace. This name shows that Jesus is truly God, and that real, enduring peace with God is found only through Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "People often try to find calm by avoiding arguments, gathering wealth, or turning to other religions, but that kind of peace breaks easily when hard times hit. By emphasizing that the Lord Himself gives peace, Paul shows that peace is part of who God is. He gives it directly to His people as a steady spiritual attitude rooted in our reconciliation with Him, which means being brought back into a right relationship with God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our sovereign God is in control of all things. He is never anxious, conflicted, or taken by surprise by the troubles of this world. Because this calm belongs to God Himself, we can experience His peace in all circumstances, even when life feels unsettled.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you usually turn for peace when life becomes stressful or uncertain?",
+    "How does knowing that God is never caught off guard help you face your current troubles?"
+   ],
+   "prayer": "Lord Jesus, thank you for giving us your true and lasting peace. When we face confusion or conflict, remind us that you are sovereign and never anxious. Help us to rest in the deep calm that comes from being right with you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Blessing of Peace",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-blessing-of-peace"
+    },
+    "D2": {
+     "author": "John MacArthur",
+     "work": "The Only True Peace",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/print/B121203/the-only-true-peace"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

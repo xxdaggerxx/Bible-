@@ -1,0 +1,68 @@
+{
+ "id": "41-004-026",
+ "title": "The Seed Growing Secretly",
+ "refs": [
+  "Mark 4:26-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 41004026,
+   "end": 41004029,
+   "ref": "Mark 4:26-29",
+   "ranges": [
+    [
+     41004026,
+     41004029
+    ]
+   ],
+   "title": "Trusting God for the Growth",
+   "key_verse": [
+    41004028,
+    41004028
+   ],
+   "reflect": [
+    {
+     "text": "In this story, Jesus describes a farmer who scatters seed on the ground. Night and day, the farmer sleeps and goes about his ordinary routine, yet the seed sprouts and grows without his help. In our own lives, we are responsible for sharing God's Word, but we cannot create spiritual life on our own. God's kingdom advances through ordinary and quiet ways, unfolding through a slow and steady process that belongs entirely to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Recognizing our human limitations brings real humility. It relieves the pressure of trying to control how other people respond to the message of Jesus. We do not need to rely on superficial tactics or try to force quick results. Acknowledging that we cannot change hearts is not an excuse to sit back and do nothing. Instead, it frees us to be patient and faithful in our daily callings, planting the truth and trusting God to bring about lasting fruit in His own time.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where have you felt the pressure to control someone else's spiritual growth instead of trusting God?",
+    "What ordinary, daily step of sharing God's Word can you take with patience today?"
+   ],
+   "prayer": "Lord, thank You for reminding us that You alone can make spiritual life grow. Forgive us when we try to force results or worry about what we cannot control. Teach us to be patient and faithful in sharing Your truth, trusting Your hidden work in every heart. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Knowing Your Limitations",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/knowing-your-limitations-one-year-devotions-for-men-january-14.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Slow and Steady Growth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/slow-and-steady-growth"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

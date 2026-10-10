@@ -1,0 +1,66 @@
+{
+ "id": "66-006-007",
+ "title": "The Fourth Seal: Death",
+ "refs": [
+  "Revelation 6:7-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66006007,
+   "end": 66006008,
+   "ref": "Revelation 6:7-8",
+   "ranges": [
+    [
+     66006007,
+     66006008
+    ]
+   ],
+   "title": "Christ Sets Limits on Suffering",
+   "key_verse": [
+    66006008,
+    66006008
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus opens the fourth seal, John sees a pale horse. Its rider brings death through conflict, hunger, sickness, and wild beasts. These painful troubles happen throughout history between Jesus' first coming and his return. Yet this vision shows us that only the Lamb of God has the authority to open the scroll and carry out God's plan.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even in this heavy scene, God's judgment is mixed with mercy. The rider is given power over only a fourth of the earth, so that humanity is preserved. Jesus places clear boundaries on how far destruction can spread. Diseases and disasters will occur, but they cannot go beyond the limits Christ sets for them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Jesus is in charge, we do not have to live in fear. Wars and sickness do not mean that God has lost control of our world. We can rest in knowing that he rules over every event and that his church will always endure under his watchful care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you hear news about war or disease, what reminds you that Christ is still in control?",
+    "How does knowing that God limits earthly suffering bring you comfort today?"
+   ],
+   "prayer": "Lord Jesus, thank you that you hold all authority over our world and its trials. When we see suffering and disaster, help us not to give in to fear. Remind us that you set boundaries on every hardship and that your church is safe in your hands. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Black and Pale Horses",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-black-and-pale-horses"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "40-021-028",
+ "title": "The Parable of the Two Sons",
+ "refs": [
+  "Matthew 21:28-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40021028,
+   "end": 40021032,
+   "ref": "Matthew 21:28-32",
+   "ranges": [
+    [
+     40021028,
+     40021032
+    ]
+   ],
+   "title": "Doing the Father's Will",
+   "key_verse": [
+    40021031,
+    40021031
+   ],
+   "reflect": [
+    {
+     "text": "Jesus tells a story about two sons to challenge the religious leaders of his day. One son says no at first, but later changes his mind and goes to work in the vineyard. The second son uses polite words and says yes, but never actually goes. Jesus makes it clear that real obedience is not just saying the right things. It is shown by what we actually do.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In this story, Jesus explains that God gladly welcomes and pardons those who openly rebel at first, so long as they turn back to him. People who were looked down on, like tax collectors and prostitutes, knew their own spiritual need and believed the truth. The religious leaders, however, thought they were good enough on their own. When they named the first son as the one who obeyed, they condemned their own resistance to God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This reminds us never to assume we are safe because of our own good deeds. God does not look for empty promises or pride. He calls us to keep admitting our sins and depending entirely on his mercy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do your everyday actions match the words of faith you speak?",
+    "Are you relying on your own goodness, or are you depending on God's mercy?"
+   ],
+   "prayer": "Lord, forgive us when we give you polite words instead of true obedience. Keep us from being proud or trusting in our own goodness. Help us to admit our faults quickly and follow you with honest, willing hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Tale of Two Sons",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/tale-two-sons"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

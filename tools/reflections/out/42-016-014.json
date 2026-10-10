@@ -1,0 +1,66 @@
+{
+ "id": "42-016-014",
+ "title": "The Law and the Prophets",
+ "refs": [
+  "Luke 16:14-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42016014,
+   "end": 42016018,
+   "ref": "Luke 16:14-18",
+   "ranges": [
+    [
+     42016014,
+     42016018
+    ]
+   ],
+   "title": "Taking Off Our Spiritual Masks",
+   "key_verse": [
+    42016015,
+    42016015
+   ],
+   "reflect": [
+    {
+     "text": "It can be easy to try to look good on the outside. Like the Pharisees who cared deeply about how others viewed them, we sometimes put on religious masks. We want people to believe we are spiritually mature, so we hide our flaws and struggles. Pretending often feels comfortable and safe, but Jesus sees straight through every disguise.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus rejected the hypocrisy of the Pharisees because God cares about what is in our hearts. What people admire is often worthless to God if the inside is corrupt. The Lord does not want an empty religious performance. Instead, He desires authentic brokenness, welcoming people who are honest about their real need for Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Being honest about our weaknesses requires real courage, but we do not have to be afraid. God already knows the truth about us, and His love for us never fails. Resting in His unconditional love frees us to set aside our masks and live genuinely for Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to pretend you have everything together rather than being honest?",
+    "How does knowing God already sees your heart help you drop your disguises before Him?"
+   ],
+   "prayer": "Lord, You know everything inside our hearts, including the flaws we try to hide. Thank You for loving us completely and meeting us in our brokenness. Give us the courage to drop our disguises and walk openly with You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Doug Fields",
+     "work": "Taking Off the Disguise",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/taking-off-the-disguise-homeword-july-16.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "47-013-001",
+ "title": "Examine Yourselves",
+ "refs": [
+  "2 Corinthians 13:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47013001,
+   "end": 47013010,
+   "ref": "2 Corinthians 13:1-10",
+   "ranges": [
+    [
+     47013001,
+     47013010
+    ]
+   ],
+   "title": "Passing the Test of Faith",
+   "key_verse": [
+    47013005,
+    47013005
+   ],
+   "reflect": [
+    {
+     "text": "Paul tells the Corinthian church to examine themselves to see whether they are in the faith. Many times, people use this verse to call for intense spiritual inspection. Looking at our own hearts can turn harmful, though, if we feel we are never allowed to pass the test.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul did not write these words to leave his readers feeling helpless or rejected. In this letter, he actually expected the Corinthian believers to pass the test. He reminded them that Jesus Christ really lives in His people. Because Jesus is inside us, we have genuine reasons to know that we belong to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Testing our hearts is still a valuable practice for Christians. Yet we do not need to live under constant fear of failing. As Kevin DeYoung notes, believers can \"give themselves a passing grade\" to God's glory when they trust in Christ living in them.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you look at your life, do you see evidence that Jesus Christ lives in you?",
+    "How does knowing you can pass this test by God's grace bring you peace today?"
+   ],
+   "prayer": "Lord Jesus, thank You for making Your home inside our hearts. Help us examine ourselves honestly without falling into endless fear or doubt. Give us peace and joy as we trust that You are truly with us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Kevin DeYoung",
+     "work": "It’s Okay to Pass This Test",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/its-okay-to-pass-this-test/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "40-006-001",
+ "title": "Giving to the Needy",
+ "refs": [
+  "Matthew 6:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40006001,
+   "end": 40006004,
+   "ref": "Matthew 6:1-4",
+   "ranges": [
+    [
+     40006001,
+     40006004
+    ]
+   ],
+   "title": "Giving in Secret for God's Approval",
+   "key_verse": [
+    40006004,
+    40006004
+   ],
+   "reflect": [
+    {
+     "text": "In our world, people often want praise and applause when they help others. Jesus warns us not to show off our good deeds just to be noticed by people. When we give simply to look good, human praise is the only reward we will ever get. God looks at our hearts, and He cares about why we give, not just what we do.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead, Jesus calls us to give quietly. Charles Spurgeon urged believers to give without even whispering to ourselves that we are generous. Giving should become such a normal habit that we do not stop to congratulate ourselves. When we quietly help people in need without drawing attention to it, we discover a deep and sweet joy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can safely leave our gifts in God's hands. He sees every act done in secret, and His approval matters far more than the opinions of other people. The Lord Himself promises to reward our quiet kindness in His own perfect time and way.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you help someone in need, do you look for human praise, or are you content with God seeing it?",
+    "How can you make giving such a regular habit that you do not dwell on your own generosity?"
+   ],
+   "prayer": "Father in heaven, please cleanse my heart from the desire for human praise. Help me to give quietly and gladly, seeking only Your approval. Thank You that You see every hidden kindness and that Your reward is enough for me. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 2",
+     "on": "Matthew 6:3-4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Giving with Discretion",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/giving-discretion"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

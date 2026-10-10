@@ -1,0 +1,127 @@
+{
+ "id": "50-002-012",
+ "title": "Lights in the World",
+ "refs": [
+  "Philippians 2:12-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 50002014,
+   "end": 50002015,
+   "ref": "Philippians 2:14-15",
+   "ranges": [
+    [
+     50002014,
+     50002015
+    ]
+   ],
+   "title": "\"Shine as Lights in the World\"",
+   "key_verse": [
+    50002015,
+    50002015
+   ],
+   "reflect": [
+    {
+     "text": "When we complain or argue, we fail to honor God. Grumbling often shows that we doubt God's goodness and His control over our daily lives. Instead of letting discontent grow, we can choose to be thankful and rejoice in what Christ has done for us. When disagreements happen, handling them with humility rather than pride keeps unnecessary conflict away.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "By putting away complaints and holding onto God's Word, we stand out as bright lights in a dark world. Lights serve several clear purposes in our lives. First, they reveal who we follow, so that people see the image of Jesus in our actions. They also guide those who are lost or tired, pointing them to Christ and helping them understand God's truth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Lights also give warning and bring cheer. We can warn others away from harmful sins that pretend to be harmless pleasures. At the same time, Charles Spurgeon reminds us that a believer ought to be a comforter, carrying \"kind words on his lips, and sympathy in his heart.\" Through gentle guidance, honest warnings, and kind comfort, our lives bring warmth and direction to people around us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What is one area where you are tempted to grumble, and how can gratitude replace that complaint today?",
+    "How can you be a comforting and guiding light to someone around you this week?"
+   ],
+   "prayer": "Lord, help us to turn away from grumbling and to trust Your good care in all our circumstances. Fill our hearts with gratitude and humility when we face challenges or disagreements. Make our lives shine brightly so that others see Jesus in our words and actions, finding both guidance and comfort through us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 6",
+     "on": "Philippians 2:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Emily Rose Massey",
+     "work": "A Heart Full of Gratitude Instead of Grumbling",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/a-heart-full-of-gratitude-instead-of-grumbling-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 50002012,
+   "end": 50002018,
+   "ref": "Philippians 2:12-18",
+   "ranges": [
+    [
+     50002012,
+     50002018
+    ]
+   ],
+   "title": "Working Out God's Good Purpose",
+   "key_verse": [
+    50002013,
+    50002013
+   ],
+   "reflect": [
+    {
+     "text": "Discovering God's will for our lives is not a mystery meant to stay hidden. It begins when we open Scripture to learn God's clear commands and basic principles. As we read, we are called to actively obey what He says with reverence, which means having a deep, respectful awe of God. We take responsibility to do our part each day, trusting Him with the results.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Even as we put in effort, we are never left on our own. God is already at work deep inside us. He shapes our inner desires so that we want what is right, and He gives us the strength to carry out His good plans. As Chuck Swindoll explains, knowing God's direction also requires careful attention and a sensitive conscience as the Lord leads us through open and closed doors.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Along with watching our steps, God gives us the support of other believers. Talking with wise and trusted mentors can bring great clarity when decisions feel hard. When we combine God's Word, active obedience, the inner work of God, and godly advice, we can walk forward in His plan with peace.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What clear command from the Bible can you focus on obeying today with a reverent heart?",
+    "Who is a wise, trusted mentor you can talk to when you need help discerning God's direction?"
+   ],
+   "prayer": "Father, thank You for working inside us to guide our desires and actions toward Your good purpose. Give us reverent hearts that eagerly obey Your Word and keep a sensitive conscience. Bring wise counselors into our lives, and grant us peace as You lead us through open and closed doors. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "How Do I Know God’s Will?",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/how-do-i-know-gods-will"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "38-003-001",
+ "title": "The Vision of Joshua the High Priest",
+ "refs": [
+  "Zechariah 3:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38003001,
+   "end": 38003010,
+   "ref": "Zechariah 3:1-10",
+   "ranges": [
+    [
+     38003001,
+     38003010
+    ]
+   ],
+   "title": "Claimed and Defended by the Lord",
+   "key_verse": [
+    38003002,
+    38003002
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, Joshua the high priest stands before God dressed in dirty garments. He represents all of God's people. Satan stands right beside him to accuse him, and Joshua has no self-defense because his guilt is real. The devil often tempts us and then condemns us to push us away from God. These stained clothes show what our spiritual condition is like without Christ. True freedom begins only when we stop making excuses and honestly admit our guilt before the Lord.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Yet God does not leave Joshua to face the enemy alone. The Lord halts the attack, rebukes Satan, and claims Joshua as a stick snatched from the fire. As Charles Spurgeon notes, \"it is only through a mediator that we poor defiled ones can ever become priests\" before God. Because Jesus is our mediator—the One who stands between us and God—our prayers and daily service are accepted. We can find deep comfort knowing we belong to the Lord, who silences the accuser's attempts to defeat us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel accused or guilty, are you tempted to make excuses instead of admitting your need to God?",
+    "How does knowing that the Lord defends and accepts you through Jesus bring you peace today?"
+   ],
+   "prayer": "Lord, we confess that our own lives are stained with sin and that we have no defense of our own. Thank You for rebuking the enemy and claiming us as Your own. Help us to serve You every day, trusting that Jesus makes our prayers and praise pleasing in Your sight. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 27",
+     "on": "Zechariah 3:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Are You Free from Guilt?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-july-1-2023.html"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "This One Is Mine",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-september-7-2005-1351222.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

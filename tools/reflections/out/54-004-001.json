@@ -1,0 +1,79 @@
+{
+ "id": "54-004-001",
+ "title": "A Warning against Apostasy",
+ "refs": [
+  "1 Timothy 4:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54004001,
+   "end": 54004005,
+   "ref": "1 Timothy 4:1-5",
+   "ranges": [
+    [
+     54004001,
+     54004005
+    ]
+   ],
+   "title": "Receiving God's Good Gifts with Thanks",
+   "key_verse": [
+    54004004,
+    54004004
+   ],
+   "reflect": [
+    {
+     "text": "God gives us the Holy Spirit and a conscience to act as inner boundaries against wrongdoing. If we ignore those boundaries and keep walking into sin, our conscience can become seared and numb, like skin burned with an iron. When that happens, we lose clear discernment and can even feel false guilt while overlooking real sin. To stay truly free and clear-minded, we must keep our lives aligned with God's Word.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The passage also warns against rejecting what God has made. Everything God created is good, but we must learn to distinguish His pure gifts from our human distortions of them. Wholesome food, nature, and true friendship come directly from His hand. When we can bring something before God in prayer without hesitation, we can enjoy it freely and let the gift direct our hearts toward the Giver.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God even gave us taste buds so we could enjoy the daily sensory experience of eating and drinking. Too often, we rush through meals and fail to appreciate these physical blessings. Scripture reminds us that everything God created is good when we receive it with thanksgiving. When we slow down to savor our food and pray over it, we honor God for His daily care.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you practice slowing down today to thank God for the simple physical gifts He provides?",
+    "Are you keeping your conscience tender by staying close to God's Word?"
+   ],
+   "prayer": "Lord, thank You for the good world You made and for every daily gift we receive from Your hand. Help us keep a tender conscience that stays aligned with Your truth and turns away from sin. Teach us to slow down, savor Your blessings, and give You thanks in all things. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Timothy 4:4",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Taste...Enjoy It!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/taste-enjoy-it-today-s-insight-january-14-2016.html"
+    },
+    "D3": {
+     "author": "Jack Graham",
+     "work": "Power Point - December 16, 2004",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-december-16-2004-1301501.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

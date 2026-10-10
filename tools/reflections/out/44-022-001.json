@@ -1,0 +1,79 @@
+{
+ "id": "44-022-001",
+ "title": "Paul’s Defense to the Crowd",
+ "refs": [
+  "Acts 22:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44022001,
+   "end": 44022021,
+   "ref": "Acts 22:1-21",
+   "ranges": [
+    [
+     44022001,
+     44022021
+    ]
+   ],
+   "title": "A Witness Sent to All People",
+   "key_verse": [
+    44022015,
+    44022015
+   ],
+   "reflect": [
+    {
+     "text": "When Paul spoke to the crowd, he used clear language they could easily understand. He shared his past sins with genuine humility, never bragging about his former life or acting superior to his listeners. Paul kept the attention entirely on Jesus. His defense shows that every believer's story matters, because God gives each of us an active purpose to serve Him in this life.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul learned that God did not save him just for his own private benefit. Knowing the Lord is a great gift, but it is meant to reach others. As Charles Spurgeon wrote, \"we must be eager to bear our testimony.\" We are called to be constant witnesses for Christ, sharing what He has done not just with people who are easy to talk to, but with everyone we can reach.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The crowd listened quietly until Paul mentioned that God sent him to the Gentiles, people outside their own nation. The mob grew furious because they treated God as their own exclusive possession rather than the Lord of all nations. We face the same danger today whenever we twist Scripture to fit our own culture or comfort instead of welcoming everyone God loves.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you share what Jesus has done in your life with honesty and humility?",
+    "Are there people you are tempted to leave out when sharing God's love?"
+   ],
+   "prayer": "Lord Jesus, thank You for saving us and giving our lives a true purpose. Give us courage to speak about You clearly and humbly to all people. Protect our hearts from treating Your love as something only meant for people like us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 10",
+     "on": "Acts 22:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 281: Acts 22:1–21",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-281-acts-22-121.html"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Acts 22",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/genesis-23-matthew-22-nehemiah-12-acts-22/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

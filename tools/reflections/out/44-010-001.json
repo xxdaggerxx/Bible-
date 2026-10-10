@@ -1,0 +1,67 @@
+{
+ "id": "44-010-001",
+ "title": "Cornelius Sends for Peter",
+ "refs": [
+  "Acts 10:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44010001,
+   "end": 44010008,
+   "ref": "Acts 10:1-8",
+   "ranges": [
+    [
+     44010001,
+     44010008
+    ]
+   ],
+   "title": "Prepared in the Quiet",
+   "key_verse": [
+    44010006,
+    44010006
+   ],
+   "reflect": [
+    {
+     "text": "When the angel told Cornelius where to find Peter, he named an unexpected address: the house of Simon the tanner. For Peter, staying there was probably unpleasant. Tanning animal skins smelled foul and brought him close to dead animals, which Jewish traditions treated as unclean. Peter had just seen great success in his ministry, but now he found himself stranded in an obscure, uncomfortable place by the sea.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God often leads His servants into quiet seasons like this. We easily substitute busy work for God instead of enjoying quiet communion with Him, which simply means close friendship and prayer. Success can tempt us to feel proud and rely on our own strength. To protect us, God sometimes pulls us away from the praise of others so our pride is lowered and we learn to rely only on Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Peter did not waste his time while he waited. He kept his habits of prayer, listened for the Holy Spirit, and stayed open to lessons that challenged his old thinking. While Peter was tucked away, God was already sending Cornelius's men to his door. When God places you in a slow or hidden place, He is often preparing you in secret for His next step.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to stay busy working for God instead of taking time to be close to Him?",
+    "How can you use a quiet or slow season in your life to listen more carefully to God?"
+   ],
+   "prayer": "Lord, help us when life feels slow, hidden, or uncomfortable. Guard our hearts from pride, and teach us not to replace quiet time with You with endless activity. Give us patient hearts to pray, listen, and follow wherever You lead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 10:6",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

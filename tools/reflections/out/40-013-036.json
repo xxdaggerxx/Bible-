@@ -1,0 +1,66 @@
+{
+ "id": "40-013-036",
+ "title": "The Parable of the Weeds Explained",
+ "refs": [
+  "Matthew 13:36-43"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40013036,
+   "end": 40013043,
+   "ref": "Matthew 13:36-43",
+   "ranges": [
+    [
+     40013036,
+     40013043
+    ]
+   ],
+   "title": "A Glorious Future for God's People",
+   "key_verse": [
+    40013043,
+    40013043
+   ],
+   "reflect": [
+    {
+     "text": "Jesus explains that the field is the world, where God's people and evil live side by side for now. It can be hard to see wrongdoing all around us and wonder why God permits it. Yet the delay of final judgment does not mean that judgment has been cancelled. God's plan is still on schedule.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God leaves the weeds in place for a time so that true believers are not harmed or pulled up before they reach maturity. While we wait, we may face suffering, trouble, and opposition from the world. Even so, Jesus assures us that evil will not remain forever. In the final harvest, God will remove all sin and lawlessness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Believers can find great comfort in this truth. One day, God will vindicate His people, showing that their faith in Him was true. When that day arrives, the righteous will shine like the sun in the kingdom of their Father, safe in His glorious presence forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that evil is only temporary bring you comfort during difficult times?",
+    "In what ways can the hope of shining in your Father's kingdom help you remain faithful today?"
+   ],
+   "prayer": "Heavenly Father, thank You for the sure hope that evil will not last forever. Give us patience and strength when we face hardship and opposition in this world. Help us to trust Your timing and look forward to the day when we will shine in Your kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Glorious Future",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/glorious-future"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

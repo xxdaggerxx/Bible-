@@ -1,0 +1,73 @@
+{
+ "id": "44-008-004",
+ "title": "Philip in Samaria",
+ "refs": [
+  "Acts 8:4-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44008004,
+   "end": 44008008,
+   "ref": "Acts 8:4-8",
+   "ranges": [
+    [
+     44008004,
+     44008008
+    ]
+   ],
+   "title": "Joy and the Gospel in Samaria",
+   "key_verse": [
+    44008008,
+    44008008
+   ],
+   "reflect": [
+    {
+     "text": "Severe trouble hit the early believers in Jerusalem, threatening to silence their public faith. Yet God used that persecution in an unexpected way. Instead of crushing the message, hard trials scattered the believers like sparks from a fire, carrying the gospel wherever they went. God often uses painful disruptions, rather than human comfort, to advance His kingdom and expand our horizons.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Philip traveled down to Samaria, carrying the message across old cultural and ethnic divisions. The people there were eager to listen, partly because Jesus had already sown seeds among them during His own earthly ministry. Philip boldly proclaimed Christ, and God confirmed the message with miracles of healing and spiritual deliverance.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God turned a time of persecution into a season of great blessing. When the Samaritans believed the good news and found freedom in Christ, profound joy filled the whole city. Even when hardship scatters us or disrupts our lives, God can use it to reach new people and bring lasting joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How might God be using an unexpected disruption in your life to point someone else to Jesus?",
+    "Are there cultural or personal barriers God is inviting you to cross with His message of hope?"
+   ],
+   "prayer": "Lord, thank You for using hard times and disruptions to spread Your love. Help us to share the good news of Christ across every barrier, just as Philip did. Fill our lives and communities with the deep joy that comes from trusting in You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Joy in Samaria",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/joy-in-samaria"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 233: Acts 8:1–13",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-233-acts-8-113.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

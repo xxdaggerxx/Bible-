@@ -1,0 +1,74 @@
+{
+ "id": "49-006-010",
+ "title": "The Full Armor of God",
+ "refs": [
+  "Ephesians 6:10-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 49006010,
+   "end": 49006020,
+   "ref": "Ephesians 6:10-20",
+   "ranges": [
+    [
+     49006010,
+     49006020
+    ]
+   ],
+   "title": "Standing Firm in the Lord's Armor",
+   "key_verse": [
+    49006011,
+    49006011
+   ],
+   "reflect": [
+    {
+     "text": "Hard times and emotional pain can feel overwhelming. The enemy wants to use these painful moments to make us feel helpless, but God calls us to stand firm as empowered warriors rather than defeated victims. We take up God's armor by clothing ourselves in the truth and character of Jesus. Just as ancient soldiers needed sturdy shoes for long marches, the gospel gives us secure footing for the Christian life. Knowing we are reconciled to God, meaning our peace with Him rests entirely on Christ rather than our own efforts, protects us from discouraging lies and accusations.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Along with this armor, God calls us to keep praying at all times. From the first moment we asked Him for mercy to forgive our sins, our souls have depended on Him for everything. Charles Spurgeon wrote that we come to God as \"constant beggars asking for everything.\" We cannot find true spiritual life or strength anywhere else. In every temptation, duty, and trial, God faithfully answers our weak prayers. Remembering His daily care fills us with gratitude and helps us persevere in battle.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When difficult circumstances or accusations tempt you to feel defeated, how does remembering your peace with God help you stand firm?",
+    "What needs or trials do you need to bring to God in prayer today, trusting Him to supply your strength?"
+   ],
+   "prayer": "Lord, thank You that our standing before You rests completely on Jesus and not on our own strength. Clothe us in Your truth when we face trials, and give us secure footing against the enemy's discouragement. Teach us to bring every need to You in prayer, trusting that You always hear and sustain us.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 6",
+     "on": "Ephesians 6:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Gospel Readiness",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gospel-readiness"
+    },
+    "D3": {
+     "author": "Cindi McMenamin",
+     "work": "Becoming Strong in Our Struggles",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/becoming-strong-in-our-struggles-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

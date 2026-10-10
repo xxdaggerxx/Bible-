@@ -1,0 +1,73 @@
+{
+ "id": "45-005-006",
+ "title": "Christ’s Sacrifice for the Ungodly",
+ "refs": [
+  "Romans 5:6-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45005006,
+   "end": 45005011,
+   "ref": "Romans 5:6-11",
+   "ranges": [
+    [
+     45005006,
+     45005011
+    ]
+   ],
+   "title": "Loved While We Were Helpless Sinners",
+   "key_verse": [
+    45005008,
+    45005008
+   ],
+   "reflect": [
+    {
+     "text": "Most people only want to risk their lives for someone who is good or worthy. Yet Jesus died for us when we were completely weak, helpless, and living in open rebellion against God. When we see the dark truth about our own sin, the beauty and power of the cross shine even brighter.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The cross is permanent proof of God's love for us, no matter what hard things happen in our lives. Christ's painful suffering on the cross had to happen before the victory of Easter Sunday could arrive.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Through Jesus, God tore down the barrier keeping us away, welcoming former enemies right into His presence. In this great rescue, we are invited to give up our guilt and receive Christ's abundant, everlasting life instead.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering that Jesus died for you while you were still a sinner help you trust God during hard times?",
+    "What does it mean for your daily life that the barrier between you and God is completely gone?"
+   ],
+   "prayer": "Lord God, thank You for loving me when I had nothing good to offer and was helpless in my sin. Thank You for proving Your love by sending Jesus to die in my place and bring me back to You. Help me rejoice today in the direct access and eternal life I have through Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jeff Schreve",
+     "work": "What’s So Good About Friday?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-apr-6-11536454.html"
+    },
+    "D2": {
+     "author": "Marshall Segal",
+     "work": "Good Friday for Bad People",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/good-friday-for-bad-people"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

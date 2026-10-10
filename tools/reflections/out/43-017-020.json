@@ -1,0 +1,68 @@
+{
+ "id": "43-017-020",
+ "title": "Prayer for All Believers",
+ "refs": [
+  "John 17:20-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43017020,
+   "end": 43017026,
+   "ref": "John 17:20-26",
+   "ranges": [
+    [
+     43017020,
+     43017026
+    ]
+   ],
+   "title": "Sharing Christ's Glory and Home",
+   "key_verse": [
+    43017020,
+    43017020
+   ],
+   "reflect": [
+    {
+     "text": "Jesus shows amazing generosity to all who believe in Him. He does not just offer us small crumbs of mercy from under His table, nor does He do things by halves. Instead, He invites us to sit with Him and share in His feast. Jesus gives His people all that He has, holding back no room in His house. He shares His own glory and grace so that we might be rich in Him. His love is like an endless cup that we are invited to drink from freely every day.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus also prayed that those the Father gave Him would finally be with Him where He is. When faithful believers leave this world, their departure is actually an answer to Christ's prayer. In times of grief, we naturally pray for our friends to remain with us on earth. Yet Jesus prays to bring them home to behold His glory. As Charles Spurgeon wrote, we can say in faith, \"Jesus, not my will, but thine be done.\" We can trust His loving purpose and release them into His care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus shares all His treasures with you change how you see your life today?",
+    "How can remembering Christ's prayer comfort you when you must say goodbye to a fellow believer?"
+   ],
+   "prayer": "Lord Jesus, thank You for holding nothing back and sharing Your rich grace and glory with us. When we face the loss of those we love, help us to remember Your prayer to have them with You. Teach us to trust Your wise love and surrender our will to Yours. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 22",
+     "on": "John 17:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 30",
+     "on": "John 17:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

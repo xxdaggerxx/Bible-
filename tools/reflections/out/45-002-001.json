@@ -1,0 +1,133 @@
+{
+ "id": "45-002-001",
+ "title": "God’s Righteous Judgment",
+ "refs": [
+  "Romans 2:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 45002001,
+   "end": 45002002,
+   "ref": "Romans 2:1-2",
+   "ranges": [
+    [
+     45002001,
+     45002002
+    ]
+   ],
+   "title": "\"You Have No Excuse\"",
+   "key_verse": [
+    45002001,
+    45002001
+   ],
+   "reflect": [
+    {
+     "text": "It is often easy to point out the faults we see in other people. Yet when we criticize someone else, we prove that we already understand that evil deserves judgment. If we condemn their actions while practicing the very same wrongs ourselves, we leave ourselves completely without an excuse. Having a religious heritage or keeping up an outward show of morality gives no one a special pass before God's completely fair justice.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Criticizing other people over surface matters often blinds us to our own spiritual weaknesses. We look at what is on the outside, but only God can accurately judge the hidden intentions and true condition of a person's heart.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Recognizing our own hypocrisy should change how we look at ourselves. When we face our moral failure under God's true standard, we are meant to turn away from pride. Admitting that we share the same faults should lead us directly to repentance, which means turning from our sins, and drive us to seek God's grace—His kindness that we do not deserve.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Do I spend more time noticing other people's faults than looking honestly at my own?",
+    "How can remembering my need for God's mercy help me stop judging others?"
+   ],
+   "prayer": "Lord, help us to see our own hidden faults instead of pointing fingers at others. Forgive us for judging people while doing wrong things ourselves. Thank You for showing us mercy and grace through the gospel. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Laura MacCorkle",
+     "work": "\"Let Me Help You with That Speck\"",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/let-me-help-you-with-that-speck-crosswalk-the-devotional-aug-11-2010-11635298.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Without Excuse",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/without-excuse"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 45002004,
+   "end": 45002004,
+   "ref": "Romans 2:4",
+   "ranges": [
+    [
+     45002004,
+     45002004
+    ]
+   ],
+   "title": "\"God’s Kindness Leads You to Repentance\"",
+   "key_verse": [
+    45002004,
+    45002004
+   ],
+   "reflect": [
+    {
+     "text": "When we feel physical pain, it acts as a warning to stop what we are doing and get help. In the same way, emotional and spiritual distress can be useful. It alerts us when we wander into harmful habits and attitudes. Instead of trying to ignore or numb our inner pain, facing it honestly allows God to bring real healing to our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God is the true judge of every life, so we need humility each day. Through daily prayer, we can invite the Holy Spirit to point out our unkind words, harsh thoughts, or hidden rebellion. Making small, regular adjustments helps keep our hearts lined up with God's good purpose.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God does not show patience and tolerance to tell us that sin does not matter. Instead, He is patient so that we will turn away from our wrongdoing. Experiencing His steady mercy and kindness is what gently leads us to true repentance.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What painful feelings or attitudes might God be using to show me that I need to change?",
+    "How does knowing God is kind and patient make it easier for me to admit my faults to Him?"
+   ],
+   "prayer": "Lord, thank You for being so patient and gentle with us when we stray. Help us not to ignore our inner pain or hide our sins, but to listen when Your Holy Spirit convicts us. Lead us in humility each day as we turn our hearts back to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Kenisha Bethea",
+     "work": "Sometimes Pain Is a Good Thing",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-30-2018.html"
+    },
+    "D3": {
+     "author": "Gwen Smith",
+     "work": "Small Adjustments Can Make a Big Difference",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-may-4-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

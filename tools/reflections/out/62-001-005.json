@@ -1,0 +1,130 @@
+{
+ "id": "62-001-005",
+ "title": "Walking in the Light",
+ "refs": [
+  "1 John 1:5-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 62001007,
+   "end": 62001007,
+   "ref": "1 John 1:7",
+   "ranges": [
+    [
+     62001007,
+     62001007
+    ]
+   ],
+   "title": "\"Walk in the Light\"",
+   "key_verse": [
+    62001007,
+    62001007
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to walk in the light as he is in the light. This does not mean we must match God's perfect purity right now. As Charles Spurgeon pointed out, it means likeness rather than equal measure. We step into the light by laying aside our masks and being honest about our lives. When we hide behind false fronts, we isolate ourselves and harm our friendships. Bringing our hidden faults into the open allows us to enjoy genuine, warm fellowship with other believers.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "When we walk openly before God, we meet Christ's tender mercy rather than rejection. John writes that the blood of Jesus cleanses us from all sin. This cleansing is in the present tense. It is not merely a hope for our dying day, but an hourly reality. Charles Spurgeon wrote that \"forgiveness of sin is a present thing.\" Christ washes away every offense completely, giving us peace today, tomorrow, and forever.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any hidden fault or pretense you need to bring into the open before God today?",
+    "How does knowing that Jesus cleanses you right now give you confidence to be honest with others?"
+   ],
+   "prayer": "Lord Jesus, thank you for welcoming us into your light and cleansing our sins by your blood. Help us to drop our false fronts and live with honest hearts before you and our Christian brothers and sisters. Keep us resting in your full and present forgiveness each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 23",
+     "on": "1 John 1:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 31",
+     "on": "1 John 1:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Jared C. Wilson",
+     "work": "Walk in the Light",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/walk-in-the-light/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 62001005,
+   "end": 62001010,
+   "ref": "1 John 1:5-10",
+   "ranges": [
+    [
+     62001005,
+     62001010
+    ]
+   ],
+   "title": "Walking with God in Truth",
+   "key_verse": [
+    62001009,
+    62001009
+   ],
+   "reflect": [
+    {
+     "text": "To have fellowship with God means to share life and purpose with Jesus. When faith joins us to Christ, his interests become our interests. What Jesus loves, we learn to love as well. We care for fellow believers, reach out to a needy world, and work for our Father's glory. We also share in his reproaches and trials for following him, while enjoying the deep gladness that comes from doing his will.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God is light, we cannot walk with him while pretending our sin does not exist. Whenever the Holy Spirit convicts our conscience, we should confess our guilt at once. Biblical confession means agreeing with God's diagnosis of our sin with sincere sorrow. We go directly to God, who alone purifies us. Furthermore, when our actions hurt others, we must confess to them as well so that peace and trust can be restored.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do your daily desires and concerns reflect what Jesus loves?",
+    "When the Holy Spirit convicts you of a fault, do you confess it immediately to God and make amends where needed?"
+   ],
+   "prayer": "Heavenly Father, unite our hearts to the desires and love of your Son. Give us humble spirits that agree quickly with your truth whenever we fail. Cleanse our unrighteousness and keep our fellowship with you and one another sweet and strong. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 23",
+     "on": "1 John 1:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Augustus Lopes",
+     "work": "How Should We Confess Our Sins?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/how-should-we-confess-our-sins"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "57-001-004",
+ "title": "Philemon’s Faith and Love",
+ "refs": [
+  "Philemon 1:4-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 57001004,
+   "end": 57001007,
+   "ref": "Philemon 1:4-7",
+   "ranges": [
+    [
+     57001004,
+     57001007
+    ]
+   ],
+   "title": "Joy and Consolation in Christ",
+   "key_verse": [
+    57001007,
+    57001007
+   ],
+   "reflect": [
+    {
+     "text": "Paul wrote to Philemon with genuine gratitude, thanking God whenever he remembered him in prayer. Paul deeply valued Philemon as a brother in the faith whose sincere love brought him great joy and consolation. Philemon showed this love in simple, practical ways. He refreshed the hearts of fellow Christians through faithful prayer, thoughtful encouragement, and practical acts of discipleship. His care gave real strength to those around him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Engaging Scripture honestly means grappling with historical contexts and complex realities without giving up biblical truth. Philemon was not a flawless person. The truth is that no believer applies the gospel perfectly in every area of life. We should avoid whitewashing the sins or shortcomings of Christians from the past. At the same time, we can still learn from the sincere love Philemon shared and seek to refresh others in our own day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you practically refresh and encourage another believer this week?",
+    "Why is it helpful to remember that even faithful believers throughout history had flaws?"
+   ],
+   "prayer": "Lord God, thank you for the brothers and sisters who encourage and refresh our hearts. Help us to love others through practical care, prayer, and discipleship. Give us wisdom to see human flaws honestly while trusting your truth completely. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Joy and Comfort in Christ",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/joy-and-comfort-christ"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

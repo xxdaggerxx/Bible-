@@ -1,0 +1,75 @@
+{
+ "id": "31-001-015",
+ "title": "The Deliverance of Israel",
+ "refs": [
+  "Obadiah 1:15-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 31001015,
+   "end": 31001021,
+   "ref": "Obadiah 1:15-21",
+   "ranges": [
+    [
+     31001015,
+     31001021
+    ]
+   ],
+   "title": "The Kingdom Will Belong to the Lord",
+   "key_verse": [
+    31001021,
+    31001021
+   ],
+   "reflect": [
+    {
+     "text": "Life can sometimes feel full of unfairness and suffering. Obadiah reminds God's weary people that their pain and exile are not the end of the story. God sees the proud who gloat over the hurt of others, and His justice ensures that evil deeds will not go unanswered. The Day of the Lord is coming for all nations, when God will step in to put every wrong right.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The downfall of ancient nations like Edom serves as a real warning of that final day of judgment. Yet for God's covenant family, this day brings rescue rather than despair. We deserve judgment for our own sins, but God sent Jesus Christ to bear the Day of the Lord for us on the cross. Because of Him, we are spared condemnation and welcomed into God's family.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our true hope does not rest in worldly rulers, but in God's lasting promise. One day, Jesus will return to bring His kingdom to its full completion. In the end, all oppressors will fall, God's people will share in their true inheritance, and the kingdom will belong fully to the Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that the kingdom belongs to the Lord give you peace when you see injustice around you?",
+    "In what ways can remembering Christ's sacrifice on your behalf help you face hard times with hope?"
+   ],
+   "prayer": "Lord, thank You for Your perfect justice and Your wonderful rescue. Thank You that Jesus took the judgment we deserved so that we could have a place in Your family. Help us to rest in the hope of Your coming kingdom when we face trials today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Edom's Fall and Israel's Rise",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/edoms-fall-and-israels-rise"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Obadiah",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/1-chronicles-16-james-3-obadiah-luke-5/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

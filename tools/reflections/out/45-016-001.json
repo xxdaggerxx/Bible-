@@ -1,0 +1,88 @@
+{
+ "id": "45-016-001",
+ "title": "Personal Greetings and Love",
+ "refs": [
+  "Romans 16:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45016001,
+   "end": 45016016,
+   "ref": "Romans 16:1-16",
+   "ranges": [
+    [
+     45016001,
+     45016016
+    ]
+   ],
+   "title": "A Family United in Christ",
+   "key_verse": [
+    45016016,
+    45016016
+   ],
+   "reflect": [
+    {
+     "text": "At the end of his letter, Paul takes time to greet over two dozen Christians by name. He begins by commending Phoebe, a servant who likely carried this letter to Rome, and asks the church to welcome her and care for her needs. Throughout the list, Paul honors both men and women who worked hard and served faithfully as his partners in ministry. Everyday acts of service, like delivering a letter or opening a home, made a lasting difference for the gospel.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Paul's greetings show that the church is an enduring spiritual family. Believers from different backgrounds, cultures, and social ranks were brought together by their shared bond in Jesus. By naming specific friends and praising their labor, Paul made people feel seen, valued, and loved.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Paul finishes by urging them to greet each other with a holy kiss. Our greetings should never be fake, like Judas's kiss was, but sincere and pure. Whether we offer a warm handshake, a hug, or a kind word, we are called to show real delight in our brothers and sisters in Christ.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Whom can you encourage this week by thanking them for their quiet service in the church?",
+    "How can your greetings on Sunday show warm, sincere love to people from different backgrounds?"
+   ],
+   "prayer": "Lord Jesus, thank you for making us part of your spiritual family. Help us to notice, value, and encourage our brothers and sisters who serve faithfully. Teach us to welcome others with warm, sincere love that brings honor to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Phoebe’s Commendation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/phoebes-commendation"
+    },
+    "D2": {
+     "author": "David Mathis",
+     "work": "Greet with a Holy Kiss? Applying an Uncomfortable Command",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/greet-with-a-holy-kiss"
+    },
+    "D3": {
+     "author": "Kristine Nethers",
+     "work": "How (and Why) to Greet like Paul",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/greet-like-paul/"
+    },
+    "D4": {
+     "author": "Angie Velasquez Thornton",
+     "work": "What Romans 16 Teaches Us About Gospel Partnerships",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/femmes-scriptura/what-romans-16-teaches-us-about-gospel-partnership/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

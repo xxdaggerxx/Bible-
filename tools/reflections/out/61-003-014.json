@@ -1,0 +1,80 @@
+{
+ "id": "61-003-014",
+ "title": "Final Exhortations",
+ "refs": [
+  "2 Peter 3:14-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 61003014,
+   "end": 61003018,
+   "ref": "2 Peter 3:14-18",
+   "ranges": [
+    [
+     61003014,
+     61003018
+    ]
+   ],
+   "title": "Growing in Grace and Giving God Glory",
+   "key_verse": [
+    61003018,
+    61003018
+   ],
+   "reflect": [
+    {
+     "text": "Spiritual growth needs regular feeding, just like our physical bodies need food every day. When we listen to faithful preaching and study the Scriptures on our own, the Holy Spirit teaches us and keeps our souls from starving. Even painful trials serve as growing pains that test what we have learned and show us grace, which is God's kindness that we do not deserve.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God calls us to grow in every grace, not just one. We grow in faith by trusting God's promises more firmly, and we grow in love and humility as we think less of ourselves and draw nearer to Jesus. Knowing Christ brings true joy and satisfaction. The more we learn of His sacrifice, His resurrection, and His love for us, the more we will desire to stay close to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "All of this growth leads to praising our Savior. Jesus will receive ceaseless praise in eternity, but we are called to bring Him honor right now. We can glorify Him today by staying content when we have little, being patient when we are sick, and offering our time, thoughts, and abilities into His service.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What is one daily habit in God's Word that can help protect you from spiritual hunger?",
+    "How can you honor Jesus today through your thoughts, your time, or your patience during a trial?"
+   ],
+   "prayer": "Lord Jesus, feed our souls with Your truth so we may grow in faith, love, and humility. Teach us to know You more deeply each day and to find our full satisfaction in Your presence. Help us to bring You glory right now in everything we think, say, and endure. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 4",
+     "on": "2 Peter 3:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 15",
+     "on": "2 Peter 3:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Carolyn Dale Newell",
+     "work": "Feasting on God's Word",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/feasting-on-god-s-word-encouragement-caf-january-13-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

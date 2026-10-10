@@ -1,0 +1,71 @@
+{
+ "id": "40-012-031",
+ "title": "The Unpardonable Sin",
+ "refs": [
+  "Matthew 12:31-32",
+  "Mark 3:28-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40012031,
+   "end": 40012032,
+   "ref": "Matthew 12:31-32; Mark 3:28-30",
+   "ranges": [
+    [
+     40012031,
+     40012032
+    ],
+    [
+     41003028,
+     41003030
+    ]
+   ],
+   "title": "Understanding the Unpardonable Sin",
+   "key_verse": [
+    41003029,
+    41003029
+   ],
+   "reflect": [
+    {
+     "text": "Jesus performed powerful miracles and cast out demons, clearly showing God's power and authority over evil. Yet some religious leaders claimed He was doing this work by the power of Satan. Even though they knew the Scriptures very well, they deliberately chose to call the Holy Spirit's good work demonic.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus warned that speaking against the Holy Spirit will not be forgiven. This sin is a persistent, willful choice to say God's work belongs to the devil. It cannot be pardoned because it comes from a heart that has become permanently hardened against God's grace and will never turn to Him in repentance.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Many Christians worry that they might have committed this unforgivable sin. If you are troubled or fearful about this, that very worry shows your heart is still tender toward God. A heart that desires repentance has not been hardened beyond the reach of His mercy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that a repentant heart can always find mercy bring you peace?",
+    "What helps you keep your heart soft and open to the guidance of the Holy Spirit?"
+   ],
+   "prayer": "Lord Jesus, thank You for showing us the power and goodness of God. Keep our hearts humble, soft, and quick to turn to You when we fail. Help us to always honor the work of Your Holy Spirit in our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Blasphemy against the Holy Spirit",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/blasphemy-against-holy-spirit"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

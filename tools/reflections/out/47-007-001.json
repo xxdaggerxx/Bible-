@@ -1,0 +1,123 @@
+{
+ "id": "47-007-001",
+ "title": "Paul’s Joy in the Corinthians",
+ "refs": [
+  "2 Corinthians 7:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47007010,
+   "end": 47007010,
+   "ref": "2 Corinthians 7:10",
+   "ranges": [
+    [
+     47007010,
+     47007010
+    ]
+   ],
+   "title": "\"Godly sorrow brings repentance\"",
+   "key_verse": [
+    47007010,
+    47007010
+   ],
+   "reflect": [
+    {
+     "text": "Real sorrow for sin is not something we can make on our own. Charles Spurgeon noted that repentance is \"too choice a flower to grow in nature's garden.\" It is a gracious gift from the Holy Spirit, not just human self-improvement. When God points out our sin, we realize our duty is before Him. Godly grief does not leave us stuck in mere self-disgust. Instead, it leads us to look at our wrongdoing in the clear light of Jesus and His cross.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "This sorrow brings real, lasting change to our daily actions. We turn away from sin like someone learning to dread a fire after being burned. We become watchful over our words, shunning small sins just as we would big ones. True repentance is not a one-time event that ends. It is an ongoing habit that keeps our hearts soft before God, producing holiness and true confession until our final day.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you make a mistake, do you focus only on your hurt pride or on turning back to God?",
+    "How can keeping a tender, repentant heart protect your daily choices?"
+   ],
+   "prayer": "Lord, thank you for giving us the gift of true repentance. Help us to see our sins clearly in the light of Christ's love on the cross. Keep our hearts soft and eager to obey you every day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 13",
+     "on": "2 Corinthians 7:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Oswald Chambers",
+     "work": "Repentance",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/updated/repentance/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 47007001,
+   "end": 47007016,
+   "ref": "2 Corinthians 7:1-16",
+   "ranges": [
+    [
+     47007001,
+     47007016
+    ]
+   ],
+   "title": "Holiness and God's Comfort",
+   "key_verse": [
+    47007001,
+    47007001
+   ],
+   "reflect": [
+    {
+     "text": "God calls His people to live clean and dedicated lives. A shallow, surface-level faith cannot hold up against the constant pressures of worldly standards. Instead, walking in consistent godliness is a living act of worship that pleases God. It takes courage to stand alone for what is right when everyone around us compromises. Believers must actively allow God to renew and transform their daily thinking so they can stand firm.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "As we walk this path, conflicts and fears will sometimes weigh us down, but God comforts those who are downcast. Earthly friends can offer kind words, but only the Lord can truly revive a troubled heart. As Charles Spurgeon wrote, \"there is no physician among the creatures, but the Creator is Jehovah-rophi.\" When your spirit feels dry and weary, do not sit in despair. Go directly to God, and let His promises refresh your soul with true comfort.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you feel pressure from the world to compromise your walk with God?",
+    "When you feel discouraged, do you turn first to God for comfort or to other things?"
+   ],
+   "prayer": "Father, renew our minds each day so we can stand firm in holiness. Give us the courage to live lives that please you, even when it is hard. When we feel overwhelmed or downcast, comfort our hearts with your promises. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 20",
+     "on": "2 Corinthians 7:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Godliness",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/godliness1"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

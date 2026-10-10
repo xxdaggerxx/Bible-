@@ -1,0 +1,73 @@
+{
+ "id": "51-002-001",
+ "title": "Absent in Body, Present in Spirit",
+ "refs": [
+  "Colossians 2:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 51002001,
+   "end": 51002005,
+   "ref": "Colossians 2:1-5",
+   "ranges": [
+    [
+     51002001,
+     51002005
+    ]
+   ],
+   "title": "Treasures of Wisdom in Christ",
+   "key_verse": [
+    51002003,
+    51002003
+   ],
+   "reflect": [
+    {
+     "text": "Jesus is the ultimate treasure. God has placed all true wisdom and knowledge in Him. Yet daily life brings many distractions and temporary counterfeits that tempt us away from these eternal riches. Uncovering biblical truth requires quiet, focused time with the Lord. We are invited to open His Word every day with the deliberate excitement of a treasure hunt.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Holding firmly to Jesus also protects our hearts from deception. False spiritual teachings are dangerous because they rarely look wrong at first; instead, they sound smooth, reasonable, and persuasive. Steady confidence in Jesus as God, and resting in the fact that He is completely sufficient for us, shields us from these subtle errors.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We also need each other in this walk of faith. Even when we cannot meet face to face, the Holy Spirit binds all Christians together across any physical distance. Like Paul, we can genuinely encourage and strengthen distant brothers and sisters through Spirit-led prayer, sharing God's promises as we stand firm in Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly distractions tend to draw you away from seeking the wisdom found in Christ?",
+    "Who is a distant brother or sister in faith you can encourage through prayer this week?"
+   ],
+   "prayer": "Lord Jesus, thank You for being the ultimate treasure of all wisdom and knowledge. Protect our minds from teachings that sound plausible but lead us away from You. Please bind our hearts together with fellow believers in love, and help us faithfully support one another through prayer. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Paul's Presence in Colossae",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/pauls-presence-colossae"
+    },
+    "D2": {
+     "author": "Renee Swope",
+     "work": "Treasures of Truth",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-26-2005-1347127.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

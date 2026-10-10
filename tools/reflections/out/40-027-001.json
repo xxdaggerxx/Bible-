@@ -1,0 +1,71 @@
+{
+ "id": "40-027-001",
+ "title": "Jesus Delivered to Pilate",
+ "refs": [
+  "Matthew 27:1-2",
+  "Mark 15:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40027001,
+   "end": 40027002,
+   "ref": "Matthew 27:1-2; Mark 15:1-5",
+   "ranges": [
+    [
+     40027001,
+     40027002
+    ],
+    [
+     41015001,
+     41015005
+    ]
+   ],
+   "title": "Standing Accused for Us",
+   "key_verse": [
+    41015002,
+    41015002
+   ],
+   "reflect": [
+    {
+     "text": "Early in the morning, the religious leaders took Jesus bound to the Roman governor, Pontius Pilate. Under Roman rule, the Jewish council did not have the authority to carry out the death penalty. Because they wanted Jesus dead, they changed their complaint. They shifted from claiming He spoke against God to framing Him as a rebel against the Roman emperor Caesar.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Pilate asked if He was the King of the Jews, Jesus agreed that He was. Yet when the chief priests threw many false accusations at Him, Jesus chose not to answer. Pilate was amazed that a man facing death would stand so quietly and refuse to defend Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus chose to stand as an accused criminal before a human ruler for a reason. He did this so that His people could be acquitted in God's heavenly court. To be acquitted means to be declared completely free of guilt. By taking our punishment and giving us His perfect goodness, Jesus makes it possible for us to stand before our Creator without fear.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus stood quietly in your place help you trust God when you face unfair treatment?",
+    "How does it comfort you to know that Christ took your blame so you can stand before God without fear?"
+   ],
+   "prayer": "Lord Jesus, thank You for willingly standing accused before a human judge for our sake. Thank You for bearing our punishment so that we could be declared not guilty before God. Help us to live each day in the comfort of Your righteousness and grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Taken to Pilate",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/taken-pilate"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

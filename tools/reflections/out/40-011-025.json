@@ -1,0 +1,142 @@
+{
+ "id": "40-011-025",
+ "title": "Rest for the Weary",
+ "refs": [
+  "Matthew 11:25-30",
+  "Luke 10:21-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40011028,
+   "end": 40011030,
+   "ref": "Matthew 11:28-30",
+   "ranges": [
+    [
+     40011028,
+     40011030
+    ]
+   ],
+   "title": "\"Come to Me, and I Will Give You Rest\"",
+   "key_verse": [
+    40011028,
+    40011028
+   ],
+   "reflect": [
+    {
+     "text": "In the gospel, Jesus gives us a gentle invitation: \"Come.\" Unlike strict laws that drive people with fear, Jesus draws us with kindness, like a mother encouraging her small child to walk. He offers rest as a complete gift. You do not need to buy it or earn it. Jesus made Himself the great burden-bearer who carried the crushing weight of our sin so we would not remain weighed down by guilt, fear, and daily anxiety.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Coming directly to Jesus is simple, yet our own pride often hesitates to admit our need. When we hold back, it shows where we are still trying to rely on ourselves. Jesus waits patiently for us to come. He invites us to take His yoke. A yoke joins two work animals together to share the load. Jesus does not add new weight to our lives; He steps in to share our load and teaches us to walk at His gentle pace.",
+     "sources": [
+      "D5",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burden or worry are you trying to carry on your own today?",
+    "Is pride or self-reliance holding you back from simply coming to Jesus for help?"
+   ],
+   "prayer": "Lord Jesus, thank You for offering rest as a free gift that I do not have to earn. Forgive my pride when I try to carry my own worries, fears, and burdens. Help me walk beside You each day and learn from Your gentle heart. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 16",
+     "on": "Matthew 11:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 14",
+     "on": "Matthew 11:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Rick Warren",
+     "work": "Let Jesus Lighten Your Load",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-february-1-2018.html"
+    },
+    "D6": {
+     "author": "Oswald Chambers",
+     "work": "Come to Me",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/modern-classic/come-to-me/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40011025,
+   "end": 40011030,
+   "ref": "Matthew 11:25-30; Luke 10:21-24",
+   "ranges": [
+    [
+     40011025,
+     40011030
+    ],
+    [
+     42010021,
+     42010024
+    ]
+   ],
+   "title": "Rejoicing in the Father's Presence",
+   "key_verse": [
+    42010021,
+    42010021
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus spoke in Matthew, the text says He answered, even though no human being had asked Him a question. This shows that Jesus lived in constant, quiet fellowship with His Father. God spoke continually to His heart, and Jesus was always ready to answer Him. We are invited into that same silent friendship. As God speaks to us, we can answer Him by confessing our sins, thanking Him for His daily mercy, and resting on His promises.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Luke also tells us that Jesus rejoiced in the Holy Spirit. Even though our Lord faced many sorrows, deep in His soul lived an unending well of heavenly joy. As Charles Spurgeon wrote, \"benevolence is joy.\" Jesus found great delight in doing good and praising the Father. Followers of Jesus may walk through difficult seasons and trials, yet we share in that same deep river of joy that sustains us along the way.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you practice listening and answering God's quiet voice in your heart throughout today?",
+    "How does knowing Jesus had deep, hidden joy encourage you during hard seasons?"
+   ],
+   "prayer": "Father in heaven, quiet my heart so I can listen and respond to Your voice today. When trials come, sustain me with the deep joy that Jesus knew. Help me find my delight in Your goodness and grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 5",
+     "on": "Matthew 11:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 24",
+     "on": "Luke 10:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

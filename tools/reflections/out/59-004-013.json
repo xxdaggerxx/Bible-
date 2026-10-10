@@ -1,0 +1,73 @@
+{
+ "id": "59-004-013",
+ "title": "Do Not Boast about Tomorrow",
+ "refs": [
+  "James 4:13-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 59004013,
+   "end": 59004017,
+   "ref": "James 4:13-17",
+   "ranges": [
+    [
+     59004013,
+     59004017
+    ]
+   ],
+   "title": "Making the Most of Fleeting Days",
+   "key_verse": [
+    59004014,
+    59004014
+   ],
+   "reflect": [
+    {
+     "text": "James reminds us that our earthly lives are like a morning mist that appears briefly and then vanishes. We often boast about tomorrow by assuming we will always have time later to invest in the people we love. Yet tomorrow is never guaranteed. When we get consumed by urgent daily tasks and work, we can easily miss the fleeting moments that matter most.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because no one knows how long their life will last, we are called to focus on the purpose of each day. Earthly life is temporary, so our days should be lived for God's glory rather than self-centered pursuits. Keeping the brevity of life in mind helps cure procrastination and spurs us to persevere in doing good right now.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Walking in God's will means choosing meaningful connection with others over mere productivity. Serving and loving the people around us with kindness brings deep fulfillment and points them toward God. Remembering how short our time is encourages us to do the good we know we ought to do today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What relationship or act of kindness have you been putting off until tomorrow?",
+    "How can remembering that life is brief help you focus on what matters to God today?"
+   ],
+   "prayer": "Lord, thank you for the gift of this day. Please forgive us when we get so caught up in our own plans and busy schedules that we neglect others. Teach us to walk in your will, love the people around us, and do good with the time you give us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jennifer Heeren",
+     "work": "Your Life Is Like the Morning Fog - (James 4:14) - Your Daily Bible Verse - December 14",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/life-is-short-bible-study-minute-december-14-2018.html"
+    },
+    "D2": {
+     "author": "Kia Stephens",
+     "work": "Prioritizing What Matters Most - Encouragement for Today - November 18, 2022",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-november-18-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

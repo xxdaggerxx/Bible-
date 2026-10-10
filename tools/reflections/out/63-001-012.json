@@ -1,0 +1,74 @@
+{
+ "id": "63-001-012",
+ "title": "Conclusion",
+ "refs": [
+  "2 John 1:12-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 63001012,
+   "end": 63001013,
+   "ref": "2 John 1:12-13",
+   "ranges": [
+    [
+     63001012,
+     63001013
+    ]
+   ],
+   "title": "The Joy of Face to Face",
+   "key_verse": [
+    63001012,
+    63001012
+   ],
+   "reflect": [
+    {
+     "text": "John had many things to share, but he chose not to rely only on paper and ink. Written letters served a helpful purpose when physical travel was impossible, just as our modern digital devices help us today. Yet Jesus and his apostles showed that true ministry is rooted in bodily presence and shared life together.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Scripture shows us that communicating from a distance leaves our joy incomplete. Quick messages can easily deceive us into mistaking simple contact for deep relationship. Being together in person provides unique moments to comfort, encourage, and strengthen fellow believers. Communication tools are good gifts, but they are meant to support physical community rather than replace it.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This longing to be together carries a deeper meaning for believers. When we miss meeting face to face, our hearts look ahead to our true hope. Our present ache to gather in person anticipates the day when we will dwell in the presence of God forever.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How might you use messages this week to encourage meeting someone in person rather than replacing it?",
+    "How has gathering in person brought you deeper comfort or encouragement than a message could?"
+   ],
+   "prayer": "Lord, thank you for the helpful tools that connect us when we are apart. Help us not to settle for easy contact when we have the opportunity to share life together in person. Strengthen our church community, and keep our eyes on the day when we will dwell in your presence forever. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Trevin Wax",
+     "work": "The Apostle John’s View of Technology",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/trevin-wax/the-apostle-johns-view-of-technology/"
+    },
+    "D2": {
+     "author": "Marshall Segal",
+     "work": "Apart for Now: Why We Long for Face to Face",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/apart-for-now"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

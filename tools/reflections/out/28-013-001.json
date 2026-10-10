@@ -1,0 +1,67 @@
+{
+ "id": "28-013-001",
+ "title": "God’s Anger against Israel",
+ "refs": [
+  "Hosea 13:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 28013001,
+   "end": 28013008,
+   "ref": "Hosea 13:1-8",
+   "ranges": [
+    [
+     28013001,
+     28013008
+    ]
+   ],
+   "title": "Known in the Wilderness",
+   "key_verse": [
+    28013005,
+    28013005
+   ],
+   "reflect": [
+    {
+     "text": "In Hosea, God reminds His people of how He cared for them in a dry, barren desert. Charles Spurgeon notes that God knew us even in our fallen state, choosing us when we had nothing to offer. When our circumstances feel like an empty wilderness and others turn away, God still claims us as His own. As Spurgeon reminds us, \"no affliction dims the lustre of thy love.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The great danger comes when life becomes comfortable. Israel had plenty to eat, but when they were satisfied, their hearts grew proud and they forgot the Lord. Spurgeon warns that we can easily be lifted up by success and forget that we owe everything to God's gentleness. When things go well, we may even be tempted to feel ashamed of following Jesus and His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If the Lord loved us in our poverty and shame, we should gladly cling to Him in our prosperity. We need Him just as much when life is bright as when we face hardship. Remembering His past faithfulness keeps our hearts humble and faithful today.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When life is going well, do you tend to rely on yourself and forget God's kindness?",
+    "How can remembering God's help in your hard times keep you humble today?"
+   ],
+   "prayer": "Lord, thank You for knowing and loving us even in our lowest moments. Forgive us for the times we grow proud and forget You when life is easy. Keep our hearts faithful to Jesus in both good days and bad. Help us always remember that every blessing comes from Your gentle mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 31",
+     "on": "Hosea 13:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

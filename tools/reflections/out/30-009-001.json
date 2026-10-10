@@ -1,0 +1,77 @@
+{
+ "id": "30-009-001",
+ "title": "The Destruction of Israel",
+ "refs": [
+  "Amos 9:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 30009009,
+   "end": 30009009,
+   "ref": "Amos 9:9",
+   "ranges": [
+    [
+     30009009,
+     30009009
+    ]
+   ],
+   "title": "\"Not the Least Grain Shall Fall\"",
+   "key_verse": [
+    30009009,
+    30009009
+   ],
+   "reflect": [
+    {
+     "text": "In this life, believers often feel shaken. We may face hard trials, worldly pressure, or restless fears in our hearts. At times it feels as though an enemy is tossing us up and down in a sieve to destroy our faith. Yet the Bible reminds us that every sifting happens under God's command and permission. Even when hard times shake us, God overrules the trial. He uses the very troubles meant to harm us to clear away worthless dust and chaff.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The sifting also separates what is real from what is hollow. In God's sieve, empty chaff blows away, but solid grain remains. God uses trials to purify his people and remove what does not belong. While this work can feel stern and heavy, it brings eternal good to everyone who trusts in the Lord. Through these testings, we are cleaned and strengthened rather than destroyed.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Most comforting of all is God's promise that not the smallest grain will fall to the ground. As Charles Spurgeon wrote, \"every individual believer is precious\" to the Lord. A caring shepherd will not lose one sheep, and God will never lose one of his redeemed people. Even if you feel weak or small, you are completely safe. In Christ, you will not lose anything truly worth keeping, and your soul is secure in his hands.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When trials shake your life, how does knowing God controls the sieve bring you peace?",
+    "How does the promise that not one grain will be lost help you rest in Jesus today?"
+   ],
+   "prayer": "Lord, thank you that our lives are in your hands, even when we feel shaken by trials and fears. Please use every hardship to clear away what is worthless and make our faith pure. Comfort us with the promise that not one of your people will ever be lost, and keep us safe in Christ Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 20",
+     "on": "Amos 9:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 23",
+     "on": "Amos 9:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

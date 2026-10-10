@@ -1,0 +1,66 @@
+{
+ "id": "46-006-009",
+ "title": "Members of Christ",
+ "refs": [
+  "1 Corinthians 6:9-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46006012,
+   "end": 46006012,
+   "ref": "1 Corinthians 6:12",
+   "ranges": [
+    [
+     46006012,
+     46006012
+    ]
+   ],
+   "title": "\"Not Everything Is Beneficial\"",
+   "key_verse": [
+    46006012,
+    46006012
+   ],
+   "reflect": [
+    {
+     "text": "As followers of Jesus, we have been set free from strict rules and legalism by God's grace, His kindness that we do not earn. However, this freedom does not give us permission to do whatever we feel like doing. God gives us freedom so we can live for His glory. The way we use our liberties every day reveals where our true loyalty belongs. Instead of pleasing ourselves, freedom calls us to a higher standard of following Christ with purpose.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul reminds us that even though an activity is allowed, that does not mean it is good for us. Many pursuits are not sinful in themselves, but they can still crowd our lives. Good activities and demanding ministry work can slowly push out vital relationships, including marriage. An endless schedule of busyness brings painful spiritual and personal harm. Because of this, we must deliberately shape our daily choices around what matters most to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do your daily choices and schedule show what matters most to you?",
+    "Is there any good activity in your life right now that is crowding out your key relationships or your walk with God?"
+   ],
+   "prayer": "Lord, thank You for the freedom You give us through Your grace. Help us not to use our freedom selfishly or get lost in endless busyness. Teach us to choose what is truly beneficial and to use our time for Your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Doug Fields",
+     "work": "Choices, Choices",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/choices-choices-homeword-march-6.html"
+    },
+    "D2": {
+     "author": "Jack Graham",
+     "work": "Using Your Freedom for God's Glory",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-jan-31-2011-11644829.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

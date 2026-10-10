@@ -1,0 +1,126 @@
+{
+ "id": "40-010-032",
+ "title": "Confessing Christ",
+ "refs": [
+  "Matthew 10:32-33",
+  "Luke 12:8-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40010032,
+   "end": 40010032,
+   "ref": "Matthew 10:32",
+   "ranges": [
+    [
+     40010032,
+     40010032
+    ]
+   ],
+   "title": "\"Everyone Who Confesses Me\"",
+   "key_verse": [
+    40010032,
+    40010032
+   ],
+   "reflect": [
+    {
+     "text": "True faith in Christ starts in the heart, but it does not stay hidden there. While living an obedient Christian life is very important, it cannot replace actually speaking about Jesus with our mouths. Talking vaguely about general spiritual ideas falls short if we avoid naming our Lord. We need to speak the name of Jesus clearly, because His name confronts people with who He truly is and points them to the only way of salvation.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "It is a great joy to speak openly of our Lord rather than slipping into a fearful silence. Friends may turn away or enemies may mock us, but Jesus will never disown those who trust Him. As Charles Spurgeon wrote, it is \"an honor beyond all honors\" for the Lord Jesus to confess us. When we stand before God the Father at the end of time, Jesus will claim us as His own because we were not ashamed of Him on earth.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there times when you talk about God in general terms instead of naming Jesus?",
+    "How does the promise of Jesus claiming you in heaven help you speak up for Him today?"
+   ],
+   "prayer": "Lord Jesus, thank You for promising to claim us before Your Father in heaven. Forgive us when we stay silent or hide our faith because of fear. Give us courage to speak Your name clearly and to share Your truth with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 14",
+     "on": "Matthew 10:32",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Steffen Mueller",
+     "work": "Confessing Jesus with Your Mouth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/confessing-jesus-with-your-mouth"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40010032,
+   "end": 40010033,
+   "ref": "Matthew 10:32-33; Luke 12:8-12",
+   "ranges": [
+    [
+     40010032,
+     40010033
+    ],
+    [
+     42012008,
+     42012012
+    ]
+   ],
+   "title": "Help to Speak Without Fear",
+   "key_verse": [
+    42012011,
+    42012012
+   ],
+   "reflect": [
+    {
+     "text": "When we face criticism or hostility for our faith, we often worry about how to defend ourselves. We might feel pressured to rehearse clever arguments or try to win debates in our own strength. But arguing in that way usually leads only to anger and bitterness. Instead, Jesus calls us to acknowledge Him without fear and trust the Holy Spirit to supply the right words, wisdom, and timing. Through prayerful dependence, God helps us speak His truth with love and patience.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Jesus understood the heavy strain of worry, yet His own heart remained completely peaceful amid the storms of life. He lived with constant trust in the loving care of God. We can experience that same calm when we stop anxious scheming and rest in God's daily guidance. When we surrender our will to Him, we can trust that He will provide everything we need to stand for Him and do our duty.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face tough questions or criticism about your faith, do you try to argue in your own strength or rely on the Holy Spirit?",
+    "What worries about speaking for Christ can you surrender to God today?"
+   ],
+   "prayer": "Heavenly Father, we often feel anxious when people challenge our faith. Please quiet our fears and keep our hearts at peace in You. Teach us by Your Holy Spirit what to say, and grant us wisdom to speak the truth with patience and love. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 12:10",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D4": {
+     "author": "Jennifer Waddle",
+     "work": "What to Say and How to Say It (Luke 12:11-12) - Your Daily Bible Verse - May 13",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-may-13.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

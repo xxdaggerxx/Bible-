@@ -1,0 +1,73 @@
+{
+ "id": "44-005-033",
+ "title": "Gamaliel’s Advice",
+ "refs": [
+  "Acts 5:33-42"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44005038,
+   "end": 44005039,
+   "ref": "Acts 5:38-39",
+   "ranges": [
+    [
+     44005038,
+     44005039
+    ]
+   ],
+   "title": "\"If It Is From God\"",
+   "key_verse": [
+    44005039,
+    44005039
+   ],
+   "reflect": [
+    {
+     "text": "When the religious leaders were furious and ready to act in haste, Gamaliel stepped forward with calm and reasoned advice. He pointed out that movements started purely by human effort quickly fade away. But if something comes from God, no human power can stop it. Fighting against God's work only means fighting against God Himself. In His sovereignty, God used this unexpected voice to spare the apostles' lives so their mission could continue.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Gamaliel's insight also reminds us to examine our own hearts. It is easy to strive in our own strength, trying to force doors open or rushing ahead of God's plans. Yet working by human effort alone ultimately comes to nothing, and it can even place us in conflict with what God wants to do. When we surrender our timing to the Holy Spirit, we allow God to open the right doors in His way.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Whenever we face what seems like impossible odds, we can rest knowing that God protects His own work. He is fully capable of providing unexpected helpers and working out His purposes in our lives.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you striving to force open a door by your own effort instead of waiting on God's timing?",
+    "How can trusting God's control help you remain calm when facing difficult circumstances?"
+   ],
+   "prayer": "Lord, forgive us for the times we rush ahead and try to force our own plans. Help us to yield our timing to the Holy Spirit and trust Your sovereign direction. Thank You for protecting Your work and placing the help we need along the way. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michelle S. Lazurek",
+     "work": "Are You Fighting Against God's Will for Your Life?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/fighting-against-gods-will-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "An Unexpected Ally",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-september-5-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

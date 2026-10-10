@@ -1,0 +1,72 @@
+{
+ "id": "66-020-007",
+ "title": "Satan Cast into the Lake of Fire",
+ "refs": [
+  "Revelation 20:7-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66020007,
+   "end": 66020010,
+   "ref": "Revelation 20:7-10",
+   "ranges": [
+    [
+     66020007,
+     66020010
+    ]
+   ],
+   "title": "The Devil's Final Defeat",
+   "key_verse": [
+    66020010,
+    66020010
+   ],
+   "reflect": [
+    {
+     "text": "Before the end of all things, Satan will be released for one final attempt to deceive the nations and attack the church. A vast army gathers to surround the people of God, looking completely overwhelming. Yet the threat ends almost as soon as it begins. God swiftly sends fire from heaven to consume the rebellion and protect His beloved people.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The sentence God pronounced against the serpent back in Genesis is finally executed here. The devil is thrown forever into the lake of fire, ending his ability to deceive or harm anyone again. While the first book of the Bible records how sin, the curse, and death came into our world, Revelation shows their total removal. God brings His creation to the ultimate victory He planned from the beginning.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing the end of the story changes how we see our lives right now. When evil seems to surge and opposition grows fierce, we do not need to live in dread. The Lord of hosts holds absolute power, and for those who belong to Christ, final defeat is impossible.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When the world around you feels hostile to faith, how does knowing Satan's certain defeat bring you peace?",
+    "What helps you remember that God is in complete control when trouble seems overwhelming?"
+   ],
+   "prayer": "Lord God, thank You that evil will not have the final say. When darkness seems strong, help us trust Your sovereign power and remember the victory You have already promised. Keep our faith firm and free from fear. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Why So Much Controversy over These Two Books?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-march-17-2021.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Satan’s Final Assault",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/satans-final-assault"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

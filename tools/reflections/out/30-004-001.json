@@ -1,0 +1,128 @@
+{
+ "id": "30-004-001",
+ "title": "Punishment Brings No Repentance",
+ "refs": [
+  "Amos 4:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 30004012,
+   "end": 30004012,
+   "ref": "Amos 4:12",
+   "ranges": [
+    [
+     30004012,
+     30004012
+    ]
+   ],
+   "title": "\"Prepare to Meet Your God\"",
+   "key_verse": [
+    30004012,
+    30004012
+   ],
+   "reflect": [
+    {
+     "text": "Every day gives us a quiet call to get ready to meet our Lord. We hear this reminder when we wake up each morning, when we gather for worship, and when we face weakness or sickness. Because Jesus took all our punishment on the cross, we do not need to shrink back in terror. We are accepted and loved by our heavenly Father, dressed in the goodness of Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even though our salvation is secure, we should not rush carelessly into God's presence. As F. B. Meyer wrote, \"there should be a preparedness of heart.\" We pause to remember how awesome He is. He carved the mountains, created the wind, and knows our deepest thoughts. One day, our service and motives will be evaluated before Him. Living only for ourselves brings loss, but living for His kingdom brings lasting joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This calling asks us to examine how we are walking today. We can look honestly at our daily choices and make any necessary changes right now. Preparing to meet God means aligning our hearts with His desires each day.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus took away your punishment change the way you think about meeting God?",
+    "What is one choice you can make today to live more for God's kingdom rather than for yourself?"
+   ],
+   "prayer": "Lord, thank You that through Jesus we are welcomed into Your presence without fear. Help us to honor Your greatness and not rush carelessly through our days. Search our motives and guide us to make course corrections so that our lives please You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Amos 4:12",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Pastor Jeff Schreve",
+     "work": "Are You Ready?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-november-8.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 30004001,
+   "end": 30004013,
+   "ref": "Amos 4:1-13",
+   "ranges": [
+    [
+     30004001,
+     30004013
+    ]
+   ],
+   "title": "The Limits of God's Patience",
+   "key_verse": [
+    30004006,
+    30004006
+   ],
+   "reflect": [
+    {
+     "text": "The Lord showed great patience to Israel by sending repeated warnings so they would turn back to Him. He sent crop failures, droughts, and plagues as wake-up calls, hoping His people would notice their danger. Yet time after time, the people refused to return to Him. They assumed His patience meant He would never act against their wrongdoing.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The people of Israel tried to cover their disobedience with busy religious activity. They were eager to bring sacrifices and proclaim their offerings at their shrines, but at the same time they were oppressing the poor and crushing the needy. They thought their enthusiastic worship would excuse the injustice in their daily lives.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God made it clear that outward religious rituals mean nothing to Him if our hearts remain stubborn. Presuming on the Lord's kindness is dangerous, because His patience will not continue forever without an answer. Genuine faith must show itself in true repentance, turning away from selfish harm and turning back to the God who loves justice.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas where you rely on religious habits instead of genuinely listening to God?",
+    "How can you respond when God uses life's hardships to call your heart back to Him?"
+   ],
+   "prayer": "Father, forgive us when we take Your patience for granted or hide behind hollow religious routines. Teach us to listen quickly when You correct us and to care for those who are hurting. Give us soft hearts that truly turn away from sin and walk in Your ways. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Limits of God's Patience",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/limits-gods-patience"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

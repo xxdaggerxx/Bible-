@@ -1,0 +1,160 @@
+{
+ "id": "40-028-001",
+ "title": "The Resurrection",
+ "refs": [
+  "Matthew 28:1-10",
+  "Mark 16:1-8",
+  "Luke 24:1-12",
+  "John 20:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42024005,
+   "end": 42024007,
+   "ref": "Luke 24:5-7",
+   "ranges": [
+    [
+     42024005,
+     42024007
+    ]
+   ],
+   "title": "\"Why Look for the Living Among the Dead?\"",
+   "key_verse": [
+    42024005,
+    42024005
+   ],
+   "reflect": [
+    {
+     "text": "The women went to the tomb early in the morning expecting only to care for a dead body. They were not anticipating a miracle. But the angels surprised them with a searching question: why look for the living among the dead? Like those women, we often forget what Jesus told us. We easily turn to empty things in this world, hoping they will give us lasting hope or happiness. Yet we cannot find true life in places where there is only spiritual death.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "Because the grave could not hold Jesus, death has been defeated, and He is alive forever. This truth changes how we walk each day. As F. B. Meyer explains, Christ's death and rising shape our daily growth in holiness. By the power of the Holy Spirit, we leave behind our old sins like discarded grave-clothes. We count ourselves dead to selfish desires, and we rise each morning to follow our living Lord.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you find yourself looking for life or happiness apart from Jesus?",
+    "How can you leave behind old, sinful habits today and walk in Christ's new life?"
+   ],
+   "prayer": "Lord Jesus, forgive us when we forget Your promises and seek life in things that cannot save. Thank You for conquering death and rising from the grave. Help us by Your Spirit to turn away from sin and live each day for You. Amen.",
+   "sources": {
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 24:7",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Jason Soroski",
+     "work": "Seeking the Living Among the Dead - He Is Risen!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-april-12.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40028001,
+   "end": 40028010,
+   "ref": "Matthew 28:1-10; Mark 16:1-8; Luke 24:1-12; John 20:1-9",
+   "ranges": [
+    [
+     40028001,
+     40028010
+    ],
+    [
+     41016001,
+     41016008
+    ],
+    [
+     42024001,
+     42024012
+    ],
+    [
+     43020001,
+     43020009
+    ]
+   ],
+   "title": "The Joy of the Risen Lord",
+   "key_verse": [
+    40028006,
+    40028006
+   ],
+   "reflect": [
+    {
+     "text": "Mary Magdalene and the other women sought Jesus with earnest love. They went to the tomb while it was dark, braving danger when others kept away. When an angel appeared, the Roman guards shook with terror, but the angel told the women not to be afraid. As F. B. Meyer notes, those who seek the crucified Savior have no reason to fear. Whether we worry about our past sins or fear our faith is too weak, Jesus welcomes everyone who comes seeking Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "The good news of Easter is far greater than springtime celebrations or human traditions. Because Jesus truly rose from the dead, we have a certain hope that brightens our darkest moments. Even better, our Lord never leaves us to walk alone. Charles Spurgeon reminds us that Jesus is \"always first in fellowship.\" He went ahead of His disciples to Galilee just as He promised, and He still meets us faithfully in prayer and worship today.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    },
+    {
+     "text": "Meeting the living Savior filled the women with joy and moved them to action. When we know the peace of Christ's victory, we cannot keep the story to ourselves. Our hearts learn to seek Him above all rivals, and we eagerly tell others that our Lord has conquered the grave.",
+     "sources": [
+      "D1",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or doubts do you need to bring to the risen Jesus today?",
+    "How can you share the hope of Christ's resurrection with someone this week?"
+   ],
+   "prayer": "Living Lord, thank You for meeting us with grace and taking away our fears. Help us to seek You with our whole hearts and to trust Your faithful promises. Give us joy and courage to tell others that You are alive. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 14",
+     "on": "Matthew 28:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 7",
+     "on": "Mark 16:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 28:5",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D6": {
+     "author": "Vivian Bricker",
+     "work": "Rediscovering the Real Meaning of Easter",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/rediscovering-the-real-meaning-of-easter-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

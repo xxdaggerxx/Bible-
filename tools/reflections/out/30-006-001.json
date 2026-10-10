@@ -1,0 +1,66 @@
+{
+ "id": "30-006-001",
+ "title": "Woe to Those at Ease in Zion",
+ "refs": [
+  "Amos 6:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 30006001,
+   "end": 30006007,
+   "ref": "Amos 6:1-7",
+   "ranges": [
+    [
+     30006001,
+     30006007
+    ]
+   ],
+   "title": "The Danger of False Comfort",
+   "key_verse": [
+    30006001,
+    30006001
+   ],
+   "reflect": [
+    {
+     "text": "In the time of Amos, the leaders lived in great luxury and ease. They felt untouchable because of their wealth, prestige, and familiar religious routines. When God sent warnings of coming trouble, society brushed them off as mere alarmism. People preferred to retreat into false comfort, enjoying fine food and soft couches instead of listening to God's truth.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet a terrible calamity was looming over them. The nation had neglected justice, mistreated poor people, and chased after self-made idols. They took God's grace, his kindness that we do not deserve, for granted while completely ignoring his holiness. Because they chose self-sufficiency over obedience, they invited God's judgment and the loss of everything they treasured.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can easily fall into the same trap when life feels safe and comfortable. True spiritual security never comes from wealth, success, or outward religious habits. It comes only from taking God's word seriously and trusting him rather than ourselves.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to rely on your own comfort instead of trusting God?",
+    "What does taking God's word seriously look like in your daily choices?"
+   ],
+   "prayer": "Lord God, forgive us when we take your grace for granted and hide behind our own comfort. Keep our hearts from ignoring your holiness and the needs of others. Teach us to find our true security in your word alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "Alarmists - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/alarmists-one-year-devotions-for-men-december-11.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

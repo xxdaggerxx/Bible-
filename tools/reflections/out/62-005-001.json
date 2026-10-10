@@ -1,0 +1,127 @@
+{
+ "id": "62-005-001",
+ "title": "Overcoming the World",
+ "refs": [
+  "1 John 5:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 62005003,
+   "end": 62005005,
+   "ref": "1 John 5:3-5",
+   "ranges": [
+    [
+     62005003,
+     62005005
+    ]
+   ],
+   "title": "\"This Is the Victory\"",
+   "key_verse": [
+    62005004,
+    62005004
+   ],
+   "reflect": [
+    {
+     "text": "When God gives us new birth, our hearts change toward his commands. By nature, we resist God's authority, but living faith removes that inner resistance. Instead of feeling like a crushing weight, following God becomes our freedom and delight.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Even so, life brings deep sorrow, loss, and trials that can shake human endurance. Secular thinking offers no true hope in the middle of misery, but Jesus meets us directly in our hardships. He supplies daily, sustaining grace and truth when our own strength runs out.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Overcoming the world is not an uncertain battle that depends on our strength. It is an established victory belonging to everyone who is born of God. By trusting in God's sovereignty and walking by faith each day, we share in Christ's triumph over the world.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What makes God's commands feel like a joy rather than a heavy burden to you?",
+    "In what area of hardship do you need to rely on Jesus' daily grace today?"
+   ],
+   "prayer": "Heavenly Father, thank you for giving us new birth and faith in your Son. Please soften our hearts so we delight in your commands. When trials and grief press hard against us, remind us that Christ has already overcome the world. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Sorrow and Hope - Today's Insight - December 31, 2022",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-december-31-2022.html"
+    },
+    "D3": {
+     "author": "John Piper",
+     "work": "Pleased with His Precepts",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/pleased-with-his-precepts"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 62005001,
+   "end": 62005008,
+   "ref": "1 John 5:1-8",
+   "ranges": [
+    [
+     62005001,
+     62005008
+    ]
+   ],
+   "title": "The Spirit Testifies to Christ",
+   "key_verse": [
+    62005007,
+    62005007
+   ],
+   "reflect": [
+    {
+     "text": "God does not leave his people alone in this world. Today, Jesus cheers and encourages us through the constant presence of the Holy Spirit who lives within the church. His special purpose is to comfort troubled hearts, lift up those who are bowed down, and strengthen the weak.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Spirit carries out this ministry by revealing the Lord Jesus to our hearts. As Charles Spurgeon wrote, \"the Holy Spirit is the Physician, but Jesus is the medicine.\" He heals our spiritual wounds by applying the grace and truth of Christ to our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because the Holy Spirit has taken on this loving work, believers need not despair. He will never forget his task or fail to care for those in his charge. He gently replaces our heaviness with joy until our mourning ends and we join the eternal feast of God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering that the Holy Spirit lives in you bring comfort during low moments?",
+    "How can you look to Jesus as your medicine when you feel spiritually weary?"
+   ],
+   "prayer": "Lord God, thank you for sending your Holy Spirit to live within us as our Comforter. When our spirits feel bowed down, teach us to rest in his gentle guidance. Reveal the grace of Jesus to our hearts and keep us trusting in you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 12",
+     "on": "1 John 5:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

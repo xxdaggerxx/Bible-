@@ -1,0 +1,132 @@
+{
+ "id": "40-022-034",
+ "title": "The Greatest Commandment",
+ "refs": [
+  "Matthew 22:34-40",
+  "Mark 12:28-34"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40022037,
+   "end": 40022037,
+   "ref": "Matthew 22:37",
+   "ranges": [
+    [
+     40022037,
+     40022037
+    ]
+   ],
+   "title": "\"Love the Lord Your God\"",
+   "key_verse": [
+    40022037,
+    40022037
+   ],
+   "reflect": [
+    {
+     "text": "Jesus calls us to love God with our whole heart, soul, and mind. Loving God this completely can feel impossible for our weak human nature. F. B. Meyer reminds us that this high demand is meant to drive us to the Holy Spirit, who pours God's love into willing hearts. We do not have to rely on our own strength or wait for sudden emotional feelings to begin loving Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead, we can begin with our mind, our choices, and our will. When we choose to surrender our plans and make God first in our lives, our thoughts and feelings follow. Loving God with our mind also means spending time studying His Word and learning sound truth. Our faith cannot rest only on warm feelings; it needs the solid ground of God's real promises so that our trust does not crumble when hard times arrive.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Taking time to understand Scripture protects us from false ideas and strengthens our daily walk. When we intentionally feed our minds with God's truth, we are better prepared to help and guide others toward Him as well.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life can you choose to put God first today, even when your feelings are not strong?",
+    "How can studying the Bible more carefully help steady your faith when challenges come?"
+   ],
+   "prayer": "Lord, we thank you for the gift of your Holy Spirit, who fills our hearts with your love. Teach us to love you with our choices and our minds as we read your Word. Ground our faith in your steady truth so we can stand firm and serve you faithfully. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 22:37",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Dan Johnson",
+     "work": "Love God With Your Mind",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/love-god-with-your-mind-homeword-october-30.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40022034,
+   "end": 40022040,
+   "ref": "Matthew 22:34-40; Mark 12:28-34",
+   "ranges": [
+    [
+     40022034,
+     40022040
+    ],
+    [
+     41012028,
+     41012034
+    ]
+   ],
+   "title": "Loving God with Our Whole Being",
+   "key_verse": [
+    41012030,
+    41012030
+   ],
+   "reflect": [
+    {
+     "text": "When we divide our attention between God and many worldly distractions, our devotion slowly fades. Just as divided focus harms any close relationship, giving God only part of our lives keeps us from knowing Him deeply. Jesus teaches that wholehearted love touches every single part of who we are: our heart, soul, mind, and strength.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "To love God with all our heart means bringing our changing emotions under the guidance of the Bible. Loving Him with our soul means learning to love what He loves and turning away from what He rejects. We love Him with our mind by keeping our thoughts focused on things that are pure, good, and praiseworthy, rather than letting our imagination drift into worry or darkness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Finally, loving God with all our strength means keeping going in faith and prayer, even when life feels heavy. When we bring our whole being to God each day, our love for Him becomes active and real, shaping how we live and care for those around us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What distractions tend to divide your attention and pull your focus away from God?",
+    "Which part of your daily life—your emotions, your thoughts, or your strength—needs God's direction most right now?"
+   ],
+   "prayer": "Heavenly Father, help us give you our undivided attention and our whole lives. Teach us to love what you love, guide our thoughts toward what is good, and grant us strength to keep praying in faith. May our love for you overflow into genuine care for those around us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Kelly Balarie",
+     "work": "How to Actually Love God with All Your Heart, Soul, Mind and Strength",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/how-to-actually-love-god-with-your-all-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

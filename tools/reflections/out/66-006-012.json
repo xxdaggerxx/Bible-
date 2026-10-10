@@ -1,0 +1,73 @@
+{
+ "id": "66-006-012",
+ "title": "The Sixth Seal: Terror",
+ "refs": [
+  "Revelation 6:12-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66006012,
+   "end": 66006017,
+   "ref": "Revelation 6:12-17",
+   "ranges": [
+    [
+     66006012,
+     66006017
+    ]
+   ],
+   "title": "Standing on the Day of Wrath",
+   "key_verse": [
+    66006017,
+    66006017
+   ],
+   "reflect": [
+    {
+     "text": "The opening of the sixth seal paints a picture of creation shaking under God's judgment. Like the imagery in Old Testament prophecy, these cosmic signs show great turning points in God's plan rather than ordinary events. When God acts to judge those who oppose Him, worldly power, wealth, and fame cannot hide anyone. Rich rulers and ordinary workers alike realize that earthly success gives no shelter from the Lamb.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The passage asks who can withstand this terrifying day. The clear answer is that no one can survive God's wrath on their own. Yet Scripture shows that God protects His people from final destruction, just as He did for Noah and Lot long ago. Even when we face earthly troubles, Jesus promises that believers are kept safe from God's ultimate anger. Our only real security rests in trusting God alone.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that a day of reckoning will come should stir our hearts today. It moves us to walk closely with God in daily obedience. It also gives us a fresh desire to share the good news of Jesus with others, so they too can find rescue and peace in Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to look for safety instead of trusting in Jesus?",
+    "Who in your life needs to hear the good news of Christ's rescue?"
+   ],
+   "prayer": "Lord God, thank You for rescuing us from the judgment we deserve through Jesus. Help us to put all our trust in You rather than the things of this world. Give us courage and love to share Your salvation with people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Signs in the Heavens",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/signs-in-the-heavens"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Who Can Prevail Against God’s Wrath?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-july-15-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

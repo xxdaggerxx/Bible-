@@ -1,0 +1,114 @@
+{
+ "id": "60-001-013",
+ "title": "A Call to Holiness",
+ "refs": [
+  "1 Peter 1:13-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 60001013,
+   "end": 60001013,
+   "ref": "1 Peter 1:13",
+   "ranges": [
+    [
+     60001013,
+     60001013
+    ]
+   ],
+   "title": "\"Set Your Hope Fully\"",
+   "key_verse": [
+    60001013,
+    60001013
+   ],
+   "reflect": [
+    {
+     "text": "The world around us constantly urges us to chase temporary pleasures and look out only for ourselves. We often worry about missing out, but things on earth can never truly satisfy our souls. God made us to find our joy in Him alone. Because Jesus rose from the dead, we have a secure future that cannot be spoiled or lost. Fixing all our hope on the gift of God's grace frees us from chasing empty things and gives our daily lives real purpose.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because our future is secure, Peter tells us to get our minds ready for action. God loves each of His children equally, but He gives work to those who are prepared to move. Everyday distractions, easy comforts, and poor habits can cause us to miss divine opportunities. When we keep our minds alert, listen for God's gentle prompting, and stay ready to obey, we can gladly step into the work He has planned for us.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What distractions or temporary pleasures tend to pull your attention away from God?",
+    "How can you prepare your mind today to be ready for God's call to serve?"
+   ],
+   "prayer": "Lord, help us to turn away from temporary distractions and fix our hope entirely on Your grace. Teach us to keep our minds alert and our hearts obedient. Use us today in whatever work You have prepared for us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Melissa Kruger",
+     "work": "Make Every Moment Count",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/make-every-moment-count"
+    },
+    "D3": {
+     "author": "Glynnis Whitwer",
+     "work": "Are You Ready to Go?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/are-you-ready-to-go-encouragement-for-today-apr-25-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 60001013,
+   "end": 60001021,
+   "ref": "1 Peter 1:13-21",
+   "ranges": [
+    [
+     60001013,
+     60001021
+    ]
+   ],
+   "title": "The Precious Blood of Christ",
+   "key_verse": [
+    60001019,
+    60001019
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, we are called to be holy because God is holy. We are reminded that our freedom was not bought with silver or gold, but with the precious blood of Jesus Christ. His sacrifice pays the price for our sins, cleanses away our deepest stains, and brings us back into friendship with God. Even when our faith feels weak, we can find comfort knowing that God looks at the blood of Jesus and keeps us completely safe.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This same sacrifice gives us the power to live a new, holy life. As Charles Spurgeon wrote, \"There is no motive for holiness so great\" as what flows from Jesus. His blood works in us to conquer sinful habits and inspires us to follow God's commands. Armed with the cross of Christ, we can overcome temptation and walk forward with lasting hope, knowing that death has lost its power and heaven is open to us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering the price Jesus paid for you change the way you fight against sin?",
+    "In what areas of your life do you need to trust in the cleansing and protecting power of Christ's blood today?"
+   ],
+   "prayer": "Father, thank You for redeeming us not with silver or gold, but with the precious blood of Your Son. Wash us clean from our sin and keep us secure in Your love. Give us a true desire to live holy lives that honor You every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 16",
+     "on": "1 Peter 1:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

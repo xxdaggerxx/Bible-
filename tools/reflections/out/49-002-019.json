@@ -1,0 +1,66 @@
+{
+ "id": "49-002-019",
+ "title": "Christ Our Cornerstone",
+ "refs": [
+  "Ephesians 2:19-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 49002019,
+   "end": 49002022,
+   "ref": "Ephesians 2:19-22",
+   "ranges": [
+    [
+     49002019,
+     49002022
+    ]
+   ],
+   "title": "Built Together on Christ",
+   "key_verse": [
+    49002020,
+    49002020
+   ],
+   "reflect": [
+    {
+     "text": "Because of what Jesus accomplished on the cross, we are no longer strangers or outsiders to God. Through His finished work, we have become full citizens in God's kingdom and members of His own family. We are being built together into a holy temple where God's Spirit lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This spiritual house is built on a solid foundation: the teaching of the apostles and prophets. The Holy Spirit inspired these men to deliver and write down God's authoritative Word, giving us the truth we need to stand secure.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the center of it all is Jesus Christ, our cornerstone. In ancient times, the cornerstone was not a ceremonial block for show. It was the crucial stone that set the standard, measuring and aligning every other rock in the building. As living stones in God's house, we are called to daily discipleship. Little by little, God shapes our lives so that our thoughts and actions line up with Jesus.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you are a full member of God's household change the way you see your place in the church?",
+    "In what areas of your daily life do you need God to align your actions more closely with Jesus?"
+   ],
+   "prayer": "Lord Jesus, thank You for bringing us into Your household and making us a place where You dwell. Help us to trust Your Word and let our lives be aligned with You each day. Shape us into a loving community that honors You as our true cornerstone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Cornerstone and Foundation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/cornerstone-and-foundation"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

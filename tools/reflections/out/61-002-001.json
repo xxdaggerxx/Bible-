@@ -1,0 +1,126 @@
+{
+ "id": "61-002-001",
+ "title": "Deliverance from False Prophets",
+ "refs": [
+  "2 Peter 2:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 61002009,
+   "end": 61002010,
+   "ref": "2 Peter 2:9-10",
+   "ranges": [
+    [
+     61002009,
+     61002010
+    ]
+   ],
+   "title": "\"The Lord Knows How to Rescue\"",
+   "key_verse": [
+    61002009,
+    61002009
+   ],
+   "reflect": [
+    {
+     "text": "It can trouble our hearts when deceitful teachers seem to succeed and spread their errors without anything stopping them. Yet God's history with His people shows that ungodly conduct never escapes His notice. In the days of Noah and Lot, God judged the wicked while keeping His righteous servants safe. Even the apparent success of corrupt people is an early mark of judgment, as God gives them over to deeper sin before their final sentence.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Godly people will face trials and temptations. Real faith is put to the test. Even when our path feels like a confusing maze and we cannot see any way out, God knows where we are. As Charles Spurgeon wrote, \"What they do not know their Lord knows.\" God personally undertakes to rescue those who trust Him. He knows the right time and the best way to deliver us, bringing glory to Himself and safety to His children.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because final judgment is real and sure, we need to take God's warnings seriously. We cannot afford to toy with sin or wander on our own. Walking closely with other believers in regular fellowship and honest accountability helps protect our hearts from drifting into the very sins that ruin others.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel troubled by the apparent success of evil, how does remembering God's rescue of Noah and Lot bring you peace?",
+    "Who in your Christian fellowship helps keep you accountable so that you do not drift into sin?"
+   ],
+   "prayer": "Lord, thank You that You see our trials and know exactly how to rescue those who trust in You. Help us to wait patiently for Your timing when our path seems unclear. Keep our hearts humble, and use our brothers and sisters in Christ to guard us from falling into sin. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 12",
+     "on": "2 Peter 2:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord Knows How",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-knows-how"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 61002001,
+   "end": 61002022,
+   "ref": "2 Peter 2:1-22",
+   "ranges": [
+    [
+     61002001,
+     61002022
+    ]
+   ],
+   "title": "Guarding Against False Teachers",
+   "key_verse": [
+    61002001,
+    61002001
+   ],
+   "reflect": [
+    {
+     "text": "We should not be surprised when false teachers appear and gain influence in the wider culture. Today, modern media platforms give misleading voices easy ways to spread their messages far and wide. Scripture prepares us for this reality so that we will not be caught off guard when deceptive ideas become popular.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Deceitful leaders do not always reveal themselves only through wrong doctrine. Very often, their true nature shows up most clearly in how they live. Their inner corruption consistently comes out in three distinct traps: greed for money, sensual sins of the body, and arrogant pride. What they love reveals who they really are, no matter how appealing their words sound.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "To stay safe from destructive deception, we need strong earthly guardrails. The best protection God gives us is a healthy local church family with close, accountable relationships with our pastors. When we walk alongside faithful leaders who care for our souls, we are far less likely to be deceived by empty promises of freedom.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can paying attention to a teacher's character and lifestyle help you spot spiritual danger?",
+    "How does being deeply involved in a local church protect your faith from deceptive voices?"
+   ],
+   "prayer": "Father, give us wisdom to recognize misleading teachers by their conduct as well as their words. Protect our church family from the traps of greed, pride, and sin. Help us stay rooted in our local church, guided by faithful pastors who watch over our souls. Amen.",
+   "sources": {
+    "D3": {
+     "author": "David Mathis",
+     "work": "The Surprising Truth About False Teachers",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-surprising-truth-about-false-teachers"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,91 @@
+{
+ "id": "40-014-022",
+ "title": "Jesus Walks on Water",
+ "refs": [
+  "Matthew 14:22-33",
+  "Mark 6:45-52",
+  "John 6:16-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40014022,
+   "end": 40014033,
+   "ref": "Matthew 14:22-33; Mark 6:45-52; John 6:16-21",
+   "ranges": [
+    [
+     40014022,
+     40014033
+    ],
+    [
+     41006045,
+     41006052
+    ],
+    [
+     43006016,
+     43006021
+    ]
+   ],
+   "title": "Walking with Jesus Through the Storm",
+   "key_verse": [
+    40014027,
+    40014027
+   ],
+   "reflect": [
+    {
+     "text": "The disciples found themselves in a terrifying storm while doing exactly what Jesus told them to do. Jesus sent them across the lake, guiding their circumstances for a good purpose and guarding them against worldly ambition. Even when we follow the Lord faithfully, hard seasons can come. Yet we are never left to suffer on our own, because Jesus comes to us right in the middle of our trouble.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When Jesus called Peter to walk on the water, Peter did not act presumptuously. He asked the Lord first, kept his eyes on Christ, and bravely stepped out of the boat. Taking a risk of faith and stumbling is far better than never daring to move forward. But when Peter looked at the wild winds, his fear took over and he began to sink beneath the waves.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "In that moment of deep distress, Peter called out for help. As Charles Spurgeon wrote, \"sinking times are praying times with the Lord's servants.\" A desperate cry does not need to be long or fancy to reach heaven. Peter only said three words, and Jesus immediately stretched out His hand to save him. When our own strength runs out, Christ uses our weakness to show His power and quiet the storm.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face difficult trials while trying to obey God, what helps you keep your eyes on Jesus?",
+    "How does knowing that Jesus hears even our shortest cries encourage you to pray when you feel overwhelmed?"
+   ],
+   "prayer": "Lord Jesus, thank You for never leaving us alone when winds and waves rise against us. Help us to keep our eyes on You and to trust Your power when we feel like we are sinking. Reach out Your hand to rescue us, and bring Your peace to our troubled hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 14",
+     "on": "Matthew 14:30",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Carolyn Dale Newell",
+     "work": "3 Anchors to Keep You Afloat in Any Storm",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/encouragement-caf-october-23-2017.html"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "Risk and Failure",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-may-21-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

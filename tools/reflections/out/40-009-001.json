@@ -1,0 +1,138 @@
+{
+ "id": "40-009-001",
+ "title": "Jesus Heals a Paralytic",
+ "refs": [
+  "Matthew 9:1-8",
+  "Mark 2:1-12",
+  "Luke 5:17-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 41002003,
+   "end": 41002004,
+   "ref": "Mark 2:3-4",
+   "ranges": [
+    [
+     41002003,
+     41002004
+    ]
+   ],
+   "title": "\"They Uncovered the Roof\"",
+   "key_verse": [
+    41002004,
+    41002004
+   ],
+   "reflect": [
+    {
+     "text": "When four men tried to bring their paralyzed friend to Jesus, a thick crowd blocked every doorway. Instead of giving up and turning back, they carried him up the outside stairs, tore open the roof tiles, and lowered his mat right into the middle of the room. As Charles Spurgeon wrote, \"faith is full of inventions.\" Their love for their friend made them bold enough to try unusual methods and take real risks so that he could reach the Saviour.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God frequently works through ordinary people who are willing to give their time, energy, and effort for someone in need. These four friends did not let barriers or inconvenience stand in their way. They recognized their friend's urgent physical struggle, and they knew Jesus had the power to help him. When we notice the burdens and spiritual needs of people around us, true faith spurs us into compassionate action to bring them to Christ.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone in your life whose physical or spiritual needs you can help bring to Jesus?",
+    "What obstacles or inconveniences might be holding you back from making sacrifices to help someone else reach the Lord?"
+   ],
+   "prayer": "Lord Jesus, give us a loving and creative faith that does not give up when obstacles stand in the way. Help us to notice the struggles of the people around us and be willing to give our effort to bring them to you. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 7",
+     "on": "Mark 2:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Rachael Adams",
+     "work": "Compelled to Compassionate Action",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/compelled-to-compassionate-action-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40009001,
+   "end": 40009008,
+   "ref": "Matthew 9:1-8; Mark 2:1-12; Luke 5:17-26",
+   "ranges": [
+    [
+     40009001,
+     40009008
+    ],
+    [
+     41002001,
+     41002012
+    ],
+    [
+     42005017,
+     42005026
+    ]
+   ],
+   "title": "Authority on Earth to Forgive Sins",
+   "key_verse": [
+    40009006,
+    40009006
+   ],
+   "reflect": [
+    {
+     "text": "While sickness and physical pain cause deep misery in our broken world, our greatest need is reconciliation, being brought back into peace with God. Before Jesus healed the paralyzed man's body, He addressed what mattered most by pardoning his sins. The religious leaders were right about one thing: only God has the authority to forgive sins. By forgiving this man, Jesus was making a clear claim to be God Himself.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Because forgiveness cannot be seen with human eyes, Jesus gave a visible sign to confirm His unseen authority. Telling a paralyzed man to walk was something everyone in the room could immediately test. At Christ's command, the man stood up completely whole. This physical miracle proved beyond doubt that Jesus has true divine authority to pardon guilt.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Today, Christ's atoning work is fully accomplished through His death and resurrection, and His power to forgive is boundless. He has paid our debt in full, removing our sins and giving us real peace with God. Whatever our past failures, we can come directly to Him right now, knowing He has the power to wash away our sins and heal our souls.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you treat your need for God's forgiveness as more urgent and important than your daily physical comfort?",
+    "How does knowing that Jesus completely paid your debt give you peace today?"
+   ],
+   "prayer": "Lord Jesus, thank you for bearing our sins and paying our debt in full on the cross. We praise you for your divine power to heal our broken souls and grant us peace with God. Help us to rest each day in your complete and freely offered pardon. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 10",
+     "on": "Matthew 9:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Forgiveness and Healing",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/forgiveness-and-healing"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

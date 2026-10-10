@@ -1,0 +1,73 @@
+{
+ "id": "56-002-001",
+ "title": "Teaching Sound Doctrine",
+ "refs": [
+  "Titus 2:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 56002001,
+   "end": 56002010,
+   "ref": "Titus 2:1-10",
+   "ranges": [
+    [
+     56002001,
+     56002010
+    ]
+   ],
+   "title": "Living in Line with Sound Doctrine",
+   "key_verse": [
+    56002001,
+    56002001
+   ],
+   "reflect": [
+    {
+     "text": "Paul urged Titus to teach sound doctrine to help believers stand against the corrupt world around them. Sound doctrine means true biblical teaching that feeds and strengthens our souls. It includes both what we believe about God and the moral duties of our daily lives. To live rightly, we need to know what God calls holy, and obeying Him helps us understand His truth even more deeply.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because our actions show what we believe, God calls us to practice self-control, restraint, and good judgment in every area of life. Believers and leaders must set an example through good deeds and pure living that line up with Scripture. Our daily speech and conversation must also remain clean, dignified, and beyond criticism.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We need to deliberately pursue both true understanding and daily obedience. When we live with visible integrity, we leave no room for critics to speak evil of us. Living out God's truth silences those who oppose us and makes the gospel believable to the people around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your daily routine and conversations can you better reflect God's truth to others?",
+    "How does learning sound teaching from the Bible help you practice self-control and good judgment?"
+   ],
+   "prayer": "Lord, feed our souls with Your true Word and help us understand what is holy. Give us the self-control to live with integrity, to do good, and to speak words that honor You. May our daily lives make the gospel believable to everyone who watches us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Call to Sound Doctrine",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/call-to-sound-doctrine"
+    },
+    "D2": {
+     "author": "Grace to You",
+     "work": "Sensible Men",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B150723/sensible-men"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

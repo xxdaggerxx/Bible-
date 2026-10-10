@@ -1,0 +1,130 @@
+{
+ "id": "47-009-001",
+ "title": "God Loves a Cheerful Giver",
+ "refs": [
+  "2 Corinthians 9:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47009006,
+   "end": 47009008,
+   "ref": "2 Corinthians 9:6-8",
+   "ranges": [
+    [
+     47009006,
+     47009008
+    ]
+   ],
+   "title": "\"God Loves a Cheerful Giver\"",
+   "key_verse": [
+    47009007,
+    47009007
+   ],
+   "reflect": [
+    {
+     "text": "Giving our resources is very much like planting seed in a field. Often we hesitate to give because we fear having less for ourselves. Yet sharing what we have shows we believe God will take care of our future needs. Money is meant to serve God rather than become our master. When we give willingly, we show our thanks for Christ's sacrifice on the cross and acknowledge that everything we own already belongs to God.",
+     "sources": [
+      "D2",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "The way we give matters just as much to God as the amount we bring. He does not want us to give because of guilt, pressure from others, or regret. True generosity is thoughtful and planned ahead of time rather than done in a rush. When the Holy Spirit works in our hearts, giving is not a painful duty. Instead, it becomes a joyful and cheerful response to God's deep kindness toward us.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or worries sometimes make it hard for you to give generously?",
+    "How can planning your giving ahead of time help you give with joy instead of feeling pressured?"
+   ],
+   "prayer": "Lord, thank You for the incredible gift of Jesus on the cross for us. Help us trust You with all our daily needs so we do not hold back out of fear. Give us willing hearts that love to share with freedom and joy. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Joyful Generosity",
+     "site": "Insight for Living",
+     "url": "https://insight.org/article/joyful-generosity"
+    },
+    "D3": {
+     "author": "Rick Warren",
+     "work": "God Is Looking at Your Heart",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-september-3-2026.html"
+    },
+    "D4": {
+     "author": "Frank Cavalli",
+     "work": "The Grace of Cheerful Giving",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/grace-cheerful-giving"
+    },
+    "D5": {
+     "author": "Michael Youssef",
+     "work": "The Marks of a Giver",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-october-25.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 47009001,
+   "end": 47009015,
+   "ref": "2 Corinthians 9:1-15",
+   "ranges": [
+    [
+     47009001,
+     47009015
+    ]
+   ],
+   "title": "Bread to Eat and Seed to Sow",
+   "key_verse": [
+    47009010,
+    47009010
+   ],
+   "reflect": [
+    {
+     "text": "In every harvest, God provides both bread for daily food and seed for the next planting. Those who labor in God's work need personal nourishment just like any field worker. We cannot survive spiritually on the energy of helping other people. After serving, we must open our Bibles and feed our souls through quiet prayer and meditation. The excitement of church activity can never replace true spiritual food from God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the same time, anyone who receives food must also be ready to sow. A farmer cannot eat every grain of wheat he harvests, or there will be nothing left to plant. As F. B. Meyer warned, true faith is never about \"always nursing and ministering to oneself.\" When God comforts us with the good news, He expects us to pass that truth along to others. He promises to supply all the seed we need and multiply the good fruit that comes from it.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you taking regular time to feed your own soul in Scripture, or are you running on empty from serving?",
+    "How can you pass along the spiritual comfort and truth God has given you to someone else this week?"
+   ],
+   "prayer": "Heavenly Father, thank You for feeding our hungry souls with Your Word. Help us to rest in prayer so we do not grow weary in doing good. Give us generous hearts to scatter the seed of Your truth wherever You lead us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Corinthians 9:10",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

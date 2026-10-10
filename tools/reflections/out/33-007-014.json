@@ -1,0 +1,74 @@
+{
+ "id": "33-007-014",
+ "title": "God’s Compassion on Israel",
+ "refs": [
+  "Micah 7:14-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 33007018,
+   "end": 33007019,
+   "ref": "Micah 7:18-19",
+   "ranges": [
+    [
+     33007018,
+     33007019
+    ]
+   ],
+   "title": "\"Who Is a God like You?\"",
+   "key_verse": [
+    33007018,
+    33007018
+   ],
+   "reflect": [
+    {
+     "text": "Micah is amazed by the character of God. No other god is like Him, because our Lord truly pardons wrongdoing and delights in faithful love. He does not ignore His perfect justice to forgive us. Instead, through Christ, God remains completely just while fully forgiving all who trust in Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God does not stay angry with His people. As Charles Spurgeon wrote, \"He loves because He is love,\" turning quickly from anger to pity our griefs. The Lord also promises to subdue our wrongdoing. He breaks the power of sin in our daily lives so it cannot rule over us like a harsh master.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord hurls all our sins into the deepest part of the ocean, where they sink like stones and can never wash back ashore. Because God will never hold these wrongs against us, we are set free from lingering guilt. Receiving such generous pardon also calls us to forgive others gladly when they hurt us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Since God has buried your sins in the deep sea, how can you let go of lingering guilt today?",
+    "How does knowing God's complete pardon help you forgive someone who has wronged you?"
+   ],
+   "prayer": "Lord God, thank You for delighting in mercy and pardoning our sins through Christ. We praise You for casting our guilt into the depths of the sea and subduing our wrongdoing. Please free us from shame, and help us show that same forgiveness to others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 21",
+     "on": "Micah 7:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Forgiveness of Sins",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-forgiveness-of-sins"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "43-011-001",
+ "title": "The Death of Lazarus",
+ "refs": [
+  "John 11:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43011001,
+   "end": 43011016,
+   "ref": "John 11:1-16",
+   "ranges": [
+    [
+     43011001,
+     43011016
+    ]
+   ],
+   "title": "God Sets Limits on Our Sickness",
+   "key_verse": [
+    43011001,
+    43011001
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus heard that his friend Lazarus was sick, he said the illness would not end in death. Even though Lazarus died, death was not the final stop. From this we learn that God puts a clear boundary around our suffering. As Charles Spurgeon noted, the Lord tells the waves of pain, \"Hitherto shall ye go, but no further.\" God uses trials to teach his people, not to destroy them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's limits cover everything we go through. He decides the length, the strength, and the timing of every illness and sad moment. Nothing happens by accident. Every sleepless night and low feeling is known beforehand by God, and he uses each one for our good.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "These limits are also planned with great wisdom and tender care. God measures our troubles to fit our strength and gives us his grace to endure them. He is like a caring doctor who never cuts deeper than needed, or a mother who pities her hurting child. God never gives us more pain than is necessary, and he will never arrive too late to help us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God sets the boundary for your troubles bring you comfort today?",
+    "In what ways can you trust that God will never arrive too late in your current trials?"
+   ],
+   "prayer": "Lord God, thank you that you rule over all our sickness and pain. Help us remember that our trials have boundaries set by your loving hand. Give us patience to trust your timing, knowing you never bring more trouble than we can bear. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 17",
+     "on": "John 11:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

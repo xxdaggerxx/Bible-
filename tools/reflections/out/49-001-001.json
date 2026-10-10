@@ -1,0 +1,66 @@
+{
+ "id": "49-001-001",
+ "title": "Paul’s Greeting to the Ephesians",
+ "refs": [
+  "Ephesians 1:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 49001001,
+   "end": 49001002,
+   "ref": "Ephesians 1:1-2",
+   "ranges": [
+    [
+     49001001,
+     49001002
+    ]
+   ],
+   "title": "A Letter for the Whole Church",
+   "key_verse": [
+    49001001,
+    49001001
+   ],
+   "reflect": [
+    {
+     "text": "Paul begins this letter by identifying himself as an apostle, a messenger sent by Christ Jesus through the will of God. Early church history strongly confirms that Paul wrote these words while he was imprisoned in Rome. Even though some modern scholars doubt he wrote it because the sentences are long and the words are different, this overlooks Paul's great ability as a versatile writer.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "You will notice that Paul does not address local quarrels or specific disputes in this letter. Instead, he wrote it as a circular letter meant to be passed along and read by many different churches. Because it speaks to the church widely, Ephesians has shaped Christian teaching and ministry in a lasting, foundational way throughout history.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As we read Paul's greeting of grace and peace, we are encouraged to study the core themes of this letter prayerfully. Taking time to look closely at these truths will give us a deeper insight into God's character and his ways.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Ephesians was written for many churches help you receive its message today?",
+    "What core truths about God's character are you hoping to understand more deeply as you read this letter?"
+   ],
+   "prayer": "Heavenly Father, thank you for preserving this letter to guide and build up your church throughout history. Open our hearts and minds as we study its words. Teach us more about your character and help us grow in your grace and peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "To the Saints in Ephesus",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/saints-ephesus"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

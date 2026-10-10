@@ -1,0 +1,75 @@
+{
+ "id": "44-017-010",
+ "title": "The Character of the Bereans",
+ "refs": [
+  "Acts 17:10-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44017010,
+   "end": 44017012,
+   "ref": "Acts 17:10-12",
+   "ranges": [
+    [
+     44017010,
+     44017012
+    ]
+   ],
+   "title": "\"Examined the Scriptures Every Day\"",
+   "key_verse": [
+    44017011,
+    44017011
+   ],
+   "reflect": [
+    {
+     "text": "When Paul and Silas arrived in Berea, the people in the synagogue welcomed them with open hearts. Unlike the hostile crowds in Thessalonica, the Bereans received the message with real hunger and openness. Even with their eager welcome, they did not simply accept human claims without checking them first.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead, the Bereans turned to God's written word every single day. They investigated the Scriptures diligently to see if Paul's teachings were true, rather than relying on human traditions or personal assumptions. When they saw that the message about Christ matched the Scriptures, many men and women placed their trust in Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We are called to follow this pattern in our own lives today. Daily personal Bible study and careful testing must become an ongoing practice for all believers. Checking what we hear against God's written word protects us from false teaching, guards our minds, and roots our faith firmly in the truth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How often do you check what you hear or read about God against the Bible?",
+    "What steps can you take to make daily Scripture study a steady habit in your life?"
+   ],
+   "prayer": "Lord, give us hungry and open hearts to receive Your word. Help us to study the Scriptures faithfully each day and test all teachings against Your truth. Protect our minds from false ideas and deepen our faith in Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Anna Kuta",
+     "work": "Be Like the Bereans - Crosswalk the Devotional - March 20, 2013",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/be-like-the-bereans-crosswalk-the-devotional-march-21-2012.html"
+    },
+    "D2": {
+     "author": "David Mathis",
+     "work": "Chapter-and-Verse Protestants: The Reformation Legacy of Little Berea",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/chapter-and-verse-protestants"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

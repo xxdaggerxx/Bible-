@@ -1,0 +1,73 @@
+{
+ "id": "45-006-015",
+ "title": "The Wages of Sin",
+ "refs": [
+  "Romans 6:15-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45006015,
+   "end": 45006023,
+   "ref": "Romans 6:15-23",
+   "ranges": [
+    [
+     45006015,
+     45006023
+    ]
+   ],
+   "title": "Choosing Our Master under Grace",
+   "key_verse": [
+    45006023,
+    45006023
+   ],
+   "reflect": [
+    {
+     "text": "Being under grace, which is God's kindness we do not deserve, does not mean we can live however we want. We need this warning so we do not abuse our spiritual freedom. Every day, you face an active choice about which master you will follow. You belong to the one you obey, whether that is sin leading to death, or obedience leading to doing what is right.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "On our own, human sin is like a crushing debt that we could never hope to pay off. Yet Jesus completely paid that debt for us through His sacrifice on the cross. When we trust in Christ, God cancels the penalty of our wrongdoing and gives us the free gift of eternal life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Jesus paid our debt, we are free to come straight to God in prayer, received by Him as forgiven and righteous. Since we have been released from sin's power, we can now choose each day to offer our lives in obedience to the Master who saved us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Which master do your everyday choices show you are serving?",
+    "How does knowing Jesus paid your debt in full change the way you live each day?"
+   ],
+   "prayer": "Lord Jesus, thank You for paying the debt of our sin on the cross and giving us eternal life. Help us not to take Your grace for granted or use our freedom unwisely. Guide our choices each day so that we may gladly follow You in obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alexis A. Goring",
+     "work": "Fully Forgiven",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/fully-forgiven-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Careful Warning to All Who Are Free",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-april-23-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

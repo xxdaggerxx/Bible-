@@ -1,0 +1,66 @@
+{
+ "id": "44-027-001",
+ "title": "Paul Sails for Rome",
+ "refs": [
+  "Acts 27:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44027001,
+   "end": 44027012,
+   "ref": "Acts 27:1-12",
+   "ranges": [
+    [
+     44027001,
+     44027012
+    ]
+   ],
+   "title": "Trusting God in Storms Caused by Others",
+   "key_verse": [
+    44027011,
+    44027011
+   ],
+   "reflect": [
+    {
+     "text": "Paul warned the crew that continuing their voyage would bring disaster and loss. He showed practical common sense and spiritual wisdom in his warning. But the pilot and ship owner ignored his caution. They chose to put financial gain ahead of safety, sailing straight into severe danger.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of their choice, Paul and his companions were pulled into a dangerous storm. Paul was not facing peril because of his own mistakes or disobedience. He was caught in trouble simply because of someone else's poor decision. Going through hard times caused by others can be deeply painful, and it quickly tempts us toward bitterness and blame.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy to stay angry at those whose foolish decisions hurt us. Yet Scripture reminds us that God is still at work. Rather than getting stuck in blaming people, believers caught in storms can fix their eyes on God. We can trust that he has a greater purpose even in the trials we did not cause.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever faced hardship because of someone else's poor decision?",
+    "How can focusing on God's purpose help protect your heart from bitterness and blame?"
+   ],
+   "prayer": "Lord, it is hard to suffer because of choices we did not make. Guard our hearts against bitterness when the actions of others bring trouble into our lives. Help us fix our eyes on you and trust your good purpose in the middle of every storm. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 290: Acts 27:9–12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-290-acts-27-912.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

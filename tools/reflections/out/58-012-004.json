@@ -1,0 +1,127 @@
+{
+ "id": "58-012-004",
+ "title": "God Disciplines His Sons",
+ "refs": [
+  "Hebrews 12:4-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 58012011,
+   "end": 58012011,
+   "ref": "Hebrews 12:11",
+   "ranges": [
+    [
+     58012011,
+     58012011
+    ]
+   ],
+   "title": "\"A Harvest of Righteousness and Peace\"",
+   "key_verse": [
+    58012011,
+    58012011
+   ],
+   "reflect": [
+    {
+     "text": "Discipline never feels pleasant while we are going through it. Our natural reaction is to dislike hardship, and we might even wonder if God has forgotten us or turned away. Yet Scripture honestly admits that discipline hurts. It is not meant to feel easy. Just as good human parents correct their children so they grow into mature adults, God uses our trials to train us to be like Jesus.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The key word to hold onto is afterward. As Charles Spurgeon noted, trials are like \"harsh ploughings yielding joyful harvests.\" Just as quiet calm follows a violent storm, deep peace follows our struggles. God gives us our hardest things first and our best things last. We need patience to wait for the good fruit He is producing in us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When pain makes it hard to see ahead, we must remember what God has promised. Present training leads to a quiet harvest of righteousness and lasting peace. Keeping our eyes fixed on that promised outcome gives us the strength we need to keep going today.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard training right now, how can remembering God's promised harvest help you stay patient?",
+    "What peaceful fruit have you seen in your life after past difficulties?"
+   ],
+   "prayer": "Father, thank You that You never waste our pain. Help us to endure when Your discipline feels heavy and difficult. Keep our eyes fixed on the peaceful harvest You have promised to bring in Your good time. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 18",
+     "on": "Hebrews 12:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Fruit of Discipline",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/fruit-discipline"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 58012004,
+   "end": 58012013,
+   "ref": "Hebrews 12:4-13",
+   "ranges": [
+    [
+     58012004,
+     58012013
+    ]
+   ],
+   "title": "God Disciplines Those He Loves",
+   "key_verse": [
+    58012006,
+    58012006
+   ],
+   "reflect": [
+    {
+     "text": "When painful trials hit us, we often wonder if God is angry with us. We might worry that our suffering is God paying us back for our sins. But the cross tells a completely different story. Jesus took the full punishment for every wrong thing we have done, which means there is no condemnation or angry penalty left for believers.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Jesus bore our punishment, the hard things we experience are not divine payback. Instead, they are the loving discipline of a good Father. God uses hard circumstances to train His children, not to penalize them. Far from showing that He has rejected us, His correction proves that we are truly His cherished sons and daughters.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God's aim in every trial is our good. He guides us through difficult seasons so we can share in His holiness and find lasting joy. Knowing that we are fully accepted children allows us to trust His loving hands, even when life hurts.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever fear that God is punishing you when life gets hard, and how does the cross answer that fear?",
+    "How does knowing you are God's true child change the way you look at your current trials?"
+   ],
+   "prayer": "Lord, thank You that Jesus took all our punishment on the cross so that we are completely forgiven. When we face trials, remind us that You are treating us as Your beloved children. Teach us to trust Your loving heart and grow in holiness through every test. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "When It Feels Like God Is Punishing You",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/when-it-feels-like-god-is-punishing-you"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

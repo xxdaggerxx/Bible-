@@ -1,0 +1,77 @@
+{
+ "id": "40-017-001",
+ "title": "The Transfiguration",
+ "refs": [
+  "Matthew 17:1-13",
+  "Mark 9:1-13",
+  "Luke 9:28-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40017001,
+   "end": 40017013,
+   "ref": "Matthew 17:1-13; Mark 9:1-13; Luke 9:28-36",
+   "ranges": [
+    [
+     40017001,
+     40017013
+    ],
+    [
+     41009001,
+     41009013
+    ],
+    [
+     42009028,
+     42009036
+    ]
+   ],
+   "title": "Glory and the Way of the Cross",
+   "key_verse": [
+    42009031,
+    42009031
+   ],
+   "reflect": [
+    {
+     "text": "On the mountain, Jesus shone with brilliant, heavenly light. This dazzling scene gives us a glimpse of the glory of heaven, untouched by human sin. Yet instead of remaining in that radiance, Jesus chose to return down the mountain toward our troubled world. As F. B. Meyer notes, He \"deliberately turned from all the radiant light and took the way of the cross.\" His choice to walk into suffering shows how deeply He loves us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Moses and Elijah appeared with Him, they spoke about His coming death in Jerusalem, describing it as an exodus. Moses represented the law, which pointed to the Passover lamb and the healing serpent lifted on a pole. Elijah represented the prophets, who told of a suffering servant who would finish in triumph. The death of Jesus was not an accident or a defeat. It was a mighty rescue, leading through pain into lasting victory and joy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing what Jesus accomplished changes how we face our own fears. Because He walked this road for us and conquered death, the grave loses its terror. For those who trust Him, leaving this life is no longer a hopeless end, but an exodus out of a weary world into the presence of God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus willingly chose the cross for your sake give you comfort today?",
+    "How can the truth that Jesus turned death into a rescue help you when you feel afraid?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your deep love that chose the road to the cross rather than staying in heavenly comfort. Please give us peace when life is heavy, knowing that You have won the final victory. Help us to trust You through every trial, confident that You lead us safely into Your eternal rest. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 9:30",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,127 @@
+{
+ "id": "49-005-021",
+ "title": "Wives and Husbands",
+ "refs": [
+  "Ephesians 5:21-33"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 49005025,
+   "end": 49005025,
+   "ref": "Ephesians 5:25",
+   "ranges": [
+    [
+     49005025,
+     49005025
+    ]
+   ],
+   "title": "\"Husbands, Love Your Wives\"",
+   "key_verse": [
+    49005025,
+    49005025
+   ],
+   "reflect": [
+    {
+     "text": "Jesus gives husbands the greatest example to follow. When the Bible tells husbands to love their wives, it points directly to how Christ loves His church. As Charles Spurgeon noted, Jesus gives a \"golden example\" to imitate. His affection is not mere lip-service or a passing mood. Instead, Christ loves with a steady, enduring heart that never changes, delighting deeply in His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Following this pattern requires true sacrifice. A husband is commanded to follow Christ's example of laying down His life for His church. This calling means actively protecting and providing for his wife with selfless care. We are challenged to look closely at our own lives and measure how willing we are to give up our own preferences to serve the other person.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show a steady, unselfish love to the people you care for today?",
+    "What personal comforts or habits might you need to set aside to serve your family better?"
+   ],
+   "prayer": "Lord Jesus, thank You for showing us what true, sacrificial love looks like by giving up Your life for us. Please help husbands to reflect Your steady care, protecting and cherishing their wives each day. Teach us all to lay down our selfishness so that our relationships honour You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 20",
+     "on": "Ephesians 5:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Adrian Rogers",
+     "work": "The Sacrificial Quotient of Giving",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-august-20.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 49005021,
+   "end": 49005033,
+   "ref": "Ephesians 5:21-33",
+   "ranges": [
+    [
+     49005021,
+     49005033
+    ]
+   ],
+   "title": "Grace and Honor in Marriage",
+   "key_verse": [
+    49005033,
+    49005033
+   ],
+   "reflect": [
+    {
+     "text": "A healthy Christian marriage rests on Christ as the head, where both husband and wife embrace their God-given callings. Wives are called to respect and yield to their own husbands, walking alongside them with patience as imperfect leaders. This calling does not silence a wife's wise counsel, nor does it require following a husband into sin. At the same time, husbands are called to cherish their wives like their own bodies, helping both partners grow in holiness, peace, and mutual flourishing.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Marriage also thrives when it is filled with grace, which is God's undeserved kindness. When insecurity or possessiveness takes root, it can smother a relationship and damage trust. Walking in divine grace frees couples from trying to control or constantly appease one another. When we confess unhealthy habits, God brings renewal and builds up genuine dignity and honor between spouses.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might insecurity or a desire for control be harming trust in your closest relationships?",
+    "How can you offer grace and patient encouragement to your spouse or family members this week?"
+   ],
+   "prayer": "Heavenly Father, thank You for the gift of marriage and the clear guidance You give in Your Word. Fill our homes with Your grace, taking away insecurity and the desire to control one another. Grant us patience, mutual honor, and hearts that help each other grow in holiness. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Marital Grace",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-september-2-2023.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Vocation of Wives",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/vocation-of-wives"
+    },
+    "D5": {
+     "author": "Beth Moore",
+     "work": "Day 305: Ephesians 5:25–33",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-305-ephesians-5-2533.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

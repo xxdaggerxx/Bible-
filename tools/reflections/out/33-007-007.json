@@ -1,0 +1,123 @@
+{
+ "id": "33-007-007",
+ "title": "Israel’s Confession and Comfort",
+ "refs": [
+  "Micah 7:7-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 33007007,
+   "end": 33007007,
+   "ref": "Micah 7:7",
+   "ranges": [
+    [
+     33007007,
+     33007007
+    ]
+   ],
+   "title": "\"My God Will Hear Me\"",
+   "key_verse": [
+    33007007,
+    33007007
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes friends or family members let us down, or others treat us unkindly. When relationships bring sorrow, our best choice is not to fight back with angry words. Instead, we can turn our eyes to the Lord and bring all our quiet heartaches to Him. Because God is living, loving, and committed to His people, we can be completely sure that He listens to every plea. As Charles Spurgeon wrote, \"we may tell Him all our grief.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Waiting on God is an unavoidable part of our lives. We naturally want quick answers and immediate relief, but God's eternal timing cannot be rushed. When answers seem slow in coming, we must remember that a delay is not a denial. While we wait, God is still working quietly for our good, shaping our trust and growing an enduring faith that keeps us from living in doubt.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel let down by others, do you tend to argue or do you bring your hurts to God in prayer?",
+    "How can remembering that God is still working help you wait patiently for His answers?"
+   ],
+   "prayer": "Lord, thank You that You always hear me, even when human friendships fail. Help me not to grow impatient when Your answers seem slow to arrive. Teach me to trust that You are working for my good while I wait. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 31",
+     "on": "Micah 7:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Rick Warren",
+     "work": "While You Wait, God Works",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-june-4-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 33007008,
+   "end": 33007008,
+   "ref": "Micah 7:8",
+   "ranges": [
+    [
+     33007008,
+     33007008
+    ]
+   ],
+   "title": "\"The Lord Will Be My Light\"",
+   "key_verse": [
+    33007008,
+    33007008
+   ],
+   "reflect": [
+    {
+     "text": "When we stumble into sin or face deep trouble, it can feel like our enemies are winning. Oppressors may mock us, or our own wrongdoing may bring God's discipline. In such moments, darkness can settle in. Yet God does not keep His anger forever, nor will He allow enemies to destroy us completely. Instead of taking matters into our own hands, we must confess our sins, rely on His mercy, and wait for Him to step in.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Our times of defeat and sadness are only temporary. The insults and boasting of those who oppose us will not last. Because our God never falls, He will reach down and lift us up from where we have fallen. Darkness may surround us right now through failing health, fading human love, or personal loss, but the Lord Himself remains our fountain of light. He will turn our sighing into singing and lead us into His righteousness.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What helps you remember that your season of darkness or defeat is only temporary?",
+    "Instead of trying to rescue yourself in hard times, how can you rest in God's mercy and light?"
+   ],
+   "prayer": "Father, thank You that You are my light even in the darkest valley. When I stumble or face the scorn of others, lift me up by Your power. Help me to accept Your correction, rely on Your mercy, and wait for Your deliverance. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 4",
+     "on": "Micah 7:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Micah 7:8",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

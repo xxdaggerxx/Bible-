@@ -1,0 +1,66 @@
+{
+ "id": "44-009-031",
+ "title": "The Healing of Aeneas",
+ "refs": [
+  "Acts 9:31-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44009031,
+   "end": 44009035,
+   "ref": "Acts 9:31-35",
+   "ranges": [
+    [
+     44009031,
+     44009035
+    ]
+   ],
+   "title": "A Church of Grace and Resilience",
+   "key_verse": [
+    44009031,
+    44009031
+   ],
+   "reflect": [
+    {
+     "text": "The early church showed remarkable resilience. Even after facing constant persecution, the believers experienced a season of peace and steadily grew in strength and numbers. As Chuck Swindoll points out, these early Christians maintained their momentum by being steadfast, immovable, joyful, and confident in God's promises. They did not let past hardships keep them from moving forward together.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Alongside this inner strength, the early church possessed an appealing charm that was rooted in authentic grace and love. Harsh legalism and judgmental attitudes always push people away. By contrast, when believers live with gentle kindness and show God's unearned favor, they attract others toward righteousness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As Peter traveled to visit the believers and cared for Aeneas in his eight years of paralysis, we see faith at work in human suffering. Today, our congregations must also build welcoming environments. We need spaces where people can freely bring their deepest hurts, honest questions, and practical needs to find the healing grace of Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show grace and warmth instead of judgment to people around you?",
+    "What hurts or questions do you need to bring openly to your church community?"
+   ],
+   "prayer": "Lord, grant us the resilience to remain joyful, steadfast, and confident in you through every season. Help our church to be a place of genuine grace and charm rather than harsh rules. Teach us to welcome people with their hurts and questions so they may experience your healing love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "A Church with Resilience and Charm",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/article-library/individual/a-church-with-resilience-and-charm"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

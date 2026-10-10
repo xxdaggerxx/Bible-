@@ -1,0 +1,67 @@
+{
+ "id": "50-003-017",
+ "title": "Citizenship in Heaven",
+ "refs": [
+  "Philippians 3:17-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 50003017,
+   "end": 50003021,
+   "ref": "Philippians 3:17-21",
+   "ranges": [
+    [
+     50003017,
+     50003021
+    ]
+   ],
+   "title": "Bodies Made Like His Glorious Body",
+   "key_verse": [
+    50003021,
+    50003021
+   ],
+   "reflect": [
+    {
+     "text": "Our lives in this world can be hard on our physical bodies. Pain, illness, and tired minds often make it difficult for us to think clearly or worship God. Our frail bodies humble us and remind us of our earthly weakness. But as citizens of heaven, we do not live with our minds trapped only on earthly things. We eagerly look ahead to the Savior who is coming from heaven.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Jesus returns, He will use His power to change our fragile bodies completely. Charles Spurgeon wrote that we will be \"fashioned like his own body of glory.\" Everyone who trusts in Jesus has already been made new in their soul by faith. One day, our bodies will also receive a total renewal to match. There will be no more aching heads, failing eyesight, worn-out joints, or failing strength.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Remembering this future helps us carry our everyday physical troubles and pain. Even when our bodies grow old and struggle with weakness, we can rest in the sure hope that Christ will make us like Himself.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can the promise of a renewed body give you comfort when you face sickness or tiredness?",
+    "What helps you keep your attention on your heavenly home instead of worldly worries?"
+   ],
+   "prayer": "Lord Jesus, thank You that our true home is in heaven with You. Give us patience and peace when our bodies are weak, in pain, or wearing out. Keep our hope steady on the day You return to renew us and make all things right. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 13",
+     "on": "Philippians 3:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

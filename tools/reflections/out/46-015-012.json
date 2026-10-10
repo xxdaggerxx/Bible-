@@ -1,0 +1,66 @@
+{
+ "id": "46-015-012",
+ "title": "The Resurrection of the Dead",
+ "refs": [
+  "1 Corinthians 15:12-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46015012,
+   "end": 46015019,
+   "ref": "1 Corinthians 15:12-19",
+   "ranges": [
+    [
+     46015012,
+     46015019
+    ]
+   ],
+   "title": "Why the Resurrection Matters",
+   "key_verse": [
+    46015014,
+    46015014
+   ],
+   "reflect": [
+    {
+     "text": "Some believers in Corinth were saying that people do not rise from the dead. Paul shows why this thinking is so dangerous. If the dead are not raised, then Christ Himself is still dead. And if Jesus did not rise, our faith is completely empty. His death on the cross alone cannot rescue anyone if He remained trapped in the grave. Death would still rule over all of us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus rising from the dead proves that He is truly God who came in human flesh. He was not just an ordinary martyr who died with false hopes. When God the Father brought Jesus out of the tomb, He confirmed that Christ's sacrifice on the cross was fully accepted. This resurrection assures us that our sins are forgiven and that we are justified, meaning God has declared us right with Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If our hope in Christ stopped when this life ends, we would be deeply pitied. But Jesus did break out of the grave. Because He lives, death has lost its mastery over humanity, and our faith rests on a living Savior.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus rose from the dead give you confidence that your sins are forgiven?",
+    "In what ways would our faith be empty if Jesus had remained in the grave?"
+   ],
+   "prayer": "Heavenly Father, thank You for raising Jesus from the dead and breaking the power of death over us. We praise You that His empty tomb proves He is truly God and that His sacrifice for our sins was fully accepted. Help us to live with steady hope every day because our Savior lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "No Resurrection, No Savior",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-april-15-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "42-001-067",
+ "title": "Zechariah’s Song",
+ "refs": [
+  "Luke 1:67-80"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42001067,
+   "end": 42001080,
+   "ref": "Luke 1:67-80",
+   "ranges": [
+    [
+     42001067,
+     42001080
+    ]
+   ],
+   "title": "Praising God for His Promised Redeemer",
+   "key_verse": [
+    42001068,
+    42001068
+   ],
+   "reflect": [
+    {
+     "text": "Zechariah had spent months unable to speak because he had doubted God's message. Yet when his voice finally returned, he did not waste words on complaints. Filled with the Holy Spirit, he immediately praised the Lord. His hymn points us straight to the true heart of Christmas. It reminds us that God is completely faithful to His covenant promises, bringing forth the long-expected Redeemer from King David's family.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This song shows us that salvation starts only in the tender mercy of God. Mercy means God's kind compassion toward people in need. Through this gentle care, God provides full forgiveness for our sins. He steps into our darkness to rescue us from our spiritual enemies, breaking the power of fear over our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God delivers us from these enemies, our daily lives are transformed. We are set free to worship and serve Him without being afraid. Instead of worrying, we can walk before Him in holiness and righteousness every single day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God has fully forgiven your sins help you serve Him without fear today?",
+    "In what ways can you use your words to praise God's faithfulness this week?"
+   ],
+   "prayer": "Lord God, thank You for Your tender mercy and for keeping every promise You make. Thank You for forgiving our sins and freeing us from fear through our Redeemer. Help us to serve You faithfully in holiness and joy all the days of our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Mike Pohlman",
+     "work": "The Music of Christmas",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-dec-18-2008-11597120.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

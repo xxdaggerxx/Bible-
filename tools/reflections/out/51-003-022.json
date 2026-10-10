@@ -1,0 +1,83 @@
+{
+ "id": "51-003-022",
+ "title": "Serving with Honor",
+ "refs": [
+  "Colossians 3:22-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 51003022,
+   "end": 51003025,
+   "ref": "Colossians 3:22-25",
+   "ranges": [
+    [
+     51003022,
+     51003025
+    ]
+   ],
+   "title": "Serving the Lord Christ",
+   "key_verse": [
+    51003023,
+    51003023
+   ],
+   "reflect": [
+    {
+     "text": "Paul did not write these words to kings or mighty rulers. He wrote them to ordinary workers and servants doing exhausting daily tasks. God designed purposeful work in His own image, making our daily labor a gift and an act of worship rather than a search for money or praise. When we remember who our true Master is, even the lowliest chore becomes honorable. As Charles Spurgeon noted, this truth \"sheds a halo around the most humble occupations,\" turning ordinary workplaces into holy spaces.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "It is tempting to work hard only when a boss or teacher is looking. Working just for human approval makes us insincere and leads us to slack off in secret. Earthly bosses can be flawed, but God calls us to work with our whole hearts because of His character and commands. Because we are already fully accepted in Christ, we are freed from the pressure of pleasing people. We can do our best for an audience of one.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Faithfulness in ordinary, unseen tasks is never wasted. God sees every quiet effort, and our labor will bear lasting fruit in His timing. Because Jesus is the Master we serve, all of life can be offered to Him. Even sweeping a floor or washing dishes becomes meaningful when done to honor our Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When are you most tempted to work hard only because other people are watching?",
+    "How does knowing that you serve Jesus change the way you view your routine tasks today?"
+   ],
+   "prayer": "Lord Jesus, thank You that our daily work matters to You. Help us to work with sincere hearts, giving our best even in the tasks that no one else sees. Free us from the need for human praise, and remind us that in all things we are serving You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 11",
+     "on": "Colossians 3:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Whitney Hopler",
+     "work": "Give God Your Best Work",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/give-god-your-best-work-the-crosswalk-devotional.html"
+    },
+    "D3": {
+     "author": "Phillip Holmes",
+     "work": "The Most Important Reason We Work",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-most-important-reason-we-work"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,134 @@
+{
+ "id": "60-002-001",
+ "title": "The Living Stone and Chosen People",
+ "refs": [
+  "1 Peter 2:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 60002001,
+   "end": 60002003,
+   "ref": "1 Peter 2:1-3",
+   "ranges": [
+    [
+     60002001,
+     60002003
+    ]
+   ],
+   "title": "\"Crave Pure Spiritual Milk\"",
+   "key_verse": [
+    60002002,
+    60002002
+   ],
+   "reflect": [
+    {
+     "text": "Growing as a Christian means turning away from harmful attitudes like deceit, jealousy, and speaking badly about others. Instead, we are called to hunger for God's Word like a newborn baby longs for milk. This spiritual milk is the whole message of Scripture, which nourishes our souls and helps us mature in our faith.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Peter writes that we crave this milk because we have tasted that the Lord is good. Charles Spurgeon explains that tasting God's grace is not something we can take for granted. We need to examine our own hearts to see if we truly know God's kindness by personal experience.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Spurgeon urges believers not to stay settled in doubts or question marks about their salvation. We should seek the Holy Spirit's assurance that we are truly God's children. As we rest securely in Christ, we can ask God to give us a fresh appetite to read, understand, and live out His truth every day.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you have a healthy hunger for reading and applying God's Word each day?",
+    "Are there doubts about God's mercy in your heart that you need to bring to Him in prayer?"
+   ],
+   "prayer": "Lord, thank You for letting us taste Your goodness and grace. Please take away any jealousy or bitterness in our hearts, and give us a deep hunger for Your Word. Help us grow in our faith and rest in the assurance that we belong to You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 21",
+     "on": "1 Peter 2:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Pure Spiritual Milk",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/pure-spiritual-milk"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 60002001,
+   "end": 60002012,
+   "ref": "1 Peter 2:1-12",
+   "ranges": [
+    [
+     60002001,
+     60002012
+    ]
+   ],
+   "title": "Chosen to Shine in the World",
+   "key_verse": [
+    60002009,
+    60002009
+   ],
+   "reflect": [
+    {
+     "text": "To everyone who trusts in Christ, He is precious beyond measure. All our true joy centers in Him. As Charles Spurgeon points out, life without our Lord would be a dark, empty wilderness. Even when we come home tired from daily battles, we have peace because Jesus never abandons His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God has made us His special people so we can declare His praises to others. Dr. Jack Graham notes that God does not call every believer into full-time church ministry. He strategically places ordinary Christians in secular workplaces, schools, and neighborhoods where temptations exist and light is needed.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "We have been brought out of darkness into God's wonderful light so we can point the people around us to Jesus. Shining this light in difficult places is not something we can do by our own power. We must depend on God each day to give us strength to obey Him, live honorably, and share the gospel.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you honor Jesus in your daily workplace, school, or home this week?",
+    "In what moments today do you need to rely on God's strength rather than your own?"
+   ],
+   "prayer": "Father, thank You for the precious gift of Your Son, Jesus. You have called us out of darkness to be Your own people. Give us strength today to live honorably and show Your love to the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 1",
+     "on": "1 Peter 2:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Dr. Jack Graham",
+     "work": "How to Illuminate Your World with the Gospel",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-march-22-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

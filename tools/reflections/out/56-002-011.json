@@ -1,0 +1,80 @@
+{
+ "id": "56-002-011",
+ "title": "God’s Grace Brings Salvation",
+ "refs": [
+  "Titus 2:11-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 56002011,
+   "end": 56002015,
+   "ref": "Titus 2:11-15",
+   "ranges": [
+    [
+     56002011,
+     56002015
+    ]
+   ],
+   "title": "Trained by Grace to Live for God",
+   "key_verse": [
+    56002011,
+    56002011
+   ],
+   "reflect": [
+    {
+     "text": "God's grace, His unearned kindness and love, has openly appeared in Jesus to offer rescue to all kinds of people across every nation. Good works and holy living are not requirements we must meet to earn salvation. Instead, Jesus gave Himself to redeem us and make us His own people. Knowing His continual forgiveness gives us both the reason and the desire to pursue a clean and godly life.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Grace does far more than forgive our past; it also breaks the power of sin over our daily lives. Jesus died so that we would not remain trapped by harmful habits, bitter tempers, or selfish passions. While we are not promised freedom from temptation, grace gives us practical help for this present world. It frees us to live self-controlled lives, treat others righteously, and honor God as we await Christ's glorious return.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This change is rarely effortless or instant. Grace functions like an attentive teacher, gently training us through discipline to turn away from worldly passions. Patient progress in following Christ honors God just as much as our first moment of faith. As we rely on His strength day by day, His grace enables us to grow into the people He redeemed us to be.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering God's ongoing forgiveness motivate you to turn away from sinful habits?",
+    "In what area of your daily life is God's grace currently training you to live with more self-control?"
+   ],
+   "prayer": "Lord God, thank You for revealing Your saving grace to us in Jesus Christ. Please teach us each day to turn away from ungodly desires and to walk in uprightness. Deliver us from the grip of old habits and give us strength to live faithfully as we await the return of our Savior. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Titus 2:14",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Revelation of God’s Grace",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/revelation-of-gods-grace"
+    },
+    "D3": {
+     "author": "Charles F. Stanley",
+     "work": "God’s Grace and Holiness",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/gods-grace-and-holiness"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

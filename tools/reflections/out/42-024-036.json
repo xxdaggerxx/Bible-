@@ -1,0 +1,80 @@
+{
+ "id": "42-024-036",
+ "title": "Jesus Appears to the Disciples",
+ "refs": [
+  "Luke 24:36-49",
+  "John 20:19-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42024036,
+   "end": 42024049,
+   "ref": "Luke 24:36-49; John 20:19-23",
+   "ranges": [
+    [
+     42024036,
+     42024049
+    ],
+    [
+     43020019,
+     43020023
+    ]
+   ],
+   "title": "Jesus Appears to His Disciples",
+   "key_verse": [
+    42024045,
+    42024045
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus stood among His fearful disciples, He saw the troubles and questions filling their hearts. While God watches over all His creatures, He holds a special, tender care for those who trust Him. We often miss the comfort of God's promises by reading them only in general terms for other people. As Charles Spurgeon wrote, we need to take Christ's promises \"directly home to ourselves.\" Jesus speaks peace right into our personal worries and tells us not to be afraid.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus did not just calm their fears; He also opened their minds to understand the Scriptures. Human teachers can explain words to our ears, but only the Lord can prepare our hearts to receive divine truth. Without Jesus giving us spiritual sight, we would remain completely blind to heavenly things. Even the simplest believer can grasp God's truth when the Lord instructs the heart from within.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Whenever doubts arise or the Bible feels difficult to grasp, we can bring both our worries and our confusion straight to Jesus. He invites us to sit at His feet and listen. He is ready to quiet our troubled hearts with His personal love and to give our minds light to understand His Word.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you read God's promises in the Bible, do you take them personally as words meant for you?",
+    "How can you ask Jesus to open your heart and mind before you read Scripture today?"
+   ],
+   "prayer": "Lord Jesus, thank You for caring for us and speaking peace into our troubled hearts. Open our minds to understand the Scriptures, and teach our hearts from within. Help us to take Your promises personally and rest in Your loving presence today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 19",
+     "on": "Luke 24:45",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 21",
+     "on": "Luke 24:38",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

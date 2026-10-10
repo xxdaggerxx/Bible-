@@ -1,0 +1,66 @@
+{
+ "id": "56-001-005",
+ "title": "Appointing Elders on Crete",
+ "refs": [
+  "Titus 1:5-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 56001005,
+   "end": 56001009,
+   "ref": "Titus 1:5-9",
+   "ranges": [
+    [
+     56001005,
+     56001009
+    ]
+   ],
+   "title": "Appointing Godly Leaders for the Church",
+   "key_verse": [
+    56001005,
+    56001005
+   ],
+   "reflect": [
+    {
+     "text": "Paul left Titus behind on the island of Crete to take care of unfinished work. He gave Titus the vital task of establishing proper order by appointing qualified local leaders in every town. Every local church needs faithful pastors and elders. These leaders are called to guide the congregation in truth and carefully guard the believers against false teaching.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The location of these churches made their leadership especially important. Because Crete was a central trade hub, many people traveled through and observed the Christian community. Church leaders needed to live lives above reproach so that their conduct would protect the good reputation of the church before the world.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul stated that an elder must be blameless. This requirement does not mean that a leader must achieve sinless perfection, which is impossible for any person. Instead, it describes a life of regular, ongoing repentance. A faithful leader is someone who humbly acknowledges their faults and continually turns to Christ for forgiveness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you pray for your church leaders as they guide the congregation and guard against false teaching?",
+    "What does it look like in your own walk of faith to practice ongoing repentance before Christ?"
+   ],
+   "prayer": "Lord God, thank You for providing faithful pastors and elders to guide Your church. Please help our leaders to live lives above reproach and protect the good name of the gospel. Teach each of us to turn continually to Christ with humble hearts, trusting in His mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Elders for the Church on Crete",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/elders-church-crete"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

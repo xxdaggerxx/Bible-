@@ -1,0 +1,66 @@
+{
+ "id": "46-015-050",
+ "title": "Where, O Death, Is Your Victory?",
+ "refs": [
+  "1 Corinthians 15:50-58"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46015050,
+   "end": 46015058,
+   "ref": "1 Corinthians 15:50-58",
+   "ranges": [
+    [
+     46015050,
+     46015058
+    ]
+   ],
+   "title": "Victory Over Death and Labor for the Lord",
+   "key_verse": [
+    46015057,
+    46015057
+   ],
+   "reflect": [
+    {
+     "text": "Jesus' resurrection guarantees that death does not have the final word over believers. By paying for our sins, Jesus took away the painful sting of death and freed us from the condemnation of the law. Because of what he did, we do not need to live in fear of dying. When the final trumpet sounds, our weak, mortal bodies will be changed and clothed with life that never ends. For everyone who trusts in Christ, death is only a step into his presence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because this victory is sure, we are called to stand firm and devote ourselves to the Lord's work. This calling includes our ordinary daily routines and regular jobs. When we do our everyday tasks for Jesus with honesty and care, we are serving God and following Christ's humble example. Hard times will come, but we can keep going with confidence, knowing that no effort made for the Lord is ever wasted.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that death is defeated change the way you look at your daily fears?",
+    "In what ways can you do your ordinary tasks today as service to Jesus?"
+   ],
+   "prayer": "Lord God, thank you for giving us victory over sin and death through our Lord Jesus Christ. Help us to stand firm in this promise and not be afraid. Guide our daily tasks and help us work with honesty, knowing that our labor for you is never in vain. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Destroying the Sting of Death",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/destroying-the-sting-of-death"
+    },
+    "D2": {
+     "author": "Vivian Bricker",
+     "work": "Work for the Lord",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/work-for-the-lord-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

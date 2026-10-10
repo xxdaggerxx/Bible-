@@ -1,0 +1,66 @@
+{
+ "id": "45-016-025",
+ "title": "Doxology",
+ "refs": [
+  "Romans 16:25-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45016025,
+   "end": 45016027,
+   "ref": "Romans 16:25-27",
+   "ranges": [
+    [
+     45016025,
+     45016027
+    ]
+   ],
+   "title": "God's Wise Plan in the Gospel",
+   "key_verse": [
+    45016027,
+    45016027
+   ],
+   "reflect": [
+    {
+     "text": "Paul finishes his letter to the Romans with words of deep praise. He points us to the unmatched wisdom of the only true God, which is revealed in the gospel. Humanity rebelled against God. People traded the worship of their Creator for empty idols, and because of this, we earned his righteous judgment.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet God showed his great wisdom by making a way to save sinners. He offers the perfect righteousness of Jesus Christ to us as a free gift received through faith alone. Being declared right with God brings us true peace with him. He also gives believers the Holy Spirit, who works in us to produce good fruit and lead us into joyful obedience.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's sovereign grace—his supreme kindness that we could never earn—rescues us from start to finish. When we begin to understand how wise and loving his plan of redemption is, our hearts are filled with wonder. Recognizing this grace leads us into a lifetime of worship and praise for his eternal glory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that salvation is God's free gift give you peace today?",
+    "In what ways can you praise God's wisdom through your daily obedience?"
+   ],
+   "prayer": "Heavenly Father, thank you for your great wisdom in saving us through Jesus Christ. We thank you for giving us his righteousness as a free gift and for sending the Holy Spirit to help us obey. May our lives be filled with praise for your glory every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God’s Wisdom in the Gospel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-wisdom-gospel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

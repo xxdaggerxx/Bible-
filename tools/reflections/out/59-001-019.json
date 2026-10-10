@@ -1,0 +1,66 @@
+{
+ "id": "59-001-019",
+ "title": "Hearing and Doing",
+ "refs": [
+  "James 1:19-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 59001019,
+   "end": 59001027,
+   "ref": "James 1:19-27",
+   "ranges": [
+    [
+     59001019,
+     59001027
+    ]
+   ],
+   "title": "Listening, Speaking, and Doing God's Word",
+   "key_verse": [
+    59001022,
+    59001022
+   ],
+   "reflect": [
+    {
+     "text": "Many of us enjoy hearing God's Word preached, but it is easy to assume the message is meant for someone else. When we merely listen to Scripture and agree with it without obeying, we deceive ourselves. True faith requires more than just hearing truth. God calls us to heed what we hear, apply the message to our own hearts, and find practical ways to live it out in our daily routines.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living out God's Word clearly shapes how we communicate with others each day. When we hurry to speak, we often react quickly instead of giving a gracious, compassionate response. Taking time to quietly listen shows others that they are valued and that their voices matter. Although pride tempts us to defend our words, growing more like Christ means letting go of the need to be right and humbling ourselves to ask for forgiveness when we fail.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your daily routine can you move from just hearing God's Word to actually practicing it?",
+    "In your conversations this week, how can listening more patiently help you show Christ's love to someone else?"
+   ],
+   "prayer": "Lord, help us not to fool ourselves by just listening to Your Word without putting it into practice. Give us humble hearts that are quick to listen and slow to speak with pride. Teach us to respond to others with grace and to turn what we learn into daily action. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Are You a Doer of the Word?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-october-23-2022.html"
+    },
+    "D2": {
+     "author": "Anne Peterson",
+     "work": "Sometimes I’ve Been Quick to Speak and Slow to Listen",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-january-23.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

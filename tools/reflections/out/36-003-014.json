@@ -1,0 +1,144 @@
+{
+ "id": "36-003-014",
+ "title": "Israel’s Restoration",
+ "refs": [
+  "Zephaniah 3:14-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 36003017,
+   "end": 36003017,
+   "ref": "Zephaniah 3:17",
+   "ranges": [
+    [
+     36003017,
+     36003017
+    ]
+   ],
+   "title": "\"He Will Rejoice over You with Singing\"",
+   "key_verse": [
+    36003017,
+    36003017
+   ],
+   "reflect": [
+    {
+     "text": "The Lord is right in our midst, and He is mighty to save. We often feel small, unworthy, or troubled by our past failures. Yet God has taken away the judgment against us and lives among His people as a victorious defender. As Charles Spurgeon wrote, \"He is engaged upon His choice work of salvation.\"",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "God's love and joy over you do not depend on how well you perform or how perfect you are. Just as a mother sings tenderly over her sleeping child, our heavenly Father delights in us. His close presence calms our anxious hearts and replaces feelings of rejection with gentle acceptance.",
+     "sources": [
+      "D4",
+      "D3"
+     ]
+    },
+    {
+     "text": "It is astonishing to realize that the Lord Himself sings over His redeemed people. In this secure love, our deep personal shame fades away. We do not have to live in fear, because God rests in His love for us and invites us to rest in Him too.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel anxious or unworthy, how does knowing that God sings over you bring you peace?",
+    "How can you rest today in God's love instead of trying to earn His acceptance?"
+   ],
+   "prayer": "Lord God, thank You for dwelling in our midst and rescuing us by Your power. Quiet our anxious thoughts with Your gentle love, and remind us that You take joy in us. Help us to rest peacefully in Your grace today. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 19",
+     "on": "Zephaniah 3:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Tracie Miles",
+     "work": "The Most Beautiful Love Song You'll Ever Hear",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/the-most-beautiful-love-song-you-ll-ever-hear-encouragement-for-today-february-3-2016.html"
+    },
+    "D5": {
+     "author": "Jonathan Parnell",
+     "work": "How Zephaniah Helps Us Feel the Glad Love of God",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/how-zephaniah-helps-us-feel-the-glad-love-of-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 36003014,
+   "end": 36003020,
+   "ref": "Zephaniah 3:14-20",
+   "ranges": [
+    [
+     36003014,
+     36003020
+    ]
+   ],
+   "title": "A Full Deliverance for the Weak",
+   "key_verse": [
+    36003019,
+    36003019
+   ],
+   "reflect": [
+    {
+     "text": "The Lord has turned back our enemies and broken the power of evil over our lives. Even though the devil still tries to tempt us and whisper accusations, Jesus our advocate has silenced him. Satan no longer rules our hearts, and he cannot claim us as his own.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God also promises special care for those who struggle along the path of faith. On the heavenly road, many of us feel weak, slow, or spiritually lame. We may worry that our faults will trip us up or that we are not strong enough to serve God well. Yet the Lord specifically promises to save those who limp.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our weakness does not stop God's great work of rescue. In fact, when God carries the slowest pilgrims safely home, it puts the glory on His grace, which is His kindness that we do not deserve. We can keep moving forward in prayer, knowing our King defends us and will gather every one of us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your walk with God do you feel weak or like you are limping along?",
+    "How does the truth that Jesus has broken the enemy's rule give you hope to keep going?"
+   ],
+   "prayer": "Heavenly Father, thank You for defeating our enemy and setting our spirits free. Lift us up when we feel weak, slow, or weary on the road of faith. Keep our feet secure and show the greatness of Your grace in our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 16",
+     "on": "Zephaniah 3:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 29",
+     "on": "Zephaniah 3:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

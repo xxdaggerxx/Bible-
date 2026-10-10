@@ -1,0 +1,132 @@
+{
+ "id": "40-019-016",
+ "title": "The Rich Young Man",
+ "refs": [
+  "Matthew 19:16-30",
+  "Mark 10:17-31",
+  "Luke 18:18-30"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 41010021,
+   "end": 41010021,
+   "ref": "Mark 10:21",
+   "ranges": [
+    [
+     41010021,
+     41010021
+    ]
+   ],
+   "title": "\"Take Up the Cross and Follow Me\"",
+   "key_verse": [
+    41010021,
+    41010021
+   ],
+   "reflect": [
+    {
+     "text": "The young man came to Jesus with an earnest desire for life, yet outward morality can hide a heart that does not truly trust God. Jesus looked on him with love and showed him what was missing. By commanding him to sell his possessions, Jesus revealed that money was the man's real idol. Living with wealth makes trusting God deceptive, and giving up our security demands deep faith. Jesus asks us to hand over everything we treasure so that our hope rests entirely in him.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Following Jesus also means carrying a burden. As Charles Spurgeon wrote, \"your cross is prepared and appointed for you by divine love.\" We cannot choose our own trials, nor should we run away from them in fear. The path of obedience can be heavy, but Jesus walked it first as the Man of Sorrows. When we look to him, he gives us strength to bear our daily troubles, knowing that eternal joy lies ahead.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What earthly comfort or possession is hardest for you to surrender to Jesus?",
+    "How can remembering Christ's love help you carry the daily burdens he gives you?"
+   ],
+   "prayer": "Lord Jesus, you know what our hearts cling to instead of you. Help us to let go of our false securities and treasure you above all earthly wealth. Give us willing hearts to take up our cross and follow you in faith. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 23",
+     "on": "Mark 10:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Power of Riches",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-power-of-riches"
+    },
+    "D4": {
+     "author": "Jon Bloom",
+     "work": "Lord, All I Have Is Yours",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/lord-all-i-have-is-yours"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40019016,
+   "end": 40019030,
+   "ref": "Matthew 19:16-30; Mark 10:17-31; Luke 18:18-30",
+   "ranges": [
+    [
+     40019016,
+     40019030
+    ],
+    [
+     41010017,
+     41010031
+    ],
+    [
+     42018018,
+     42018030
+    ]
+   ],
+   "title": "Serving the Good Master",
+   "key_verse": [
+    40019016,
+    40019016
+   ],
+   "reflect": [
+    {
+     "text": "When the young man called Jesus a good teacher, he spoke greater truth than he realized. Jesus is our good Master who both rules over us and teaches us. He is truly good because he is God. He showed his kindness by rescuing us when we were dead in sin, and he continues to support us in every struggle. All the good things we enjoy come from his loving care.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Serving Jesus is not a harsh chore, because his rule is love and his service brings real freedom. When we sit at his feet, he guides us with pure truth that changes our lives for the better. Like faithful believers before us, we can share his goodness with our neighbors. Inviting others to follow this gentle Master is a wise choice that no one will ever regret.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways have you experienced the goodness and care of Jesus as your Master?",
+    "How can you share the truth of his gentle leadership with someone around you?"
+   ],
+   "prayer": "Lord Jesus, you are our good Master and our patient Teacher. Thank you for ruling our lives with mercy and guiding us in your truth. Help us to obey your commands gladly and to show others how wonderful it is to serve you. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 2",
+     "on": "Matthew 19:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

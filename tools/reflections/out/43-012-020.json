@@ -1,0 +1,81 @@
+{
+ "id": "43-012-020",
+ "title": "Jesus Predicts His Death",
+ "refs": [
+  "John 12:20-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43012020,
+   "end": 43012036,
+   "ref": "John 12:20-36",
+   "ranges": [
+    [
+     43012020,
+     43012036
+    ]
+   ],
+   "title": "Drawn to Follow Jesus",
+   "key_verse": [
+    43012020,
+    43012020
+   ],
+   "reflect": [
+    {
+     "text": "When we begin to see our true need, our scattered wishes narrow down to one desire: we want to find Jesus. Earthly riches and hollow religious routines cannot satisfy our deepest thirst. Like the visitors who asked to see Jesus, an awakened heart will not settle for an empty pitcher. Our souls find genuine life only in Christ Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus explains how this desire is met. When He is lifted up on the cross, He draws all kinds of people to Himself. As Charles Spurgeon wrote, \"Jesus is the one magnet.\" Human cleverness, exciting ceremonies, and noise cannot truly win souls. It is the crucified and risen Savior who pulls us to Himself and holds us secure to the end.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Once we are drawn to Christ, He invites us to serve Him by walking in His footsteps. True service is following His example, even through hardship. Our Lord passed through suffering before entering His glory, and we share that same journey. Where He is, we will be, and the Father will bestow lasting honor on all who follow His Son.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is your deepest desire focused on Jesus Himself, or are you looking for satisfaction in earthly things?",
+    "In what areas of your daily life can you follow Jesus more closely, even when it is difficult?"
+   ],
+   "prayer": "Lord Jesus, thank You for drawing us to Yourself through Your sacrifice on the cross. Direct our wandering desires so that we seek You above all earthly comforts. Grant us courage to walk in Your footsteps each day, trusting in the promise that the Father will honor those who follow You.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 17",
+     "on": "John 12:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 4",
+     "on": "John 12:32",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 8",
+     "on": "John 12:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

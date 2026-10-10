@@ -1,0 +1,75 @@
+{
+ "id": "59-005-019",
+ "title": "Restoring a Sinner",
+ "refs": [
+  "James 5:19-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 59005019,
+   "end": 59005020,
+   "ref": "James 5:19-20",
+   "ranges": [
+    [
+     59005019,
+     59005020
+    ]
+   ],
+   "title": "Bringing Wanderers Back to the Truth",
+   "key_verse": [
+    59005020,
+    59005020
+   ],
+   "reflect": [
+    {
+     "text": "James finishes his letter by asking the church to notice anyone who drifts away from God's truth. God does not send angels to do this rescue work. Instead, He chooses ordinary believers like us to go after those who wander into sin. Real faith shows itself in how we speak to one another, using words that comfort, encourage, and gently guide someone back.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Only God can truly save a soul, but He uses our faithful prayers and loving words to protect believers during trials. Rescuing someone involves helping them see the deadly path they are on, while pointing them to God's deep mercy. God calls us to lovingly confront one another and urge each other to repent, which means turning away from sin and coming back to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When a wanderer turns back, something wonderful takes place. That person's soul is delivered from death, more sins are prevented, and their wrongs are covered over. Bringing a straying believer home preserves a life and brings deep spiritual joy to God's people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone in your church community who seems to be drifting away whom you could reach out to in love?",
+    "How can you use your words and prayers this week to encourage a fellow believer to stay close to God?"
+   ],
+   "prayer": "Lord, help us to notice when our brothers and sisters begin to wander from Your truth. Give us humble, loving hearts to pray for them and speak words that point them to Your mercy. Use us to turn straying souls back to You and protect them from harm. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Rescue the Wanderer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/rescue-wanderer"
+    },
+    "D2": {
+     "author": "Greg Morse",
+     "work": "Save a Soul from Death: How We Bring Wanderers Back",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/save-a-soul-from-death"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

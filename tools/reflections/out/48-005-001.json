@@ -1,0 +1,140 @@
+{
+ "id": "48-005-001",
+ "title": "Freedom in Christ",
+ "refs": [
+  "Galatians 5:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 48005001,
+   "end": 48005001,
+   "ref": "Galatians 5:1",
+   "ranges": [
+    [
+     48005001,
+     48005001
+    ]
+   ],
+   "title": "\"Christ Has Set Us Free\"",
+   "key_verse": [
+    48005001,
+    48005001
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus gave his life on the cross, he purchased complete freedom for us. We do not need to earn God's love through rule-keeping or wear ourselves out trying to be perfect. True liberty begins in a personal relationship with Christ, who breaks the grip of sin and condemnation, God's judgment against our wrongdoing. Knowing our worth in God also frees us from the heavy burden of trying to please other people.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Because of this freedom, we can approach God whenever we wish. Charles Spurgeon called Scripture \"the bank of heaven,\" where we can draw on God's promises in times of distress. We are always welcome to bring our sins, needs, and fears to God's throne of grace, which is his place of undeserved mercy and steady help.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Christ won this freedom for us, but we still have to stand firm in it every day. It is easy to drift back into spiritual bondage by relying on our own performance or slipping back into destructive habits. Resting in our secure identity in Christ protects us and keeps our faith strong.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you resting in what Christ has done for you, or are you still trying to earn God's approval?",
+    "What old habit, fear, or rule do you need to lay aside so you can walk in true freedom today?"
+   ],
+   "prayer": "Lord Jesus, thank you for freeing us from sin and the burden of trying to earn your love. Teach us to come to your throne of grace whenever we are in need. Help us to stand firm today and never slide back into spiritual slavery. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 19",
+     "on": "Galatians 5:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Robrenna Redl",
+     "work": "Freedom in Christ",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/freedom-in-christ-wholly-loved-june-5.html"
+    },
+    "D4": {
+     "author": "Mary Southerland",
+     "work": "Free at Last",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/free-at-last-girlfriends-in-god-july-4-2014.html"
+    },
+    "D5": {
+     "author": "Freedom in Christ Ministries",
+     "work": "Maintaining Your Freedom",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/dailyinchrist/daily-in-christ-7-or-4-544644.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 48005001,
+   "end": 48005015,
+   "ref": "Galatians 5:1-15",
+   "ranges": [
+    [
+     48005001,
+     48005015
+    ]
+   ],
+   "title": "Serving One Another in Love",
+   "key_verse": [
+    48005013,
+    48005013
+   ],
+   "reflect": [
+    {
+     "text": "Paul reminds us that Christian freedom is never an excuse to indulge our selfish desires. God did not free us so we could live only for ourselves. Instead, our freedom finds its true purpose when we turn toward others and choose to serve them.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Serving people without real love quickly causes trouble. When we act purely out of duty, we end up feeling drained, bitter, and angry, and our relationships suffer. Loving others patiently and selflessly is something our own human willpower cannot maintain on its own.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "That is why we need God's help each day. We are invited to ask the Holy Spirit to supply the love, patience, and strength we lack. With his power working in us, serving others becomes a joyful expression of our faith rather than a heavy chore.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you felt burned out or resentful while trying to serve others in your own strength?",
+    "How can you ask the Holy Spirit to give you genuine love for someone you find difficult to help today?"
+   ],
+   "prayer": "Father, thank you for calling us to freedom and teaching us to love our neighbors. Forgive us for the times we serve out of mere duty and grow resentful. Please fill us with your Holy Spirit today so we can serve others with genuine love and patience. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Amanda Idleman",
+     "work": "How to Serve with Love (Galatians 5:13)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-september-15.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

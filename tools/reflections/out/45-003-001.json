@@ -1,0 +1,66 @@
+{
+ "id": "45-003-001",
+ "title": "God Remains Faithful",
+ "refs": [
+  "Romans 3:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45003001,
+   "end": 45003008,
+   "ref": "Romans 3:1-8",
+   "ranges": [
+    [
+     45003001,
+     45003008
+    ]
+   ],
+   "title": "God Is Always True and Just",
+   "key_verse": [
+    45003004,
+    45003004
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes people try to excuse their sin with clever arguments. They might think that if human wrongdoing shows off how good and truthful God is, then God is unfair to punish us. Paul shows us that this is broken human thinking. As the Lord and Judge of the whole universe, God is always good. He cannot act unjustly.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's glory and goodness never depend on how we behave. His character stays perfect no matter how human beings respond to Him. The Lord proves His faithfulness in two clear ways: He forgives those who trust Him, and He justly punishes those who refuse to repent of their sin. Our lack of faith will never undo God's faithfulness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Doubting God's justice shows our own pride as created beings. When we question His fairness, we forget who He is. Instead of making excuses for our wrongdoing or doubting His ways, we are called to turn from our sin and rely on God's faithful character.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever tried to make excuses for wrongdoing instead of admitting it honestly to God?",
+    "How does knowing that God is always just help you trust Him with your life?"
+   ],
+   "prayer": "Heavenly Father, You are always true, righteous, and completely fair in everything You do. Forgive us when we make excuses for our sin or question Your goodness. Help us to humble our hearts and put our trust in Your perfect character every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Is God Unrighteous?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-unrighteous"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

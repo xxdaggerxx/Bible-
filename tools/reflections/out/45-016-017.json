@@ -1,0 +1,75 @@
+{
+ "id": "45-016-017",
+ "title": "Avoid Divisions",
+ "refs": [
+  "Romans 16:17-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45016017,
+   "end": 45016020,
+   "ref": "Romans 16:17-20",
+   "ranges": [
+    [
+     45016017,
+     45016020
+    ]
+   ],
+   "title": "Victory Over Strife and Deception",
+   "key_verse": [
+    45016020,
+    45016020
+   ],
+   "reflect": [
+    {
+     "text": "Paul urges believers to watch out for people who cause division and lead others astray with smooth words. In Rome, the church was troubled by strife and deception. Yet God is called the God of peace. He gives rest to our souls even when troublemakers try to disturb the church family.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This warning comes with a great comfort that echoes God's ancient promise in Genesis. Jesus has already broken the power of evil through his cross and resurrection. Paul assures us that the God of peace will soon crush Satan under our feet. As Charles Spurgeon noted, this bruising is not done by our own skill, but is \"of the Lord alone.\"",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because victory is certain, we know that division and deception will never have the last word. Still, we are called to stay watchful, clinging to what is good and remaining innocent of evil. We do not need to be afraid of conflict, because God's grace, his undeserved kindness, will carry us through.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that God has already defeated evil help you when you face conflict or division?",
+    "In what ways can you rely on God's grace to stay wise about what is good today?"
+   ],
+   "prayer": "Lord God of peace, thank you that Christ has already broken the power of evil. When we see division or deceptive words that lead people away from truth, help us to be wise and peaceful. Keep our feet firm in your grace and give us rest in your promise of victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 2",
+     "on": "Romans 16:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Satan Crushed Under Our Feet",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/satan-crushed-under-our-feet"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

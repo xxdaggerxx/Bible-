@@ -1,0 +1,66 @@
+{
+ "id": "30-003-001",
+ "title": "Witnesses against Israel",
+ "refs": [
+  "Amos 3:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 30003001,
+   "end": 30003015,
+   "ref": "Amos 3:1-15",
+   "ranges": [
+    [
+     30003001,
+     30003015
+    ]
+   ],
+   "title": "Hearing God's Warning Through His Prophets",
+   "key_verse": [
+    30003007,
+    30003007
+   ],
+   "reflect": [
+    {
+     "text": "Israel enjoyed a special covenant relationship with the Lord, being chosen and rescued out of Egypt. Yet this close bond did not excuse their wrongdoing. Instead, God brought discipline upon them because He wanted to purify His community. When a nation or church refuses to turn from sin, God's holy correction will surely follow.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when judgment is coming, God shows great mercy. He does not strike without giving warning first. He reveals His plans to His servants the prophets so people have time to repent and avoid disaster. Just as a person is filled with fear when a lion roars, Amos felt compelled to speak God's urgent message to the people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God already knows how we will react to His message, but that does not remove our personal duty. When we are confronted with the truth of God's word, we are responsible to listen and turn back to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does God's advance warning show His mercy toward us when we wander into sin?",
+    "When God's word confronts an area of wrongdoing in your life, how do you respond?"
+   ],
+   "prayer": "Lord God, thank You for Your mercy in warning us through Your word before judgment comes. Thank You for loving Your people enough to correct and purify us. Give us humble hearts to listen to Your truth and quickly turn away from our sins. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God's Servants the Prophets",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-servants-prophets"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,142 @@
+{
+ "id": "45-008-018",
+ "title": "Future Glory",
+ "refs": [
+  "Romans 8:18-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 45008023,
+   "end": 45008023,
+   "ref": "Romans 8:23",
+   "ranges": [
+    [
+     45008023,
+     45008023
+    ]
+   ],
+   "title": "\"Waiting for Our Adoption\"",
+   "key_verse": [
+    45008023,
+    45008023
+   ],
+   "reflect": [
+    {
+     "text": "Right now, believers possess the firstfruits of the Holy Spirit. God has already begun His work in us, giving us gifts like faith, repentance, and love. These gifts are like the first bundle of grain cut from a field. They are a sure promise that the full harvest is coming, but they are not the finished harvest yet.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because we have tasted God's goodness, we ache for the rest of what He promised. In the ancient Roman world, an adopted child might live as a son privately before being welcomed publicly in new clothes. In the same way, we are God's children today, but we still live in fragile earthly bodies. We long for the day when God openly reveals who we are and gives us new, resurrection bodies free from decay.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "This inner groaning is not complaining or wishing to escape our duties. As Charles Spurgeon wrote, \"it is rather the note of desire than of distress.\" We are not grumbling about our lives, but quietly waiting with patient hope for the Lord to finish His work and make us like Christ.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What does your heart desire most when you think about your future with God?",
+    "How can the work God has already started in your life give you patience while you wait for His full promise?"
+   ],
+   "prayer": "Lord, thank You for the Holy Spirit and the taste of new life You have already given us. When we feel the aches and limits of our earthly bodies, keep us from grumbling. Teach us to wait patiently for the day when You reveal Your children and make all things whole. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 23",
+     "on": "Romans 8:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 16",
+     "on": "Romans 8:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 4",
+     "on": "Romans 8:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 45008018,
+   "end": 45008027,
+   "ref": "Romans 8:18-27",
+   "ranges": [
+    [
+     45008018,
+     45008027
+    ]
+   ],
+   "title": "Future Glory and Present Help",
+   "key_verse": [
+    45008018,
+    45008018
+   ],
+   "reflect": [
+    {
+     "text": "Life in this broken world brings real grief, failing health, and heavy pain. In hard seasons, these burdens can feel overwhelming. Yet Scripture reminds us that our earthly suffering is not the end of the story. The trials we face today will be completely outshone by the glory God has prepared for us, where we will enjoy restored life and unbroken fellowship with Him forever.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "While we wait, our weakness often leaves us confused about what to ask for in prayer. We may plead for our own wishes, but true prayer means surrendering our plans to God's wisdom. When answers seem delayed or do not look like what we expected, God has not forgotten us. He uses hard circumstances to strengthen our faith and shape our lives according to His purpose.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "We do not have to carry our burdens alone. Even when we do not know how to pray, God's Spirit is with us, and God's plan is at work. Knowing that future glory is certain helps us stand firm through present difficulties with quiet, confident trust.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need to surrender your own desires to God's wise will?",
+    "How does the promise of coming glory help you bear your present struggles?"
+   ],
+   "prayer": "Father, help us when pain and unanswered questions feel heavy. Teach us to yield our desires to Your perfect will, trusting that You never abandon us. Fix our eyes on the glory You will one day reveal in us. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Betsy St. Amant Haddox",
+     "work": "Wait for the Glory (Romans 8:18) - Your Daily Bible Verse - April 23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-april-23.html"
+    },
+    "D5": {
+     "author": "Joe McKeever",
+     "work": "Praying for God's Will, Not Our Own (Romans 8:26) - Your Daily Bible Verse - August 18",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/praying-for-god-s-will-not-our-own.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

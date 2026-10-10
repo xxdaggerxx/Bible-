@@ -1,0 +1,75 @@
+{
+ "id": "41-011-020",
+ "title": "The Withered Fig Tree",
+ "refs": [
+  "Mark 11:20-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 41011020,
+   "end": 41011026,
+   "ref": "Mark 11:20-26",
+   "ranges": [
+    [
+     41011020,
+     41011026
+    ]
+   ],
+   "title": "Trusting the Father Who Hears Our Prayers",
+   "key_verse": [
+    41011022,
+    41011022
+   ],
+   "reflect": [
+    {
+     "text": "When Peter saw the withered fig tree, he was amazed at what happened. Yet Jesus was not surprised at all. His calm reply shows us that we should expect God to answer our prayers, rather than being shocked when He does. Faith is like the feet of the soul that carry us along God's path. While even a little faith saves us, a strong faith frees us from fear and gloom so we can serve God with joy.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "The strength of our prayers does not come from our own power, but from the faithful character of God. He is an attentive Father who never grows tired of hearing His children call to Him. We can come to Him with confidence about our small daily needs and our greatest worries. When prayers seem unanswered or dreams fade, true faith continues to trust His timing and His presence. It also rests humbly in His will, accepting His decision whenever He says no.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you expect God to answer when you pray, or are you surprised when He does?",
+    "What worry or daily need can you bring to your heavenly Father today, trusting His good will?"
+   ],
+   "prayer": "Heavenly Father, thank You for never growing tired of listening to our prayers. Strengthen our faith so we can trust Your good character and walk with joy. Help us bring all our needs to You, and give us humble hearts to rest in Your wise will. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 7",
+     "on": "Mark 11:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Sarah Frazer",
+     "work": "Praying with Confidence Because God Answers",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/praying-with-confidence-because-god-answers-the-crosswalk-devotional.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Believing Prayer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/believing-prayer"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

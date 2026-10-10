@@ -1,0 +1,60 @@
+{
+ "id": "66-014-014",
+ "title": "The Harvest of the Earth",
+ "refs": [
+  "Revelation 14:14-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66014014,
+   "end": 66014020,
+   "ref": "Revelation 14:14-20",
+   "ranges": [
+    [
+     66014014,
+     66014020
+    ]
+   ],
+   "title": "The Time of God's Harvest",
+   "key_verse": [
+    66014015,
+    66014015
+   ],
+   "reflect": [
+    {
+     "text": "When we face unfair treatment or see evil around us, it can often feel like justice is taking too long. God gave this vision of the harvest to encourage believers who suffer persecution. He assures us that those who continue in their wickedness will certainly be repaid for what they have done. What feels like a delay to us is not a true delay at all. God has set an exact, appointed moment for judgment, and it will happen right on schedule.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The vision of the winepress shows that God's final judgment will be completely thorough. Not a single wicked person will be missed or forgotten when that day arrives. Knowing this truth changes how we handle mistreatment. Instead of seeking revenge or growing bitter when people hurt us, we can endure hardship with patience. We can rest quietly today, trusting God's perfect timing and leaving all vengeance safely in His hands.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face unfair treatment, how does remembering God's appointed timing help you be patient?",
+    "Are there any hurts you need to release into God's hands rather than wanting to take revenge?"
+   ],
+   "prayer": "Lord, when we see wickedness in the world, help us remember that Your justice is never late. Give us patience to endure hard times without bitterness or seeking revenge. We trust that Your timing is perfect and that You hold all things safely in Your hands. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Time of Harvest",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-time-of-harvest"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "44-025-013",
+ "title": "Festus Consults Agrippa",
+ "refs": [
+  "Acts 25:13-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44025013,
+   "end": 44025022,
+   "ref": "Acts 25:13-22",
+   "ranges": [
+    [
+     44025013,
+     44025022
+    ]
+   ],
+   "title": "A Living Savior Before Kings",
+   "key_verse": [
+    44025019,
+    44025019
+   ],
+   "reflect": [
+    {
+     "text": "Paul remained in prison, but God used this hardship to open an unexpected door. Governor Festus explained the case to King Agrippa and Bernice. To Festus, the dispute seemed like a strange religious matter about a man named Jesus who had died. He spoke lightly of Jesus and could not understand how a crucified man could be alive. He never realized that his own life depended on the very death he dismissed.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "While the governor was confused by spiritual questions, Paul's faith stood firm. Real Christian faith is much more than vague opinions about religion. It is a personal knowledge of a living Lord. Dead religious leaders cannot heal, rescue, or speak to us with living power through Scripture today. But Paul knew that Christ is alive forever.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul had met the risen Jesus on the road to Damascus, and he walked in daily fellowship with Him even while wearing chains. In the same way, we know Jesus is alive because we see His work, experience His presence, and watch Him answer our prayers. He shares our troubles and gives us grace, His loving help, for every need.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How have you seen the living presence of Jesus at work in your own life?",
+    "When people around you treat Jesus lightly, what helps you remember that He is truly alive?"
+   ],
+   "prayer": "Lord Jesus, thank You that You rose from the dead and live forever. Help us to walk with You each day and to notice Your presence and answered prayers. Give us Your grace and strength whenever we face hard times. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 25:19",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 288: Acts 25:13–22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-288-acts-25-1322.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

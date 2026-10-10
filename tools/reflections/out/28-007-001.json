@@ -1,0 +1,68 @@
+{
+ "id": "28-007-001",
+ "title": "Ephraim’s Iniquity",
+ "refs": [
+  "Hosea 7:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 28007001,
+   "end": 28007016,
+   "ref": "Hosea 7:1-16",
+   "ranges": [
+    [
+     28007001,
+     28007016
+    ]
+   ],
+   "title": "Noticing Spiritual Decay",
+   "key_verse": [
+    28007009,
+    28007009
+   ],
+   "reflect": [
+    {
+     "text": "God called Ephraim an unturned cake, baked black on one side and still raw dough on the other. This picture shows what happens when we only let God into part of our lives. We might look devout and holy on the outside, yet cling to secret sins in private. True godliness cannot be a public show while evil rules our inner thoughts. God wants His grace, His loving kindness that we do not deserve, to reach through our whole being and touch every action, word, and habit.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we live with half-hearted faith, spiritual decay creeps in without us even realizing it. Like gray hairs that slowly appear, our strength slips away while we assume we are still strong. Backsliding begins quietly. We slowly lose our watchfulness over our thoughts, our joy in meeting with God's people, and our desire to pray. Unless we look honestly into the mirror of God's Word, we can drift far from the Lord while thinking everything is fine.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any part of your life you keep hidden from God while trying to look faithful on the outside?",
+    "Have you noticed any quiet signs that your love for prayer and God's house is beginning to fade?"
+   ],
+   "prayer": "Lord, search our hearts and show us where our spiritual strength is fading. Forgive us for offering You only half our lives while holding back our secret thoughts. Let Your grace change us completely, and turn our whole hearts toward You today.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 23",
+     "on": "Hosea 7:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hosea 7:9",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

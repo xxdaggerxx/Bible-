@@ -1,0 +1,66 @@
+{
+ "id": "38-006-001",
+ "title": "The Vision of the Four Chariots",
+ "refs": [
+  "Zechariah 6:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38006001,
+   "end": 38006008,
+   "ref": "Zechariah 6:1-8",
+   "ranges": [
+    [
+     38006001,
+     38006008
+    ]
+   ],
+   "title": "The Lord of All the Earth",
+   "key_verse": [
+    38006005,
+    38006005
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, Zechariah sees four chariots with strong horses setting out to patrol the earth. These heavenly messengers go out from before the Lord to do His work. Their mission shows us God's complete knowledge and sovereign rule over all world affairs. Even the surrounding lands to the north and south that had historically endangered Israel are brought to peace and quiet under His divine oversight.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This vision gave immediate comfort to the Jewish exiles who had recently returned home. As they worked to rebuild the temple, they were surrounded by threats and opposition. God assured them through this vision that He was actively watching over them and holding back their hostile enemies so their work would not be stopped.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The same vision brings strong comfort to us today. We can trust that the Lord still watches over the entire world and restrains every adversary. Because God is in complete control, we know that Christ will successfully build His church and no earthly power can stop Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God rules over world affairs bring you peace when things feel uncertain?",
+    "In what areas of your life do you need to remember that God restrains enemies and protects His people?"
+   ],
+   "prayer": "Lord of all the earth, thank you for watching over our world and holding every nation in your hands. Help us to rest in your peace when our surroundings feel unsafe or threatening. Give us confidence that you will guard your people and that Christ will successfully build His church. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "To the Four Winds of Heaven",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/four-winds-heaven"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "45-003-021",
+ "title": "Righteousness through Faith in Christ",
+ "refs": [
+  "Romans 3:21-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45003021,
+   "end": 45003031,
+   "ref": "Romans 3:21-31",
+   "ranges": [
+    [
+     45003021,
+     45003031
+    ]
+   ],
+   "title": "Righteousness Received as a Free Gift",
+   "key_verse": [
+    45003024,
+    45003024
+   ],
+   "reflect": [
+    {
+     "text": "God is completely holy and perfect. To stand before Him on our own, our lives would have to match His flawless standard. When we place our lives next to God's law, it works like a straight edge that shows how crooked and short our best deeds are. Many people believe they must work hard to earn God's acceptance. But the good news is that we cannot earn right standing with God through our own efforts. It is given freely because Jesus paid the full penalty for our sins on the cross.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Because God is fair and just, sin must be punished. That truth can feel scary at first. But Jesus stood in our place and paid our entire debt. As Charles Spurgeon noted, God is both \"just, and the justifier\" of everyone who trusts in Jesus. God will not demand payment twice for the same debt. Our peace does not rest on how good we feel or what we do, but entirely on what Christ has done for us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Receiving this gift of grace, God's undeserved kindness, does not mean we ignore His commands. We are no longer like slaves who obey out of fear to earn our freedom. God has welcomed us as His beloved children. Because He is our loving Father, we gladly want to please Him. We love others, help the needy, and follow His words not to be saved, but because we love the Savior who already saved us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to earn God's approval by your own good works, or are you resting in what Jesus finished for you?",
+    "How does knowing you are God's loved child change the reason you choose to obey Him?"
+   ],
+   "prayer": "Father, thank You for giving us right standing with You as a free gift through Jesus Christ. Thank You that Jesus took our place and paid our debt completely so that we can have peace. Help us to follow Your commands gladly today, not from fear, but out of love as Your children. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 25",
+     "on": "Romans 3:31",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 25",
+     "on": "Romans 3:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Chuck Swindoll",
+     "work": "God’s Straight Edge",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/gods-straight-edge"
+    },
+    "D4": {
+     "author": "Rick Warren",
+     "work": "Why Are You Still Working for Grace?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-march-13-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

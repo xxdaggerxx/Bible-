@@ -1,0 +1,67 @@
+{
+ "id": "47-013-011",
+ "title": "Benediction and Farewell",
+ "refs": [
+  "2 Corinthians 13:11-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47013011,
+   "end": 47013014,
+   "ref": "2 Corinthians 13:11-14",
+   "ranges": [
+    [
+     47013011,
+     47013014
+    ]
+   ],
+   "title": "Fellowship with the Holy Spirit",
+   "key_verse": [
+    47013014,
+    47013014
+   ],
+   "reflect": [
+    {
+     "text": "In this closing blessing, Paul writes of the fellowship, or communion, of the Holy Spirit. Fellowship simply means sharing things in common. The Holy Spirit is the bond that unites us with God and with one another. Like an ocean that links different lands so they can share their goods, the Spirit brings believers into oneness with the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this gift, we never have to face life alone. We can turn to the Holy Spirit at any moment for counsel and direction. His readiness to help and comfort us through every trial or duty can never run out. If we hold on to this truth, we will not lose heart or fall into deep despair when troubles come.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Walking in this close bond also calls for care. We cannot live with harshness or sinful habits and still expect to enjoy His gentle guidance. True fellowship with the Spirit asks for a watchful mind, a tender conscience, and a heart that loves God above everything else.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What burden or decision can you bring to the Holy Spirit for direction today?",
+    "Is there any harsh attitude toward others that you need to let go of to walk closely with God?"
+   ],
+   "prayer": "Holy Spirit, thank you that we are never left alone and that we can ask you for help at any moment. Guard our hearts from bitterness, harsh words, or hidden sin. Keep our consciences tender so that we may enjoy peaceful fellowship with you and with others today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Corinthians 13:14",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

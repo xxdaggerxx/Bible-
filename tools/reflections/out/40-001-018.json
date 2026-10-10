@@ -1,0 +1,153 @@
+{
+ "id": "40-001-018",
+ "title": "The Birth of Jesus",
+ "refs": [
+  "Matthew 1:18-25",
+  "Luke 2:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40001021,
+   "end": 40001021,
+   "ref": "Matthew 1:21",
+   "ranges": [
+    [
+     40001021,
+     40001021
+    ]
+   ],
+   "title": "\"He Will Save His People from Their Sins\"",
+   "key_verse": [
+    40001021,
+    40001021
+   ],
+   "reflect": [
+    {
+     "text": "Many people think salvation only means being rescued from hell and taken to heaven. While that is true, Jesus came to do something even greater. He did not come to bring an earthly kingdom or merely remove the punishment of our wrongdoing. He came to strike at the root cause by breaking the heavy grip that sin has over our daily lives.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Because Jesus experienced temptation Himself, He knows how to help us when we struggle. He can break our old habits, protect us from sudden temptations, and cleanse our hidden faults. He gives us a new heart that loves what is good and turns away from evil, so that sin is no longer our master.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily life do you need Jesus to free you from the power of sin today?",
+    "How does knowing that Jesus means \"the Lord saves\" give you hope when you face temptation?"
+   ],
+   "prayer": "Lord Jesus, thank You for coming to save us not only from future judgment, but from the power of sin right now. Please break the habits and weaknesses that hold me captive. Give me a clean heart that loves holiness and honors Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 8",
+     "on": "Matthew 1:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 8",
+     "on": "Matthew 1:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 20",
+     "on": "Matthew 1:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 1:21",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Mel Lawrenz",
+     "work": "How to Live the Bible — The Name of Jesus",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/blog/2021/11/how-to-live-the-bible-the-name-of-jesus/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "In Bible times, a person's name carried deep meaning and revealed their true purpose. The angel told Joseph to name the baby Jesus, a name that means the Lord saves. To those who trust Him, this name is sweeter than any other title. Charles Spurgeon called it \"the life of all our joys.\" From the very moment Jesus was conceived in Bethlehem, His rescuing mission began because we are entirely unable to save ourselves.",
+     "problem": "Neither the devotionals nor the Bible passages teach that Jesus was conceived in Bethlehem (Luke 2:4–5 shows Mary was already expecting before they traveled to Bethlehem; D5 mentions His incarnation in Bethlehem)."
+    }
+   ],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40001018,
+   "end": 40001025,
+   "ref": "Matthew 1:18-25; Luke 2:1-7",
+   "ranges": [
+    [
+     40001018,
+     40001025
+    ],
+    [
+     42002001,
+     42002007
+    ]
+   ],
+   "title": "Making Room for Jesus",
+   "key_verse": [
+    42002007,
+    42002007
+   ],
+   "reflect": [
+    {
+     "text": "When Joseph and Mary arrived in Bethlehem, the town was packed with travelers. The local inn was completely full, so Mary gave birth to Jesus in a humble place and laid Him in an animal feeding trough. The innkeeper was not trying to be unkind. He was simply busy running a bustling business, and his preoccupation blinded him to the arrival of God's Son.",
+     "sources": [
+      "D6"
+     ]
+    },
+    {
+     "text": "It is easy for us to make that same mistake. Our daily lives get crowded with work, school, family duties, and endless to-do lists. During holidays, we can easily join in all the celebrations and traditions while completely forgetting Jesus. When our schedules become overloaded, our hearts can end up just like that crowded inn, leaving no room for the Savior.",
+     "sources": [
+      "D6"
+     ]
+    },
+    {
+     "text": "The story of Jesus' birth invites us to pause and rethink our priorities. God does not want to be squeezed out by our daily stress and noise. He invites us to clear away our distractions so that we can know Him in a close, personal relationship.",
+     "sources": [
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What routines or distractions are currently crowding Jesus out of your thoughts?",
+    "What is one practical way you can slow down this week to make room for God?"
+   ],
+   "prayer": "Lord, forgive me for letting busy schedules and daily worries push You aside. Help me to quiet my heart and clear away the distractions that keep me from You. I want to make room in my life to walk closely with You each day. Amen.",
+   "sources": {
+    "D6": {
+     "author": "Rick Warren",
+     "work": "Is There Room in Your Inn?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-december-19-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

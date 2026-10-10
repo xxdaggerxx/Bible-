@@ -1,0 +1,73 @@
+{
+ "id": "54-006-003",
+ "title": "Reject False Doctrines",
+ "refs": [
+  "1 Timothy 6:3-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54006003,
+   "end": 54006005,
+   "ref": "1 Timothy 6:3-5",
+   "ranges": [
+    [
+     54006003,
+     54006005
+    ]
+   ],
+   "title": "Guarding Against False Teaching",
+   "key_verse": [
+    54006003,
+    54006003
+   ],
+   "reflect": [
+    {
+     "text": "Paul urges us to watch out for leaders who turn away from the sound words of Jesus Christ and godly living. Deceptive teachers often look completely sincere on the surface, copying true biblical ministry and church practices. Beneath that outward look, however, they are driven by pride and truly understand nothing. Instead of submitting to Scripture, they lift up their own ideas above God's truth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because of their pride, these teachers develop an unhealthy craving for constant arguments and debates over words. This obsession does not build up faith; instead, it brings envy, harmful talk, and division into the church family. Their corrupt minds lose hold of the truth, and they ultimately treat religion as a way to get money and personal profit.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We become easy targets for these errors when we treat discernment—the ability to tell God's truth from a lie—in a casual way. God calls us not to be careless listeners, but to study the Scriptures closely. As we stay grounded in the Bible, we must also pray asking God to give us sharp spiritual eyes so we can spot and reject deceitful teachings.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you be more intentional about studying Scripture so you are not easily misled by false ideas?",
+    "Are there controversial arguments in your conversations that are stirring up strife rather than encouraging godly living?"
+   ],
+   "prayer": "Lord, grant us spiritual discernment so we can easily tell truth from deception. Protect our hearts from pride, unnecessary arguments, and using faith for selfish gain. Keep our minds focused on the clear and healthy words of Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Can You Spot a False Teacher?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-june-23-2024.html"
+    },
+    "D2": {
+     "author": "John MacArthur",
+     "work": "The Pathology of False Teachers",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/print/B140214/the-pathology-of-false-teachers"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

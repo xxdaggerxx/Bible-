@@ -1,0 +1,65 @@
+{
+ "id": "60-005-001",
+ "title": "Instructions to Elders",
+ "refs": [
+  "1 Peter 5:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 60005001,
+   "end": 60005004,
+   "ref": "1 Peter 5:1-4",
+   "ranges": [
+    [
+     60005001,
+     60005004
+    ]
+   ],
+   "title": "Leading by Serving Alongside Others",
+   "key_verse": [
+    60005003,
+    60005003
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, leaders are urged to care for God's people with a willing heart. They are not to boss people around, but to be living examples of Christ. Dr. Jack Graham points out that Christian leadership requires active, hands-on involvement. It is never enough to sit back on the sidelines as an observer while others do all the work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Biblical leadership means we cannot simply hand down orders or cheer people on from a comfortable distance. Genuine leaders do not expect others to carry tasks that they are unwilling to touch. Instead, believers are called to step directly into the daily work and serve right beside the people they guide.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you actively serving alongside others, or are you watching from the sidelines?",
+    "How can you step in to help carry the load with the people around you this week?"
+   ],
+   "prayer": "Lord, help us to care for others with humble and willing hearts. Show us where we can step off the sidelines to serve side by side with those around us. May our daily example honor Jesus, our Chief Shepherd. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Dr. Jack Graham",
+     "work": "Powerpoint - July 3, 2012: How You Can Lead Others to Do Great Things",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-july-3-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "When we roll up our sleeves and work shoulder to shoulder with others, we follow Jesus, the Chief Shepherd. Serving alongside our brothers and sisters builds trust and shows genuine care. As we walk together in active service, we help point one another toward the eternal reward God has promised.",
+     "problem": "Neither the passage nor the devotional teaches that serving alongside others builds trust, nor that doing so helps point one another toward the eternal reward."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

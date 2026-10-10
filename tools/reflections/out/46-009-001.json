@@ -1,0 +1,66 @@
+{
+ "id": "46-009-001",
+ "title": "The Rights of an Apostle",
+ "refs": [
+  "1 Corinthians 9:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46009001,
+   "end": 46009018,
+   "ref": "1 Corinthians 9:1-18",
+   "ranges": [
+    [
+     46009001,
+     46009018
+    ]
+   ],
+   "title": "Giving Up Rights for the Gospel",
+   "key_verse": [
+    46009018,
+    46009018
+   ],
+   "reflect": [
+    {
+     "text": "The apostle Paul had every right to receive financial help from the church, but he chose not to use it. Preaching the good news was not an ordinary job or a personal career choice for Paul. It was a clear duty that Christ gave him to carry out. Because preaching was simply an assigned task from his Master, Paul knew he could claim no special credit or personal boasting for doing the work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul found his reward in something else. He saw it as a special privilege to share the gospel completely free of charge. By giving up his right to financial support and working with his own hands, Paul showed his human weakness. That weakness helped magnify the power and strength of Christ, keeping all eyes on Jesus rather than on Paul.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul's example shows how we are called to live as followers of Jesus. When we willingly surrender our rightful claims for the sake of God's work, we do not miss out. God promises a greater spiritual reward to those who put others and the gospel ahead of their own rights.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there rights or advantages you can let go of so that others can see Jesus more clearly?",
+    "How does remembering that serving Christ is an assigned duty keep you humble?"
+   ],
+   "prayer": "Lord Jesus, thank you for calling us to serve you with humble hearts. Help us to let go of our own rights when doing so serves your kingdom. Show your strength through our weakness, and give us joy in sharing your gospel freely. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Paul’s Reward",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/pauls-reward"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

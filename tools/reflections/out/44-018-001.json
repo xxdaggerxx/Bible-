@@ -1,0 +1,134 @@
+{
+ "id": "44-018-001",
+ "title": "Paul Ministers in Corinth",
+ "refs": [
+  "Acts 18:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44018009,
+   "end": 44018010,
+   "ref": "Acts 18:9-10",
+   "ranges": [
+    [
+     44018009,
+     44018010
+    ]
+   ],
+   "title": "\"Do Not Be Afraid; Keep On Speaking\"",
+   "key_verse": [
+    44018009,
+    44018009
+   ],
+   "reflect": [
+    {
+     "text": "Paul had come to Corinth after seeing only a few people respond in Athens, and he felt discouraged. In the darkness of night, Jesus spoke directly to his fears. The Lord reminded him that true fruit in ministry does not rest on our human strength, but on God's power and timing. When the task feels heavy, God reassures us that we are never left alone.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Jesus told Paul to keep speaking because He already had many people chosen for salvation in that very city. Even people who were living in deep sin and far from God belonged to Christ's purchase. As Charles Spurgeon reminds us, Jesus prays before the Father's throne even for those who do not yet know how to pray for themselves, and in His appointed time they will turn to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also promised that no one would lay a hand on Paul to harm him. The Lord holds power over angry crowds and can hold back their hostility completely. Knowing that God protects us gives us bold faith, brushing away our fears like cobwebs when we step forward in obedience.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or doubts make it hard for you to speak up about Jesus?",
+    "How does knowing that God has people He intends to save encourage you to keep sharing your faith?"
+   ],
+   "prayer": "Lord Jesus, thank You for promising to be with us when we feel weak and afraid. Help us remember that You hold our lives safely in Your hands. Give us courage to keep speaking Your truth, trusting that You are at work to draw people to Yourself. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 4",
+     "on": "Acts 18:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 29",
+     "on": "Acts 18:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Michael Youssef, Ph.D.",
+     "work": "Hang in There",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-june-10-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 44018001,
+   "end": 44018011,
+   "ref": "Acts 18:1-11",
+   "ranges": [
+    [
+     44018001,
+     44018011
+    ]
+   ],
+   "title": "Faithful Work and Steadfast Witness in Corinth",
+   "key_verse": [
+    44018011,
+    44018011
+   ],
+   "reflect": [
+    {
+     "text": "When Paul arrived in Corinth, he earned his living by sewing tents alongside Aquila and Priscilla. He did not only think about preaching to large crowds. Instead, he cared deeply about the individuals working right beside him. As F. B. Meyer notes, God often tests our hearts with the \"ones and twos,\" and learning to share the gospel in daily personal work equips us to serve larger groups.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Opposition soon pushed Paul out of the synagogue, so he moved next door to the home of Titus Justus. In spite of sharp resistance, God granted remarkable fruit, including the faith of Crispus, the synagogue leader, along with his entire household. Because God was working and had given His reassuring promise, Paul settled in for a year and a half, patiently teaching the word of God among the Corinthians.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is one person beside you in your daily work or routine that you could reach out to with God's love?",
+    "When you face resistance or closed doors, how can you look for new places where God is opening hearts?"
+   ],
+   "prayer": "Father, teach us to be faithful in our everyday tasks and to notice the individual people You place in our path. When we meet opposition, help us not to give up, but to find the open doors You provide. Give us patience to keep teaching and living Your word right where You have planted us. Amen.",
+   "sources": {
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 18:2",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "Paul at Corinth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/paul-at-corinth"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

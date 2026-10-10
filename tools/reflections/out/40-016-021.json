@@ -1,0 +1,84 @@
+{
+ "id": "40-016-021",
+ "title": "Christ’s Passion Foretold",
+ "refs": [
+  "Matthew 16:21-23",
+  "Mark 8:31-33",
+  "Luke 9:21-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40016021,
+   "end": 40016023,
+   "ref": "Matthew 16:21-23; Mark 8:31-33; Luke 9:21-22",
+   "ranges": [
+    [
+     40016021,
+     40016023
+    ],
+    [
+     41008031,
+     41008033
+    ],
+    [
+     42009021,
+     42009022
+    ]
+   ],
+   "title": "God's Plan Through Suffering and Death",
+   "key_verse": [
+    41008031,
+    41008031
+   ],
+   "reflect": [
+    {
+     "text": "Jesus told His followers plainly that He had to suffer, be rejected, die, and rise again on the third day. Many people around Him expected an earthly ruler of power and triumph, but Jesus knew God's true plan. To bear the penalty for our sins and bring human salvation, He had to walk the path of humiliation and death before entering His glory.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Peter could not accept this message. He pulled Jesus aside and rebuked Him. Peter spoke from the natural human fear of suffering and his own self-interest. Without realizing it, Peter was standing in the way of God's redemptive purpose and acting in line with Satan. Jesus immediately rejected this stumbling block to stay true to His mission.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "It is easy for us to copy Peter by holding onto our own assumptions rather than listening to all of Scripture. We often prefer comfort over God's purpose. We need the Holy Spirit to reveal our selfish thinking and align our hearts with God's priorities instead of the things of men.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might your own wishes be getting in the way of what God wants for you?",
+    "How can reading all of Scripture help you see Jesus as He really is?"
+   ],
+   "prayer": "Lord Jesus, thank You for walking the painful road to the cross to save us from our sins. Please forgive us when we value our own comfort more than Your will. Send Your Holy Spirit to guide our thinking and help us follow Your ways each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jesus Reveals His Purpose in Coming",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jesus-reveals-his-purpose-coming"
+    },
+    "D2": {
+     "author": "Clarence L. Haynes Jr.",
+     "work": "What Did Jesus Mean By \"Get behind Me Satan\"?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/important-reminders-from-the-command-get-behind-me-satan.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

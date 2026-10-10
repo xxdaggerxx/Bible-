@@ -1,0 +1,140 @@
+{
+ "id": "40-008-001",
+ "title": "The Leper’s Prayer",
+ "refs": [
+  "Matthew 8:1-4",
+  "Mark 1:40-45",
+  "Luke 5:12-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42005013,
+   "end": 42005013,
+   "ref": "Luke 5:13",
+   "ranges": [
+    [
+     42005013,
+     42005013
+    ]
+   ],
+   "title": "\"I Am Willing\"",
+   "key_verse": [
+    42005013,
+    42005013
+   ],
+   "reflect": [
+    {
+     "text": "When this sick man knelt before Jesus, he knew Jesus had the power to help him. His only question was whether Jesus wanted to. With three simple words—\"I am willing; be clean\"—Jesus took away every doubt. As F. B. Meyer observed, it is as impossible for sin to soil Christ as \"for a plague to contaminate flame.\" Jesus reached out His hand and touched skin that nobody else would touch, showing the Father's heart to restore us.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "God does not decide to heal or forgive based on our good works or special status. Jesus never turns away anyone who comes to Him. Even when our circumstances remain hard and we do not receive the physical relief we hope for, we can trust His loving character. His holiness cannot be stained by our brokenness, so you can bring every dark secret and hurt to Him with confidence.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What doubts do you sometimes have about God's willingness to care for you in your struggles?",
+    "How does knowing Jesus cannot be defiled by your sins help you come to Him honestly?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your willing heart to welcome and restore broken people. Help us to bring our deepest pain and failures to You without fear. Teach us to trust Your goodness and love, even when life is hard. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 5:13",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D4": {
+     "author": "Lynette Kittle",
+     "work": "A God Who Is Willing",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/a-god-who-is-willing-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40008001,
+   "end": 40008004,
+   "ref": "Matthew 8:1-4; Mark 1:40-45; Luke 5:12-16",
+   "ranges": [
+    [
+     40008001,
+     40008004
+    ],
+    [
+     41001040,
+     41001045
+    ],
+    [
+     42005012,
+     42005016
+    ]
+   ],
+   "title": "Cleansed by the Touch of Jesus",
+   "key_verse": [
+    40008002,
+    40008002
+   ],
+   "reflect": [
+    {
+     "text": "Leprosy brought terrible physical suffering and cut a person off from family and friends. Even so, this man boldly stepped out and fell to his knees before Jesus. He respected the Lord's authority and put himself entirely in Christ's hands. We can learn from him to bring whatever small faith we have to Jesus, trusting that the Savior welcomes those who seek Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "By touching the sick man, Jesus took on ceremonial uncleanness under Jewish law while giving the man total health. Charles Spurgeon described this as a picture of salvation, where Jesus took our place to bear our sin so that we could be forgiven. Just as His single command wiped away the disease instantly, His powerful word cleanses our souls from the guilt of sin today.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "After the healing, Jesus told the man to show himself to the priest and present the required offering. Jesus cared about more than physical relief; He followed the law so the man could be welcomed back into his community. In the same way, when Christ cleanses us on the inside, He restores our lives and brings us into fellowship with others.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What keeps you from bringing your weakness to Jesus with humble faith?",
+    "How does knowing that Jesus took your sin upon Himself change how you view your worth?"
+   ],
+   "prayer": "Lord Jesus, thank You for taking our brokenness and sin upon Yourself so that we could be made whole. Give us the courage to come to You just as we are. Restore us and help us walk in true fellowship with You and others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 4",
+     "on": "Mark 1:41",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Emma Danzey",
+     "work": "Jesus Goes to the Untouchable",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/jesus-goes-to-the-untouchable-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

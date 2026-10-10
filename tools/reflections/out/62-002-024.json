@@ -1,0 +1,73 @@
+{
+ "id": "62-002-024",
+ "title": "Remain in Christ",
+ "refs": [
+  "1 John 2:24-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 62002024,
+   "end": 62002029,
+   "ref": "1 John 2:24-29",
+   "ranges": [
+    [
+     62002024,
+     62002029
+    ]
+   ],
+   "title": "Remaining Anchored in Christ",
+   "key_verse": [
+    62002028,
+    62002028
+   ],
+   "reflect": [
+    {
+     "text": "When life brings doubts or uncertainties, we need to hold tightly to the truths we learned from the beginning. Walking with Jesus is not a comfortable, passive routine where we sit back. God often calls ordinary people out of their comfort zones into a bold spiritual journey, leading them to serve Him faithfully in quiet ways without needing praise from others.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Abiding, or staying close to Christ, unites sound doctrine with real holiness in how we live each day. True faith does not ignore our faults. Instead, it leads us to confront our sins, pursue obedience, and depend fully on the mercy of Jesus. When our lives reflect God's righteous character, we find deep reassurance of our salvation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living this way keeps us firmly anchored in Christ through every challenge. Because our hope rests in His truth and forgiveness, we do not have to dread the future. We can look forward to the day Jesus appears with joyful confidence rather than fear or shame.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what quiet or challenging areas of your life is God calling you to step out of your comfort zone?",
+    "How does depending on Jesus' mercy give you confidence when you think about His return?"
+   ],
+   "prayer": "Lord Jesus, help us remain firmly anchored in the truth we have known from the beginning. Give us courage to step out of our comfort zones and follow You in quiet obedience. Keep us close to Your mercy so that we can meet You with confidence on the day You return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Abide in Him",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/abide-him"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 329: 1 John 2:24–27",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-329-1-john-2-2427.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

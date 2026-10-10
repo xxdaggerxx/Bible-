@@ -1,0 +1,83 @@
+{
+ "id": "66-010-001",
+ "title": "The Angel and the Small Scroll",
+ "refs": [
+  "Revelation 10:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66010001,
+   "end": 66010011,
+   "ref": "Revelation 10:1-11",
+   "ranges": [
+    [
+     66010001,
+     66010011
+    ]
+   ],
+   "title": "Sweet Words and Bitter Truth",
+   "key_verse": [
+    66010009,
+    66010009
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, a mighty angel announces that there will be no more delay. We live in the final chapter of history, waiting for God's hidden purpose to be completed. Time itself will one day reach its end, but believers do not need to be alarmed. Through Jesus, God has given us eternal life that will outlast the universe. Even when we have unanswered questions about why evil is permitted for a time, we can have peace knowing God remains completely in control.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The angel tells John to take the open scroll and eat it. This action picture means taking God's Word deeply into our lives, understanding and applying it before speaking it to others. When John eats the scroll, it tastes as sweet as honey, but it turns bitter in his stomach. God's truth brings sweet joy and comfort to those who are saved in Christ. Yet it also carries a bitter weight, because it reveals God's coming judgment on a world that turns away from Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Faithful believers are called to accept the whole counsel of Scripture, including both its sweet promises and its hard warnings. We can rest in the assurance of God's everlasting love while honestly sharing His truth with those around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can taking time to deeply digest God's Word help you understand its difficult truths?",
+    "When the world around you seems troubled, how does knowing God is in sovereign control bring you peace?"
+   ],
+   "prayer": "Lord God, thank You for giving us Your Word and for holding all of history in Your hands. Help us to take Your truth deeply into our hearts, welcoming both its sweet comfort and its sobering warnings. Give us courage to live by Your whole message and share it faithfully with others. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Revelation 10:6",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "John Eats the Scroll",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/john-eats-the-scroll"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 12/26/2001",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-12-or-26-or-2001-1127346.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

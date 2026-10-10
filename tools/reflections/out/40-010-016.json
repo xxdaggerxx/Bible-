@@ -1,0 +1,129 @@
+{
+ "id": "40-010-016",
+ "title": "Sheep among Wolves",
+ "refs": [
+  "Matthew 10:16-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40010016,
+   "end": 40010016,
+   "ref": "Matthew 10:16",
+   "ranges": [
+    [
+     40010016,
+     40010016
+    ]
+   ],
+   "title": "\"Like Sheep Among Wolves\"",
+   "key_verse": [
+    40010016,
+    40010016
+   ],
+   "reflect": [
+    {
+     "text": "Jesus sends His followers into a hostile world like sheep among a pack of wolves. On our own, we are weak and helpless, entirely dependent on our Good Shepherd. Christ does not give us earthly weapons of power, yet He calls us to the remarkable task of reaching people who may oppose us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because the world can be dangerous, Jesus tells us to be as shrewd as snakes. This means using practical wisdom shaped by Scripture. We need discernment to recognize hazards, step away from unnecessary trouble, and avoid danger without turning to sin.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "At the same time, we must remain as innocent as doves. Our wisdom must always be guided by purity. By living with clean honesty and upright character, we make sure that those who oppose us have no genuine moral reason to accuse us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you need God's wisdom to steer clear of unnecessary trouble this week?",
+    "How can you keep your words and actions completely pure when others are hostile?"
+   ],
+   "prayer": "Lord Jesus, remind us daily that we depend fully on You. Give us the wisdom to avoid danger and the purity to keep our conduct blameless. Help us to represent You well before a watching world. Amen.",
+   "sources": {
+    "D2": {
+     "author": "John Piper",
+     "work": "Sheep, Wolves, Snakes, and Doves",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/sheep-wolves-snakes-and-doves"
+    },
+    "D3": {
+     "author": "Tom Ascol",
+     "work": "Lessons from Nature",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lessons-from-nature"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40010016,
+   "end": 40010025,
+   "ref": "Matthew 10:16-25",
+   "ranges": [
+    [
+     40010016,
+     40010025
+    ]
+   ],
+   "title": "A Servant Like His Master",
+   "key_verse": [
+    40010025,
+    40010025
+   ],
+   "reflect": [
+    {
+     "text": "Jesus reminds us that a servant is not greater than his master. When the Lord lived on earth, people did not honor Him. He was despised, had no home to call His own, and was led to the cross. Because the world treated our Master so harshly, we should not be surprised when His followers face hardship too.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We must not expect worldly people to admire us just because we try to follow Christ. Charles Spurgeon warned that it is a bad sign to hear the world shout \"well done\" to a Christian. If people who turn away from God praise our lives, we should stop and ask whether we are truly walking in the footsteps of Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our calling is to remain loyal to our Savior in all things. We should never search for worldly honor where our Lord received only a crown of thorns. It is enough for us to share the same path our Master walked.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to compromise your faith to gain praise from people around you?",
+    "How does knowing that Jesus was rejected bring you comfort when standing for Him is difficult?"
+   ],
+   "prayer": "Lord Jesus, forgive us for the times we have sought the approval of the world rather than Yours. Teach us to follow You faithfully, even when it costs us popularity and comfort. Grant us courage to walk the same road You walked. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 10",
+     "on": "Matthew 10:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

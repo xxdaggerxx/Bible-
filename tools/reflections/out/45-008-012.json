@@ -1,0 +1,87 @@
+{
+ "id": "45-008-012",
+ "title": "Heirs with Christ",
+ "refs": [
+  "Romans 8:12-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45008012,
+   "end": 45008017,
+   "ref": "Romans 8:12-17",
+   "ranges": [
+    [
+     45008012,
+     45008017
+    ]
+   ],
+   "title": "Adopted Children and Heirs with Christ",
+   "key_verse": [
+    45008017,
+    45008017
+   ],
+   "reflect": [
+    {
+     "text": "We were once trapped in a debt of sin we could never pay, but Jesus paid it all upon the cross. We no longer owe anything to God's justice. Instead, we owe everything to His tender love and grace, which is God's kindness that we do not deserve. Because the Lord never changes and has rescued us from spiritual death, we gladly offer our whole lives back to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even with this freedom, many believers still fight against old sins and worry that God might turn them away. We can feel unsure of our place in His family. But God did not leave us to wonder alone. His Holy Spirit speaks alongside our own spirit, assuring our hearts that we are truly adopted, cherished children who can call Him Father.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "As God's children, we are also joint heirs with Christ. Jesus does not keep His heavenly riches to Himself. As Charles Spurgeon observed, \"All that he has he shares with his people.\" Christ is not selfish with His throne, but finds deep delight in sharing His eternal joy, honor, and kingdom with everyone He redeemed.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel guilty about your shortcomings, how does the Spirit's reminder of your adoption bring you comfort?",
+    "How does knowing that Jesus gladly shares His heavenly kingdom with you change how you live for Him today?"
+   ],
+   "prayer": "Heavenly Father, thank You for paying our full debt through Jesus and adopting us into Your family. When guilt and doubt make us afraid, let Your Holy Spirit quiet our hearts with the truth that we are Your children. Help us to live joyfully for You as we wait to share in Christ's glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 3",
+     "on": "Romans 8:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 14",
+     "on": "Romans 8:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Suzie Eller",
+     "work": "When You're Not Sure You Belong",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/when-you-re-not-sure-you-belong-encouragement-for-today-october-28-2013.html"
+    },
+    "D4": {
+     "author": "Daniel Hyde",
+     "work": "The Witness of the Spirit",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/witness-spirit"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

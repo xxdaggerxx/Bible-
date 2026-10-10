@@ -1,0 +1,66 @@
+{
+ "id": "49-006-021",
+ "title": "Final Greetings",
+ "refs": [
+  "Ephesians 6:21-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 49006021,
+   "end": 49006024,
+   "ref": "Ephesians 6:21-24",
+   "ranges": [
+    [
+     49006021,
+     49006024
+    ]
+   ],
+   "title": "Peace, Love, and Faith in Christ",
+   "key_verse": [
+    49006023,
+    49006023
+   ],
+   "reflect": [
+    {
+     "text": "Paul ends his letter by sending Tychicus to comfort the believers and bring them good news. He prays for peace, love, and faith to fill their hearts from God the Father and the Lord Jesus Christ. Biblical peace is rich and deep. It means we are reconciled to God through Christ, and it also means we live in loving harmony with other Christians.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul joins love together with faith. Christian love is not just a warm feeling; it must remain firmly anchored in the objective truth of the gospel. Real faith proves itself through active love. This kind of love works hard to tear down ungodly divisions that can damage our fellowship.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God calls every believer to guard both sound truth and church unity. We do not have to choose between standing for gospel truth and loving our brothers and sisters. When we actively pursue both doctrinal purity and peace among believers, we bring glory to God and honor Christ with an enduring love.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you actively pursue peace and harmony with other believers in your church this week?",
+    "In what ways does your faith show itself in practical love that tears down divisions?"
+   ],
+   "prayer": "Heavenly Father, thank You for making peace with us through Jesus Christ. Help us to stand firmly on the truth of Your Word while loving one another deeply. Break down any divisions among us so that our unity brings glory to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Peace and Purity of the Church",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-peace-and-purity-of-the-church"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

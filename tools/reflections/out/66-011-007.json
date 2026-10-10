@@ -1,0 +1,67 @@
+{
+ "id": "66-011-007",
+ "title": "The Witnesses Killed and Raised",
+ "refs": [
+  "Revelation 11:7-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66011007,
+   "end": 66011014,
+   "ref": "Revelation 11:7-14",
+   "ranges": [
+    [
+     66011007,
+     66011014
+    ]
+   ],
+   "title": "Waiting for the Call Home",
+   "key_verse": [
+    66011012,
+    66011012
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, after the two witnesses finish their earthly work, a loud voice from heaven calls them up. Charles Spurgeon explains that one day, every believer will hear this same invitation from our Lord. Instead of fearing death or dreading the end of our earthly life, we can look forward to that day with joy. We are not called down into a dark grave, but up to the skies to be at home with our Father.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though our hearts may long for heaven, we are called to wait patiently. God knows the best time to summon us home. There is still valuable work for us to do here below. While we remain in this world, God gives us opportunities to do good, scatter the seed of His word, and bring honor to His name.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God plans our lives with perfect wisdom, we do not need to rush our departure or feel restless. Whether our Master tells us to stay a while longer or bids us come home, we can be content. What brings us peace is knowing that He walks with us right now, until the hour He calls us to Himself.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you able to look forward to being with Christ, or does the thought of leaving this world bring you fear?",
+    "What good work has God given you to do for others while you wait for His call?"
+   ],
+   "prayer": "Lord God, thank you for the joyful hope that you will one day call us home to be with you. Teach us to wait patiently for your appointed time and not to dread our departure. Give us grace to serve you faithfully and do good to those around us while we remain here. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 7",
+     "on": "Revelation 11:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

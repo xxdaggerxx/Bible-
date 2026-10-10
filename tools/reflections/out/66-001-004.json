@@ -1,0 +1,73 @@
+{
+ "id": "66-001-004",
+ "title": "John Greets the Seven Churches",
+ "refs": [
+  "Revelation 1:4-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66001004,
+   "end": 66001008,
+   "ref": "Revelation 1:4-8",
+   "ranges": [
+    [
+     66001004,
+     66001008
+    ]
+   ],
+   "title": "The Sovereign Lord Who Loves Us",
+   "key_verse": [
+    66001008,
+    66001008
+   ],
+   "reflect": [
+    {
+     "text": "Many people feel nervous when they read the book of Revelation, but past believers found great comfort here. God calls Himself the Alpha and the Omega, the beginning and the end. He rules over all of history from start to finish. Even when the church faces persecution or culture changes around us, nothing falls outside God's sovereign care.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "John also reminds us of who Jesus is. As the faithful witness, Jesus showed us the Father fully through His words and works. When He rose from the dead, Christ broke the power of death and secured eternal life for believers. He is also the ruler of earthly kings, holding supreme authority over every worldly power.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Above all, Jesus shows His ongoing love for us. Through His blood, He released us from the guilt, punishment, and grip of sin. Knowing that our Saviour loves us and that the Almighty God guides all of history gives us lasting hope today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God rules over all of history bring you peace when the world feels uncertain?",
+    "In what ways does remembering Christ's sacrifice help you rest in His love today?"
+   ],
+   "prayer": "Lord God, thank You that You reign over the beginning and the end of all things. Thank You, Jesus, for breaking the power of death and setting us free from our sins through Your blood. Help us to trust Your sovereign power and rest quietly in Your love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jeffrey Jue",
+     "work": "The Alpha and the Omega",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/alpha-and-omega"
+    },
+    "D2": {
+     "author": "Charles F. Stanley",
+     "work": "Who is Christ?",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/who-is-christ"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,114 @@
+{
+ "id": "60-001-003",
+ "title": "A Living Hope",
+ "refs": [
+  "1 Peter 1:3-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 60001006,
+   "end": 60001007,
+   "ref": "1 Peter 1:6-7",
+   "ranges": [
+    [
+     60001006,
+     60001007
+    ]
+   ],
+   "title": "\"More Precious Than Gold\"",
+   "key_verse": [
+    60001007,
+    60001007
+   ],
+   "reflect": [
+    {
+     "text": "When troubles arrive, it is easy to wonder if God has turned away from us. But hard times are not a sign of His rejection. They last only for a little while, and God uses them like fire that refines precious metal. The heat clears away what does not belong and proves that your faith is genuine. In our struggles, we are never left alone. Pain often leads us into deeper prayer and brings us closer to God.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "A faith that never meets a storm tends to stay small and weak. As Charles Spurgeon wrote, \"tempests are her trainers.\" Just as a ship needs winds to move toward the harbor, our faith grows stronger when things seem set against us. In the deep waters, we discover our own weakness and learn how dependable God's power is. If you are new in faith, do not worry about seeking trials. God will measure out what you need in His time. For now, thank Him for the trust He has already given you.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How have past hardships helped you see God's strength and brought you closer to Him in prayer?",
+    "What helps you remember that your present difficulties are temporary and not a sign of God's rejection?"
+   ],
+   "prayer": "Lord, thank You that our trials do not last forever and that You remain with us through them all. Please use our difficulties to purify our trust in You and strip away our doubts. Help us to recognize our own weakness so that we may rely completely on Your strength. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 12",
+     "on": "1 Peter 1:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "C. Adam Clagg",
+     "work": "How to See Hope and Value in Your Suffering",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/how-to-see-hope-and-value-in-your-suffering-bible-study-minute-april-17-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 60001003,
+   "end": 60001012,
+   "ref": "1 Peter 1:3-12",
+   "ranges": [
+    [
+     60001003,
+     60001012
+    ]
+   ],
+   "title": "A Living and Certain Hope",
+   "key_verse": [
+    60001003,
+    60001003
+   ],
+   "reflect": [
+    {
+     "text": "Many people have called Peter the apostle of hope because he points us so clearly to God's great mercy. In daily life, hope often means wishing for something uncertain, like hoping for good weather. Biblical hope is entirely different. It is not wishful thinking or guesswork. Instead, it is a firm, confident assurance based on God's unbreakable promises.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God gives believers new life through what Peter calls a living hope. This hope is alive and active because it is anchored directly in the resurrection of Jesus Christ from the dead. Because Jesus is alive, our future is completely secure. This hope is not just a dream for the distant future; it sustains and protects our faith right now, guiding us each day toward eternal glory.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does biblical hope differ from the way people usually use the word hope?",
+    "How does knowing that Jesus rose from the dead bring peace to your daily life?"
+   ],
+   "prayer": "Heavenly Father, thank You for Your great mercy in granting us a living hope through the resurrection of Jesus Christ. Help us to rest in Your unbreakable promises rather than our changing feelings. Let this certain hope sustain our faith today and keep our eyes fixed on Your eternal glory. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Apostle of Hope",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/apostle-of-hope"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

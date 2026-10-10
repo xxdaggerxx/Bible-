@@ -1,0 +1,133 @@
+{
+ "id": "40-013-018",
+ "title": "The Parable of the Sower Explained",
+ "refs": [
+  "Matthew 13:18-23",
+  "Mark 4:13-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 41004019,
+   "end": 41004019,
+   "ref": "Mark 4:19",
+   "ranges": [
+    [
+     41004019,
+     41004019
+    ]
+   ],
+   "title": "\"The Worries of This Life\"",
+   "key_verse": [
+    41004019,
+    41004019
+   ],
+   "reflect": [
+    {
+     "text": "When we hear God's word, other things can compete for space in our hearts. Merely hearing the truth is not enough if we do not welcome and protect it. In a field, the soil can only nourish one plant well. It can feed either the good grain or the weeds, but not both. When weeds take over, they drain away the life of the soil. The good plant might not die completely, but it is choked before it can ever produce a crop.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus warns that these choking weeds are the worries of this life, the deceit of wealth, and the craving for other things. Worry divides our focus. Anxieties about daily food or bills start small, but they can quickly carve deep paths in our thinking and push out prayer and Scripture. At the same time, pursuing riches deceives us. Constantly figuring out how to get and keep money leaves us empty and feeds our discontentment.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "To stop these weeds from taking over, we must bring our worries straight to our heavenly Father. Whenever anxious thoughts try to steal our peace, we can treat them as temptations and hand them over to God. Instead of obsessing over wealth, we can view everything we own as a trust from God to be managed for his glory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily worries or desires tend to distract you from prayer and reading the Bible?",
+    "How can you practice handing those specific anxieties over to God today?"
+   ],
+   "prayer": "Heavenly Father, my mind is often pulled in many directions by daily cares and the desire for more things. Please forgive me for letting these anxieties choke your truth in my heart. Teach me to trust you with every need and to find my peace in your care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Mark 4:19",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Things That Strangle Us",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/things-that-strangle-us"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40013018,
+   "end": 40013023,
+   "ref": "Matthew 13:18-23; Mark 4:13-20",
+   "ranges": [
+    [
+     40013018,
+     40013023
+    ],
+    [
+     41004013,
+     41004020
+    ]
+   ],
+   "title": "Cultivating Good Soil in Our Hearts",
+   "key_verse": [
+    40013023,
+    40013023
+   ],
+   "reflect": [
+    {
+     "text": "Jesus explains that people receive God's word in different ways, but only the seed in good soil produces a true harvest. A healthy crop does not grow by accident. In the garden of the heart, unchecked weeds can quietly spread over time. If left alone, they will slowly overpower and destroy even plants that seemed strong and well established.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because of this danger, followers of Jesus need the regular spiritual discipline of weeding. Weeding means taking time to examine our thoughts and habits, then pulling up anything harmful before it takes deep root. If we ignore these destructive patterns, they will choke our spiritual growth and prevent God's word from flourishing.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Cultivating good soil requires us to put God's kingdom first each day. Rather than chasing worldly concerns, we can actively practice contentment with what God provides. As we clear out the weeds and prioritize his kingdom, our hearts become good ground where his truth can take root and produce abundant fruit.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What harmful thoughts or habits do you need to weed out of your heart this week?",
+    "In what practical ways can you prioritize God's kingdom and practice contentment today?"
+   ],
+   "prayer": "Lord God, thank you for planting the good seed of your word in my life. Show me any destructive habits or thoughts that are slowly crowding out your truth. Give me the grace to weed them out, to practice contentment, and to bear fruit for your kingdom. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Sophia Bricker",
+     "work": "The Spiritual Practice of Weeding",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/the-spiritual-practice-of-weeding.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

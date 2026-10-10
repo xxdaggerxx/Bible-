@@ -1,0 +1,75 @@
+{
+ "id": "50-002-001",
+ "title": "One in Christ",
+ "refs": [
+  "Philippians 2:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 50002001,
+   "end": 50002004,
+   "ref": "Philippians 2:1-4",
+   "ranges": [
+    [
+     50002001,
+     50002004
+    ]
+   ],
+   "title": "United in Love and Humility",
+   "key_verse": [
+    50002003,
+    50002003
+   ],
+   "reflect": [
+    {
+     "text": "By nature, human beings tend to look out for themselves first. Selfish ambition and personal rivalry can easily become our default way of living. Yet the church is called to genuine unity and shared love. To live together in peace, we must intentionally set aside empty conceit and the desire to promote ourselves.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Choosing humility does not mean hating yourself or pretending you have no value. Genuine humility simply means having an accurate, modest view of your own importance. Instead of being obsessed with ourselves, we honor others by prioritizing their needs and dignity before our own. Assuming the best about fellow believers helps us gladly serve them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Immersing ourselves in God's Word reminds us of our human limits and points us back to loving God and our neighbors. A reverent awe before God produces a quiet, obedient heart. Modeled after Jesus' servant heart, we can use our gifts and freedom not to elevate ourselves, but to watch out for the interests of those around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might selfish ambition or pride be getting in the way of how you treat others?",
+    "What is one practical way you can use your gifts to look out for someone else's well-being this week?"
+   ],
+   "prayer": "Lord, forgive us for the times we focus only on our own desires and empty pride. Help us to have an accurate, humble view of ourselves and to value our brothers and sisters above ourselves. Teach us to follow Christ's servant heart by using our lives and gifts to care for those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Amanda Idleman",
+     "work": "Considering Others Better Than Yourself",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/considering-others-better-than-yourself-the-crosswalk-devotion.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Christian Humility",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/christian-humility"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

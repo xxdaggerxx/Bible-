@@ -1,0 +1,144 @@
+{
+ "id": "28-006-001",
+ "title": "The Unrepentance of Israel and Judah",
+ "refs": [
+  "Hosea 6:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 28006003,
+   "end": 28006003,
+   "ref": "Hosea 6:3",
+   "ranges": [
+    [
+     28006003,
+     28006003
+    ]
+   ],
+   "title": "\"Press On to Know the LORD\"",
+   "key_verse": [
+    28006003,
+    28006003
+   ],
+   "reflect": [
+    {
+     "text": "You can always count on God. When life feels dark and cold, it is not because God has moved away from you. Just as our earth turns into the night while the sun stays fixed in place, God remains right where He has always been. As surely as the morning sun rises and the spring rains fall to water the ground, God will appear to meet you in His perfect time.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "During long seasons of waiting, it is easy to wonder if God hears your prayers. Yet we are invited to keep praying and press on in trusting Him. We do not learn everything all at once. God is a patient Teacher who delights to make the simple wise, and as Charles Spurgeon noted, He \"will not give us up, however slow of understanding we may be.\"",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Keep your focus on knowing God Himself—Father, Son, and Holy Spirit. As you turn your heart back toward His light, the Holy Spirit gently leads you into truth and renews your spirit. Even when your progress feels slow, you can walk forward with hope, trusting that God's faithful presence is already waiting for you.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life are you waiting for God, and how can remembering His dependability encourage you today?",
+    "What is one small step you can take today to know God better rather than feeling rushed?"
+   ],
+   "prayer": "Lord, thank You that Your arrival in our lives is as dependable as the morning dawn. When my heart feels weary or slow to understand, help me to keep seeking You patiently in prayer. Refresh my spirit by Your Holy Spirit, and teach me to know You more each day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 2",
+     "on": "Hosea 6:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hosea 6:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D5": {
+     "author": "Whitney Hopler",
+     "work": "God Will Show Up for You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/god-will-show-up-for-you-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 28006001,
+   "end": 28006011,
+   "ref": "Hosea 6:1-11",
+   "ranges": [
+    [
+     28006001,
+     28006011
+    ]
+   ],
+   "title": "Returning to the God of Love",
+   "key_verse": [
+    28006006,
+    28006006
+   ],
+   "reflect": [
+    {
+     "text": "When God shows us our sin, it can feel painful and crushing. Yet God only wounds in order to heal. Like a wise surgeon making a careful cut, the Lord lets us feel our deep need so that He can bind up our broken hearts. He never tears us down to abandon us in our misery. He invites us to return straight to Him with all our hurts, because He alone has the power and the joy to make us whole.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God desires our heart's devotion far more than outward religious routines. Love is not merely an action God chooses; love is the very essence of who He is. He did not make us because He had any lack, but so that we could be the cherished objects of His love. When we understand how deeply the Lord loves us, our fears and insecurities fade away.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Our highest calling in life is simply to know God and love Him back. Instead of settling for empty rituals, we can align our lives with His good purpose by focusing each morning on drawing close to Him. As we welcome His honest surgery and receive His great love, we discover the true healing and life He created us to enjoy.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you offering God empty religious habits, or are you bringing Him your honest heart?",
+    "How does knowing that God loves you simply because He is love help you bring your wounds to Him today?"
+   ],
+   "prayer": "Heavenly Father, thank You that You wound us only to heal us and draw us closer to Yourself. Forgive us when we depend on outward rituals instead of truly knowing You and loving You back. Help us to rest in Your deep love and begin each morning seeking Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 14",
+     "on": "Hosea 6:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Rick Warren",
+     "work": "The Most Important Thing to Know and Do",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-august-29-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,126 @@
+{
+ "id": "46-001-004",
+ "title": "Thanksgiving",
+ "refs": [
+  "1 Corinthians 1:4-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46001009,
+   "end": 46001009,
+   "ref": "1 Corinthians 1:9",
+   "ranges": [
+    [
+     46001009,
+     46001009
+    ]
+   ],
+   "title": "\"God Is Faithful\"",
+   "key_verse": [
+    46001009,
+    46001009
+   ],
+   "reflect": [
+    {
+     "text": "Faithfulness is not merely something God chooses to show at times. It is who He is at all times. When we look honestly at our own sins and shortcomings, God's steady loyalty becomes truly amazing. We do not earn His faithfulness by our good behavior. Instead, He gives it freely because we are joined to Jesus Christ.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The fellowship God gives us is a shared partnership. As F. B. Meyer writes, we are welcomed into \"partnership with the Son of God\" in His work. It is like an ordinary worker being made a full partner in a wealthy business. Christ's work in the world is now our work, and all His endless riches are open to us. Because the Father called us into this life, He will never leave us to face our needs alone.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Remembering this unearned kindness turns our hearts toward God in genuine praise. When we reflect on Jesus and the cross, we are filled with gratitude and moved to remain faithful to the God who is always true to us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God's faithfulness is an unearned gift bring you peace when you fail?",
+    "In what ways can you rely on Christ's rich resources today instead of trying to manage alone?"
+   ],
+   "prayer": "Father, thank You for being faithful even when our own hearts are weak. Thank You for welcoming us into partnership with Your Son, Jesus Christ. Help us to draw upon His strength and to live with grateful, loyal hearts today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Corinthians 1:9",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Erik Raymond",
+     "work": "God is faithful...but why?",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/god-is-faithfulbut-why/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 46001004,
+   "end": 46001009,
+   "ref": "1 Corinthians 1:4-9",
+   "ranges": [
+    [
+     46001004,
+     46001009
+    ]
+   ],
+   "title": "Thanksgiving for God's Grace",
+   "key_verse": [
+    46001004,
+    46001004
+   ],
+   "reflect": [
+    {
+     "text": "The apostle Paul gives us a helpful example of how to give thanks. The Corinthian Christians had real troubles, including using their spiritual gifts in selfish and messy ways. Even so, Paul begins by thanking God for the grace and gifts they had received. He reminds us that God's gifts are good, so we should correct improper behavior without rejecting the gifts themselves.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Recognizing where our gifts come from keeps us humble. Every ability and every insight is a gift from God, which leaves no room for spiritual pride. When we remember that God gave us what we have, we are encouraged to care for those gifts and use them thoughtfully for others.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Paul also comforts believers with the promise that God preserves His people. The Lord who gives new life guarantees that He will sustain His people until the end. Our final hope of standing blameless before Him does not depend on our own power, but on God's reliable work in us.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever looked down on a good gift from God simply because someone else misused it?",
+    "How does remembering that all your abilities come from God help protect you from pride?"
+   ],
+   "prayer": "Lord, thank You for enriching Your church with every good gift we need. Guard us from pride, and teach us to use Your blessings with care and humility. We trust You to sustain us and keep us blameless until Jesus returns. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "God’s Blessing on the Corinthians",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-blessing-on-the-corinthians"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

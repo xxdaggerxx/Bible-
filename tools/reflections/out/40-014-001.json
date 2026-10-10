@@ -1,0 +1,76 @@
+{
+ "id": "40-014-001",
+ "title": "The Beheading of John",
+ "refs": [
+  "Matthew 14:1-12",
+  "Mark 6:14-29",
+  "Luke 9:7-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40014001,
+   "end": 40014012,
+   "ref": "Matthew 14:1-12; Mark 6:14-29; Luke 9:7-9",
+   "ranges": [
+    [
+     40014001,
+     40014012
+    ],
+    [
+     41006014,
+     41006029
+    ],
+    [
+     42009007,
+     42009009
+    ]
+   ],
+   "title": "Hearing the Truth Without Loving It",
+   "key_verse": [
+    41006020,
+    41006020
+   ],
+   "reflect": [
+    {
+     "text": "Herod was not a godly ruler, yet he could still tell that John was holy. When John spoke, God's truth reached Herod's conscience, and Herod even protected the prophet for a time. Even people caught deep in sin can recognize holiness and divine truth when they see it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Herod enjoyed listening to John, but being curious about the truth does not save anyone. Without a real love for God, Herod's heart remained unchanged. When social pressure arose and he feared looking weak before his guests, his self-interest won out and he compromised the truth.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This account reminds us to keep sharing God's Word faithfully, because truth penetrates human hearts. It also warns us to check our own lives. We need God to give us more than simple fascination with His message; we need a genuine love for it that leads to obedience.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a truth from God that you enjoy hearing about, but have not yet obeyed?",
+    "What helps you stand firm in what is right when you feel pressure from the people around you?"
+   ],
+   "prayer": "Lord, please give us more than an interest in Your Word. Change our hearts so that we truly love Your truth. Give us the strength to follow You faithfully, even when we face pressure from the world. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Herod’s Discernment",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/herods-discernment"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

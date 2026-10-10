@@ -1,0 +1,66 @@
+{
+ "id": "58-011-020",
+ "title": "The Faith of Isaac, Jacob, and Joseph",
+ "refs": [
+  "Hebrews 11:20-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58011020,
+   "end": 58011022,
+   "ref": "Hebrews 11:20-22",
+   "ranges": [
+    [
+     58011020,
+     58011022
+    ]
+   ],
+   "title": "Looking Ahead in Faith",
+   "key_verse": [
+    58011022,
+    58011022
+   ],
+   "reflect": [
+    {
+     "text": "At the end of his life, Joseph showed a faith that looked far into the future. Even though he held great worldly power and wealth in Egypt, he recognized that Egypt was not his true home. His heart remained with God's people and the promises God had made to them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Joseph trusted that God would lead the Israelites out of Egypt in the exodus, even though that event was still centuries away. Because of this trust, he left instructions about what to do with his bones. He knew that dying was not a barrier to God keeping his word.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Joseph was looking even further than an earthly resting place in Canaan. His ultimate hope was the future resurrection, when God's people will be raised to live in his eternal presence. Like Joseph, we can trust God's promises for our future, knowing that death cannot overcome what he has prepared for us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you tend to look for your security when worldly success or comfort surrounds you?",
+    "How does the promise of the future resurrection help you trust God when facing death or loss?"
+   ],
+   "prayer": "Lord God, thank you that death cannot stand in the way of your promises. Help us remember that our true home is with you and your people, not in the passing things of this world. Keep our hope firmly fixed on the resurrection and the joy of living forever in your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Faith of Joseph",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-faith-of-joseph"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,116 @@
+{
+ "id": "38-014-016",
+ "title": "All Nations Will Worship the King",
+ "refs": [
+  "Zechariah 14:16-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 38014020,
+   "end": 38014020,
+   "ref": "Zechariah 14:20",
+   "ranges": [
+    [
+     38014020,
+     38014020
+    ]
+   ],
+   "title": "\"Holy to the Lord\"",
+   "key_verse": [
+    38014020,
+    38014020
+   ],
+   "reflect": [
+    {
+     "text": "In the vision Zechariah shares, the knowledge of God fills everything, and the common becomes holy. Words once written only on the high priest's golden headband are inscribed onto the bells of workhorses. As F. B. Meyer explains, things once tied to human pride and war are now completely dedicated to God. Even simple kitchen pots in the Lord's house become as sacred as the bowls used before the altar.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This holiness is meant to shape our daily lives right now. Charles Spurgeon noted that believers can live so that every meal, garment, and word honors God. When our morning alarm rings or duty calls us to school or work, we can hear it as God's invitation to serve Him. Because Jesus owns all that we have, our everyday tasks, conversations, and simple joys can all be set apart for His glory.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you treat your ordinary daily tasks at home or work as sacred service to God?",
+    "What everyday habits or joys can you intentionally set apart for the Lord today?"
+   ],
+   "prayer": "Lord, thank You that all we have belongs to You. Help us to serve You in our ordinary routines, whether we are working, eating, or resting. May everything we do today bring honor to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 16",
+     "on": "Zechariah 14:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Zechariah 14:20",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 38014016,
+   "end": 38014021,
+   "ref": "Zechariah 14:16-21",
+   "ranges": [
+    [
+     38014016,
+     38014021
+    ]
+   ],
+   "title": "All Nations Will Worship the King",
+   "key_verse": [
+    38014016,
+    38014016
+   ],
+   "reflect": [
+    {
+     "text": "Long ago, God's people celebrated the Feast of Booths to remember how the Lord rescued them and guided them through the wilderness. In this passage, Zechariah looks forward to a much greater gathering. Survivors from all the nations that once fought against God's people will journey to Jerusalem. Together, they will bow before the true King, the Lord of hosts.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "This global feast shows God opening His covenant family far beyond a single nation. In His sovereign mercy, God invites people from every background to be joined to His people. Yet the passage also gives a clear warning. Those who refuse to come and worship will receive no life-giving rain. True spiritual blessing comes only when we submit to Israel's Lord. Knowing that God has freely welcomed us into His family should fill our hearts with deep humility and thanks.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God welcomes people from all nations deepen your gratitude for His mercy?",
+    "In what areas of your life do you need to submit more fully to the King to receive His spiritual blessings?"
+   ],
+   "prayer": "Heavenly Father, thank You for Your mercy that reaches across all nations to bring us into Your family. Give us humble and grateful hearts for redeeming us. Teach us to submit gladly to Your rule as our King. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Sukkot to Come",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sukkot-come"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "44-015-022",
+ "title": "The Letter to the Gentile Believers",
+ "refs": [
+  "Acts 15:22-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44015022,
+   "end": 44015029,
+   "ref": "Acts 15:22-29",
+   "ranges": [
+    [
+     44015022,
+     44015029
+    ]
+   ],
+   "title": "Boundaries That Protect Our Freedom",
+   "key_verse": [
+    44015028,
+    44015028
+   ],
+   "reflect": [
+    {
+     "text": "The leaders in Jerusalem sent a letter to reassure the Gentile believers of their freedom in Christ. They did not want to weigh them down with heavy religious rules. Yet, the letter asked them to step away from specific practices tied to their old lives, including idolatry and sexual sin. These instructions were not meant to steal their joy. Instead, they offered practical boundaries to protect their new liberty.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often face a similar temptation today. It is easy to look at parts of our old, worldly way of living and think they are harmless. But when we hang around old habits and customs, our spiritual strength can quietly weaken. Lingering near past temptations can also cause other believers around us to stumble in their walk.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God calls us to set clear boundaries for our own good. Lasting freedom and spiritual safety do not come from seeing how close we can get to our old traps. They come from choosing to stay far away from past snares so we can walk freely with the Lord.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there parts of your old life that you still treat as harmless, even though they pull you away from God?",
+    "How can setting wise boundaries help protect your faith and keep others from stumbling?"
+   ],
+   "prayer": "Lord, thank you for the true freedom we have in Christ. Help us recognise the old habits and worldly traps that could weaken our faith. Give us the wisdom to keep clear boundaries, so we can honour you and protect those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 251: Acts 15:22–35",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-251-acts-15-2235.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

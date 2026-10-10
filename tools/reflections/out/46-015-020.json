@@ -1,0 +1,141 @@
+{
+ "id": "46-015-020",
+ "title": "The Order of Resurrection",
+ "refs": [
+  "1 Corinthians 15:20-34"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46015020,
+   "end": 46015022,
+   "ref": "1 Corinthians 15:20-22",
+   "ranges": [
+    [
+     46015020,
+     46015022
+    ]
+   ],
+   "title": "\"In Christ All Will Be Made Alive\"",
+   "key_verse": [
+    46015022,
+    46015022
+   ],
+   "reflect": [
+    {
+     "text": "Adam brought physical and spiritual death to all humanity when he sinned as our representative. But Jesus came as the new Adam to bring righteousness and life. Christ's resurrection proves that He is truly God's Son and Lord of both the living and the dead. Because He rose as the firstfruits, He guarantees that everyone who belongs to Him will also be raised with a real body.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Every blessing in the Christian life depends on this living truth. As Charles Spurgeon wrote, \"the silver thread of resurrection runs through all the believer's blessings.\" Because Jesus defeated the grave, our sins are forgiven, we are given new spiritual life, and our future is secure. We can rest quietly in His finished work and hold fast to His promise of eternal life.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "This victory also shapes how we live in the present. Jesus rising from the dead proves that God's justice will ultimately triumph over all unfairness and wrong. In the meantime, our living Savior gives us spiritual power each day to overcome sin and live transformed lives.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus guarantees your future resurrection bring you peace today?",
+    "Where in your life do you need the risen Savior's power to help you turn away from sin?"
+   ],
+   "prayer": "Lord Jesus, thank You for rising from the dead and securing our forgiveness and eternal hope. Teach us to rest completely in Your finished work instead of our own efforts. Please grant us Your power today to overcome sin and live lives that honor You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 10",
+     "on": "1 Corinthians 15:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "What the Resurrection Means to Us",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/battle-of-the-gods-greg-laurie-daily-devotion-march-9-2016.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Death in Adam, Life in Christ",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/death-in-adam-life-in-christ"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 46015020,
+   "end": 46015034,
+   "ref": "1 Corinthians 15:20-34",
+   "ranges": [
+    [
+     46015020,
+     46015034
+    ]
+   ],
+   "title": "Christ's Victory and Holy Living",
+   "key_verse": [
+    46015026,
+    46015026
+   ],
+   "reflect": [
+    {
+     "text": "Jesus is reigning today, and His rule will continue until every opposing power is put beneath His feet. The very last enemy He will destroy is death itself. For those who follow Jesus, death is not the final end. When believers die, they go to dwell in heaven with the Lord while they wait for their physical bodies to be raised at His return.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "Because Christ has this eternal plan, our daily choices matter. We cannot treat our habits and friendships lightly. It is easy to assume our goodness will rub off on companions who ignore God. Yet just as clean gloves get soiled when plunged into mud, spending close time with corrupt influences will inevitably harm our own character.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The promise of Christ's coming defeat of death should wake us up to live carefully right now. Believers are called to turn away from sin and protect their hearts. Knowing that the Lord reigns over the future gives us every reason to choose our companions wisely and walk in holiness today.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the promise that Christ will destroy death give you comfort when you face grief?",
+    "Are there relationships or influences in your life that are pulling your character away from God?"
+   ],
+   "prayer": "Heavenly Father, thank You that Christ reigns and that death will one day be completely destroyed. Comfort our hearts with the hope of heaven for those who belong to You. Give us the wisdom to choose our companions carefully and live holy lives that reflect Your truth. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Don't Get Burned!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-july-20-2012.html"
+    },
+    "D5": {
+     "author": "Time with God",
+     "work": "Time with God - October 10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-october-10-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "40-016-005",
+ "title": "The Leaven of the Pharisees and Sadducees",
+ "refs": [
+  "Matthew 16:5-12",
+  "Mark 8:14-21",
+  "Luke 12:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40016005,
+   "end": 40016012,
+   "ref": "Matthew 16:5-12; Mark 8:14-21; Luke 12:1-3",
+   "ranges": [
+    [
+     40016005,
+     40016012
+    ],
+    [
+     41008014,
+     41008021
+    ],
+    [
+     42012001,
+     42012003
+    ]
+   ],
+   "title": "Remembering the Bread and Avoiding the Leaven",
+   "key_verse": [
+    41008015,
+    41008015
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus cautioned His disciples about the leaven of the Pharisees and Herod, they thought He was talking about their lunch. They had forgotten to bring extra bread and immediately grew anxious. Jesus challenged them for worrying about food right after seeing Him feed thousands from just a few loaves. Forgetting His miraculous power caused them to lose their peace and misunderstand His words.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus was not talking about baking. He was warning them about corrupting influences that can quietly spread through an entire group. The leaven of the Pharisees points to legalistic self-righteousness, while Herod's leaven points to worldly living. Communities often try to cure worldliness with strict rules, or legalism with worldly indulgence. Yet both extremes are flawed attempts to save ourselves rather than genuine remedies.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus urges us to stay alert to both dangers so we will look only to Him as our true bread. When fresh trials make us anxious, recalling past moments of God's faithful care gives us peace and courage. Remembering what He has done guards our hearts against false teachings and quiet panic.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What past moments of God's provision can you remember today when you start to worry?",
+    "Have you ever tried to fix worldly habits with rigid rules instead of turning directly to Jesus?"
+   ],
+   "prayer": "Lord Jesus, forgive us for how quickly we forget Your past faithfulness when new worries arrive. Guard our hearts from both self-righteous pride and worldly compromise. Teach us to rest quietly in Your power and trust You alone as our provider. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Binu Samuel",
+     "work": "Remember the Loaves",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-may-31-2024.html"
+    },
+    "D2": {
+     "author": "Jared Wilson",
+     "work": "When the Prodigal Church Comes Home",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/when-the-prodigal-church-comes-home"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

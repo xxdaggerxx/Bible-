@@ -1,0 +1,132 @@
+{
+ "id": "40-007-007",
+ "title": "Ask, Seek, Knock",
+ "refs": [
+  "Matthew 7:7-12",
+  "Luke 11:5-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40007007,
+   "end": 40007008,
+   "ref": "Matthew 7:7-8",
+   "ranges": [
+    [
+     40007007,
+     40007008
+    ]
+   ],
+   "title": "\"Ask, and It Will Be Given\"",
+   "key_verse": [
+    40007007,
+    40007007
+   ],
+   "reflect": [
+    {
+     "text": "Jesus invites anyone in need to come directly to Him. Charles Spurgeon compared this to a charitable house where any hungry traveller could knock and receive bread. In Jesus, when we come as sinners, He washes our guilt away and clothes us completely. He provides all the daily help and spiritual protection we need for life, promising an eternal home with Him at the end.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Coming to God in prayer is not a one-time transaction, but a regular, ongoing practice. We are invited to keep on asking, seeking, and knocking. God shows no favoritism, so this open door is for everyone. Even when we do not know how to put our prayers into words, the Holy Spirit helps us and speaks for our deepest needs.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because our dependable Lord invites us so warmly, we do not need to hold back out of bashfulness or doubt. We can spread all our needs before Him, trusting that He already knows what we require and loves to answer those who seek Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What is a need or worry you have hesitated to bring repeatedly to God?",
+    "How does knowing the Holy Spirit helps you pray encourage you to keep knocking?"
+   ],
+   "prayer": "Lord, thank You that Your door of mercy is always open to me. Wash away my sins and supply everything I need to follow You today. When I feel hesitant or tired, help me by Your Spirit to keep on asking and seeking. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 5",
+     "on": "Matthew 7:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Meg Bucher",
+     "work": "Keep on Asking",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/keep-on-asking-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40007007,
+   "end": 40007012,
+   "ref": "Matthew 7:7-12; Luke 11:5-13",
+   "ranges": [
+    [
+     40007007,
+     40007012
+    ],
+    [
+     42011005,
+     42011013
+    ]
+   ],
+   "title": "How Much More Will Your Father Give",
+   "key_verse": [
+    40007011,
+    40007011
+   ],
+   "reflect": [
+    {
+     "text": "Jesus uses the care of human parents to teach us about God. Even flawed earthly mothers and fathers know how to give good food to their children rather than a harmful stone or a snake. If imperfect people want the best for their children, our perfect heavenly Father is far more loving and dependable in how He responds to us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God never ignores the cries of His children. Because He is completely good, He gives only what is truly beneficial for us. If we ask for something that would bring harm, our loving Father withholds it or provides something better instead. Believing in His goodness removes our skepticism and timid hesitation when we pray.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Knowing that our Father reliably supplies all our needs frees us from self-centered worry. We do not have to live defensively. Confidence in God's generosity gives us the freedom to love others and treat them the way we want to be treated.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When God does not answer a prayer the way you expected, how does trusting His fatherly goodness bring you peace?",
+    "How can knowing your heavenly Father cares for you help you treat someone else with kindness today?"
+   ],
+   "prayer": "Heavenly Father, thank You that You are a loving Father who gives only what is truly good for me. Forgive my doubts and quiet my anxious thoughts with Your care. Help me trust Your answers and treat the people around me with the same generosity You show to me. Amen.",
+   "sources": {
+    "D3": {
+     "author": "John Piper",
+     "work": "You Can Never Ask Too Much",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/you-can-never-ask-too-much"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

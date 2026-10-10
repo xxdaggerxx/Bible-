@@ -1,0 +1,143 @@
+{
+ "id": "62-003-001",
+ "title": "Children of God",
+ "refs": [
+  "1 John 3:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 62003001,
+   "end": 62003001,
+   "ref": "1 John 3:1",
+   "ranges": [
+    [
+     62003001,
+     62003001
+    ]
+   ],
+   "title": "\"Children of God\"",
+   "key_verse": [
+    62003001,
+    62003001
+   ],
+   "reflect": [
+    {
+     "text": "We often fall into the trap of measuring our worth by our daily productivity, roles, or achievements. When we face painful losses, unmet hopes, or the memory of past failures, we can easily feel inadequate and defeated. God, however, does not measure our value by our success. His lavish love is an unearned gift poured out on us without conditions.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "God declares that we are His chosen, forgiven children right now, not because of how well we perform. Our feelings often rise and fall, and during times of sorrow our faith might feel like a weak spark. As Charles Spurgeon wrote, \"it is neither your graces nor feelings on which you are to live.\" Our standing as God's children rests on His promise, not on our emotions.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "When we trust God's Word above our own self-doubt, we find an unshakable peace. We enjoy the tender care and love that a father gives his child. Even when the world does not understand us, we can rest quietly in our permanent belonging to God.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to base your worth on your accomplishments or your feelings rather than God's Word?",
+    "How does knowing you are already God's child bring you peace in your current struggles?"
+   ],
+   "prayer": "Heavenly Father, thank You for lavishing Your love on us and adopting us as Your own children. Help us to stop measuring our worth by our successes or our changing emotions. Teach us to rest quietly in Your truth and trust what You say about who we are. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 13",
+     "on": "1 John 3:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Alisha Headley",
+     "work": "Your Identity Is Secure in Christ",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/your-identity-is-secure-in-christ.html"
+    },
+    "D5": {
+     "author": "Sharon Jaynes",
+     "work": "You Are Who God Says You Are",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-september-27-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 62003001,
+   "end": 62003010,
+   "ref": "1 John 3:1-10",
+   "ranges": [
+    [
+     62003001,
+     62003010
+    ]
+   ],
+   "title": "Following Our Brother and Friend",
+   "key_verse": [
+    62003005,
+    62003005
+   ],
+   "reflect": [
+    {
+     "text": "Jesus chose to call Himself the Son of man, showing us His deep humility. He did not seek proud titles, but instead honored our human nature by sharing in it. Because He lived as a man and suffered, He knows our griefs and troubles by experience. He is our near brother, and we can approach Him at any time without fear.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Throughout our lives, Jesus proves Himself to be a generous and compassionate friend. When we face heavy pressures from the world or trials among other believers, we can find true peace simply by resting on Him. Simple faith in our Saviour gives our spirits all the comfort and joy we could ever desire.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "People may walk away from Christ, but there is no reason for us to leave Him. He never changes, whether we face sickness, poverty, or sorrow, and nothing can separate us from His love. Because He is entirely sufficient for every need, we can hold fast to Him and follow Him with steady loyalty.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What griefs or fears can you bring to Jesus today, knowing that He understands them from personal experience?",
+    "Why is Jesus better and more reliable than anything else this world offers you?"
+   ],
+   "prayer": "Lord Jesus, thank You for being our humble brother who understands all our trials and sorrows. When hard times tempt us to wander, remind us that You are our all-sufficient and unchanging friend. Keep our hearts close to You, and let us always find our rest in Your love. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 25",
+     "on": "1 John 3:7-8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 23",
+     "on": "1 John 3:4-5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "59-005-001",
+ "title": "A Warning to the Rich",
+ "refs": [
+  "James 5:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 59005001,
+   "end": 59005006,
+   "ref": "James 5:1-6",
+   "ranges": [
+    [
+     59005001,
+     59005006
+    ]
+   ],
+   "title": "Where True Security Lies",
+   "key_verse": [
+    59005004,
+    59005004
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, James gives a stern warning to people who look to earthly wealth for their ultimate safety. Earthly treasures like silver, gold, and fine clothes do not last, and they cannot protect anyone when Christ returns. When people hoard money through dishonest actions and cheat working people out of their fair pay, they invite God's righteous judgment upon themselves.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "For Christians who face unfair treatment, these words bring real comfort. We are reminded that God hears the cries of the oppressed and will one day settle every wrong. Because we know that the Lord will avenge those who are mistreated, we can endure hardships with patience instead of giving in to despair or anger.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This passage also calls us to look closely at our own hearts and habits. Possessions have no eternal value on their own. Instead of storing up riches for selfish comfort, God calls us to examine our spending and use our resources faithfully to serve His kingdom.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you use your money and resources to help others and serve God's kingdom?",
+    "How does knowing that God sees every injustice help you remain patient during hard times?"
+   ],
+   "prayer": "Lord, help us to place our hope in You rather than in earthly riches that soon fade away. Teach us to be generous and fair in how we treat others, honoring You with the things You have given us. When we face hardship or mistreatment, grant us patience as we trust in Your perfect justice. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Rich Oppressors",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/rich-oppressors"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

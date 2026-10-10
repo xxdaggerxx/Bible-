@@ -1,0 +1,116 @@
+{
+ "id": "30-008-001",
+ "title": "The Basket of Summer Fruit",
+ "refs": [
+  "Amos 8:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 30008011,
+   "end": 30008012,
+   "ref": "Amos 8:11-12",
+   "ranges": [
+    [
+     30008011,
+     30008012
+    ]
+   ],
+   "title": "\"A Famine of Hearing the Words\"",
+   "key_verse": [
+    30008011,
+    30008011
+   ],
+   "reflect": [
+    {
+     "text": "Amos warned of a famine far worse than running out of bread or water. It is a terrible hunger to hear the message of the Lord. When people repeatedly refuse to listen to God, He may silence His prophets as a fair response to their rebellion. Amos saw a day when people would wander from coast to coast looking for God's guidance and not find it. Today, we still see this deep spiritual starvation, where busy activities often replace faithful biblical teaching.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "To grow strong in faith, our souls need rich teaching from Scripture rather than shallow thoughts. As F. B. Meyer warned, we must not spoil our appetite with the \"painted sweetmeats of the world.\" When people turn away from God's voice, they easily chase after empty spiritual substitutes to fill the void. We are called to recognize this widespread hunger, feed deeply on God's truth, and help break the famine around us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What kind of spiritual food are you feeding on each day?",
+    "How can you help share God's true Word with those who are spiritually hungry?"
+   ],
+   "prayer": "Lord, give us a true hunger for Your Word. Protect us from settling for empty substitutes that cannot feed our souls. Help us to share Your truth with people who are searching for life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Amos 8:11",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Breaking the Famine, Part One",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/breaking-the-famine-part-one"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 30008001,
+   "end": 30008014,
+   "ref": "Amos 8:1-14",
+   "ranges": [
+    [
+     30008001,
+     30008014
+    ]
+   ],
+   "title": "Ripe for Judgment",
+   "key_verse": [
+    30008002,
+    30008002
+   ],
+   "reflect": [
+    {
+     "text": "God showed Amos a basket of ripe summer fruit to reveal that Israel's time was up. Just as fruit reaches the point where it must be picked, the nation was now fully ripe for divine judgment. Their ruin came because of deep greed and dishonest business. Wealthy leaders could hardly wait for religious holidays to finish so they could cheat buyers with unfair scales and mistreat the poor.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because their worship was mixed with cruelty and hypocrisy, God warned that their celebrations would turn into bitter mourning and death. The Lord does not overlook when people harm the needy while pretending to honor Him. The most severe consequence of their hard hearts was that God would withdraw His voice, leaving them without the truth they took for granted. We are urged to cherish God's revealed Word today, knowing that stubborn rebellion can cost us the very truth we need to live.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does God view the way we treat the poor and handle our everyday business?",
+    "Are you truly cherishing God's Word, or taking His truth for granted?"
+   ],
+   "prayer": "Lord, help us to live honestly and care for those who are needy. Forgive us when our worship does not match how we treat others. Teach us to cherish Your revealed truth with humble and obedient hearts. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "God Withdraws His Revelation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-withdraws-his-revelation"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

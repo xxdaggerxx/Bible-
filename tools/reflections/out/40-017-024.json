@@ -1,0 +1,75 @@
+{
+ "id": "40-017-024",
+ "title": "The Temple Tax",
+ "refs": [
+  "Matthew 17:24-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40017024,
+   "end": 40017027,
+   "ref": "Matthew 17:24-27",
+   "ranges": [
+    [
+     40017024,
+     40017027
+    ]
+   ],
+   "title": "Giving Up Our Rights for Others",
+   "key_verse": [
+    40017027,
+    40017027
+   ],
+   "reflect": [
+    {
+     "text": "The temple tax began long ago under Moses to help care for the tabernacle. When tax collectors asked Peter about it, Jesus explained that kings do not tax their own children. As the Son of God who fulfills the true purpose of the temple, Jesus had every right to be exempt. He and His followers were truly free from this duty.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even so, Jesus did not insist on His rights or try to win an argument. Instead, He miraculously provided a coin in the mouth of a fish to pay the tax. He did this so He would not set up an unnecessary stumbling block or offend others. For Jesus, true leadership meant choosing grace, empathy, and connection rather than demanding His own way.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus invites us to follow this pattern. We often have personal freedoms and rights, but we are called to hold them lightly. When we practice restraint, we protect people who may have weaker consciences. Our humble choices ensure that our words and actions never get in the way of others seeing Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area where you might choose to let go of your rights so you do not cause someone else to stumble?",
+    "How can choosing grace and empathy over winning arguments help others see Christ in you?"
+   ],
+   "prayer": "Lord Jesus, thank You for showing us what true humility looks like. Teach us to hold our personal freedoms lightly and to care for the consciences of those around us. Help our words and choices to reflect Your grace so nothing we do hinders others from knowing You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rev. Dr. Ron Bell",
+     "work": "Fish, Taxes, and the Call to Love Anyway",
+     "site": "The Upper Room",
+     "url": "https://www.upperroom.org/news/2910"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Jesus Provides a Shekel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jesus-provides-shekel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

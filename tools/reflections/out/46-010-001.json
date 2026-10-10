@@ -1,0 +1,137 @@
+{
+ "id": "46-010-001",
+ "title": "Warnings from Israel’s Past",
+ "refs": [
+  "1 Corinthians 10:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46010013,
+   "end": 46010013,
+   "ref": "1 Corinthians 10:13",
+   "ranges": [
+    [
+     46010013,
+     46010013
+    ]
+   ],
+   "title": "\"God Is Faithful\"",
+   "key_verse": [
+    46010013,
+    46010013
+   ],
+   "reflect": [
+    {
+     "text": "When temptation comes, we can easily feel alone and defeated. Yet facing temptation is not a sin in itself. Even Jesus was tempted in the wilderness, though He never sinned. Sin happens only when we surrender to deceitful desires and act on them. The struggles you face are common to all people, and Jesus understands our human weakness. Remembering this silences our self-pity and stops us from making proud excuses for disobedience. Other believers have walked through these same trials and faithfully stood firm through the Holy Spirit.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The Lord is faithful. He rules over every circumstance and promises never to let testing become greater than what you can bear. The way of escape He provides is rarely an easy exit from difficulty. Instead, God gives us the strength to endure the trial without yielding to sin. His commandments are life-giving blessings rather than impossible burdens. We can actively resist temptation by persistent prayer, meditating on Scripture, and submitting ourselves to God.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What excuses or feelings of self-pity do you need to lay aside when you face temptation?",
+    "How can you use God's Word and prayer to endure your current struggles without giving in to sin?"
+   ],
+   "prayer": "Faithful Father, thank You that You understand our weakness and never leave us to face trials alone. Give us strength to endure every testing without giving in to sin. Help us trust Your life-giving commands and turn quickly to Scripture and prayer. Amen.",
+   "sources": {
+    "D2": {
+     "author": "John MacArthur",
+     "work": "How to Escape Temptation",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B240614/how-to-escape-temptation"
+    },
+    "D3": {
+     "author": "Betsy St. Amant Haddox",
+     "work": "Staying Alert Against Temptation (1 Corinthians 10:13) - Your Daily Bible Verse - November 7",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-november-7.html"
+    },
+    "D4": {
+     "author": "Melissa Kruger",
+     "work": "When Temptation Comes Knocking",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/temptation-comes-knocking"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 46010001,
+   "end": 46010013,
+   "ref": "1 Corinthians 10:1-13",
+   "ranges": [
+    [
+     46010001,
+     46010013
+    ]
+   ],
+   "title": "Warnings from the Wilderness",
+   "key_verse": [
+    46010012,
+    46010012
+   ],
+   "reflect": [
+    {
+     "text": "The story of Israel in the desert serves as a solemn warning for us today. The Christian life is a wilderness journey that requires patient endurance. God graciously supplied Israel with spiritual food and water, and Christ Himself was the source of those gifts. Yet many of them fell because they presumed upon God's kindness and craved evil things. We must take care not to take God's grace for granted.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "Because of this, we must never become proud of our own spiritual standing. As Charles Spurgeon wrote, \"He who boasts of grace has little grace to boast of.\" We cannot rely on past faith or personal strength to keep us standing firm. A lamp will soon smoke and go out if it lacks a continuous supply of oil. In the same way, our spiritual life must constantly flow from Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our safety comes from keeping our confidence in Jesus alone and walking with humble caution. God keeps us moving forward through His ordinary gifts of grace: regular Bible reading, persistent prayer, and worship with other believers. Ask the Lord daily to uphold you, for only He can keep you from falling.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your spiritual walk are you tempted to rely on your own strength rather than on Christ?",
+    "How can you make better use of everyday gifts of grace, such as Scripture and prayer, to guard your heart?"
+   ],
+   "prayer": "Lord God, keep us from becoming proud or taking Your mercy for granted. Teach us to walk with humble caution and put all our confidence in Christ alone. Nourish our souls each day through Your Word and fellowship, and hold us fast until our journey is complete. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 14",
+     "on": "1 Corinthians 10:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "L. Michael Morales",
+     "work": "God's Wilderness Provisions",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-wilderness-provisions"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

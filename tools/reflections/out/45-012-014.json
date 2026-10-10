@@ -1,0 +1,75 @@
+{
+ "id": "45-012-014",
+ "title": "Forgiveness",
+ "refs": [
+  "Romans 12:14-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45012014,
+   "end": 45012021,
+   "ref": "Romans 12:14-21",
+   "ranges": [
+    [
+     45012014,
+     45012021
+    ]
+   ],
+   "title": "Overcoming Evil with Good",
+   "key_verse": [
+    45012021,
+    45012021
+   ],
+   "reflect": [
+    {
+     "text": "When people hurt us through gossip, betrayal, or hostility, our natural reaction is to strike back or retreat into cold silence. Yet God calls us to something deeper than mere politeness or passive endurance. We are told not to repay evil with evil. Refusing revenge protects our own hearts from slipping into the world's destructive pattern of retaliation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Biblical peace requires us to choose forgiveness and take active steps to love and serve those who mistreat us. Jesus gave us the ultimate example of this when He prayed for the people who crucified Him. Showing this kind of selfless love is not something we can do on our own; it relies completely on the power of the Holy Spirit.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Taking the initiative toward reconciliation frees us from the heavy weight of bitterness, even if our efforts are not welcomed. When we respond to hostility with kindness, we display the character of Christ. This unexpected goodness can disarm opposition and may even help lead those who oppose us to repentance, turning back to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone who has hurt you whom you need to forgive instead of holding onto bitterness?",
+    "What practical act of kindness could you show to someone who opposes or mistreats you?"
+   ],
+   "prayer": "Lord, thank You for showing us true forgiveness through Jesus. Help us rely on the Holy Spirit whenever others hurt or oppose us. Free us from bitterness, and grant us the strength to overcome evil with good. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Victoria Riollano",
+     "work": "A Prayer for Peace in Relationships",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-peace-in-relationships.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Overcoming Evil with Good",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/overcoming-evil-good"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

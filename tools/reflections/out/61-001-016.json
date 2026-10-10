@@ -1,0 +1,73 @@
+{
+ "id": "61-001-016",
+ "title": "Eyewitnesses of His Majesty",
+ "refs": [
+  "2 Peter 1:16-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 61001016,
+   "end": 61001021,
+   "ref": "2 Peter 1:16-21",
+   "ranges": [
+    [
+     61001016,
+     61001021
+    ]
+   ],
+   "title": "Eyewitnesses and the Light of Truth",
+   "key_verse": [
+    61001019,
+    61001019
+   ],
+   "reflect": [
+    {
+     "text": "Our Christian faith is not built on clever, made-up stories. In Peter's day, false teachers claimed the apostles invented tales about Jesus coming back, using that excuse to defend their own sinful lives. Peter answers them by reminding us that the apostles were firsthand eyewitnesses. They personally saw Jesus shine with royal glory on the holy mountain. This real historical event proved that Jesus is the promised King who will return in judgment.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As limited human beings, we could never know an infinite God unless He chose to show Himself to us. Before God speaks, our hearts sit in murky darkness and uncertainty. God gave us His Word to act like a lamp shining in that dark place. Through the Scriptures, the Holy Spirit lifts the curtain of our skepticism and floods our inner lives with the light of Christ.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that our hope rests on true history and inspired Scripture shapes how we live each day. Trusting in the return of Jesus motivates us to pursue pure and holy lives. It also equips us to take the steady light of God's Word and comfort others who are wrestling with doubt.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing our faith rests on real eyewitness accounts help you when you feel uncertain?",
+    "Who in your life is struggling with doubt, and how can you share God's Word to encourage them?"
+   ],
+   "prayer": "Lord God, thank You for not leaving us in the dark. Thank You for revealing Your truth through eyewitness testimony and Your inspired Word. Help us to keep our eyes fixed on Scripture as a shining lamp, and guide our daily lives in holiness until Jesus returns. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Eyewitnesses of Majesty",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/eyewitnesses-majesty"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "The Morning Star of Hope",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-june-29-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

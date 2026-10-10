@@ -1,0 +1,136 @@
+{
+ "id": "42-010-025",
+ "title": "The Parable of the Good Samaritan",
+ "refs": [
+  "Luke 10:25-37"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42010036,
+   "end": 42010037,
+   "ref": "Luke 10:36-37",
+   "ranges": [
+    [
+     42010036,
+     42010037
+    ]
+   ],
+   "title": "\"Go and Do Likewise\"",
+   "key_verse": [
+    42010037,
+    42010037
+   ],
+   "reflect": [
+    {
+     "text": "Jesus asked which traveler proved to be a true neighbor, and the answer was the man who showed mercy. In our daily lives, we can easily act like the other travelers. The priest kept up an appearance of godliness while hiding a hard heart, and the Levite let busyness and self-concern crowd out his care. In our fast-paced world, our full schedules can blind us to people who are hurting. We have to make a conscious choice to slow down and notice those around us.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "The Samaritan crossed social boundaries and gave his own time and money to help a stranger. Jesus directs us to live with that same readiness. Rather than making excuses, delaying, or letting fear take over, we are called to step in quickly. Daily prayer softens our hearts to see strangers with kindness, and remembering how God has shown us mercy in our past troubles helps us treat others with gentle empathy.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Living out Christ's command does not require special standing or wealth. As Jim Burns points out, Christ calls ordinary people to demonstrate extraordinary love through practical acts of kindness. When we share our resources and time to help someone in distress, we reflect the neighborly love Jesus calls us to show.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What parts of your regular routine might be keeping you from noticing people in need?",
+    "How can remembering God's mercy to you encourage you to offer your time to someone else?"
+   ],
+   "prayer": "Lord, slow us down when our busy lives cause us to overlook hurting people. Remind us of the mercy you have shown us so that our hearts stay tender toward strangers. Give us the courage and generosity to meet practical needs with love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jim Burns",
+     "work": "An Ordinary Act of Extraordinary Love",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-mar-8-2010-11627199.html"
+    },
+    "D4": {
+     "author": "Meg Bucher",
+     "work": "5 Ways Christians Can Apply the Parable of the Good Samaritan Today",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/bible-parable-of-the-good-samaritan.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 42010025,
+   "end": 42010037,
+   "ref": "Luke 10:25-37",
+   "ranges": [
+    [
+     42010025,
+     42010037
+    ]
+   ],
+   "title": "The Parable of the Good Samaritan",
+   "key_verse": [
+    42010027,
+    42010027
+   ],
+   "reflect": [
+    {
+     "text": "The legal expert came to test Jesus, assuming that eternal life could be earned by keeping God's rules. When asked about the Law, the man correctly answered that we must love God completely and love our neighbor as ourselves. Yet he tried to narrow the definition of neighbor to justify himself. Jesus used the high standard of God's commands to show that no one can earn salvation on their own, highlighting our great need for a Savior.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Genuine love for God always shows itself in how we treat other people. Jesus surprised his listeners by choosing a Samaritan as the example of mercy, because Jews and Samaritans shared deep mutual hostility. God's command to love extends beyond ethnicity, social rank, or family lines. While believers share spiritual brotherhood only in Christ, every human being is made in the image of God and belongs to our neighborhood.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The Samaritan's rescue of the battered traveler paints a picture of Jesus' saving grace toward helpless sinners. The gospel removes human prejudice and teaches us that living faith will always show itself in sacrificial love for those around us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do you find yourself trying to prove your own goodness instead of resting in Christ's grace?",
+    "Are there certain people or groups that you find difficult to view as your neighbors?"
+   ],
+   "prayer": "Heavenly Father, thank you that Jesus rescued us when we were completely helpless and unable to save ourselves. Help us rest in your grace rather than trying to justify ourselves. Remove all prejudice from our hearts so we can love every neighbor you place in our path. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ken Jones",
+     "work": "Lessons from the Good Samaritan",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lessons-from-the-good-samaritan"
+    },
+    "D3": {
+     "author": "Tabletalk Magazine",
+     "work": "The Parable of the Good Samaritan",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/parable-good-samaritan"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

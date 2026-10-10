@@ -1,0 +1,91 @@
+{
+ "id": "40-022-041",
+ "title": "Whose Son Is the Christ?",
+ "refs": [
+  "Matthew 22:41-46",
+  "Mark 12:35-37",
+  "Luke 20:41-44"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40022041,
+   "end": 40022046,
+   "ref": "Matthew 22:41-46; Mark 12:35-37; Luke 20:41-44",
+   "ranges": [
+    [
+     40022041,
+     40022046
+    ],
+    [
+     41012035,
+     41012037
+    ],
+    [
+     42020041,
+     42020044
+    ]
+   ],
+   "title": "David's Son and David's Lord",
+   "key_verse": [
+    40022042,
+    40022042
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus asked the religious leaders about the Messiah, they rightly answered that He would be David's physical descendant. Yet Jesus showed them from Psalm 110 that David himself called this promised King his Lord. Many people in that day were merely hoping for an earthly ruler to overthrow Rome and bring political reform. But Jesus pointed out that the Messiah is far greater than David. He is not just a mortal king; He shares God's own divine throne and authority.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Our deepest human need is not political change, but rescue from sin. Jesus came as the divine King who alone can defeat our ultimate spiritual enemies. True faith means confessing that Jesus is both David's son in human history and David's eternal Lord.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This brings us to the central question: what do you think of Christ? As Charles Spurgeon noted, this is \"the great test of your soul's health.\" You may feel weak, poor, or full of struggles, but what matters most is whether Jesus is great in your eyes. When He holds the highest place in your heart, your soul is safe in His care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Does Jesus hold the highest place of honour in your heart and daily life?",
+    "Do you trust in Christ to rescue you from sin rather than looking to earthly leaders for ultimate hope?"
+   ],
+   "prayer": "Lord Jesus, we praise You as the divine King who sits at the right hand of God. Thank You for conquering sin and ruling over every enemy. Give us grace to honour You above all else each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 29",
+     "on": "Matthew 22:42",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "David's Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/davids-lord"
+    },
+    "D3": {
+     "author": "Ann Spangler",
+     "work": "Praying the Names of God - April 28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/prayingnamesgod/praying-the-names-of-god-may-8.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

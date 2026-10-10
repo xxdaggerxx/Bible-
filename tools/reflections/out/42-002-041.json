@@ -1,0 +1,66 @@
+{
+ "id": "42-002-041",
+ "title": "The Boy Jesus at the Temple",
+ "refs": [
+  "Luke 2:41-52"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42002041,
+   "end": 42002052,
+   "ref": "Luke 2:41-52",
+   "ranges": [
+    [
+     42002041,
+     42002052
+    ]
+   ],
+   "title": "Growing in the Father's House",
+   "key_verse": [
+    42002052,
+    42002052
+   ],
+   "reflect": [
+    {
+     "text": "When Mary and Joseph found young Jesus in the temple courts, He was completely focused on His Father. Jesus had an inner pull toward God that shaped His whole life. He did not live for personal ambition or secondary pursuits, but centered everything on God. When Mary asked Him why He stayed behind, she did not yet understand, but we are free to bring our honest questions to Jesus too. The highest aim of our walk with Christ is to be so devoted to God that people naturally expect to find us in Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Luke also shows us that spiritual maturity never happens by accident. Our hearts naturally drift away without clear intention. Jesus Himself grew across four key areas: in wisdom, in physical growth, and in favor with God and other people. These areas give us a simple daily dashboard to check our mental, physical, spiritual, and relational health. Setting aside just a few minutes every day to look at these areas can help us notice drift early and make needed changes.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Which of the four areas of health—mental, physical, spiritual, or relational—needs your intentional attention today?",
+    "What is one honest question or concern you can bring to Jesus right now?"
+   ],
+   "prayer": "Lord, draw our hearts to be near You just as Jesus was drawn to His Father. Help us not to drift, but to grow each day in our minds, bodies, relationships, and faith. Keep our lives centered on You above all other pursuits. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Dave Ferguson",
+     "work": "You Don’t Drift Into Spiritual Health: What Luke 2:52 Teaches Us About Becoming More Like Jesus",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/learn/biblical-living/discipleship/becoming-more-like-jesus/"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 133: Luke 2:48–50",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-133-luke-2-4850.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,14 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://www.biblegateway.com/passage/?search=Acts+6%3A1-7&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Acts+6%3A1-7&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Acts+6%3A1-7&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Acts+6&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Acts+6&version=KJV",
+  "https://www.biblegateway.com/passage/?search=Acts+6&version=NASB",
+  "https://www.biblegateway.com/passage/?search=Acts+6&version=NKJV"
+ ],
+ "cost": 0.029453825000000003,
+ "model": "google/gemini-3.8-flash"
+}

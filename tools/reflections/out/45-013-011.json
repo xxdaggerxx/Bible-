@@ -1,0 +1,82 @@
+{
+ "id": "45-013-011",
+ "title": "The Day Is Near",
+ "refs": [
+  "Romans 13:11-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45013011,
+   "end": 45013014,
+   "ref": "Romans 13:11-14",
+   "ranges": [
+    [
+     45013011,
+     45013014
+    ]
+   ],
+   "title": "Waking Up to the Approaching Day",
+   "key_verse": [
+    45013011,
+    45013011
+   ],
+   "reflect": [
+    {
+     "text": "Time is passing quickly, and our life here is brief. Scripture reminds us that the present age is drawing to an end, and our final salvation is closer today than when we first trusted Christ. Full salvation includes God declaring us right with Him, changing us day by day, and finally freeing us from all sin when Jesus returns. We can trust that God will finish the good work He began in us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because our time is short, it is urgent that we wake up from spiritual slumber and lay aside dark deeds. Like Augustine, who turned away from his sinful habits when he read these verses, we are called to cast off sin and run to Christ. We do not have endless time to turn from darkness or to share Christ with others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our own good works cannot save us, since only Jesus fulfilled God's law completely. Instead, we are called to clothe ourselves with Christ and live as His devoted servants every day. When we look to Jesus as our Master, we seek to please Him in our choices, avoid feeding selfish desires, and make sure we do not cause others to stumble.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that the return of Jesus is drawing nearer change the way you spend your time today?",
+    "Are there old habits of darkness you need to turn away from so you can honor Christ and encourage others?"
+   ],
+   "prayer": "Lord Jesus, thank You that our complete salvation is nearer today than when we first believed. Help us to wake up, turn away from sinful habits, and clothe ourselves with Your love and truth. Guide our choices today so that we honor You as our Master and build up the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Romans 13:14",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Billy Graham",
+     "work": "It’s Later Than You Think",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/lp/75-day-devotional-day-12"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Salvation Draws Near",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/salvation-draws-near"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

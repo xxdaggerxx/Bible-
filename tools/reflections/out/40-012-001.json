@@ -1,0 +1,83 @@
+{
+ "id": "40-012-001",
+ "title": "The Lord of the Sabbath",
+ "refs": [
+  "Matthew 12:1-8",
+  "Mark 2:23-28",
+  "Luke 6:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40012001,
+   "end": 40012008,
+   "ref": "Matthew 12:1-8; Mark 2:23-28; Luke 6:1-5",
+   "ranges": [
+    [
+     40012001,
+     40012008
+    ],
+    [
+     41002023,
+     41002028
+    ],
+    [
+     42006001,
+     42006005
+    ]
+   ],
+   "title": "The True Gift of the Sabbath",
+   "key_verse": [
+    41002027,
+    41002028
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus and His disciples walked through the fields, the religious leaders watched closely. The Pharisees had turned God's day of rest into a long, heavy list of strict rules. Instead of bringing peace, their traditions weighed people down. Jesus reminded them that God created human beings with a real need for physical and spiritual renewal. God gave the Sabbath as a blessing to restore us, not as a difficult test to pass.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Taking time to step away from our regular labor and daily screens shows our trust in God. It proves that we rely on Him to provide for our needs rather than counting only on our own constant striving. God wants us to receive this day as a welcome gift of mercy rather than an exhausting chore.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus also declared that He is the Lord of the Sabbath. In doing this, He showed His divine authority as God. Because Jesus is the author of God's law, He shows us how to understand it rightly. He frees us from burdensome checklists so we can find true refreshment in Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you view resting as a helpful gift from God or as an unwelcome rule?",
+    "What work or worries do you need to set aside to trust God's care for you?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving us rest for our bodies and our souls. Help us to put aside our busy work and trust that You will provide for us. Teach us to follow You as our Lord and find true renewal in Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Glynnis Whitwer",
+     "work": "How to Honor the Sabbath",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-august-15-2017.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Lord of the Sabbath",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-sabbath"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,128 @@
+{
+ "id": "55-004-001",
+ "title": "Preach the Word",
+ "refs": [
+  "2 Timothy 4:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 55004001,
+   "end": 55004002,
+   "ref": "2 Timothy 4:1-2",
+   "ranges": [
+    [
+     55004001,
+     55004002
+    ]
+   ],
+   "title": "\"Preach the Word\"",
+   "key_verse": [
+    55004002,
+    55004002
+   ],
+   "reflect": [
+    {
+     "text": "Paul urges us to share God's truth with serious urgency. Jesus will return one day to judge the living and the dead, so our time to tell others about Him is limited. We are called to stand firm and speak His message faithfully. That means we should never water down or change hard truths just to make them fit modern culture.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Sharing the gospel should happen at all times, whether in planned moments or in surprise conversations during our ordinary week. When we speak with people, we need to address their real fears, doubts, and life situations. Guiding, correcting, and encouraging others takes steady patience. Spiritual fruit often grows slowly, and we must trust God alone to open hearts to salvation.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Along with sharing our faith ourselves, we are called to value our church leaders. We should actively support and appreciate pastors who faithfully teach God's Word week after week, helping us all remain true to the gospel.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you talk about your faith, are you tempted to soften hard biblical truths to avoid making people uncomfortable?",
+    "How can you show patience and support this week to someone who is slowly learning God's truth?"
+   ],
+   "prayer": "Lord Jesus, remind us that You are coming back, and give us courage to share Your truth with love and honesty. Teach us to listen with humility to others and to be patient as You work in their lives. Please bless and strengthen the pastors who faithfully preach Your Word each week. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Ready in All Seasons",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ready-in-all-seasons"
+    },
+    "D3": {
+     "author": "Dr. Michael A. Youssef",
+     "work": "Speak the Truth in the Last Days",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-september-24-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 55004001,
+   "end": 55004008,
+   "ref": "2 Timothy 4:1-8",
+   "ranges": [
+    [
+     55004001,
+     55004008
+    ]
+   ],
+   "title": "A Crown Laid Up for You",
+   "key_verse": [
+    55004008,
+    55004008
+   ],
+   "reflect": [
+    {
+     "text": "Near the end of his earthly race, Paul looked forward to the righteous crown waiting for him in heaven. Many sincere believers still wrestle with fear, quietly wondering if they will really make it home to glory. Yet Charles Spurgeon assures us that \"there shall be no vacant thrones in glory\" when God gathers His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If you have repented of sin and put your faith in Jesus, your heavenly inheritance is completely safe. God has prepared an eternal place specifically for each of His children. That promised crown and rest belong to you through Christ, and no one else can take your place.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We do not have to live in dread of losing our future with God. We can look across the close of this life with quiet confidence, knowing that the Lord keeps His people secure. He will bring every one of His children safely into His presence to dwell with Him forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever fear that you might miss heaven, and how does God's promise of a secure inheritance bring you peace?",
+    "How does knowing that Jesus has a place reserved for you change the way you face your daily struggles?"
+   ],
+   "prayer": "Heavenly Father, thank You for the secure hope we have through faith in Jesus Christ. When our hearts doubt or feel afraid, help us to remember that our heavenly home is kept safe by Your grace. Give us quiet peace as we look forward to being with You forever. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 10",
+     "on": "2 Timothy 4:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

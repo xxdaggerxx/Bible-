@@ -1,0 +1,66 @@
+{
+ "id": "46-003-010",
+ "title": "Christ Our Foundation",
+ "refs": [
+  "1 Corinthians 3:10-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46003010,
+   "end": 46003015,
+   "ref": "1 Corinthians 3:10-15",
+   "ranges": [
+    [
+     46003010,
+     46003015
+    ]
+   ],
+   "title": "Building Carefully on the Right Foundation",
+   "key_verse": [
+    46003011,
+    46003011
+   ],
+   "reflect": [
+    {
+     "text": "Every life is being built on something. The apostle Paul reminds us that Jesus Christ is the only true foundation for a Christian. When our faith rests on him, our starting place is completely solid. Yet God also calls us to be careful about how we build on this foundation each day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our daily choices serve as our building materials. We choose every day between lasting virtues, like love and forgiveness, and inferior attitudes that do not honor the Lord. Our inner reasons matter just as much as external appearances. God looks past what other people see and notices the true spirit behind our actions.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "A day of testing will eventually come, and it will show the true quality of each person's work. What we do intentionally for God's glory will endure the fire and receive a reward, while worthless work will be lost. Knowing this encourages us to live with purpose and choose what truly lasts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What kind of building materials, such as love or selfish attitudes, did you choose in your actions today?",
+    "Are your daily motivations focused on pleasing other people or bringing glory to God?"
+   ],
+   "prayer": "Lord Jesus, thank you for being the secure foundation of our faith. Teach us to choose love, patience, and forgiveness in the small decisions we make every day. Check our motives and help us build a life that honors you and endures. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jim Liebelt",
+     "work": "Build It Right",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/build-it-right-homeword-july-5.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

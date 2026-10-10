@@ -1,0 +1,73 @@
+{
+ "id": "60-003-014",
+ "title": "Suffering for Righteousness",
+ "refs": [
+  "1 Peter 3:14-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 60003015,
+   "end": 60003015,
+   "ref": "1 Peter 3:15",
+   "ranges": [
+    [
+     60003015,
+     60003015
+    ]
+   ],
+   "title": "\"Always Be Prepared to Give a Defense\"",
+   "key_verse": [
+    60003015,
+    60003015
+   ],
+   "reflect": [
+    {
+     "text": "When people treat you unfairly for doing what is right, it is easy to react with anger. Yet believers are called to respond differently. Setting apart Christ as Lord in your heart means placing the situation under His control instead of acting rashly. You can remain calm and steady because you know God is present, good, and holding everything in His hands.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living with integrity is essential, but Peter explains that we must also be ready to explain our hope with words. Giving a defense does not mean apologizing for what you believe. It means sharing a clear, reasoned answer about the truth. To do this well, we need to study Scripture and understand key teachings about sin, salvation, heaven, and hell.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When questions or mistreatment come, our words and our behavior work together. Christ gives us grace—His undeserved kindness and help—to keep our emotions in check and answer others with gentleness. By speaking the truth with respect, we honor Jesus as the true guide of our lives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that God is in control help you stay calm when someone treats you unfairly?",
+    "What Bible truth about your faith could you study more closely so you are ready to explain it to someone else?"
+   ],
+   "prayer": "Lord Jesus, help us honor You as the true master of our hearts. When others challenge us or treat us unfairly, give us the grace to stay calm and control our reactions. Teach us Your truth through the Scriptures so we can clearly and gently share the reason for our hope. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Managing Mistreatment",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-february-15-2013.html"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Always Be Ready to Give an Answer",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-november-25-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

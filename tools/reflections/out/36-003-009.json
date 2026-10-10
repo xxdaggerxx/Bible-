@@ -1,0 +1,68 @@
+{
+ "id": "36-003-009",
+ "title": "A Faithful Remnant",
+ "refs": [
+  "Zephaniah 3:9-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 36003009,
+   "end": 36003013,
+   "ref": "Zephaniah 3:9-13",
+   "ranges": [
+    [
+     36003009,
+     36003013
+    ]
+   ],
+   "title": "God's Humble and Protected Remnant",
+   "key_verse": [
+    36003012,
+    36003012
+   ],
+   "reflect": [
+    {
+     "text": "When faith seems to fade away among the proud and wealthy, the Lord still keeps a humble people for Himself. Often, those who have very little worldly power or money learn best to rely on God. Feeling our own weakness and being grieved by the sin around us drives us to lean entirely on the name of the Lord. As Charles Spurgeon reminds us, Jesus shows us the character of God, and those who trust Him are left in this world for a purpose.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This remnant of believers does not fight with deceit or wicked schemes. In our own strength, we are as helpless as sheep surrounded by fierce wolves. Yet God's people do not need to tremble. We have a Shepherd who feeds us, guards us, and grants us true quietness of heart. Because Jesus is near to give us rest, no enemy can take away the peace He provides.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Am I leaning on my own strength, or am I resting entirely on the name of the Lord?",
+    "How does knowing that Jesus is our Shepherd help calm your fears today?"
+   ],
+   "prayer": "Lord, teach us to be humble and poor in spirit, looking away from ourselves to trust in Your name. When trouble surrounds us, remind us that Jesus is our caring Shepherd who guards our souls. Help us to live honestly and rest quietly in Your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 9",
+     "on": "Zephaniah 3:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 10",
+     "on": "Zephaniah 3:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

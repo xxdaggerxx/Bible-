@@ -1,0 +1,85 @@
+{
+ "id": "41-016-019",
+ "title": "The Ascension",
+ "refs": [
+  "Mark 16:19-20",
+  "Luke 24:50-53"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 41016019,
+   "end": 41016020,
+   "ref": "Mark 16:19-20; Luke 24:50-53",
+   "ranges": [
+    [
+     41016019,
+     41016020
+    ],
+    [
+     42024050,
+     42024053
+    ]
+   ],
+   "title": "Jesus Ascends and Reigns in Heaven",
+   "key_verse": [
+    41016019,
+    41016019
+   ],
+   "reflect": [
+    {
+     "text": "Jesus' life on earth was a purposeful journey toward His return to heavenly glory. His visible departure removed all doubt, showing His disciples that His saving work was fully accomplished. When Jesus took His seat at the right hand of God the Father, He began His universal rule. While we must respect human leaders, Christ alone holds supreme authority over all creation and deserves our absolute allegiance.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Before He left, Jesus lifted His hands to bless His disciples. Raising hands was a traditional sign of ongoing care. The same Savior who endured the cross continues to delight in giving His blessing to believers today. His ascension was not an end to His concern, but the start of His lasting care from heaven.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even though Jesus sits in majestic rest, He actively works alongside His people. The early disciples saw great success because their invisible Lord was with them, confirming their message. As F. B. Meyer wrote, \"This blessed partnership has never been repealed.\" When we keep our hearts clean, seek God's glory, stay united in love, and trust His Word, we can count on Jesus to work through us too.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus holds supreme authority over all creation bring you peace today?",
+    "What is one way you can faithfully rely on Jesus to work through you this week?"
+   ],
+   "prayer": "Lord Jesus, we praise You as our King who rules over all creation. Thank You for finishing the work of salvation and for blessing us with Your continuous care. Keep our hearts clean and our minds focused on Your glory. Help us trust that You are always beside us as we share Your truth with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Mark 16:20",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "His Hands Raised High",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-november-5-2025.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Ascension and Session",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ascension-and-session"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

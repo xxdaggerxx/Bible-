@@ -1,0 +1,151 @@
+{
+ "id": "46-015-035",
+ "title": "The Resurrection Body",
+ "refs": [
+  "1 Corinthians 15:35-49"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46015042,
+   "end": 46015044,
+   "ref": "1 Corinthians 15:42-44",
+   "ranges": [
+    [
+     46015042,
+     46015044
+    ]
+   ],
+   "title": "\"Raised in Glory\"",
+   "key_verse": [
+    46015043,
+    46015043
+   ],
+   "reflect": [
+    {
+     "text": "Aging, sickness, and decay are daily reminders that our present bodies are temporary. When physical strength fades, death often brings pain, bodily indignity, and weakness. Scripture does not hide from this hard reality. It frankly describes burial as being sown in dishonor. Yet just as an ordinary seed must be buried in the dirt to grow into a beautiful plant, our frail bodies must be laid in the ground before they experience the full renewal God has promised.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Jesus Himself endured deep bodily shame and suffering on the cross before He rose in power. His resurrection guarantees that God will redeem the whole person. While our future state remains partly mysterious, the risen form of Jesus gives us clear clues of what is to come. God will clothe us in an immortality that we do not have on our own, giving us spiritual bodies completely free from illness, weakness, and pain.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "This certain promise gives believers true comfort as we face bodily decline and support each other through dying. Knowing that what is buried in weakness will be raised in lasting glory turns our grief into grateful worship and praise.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the promise of a renewed body bring you peace when you experience sickness or fatigue?",
+    "Who in your life needs comfort today regarding physical suffering or the fear of death?"
+   ],
+   "prayer": "Father in heaven, thank You that our weakness and decay will not have the last word. When our bodies hurt or fail us, fix our eyes on the power and glory revealed in the resurrection of Jesus. Help us to encourage one another with this living hope. In Jesus' name, Amen.",
+   "sources": {
+    "D3": {
+     "author": "John Piper",
+     "work": "It Is Sown in Dishonor, It Is Raised in Glory",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/it-is-sown-in-dishonor-it-is-raised-in-glory"
+    },
+    "D4": {
+     "author": "Jeff Schreve",
+     "work": "A Transformation Is Coming",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-march-2.html"
+    },
+    "D5": {
+     "author": "R.C. Sproul",
+     "work": "Unraveling the Mystery",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/unraveling-mystery"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 46015035,
+   "end": 46015049,
+   "ref": "1 Corinthians 15:35-49",
+   "ranges": [
+    [
+     46015035,
+     46015049
+    ]
+   ],
+   "title": "Bearing the Likeness of Christ",
+   "key_verse": [
+    46015049,
+    46015049
+   ],
+   "reflect": [
+    {
+     "text": "People sometimes doubt whether God can raise the dead, but such questions overlook His mighty power. Everyday nature displays what God can do. An ordinary seed dies in the ground to produce new life, and creation is filled with diverse bodies, from earthly animals to glowing stars. Since God easily crafts such varied splendor throughout the universe, we can trust His power to give His people a new and higher bodily form.",
+     "sources": [
+      "D6"
+     ]
+    },
+    {
+     "text": "Scripture explains this redemption by comparing Adam and Jesus Christ. As natural descendants of Adam, we share his earthly frame and his mortality. But by God's grace, Jesus serves as our new representative. All that Christ did on our behalf counts for us. Because of our covenant union with Him, we were buried with Him, raised with Him, and welcomed into the Father's favor.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon observed, \"As is our loving Head, such is the body.\" Jesus does not share His eternal life with a mismatched body. Because our living Head is immortal and heavenly, all who belong to Him will share that same nature. We do not need to chase worldly vanities when God has honored us with a place in Christ's own family.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does looking at the variety and wonder of creation help you trust God's promises?",
+    "In what areas of life are you tempted to chase worldly things instead of resting in your union with Christ?"
+   ],
+   "prayer": "Almighty God, Your power and wisdom shine throughout all of creation. Thank You for uniting us to Jesus Christ, our heavenly representative, and for adopting us into Your family. Keep our hearts from empty distractions as we look forward to bearing the likeness of our Savior. In His name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 6",
+     "on": "1 Corinthians 15:48",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 26",
+     "on": "1 Corinthians 15:45",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "Questions about the Resurrected Body",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/questions-about-the-resurrected-body"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

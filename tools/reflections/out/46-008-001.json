@@ -1,0 +1,92 @@
+{
+ "id": "46-008-001",
+ "title": "Food Sacrificed to Idols",
+ "refs": [
+  "1 Corinthians 8:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46008001,
+   "end": 46008013,
+   "ref": "1 Corinthians 8:1-13",
+   "ranges": [
+    [
+     46008001,
+     46008013
+    ]
+   ],
+   "title": "Using Freedom in Love",
+   "key_verse": [
+    46008009,
+    46008009
+   ],
+   "reflect": [
+    {
+     "text": "Food itself does not change our standing with God, because such things are morally neutral. Scripture gives us freedom in these areas, but having correct knowledge is not enough on its own. Knowledge by itself can make us proud, while love works to build others up.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Believers in the church are at different stages of maturity and do not all see things the same way. A person from an idolatrous past may still have a sensitive conscience and feel troubled by food offered to idols. If our careless choices push someone to go against their conscience and stumble, we commit a serious offense against Christ Himself.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "True spiritual maturity willingly sets aside rights for the good of others. As F. B. Meyer wrote, 'for their sakes we must forego what is innocent and pleasant to ourselves.' Love gladly limits its own freedom so that our brothers and sisters in God's family are protected and built up in faith.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there personal freedoms or habits you enjoy that might confuse or harm a fellow believer?",
+    "How can you put the spiritual needs of others ahead of your own preferences this week?"
+   ],
+   "prayer": "Lord, thank you for the freedom we have in Christ. Protect us from pride in what we know, and fill us with genuine love for our spiritual family. Give us willing hearts to lay aside our own rights whenever it protects and strengthens our brothers and sisters. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Corinthians 8:13",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Knowing When to Eat",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/knowing-when-to-eat"
+    },
+    "D3": {
+     "author": "Michael A. Youssef, Ph.D.",
+     "work": "So That No One May Stumble",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-august-12-2026.html"
+    },
+    "D4": {
+     "author": "Grace to You",
+     "work": "Liberty, Knowledge and Love",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B140926/liberty-knowledge-and-love"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

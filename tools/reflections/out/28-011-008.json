@@ -1,0 +1,81 @@
+{
+ "id": "28-011-008",
+ "title": "God’s Love for Israel",
+ "refs": [
+  "Hosea 11:8-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 28011008,
+   "end": 28011012,
+   "ref": "Hosea 11:8-12",
+   "ranges": [
+    [
+     28011008,
+     28011012
+    ]
+   ],
+   "title": "The Lord's Sparing Mercy",
+   "key_verse": [
+    28011009,
+    28011009
+   ],
+   "reflect": [
+    {
+     "text": "Israel repeatedly turned away from God and deserved complete ruin, just like ancient cities that faced total judgment. Yet the Lord held back the full force of His anger. His choice to spare them was not based on their good behavior, but on His sovereign grace, which is God's kindness given to people who do not deserve it. The faithful compassion God showed to Israel in the Old Testament is the very same unchanging love He offers to us today.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we fall into sin, we are dealing with God and not with another human being. As Charles Spurgeon wrote, \"If He had been man, He would long ago have cut you off.\" Human patience soon runs out, but God is patient beyond measure. Even when our sins feel overwhelming, the Lord invites us to confess our wrongs and turn to Jesus, where we find true forgiveness instead of condemnation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God promises to keep and restore His people through Christ, we do not need to live in fear of being abandoned. Remembering His deep compassion brings real comfort to our souls. Seeing how tenderly the Lord treats us encourages us to love Him in return and follow Him with sincere, grateful obedience.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God is far more patient than any human change how you bring your sins to Him?",
+    "In what part of your daily walk can you show gratitude for God's sparing mercy?"
+   ],
+   "prayer": "Lord God, thank You that Your mercy is greater than our failures. We praise You that You are God and not man, always patient and ready to forgive through Christ. Help us to rest securely in Your unfailing love. Lead us to walk faithfully before You with thankful hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 16",
+     "on": "Hosea 11:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Crosswalk.com",
+     "work": "Time with God - Dec. 8, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-dec-8-2010-11642390.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord's Tender Compassion",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lords-tender-compassion"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

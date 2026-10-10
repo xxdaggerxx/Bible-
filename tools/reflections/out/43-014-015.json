@@ -1,0 +1,81 @@
+{
+ "id": "43-014-015",
+ "title": "Jesus Promises the Holy Spirit",
+ "refs": [
+  "John 14:15-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43014015,
+   "end": 43014026,
+   "ref": "John 14:15-26",
+   "ranges": [
+    [
+     43014015,
+     43014026
+    ]
+   ],
+   "title": "Never Left Alone",
+   "key_verse": [
+    43014015,
+    43014015
+   ],
+   "reflect": [
+    {
+     "text": "Jesus promised that He would not leave His followers as orphans. Even though He returned to the Father, He did not abandon us without help. As Charles Spurgeon noted, Jesus is our comfort, and \"none can prevent His coming\" back to His own people. Even when we feel a sense of distance or loss, we can hold onto His certain promise that He will come to us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "To care for us in the meantime, the Father gave us the Holy Spirit to stay with us forever. The Spirit lives in and among believers, guiding our steps and giving us life. Without His power, we can do nothing of lasting value. Too often we rush ahead into our daily tasks without looking to Him. Yet the Spirit is patient, kind, and ready to help whenever we turn to Him with humble hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus also promises to make Himself known to those who love and obey Him. When the Lord draws near in this special way, it changes our lives. Experiencing His presence brings deep joy, true humility, and a desire to live holy lives that honor Him. Obedience is not about earning His love, but about walking closely with the Savior who has made His home with us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to rush through your day on your own strength, or do you ask the Holy Spirit for His guidance?",
+    "How can loving obedience to Jesus help you enjoy His presence today?"
+   ],
+   "prayer": "Lord Jesus, thank You for the promise that You will never leave us alone as orphans. Holy Spirit, guide our hearts and give us the strength to obey Your word each day. Help us to walk humbly before You and to delight in Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 12",
+     "on": "John 14:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 12",
+     "on": "John 14:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 4",
+     "on": "John 14:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

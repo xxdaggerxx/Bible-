@@ -1,0 +1,78 @@
+{
+ "id": "47-011-001",
+ "title": "Paul and the False Apostles",
+ "refs": [
+  "2 Corinthians 11:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47011001,
+   "end": 47011003,
+   "ref": "2 Corinthians 11:1-3",
+   "ranges": [
+    [
+     47011001,
+     47011003
+    ]
+   ],
+   "title": "\"Pure Devotion to Christ\"",
+   "key_verse": [
+    47011003,
+    47011003
+   ],
+   "reflect": [
+    {
+     "text": "As believers, our primary identity is that of a cherished bride promised to Jesus. We are defined not by what we achieve, but by Christ's great love and sacrifice for us. Yet our enemy constantly tries to draw our hearts away from simple, wholehearted affection for our Savior. He wants to distract us from resting in the victory that Christ has already won for us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This danger often looks harmless at first. Just as Eve was tricked by appealing fruit, we are often tempted by things that appear comfortable, peaceful, or deserved. Temptation rarely looks dangerous on the surface, but giving in to compromise always damages our spiritual walk. Because of this, we must continually measure our feelings and desires against God's unchanging truth.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Staying close to Jesus requires simplicity of heart. Overthinking and human analysis cannot clear away spiritual confusion. True spiritual clarity comes when we surrender our thoughts and imaginations to Christ and follow Him with prompt obedience. Even leaving a small part of our lives outside the Holy Spirit's control clouds our sight, but choosing simple obedience keeps our devotion pure.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What attractive ideas or desires might be pulling your focus away from simple love for Jesus?",
+    "Is there an area of your life where you need to practice prompt obedience rather than overthinking?"
+   ],
+   "prayer": "Lord Jesus, thank You for loving us and calling us Your cherished bride. Protect our minds and hearts from subtle temptations that look harmless. Help us to obey You quickly, surrender our thoughts to You, and keep our love for You pure and simple. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Oswald Chambers",
+     "work": "Imagination versus Inspiration",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/modern-classic/imagination-versus-inspiration/"
+    },
+    "D2": {
+     "author": "Scotty Smith",
+     "work": "A Prayer of Sincere and Pure Devotion to Jesus",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/a-prayer-of-sincere-and-pure-devotion-to-jesus/"
+    },
+    "D3": {
+     "author": "Lou Ann Prater",
+     "work": "Fluffy Deception",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-11-14-03-1230385.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

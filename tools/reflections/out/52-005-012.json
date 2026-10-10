@@ -1,0 +1,66 @@
+{
+ "id": "52-005-012",
+ "title": "Christian Living",
+ "refs": [
+  "1 Thessalonians 5:12-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 52005016,
+   "end": 52005018,
+   "ref": "1 Thessalonians 5:16-18",
+   "ranges": [
+    [
+     52005016,
+     52005018
+    ]
+   ],
+   "title": "\"Give Thanks in Every Circumstance\"",
+   "key_verse": [
+    52005018,
+    52005018
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to choose joy, keep praying, and give thanks no matter what happens around us. When hard trials or scary health news come our way, it is easy to let fear and suffering take over our thinking. But even in painful seasons, the gift of salvation through Jesus gives us an unfailing reason to be thankful. Making a deliberate choice to list our everyday blessings helps turn our eyes back to God's love and faithfulness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Scripture also tells us to pray without ceasing as a vital way God gives us grace and strength. In real life, staying faithful in our prayer habits is often very difficult, and many people end up neglecting their daily fellowship with the Lord. Practical frameworks like the ACTS model can help guide our thoughts toward God's character and kingdom. Praying through the Psalms also gives us God's own words to shape our personal and church prayers.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily blessings can you thank God for today, even if you are facing difficult trials?",
+    "How could using the Psalms or a simple prayer model help you pray more steadily throughout your day?"
+   ],
+   "prayer": "Father, thank you for the gift of salvation in Jesus, which gives us an unfailing reason to rejoice. When fear or trials pull our focus away, remind us of your steady love and faithfulness. Help us build steady habits of prayer so we can walk closely with you each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Unceasing Prayer",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/unceasing-prayer"
+    },
+    "D2": {
+     "author": "Susan Aken",
+     "work": "Finding Gratitude in the Midst of Difficulties",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/finding-gratitude-in-the-midst-of-difficulties.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

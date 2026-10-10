@@ -1,0 +1,67 @@
+{
+ "id": "29-001-013",
+ "title": "A Call to Repentance",
+ "refs": [
+  "Joel 1:13-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 29001013,
+   "end": 29001020,
+   "ref": "Joel 1:13-20",
+   "ranges": [
+    [
+     29001013,
+     29001020
+    ]
+   ],
+   "title": "Turning to God in Hard Times",
+   "key_verse": [
+    29001014,
+    29001014
+   ],
+   "reflect": [
+    {
+     "text": "The prophet Joel saw terrible ruin across the land. Locusts had stripped the fields bare, granaries lay in ruins, and even the cattle and sheep groaned in distress for lack of pasture and water. In the middle of this deep crisis, Joel summoned the priests, leaders, and all the people to stop their normal work, come to the house of the Lord, and cry out to Him together.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer reminds us that when difficult trials and confusion enter our lives, we need to step back from our ordinary routines. As Meyer notes, God \"does not afflict willingly,\" so hard times should prompt us to lay bare our hearts and discover why we have drifted from Him. Sufferings are often God's call for us to examine our lives honestly.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Throughout history, seasons of distress have moved believers to unite in urgent prayer. A shared desire to return to God can bring spiritual renewal to the whole church and bear fruit for His kingdom. Rather than waiting for others, we can bring our own troubles and needs to the Lord right now, trusting Him to hear our cries.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When unexpected troubles enter your life, do you pause your normal routine to seek God in prayer?",
+    "What hidden sins or distractions might the Lord be asking you to lay before Him today?"
+   ],
+   "prayer": "Lord God, when trouble and sorrow touch our lives, teach us to turn our hearts back to You. Forgive our wanderings and reveal anything that stands between us and Your will. Draw Your people together in earnest prayer, and revive our devotion to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Joel 1:14",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

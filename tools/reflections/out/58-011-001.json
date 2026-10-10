@@ -1,0 +1,72 @@
+{
+ "id": "58-011-001",
+ "title": "Faith and Assurance",
+ "refs": [
+  "Hebrews 11:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58011001,
+   "end": 58011003,
+   "ref": "Hebrews 11:1-3",
+   "ranges": [
+    [
+     58011001,
+     58011003
+    ]
+   ],
+   "title": "Confidence in What We Hope For",
+   "key_verse": [
+    58011001,
+    58011001
+   ],
+   "reflect": [
+    {
+     "text": "Faith can feel hard to understand, especially when we wonder how we can know God is truly real. Yet biblical assurance acts like reliable evidence, proving that our Christian hope is trustworthy. God meets us in our deepest places, filling the inner emptiness that human relationships cannot satisfy. As we seek Him with our whole heart, we encounter His presence through sincere acts of love and through timely words in Scripture.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This steady confidence also sustains us when life is painful. When grief or hardship threatens to overwhelm us, faith provides the purpose and strength we need to keep moving forward. We do not have to hide our doubts or spiritual dry spells from God. He invites us to bring our honest struggles directly to Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "By turning to daily prayer and reading the Bible, we nurture a deeper trust in God. Anchoring our assurance in Him empowers us to walk through trials without losing heart. Even when we cannot see the outcome, we can rest on His enduring promises.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What honest doubts or struggles do you need to bring to God in prayer today?",
+    "How have timely words from Scripture or acts of love helped you notice God's reality?"
+   ],
+   "prayer": "Lord, thank You for giving us a trustworthy hope that anchors our hearts. When trials or questions make us feel unsteady, remind us of Your faithful presence. Help us to seek You with our whole heart through daily prayer and Your Word. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Noelle Kirchner",
+     "work": "How You Can Know God Is Real",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/ibelieve-truth-a-devotional-for-women-may-12.html"
+    },
+    "D2": {
+     "author": "Vivian Bricker",
+     "work": "Cultivating the Faith to Keep Going",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/cultivating-the-faith-to-keep-going-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "40-018-019",
+ "title": "Ask in My Name",
+ "refs": [
+  "Matthew 18:19-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40018019,
+   "end": 40018020,
+   "ref": "Matthew 18:19-20",
+   "ranges": [
+    [
+     40018019,
+     40018020
+    ]
+   ],
+   "title": "Where Two or Three Gather",
+   "key_verse": [
+    40018020,
+    40018020
+   ],
+   "reflect": [
+    {
+     "text": "Many believers often quote Jesus' words about two or three gathering together whenever they meet in small prayer groups. We commonly use this promise to seek or confirm that Christ is present with us. Yet in its original setting in the Bible, Jesus is speaking about something quite specific. He is addressing interpersonal sin, church accountability, and the difficult work of reconciliation, which means restoring broken relationships.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This phrase about two or three people points back to Old Testament laws that required multiple witnesses to settle a matter justly. Jesus assures His followers that He offers His spiritual presence and divine backing when believers gather to help restore someone who has wandered into sin. He stands with the church as it seeks fairness, peace, and healing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Remembering this context also encourages our everyday prayer life. We do not need a crowd for God to hear us. God is omnipresent, meaning He is present everywhere at all times. He listens to our prayers just as fully when we are praying completely alone as when we are gathered with others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus stands with us in restoring broken relationships change how we approach conflict with others?",
+    "How does the truth that God is always everywhere bring you comfort when you pray by yourself?"
+   ],
+   "prayer": "Lord, thank You for Your promise to be with us when we seek reconciliation and peace. Help us to handle conflict with justice, patience, and love. Remind us each day that You are always near, hearing our prayers even when we are completely alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Liz Auld",
+     "work": "Why the Context \"Where Two or Three Are Gathered\" (Matthew 18:20) Is So Important",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/why-the-context-of-matthew-18-20-is-important.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

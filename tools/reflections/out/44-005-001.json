@@ -1,0 +1,74 @@
+{
+ "id": "44-005-001",
+ "title": "Ananias and Sapphira",
+ "refs": [
+  "Acts 5:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44005004,
+   "end": 44005004,
+   "ref": "Acts 5:4",
+   "ranges": [
+    [
+     44005004,
+     44005004
+    ]
+   ],
+   "title": "\"You Have Not Lied to Men\"",
+   "key_verse": [
+    44005004,
+    44005004
+   ],
+   "reflect": [
+    {
+     "text": "Peter reminded Ananias that the land belonged to him and he was free to keep the money. The real problem was not keeping some of the profit, but putting on a false show. Ananias and Sapphira pretended to give everything so they would look generous and deeply devoted to others. In our world today, people often bend the truth or hold back facts to protect their image. Yet hiding the truth to create a false impression is still dishonesty.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Peter made it clear that misrepresenting the truth to other believers is really lying to God Himself. We might fool the people around us with an outward act, just as Judas hid his betrayal behind friendly gestures. But God sees every hidden motive and cannot be tricked. Many people want to see powerful miracles like the early church experienced, but they forget that God's great holiness brings serious accountability.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because the Lord knows our hearts completely, Scripture calls us to speak the truth plainly to one another. Instead of making excuses to look good, we need to examine our own motives. When we notice any deceit in our words or actions, we must confess it to God and commit to complete honesty.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there moments when you try to appear more generous or devoted than you truly are?",
+    "What helps you choose complete honesty instead of trying to manage what others think of you?"
+   ],
+   "prayer": "Lord, you know every hidden thought in our hearts, and we cannot fool you. Forgive us for the times we bend the truth or try to protect our reputation with false impressions. Help us to speak the truth plainly and live with honest hearts before you.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "Putting on a Show",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-may-7-2024.html"
+    },
+    "D2": {
+     "author": "Lynette Kittle",
+     "work": "Seek to Speak the Truth to Each Other",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/seek-to-speak-the-truth-to-each-other-bible-study-minute-october-16-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

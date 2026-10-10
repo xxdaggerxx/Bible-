@@ -1,0 +1,74 @@
+{
+ "id": "39-001-006",
+ "title": "The Polluted Offerings",
+ "refs": [
+  "Malachi 1:6-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 39001006,
+   "end": 39001014,
+   "ref": "Malachi 1:6-14",
+   "ranges": [
+    [
+     39001006,
+     39001014
+    ]
+   ],
+   "title": "Giving God Our Best Honor",
+   "key_verse": [
+    39001006,
+    39001006
+   ],
+   "reflect": [
+    {
+     "text": "In Malachi's day, priests brought blind, sick, and injured animals to God's altar. They treated worship as a tiresome chore and gave God their cast-offs instead of their best. God asked them where His rightful honor and respect had gone. When we become complacent, or careless in our faith, we can fall into the same trap. We risk treating holy things as an unwelcome burden, letting apathy and boredom quietly slip into our spiritual lives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This half-hearted worship can show up in our daily lives as well. When we offer God sleepy leftovers of our time, neglect Scripture through distraction, or serve with divided hearts, we parallel those ancient priests. God does not accept careless routines or flawed offerings. Approaching our Heavenly Father requires genuine reverence and awakened awe rather than casual habit.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Breaking free from spiritual complacency starts with taking an honest look at our personal spiritual health. We need to confess our apathy, turn away from divided loyalty, and ask God to renew our intentional fervor. When we remember who our great King is, worship ceases to be a nuisance and becomes an honor.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Am I giving God my best focus and time, or just the tired leftovers of my day?",
+    "In what areas of worship or service have I allowed careless routine to replace genuine reverence?"
+   ],
+   "prayer": "Lord, forgive us when we grow complacent and treat worship as a burden. Awaken our hearts to Your greatness so that we honor You with real awe and sincere devotion. Help us turn away from sleepy routines and joyfully give You our best.",
+   "sources": {
+    "D1": {
+     "author": "Greg Morse",
+     "work": "'I’ve Lost My Taste for God’s Word': Bad Reasons We Neglect the Bible",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/ive-lost-my-taste-for-gods-word"
+    },
+    "D2": {
+     "author": "Will Graham",
+     "work": "Will Graham Devotion: Complacent Christians",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/articles/will-graham-devotion-complacent-christians"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "66-002-008",
+ "title": "To the Church in Smyrna",
+ "refs": [
+  "Revelation 2:8-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66002008,
+   "end": 66002011,
+   "ref": "Revelation 2:8-11",
+   "ranges": [
+    [
+     66002008,
+     66002011
+    ]
+   ],
+   "title": "Faithful Through Every Trial",
+   "key_verse": [
+    66002010,
+    66002010
+   ],
+   "reflect": [
+    {
+     "text": "Jesus knows the afflictions of His people, and He remains completely in control, even over the devil. Christ permits hard trials and persecution not to harm us, but to test and refine our faith. He sets clear limits on our suffering, reminding us that our hardships have boundaries and will not last forever.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When hardships arrive, God provides the supernatural grace—His special help and strength—to match every trial we face. Passing these tests means continuing to trust in Jesus' goodness and staying faithful to Him to the very end, even if following Him requires facing death with spiritual dignity.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We do not need to fear physical death, because Charles Spurgeon wrote that Jesus transformed it into a \"passage leading to glory.\" The true danger is the second death, which is final separation from God. Because Jesus died and rose again, everyone who overcomes through faith will be safe from that second death. Christ will reward our fidelity with the crown of life, an eternal joy that outweighs every earthly loss.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus sets limits on your trials help you endure difficult times?",
+    "What helps you keep your eyes on the promise of eternal life when your faith is tested?"
+   ],
+   "prayer": "Lord Jesus, thank You for holding our lives in Your hands and setting boundaries around our trials. Give us Your grace to stay faithful and trust Your goodness whenever our faith is tested. Help us to endure every hardship with courage, knowing You have prepared for us an eternal crown of life.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 23",
+     "on": "Revelation 2:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "When Satan Hurts Christ’s People",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/when-satan-hurts-christs-people"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 344: Revelation 2:10–11",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-344-revelation-2-1011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

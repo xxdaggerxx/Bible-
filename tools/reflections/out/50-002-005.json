@@ -1,0 +1,82 @@
+{
+ "id": "50-002-005",
+ "title": "The Mind of Christ",
+ "refs": [
+  "Philippians 2:5-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 50002005,
+   "end": 50002011,
+   "ref": "Philippians 2:5-11",
+   "ranges": [
+    [
+     50002005,
+     50002011
+    ]
+   ],
+   "title": "Learning the Humble Mind of Christ",
+   "key_verse": [
+    50002005,
+    50002005
+   ],
+   "reflect": [
+    {
+     "text": "Following Jesus begins on the inside. God looks at our heart attitudes rather than just our outward actions. Jesus is our supreme example of selflessness. Although He is fully God, He did not hold tightly to His divine rights. Instead, He chose to set aside His privileges and live in complete dependence on the Father's will and timing.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus lowered Himself all the way to serving others and dying like a criminal on a cross. As Charles Spurgeon wrote, \"pride cannot live beneath the cross.\" When we look at how much Jesus gave up out of love to rescue us, our pride begins to melt away. Because Jesus obeyed so completely, God raised Him to the highest place and gave Him the name above all names.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God does not ask us for flawless perfection right away, but He calls us to yield to the Holy Spirit each day. We reflect the mindset of Jesus when we put other people before ourselves and lay down selfish ambition. Instead of grumbling, we can choose gratitude, hold on to joy, and put Christ's humble love into practice.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your daily routine is it hardest to put others ahead of yourself?",
+    "How does remembering Jesus' sacrifice on the cross help you let go of pride and grumbling?"
+   ],
+   "prayer": "Lord Jesus, thank You for emptying Yourself and dying on the cross for our sake. Please shape our hearts by Your Holy Spirit so we can let go of selfish ambition and pride. Teach us to serve others with humble joy and thankfulness each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 3",
+     "on": "Philippians 2:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Meg Bucher",
+     "work": "How Can We Aim to Have the Same Attitude as Jesus?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/how-can-we-aim-to-have-the-same-attitude-as-jesus-the-crosswalk-devotional.html"
+    },
+    "D3": {
+     "author": "Chuck Swindoll",
+     "work": "Jesus Emptied Himself",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/jesus-emptied-himself"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

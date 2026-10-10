@@ -1,0 +1,81 @@
+{
+ "id": "44-026-001",
+ "title": "Paul’s Testimony to Agrippa",
+ "refs": [
+  "Acts 26:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44026001,
+   "end": 44026023,
+   "ref": "Acts 26:1-23",
+   "ranges": [
+    [
+     44026001,
+     44026023
+    ]
+   ],
+   "title": "Not Disobedient to the Heavenly Vision",
+   "key_verse": [
+    44026019,
+    44026019
+   ],
+   "reflect": [
+    {
+     "text": "When Paul stood before King Agrippa, he shared his story with humility and respect. He spoke in a way his listener could understand, pointing Agrippa directly to Jesus and his resurrection. God reveals himself to us as well, showing us the reality of the risen Christ and calling us to a holy life. As F. B. Meyer wrote, our vital duty is whether we will \"obey the vision\" or refuse to follow the voice that calls us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Obeying Jesus means recognizing that we belong completely to him. When we come to Christ, he gives us the new life and power we need to change direction. Real repentance means a full turnaround in mind and heart, turning away from sin to follow God. This inner change is never hidden; it always shows itself in our daily actions and choices.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because it is God alone who opens eyes and turns hearts from darkness to light, we can be patient and gentle with others. We do not need to argue or force people to believe. We simply share what Christ has done in our lives, trusting God to work in his own time.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what practical ways are your daily choices showing the fruit of turning to God?",
+    "How can you share what Jesus has done for you with gentleness and patience?"
+   ],
+   "prayer": "Lord Jesus, thank you for opening our eyes and calling us into your light. Help us to follow you faithfully each day and to show our love for you in how we live. Give us humble hearts to share your truth with patience and grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 26:19",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Walk Thru the Bible",
+     "work": "Quiet Walk - September 16",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/quiet-walk/quiet-walk-sept-16-11554191.html"
+    },
+    "D3": {
+     "author": "Lorraine Potter Zechmann",
+     "work": "What Acts 26 Taught Me About Evangelism",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/acts-26-evangelism/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

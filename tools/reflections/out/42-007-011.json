@@ -1,0 +1,82 @@
+{
+ "id": "42-007-011",
+ "title": "Jesus Raises a Widow’s Son",
+ "refs": [
+  "Luke 7:11-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42007013,
+   "end": 42007014,
+   "ref": "Luke 7:13-14",
+   "ranges": [
+    [
+     42007013,
+     42007014
+    ]
+   ],
+   "title": "\"Do Not Weep\"",
+   "key_verse": [
+    42007013,
+    42007013
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus met the funeral procession at the town gate, He saw a grieving mother who had lost her only son. Without her husband or her child, this widow was left without protection, provision, or earthly hope. Jesus did not wait for her to ask for help or prove her faith. Instead, seeing her grief stirred Him to His core, and He tenderly stepped into her sorrow with the words, \"Do not weep.\"",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus reveals God's kingdom through deep mercy rather than worldly displays. As F. B. Meyer wrote, Christ is always near, \"touched with compassion,\" seeing and understanding our deepest heartbreaks. He truly feels our pain. His comfort points us to the truth that God's love never ends, death cannot destroy that love, and one day believers will be reunited without any more goodbyes.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Then Jesus spoke to the dead youth with divine authority, commanding him to get up. In this moment, the Lord joined infinite tenderness with infinite power over death. We can take deep comfort in knowing that Jesus notices our tears, cares for our broken hearts, and has the strength to carry us through every sorrow.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus truly feels your sorrow bring you comfort today?",
+    "In what areas of your life do you need to trust the Lord's power and compassion?"
+   ],
+   "prayer": "Lord Jesus, thank You for seeing our grief and caring for our broken hearts. Thank You that Your deep compassion is matched by Your divine power over death and sorrow. Help us to rest in Your unchanging love whenever we walk through dark days. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 7:13",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Sharon Jaynes",
+     "work": "Jesus Sees a Woman’s Tears",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-3-2024.html"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "Our Compassionate Shepherd",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-september-29-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

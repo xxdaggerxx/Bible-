@@ -1,0 +1,73 @@
+{
+ "id": "58-006-013",
+ "title": "God’s Unchangeable Promise",
+ "refs": [
+  "Hebrews 6:13-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 58006018,
+   "end": 58006020,
+   "ref": "Hebrews 6:18-20",
+   "ranges": [
+    [
+     58006018,
+     58006020
+    ]
+   ],
+   "title": "\"An Anchor for the Soul\"",
+   "key_verse": [
+    58006019,
+    58006019
+   ],
+   "reflect": [
+    {
+     "text": "Early believers used the anchor as a picture of safety in the storms of life. When trouble comes, we might feel like we are being tossed about. Yet God swore by Himself to keep His word. Because His character never changes, we can be sure He will do everything He promised. Our confidence does not come from our own strength, but from running to God for shelter and trusting His power.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Daily routines and hard times can make us drift away spiritually without noticing. If we pin our hopes on easy days or good outcomes in this world, our feelings will be tossed about. But Jesus went into the very presence of God for us. He is our sure anchor, giving us peace and keeping us steady when we face anxiety or difficult situations.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Holding fast to this hope keeps us safe. Jesus has secured our place with God forever. When we keep our eyes fixed on Him, life's trials cannot sweep us away.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What earthly outcomes are you tempted to rely on instead of trusting in Jesus?",
+    "How can remembering God's unchanging promises steady your heart today?"
+   ],
+   "prayer": "Lord Jesus, thank You for going before us to be the secure anchor for our souls. When daily worries and hardships make us drift, help us place our trust in You rather than earthly things. Keep us steady in Your peace and remind us that Your promises never fail.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe (One Year Devotions for Men)",
+     "work": "Anchor for the Soul",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/anchor-for-the-soul-one-year-devotions-for-men-june-13.html"
+    },
+    "D2": {
+     "author": "Jessica Van Roekel",
+     "work": "A Prayer to Be Anchored in Hope",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-be-anchored-in-hope.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

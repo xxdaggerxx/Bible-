@@ -1,0 +1,75 @@
+{
+ "id": "28-013-009",
+ "title": "Death and Resurrection",
+ "refs": [
+  "Hosea 13:9-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 28013014,
+   "end": 28013014,
+   "ref": "Hosea 13:14",
+   "ranges": [
+    [
+     28013014,
+     28013014
+    ]
+   ],
+   "title": "\"I Will Redeem Them from Death\"",
+   "key_verse": [
+    28013014,
+    28013014
+   ],
+   "reflect": [
+    {
+     "text": "Israel turned away into evil, and God judged them with death and exile. Yet death is not good in itself. God allowed it for a time to purge His people, protect a faithful remnant, and show His ultimate victory. In His plan, death strangely becomes the pathway that leads into true life. Even while judging their sins, God's deep and unchanging love meant He resolved to rescue His chosen people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The grave may look strong, but God is far stronger. When believers die, we do not truly lose, because we go to be with Christ. God promised to buy His people back from the power of death. This promise reached its clearest turning point when Jesus rose from the dead, stripping death of its painful sting.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The full victory will be seen when Jesus returns. Our dying bodies will be raised to live forever, made like His glorious body. As F. B. Meyer noted, \"Not one of the redeemed shall remain in the prison-house.\" Death will be completely swallowed up and defeated forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus defeated death change the way you think about loss and grief?",
+    "Where do you need to trust that God can bring new life out of a hard situation?"
+   ],
+   "prayer": "Lord God, thank You for Your unchanging love that delivers us from sin and the grave. Thank You that Jesus rose from the dead, taking away death's sting for all who belong to Him. Help us to live with quiet courage today, trusting in the promise of Your coming victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hosea 13:14",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Sting of Death",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sting-death"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

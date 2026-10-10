@@ -1,0 +1,90 @@
+{
+ "id": "29-002-001",
+ "title": "The Army of Locusts",
+ "refs": [
+  "Joel 2:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 29002001,
+   "end": 29002011,
+   "ref": "Joel 2:1-11",
+   "ranges": [
+    [
+     29002001,
+     29002011
+    ]
+   ],
+   "title": "The Lord and His Mighty Camp",
+   "key_verse": [
+    29002011,
+    29002011
+   ],
+   "reflect": [
+    {
+     "text": "The prophet Joel sounded a trumpet alarm because the Day of the Lord was near. The people of Judah had taken God's favor for granted, wrongly thinking judgment could never reach them. Yet the destructive army of locusts sweeping over the land was a real foretaste of God's final judgment. While Jesus first arrived humbly in a manger, Scripture reminds us that He is coming again as a reigning King, bringing lasting peace and renewal for His people.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The Lord Himself commands this army, and all of creation answers His call. From tiny insects to the stars and winds, every creature serves His purpose and moves in perfect order without breaking rank. As Charles Spurgeon noted, \"His camp is very great.\" It is foolish to resist such a mighty Ruler. Instead, we are called to make peace with Him and enlist under His banner through the grace of Jesus.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that Christ's return draws closer each day calls us to turn from sin and live for Him now. We are invited to walk humbly in our places, avoid envy, and honor God in our daily responsibilities. While we await His coming, we have the joy of serving Him each day and sharing His good news with others.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you surrendered your life to King Jesus and sought peace under His banner?",
+    "How can you fulfill God's purpose today by loving others and sharing His good news?"
+   ],
+   "prayer": "Lord Jesus, You are the mighty King of heaven and earth, and all creation obeys Your voice. Forgive us for the times we take Your kindness for granted or forget that Your day is coming. Help us to walk humbly in our callings, keep step together in love, and point others to Your salvation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 18",
+     "on": "Joel 2:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 24",
+     "on": "Joel 2:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Army of the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/army-lord"
+    },
+    "D4": {
+     "author": "Sharon Jaynes",
+     "work": "He's Coming Again!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-dec-31-2009-11624355.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

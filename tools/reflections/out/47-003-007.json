@@ -1,0 +1,75 @@
+{
+ "id": "47-003-007",
+ "title": "The Glory of the New Covenant",
+ "refs": [
+  "2 Corinthians 3:7-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47003018,
+   "end": 47003018,
+   "ref": "2 Corinthians 3:18",
+   "ranges": [
+    [
+     47003018,
+     47003018
+    ]
+   ],
+   "title": "\"Transformed into His Image\"",
+   "key_verse": [
+    47003018,
+    47003018
+   ],
+   "reflect": [
+    {
+     "text": "When we turn to Jesus, we come to God with open, unveiled faces. The Holy Spirit begins a deep change inside us, shaping our lives to look more like Christ. This transformation does not happen overnight. It is an ongoing work that unfolds day by day through the power of the Spirit, not through our own self-effort.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We are called to reflect more of God's glory and character each day than we did before. Even when we walk through dry seasons or uncomfortable changes, God is still at work. These hard times are not signs of spiritual failure. Instead, the Lord uses them as tools to help our faith grow deeper.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We take part in this growth by keeping our eyes on the Lord through regular spiritual habits. When we build a steady commitment to God's Word and set aside daily time for personal prayer, the Spirit opens our eyes to His truth and continues to change our hearts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that spiritual growth is a slow process bring you peace during dry seasons?",
+    "What is one way you can faithfully spend time in God's Word and prayer each day?"
+   ],
+   "prayer": "Lord, thank You for sending Your Spirit to shape our lives into the likeness of Jesus. Please give us patience during seasons of change and help us keep our eyes fixed on You. Open our eyes through Your Word and prayer so that we may reflect Your character more clearly each day.",
+   "sources": {
+    "D1": {
+     "author": "Aubrey Sampson",
+     "work": "Embracing the Colors of Change in Your Spiritual Life",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/embracing-the-colors-of-change-in-your-spiritual-life.html"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Are You Reflecting Jesus?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-august-2-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,85 @@
+{
+ "id": "44-014-021",
+ "title": "Strengthening the Disciples",
+ "refs": [
+  "Acts 14:21-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44014021,
+   "end": 44014023,
+   "ref": "Acts 14:21-23",
+   "ranges": [
+    [
+     44014021,
+     44014023
+    ]
+   ],
+   "title": "\"We Must Endure Many Hardships\"",
+   "key_verse": [
+    44014022,
+    44014022
+   ],
+   "reflect": [
+    {
+     "text": "Hardships are not an accident. God assigns trials to all His people, just as He did for Abraham and Job throughout Scripture. We were never promised an easy life free from pain. Even so, we have great comfort because Jesus walked this hard path before us. He gives us His presence, sympathy, and grace—His undeserved help—to endure. When we reach the kingdom, its glory will far outweigh every trial.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Following Jesus is not only about beginning well; it means keeping on until the end. As Charles Spurgeon noted, \"Perseverance is the badge of true saints.\" Our spiritual enemies will try to tire us out, tempting us to quit or compromise. We need to stay watchful and cry out to God for His Spirit to sustain us so that we remain faithful.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When hardships come, do you treat them as an expected part of following Jesus, or do you worry that you have failed?",
+    "In what area of your life do you need God's Spirit to help you keep going today?"
+   ],
+   "prayer": "Lord, thank You for walking before us through hardship and offering us Your comfort. When we face trials, protect us from fear and discouragement. Strengthen our hearts by Your Holy Spirit so that we may continue in the faith to the very end. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 8",
+     "on": "Acts 14:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 26",
+     "on": "Acts 14:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 248: Acts 14:21–22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-248-acts-14-2122.html"
+    },
+    "D4": {
+     "author": "Charles Swindoll",
+     "work": "Mission Accomplished - Today's Insight - July 20, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-july-20-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "Paul and Barnabas returned to cities where people had mistreated them. Instead of nursing past hurts, they chose to strengthen new believers and appoint church leaders. They gave disciples an honest message: entering God's kingdom means facing many difficulties. Hearing this truth helps us stop wasting energy on fear. Experiencing hard times is a normal part of following Christ, not a sign of spiritual failure or God's anger.",
+     "problem": "Neither D3, D4, nor the scripture passage teaches that hard times are not a sign of God's anger (D3 states that trials are not proof of spiritual failure, immaturity, or disobedience)."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

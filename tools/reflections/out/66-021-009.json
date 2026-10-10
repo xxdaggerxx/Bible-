@@ -1,0 +1,127 @@
+{
+ "id": "66-021-009",
+ "title": "The New Jerusalem",
+ "refs": [
+  "Revelation 21:9-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 66021023,
+   "end": 66021023,
+   "ref": "Revelation 21:23",
+   "ranges": [
+    [
+     66021023,
+     66021023
+    ]
+   ],
+   "title": "\"The Lamb Is Its Lamp\"",
+   "key_verse": [
+    66021023,
+    66021023
+   ],
+   "reflect": [
+    {
+     "text": "In heaven, there is no need for the sun or moon because Jesus Himself is the light. Charles Spurgeon explains that light represents joy, beauty, and knowledge. All the joy of believers comes from knowing that Jesus chose us, loved us, cleansed us from sin, and kept us safe. Any beauty we have comes directly from Him, like planets reflecting the sun. When we are with Him, all the painful and confusing mysteries of our earthly lives will be made completely clear in His light.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living in the light of the Lamb also means we will no longer depend on earthly comforts to satisfy us. In this world, we need medicine when we are sick, sleep when we are weary, and clothes that wear out. In heaven, our bodies will never suffer, and we will feast directly at God's table. We will not need human teachers or intermediate messengers, because we will see the Lord face to face and find our full rest in Him alone.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face confusing or painful situations in life, how does the promise of Christ's future light bring you peace?",
+    "How does looking forward to seeing Jesus face to face change what you rely on for comfort today?"
+   ],
+   "prayer": "Lord Jesus, thank You for loving us, cleansing us from our sins, and promising to be our light. Help us to rest in You today instead of relying only on earthly comforts. We look forward to the day when all our questions are answered and we see You face to face. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 3",
+     "on": "Revelation 21:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 9",
+     "on": "Revelation 21:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 66021009,
+   "end": 66021027,
+   "ref": "Revelation 21:9-27",
+   "ranges": [
+    [
+     66021009,
+     66021027
+    ]
+   ],
+   "title": "The Holy City and the Lamb",
+   "key_verse": [
+    66021022,
+    66021022
+   ],
+   "reflect": [
+    {
+     "text": "When the angel shows John the holy city, he calls it the bride of the Lamb. This shows that the city represents the church triumphant, God's fully redeemed people. John sees that the city is shaped as a cube, with equal length, width, and height. In the Old Testament, the only room with equal dimensions was the Holy of Holies, the sacred inner room where God dwelt. This picture means all barriers are removed, and God's people will live directly in His holy presence.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "John notices there is no temple building in the city, because the Lord God and the Lamb are its temple. In this life, our worship uses symbols, and our joy often feels incomplete. Beth Moore observes that earthly celebrations still carry reminders of grief. Yet in the New Jerusalem, every longing is answered. All who trust in Jesus will gather at His feast, sorrow will end, and we will enjoy God's presence without any separation.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Knowing this glorious future shapes how we live right now. Since God is preparing us to dwell in His pure presence, we are called to pursue holiness today through the help of the Holy Spirit. We can walk faithfully as we wait for Christ to complete His work.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God will remove every barrier between Himself and His people encourage you in prayer today?",
+    "In what practical ways can you pursue holiness by the Spirit as you wait for Christ to finish His work?"
+   ],
+   "prayer": "Heavenly Father, thank You for the promise that we will live with You forever in perfect fellowship. Comfort our hearts in moments of sorrow, and help us pursue holiness each day by the power of Your Spirit. Keep our eyes fixed on Christ as we look forward to the day of complete joy. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 365: Revelation 21:22–27",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-365-revelation-21-2227.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The New Jerusalem",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-new-jerusalem"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,84 @@
+{
+ "id": "40-024-015",
+ "title": "The Abomination of Desolation",
+ "refs": [
+  "Matthew 24:15-25",
+  "Mark 13:14-23",
+  "Luke 21:20-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40024015,
+   "end": 40024025,
+   "ref": "Matthew 24:15-25; Mark 13:14-23; Luke 21:20-24",
+   "ranges": [
+    [
+     40024015,
+     40024025
+    ],
+    [
+     41013014,
+     41013023
+    ],
+    [
+     42021020,
+     42021024
+    ]
+   ],
+   "title": "God's Mercy in Days of Judgment",
+   "key_verse": [
+    40024022,
+    40024022
+   ],
+   "reflect": [
+    {
+     "text": "Jesus gave an urgent warning about days of terrible distress. By comparing these words with Luke, we see Jesus was speaking of the fall of Jerusalem in AD 70. The terrible desecration took place when Roman soldiers placed pagan standards at the temple gate. The coming suffering was so severe that Jesus told people to flee immediately without even stopping to grab a coat. This tragic event shows the heavy judgment that comes when people refuse to submit to Christ as Lord.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet even in the middle of fierce judgment, God remembers mercy. Jesus said that those hard days would be cut short for the sake of His chosen people, the elect. As Charles Spurgeon noted, \"out of regard to His elect the Lord damps the flame.\" God holds back complete destruction and preserves human lives because of His love for His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This truth calls us to take our walk with God seriously and live as faithful, obedient servants. It also gives us a reason to pray with earnest hearts. Believers have the honor of coming before the Lord to plead for others. We can pray for our neighbors and our nation, asking God to shorten times of suffering and draw people to faith in Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God listens to His people encourage you to pray for others during difficult times?",
+    "In what practical ways can you take your daily walk with the Lord more seriously?"
+   ],
+   "prayer": "Lord Jesus, thank You for showing mercy even in times of trouble and judgment. Help us to walk faithfully before You as obedient servants each day. Teach us to pray earnestly for our neighbors and our land, trusting that You hear us and hold back harm. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 26",
+     "on": "Matthew 24:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Desecrating the Sanctuary",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/desecrating-sanctuary"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

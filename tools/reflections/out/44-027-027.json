@@ -1,0 +1,66 @@
+{
+ "id": "44-027-027",
+ "title": "The Shipwreck",
+ "refs": [
+  "Acts 27:27-44"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44027027,
+   "end": 44027044,
+   "ref": "Acts 27:27-44",
+   "ranges": [
+    [
+     44027027,
+     44027044
+    ]
+   ],
+   "title": "Weathering the Storm Together",
+   "key_verse": [
+    44027031,
+    44027031
+   ],
+   "reflect": [
+    {
+     "text": "When severe storms strike, our natural reaction is often fear. We might be tempted to cut ties, pull away, and try to escape completely on our own. Yet withdrawing into isolation only makes our pain and despair much worse. God did not make us to face deep trials by ourselves. Just as Paul warned that survival required everyone to stay with the ship, we need the gift of mutual support. Holding fast to unity with family and God's people helps carry our faith through tough seasons.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "At the same time, our personal obedience to God brings protection and blessing to those around us. Unlike the prophet Jonah, who ran from God's call and brought distress to his shipmates, Paul listened and obeyed. Because Paul was faithful, every person on board was spared from death. Walking in genuine obedience not only fills our own hearts with lasting joy, but it also turns our lives into a shelter of hope for friends, coworkers, and family caught in life's crises.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When trials come, do you tend to pull away into isolation or lean into the community God has given you?",
+    "How might your daily obedience to God bring peace and safety to the people around you?"
+   ],
+   "prayer": "Lord, help us resist the urge to run away and hide when life becomes frightening. Thank you for placing people around us to support us through hard times. Teach us to walk in joyful obedience so that our faith might be a shelter to others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 292: Acts 27:27–44",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-292-acts-27-2744.html"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Anchor of Unity - Today's Insight - August 14, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-august-14-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "59-003-013",
+ "title": "The Wisdom from Above",
+ "refs": [
+  "James 3:13-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 59003016,
+   "end": 59003017,
+   "ref": "James 3:16-17",
+   "ranges": [
+    [
+     59003016,
+     59003017
+    ]
+   ],
+   "title": "\"The Wisdom from Above\"",
+   "key_verse": [
+    59003017,
+    59003017
+   ],
+   "reflect": [
+    {
+     "text": "When disagreements happen, it is easy to let our pride take control. We often want to win an argument, and we might even convince ourselves that we are just standing up for the truth. But harboring selfish ambition or jealousy brings confusion and division. Putting ourselves first damages our relationships and drives people apart.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The culture around us constantly pushes us to put ourselves first and compromise. Media and the world urge us to vent our anger and adopt self-centered thinking. Yet God offers us heavenly wisdom, which is completely different from the world's ways. His wisdom is pure, gentle, and peace-loving. Keeping his wisdom in mind helps restrain us from losing our temper or acting out of spite.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In every conflict, we have a choice about how we respond. We do not have to let personal pride dictate our words and actions. Instead, we can rely on God's grace, which is his kindness and help that we do not deserve. When we choose to respond with gentleness, purity, and mercy, we protect our friendships and walk in true peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In your relationships, do you ever find yourself trying to win an argument rather than seeking peace?",
+    "How can choosing God's gentle wisdom change how you respond the next time you disagree with someone?"
+   ],
+   "prayer": "Lord, forgive us for the times our pride and selfish desires cause division with others. Help us resist worldly habits and remember your pure, gentle wisdom. Please give us your grace to respond with mercy and patience in every relationship. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Gwen Smith",
+     "work": "The Little Black Dress of Faith",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-july-16-2020.html"
+    },
+    "D2": {
+     "author": "Emily Rose Massey",
+     "work": "A Prayer for Strife in Friendships",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-strife-in-friendships.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

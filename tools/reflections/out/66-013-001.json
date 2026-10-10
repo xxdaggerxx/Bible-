@@ -1,0 +1,66 @@
+{
+ "id": "66-013-001",
+ "title": "The Beast from the Sea",
+ "refs": [
+  "Revelation 13:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66013001,
+   "end": 66013010,
+   "ref": "Revelation 13:1-10",
+   "ranges": [
+    [
+     66013001,
+     66013010
+    ]
+   ],
+   "title": "Secure in the Lamb's Book of Life",
+   "key_verse": [
+    66013008,
+    66013008
+   ],
+   "reflect": [
+    {
+     "text": "In Revelation 13, a terrifying beast demands worship from the whole world. Yet this passage brings a quiet and deep comfort to believers. Everyone whose name is written in the Book of Life belongs to the Lamb who was slain. If you belong to Jesus, your eternal salvation is completely safe and guaranteed by God Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Getting into heaven does not depend on our own good deeds or how hard we try to earn God's favor. It rests entirely on the sacrifice of Jesus on the cross. When the final judgment comes, our lives will simply show the evidence of our real faith and connection to Christ. Even a person who lived a lifetime of sin and repented at the very end, like the thief on the cross, will openly show the work of God's transforming grace, His kindness we do not deserve.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because our hope is anchored in what Jesus did, we do not have to live in fear of trials or evil in the world. We can face each day with steady confidence, trusting that God will faithfully finish the good work He started in us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that your salvation is secure in Jesus change how you face difficult times?",
+    "In what ways are you tempted to rely on your own good deeds rather than the sacrifice of the Lamb?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving Your life as the Lamb who was slain for us. We praise You that our salvation rests safely in Your hands and not in our own efforts. Please give us peace and courage today, trusting that You will finish the good work You began in our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "The Books at the Judgment",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/the-books-at-the-judgment"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

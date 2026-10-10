@@ -1,0 +1,66 @@
+{
+ "id": "50-001-001",
+ "title": "Greetings from Paul and Timothy",
+ "refs": [
+  "Philippians 1:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 50001001,
+   "end": 50001002,
+   "ref": "Philippians 1:1-2",
+   "ranges": [
+    [
+     50001001,
+     50001002
+    ]
+   ],
+   "title": "Joy and Fellowship in Christ",
+   "key_verse": [
+    50001002,
+    50001002
+   ],
+   "reflect": [
+    {
+     "text": "Paul likely wrote this letter around AD 62 while he was held in a Roman prison. Unlike some of his other letters, he was not writing to fix an urgent doctrinal crisis or correct dangerous teachings. Instead, he wanted to send personal updates, express his gratitude for the financial support the believers had sent, and encourage relational harmony among them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even from a dark prison cell, Paul greeted the church with sincere joy. His joy was not based on comfortable circumstances, but on the true fellowship he shared with them in Christ Jesus. Because of their common life in the Lord, Paul could warmly offer them grace, which is God's undeserved kindness, along with true peace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As believers today, we are called to follow this pattern by deepening our bonds with one another in the church family. Paul's greeting invites us to lean into our shared connection in Christ and embrace the call to rejoice in every circumstance we face.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you intentionally strengthen your relationships with fellow believers this week?",
+    "What helps you hold onto joy in Christ when your everyday circumstances are difficult?"
+   ],
+   "prayer": "Father, thank you for your grace, peace, and the fellowship we share with others in Jesus. Help us to build deeper bonds of love and unity within our church family. Teach us to find our lasting joy in Christ no matter what challenges we face. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "To All the Saints at Philippi",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/to-all-the-saints-at-philippi"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

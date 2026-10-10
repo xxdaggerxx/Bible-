@@ -1,0 +1,75 @@
+{
+ "id": "43-013-001",
+ "title": "Jesus Washes His Disciples’ Feet",
+ "refs": [
+  "John 13:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43013001,
+   "end": 43013017,
+   "ref": "John 13:1-17",
+   "ranges": [
+    [
+     43013001,
+     43013017
+    ]
+   ],
+   "title": "Loved to the End and Cleansed Daily",
+   "key_verse": [
+    43013001,
+    43013001
+   ],
+   "reflect": [
+    {
+     "text": "Before Jesus went to the cross, He showed His disciples how deep His love truly was. There was nothing in those weak men that earned such devotion, yet Jesus loved them as His own treasure. When Jesus begins to love His people, He never stops. He loves them to the very end, giving Himself for them with a perfect love that has no flaw or limit.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus showed this humble love by taking a basin and washing the disciples' dirty feet. He still serves us in a similar way today. We often stumble back into the very sins we were saved from, yet our Lord patiently hears our confessions. Charles Spurgeon wrote that Jesus still goes about among His people \"with the basin and the towel.\" Day by day, He washes away our faults and speaks peace to our hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing that our Lord loves us completely and washes us daily should change how we live. His gentle patience is not an excuse to take sin lightly. Instead, resting in His cleansing grace makes us watchful and gives us a fresh desire to live holy lives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus never stops loving you bring you comfort when you fail?",
+    "How should the Lord's daily cleansing encourage you to stay watchful against sin today?"
+   ],
+   "prayer": "Lord Jesus, thank You for loving us completely and bearing with our repeated weaknesses. Cleanse our hearts from daily sins and give us Your peace. Help us to stay watchful and live holy lives that honor You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 24",
+     "on": "John 13:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 30",
+     "on": "John 13:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

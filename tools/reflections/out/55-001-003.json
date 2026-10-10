@@ -1,0 +1,79 @@
+{
+ "id": "55-001-003",
+ "title": "Faithfulness under Persecution",
+ "refs": [
+  "2 Timothy 1:3-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 55001003,
+   "end": 55001012,
+   "ref": "2 Timothy 1:3-12",
+   "ranges": [
+    [
+     55001003,
+     55001012
+    ]
+   ],
+   "title": "Saved by Grace and Kept by Christ",
+   "key_verse": [
+    55001007,
+    55001007
+   ],
+   "reflect": [
+    {
+     "text": "God does not give us a spirit of fear. While natural fears can protect us from sudden danger, a lasting spirit of fear never comes from God. Instead, the Holy Spirit supplies us with genuine power, love, and clear, sound thinking. When fear threatens to hold us back, we can ask God for His strength to walk boldly in love.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We also have confidence because God has already rescued us. As Charles Spurgeon wrote, believers are \"already saved.\" Our salvation is not a distant wish, but a gift given through grace, God's kindness that we did not earn. Because of this complete gift, God calls us to a holy life. He gives us a new nature that naturally rejoices in turning from sin and following Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This gift of salvation gave Paul courage even when facing prison and death. Real saving faith is not a blind guess. It is a personal trust based on the truth of the gospel. When we make the willing choice to put our lives in the hands of Jesus, we find complete security. Our assurance rests on Christ Himself, who is fully able to guard everything we entrust to Him.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What lingering fears do you need to replace with the Holy Spirit's power and sound thinking?",
+    "How does knowing that Christ safely guards your life help you live for Him today?"
+   ],
+   "prayer": "Father, thank You for saving us by Your grace and giving us Your Holy Spirit. Please take away our lingering fears and fill us with Your power, love, and self-control. Help us to entrust our whole lives to Jesus, trusting that He will faithfully guard us to the very end. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 12",
+     "on": "2 Timothy 1:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Not a Spirit of Fear",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-august-21-2026.html"
+    },
+    "D3": {
+     "author": "Harry Reeder",
+     "work": "Saving Faith",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/saving"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

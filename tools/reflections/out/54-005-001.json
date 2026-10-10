@@ -1,0 +1,74 @@
+{
+ "id": "54-005-001",
+ "title": "Reproof and Respect",
+ "refs": [
+  "1 Timothy 5:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54005001,
+   "end": 54005002,
+   "ref": "1 Timothy 5:1-2",
+   "ranges": [
+    [
+     54005001,
+     54005002
+    ]
+   ],
+   "title": "Treating the Church Like Family",
+   "key_verse": [
+    54005001,
+    54005001
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to relate to people in the church just like a caring family. Scripture commands us to honor and respect older generations, recognizing their ongoing worth and purpose in God's kingdom. Younger believers and leaders must resist generational pride. Instead of showing impatience or frustration with older saints, we should exercise patience, honor their dignity in daily life, and take time to learn from them and pray for them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Older believers are not exempt from correction, but the way we speak to them matters deeply. We must avoid harsh rebukes that cause public embarrassment. Instead, we should appeal to them gently and persuasively, just as we would speak to a father. The goal of this kind of correction is spiritual restoration, bringing healing rather than shame.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This family spirit shapes all our relationships in the church. We are called to treat younger men as brothers and younger women as sisters, showing mutual care and pure devotion. When we drop pride and treat one another with intentional respect, our church family reflects God's patient love across every generation.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show greater patience and honor toward the older believers in your church this week?",
+    "When someone needs correction or guidance, how can you speak in a way that seeks restoration rather than embarrassment?"
+   ],
+   "prayer": "Lord, thank You for placing us in a church family with believers of all ages. Help us to put away pride, honor our elders with patience, and treat our brothers and sisters with gentle love. Give us words that restore and encourage one another every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Encouraging Young and Old",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/encouraging-young-and-old"
+    },
+    "D2": {
+     "author": "Emma Danzey",
+     "work": "A Prayer for the Elderly",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-the-elderly.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

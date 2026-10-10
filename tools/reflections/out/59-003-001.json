@@ -1,0 +1,68 @@
+{
+ "id": "59-003-001",
+ "title": "Taming the Tongue",
+ "refs": [
+  "James 3:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 59003005,
+   "end": 59003006,
+   "ref": "James 3:5-6",
+   "ranges": [
+    [
+     59003005,
+     59003006
+    ]
+   ],
+   "title": "\"The Tongue Also Is a Fire\"",
+   "key_verse": [
+    59003006,
+    59003006
+   ],
+   "reflect": [
+    {
+     "text": "A small spark can quickly ignite a huge forest fire. In the same way, careless words can spread fast and burn down trust. When we fail to control what we say, our speech can become the greatest destroyer of our relationships. Harsh remarks and gossip shatter homes, families, friendships, and careers. The emotional injuries from cruel words often last far longer than physical wounds. Once we say something, we can never take those words back, and God holds us accountable for every careless thing we speak.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "James warns us that the destructive power of harmful speech comes from hell itself. Because of this, our own willpower is not enough to tame the tongue. We need the help of the Holy Spirit. God calls us to look closely at our daily speech and repent when we have hurt others. Instead of criticism, we can choose words that encourage and build people up. By speaking life and practicing disciplined speech, we reflect God's glory in a dark world.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have any careless or critical words slipped into your conversations lately that you need to confess and turn away from?",
+    "How can you ask the Holy Spirit today to help you build up and encourage someone instead of tearing them down?"
+   ],
+   "prayer": "Lord, forgive us for the times our careless words have caused pain and broken trust. We know we cannot tame our tongues through our own willpower, so we ask your Holy Spirit to guide everything we say. Help us replace harsh criticism with disciplined words that bring life to others and honor to your name.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "Words That Harm",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/words-that-harm.html"
+    },
+    "D2": {
+     "author": "Rick Warren",
+     "work": "Be Wise with Your Words",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-september-5-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

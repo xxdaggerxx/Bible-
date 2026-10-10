@@ -1,0 +1,127 @@
+{
+ "id": "55-002-014",
+ "title": "The Lord’s Approved Workman",
+ "refs": [
+  "2 Timothy 2:14-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 55002015,
+   "end": 55002015,
+   "ref": "2 Timothy 2:15",
+   "ranges": [
+    [
+     55002015,
+     55002015
+    ]
+   ],
+   "title": "\"Approved to God\"",
+   "key_verse": [
+    55002015,
+    55002015
+   ],
+   "reflect": [
+    {
+     "text": "When we read the Bible, we need to look at it carefully for ourselves rather than just picking random verses here and there. Reading Scripture in its full context matters far more than rushing through many pages. Taking time to absorb even a single verse helps us hear what God is saying directly to our lives. When we investigate the written Word for ourselves, the Holy Spirit gives us discernment—the ability to tell truth from error—so that false teachings do not mislead or harm us.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "God calls us to do the hard work of wrestling with His truth until we can explain what we believe clearly. Simply borrowing someone else's words leaves us without real personal depth. As Oswald Chambers reminds us, our convictions only become genuinely ours \"when forged through thoughtful reflection, study, and suffering.\" When we patiently work through the struggle of understanding God's Word, that truth becomes a source of genuine strength we can share with others.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you take time to study Scripture carefully for yourself, or do you mostly rely on what other people say?",
+    "What is one truth from God's Word you can spend time meditating on and putting into practice today?"
+   ],
+   "prayer": "Lord, help us to study Your Word with care and patience instead of rushing through it. Give us discernment by Your Spirit so we can recognize truth and reject what is false. May Your truth take deep root in our hearts so we can explain what we believe and help others.",
+   "sources": {
+    "D2": {
+     "author": "Oswald Chambers",
+     "work": "Approved to God",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/updated/approved-to-god/"
+    },
+    "D3": {
+     "author": "Adrian Rogers",
+     "work": "Don’t Use the “Hunt and Peck” Method...",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-april-8-2019.html"
+    },
+    "D4": {
+     "author": "Courtnaye Richard",
+     "work": "Why You Must Study the Word for Yourself",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/why-you-must-study-the-word-for-yourself-bible-study-minute-october-20-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 55002014,
+   "end": 55002026,
+   "ref": "2 Timothy 2:14-26",
+   "ranges": [
+    [
+     55002014,
+     55002026
+    ]
+   ],
+   "title": "A Firm Foundation and Honorable Vessels",
+   "key_verse": [
+    55002019,
+    55002019
+   ],
+   "reflect": [
+    {
+     "text": "The Christian faith rests on an unshakable foundation that cannot be moved. At the very center of the gospel is the truth of substitution, which means that Jesus Christ suffered in our place on the cross to bring us to God. As Charles Spurgeon reminds us, \"the great pillar of the Christian's hope is substitution.\" Even when people oppose this message, God's foundation remains sure. Knowing that Christ bore our sins gives us deep peace, and gratitude for His sacrifice shapes how we live and speak each day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because we belong to the Lord, we are called to live holy lives that honor Him. Paul compares God's people to utensils in a large house, where some vessels are kept clean for noble use while others are common disposal pots. Remaining faithful sometimes requires painful separation from false teachings and moral wrongdoing. When we turn away from what is unfit, the Master cleanses us to be honorable vessels, prepared and ready for every good work He gives us.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Christ died in your place give you confidence and gratitude today?",
+    "What impure habits or wrongful teachings do you need to turn away from so you can be useful to the Master?"
+   ],
+   "prayer": "Lord, thank You for the secure foundation we have in Jesus, who bore our guilt on the cross to reconcile us to God. Cleanse our hearts and turn us away from anything that departs from Your truth. Make us honorable vessels who are pure, devoted to You, and ready for every good work.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 21",
+     "on": "2 Timothy 2:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord's Honorable Vessels",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lords-honorable-vessels"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

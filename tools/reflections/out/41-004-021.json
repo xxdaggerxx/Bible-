@@ -1,0 +1,77 @@
+{
+ "id": "41-004-021",
+ "title": "The Lesson of the Lamp",
+ "refs": [
+  "Mark 4:21-25",
+  "Luke 8:16-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 41004021,
+   "end": 41004025,
+   "ref": "Mark 4:21-25; Luke 8:16-18",
+   "ranges": [
+    [
+     41004021,
+     41004025
+    ],
+    [
+     42008016,
+     42008018
+    ]
+   ],
+   "title": "Take Care How You Listen",
+   "key_verse": [
+    42008018,
+    42008018
+   ],
+   "reflect": [
+    {
+     "text": "Jesus reminds us that light is meant to be seen and that God wants His truth brought out into the open. Yet our daily lives are often packed with noise and mental clutter. These distractions make it hard to notice God's still, small voice. To truly hear Him, we need intentional moments of quiet where we step away from the rush of life.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Listening to God means far more than simply letting words pass through our ears. Faithful hearing means actively believing what Christ says and obeying Him right away. Spiritual understanding is a gift from God, and He entrusts deeper insight to those who welcome His message. God generously gives more truth to those who treasure what they have, but those who neglect His Word risk losing even what they think they hold.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we take time to hear God carefully, it also changes how we treat other people. Failing to listen well often creates painful misunderstandings and hurts our relationships. Listening closely to the Lord guards our hearts, shaping how we hear others and keeping us from harmful gossip.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What distractions do you need to set aside so you can quietly listen to God today?",
+    "How can you put what God has already taught you into practice right away?"
+   ],
+   "prayer": "Lord, help us quiet our minds and step away from the noise so we can hear your voice. Give us humble hearts that actively believe and obey your Word. Teach us to cherish your truth and to listen to others with love and patience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "More to Those Who Have",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/more-those-who-have"
+    },
+    "D2": {
+     "author": "Sharon Jaynes",
+     "work": "Encouragement for Today - September 27, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-september-27-2005-1353609.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

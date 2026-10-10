@@ -1,0 +1,68 @@
+{
+ "id": "66-016-017",
+ "title": "The Seventh Bowl of Wrath",
+ "refs": [
+  "Revelation 16:17-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66016017,
+   "end": 66016021,
+   "ref": "Revelation 16:17-21",
+   "ranges": [
+    [
+     66016017,
+     66016021
+    ]
+   ],
+   "title": "God's Final Victory Is Certain",
+   "key_verse": [
+    66016017,
+    66016017
+   ],
+   "reflect": [
+    {
+     "text": "When we look at news of trouble and conflict in our world, it can easily seem as though evil is winning. Our limited human view can make us panic, like hearing incomplete news before a final victory is announced. But Revelation shows us the full picture. A loud voice from God's throne declares, \"It is done!\" Christ has already defeated the enemy. A great shaking will take place, and all the worldly systems and powers set against God will fully collapse.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The passage also shows that severe pain does not soften hard hearts. Without God stepping in to change them, people stay in stubborn rebellion and even curse Him during judgment. Suffering alone cannot make someone turn to the Lord. That is why we must pray for God to give people new hearts and the grace to believe. In the meantime, we do not have to live in fear. We can stay alert, prepared, and faithful as we wait for Jesus to return.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When world events cause you worry, how does remembering that Christ has already won bring you peace?",
+    "Who is someone in your life who does not know the Lord that you can pray for today?"
+   ],
+   "prayer": "Lord, thank You that You hold all power and that evil will not win. Help us not to panic when the world seems dark, but to trust that Your victory is sure. Please soften the hearts of those around us and give them the grace to believe in You. Keep us alert and faithful as we wait for Your return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michael A. Youssef",
+     "work": "Victory Assured",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-september-13-2026.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Plague of Hail",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-plague-of-hail"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

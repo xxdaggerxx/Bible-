@@ -1,0 +1,85 @@
+{
+ "id": "40-012-046",
+ "title": "Jesus’ Mother and Brothers",
+ "refs": [
+  "Matthew 12:46-50",
+  "Mark 3:31-35",
+  "Luke 8:19-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40012046,
+   "end": 40012050,
+   "ref": "Matthew 12:46-50; Mark 3:31-35; Luke 8:19-21",
+   "ranges": [
+    [
+     40012046,
+     40012050
+    ],
+    [
+     41003031,
+     41003035
+    ],
+    [
+     42008019,
+     42008021
+    ]
+   ],
+   "title": "Belonging to the Family of Jesus",
+   "key_verse": [
+    40012050,
+    40012050
+   ],
+   "reflect": [
+    {
+     "text": "Natural family ties are often the closest and deepest relationships we experience in this life. Yet when Jesus' mother and brothers arrived and sent for Him, He did not let their arrival interrupt His commitment to God's work. He used this moment to show that even His earthly relatives did not hold an exclusive claim or special privilege over Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus looked at the people sitting around Him and revealed a brand-new way to understand family. In the kingdom of God, our true family bond is not defined by human bloodlines. Instead, our deepest allegiance belongs to God. True family consists of anyone who receives Christ, listens to God's word, and obeys the Father's will.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This invitation is open equally to every believing man and woman. When we follow Jesus, we are welcomed into an intimate union with Him. We are treated as His own brothers and sisters, guarded by Him, and bound together in an eternal family that will never end.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you are part of Jesus' eternal family change how you view your daily obedience to God?",
+    "Are there times when earthly relationships compete with your primary allegiance to Christ?"
+   ],
+   "prayer": "Lord Jesus, thank You for welcoming us into Your spiritual family through faith. Help us to hear the Father's word and follow His will with whole hearts. Keep our loyalty to Your kingdom above all other earthly bonds. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The True Family of Jesus",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/true-family-jesus"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Oct. 5, 2011",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-oct-5-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

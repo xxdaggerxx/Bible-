@@ -1,0 +1,85 @@
+{
+ "id": "40-020-017",
+ "title": "The Third Prediction of the Passion",
+ "refs": [
+  "Matthew 20:17-19",
+  "Mark 10:32-34",
+  "Luke 18:31-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40020017,
+   "end": 40020019,
+   "ref": "Matthew 20:17-19; Mark 10:32-34; Luke 18:31-34",
+   "ranges": [
+    [
+     40020017,
+     40020019
+    ],
+    [
+     41010032,
+     41010034
+    ],
+    [
+     42018031,
+     42018034
+    ]
+   ],
+   "title": "Walking Behind Jesus to Jerusalem",
+   "key_verse": [
+    41010032,
+    41010032
+   ],
+   "reflect": [
+    {
+     "text": "As Jesus walked toward Jerusalem, He moved ahead of His disciples with steady resolve. He warned them plainly about what lay ahead: He would be handed over to the Gentiles, mocked, and killed as our sin-bearer. The disciples felt amazement and fear. True discipleship means following Christ along a road that often includes hardship, suffering, and the world's hostility.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Following Jesus calls us to give up our own selfish dreams and natural desires. Such a call can feel difficult and frightening. Yet we do not walk alone. As F. B. Meyer writes, \"He never puts forth His own sheep without going before them.\" Jesus never asks us to walk down a hard road that He has not already traveled Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Along with the warning of the cross, Jesus gave the promise of resurrection. Death would not have the final word. This sure promise brings deep comfort and hope. Looking ahead to the eternal glory and joy set before us helps us bear today's afflictions with patience and courage.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal ambitions or comforts might Jesus be asking you to lay down as you follow Him?",
+    "How does the promise of Jesus' resurrection give you hope when obedience feels costly?"
+   ],
+   "prayer": "Lord Jesus, thank You for walking ahead of us and bearing the cross for our sake. Give us courage when following You brings hardship, and teach us to trust Your prepared path. Fix our eyes on the hope of Your resurrection and the eternal glory ahead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Mark 10:32",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Up to Jerusalem",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jerusalem"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "40-026-014",
+ "title": "Judas Agrees to Betray Jesus",
+ "refs": [
+  "Matthew 26:14-16",
+  "Mark 14:10-11",
+  "Luke 22:3-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40026014,
+   "end": 40026016,
+   "ref": "Matthew 26:14-16",
+   "ranges": [
+    [
+     40026014,
+     40026016
+    ]
+   ],
+   "title": "\"What Are You Willing to Give Me?\"",
+   "key_verse": [
+    40026015,
+    40026015
+   ],
+   "reflect": [
+    {
+     "text": "Judas was an intimate companion of Jesus, not an unknown stranger. Long before he took silver from the chief priests, he had already begun giving in to quiet compromises and selfish choices. Even though Jesus knew what was going to happen, being handed over by a close friend caused deep sorrow. Betrayal always cuts much deeper when it comes from someone we trust and love.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This story reminds us that simply being near Jesus does not stop our hearts from becoming hard. None of us is completely safe from the quiet pull of greed, pride, or worldly compromise. Deceptive desires can fool us into trading eternal treasures for things that do not last. To stay faithful, we need daily watchfulness and humble reliance on the Holy Spirit, God's helper within us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Jesus walked this painful road Himself, He understands personal rejection firsthand. When someone lets us down or turns against us, Jesus knows the sting of that wound. He offers comfort and healing to anyone walking through the deep hurt of broken trust.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there quiet compromises or selfish desires in your heart that you need to surrender to God today?",
+    "How does knowing that Jesus experienced betrayal help you turn to Him when friends hurt or reject you?"
+   ],
+   "prayer": "Lord Jesus, thank You for walking through deep sorrow and for understanding our pain when people let us down. Guard our hearts from greed, pride, and the temptation to trade eternal life for empty treasures. Please help us rely on the Holy Spirit each day so we may stay faithful to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Amanda Idleman",
+     "work": "A Prayer of Watchfulness on Spy Wednesday",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-of-watchfulness-on-spy-wednesday-your-daily-prayer.html"
+    },
+    "D2": {
+     "author": "Lynette Kittle",
+     "work": "The Sting of Judas' Betrayal",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/easter-devotionals/easter-devotional-march-29.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

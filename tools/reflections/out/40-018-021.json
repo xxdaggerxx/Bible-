@@ -1,0 +1,136 @@
+{
+ "id": "40-018-021",
+ "title": "The Unforgiving Servant",
+ "refs": [
+  "Matthew 18:21-35"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40018021,
+   "end": 40018022,
+   "ref": "Matthew 18:21-22",
+   "ranges": [
+    [
+     40018021,
+     40018022
+    ]
+   ],
+   "title": "\"Seventy-Seven Times\"",
+   "key_verse": [
+    40018022,
+    40018022
+   ],
+   "reflect": [
+    {
+     "text": "Peter asked Jesus how often he should forgive someone who wronged him, suggesting seven times as a generous limit. He was thinking in terms of legal minimums and rules. Instead of giving him a cap, Jesus called for limitless grace, telling him to forgive seventy-seven times. Disciples are not meant to keep a running tally of offenses or set a ceiling on mercy.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Unresolved hurts and grudges can quickly spread, harming Christian relationships and entire groups of believers. Extending endless forgiveness does not mean letting people abuse you or acting like a doormat. Rather, it means giving up personal revenge and trusting God to judge righteously, which displays the truth of the gospel to others.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "When we refuse to forgive a fellow believer who asks for mercy, we act as if Christ's cross was not enough to pay for their sin. Jesus asks us to forgive freely from the heart, remembering how lavishly God first loved and spared us.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding onto a running list of someone's past wrongs instead of showing grace?",
+    "How can releasing your desire for revenge show others the mercy of God?"
+   ],
+   "prayer": "Lord Jesus, forgive us for keeping score when people hurt us. Teach us to forgive freely from the heart just as You have spared us. Give us strength to let go of bitterness and trust Your righteous care. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Betsy St. Amant Haddox",
+     "work": "The Beauty in Forgiveness (Matthew 18:21-22)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-december-18.html"
+    },
+    "D4": {
+     "author": "Ryan Duncan",
+     "work": "Seventy-Seven",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-may-10-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40018021,
+   "end": 40018035,
+   "ref": "Matthew 18:21-35",
+   "ranges": [
+    [
+     40018021,
+     40018035
+    ]
+   ],
+   "title": "Mercy Given and Mercy Shared",
+   "key_verse": [
+    40018033,
+    40018033
+   ],
+   "reflect": [
+    {
+     "text": "In Jesus' story, a servant owed his king a massive debt that was entirely impossible to pay off. The master showed deep compassion and canceled the whole sum out of sheer grace. This king pictures God, who offers us lavish vertical pardon when we are spiritually ruined and helpless to save ourselves.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet after walking away free, that same servant found a peer who owed him only a few coins and violently demanded payment. His cruelty was startling after what he had just received. Demanding absolute justice from others while clinging tightly to God's mercy is pure hypocrisy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Holding on to an unmerciful spirit suggests we have never truly understood the deep pardon God gave us. Those who have received unmerited mercy must make forgiving daily offenses an ongoing, habitual practice in their walk with Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering the massive debt of sin God erased for you change your view of smaller offenses?",
+    "Is there anyone you are treating with harsh demands while expecting God to be gentle with you?"
+   ],
+   "prayer": "Heavenly Father, You erased an impossible debt of sin that we could never repay on our own. Guard our hearts against hypocrisy and harshness toward our neighbors. Help us to share Your royal grace each day by forgiving others as You have forgiven us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Unlimited Forgiveness",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/unlimited-forgiveness"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "When You Are the Offended, Part 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-february-21-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

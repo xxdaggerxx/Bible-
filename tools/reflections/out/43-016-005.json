@@ -1,0 +1,81 @@
+{
+ "id": "43-016-005",
+ "title": "The Promise of the Holy Spirit",
+ "refs": [
+  "John 16:5-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43016005,
+   "end": 43016016,
+   "ref": "John 16:5-16",
+   "ranges": [
+    [
+     43016005,
+     43016016
+    ]
+   ],
+   "title": "The Spirit Who Guides and Comforts",
+   "key_verse": [
+    43016005,
+    43016005
+   ],
+   "reflect": [
+    {
+     "text": "God's truth is deep and vast, and we cannot explore it safely on our own. Because we are prone to lose our way, Jesus promised the Holy Spirit to lead us. The Spirit acts as our faithful guide, taking us step by step into the deep things of God as we are able to bear them.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The Spirit guides us by opening both the Scriptures and our minds so that we can clearly see Jesus. His aim is always to honor the Lord. As Charles Spurgeon noted, \"There is no adorning Him except with His own gold.\" We do not ask for the Spirit's help just to satisfy curiosity, but so that our hearts may truly honor Christ.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The Spirit also brings Christ's blessings straight to us when we are too weak to reach them. Like a wounded soldier who cannot crawl to the hospital, we cannot heal our own souls. Jesus does not put His peace on a high shelf out of reach; by His Spirit, He draws near and places His comfort directly into our hearts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life do you need the Holy Spirit to guide your steps today?",
+    "When you feel weak or troubled, how can you rely on the Spirit to bring Christ's promises close to your heart?"
+   ],
+   "prayer": "Lord Jesus, thank You for sending the Holy Spirit to be our helper and guide. Please open our minds to understand Your Word and bring Your comfort to our weary hearts. Teach us to follow Your truth and live for Your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 22",
+     "on": "John 16:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 29",
+     "on": "John 16:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 6",
+     "on": "John 16:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

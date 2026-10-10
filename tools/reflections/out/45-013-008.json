@@ -1,0 +1,66 @@
+{
+ "id": "45-013-008",
+ "title": "Love Fulfills the Law",
+ "refs": [
+  "Romans 13:8-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45013008,
+   "end": 45013010,
+   "ref": "Romans 13:8-10",
+   "ranges": [
+    [
+     45013008,
+     45013010
+    ]
+   ],
+   "title": "The Ongoing Debt of Love",
+   "key_verse": [
+    45013008,
+    45013008
+   ],
+   "reflect": [
+    {
+     "text": "As followers of Christ, we are called to pay our earthly debts and fulfill our daily duties. Yet there is one obligation that is never completely paid off: our call to love other people. Even when we have shown kindness yesterday, each new morning gives us a fresh duty to care for those around us as long as we live.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This kind of love is not merely a passing emotion or warm feeling that comes and goes. True love for our neighbors grows directly out of a sincere love for God. God does not leave us to guess what love looks like; He reveals it in His moral standards. Commandments against harming, stealing, and envying teach us how to guard and respect others.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Fulfilling God's law through love means deliberately matching our actions and our attitudes with His commands. When we willingly keep God's rules, we choose what is truly good for our neighbor and honor the Lord who gave them.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what daily situations do you need to remember that loving others is a debt that never ends?",
+    "How can God's commandments guide your actions when you do not feel naturally loving toward someone?"
+   ],
+   "prayer": "Lord God, thank you for teaching us how to love through your Word. Help us to handle our earthly obligations well and to remember our ongoing call to love the people around us. Guide our hearts and actions today so that we reflect your goodness in the way we treat our neighbors. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Sum of God's Commandments",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sum-gods-commandments"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

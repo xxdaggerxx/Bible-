@@ -1,0 +1,85 @@
+{
+ "id": "40-009-014",
+ "title": "Questions about Fasting",
+ "refs": [
+  "Matthew 9:14-15",
+  "Mark 2:18-20",
+  "Luke 5:33-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40009014,
+   "end": 40009015,
+   "ref": "Matthew 9:14-15; Mark 2:18-20; Luke 5:33-35",
+   "ranges": [
+    [
+     40009014,
+     40009015
+    ],
+    [
+     41002018,
+     41002020
+    ],
+    [
+     42005033,
+     42005035
+    ]
+   ],
+   "title": "The Bridegroom and the Wedding Feast",
+   "key_verse": [
+    41002019,
+    41002019
+   ],
+   "reflect": [
+    {
+     "text": "People asked why Jesus' disciples did not fast like the Pharisees and the disciples of John. Those frequent fasts came from human traditions rather than God's law given through Moses. Jesus did not condemn fasting itself, but He explained that it did not fit the moment. Just as guests at a wedding feast do not mourn while the bridegroom is present, His disciples could not fast while He was with them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "By calling Himself the bridegroom, Jesus identified Himself as the Messiah. The Old Testament describes God as the bridegroom of Israel, so Jesus was also pointing to His own deity. Fasting shows a deep longing for God's presence, but God had come in human flesh to walk with them. His physical presence brought joy that replaced the need for mourning.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus explained that a time would come when the bridegroom would be taken away. After His resurrection and return to heaven, His people would fast again. Today, as we wait for Christ to return, fasting is a fitting practice for solemn prayer. It is an act of humility before God, not a way to earn His favor.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus is the promised bridegroom shape the way you think about Him?",
+    "When you pray, how can you practice humility rather than trying to earn God's favor?"
+   ],
+   "prayer": "Lord Jesus, thank You for bringing the joy of Your presence to Your people. Help us to wait for Your return with humble and focused hearts. Teach us to seek You in prayer, trusting completely in Your grace rather than our own efforts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Proper Day for Fasting",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/proper-day-fasting"
+    },
+    "D2": {
+     "author": "Ken Jones",
+     "work": "New Covenant Fasting",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/new-covenant-fasting"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

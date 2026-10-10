@@ -1,0 +1,72 @@
+{
+ "id": "50-002-019",
+ "title": "Timothy and Epaphroditus",
+ "refs": [
+  "Philippians 2:19-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 50002019,
+   "end": 50002030,
+   "ref": "Philippians 2:19-30",
+   "ranges": [
+    [
+     50002019,
+     50002030
+    ]
+   ],
+   "title": "Honoring Faithful Friends and Servants",
+   "key_verse": [
+    50002029,
+    50002029
+   ],
+   "reflect": [
+    {
+     "text": "In seasons of hardship, dependable Christian friends are a great gift. Timothy and Epaphroditus were true partners who put their faith into action through practical, sacrificial deeds. They made themselves available, standing ready to serve whenever there was a pressing need. We do not need grand gestures to serve God. Even small, steady acts of encouragement matter, and the best friend you can be is someone who faithfully points others to Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Epaphroditus cared so much about bringing relief to Paul that he put gospel work ahead of his own comfort and physical survival. Choosing to serve others instead of protecting his own well-being reflected the selfless heart of Christ. Supporting and assisting those who labor for the gospel is one of the highest ways we can serve God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because of this, the church has a duty to warmly welcome and honor faithful Christian workers. We can honor dedicated ministers by praying for them, respecting their leadership, and helping supply their material needs.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you make yourself available to encourage and point a friend to Jesus this week?",
+    "What is one practical way you can support and pray for someone who works hard to share the gospel?"
+   ],
+   "prayer": "Lord, thank You for faithful friends and workers who serve others with selfless hearts. Help us to be dependable companions who point people to Jesus through quiet acts of love. Teach us to support, pray for, and honor those who labor to share the good news. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "Friends in Christ",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-21-2023.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Honoring Christ's Servants",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/honoring-christs-servants"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

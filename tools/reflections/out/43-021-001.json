@@ -1,0 +1,67 @@
+{
+ "id": "43-021-001",
+ "title": "Jesus Appears by the Sea of Tiberias",
+ "refs": [
+  "John 21:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43021001,
+   "end": 43021014,
+   "ref": "John 21:1-14",
+   "ranges": [
+    [
+     43021001,
+     43021014
+    ]
+   ],
+   "title": "Come and Dine with the Lord",
+   "key_verse": [
+    43021001,
+    43021001
+   ],
+   "reflect": [
+    {
+     "text": "After a long night of catching nothing, the disciples found Jesus waiting on the shore with warm bread and fish. When He called out to them to come and eat breakfast, He was offering more than physical food. As Charles Spurgeon wrote, \"the believer is invited to a holy nearness to Jesus.\" Sitting at the table with our Savior means being welcomed into close fellowship with Him, where He shares His love with us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This meal is also an invitation to be united with one another. Christians might differ on various points, but we all have the same spiritual hunger. When we feed on Christ together, our differences fade. The closer we draw to Jesus in faith, the closer we become to our brothers and sisters who depend on the very same bread of life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finally, coming to Jesus is where we find daily strength. We need to look to Christ to receive life, but we must feast on Him to have energy to serve. When we feel exhausted or weak in our Christian walk, it is often because we have neglected this quiet time with our Master. Coming to Him by faith renews our power to do His work.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What keeps you from spending quiet time with Jesus to receive His strength?",
+    "How does drawing closer to Jesus change how you view other believers?"
+   ],
+   "prayer": "Lord Jesus, thank You for inviting us into close fellowship with You. Forgive us when we try to labor in our own strength instead of coming to You to be fed. Draw us near to Your heart today so we may love Your people and serve You with joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 16",
+     "on": "John 21:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

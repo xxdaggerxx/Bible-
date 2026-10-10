@@ -1,0 +1,91 @@
+{
+ "id": "40-023-001",
+ "title": "Woes to Scribes and Pharisees",
+ "refs": [
+  "Matthew 23:1-36",
+  "Luke 11:37-54"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40023001,
+   "end": 40023036,
+   "ref": "Matthew 23:1-36; Luke 11:37-54",
+   "ranges": [
+    [
+     40023001,
+     40023036
+    ],
+    [
+     42011037,
+     42011054
+    ]
+   ],
+   "title": "Cleaning the Inside of the Cup",
+   "key_verse": [
+    40023026,
+    40023026
+   ],
+   "reflect": [
+    {
+     "text": "Jesus spoke strongly against religious leaders who cared mostly about human praise. They performed their good deeds and kept outward rituals so that other people would look up to them. Yet Jesus taught that real greatness is not found in seeking titles, applause, or worldly status. Instead, true greatness means choosing the humble posture of a servant and relying on God's grace.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "It is dangerously easy to have a head full of Bible knowledge while our hearts remain full of sin. When we obsess over meticulous rule-following, we easily become blind to what matters most to God, such as justice, mercy, and faithful love. Scripture is meant to be a life-giving guide, never a weapon to judge or look down on other people.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Relying on external performance only creates a false sense of security. God often uses stressful seasons to uncover the hidden pride, bitterness, and insecurity that we try to keep buried. Walking with Jesus does not mean maintaining a flawless outward appearance. It means honestly admitting our faults, letting Him clean our hearts from the inside out, and choosing close fellowship with Him over mere religious routines.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to focus on looking spiritually mature to others rather than showing genuine mercy and love?",
+    "What hidden attitudes of pride or bitterness might God be asking you to confess to Him today?"
+   ],
+   "prayer": "Lord Jesus, forgive us when we care more about human approval than a clean heart before You. Strip away our pride and teach us to love others with genuine mercy, justice, and humility. Please clean us from the inside out so our lives reflect Your grace.",
+   "sources": {
+    "D1": {
+     "author": "Jon Bloom",
+     "work": "The Path to Short-Lived Greatness",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-path-to-short-lived-greatness"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Do You Relate to the Pharisees?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-october-21-2022.html"
+    },
+    "D3": {
+     "author": "Glynnis Whitwer",
+     "work": "I Would Have Made a Great Pharisee",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-september-13-2011.html"
+    },
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Oct. 10, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-oct-10-2008-11582783.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "45-012-001",
+ "title": "Living Sacrifices",
+ "refs": [
+  "Romans 12:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 45012001,
+   "end": 45012002,
+   "ref": "Romans 12:1-2",
+   "ranges": [
+    [
+     45012001,
+     45012002
+    ]
+   ],
+   "title": "\"Offer Your Bodies as Living Sacrifices\"",
+   "key_verse": [
+    45012001,
+    45012001
+   ],
+   "reflect": [
+    {
+     "text": "Because God has shown us so much mercy, He calls us to give ourselves entirely to Him. F. B. Meyer reminds us that God's great love makes Him eager to receive our lives when we hand them over to Him. Giving our bodies as living sacrifices means letting our worship touch everything we do each day. Rather than letting entertainment quietly direct our thinking, we actively guard our minds and replace worldly noise with prayer and praise.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Paul warns us not to copy the patterns of the world around us. Charles Spurgeon notes that even small compromises weaken our faith, warning that conformity to the world \"cuts the tendons of your strength.\" Unhealthy habits sneak into our lives when we dwell on worldly thoughts. To grow strong in grace, God's undeserved kindness, we need to stand out as distinct followers of Jesus.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we let God renew our minds each day, He changes the way we see life. God's will can sometimes look scary from a distance, but obedience shows us how good and pleasing it really is. As God transforms our thinking, He replaces anxiety with real peace, deep joy, and a life that honors Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly influences or media do you need to filter out so your mind can be renewed?",
+    "In what area of your daily life can you surrender yourself more completely to God?"
+   ],
+   "prayer": "Lord, thank you for your great mercy toward us. Help us guard our minds against the patterns of this world and fill our thoughts with your truth. Take our bodies and lives today as living offerings, and teach us to trust your good and perfect will.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 14",
+     "on": "Romans 12:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Romans 12:1",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Daily Disciples",
+     "work": "Daily Disciples Devotional - January 2",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-devotional-january-2-11563076.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

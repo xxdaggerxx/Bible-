@@ -1,0 +1,73 @@
+{
+ "id": "44-009-001",
+ "title": "The Road to Damascus",
+ "refs": [
+  "Acts 9:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44009001,
+   "end": 44009009,
+   "ref": "Acts 9:1-9",
+   "ranges": [
+    [
+     44009001,
+     44009009
+    ]
+   ],
+   "title": "Stopped on the Road",
+   "key_verse": [
+    44009004,
+    44009004
+   ],
+   "reflect": [
+    {
+     "text": "Saul traveled toward Damascus with official authority and unchecked anger, determined to wipe out followers of Jesus. For much of the trip, God seemed silent. Then, right at the moment of greatest impact, God stepped in. Without any advance warning, a brilliant light from heaven flashed around Saul and brought his rampage to an immediate stop.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When Jesus spoke from heaven, He asked why Saul was persecuting Him. This question shows that Jesus intimately shares in the pain of His suffering church. God has complete power over His enemies. In a single moment, the Lord humbled this arrogant opponent, leaving him blind and helpless. Instead of marching proudly into the city, Saul had to be led by the hand, spending three quiet days in darkness, fasting and praying.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Unexpected troubles can crash into our lives just as suddenly as that blinding light hit Saul on the road. When unplanned crises jolt our world, they remind us that our own plans are fragile and that God remains in sovereign control over all things.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus shares in the suffering of His people bring you comfort when life is hard?",
+    "When unexpected trials disrupt your plans, how can you remind yourself that God is still in control?"
+   ],
+   "prayer": "Lord Jesus, thank You for caring so deeply for Your church that You share in our pain. When sudden troubles shake our lives and change our plans, help us to be humble and trust Your supreme authority. Lead us in Your ways each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Conversion of Saul",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-conversion-of-saul"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Roadside Conversion - Today's Insight - June 8, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-june-8-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

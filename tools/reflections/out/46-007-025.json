@@ -1,0 +1,80 @@
+{
+ "id": "46-007-025",
+ "title": "The Unmarried and Widowed",
+ "refs": [
+  "1 Corinthians 7:25-40"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46007029,
+   "end": 46007031,
+   "ref": "1 Corinthians 7:29-31",
+   "ranges": [
+    [
+     46007029,
+     46007031
+    ]
+   ],
+   "title": "\"The Time Is Short\"",
+   "key_verse": [
+    46007029,
+    46007029
+   ],
+   "reflect": [
+    {
+     "text": "Paul reminds us that our time on earth is brief and that this present world is quickly passing away. Because earthly arrangements are not permanent, we must hold our present lives loosely. We can thankfully enjoy God's creation, but we should not become too attached to anything here. Our present relationships, sorrows, and possessions are only temporary compared to God's coming eternal kingdom.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Deep sorrow, everyday joys, and the things we buy can easily dominate our thoughts. When these things take over, our interests become divided and bring extra anxiety into our lives. Surrendering our own plans allows the Lord to work powerfully for our good. Looking at life through the lens of eternity helps us find true contentment, so neither hardships nor temporary pleasures take our eyes off God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Devoting ourselves to God means paying attention to our current calling while accepting our human limits. Faithfulness often requires us to say no to good things that distract us from what matters most. By regularly clearing away life's clutter, we can live lean and keep our focus on eternal gains.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What earthly possession, sorrow, or routine has been taking too much of your attention lately?",
+    "Is there a good distraction you need to say no to so you can serve God with a clearer heart?"
+   ],
+   "prayer": "Lord, help us remember that this world is passing away and that our time here is short. Teach us to hold our possessions, joys, and sorrows loosely as we look to your eternal kingdom. Free us from divided interests and give us content hearts devoted to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Time Grows Short",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/time-grows-short"
+    },
+    "D2": {
+     "author": "Michael A. Youssef, Ph.D.",
+     "work": "Because the Time Is Short",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-august-10-2026.html"
+    },
+    "D3": {
+     "author": "Jon Bloom",
+     "work": "Free Yourself from Divided Interests",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/free-yourself-from-divided-interests"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

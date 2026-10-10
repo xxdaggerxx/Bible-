@@ -1,0 +1,73 @@
+{
+ "id": "48-006-011",
+ "title": "Final Warnings and Blessings",
+ "refs": [
+  "Galatians 6:11-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 48006011,
+   "end": 48006018,
+   "ref": "Galatians 6:11-18",
+   "ranges": [
+    [
+     48006011,
+     48006018
+    ]
+   ],
+   "title": "Boasting Only in the Cross of Christ",
+   "key_verse": [
+    48006014,
+    48006014
+   ],
+   "reflect": [
+    {
+     "text": "Standing before the cross leaves no room for our own pride or self-merit. Instead of boasting in what we have done or showing off for other people, true Christian boasting delights only in God's grace shown at Calvary. When our hearts focus on Christ rather than worldly status and temporary things, our desires are aligned with His sacrifice, and He alone is honored.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul knew this because he belonged entirely to Jesus. Just as a servant bears the mark of an owner, Paul carried physical scars from serving Christ. For us, following Jesus might bring disapproval, cold looks, or personal losses from people who once accepted us. As F. B. Meyer writes, these trials are just as much 'the brand of His Cross' today.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Jesus bought us with His own blood, we gladly give Him our lives each day. We awake as His property, ready to obey His direction, without holding back any locked rooms in our hearts. In Him, our souls find quiet peace: if our Lord is pleased, we can be content no matter what the world thinks.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly achievements or opinions are you tempted to boast in instead of Jesus?",
+    "How can you surrender every part of your day to Christ as His willing servant?"
+   ],
+   "prayer": "Lord Jesus, thank You for buying us with Your precious blood and showing us such grace on the cross. Forgive us when we look for praise from others or take pride in ourselves. Help us to hold nothing back from You today, finding our deepest peace in pleasing You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Galatians 6:17",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Erik Raymond",
+     "work": "Challenged to Boast like a Christian",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/challenged-to-boast-like-a-christian/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

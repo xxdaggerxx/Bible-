@@ -1,0 +1,81 @@
+{
+ "id": "45-011-033",
+ "title": "A Hymn of Praise",
+ "refs": [
+  "Romans 11:33-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45011033,
+   "end": 45011036,
+   "ref": "Romans 11:33-36",
+   "ranges": [
+    [
+     45011033,
+     45011036
+    ]
+   ],
+   "title": "All Things for God's Glory",
+   "key_verse": [
+    45011036,
+    45011036
+   ],
+   "reflect": [
+    {
+     "text": "God is far greater than our human minds can comprehend. Even if we read the entire Bible, we will never solve every mystery about Him. Deep truths such as His majesty, His rule over creation, and His judgments are beyond our reach by design. Instead of exhausting ourselves trying to explain what cannot be explained, we are called to trust Him with quiet reverence and faith.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Since everything comes from God, continues through Him, and exists for Him, His glory is the chief purpose of all life. Charles Spurgeon noted that God's honor should be our \"single desire.\" When we live only for ourselves, sorrow soon follows. In the same way, our prayers can go unanswered when we seek only our own benefit rather than God's honor. Praying rightly means wanting the Father to be praised in all things.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God gives us life and every good gift, our praise should keep growing over time. When He blesses us with better health, greater knowledge, or peaceful seasons, we can respond with stronger faith and deeper thanksgiving. In our work, our prayers, and our everyday choices, we can aim to give Him the honor He deserves.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there mysteries about God that you need to trust Him with instead of worrying over them?",
+    "How can you reshape your prayers so that honoring God matters more than getting what you want?"
+   ],
+   "prayer": "Lord God, your wisdom and knowledge are deeper than we can ever measure. Teach us to trust your ways with quiet faith when we do not understand your plans. Realign our prayers and our daily actions so that bringing you honor becomes our greatest joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 17",
+     "on": "Romans 11:36",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "The Mysteries of God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-august-28-2026.html"
+    },
+    "D3": {
+     "author": "Adrian Rogers",
+     "work": "How Do You Pray to God?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-march-12-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

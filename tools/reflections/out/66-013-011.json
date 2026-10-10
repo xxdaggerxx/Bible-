@@ -1,0 +1,66 @@
+{
+ "id": "66-013-011",
+ "title": "The Beast from the Earth",
+ "refs": [
+  "Revelation 13:11-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66013011,
+   "end": 66013015,
+   "ref": "Revelation 13:11-15",
+   "ranges": [
+    [
+     66013011,
+     66013015
+    ]
+   ],
+   "title": "Discerning the Counterfeit",
+   "key_verse": [
+    66013011,
+    66013011
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, John describes a second beast that rises with horns like a gentle lamb, yet speaks with the voice of a dragon. Satan actively works against us by creating clever counterfeits of holy things. By mimicking what is pure and good, the enemy schemes to draw people away from the true God without them noticing the danger.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This beast uses religious deception and dramatic, false signs to compel everyone on earth to bow down to worldly powers. Throughout history, powerful rulers have often partnered with corrupt teachers and false religion. Together, they use this ungodly alliance to strengthen their own earthly authority and stand against the faithful witness of God's church.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Following Jesus in a fallen world means learning to recognize these subtle traps. Believers frequently face severe pressure, including economic coercion and loss of livelihood, if they refuse to conform. We must pray for spiritual discernment so that we do not fall for these deceptive schemes, keeping our ultimate allegiance anchored in Christ alone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you see worldly ideas disguised as truth today?",
+    "What helps you stay loyal to Christ when you face pressure to compromise?"
+   ],
+   "prayer": "Lord, give us clear eyes to spot the enemy's counterfeits and stay true to your word. Protect us when we face pressure to put earthly powers before you. Keep our faith firm and our hearts devoted to Christ alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Beast from the Earth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-beast-from-the-earth"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "40-007-028",
+ "title": "The Authority of Jesus",
+ "refs": [
+  "Matthew 7:28-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40007028,
+   "end": 40007029,
+   "ref": "Matthew 7:28-29",
+   "ranges": [
+    [
+     40007028,
+     40007029
+    ]
+   ],
+   "title": "Teaching with True Authority",
+   "key_verse": [
+    40007029,
+    40007029
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus finished speaking, the people were amazed. The religious scribes of His day only repeated human traditions that had no power to change lives. Jesus was completely different. His words came with direct authority from God the Father. He proved this supreme authority throughout His life by never sinning, dying on the cross for us, and rising again from the dead.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Real spiritual change does not come from clever human ideas or techniques. God's living Word alone has the power to transform our hearts. Because Jesus is our King, listening to Him means we need to put aside our own wishes and gladly submit to His rule every day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Following Jesus also shapes how we treat the people around us. The world cares about power and rank, but true Christian discipleship looks like quiet, humble service to others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily life is it hardest to obey Jesus' commands?",
+    "How can you humbly serve someone in your church or family this week?"
+   ],
+   "prayer": "Lord Jesus, thank You for speaking with the true authority of God. Please use Your living Word to change my heart and help me trust You. Teach me to turn away from human pride and follow You by humbly serving others today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Kevin Struyk",
+     "work": "Trust and Obey",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/trust-and-obey"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

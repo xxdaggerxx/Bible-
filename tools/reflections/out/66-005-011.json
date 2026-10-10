@@ -1,0 +1,72 @@
+{
+ "id": "66-005-011",
+ "title": "The Lamb Exalted",
+ "refs": [
+  "Revelation 5:11-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66005011,
+   "end": 66005014,
+   "ref": "Revelation 5:11-14",
+   "ranges": [
+    [
+     66005011,
+     66005014
+    ]
+   ],
+   "title": "Worthy Is the Slain Lamb",
+   "key_verse": [
+    66005012,
+    66005012
+   ],
+   "reflect": [
+    {
+     "text": "Our world still suffers under the brokenness of the curse, but Jesus has overcome it through His sacrifice. In John's vision, countless angels encircle the throne to declare that the slain Lamb possesses infinite, boundless worth. All creation is being restored through His redemptive work on the cross.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "True worship begins when we recognize that God is our Master and that He alone is worthy. Just as a rare violin belongs in the hands of a master musician, all honour belongs rightfully to Christ. We can build a habit of praise by naming His qualities and thanking Him for who He is, who He has been to us, and who He will always be.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "One day, every single creature in heaven, on earth, and under the sea will join together in praising God and the Lamb. We do not have to wait for that future day to take part. We are called to join this eternal song right now, both in our private time with the Lord and when we gather with our church family.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific attributes or works of Christ can you praise Him for today?",
+    "How can remembering that all creation will praise Jesus change how you worship Him this week?"
+   ],
+   "prayer": "Lord Jesus, you are the Lamb who was slain, and you alone are worthy of all honour and power. Help us to acknowledge you as our Master in everything we do. Unite our voices with the song of heaven as we praise you in private and together with your people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "He Alone Is Worthy - Love Worth Finding - January 8",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-january-8-2019.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Praising the Lamb",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/praising-the-lamb"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

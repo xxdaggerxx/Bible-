@@ -1,0 +1,66 @@
+{
+ "id": "60-001-001",
+ "title": "A Greeting from Peter",
+ "refs": [
+  "1 Peter 1:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 60001001,
+   "end": 60001002,
+   "ref": "1 Peter 1:1-2",
+   "ranges": [
+    [
+     60001001,
+     60001002
+    ]
+   ],
+   "title": "Chosen Exiles with Living Hope",
+   "key_verse": [
+    60001001,
+    60001001
+   ],
+   "reflect": [
+    {
+     "text": "The apostle Peter wrote this letter to early Christians scattered across Asia Minor. As one of the original disciples of Jesus, Peter spoke with God-given authority to bring them comfort. The believers who first received these words were facing hard times. They were dealing with unfair treatment, insults, and social hostility from their neighbors, rather than large-scale government attacks.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Peter calls these believers elect exiles. Even though many of them were Gentiles, people who were not Jewish, Peter shows that they now belong to God's covenant family. Living for Jesus made them feel like strangers in their own culture. Yet Peter points them to a living hope, reminding them that God chose them and cares for them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can face similar hardships today. When people misunderstand our faith, speak badly about us, or push us away, it can feel lonely. Peter's letter encourages us to remember who we are in God's family and stand firm in our faith in Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When have you felt like an outsider or faced unkind words because of your faith?",
+    "How does knowing that you belong to God's family give you strength to stand firm?"
+   ],
+   "prayer": "Lord God, thank You for choosing us and bringing us into Your family. When people misunderstand or speak against our faith, help us to remain steady in Christ. Keep our eyes on the living hope You have given us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Peter, Apostle of Christ",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/peter-apostle-christ"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

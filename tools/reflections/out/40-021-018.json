@@ -1,0 +1,87 @@
+{
+ "id": "40-021-018",
+ "title": "The Barren Fig Tree",
+ "refs": [
+  "Matthew 21:18-22",
+  "Mark 11:12-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40021018,
+   "end": 40021022,
+   "ref": "Matthew 21:18-22; Mark 11:12-14",
+   "ranges": [
+    [
+     40021018,
+     40021022
+    ],
+    [
+     41011012,
+     41011014
+    ]
+   ],
+   "title": "Genuine Fruit and Faithful Prayer",
+   "key_verse": [
+    40021022,
+    40021022
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus saw the leafy fig tree, its green leaves suggested it held fruit. Instead, it was completely bare. This was not a moment of sudden anger over being hungry, but a deliberate lesson. Jesus used His authority over creation to give a clear warning against hypocrisy. A tree full of leaves with no fruit resembles religious activity that looks healthy on the outside but offers no real spiritual nourishment.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God desires genuine fruit in our lives, not just an outward display. It can be tempting to maintain a good appearance while our hearts remain empty. Jesus calls us to practice what we profess, living in ways that display true spiritual life before others.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When the disciples were amazed at how fast the tree withered, Jesus pointed them to the power of faithful prayer. As F. B. Meyer observed, we often go wrong when we let self-will lead our prayers and try to bring God around to our thinking. True faith does not come from forcing our own way. It grows when we quiet our hearts and let our desires align with God's purpose.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might you be settling for outward religious appearances instead of genuine spiritual fruit?",
+    "How can you quiet your heart to ensure your prayers align with God's purpose rather than your own will?"
+   ],
+   "prayer": "Lord, protect us from empty religious habits that only look good on the surface. Teach us to quiet our own wills and seek what pleases You. Help our lives to bear real fruit and our prayers to align with Your good purpose. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 21:22",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "A Lesson From a Fig Tree",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lesson-fig-tree"
+    },
+    "D3": {
+     "author": "Ryan Duncan",
+     "work": "Figuring Out the Fig Tree",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-march-6-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

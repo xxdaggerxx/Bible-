@@ -1,0 +1,75 @@
+{
+ "id": "38-011-001",
+ "title": "The Doomed Flock",
+ "refs": [
+  "Zechariah 11:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38011001,
+   "end": 38011009,
+   "ref": "Zechariah 11:1-9",
+   "ranges": [
+    [
+     38011001,
+     38011009
+    ]
+   ],
+   "title": "Listening to the True Shepherd",
+   "key_verse": [
+    38011007,
+    38011007
+   ],
+   "reflect": [
+    {
+     "text": "The picture of mighty cedars crashing down reminds us that life is short and fragile. When tall trees fall in the forest, the smaller trees around them should pay attention. We are all like trees that will one day face the axe, and none of us can escape death or God's judgment. Charles Spurgeon warns us not to become numb to this truth, like birds that sleep in a steeple while funeral bells toll. God's warnings should sober us and make us prepare to meet our Master.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In this passage, the prophet steps in to guide a hurting and mistreated flock. He uses two staffs, showing God's desire for beauty and unity among His people. This points directly to Jesus, our Good Shepherd. He longs for His church to reflect spiritual beauty and live together in close harmony. Yet people often undervalue His tender care and reject His leadership, treating His great love as if it were worth almost nothing.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because our time on earth is short and Christ comes suddenly, we cannot afford to play with our eternal destiny. We must examine our hearts to see if we have ignored the Shepherd's voice or neglected the unity He desires for us. Turning to Him in repentance and serving Him with all our heart ensures we are ready to stand before Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can the reminder that our days are short help you value the guidance of Jesus more today?",
+    "In what ways might you be neglecting the peace and unity Christ desires among His followers?"
+   ],
+   "prayer": "Lord Jesus, thank You for being our faithful Shepherd who cares for us when we are weak. Forgive us for the times we treat Your love lightly or forget that our lives on earth will soon end. Teach us to walk in Your beauty and live in unity with one another. Keep our hearts ready to give an account to You with joy.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 26",
+     "on": "Zechariah 11:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Zechariah 11:7",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

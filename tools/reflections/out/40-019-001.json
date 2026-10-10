@@ -1,0 +1,78 @@
+{
+ "id": "40-019-001",
+ "title": "Teachings about Divorce",
+ "refs": [
+  "Matthew 19:1-12",
+  "Mark 10:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40019001,
+   "end": 40019012,
+   "ref": "Matthew 19:1-12; Mark 10:1-12",
+   "ranges": [
+    [
+     40019001,
+     40019012
+    ],
+    [
+     41010001,
+     41010012
+    ]
+   ],
+   "title": "What God Has Joined Together",
+   "key_verse": [
+    41010009,
+    41010009
+   ],
+   "reflect": [
+    {
+     "text": "Many people in society treat marriage as an arrangement of convenience that can be set aside when things become difficult. In Jesus' day, religious teachers also twisted God's laws to allow divorce for small and trivial reasons. Jesus pointed them back to the beginning of creation. God designed marriage to be a lifelong union between a husband and a wife. Because God Himself joins them together, human beings must not tear them apart.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When questioned about Moses' commands, Jesus explained that divorce was permitted only because the people had hard hearts. God patiently trained Israel in stages, meeting them where they were while still holding out His perfect purpose. Our own understanding grows in a similar way. Like morning mist slowly lifting from a hill, God gradually clears our sight. He reveals sin in places we never noticed before and teaches us to love His pure standards.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because marriage is so sacred to God, church leaders carry an important duty. Pastors and elders are called to stand up for those who have been wronged and to apply the teachings of Scripture with fairness and justice.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How is God helping you see His holy standards more clearly as you grow in faith?",
+    "How can we support and honor the lifelong commitment of marriage in our community?"
+   ],
+   "prayer": "Heavenly Father, thank You for Your good design for marriage and for joining lives together. Forgive us for the hardness of our hearts, and open our eyes where we fail to see Your truth. Please grant wisdom to our church leaders to protect those who are hurt and to guide us with justice. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 19:8",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The One-Flesh Union",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/one-flesh-union"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

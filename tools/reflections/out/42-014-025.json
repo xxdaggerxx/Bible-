@@ -1,0 +1,76 @@
+{
+ "id": "42-014-025",
+ "title": "The Cost of Discipleship",
+ "refs": [
+  "Luke 14:25-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42014025,
+   "end": 42014033,
+   "ref": "Luke 14:25-33",
+   "ranges": [
+    [
+     42014025,
+     42014033
+    ]
+   ],
+   "title": "Counting the Cost of Following Jesus",
+   "key_verse": [
+    42014033,
+    42014033
+   ],
+   "reflect": [
+    {
+     "text": "Large crowds walked with Jesus, but He did not look for quick enthusiasm. Real discipleship requires a deliberate, lifelong choice to obey Him rather than a temporary impulse. While God's mercy is open wide to all who believe, true saving faith must be ready to face the serious costs Jesus sets before us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus shows us three clear tests. First, our love for Him must rise above our dearest family relationships and our very lives. If tender home ties pull us in one direction while Christ calls us in another, we must choose Him. Second, we must carry our own cross. As F. B. Meyer explains, this means facing \"some one thing in which the will of God crosses his will.\" We cannot follow Christ without voluntary self-denial and enduring hardships for His sake.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Finally, following Jesus asks us to surrender all our possessions. We are called to view ourselves not as owners of our things, but simply as caretakers who manage what belongs to God. When all our earthly treasures are placed on one side and Christ on the other, a true disciple gladly chooses Jesus above everything else.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any relationship or personal plan that you find hard to place second behind Jesus?",
+    "What does carrying your cross look like in the choices you face this week?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your open gift of mercy. Give us the courage to follow You with a steady, lifelong commitment instead of fleeting feelings. Teach us to love You above all earthly ties, to submit our will to Yours, and to hold all our possessions with open hands for Your sake. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 14:26",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "J. Oswald Sanders",
+     "work": "Foundations of the Faith: What It Means to Be a Disciple of Christ",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/decision-magazine/articles/foundations-of-the-faith-what-it-means-to-be-a-disciple-of-christ"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

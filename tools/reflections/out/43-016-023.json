@@ -1,0 +1,116 @@
+{
+ "id": "43-016-023",
+ "title": "Ask in My Name",
+ "refs": [
+  "John 16:23-33"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 43016033,
+   "end": 43016033,
+   "ref": "John 16:33",
+   "ranges": [
+    [
+     43016033,
+     43016033
+    ]
+   ],
+   "title": "\"I Have Overcome the World\"",
+   "key_verse": [
+    43016033,
+    43016033
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus tells us we will face trouble in this world, we should not be surprised. Our holy Father uses trials like a refining furnace to shape us and make us pure like Him. Around us, this world is an enemy's country, not our permanent home. Satan seeks to trouble us, and our own hearts still struggle with sin and selfish desires. For all these reasons, hard times will surely come.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet Jesus calls us to take heart because He has overcome the world. When hard times strike, our spirits easily sink and we feel discouraged. But as Charles Spurgeon writes, we \"fight with a beaten foe.\" Jesus faced a far heavier battle than ours and won. Because He has already defeated the world, we can be glad and trust that He will give us victory as well.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When hardships come, what helps you remember that this broken world is not your final home?",
+    "How does knowing that Jesus has already conquered the world bring you peace today?"
+   ],
+   "prayer": "Lord Jesus, help us not to lose heart when we meet trials in this life. Thank You for winning the victory over the world and its troubles. Give us Your peace, and teach us to trust You through every hardship. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 3",
+     "on": "John 16:33",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 31",
+     "on": "John 16:33",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 43016023,
+   "end": 43016033,
+   "ref": "John 16:23-33",
+   "ranges": [
+    [
+     43016023,
+     43016033
+    ]
+   ],
+   "title": "Left All Alone",
+   "key_verse": [
+    43016023,
+    43016023
+   ],
+   "reflect": [
+    {
+     "text": "Before going to the cross, Jesus warned His disciples that they would scatter and leave Him completely alone. When His deepest suffering began in the garden, most of His followers stayed far back. Even His three closest friends were kept a short distance away and could not enter the heart of His grief. In His darkest hour, no human companion stood beside Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus had to bear the weight of His suffering by Himself. As Charles Spurgeon noted, there was an \"inner chamber in our Master's grief, shut out from human knowledge.\" No person could fully grasp the sorrow He felt. Yet He bore that solitary pain so that we might be saved. All the eternal joys we receive were bought by the unseen agonies He suffered alone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus suffered completely alone comfort you when you feel lonely?",
+    "What does Christ's willing endurance of unseen agony show you about His great love?"
+   ],
+   "prayer": "Lord Jesus, thank You for walking through the deepest darkness and loneliness for our sake. When everyone abandoned You, You remained faithful to rescue us from our sins. Help us to treasure the eternal joy You purchased with Your suffering. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 21",
+     "on": "John 16:32",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

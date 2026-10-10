@@ -1,0 +1,115 @@
+{
+ "id": "54-004-006",
+ "title": "A Good Servant of Jesus Christ",
+ "refs": [
+  "1 Timothy 4:6-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 54004012,
+   "end": 54004012,
+   "ref": "1 Timothy 4:12",
+   "ranges": [
+    [
+     54004012,
+     54004012
+    ]
+   ],
+   "title": "\"Set an Example for the Believers\"",
+   "key_verse": [
+    54004012,
+    54004012
+   ],
+   "reflect": [
+    {
+     "text": "When we guide or teach others in the faith, our words are never enough on their own. People need to see the truth of Christ lived out in our daily lives. If our conduct contradicts what we teach, we undermine the credibility of the message. Christian leaders earn genuine respect through honest words, upright living, and moral purity. This visible consistency gives other believers a trustworthy pattern of godliness that they can safely follow.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Setting a good example also requires selfless love. Real Christian ministry does not look for personal prestige or do the bare minimum to stay comfortable. Instead, it calls for generous exertion and sacrifice to cherish and serve the church. Even when we face opposition, patient love endures because our confidence rests in God's eternal promises. By giving ourselves away for the good of others, we show the world what Jesus is truly like.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what practical ways can your daily speech and actions provide a clear, godly pattern for others to follow?",
+    "Where might God be calling you to give up your own comfort to serve someone else with Christlike love?"
+   ],
+   "prayer": "Lord, help us to live lives of purity, truth, and love that honor your name. Keep us from hypocrisy so that our actions never contradict the gospel we share. Give us generous hearts willing to sacrifice our own comfort to cherish and serve others for your sake. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ray Ortlund",
+     "work": "Preach Christ, Embody Christ: How to Set an Example in Love",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/preach-christ-embody-christ"
+    },
+    "D3": {
+     "author": "John MacArthur",
+     "work": "The Servant Leader Exemplifies",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B190320/the-servant-leader-exemplifies"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 54004006,
+   "end": 54004016,
+   "ref": "1 Timothy 4:6-16",
+   "ranges": [
+    [
+     54004006,
+     54004016
+    ]
+   ],
+   "title": "A Good Servant of Jesus Christ",
+   "key_verse": [
+    54004015,
+    54004015
+   ],
+   "reflect": [
+    {
+     "text": "Spiritual growth does not happen by accident, nor does it come from quick and shallow reading of the Bible. If we want God's Word to shape our lives, we must spend quiet time thinking deeply about its truth. Busy activity and hurried routines cannot replace honest heart-work. When we bring our best thoughts and sincere energy to what the Lord asks of us, we will find real profit for our souls.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To make steady progress, we must give ourselves completely to holy things rather than dividing our loyalty. When our hearts are split between Christ and our own selfish desires, or between God and worldly wealth, we stall in our spiritual walk. As Charles Spurgeon wrote, we must be \"in-and-in with Jesus, and then out-and-out for Jesus.\" Making His service our main life pursuit allows our growth to become evident, bringing a lasting, helpful influence to both the church and the world around us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you taking time to meditate deeply on Scripture, or are you rushing through your time with God?",
+    "What worldly interests or selfish desires might be dividing your focus from serving Christ with your whole heart?"
+   ],
+   "prayer": "Father, teach us to slow down and meditate on your Word with our whole minds. Forgive us for the times our hearts are divided between you and the things of this world. May our devotion to Jesus be deep and undivided, so that our lives bear clear fruit and encourage those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 2",
+     "on": "1 Timothy 4:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "38-012-010",
+ "title": "Mourning the One They Pierced",
+ "refs": [
+  "Zechariah 12:10-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38012010,
+   "end": 38012014,
+   "ref": "Zechariah 12:10-14",
+   "ranges": [
+    [
+     38012010,
+     38012014
+    ]
+   ],
+   "title": "Mourning the One We Pierced",
+   "key_verse": [
+    38012010,
+    38012010
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God promises a day when His people will look upon the One they pierced and weep with deep sorrow. F. B. Meyer compares this to Joseph revealing himself to his brothers in Egypt. They realized what they had done to their brother and wept bitter tears. In the same way, God's people will recognize Jesus, see His wounds, and grieve over what He suffered.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Meyer points out that this weeping begins after God has already rescued and saved His people. True sorrow for sin often comes after we understand that we are loved and forgiven, just like the woman who washed Jesus' feet with her tears. We should not be discouraged if our grief over sin seems small at first. The more we gaze upon the cross and know Christ's love, the more our hearts are broken and softened.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does seeing the deep love of Jesus on the cross help soften your heart toward your own sin?",
+    "Have you ever felt that you needed to feel enough sorrow before coming to Jesus for forgiveness?"
+   ],
+   "prayer": "Lord, pour out on us Your grace and help us look upon Jesus, whom our sins have pierced. Soften our hearts with Your deep love so that we may turn away from our wrongdoing. Thank You for rescuing us and forgiving us completely. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Zechariah 12:10",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

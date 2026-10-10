@@ -1,0 +1,79 @@
+{
+ "id": "40-007-015",
+ "title": "A Tree and Its Fruit",
+ "refs": [
+  "Matthew 7:15-23",
+  "Luke 6:43-45"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40007015,
+   "end": 40007023,
+   "ref": "Matthew 7:15-23; Luke 6:43-45",
+   "ranges": [
+    [
+     40007015,
+     40007023
+    ],
+    [
+     42006043,
+     42006045
+    ]
+   ],
+   "title": "Known by Our Fruit",
+   "key_verse": [
+    40007016,
+    40007016
+   ],
+   "reflect": [
+    {
+     "text": "Jesus warns us that people can look religious on the outside while hiding who they truly are. Outward appearances and spoken words cannot permanently conceal a corrupt heart. For this reason, Jesus gives us a clear standard: we recognize a tree by its fruit. Examining fruit in this way is not harsh condemnation; it is healthy spiritual discernment that helps us recognize deception.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "True spiritual fruit always begins in the heart and naturally overflows into godly actions and attitudes. A life marked by ongoing, unrepentant sin reveals an inner nature that belongs to the world, not to God. In contrast, genuine faith born of God's grace displays true humility, meekness, and obedience.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "These verses also invite us to look closely at ourselves. Rather than only inspecting others, we need to examine our own lives to see if our daily conduct and speech show the fruit of the Holy Spirit.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What do your everyday words and attitudes reveal about the condition of your heart?",
+    "How can you practice careful discernment while remaining humble and free from a judgmental spirit?"
+   ],
+   "prayer": "Lord, give us wisdom to discern the truth and recognize the fruit in those around us. Search our own hearts and remove any unrepentant sin. Grow in us the quiet humility and goodness that come only from your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Lynette Kittle",
+     "work": "Identifying Fruit",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/identifying-fruit-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "John MacArthur",
+     "work": "Fruit Inspection",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/print/B140212/fruit-inspection"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

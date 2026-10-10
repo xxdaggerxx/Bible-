@@ -1,0 +1,66 @@
+{
+ "id": "40-013-047",
+ "title": "The Parable of the Net",
+ "refs": [
+  "Matthew 13:47-52"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40013047,
+   "end": 40013052,
+   "ref": "Matthew 13:47-52",
+   "ranges": [
+    [
+     40013047,
+     40013052
+    ]
+   ],
+   "title": "Caught in God's Net",
+   "key_verse": [
+    40013047,
+    40013047
+   ],
+   "reflect": [
+    {
+     "text": "In deep-sea fishing, a net sweeps up everything in its path, both good catches and unwanted creatures. A fisherman might haul in a fine, edible fish right alongside an aggressive eel that must be thrown away. Jesus explained that the kingdom of heaven is like this wide net. A day of sorting is coming at the end of the age, when God will separate the righteous from those who reject Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Unlike human fishermen who simply want a good haul, God constantly casts His net wide because He actively seeks a relationship with every person. He does not ignore anyone. Instead, He reaches out across the waters of this world to draw people toward Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Believers are invited to yield to Christ rather than fight against His reach. When a normal fish is caught, it loses its life, but Jesus is a different kind of fisherman. When we surrender to Him, being caught does not lead to harm. Giving our lives over to Christ leads to true freedom.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God actively seeks a relationship with you change the way you view Him?",
+    "Is there any part of your life where you are resisting Christ instead of yielding to Him?"
+   ],
+   "prayer": "Lord Jesus, thank You for casting Your net wide and seeking a relationship with me. Help me to stop resisting Your gentle pull and to surrender my life into Your hands. Thank You that yielding to You brings true freedom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ryan Duncan",
+     "work": "\"Good Fish, Bad Fish\" - Crosswalk the Devotional - July 19, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/good-fish-bad-fish-crosswalk-the-devotional-july-25-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

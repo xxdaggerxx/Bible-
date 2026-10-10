@@ -1,0 +1,75 @@
+{
+ "id": "44-011-019",
+ "title": "The Church at Antioch",
+ "refs": [
+  "Acts 11:19-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44011019,
+   "end": 44011030,
+   "ref": "Acts 11:19-30",
+   "ranges": [
+    [
+     44011019,
+     44011030
+    ]
+   ],
+   "title": "Grace at Work in Antioch",
+   "key_verse": [
+    44011023,
+    44011023
+   ],
+   "reflect": [
+    {
+     "text": "When ordinary believers fled persecution, they were bold enough to cross old boundaries and share the good news of Jesus with outsiders. In Antioch, God blessed their efforts, and many turned to the Lord. When news reached Jerusalem, Barnabas went to investigate. Instead of feeling suspicious or jealous of work begun by unknown refugees, Barnabas rejoiced because he saw God's grace, His undeserved kindness, truly at work.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Barnabas encouraged the new believers to stay true to the Lord with all their hearts. We need to decide in advance to remain faithful rather than waiting until trials test us. Barnabas also knew he could not do the work alone. Without seeking a personal following for himself, he found Saul so they could partner together in teaching and discipling the growing church.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "It was in Antioch that disciples were first called Christians. While outsiders may have first used the title as an insult, wearing the name of Christ became the highest honor for everyone who belongs to Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there times when suspicion or pride keeps you from celebrating how God is working through other people?",
+    "What does it mean for you to decide today to stay faithful to Jesus before trials arise?"
+   ],
+   "prayer": "Lord Jesus, thank You for bringing good news across every boundary and making us part of Your family. Give us humble hearts like Barnabas, eager to partner with others and rejoice in Your grace wherever it appears. Help us resolve to stay faithful to You and wear the name of Christian with quiet joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 11:24",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 240: Acts 11:19–26",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-240-acts-11-1926.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

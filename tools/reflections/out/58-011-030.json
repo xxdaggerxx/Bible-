@@ -1,0 +1,127 @@
+{
+ "id": "58-011-030",
+ "title": "The Faith of Many",
+ "refs": [
+  "Hebrews 11:30-40"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 58011039,
+   "end": 58011040,
+   "ref": "Hebrews 11:39-40",
+   "ranges": [
+    [
+     58011039,
+     58011040
+    ]
+   ],
+   "title": "\"Something Better for Us\"",
+   "key_verse": [
+    58011040,
+    58011040
+   ],
+   "reflect": [
+    {
+     "text": "The believers of the Old Testament trusted God through trials, mistreatment, and death, even though they did not receive the final promise during their earthly lifetimes. God was preparing something far better by bringing the age of fulfillment through Jesus Christ. Turning back to old rituals and shadows would mean walking away from the very rescue those ancient saints were waiting for.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God's people throughout all generations are linked together in one shared faith in the living God. As F. B. Meyer observed, \"heaven waits\" with expectancy until all of God's children are gathered safely home. Just as a loving family waits to begin the best celebration until everyone arrives, heaven's fullness will be realized when the entire family of faith stands together.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of what Christ has accomplished, we are called to cling to Him through every kind of suffering. We walk the same path of persevering trust as those who came before us, confident that God will bring every one of His people into perfect and everlasting joy.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you are part of a single, unfinished family of faith encourage you when following Jesus feels difficult?",
+    "What helps you hold tightly to Christ rather than looking back to old habits or empty substitutes?"
+   ],
+   "prayer": "Lord God, thank You for providing the fullness of Your promise to us in Jesus Christ. Help us to endure hardships with steady trust, just as the saints of old did. Keep our hearts fixed on the day when Your whole family will be gathered in eternal joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hebrews 11:40",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Receiving the Promise",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/receiving-promise"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 58011030,
+   "end": 58011040,
+   "ref": "Hebrews 11:30-40",
+   "ranges": [
+    [
+     58011030,
+     58011040
+    ]
+   ],
+   "title": "Faith in the Lives of Ordinary People",
+   "key_verse": [
+    58011031,
+    58011031
+   ],
+   "reflect": [
+    {
+     "text": "The biblical record of faith includes people whom the surrounding world would easily dismiss or look down upon. In the story of Rahab, we see clearly that God looks past social labels, earthly reputations, and past mistakes. Human society often defines people by their history, but God graciously welcomes and uses ordinary, unlikely individuals to accomplish His holy plans.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When Rahab heard reports of the mighty deeds of the living God, she responded with deep, reverent awe. Her faith was not merely a silent thought kept to herself. That holy fear moved her to action, leading her to take a serious personal risk by hiding the Israelite spies and protecting them from harm.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Genuine faith always shows itself in active obedience. When we carry a reverent awe for God's power and goodness, that holy reverence motivates us to serve Him faithfully. God calls ordinary believers today to step forward in courageous service, allowing deep respect for the Lord to guide our daily lives and choices.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life is God asking your reverence for Him to turn into practical action?",
+    "How can Rahab's story encourage you when you feel disqualified or too ordinary to be used by God?"
+   ],
+   "prayer": "Heavenly Father, thank You that You look past our social labels and welcome ordinary people into Your work. Give us a reverent fear of Your great power and goodness. Move our hearts to active, courageous obedience whenever You call us to serve. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jennifer Waddle",
+     "work": "The Faith of Ordinary People",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/the-faith-of-ordinary-people-bible-study-minute-january-22-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "61-003-008",
+ "title": "The Day of the Lord",
+ "refs": [
+  "2 Peter 3:8-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 61003008,
+   "end": 61003010,
+   "ref": "2 Peter 3:8-10",
+   "ranges": [
+    [
+     61003008,
+     61003010
+    ]
+   ],
+   "title": "\"With the Lord a Day Is like a Thousand Years\"",
+   "key_verse": [
+    61003009,
+    61003009
+   ],
+   "reflect": [
+    {
+     "text": "We experience time one moment after another, so thousands of years can feel like an extensive delay. In Peter's day, skeptics even claimed that Christ would never return. Yet God exists outside of time, and to Him, a thousand years is as fleeting as a single day. From His eternal view, the return of Jesus is always near, and we can trust that He will act at the right moment.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "What feels like slowness to us is actually God's mercy. God delays the Day of the Lord because He deeply values people and desires their salvation. He holds back judgment to give people time to turn to Him and receive forgiveness through Jesus.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Understanding God's perspective on time helps us pray patiently. Because future destruction is real and certain, we are also moved to action. We should actively invite others to find safety in Christ while the door of God's patience remains open.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God's patience change the way you view His timing in your life?",
+    "Who around you needs to be invited to receive the forgiveness and safety found in Jesus?"
+   ],
+   "prayer": "Lord, thank You for Your patience and for delaying judgment so that many can come to repentance. Help us to wait on You with trust, believing that You always act at the right time. Give us boldness to share the good news and invite others to find safety in Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God and Time",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-and-time"
+    },
+    "D2": {
+     "author": "Crosswalk.com",
+     "work": "Time with God - October 29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-october-29-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

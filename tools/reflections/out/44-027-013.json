@@ -1,0 +1,95 @@
+{
+ "id": "44-027-013",
+ "title": "The Storm at Sea",
+ "refs": [
+  "Acts 27:13-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44027013,
+   "end": 44027026,
+   "ref": "Acts 27:13-26",
+   "ranges": [
+    [
+     44027013,
+     44027026
+    ]
+   ],
+   "title": "Kept Safe Through the Fierce Storm",
+   "key_verse": [
+    44027025,
+    44027025
+   ],
+   "reflect": [
+    {
+     "text": "A sudden gale can sweep into our lives when everything seems calm. The sailors on Paul's ship tried everything they could, tossing cargo overboard and giving up all hope of survival. When fierce trouble hits, our human plans quickly fail. Instead of relying on our own strength or giving in to helplessness, we need to stay anchored in the Lord and refuse to cut loose our hope.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "God meets us at our lowest moments. In the pitch-black night, God sent an angel to Paul with words of comfort and assurance. As Charles Spurgeon noted, Paul had \"a secret Friend who kept his courage up.\" Even when life's barriers look huge and impossible, we can find courage to keep going because God's word is our true anchor of stability.",
+     "sources": [
+      "D1",
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Even though God promised to save everyone on board, Paul warned that they would still run aground on an island. Sudden setbacks and painful detours do not mean we have drifted outside of God's will. When our lives are backed against a wall, these unplanned seasons of waiting become opportunities to let our trust in the Lord grow deeper.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What human coping mechanisms or fears do you need to throw overboard in your current trial?",
+    "How does knowing that setbacks are still part of God's plan help you keep your courage today?"
+   ],
+   "prayer": "Lord, when darkness surrounds us and our own plans fail, remind us of Your faithful presence. Help us to believe Your promises and hold on to courage when life feels completely out of our control. Teach us to trust Your good purpose, even through painful detours and unexpected delays. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 10",
+     "on": "Acts 27:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Marybeth Whalen",
+     "work": "Running Aground",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-october-6-2011.html"
+    },
+    "D3": {
+     "author": "Dr. James Dobson",
+     "work": "Up Against the Wall",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobsons-parenting-devotional-june-14.html"
+    },
+    "D4": {
+     "author": "Beth Moore",
+     "work": "Day 291: Acts 27:13–26",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-291-acts-27-1326.html"
+    },
+    "D5": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Anchor of Stability",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/anchor-of-stability"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

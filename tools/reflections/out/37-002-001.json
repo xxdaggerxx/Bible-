@@ -1,0 +1,73 @@
+{
+ "id": "37-002-001",
+ "title": "The Coming Glory of God’s House",
+ "refs": [
+  "Haggai 2:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 37002001,
+   "end": 37002009,
+   "ref": "Haggai 2:1-9",
+   "ranges": [
+    [
+     37002001,
+     37002009
+    ]
+   ],
+   "title": "Greater Glory and Lasting Peace",
+   "key_verse": [
+    37002009,
+    37002009
+   ],
+   "reflect": [
+    {
+     "text": "When God's people began rebuilding the temple, those who remembered Solomon's majestic building felt discouraged. Compared to the former glory of the old temple, this new work seemed like nothing at all. Yet God urged His people not to judge success simply by outward appearances. Instead of relying on what they could see, they were called to walk forward by persevering faith.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even in the face of hard opposition and doubt, the Lord commanded the leaders and the people to be strong and keep working. God did not ignore their real hardships. Instead, He offered deep comfort by assuring them that His Spirit was with them. The true remedy for our own fear and worry is resting in God's promise that He will never forsake His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also promised that the future glory of His house would be far greater than the former one. This promise looked ahead to the coming of Jesus Christ and the good news of the gospel. Through Christ, believers now become God's dwelling place, filled with His presence and the blessing of His sustaining peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to measure God's work in your life only by outward results?",
+    "How can resting in God's presence help you stay strong and keep working through hard times?"
+   ],
+   "prayer": "Lord, forgive us when we feel discouraged by humble beginnings or difficult tasks. Help us to trust Your presence and keep working faithfully. Thank You for making us Your dwelling place and giving us Your lasting peace through Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michael A. Youssef",
+     "work": "The God Who Encourages Us",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-september-10-2026.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Latter Glory of the Lord's House",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/latter-glory-lords-house"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

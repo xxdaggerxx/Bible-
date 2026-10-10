@@ -1,0 +1,82 @@
+{
+ "id": "60-001-022",
+ "title": "The Enduring Word",
+ "refs": [
+  "1 Peter 1:22-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 60001022,
+   "end": 60001025,
+   "ref": "1 Peter 1:22-25",
+   "ranges": [
+    [
+     60001022,
+     60001025
+    ]
+   ],
+   "title": "Born Again by the Enduring Word",
+   "key_verse": [
+    60001023,
+    60001023
+   ],
+   "reflect": [
+    {
+     "text": "When God saves us, He gives us a new nature through His Word. Because we are born into God's family, we are called to love our fellow believers deeply from a pure heart. Real saving faith always shows itself in how we care for one another. Personal holiness is never complete if we fail to show sincere love to our brothers and sisters in Christ. As God's children, our new birth gives us true dignity and calls us to turn away from evil and pursue what is holy.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "This new life begins through God's Word, which acts like an imperishable seed that never dies. Everything in mortal human life is like grass that withers and flowers that fall. Human teachings and opinions quickly pass away, but the message of the gospel never changes or grows outdated. It is always living and strong to save and comfort us. When we receive this enduring truth into our hearts, the Holy Spirit uses it to bring new spiritual birth and ongoing growth.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that you are born into God's family change the way you show sincere love to other Christians?",
+    "Since human ideas quickly fade but God's Word never changes, how can you lean more fully on Scripture today?"
+   ],
+   "prayer": "Lord God, thank You for giving us new life through Your living and unchanging Word. Teach us to live with the dignity of Your children and to love our brothers and sisters deeply from the heart. Help us to rest our lives completely on Your eternal truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 4",
+     "on": "1 Peter 1:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 31",
+     "on": "1 Peter 1:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Love Earnestly",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/love-earnestly"
+    },
+    "D4": {
+     "author": "John MacArthur",
+     "work": "The Living and Active Word of God",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B170517/the-living-and-active-word-of-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

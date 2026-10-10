@@ -1,0 +1,81 @@
+{
+ "id": "66-002-018",
+ "title": "To the Church in Thyatira",
+ "refs": [
+  "Revelation 2:18-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66002018,
+   "end": 66002029,
+   "ref": "Revelation 2:18-29",
+   "ranges": [
+    [
+     66002018,
+     66002029
+    ]
+   ],
+   "title": "Holding Fast to Christ",
+   "key_verse": [
+    66002025,
+    66002025
+   ],
+   "reflect": [
+    {
+     "text": "The church in Thyatira showed real love and growth, but they tolerated teaching that excused sin. Believers faced pressure to compromise their morals to fit into pagan trade guilds and earn a living. False teachers claimed they could follow Jesus while ignoring His commands. But Jesus reminded them that true faith and obedience belong together. He sees every believer who stays faithful, even when standing firm brings financial loss or goes unnoticed by others.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus placed no heavy extra burden on those who resisted this corruption. He simply told them to hold fast to what they had until His return. When we face pressure to blend in with our culture today, we do not stand alone. God gives us the strength we need to remain true to Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "To those who overcome, Jesus promises a share in His future rule. Even better, He promises to give them the morning star, which is Jesus Himself. Charles Spurgeon wrote that seeing Jesus assures us \"we shall one day be like Him.\" Looking to Christ reminds us that the darkness will end and eternal daylight is near.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you feel pressure to compromise your obedience to fit into the world around you?",
+    "How does the promise of receiving Christ Himself encourage you to keep holding fast?"
+   ],
+   "prayer": "Lord Jesus, thank You for seeing our struggles and keeping us by Your power. When the world tempts us to compromise our faith, give us courage to hold fast to Your truth. Fill our hearts with the hope of Your coming day, knowing You are our greatest reward. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 13",
+     "on": "Revelation 2:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Jezebel’s Road",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-november-18-2023.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "To The Church at Thyatira II",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/to-the-church-at-thyatira-ii"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "54-006-001",
+ "title": "Serving with Honor",
+ "refs": [
+  "1 Timothy 6:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54006001,
+   "end": 54006002,
+   "ref": "1 Timothy 6:1-2",
+   "ranges": [
+    [
+     54006001,
+     54006002
+    ]
+   ],
+   "title": "Serving to Honor God's Name",
+   "key_verse": [
+    54006001,
+    54006001
+   ],
+   "reflect": [
+    {
+     "text": "How we treat those placed over us matters greatly to God. The apostle Paul taught servants to treat their masters with full honor. For us today, this instruction applies directly to how we treat our employers, managers, and supervisors. God cares about the attitude and respect we bring to our daily responsibilities.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "People who do not believe often judge the truth and reality of the gospel by watching how Christians act. If we are disrespectful, rebellious, or refuse to obey instructions, we give the world an excuse to mock God and His word. Insubordination from believers brings God's holy name into disrepute.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we choose to honor our leaders and do our work well, we protect God's reputation. Our diligence displays the real, life-changing power of the gospel. Showing genuine respect to authorities is one clear way we revere the Lord and point others to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How might your everyday attitude toward your supervisors shape what others think about God?",
+    "What is one practical way you can show honor and diligence in your work this week?"
+   ],
+   "prayer": "Lord, help us to show genuine respect to the authorities and supervisors placed over us. Guard our speech and actions so that Your holy name is never discredited because of our behavior. Let our honest work reflect the quiet power of the gospel in our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "That God’s Name May Be Honored",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-name-may-be-honored"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

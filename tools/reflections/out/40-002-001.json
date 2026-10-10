@@ -1,0 +1,127 @@
+{
+ "id": "40-002-001",
+ "title": "The Pilgrimage of the Magi",
+ "refs": [
+  "Matthew 2:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40002011,
+   "end": 40002011,
+   "ref": "Matthew 2:11",
+   "ranges": [
+    [
+     40002011,
+     40002011
+    ]
+   ],
+   "title": "\"They Fell Down and Worshiped Him\"",
+   "key_verse": [
+    40002011,
+    40002011
+   ],
+   "reflect": [
+    {
+     "text": "When the travelers finally found Jesus, they bowed before Him. Natural human thinking is never enough to bring people to Christ. God used His written Scriptures to guide these seekers to His living Son. Coming before the King leaves no room for human arrogance. We are invited into genuine awe, humility, and wholehearted worship.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The visitors opened their treasures and offered costly gold, an honor fit for royalty. God used this gift to care for the young family, providing what Joseph needed for the coming journey into Egypt. As F. B. Meyer observed, when we step out in obedience, God becomes responsible and will \"defray all costs.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Truly understanding the good news means offering our entire lives to Jesus each day. We honor Him by placing our possessions, time, and plans in His hands. Even if we have little to give, love turns our small, humble gifts into offerings of real worth to our King.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal pride do you need to lay down as you come before Jesus today?",
+    "How can you surrender your time or material resources to honor the Lord this week?"
+   ],
+   "prayer": "Lord Jesus, You are the King who deserves all our honor and devotion. Take away our pride and teach us to approach You with humble hearts. Help us to trust Your provision as we offer our lives and gifts to Your service. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 2:11",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "The Greatest Discovery",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/the-greatest-discovery.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40002001,
+   "end": 40002012,
+   "ref": "Matthew 2:1-12",
+   "ranges": [
+    [
+     40002001,
+     40002012
+    ]
+   ],
+   "title": "Rejoicing in the Sovereign King",
+   "key_verse": [
+    40002010,
+    40002010
+   ],
+   "reflect": [
+    {
+     "text": "Our familiar nativity traditions often add extra details that the biblical account does not actually say. The true story shows God actively guiding Gentile outsiders from distant lands. By directing these unexpected seekers, the Lord confirmed their quest and proved that His ancient promises through the prophets were coming true.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Seeing the star guide them to the child filled these travelers with overwhelming joy. Yet their arrival also troubled King Herod, who feared losing power. Even in the face of such hostile resistance, God guarded His purposes. The Father always makes certain that His Son receives honour and praise, no matter what earthly rulers try to do.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "This account challenges each of us to consider how we respond to Jesus today. Herod resisted the child because he wanted to protect his own throne. Rather than fighting against Christ's sovereign reign, believers are invited to submit to Him with gladness and honor Him as the Shepherd of our lives.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine are you tempted to keep control instead of trusting Christ?",
+    "How does knowing that God keeps His ancient promises encourage your faith today?"
+   ],
+   "prayer": "Heavenly Father, thank You for keeping Your promises and making Your Son known to the world. Forgive us when we try to hold onto our own control instead of resting in Your good will. Give us joyful hearts as we yield to Jesus as our true Shepherd and King. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Wise Men Rejoice",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/wise-men-rejoice"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

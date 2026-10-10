@@ -1,0 +1,81 @@
+{
+ "id": "50-004-010",
+ "title": "The Generosity of the Philippians",
+ "refs": [
+  "Philippians 4:10-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 50004010,
+   "end": 50004020,
+   "ref": "Philippians 4:10-20",
+   "ranges": [
+    [
+     50004010,
+     50004020
+    ]
+   ],
+   "title": "Contentment in Plenty and in Need",
+   "key_verse": [
+    50004019,
+    50004019
+   ],
+   "reflect": [
+    {
+     "text": "Contentment does not come naturally to us. Complaining and wanting more spring up in our hearts as easily as weeds in an untended field. True peace in every circumstance takes time, practice, and God's gentle discipline. Even the apostle Paul had to learn this lesson over many years, until he could remain content even while held in a cold prison cell. As Charles Spurgeon wrote, contentment is \"one of the flowers of heaven\" that must be carefully cultivated in our hearts.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Learning contentment also means knowing how to handle good times. In fact, having plenty can be a greater test of faith than going without. When our lives are full of comfort and ease, it is very easy to grow proud, enjoy the world too much, and forget God. It takes God's grace to receive His blessings with humble gratitude and steady hands, so that the gifts He gives do not pull our love away from Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Whether we have little or much, we can rest in the promise that God will provide for our needs. He does not give in small or stingy portions. Instead, He measures His supply by the limitless riches of His glory in Christ Jesus. Because our heavenly Father loves us and remains faithful, we do not have to live in fear. His care is surer than any earthly treasure.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is it harder for you to remember God when you have plenty, or to trust Him when you are in need?",
+    "What is one way you can practice quiet contentment in your current circumstances today?"
+   ],
+   "prayer": "Father, teach us how to be content whether we face hard times or enjoy abundance. Please keep our hearts from pride and forgetfulness when you pour out your blessings upon us. Help us to rest each day in your promise to supply all our needs through Christ Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 10",
+     "on": "Philippians 4:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 16",
+     "on": "Philippians 4:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 15",
+     "on": "Philippians 4:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

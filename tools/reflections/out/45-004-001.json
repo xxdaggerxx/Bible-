@@ -1,0 +1,74 @@
+{
+ "id": "45-004-001",
+ "title": "Abraham Justified by Faith",
+ "refs": [
+  "Romans 4:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 45004005,
+   "end": 45004005,
+   "ref": "Romans 4:5",
+   "ranges": [
+    [
+     45004005,
+     45004005
+    ]
+   ],
+   "title": "\"He Justifies the Wicked\"",
+   "key_verse": [
+    45004005,
+    45004005
+   ],
+   "reflect": [
+    {
+     "text": "When we fail again and again, deep guilt can leave us feeling trapped and hopeless. We often think we must clean up our lives and fix our behavior before God will accept us. But the gospel shatters that despair. Our relationship with Jesus does not start with moral self-improvement. God welcomes us while we are still ungodly, calling us simply to trust in Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Through faith alone, God counts us as completely righteous because of Jesus. This does not mean God gives us a little goodness so we can complete the rest with our good deeds. Instead, God legally credits Christ's perfect righteousness to our account. Because Jesus bore God's wrath on the cross, those who rest in Him never need to fear being condemned.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Good deeds and obedience naturally grow out of real faith, but our works never make us right with God. Scripture shows through Abraham and David that we are justified by faith alone. Even when we stumble and face dark seasons of spiritual failure, we can be confident that the Lord will defend our cause.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt you needed to fix yourself before coming to God?",
+    "How does knowing Christ's righteousness is credited to you bring comfort when you fail?"
+   ],
+   "prayer": "Heavenly Father, thank you that you do not wait for us to earn your love before receiving us. Thank you for giving us the perfect righteousness of Jesus through faith alone. When guilt tempts us to despair, help us rest in your complete forgiveness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Faith Is Counted",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/faith-counted"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "Justification by Faith",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/justification-by-faith"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

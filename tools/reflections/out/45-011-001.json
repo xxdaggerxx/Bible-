@@ -1,0 +1,66 @@
+{
+ "id": "45-011-001",
+ "title": "A Remnant Chosen by Grace",
+ "refs": [
+  "Romans 11:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45011001,
+   "end": 45011010,
+   "ref": "Romans 11:1-10",
+   "ranges": [
+    [
+     45011001,
+     45011010
+    ]
+   ],
+   "title": "God Preserves His Faithful Remnant",
+   "key_verse": [
+    45011005,
+    45011005
+   ],
+   "reflect": [
+    {
+     "text": "Paul asks an important question: has God discarded His people? He shows that the answer is clearly no. Paul points to his own background and faith as an Israelite, showing that God has not abandoned ethnic Israel. Even though Gentiles were now being included, God had not turned His back on His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul also points back to the story of Elijah. When the prophet felt completely alone, God answered him that seven thousand people had remained faithful. Throughout history, the Lord has always preserved a remnant. This group is kept purely by grace, which is God's kindness that we do not earn or deserve. The existence of Jewish believers in Christ confirms that God is steadfast in keeping His promises.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's ongoing faithfulness to His promises gives great comfort to believers today. Because the Lord stands firmly by His word, we can be confident that He will never abandon or reject those who trust in Him. His grace keeps us secure in every season of life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does God's faithfulness to His promises encourage you when you feel alone or uncertain?",
+    "Why is it comforting to know that God holds onto us through His grace rather than our own works?"
+   ],
+   "prayer": "Heavenly Father, thank You for Your steadfast love and for keeping every promise You have made. Thank You that You save us through Your grace and not through our own good works. Help us to rest in the comfort that You will never reject those who belong to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God's Chosen Remnant",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-chosen-remnant"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

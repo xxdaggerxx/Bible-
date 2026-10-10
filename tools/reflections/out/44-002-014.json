@@ -1,0 +1,66 @@
+{
+ "id": "44-002-014",
+ "title": "Peter Addresses the Crowd",
+ "refs": [
+  "Acts 2:14-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44002014,
+   "end": 44002036,
+   "ref": "Acts 2:14-36",
+   "ranges": [
+    [
+     44002014,
+     44002036
+    ]
+   ],
+   "title": "Jesus Is Lord and Christ",
+   "key_verse": [
+    44002036,
+    44002036
+   ],
+   "reflect": [
+    {
+     "text": "Peter spoke to the crowd in Jerusalem to declare who Jesus truly is. God made Jesus both Lord and Christ. The title Christ means the Anointed One, the King sent by God on a great mission to defeat sin and death. Even though Jesus was put to death on a cross, the grave could not hold Him. Death was powerless to keep its grip on Jesus because He is life itself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we trust in Jesus, we are united with Him. Being joined to Christ gives us eternal life that cannot be destroyed. It also gives us spiritual resilience, which is God's inner strength to help us stand firm when troubles come. Following our Messiah means that we may share in His suffering before we experience the full glory of His resurrection.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Jesus defeated death and lives forever, we do not need to lose heart. We are called to face our hard trials with patience, courage, and real hope. We can stay strong knowing that our Savior has already won the final victory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What hard trial in your life right now calls for quiet courage and hope in Christ?",
+    "How does knowing that Jesus conquered death help you endure difficult times?"
+   ],
+   "prayer": "Lord Jesus, thank You for being the Christ who conquered sin and death for us. When we face painful struggles, grant us the strength and patience to keep following You. Keep our hearts anchored in the eternal life we share with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ann Spangler",
+     "work": "Praying the Names of God - February 11",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/prayingnamesgod/praying-the-names-of-god-february-22.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "43-004-001",
+ "title": "Jesus and the Samaritan Woman",
+ "refs": [
+  "John 4:1-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43004001,
+   "end": 43004026,
+   "ref": "John 4:1-26",
+   "ranges": [
+    [
+     43004001,
+     43004026
+    ]
+   ],
+   "title": "The Gift of Living Water",
+   "key_verse": [
+    43004001,
+    43004001
+   ],
+   "reflect": [
+    {
+     "text": "This story is full of surprising contrasts. Jesus, who offers rest to everyone, sits down tired by the well. The Jewish Messiah speaks tenderly with an outcast Samaritan woman. He who can give living water asks her for a drink. God’s greatest blessings cannot be bought with money or earned by good deeds; they are free gifts. As F. B. Meyer noted, \"Prayer is a necessary link\" between God's giving hand and our receiving heart. If we only knew who Jesus is, we would never stop asking Him to fill us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When Jesus gives us His living water, our deepest thirst is finally quenched. Our hearts can feel completely empty until He comes to live in them. Once He enters, we find a lasting joy that the world cannot take away. Even in loneliness, pain, or difficulty, a believer can find full peace in Christ. We no longer crave the shallow comforts of this life. Instead, our only desire is to know Jesus better and to enjoy His love more every day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly things do you usually turn to when you feel unsatisfied, instead of asking Jesus to fill your heart?",
+    "How would your daily prayers change if you remembered how willing the Lord is to give you His living water?"
+   ],
+   "prayer": "Lord Jesus, thank You for offering the gift of eternal life so freely to us. Forgive us for trying to satisfy our souls with things that can never last. Help us to bring our needs to You in prayer each day, finding all our comfort and contentment in Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 6",
+     "on": "John 4:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "John 4:10",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

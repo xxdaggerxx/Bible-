@@ -1,0 +1,73 @@
+{
+ "id": "39-002-010",
+ "title": "Judah’s Unfaithfulness",
+ "refs": [
+  "Malachi 2:10-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 39002014,
+   "end": 39002016,
+   "ref": "Malachi 2:14-16",
+   "ranges": [
+    [
+     39002014,
+     39002016
+    ]
+   ],
+   "title": "\"Guard Yourselves in Your Spirit\"",
+   "key_verse": [
+    39002015,
+    39002015
+   ],
+   "reflect": [
+    {
+     "text": "When two people make marriage vows, God stands with them as an active witness to their covenant. He sees every small act of service and steady kindness, even when a spouse overlooks them. We can easily become blinded by unmet hopes for grand romance, but God notices the quiet, faithful ways we care for each other every day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Breaking faith does not happen all at once. It begins secretly inside our spirit, in the hidden places where our thoughts and daydreams wander. Guarding our spirit means paying close attention to our inner desires. Using our time carefully keeps idleness from leading to emotional compromise, and keeping healthy boundaries with media protects our hearts from envious comparisons.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Contentment grows when we choose to invest our hearts and energy into our own home rather than looking elsewhere. Remembering that the Lord witnesses every action helps us stay true to our promises. We honor Him when we faithfully cherish one another in ordinary, practical ways.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do your thoughts and daydreams usually wander during quiet moments of the day?",
+    "How can remembering that God sees every hidden act of service help you care for your home with patience?"
+   ],
+   "prayer": "Lord, thank You for being the faithful witness to all our promises. Guard our inner thoughts from wandering toward envy or discontent, and help us use our time wisely. Teach us to cherish one another through simple, steady acts of love each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michelle S. Lazurek",
+     "work": "As God Is Our Witness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-couples-devotional/as-god-is-our-witness-crosswalk-couples-devotional-september.html"
+    },
+    "D2": {
+     "author": "Tanner Kay Swanson",
+     "work": "Wife, Guard Your Spirit from Unfaithfulness",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/wife-guard-your-spirit-from-unfaithfulness"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "66-018-021",
+ "title": "The Doom of Babylon",
+ "refs": [
+  "Revelation 18:21-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66018021,
+   "end": 66018024,
+   "ref": "Revelation 18:21-24",
+   "ranges": [
+    [
+     66018021,
+     66018024
+    ]
+   ],
+   "title": "The Final Fall of Worldly Power",
+   "key_verse": [
+    66018021,
+    66018021
+   ],
+   "reflect": [
+    {
+     "text": "In this vision, a mighty angel lifts a stone like a giant millstone and throws it into the sea. This action shows the violent and permanent end of Babylon, the worldly system that opposes God. Just like a heavy rock sinks straight to the bottom and cannot rise again, this corrupt city and all its power will never return. God brings complete and final justice to the evil system that persecuted His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Babylon collapses, its wealth and trade vanish. Instead of turning to God in repentance, worldly leaders and merchants weep only because they lost their earthly luxuries. Their sorrow reveals that they loved their possessions rather than God. Meanwhile, God's people can rejoice because the oppressive power that harmed the innocent has finally met divine justice.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The fall of Babylon is a clear wake-up call for our own hearts. Earthly comforts and money cannot last, and they can never save us. When wealth proves unstable, it reminds us to turn away from materialism and put our ultimate trust in Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to look for comfort and security instead of trusting in God?",
+    "How can remembering that earthly wealth does not last help you rely more on Christ?"
+   ],
+   "prayer": "Lord God, thank You for Your promise to bring true justice to our broken world. Forgive us when we hold on too tightly to earthly comforts and money. Help us turn away from materialism and place our whole trust in Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Fall of Babylon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-fall-of-babylon"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

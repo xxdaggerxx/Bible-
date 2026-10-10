@@ -1,0 +1,121 @@
+{
+ "id": "62-004-001",
+ "title": "Testing the Spirits",
+ "refs": [
+  "1 John 4:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 62004001,
+   "end": 62004001,
+   "ref": "1 John 4:1",
+   "ranges": [
+    [
+     62004001,
+     62004001
+    ]
+   ],
+   "title": "\"Do Not Believe Every Spirit\"",
+   "key_verse": [
+    62004001,
+    62004001
+   ],
+   "reflect": [
+    {
+     "text": "We cannot simply believe every spiritual message or teacher we come across. False prophets have always been active in the world, and misleading ideas can easily creep into the church. For this reason, God gave us the Bible as our ultimate standard. Scripture is God-breathed truth, and we are called to measure every message against it. By carefully studying Christian teaching, we build discernment, which means the ability to tell God's truth from human error.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "While we must stay watchful, we do not need to feel anxious or unsettled. Believers can rest safely in God's special, choosing love. Charles Spurgeon described God's covenant promises as a quiet resting place for \"trembling spirits.\" God has bound Himself to keep us safe in Jesus. When earthly opinions shake around us, knowing that the Father has chosen us and will never break His word brings deep comfort and quiet courage to our hearts.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How often do you compare the teachings and ideas you hear with what the Bible actually says?",
+    "How does knowing God's secure covenant promise bring you comfort when false ideas cause confusion?"
+   ],
+   "prayer": "Heavenly Father, give us wise and discerning hearts to test every teaching by Your Word. Help us to study the Bible faithfully and recognize misleading claims. Thank You for Your secure love and for keeping us safe in Christ. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 28",
+     "on": "1 John 4:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Test the Spirits",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/test-spirits"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 62004001,
+   "end": 62004006,
+   "ref": "1 John 4:1-6",
+   "ranges": [
+    [
+     62004001,
+     62004006
+    ]
+   ],
+   "title": "Greater Is He in You",
+   "key_verse": [
+    62004004,
+    62004004
+   ],
+   "reflect": [
+    {
+     "text": "The most crucial question every person faces is the identity of Jesus Christ. Since the time of the apostles, false teachers have twisted the truth by denying that God truly came to earth in human flesh. Today, many voices still present distorted portraits of Jesus that empty the gospel of its power. Yet believers can stand firm against these lies, because the Holy Spirit living within us is far greater than any deception in the world.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "The Lord Jesus has not kept His distance from His people across some stormy sea. Instead, He has chosen to take up residence right inside humble hearts. Because Christ dwells in us, we enjoy a wide and open door to talk with Him every day. He invites us to walk in constant fellowship with Him as our nearest brother and friend. We do not face worldly confusion alone, for the living Lord makes His home with us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it essential to hold fast to the truth that Jesus is God who truly came in human flesh?",
+    "In what ways can you enjoy closer daily communion with Christ, knowing He lives within you?"
+   ],
+   "prayer": "Lord Jesus, thank You for coming in human flesh to redeem us and bring us to God. We praise You that You make Your dwelling in our hearts and give us daily fellowship with You. Keep us rooted in Your truth so that we may overcome the deceptive voices of this world. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 31",
+     "on": "1 John 4:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "John Duncan",
+     "work": "Who Is Jesus?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/who-jesus"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

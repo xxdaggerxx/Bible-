@@ -1,0 +1,76 @@
+{
+ "id": "40-024-009",
+ "title": "Witnessing to All Nations",
+ "refs": [
+  "Matthew 24:9-14",
+  "Mark 13:9-13",
+  "Luke 21:10-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40024014,
+   "end": 40024014,
+   "ref": "Matthew 24:14",
+   "ranges": [
+    [
+     40024014,
+     40024014
+    ]
+   ],
+   "title": "\"This Gospel Will Be Preached in All the World\"",
+   "key_verse": [
+    40024014,
+    40024014
+   ],
+   "reflect": [
+    {
+     "text": "Jesus tells us that this good news of the kingdom will be told across the entire earth. This is not just a hard assignment for the church to attempt. It is an absolute guarantee from Jesus Himself. Christ holds total control over history, so His church will not fail to finish this work. His words carry on God's ancient covenant promise to bring blessing to every family across the world.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When the Bible speaks of all nations, it does not mean modern countries with political borders. It means distinct ethnic and language groups. God cares about each group of people, and Jesus guarantees that His message will reach them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Many religious and political barriers still stand in the way today, leaving large parts of the world without the gospel. Even so, Scripture shows that the final success of this message is already certain before God's throne. Because the final outcome cannot fail, we can give, go, and pray with steady confidence. Beyond giving money to support workers, each of us is called to plead with God daily to fulfill His promise.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus guarantees the success of the gospel change how you view mission work?",
+    "In what ways can you pray each day for people groups who have not yet heard the good news?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your promise that the good news of Your kingdom will reach every people group. Give us confidence in Your control over history, even when barriers seem impossible to cross. Teach us to pray faithfully each day and to support the spread of Your word across the earth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "Jesus Will Finish the Mission",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/jesus-will-finish-the-mission"
+    },
+    "D2": {
+     "author": "Jerry Bridges",
+     "work": "The Worldwide Gospel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/worldwide-gospel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

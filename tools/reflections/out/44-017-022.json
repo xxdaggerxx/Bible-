@@ -1,0 +1,74 @@
+{
+ "id": "44-017-022",
+ "title": "Paul’s Address in the Areopagus",
+ "refs": [
+  "Acts 17:22-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44017022,
+   "end": 44017034,
+   "ref": "Acts 17:22-34",
+   "ranges": [
+    [
+     44017022,
+     44017034
+    ]
+   ],
+   "title": "Sharing Christ with Clarity and Care",
+   "key_verse": [
+    44017023,
+    44017023
+   ],
+   "reflect": [
+    {
+     "text": "When Paul stood before the leaders and thinkers in Athens, he was ready to speak about God with care and respect. He had noticed their city and saw an altar with the words, 'TO AN UNKNOWN GOD.' Instead of attacking them, he used that altar as a bridge. He began right where the people were, showing sensitivity to what they already knew and thought about.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul told them the truth about the living God. He explained that God made everything, gives breath to everyone, and does not need anything from human hands. To help his listeners understand, he even referred to lines from their own poets. He spoke with careful thought and excellence, making sure his message about the Creator was clear.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though Paul was polite, he did not hold back the heart of the message. He called everyone to repent, turning away from sin to follow God, and spoke about Jesus rising from the dead. While some people made fun of him, others believed. Like Paul, we can speak about Christ with courage, meeting people where they are without leaving out the truth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you listen carefully to the people around you to find common ground for sharing your faith?",
+    "What helps you share the truth about Jesus clearly without feeling afraid?"
+   ],
+   "prayer": "Lord, thank You for making the world and giving us life every day. Give us courage and wisdom to talk about You with kindness and clarity. Help us meet others right where they are and point them faithfully to Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Say It Well",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/say-it-well?ga=testimonial-resources"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 261: Acts 17:15–23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-261-acts-17-1523.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,144 @@
+{
+ "id": "40-026-006",
+ "title": "Jesus Anointed at Bethany",
+ "refs": [
+  "Matthew 26:6-13",
+  "Mark 14:3-9",
+  "Luke 7:36-50"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 41014006,
+   "end": 41014006,
+   "ref": "Mark 14:6",
+   "ranges": [
+    [
+     41014006,
+     41014006
+    ]
+   ],
+   "title": "\"Leave Her Alone\"",
+   "key_verse": [
+    41014006,
+    41014006
+   ],
+   "reflect": [
+    {
+     "text": "People who love Jesus deeply are often misunderstood by those around them. When others measure our service by practical usefulness, they fail to see the true spiritual worth of our devotion. Yet when critical voices grow loud, F. B. Meyer reminds us that Jesus steps in and \"casts the shield of His love\" around our troubled hearts. He stands watch to protect us against human unkindness, sorrow, and the discouragement of the enemy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Mary acted decisively and offered her finest treasure to the Lord without letting the judgment of onlookers stop her. Her costly gift filled the room with an enduring fragrance of pure dedication. Jesus knew the real posture of her heart and defended her against those who complained. When we dedicate our lives to Christ as a pleasing offering, he welcomes our worship and stands with us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When have you felt discouraged from serving Christ because you feared what others might say?",
+    "How does knowing that Jesus shields and defends you bring peace when people misunderstand your devotion?"
+   ],
+   "prayer": "Lord Jesus, thank you for sheltering me in your love whenever others criticize or misunderstand my faith. Give me the courage to offer you my best without being held back by fear. Help my life to be a pleasing aroma of sincere worship to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Mark 14:6",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Elizabeth Cole",
+     "work": "'Til the Last Drop",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/til-the-last-drop-homeword-october-3.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40026006,
+   "end": 40026013,
+   "ref": "Matthew 26:6-13; Mark 14:3-9; Luke 7:36-50",
+   "ranges": [
+    [
+     40026006,
+     40026013
+    ],
+    [
+     41014003,
+     41014009
+    ],
+    [
+     42007036,
+     42007050
+    ]
+   ],
+   "title": "Extravagant Love for the Savior",
+   "key_verse": [
+    42007047,
+    42007047
+   ],
+   "reflect": [
+    {
+     "text": "In the home of Simon the Pharisee, proper religion appeared respectable on the outside, yet it lacked true warmth and love. Jesus explained that a person who knows how deeply they have been forgiven will naturally show immense love. He does not treat sin lightly, but his complete pardon frees our hearts to love him without holding anything back.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Radical devotion often looks reckless or wasteful to people who prefer a safe, measured faith. Pouring out an entire year's wages of costly perfume seemed excessive to the disciples, who calculated the temporal price. Yet Mary understood what was most important in those final days. Her broken jar honored Jesus and prepared his body for burial, pointing toward how Christ would soon pour out his own blood and life for his people.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Jesus delights in every sacrifice offered out of love for his great worth. While worldly observers see only waste, the Lord warmly receives our worship and promises that faithful service to him will never be forgotten.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How does a clear awareness of how much God has forgiven you change the way you show your love to Jesus?",
+    "In what ways are you tempted to keep your worship comfortable and safe instead of giving Christ your very best?"
+   ],
+   "prayer": "Lord Jesus, thank you for forgiving my many sins and giving your life on the cross for me. Guard me from a cautious, lukewarm faith that only counts the cost. Help me to love you with all my heart and honor you with everything I have. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 148: Luke 7:39–48",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-148-luke-7-3948.html"
+    },
+    "D4": {
+     "author": "Scott Hubbard",
+     "work": "He Welcomed Her Worship",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/he-welcomed-her-worship"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "Anointed for Burial",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/anointed-burial"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

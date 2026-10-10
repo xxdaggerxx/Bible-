@@ -1,0 +1,66 @@
+{
+ "id": "42-001-039",
+ "title": "Mary Visits Elizabeth",
+ "refs": [
+  "Luke 1:39-45"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42001039,
+   "end": 42001045,
+   "ref": "Luke 1:39-45",
+   "ranges": [
+    [
+     42001039,
+     42001045
+    ]
+   ],
+   "title": "Blessed Are Those Who Believe God's Word",
+   "key_verse": [
+    42001045,
+    42001045
+   ],
+   "reflect": [
+    {
+     "text": "When Mary greeted Elizabeth, Elizabeth was filled with the Holy Spirit and her unborn baby leaped for joy. This event shows the direct power of God. The Holy Spirit changes human hearts Himself rather than relying on human helpers. While people hear the message of God from human voices, we cannot truly respond until the Spirit gives new life to our dead hearts. God is the one who sovereignly brings spiritual life where there was once spiritual death.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Elizabeth also praised Mary for trusting what the Lord had said. Mary faced great uncertainty about her future and how God's promise would possibly unfold. Yet true faith does not need to understand how God will work out His plans before choosing to believe Him. We are called to rely on God's promises to guide us, provide for us, and bring justice. God already knows every answer to our questions and has a clear plan to fulfill every promise He makes.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you waiting to understand how God will work things out before choosing to trust His promises?",
+    "How does knowing that the Holy Spirit directly gives new life encourage you to depend on God?"
+   ],
+   "prayer": "Lord God, thank You for sending Your Holy Spirit to give new life to our hearts. Help us to rely on Your promises even when we face deep uncertainty about our future. Teach us to trust that You already have the answers and will faithfully fulfill every word You have spoken. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Betsy Childs Howard",
+     "work": "Advent Meditation: The Blessing of Believing",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/blessing-believing/"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Regeneration Is Immediate",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/regeneration-immediate"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,84 @@
+{
+ "id": "38-013-007",
+ "title": "The Shepherd Struck, the Sheep Scattered",
+ "refs": [
+  "Zechariah 13:7-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 38013007,
+   "end": 38013009,
+   "ref": "Zechariah 13:7-9",
+   "ranges": [
+    [
+     38013007,
+     38013009
+    ]
+   ],
+   "title": "Refined Through the Fire",
+   "key_verse": [
+    38013009,
+    38013009
+   ],
+   "reflect": [
+    {
+     "text": "When we walk through painful seasons, we might worry that God has left us. Yet the Lord explains that hard times are like a furnace used to test silver and gold. As Charles Spurgeon reminds us, \"the fire only refines, it does not destroy.\" God considers us valuable, and He uses difficulties to melt away our weaknesses and prove our faith genuine so that we reflect His glory.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We often admire athletes who push through grueling physical tests, yet we hesitate when hardships come our way. We might wish for an easy life without challenges, but that would leave us weak. Testing trains our minds and hearts to think and live according to God's ways. We prepare for these intense moments by speaking with God daily in prayer and learning to rely on Him instead of ourselves.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The heat of the furnace is only temporary. God promises to carry us through the trial, never leaving us behind in the flames. When the pressure rises, He invites us to call on His name. As we lean on Him, He gives us peace and answers our cries, assuring us that we are His cherished people and He is our faithful God.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When hard times come, do you tend to feel God is absent or do you look for His refining work in your life?",
+    "How can turning to God in prayer each day help you stay ready for unexpected trials?"
+   ],
+   "prayer": "Lord, thank You for holding us close even when life feels painful and hot like a furnace. Help us not to fear trials, but to trust Your loving purpose to purify our faith. Teach us to call upon You in every struggle, resting in the peace that we belong to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 9",
+     "on": "Zechariah 13:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Katherine Britton",
+     "work": "Olympic Trials",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-aug-20-2008-11580691.html"
+    },
+    "D3": {
+     "author": "Daily Disciples Ministries",
+     "work": "Refined and Tested",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-dec-30-2009-11624216.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,148 @@
+{
+ "id": "40-025-014",
+ "title": "The Parable of the Talents",
+ "refs": [
+  "Matthew 25:14-30",
+  "Luke 19:11-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40025019,
+   "end": 40025021,
+   "ref": "Matthew 25:19-21",
+   "ranges": [
+    [
+     40025019,
+     40025021
+    ]
+   ],
+   "title": "\"Well Done, Good and Faithful Servant\"",
+   "key_verse": [
+    40025021,
+    40025021
+   ],
+   "reflect": [
+    {
+     "text": "Many people think a life that counts for God must be famous or achieve massive visible success. We often judge our worth by big numbers or public applause. Yet when the master returns in this parable, he gives the exact same commendation to the servant with two talents as he gives to the one with five. God does not measure our work by sheer output. He asks us to be faithful with whatever specific opportunities and gifts he gives us.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Everything we have belongs to God, which means we are responsible for how we invest our lives. Insecurity, comparison, and fear often tempt us to hold back. We might worry that our small contribution will not matter, or we might be afraid of failing. Yet God calls us to step out with courage. He invites us to use what he has placed in our hands, leaving the final results to him while dedicating our time to eternal purposes.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Most faithful kingdom work happens in the quiet, ordinary rhythms of everyday life. When we make ourselves available and do our daily tasks with care, God uses our obedience in ways we cannot always see. He does not ask us to be extraordinary by worldly standards. He simply calls us to be faithful in little things, and he promises that we will share in his lasting joy.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to compare your gifts with others instead of being faithful with what God gave you?",
+    "What is one ordinary, quiet way you can serve God with your time this week?"
+   ],
+   "prayer": "Lord, thank you that you look at our faithfulness rather than our worldly success. Forgive us when fear or comparison keeps us from serving you. Help us to invest our daily time and abilities for your kingdom, trusting that our small efforts matter in your hands. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Chase Krug",
+     "work": "Be Faithful over Little: A Different Vision for a Life That Counts",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/faithful-over-little/"
+    },
+    "D3": {
+     "author": "Renee Swope",
+     "work": "Able and Available",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-04-27-04-1258559.html"
+    },
+    "D4": {
+     "author": "Leslie Snyder",
+     "work": "Successful or Faithful?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-nov-17-2006-1449052.html"
+    },
+    "D5": {
+     "author": "Kelly McFadden",
+     "work": "Investing Your Life",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-mar-25-2008-11571570.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40025014,
+   "end": 40025030,
+   "ref": "Matthew 25:14-30; Luke 19:11-27",
+   "ranges": [
+    [
+     40025014,
+     40025030
+    ],
+    [
+     42019011,
+     42019027
+    ]
+   ],
+   "title": "Using Even the Smallest Gift",
+   "key_verse": [
+    40025018,
+    40025018
+   ],
+   "reflect": [
+    {
+     "text": "It is surprising that the man who received only one talent was the one who hid it. We might expect someone with five talents to neglect a portion, but it is often the person with the smallest share who gives up. When our abilities or opportunities feel slight, we are easily tempted to do nothing at all. We tell ourselves that our little effort cannot make a difference and that we will not be missed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet small things carry great weight. As F. B. Meyer notes, \"an ounce-weight may turn the scales,\" reminding us that even the lightest push can balance a heavy load. Even if your role seems minor, such as taking water to workers in a field, God values that service. If you feel too weak or isolated to accomplish much on your own, you can join your effort with the church, working together as part of God's people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We do not have to wait for the distant future to see the results of our choices. Our gifts are already growing or shrinking in our hands right now. When we step out and use what God has given us, we often discover strengths we never knew we had. But when we bury our abilities out of neglect, we risk losing even the little we once possessed.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever held back from helping because you felt your contribution was too small to matter?",
+    "How can you join with others in your church to put your abilities to work?"
+   ],
+   "prayer": "Lord, forgive us when we make excuses or hide our gifts because we feel small. Show us the opportunities you have placed before us today, and give us willing hearts to serve. Teach us to work faithfully alongside our brothers and sisters in Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 25:24",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

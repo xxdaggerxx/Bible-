@@ -1,0 +1,60 @@
+{
+ "id": "49-006-005",
+ "title": "Serving with Honor",
+ "refs": [
+  "Ephesians 6:5-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 49006005,
+   "end": 49006009,
+   "ref": "Ephesians 6:5-9",
+   "ranges": [
+    [
+     49006005,
+     49006009
+    ]
+   ],
+   "title": "Serving from the Heart for Christ",
+   "key_verse": [
+    49006007,
+    49006007
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to care about our work only when other people are watching us. Yet God calls us to serve wholeheartedly, whether our earthly boss is looking or not. As Ginger Plowman explains, God rewards quiet faithfulness rather than public attention or worldly success. Even when supervisors or family members fail to notice our hard work, the Lord sees every small, behind-the-scenes deed and values it deeply.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Keeping in mind that Jesus is our true supervisor gives us the endurance we need each day. When earthly leaders are ungracious or our daily labor feels unrewarded, we can still serve with a willing heart because we work for Christ Himself. Serving this way is not done to earn our salvation, which is God's free gift. Rather, working with a good attitude flows from our love for God and shines as a steady testimony before people who do not yet know Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel unappreciated at work or at home, how does knowing Jesus sees your service help you keep going?",
+    "How can working with a cheerful attitude today point others toward God?"
+   ],
+   "prayer": "Lord Jesus, help us remember that You are our true Master in everything we do today. When our efforts go unnoticed by others, give us patience to serve faithfully from the heart. Let our quiet work show Your love and honor Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ginger Plowman",
+     "work": "Fruitfulness Versus Faithfulness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-2-16-04-1243611.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

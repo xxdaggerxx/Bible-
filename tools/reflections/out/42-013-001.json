@@ -1,0 +1,75 @@
+{
+ "id": "42-013-001",
+ "title": "A Call to Repentance",
+ "refs": [
+  "Luke 13:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42013001,
+   "end": 42013005,
+   "ref": "Luke 13:1-5",
+   "ranges": [
+    [
+     42013001,
+     42013005
+    ]
+   ],
+   "title": "A Warning and a Call to Repent",
+   "key_verse": [
+    42013003,
+    42013003
+   ],
+   "reflect": [
+    {
+     "text": "When terrible tragedies happen, people naturally wonder where God is and why He allows such suffering. It is easy to assume that those who suffer must have done something especially bad. But Jesus rejected this idea. He explained that the people killed by violent rulers or a falling tower were not worse sinners than anyone else. Calamities in this broken world do not mean that the victims had greater personal guilt.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead, Jesus explained that sudden disasters reveal how fragile our lives are. They serve as a solemn warning that all of us deserve judgment for our sins. When we hear about catastrophes, we should not focus on judging others. Rather, these events urge us to examine our own hearts and remember that we all need to repent, turning away from sin and toward God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Each day we are given is a gift of God's mercy. Instead of questioning why disasters fall on others, we can marvel at His daily patience toward us. In His kindness, God offers us a way of escape and eternal life through faith in Jesus.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When sudden disasters happen, do you tend to judge others or examine your own heart?",
+    "How can remembering God's daily patience toward you lead you to repent and trust in Him?"
+   ],
+   "prayer": "Lord, thank You for Your patient mercy toward us each day. Help us not to look down on others when hard things happen, but to see our own need for Your forgiveness. Give us humble hearts that turn away from sin and trust in Jesus for eternal life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "When Towers Fall",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/when-towers-fall"
+    },
+    "D2": {
+     "author": "Michael A. Youssef",
+     "work": "What Would Jesus Say?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-september-7-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

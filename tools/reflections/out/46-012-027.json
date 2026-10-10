@@ -1,0 +1,73 @@
+{
+ "id": "46-012-027",
+ "title": "The Greater Gifts",
+ "refs": [
+  "1 Corinthians 12:27-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46012027,
+   "end": 46012031,
+   "ref": "1 Corinthians 12:27-31",
+   "ranges": [
+    [
+     46012027,
+     46012031
+    ]
+   ],
+   "title": "Serving Together in the Body of Christ",
+   "key_verse": [
+    46012027,
+    46012027
+   ],
+   "reflect": [
+    {
+     "text": "You are a vital part of the body of Christ, and God has given every believer an important role to play. We each need a local church family where we can put our gifts into practice. No form of service is small or unimportant to God, and quiet, behind-the-scenes help often makes the biggest difference. Just as an injured or sick organ harms the whole physical body, a Christian who stays disengaged weakens the entire church. When you use your abilities to serve fellow believers, you are serving God Himself.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "It can be easy to fall into rivalry and compare our gifts with others, just as believers did in the early church. Paul urged the church to turn away from competing over who has the greatest role. While God gives different gifts to different people, He calls every Christian without exception to walk in love.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Using our abilities without love ends in spiritual failure and immaturity, no matter how impressive our actions might look. We need to follow God's true definition of love rather than the world's distorted ideas. When we let love guide how we serve, we build up the entire body of Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what quiet or practical ways can you support your church family this week?",
+    "Are you ever tempted to compare your gifts with others instead of serving them with love?"
+   ],
+   "prayer": "Lord, thank you for making us members of your body and giving each of us a place to serve. Help me to use my role faithfully and never look down on quiet ways of helping. Teach me to love others with your true love so that everything I do honors you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The More Excellent Way of Love",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-more-excellent-way-of-love"
+    },
+    "D2": {
+     "author": "Rick Warren",
+     "work": "The Body of Christ Needs You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/the-body-of-christ-needs-you-daily-hope-with-rick-warren-march-26-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

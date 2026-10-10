@@ -1,0 +1,72 @@
+{
+ "id": "59-001-013",
+ "title": "Good and Perfect Gifts",
+ "refs": [
+  "James 1:13-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 59001013,
+   "end": 59001018,
+   "ref": "James 1:13-18",
+   "ranges": [
+    [
+     59001013,
+     59001018
+    ]
+   ],
+   "title": "Every Good Gift from God",
+   "key_verse": [
+    59001017,
+    59001017
+   ],
+   "reflect": [
+    {
+     "text": "When hard times come, we might be tempted to make excuses for our failures or even blame God. Yet true faith knows that God never tempts anyone to do evil. Even though He allows trials to test us, temptation does not come from Him. It starts in our own fallen desires when we are pulled away by them. We must take personal responsibility for our sin and turn back to God in repentance.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Far from bringing evil into our lives, God is the loving giver of every good thing. The blessings we receive do not happen by chance, but flow intentionally from our generous Creator. Earthly circumstances constantly shift and change, but God's character and goodness remain completely steady.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We can train our eyes to notice everyday mercies as well as big answers to prayer. Practicing this kind of gratitude turns our attention away from what we think we lack and points us to God's sufficiency. When we remember how good and faithful He is, we find the strength to trust Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face temptation, do you ever find yourself blaming your circumstances or God instead of owning your own desires?",
+    "What everyday blessings can you thank God for today to remind yourself of His steady goodness?"
+   ],
+   "prayer": "Father of lights, thank You that You are always good and never change. Forgive us for the times we make excuses for our sinful desires. Help us notice Your generous daily gifts and rest in Your sufficiency today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Temptation's Source",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/temptations-source"
+    },
+    "D2": {
+     "author": "Whitney Hopler",
+     "work": "Growing in Gratitude for Gifts from Above",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/gratitude-for-gifts-from-above-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

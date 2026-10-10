@@ -1,0 +1,74 @@
+{
+ "id": "45-005-012",
+ "title": "Death in Adam, Life in Christ",
+ "refs": [
+  "Romans 5:12-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45005012,
+   "end": 45005021,
+   "ref": "Romans 5:12-21",
+   "ranges": [
+    [
+     45005012,
+     45005021
+    ]
+   ],
+   "title": "Greater Grace in Jesus Christ",
+   "key_verse": [
+    45005017,
+    45005017
+   ],
+   "reflect": [
+    {
+     "text": "When Adam sinned, he unleashed death into the world as the natural result of rebellion. But salvation is entirely God's work of grace, His kindness reaching down to save sinners. Christ came with a supernatural gift that far outweighs the damage done by the fall. His sacrifice paid not just for Adam's first disobedience, but for every single rebellion of His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Through this gift, we receive imputed righteousness, which means God counts Christ's perfect goodness as our own. Being united with Christ lifts believers to a place even greater than Adam had before he fell. Rather than remaining trapped under the rule of death, we receive a new identity to reign in life through Jesus.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This grace does not run out when we fail. When we stumble, God's enduring grace forgives us, restores us, and holds us secure. No matter how deep sin once went, God's grace abounds far more to keep us safe in Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Christ paid for all your sins bring you peace when you stumble?",
+    "How can your new identity in Jesus change the way you live today?"
+   ],
+   "prayer": "Lord Jesus, thank you for reaching down to us in grace and forgiving all our sins. Thank you for giving us your righteousness and holding us secure when we stumble. Help us to rest in your love and walk boldly in the life you have given us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "When Grace Defeated the Monster",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-february-4-2025.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "A Superior Union",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/a-superior-union"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

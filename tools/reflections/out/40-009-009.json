@@ -1,0 +1,76 @@
+{
+ "id": "40-009-009",
+ "title": "Jesus Calls Matthew",
+ "refs": [
+  "Matthew 9:9-13",
+  "Mark 2:13-17",
+  "Luke 5:27-32"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 41002016,
+   "end": 41002017,
+   "ref": "Mark 2:16-17",
+   "ranges": [
+    [
+     41002016,
+     41002017
+    ]
+   ],
+   "title": "\"It is not the healthy who need a doctor\"",
+   "key_verse": [
+    41002017,
+    41002017
+   ],
+   "reflect": [
+    {
+     "text": "Religious leaders criticized Jesus for eating with tax collectors and outcasts. While the critics looked at these people with disapproval, Jesus saw hurting patients who needed spiritual healing. He did not come for people who thought they were already good enough on their own. He came to offer deep healing from sin to those who knew they were broken.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "A doctor cannot help someone who refuses to admit they are sick. Finding a spiritual cure begins when we humbly admit our own sin and need for God. Too often, we stubbornly try to carry heavy burdens alone, turning to God only as an exhausted last resort. Jesus wants us to come to Him daily as our Great Physician, because bringing our struggles to Him brings quiet peace to our hearts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus calls us to share His heart for outcasts. Rather than hiding away from broken people or looking down on them, we are called to step out in love and help lead hurting people to the Savior.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there burdens or sins you are trying to carry alone instead of bringing them to Jesus today?",
+    "How can you step out in love toward someone around you who is hurting?"
+   ],
+   "prayer": "Lord Jesus, thank You for being the Great Physician who heals our sin and forgives our wrongs. Please teach us to admit our weakness and turn to You daily instead of carrying our burdens alone. Give us Your compassionate heart so we can gently lead hurting people to Your healing love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Tracie Miles",
+     "work": "Calling the Great Physician",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/calling-the-great-physician-encouragement-for-today-oct-30-2009-11610513.html"
+    },
+    "D2": {
+     "author": "PowerPoint Ministries",
+     "work": "Power Point - October 17, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-october-17-2005-1356281.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

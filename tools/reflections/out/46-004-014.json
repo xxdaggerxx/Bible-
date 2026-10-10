@@ -1,0 +1,73 @@
+{
+ "id": "46-004-014",
+ "title": "Paul’s Fatherly Warning",
+ "refs": [
+  "1 Corinthians 4:14-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46004020,
+   "end": 46004020,
+   "ref": "1 Corinthians 4:20",
+   "ranges": [
+    [
+     46004020,
+     46004020
+    ]
+   ],
+   "title": "\"Not Talk but Power\"",
+   "key_verse": [
+    46004020,
+    46004020
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to sit on the sidelines and talk about what others should be doing. Sometimes we act like consumers at church, simply watching from the stands instead of getting involved. It takes little effort to sit back and criticize, but stepping up to serve requires real commitment. God's kingdom is not built on empty talk, but on active and faithful living.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the same time, we cannot live this life in our own strength. Religious words can never replace a true walk with God that has spiritual power behind it. When we realize our own weakness and empty hands, it pushes us to pray. God promises to give His Holy Spirit to those who ask, giving us what we need to worship Him and share our faith with boldness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "True faith shows itself in action backed by God's help. When we stop relying on mere talk, ask for God's Spirit, and step out to serve, His power works through our ordinary lives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you currently serving others in God's kingdom, or are you mostly watching from the sidelines?",
+    "How might asking God for the Holy Spirit's help change the way you live and speak this week?"
+   ],
+   "prayer": "Lord, forgive us when we offer empty words instead of living out our faith. We know that we are weak on our own, so we ask You to fill us with Your Holy Spirit. Give us willing hearts to step forward, serve others, and show Your power today. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jack Graham",
+     "work": "Are You in the Game or in the Stands?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-june-22-2012.html"
+    },
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "Lord, Fill Me with Your Spirit",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/lord-fill-me-with-your-spirit"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

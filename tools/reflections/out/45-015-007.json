@@ -1,0 +1,74 @@
+{
+ "id": "45-015-007",
+ "title": "Christ the Servant of Jews and Gentiles",
+ "refs": [
+  "Romans 15:7-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45015007,
+   "end": 45015013,
+   "ref": "Romans 15:7-13",
+   "ranges": [
+    [
+     45015007,
+     45015013
+    ]
+   ],
+   "title": "Welcomed into God's Family and Hope",
+   "key_verse": [
+    45015007,
+    45015007
+   ],
+   "reflect": [
+    {
+     "text": "Jesus welcomed us at great personal cost so that we could be reconciled, or brought into right relationship, with God. In doing this, He fulfilled ancient Scripture by making a way for both Jews and Gentiles to receive salvation. Because our peace and joy rest on what Christ actually accomplished for us rather than on our shifting feelings, we have a firm foundation for our faith.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Since Christ accepted us, we are called to welcome one another into God's household. Christian welcome is much deeper than polite handshakes on a Sunday morning. It means treating other believers as true family across personal, cultural, and opinion differences through humble, everyday acts of service.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When a church shows this kind of sacrificial love and unity, it displays the glory and worth of God to the watching world. God Himself is our source of hope, supplying us with peace and joy as we trust Him. Keeping our minds on this promised hope protects our hearts and gives us endurance through every earthly hardship.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show genuine, family love to someone in your church who has a different background or opinion than you?",
+    "How does remembering that your peace rests on what Christ did, rather than on your feelings, help you through hard times?"
+   ],
+   "prayer": "Lord God, thank You for welcoming us into Your household through the sacrifice of Your Son. Help us to serve and receive one another with humble love across all our differences so that Your name is honored. Fill our hearts with Your joy and peace today as we put our hope in You.",
+   "sources": {
+    "D1": {
+     "author": "Stephen Witmer",
+     "work": "You Are Welcome Here",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/you-are-welcome-here"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Abounding in Hope",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/abounding-hope"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

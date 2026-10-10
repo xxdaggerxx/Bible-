@@ -1,0 +1,66 @@
+{
+ "id": "44-028-016",
+ "title": "Paul Preaches at Rome",
+ "refs": [
+  "Acts 28:16-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44028016,
+   "end": 44028031,
+   "ref": "Acts 28:16-31",
+   "ranges": [
+    [
+     44028016,
+     44028031
+    ]
+   ],
+   "title": "Persevering With Passion for Christ",
+   "key_verse": [
+    44028031,
+    44028031
+   ],
+   "reflect": [
+    {
+     "text": "Paul spent two full years under guard in a rented house in Rome. Even in chains, he welcomed all who came to see him, speaking openly about the kingdom of God and the Lord Jesus. Paul's remarkable perseverance through such hardship was rooted in his deep passion for Christ. His love for Jesus gave him strength to keep going when things were difficult.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often look for an easy, comfortable life, but settling into spiritual comfort brings its own danger. It risks causing us to miss out on the greater riches God offers us. God does not promise to leave us comfortable. His greatest blessings are given to shape us and make us more like Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Holy Spirit can work powerful things through ordinary human lives when we stay receptive and yield to Him. When we choose to walk with God and trust Him each day, our lives become an ongoing spiritual adventure filled with His purpose.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you settling for comfortable living instead of seeking the deeper riches God offers?",
+    "How can yielding to the Holy Spirit today help you follow Jesus through difficult times?"
+   ],
+   "prayer": "Lord, give us a deep passion for Jesus so we can persevere through every hardship. Help us not to settle for mere comfort, but allow Your blessings to shape us into the likeness of Your Son. Work through our ordinary lives as we yield to Your Holy Spirit each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 298: Acts 28:30–31",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-298-acts-28-3031.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

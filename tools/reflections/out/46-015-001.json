@@ -1,0 +1,72 @@
+{
+ "id": "46-015-001",
+ "title": "The Resurrection of Christ",
+ "refs": [
+  "1 Corinthians 15:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46015001,
+   "end": 46015011,
+   "ref": "1 Corinthians 15:1-11",
+   "ranges": [
+    [
+     46015001,
+     46015011
+    ]
+   ],
+   "title": "The Good News of God's Grace",
+   "key_verse": [
+    46015010,
+    46015010
+   ],
+   "reflect": [
+    {
+     "text": "The heart of the Christian message is simple and clear. Christ died for our sins, was buried, and was raised back to life. These events were not sudden accidents. They happened just as the Old Testament Scriptures promised long before. The risen Jesus was seen by hundreds of real eyewitnesses, showing that our faith rests on solid history. Because of this, we can cherish the Old Testament, which gives us the foundation to understand Jesus and His work to save us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This good news also changes how we view ourselves. The apostle Paul knew he did not deserve God's love, especially since he had once persecuted the church. Our culture often praises self-made success, but believers are called to give God the credit for every accomplishment. Any standing we have or work we finish comes purely from grace, which is God's undeserved kindness to us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we know that the Lord loves us unconditionally, it changes how we treat others. Recognizing that we did not earn God's favor motivates us to extend that same grace, patience, and acceptance to the people around us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus really rose in history give you confidence in His promises?",
+    "In what practical way can you show undeserved grace to someone else today?"
+   ],
+   "prayer": "Lord God, thank You for the good news that Christ died for our sins and rose again. Help us to stop boasting in our own achievements and remember that everything we have is a gift of Your grace. Teach us to love and accept others just as unconditionally as You have loved us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Undeserving, Yet Unconditionally Loved",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-august-14-2023.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Gospel Summarized",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-gospel-summarized"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

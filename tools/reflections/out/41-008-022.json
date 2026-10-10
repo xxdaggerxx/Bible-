@@ -1,0 +1,75 @@
+{
+ "id": "41-008-022",
+ "title": "The Blind Man at Bethsaida",
+ "refs": [
+  "Mark 8:22-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 41008022,
+   "end": 41008026,
+   "ref": "Mark 8:22-26",
+   "ranges": [
+    [
+     41008022,
+     41008026
+    ]
+   ],
+   "title": "Seeing Clearly in God's Time",
+   "key_verse": [
+    41008025,
+    41008025
+   ],
+   "reflect": [
+    {
+     "text": "Jesus took the blind man gently by the hand and led him outside the village. Leading him away showed judgment on Bethsaida, a place that stayed in unbelief even after seeing many miracles. At the same time, it showed the Lord's gentle care for the man himself, guiding him away from the public gaze.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus chose to heal the man using his own spit and hands. He has complete freedom to heal through whatever means he chooses, and his touch encouraged the man's faith. Unlike most healings in the Gospels, this miracle happened in stages. At first, the man saw people who looked like trees walking around. Physical blindness reflects how our natural human hearts are blind to God's kingdom. This middle stage also mirrored Jesus' disciples, whose spiritual understanding was growing but not yet complete.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When Jesus laid his hands on him a second time, the man could see everything clearly. Christ's touch changes both physical sight and the human heart. Spiritual growth is often a gradual work of God's grace, and we can pray persistently for others knowing God transforms hearts over time.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways is Jesus currently helping you understand his truth more clearly?",
+    "Who can you pray for today with patience, trusting God to work in their life over time?"
+   ],
+   "prayer": "Lord Jesus, thank you for your gentle patience with us when our understanding is incomplete. Continue your work of grace in our hearts so that we may see you clearly. Help us to keep praying faithfully for the people in our lives as you draw them to yourself. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Blind Man at Bethsaida",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/blind-man-bethsaida"
+    },
+    "D2": {
+     "author": "R.C. Sproul",
+     "work": "Tender Grace",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/tender-grace"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

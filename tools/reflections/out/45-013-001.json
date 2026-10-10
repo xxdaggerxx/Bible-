@@ -1,0 +1,66 @@
+{
+ "id": "45-013-001",
+ "title": "Submission to Authorities",
+ "refs": [
+  "Romans 13:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45013001,
+   "end": 45013007,
+   "ref": "Romans 13:1-7",
+   "ranges": [
+    [
+     45013001,
+     45013007
+    ]
+   ],
+   "title": "Honoring God Through Earthly Authorities",
+   "key_verse": [
+    45013001,
+    45013001
+   ],
+   "reflect": [
+    {
+     "text": "God is the supreme ruler over the whole world, and He sets all earthly rulers in place. Scripture reminds us that even leaders who do not know or follow God are established by Him. God gave us civil government as a good gift to protect society from chaos and anarchy. Without government to encourage good conduct and restrain wrongdoing, our communities would easily fall into disorder.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Bible also shows us that civil government and church leadership have distinct roles and clear boundaries. Civil rulers are given a specific task to maintain order in civic life. Jesus Himself affirmed that earthly rulers possess legitimate authority over civic matters. That is why believers are called to pay taxes, follow lawful rules, and give public officials proper respect.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God appointed these authorities, following the law is not simply about avoiding punishment. We submit to governing authorities as a matter of conscience before the Lord. When we live as responsible citizens and show respect to our leaders, we are fundamentally honoring God, who placed them in their roles.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God instituted civil government change the way you view paying taxes and following laws?",
+    "In what practical ways can you show honor to God through how you speak about and treat civic authorities?"
+   ],
+   "prayer": "Lord God, thank You for providing civil authorities to preserve peace and protect society from chaos. Help us to carry out our civic duties faithfully and with a clear conscience. Teach us to honor You by showing proper respect and submission to the leaders You have established. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Established by God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/established-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

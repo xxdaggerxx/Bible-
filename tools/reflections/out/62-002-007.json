@@ -1,0 +1,74 @@
+{
+ "id": "62-002-007",
+ "title": "A New Commandment",
+ "refs": [
+  "1 John 2:7-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 62002009,
+   "end": 62002011,
+   "ref": "1 John 2:9-11",
+   "ranges": [
+    [
+     62002009,
+     62002011
+    ]
+   ],
+   "title": "\"Whoever Loves His Brother Remains in the Light\"",
+   "key_verse": [
+    62002010,
+    62002010
+   ],
+   "reflect": [
+    {
+     "text": "John reminds us that truly knowing Christ is not just about what we know in our heads. Loving our fellow believers gives us real assurance that we are walking in God's light. This call to love is an ancient command, but Jesus made it completely new by the way He lived. He showed us the full depth of love by offering limitless forgiveness and laying down His life for others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Following Jesus means we must share this same genuine love, even with brothers and sisters who are difficult to love. The greatest danger we face is often our own self-focus. When we become self-obsessed, that selfishness quickly fuels resentment, anger, and hatred toward the people around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "To stay in the light, we need to examine our hearts with honesty. We can ask the Lord to expose any quiet, hidden roots of bitterness or selfishness. As God uncovers our self-centered ways, His grace can fill us and overflow into active love for our brothers and sisters.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a brother or sister in Christ whom you struggle to love right now?",
+    "Where might self-focus or hidden bitterness be keeping you from showing love to others?"
+   ],
+   "prayer": "Lord, thank You for showing us true love through the life and sacrifice of Jesus. Search our hearts and uncover any hidden bitterness or self-centered thoughts. Help Your grace overflow in our lives so we can genuinely love our brothers and sisters, even when it is hard.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Love Your Brothers",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/love-your-brothers"
+    },
+    "D2": {
+     "author": "Michael A. Youssef",
+     "work": "The Danger of Self-Love",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-october-9-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

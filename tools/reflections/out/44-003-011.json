@@ -1,0 +1,67 @@
+{
+ "id": "44-003-011",
+ "title": "Peter Speaks in Solomon’s Colonnade",
+ "refs": [
+  "Acts 3:11-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44003011,
+   "end": 44003026,
+   "ref": "Acts 3:11-26",
+   "ranges": [
+    [
+     44003011,
+     44003026
+    ]
+   ],
+   "title": "Returning Home to the Savior",
+   "key_verse": [
+    44003019,
+    44003019
+   ],
+   "reflect": [
+    {
+     "text": "Peter explained that Jesus had to suffer, just as God's prophets foretold long ago. People expected an earthly king of power, so they rejected Him. Yet Jesus walked through deep sorrow so He could understand our pain and help us when we hurt. By giving His life as a sacrifice, He satisfied God's justice and made full forgiveness possible. Because He stooped so low to serve, God exalted Him to reign in glory.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though the crowd had rejected the Author of life, Peter urged them to turn back. No person and no failure is ever beyond God's love. True repentance means turning around and returning home to God's presence. When we honestly admit the harm we have done, our spiritual and emotional healing can begin. That same humble posture opens the door to lasting peace and restored relationships with other people.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a past failure or wrong you have held back from bringing home to God?",
+    "How does knowing Jesus suffered help you trust Him with your own pain?"
+   ],
+   "prayer": "Lord Jesus, thank You for enduring deep sorrow to carry our sins and understand our weakness. Give us humble hearts to admit our wrongdoing and return home to Your presence. Please heal what is broken within us and help us live in peace with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 3:18",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Becca Stevens",
+     "work": "A Call to Return Home (Acts 3:19) - Your Daily Bible Verse - July 9",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/a-call-to-return-home-bible-study-minute-july-3-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

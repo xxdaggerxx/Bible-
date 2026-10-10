@@ -1,0 +1,83 @@
+{
+ "id": "33-006-001",
+ "title": "The Case against Israel",
+ "refs": [
+  "Micah 6:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 33006008,
+   "end": 33006008,
+   "ref": "Micah 6:8",
+   "ranges": [
+    [
+     33006008,
+     33006008
+    ]
+   ],
+   "title": "\"Act Justly, Love Mercy, Walk Humbly\"",
+   "key_verse": [
+    33006008,
+    33006008
+   ],
+   "reflect": [
+    {
+     "text": "Our world often overwhelms us with endless demands, and empty religious rituals mean nothing to God without a sincere heart. God makes what He desires wonderfully simple and clear. He calls us to act justly in our everyday lives. That means treating everyone with fairness and respect, dealing honestly in our daily work, and caring for others just as we want to be treated.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God also calls us to love mercy. This means we do not help others out of cold duty or begrudging obligation. Instead, God gives us the spiritual strength to find genuine gladness in showing kindness. Even in our busy routines, we can make an intentional choice to look out for those weighed down by sorrow, illness, or hard times.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Finally, we are called to walk humbly with God. This means laying aside our pride and self-righteousness, knowing that every person stands equal before Him. Walking humbly means keeping close to God throughout our day, turning our self-centered thoughts into a steady, prayerful conversation with Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where can you choose to show kindness with gladness this week instead of seeing it as a burden?",
+    "How can you turn your thoughts into an ongoing conversation with God as you go about your day?"
+   ],
+   "prayer": "Lord, thank You for showing us so clearly what is good. Help us to treat people fairly and to find real joy in being merciful to those who are hurting. Take away our pride so that we may walk closely and humbly with You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Micah 6:8",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "Love One Another Gladly",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/love-one-another-gladly"
+    },
+    "D3": {
+     "author": "Megan J. Conner",
+     "work": "What Does the Lord Require of Us?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/what-does-the-lord-require-of-us-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

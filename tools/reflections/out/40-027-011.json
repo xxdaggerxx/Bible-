@@ -1,0 +1,77 @@
+{
+ "id": "40-027-011",
+ "title": "Jesus before Pilate",
+ "refs": [
+  "Matthew 27:11-14",
+  "Luke 23:1-5",
+  "John 18:28-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40027011,
+   "end": 40027014,
+   "ref": "Matthew 27:11-14; Luke 23:1-5; John 18:28-40",
+   "ranges": [
+    [
+     40027011,
+     40027014
+    ],
+    [
+     42023001,
+     42023005
+    ],
+    [
+     43018028,
+     43018040
+    ]
+   ],
+   "title": "Silent Before His Accusers",
+   "key_verse": [
+    40027014,
+    40027014
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus stood accused before the governor, He gave no answer to the charges against Him. He had never been slow to speak when He was helping and blessing others, but He refused to say a single word to defend Himself. He had completely given Himself over to be the sacrifice for us. Human sin has no excuse, so Jesus quietly carried the full weight of our guilt before His judge.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus also shows us the wisdom of calm patience. Answering His accusers would only have added fuel to their anger. False words will eventually fall apart on their own, so truth can afford to be quiet. As Charles Spurgeon wrote, \"the anvil breaks a host of hammers by quietly bearing their blows.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "By holding His peace, Jesus fulfilled ancient prophecy. Long before this trial, scripture foretold that God's servant would be led like a silent lamb to the slaughter. In His quiet obedience, Jesus proved that He is truly the Lamb of God who gives His life to save us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When others criticize or misunderstand you, how might quiet patience be wiser than arguing back?",
+    "How does Jesus' willingness to bear our guilt in silence show the depth of His love for you?"
+   ],
+   "prayer": "Lord Jesus, thank You for silently bearing the full weight of our sin and giving Your life for us. When we face unfair words or conflict, grant us the wisdom of quiet patience instead of anger. Help us to trust that Your truth will always stand. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 2",
+     "on": "Matthew 27:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

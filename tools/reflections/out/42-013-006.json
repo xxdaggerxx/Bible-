@@ -1,0 +1,66 @@
+{
+ "id": "42-013-006",
+ "title": "The Parable of the Barren Fig Tree",
+ "refs": [
+  "Luke 13:6-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42013006,
+   "end": 42013009,
+   "ref": "Luke 13:6-9",
+   "ranges": [
+    [
+     42013006,
+     42013009
+    ]
+   ],
+   "title": "Growing Fruit in Your Life",
+   "key_verse": [
+    42013008,
+    42013008
+   ],
+   "reflect": [
+    {
+     "text": "In this parable, a man looks for fruit on a fig tree planted in his vineyard. Following Jesus means expecting real, visible growth in our lives. It is more than just being forgiven and waiting for heaven. Genuine spiritual life naturally shows up in who we are, shaping our everyday character and the choices we make.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When a tree stays empty year after year, it shows that something is wrong and needs to change. The vineyard keeper asks for another year to care for the tree and help it grow. In the same way, we have wonderful potential to flourish when we let God work in us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Sometimes, we hold back or resist God without even realizing it. We are called to pray honestly about whatever inner resistance is keeping us from growing. As we open our lives to God's care, he helps us turn away from what holds us back and produce good fruit.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What kind of fruit is God helping you grow in your daily decisions?",
+    "Is there any inner resistance you need to bring to God in prayer?"
+   ],
+   "prayer": "Lord, thank you for being patient with us and giving us what we need to grow. Show us where we are resisting your work in our hearts. Please help our daily character and choices reflect your life in us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Robin Dugall",
+     "work": "What Fruit Are You Growing?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/what-fruit-are-you-growing-homeword-october-5.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

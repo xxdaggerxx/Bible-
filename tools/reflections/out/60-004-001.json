@@ -1,0 +1,75 @@
+{
+ "id": "60-004-001",
+ "title": "Living for God’s Glory",
+ "refs": [
+  "1 Peter 4:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 60004010,
+   "end": 60004010,
+   "ref": "1 Peter 4:10",
+   "ranges": [
+    [
+     60004010,
+     60004010
+    ]
+   ],
+   "title": "\"Use Whatever Gift You Have Received\"",
+   "key_verse": [
+    60004010,
+    60004010
+   ],
+   "reflect": [
+    {
+     "text": "God gives each believer unique abilities and strengths, including everyday skills and creative hobbies. He entrusts these gifts to us not for selfish gain, but to encourage and bless our community. When we understand that our talents come from God, we can see that our skills have a special purpose.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Keeping our abilities to ourselves holds back the help and care that other people need. Faithful stewardship means taking good care of whatever God has put into our hands. When we are faithful in small, simple acts of service, God can multiply our efforts to have a far-reaching impact on others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Using what you have to support others is how you bring glory to God. When we use our everyday skills to serve those around us, we help advance His kingdom. You do not need extraordinary talents to make a difference; you simply need to offer what God has already given you to bless someone else.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What everyday skill or hobby has God given you that could encourage someone today?",
+    "In what simple way can you use your abilities to serve others instead of keeping them to yourself?"
+   ],
+   "prayer": "Lord, thank You for the gifts, hobbies, and everyday skills You have given to each of us. Help us not to keep these talents to ourselves, but to use them faithfully to encourage and serve others. Please take our simple acts of service and use them to bless our community and bring glory to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "Your Gifts Are for Other People",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-may-26-2025.html"
+    },
+    "D2": {
+     "author": "Sandi Swiridoff",
+     "work": "When a Hobby Brings New Hope",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-november-7-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

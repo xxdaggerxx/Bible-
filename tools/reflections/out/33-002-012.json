@@ -1,0 +1,76 @@
+{
+ "id": "33-002-012",
+ "title": "The Remnant of Israel",
+ "refs": [
+  "Micah 2:12-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 33002012,
+   "end": 33002013,
+   "ref": "Micah 2:12-13",
+   "ranges": [
+    [
+     33002012,
+     33002013
+    ]
+   ],
+   "title": "The King Who Clears the Way",
+   "key_verse": [
+    33002013,
+    33002013
+   ],
+   "reflect": [
+    {
+     "text": "In Micah, God promises to gather his people like a flock of sheep and lead them out of confinement. A leader, called the breaker, goes ahead to open the path through the gate. Jesus is this divine trailblazer for us. He walked the road before us, removing every barrier that blocked our way to God. Because Christ has traveled the path ahead of his people, things are completely changed.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our greatest enemies—sin, death, and hell—have already been disarmed. Charles Spurgeon wrote that Jesus \"conquered every foe that obstructed the way.\" By dying on the cross, he dealt with our sin, broke the power of death, and shut the door of destruction against his children. Any danger remaining on our path has lost its teeth and power to do us lasting harm.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We will still encounter spiritual opposition and struggle in this life. But when we face trials, we are fighting an enemy that has already been defeated. We do not march toward uncertainty. Because our King walks in front of us, we can move forward with confidence and joy, assured of our final victory in him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What fear or hardship makes you feel trapped or opposed today?",
+    "How does knowing that Jesus has already disarmed sin and death give you courage to move forward?"
+   ],
+   "prayer": "Lord Jesus, thank you for being the leader who breaks open our path. When we face spiritual battles or fears, remind us that you have already defeated our enemies on the cross. Give us quiet confidence and joy as we follow where you lead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 24",
+     "on": "Micah 2:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth for Life",
+     "work": "Christ's Victory",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-24-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

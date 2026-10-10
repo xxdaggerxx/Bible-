@@ -1,0 +1,74 @@
+{
+ "id": "40-005-033",
+ "title": "Oaths and Vows",
+ "refs": [
+  "Matthew 5:33-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40005033,
+   "end": 40005037,
+   "ref": "Matthew 5:33-37",
+   "ranges": [
+    [
+     40005033,
+     40005037
+    ]
+   ],
+   "title": "Letting Our Words Stand on Their Own",
+   "key_verse": [
+    40005037,
+    40005037
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to make quick promises that we never keep. In our everyday world, people often make casual commitments or search for loopholes to get out of telling the full truth. Jesus calls His followers to a higher standard of honesty. Instead of using special oaths to sound convincing or making flimsy excuses, He wants our words to be simple, clear, and dependable.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Integrity means doing what we say we will do. Our actions show our faith far better than empty speech ever could. Because of this, we should pause and think carefully before making a promise, making sure we have the ability to follow through. When we hold ourselves accountable to what we say, our daily walk matches what we profess.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Being reliable in small, ordinary matters also protects our witness for God. When others see that our simple yes truly means yes, they learn that they can trust us. Living with this kind of quiet consistency gives credibility to our words, so that when we share the good news of Jesus, our message rings true.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever make quick commitments without pausing to consider if you can keep them?",
+    "How can following through on small promises help others see that your faith is real?"
+   ],
+   "prayer": "Lord, help us to be people of simple truth who honor what we say. Give us wisdom to pause before making commitments, and grant us the strength to follow through faithfully. May our honesty in daily life reflect your trustworthy character to those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Glynnis Whitwer",
+     "work": "Encouragement for Today: Let Your Yes Be Yes",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-05-26-04-1263268.html"
+    },
+    "D2": {
+     "author": "Jim Liebelt",
+     "work": "Talk is Cheap",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-jan-9-2009-11597927.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

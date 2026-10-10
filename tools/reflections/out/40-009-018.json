@@ -1,0 +1,115 @@
+{
+ "id": "40-009-018",
+ "title": "The Healing Touch of Jesus",
+ "refs": [
+  "Matthew 9:18-26",
+  "Mark 5:21-43",
+  "Luke 8:40-56"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40009018,
+   "end": 40009026,
+   "ref": "Matthew 9:18-26; Mark 5:21-43; Luke 8:40-56",
+   "ranges": [
+    [
+     40009018,
+     40009026
+    ],
+    [
+     41005021,
+     41005043
+    ],
+    [
+     42008040,
+     42008056
+    ]
+   ],
+   "title": "The Gentle Power of Jesus",
+   "key_verse": [
+    41005036,
+    41005036
+   ],
+   "reflect": [
+    {
+     "text": "As Jesus walked toward the home of Jairus, His path was filled with kindness. He did not hold back His power for only one person, but shared grace freely as He went. A woman who had suffered for twelve years reached through the pressing crowd to touch the hem of His robe. Many people were merely brushing past Jesus by accident, but she reached out on purpose. Her understanding was imperfect, and she came trembling with fear. Yet Jesus did not scold her. He stopped to find her, spoke with tender family warmth by calling her daughter, and gave her full peace and healing. Even small, weak faith receives His immediate mercy.",
+     "sources": [
+      "D1",
+      "D2",
+      "D5",
+      "D6",
+      "D7"
+     ]
+    },
+    {
+     "text": "While Jesus was still speaking with the woman, news came that Jairus' daughter had died. It seemed that all hope was gone and that it was useless to trouble the Teacher any further. Yet Jesus delayed so He could show what God can do. He told the grieving father, 'Do not be afraid; just believe.' Holding the father's hand through the darkness, Jesus went to the house, took the child by the hand, and raised her to life. In every trial, the Lord invites us to trust Him fully. He has the power to bring life out of death and to make our broken hearts clean and whole.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face a situation that seems hopeless, how does Jesus' command to 'just believe' help you trust Him?",
+    "What is the difference between casually being around Jesus and reaching out to Him with purposeful faith?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your deep gentleness and Your great power to heal. When our problems feel too large or hope seems gone, help us not to fear. We reach out to You in faith, asking You to make us whole and guide our steps each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 14",
+     "on": "Luke 8:47",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 3",
+     "on": "Luke 8:42",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 9:22",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Mark 5:35",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Mike DeVries",
+     "work": "The Shalom of God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-march-22-2007-11532185.html"
+    },
+    "D6": {
+     "author": "Linda Gray",
+     "work": "A Touch of the Master’s Hem",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/a-touch-of-the-masters-hem-encouragement-cafe-august-24.html"
+    },
+    "D7": {
+     "author": "Ligonier Ministries",
+     "work": "The Compassion Of Christ",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/compassion-christ"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

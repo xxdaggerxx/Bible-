@@ -1,0 +1,78 @@
+{
+ "id": "40-013-033",
+ "title": "The Parable of the Leaven",
+ "refs": [
+  "Matthew 13:33",
+  "Luke 13:20-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40013033,
+   "end": 40013033,
+   "ref": "Matthew 13:33; Luke 13:20-21",
+   "ranges": [
+    [
+     40013033,
+     40013033
+    ],
+    [
+     42013020,
+     42013021
+    ]
+   ],
+   "title": "The Kingdom at Work Within Us",
+   "key_verse": [
+    40013033,
+    40013033
+   ],
+   "reflect": [
+    {
+     "text": "Jesus teaches that God's kingdom is like yeast mixed into dough. A tiny amount of yeast quietly spreads through the entire batch. In the same way, God's kingdom works quietly inside us with tremendous power. When we welcome His kingdom, the Holy Spirit changes us from the inside out. Slowly, He replaces our fears and weaknesses with real faith, virtue, and lasting hope.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because hidden influences have such great power to spread, we must also be careful about what shapes our hearts. Jesus often warned against corrupt leadership marked by pride. The Pharisees fell into cold legalism, having outward knowledge of Scripture without true spiritual life. Others fell into doubt, or gave in to worldly desires and moral compromise.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We need to guard our hearts and our churches from these dangerous influences. When we surrender our daily lives completely to God instead, His presence works through us. His peace and joy take root, shaping our character no matter what challenges we face.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need God's Spirit to quietly change your thoughts and fears into faith?",
+    "Are you guarding your heart against pride, rigid rules, and worldly compromise?"
+   ],
+   "prayer": "Lord God, please let Your Spirit work quietly in our hearts today like leaven in dough. Guard us from pride, cold legalism, and worldly compromise. Transform us from the inside out so that Your peace and joy may fill our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Whitney Hopler",
+     "work": "The Parable of the Yeast",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/the-parable-of-the-yeast.html"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Guard Against Pride in Religious Leadership",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-june-21-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

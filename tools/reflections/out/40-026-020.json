@@ -1,0 +1,84 @@
+{
+ "id": "40-026-020",
+ "title": "The Last Supper",
+ "refs": [
+  "Matthew 26:20-30",
+  "Mark 14:17-26",
+  "Luke 22:14-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40026020,
+   "end": 40026030,
+   "ref": "Matthew 26:20-30; Mark 14:17-26; Luke 22:14-23",
+   "ranges": [
+    [
+     40026020,
+     40026030
+    ],
+    [
+     41014017,
+     41014026
+    ],
+    [
+     42022014,
+     42022023
+    ]
+   ],
+   "title": "A Meal of Remembrance and Hope",
+   "key_verse": [
+    40026028,
+    40026028
+   ],
+   "reflect": [
+    {
+     "text": "God planned every single detail so Jesus and His disciples could share this final Passover meal together. During this special supper, Jesus took the simple food on the table to explain what He was about to do. He picked up the bread, gave thanks, and broke it. That broken bread represented His own physical body, which would soon suffer death on the cross for us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even the ancient blessing over the bread pointed ahead to Jesus rising again from the grave. Jesus also passed the cup of wine, explaining that His blood would soon be poured out as a sacrifice. This sacrifice established a new covenant, which is God's promise to forgive our sins and make us completely right before Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we take Communion today, we remember the high price Jesus paid to rescue us. Sharing in this meal turns our attention to Christ's wonderful love. It also moves us to go out into the world and proclaim this good news of forgiveness to others.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you remember that Jesus gave His body and blood for you, how does that shape the way you live each day?",
+    "Who in your life needs to hear the good news of Christ's forgiveness and love?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving Your body and shedding Your blood so our sins could be fully forgiven. Help us to remember Your sacrifice with deep thankfulness and humble faith. Give us love and courage to share this good news of Your grace with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "The Bread of Life",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-august-13-2026.html"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "The Last Supper",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-april-9-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

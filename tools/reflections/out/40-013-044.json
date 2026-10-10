@@ -1,0 +1,73 @@
+{
+ "id": "40-013-044",
+ "title": "The Parables of the Treasure and the Pearl",
+ "refs": [
+  "Matthew 13:44-46"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40013044,
+   "end": 40013046,
+   "ref": "Matthew 13:44-46",
+   "ranges": [
+    [
+     40013044,
+     40013046
+    ]
+   ],
+   "title": "The Treasure of the Kingdom",
+   "key_verse": [
+    40013044,
+    40013044
+   ],
+   "reflect": [
+    {
+     "text": "Jesus revealed the hidden treasure of the kingdom of heaven during His ministry on earth. Even though religious leaders saw His miracles firsthand, they were blind to who He really was. Because they failed to recognize the King, they missed the spiritual reality right in front of them. To truly see the treasure of Jesus and His kingdom, we must humble our hearts and ask God to open our spiritual eyes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Once we see who Jesus is, we discover His incomparable worth. The merchant in the parable found one precious pearl and sold everything he had to buy it. In the same way, true followers of Christ gladly part with every prized earthly possession to hold onto Him. Just as Mary poured out expensive perfume and Paul surrendered his pedigree, we count all else as loss for Christ.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Giving up what we have is not a sad chore when we understand what we gain. The surpassing joy of possessing Christ far outweighs any earthly cost or sacrifice. When God opens our eyes to the treasure of His kingdom, following Jesus with everything we are is the greatest joy we can know.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What prized earthly things might be competing with Jesus for first place in your heart?",
+    "Are you asking God with a humble heart to open your spiritual eyes to the worth of His kingdom?"
+   ],
+   "prayer": "Lord, humble our hearts and open our eyes to see the true beauty and worth of Your kingdom. Help us to gladly let go of anything that holds us back from knowing You. May the surpassing joy of having Christ far outweigh every earthly cost. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Are You Blind to Spiritual Reality?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-june-25-2024.html"
+    },
+    "D2": {
+     "author": "David Mathis",
+     "work": "He Sold All His Pearls for One",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/he-sold-all-his-pearls-for-one"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

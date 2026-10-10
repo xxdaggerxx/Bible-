@@ -1,0 +1,84 @@
+{
+ "id": "40-013-031",
+ "title": "The Parable of the Mustard Seed",
+ "refs": [
+  "Matthew 13:31-32",
+  "Mark 4:30-34",
+  "Luke 13:18-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40013031,
+   "end": 40013032,
+   "ref": "Matthew 13:31-32; Mark 4:30-34; Luke 13:18-19",
+   "ranges": [
+    [
+     40013031,
+     40013032
+    ],
+    [
+     41004030,
+     41004034
+    ],
+    [
+     42013018,
+     42013019
+    ]
+   ],
+   "title": "The Greatness of God's Growing Kingdom",
+   "key_verse": [
+    40013032,
+    40013032
+   ],
+   "reflect": [
+    {
+     "text": "Jesus used everyday farming pictures to teach ordinary people deep spiritual truths. When He described the mustard seed, He used a familiar expression for something superlatively small. The heart of this parable is not the tiny seed itself, but the greatness of God. His kingdom began in a very small and quiet way when Jesus came. Yet it is meant to grow over a long time until it reaches undeniable greatness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God does not expand His kingdom with flashy displays or worldly fanfare. Instead, it advances quietly through obedience to His Word and His Spirit. Even when we face dark times and hard troubles, God is still at work. His kingdom moves forward silently and steadily across the whole earth, and nothing can stop it.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This truth brings great comfort to our everyday lives. God does not demand grand, worldly achievements from us. Instead, He uses our smallest words and our humblest deeds of service to build a kingdom that will last forever. Every quiet act of faithfulness matters to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God uses small and humble deeds change the way you view your daily acts of service?",
+    "When the world seems dark, how does Jesus' promise about His growing kingdom give you hope?"
+   ],
+   "prayer": "Lord, thank You for the quiet and unstoppable growth of Your kingdom throughout the world. Help us to trust Your Word and Spirit rather than relying on worldly fanfare. Please take our small words and simple deeds of service and use them for Your enduring glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "R.C. Sproul",
+     "work": "Mustard Seeds and The Greatness of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/mustard-seeds-the-greatness-god"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Mustard Seed and Leaven",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/mustard-seed-and-leaven"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

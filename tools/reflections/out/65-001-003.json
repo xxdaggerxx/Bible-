@@ -1,0 +1,113 @@
+{
+ "id": "65-001-003",
+ "title": "God’s Judgment on the Ungodly",
+ "refs": [
+  "Jude 1:3-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 65001003,
+   "end": 65001003,
+   "ref": "Jude 1:3",
+   "ranges": [
+    [
+     65001003,
+     65001003
+    ]
+   ],
+   "title": "\"Contend Earnestly for the Faith\"",
+   "key_verse": [
+    65001003,
+    65001003
+   ],
+   "reflect": [
+    {
+     "text": "Jude urges us to stand up firmly for the message God gave His people once for all. Christian truth is not something we invent or adjust as times change. It gives us clear teachings about who God is and clear boundaries for how we ought to live. Right beliefs and holy living belong together. When we change what the Bible says about right and wrong to match the trends around us, we push aside the lordship of Jesus. Holding on to historic truth is actually the most loving thing we can do for others.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The world around us often treats God like a distant helper who exists only to make our lives comfortable. When we chase ease and convenience, we can easily be tempted to bend God's words to fit our own wishes. But God showed Himself clearly in Jesus, and real faith means listening to the authority of Scripture rather than following the crowd. We protect this faith by studying God's truth together and helping one another stay faithful.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you most tempted to bend God's truth to fit what feels easy or popular?",
+    "How can you help other believers in your church hold firmly to the Bible?"
+   ],
+   "prayer": "Lord Jesus, thank you for giving us your truth once for all. Help us to stand firm in your word without changing it to fit our culture. Give us humble hearts to obey your teaching and love one another well. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Justin Dillehay",
+     "work": "Contending for the Faith in a Confused Culture",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/contending-faith-confused-culture/"
+    },
+    "D2": {
+     "author": "Jim Liebelt",
+     "work": "Contending for the Faith - HomeWord - November 4, 2016",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-november-4-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 65001003,
+   "end": 65001016,
+   "ref": "Jude 1:3-16",
+   "ranges": [
+    [
+     65001003,
+     65001016
+    ]
+   ],
+   "title": "Warnings from the Past",
+   "key_verse": [
+    65001005,
+    65001005
+   ],
+   "reflect": [
+    {
+     "text": "Jude points back to the history of God's people to show what happens when people turn away from the truth. God rescued the Israelites out of slavery in Egypt, but He later destroyed those who did not truly believe Him. Being part of the crowd or having outward religious privileges is not enough. Sitting in church or seeing God's blessings cannot take the place of personal, saving trust in Him.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Jude also mentions the fallen angels who rebelled and the cities of Sodom and Gomorrah that fell into sexual sin. Their judgment stands as a serious warning for all time. God's grace, His kindness we do not deserve, is never an excuse to chase after sin or live in open rebellion against Him. Genuine grace always calls us to turn away from ungodly living and walk with the Lord in true faith.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on true, personal faith in Christ, or just on being around church activities?",
+    "How does remembering God's past judgments help you take holiness seriously?"
+   ],
+   "prayer": "Holy God, thank you for rescuing us by your grace. Keep our hearts from taking your kindness for granted or treating it as an excuse to sin. Give us real, enduring faith that honours you in how we live each day. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Unbelief and Destruction",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/unbelief-and-destruction"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

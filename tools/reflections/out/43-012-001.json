@@ -1,0 +1,67 @@
+{
+ "id": "43-012-001",
+ "title": "Mary Anoints Jesus",
+ "refs": [
+  "John 12:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43012001,
+   "end": 43012008,
+   "ref": "John 12:1-8",
+   "ranges": [
+    [
+     43012001,
+     43012008
+    ]
+   ],
+   "title": "Sitting at the Table with Jesus",
+   "key_verse": [
+    43012001,
+    43012001
+   ],
+   "reflect": [
+    {
+     "text": "At the dinner in Bethany, Martha served the food, but Lazarus sat at the table with Jesus. Serving is a good thing in its proper time, but Charles Spurgeon notes that nothing brings more joy than \"the vine of fellowship.\" To rest near Jesus, listen to his voice, and enjoy his presence made Lazarus deeply happy. When we take time to be near our Lord, nothing in the world can match that quiet gladness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Lazarus is also an example for us to follow. Jesus had called him out of the grave and given him life again. It would have been unthinkable and ungrateful for Lazarus to stay away from the one who raised him. In a similar way, we were once dead in our sins until Jesus gave us new life. Because he loved us so much, we should never be content living at a distance from him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus wept tears of love over Lazarus, but for us, the Saviour went even further and shed his own blood. Since he gave so much to redeem us, we should turn our hearts back to him. We can ask the Holy Spirit for closer intimacy with Jesus, making time every day to sit at his table.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you spending all your time working for the Lord, or are you also taking time to sit and enjoy his company?",
+    "Remembering that Jesus gave his life to save you, how can you draw closer to him today?"
+   ],
+   "prayer": "Lord Jesus, thank you for raising us out of spiritual death and giving us new life through your sacrifice. Forgive us when we drift away or get too busy to spend time with you. Send your Holy Spirit to draw our hearts into close fellowship with you each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 21",
+     "on": "John 12:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "58-003-012",
+ "title": "The Peril of Unbelief",
+ "refs": [
+  "Hebrews 3:12-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 58003012,
+   "end": 58003013,
+   "ref": "Hebrews 3:12-13",
+   "ranges": [
+    [
+     58003012,
+     58003013
+    ]
+   ],
+   "title": "\"Exhort One Another Daily\"",
+   "key_verse": [
+    58003013,
+    58003013
+   ],
+   "reflect": [
+    {
+     "text": "Scripture warns us not to copy the people who left Egypt only to turn away from God in unbelief. Turning our backs on Christ is a serious danger. The time we have to repent—turning away from our wrong paths and trusting Jesus—will not last forever. God calls us to answer Him immediately today, rather than putting it off and presuming we always have tomorrow.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God never intended for us to walk this path of faith in isolation. Sin is deceitful, and it can quietly harden our hearts against God when we are by ourselves. That is why God provides mutual daily encouragement within the church. Walking alongside other Christians gives us accountability that helps keep us from stumbling into sin.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we know fellow believers are actively cheering us on, our spirits are lifted and strengthened. Consistent fellowship and regular encouragement give us a resilient faith that lasts. By speaking truth to one another day after day, we help each other remain close to the Lord.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you staying in close fellowship with other believers, or have you been trying to walk your faith alone?",
+    "Who is a Christian brother or sister you can actively encourage today?"
+   ],
+   "prayer": "Lord, thank You for giving us fellow believers so we do not have to follow You in isolation. Please protect our hearts from the deceitfulness of sin and help us trust You today without delay. Show us how to cheer on and support one another each day so our faith remains resilient. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Remedy for Sin’s Deceitfulness",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-remedy-for-sins-deceitfulness"
+    },
+    "D2": {
+     "author": "Kelly McFadden",
+     "work": "The Encourager",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-dec-11-2007-11561517.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

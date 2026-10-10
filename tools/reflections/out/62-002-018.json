@@ -1,0 +1,66 @@
+{
+ "id": "62-002-018",
+ "title": "Beware of Antichrists",
+ "refs": [
+  "1 John 2:18-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 62002018,
+   "end": 62002023,
+   "ref": "1 John 2:18-23",
+   "ranges": [
+    [
+     62002018,
+     62002023
+    ]
+   ],
+   "title": "Standing Firm in the Truth of Christ",
+   "key_verse": [
+    62002022,
+    62002022
+   ],
+   "reflect": [
+    {
+     "text": "People often wonder about the future coming of the Antichrist. Yet John warns us that the spirit of the antichrist is already active today through false teaching. Deceptive ideas quietly make their way into our culture and even into churches, slowly preparing people to accept greater spiritual lies.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "One clear sign of false teaching is denying who Jesus is. In our world, this often looks like claiming that Jesus is merely one path among many ways to God. But the Bible tells us that anyone who rejects the Son also rejects the Father.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this danger, we must stay alert and grounded deeply in God's Word. When we know Scripture, we can easily tell the difference between divine truth and error. Even when many people are led astray, we do not need to fear, because the enemy and his kingdom face certain defeat.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you hear ideas in culture that treat Jesus as just one option among many?",
+    "How can spending regular time in the Bible help you notice deceptive teachings?"
+   ],
+   "prayer": "Lord, thank you for giving us your Word so we can know the truth. Help us stay watchful and recognize any false ideas that lead people away from Jesus. Keep our faith firm in Christ alone, knowing that your truth will always win in the end. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Michael A. Youssef, Ph.D.",
+     "work": "The Spirit of the Antichrist",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-devotional-for-september-12-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

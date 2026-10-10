@@ -1,0 +1,67 @@
+{
+ "id": "42-014-007",
+ "title": "The Parable of the Guests",
+ "refs": [
+  "Luke 14:7-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42014007,
+   "end": 42014014,
+   "ref": "Luke 14:7-14",
+   "ranges": [
+    [
+     42014007,
+     42014014
+    ]
+   ],
+   "title": "Called to Move Up Higher",
+   "key_verse": [
+    42014010,
+    42014010
+   ],
+   "reflect": [
+    {
+     "text": "When we first come to God, we are often overwhelmed by how great and holy He is compared to our own sin. Like a guest quietly taking the lowest seat at a banquet, we come before Him with deep humility and trembling. We realize that on our own, we do not deserve an honored place in the presence of the Almighty God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet as we grow in grace—God's kindness that we do not earn—He invites us to come up higher. Our fear loses its dread and turns into peaceful respect. We begin to see not only God's majesty, but also His endless mercy and fatherly goodness. Because of what Jesus has done for us, we discover that we are welcomed and loved.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This invitation to move closer changes how we pray. While we still bow before God with true reverence, we no longer hide from Him in terror. He lifts us from the lowest place, welcoming us to speak freely with Him and to trust Him completely as our Father.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways have you felt God gently lead you from fear toward trusting His love?",
+    "How does knowing that God welcomes you near change the way you talk to Him in prayer?"
+   ],
+   "prayer": "Lord, thank You for welcoming us when we were humbled by our own weakness. Remove our fearful dread and teach us to rest in Your mercy and love. Help us to approach You with holy wonder, joyful trust, and deep gratitude every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 23",
+     "on": "Luke 14:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

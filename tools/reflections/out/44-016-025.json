@@ -1,0 +1,68 @@
+{
+ "id": "44-016-025",
+ "title": "The Conversion of the Jailer",
+ "refs": [
+  "Acts 16:25-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44016025,
+   "end": 44016034,
+   "ref": "Acts 16:25-34",
+   "ranges": [
+    [
+     44016025,
+     44016034
+    ]
+   ],
+   "title": "Faith and Salvation in the Prison",
+   "key_verse": [
+    44016031,
+    44016031
+   ],
+   "reflect": [
+    {
+     "text": "Even locked in a dark prison cell, Paul and Silas prayed and sang hymns to God. When we praise God during hard times, we show that our faith is real, and the people watching us take notice. True worship in trials invites God's power to break chains, both physical and spiritual. When the earthquake opened the prison doors, Paul and Silas chose restraint instead of running away to save themselves. By staying put, they kept the frightened jailer from ending his life and opened a clear path to share the gospel.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When the trembling jailer asked how to be saved, Paul pointed him straight to Jesus. Salvation does not depend on our own merit or good works; it comes through turning away from self and trusting Jesus as our Saviour. As Charles Spurgeon wrote, this is good news for a person with a sword at their throat, and it is all we need for daily life. Remaining faithful in hard moments sets an example that can lead entire households to Christ. We can take God at His word and bring our own families, friends, and workers before Him in prayer every day.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How might praising God in the middle of a difficult situation encourage the people watching you?",
+    "Who among your family members or close friends can you commit to praying for today?"
+   ],
+   "prayer": "Lord Jesus, help us to sing Your praises and trust You even when our circumstances are dark. We turn away from our own merit and rest completely in Your gift of salvation. Please soften the hearts of our family and friends, and bring them into the joy of believing in You.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 12",
+     "on": "Acts 16:31",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Melinda Eye Cooper",
+     "work": "4 Faithful Lessons We Can Learn from Paul and Silas in Prison",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/faithful-lessons-we-can-learn-from-paul-and-silas-in-prison.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

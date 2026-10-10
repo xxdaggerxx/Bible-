@@ -1,0 +1,127 @@
+{
+ "id": "45-008-001",
+ "title": "Walking by the Spirit",
+ "refs": [
+  "Romans 8:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 45008001,
+   "end": 45008001,
+   "ref": "Romans 8:1",
+   "ranges": [
+    [
+     45008001,
+     45008001
+    ]
+   ],
+   "title": "\"No Condemnation\"",
+   "key_verse": [
+    45008001,
+    45008001
+   ],
+   "reflect": [
+    {
+     "text": "Before God, all of us stand like people on trial awaiting sentencing. We have broken God's law, and our own effort can never reach the perfection God requires. Human striving simply cannot earn our freedom from sin.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God showed us great mercy by sending His Son. Jesus lived the only perfect life and took the punishment we deserved on the cross. When we place our trust in Him, we are united with Him, and our condemnation is taken away completely. As Charles Spurgeon wrote, \"thy Saviour's blood has procured thy full discharge.\" Christ kept the law for us, and God counts His goodness as our own.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This means that if you are in Christ, you never need to live in fear of God's anger. You are released from the prison of guilt. You can now approach your heavenly Father with confidence and walk in the joy of His love every day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of life do you still struggle with feelings of guilt or fear before God?",
+    "How does knowing that Jesus took your punishment change the way you speak to God today?"
+   ],
+   "prayer": "Heavenly Father, thank You for freeing us from the guilt and fear of sin through Jesus. We are grateful that His perfect life and sacrifice are counted for us. Help us to live in this freedom today and to come to You boldly with thankful hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 13",
+     "on": "Romans 8:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Jana Kelley",
+     "work": "Guilty?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/guilty-wholly-loved-august-7.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 45008001,
+   "end": 45008011,
+   "ref": "Romans 8:1-11",
+   "ranges": [
+    [
+     45008001,
+     45008011
+    ]
+   ],
+   "title": "Life and Peace",
+   "key_verse": [
+    45008006,
+    45008006
+   ],
+   "reflect": [
+    {
+     "text": "Setting our mindset on the Holy Spirit is essential for every believer. As Paul explains, the mind of the Spirit brings genuine life and peace. Yet staying focused on God is not always easy. Worldly entertainment, busy routines, and daily distractions can easily draw our attention away from the things of God.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Being spiritually minded does not mean escaping from everyday life. Instead, it means seeing ordinary routines through an enduring awareness of God. Whether you are working, studying, or resting, you can learn to recognize God's presence and purpose in all that you do.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "We cultivate this mindset by choosing where we anchor our hearts. We find steady peace when our deepest joy rests in God rather than in temporary pleasures. Taking time to think about eternity and asking God to renew our desires helps keep our minds centered on Him.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily distractions most often pull your thoughts away from God?",
+    "How might remembering God's presence change how you handle ordinary tasks today?"
+   ],
+   "prayer": "Lord, thank You for giving us life and peace through Your Holy Spirit. Forgive us for the times our minds are swept away by daily distractions. Please renew our hearts, anchor our joy in You, and help us walk with You throughout our day. Amen.",
+   "sources": {
+    "D3": {
+     "author": "John Piper",
+     "work": "How to Be Spiritually Minded",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/how-to-be-spiritually-minded"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

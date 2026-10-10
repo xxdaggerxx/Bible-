@@ -1,0 +1,134 @@
+{
+ "id": "47-001-012",
+ "title": "Paul’s Change of Plans",
+ "refs": [
+  "2 Corinthians 1:12-24"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 47001020,
+   "end": 47001020,
+   "ref": "2 Corinthians 1:20",
+   "ranges": [
+    [
+     47001020,
+     47001020
+    ]
+   ],
+   "title": "\"All the Promises of God Are Yes\"",
+   "key_verse": [
+    47001020,
+    47001020
+   ],
+   "reflect": [
+    {
+     "text": "In Jesus Christ, God gives us His absolute \"Yes.\" Every promise God has ever made is dependable because His word is anchored in His flawless character. Sometimes we pour faithful labor into serving others and do not see results right away. Yet when we remain attached to Christ, our lives will bear fruit in His timing, and we are freed from trying to control the outcome.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "The Hebrew word \"amen\" means \"it is true\" or \"yes.\" It affirms that what God says is sure and completely dependable. When we say \"amen,\" whether agreeing with the truths of salvation in Christ alone or ending our prayers, we express our confidence that God hears us and answers according to His will.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Prayer connects God's past promises with our hope for future grace, which is God's undeserved kindness. When we pray, we echo God's \"Yes\" back to Him with our heartfelt \"Amen.\" Living each day in grateful prayer brings honor and glory to God.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you say \"amen\" in prayer, how does knowing God's promises are secure in Jesus help your trust?",
+    "In what area of your life can you stop trying to control the outcome and rest in God's promises instead?"
+   ],
+   "prayer": "Heavenly Father, thank You that all Your promises are true and dependable in Jesus. Help us to rest in Your faithful character instead of worrying about the future. May our prayers and daily lives bring glory to You as we echo Your great \"Yes.\" Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "Jesus Is God’s Amen",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/jesus-is-gods-amen"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Our Amen to the Glory of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-amen-to-the-glory-of-god"
+    },
+    "D4": {
+     "author": "Gwen Smith",
+     "work": "Yes and Amen!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/yes-and-amen-girlfriends-in-god-apr-5-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 47001012,
+   "end": 47001024,
+   "ref": "2 Corinthians 1:12-24",
+   "ranges": [
+    [
+     47001012,
+     47001024
+    ]
+   ],
+   "title": "Established and Sealed by God",
+   "key_verse": [
+    47001022,
+    47001022
+   ],
+   "reflect": [
+    {
+     "text": "Paul reminds us that standing firm does not come from our own strength or human wisdom. It is God Himself who sovereignly establishes us and personally ensures that we stand firm in Christ. Because He holds us securely, our confidence rests entirely in His faithful care.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God has also placed His Holy Spirit inside our hearts. The Spirit seals us as God's treasured possession and daily confirms that we are dearly loved. This gift of the Spirit is God's deposit and guarantee, promising that our eternal future with Him is completely secure.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that we belong to God shapes how we live with other believers. We are invited to walk together in gospel friendship. Rather than trying to control one another, we can encourage our brothers and sisters and work together for mutual joy.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing the Holy Spirit seals you as God's treasured possession give you peace today?",
+    "Who is a fellow believer you can encourage this week as you work together for joy in Christ?"
+   ],
+   "prayer": "Lord God, thank You for establishing us and keeping us firm in Jesus. Thank You for sealing us with Your Spirit and assuring us of our eternal home. Teach us to walk in genuine friendship with others and to build each other up in joy. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Scotty Smith",
+     "work": "Two Verses Pregnant with Hope and Encouragement",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/two-verses-pregnant-with-hope-and-encouragement/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

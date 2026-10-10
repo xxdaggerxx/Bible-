@@ -1,0 +1,72 @@
+{
+ "id": "40-010-026",
+ "title": "Fear God Alone",
+ "refs": [
+  "Matthew 10:26-31",
+  "Luke 12:4-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40010026,
+   "end": 40010031,
+   "ref": "Matthew 10:26-31; Luke 12:4-7",
+   "ranges": [
+    [
+     40010026,
+     40010031
+    ],
+    [
+     42012004,
+     42012007
+    ]
+   ],
+   "title": "What God Teaches in the Dark",
+   "key_verse": [
+    40010027,
+    40010027
+   ],
+   "reflect": [
+    {
+     "text": "Jesus tells His followers that what He whispers in the dark must be spoken in the open daylight. Life often brings us into dark seasons. We may face the quiet ache of sickness, a lonely room, or deep sorrow. When the noisy distractions of the world are silenced, our spiritual ears can finally hear God's gentle voice. In those hard places, He reveals deep secrets of His grace and comfort.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "During painful times, we often feel useless and wonder why God allows our suffering. We may ask what good can possibly come from being shut away from active life. Yet as F. B. Meyer writes, God draws us aside to \"higher altitudes of fellowship\" so that He can speak to us face to face. These quiet trials are never wasted time; they are moments when God strengthens our faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We are not meant to stay hidden in the dark forever. When God calls us back into the rush of daily life, we have a duty to share what we learned. Because our Father values us far more than sparrows and counts every hair on our head, we do not need to fear people. We can step boldly into the light and proclaim His truth.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What has God shown you about Himself during a painful or quiet season?",
+    "Who in your life needs to hear the comfort and truth God has taught you?"
+   ],
+   "prayer": "Father, thank You for speaking to our hearts even in our darkest hours. Help us to trust Your purpose when life is painful, knowing that You care for us completely. Give us courage to step into the daylight and share Your truth with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 10:27",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

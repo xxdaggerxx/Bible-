@@ -1,0 +1,75 @@
+{
+ "id": "66-011-001",
+ "title": "The Two Witnesses",
+ "refs": [
+  "Revelation 11:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66011001,
+   "end": 66011006,
+   "ref": "Revelation 11:1-6",
+   "ranges": [
+    [
+     66011001,
+     66011006
+    ]
+   ],
+   "title": "Light and Truth in the Darkness",
+   "key_verse": [
+    66011004,
+    66011004
+   ],
+   "reflect": [
+    {
+     "text": "God sends His witnesses to speak His truth in a rebellious world. Described as olive trees and lampstands, these messengers rely on the Holy Spirit to shine divine light during times of deep spiritual darkness. Their work echoes the ancient ministries of Moses and Elijah, boldly confronting evil and announcing the reality of God's coming judgment.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even though these witnesses proclaim severe warnings and judgments, their aim is not spite. The true motive behind their preaching is to convict sinners of their wrongdoing and call them to repentance, which means turning back to God. God uses their bold words to reach people before judgment arrives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Speaking for God often brings hatred and opposition. Yet Scripture shows that God faithfully guards His servants. Believers in the center of God's will are protected until their mission is accomplished. Any earthly defeat is only temporary, because Christ guarantees the final victory for His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you rely on the Holy Spirit to shine God's light when people around you resist the truth?",
+    "When sharing your faith feels difficult, how does knowing God protects you bring you peace?"
+   ],
+   "prayer": "Lord God, thank You for empowering Your people to stand as lights in a dark world. Give us courage to speak Your truth clearly and to invite others to turn to You in repentance. Help us trust Your faithful protection and rest in the victory of Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Prophetic Witnesses",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/prophetic-witnesses"
+    },
+    "D2": {
+     "author": "David Jeremiah",
+     "work": "Two Witnesses",
+     "site": "Turning Point",
+     "url": "https://www.davidjeremiah.org/age-of-signs/two-witnesses?tid=djtw_post-01.09.23_blog-habitsdestoryingwalk_dvdjrmh-blog"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

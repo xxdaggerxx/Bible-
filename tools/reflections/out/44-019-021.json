@@ -1,0 +1,73 @@
+{
+ "id": "44-019-021",
+ "title": "The Riot in Ephesus",
+ "refs": [
+  "Acts 19:21-41"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44019021,
+   "end": 44019041,
+   "ref": "Acts 19:21-41",
+   "ranges": [
+    [
+     44019021,
+     44019041
+    ]
+   ],
+   "title": "Peace and Wisdom in the Storm",
+   "key_verse": [
+    44019023,
+    44019023
+   ],
+   "reflect": [
+    {
+     "text": "Serious trouble often begins right after we surrender our lives and plans to God. In Ephesus, people who trusted in Jesus were freed from needing artificial idols and religious trinkets. This hurt the business of Demetrius and the other craftsmen. Because they feared losing money, they blamed Paul and stirred up an angry mob.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Paul showed great courage by wanting to face the hostile crowd inside the theater. But wise leaders are not dictators. Paul listened to the advice of fellow believers and local officials who cared about him. God gives us good sense to use, and we do not have to rush recklessly into danger without His leading.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When the world around us becomes confusing and hostile, God gives His people supernatural peace. We do not have to be swept away by mob panic. By staying calm and trusting the Lord through difficult trials, we can bring honor to Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When unexpected trouble or hostility appears, do you lean on God's peace or give in to panic?",
+    "Are you willing to listen humbly to the wise advice of Christian friends when facing a hard decision?"
+   ],
+   "prayer": "Lord, thank You for Your steady peace when circumstances around us seem confusing and chaotic. Give us the courage to follow You and the wisdom to listen to godly counsel. Help us to keep our focus on Christ rather than giving in to fear. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 269: Acts 19:21–31",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-269-acts-19-2131.html"
+    },
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Peace Amidst Unpleasant Circumstances",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/peace-amidst-unpleasant-circumstances?ga=testimonial-resources"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

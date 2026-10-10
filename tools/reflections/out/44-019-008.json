@@ -1,0 +1,66 @@
+{
+ "id": "44-019-008",
+ "title": "Paul Ministers in Ephesus",
+ "refs": [
+  "Acts 19:8-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44019008,
+   "end": 44019012,
+   "ref": "Acts 19:8-12",
+   "ranges": [
+    [
+     44019008,
+     44019012
+    ]
+   ],
+   "title": "Multiplying the Word Through Faithful Discipleship",
+   "key_verse": [
+    44019010,
+    44019010
+   ],
+   "reflect": [
+    {
+     "text": "When Paul faced stubborn resistance in the synagogue, he did not give up on his mission. Instead, he stepped away and gathered the believers daily in a nearby lecture hall. Investing deeply in a small group of well-trained disciples can accomplish far more for God's kingdom than trying to entertain large, untrained crowds.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This daily, focused discipleship bore widespread fruit over the next two years. Because ordinary believers learned God's truth and shared it, the word of the Lord spread throughout the whole province. God supernaturally multiplied their quiet, faithful work far beyond anything human effort alone could do.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "During this time, God also did remarkable miracles through Paul, healing sick people and casting out evil spirits. God gave these visible signs of His power to help people trust in His invisible care. When we faithfully learn and share God's word, He can bring about results greater than we could ever plan.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where can you focus on growing deeply in God's word rather than just seeking large crowds or quick results?",
+    "How have you seen God multiply your small, faithful efforts in ways you did not expect?"
+   ],
+   "prayer": "Lord, help us to be faithful in learning Your truth and sharing it with others each day. Teach us to trust that You can multiply our small efforts far beyond what we can do on our own. Strengthen our faith in Your unseen care as we serve You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 267: Acts 19:8-10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-267-acts-19-8-10.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "66-008-006",
+ "title": "The First Four Trumpets",
+ "refs": [
+  "Revelation 8:6-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66008006,
+   "end": 66008013,
+   "ref": "Revelation 8:6-13",
+   "ranges": [
+    [
+     66008006,
+     66008013
+    ]
+   ],
+   "title": "God's Victory Over Earthly Powers",
+   "key_verse": [
+    66008013,
+    66008013
+   ],
+   "reflect": [
+    {
+     "text": "When the angels sound their trumpets, we hear echoes of warnings from the Old Testament. In ancient times, trumpet blasts announced that God was arriving to bring judgment and defeat His enemies. The visions of burned grass, ruined waters, and darkened skies remind us of the plagues God sent against Egypt in the book of Exodus when He rescued His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The imagery here also reflects the realities of ancient warfare. It shows that even the mightiest worldly powers are fragile and cannot withstand God. Instead of giving us a strict, step-by-step timeline of events, these visions give us repeated looks at God's judgment from different angles. Strong nations may seem unstoppable, but they are completely vulnerable before the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God is sovereign, we can find deep comfort in His promised victory over every enemy. When the world around us feels heavy or uncertain, we do not have to give in to fear. God gives us persistent prayer as our greatest weapon while we wait on Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that earthly powers are fragile help you when the news feels frightening?",
+    "How can you make persistent prayer your first response when facing uncertainty?"
+   ],
+   "prayer": "Lord God, thank You for reminding us that You rule over all things and hold the final victory. When the world feels overwhelming, guard our hearts from fear and help us trust Your justice. Teach us to turn to You in steady prayer, resting securely in Your care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Four Trumpets of Judgment",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/four-trumpets-of-judgment"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

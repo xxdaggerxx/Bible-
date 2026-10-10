@@ -1,0 +1,67 @@
+{
+ "id": "66-011-015",
+ "title": "The Seventh Trumpet",
+ "refs": [
+  "Revelation 11:15-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66011015,
+   "end": 66011019,
+   "ref": "Revelation 11:15-19",
+   "ranges": [
+    [
+     66011015,
+     66011019
+    ]
+   ],
+   "title": "The Lord God Almighty Reigns",
+   "key_verse": [
+    66011015,
+    66011015
+   ],
+   "reflect": [
+    {
+     "text": "The blast of the seventh trumpet announces the arrival of God's full, uncontested rule over the earth. While God has always held sovereign control over creation, Scripture points to a world willingly submitted to His appointed King. Jesus fulfills the ancient promise of Psalm 2 as the divine human King who wins back the rule lost in Adam's rebellion. Because we live under His reign today, we are called to joyful obedience and to actively tell others about His kingship.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When heaven's temple opens, the ark of God's covenant appears. As F. B. Meyer writes, \"God will never forget His covenant.\" Even when long seasons of sorrow make it hard to see His faithfulness, God always stands by His word. The victory of Jesus fulfills that ancient pledge. This covenant brings rescue and comfort to God's children, even as His righteous judgment brings terror to His enemies.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus has won back what was lost help you obey Him with joy today?",
+    "When hard times make God seem distant, what reminds you that He never forgets His promises?"
+   ],
+   "prayer": "Lord God Almighty, we praise You because You reign forever and ever. Thank You that Jesus has overcome rebellion and that You never forget Your promises to Your people. Help us to follow our King gladly each day and tell others about His kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Revelation 11:19",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Seventh Trumpet",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-seventh-trumpet"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

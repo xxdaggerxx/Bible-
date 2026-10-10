@@ -1,0 +1,74 @@
+{
+ "id": "45-015-014",
+ "title": "Paul the Minister to the Gentiles",
+ "refs": [
+  "Romans 15:14-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 45015017,
+   "end": 45015019,
+   "ref": "Romans 15:17-19",
+   "ranges": [
+    [
+     45015017,
+     45015019
+    ]
+   ],
+   "title": "\"What Christ Has Accomplished\"",
+   "key_verse": [
+    45015018,
+    45015018
+   ],
+   "reflect": [
+    {
+     "text": "When Paul looked back on his missionary journeys, he refused to take credit for the fruit. He exulted only in what Christ had accomplished through him by the power of the Holy Spirit. The Bible warns against self-reliant pride, but it praises boasting in the Lord. Any service we offer back to God is simply a return of the gifts and grace, His undeserved favor, that He first gave us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Apart from Jesus, our efforts count for nothing in God's eyes. Fruitful ministry happens only when Christ works within us. We often feel inadequate and say we cannot speak to a neighbor or serve others. Yet as F. B. Meyer wrote, we can \"let Christ do these things through you.\" When we yield to Him, His power works through our weakness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Believers are instruments in God's hands. We are called to step out in obedience and work faithfully, while trusting the Lord alone for the results. Everything good that happens in our lives and witness comes from the power of His Spirit.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life or service are you tempted to rely on your own strength rather than on Christ?",
+    "How does knowing that all good results come from God free you from worry about your weaknesses?"
+   ],
+   "prayer": "Lord Jesus, thank You that any good fruit in our lives comes entirely from You. Forgive us when we depend on our own strength or take pride in our service. Please fill us with Your Holy Spirit and accomplish Your work through us today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Romans 15:18",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "What Christ Did through Paul",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/what-christ-did-through-paul"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

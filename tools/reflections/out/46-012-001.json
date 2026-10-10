@@ -1,0 +1,73 @@
+{
+ "id": "46-012-001",
+ "title": "Spiritual Gifts",
+ "refs": [
+  "1 Corinthians 12:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46012001,
+   "end": 46012011,
+   "ref": "1 Corinthians 12:1-11",
+   "ranges": [
+    [
+     46012001,
+     46012011
+    ]
+   ],
+   "title": "Gifts for the Good of All",
+   "key_verse": [
+    46012007,
+    46012007
+   ],
+   "reflect": [
+    {
+     "text": "The Holy Spirit gives different spiritual gifts to each believer in Christ. God distributes these abilities entirely according to His own sovereign purpose and perfect wisdom. No single person receives every gift, which means God intentionally designed us to depend on one another. Knowing this protects us from living in isolation and keeps us from being envious of the gifts given to others.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God gives these spiritual gifts for the common good of the entire church, rather than for our own selfish pleasure. We each have a personal responsibility to actively study, stir up, and develop the gifts God has placed within us. Using our gifts is an act of service to help our brothers and sisters grow.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we collaborate and combine our gifts in love, the whole body of Christ grows into mature unity. Every member has a unique role to play, and our shared service displays the goodness of God as we build one another up.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How are you currently developing and using the gifts God has given you to help others?",
+    "In what ways can you better appreciate and depend on the different gifts of people in your church?"
+   ],
+   "prayer": "Heavenly Father, thank You for giving each of us gifts through Your Holy Spirit. Help us to develop these abilities and use them unselfishly to serve our church family. Teach us to depend on one another so that we may grow together in mature unity. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "How Did God Design the Body of Christ to Work?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-october-25-2024.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Sovereign Bestowal of Gifts",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-sovereign-bestowal-of-gifts"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

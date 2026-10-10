@@ -1,0 +1,75 @@
+{
+ "id": "42-017-020",
+ "title": "The Coming of the Kingdom",
+ "refs": [
+  "Luke 17:20-37"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42017021,
+   "end": 42017021,
+   "ref": "Luke 17:21",
+   "ranges": [
+    [
+     42017021,
+     42017021
+    ]
+   ],
+   "title": "\"The Kingdom of God Is in Your Midst\"",
+   "key_verse": [
+    42017021,
+    42017021
+   ],
+   "reflect": [
+    {
+     "text": "We often wear ourselves out trying to find God through special formulas, extra books, or intense emotional highs. We can easily start to think we need complicated routines to experience His presence. But God's kingdom is not a physical place we have to search for. When we trust in Jesus, we are welcomed into His family, and His loving reign begins right inside our hearts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Pharisees completely missed Jesus standing right in front of them because of their rigid ideas about what His kingdom should look like. We can make that same mistake if we expect God to move only in ways we predict. Scripture reminds us that His kingdom is already active in our midst, drawing people to Himself through His redeeming love, even as we wait for the future day when Christ returns to make all things new.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our everyday lives are transformed when we realize that God is already at work within us. We do not need to chase after dramatic signs to know He is near. Instead, we can keep our hearts open to notice the quiet, unexpected ways He is moving in our personal lives and in the world around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you been exhausting yourself looking for God in complicated routines instead of resting in His presence?",
+    "What unexpected ways might God be working in your heart or around you today?"
+   ],
+   "prayer": "Lord Jesus, thank You for welcoming us into Your family and bringing Your kingdom near. Forgive us for the times we look for complicated formulas or miss You because of our own rigid ideas. Keep our hearts open to see You at work today, and grant us confident hope as we trust in Your eternal reign. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Amanda Idleman",
+     "work": "The Kingdom of God (Luke 17:21) - Your Daily Bible Verse - November 24",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-november-24.html"
+    },
+    "D2": {
+     "author": "In Touch Ministries",
+     "work": "Sunday Reflection: The Promise of His Kingdom",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/sunday-reflection-the-promise-of-his-kingdom"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

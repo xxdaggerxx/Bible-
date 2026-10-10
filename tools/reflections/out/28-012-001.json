@@ -1,0 +1,81 @@
+{
+ "id": "28-012-001",
+ "title": "A Reproof of Ephraim, Judah, and Jacob",
+ "refs": [
+  "Hosea 12:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 28012001,
+   "end": 28012014,
+   "ref": "Hosea 12:1-14",
+   "ranges": [
+    [
+     28012001,
+     28012014
+    ]
+   ],
+   "title": "Returning from Self-Reliance to God",
+   "key_verse": [
+    28012006,
+    28012006
+   ],
+   "reflect": [
+    {
+     "text": "We often try to live in our own strength. We think self-reliance and clever schemes will make us secure, but they always fail us. Jacob spent years striving in his own power, but his true turning point came when he was broken and weak. When he could do nothing more than weep and cling to God in desperate prayer, he found God's blessing. Our proud independence must give way to honest dependence on the Lord.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God calls us to turn back to Him, not through empty religious customs or worldly alliances, but through active love, fairness, and daily patience. Real freedom is not living only for ourselves or boasting in what we have made. True honor comes when we humbly admit our need and rely on God at every step.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The passage also remembers how Jacob labored as a shepherd for his bride. As Charles Spurgeon wrote, \"Even more toilsome than this was the life of our Saviour.\" Jacob's hard labor points to Jesus, who spent nights in prayer and endured the greatest hardships to rescue and keep His people. Because our Shepherd watches over us so faithfully, we can safely rest in His care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life are you relying on your own power instead of clinging to God?",
+    "How does knowing that Jesus toiled to keep you safe help you wait patiently on Him?"
+   ],
+   "prayer": "Lord, forgive us when we trust in our own strength and chase things that cannot satisfy. Break our pride, and teach us to depend on You every day in love and justice. Thank You, Jesus, for watching over us like a faithful shepherd. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 22",
+     "on": "Hosea 12:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hosea 12:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Shawn McEvoy",
+     "work": "Dependence Day",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-july-4-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

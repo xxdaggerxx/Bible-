@@ -78,8 +78,8 @@ android {
         applicationId = "com.biblestudy.app"
         minSdk = 29
         targetSdk = 35
-        versionCode = 63
-        versionName = "2.8.2"
+        versionCode = 64
+        versionName = "2.9.0"
         buildConfigField("String", "YOUVERSION_KEY", "\"$youVersionKey\"")
         buildConfigField("String", "ESV_KEY", "\"$esvKey\"")
         buildConfigField("String", "NLT_KEY", "\"$nltKey\"")

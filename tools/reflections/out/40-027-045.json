@@ -1,0 +1,96 @@
+{
+ "id": "40-027-045",
+ "title": "The Death of Jesus",
+ "refs": [
+  "Matthew 27:45-56",
+  "Mark 15:33-41",
+  "Luke 23:44-49",
+  "John 19:28-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40027045,
+   "end": 40027056,
+   "ref": "Matthew 27:45-56; Mark 15:33-41; Luke 23:44-49; John 19:28-30",
+   "ranges": [
+    [
+     40027045,
+     40027056
+    ],
+    [
+     41015033,
+     41015041
+    ],
+    [
+     42023044,
+     42023049
+    ],
+    [
+     43019028,
+     43019030
+    ]
+   ],
+   "title": "The Finished Work of Jesus",
+   "key_verse": [
+    40027045,
+    40027045
+   ],
+   "reflect": [
+    {
+     "text": "On the cross, Jesus faced the darkest hours of His life on earth. Friends stood far away, and people mocked Him. When He cried out asking why God had forsaken Him, He was quoting Psalm 22 and taking our place. He carried the guilt of our sins so that we could be forgiven. Even in that deep darkness, Jesus held on to His Father in faith, trusting Him through the suffering.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When Jesus shouted, \"It is finished,\" it was the cry of a victor at the end of a long, hard battle. Every promise in Scripture about His suffering was fulfilled, down to His dying thirst. His earthly life of weariness, pain, and temptation was over forever. Most of all, His work to save the world was complete. Jesus had obeyed the Father completely, and sin was put away.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "At that very moment, the thick curtain inside the temple tore from top to bottom. The old animal sacrifices were no longer needed, because Jesus offered His own blood once for all time. God opened the way directly into His holy presence for everyone who trusts in Christ. As Charles Spurgeon wrote, \"we may come with boldness to the throne of the heavenly grace.\"",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus fully finished the work of salvation bring you comfort today?",
+    "What does it mean for your prayers that the way to God is now wide open?"
+   ],
+   "prayer": "Lord Jesus, thank You for bearing our sins on the cross and obeying the Father to the very end. We praise You that Your work to rescue us is fully completed. Thank You that the way to God is open, so we can come into His presence with quiet confidence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 19",
+     "on": "Matthew 27:51",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Mark 15:34",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "John 19:30",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "43-005-039",
+ "title": "The Witness of Scripture",
+ "refs": [
+  "John 5:39-47"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43005039,
+   "end": 43005047,
+   "ref": "John 5:39-47",
+   "ranges": [
+    [
+     43005039,
+     43005047
+    ]
+   ],
+   "title": "Searching the Scriptures to Find Jesus",
+   "key_verse": [
+    43005039,
+    43005039
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus speaks of examining the Scriptures, he calls us to an earnest search. We cannot just skim a page quickly and expect to understand its riches. As Charles Spurgeon wrote, \"the door of the word only opens to the key of diligence.\" Like miners digging for gold, we need patience and the help of the Holy Spirit to discover what God has written.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God does not ask us to sift through empty straw to find a single grain of truth. His word is already winnowed corn, a storehouse full of nourishing food. It carries the authority of God himself, and it rewards anyone who studies it closely. The more we read with care, the more wonders God reveals to us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Above all, the Scriptures point us directly to Jesus. Jesus tells his listeners that the whole Bible testifies about him. Reading the Bible is not just about gaining knowledge; it is about meeting our Saviour. When our study brings us to know and trust Jesus, we receive eternal life and every true blessing.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you read the Bible, do you take time to search deeply for what God is saying?",
+    "How can your time in Scripture help you see and trust Jesus more clearly each day?"
+   ],
+   "prayer": "Lord, thank you for giving us your Holy Scriptures. Help us not to skim past your truth, but to search it with patient and eager hearts. Teach us by your Holy Spirit, and let every page lead us closer to Jesus our Saviour. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 9",
+     "on": "John 5:39",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "40-018-015",
+ "title": "A Brother Who Sins",
+ "refs": [
+  "Matthew 18:15-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40018015,
+   "end": 40018018,
+   "ref": "Matthew 18:15-18",
+   "ranges": [
+    [
+     40018015,
+     40018018
+    ]
+   ],
+   "title": "Pursuing Peace and Restoration",
+   "key_verse": [
+    40018015,
+    40018015
+   ],
+   "reflect": [
+    {
+     "text": "When another Christian sins against you, Jesus tells us to go to them privately. Handling the matter quietly helps stop gossip and protects the peace of the whole church. We are called to look after one another's spiritual health. Going to a brother or sister in love is not about winning an argument. Instead, it reflects God's caring heart to rescue a wandering person before sin brings ruin.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "If the person refuses to listen, bringing two or three witnesses protects both sides and upholds fairness. Even if the final step requires treating someone as an outsider, the ultimate goal remains their restoration. We should keep praying for their salvation. Satan uses personal conflicts to hurt the message of the gospel, but genuine harmony among believers shows the watching world what God is like.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "True, deep harmony does not happen on the surface; it requires Christ. Unresolved division dishonors God and discourages fellow believers. Because of this, we must make deliberate efforts to pursue peace and reconcile with one another.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a conflict you have avoided addressing directly and lovingly?",
+    "How can pursuing peace with another believer help show God's love to the watching world?"
+   ],
+   "prayer": "Lord, please give us the humility and courage to seek peace when someone sins against us. Guard our speech from gossip and help us care deeply about each other's spiritual lives. Work through Christ to heal our divisions so that our unity points others to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Christ is the Only Way to Harmony",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-february-28-2024.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Redemptive Discipline",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/redemptive-discipline"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

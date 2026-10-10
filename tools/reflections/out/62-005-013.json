@@ -1,0 +1,68 @@
+{
+ "id": "62-005-013",
+ "title": "Effective Prayer",
+ "refs": [
+  "1 John 5:13-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 62005013,
+   "end": 62005017,
+   "ref": "1 John 5:13-17",
+   "ranges": [
+    [
+     62005013,
+     62005017
+    ]
+   ],
+   "title": "Confidence in God's Will",
+   "key_verse": [
+    62005014,
+    62005014
+   ],
+   "reflect": [
+    {
+     "text": "We can come to God in prayer with bold confidence. He made each of us and understands our hearts completely. Because He knows us so well, we do not need to hide our worries from Him. Bringing our fears honestly before the Lord replaces our anxiety with supernatural peace. When we pray according to His purposes, He helps us stay grounded in the truth and carry out the good works He has prepared for our lives.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "To pray effectively, we must lay aside selfish pride and align our desires with God's will. Praying in Jesus' name is a holy privilege that honors Him. As Charles Spurgeon wrote, we cannot use Christ's name for a \"selfish or willful petition.\" We are invited to ask for things that Jesus Himself would approve. When our prayers match what God desires, we can be completely sure that He hears us and provides what we need.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or worries do you need to hand over to God in exchange for His peace?",
+    "How can you check if the things you are asking for match what Jesus desires?"
+   ],
+   "prayer": "Father, thank You for knowing us completely and welcoming us to come to You with confidence. Please quiet our anxieties with Your peace and remove every trace of selfish pride from our hearts. Teach us to pray for what pleases You, and help us walk in the good works You have planned for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 14",
+     "on": "1 John 5:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Wendy Blight",
+     "work": "A New Year's Prayer for You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/a-new-year-s-prayer-for-you-encouragement-for-today-january-1-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

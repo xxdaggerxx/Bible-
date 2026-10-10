@@ -1,0 +1,88 @@
+{
+ "id": "32-004-001",
+ "title": "Jonah’s Anger at the LORD’s Compassion",
+ "refs": [
+  "Jonah 4:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 32004001,
+   "end": 32004011,
+   "ref": "Jonah 4:1-11",
+   "ranges": [
+    [
+     32004001,
+     32004011
+    ]
+   ],
+   "title": "Have You Any Right to Be Angry?",
+   "key_verse": [
+    32004004,
+    32004004
+   ],
+   "reflect": [
+    {
+     "text": "Jonah had just seen God spare Nineveh after preaching there. Instead of rejoicing over their repentance, he became bitter and wished to die. Jonah gladly accepted God's rescue for himself, yet he resented God for showing grace, God's undeserved kindness, to people he considered unworthy. Even after experiencing God's deliverance and serving him well, we can still fall into selfish attitudes and forget our own need for mercy.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "To teach Jonah, the Lord provided a leafy plant to give him shade, and Jonah was delighted. But when God sent a worm and a hot wind to wither the plant, Jonah became angry all over again. As F. B. Meyer observed, \"what the gourd was to himself, Nineveh was to God.\" God often lets our earthly comforts fade to show us what truly matters to him and to cure our self-centeredness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Twice the Lord asked Jonah if he had any right to be angry. While anger can sometimes oppose evil, our tempers often run wild and reveal our own stubborn hearts. We have no right to question God's kindness to others or complain when small comforts disappear. Instead of giving in to anger, we are called to look to Christ and be reshaped in his gentle, compassionate likeness.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt bitter when someone you disliked received kindness or forgiveness?",
+    "When everyday comforts are taken away, does your reaction reveal self-centered anger or trust in God?"
+   ],
+   "prayer": "Lord, forgive us for holding double standards and wanting your mercy only for ourselves. When we lose our tempers over earthly comforts, search our hearts and help us see what truly matters to you. Teach us to rejoice in your grace toward others and shape us in the gentleness of Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 13",
+     "on": "Jonah 4:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jonah 4:6",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "Angry about the Wrong Things",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/angry-about-the-wrong-things-greg-laurie-daily-devotion-october-14-2020.html"
+    },
+    "D4": {
+     "author": "Alistair Begg",
+     "work": "Undeserving Servants",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-16-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

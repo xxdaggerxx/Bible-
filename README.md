@@ -1,4 +1,4 @@
-# Ink & Word — version 2.5.0
+# Ink & Word — version 2.9.0
 
 **Ink & Word** (called *Bible Study* until version 1.1.3) is a personal, fully offline Bible study app for Android tablets, designed around the Samsung Galaxy Tab S9 and S Pen. It works on any Android 10+ tablet, and since version 2.0 on Android phones too, drawing with a finger.
 
@@ -71,6 +71,14 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 ```
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
+
+## New in version 2.9.0
+
+- **Reflections**, a new view under **Study** in a panel's menu: 2,519 short devotional reflections on 2,032 passages across the whole Bible, for quiet time with what you're reading. Some are on a whole passage (*The Feeding of the Five Thousand*), some on a single saying (*"I am the vine"*). Each has **Read** (the passage and key verse, tappable to read them in your version), a few short paragraphs, **Ask yourself** and **Pray**.
+- **Grounded in real devotionals.** AI (Google's Gemini through OpenRouter) wrote them for Ink & Word only from existing devotionals, named under each one: the public-domain classics of Charles Spurgeon (*Morning and Evening*, *Faith's Checkbook*) and F. B. Meyer (*Our Daily Homily*), and modern devotionals found on ministry sites (Ligonier, Crosswalk, The Gospel Coalition, Desiring God, Insight for Living and others), summarised in its own words. A second pass checked each paragraph against its sources and removed 43 it couldn't find there.
+- **Overlap without repeats.** A saying with its own reflection is left to it by the reflection on the whole passage, and *See also* links them. Parallel Gospel accounts share one reflection (*Also in*). A word-by-word comparison of all reflections found no two alike.
+- It follows your reading like the commentary (link button, *Keep on this passage*), can be written on, works offline, and has an About ⓘ. Made by `tools/build_reflections.py` (catalog → passages → write → check → pack); the catalog, passages and finished reflections are in `tools/reflections`, so it can be rebuilt without calling the AI again.
+- Known gaps: 772 passages (mostly genealogies, laws, lists and some prophecy) have no reflection, because no devotional on them was found; the view then links the nearest ones. Modern sources lean on Crosswalk and Ligonier, whose devotionals are easiest to find by passage; Our Daily Bread and Desiring God turn up less. Meyer's volumes are scanned books, so some of his days couldn't be matched to their verse and weren't used. Web sources show their address but don't open as links.
 
 ## New in version 2.8.2
 

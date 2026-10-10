@@ -1,0 +1,66 @@
+{
+ "id": "48-003-001",
+ "title": "Faith and Belief",
+ "refs": [
+  "Galatians 3:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 48003001,
+   "end": 48003009,
+   "ref": "Galatians 3:1-9",
+   "ranges": [
+    [
+     48003001,
+     48003009
+    ]
+   ],
+   "title": "Receiving the Spirit by Faith",
+   "key_verse": [
+    48003005,
+    48003005
+   ],
+   "reflect": [
+    {
+     "text": "When we try to earn our standing before God by keeping religious rules, we only face condemnation. Our obedience is never complete, and failing even once leaves us under God's judgment. But Jesus Christ took that curse on Himself when He died on the cross, freeing everyone who trusts in Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul reminds the Galatians of how their new life began. We did not receive God's Holy Spirit by obeying laws or doing our best. Instead, God gave us His Spirit when we heard the gospel message and believed it with simple faith. Turning back to rule-keeping to secure our standing before God treats Jesus' death as if it were not enough.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Right living is still important, but it is the fruit of being made right with God, never the cause. Just as Abraham believed God and was counted righteous, we are blessed through faith. Our hope rests entirely on what Jesus has done for us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to trust in your own rule-keeping rather than resting in Christ's finished work?",
+    "How does remembering that the Holy Spirit is a gift received by faith bring peace to your heart today?"
+   ],
+   "prayer": "Heavenly Father, thank You for sending Jesus to take the curse of our sin upon Himself at the cross. Help us to rest fully in Your grace rather than trying to earn Your love through our own effort. Teach us to live in the joy and freedom of Your Holy Spirit every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Gift of the Spirit",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gift-spirit"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

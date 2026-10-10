@@ -1,0 +1,144 @@
+{
+ "id": "40-005-003",
+ "title": "The Beatitudes",
+ "refs": [
+  "Matthew 5:3-12",
+  "Luke 6:20-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40005008,
+   "end": 40005008,
+   "ref": "Matthew 5:8",
+   "ranges": [
+    [
+     40005008,
+     40005008
+    ]
+   ],
+   "title": "\"Pure in Heart\"",
+   "key_verse": [
+    40005008,
+    40005008
+   ],
+   "reflect": [
+    {
+     "text": "Jesus tells us that those who are pure in heart will see God. This purity does not mean being completely flawless in everything we do. Instead, it means having an undivided heart that is surrendered to God in our thoughts, feelings, and choices. Through Christ, God gives us a clean standing before Him, and the Holy Spirit helps us grow in daily holiness.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    },
+    {
+     "text": "What we love deeply shapes how clearly we see spiritual truth. As Charles Spurgeon wrote, \"if the heart is foul, the eye will be dim.\" When we hold on to sin, we become blind to what is good and cannot clearly know a holy God. But when we turn away from evil, we begin to recognize the Lord at work in Scripture and in our daily lives, looking forward to seeing Him face to face in eternity.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any hidden attitude or habit in your life that is clouding your view of God?",
+    "What does it look like for you to give your thoughts and desires fully to the Lord today?"
+   ],
+   "prayer": "Lord, make our hearts clean and undivided before You. Forgive us when we hold on to sinful things that blur our spiritual vision. Help us to follow You in daily obedience so that we may see Your loving hand at work in our lives. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 8",
+     "on": "Matthew 5:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D6": {
+     "author": "Michael Youssef, Ph.D.",
+     "work": "The Pure in Heart",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/leading-the-way/leading-the-way-week-of-february-7.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40005003,
+   "end": 40005012,
+   "ref": "Matthew 5:3-12; Luke 6:20-23",
+   "ranges": [
+    [
+     40005003,
+     40005012
+    ],
+    [
+     42006020,
+     42006023
+    ]
+   ],
+   "title": "The Blessings of the Kingdom",
+   "key_verse": [
+    40005003,
+    40005003
+   ],
+   "reflect": [
+    {
+     "text": "In the Beatitudes, Jesus describes the surprising nature of His kingdom. The world admires aggressive pride and self-reliance, but Jesus blesses those who are poor in spirit. Being poor in spirit means realizing we bring nothing of our own to God and choosing childlike dependence on Him. In the same way, those who grieve over sin receive the comfort of God's forgiveness through Jesus and the sure promise that their sorrow will turn to joy.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Followers of Jesus are also called to show mercy by forgiving others and choosing kindness over harshness. When we treat others gently, we reflect the great mercy God has shown to us. Jesus also blesses peacemakers. Charles Spurgeon reminded believers that we must be \"first pure, then peaceable,\" standing firmly against sin while seeking true reconciliation. Even when our peaceful ways are met with insults or mistreatment, we can rejoice because God promises a great reward in heaven.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of life are you relying on your own strength rather than depending on God like a child?",
+    "Who in your life needs you to offer them patience, forgiveness, or peace this week?"
+   ],
+   "prayer": "Father, help us to humble ourselves and depend entirely on Your grace rather than our own pride. Comfort our hearts when we sorrow over sin, and teach us to be gentle and forgiving toward others. Give us the courage to make peace and stand firm for what is right, even when it brings hardship. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 17",
+     "on": "Matthew 5:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 16",
+     "on": "Matthew 5:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 15",
+     "on": "Matthew 5:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "A Promise for \"The Poor in Spirit\"",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/a-promise-for-quot-the-poor-in-spirit-quot"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

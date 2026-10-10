@@ -1,0 +1,138 @@
+{
+ "id": "28-014-004",
+ "title": "A Promise of God’s Blessing",
+ "refs": [
+  "Hosea 14:4-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 28014004,
+   "end": 28014004,
+   "ref": "Hosea 14:4",
+   "ranges": [
+    [
+     28014004,
+     28014004
+    ]
+   ],
+   "title": "\"I Will Love Them Freely\"",
+   "key_verse": [
+    28014004,
+    28014004
+   ],
+   "reflect": [
+    {
+     "text": "When God promises to love freely, He gives us the heart of the gospel message. Charles Spurgeon called this sentence a \"body of divinity in miniature.\" God does not wait for us to earn His love, buy it, or seek it first. Instead, His love pours out toward us purely as a gift.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "This promise removes any need to prove ourselves worthy before we come to God. We often worry because our hearts feel hard or cold, or because we do not feel our need for Jesus as strongly as we should. Yet God does not place conditions on His grace, which is His kindness to people who do not deserve it. He does not love us because of our feelings; He simply chooses to love us freely.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "This generous promise also calls backsliders, those who have wandered away from the Lord, to turn back home. Knowing that God is ready to heal our wandering and welcome us without price can melt a stubborn heart. We can safely return to our Father, trusting that His grace is open to us right now.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever hold back from God because you feel your heart is too cold or unworthy?",
+    "How does knowing that God loves you without conditions help you return to Him when you drift?"
+   ],
+   "prayer": "Lord God, thank You for loving us freely when we could never earn or purchase Your grace. Forgive us for holding back because of our hard hearts or weak feelings. Heal our wandering ways, and draw us back into the comfort of Your unchanging love. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 22",
+     "on": "Hosea 14:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Truth For Life",
+     "work": "The Body of Divinity in Miniature - Truth For Life - October 22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-october-22-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 28014008,
+   "end": 28014008,
+   "ref": "Hosea 14:8",
+   "ranges": [
+    [
+     28014008,
+     28014008
+    ]
+   ],
+   "title": "\"Your Fruit Comes From Me\"",
+   "key_verse": [
+    28014008,
+    28014008
+   ],
+   "reflect": [
+    {
+     "text": "God describes the spiritual life with pictures of natural beauty and strength. He points to the pure blossom of the lily, the deep roots of the cedar, and the usefulness of olives and vines. Yet none of these graces start in ourselves. As F. B. Meyer wrote, \"thou couldst do nothing apart from Jesus.\" Everything good, strong, and lasting in our lives is received from Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Just as a branch cannot produce grapes unless it stays joined to the vine, we cannot bear spiritual fruit without being united to Christ. The life and sap flow from the root through the stem into the fruit. In the same way, every good work in us began first in Jesus, who constantly gives us His teaching, comfort, and strength.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also works like a wise gardener who uses a sharp knife to prune away extra shoots so the tree can produce more. When God trims things from our lives, He is helping us grow in deeper ways. Because every good fruit comes from His care and providence, all the honor for our growth belongs entirely to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your daily life do you need to rely more on Christ rather than your own strength?",
+    "How does remembering that God is a wise gardener help you when He prunes away things in your life?"
+   ],
+   "prayer": "Heavenly Father, thank You for connecting us to Jesus, the true source of all spiritual life. Please keep us close to Him, because without Him we can do nothing of lasting value. Help us trust Your gentle pruning, and let all the fruit in our lives bring praise to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 8",
+     "on": "Hosea 14:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hosea 14:8",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

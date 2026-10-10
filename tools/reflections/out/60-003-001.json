@@ -1,0 +1,66 @@
+{
+ "id": "60-003-001",
+ "title": "Wives and Husbands",
+ "refs": [
+  "1 Peter 3:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 60003001,
+   "end": 60003007,
+   "ref": "1 Peter 3:1-7",
+   "ranges": [
+    [
+     60003001,
+     60003007
+    ]
+   ],
+   "title": "Honoring God in Marriage",
+   "key_verse": [
+    60003007,
+    60003007
+   ],
+   "reflect": [
+    {
+     "text": "God calls Christian wives to live with unconditional love and devotion. Submitting to a husband is something a wife chooses to do freely out of love, never because she is forced. This does not mean a wife has less worth, just as Jesus remains fully equal to the Father even while submitting to Him. Cultivating inner calm and a gentle spirit reflects the true beauty of Christ. Such reverent, quiet behavior can speak with great power, even winning over a husband who does not yet believe in God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In the same way, God calls husbands to lead their homes with gentleness, patience, and real understanding. They are never to be harsh or misuse their authority. Although Peter describes a wife as a delicate vessel, she is never spiritually inferior. Both husband and wife are equal co-heirs of God's gift of life. A husband must actively honor and value his wife each day, because failing to treat her with respect will block his own prayers to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show genuine respect and honor to your spouse or family members in your daily actions?",
+    "In what ways can a gentle and peaceful attitude speak more clearly about Christ than words alone?"
+   ],
+   "prayer": "Lord, help us to treat each other with gentleness, honor, and sincere love. Teach us to value one another as equal partners who share your gracious gift of life. Keep our hearts humble, so that our lives reflect Jesus and our prayers are not hindered. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Understanding Husbands",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/understanding-husbands"
+    },
+    "D2": {
+     "author": "PowerPoint Ministries",
+     "work": "PowerPoint - Nov. 6, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-nov-6-2008-11595358.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

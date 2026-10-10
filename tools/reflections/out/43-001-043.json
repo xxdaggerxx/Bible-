@@ -1,0 +1,75 @@
+{
+ "id": "43-001-043",
+ "title": "Jesus Calls Philip and Nathanael",
+ "refs": [
+  "John 1:43-51"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 43001043,
+   "end": 43001051,
+   "ref": "John 1:43-51",
+   "ranges": [
+    [
+     43001043,
+     43001051
+    ]
+   ],
+   "title": "Greater Things and an Open Heaven",
+   "key_verse": [
+    43001043,
+    43001043
+   ],
+   "reflect": [
+    {
+     "text": "When Nathanael met Jesus, he was ready to believe with a simple, childlike faith. Because he was willing to trust, Jesus promised that he would see even greater things. The same is true for us today. When we keep our eyes open to the Lord, our faith does not shrink or fade away. God has already shown us much, but there are deeper truths in His Word, greater love to discover, and more ways to serve Him as we grow.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus pointed ahead to an open heaven, showing that He is the true ladder between earth and God. Charles Spurgeon called this \"a stairway of light\" that gives us a clear way to the Father. Through Jesus, our prayers go up to God and His answers come down to us. We do not have to wonder if God hears us, because Jesus has opened the way and made peace between heaven and earth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This living connection changes how we live each day. We can climb this path continually in quiet prayer, bringing our needs and the needs of others to God. Then we can return to our daily work, ready to share God's kindness and blessings with the people around us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What greater things in God's Word or in your walk with Him are you asking the Lord to show you?",
+    "How can you use this open way to God today to pray for someone else and share His love with them?"
+   ],
+   "prayer": "Lord Jesus, thank You for opening the way between heaven and earth for us. Help us to keep our eyes open in faith and to expect greater things from You each day. Teach us to bring our prayers to the Father through You and to carry Your blessings to the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 7",
+     "on": "John 1:50",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 25",
+     "on": "John 1:51",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,144 @@
+{
+ "id": "33-005-001",
+ "title": "A Ruler from Bethlehem",
+ "refs": [
+  "Micah 5:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 33005002,
+   "end": 33005002,
+   "ref": "Micah 5:2",
+   "ranges": [
+    [
+     33005002,
+     33005002
+    ]
+   ],
+   "title": "\"Small Among the Clans of Judah\"",
+   "key_verse": [
+    33005002,
+    33005002
+   ],
+   "reflect": [
+    {
+     "text": "When Micah looked ahead to God's promised King, he did not point to the grand palaces of Jerusalem. Instead, God chose Bethlehem, an unassuming little village whose name means house of bread. As Alistair Begg notes, God regularly works by choosing the weak, small, and overlooked rather than human power. Earthly rulers like Caesar thought they were directing events, but God sovereignly guided history so His Son would be born in a humble feed trough.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "This humble birth was part of an ancient plan. Before the world was even created, Jesus set His heart on His people. Charles Spurgeon described Him as a \"changeless Lover\" who agreed from eternity to be our representative and pay for our redemption through His own suffering. Long before we took our first breath, Christ committed Himself to save us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If you ever feel unimportant, small, or forgotten by others, remember how God works. The Savior of the world did not arrive among the proud or powerful. His love for you did not begin yesterday, and because He has held you from before time began, you can be sure He will never let you slip away.",
+     "sources": [
+      "D1",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When do you tend to feel small or overlooked, and how does Jesus' humble birthplace bring you comfort?",
+    "How does knowing Christ loved you from eternity change how you view your daily weaknesses?"
+   ],
+   "prayer": "Lord Jesus, thank You for choosing what is humble and lowly in this world to accomplish Your great rescue. We praise You for setting Your love upon us before time began and for walking the path to the cross for us. Help us rest in Your unchanging care whenever we feel weak or forgotten. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 27",
+     "on": "Micah 5:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Birthplace of the King",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/birthplace-of-the-king"
+    },
+    "D5": {
+     "author": "Alistair Begg",
+     "work": "God’s Way - Truth For Life - December 11",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-december-11-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 33005001,
+   "end": 33005006,
+   "ref": "Micah 5:1-6",
+   "ranges": [
+    [
+     33005001,
+     33005006
+    ]
+   ],
+   "title": "The Shepherd Who Brings Peace",
+   "key_verse": [
+    33005004,
+    33005004
+   ],
+   "reflect": [
+    {
+     "text": "Micah reveals that the ruler God sends is not a distant or harsh monarch, but a faithful shepherd-king. He does not sit idly on an empty throne. Instead, He actively guides, watches, restores, and feeds His people day and night. His hands never grow weary, and His shoulders never tire of carrying our heavy burdens. Because He governs through love and divine strength, His flock can live in safety.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Life around us often feels like shifting quicksand, filled with sudden conflicts, storms, and unpredictable changes. Yet our Shepherd stands firm and unmovable in the majesty of God. He is also our peace. He won that peace for us by laying down His life on the cross without complaint, using His perfect divine strength to carry our human weakness.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because Christ is fully human, He understands our struggles, and because He is truly God, He has the power to protect us. He pours His own calm peace into our hearts, a deep stillness that the world cannot take away. In every trial, we can rest knowing our Shepherd is actively caring for us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burdens or changing circumstances can you entrust to your Shepherd's care today?",
+    "How can remembering Christ's sacrifice on the cross bring you peace during stressful moments?"
+   ],
+   "prayer": "Lord Jesus, our faithful Shepherd, thank You for watching over us and carrying our burdens with Your tireless strength. When the world around us is stormy and uncertain, steady our hearts with Your presence. Fill us today with the lasting peace You bought for us on the cross. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 19",
+     "on": "Micah 5:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Micah 5:5",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

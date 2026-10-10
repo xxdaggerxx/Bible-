@@ -1,0 +1,81 @@
+{
+ "id": "46-003-001",
+ "title": "God’s Fellow Workers",
+ "refs": [
+  "1 Corinthians 3:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46003001,
+   "end": 46003009,
+   "ref": "1 Corinthians 3:1-9",
+   "ranges": [
+    [
+     46003001,
+     46003009
+    ]
+   ],
+   "title": "Serving Together in God's Field",
+   "key_verse": [
+    46003007,
+    46003007
+   ],
+   "reflect": [
+    {
+     "text": "When our faith feels small, we might worry that God is displeased with us. Yet even if we are like infants in Christ, we are still completely accepted and loved by our heavenly Father. As Charles Spurgeon reminds us, an infant is as truly a child of its family as a full-grown person. We are fully forgiven and belong to God, even while we are still learning and growing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Trouble begins when spiritual immaturity leads us into jealousy and comparison. In Corinth, believers argued about whether Paul or Apollos was better. Worldly thinking tempts us to take sides around prominent leaders and compare our gifts. But human leaders are simply servants carrying out the tasks God gave them. Just like a farmer cannot force a seed to sprout, no human effort can generate spiritual life.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "All of us in Christ belong to the exact same team. One person may plant the good news, and another may help water it, but God alone makes the seed grow. Instead of competing or worrying about who gets credit, we are called to work together in unity. We can faithfully do our part and rest in the truth that God will produce the fruit.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you found yourself comparing your gifts or Christian leaders with others?",
+    "How does remembering that God alone gives spiritual growth help you serve with peace and humility?"
+   ],
+   "prayer": "Heavenly Father, thank you for loving us as your children even when our faith is still young. Keep us from jealousy, pride, and dividing over human leaders. Help us to serve faithfully alongside our brothers and sisters, trusting you alone to give the growth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 19",
+     "on": "1 Corinthians 3:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Amber Ginter",
+     "work": "God Makes the Seed Grow",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/god-makes-the-seed-grow.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "God Gives the Growth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-gives-the-growth"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

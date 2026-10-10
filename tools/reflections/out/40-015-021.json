@@ -1,0 +1,95 @@
+{
+ "id": "40-015-021",
+ "title": "The Faith of the Canaanite Woman",
+ "refs": [
+  "Matthew 15:21-28",
+  "Mark 7:24-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40015021,
+   "end": 40015028,
+   "ref": "Matthew 15:21-28; Mark 7:24-30",
+   "ranges": [
+    [
+     40015021,
+     40015028
+    ],
+    [
+     41007024,
+     41007030
+    ]
+   ],
+   "title": "The Faith That Keeps Asking",
+   "key_verse": [
+    40015028,
+    40015028
+   ],
+   "reflect": [
+    {
+     "text": "When the woman cried out for her troubled child, Jesus met her with silence at first. When the Lord seems quiet to us, it can feel like a heavy trial, but He is not ignoring our cries. He is preparing our faith to grow, teaching us to persevere with patience instead of turning away in discouragement.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "This mother did not come to ask for herself, but to intercede, which means praying on behalf of someone else. When Jesus spoke hard words about the children's bread, she did not act entitled or take offense. Instead, she knelt at His feet with true humility, agreeing with His words and gladly accepting her place as someone who simply needed mercy.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "She found peace because she had great thoughts of Christ. She believed His table was so full of grace, God's generous kindness, that even a falling crumb was more than enough to drive out the demon. While her need felt crushing to her, she knew it was a small thing for Jesus to heal. We can approach Him with that same expectation, trusting His rich care and thankfully receiving whatever help He gives.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When God seems quiet in your prayers, what helps you keep trusting Him instead of giving up?",
+    "How can thinking about Christ's vast power and generosity change the way you bring your requests to Him?"
+   ],
+   "prayer": "Lord Jesus, help us to keep praying with patience even when You seem silent. Teach us to come to You with humble hearts, bringing the needs of others to Your feet. We trust in Your generous love, knowing that no burden is too big for Your great power to handle.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 27",
+     "on": "Matthew 15:27",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 9",
+     "on": "Matthew 15:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 15:28",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D4": {
+     "author": "April Motl",
+     "work": "When It Feels Like God Isn't Listening to Our Prayers (Matthew 15:21-28)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/when-it-feels-like-god-isn-t-listening-to-our-prayers-bible-study-minute-march-6-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

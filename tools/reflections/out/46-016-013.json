@@ -1,0 +1,72 @@
+{
+ "id": "46-016-013",
+ "title": "Concluding Exhortations",
+ "refs": [
+  "1 Corinthians 16:13-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46016013,
+   "end": 46016014,
+   "ref": "1 Corinthians 16:13-14",
+   "ranges": [
+    [
+     46016013,
+     46016014
+    ]
+   ],
+   "title": "\"Stand Firm in the Faith\"",
+   "key_verse": [
+    46016013,
+    46016013
+   ],
+   "reflect": [
+    {
+     "text": "Paul sums up practical Christian living with a clear call to stay alert and be strong. Today, secular culture often mocks or misunderstands true, godly courage. Yet the gospel affirms God's good design and gives brave conviction an essential place. This call to spiritual strength is not just for certain people, but for the whole congregation together.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Standing firm means clinging unswervingly to the truth of God's Word, even when culture pushes against us. We do not stand in our own power, but in the power of the Holy Spirit. He gives us the courage to resist outside pressures and stay faithful to Christ.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "At the same time, we must never confuse firmness with being harsh or unkind. Strength without warmth is not Christian. Paul makes sure to add that everything we do must be done in love. When we defend the truth or take a stand, we must always act with humble and gentle hearts toward others.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you feel the pressure from our culture to compromise on God's truth?",
+    "How can you show both firm conviction and genuine love in your conversations this week?"
+   ],
+   "prayer": "Lord, help us to stay alert and hold firmly to the truth of your Word. Give us courage through your Spirit to resist the pressures of the world around us. Teach us to speak and act with deep humility, so that everything we do is guided by love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ray Ortlund",
+     "work": "1 Corinthians 16:13",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/ray-ortlund/act-like-men/"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Firmness, Courage, and Love",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/firmness-courage-and-love"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

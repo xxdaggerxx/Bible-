@@ -1,0 +1,73 @@
+{
+ "id": "64-001-005",
+ "title": "Gaius Commended for Hospitality",
+ "refs": [
+  "3 John 1:5-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 64001005,
+   "end": 64001008,
+   "ref": "3 John 1:5-8",
+   "ranges": [
+    [
+     64001005,
+     64001008
+    ]
+   ],
+   "title": "Fellow Workers for the Truth",
+   "key_verse": [
+    64001008,
+    64001008
+   ],
+   "reflect": [
+    {
+     "text": "Showing hospitality to traveling teachers and missionaries is a clear, practical sign of Christian love. Gaius cared for brothers he did not even know because they went out to share the name of Christ. When workers go out to preach the gospel, they deserve generous help that is worthy of God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Not everyone is called to travel as a frontline missionary or serve in full-time ministry. Yet God calls each of us to be faithful right where we are. Even the most gifted evangelists cannot finish their mission without people standing behind them. In God's eyes, there is no ladder of importance; the supporting roles are completely necessary.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "By offering practical help, giving our finances, and praying, we fulfill our part in the Great Commission, Jesus' command to share his good news with the world. Supporting those who proclaim the gospel connects us directly to their work. In this way, every believer who helps send a worker becomes a true fellow worker for the truth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you use your finances, home, or time to encourage those who share the gospel?",
+    "Why is supporting ministry workers just as valuable to God as being the one who travels?"
+   ],
+   "prayer": "Lord, thank you for the workers who carry your name to others. Help us to be generous and faithful right where you have placed us. Teach us to support your servants with our prayers and resources so that we may work together for your truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "We Ought to Support",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/we-ought-support"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Your Primary Calling: Faithfulness - Truth For Life - November 24",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-november-24-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

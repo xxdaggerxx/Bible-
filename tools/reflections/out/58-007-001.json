@@ -1,0 +1,73 @@
+{
+ "id": "58-007-001",
+ "title": "Melchizedek and Abraham",
+ "refs": [
+  "Hebrews 7:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58007001,
+   "end": 58007010,
+   "ref": "Hebrews 7:1-10",
+   "ranges": [
+    [
+     58007001,
+     58007010
+    ]
+   ],
+   "title": "A Greater Priest and King",
+   "key_verse": [
+    58007007,
+    58007007
+   ],
+   "reflect": [
+    {
+     "text": "Long ago, Abraham met a mysterious king and priest named Melchizedek. Abraham gave him a tenth of his goods and received a blessing from him. In the ancient world, the person who gave the blessing had greater honor than the one who received it. Because the Levite priests were Abraham's future descendants, even they paid tithes to Melchizedek through him. This encounter proved that Melchizedek's priestly order was higher and greater than the old Levitical priesthood.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Melchizedek's name means king of righteousness, and his city Salem means peace. Both titles point forward to the promised Messiah. Genesis leaves out Melchizedek's family history, birth, and death. Scripture presents him this way on purpose so that he resembles the Son of God, who has an unending priesthood. Jesus is far greater than this early picture because He truly has an eternal divine nature with no beginning and no end.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This whole story in the Old Testament directs our eyes to Jesus. He fulfills this superior priesthood completely. We do not rely on ordinary human priests who pass away, but on the living Son of God who permanently secures our salvation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus is your eternal Priest give you confidence in your salvation?",
+    "What does it mean for your daily life to follow Jesus as both your King of righteousness and your King of peace?"
+   ],
+   "prayer": "Lord Jesus, thank You for being our eternal Priest and our King of peace. We praise You because You live forever and have permanently secured our salvation. Help us to put all our trust in You today and rest in Your faithful care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Resembling the Son",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/resembling-son"
+    },
+    "D2": {
+     "author": "Kim Riddlebarger",
+     "work": "A Better Priesthood",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/better-priesthood"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

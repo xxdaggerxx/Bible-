@@ -1,0 +1,156 @@
+{
+ "id": "38-014-001",
+ "title": "The Destroyers of Jerusalem Destroyed",
+ "refs": [
+  "Zechariah 14:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 38014007,
+   "end": 38014007,
+   "ref": "Zechariah 14:7",
+   "ranges": [
+    [
+     38014007,
+     38014007
+    ]
+   ],
+   "title": "\"At Evening Time It Shall Be Light\"",
+   "key_verse": [
+    38014007,
+    38014007
+   ],
+   "reflect": [
+    {
+     "text": "We often look ahead to old age and the end of life with fear. Everything around us seems to say that the day will end in darkness, sickness, and sorrow. But God makes a surprising promise to His people. When evening comes, it will not deepen into total night. Instead, God brings a wonderful light that breaks through our fears.",
+     "sources": [
+      "D2",
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "The later years of life can become a season of quiet rest and settled trust. Even when our bodies grow weak and we face pain, Christ gives us His strength to endure with patience. The flash of youth fades, but a deeper love for God remains. We learn to wait patiently on the Lord, knowing that His work in us will not end in gloom.",
+     "sources": [
+      "D2",
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "Faith also changes how we look at death. When unbelief sees only shadows falling, faith sees the true day beginning. As Charles Spurgeon wrote, believers receive \"the light of immortality, the light of a Father's countenance.\" God removes our dread and welcomes us into the brightness of heaven.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries do you have about growing older or facing the end of life?",
+    "How does God's promise of light at evening give you patience in hard times?"
+   ],
+   "prayer": "Lord, thank You for promising light when our days seem to grow dark. Help us trust You when we feel weak or afraid of the future. Give us patience to wait on You, and fill our hearts with the peace of Your coming presence. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 4",
+     "on": "Zechariah 14:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 13",
+     "on": "Zechariah 14:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D6": {
+     "author": "Truth For Life",
+     "work": "The Altar of Age",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-october-4-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 38014001,
+   "end": 38014015,
+   "ref": "Zechariah 14:1-15",
+   "ranges": [
+    [
+     38014001,
+     38014015
+    ]
+   ],
+   "title": "The Lord Will Be King",
+   "key_verse": [
+    38014009,
+    38014009
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, the prophet shows us the final day of history. When God's people seem surrounded and on the brink of defeat, the Lord Himself arrives with His heavenly army to rescue them. Today, we still see rebellion, confusion, and false gods everywhere. Yet the Bible assures us that God's purpose will never fail. Jesus did not die in vain, and one day the whole earth will acknowledge Him as the only King.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Zechariah also tells of living water flowing continually from Jerusalem. These streams do not dry up during the scorching heat of summer, nor do they freeze in the bitter cold of winter. Earthly rivers may shift or run dry, but the river of God's grace never fails. It brings unending spiritual renewal to all who belong to Him.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "We already share in the blessings of Christ's kingdom today, even while we wait for His final victory. Because His reign is certain, we can go about our daily work with confidence. Whenever life feels draining or troubled, we can come to His inexhaustible fountain and drink freely from His love.",
+     "sources": [
+      "D1",
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your daily life do you need to drink from the never-failing river of God's grace?",
+    "How does the certainty that Jesus will reign over all the earth give you courage today?"
+   ],
+   "prayer": "Heavenly Father, we praise You because Your throne cannot be shaken. Thank You for the living water of Your grace that refreshes us in every season of life. Keep our faith strong as we serve You each day, waiting for the day when every tribe honors Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 1",
+     "on": "Zechariah 14:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 6",
+     "on": "Zechariah 14:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "The LORD Will Be King",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-will-be-king"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

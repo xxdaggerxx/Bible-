@@ -1,0 +1,71 @@
+{
+ "id": "40-027-024",
+ "title": "Pilate Washes His Hands",
+ "refs": [
+  "Matthew 27:24-26",
+  "Mark 15:12-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40027024,
+   "end": 40027026,
+   "ref": "Matthew 27:24-26; Mark 15:12-15",
+   "ranges": [
+    [
+     40027024,
+     40027026
+    ],
+    [
+     41015012,
+     41015015
+    ]
+   ],
+   "title": "Handed Over to Be Crucified",
+   "key_verse": [
+    40027024,
+    40027024
+   ],
+   "reflect": [
+    {
+     "text": "Pilate knew Jesus had done nothing wrong. Even so, he feared a riot and wanted to keep the crowd happy, so he gave up on doing what was right. Pilate washed his hands in front of everyone to claim he was innocent, but this action could not wash away his personal guilt for putting an innocent man to death.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The crowd chose to free Barabbas instead of Jesus. They wanted a violent rebel rather than a humble Savior. While Pilate tried to shift the blame to the people, his choice was still his own. The crowd's angry response also gives no one an excuse for prejudice against Jewish people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In truth, all of humanity shares responsibility for the death of Jesus. Our own sins made His suffering necessary. Yet, by God's grace, His kindness that we do not earn, Jesus went to the cross willingly for us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever tried to excuse your own wrong actions by blaming the pressure of other people?",
+    "How does knowing Jesus willingly suffered for your sins help you appreciate His grace today?"
+   ],
+   "prayer": "Lord Jesus, thank You for going willingly to the cross to pay for our sins. Forgive us when we try to hide our faults or shift the blame to others. Help us to trust in Your grace and follow You with honest, humble hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Sentenced to Death",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sentenced-death"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

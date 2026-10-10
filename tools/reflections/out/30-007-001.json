@@ -1,0 +1,73 @@
+{
+ "id": "30-007-001",
+ "title": "The Locusts, Fire, and Plumb Line",
+ "refs": [
+  "Amos 7:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 30007001,
+   "end": 30007009,
+   "ref": "Amos 7:1-9",
+   "ranges": [
+    [
+     30007001,
+     30007009
+    ]
+   ],
+   "title": "Tested by God's True Standard",
+   "key_verse": [
+    30007008,
+    30007008
+   ],
+   "reflect": [
+    {
+     "text": "God showed the prophet Amos terrifying visions of ruin through hungry locusts and consuming fire. Each time, Amos pleaded for the people, and the Lord chose to relent from wiping them out completely. This shows us that God truly listens when we pray for others. We can bring our requests to Him in faith, confident that He hears our cries while we rest in His sovereign care.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Next, the Lord showed Amos a wall and a plumb line, which is a weighted cord a builder uses to check if a wall stands straight. Israel had leaned hopelessly off-center. Instead of threatening total destruction, the plumb line showed God measuring hearts to separate those who were faithful from those who broke His covenant. Amos did not ask God to stop this time, because he knew God's standard of justice was right.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God's Word and Jesus Christ serve as the plumb line for our lives today. Human ideas of goodness shift and lead to collapse, but Scripture gives us a clear and true standard. As we look into God's Word to examine our thoughts and actions, He reveals where we have leaned away from Him and calls us to upright obedience.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you look at your daily choices in the light of Scripture, what areas might be leaning off-center?",
+    "Who is someone you can pray for today, asking God to show them His mercy?"
+   ],
+   "prayer": "Lord, thank You that You hear our prayers and show mercy to us. Please use Your Word to test our hearts and show us where we have drifted from Your truth. Help us to walk in upright obedience and follow Christ as our guide. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Amos Prays and God Relents",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/amos-prays-and-god-relents"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Sept. 23, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-sept-23-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

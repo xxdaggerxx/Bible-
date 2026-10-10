@@ -1,0 +1,79 @@
+{
+ "id": "58-011-008",
+ "title": "The Faith of Abraham and Sarah",
+ "refs": [
+  "Hebrews 11:8-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58011008,
+   "end": 58011019,
+   "ref": "Hebrews 11:8-19",
+   "ranges": [
+    [
+     58011008,
+     58011019
+    ]
+   ],
+   "title": "Walking by Faith Toward Our Heavenly Home",
+   "key_verse": [
+    58011016,
+    58011016
+   ],
+   "reflect": [
+    {
+     "text": "Abraham shows us what it looks like to trust God and step forward immediately. God called him to leave his comfortable, familiar home with nothing to rely on except divine promises. Real faith obeys and moves forward even when we do not know the full path ahead. If we refuse to go, we drift backward and grow spiritually stuck, but stepping out in obedience places us right inside God's good purposes.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Like Abraham and Sarah, we live as temporary guests in this world rather than permanent residents. We often feel lonely, homesick, or ache for familiar comforts. Yet deep underneath those feelings is a God-given desire to be truly at home in His presence. While we live here with purpose, loving and serving God and our neighbors, our longings remind us to look ahead to our heavenly home.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "These believers held on to their trust in God all the way to the end. Charles Spurgeon observed that \"faith is as precious to die by as to live by.\" Faith was their guide and comfort in life, resting in God's mercy and present love. It also gave them hope for the future, knowing they would rise again to see their Savior. Today, we look to Jesus, who gives us that very same faith to walk by.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might God be asking you to step out in obedience today, even if you cannot see the whole road ahead?",
+    "How can your everyday longings and feelings of homesickness turn your attention toward your heavenly home?"
+   ],
+   "prayer": "Lord, give us faith to obey Your voice and step forward even when the future seems unclear. Help us remember that we are temporary travelers here, called to love and serve others along the way. Keep our eyes fixed on Jesus until we safely reach our eternal home with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 2",
+     "on": "Hebrews 11:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Stepping Out in Faith",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-31-2024.html"
+    },
+    "D3": {
+     "author": "Jim Liebelt",
+     "work": "What Lies Beneath Longings?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-november-11-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

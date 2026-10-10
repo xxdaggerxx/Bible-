@@ -1,0 +1,135 @@
+{
+ "id": "39-004-001",
+ "title": "The Day of the LORD",
+ "refs": [
+  "Malachi 4:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 39004002,
+   "end": 39004002,
+   "ref": "Malachi 4:2",
+   "ranges": [
+    [
+     39004002,
+     39004002
+    ]
+   ],
+   "title": "\"The Sun of Righteousness Will Rise\"",
+   "key_verse": [
+    39004002,
+    39004002
+   ],
+   "reflect": [
+    {
+     "text": "When life feels dark and heavy, God promises that light is on the way. For those who revere and honor God's name, the Sun of Righteousness will rise with healing in His wings. As Charles Spurgeon wrote, \"When the night is darkest, dawn is nearest.\" This rising brings real relief to our hurting souls, warming us with God's holiness and His deep mercy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Throughout the Old Testament, God's people lived through long seasons of waiting, seeing His truth only in promises and shadows. But in Christ, that darkness is broken. We now live in the clear light of His love, looking forward with confidence to the day when He returns.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because this light shines upon us, we do not need to stay locked inside discouragement or stay weak in our faith. Like young calves leaping freely out of their stalls into spring pastures, we can step out into holy confidence. We are invited to feast on God's love and grow stronger in our knowledge of Him every day.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life do you need to wait patiently for God's light and healing?",
+    "How can you step out in joyful freedom today instead of staying stuck in discouragement?"
+   ],
+   "prayer": "Lord, thank You for rising over our dark seasons with light and healing. Teach us to revere Your holy name and walk in Your joy each day. Help us leave behind discouragement so that we may grow strong in Your love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 1",
+     "on": "Malachi 4:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 2",
+     "on": "Malachi 4:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Malachi 4:2",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 39004001,
+   "end": 39004006,
+   "ref": "Malachi 4:1-6",
+   "ranges": [
+    [
+     39004001,
+     39004006
+    ]
+   ],
+   "title": "Turning Hearts Back to Family",
+   "key_verse": [
+    39004006,
+    39004006
+   ],
+   "reflect": [
+    {
+     "text": "At the very end of the Old Testament, God speaks of a great day to come and calls for restoration among His people. He promises to turn the hearts of parents toward their children, and children toward their parents. God created the family to be one of the primary places where love, faith, and care are lived out.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "When we consider the end of life, few things matter as much as the love we share with those closest to us. Having honest, heartfelt conversations and speaking words of love brings a comfort that outlasts sorrow. Leaving no love unspoken is a lasting blessing for both the giver and the receiver.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "God calls us to turn our hearts back toward home before opportunities slip away. Rather than letting hostility, bitterness, or cold distance remain between us and our relatives, we are urged to bring warmth and kindness into our relationships. We can make the choice today to intentionally show and tell our family that they are loved.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a family member who needs to hear you say that you love them today?",
+    "What hurt or cold attitude can you replace with warmth in your home?"
+   ],
+   "prayer": "Father, thank You for giving us families to care for and cherish. Turn our hearts toward home and soften any bitterness or distance between us. Give us the courage to speak words of love and kindness to those closest to us today. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Jim Burns",
+     "work": "Does Your Family Know You Love Them?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-october-20-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

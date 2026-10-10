@@ -1,0 +1,138 @@
+{
+ "id": "34-001-001",
+ "title": "The Burden against Nineveh",
+ "refs": [
+  "Nahum 1:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 34001003,
+   "end": 34001003,
+   "ref": "Nahum 1:3",
+   "ranges": [
+    [
+     34001003,
+     34001003
+    ]
+   ],
+   "title": "\"Slow to Anger\"",
+   "key_verse": [
+    34001003,
+    34001003
+   ],
+   "reflect": [
+    {
+     "text": "God reveals that He is slow to anger because His power is so immense. A weak person flares up quickly, but true power shows itself in self-restraint. God holds back His wrath because He takes no pleasure in anyone dying, giving plenty of time for mercy. If you have run to Jesus as your shelter, this mighty power is not against you. He uses His great strength as your Father and Friend.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The verse also tells us that the clouds are like the dust beneath His feet. When dark storms gather across your life, you might feel afraid or think God has forgotten you. Yet storms serve a purpose by clearing away dead branches and bringing needed rain. Even the towering troubles that seem like huge mountains to us are merely specks of dust to God. The very clouds that hide Him show that He is walking near, ready to help.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When hard times look as dark and heavy as storm clouds, how does remembering God's power help you trust Him?",
+    "In what ways does knowing that God is patient and slow to anger bring peace to your heart?"
+   ],
+   "prayer": "Father, thank You for being patient with us and holding back Your wrath. When troubles rise up around us like a dark storm, help us remember that You are walking near. We rest in Your great power and trust Your loving care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 22",
+     "on": "Nahum 1:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Nahum 1:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 34001001,
+   "end": 34001015,
+   "ref": "Nahum 1:1-15",
+   "ranges": [
+    [
+     34001001,
+     34001015
+    ]
+   ],
+   "title": "A Stronghold in the Day of Trouble",
+   "key_verse": [
+    34001007,
+    34001007
+   ],
+   "reflect": [
+    {
+     "text": "Nahum paints a sobering picture of God's holy wrath against unrepentant evil, reminding us that wickedness will not go unpunished. Yet right in the middle of these warnings, God promises that He is good and acts as a safe fortress in hard days. He knows and guards everyone who trusts in Him. Because the Lord loves us so deeply, He is jealous for our wholehearted devotion. He does not want us leaning on our own strength or worldly comforts, but invites us to find complete security in Christ.",
+     "sources": [
+      "D2",
+      "D6"
+     ]
+    },
+    {
+     "text": "God also comforts His people by setting a clear end to their hardships. When His good purposes in our trials are finished, He removes the burden. He does not simply loosen the heavy yoke of our troubles; He shatters it completely so it cannot bind us again. The Lord offers real and lasting freedom, breaking the hold of our spiritual enemies. Even when your path feels dark, you can look ahead with hope, knowing that God will quiet the storm and bring lasting peace.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What false supports or worldly comforts are you tempted to rely on instead of resting in God's love?",
+    "How does the promise that God sets a limit to your trials give you courage to keep trusting Him today?"
+   ],
+   "prayer": "Lord, thank You for being our shelter when troubles surround us and for watching over everyone who trusts in You. We praise You for breaking the heavy chains of sin and setting a limit to our sorrows. Keep our hearts completely devoted to You as we look forward to Your peace. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 12",
+     "on": "Nahum 1:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 19",
+     "on": "Nahum 1:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 2",
+     "on": "Nahum 1:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D6": {
+     "author": "Seth Porch",
+     "work": "How to Read a Thunderstorm",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/how-to-read-a-thunderstorm"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,121 @@
+{
+ "id": "40-005-038",
+ "title": "Love Your Enemies",
+ "refs": [
+  "Matthew 5:38-48",
+  "Luke 6:27-36"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42006027,
+   "end": 42006028,
+   "ref": "Luke 6:27-28",
+   "ranges": [
+    [
+     42006027,
+     42006028
+    ]
+   ],
+   "title": "\"Love Your Enemies\"",
+   "key_verse": [
+    42006028,
+    42006028
+   ],
+   "reflect": [
+    {
+     "text": "When people speak hurtful words or falsely accuse us, we face an immediate choice. We can hold on to bitter offense, or we can choose forgiveness like Jesus showed. John Piper explains that Jesus calls us to pray for anyone who opposes us, whether they are hard family members or fierce persecutors. Turning to God in prayer brings Him directly into our troubles so that we leave vengeance to Him instead of trying to pay people back ourselves.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Praying for those who hurt us guards our hearts. When we refuse to forgive, we end up trapped in spiritual bondage, which is being held down by sin. Asking God to bless those who mistreat us breaks that trap and keeps bitterness from taking root. As we pray, we look beyond their daily needs and ask God for their true transformation, asking Him to give them repentance and eternal joy in Himself. We cannot show this kind of mercy by our own willpower, so we must rely on the Holy Spirit to give us strength.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there someone who has hurt you recently whom you need to bring to God in prayer?",
+    "How can asking God to change your opponent's heart help free you from bitterness?"
+   ],
+   "prayer": "Lord, help us to turn away from revenge when others hurt us. Give us the Holy Spirit's power to pray for those who mistreat us and to desire their eternal good. Free our hearts from anger so we can show Your mercy. Amen.",
+   "sources": {
+    "D2": {
+     "author": "John Piper",
+     "work": "Pray for Those Who Abuse You",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/pray-for-those-who-abuse-you"
+    },
+    "D3": {
+     "author": "Emily Rose Massey",
+     "work": "A Prayer for Your Enemies",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/praying-for-your-enemies.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40005038,
+   "end": 40005048,
+   "ref": "Matthew 5:38-48; Luke 6:27-36",
+   "ranges": [
+    [
+     40005038,
+     40005048
+    ],
+    [
+     42006027,
+     42006036
+    ]
+   ],
+   "title": "Loving Our Neighbors Through Thick and Thin",
+   "key_verse": [
+    40005044,
+    40005044
+   ],
+   "reflect": [
+    {
+     "text": "Jesus calls us to love our neighbors, no matter what their life looks like compared to ours. If our neighbor is wealthy while we have very little, we might feel tempted to look at their possessions with envy. Loving that person frees us from jealousy and helps us stay content with what God has given us. In the same way, if we have plenty and live near people who are poor, we must never look down on them. Charles Spurgeon reminds us that God made all people as equals, so a finer coat does not make anyone better than another.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Loving others becomes even harder when people return our kindness with disrespect or ingratitude. Yet this gives us room to show brave, enduring love. We are called to keep doing good even when the path is rough. When people refuse to appreciate our care, we can remember that our goal is not to win their praise. Our true desire is to please our Master, Jesus Christ. Even if our neighbors reject our love, God receives our service with joy, and we walk in the footsteps of Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does loving your neighbor keep you from feeling either jealous of their wealth or superior to their poverty?",
+    "When someone treats your kindness with disrespect, how does remembering Jesus help you continue to love them?"
+   ],
+   "prayer": "Father, teach us to love every neighbor without comparing our lives to theirs. Keep our hearts from jealousy when others have more, and guard us from pride when others have less. Give us patience to keep doing good even when people show no gratitude, so that we may honor our Master. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 12",
+     "on": "Matthew 5:43",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

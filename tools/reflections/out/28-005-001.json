@@ -1,0 +1,137 @@
+{
+ "id": "28-005-001",
+ "title": "Judgment on Israel and Judah",
+ "refs": [
+  "Hosea 5:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 28005015,
+   "end": 28005015,
+   "ref": "Hosea 5:15",
+   "ranges": [
+    [
+     28005015,
+     28005015
+    ]
+   ],
+   "title": "\"They Will Earnestly Seek Me\"",
+   "key_verse": [
+    28005015,
+    28005015
+   ],
+   "reflect": [
+    {
+     "text": "When life is easy and peaceful, we can easily become proud and self-reliant. We start to think our mountain stands firm and that we will never be shaken. In our comfort, we wander away from God. Like a caring shepherd who sends out dogs to bring back lost sheep, God sometimes uses hard trials and losses to call us home. He takes away our earthly props so that we will lean only on Him.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "There is always a loving purpose behind God's discipline. When the Lord withdraws His felt presence, He sets a boundary: He waits until we acknowledge our wrongdoing and turn back to Him. As F. B. Meyer observed, God \"tears that He may heal\" and leaves so that He may return. If we are walking through darkness or trouble, we should search our hearts. We can ask the Lord if there is any hidden pride, greed, or idolatry that we need to confess and put away.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "If you feel troubled by your own wandering during hard times, take heart. That sadness over sin is a healthy sign of spiritual life. God does not strike us in anger to destroy us, but to empty our hands so that we will run back to Him. Instead of losing hope under His correction, we can see the Father's tender hand and say, \"I will arise, and go unto my Father.\"",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When times are comfortable, in what ways might you be tempted to rely on yourself rather than on God?",
+    "How does remembering that God's discipline aims to bring you back give you hope during seasons of trial?"
+   ],
+   "prayer": "Heavenly Father, forgive us for letting comfort make us proud and forgetful of You. Thank You for Your loving hand that corrects us when we wander away. Strip away our false confidences and draw us back to find our only rest in Your grace. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 25",
+     "on": "Hosea 5:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hosea 5:15",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D4": {
+     "author": "Truth For Life",
+     "work": "Wayward Sheep - Truth For Life - July 25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-25-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 28005001,
+   "end": 28005015,
+   "ref": "Hosea 5:1-15",
+   "ranges": [
+    [
+     28005001,
+     28005015
+    ]
+   ],
+   "title": "Unfaithfulness Against the Lord",
+   "key_verse": [
+    28005007,
+    28005007
+   ],
+   "reflect": [
+    {
+     "text": "In Hosea 5, God speaks to the leaders and people about their unfaithfulness. As believers, we have been redeemed by Christ's blood, called by grace (God's undeserved kindness), and accepted into His family. He is our truest and best friend, and we are on our way to heaven. Yet, like Israel, we have often acted treacherously toward Him. We make promises to love and serve Him, but we quickly fail to keep our word.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we first came to Jesus, we clung closely to Him. We thought we would never grow cold, and we gave up everything for His sake. But over time, our prayers have often become hurried and dry, lacking true warmth. We forget quiet communion with Christ and fill our minds with worldly worries and shallow pleasures. Instead of eager obedience, we offer excuses, half-hearted service, and patience that wears thin under pressure.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our failure to remain faithful is deeply sobering when we consider how faithful Christ is to us. As Charles Spurgeon wrote, Jesus \"stands with our names engraven on his breastplate\" before the eternal throne. Even when we have turned away and trusted in human strength, our Lord never forgets us and still intercedes on our behalf. Remembering His steadfast love should lead us to honest repentance, asking for His forgiveness and the grace to follow Him sincerely.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does your current prayer life and devotion compare to when you first trusted Christ?",
+    "How does knowing that Jesus continually remembers you before the Father help you turn away from worldly distractions?"
+   ],
+   "prayer": "Lord Jesus, we confess that our hearts have often grown cold and unfaithful to You. Forgive us for our hurried prayers, our worldly worries, and our broken promises. Thank You for bearing our names before the throne of God and never forgetting us. Strengthen our faith today so that we may walk closely with You in sincere love. In Your name, Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 12",
+     "on": "Hosea 5:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

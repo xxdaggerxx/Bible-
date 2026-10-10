@@ -1,0 +1,89 @@
+{
+ "id": "66-022-001",
+ "title": "The River of Life",
+ "refs": [
+  "Revelation 22:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66022001,
+   "end": 66022005,
+   "ref": "Revelation 22:1-5",
+   "ranges": [
+    [
+     66022001,
+     66022005
+    ]
+   ],
+   "title": "Life and Light in the New Jerusalem",
+   "key_verse": [
+    66022004,
+    66022004
+   ],
+   "reflect": [
+    {
+     "text": "John brings great comfort to God's people by showing the world to come. In this renewed creation, we will enjoy real, bodily life that far exceeds the garden of Eden. A crystal-clear river flows straight from the throne of God and of the Lamb, showing that all eternal life comes directly from Christ. On its banks, the tree of life bears fruit every month with leaves that heal. This rich picture shows that the painful curse of sin is completely undone, and evil can never enter again.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "In this holy city, believers will enjoy close, unbroken fellowship with God. Charles Spurgeon noted that we will \"serve Jesus always, perfectly, without weariness.\" No harsh masters will trouble us again. Instead, we belong to the Lamb who bought us with His own blood. We will follow Him in joyful praise and look directly into His face. Gazing upon our Lord, His name will be placed on our foreheads, openly marking us as His own forever.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because the Lord God shines on His people, there will be no more night or sorrow. Present troubles and suffering cannot undo the rest and glory Christ has won for His church. We can take heart today knowing that our eternal home is safe, abundant, and bright in His presence.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the promise of seeing Jesus face to face give you hope during present trials?",
+    "What does it mean to you that all life, healing, and joy flow directly from Christ?"
+   ],
+   "prayer": "Lord God, thank You for the promise of a renewed creation where sin, suffering, and darkness are gone forever. Thank You that Jesus bought us with His blood so we may serve Him with joy and look upon His face. Help us to rest in the eternal life Christ has secured for us, even when we walk through difficult days. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 27",
+     "on": "Revelation 22:3-4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Revelation 22:1-2",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Ken Jones",
+     "work": "The Future Tree of Life",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/future-tree-life"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Yielding Its Fruit",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/yielding-its-fruit"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

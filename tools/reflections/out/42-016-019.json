@@ -1,0 +1,73 @@
+{
+ "id": "42-016-019",
+ "title": "The Rich Man and Lazarus",
+ "refs": [
+  "Luke 16:19-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42016019,
+   "end": 42016031,
+   "ref": "Luke 16:19-31",
+   "ranges": [
+    [
+     42016019,
+     42016031
+    ]
+   ],
+   "title": "Eternity and the Things We Hold",
+   "key_verse": [
+    42016025,
+    42016025
+   ],
+   "reflect": [
+    {
+     "text": "In this life, the rich man enjoyed every luxury while ignoring Lazarus, who lay suffering at his gate. Outward wealth and status often tempt people to look down on others and ignore those who lack basic necessities. Relying on possessions robs us of true peace, gratitude, and healthy relationships. Jesus warns us against living with an uncaring heart toward people in need.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "After death, their situations changed completely. Lazarus was comforted beside Abraham, while the rich man was in torment. The rich man could clearly see Lazarus receiving comfort, yet even in his agony he clung to his pride, expecting Lazarus to serve him. His story shows that hell is an irreversible reality with no way out and no second chances.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Filled with regret, the rich man pleaded for someone to warn his brothers. Earthly comfort must never distract us from preparing for eternity through faith in Jesus. Christ calls us to faithful stewardship, knowing God owns everything. Growing spiritually means cultivating humility and being poor in spirit, no matter how much or how little we have.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you letting comfort or possessions distract you from caring for others and preparing for eternity?",
+    "In what ways can you practice humility and remember that all you have belongs to God?"
+   ],
+   "prayer": "Lord, protect our hearts from pride and from looking down on those who are suffering. Help us remember that all we possess belongs to you, and teach us to hold our earthly goods loosely. Give us humility to seek you first and trust in Jesus for our true and lasting life.",
+   "sources": {
+    "D1": {
+     "author": "Lynette Kittle",
+     "work": "Witnessing Heaven on the Horizon - The Crosswalk Devotional - May 9",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/witnessing-heaven-on-the-horizon-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Crosswalk.com",
+     "work": "Day 52: Jesus Loosens Our Grip on Stuff",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/jesus/jesus-day-52-jesus-loosens-our-grip-on-stuff.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

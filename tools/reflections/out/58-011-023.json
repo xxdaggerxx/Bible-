@@ -1,0 +1,66 @@
+{
+ "id": "58-011-023",
+ "title": "The Faith of Moses",
+ "refs": [
+  "Hebrews 11:23-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58011023,
+   "end": 58011029,
+   "ref": "Hebrews 11:23-29",
+   "ranges": [
+    [
+     58011023,
+     58011029
+    ]
+   ],
+   "title": "Fixing Our Eyes on the Invisible God",
+   "key_verse": [
+    58011027,
+    58011027
+   ],
+   "reflect": [
+    {
+     "text": "Moses made difficult choices when he walked away from the wealth of Egypt to suffer alongside God's people. He persevered through danger and fear because he kept his eyes on the God who is invisible. Real faith does not depend on outward things we can see with our physical eyes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Much of what God does in our lives happens out of sight. If we measure our faith only by visible circumstances, our feelings will rise and fall with every hardship. When God's ways are hard to understand, looking only at what is happening around us leads to emotional instability.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True faith anchors itself in who God is rather than in what He does for us. Like Moses, we are called to focus our hearts on seeking and knowing God Himself. When we trust His character, we can stand strong even when His work remains hidden from our view.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you currently judging God's goodness by your visible circumstances or by who He is?",
+    "What is one way you can focus on simply knowing God better this week?"
+   ],
+   "prayer": "Lord, help us to fix our eyes on You rather than on what we see around us. When we cannot understand what You are doing, give us peace to trust who You are. Teach us to seek Your presence above all else. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day Thirty-six",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/whispers-of-hope-10-weeks-of-devotional-praye/whispers-of-hope-10-weeks-of-devotional-prayer-woh04-content-35.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

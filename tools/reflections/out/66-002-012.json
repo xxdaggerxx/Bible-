@@ -1,0 +1,120 @@
+{
+ "id": "66-002-012",
+ "title": "To the Church in Pergamum",
+ "refs": [
+  "Revelation 2:12-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 66002017,
+   "end": 66002017,
+   "ref": "Revelation 2:17",
+   "ranges": [
+    [
+     66002017,
+     66002017
+    ]
+   ],
+   "title": "\"I Will Give the Hidden Manna\"",
+   "key_verse": [
+    66002017,
+    66002017
+   ],
+   "reflect": [
+    {
+     "text": "Jesus promises to give hidden manna to those who persevere and win the battle of faith. In the Old Testament, a jar of manna was kept inside the holy ark where no one could see it, and it never spoiled. Charles Spurgeon wrote that our spiritual life is hidden with Christ, and Jesus \"is Himself our reward.\" He gives us strength to stand firm today, and He will satisfy our souls completely in the life to come.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus also promises each overcomer a white stone with a secret new name written on it. In this world, people often look for labels and titles to feel accepted and to fit in. In Scripture, a new name from God marked a fresh beginning and a renewed calling. When we trust in Christ, we become children of God. His personal gift assures us that our true worth comes from who we are in Him, rather than the approval of the world.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you look to other people for your sense of worth, or do you rest in your identity in Christ?",
+    "How does the promise of Jesus being your eternal reward help you keep going when faith is difficult?"
+   ],
+   "prayer": "Lord Jesus, thank You for feeding our souls and keeping our lives secure in You. Help us not to chase after the praise or acceptance of this world. Remind us each day that our true worth and purpose are found only in You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 30",
+     "on": "Revelation 2:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Laura MacCorkle",
+     "work": "What’s in a Name?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/what-s-in-a-name-crosswalk-the-devotional-sept-23-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 66002012,
+   "end": 66002017,
+   "ref": "Revelation 2:12-17",
+   "ranges": [
+    [
+     66002012,
+     66002017
+    ]
+   ],
+   "title": "Standing Firm Against Compromise",
+   "key_verse": [
+    66002016,
+    66002016
+   ],
+   "reflect": [
+    {
+     "text": "The believers in Pergamum lived in a very difficult city. It was a center of pagan worship and emperor worship, a place where Satan had strong influence. Jesus commended the church because they held firmly to His name and did not deny Him, even when a faithful witness named Antipas was killed for his faith. They showed real bravery under severe pressure from the surrounding culture.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "However, serious trouble was also growing inside the church. Some members were tolerating false teachings that led believers into sexual sin and eating food offered to idols, just as Balaam once led ancient Israel into sin. Although the church had resisted open persecution from the outside, they were allowing harmful compromise to take root on the inside. Jesus warned them to repent quickly or face judgment from the sword of His mouth.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "This passage reminds us that believers must stay alert against worldly influences. It is not enough to stand strong during public trials if we allow sinful habits and teachings to quietly slip into our lives. Christ calls His people to pure devotion. We need to examine our hearts, turn away from compromise, and refuse to let anything in this world rival our devotion to Jesus.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there subtle worldly compromises or sinful habits that you have started to tolerate in your life?",
+    "How can we encourage our church community to remain faithful to God's truth without giving in to culture?"
+   ],
+   "prayer": "Lord God, give us the courage to stand firm in our faith even when the culture opposes us. Search our hearts and reveal any secret compromises that pull us away from pure devotion to Christ. Help us to turn away from sin quickly and follow You with our whole lives. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "To the Church in Pergamum",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/to-the-church-in-pergamum"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

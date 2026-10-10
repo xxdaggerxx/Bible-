@@ -1,0 +1,74 @@
+{
+ "id": "45-009-006",
+ "title": "God’s Sovereign Choice",
+ "refs": [
+  "Romans 9:6-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45009006,
+   "end": 45009029,
+   "ref": "Romans 9:6-29",
+   "ranges": [
+    [
+     45009006,
+     45009029
+    ]
+   ],
+   "title": "God’s Right to Show Mercy",
+   "key_verse": [
+    45009016,
+    45009016
+   ],
+   "reflect": [
+    {
+     "text": "Paul reminds us that God's plans do not depend on human effort or family background, but on His own calling and purpose. When God chose Jacob instead of Esau, He was acting on His wise plan to bless the world through a chosen people. God looks ahead with perfect knowledge and selects the people and nations best fitted to carry out His divine work. This calls us to take heed and not forfeit eternal blessings for short-lived pleasures, as Esau foolishly gave away his birthright for a single meal.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "At the same time, we must remember that God owes nothing to anyone. Because of our sin, we all deserve judgment, and none of us has a rightful claim on God. As Charles Spurgeon wrote, God holds the right to give or withhold mercy \"according to his own sovereign will.\" When we realize our own guilt, we stop complaining that God is unfair. Instead, we see that any mercy He gives is an entirely free and undeserved gift.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's sovereign choice leaves no room for human boasting. It humbles us completely, because our salvation rests entirely on His kindness rather than our own good works. When believers see that God's will alone is glorified, it stirs deep gratitude and leads us to love and serve Him with pure hearts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that salvation is entirely God's free gift keep you from pride?",
+    "Are there temporary desires in your life right now that tempt you to ignore God's eternal purposes?"
+   ],
+   "prayer": "Lord God, You are the righteous Judge of all the earth, and You owe us nothing. Thank You for showing us undeserved mercy and calling us according to Your purpose. Keep us from trading Your eternal promises for the passing desires of this world, and fill our hearts with humble praise for Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 25",
+     "on": "Romans 9:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Romans 9:13",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

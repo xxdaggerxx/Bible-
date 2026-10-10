@@ -1,0 +1,68 @@
+{
+ "id": "44-010-024",
+ "title": "Peter Visits Cornelius",
+ "refs": [
+  "Acts 10:24-33"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44010028,
+   "end": 44010028,
+   "ref": "Acts 10:28",
+   "ranges": [
+    [
+     44010028,
+     44010028
+    ]
+   ],
+   "title": "\"Not Call Any Man Impure\"",
+   "key_verse": [
+    44010028,
+    44010028
+   ],
+   "reflect": [
+    {
+     "text": "Peter was a devout believer who had always observed strict cultural separation from non-Jewish people. From childhood, he had inherited assumptions that made him view Gentiles as unclean. But God does not honor prejudice, even when it is found in committed and faithful believers. Through a rooftop vision, God prepared Peter to understand that these lessons were not about food laws at all, but about how he viewed other human beings.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Spiritual growth requires allowing God to pry open our minds and take away our biases. Believers are called to reject spiritual elitism, remembering that everything we have is a free gift of grace, God's kindness that we do not deserve. We can recognize differences without letting them divide us. When God asked Peter to leave his comfort zone, Peter obeyed. His choice to enter Cornelius's home helped the gospel reach across cultural boundaries, permanently reshaping the history of the church.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there inherited assumptions or biases that God is asking you to let go of?",
+    "How can remembering that salvation is an unearned gift keep you from feeling superior to others?"
+   ],
+   "prayer": "Lord, forgive us when we hold on to prejudice or treat others as less worthy of Your love. Pry open our minds and help us step out of our comfort zones to share the good news of Jesus. Remind us every day that all we have received is an undeserved gift of Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "A Pivotal Moment in Church History",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/a-pivotal-moment-in-church-history-greg-laurie-daily-devotion-december-27-2016.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 239: Acts 10:9–28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-239-acts-10-928.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "66-009-001",
+ "title": "The Fifth Trumpet",
+ "refs": [
+  "Revelation 9:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66009001,
+   "end": 66009012,
+   "ref": "Revelation 9:1-12",
+   "ranges": [
+    [
+     66009001,
+     66009012
+    ]
+   ],
+   "title": "Sheltered by the Seal of God",
+   "key_verse": [
+    66009004,
+    66009004
+   ],
+   "reflect": [
+    {
+     "text": "The fifth trumpet sounds, and a terrifying swarm rises from the deep pit like an army prepared for battle. This vivid picture shows the dread of demonic oppression and God's holy wrath against human sin. Yet even in this frightening judgment, God remains completely in control. The tormenting swarm is strictly restrained by His command and is forbidden from harming those who bear God's seal on their foreheads.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Having God's seal means that we belong to Him forever. In the words of F. B. Meyer, believers know that \"neither life nor death can dissolve\" this bond of ownership. Because we belong to Christ and have eternal life, we can live free from fear even amid terrifying judgments. God watches over His people, sending His angels to guide us safely to our Father's home.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because God has full power to hold back the enemy, we can also trust Him when hardships do touch us. Whenever He allows sorrow or pain in our lives, He does so for a sufficient purpose, even if we cannot understand it yet. We can look to Him with humble confidence and trust His wise plan for our lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you belong to God give you peace when the world feels dark or frightening?",
+    "When hard times come, what helps you trust that God has a wise and good reason for what He permits?"
+   ],
+   "prayer": "Lord God, thank You that we belong to You and are kept safe in Your care. When we see evil and fearful troubles in the world, remind us that all powers are under Your sovereign command. Help us to rest in Your protection and to trust Your good purposes in every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Revelation 9:4",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Fifth Trumpet",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-fifth-trumpet"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,90 @@
+{
+ "id": "40-024-032",
+ "title": "The Lesson of the Fig Tree",
+ "refs": [
+  "Matthew 24:32-35",
+  "Mark 13:28-31",
+  "Luke 21:29-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40024032,
+   "end": 40024035,
+   "ref": "Matthew 24:32-35; Mark 13:28-31; Luke 21:29-33",
+   "ranges": [
+    [
+     40024032,
+     40024035
+    ],
+    [
+     41013028,
+     41013031
+    ],
+    [
+     42021029,
+     42021033
+    ]
+   ],
+   "title": "Words That Will Never Pass Away",
+   "key_verse": [
+    40024035,
+    40024035
+   ],
+   "reflect": [
+    {
+     "text": "When spring arrives, tender leaves on a tree show that summer is right around the corner. Jesus told His followers to look at the signs around them with that same careful attention. His warning about judgment coming upon Jerusalem came true within that very generation when the temple was destroyed. Just as He promised, His kingdom moved forward and the good news began reaching people across every nation.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Even when the world feels cold and shaken by frightening news, we are reminded that Christ is near. F. B. Meyer reminds us that Jesus is the King \"whose presence makes summer\" for those who love Him. Rather than losing heart when times are hard, we can take courage, rest in His nearness, and keep doing the King's work with quiet confidence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Leaves wither and the physical world will eventually perish, but the words of Jesus will never fail. Many critics and philosophies have tried to silence Scripture, yet God's truth outlasts every opponent and continues to transform lives around the world. Because everything Christ spoke is completely dependable, we can build our daily lives upon His unfailing promises.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need to rely more on God's unchanging promises rather than shifting worldly opinions?",
+    "How does knowing that Jesus is near encourage you to keep serving Him faithfully today?"
+   ],
+   "prayer": "Lord Jesus, thank You that Your words are dependable and will never pass away. When the world around us feels troubled, remind us that You are near. Help us to anchor our lives firmly in Your truth and to follow You with courage. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 24:32",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Rick Warren",
+     "work": "The Bible Always Survives and Always Will",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-february-7-2017.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Within a Generation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/within-generation"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,84 @@
+{
+ "id": "40-010-005",
+ "title": "The Ministry of the Twelve",
+ "refs": [
+  "Matthew 10:5-15",
+  "Mark 6:7-13",
+  "Luke 9:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40010005,
+   "end": 40010015,
+   "ref": "Matthew 10:5-15; Mark 6:7-13; Luke 9:1-6",
+   "ranges": [
+    [
+     40010005,
+     40010015
+    ],
+    [
+     41006007,
+     41006013
+    ],
+    [
+     42009001,
+     42009006
+    ]
+   ],
+   "title": "Sent Out with Power and Grace",
+   "key_verse": [
+    40010008,
+    40010008
+   ],
+   "reflect": [
+    {
+     "text": "Jesus did not keep His work to Himself. He sent the Twelve disciples out across Galilee with His own authority to preach and heal. They were no longer just watching Jesus perform miracles from the sidelines; they were now active partners in His mission. Walking so closely with the Son of God was already an undeserved gift of grace, and now they were called to share that gift with others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus told His followers to travel light, carrying no extra money or bags, and to rely on the hospitality of the communities they visited. Because they had received God's generous gifts without paying for them, they were commanded to give freely to those in need. Experiencing God's unearned kindness was meant to move them to pour out their lives in service.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Not everyone would welcome their message. When a town refused to listen, the disciples were instructed to shake the dust from their feet as a visible sign of judgment against them. Warning people that they are accountable before God points them back to the truth and can ultimately lead them to repentance.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering God's free grace to you encourage you to serve others more generously?",
+    "In what ways might Jesus be calling you to step out and actively take part in His work?"
+   ],
+   "prayer": "Lord Jesus, thank You for the generous grace You have freely given us. Teach us to step out and serve others with open hands, trusting You to provide for our needs. Help us to speak Your truth with care, so that others may turn to You.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jesus Sends out the Twelve",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jesus-sends-out-twelve"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 101: Matthew 10:5–10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-101-matthew-10-510.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

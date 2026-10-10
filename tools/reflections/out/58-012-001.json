@@ -1,0 +1,81 @@
+{
+ "id": "58-012-001",
+ "title": "A Call to Endurance",
+ "refs": [
+  "Hebrews 12:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58012001,
+   "end": 58012003,
+   "ref": "Hebrews 12:1-3",
+   "ranges": [
+    [
+     58012001,
+     58012003
+    ]
+   ],
+   "title": "Running the Race with Fixed Eyes",
+   "key_verse": [
+    58012002,
+    58012002
+   ],
+   "reflect": [
+    {
+     "text": "The Christian life is not a quick sprint. It is a long race that takes steady endurance. In this race, believers before us stand as a cloud of witnesses, showing us that God helps his people finish well. To run smoothly, we must throw off heavy sins that trip us up and slow us down, leaning on God and his church for help along the way.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Where we look decides where we go. If we stare at our own sins, our weak feelings, or our struggles, we will quickly stumble and lose heart. The enemy wants us looking inside at ourselves, whispering that our faith is too weak. But looking inward never brings true peace or safety.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "True strength comes from looking straight at Jesus. As Charles Spurgeon reminds us, \"it is not thy hold of Christ that saves thee--it is Christ.\" Jesus carried the cross and finished his work. When we keep our eyes on him instead of our own efforts, he gives rest to our souls and leads us safely to the finish line.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries or personal weaknesses tend to pull your attention away from Jesus?",
+    "How can keeping your eyes on Christ help you let go of sins that weigh you down?"
+   ],
+   "prayer": "Lord Jesus, turn our eyes away from our own fears, failures, and weak feelings. Teach us to drop every heavy weight and run our race with steady patience. Thank you for finishing your work on the cross and keeping us safe in your hands. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 28",
+     "on": "Hebrews 12:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Rachel Olsen",
+     "work": "Focus Determines Direction",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/focus-determines-direction-encouragement-for-today-jan-8-2013.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Run With Endurance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/run-endurance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

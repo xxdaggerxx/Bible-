@@ -1,0 +1,74 @@
+{
+ "id": "45-001-001",
+ "title": "Paul Greets the Saints in Rome",
+ "refs": [
+  "Romans 1:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45001001,
+   "end": 45001007,
+   "ref": "Romans 1:1-7",
+   "ranges": [
+    [
+     45001001,
+     45001007
+    ]
+   ],
+   "title": "Called to Belong to Jesus",
+   "key_verse": [
+    45001006,
+    45001006
+   ],
+   "reflect": [
+    {
+     "text": "The book of Romans brings good news to a broken world. Just as God used this message long ago to transform troubled lives, the gospel still holds the power to redeem people today. Paul was set apart to share this message, and all believers are called to belong to Jesus Christ. Being set apart means we should not hide behind fear, quietness, or comfortable routines. When we recognize our own apathy, we can turn away from it and actively speak of God's work in our lives.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Paul also writes to everyone loved by God and called to be saints. We often think of the apostles as extraordinary people who never struggled with weakness or temptation. Yet, as Charles Spurgeon wrote, they had \"the selfsame trials to endure\" that we face today. A saint is simply any believer whom God has called by grace, his kindness that we do not earn. We have the very same Spirit and the same grace available to us. As we live for Jesus each day, we can grow to be like him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or excuses sometimes keep you from actively sharing what God has done in your life?",
+    "How does knowing that early believers faced the same everyday struggles help you pursue holiness today?"
+   ],
+   "prayer": "Lord God, thank you for your gospel that transforms troubled and broken lives. Forgive us when we become comfortable or let fear keep us quiet about your work. Give us grace to face our daily struggles and help us grow more like Jesus each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 5",
+     "on": "Romans 1:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "John UpChurch",
+     "work": "Set Apart for the Gospel",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/set-apart-for-the-gospel-crosswalk-the-devotional-nov-10-2010-11639369.html"
+    },
+    "D3": {
+     "author": "PowerPoint Ministries",
+     "work": "Good News for a Broken World",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-january-26-2005-1308621.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

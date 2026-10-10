@@ -1,0 +1,76 @@
+{
+ "id": "40-021-033",
+ "title": "The Parable of the Wicked Tenants",
+ "refs": [
+  "Matthew 21:33-46",
+  "Mark 12:1-12",
+  "Luke 20:9-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40021033,
+   "end": 40021046,
+   "ref": "Matthew 21:33-46; Mark 12:1-12; Luke 20:9-18",
+   "ranges": [
+    [
+     40021033,
+     40021046
+    ],
+    [
+     41012001,
+     41012012
+    ],
+    [
+     42020009,
+     42020018
+    ]
+   ],
+   "title": "The Cornerstone of God's Kingdom",
+   "key_verse": [
+    40021042,
+    40021042
+   ],
+   "reflect": [
+    {
+     "text": "In this story, Jesus confronted the religious leaders of his day. They were supposed to guide others to God, but they failed to produce good fruit. God had shown great patience by sending messenger after messenger to them. Yet when the owner sent his beloved son, the tenants murdered him. This shocking act exposed the deep rebellion in human hearts against God's patient kindness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of their corrupt leadership, God brought judgment on those leaders. He transferred the care of his vineyard to a new covenant community made up of both Jews and Gentiles. The builders of that time rejected Jesus, but God exalted him as the sovereign cornerstone, the chief foundation stone that stands over every earthly kingdom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This parable shows us what God desires from each of us. True faith is never just talk or a religious title. Genuine faith will always show itself in daily discipleship and a life of fruitful obedience to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Does your life show the fruit of true faith and obedience to God?",
+    "In what ways are you relying on Jesus as the cornerstone of your life?"
+   ],
+   "prayer": "Lord God, thank you for your enduring patience toward us and for sending your Son. Forgive us for the ways we rebel against you. Help us to build our lives on Jesus as our cornerstone and to walk with you in faithful obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Parable of the Tenants",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/parable-tenants"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

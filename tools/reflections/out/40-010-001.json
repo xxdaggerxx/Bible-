@@ -1,0 +1,84 @@
+{
+ "id": "40-010-001",
+ "title": "The Twelve Apostles",
+ "refs": [
+  "Matthew 10:1-4",
+  "Mark 3:13-19",
+  "Luke 6:12-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40010001,
+   "end": 40010004,
+   "ref": "Matthew 10:1-4; Mark 3:13-19; Luke 6:12-16",
+   "ranges": [
+    [
+     40010001,
+     40010004
+    ],
+    [
+     41003013,
+     41003019
+    ],
+    [
+     42006012,
+     42006016
+    ]
+   ],
+   "title": "Called from Prayer on the Mountain",
+   "key_verse": [
+    42006012,
+    42006012
+   ],
+   "reflect": [
+    {
+     "text": "Before Jesus chose His twelve apostles, He spent the entire night on a quiet mountain praying to God. Even though He was the perfect Son of God, He loved speaking with His Father and praying for His people. He chose a silent place away from crowds, where nothing would interrupt Him. The cold night air and long hours did not stop Him. Jesus showed us that big decisions and new works should always begin with deep, earnest prayer.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When morning came, Jesus called to Himself the men He wanted. As Charles Spurgeon wrote, \"Jesus calleth whom he wills.\" He has the sovereign right to choose who will serve Him and where they will go. Whether our place seems small or great, it is a gift of His grace—His undeserved kindness—to have any part in His service. Those He called had to leave the valley and climb up the mountain to meet Him, drawing near to Him before doing His work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Before the apostles could preach or heal, they had to be with Jesus. We cannot do the Lord's work in our own strength or go into spiritual battles without heavenly help. We need to spend time alone with Him in prayer before we face the world each day. When we linger with Jesus, He gives us the strength and peace we need to serve others in His name.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What important decisions or responsibilities do you need to bring to God in prayer right now?",
+    "How can you set aside quiet time to be with Jesus before you start your daily work?"
+   ],
+   "prayer": "Lord Jesus, thank You for showing us how important it is to seek the Father in prayer. Draw our hearts up to You each day so we may learn from You and rest in Your presence. Give us humble and willing hearts to serve wherever You choose to place us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 10",
+     "on": "Mark 3:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 12",
+     "on": "Luke 6:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

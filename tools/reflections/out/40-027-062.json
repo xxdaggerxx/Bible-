@@ -1,0 +1,67 @@
+{
+ "id": "40-027-062",
+ "title": "The Guards at the Tomb",
+ "refs": [
+  "Matthew 27:62-66"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40027062,
+   "end": 40027066,
+   "ref": "Matthew 27:62-66",
+   "ranges": [
+    [
+     40027062,
+     40027066
+    ]
+   ],
+   "title": "Securing the Tomb",
+   "key_verse": [
+    40027065,
+    40027065
+   ],
+   "reflect": [
+    {
+     "text": "After Jesus was buried, the religious leaders asked Pilate to secure the grave. Pilate had already shown he did not consider Jesus guilty of treason by releasing His body for burial. To make sure no one could touch the tomb, the leaders placed an imperial wax seal on the heavy stone and posted armed soldiers on guard. These intense precautions answered any claim that fearful disciples stole the body or that Jesus had merely fainted. Without meaning to, the authorities provided strong historical evidence that Jesus had truly died and was locked securely inside.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet all the power of the rulers was completely useless against God. No one had forced Jesus into death against His will. As John Piper notes, Jesus laid down His life entirely of His own accord and had full authority to take it back up. While the world believed Jesus was finished, God was silently bringing life out of death in the dark. Because the risen Christ conquered the grave with an indestructible life, those who follow Him stand on solid ground and cannot lose.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the heavy security around the tomb strengthen your confidence that Jesus really rose from the dead?",
+    "Where do you need to remember that God can bring life out of situations that seem completely finished?"
+   ],
+   "prayer": "Lord Jesus, thank You for willingly laying down Your life and taking it up again. When our circumstances seem dark or hopeless, remind us of Your power over the grave. Help us to stand firm in faith, knowing that because You live, we can never truly lose. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "You Cannot Lose in the End",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/you-cannot-lose-in-the-end"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Christ's Tomb is Sealed",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/christs-tomb-sealed"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

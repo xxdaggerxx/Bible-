@@ -1,0 +1,66 @@
+{
+ "id": "58-009-001",
+ "title": "The Earthly Tabernacle",
+ "refs": [
+  "Hebrews 9:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58009001,
+   "end": 58009010,
+   "ref": "Hebrews 9:1-10",
+   "ranges": [
+    [
+     58009001,
+     58009010
+    ]
+   ],
+   "title": "Pointing the Way to Christ",
+   "key_verse": [
+    58009008,
+    58009008
+   ],
+   "reflect": [
+    {
+     "text": "The tabernacle was a special place for worship, but its physical setup showed clear limitations. Heavy curtains kept people out of the Most Holy Place, and only the high priest could enter once a year with blood. By this arrangement, the Holy Spirit was showing that direct access into God's presence was not yet fully opened under the old covenant.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The gifts, sacrifices, and washing rituals also had limits. They were external regulations that could never truly cleanse the conscience of the person worshiping. Believers in those days received God's grace by looking forward to the promised Savior, but the old system itself could not provide full access to God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The old tent and its rituals were never meant to be the final goal. Instead, the Holy Spirit used them to point ahead to Jesus. Christ accomplishes what the old covenant could only foreshadow, giving us clean hearts and open access to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing the limits of the old rituals help you value what Jesus has done for your conscience?",
+    "How can you make use of your open access to God in prayer today?"
+   ],
+   "prayer": "Lord God, thank you for making a way for us into your presence through Jesus Christ. Thank you that our hearts and consciences are cleansed not by external rules, but by his finished work. Help us to live with joyful gratitude for the free access we have to you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "What the Tabernacle Reveals",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/what-the-tabernacle-reveals"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

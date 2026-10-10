@@ -1,0 +1,66 @@
+{
+ "id": "45-011-011",
+ "title": "The Ingrafting of the Gentiles",
+ "refs": [
+  "Romans 11:11-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45011011,
+   "end": 45011024,
+   "ref": "Romans 11:11-24",
+   "ranges": [
+    [
+     45011011,
+     45011024
+    ]
+   ],
+   "title": "Supported by the Root",
+   "key_verse": [
+    45011020,
+    45011020
+   ],
+   "reflect": [
+    {
+     "text": "Paul uses the picture of an olive tree to describe God's covenant people, the family of those who belong to Him. Some natural branches were broken off because they did not believe. Non-Jewish believers, like wild olive shoots, were joined to the tree in their place. They now receive all their life and nourishment from the root of God's historic covenant promises.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this, Paul warns believers not to become proud or look down on the branches that were cut away. We did not earn our place, and we do not hold up the root. The root holds us up. We belong to God's people by faith alone, which leaves no room for boasting about ourselves.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We are told to keep in mind both the kindness and the severity of God. His severity shows when unbelief is cut off, while His kindness welcomes those who trust Him. This reminder calls us to revere the Lord deeply and continue each day in humble faith.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways are you tempted to feel proud rather than thankful for your place in God's family?",
+    "How does remembering both God's kindness and His severity help you stay humble?"
+   ],
+   "prayer": "Lord God, thank You for welcoming us into Your people through faith alone. Keep us from pride, and remind us daily that we depend entirely on Your grace. Teach us to revere Your holiness and walk humbly in Your kindness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Broken Branches",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/broken-branches"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

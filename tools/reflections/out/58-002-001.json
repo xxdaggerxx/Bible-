@@ -1,0 +1,73 @@
+{
+ "id": "58-002-001",
+ "title": "Salvation Confirmed",
+ "refs": [
+  "Hebrews 2:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58002001,
+   "end": 58002004,
+   "ref": "Hebrews 2:1-4",
+   "ranges": [
+    [
+     58002001,
+     58002004
+    ]
+   ],
+   "title": "Paying Attention to a Great Salvation",
+   "key_verse": [
+    58002001,
+    58002001
+   ],
+   "reflect": [
+    {
+     "text": "Spiritual drifting rarely happens overnight. Instead, it creeps in quietly when we become so familiar with our faith that we lose our sense of awe. Over time, we can easily take God's incredible gift of salvation for granted. Because drifting is so subtle, Scripture urges us to stay alert and hold tightly to the truth we have received.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This warning is urgent because of who spoke the message. The law given through angels was binding, and disobeying it brought just consequences. The gospel delivered by Jesus carries even greater weight and accountability. God gives us these solemn warnings to protect us, waking us up so that we stay securely anchored in our faith.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "To keep from floating away, we must regularly check our direction against God's Word. Jesus understands our human weakness and does not leave us to struggle alone. He gives us the exact help and strength we need to stay close to Him and remain on course.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what small ways might you be drifting away from God's truth without noticing it?",
+    "How can you use God's Word this week to check the direction of your spiritual life?"
+   ],
+   "prayer": "Lord Jesus, thank You for the great gift of salvation You announced and secured for us. Forgive us for the times we take Your good news for granted and begin to drift. Give us watchful hearts that stay anchored in Your Word, and help us rely on Your strength every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Christine Caine",
+     "work": "It’s So Easy To Drift",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-june-16-2021.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "So Great a Salvation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/so-great-salvation"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

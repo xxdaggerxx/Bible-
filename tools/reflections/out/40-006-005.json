@@ -1,0 +1,147 @@
+{
+ "id": "40-006-005",
+ "title": "The Lord’s Prayer",
+ "refs": [
+  "Matthew 6:5-15",
+  "Luke 11:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40006009,
+   "end": 40006009,
+   "ref": "Matthew 6:9",
+   "ranges": [
+    [
+     40006009,
+     40006009
+    ]
+   ],
+   "title": "\"Our Father in Heaven\"",
+   "key_verse": [
+    40006009,
+    40006009
+   ],
+   "reflect": [
+    {
+     "text": "True prayer begins with knowing God as our Father. Jesus invites us to come to God with the confidence of adopted children who belong to Him. When we say, \"Our Father,\" we speak to Him with simple, childlike trust. Yet we also remember that He is \"in heaven.\" His majesty lifts our hearts from quiet trust into deep reverence and wonder.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we pray that God's name be hallowed, or kept holy, we are making an earnest request. We are asking God to cause His name to be honored and praised throughout the earth. We do not pray this to persuade a reluctant God, for His own chief desire is already the honor of His name.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Instead, this petition reshapes our hearts. Our own small concerns are brought under God's great purpose. As Charles Spurgeon observed, this prayer carries the soul \"from a sense of adoption\" into worship. When we long for what God longs for, our prayers are filled with real strength and peace.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you pray, do you approach God more as a loving Father or as a distant ruler?",
+    "How does asking God to bring honor to His name change what you ask for each day?"
+   ],
+   "prayer": "Heavenly Father, thank You for welcoming us as Your own children. Help us to reverence Your holy name in everything we think, say, and do. Align our hearts with Your great glory so that our daily desires match Your kingdom. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 29",
+     "on": "Matthew 6:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "John Piper",
+     "work": "Prayer’s First Priority",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/prayers-first-priority"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40006005,
+   "end": 40006015,
+   "ref": "Matthew 6:5-15; Luke 11:1-4",
+   "ranges": [
+    [
+     40006005,
+     40006015
+    ],
+    [
+     42011001,
+     42011004
+    ]
+   ],
+   "title": "Teach Us to Pray",
+   "key_verse": [
+    42011001,
+    42011001
+   ],
+   "reflect": [
+    {
+     "text": "The disciples asked Jesus to teach them to pray after watching Him pray Himself. His holy and devoted life made them want to learn this good practice. When we come to prayer, we can ask the Master to teach us too. Jesus gives us a pattern that looks outward. We do not pray only for \"me\" and \"mine,\" but for \"us\" and \"our,\" bringing the needs of our brothers and sisters before God alongside our own.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Part of that daily reliance is asking for our daily bread. Material uncertainties often tempt us to worry and cling tightly to what we have. Yet trusting God for today's provision frees us from fear about tomorrow. When we rest in His daily faithfulness, our hearts overflow with gratitude, and we become glad to share generously with others who are in need.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "Jesus also tells us to seek forgiveness and pray against temptation. We need pardon as constantly as we need bread. What we pray with our lips, we must also pursue in our actions. While we will all face spiritual danger, we must avoid walking carelessly into temptation. As Charles Spurgeon wrote, \"prevention is better than cure.\" We watch, pray, and trust God to rescue us from evil.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does including other people in your prayers change the way you bring your needs to God?",
+    "In what areas of life do you need to actively turn away from temptation rather than testing your strength?"
+   ],
+   "prayer": "Lord Jesus, teach us how to pray with humble hearts and unselfish love for others. Give us trust in Your daily care so that we do not worry about tomorrow. Guard our steps from dangerous paths, and deliver us from the grip of evil. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 9",
+     "on": "Luke 11:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Luke 11:1",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D5": {
+     "author": "Ashley Moore",
+     "work": "Trusting God for Daily Provision",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/daily-provision-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

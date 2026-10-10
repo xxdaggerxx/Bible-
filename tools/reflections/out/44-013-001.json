@@ -1,0 +1,66 @@
+{
+ "id": "44-013-001",
+ "title": "Paul’s First Missionary Journey Begins",
+ "refs": [
+  "Acts 13:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44013001,
+   "end": 44013003,
+   "ref": "Acts 13:1-3",
+   "ranges": [
+    [
+     44013001,
+     44013003
+    ]
+   ],
+   "title": "Set Apart for the Work",
+   "key_verse": [
+    44013002,
+    44013002
+   ],
+   "reflect": [
+    {
+     "text": "The church in Antioch shows us what a healthy spiritual community looks like. Its leaders were deeply devoted to God and served Him faithfully together. They spent dedicated time worshiping the Lord and fasting, setting aside meals to focus entirely on Him. Because they gave God their full attention, they were positioned to hear the Holy Spirit speak.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Holy Spirit told the leaders to set apart Barnabas and Saul for a specific assignment. This call was not rushed. God patiently prepares His servants over many years before releasing them into their special work. His timing is careful, shaping people long before sending them out.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "After more fasting and prayer, the leaders placed their hands on Barnabas and Saul and sent them off. This commissioning marked the start of pioneering missionary work to spread the gospel to new lands. A community devoted to God became the launching place for sharing the good news.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you make quiet time to worship and listen for the Holy Spirit's guidance?",
+    "How does knowing that God patiently prepares His servants help you trust His timing?"
+   ],
+   "prayer": "Lord, help us build healthy communities that are fully devoted to You. Teach us to quiet our hearts in worship and prayer so we can hear Your Spirit speak. Give us patience as You prepare us, and help us follow wherever You lead. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 242: Acts 13:1–3",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-242-acts-13-13.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

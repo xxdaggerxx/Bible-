@@ -1,0 +1,77 @@
+{
+ "id": "40-024-026",
+ "title": "The Return of the Son of Man",
+ "refs": [
+  "Matthew 24:26-31",
+  "Mark 13:24-27",
+  "Luke 21:25-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 42021028,
+   "end": 42021028,
+   "ref": "Luke 21:28",
+   "ranges": [
+    [
+     42021028,
+     42021028
+    ]
+   ],
+   "title": "\"Lift Up Your Heads\"",
+   "key_verse": [
+    42021028,
+    42021028
+   ],
+   "reflect": [
+    {
+     "text": "When scary things happen in the world, people often grow anxious. Yet Jesus tells us that hard times and global troubles are to be expected before He returns. Because of this, believers do not need to hide in fear, chase conspiracy theories, or be shaken by dark headlines. God gave us Bible prophecy so that we would stay alert instead of being caught off guard.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Human rulers and science cannot give us lasting hope. Our real hope rests in the return of Jesus Christ. We are not struggling to earn a victory, but living out of the victory Jesus already won for us on the cross. Surrounded by His steady love, we can stand tall and lift our heads with joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of pulling away from others, times of crisis give us great opportunities to tell people the good news. We can stay faithfully on mission, pointing people toward the Savior whose rescue is drawing near.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When global news feels overwhelming, do you find yourself reacting with fear or looking to Jesus in hope?",
+    "How can you use today's troubled times as an opportunity to share God's good news with someone else?"
+   ],
+   "prayer": "Lord Jesus, thank You that our future is secure in Your hands and that You already won the victory. Keep our hearts from fear and panic when the world is shaken. Help us to lift our heads with joy and faithfully tell others about Your great rescue. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Scotty Smith",
+     "work": "Stand Up and Lift Up Your Heads",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/scotty-smith/stand-up-and-lift-up-your-heads/"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "How Can it Be “Gloriously Dark”?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-september-11-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "54-002-001",
+ "title": "A Call to Prayer",
+ "refs": [
+  "1 Timothy 2:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54002001,
+   "end": 54002008,
+   "ref": "1 Timothy 2:1-8",
+   "ranges": [
+    [
+     54002001,
+     54002008
+    ]
+   ],
+   "title": "Coming to God Through Christ in Prayer",
+   "key_verse": [
+    54002005,
+    54002005
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to pray for all people, especially our governing leaders. Even when political hostility, dishonesty, and anger threaten to tear society apart, we are told to pray for those in authority whether we agree with them or not. Mocking and attacking leaders tears a community down, but praying for them and speaking blessing builds it up. True healing and real answers to moral decay do not come from political parties, but through Jesus Christ and spiritual renewal.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can bring these prayers to God because of Jesus. Because of our sin, we cannot approach a holy God on our own. In the past, human priests and animal sacrifices were only temporary and could never fully wash away sin. Jesus is our only mediator, a go-between who brings us together with God because He is both fully God and fully human. He gave Himself as a ransom, paying the full price for our sins through His death.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Jesus now continually speaks to the Father for us, we can pray with bold confidence. Instead of fighting with anger or dissension, we are called to lift clean hands in peace. As we pray for our leaders and live faithful Christian lives, we point those around us to the savior who desires everyone to know the truth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you replace political frustration or complaints with regular prayer for your leaders?",
+    "How does knowing that Jesus stands as your mediator give you confidence when you pray?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus to be our mediator and to pay the ransom for our sins. Please give us hearts that pray for our leaders rather than tearing them down with anger. Heal our society and draw many people to know the truth found in Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jeff Schreve",
+     "work": "A House Divided",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-may-26-2017.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Christ Our Mediator",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/christ-our-mediator"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,122 @@
+{
+ "id": "52-001-001",
+ "title": "Greetings to the Thessalonians",
+ "refs": [
+  "1 Thessalonians 1:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 52001002,
+   "end": 52001004,
+   "ref": "1 Thessalonians 1:2-4",
+   "ranges": [
+    [
+     52001002,
+     52001004
+    ]
+   ],
+   "title": "\"Your Work of Faith and Labor of Love\"",
+   "key_verse": [
+    52001003,
+    52001003
+   ],
+   "reflect": [
+    {
+     "text": "When Paul prayed for his friends, he continually gave thanks to God for the good changes in their lives. He knew that every good fruit in a believer is a gift from God. Real faith is never just ideas in our heads. It moves us to obey God and produce good works. Serving other people can bring friction, tiredness, and relational strain, but our love for God acts like an engine that keeps us working sacrificially. Confident hope in Jesus gives us the endurance we need to stay steady through hard trials without giving up.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Paul also reminded these believers that they were chosen by God, which means God picked them to belong to Him. Sometimes we worry and wonder whether we are truly chosen. Charles Spurgeon explained that we discover this only by \"looking unto Jesus.\" We do not need to solve deep mysteries first. We simply go straight to Christ as sinners, trust His cross, and give our lives to Him. When you place your trust in Jesus, you can be sure that God has chosen you and loves you with an everlasting love.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does your love for Jesus help you keep serving others when ministry feels tiring?",
+    "When you wonder about God's love for you, how does looking straight to Jesus give you peace?"
+   ],
+   "prayer": "Father, thank You for the gifts of faith, love, and hope that come from Your hand. When serving others feels weary, let our love for You be our strength to keep going. Help us fix our eyes on Jesus, resting securely in the promise of His cross. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 17",
+     "on": "1 Thessalonians 1:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Prayers of Thanksgiving",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/prayers-of-thanksgiving"
+    },
+    "D4": {
+     "author": "Jessica Van Roekel",
+     "work": "3 Keys to Serving God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/3-keys-to-serving-god-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 52001001,
+   "end": 52001010,
+   "ref": "1 Thessalonians 1:1-10",
+   "ranges": [
+    [
+     52001001,
+     52001010
+    ]
+   ],
+   "title": "Waiting for the Deliverer",
+   "key_verse": [
+    52001010,
+    52001010
+   ],
+   "reflect": [
+    {
+     "text": "The believers in Thessalonica turned away from dead stone idols to serve the living God and wait for His Son from heaven. Looking forward to Christ's return is a blessed and joyful hope. It lifts our minds above the dark troubles of this world and links our present lives to God's glorious future. Remembering that Jesus will come back comforts our hearts when we face loss, and it urges us to keep our lives pure and watchful for Him right now.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Some people think that looking for the return of Jesus is merely a dreamy thought that keeps us from practical duties. Yet those who live with this anticipation are often the most earnest and devoted workers of all. When we begin each day thinking that Jesus could return before nightfall, it motivates us to make the most of every hour. Eagerly waiting for our Savior does not make us idle. Instead, it fills our daily service with energy and purpose as we seek to honor Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the promise of Jesus returning change the way you face difficulties today?",
+    "In what practical ways can the hope of Christ's return make you more watchful and active in serving God?"
+   ],
+   "prayer": "Lord Jesus, thank You for the certain promise that You will return from heaven. Lift our eyes above the worries of this world, and fill our hearts with patient expectation. Help us to stay awake, live purely, and serve You faithfully until the day You come. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Thessalonians 1:10",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

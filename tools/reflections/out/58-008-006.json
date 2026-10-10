@@ -1,0 +1,84 @@
+{
+ "id": "58-008-006",
+ "title": "The New Covenant",
+ "refs": [
+  "Hebrews 8:6-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 58008006,
+   "end": 58008013,
+   "ref": "Hebrews 8:6-13",
+   "ranges": [
+    [
+     58008006,
+     58008013
+    ]
+   ],
+   "title": "A Better Covenant of Grace",
+   "key_verse": [
+    58008006,
+    58008006
+   ],
+   "reflect": [
+    {
+     "text": "Under the old agreement, animal sacrifices could not completely remove sin; they only served as reminders of human failure. The old law showed God's holy standard, but it could not provide internal power to obey. In time, that ancient system began to fade away, making room for the perfect work of Jesus, who established a lasting agreement through His own blood.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus now serves as our High Priest under a far better covenant built on better promises. As F. B. Meyer observed, this new arrangement focuses on the gracious \"I wills\" of God rather than human effort. Instead of writing commands on stone tablets, the Lord writes His desires directly upon our minds and hearts. Through Christ, every believer enjoys close, personal fellowship with God.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Best of all, Jesus secures full and permanent pardon for all who trust in Him. God promises to forgive our wrongs and remember our sins no more. Because we are saved entirely by Christ's grace, God's undeserved kindness, we can live with quiet confidence and joyfully tell others that Jesus is the only Savior.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God has written His desires on your heart change the way you seek to obey Him?",
+    "In what ways does the promise that God remembers your sins no more bring peace to your conscience today?"
+   ],
+   "prayer": "Lord Jesus, thank You for establishing a new covenant through Your own blood and winning our lasting forgiveness. Thank You for giving us new hearts and drawing us into a personal relationship with You. Help us to rest in Your grace each day and share Your good news with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hebrews 8:13",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Better Promises for a Better Covenant",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/better-promises-for-a-better-covenant"
+    },
+    "D3": {
+     "author": "Sam Storms",
+     "work": "10 Things You Should Know about the New Covenant",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/10-things-you-should-know-about-the-new-covenant.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

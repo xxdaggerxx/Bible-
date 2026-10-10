@@ -1,0 +1,66 @@
+{
+ "id": "44-021-001",
+ "title": "Paul’s Journey to Jerusalem",
+ "refs": [
+  "Acts 21:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44021001,
+   "end": 44021007,
+   "ref": "Acts 21:1-7",
+   "ranges": [
+    [
+     44021001,
+     44021007
+    ]
+   ],
+   "title": "Deep Bonds and Prayer on the Shore",
+   "key_verse": [
+    44021005,
+    44021005
+   ],
+   "reflect": [
+    {
+     "text": "Travel does not always go in a straight line. When Paul's ship stopped in Tyre to unload cargo, God gave him an unexpected blessing during the delay. Paul searched for and found believers there who welcomed him warmly. Even though earlier hard times had scattered these Christians, they opened their homes and showed genuine hospitality.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we share faith in Jesus, deep love can form very quickly. In just one week, Paul and this local group of believers built an affectionate bond of mutual care. When the time came to leave, whole families walked together out of the city. Parents and children knelt down side by side on the sand to pray before Paul stepped onto the ship.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The footprints they left on that beach soon washed away, but their prayers remained. Faithful intercession, which simply means praying for someone else, holds lasting spiritual power. God often uses unplanned stops and the loving support of other Christians to strengthen us for whatever lies ahead.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Has God ever surprised you with a blessing or new friendship during an unexpected delay?",
+    "How can you and your family lift up other believers in faithful prayer this week?"
+   ],
+   "prayer": "Lord, thank you for placing caring believers along our journey. Teach us to welcome others with open hearts and to pray earnestly for those we love. We trust that our prayers for one another carry lasting power in your hands. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 276: Acts 21:1–6",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-276-acts-21-16.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

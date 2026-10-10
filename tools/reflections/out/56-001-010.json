@@ -1,0 +1,66 @@
+{
+ "id": "56-001-010",
+ "title": "Correcting False Teachers",
+ "refs": [
+  "Titus 1:10-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 56001010,
+   "end": 56001016,
+   "ref": "Titus 1:10-16",
+   "ranges": [
+    [
+     56001010,
+     56001016
+    ]
+   ],
+   "title": "True Purity and Christian Freedom",
+   "key_verse": [
+    56001015,
+    56001015
+   ],
+   "reflect": [
+    {
+     "text": "In Crete, false teachers were confusing the church with human rules about ritual purity. They believed spiritual cleanliness came from following external taboos and manmade regulations. But Jesus fulfilled and set aside those old ceremonial distinctions. Through Christ, all created things are made clean and good when we receive them with thankful hearts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When people have corrupted minds and consciences, they miss what God's kingdom is truly about. Instead of trusting God, they fixate on outward restrictions. Because of the freedom Christ won for us, believers are free to make personal choices in matters that God has left open. We must never bind the consciences of our brothers and sisters by forcing our own personal choices onto them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "All of us must stay alert to our own natural pull toward legalism, which means trying to earn God's favor by keeping outside rules. We must remember the liberty bought by Jesus. True purity is a gift from Christ, not something we produce by following lists of what to avoid.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to judge other believers by manmade rules instead of trusting in God's grace?",
+    "How can remembering the freedom Christ bought help you receive God's gifts with thanksgiving today?"
+   ],
+   "prayer": "Lord, thank you for setting us free from human regulations through Jesus Christ. Guard our hearts against legalism, and keep us from judging others where you have given freedom. Help us to enjoy your good gifts with pure and thankful hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Pure Things for the Pure",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/pure-things-for-the-pure"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

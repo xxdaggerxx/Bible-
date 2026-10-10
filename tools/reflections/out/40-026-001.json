@@ -1,0 +1,75 @@
+{
+ "id": "40-026-001",
+ "title": "The Plot to Kill Jesus",
+ "refs": [
+  "Matthew 26:1-5",
+  "Mark 14:1-2",
+  "Luke 22:1-2",
+  "John 11:45-57"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40026001,
+   "end": 40026005,
+   "ref": "Matthew 26:1-5; Mark 14:1-2; Luke 22:1-2; John 11:45-57",
+   "ranges": [
+    [
+     40026001,
+     40026005
+    ],
+    [
+     41014001,
+     41014002
+    ],
+    [
+     42022001,
+     42022002
+    ],
+    [
+     43011045,
+     43011057
+    ]
+   ],
+   "title": "God's Plan Behind the Plot",
+   "key_verse": [
+    40026002,
+    40026002
+   ],
+   "reflect": [
+    {
+     "text": "Jesus told His disciples straight out what was coming. He warned them that He would be handed over and crucified during the Passover feast. Meanwhile, the religious leaders were gathering in secret to plan His death. Jesus was speaking the truth, and many people were listening to Him. Because of this, the leaders worried about losing their power and their standing with the Roman rulers. They wanted Him gone, but they were afraid of starting a riot if they arrested Him openly during the crowded festival.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It might look like wicked schemers were completely in charge of the story. Yet behind all their secret meetings, God was working out His own purpose. These painful events were fulfilling what the Scriptures had long predicted. Human enemies plotted against Jesus, but God sovereignly directed every detail that led to the cross. Even in these dark moments, everything moved forward according to God's loving plan to bring us salvation.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God remained in control bring you comfort during confusing or difficult times?",
+    "When human plans seem threatening, how can we remember that God is still working out His good purpose?"
+   ],
+   "prayer": "Lord God, thank You for guiding all things according to Your loving plan. Help us trust You when circumstances seem frightening or out of control. Remind our hearts that Jesus willingly walked toward the cross to save us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "The Plot to Kill Jesus",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-april-8-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

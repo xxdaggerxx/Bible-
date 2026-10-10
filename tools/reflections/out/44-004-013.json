@@ -1,0 +1,127 @@
+{
+ "id": "44-004-013",
+ "title": "The Name Forbidden",
+ "refs": [
+  "Acts 4:13-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 44004013,
+   "end": 44004013,
+   "ref": "Acts 4:13",
+   "ranges": [
+    [
+     44004013,
+     44004013
+    ]
+   ],
+   "title": "\"They Had Been with Jesus\"",
+   "key_verse": [
+    44004013,
+    44004013
+   ],
+   "reflect": [
+    {
+     "text": "Peter and John were ordinary men without special schooling. Yet when they stood before the council, they spoke with remarkable courage. The religious leaders quickly saw why: these men had spent time with Jesus. An active, personal relationship with Jesus changes us from the inside out, making His presence clear to those around us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "A true Christian life is like a living picture of Christ. As Charles Spurgeon noted, a believer should be a \"striking likeness of Jesus Christ.\" People can see Jesus in us through our boldness, our loving spirit, and our patience. When we pray earnestly, submit to God, and forgive those who hurt us, our daily lives show that we belong to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Real faith is never just an empty claim. When we walk closely with the Lord each day, our words and conduct reflect His heart. The people around us will be able to tell that we have truly spent time with Jesus.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Can the people in your daily life tell from your actions that you spend time with Jesus?",
+    "Which quality of Jesus, such as His patience or His forgiveness, can you show to someone today?"
+   ],
+   "prayer": "Lord Jesus, draw us close to You every day. Teach us to speak with Your courage and treat others with Your gentle kindness. Help our lives show the world that we have been with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 11",
+     "on": "Acts 4:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "They Had Been With Jesus",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/they-had-been-with-jesus-1323750.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 44004013,
+   "end": 44004022,
+   "ref": "Acts 4:13-22",
+   "ranges": [
+    [
+     44004013,
+     44004022
+    ]
+   ],
+   "title": "Obeying God First",
+   "key_verse": [
+    44004019,
+    44004019
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to be peaceful citizens and respect earthly authorities in daily life. Most of the time, we honor God by obeying the laws of our land. Yet the rulers in Jerusalem commanded Peter and John to stop speaking about Jesus. This human demand directly opposed what God had commanded the apostles to do.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When human rulers demand that we disobey the Lord, our duty is clear. Our first allegiance belongs to Christ, who is Lord over all earthly powers. We must obey God rather than people whenever human laws forbid what God commands or command what He forbids.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Standing firm for God can bring threats and hardship, just as it did for the apostles. Putting Christ first requires prayerful wisdom and courage so that we remain faithful even when under pressure.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there situations where pleasing people tempts you to disobey what God has commanded?",
+    "How can you ask God for wisdom and courage to keep Christ as your highest authority?"
+   ],
+   "prayer": "Heavenly Father, You are the Lord over all rulers on earth. Help us to respect our leaders, but give us the courage to always put You first. Grant us wisdom and strength to obey You no matter what pressure we face. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "When Disobedience Is Required",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/when-disobedience-required"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

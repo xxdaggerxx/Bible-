@@ -1,0 +1,111 @@
+{
+ "id": "40-026-047",
+ "title": "The Betrayal of Jesus",
+ "refs": [
+  "Matthew 26:47-56",
+  "Mark 14:43-52",
+  "Luke 22:47-53",
+  "John 18:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40026047,
+   "end": 40026056,
+   "ref": "Matthew 26:47-56; Mark 14:43-52; Luke 22:47-53; John 18:1-14",
+   "ranges": [
+    [
+     40026047,
+     40026056
+    ],
+    [
+     41014043,
+     41014052
+    ],
+    [
+     42022047,
+     42022053
+    ],
+    [
+     43018001,
+     43018014
+    ]
+   ],
+   "title": "Jesus in Control in the Garden",
+   "key_verse": [
+    40026047,
+    40026047
+   ],
+   "reflect": [
+    {
+     "text": "Even in the middle of a dark, armed crowd, Jesus remained in complete command of every event. As Greg Laurie observes, Christ stepped forward purposefully to protect His followers and fulfill the Scriptures. He offered Himself to His enemies and commanded them to let His disciples go. Here we see the deep love of the Good Shepherd, who surrendered Himself so that His people could go completely free.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "By contrast, the disciples reacted in human weakness and panic. Peter struck out with a physical weapon in fleshly anger, forgetting that human hostility ruins our Christian witness instead of serving God. Soon after, all the disciples forgot their bold promises to die with Him, and they deserted Him in fear. Left to ourselves, we are just as frail and easily frightened as they were.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "This night also warns us against false loyalty. Judas pretended affection with a kiss while betraying his Master. We must examine our own hearts, making sure our Christian life is not just an empty show while we live carelessly. We need the Holy Spirit's grace to make our cowardly hearts brave and keep our devotion sincere.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel threatened or stressed, do you rely on human anger or trust that God remains in control?",
+    "How can you practice sincere, wholehearted devotion to Jesus instead of just going through outward motions?"
+   ],
+   "prayer": "Lord Jesus, thank You for stepping forward to protect us and laying down Your life so we could go free. Forgive us for the moments when we react in anger, make shallow promises, or run away in fear. Please fill us with Your Holy Spirit, making our love sincere and our faith steadfast in every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 25",
+     "on": "Luke 22:48",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 26",
+     "on": "John 18:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 27",
+     "on": "Matthew 26:56",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Love Worth Finding",
+     "work": "Wrong Weapon. Wrong Strength. Wrong Attitude.",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-november-22-2025.html"
+    },
+    "D5": {
+     "author": "Greg Laurie",
+     "work": "Jesus Is Arrested",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-april-11-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "66-007-001",
+ "title": "144,000 Sealed",
+ "refs": [
+  "Revelation 7:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66007001,
+   "end": 66007008,
+   "ref": "Revelation 7:1-8",
+   "ranges": [
+    [
+     66007001,
+     66007008
+    ]
+   ],
+   "title": "Marked and Protected by God",
+   "key_verse": [
+    66007003,
+    66007003
+   ],
+   "reflect": [
+    {
+     "text": "In the book of Revelation, the scenes of cosmic judgment pause for a moment. God stops the action to answer an important question: who can endure His holy wrath? Four angels hold back the winds of destruction from the land and sea until God's servants receive a special mark on their foreheads.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This divine seal shows God's true ownership of His people. Being marked by Him means that His servants are kept completely safe from His final wrath. The passage numbers these people as 144,000. This number represents the complete spiritual army of God, gathered together to encompass all who trust in Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because we belong to God and have His seal, we do not need to dread what is to come. While God's judgment against evil is real and serious, followers of Jesus can look ahead with peaceful confidence rather than fear.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God owns and protects His people change the way you think about the future?",
+    "What helps you face the thought of God's judgment with confidence rather than fear?"
+   ],
+   "prayer": "Lord God, thank You for claiming us as Your own and keeping us safe from Your wrath. When the world feels uncertain, remind us that we belong to You. Please fill our hearts with confidence as we place all our trust in Jesus.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Sealing the Servants of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sealing-the-servants-of-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

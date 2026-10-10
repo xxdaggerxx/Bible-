@@ -1,0 +1,66 @@
+{
+ "id": "62-001-001",
+ "title": "The Word of Life",
+ "refs": [
+  "1 John 1:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 62001001,
+   "end": 62001004,
+   "ref": "1 John 1:1-4",
+   "ranges": [
+    [
+     62001001,
+     62001004
+    ]
+   ],
+   "title": "The Tangible Word of Life",
+   "key_verse": [
+    62001003,
+    62001003
+   ],
+   "reflect": [
+    {
+     "text": "The Christian faith does not rest on empty words or made-up ideas. John tells us that the message began with Christ and was carried on by eyewitnesses. The apostles heard Jesus speak, saw Him with their own eyes, and touched Him with their hands. Faith in Jesus is rooted in this solid, firsthand witness to the Word of life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Down through the centuries, this proclamation has spread across the world to reach millions of people. It invites us into fellowship, which means sharing a close bond with God the Father, His Son, and fellow believers. Because this message brings eternal life, we are urged to examine our own hearts and see whether we have truly accepted it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we receive this message, our lives begin to show it. We are called to actively share Christ in our daily routines. We can proclaim Him by speaking words of encouragement and by serving others through tangible, practical actions.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you truly accepted the life-changing message of Jesus for yourself?",
+    "What is one practical action or encouraging word you can offer someone today to show Christ's love?"
+   ],
+   "prayer": "Lord God, thank You that our faith rests on the real testimony of those who walked with Jesus. Help us to hold firmly to this message of life and joy. Guide our speech and our daily actions so that others may see Your love through us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Mel Lawrenz",
+     "work": "How to Live the Bible — More Than Words",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/blog/2021/08/how-to-live-the-bible-more-than-words/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

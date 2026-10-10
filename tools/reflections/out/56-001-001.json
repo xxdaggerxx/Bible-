@@ -1,0 +1,67 @@
+{
+ "id": "56-001-001",
+ "title": "Paul’s Greeting to Titus",
+ "refs": [
+  "Titus 1:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 56001001,
+   "end": 56001004,
+   "ref": "Titus 1:1-4",
+   "ranges": [
+    [
+     56001001,
+     56001004
+    ]
+   ],
+   "title": "A Sure Hope and True Faith",
+   "key_verse": [
+    56001002,
+    56001002
+   ],
+   "reflect": [
+    {
+     "text": "Paul begins by writing about the faith shared by God's people and the knowledge of the truth that leads to godliness. Real faith and knowledge go hand in hand. The faith that trusts God is the same gift shared by believers across all ages. True knowledge is not just facts in our heads or human guesses. It is discovering God's ways. When we know God's truth, it changes our hearts and leads us to live a reverent life that reflects Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This godly life rests on the steady hope of eternal life. Worldly hope is often just wishful thinking, but Christian hope is a quiet certainty. It does not rest on our feelings, but on God Himself, who cannot lie. God does not promise that all our earthly wishes will come true, but He does promise everlasting life with Christ. Resting on His faithful word takes away our fear of death and gives us lasting peace.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does learning God's truth help you grow in godliness rather than just head knowledge?",
+    "Are you basing your hope on God's unbreakable promise of eternal life, or on temporary earthly wishes?"
+   ],
+   "prayer": "Lord God, thank You that Your truth leads us to know You and live godly lives. Help us build our lives on Your unbreakable promise of eternal life rather than our own passing desires. Fill us with peace as we trust in You, the God who never lies. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Titus 1:1",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Oyewole Akande",
+     "work": "Christian, Is Your Hope Defined by God or Your Desires?",
+     "site": "The Gospel Coalition",
+     "url": "https://africa.thegospelcoalition.org/article/christian-is-your-hope-defined-by-god-or-your-desires/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

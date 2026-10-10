@@ -1,0 +1,66 @@
+{
+ "id": "42-023-006",
+ "title": "Jesus before Herod",
+ "refs": [
+  "Luke 23:6-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42023006,
+   "end": 42023012,
+   "ref": "Luke 23:6-12",
+   "ranges": [
+    [
+     42023006,
+     42023012
+    ]
+   ],
+   "title": "The Danger of a Hardened Heart",
+   "key_verse": [
+    42023009,
+    42023009
+   ],
+   "reflect": [
+    {
+     "text": "Herod was glad to see Jesus, but only because he was curious and hoped to watch Him perform a miracle. He asked Jesus many questions, yet Jesus answered nothing. The Lord met him with complete silence because He knew the king's shallow motives and saw that Herod had no desire to repent, which means turning away from wrong and returning to God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Earlier in his life, Herod had actually enjoyed listening to John the Baptist. That changed when John confronted Herod about his personal sin. Instead of repenting, Herod chose to keep his sin and excuse it. When we persistently make excuses and hold on to what is wrong, our conscience slowly goes numb and our heart hardens against the truth.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Herod's encounter with Jesus is a serious warning for us. We must not treat Christ with mere curiosity while ignoring what He asks of us. When God shows us our sin, we need to turn away from it quickly so that our hearts remain soft and open to His voice.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there sins in your life that you have been excusing rather than confessing to God?",
+    "What helps you keep your heart soft and willing to obey Jesus?"
+   ],
+   "prayer": "Lord Jesus, please keep our hearts from becoming numb to Your truth. Help us to turn away from our sins quickly instead of making excuses for them. Give us humble hearts that truly listen to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "Hardened by Sin’s Deceit",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-february-3-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

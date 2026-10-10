@@ -1,0 +1,87 @@
+{
+ "id": "44-013-013",
+ "title": "In Pisidian Antioch",
+ "refs": [
+  "Acts 13:13-41"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44013013,
+   "end": 44013041,
+   "ref": "Acts 13:13-41",
+   "ranges": [
+    [
+     44013013,
+     44013041
+    ]
+   ],
+   "title": "God's Sure Promise in Christ",
+   "key_verse": [
+    44013039,
+    44013039
+   ],
+   "reflect": [
+    {
+     "text": "When God raised up David as king, he chose someone others easily overlooked. David returned to the quiet work of watching sheep, which became God's training ground for his character. God still looks at our hearts today. Even when our daily routines feel small or unnoticed, we can take comfort knowing that God hand-picks us to serve him.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "David served God's purpose in his generation, and God calls us to do the same. We do not need to chase every changing trend in the world. Our lives are firmly anchored in what Jesus did on the cross and look forward to his coming kingdom. God's covenant mercies are entirely sure. Unlike human promises, God never takes back what he has pledged to his people.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because Jesus rose from the dead, we receive full forgiveness through him. The Bible says that everyone who believes is justified, which means God declares us completely right with himself. As Charles Spurgeon noted, faith brings us a present justification. We are fully pardoned right now, with no guilt left against us. Knowing we are already accepted gives us joy to live for Jesus today.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God notices your quiet faithfulness change how you view your daily routines?",
+    "How does the truth that God completely pardons you right now bring you peace today?"
+   ],
+   "prayer": "Father, thank you for choosing us and guiding us through our everyday routines. We praise you that your promises in Jesus are unfailing and completely dependable. Thank you for forgiving our sins and accepting us right now through faith in Christ. Help us to serve your purpose faithfully in our generation. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 15",
+     "on": "Acts 13:39",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 27",
+     "on": "Acts 13:34",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Harry Reeder",
+     "work": "The Untimely Church",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/untimely-church"
+    },
+    "D4": {
+     "author": "Lysa TerKeurst",
+     "work": "If You Feel Overlooked or Underappreciated",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-may-11-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

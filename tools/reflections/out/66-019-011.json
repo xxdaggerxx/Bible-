@@ -1,0 +1,75 @@
+{
+ "id": "66-019-011",
+ "title": "The Rider on the White Horse",
+ "refs": [
+  "Revelation 19:11-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66019011,
+   "end": 66019016,
+   "ref": "Revelation 19:11-16",
+   "ranges": [
+    [
+     66019011,
+     66019016
+    ]
+   ],
+   "title": "The Faithful King Who Suffered for Us",
+   "key_verse": [
+    66019016,
+    66019016
+   ],
+   "reflect": [
+    {
+     "text": "Earthly leaders often fail us, but the rider on the white horse is completely dependable and true. Jesus is the King of kings, yet He is entirely different from any human ruler. People often expect rulers to seek worldly power and political control, but Jesus showed His true royal nature by choosing to lay down His life to rescue His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This mysterious warrior is the Word of God returning with supreme authority to bring righteous judgment. His blood-stained robe gives us a sobering reminder that our final Judge came first as our suffering Savior. Even a Roman soldier recognized who Jesus truly was not through royal pageantry, but by watching Him die on the cross.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "While judgment waits for those who reject His grace, this warrior-king warmly receives anyone who repents with a humble heart. Our faith is unique because our supreme King voluntarily suffered to redeem us, paying the cost to bring us back to God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus is completely faithful change how you trust Him compared to human leaders?",
+    "How does remembering that your future Judge is also the Savior who died for you bring you peace?"
+   ],
+   "prayer": "Lord Jesus, You are the King of kings, perfectly faithful and true. Thank You for choosing to lay down Your life to rescue us before You return in power. Please help us to turn away from our sin and rest humbly in Your grace every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "The White Horse",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/the-white-horse-one-year-devotions-for-men-july-12.html"
+    },
+    "D2": {
+     "author": "Lisa Harper",
+     "work": "One of These Things Is Not Like the Other Ones: A Devotion on Good Friday and Easter",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/learn/voices/king-of-kings-easter-devotional/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

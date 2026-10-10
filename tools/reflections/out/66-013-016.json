@@ -1,0 +1,66 @@
+{
+ "id": "66-013-016",
+ "title": "The Mark of the Beast",
+ "refs": [
+  "Revelation 13:16-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66013016,
+   "end": 66013018,
+   "ref": "Revelation 13:16-18",
+   "ranges": [
+    [
+     66013016,
+     66013018
+    ]
+   ],
+   "title": "Wisdom, Ownership, and God's Design",
+   "key_verse": [
+    66013018,
+    66013018
+   ],
+   "reflect": [
+    {
+     "text": "Reading about the mark of the beast often makes people feel anxious or afraid. Yet in Scripture, marks are about ownership. They show who belongs to whom. The beast tries to copy God by marking his followers, but believers in Jesus are already securely sealed by the Holy Spirit. Since we belong safely to God for eternity, we do not need to live in dread. Knowing we bear the Lord's name can guide us to live holy lives for Him every day.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "John then invites us to use wisdom to understand the number of the beast. God has placed mathematical order throughout the physical world, from the movements of planets to our own genetics. In Scripture, God also uses numbers with purpose to teach spiritual truths. These deliberate patterns remind us that God's Word is carefully designed, not random. Instead of being confused, we are invited to look at these numbers with the wisdom and discernment God gives us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you are sealed by the Holy Spirit bring you peace instead of fear?",
+    "In what ways can you see God's careful order and wisdom at work in your life today?"
+   ],
+   "prayer": "Lord, thank You for sealing us with Your Holy Spirit and giving us security in Christ. Help us to rest in Your ownership rather than being driven by fear. Give us Your wisdom to understand Your Word and trust Your orderly design. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Do You Know About God’s Numerical Symbolism?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-july-16-2023.html"
+    },
+    "D2": {
+     "author": "Jen Wilkin",
+     "work": "Don’t Fear the Marks in Revelation",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/fear-marks-revelation/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

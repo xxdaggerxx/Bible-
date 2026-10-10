@@ -1,0 +1,135 @@
+{
+ "id": "58-010-001",
+ "title": "Christ’s Perfect Sacrifice",
+ "refs": [
+  "Hebrews 10:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 58010014,
+   "end": 58010014,
+   "ref": "Hebrews 10:14",
+   "ranges": [
+    [
+     58010014,
+     58010014
+    ]
+   ],
+   "title": "\"He has made perfect for all time\"",
+   "key_verse": [
+    58010014,
+    58010014
+   ],
+   "reflect": [
+    {
+     "text": "Jesus offered himself on the cross once, and that single sacrifice is completely sufficient. We do not earn God's acceptance through our own tears, pleading, or moral effort. Instead, we must humble ourselves and trust only in what Jesus did. Because his work is finished forever, we only need to be saved once. Scripture never speaks of repeating salvation, as though Christ had to suffer and die all over again.",
+     "sources": [
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "When you put your faith in Christ, God instantly justifies you, which means he clothes you in clean spiritual robes and forgives you fully. Being made perfect does not mean we never make mistakes in this life. Rather, it means God never counts our sins against us anymore. At the same time, we are being sanctified, which is the lifelong work of God changing our hearts to make us holy. Our lingering weaknesses do not disqualify us. When we stumble, we can confess our sins quickly, receive cleansing, and keep walking with him.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever worry that your daily weaknesses undo your standing before God?",
+    "How does knowing that Jesus secured your forgiveness once for all help you say no to sin today?"
+   ],
+   "prayer": "Lord Jesus, thank you for paying the full price for our sins through your one sacrifice on the cross. Help us to rest in the complete forgiveness you purchased for us. When we stumble, give us humble hearts to turn back to you quickly and follow you in holiness. Amen.",
+   "sources": {
+    "D3": {
+     "author": "John Piper",
+     "work": "Complete Assurance for Incomplete People",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/complete-assurance-for-incomplete-people"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "You Only Need to Be Saved Once",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-september-20-2026.html"
+    },
+    "D5": {
+     "author": "Lisa Morrone",
+     "work": "Dress in White",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-march-10-2020.html"
+    },
+    "D6": {
+     "author": "Oswald Chambers",
+     "work": "Redemption through His Blood",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/modern-classic/redemption-through-his-blood/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 58010001,
+   "end": 58010018,
+   "ref": "Hebrews 10:1-18",
+   "ranges": [
+    [
+     58010001,
+     58010018
+    ]
+   ],
+   "title": "Christ’s Perfect Sacrifice",
+   "key_verse": [
+    58010009,
+    58010009
+   ],
+   "reflect": [
+    {
+     "text": "The old law relied on animal sacrifices and outward ceremonies that could never fully remove human sin. When Jesus came into the world, he set aside those repeated rituals by giving himself in total obedience to the Father's will. Because Jesus died representing his people, we are united to him and called to turn away from the world. Day by day, the Holy Spirit works within us so that our own desires line up with God's will, drawing us closer to the loving center of God's family.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Jesus established this new covenant, God makes a wonderful promise: he will remember our sins no more. He treats us as if we had never sinned at all, wiping away our past failures. We no longer need to live in dread of his anger. Instead, God receives us warmly as his children, delights in us, and even honors us by trusting us to carry the good news of his grace to others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God chooses to forget your sins change how you talk to him each day?",
+    "Where is God asking you to surrender your own will so you can draw closer to him?"
+   ],
+   "prayer": "Heavenly Father, thank you that Jesus came to do your will and opened the way for us to be completely forgiven. Thank you for treating us with grace and never holding our past sins against us. Help us to yield our desires to your good purpose, so we may live close to you and serve you faithfully. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 23",
+     "on": "Hebrews 10:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Hebrews 10:9",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

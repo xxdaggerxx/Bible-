@@ -1,0 +1,73 @@
+{
+ "id": "45-003-009",
+ "title": "There Is No One Righteous",
+ "refs": [
+  "Romans 3:9-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 45003009,
+   "end": 45003020,
+   "ref": "Romans 3:9-20",
+   "ranges": [
+    [
+     45003009,
+     45003020
+    ]
+   ],
+   "title": "No One Is Righteous on Their Own",
+   "key_verse": [
+    45003020,
+    45003020
+   ],
+   "reflect": [
+    {
+     "text": "We often like to think of ourselves as good people. By nature, we try to build up a list of good deeds to satisfy God. Yet Scripture tells us the hard truth about every human being. Not one of us is innocent, and no one seeks God on their own. Sin creates a barrier between us and God that we can never cross by our own power.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God gave His law, but not so we could earn our way to Him by keeping its commands. Because our hearts are corrupted by sin, obeying rules cannot give us life or make us right with God. Instead, the law silences our excuses. Its true purpose is to expose our sin and show that the whole world is accountable to God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because we cannot save ourselves through good deeds or rituals, God offers salvation as a free gift through faith in Jesus Christ. Human pride often finds it hard to accept something so precious without paying for it. Yet while this gift costs us nothing, it cost Jesus everything when He died as our substitute on the cross.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways are you tempted to rely on your own good deeds rather than trusting in God?",
+    "Why is it difficult for our pride to accept that salvation is entirely a free gift?"
+   ],
+   "prayer": "Lord God, thank You for using Your law to show us our deep need for You. Forgive us when we try to earn Your love through our own good works. We thank You for Jesus, who paid the full price on the cross so we could receive life as a gift. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Free Offer",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/free-offer"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Works of the Law",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/works-law"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

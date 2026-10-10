@@ -1,0 +1,73 @@
+{
+ "id": "64-001-009",
+ "title": "Diotrephes and Demetrius",
+ "refs": [
+  "3 John 1:9-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 64001009,
+   "end": 64001012,
+   "ref": "3 John 1:9-12",
+   "ranges": [
+    [
+     64001009,
+     64001012
+    ]
+   ],
+   "title": "Choosing Humility Over Being First",
+   "key_verse": [
+    64001011,
+    64001011
+   ],
+   "reflect": [
+    {
+     "text": "John sets two very different men before us. Diotrephes wanted to be first. Because he cared so much about protecting his own status, he rejected faithful leaders, spread hurtful lies, and refused to welcome other Christians. His story warns us about how destructive pride can be. Selfish ambition easily creeps into our friendships, marriages, and daily work through self-promotion. Often, jealousy lies behind harsh criticism of others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In contrast, Demetrius showed what true faith looks like in practice. Genuine belief cannot be separated from loving actions and good fruit. Demetrius did not push himself forward, but his faithful service earned him a good reputation that reflected the truth. John reminds us not to copy proud, self-serving behavior, but to follow godly examples of humility.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In the small moments of everyday life, we all battle the habit of focusing on ourselves. Jesus showed us true greatness by giving up power and laying down His life as a servant. As our love for Christ grows deeper, He frees us from the urge to demand priority over everyone else.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily life are you most tempted to put yourself first?",
+    "Who is a humble believer in your life whose loving example you can follow?"
+   ],
+   "prayer": "Lord Jesus, thank you for showing us true greatness by becoming a servant. Forgive us for the times pride and jealousy make us demand our own way. Deepen our love for you, and help our daily actions reflect your goodness and truth to others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Scotty Smith",
+     "work": "A Prayer About Loving to be First",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/a-prayer-about-loving-to-be-first/"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Imitate Good",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/imitate-good"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

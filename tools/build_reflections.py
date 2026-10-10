@@ -11,13 +11,16 @@ Stages, each resumable:
             write the reflection from the classic devotionals' text and the modern pages, as JSON.
             The script drops any source it can't check: a classic must be assigned to the passage, a web
             page must have come up in the search.
-  pack      Turn the finished reflections into assets/reflections.db.xz.
+  check     List reflections that read alike (repeat check).
+  pack      Turn the finished reflections into assets/commentaries/reflections.db.xz.
 
 Usage:
   python3 build_reflections.py catalog <dir>
   python3 build_reflections.py passages <dir> [John ...]
   OPENROUTER_API_KEY=... python3 build_reflections.py write <dir> all|<passage id> ...
-  python3 build_reflections.py pack <dir> app/src/main/assets/reflections.db.xz
+  python3 build_reflections.py check <dir>
+      Repeat check: lists pairs of reflections that read alike, for a person to compare.
+  python3 build_reflections.py pack <dir> app/src/main/assets/commentaries/reflections.db.xz
 
 <dir> (tools/reflections) holds sources/ (the classic texts), catalog.json, passages.json, out/ (finished
 reflections, one JSON per passage), research/ and usage.json.
@@ -764,7 +767,8 @@ def short_url(url):
 
 def source_text(x):
     if x.get("site"):
-        return f"{x['author']}, “{x['work']}” ({x['site']}, {short_url(x['url'])})"
+        where = short_url(x["url"]) if x["author"] == x["site"] else f"{x['site']}, {short_url(x['url'])}"
+        return f"{x['author']}, “{x['work']}” ({where})"
     when = x.get("date") or ("on " + x["on"] if x.get("on") else "")
     return f"{x['author']}, {x['work']}" + (f" ({when})" if when else "")
 
@@ -824,12 +828,49 @@ def cmd_pack(d, target):
     print(f"{count} reflections on {units} passages ({len(rows)} rows) -> {target} ({os.path.getsize(target) / 1e6:.2f} MB)")
 
 
+# ---------- repeat check ----------
+
+def cmd_check(d, threshold=0.5):
+    """Repeat check (RBD-6): compares every pair of reflections by their words (tf-idf cosine) and lists the pairs
+    above the threshold, for a person to read. Also counts what the other checks removed."""
+    import collections
+    import math
+    rs = []
+    for f in sorted(os.listdir(os.path.join(d, "out"))):
+        rs += json.load(open(os.path.join(d, "out", f))).get("reflections") or []
+    toks = [re.findall(r"[a-z]{4,}", " ".join(p["text"] for p in r["reflect"]).lower()) for r in rs]
+    df = collections.Counter(w for t in toks for w in set(t))
+    vecs = []
+    for t in toks:
+        v = {w: n * math.log(len(rs) / df[w]) for w, n in collections.Counter(t).items()}
+        norm = math.sqrt(sum(x * x for x in v.values())) or 1
+        vecs.append({w: x / norm for w, x in v.items()})
+    index = collections.defaultdict(list)
+    for i, v in enumerate(vecs):
+        for w, x in v.items():
+            index[w].append((i, x))
+    pairs = []
+    for i, v in enumerate(vecs):
+        acc = collections.Counter()
+        for w, x in v.items():
+            for j, y in index[w]:
+                if j > i:
+                    acc[j] += x * y
+        pairs += [(s, i, j) for j, s in acc.items() if s > threshold]
+    print(f"{len(rs)} reflections; {sum(len(r['unsupported']) for r in rs)} paragraphs removed by the grounding check")
+    print(f"{len(pairs)} pairs more alike than {threshold}:")
+    for s, i, j in sorted(pairs, reverse=True):
+        print(f"  {s:.2f}  {rs[i]['ref']} “{rs[i]['title']}”  /  {rs[j]['ref']} “{rs[j]['title']}”")
+
+
 if __name__ == "__main__":
     cmd, args = sys.argv[1], sys.argv[2:]
     if cmd == "catalog":
         cmd_catalog(args[0])
     elif cmd == "passages":
         cmd_passages(args[0])
+    elif cmd == "check":
+        cmd_check(args[0])
     elif cmd == "pack":
         cmd_pack(args[0], args[1])
     elif cmd == "write":

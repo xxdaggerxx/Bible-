@@ -1,0 +1,66 @@
+{
+ "id": "54-003-008",
+ "title": "Qualifications for Deacons",
+ "refs": [
+  "1 Timothy 3:8-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 54003008,
+   "end": 54003013,
+   "ref": "1 Timothy 3:8-13",
+   "ranges": [
+    [
+     54003008,
+     54003013
+    ]
+   ],
+   "title": "Holding the Faith with a Clear Conscience",
+   "key_verse": [
+    54003009,
+    54003009
+   ],
+   "reflect": [
+    {
+     "text": "In the church, deacons are called primarily to ministries of mercy rather than preaching sermons. Even so, their daily care involves giving counsel to people in need, so they must be firmly grounded in biblical truth. Paul says they must hold to the mystery of the faith. This mystery is the good news of the gospel, fully revealed through Jesus Christ and his saving death on the cross.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul also writes that they must hold this truth with a clear conscience. Serving with a clear conscience means genuinely believing Christian teaching in both heart and mind. God calls leaders to avoid hypocrisy or merely paying lip service to the truth while living another way.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Practical skills and administrative gifts are helpful, but God looks deeper. Anyone who wants to serve in the church should focus first on growing in their knowledge of the faith and living with personal integrity.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you make sure your belief in the gospel is genuine in your daily life rather than just lip service?",
+    "Why is personal integrity more important to God than simply having good organizational skills?"
+   ],
+   "prayer": "Lord God, thank you for revealing the good news of salvation through Jesus Christ. Help us to know your truth deeply and to hold it with a sincere heart and a clear conscience. Grow our integrity as we seek to care for and serve the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Mystery of the Faith",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/mystery-faith"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

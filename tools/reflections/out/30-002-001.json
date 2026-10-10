@@ -1,0 +1,66 @@
+{
+ "id": "30-002-001",
+ "title": "Judgment on Moab, Judah, and Israel",
+ "refs": [
+  "Amos 2:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 30002001,
+   "end": 30002016,
+   "ref": "Amos 2:1-16",
+   "ranges": [
+    [
+     30002001,
+     30002016
+    ]
+   ],
+   "title": "Remembering God's Grace and Justice",
+   "key_verse": [
+    30002006,
+    30002006
+   ],
+   "reflect": [
+    {
+     "text": "Amos surprised his listeners with a sudden turn. He began by speaking about judgment on the pagan nations around them, but then he pointed directly at God's covenant people. Judah had rejected God's commands and followed false lies. Israel was guilty of deep social injustice. Powerful people abused the weak, corrupt judges accepted bribes against the innocent, and lenders kept the essential coats taken from the poor.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "How did God's people fall into such cruelty? They developed spiritual amnesia. They forgot how the Lord had graciously rescued them from slavery in Egypt and provided for them. Forgetting God's mercy paved the way for their moral collapse.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We face a similar danger when we take God's kindness for granted. If we forget our rescue, we can easily blend in with the culture around us and neglect the hurting. Remembering God's redemptive work each day guards our hearts and moves us to live with justice and love.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can forgetting God's kindness to us cause us to treat others unfairly?",
+    "What helps you remember God's rescue each day so you do not conform to the world around you?"
+   ],
+   "prayer": "Lord, forgive us when we forget Your great mercy and treat others thoughtlessly. Help us remember each day how You delivered us so we do not presume on Your grace. Teach us to honor Your word and protect those who are vulnerable. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Condemnation for Israel and Judah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/condemnation-israel-and-judah"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

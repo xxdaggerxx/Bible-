@@ -1,0 +1,77 @@
+{
+ "id": "40-008-023",
+ "title": "Jesus Calms the Storm",
+ "refs": [
+  "Matthew 8:23-27",
+  "Mark 4:35-41",
+  "Luke 8:22-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40008023,
+   "end": 40008027,
+   "ref": "Matthew 8:23-27; Mark 4:35-41; Luke 8:22-25",
+   "ranges": [
+    [
+     40008023,
+     40008027
+    ],
+    [
+     41004035,
+     41004041
+    ],
+    [
+     42008022,
+     42008025
+    ]
+   ],
+   "title": "Safe in the Storm with Jesus",
+   "key_verse": [
+    41004039,
+    41004039
+   ],
+   "reflect": [
+    {
+     "text": "When we follow Jesus, we are not promised calm weather. In this story, a violent storm tossed the boat carrying Jesus, as well as the other little boats near him. If the sea was rough for our Lord, we should expect trials and hard times in our own lives as well. As Charles Spurgeon wrote, \"If we go with Jesus we must be content to fare as he fares.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The disciples were terrified when the waves began to swamp their boat, and all human help was useless. Yet when they woke the Saviour, he spoke to the gale. With a single command, the raging winds died down and the lake became completely still. His quiet presence brought peace and safety to every small boat travelling in his company.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus watches over everyone who sails with him. Even when the squalls of life blow hard against us, winds and waves still obey his voice. Because he holds the power over every storm, we can have calm hearts inside, trusting that he will guide our lives safely to shore.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What storms or worries in your life feel overwhelming right now?",
+    "How can remembering that Jesus rules the wind and sea give you peace today?"
+   ],
+   "prayer": "Lord Jesus, thank you for being with us through every rough sea. When fear grips our hearts, remind us that you hold power over every wind and wave. Grant us peace within our souls, and guide us safely home in your care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 14",
+     "on": "Mark 4:36",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

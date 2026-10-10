@@ -1,0 +1,74 @@
+{
+ "id": "53-002-001",
+ "title": "The Man of Lawlessness",
+ "refs": [
+  "2 Thessalonians 2:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 53002001,
+   "end": 53002012,
+   "ref": "2 Thessalonians 2:1-12",
+   "ranges": [
+    [
+     53002001,
+     53002012
+    ]
+   ],
+   "title": "Standing Firm in the Truth",
+   "key_verse": [
+    53002010,
+    53002010
+   ],
+   "reflect": [
+    {
+     "text": "Paul warns that the power of lawlessness is already at work in our world. Right now, the church acts as salt and light to slow down moral decay and spiritual darkness. Even though worldly culture often resents Christians as obstacles to human progress, these deceptive modern trends are actually rooted in satanic deception.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When people refuse to love the truth, they leave themselves open to powerful delusions and falsehoods. Scripture tells us that when the restraining presence is finally removed, unrestrained deception will flood the world before Christ brings his judgment. Remembering that judgment is coming should give us an urgent compassion to share the gospel with others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because deception is so widespread, believers urgently need biblical discernment grounded in the wisdom of Scripture. Instead of retreating from the world in fear, we are called to model holy lives that openly display God's truth to everyone around us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you use Scripture this week to test the messages and trends you hear in the culture?",
+    "Who in your life needs to experience the love of Christ through your compassion and holy living?"
+   ],
+   "prayer": "Lord, thank you for giving us your truth so we do not have to be led astray. Help us to study your Word each day so we can discern what is false and hold fast to what is good. Fill us with love and urgency to share the gospel with people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Can Evil Be Restrained?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-july-8-2023.html"
+    },
+    "D2": {
+     "author": "Jack Graham",
+     "work": "Power Point - November 1, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-november-1-2005-1360142.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

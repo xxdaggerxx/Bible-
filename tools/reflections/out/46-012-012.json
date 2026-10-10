@@ -1,0 +1,81 @@
+{
+ "id": "46-012-012",
+ "title": "The Body of Christ",
+ "refs": [
+  "1 Corinthians 12:12-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46012012,
+   "end": 46012026,
+   "ref": "1 Corinthians 12:12-26",
+   "ranges": [
+    [
+     46012012,
+     46012026
+    ]
+   ],
+   "title": "Many Parts, One Body in Christ",
+   "key_verse": [
+    46012020,
+    46012020
+   ],
+   "reflect": [
+    {
+     "text": "A healthy human body needs every part to work properly. In the same way, God intentionally arranged His church with different gifts, roles, and personalities under Christ. Like players on a sports team, every believer has a distinct job to do. Leaders who stand in the spotlight rely completely on the help of those who work behind the scenes. Instead of trying to force everyone to be the same or seeking to control others, we are invited to be humble servants, resting like soft clay in the Potter's hands.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "It is easy to fall into the trap of comparing ourselves with others or envying their abilities. Bickering over status and recognition wastes our energy and damages our witness before the world. Having different roles never means unequal value to God. The Holy Spirit gives gifts to each of us so we can strengthen the whole community. When we faithfully serve without needing praise, we treat every believer as an essential partner.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Our differences give us daily chances to guide one another and share heavy burdens. When one person suffers, we feel that pain together, and when someone is honored, we all rejoice. Following the example of Jesus means rejecting selfish comparisons and treating every member of the body with equal care and honor.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to envy someone else's gifts or feel that your own role does not matter?",
+    "What is one practical way you can support and honor another member of your church family this week?"
+   ],
+   "prayer": "Heavenly Father, thank You for placing each of us into Your church with gifts to share. Forgive us when we compare ourselves to others or seek our own recognition. Teach us to serve with humble hearts, carry one another's burdens, and care for every part of Your body. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Kelly McFadden",
+     "work": "One Body",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/one-body-homeword-july-.html"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "For Pure Motives in Service",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-october-22-2021.html"
+    },
+    "D3": {
+     "author": "Jim Liebelt",
+     "work": "Partners of Equal Value",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/partners-of-equal-value-homeword-august-18.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

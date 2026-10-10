@@ -1,0 +1,76 @@
+{
+ "id": "40-012-022",
+ "title": "A House Divided",
+ "refs": [
+  "Matthew 12:22-30",
+  "Mark 3:20-27",
+  "Luke 11:14-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40012022,
+   "end": 40012030,
+   "ref": "Matthew 12:22-30; Mark 3:20-27; Luke 11:14-23",
+   "ranges": [
+    [
+     40012022,
+     40012030
+    ],
+    [
+     41003020,
+     41003027
+    ],
+    [
+     42011014,
+     42011023
+    ]
+   ],
+   "title": "The Stronger King and Our Choice",
+   "key_verse": [
+    40012030,
+    40012030
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus healed a man and drove out a demon, some religious leaders claimed He worked for the devil. Jesus showed how foolish that was, because an army divided against itself cannot stand. Instead, Jesus came as the stronger one who overpowers the devil and frees people held captive by evil. By doing this, He fulfilled God's ancient promises to rescue His people. Christ's victory continues today every time the gospel brings someone out of spiritual darkness into light. Because Jesus has disarmed the enemy, we do not have to live in fear.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Jesus is actively defeating evil, there is no neutral middle ground with Him. We cannot stand on the sidelines or pretend the choice does not matter. Putting off our decision to follow Him is really the same as saying no. In the end, each of us must answer Him with a clear yes or no. If we do not stand with Christ and gather people into His kingdom, our lives end up scattering against His work.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to stay neutral instead of openly following Jesus?",
+    "How does knowing that Jesus has already disarmed the enemy give you peace today?"
+   ],
+   "prayer": "Lord Jesus, thank You for being stronger than the powers of darkness and setting us free. Help us not to hesitate or try to stay in the middle. Give us courage to stand firmly with You and work alongside You in Your kingdom today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Binding the Strong Man",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/binding-strong-man"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "There Is No Neutral Ground with Jesus - Love Worth Finding - September 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-september-1-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

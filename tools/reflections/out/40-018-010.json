@@ -1,0 +1,84 @@
+{
+ "id": "40-018-010",
+ "title": "The Parable of the Lost Sheep",
+ "refs": [
+  "Matthew 18:10-14",
+  "Luke 15:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40018010,
+   "end": 40018014,
+   "ref": "Matthew 18:10-14; Luke 15:1-7",
+   "ranges": [
+    [
+     40018010,
+     40018014
+    ],
+    [
+     42015001,
+     42015007
+    ]
+   ],
+   "title": "The Shepherd Who Rescues the Lost",
+   "key_verse": [
+    42015004,
+    42015004
+   ],
+   "reflect": [
+    {
+     "text": "Jesus welcomed sinners, even though religious leaders complained. It is amazing that the holy God would stoop down to reach people who turned away from Him. He does not take us in just to leave us in our sin. Instead, as Charles Spurgeon wrote, \"he receives them that he may pardon their sins\" and clean our hearts, welcoming us into a close friendship with Himself.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "No obstacle can stop Jesus from finding His lost sheep. The enemy works constantly to ruin lives and block the Lord's work. Yet even when there is fierce opposition or stormy trouble, Christ pursues the lost until He finds them. Satan's attempts to stop Jesus always fail because the Shepherd's saving power is far greater.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our heavenly Father cares deeply for each individual sheep. He watches over His children with constant care and will not let any of them be abandoned to perish. Because God loves like this, we must put away pride and never look down on others. We are called to share the Father's heart by gently helping wandering brothers and sisters return.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that no obstacle can stop Jesus from reaching you bring you peace today?",
+    "Is there a wandering believer you can lovingly encourage instead of looking down on them?"
+   ],
+   "prayer": "Lord Jesus, thank You for seeking us out when we were lost and welcoming us into Your love. Keep us from pride, and give us Your heart to care for others who wander. Help us trust that nothing can stop You from keeping each of Your sheep safe. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 13",
+     "on": "Luke 15:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Finding the Lost Sheep",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/harvest-daily-april-21-2005-1325214.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord’s Care for His Own",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lords-care-his-own"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "64-001-001",
+ "title": "A Greeting from the Elder",
+ "refs": [
+  "3 John 1:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 64001001,
+   "end": 64001004,
+   "ref": "3 John 1:1-4",
+   "ranges": [
+    [
+     64001001,
+     64001004
+    ]
+   ],
+   "title": "Walking in Truth and Caring for Health",
+   "key_verse": [
+    64001004,
+    64001004
+   ],
+   "reflect": [
+    {
+     "text": "In this letter, John rejoices to hear that his friend Gaius is walking faithfully in the truth. Christian leaders feel deep joy when they see fellow believers living out God's word. John also prays for Gaius's physical well-being. This wish follows a common greeting of that day rather than a promise that Christians will always have wealth or ease. While God grants us rich spiritual blessings today, full physical restoration belongs to the future new creation. Until that day, we learn godly contentment with God's provision, even in hard times.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the same time, our physical well-being matters. Being worn out physically takes a heavy toll on our spiritual and emotional strength. We cannot carry out our callings well if we ignore our bodies, which are temples of the Holy Spirit. Serving God faithfully means cooperating with Him by respecting our physical limits. Taking regular rest, finding recreation, and being refreshed are necessary if we want to serve Him over the long haul.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you taking regular time to rest and care for your body so you can continue serving God well?",
+    "How can you practice contentment with what God provides while continuing to walk in His truth?"
+   ],
+   "prayer": "Lord, thank you for the joy of walking in your truth and for your faithful care. Help us to find contentment in what you provide, even when life is hard. Teach us to respect our physical limits and care for our bodies as your temples, so that we may serve you with lasting endurance. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Third John",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/third-john"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 337: 3 John 1–4",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-337-3-john-14.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "40-005-001",
+ "title": "The Sermon on the Mount",
+ "refs": [
+  "Matthew 5:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40005001,
+   "end": 40005002,
+   "ref": "Matthew 5:1-2",
+   "ranges": [
+    [
+     40005001,
+     40005002
+    ]
+   ],
+   "title": "Seen and Welcomed by Jesus",
+   "key_verse": [
+    40005001,
+    40005001
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus saw the crowds, He went up the mountainside and sat down among them before speaking. His followers came close to Him, and He got ready to teach. Jesus did not remain at a distance or look past the crowd. Instead, He sat down near them, directly seeing and engaging all the different people gathered before Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the start of this great teaching, Jesus did not begin with a long list of burdensome rules or demands. He recognized the real-life struggles and hardships carried by the people listening to Him. He met them right where they were, paying close attention to their daily troubles.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Whatever pain, weakness, or vulnerability brings us to the feet of Jesus, He notices it completely. He does not turn us away or lay heavy weights on us. Instead, Christ sees the broken parts of our lives and meets us with blessing.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What weaknesses or everyday struggles are you bringing to Jesus today?",
+    "How does it comfort you to know that Jesus truly sees and blesses you as you are?"
+   ],
+   "prayer": "Lord Jesus, thank You for seeing each of us in our struggles and weakness. Help us to draw near to You with open hearts, trusting that You welcome us. Please meet our honest needs today with Your blessing and peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Shawn McEvoy",
+     "work": "Sit Down and Be Seen By Jesus",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/sit-down-and-be-seen-by-jesus-bible-study-minute-january-8-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

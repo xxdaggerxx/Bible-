@@ -1,0 +1,66 @@
+{
+ "id": "44-010-044",
+ "title": "The Gentiles Receive the Holy Spirit",
+ "refs": [
+  "Acts 10:44-48"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44010044,
+   "end": 44010048,
+   "ref": "Acts 10:44-48",
+   "ranges": [
+    [
+     44010044,
+     44010048
+    ]
+   ],
+   "title": "God Changes the Heart",
+   "key_verse": [
+    44010044,
+    44010044
+   ],
+   "reflect": [
+    {
+     "text": "When Peter shared the good news, he did not rely on clever speeches to win over his listeners. While he was still speaking, God directly stepped in and poured out the Holy Spirit on all who heard the message. Genuine spiritual change never comes from human eloquence or clever arguments. Our words on their own cannot produce real faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Lasting faith depends on the work of the Holy Spirit moving together with Scripture and the testimony of believers. People do not come to spiritual understanding through human intellect or sheer willpower. It is God's Spirit who illuminates truth, convicts hearts, and brings about real transformation on the inside.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Holy Spirit is still actively present today to do this very work. When we share our faith, we do not need to feel the pressure of winning a debate. We can simply share God's word, trusting the Spirit to give understanding and draw people to Christ.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt the pressure to argue someone into faith using your own clever words?",
+    "How does knowing that the Holy Spirit changes hearts give you peace when you speak about Jesus?"
+   ],
+   "prayer": "Lord, thank you that changing hearts is your work and not ours. Forgive us when we rely on our own arguments instead of trusting in you. Please send your Holy Spirit to open eyes and draw people into genuine faith. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Love Worth Finding",
+     "work": "While Peter Was Still Speaking",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-october-12-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

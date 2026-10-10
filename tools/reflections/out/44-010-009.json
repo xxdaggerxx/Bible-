@@ -1,0 +1,73 @@
+{
+ "id": "44-010-009",
+ "title": "Peter’s Vision",
+ "refs": [
+  "Acts 10:9-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44010009,
+   "end": 44010016,
+   "ref": "Acts 10:9-16",
+   "ranges": [
+    [
+     44010009,
+     44010016
+    ]
+   ],
+   "title": "God Reaches Beyond Our Boundaries",
+   "key_verse": [
+    44010015,
+    44010015
+   ],
+   "reflect": [
+    {
+     "text": "While praying on a rooftop, Peter saw a vision of animals that his Jewish background strictly forbade him to eat. When God told him to kill and eat, Peter refused because he wanted to stick to familiar religious rules. He struggled with the tension between the laws he grew up with and the freedom God was suddenly showing him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God repeated this vision three times to prepare Peter's conscience for what was coming next. The initiative to break down cultural and racial barriers came directly from God Himself. He was preparing Peter to enter a Gentile household and preach salvation to people previously seen as outsiders.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We can easily fall into the trap of judging who deserves to hear the gospel, God's good news of salvation. Yet God works in unexpected hearts and calls us to step past our comfort zones. The message of grace, God's unearned favor, is meant to be given away freely to all people rather than kept to ourselves.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there people outside your comfort zone whom you hesitate to share God's love with?",
+    "How can you remind yourself that God offers His grace freely to everyone without favoritism?"
+   ],
+   "prayer": "Lord, thank You for taking the initiative to welcome outsiders into Your family. Forgive us when we judge who deserves to hear Your good news. Give us the courage to step outside our comfort zones and share Your grace freely with everyone we meet. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jack Graham",
+     "work": "Giving away the Gospel",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-jan-11-2011-11643936.html"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Acts 10",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/judges-6-acts-10-jeremiah-19-mark-5/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

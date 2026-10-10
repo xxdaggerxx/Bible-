@@ -1,0 +1,66 @@
+{
+ "id": "44-005-017",
+ "title": "The Apostles Arrested and Freed",
+ "refs": [
+  "Acts 5:17-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44005017,
+   "end": 44005023,
+   "ref": "Acts 5:17-23",
+   "ranges": [
+    [
+     44005017,
+     44005023
+    ]
+   ],
+   "title": "Following What God Commands",
+   "key_verse": [
+    44005020,
+    44005020
+   ],
+   "reflect": [
+    {
+     "text": "When the apostles were locked away in prison, God sent an angel to lead them out and give them clear directions. As Adrian Rogers points out, true obedience begins by hearing clearly from God. The apostles had direct instructions from the Lord to go to the temple and share the message of new life. Because they knew exactly what God wanted them to do, they could step forward with confidence, even after being arrested.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often desire to serve God, but we can easily rush ahead with our own plans. Rogers reminds us that believers should not chase after self-willed efforts under the label of Christian service. God does not promise to bless projects that He Himself never commanded. Good intentions are not the same thing as obeying His voice.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This account invites us to pause and evaluate our daily choices. Instead of making our own path and asking God to support it, we are called to surrender every part of our lives to His will. When our actions are guided by what He actually desires, we can walk forward in peace, knowing He is with us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you currently running ahead with your own ideas, or are you seeking God's clear direction first?",
+    "What area of your life do you need to pause and submit to God's will today?"
+   ],
+   "prayer": "Lord, forgive us for the times we run ahead on our own instead of waiting on You. Teach us to listen carefully to Your instruction rather than leaning on our own plans. Help us to submit every part of our daily lives to Your will, trusting that You will guide our steps. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Adrian Rogers",
+     "work": "Do You Know What God Wants You to Do? - Love Worth Finding - January 22",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-january-22-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

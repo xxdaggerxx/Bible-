@@ -1,0 +1,76 @@
+{
+ "id": "40-018-006",
+ "title": "Temptations and Trespasses",
+ "refs": [
+  "Matthew 18:6-9",
+  "Mark 9:42-48",
+  "Luke 17:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40018006,
+   "end": 40018009,
+   "ref": "Matthew 18:6-9; Mark 9:42-48; Luke 17:1-4",
+   "ranges": [
+    [
+     40018006,
+     40018009
+    ],
+    [
+     41009042,
+     41009048
+    ],
+    [
+     42017001,
+     42017004
+    ]
+   ],
+   "title": "Guarding Our Hearts Against Sin and Bitterness",
+   "key_verse": [
+    42017003,
+    42017003
+   ],
+   "reflect": [
+    {
+     "text": "Jesus speaks with great seriousness about the danger of sin. When we tolerate habitual sin in our daily lives, we lose sight of God's holiness. Jesus gives sobering warnings about judgment because hell is real and terrifying. Cutting off a hand or plucking out an eye is a picture of the radical steps we must take. We need to eliminate any habits, relationships, or pursuits that cause us to stumble. Learning a healthy, respectful fear of the Lord protects our souls and leads us to real joy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus also warns us to watch how we respond when other people hurt us. Keeping hold of anger creates a hidden root of bitterness that we must actively pull up. Forgiving someone who wrongs us repeatedly is not about waiting until we feel ready. Instead, it is an act of faithful obedience to God. When we choose biblical forgiveness, we willingly give up our right to hate or punish the offender, trusting that God can use even painful wounds to shape our Christian character.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What harmful habit, relationship, or pursuit do you need to remove so you do not stumble?",
+    "Is there someone who has hurt you whom you need to forgive in obedience to God today, even if you do not feel like it yet?"
+   ],
+   "prayer": "Lord, help us to honor your holiness and give us courage to remove whatever leads us into sin. Pull up any roots of bitterness that have taken hold in our hearts. Teach us to forgive others freely, trusting you to use every trial to build our character. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jon Bloom",
+     "work": "Cut Off Your Hand: How Far Will You Go to Save Your Soul?",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/cut-off-your-hand"
+    },
+    "D2": {
+     "author": "PowerPoint Ministries",
+     "work": "PowerPoint - Aug. 7, 2007",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-aug-7-2007-11550323.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

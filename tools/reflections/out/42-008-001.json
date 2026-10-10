@@ -1,0 +1,75 @@
+{
+ "id": "42-008-001",
+ "title": "Women Minister to Jesus",
+ "refs": [
+  "Luke 8:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42008001,
+   "end": 42008003,
+   "ref": "Luke 8:1-3",
+   "ranges": [
+    [
+     42008001,
+     42008003
+    ]
+   ],
+   "title": "Welcomed to Follow and Serve",
+   "key_verse": [
+    42008003,
+    42008003
+   ],
+   "reflect": [
+    {
+     "text": "As Jesus traveled from place to place sharing the good news of God's kingdom, a group of women journeyed alongside Him and the Twelve. In that culture, teachers rarely taught female disciples, and religious leaders kept their distance. Yet Jesus broke through these social expectations. He welcomed women to follow Him, learn from Him, and serve with Him. Women often wonder if they have a real place in ministry, but Christ showed that women are an intentional priority in God's kingdom, never an afterthought.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "These women came from very different walks of life. Some, like Mary Magdalene, had suffered from evil spirits and sickness before Jesus healed them. Another, Joanna, was married to a high court official in Herod's household. Despite their different backgrounds, they were united in Christ. Because Jesus owned no earthly property, His traveling ministry depended on the everyday support of others.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Having received God's grace and healing, these faithful women used their own money and means to support Jesus and His disciples. Their generosity helped care for the practical needs of the gospel mission. In the same way, when we remember the kindness God has shown us, we are invited to support those who give their lives to full-time gospel work.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does Jesus' welcome of women from all backgrounds encourage your own place in His kingdom?",
+    "In what practical ways can you use what you have to support gospel work today?"
+   ],
+   "prayer": "Lord Jesus, thank You for welcoming people from every background to learn from You and serve alongside You. Thank You for the grace and healing You give us so freely. Help us to use our resources with glad and generous hearts to support the spread of Your good news. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jen Oshman",
+     "work": "Jesus Makes Room for Women",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-8-2026.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Many Generous Women",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/many-generous-women"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

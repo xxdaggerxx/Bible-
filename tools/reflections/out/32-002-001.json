@@ -1,0 +1,88 @@
+{
+ "id": "32-002-001",
+ "title": "Jonah’s Prayer",
+ "refs": [
+  "Jonah 2:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 32002001,
+   "end": 32002010,
+   "ref": "Jonah 2:1-10",
+   "ranges": [
+    [
+     32002001,
+     32002010
+    ]
+   ],
+   "title": "Salvation Belongs to the Lord",
+   "key_verse": [
+    32002009,
+    32002009
+   ],
+   "reflect": [
+    {
+     "text": "When trouble comes, our pride often convinces us that we can fix the mess on our own. We tend to search for worldly advice and treat God as a last resort. Yet Jonah shows us that God listens to our desperate cries even when our distress is caused by our own disobedience. Hard trials can actually be God stepping in to redirect our steps and rescue us. No matter how deep or dark your situation feels, it is never too late to call on Him.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "From deep in the water, Jonah decided to look toward God again. You do not have to wait until your circumstances improve before you turn your eyes back to Him. Even when your heart says you have wandered too far or failed too many times, God is waiting to show you mercy. He receives our smallest cry for help and offers us another opportunity to walk forward in obedience.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "In the belly of the fish, Jonah realized that rescue cannot come from within ourselves. As Charles Spurgeon wrote, \"Salvation is the work of God.\" We cannot cleanse our own hearts or sustain our own spiritual lives. Every bit of strength, goodness, and help we receive comes from God upholding us by His hand.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When trouble comes your way, do you turn to God first or do you try to fix things on your own?",
+    "What keeps you from looking toward God right away when you know you have disobeyed Him?"
+   ],
+   "prayer": "Lord God, thank You for hearing our cries even when we have wandered away from You. Please forgive our stubborn pride and help us give up trying to save ourselves. Uphold us with Your strong hand and teach us to look to You in every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 26",
+     "on": "Jonah 2:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jonah 2:4",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Leslie Snyder",
+     "work": "A Fishy Story",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/a-fishy-story-homeword-december-7.html"
+    },
+    "D4": {
+     "author": "Annah Mathews",
+     "work": "The Depths of Mercy",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/encouragement-caf-february-19-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

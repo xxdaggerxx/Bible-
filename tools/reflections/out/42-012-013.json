@@ -1,0 +1,73 @@
+{
+ "id": "42-012-013",
+ "title": "The Parable of the Rich Fool",
+ "refs": [
+  "Luke 12:13-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 42012013,
+   "end": 42012021,
+   "ref": "Luke 12:13-21",
+   "ranges": [
+    [
+     42012013,
+     42012021
+    ]
+   ],
+   "title": "Rich Toward God",
+   "key_verse": [
+    42012015,
+    42012015
+   ],
+   "reflect": [
+    {
+     "text": "When a man asked Jesus to settle a family inheritance argument, Jesus looked past the dispute to warn about greed. The rich farmer in His story had a great harvest, but he thought only of himself. Instead of thanking God and depending on Him, he built bigger barns to store his goods. Wealth itself is not wrong, but making an idol of riches and trying to be completely self-sufficient leads to God's judgment.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Greed often sneaks into ordinary life through small splurges and desires for things we do not need. We can easily begin to feel that having more stuff makes us more important. Yet our true worth is never measured by what we own. Our time on earth can end at any moment, and we will leave every earthly possession behind.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus calls us to turn away from covetousness, which is wanting what others have or hoarding what we have. When we forget to thank God for His gifts, we stop caring for the poor. As we examine our spending and curb selfish desires, we can use our money and goods to bless others and serve God's kingdom.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What unnecessary desires or spending habits might be creeping into your daily life?",
+    "How can you use what God has given you to help someone in need this week?"
+   ],
+   "prayer": "Lord, forgive us when we focus on gathering possessions instead of depending on You. Remind us that our lives are brief and that our real worth comes from You alone. Teach us to rein in selfish desires so we can give generously and be rich toward You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Karen Ehman",
+     "work": "Do You Have Enough?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/do-you-have-enough-encouragement-for-today-august-19-2013.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Parable of the Rich Fool",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/parable-rich-fool"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,86 @@
+{
+ "id": "46-011-001",
+ "title": "Roles in Worship",
+ "refs": [
+  "1 Corinthians 11:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 46011001,
+   "end": 46011001,
+   "ref": "1 Corinthians 11:1",
+   "ranges": [
+    [
+     46011001,
+     46011001
+    ]
+   ],
+   "title": "\"Imitate Me, as I Imitate Christ\"",
+   "key_verse": [
+    46011001,
+    46011001
+   ],
+   "reflect": [
+    {
+     "text": "Following Jesus is not something we can do on our own. Just like learning a difficult sport, newer believers need coaches who will walk alongside them in real life. You do not need to run a church program or have every answer to help someone else. If you are seeking to follow Christ, you already have lessons to share. Being honest about your own past mistakes can help others avoid those same missteps.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Words by themselves are not enough to pass on faith. Just like ducks who talk about flying but choose to waddle on the ground, our instruction means very little if we do not put it into practice. Real spiritual influence begins when we face our own shortcomings and let our daily actions show what we believe.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Living this way makes a deep impression, especially on children. When parents pray and genuinely seek God, young ones notice and remember. Even if children later wander, the memory of a true Christian example stays with them. With the help of God's grace, our simple obedience can guide others toward Christ for generations to come.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Who has God placed in your life that you could encourage simply by listening and sharing your journey?",
+    "In what parts of your daily life do your actions need to match what you say you believe?"
+   ],
+   "prayer": "Lord, thank you for the faithful people who showed us what it looks like to follow you. Help us to live out our convictions with honest and humble hearts. Give us the courage to guide others and point them to your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Doug Fields",
+     "work": "Wanted: Jesus Coaches",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/wanted-jesus-coaches-homeword-june-4.html"
+    },
+    "D2": {
+     "author": "Jill Beran",
+     "work": "A Role You Can Play",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/encouragement-caf-may-18-2016.html"
+    },
+    "D3": {
+     "author": "Jim Burns",
+     "work": "Parable of the Ducks",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-jan-24-2011-11644471.html"
+    },
+    "D4": {
+     "author": "Dr. James Dobson",
+     "work": "Faithful Role Models",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobsons-parenting-devotional-apr-20.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

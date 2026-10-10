@@ -1,0 +1,66 @@
+{
+ "id": "48-003-015",
+ "title": "The Purpose of the Law",
+ "refs": [
+  "Galatians 3:15-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 48003015,
+   "end": 48003025,
+   "ref": "Galatians 3:15-25",
+   "ranges": [
+    [
+     48003015,
+     48003025
+    ]
+   ],
+   "title": "Our Guardian Leading Us to Christ",
+   "key_verse": [
+    48003024,
+    48003024
+   ],
+   "reflect": [
+    {
+     "text": "In the ancient Roman world, a guardian was a temporary caretaker whose job was to supervise and discipline a young child. Paul explains that God gave the Mosaic law to act like that guardian for His people. It was never intended to be a permanent way to be made right with God, which we call justification. Instead, God gave the law to care for His people and direct them toward maturity in Jesus Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we look at what God's law requires, it clearly shows us our own shortcomings. The law cannot give us life or make us righteous on its own. Instead, seeing how far we fall short compels us to turn away from self-reliance and put all our trust in Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Now that Christ has come, our time under that temporary guardian is over. Trying to rely on keeping rules to earn God's favor is spiritually like an adult choosing to go back to being a child. We do not need to live under that old supervision anymore, because we are now justified by faith in Jesus.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does seeing your inability to keep God's law remind you of your need for Jesus?",
+    "Are there areas in your life where you try to rely on rule-keeping rather than trusting in Christ?"
+   ],
+   "prayer": "Lord God, thank You for using Your law to show us our shortcomings and to point us to Jesus. Forgive us when we try to earn Your favor through our own rule-keeping instead of resting in Your Son. Teach us to live in the freedom and maturity of faith in Christ alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Law as Guardian",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/law-guardian"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

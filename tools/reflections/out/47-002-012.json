@@ -1,0 +1,73 @@
+{
+ "id": "47-002-012",
+ "title": "Triumph in Christ",
+ "refs": [
+  "2 Corinthians 2:12-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 47002012,
+   "end": 47002017,
+   "ref": "2 Corinthians 2:12-17",
+   "ranges": [
+    [
+     47002012,
+     47002017
+    ]
+   ],
+   "title": "Led in Christ's Triumphal Victory",
+   "key_verse": [
+    47002014,
+    47002014
+   ],
+   "reflect": [
+    {
+     "text": "Even when Paul felt troubled and his travel plans changed, he stopped to thank God. He pictured a Roman victory parade, where a general led captives through streets filled with the scent of incense. In Christ, God has won the real victory at the cross. We are no longer held captive by Satan. Instead, we belong to Jesus as His own people, and He leads us in His ongoing procession as we share the gospel and support the church.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As we follow Jesus, God uses us to spread the knowledge of Him everywhere like a pleasing fragrance. In Scripture, incense was burned during times of prayer and sacrifice, and our own devotion rises favorably before God today. We share the aroma of Christ by walking in selfless love and seeking holiness. Daily prayer and simple obedience allow us to display His character to the people around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Living this way turns people's attention toward God in gratitude and awe. When we reflect the character of Jesus, we show others the sweetness of knowing Him. Though people will respond to our message in different ways, we can serve Him with sincere hearts, confident that God is at work through our lives.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can your daily choices and love for others help spread the sweet aroma of Christ this week?",
+    "When plans change or worries arise, how does remembering Christ's victory help you give thanks to God?"
+   ],
+   "prayer": "Lord God, thank You for winning the victory at the cross and leading us in Christ. Teach us to walk in selfless love, faithful prayer, and obedience each day. Please let our lives be a pleasing aroma that points the people around us to the sweetness of knowing You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Triumphal Procession in Christ",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/triumphal-procession-in-christ"
+    },
+    "D2": {
+     "author": "Whitney Hopler",
+     "work": "The Aroma of Christ",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-aroma-of-christ-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

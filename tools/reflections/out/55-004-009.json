@@ -1,0 +1,66 @@
+{
+ "id": "55-004-009",
+ "title": "Personal Concerns",
+ "refs": [
+  "2 Timothy 4:9-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 55004009,
+   "end": 55004015,
+   "ref": "2 Timothy 4:9-15",
+   "ranges": [
+    [
+     55004009,
+     55004015
+    ]
+   ],
+   "title": "Needing Fellowship to the End",
+   "key_verse": [
+    55004009,
+    55004009
+   ],
+   "reflect": [
+    {
+     "text": "Paul wrote these words while sitting in a cold Roman prison, feeling deeply lonely. One companion, Demas, had loved the present world and abandoned him, while others had traveled away on ministry tasks. Knowing that his life would soon come to an end, Paul urgently asked his friend Timothy to come visit him quickly.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even in his final days, Paul still cared for both his body and his mind. He asked Timothy to bring a cloak to keep him warm and his scrolls so he could keep studying God's Word. Although only Luke was currently with him, Paul also asked for Mark to come, showing how much he valued trusted partners in ministry.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Paul's honesty shows us that believers need Christian fellowship. We are not made to walk through hard trials alone. God gives us brothers and sisters in the faith to stand with us, pray for us, and bring comfort when times are difficult.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who are the Christian friends you turn to for prayer and support when life is difficult?",
+    "How can you offer comfort and presence to another believer who might be feeling lonely right now?"
+   ],
+   "prayer": "Lord, thank you for placing us in a family of believers so we do not have to walk alone. When we face loneliness or hardship, help us to seek out Christian friends and stay rooted in your Word. Teach us also to be faithful companions who encourage and support others in their need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Paul's Desire to See Timothy",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/pauls-desire-see-timothy"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

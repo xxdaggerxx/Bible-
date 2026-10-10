@@ -1,0 +1,66 @@
+{
+ "id": "66-012-001",
+ "title": "The Woman and the Dragon",
+ "refs": [
+  "Revelation 12:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66012001,
+   "end": 66012006,
+   "ref": "Revelation 12:1-6",
+   "ranges": [
+    [
+     66012001,
+     66012006
+    ]
+   ],
+   "title": "The Spiritual Battle and Our True Hope",
+   "key_verse": [
+    66012005,
+    66012005
+   ],
+   "reflect": [
+    {
+     "text": "Following Jesus in this world is often hard. Both individual believers and local churches regularly face tragedy, painful conflicts among themselves, and pressure from the outside world. We know that human wrongdoing, living in a broken world, and God's sovereign plan all help explain our suffering. But there is also another reality at work: an unseen spiritual war.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Revelation 12 pulls back the curtain on this hidden conflict. The vision shows a fierce red dragon waiting to devour the woman's newborn child. This dragon represents Satan, who has a deep and relentless hatred against the good news of Jesus and against all of God's people. The struggles we face are part of this spiritual battle.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even so, believers can live with steady hope. The dragon could not destroy the child. Jesus was born to vanquish this enemy and to rule over every nation. Because Christ was raised and seated at God's throne, the enemy has already lost the war. We can take comfort knowing that our Savior protects us and has already secured the final victory.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face trials or conflicts, how does knowing about this spiritual war help you understand what is happening?",
+    "How does the victory of Jesus over the dragon give you peace today?"
+   ],
+   "prayer": "Lord God, thank You for opening our eyes to the spiritual battle around us. When trials come, help us remember that Satan's anger cannot overturn Your promises. Give us peace and courage as we rest in Jesus, the ruler of the nations who has already won the victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Kevin DeYoung",
+     "work": "Hell Bent",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/hell-bent/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

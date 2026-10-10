@@ -1,0 +1,83 @@
+{
+ "id": "66-019-006",
+ "title": "The Marriage of the Lamb",
+ "refs": [
+  "Revelation 19:6-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 66019006,
+   "end": 66019010,
+   "ref": "Revelation 19:6-10",
+   "ranges": [
+    [
+     66019006,
+     66019010
+    ]
+   ],
+   "title": "The Marriage Feast of the Lamb",
+   "key_verse": [
+    66019007,
+    66019007
+   ],
+   "reflect": [
+    {
+     "text": "Heaven resounds with joy because the Lord God reigns and the long-awaited wedding day has finally arrived. The marriage supper fulfills ancient promises of a great feast to celebrate the completion of God's kingdom. Believers from every nation and age will be united as one Church, putting aside every sorrow and trial to share in this glorious celebration.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Christians already belong to Jesus in a sacred promise of marriage, having received the Holy Spirit as the pledge of their future with Him. To prepare His people, Jesus gave Himself up to purify them from sin. The clean, bright linen worn by the bride stands in contrast to worldly corruption, representing holy deeds that are not earned by human effort but granted freely by God's grace.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Even though the church faces flaws and persecutions today, Christ is faithfully preparing His bride to stand before Him without blemish. Because this great day is coming, we are called to prepare our hearts with joyful devotion and urgently share God's invitation with others while the door of salvation remains open.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing you already belong to Jesus change the way you live each day?",
+    "Who can you share the good news of God's invitation with this week?"
+   ],
+   "prayer": "Lord God Almighty, we praise You because You reign over all things. Thank You for claiming us as Your own and clothing us in Your grace. Help us to live purely for You and gladly invite others to Your coming feast. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Revelation 19:9",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "Jesus Has Given You His Promise Ring…",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-september-14-2019.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Marriage Supper of the Lamb",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-marriage-supper-of-the-lamb"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "63-001-007",
+ "title": "Beware of Deceivers",
+ "refs": [
+  "2 John 1:7-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 63001007,
+   "end": 63001011,
+   "ref": "2 John 1:7-11",
+   "ranges": [
+    [
+     63001007,
+     63001011
+    ]
+   ],
+   "title": "Guarding the Truth in Love",
+   "key_verse": [
+    63001008,
+    63001008
+   ],
+   "reflect": [
+    {
+     "text": "People have a natural spiritual hunger, but that hunger can easily be pulled in the wrong direction. Misleading ideas often do not appear as obvious lies. Instead, subtle distortions of Christian teaching can creep in quietly. When someone denies that Jesus truly came in human flesh, they take away the real basis of our salvation. Authentic Christian living requires us to balance genuine love for people with careful testing of what is taught.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because truth matters, believers must hold firmly to essentials like the coming of Christ in the flesh. The apostle warns against welcoming or endorsing deceptive leaders. This warning does not forbid us from reaching out with kindness to unbelievers. Instead, it forbids giving a public platform or support to teachers of error. We should also examine our giving to ensure our funds do not aid work that opposes the good news of Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Churches and their leaders have a serious duty to protect their congregations from harmful voices. By remaining alert, we preserve the work of the gospel and stay rooted in the truth of God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you practice testing what you hear against the truth about Jesus?",
+    "In what ways can you show kindness to others without endorsing false teachings?"
+   ],
+   "prayer": "Lord God, grant us wisdom to spot subtle distortions and keep us faithful to the truth about your Son. Teach us to balance love for our neighbors with a firm commitment to the gospel. Protect our churches and guide how we use our resources to honor you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Do Not Receive Him",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/do-not-receive-him"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 336: 2 John 7–13",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-336-2-john-713.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

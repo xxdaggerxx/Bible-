@@ -1,0 +1,84 @@
+{
+ "id": "40-018-001",
+ "title": "The Greatest in the Kingdom",
+ "refs": [
+  "Matthew 18:1-5",
+  "Mark 9:33-41",
+  "Luke 9:46-50"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40018001,
+   "end": 40018005,
+   "ref": "Matthew 18:1-5; Mark 9:33-41; Luke 9:46-50",
+   "ranges": [
+    [
+     40018001,
+     40018005
+    ],
+    [
+     41009033,
+     41009041
+    ],
+    [
+     42009046,
+     42009050
+    ]
+   ],
+   "title": "True Greatness in God's Kingdom",
+   "key_verse": [
+    41009035,
+    41009035
+   ],
+   "reflect": [
+    {
+     "text": "As they walked along the road, the disciples argued about which of them would hold the highest position. They struggled to understand that the Messiah's glory comes through suffering and humiliation rather than worldly rank. Like them, we often feel the pull of a culture that is obsessed with pride, influence, and competing to get ahead.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus did not reject the desire for greatness, but He completely redefined it. He placed a young child in the middle of the group to overturn their ideas. Entering God's kingdom begins when we admit our complete spiritual helplessness before Him. Just like children who simply depend on others, Jesus calls His followers to practice unpretentious honesty and humility.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In God's kingdom, the way to the front is to willingly take the lowest place. We counter the world's love for power by choosing to become servants to everyone around us. Real greatness is not found in having people serve us, but in looking for practical ways to care for others each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you feel tempted to compete for attention or status instead of serving others?",
+    "What is one practical way you can take the lowest place and help someone this week?"
+   ],
+   "prayer": "Lord Jesus, forgive us when we chase worldly status and pride. Help us to see our utter helplessness without You, and grant us childlike humility. Give us willing hearts to take the lowest place and gladly serve the people around us today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Who Is the Greatest?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/who-greatest"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Two Suggestions for Becoming Great",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/article-library/two-suggestions-for-becoming-great"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

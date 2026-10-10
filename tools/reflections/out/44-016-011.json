@@ -1,0 +1,91 @@
+{
+ "id": "44-016-011",
+ "title": "Lydia’s Conversion in Philippi",
+ "refs": [
+  "Acts 16:11-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 44016011,
+   "end": 44016015,
+   "ref": "Acts 16:11-15",
+   "ranges": [
+    [
+     44016011,
+     44016015
+    ]
+   ],
+   "title": "The Lord Opened Her Heart",
+   "key_verse": [
+    44016014,
+    44016014
+   ],
+   "reflect": [
+    {
+     "text": "Lydia was a religious woman gathered by the river to pray, but she could not save herself. Our hearts are naturally closed and unresponsive to the good news about Jesus. In his providence, God brought her to the right place to hear Paul speak. As F. B. Meyer notes, her heart opened quietly \"as a flower beneath the touch of the sun.\"",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God alone holds the key to a human heart. It was not Paul's preaching or Lydia's own effort that brought new life, but the Lord himself opening her heart to trust in Jesus. True faith is a gift of God's kindness, not something we produce. Because of this divine miracle, we can live each day filled with amazed gratitude.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "When God opens a heart, real change always follows. Lydia was quickly baptized in simple obedience to Christ. She also urged the apostles to stay in her house. Saving faith brings us into God's family and moves us to love other Christians, eagerly sharing our homes, time, and resources to build up the church.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How has God shown his quiet grace in opening your own heart to trust in Jesus?",
+    "In what practical ways can you use your home, time, or resources to serve other believers?"
+   ],
+   "prayer": "Lord, thank you for the quiet miracle of opening our hearts to receive your truth. Help us to follow you in willing obedience each day. Fill us with love for your people, and teach us to use our homes and resources generously to serve your family. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 10",
+     "on": "Acts 16:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Acts 16:14",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "John Piper",
+     "work": "God Opens the Heart",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/god-opens-the-heart"
+    },
+    "D4": {
+     "author": "Alistair Begg",
+     "work": "All in the Family",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-10-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

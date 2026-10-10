@@ -1,0 +1,90 @@
+{
+ "id": "46-001-026",
+ "title": "Wisdom from God",
+ "refs": [
+  "1 Corinthians 1:26-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 46001026,
+   "end": 46001031,
+   "ref": "1 Corinthians 1:26-31",
+   "ranges": [
+    [
+     46001026,
+     46001031
+    ]
+   ],
+   "title": "God Chooses the Weak",
+   "key_verse": [
+    46001027,
+    46001027
+   ],
+   "reflect": [
+    {
+     "text": "When we look at who God gathers, it is rarely the powerful or impressive by worldly standards. From the beginning, church gatherings were mostly made up of ordinary, lowly people. God often leads us into situations and callings that go far beyond our own abilities. Feeling weak or uncomfortable keeps us from relying on ourselves and helps us see how much we need Him.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "The world values status and strength, but God delights in choosing what is overlooked and despised. Even people who seem like the worst outcasts are not beyond the reach of His saving mercy. As Charles Spurgeon wrote, God can turn pebbles into jewels for a royal crown. We do not need to put on a mask of perfection, because God displays His power most clearly through our human limitations.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Human cleverness and complicated philosophies can never give our hearts true peace. Real wisdom is found in the simple truth of the cross, where Jesus came to rescue sinners. Because Christ is our righteousness and wisdom, human pride is removed. We have no reason to boast in ourselves, but only in what the Lord has done.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you feel weak or unequipped right now?",
+    "How can remembering that Christ is your true wisdom keep you from depending on your own strength?"
+   ],
+   "prayer": "Lord God, thank You for choosing what is weak and ordinary to display Your grace. Forgive us when we try to rely on our own abilities or human wisdom. Teach us to rest in Jesus and to boast only in what He has done for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 25",
+     "on": "1 Corinthians 1:30",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 7",
+     "on": "1 Corinthians 1:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "Your Key to Usefulness",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-june-16-2023.html"
+    },
+    "D4": {
+     "author": "Amanda Idleman",
+     "work": "What God Chooses to Accomplish His Will",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-may-12.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

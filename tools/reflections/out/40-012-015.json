@@ -1,0 +1,135 @@
+{
+ "id": "40-012-015",
+ "title": "God’s Chosen Servant",
+ "refs": [
+  "Matthew 12:15-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 40012020,
+   "end": 40012021,
+   "ref": "Matthew 12:20-21",
+   "ranges": [
+    [
+     40012020,
+     40012021
+    ]
+   ],
+   "title": "\"A Bruised Reed He Will Not Break\"",
+   "key_verse": [
+    40012020,
+    40012020
+   ],
+   "reflect": [
+    {
+     "text": "A reed growing in a marsh is very fragile. Even a small water bird landing on it can bend or snap its stem. A smoldering wick is just as delicate, because a single faint breath can snuff out its tiny spark. Many of us feel like that in our daily lives. We might try to put on a brave face for others, but deep down we often feel bent, exhausted, and spiritually frail.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "In our world, powerful rulers chase influence and often cast aside anyone who seems weak or useless. Jesus does not act like earthly rulers. Instead of snapping bent reeds or stamping out dim flames, He quietly welcomes the wounded and restores them. God deliberately chooses what is weak and unimpressive to display His grace, which is His free and undeserved favor.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Charles Spurgeon reminds us of Christ's gentle care, writing that \"we need never shrink back from his touch.\" Jesus does not scold us for our weakness or push us away when we stumble. When you feel battered by trials or ready to faint, you can rest in the truth that your Savior will handle you with patient tenderness.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When do you feel most like a bruised reed or a flickering wick?",
+    "How does knowing Jesus is gentle and patient change how you come to Him with your weaknesses?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your gentle heart toward us when we are weak and hurting. Forgive us for trying to hide our wounds instead of bringing them to You. Please hold us with Your tender care and give us rest in Your unfailing love. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 19",
+     "on": "Matthew 12:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Tim Keesee",
+     "work": "Bruised Reeds",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/bruised-reeds"
+    },
+    "D4": {
+     "author": "Darryl Dash",
+     "work": "Bruised Reed Ministry",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/straight-paths/bruised-reed-ministry/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 40012015,
+   "end": 40012021,
+   "ref": "Matthew 12:15-21",
+   "ranges": [
+    [
+     40012015,
+     40012021
+    ]
+   ],
+   "title": "He Healed Them All",
+   "key_verse": [
+    40012015,
+    40012015
+   ],
+   "reflect": [
+    {
+     "text": "When Jesus withdrew to a quiet place, huge crowds followed Him carrying all kinds of sickness and pain. People arrived with burning fevers, paralyzed bodies, blindness, and terrible sores. Jesus was never disgusted by their misery. Instead, He patiently attended to every person who came to Him, and He healed them all. Every form of illness yielded to His authority.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus is still our great Physician today. Just as He walked among the sick on earth, He still shows mercy and works in human hearts. Whatever inner sins or weaknesses you face, you can bring them to Him with confidence. In the words of Charles Spurgeon, \"the beloved Physician can heal me.\" We can also bring our family members and friends to Him in prayer, trusting in His power to save them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Christ provided our deepest spiritual cure by taking our sicknesses and sins upon Himself on the cross. Through His wounds, our souls are completely restored. As we remember His faithful care for suffering people, we can praise Him and gladly tell others about His healing power.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal struggles or sins do you need to bring to Jesus, our great Physician, today?",
+    "Who among your friends or family can you lift up to Him in prayer, trusting in His power to heal?"
+   ],
+   "prayer": "Lord Jesus, You are the great Physician who never turns away from our sickness and sin. Thank You for bearing our griefs and healing our souls through Your sacrifice on the cross. Give us faith to bring all our needs to You and to pray with hope for the people we love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 7",
+     "on": "Matthew 12:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

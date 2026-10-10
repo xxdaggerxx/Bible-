@@ -1,0 +1,88 @@
+{
+ "id": "40-013-010",
+ "title": "The Purpose of Jesus’ Parables",
+ "refs": [
+  "Matthew 13:10-17",
+  "Mark 4:10-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 40013010,
+   "end": 40013017,
+   "ref": "Matthew 13:10-17; Mark 4:10-12",
+   "ranges": [
+    [
+     40013010,
+     40013017
+    ],
+    [
+     41004010,
+     41004012
+    ]
+   ],
+   "title": "The Purpose of Jesus' Parables",
+   "key_verse": [
+    40013011,
+    40013011
+   ],
+   "reflect": [
+    {
+     "text": "Jesus shared stories called parables for two very different reasons. They reveal the truth of God's kingdom to believers, but they hide it from those whose hearts are hard. Many in the crowds listened only because the stories sounded lovely or pleasant, yet they never truly took the message to heart. Their failure to perceive the truth was not an issue of intelligence, but a willful choice to turn away from Christ.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The ability to understand God's truth is not an achievement we earn by being clever. It is a gift of grace, which is God's undeserved kindness to us. When God gives even a tiny beginning of real faith, He continues to give more until it overflows. As Charles Spurgeon noted, \"A little faith is a nest egg; more faith will come to it.\" But if someone only pretends to believe without possessing real faith, even that outward show will eventually be lost.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God has opened our eyes, our response should be deep humility and gratitude. We cannot settle for surface-level feelings or emotional moments that fade quickly like a passing cloud. Instead, we must let God's truth sink deep into our souls, meditate on it, and put what we hear into daily action.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you content with merely enjoying the sound of Scripture, or are you letting it take deep root in your life?",
+    "How does knowing that faith is God's free gift encourage you to stay humble and thankful?"
+   ],
+   "prayer": "Lord, thank You for opening our eyes and ears to understand the good news of Your kingdom. Please deepen our small faith and cause it to grow into an abundance of love and trust. Keep our hearts from growing hard or distracted by the world. Help us not only to listen to Your Word, but to live it out each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 16",
+     "on": "Matthew 13:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Matthew 13:11",
+     "url": "https://archive.org/details/ourdailyhomily05meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Purpose of the Parables",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/purpose-parables"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}
