@@ -241,6 +241,16 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * A verse's text for the screen, without waiting: an online Bible's verse not downloaded yet
      * shows "Loading…" (and comes in the background); else the KJV's when a version lacks it.
      */
+    /**
+     * A verse to paste elsewhere (NOTE-7): its words, then the reference and version, e.g.
+     * "Jesus wept. — John 11:35 (KJV)". Null while an online Bible's verse is still downloading.
+     */
+    fun verseQuote(version: String, id: Int): String? {
+        val words = (text(version).verseText(id) ?: if (isOnline(version)) null else bible.verseText(id))?.trim()
+        if (words.isNullOrEmpty()) return null
+        return "$words \u2014 ${refLabel(id)} ($version)"
+    }
+
     fun verseTextNow(version: String, id: Int): String =
         text(version).verseText(id) ?: if (isOnline(version)) "Loading\u2026" else bible.verseText(id) ?: ""
 

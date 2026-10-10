@@ -118,6 +118,7 @@ Layers are like clear sheets over the page. Tap the layers button (it shows the 
 
 Tap any verse with your finger. Its details open in a pop-up window. Tap outside it, or ×, to close it.
 
+- **Copy a verse:** tap the copy button at the top, by ×. *Copy reference* copies just the reference ("Hebrews 13:21"); *Copy verse* copies the verse's words with the reference and version after them ("… — Hebrews 13:21 (NLT)"), ready to paste into a message or a note. The *Verse details* panel has the same button.
 - **Prefer them beside the text?** Turn on *Settings → Verse details → Verse details in a panel*. Then the details open in a panel called *Verse details* next to the Bible, and move to each verse you tap. The arrows at its top go to the verse before and after. If both panels are already in use, the pop-up opens instead.
 - You can also choose *Verse details* from a panel's menu at any time.
 - In the panel, a word study shows in the same panel. *Back to the verse* returns.

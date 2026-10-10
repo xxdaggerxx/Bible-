@@ -3024,6 +3024,31 @@ class FeatureTest {
     }
 
     @Test
+    fun theVerseWindowCopiesTheReferenceOrTheVerse() {
+        compose.runOnUiThread { vm.setVersion(0, "KJV"); vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        compose.runOnUiThread { vm.verseSheet = com.biblestudy.app.model.VerseTarget(43, 3, 16) }
+        compose.waitForIdle()
+        val clip = compose.activity.getSystemService(android.content.ClipboardManager::class.java)
+        fun copied() = clip.primaryClip?.getItemAt(0)?.text?.toString()
+        compose.onNodeWithContentDescription("Copy verse").performClick()
+        snap("200-copy-verse-menu")
+        compose.onNodeWithText("Copy reference").performClick()
+        compose.waitForIdle()
+        assertEquals("John 3:16", copied())
+        compose.onNodeWithContentDescription("Copy verse").performClick()
+        compose.onNodeWithText("Copy verse").performClick()
+        compose.waitForIdle()
+        assertEquals(
+            "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, " +
+                "but have everlasting life. \u2014 John 3:16 (KJV)",
+            copied(),
+        )
+        compose.onNodeWithContentDescription("Close").performClick()
+        compose.runOnUiThread { vm.verseSheet = null }
+    }
+
+    @Test
     fun erasingAHighlightInOneVersionErasesItInEvery() {
         val at = Offset((Page.COL_PAD + 250f) * zoom(), 600f)
         val h = highlightWordAt(at)

@@ -290,6 +290,7 @@ private fun VersePane(vm: StudyViewModel, modifier: Modifier, content: @Composab
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous verse")
             }
             Text("${vm.refLabel(id)} ($version)", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
+            CopyVerseButton(vm, id, version)
             IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse + 1, word = -1) }, enabled = t.verse < lastVerse) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next verse")
             }

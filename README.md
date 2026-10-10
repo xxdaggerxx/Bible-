@@ -72,6 +72,11 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.7.0
+
+- **Copy a verse** from the verse pop-up or the *Verse details* panel: a copy button by the × opens *Copy reference* ("Hebrews 13:21") and *Copy verse* (the words, then "— Hebrews 13:21 (NLT)"). Long-pressing words on the page still copies any part of the text.
+- Known gaps: one verse at a time. To copy several verses, long-press on the page and drag the selection across them.
+
 ## New in version 2.6.1
 
 - **New sketch page button** at the top of both lists of sketch pages (*My notes → Sketch pages* and the *Sketch pages* panel). It opens the same *New sketch page* window as *Insert → Sketch page…*; the new page opens where tapping a page in that list would (in the panel from My notes, beside the text from the Sketch pages panel).

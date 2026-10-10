@@ -74,6 +74,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.TextButton
@@ -149,10 +150,11 @@ internal fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
 }
 
 @Composable
-internal fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composable () -> Unit)? = null) {
+internal fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composable () -> Unit)? = null, actions: (@Composable () -> Unit)? = null) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         leading?.invoke()
         Text(title, style = MaterialTheme.typography.headlineSmall, modifier = Modifier.weight(1f))
+        actions?.invoke()
         IconButton(onClick = onClose) { Icon(Icons.Filled.Close, contentDescription = "Close") }
     }
 }
@@ -642,9 +644,41 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
     val version = vm.activeVersion
     BigDialog(onDismiss) {
         Column {
-            DialogTitle("${vm.refLabel(id)} ($version)", onDismiss)
+            DialogTitle("${vm.refLabel(id)} ($version)", onDismiss, actions = { CopyVerseButton(vm, id, version) })
             // The note is saved when the window closes (the details leave the screen).
             VerseDetails(vm, t, version, inPanel = false, onDone = onDismiss, modifier = Modifier.weight(1f))
+        }
+    }
+}
+
+/**
+ * Copies a verse (NOTE-7): its reference ("Hebrews 13:21"), or its words with the reference and
+ * version after them, from a menu under a copy button.
+ */
+@Composable
+internal fun CopyVerseButton(vm: StudyViewModel, id: Int, version: String) {
+    val clipboard = androidx.compose.ui.platform.LocalClipboardManager.current
+    var open by remember { mutableStateOf(false) }
+    Box {
+        IconButton(onClick = { open = true }) { Icon(Icons.Filled.ContentCopy, contentDescription = "Copy verse") }
+        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            DropdownMenuItem(
+                text = { Text("Copy reference") },
+                onClick = {
+                    open = false
+                    clipboard.setText(AnnotatedString(vm.refLabel(id)))
+                    vm.message = "Copied ${vm.refLabel(id)}."
+                },
+            )
+            DropdownMenuItem(
+                text = { Text("Copy verse") },
+                onClick = {
+                    open = false
+                    val quote = vm.verseQuote(version, id)
+                    if (quote == null) vm.message = "The verse is still loading. Try again in a moment."
+                    else { clipboard.setText(AnnotatedString(quote)); vm.message = "Copied ${vm.refLabel(id)}." }
+                },
+            )
         }
     }
 }
