@@ -848,13 +848,15 @@ private fun onlineCredit(version: String, measurer: TextMeasurer): androidx.comp
 val CHRIST_LINE = Color(0xFFC9A23A)
 
 /**
- * A faint dotted line under each hard word and Bible aid (STD-23, AID-8), and a soft gold line
+ * A faint dotted line under each hard word and Bible aid (STD-23, AID-8), and a dotted gold line
  * under each verse that points to Christ (AID-13), a little lower so both show; tapping explains them.
  */
 private fun DrawScope.drawHardWords(layout: ChapterLayout, theme: PageTheme) {
+    // Round gold dots, spaced wider than the hard words' grey dashes so the two can't be confused.
+    val christDots = PathEffect.dashPathEffect(floatArrayOf(0.1f, 9f))
     for (r in layout.christVerses) {
         for ((x0, x1, y) in layout.underlines(r.first, r.last + 1)) {
-            drawLine(CHRIST_LINE.copy(alpha = 0.6f), Offset(x0, y + 6f), Offset(x1, y + 6f), strokeWidth = 2.5f, cap = StrokeCap.Round)
+            drawLine(CHRIST_LINE.copy(alpha = 0.85f), Offset(x0, y + 7f), Offset(x1, y + 7f), strokeWidth = 4f, cap = StrokeCap.Round, pathEffect = christDots)
         }
     }
     if (layout.hardWords.isEmpty()) return

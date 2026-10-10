@@ -43,7 +43,7 @@ class ChristEntry(
 
 /**
  * Points to Christ (AID-13): Old Testament verses that point to Jesus, from
- * assets/study/christ.tsv (made by tools/build_christ.py). Marked with a soft gold line under the
+ * assets/study/christ.tsv (made by tools/build_christ.py). Marked with a dotted gold line under the
  * whole verse; tapping the verse explains it, with where the New Testament fulfils it.
  */
 object Christ {

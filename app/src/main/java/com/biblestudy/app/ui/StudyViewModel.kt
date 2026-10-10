@@ -683,7 +683,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var aidNames by mutableStateOf(prefs.getBoolean("aidNames", true))
     var aidCustoms by mutableStateOf(prefs.getBoolean("aidCustoms", true))
     var aidSymbols by mutableStateOf(prefs.getBoolean("aidSymbols", true))
-    /** Points to Christ (AID-13): a soft gold line under Old Testament verses that point to Jesus. */
+    /** Points to Christ (AID-13): a dotted gold line under Old Testament verses that point to Jesus. */
     var aidChrist by mutableStateOf(prefs.getBoolean("aidChrist", true))
 
     /** What's marked in the text (STD-23, AID-10). */

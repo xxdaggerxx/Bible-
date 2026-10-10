@@ -265,7 +265,7 @@ private fun ChristPane(vm: StudyViewModel, modifier: Modifier) {
         item {
             Text(
                 "Old Testament verses that point to Jesus: prophecies he fulfilled, and pictures of him. " +
-                    "In the Bible they have a gold line under them. Tap one to read it.",
+                    "In the Bible they have a dotted gold line under them. Tap one to read it.",
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                 modifier = Modifier.padding(vertical = 8.dp),
             )
