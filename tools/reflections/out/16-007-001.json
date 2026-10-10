@@ -1,0 +1,66 @@
+{
+ "id": "16-007-001",
+ "title": "Securing the City",
+ "refs": [
+  "Nehemiah 7:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16007001,
+   "end": 16007003,
+   "ref": "Nehemiah 7:1-3",
+   "ranges": [
+    [
+     16007001,
+     16007003
+    ]
+   ],
+   "title": "Faithful in Every Task",
+   "key_verse": [
+    16007002,
+    16007002
+   ],
+   "reflect": [
+    {
+     "text": "After the city wall was rebuilt and the gates were hung, Nehemiah needed leaders who could guard Jerusalem safely. He chose Hanani and Hananiah for this vital job because they were reliable and feared God more than most people did. Being dependable is one of the greatest things a believer can offer to God and to others.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Protection did not depend only on two leaders, though. Every resident had an essential part to play, keeping watch at their assigned post or near their own home. In the same way, every Christian has a vital role within the body of Christ. Every single role matters for the good of God's family.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God searches for people who are faithful and committed in the smallest responsibilities before entrusting them with more. If we want to serve in bigger ways or grow in ministry, that journey starts by quietly doing the immediate work God has put before us today.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What is a small daily responsibility God has given you to carry out faithfully?",
+    "How can you show dependability to the people around you this week?"
+   ],
+   "prayer": "Lord, thank You for placing me in Your family with a purpose. Help me to be dependable and to honor You with all my heart. Teach me to be faithful in the small, everyday tasks You give me to do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "Faithful in the Little Things",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/faithful-in-the-little-things-greg-laurie-daily-devotion-may-17.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

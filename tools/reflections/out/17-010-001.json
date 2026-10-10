@@ -1,0 +1,77 @@
+{
+ "id": "17-010-001",
+ "title": "Tribute to Xerxes and Mordecai",
+ "refs": [
+  "Esther 10:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 17010001,
+   "end": 17010003,
+   "ref": "Esther 10:1-3",
+   "ranges": [
+    [
+     17010001,
+     17010003
+    ]
+   ],
+   "title": "Seeking the Good of God's People",
+   "key_verse": [
+    17010003,
+    17010003
+   ],
+   "reflect": [
+    {
+     "text": "Mordecai rose to great power in the kingdom, but he did not use his position to serve himself. Instead, he spent his life seeking the welfare of his people and speaking peace to them. In this, he points forward to Jesus, who sits on His throne of glory and uses His power entirely for His people. Living merely for our own greatness is an unhappy and destructive path, but turning away from self-interest to help others brings true joy.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Every believer can follow this example. Those with influence or resources can honour God before others, while those who understand God's truth can teach and encourage their neighbours. Even the simplest acts of thoughtfulness—such as helping an overtired mother, caring for a sick friend, or praying for someone who is discouraged—can lighten a heavy burden and prepare people's hearts to receive the gospel.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Mordecai was also known for speaking peace. We can practice this same quiet ministry by putting the law of kindness on our lips. Rather than sharing gossip or saying sharp things that cause bitterness, we can offer gentle words that calm worried and irritated hearts. As we pray for the weak and do good to those around us, we share the peace God has given us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what practical ways can you use your time or position this week to seek the good of someone who is struggling?",
+    "Are your daily words bringing peace and comfort to anxious people, or are they stirring up unnecessary friction?"
+   ],
+   "prayer": "Lord, thank you for Jesus, who uses His heavenly power to care for us and plead for our needs. Forgive us when we live only for our own comfort and ambition. Fill our hearts with your love so that our words bring peace, and help us to spend our strength doing good to your people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 28",
+     "on": "Esther 10:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Esther 10:3",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

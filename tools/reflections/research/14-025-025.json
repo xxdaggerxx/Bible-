@@ -1,0 +1,15 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://utmost.org/",
+  "https://www.biblegateway.com/",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+25%3A27&version=KJV",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+25&version=NET%3BKJV",
+  "https://www.biblegateway.com/resources/smiths-bible-names-dictionary/Amaziah",
+  "https://www.biblegateway.com/verse/en/2%20Chronicles%2025%3A27",
+  "https://www.intouch.org/"
+ ],
+ "cost": 0.029419625,
+ "model": "google/gemini-3.8-flash"
+}

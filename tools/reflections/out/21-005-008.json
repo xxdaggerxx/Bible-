@@ -1,0 +1,127 @@
+{
+ "id": "21-005-008",
+ "title": "The Futility of Wealth",
+ "refs": [
+  "Ecclesiastes 5:8-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21005010,
+   "end": 21005012,
+   "ref": "Ecclesiastes 5:10-12",
+   "ranges": [
+    [
+     21005010,
+     21005012
+    ]
+   ],
+   "title": "\"Never Satisfied by Money\"",
+   "key_verse": [
+    21005010,
+    21005010
+   ],
+   "reflect": [
+    {
+     "text": "Many people believe having more money will finally bring true peace. Yet when making money becomes our main goal, it leaves us empty. God designed our hearts for eternity, which means created things can never fully satisfy us. Loving wealth only breeds ongoing discontent, bringing daily stress and anxiety instead of rest.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "As our riches grow, we also find that new costs arrive to swallow them up. Taxes, expenses, and other consumers increase right along with our income. The owner is left watching the surplus disappear. God created us to enjoy Him alone, so without Him, our souls remain restless.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Money itself is not sinful, but we must watch that it does not take God's rightful place in our hearts. When we get caught up in chasing prosperity, our daily spiritual growth gets pushed aside. God calls us instead to keep Him first and to use our wealth generously for His kingdom.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Has chasing money or possessions ever crowded out your time with God?",
+    "How can you use what God has given you today to serve His kingdom?"
+   ],
+   "prayer": "Lord, remind us that only You can truly satisfy our souls. Keep our hearts from loving money or letting it take Your place. Teach us to trust You with all our needs and to use what we have generously. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Money and Satisfaction",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/money-and-satisfaction"
+    },
+    "D2": {
+     "author": "Crosswalk.com",
+     "work": "Time with God - March 12, 2015",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-march-12-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 21005008,
+   "end": 21005020,
+   "ref": "Ecclesiastes 5:8-20",
+   "ranges": [
+    [
+     21005008,
+     21005020
+    ]
+   ],
+   "title": "True Security Beyond Hoarded Wealth",
+   "key_verse": [
+    21005013,
+    21005013
+   ],
+   "reflect": [
+    {
+     "text": "King Solomon observed that gathering more material wealth does not bring quietness to our lives. Instead, acquiring more possessions simply inflames our desire to want even more. Higher income is quickly overtaken by mounting expenses and by people who are seeking a payout.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Stockpiling abundance frequently robs owners of peaceful sleep. An ordinary worker can rest well at the end of the day, but a wealthy person is often kept awake by fear and worry over what they own. Storing up riches and holding them tightly harms the owner instead of protecting them.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Hoarding our goods also leaves us completely open to sudden, painful loss when circumstances change or a venture fails. Everything we try to store away for ourselves can vanish in a moment. Instead of trusting in earthly things that quickly disappear, we are called to seek true contentment and anchor our security in God's dependable promises.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries or possessions keep you awake instead of resting peacefully?",
+    "How can you place your security in God's promises rather than your material savings?"
+   ],
+   "prayer": "Father, guard us from the trap of hoarding earthly riches and letting worry steal our sleep. Help us to find true contentment in what You give us each day. Teach us to anchor our security in Your unchanging promises alone. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Dr. David Jeremiah",
+     "work": "5 Tips From King Solomon for a Risk–Free Investment Strategy",
+     "site": "Turning Point",
+     "url": "https://www.davidjeremiah.org/makingsense/finances?devdate=2021-03-23"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

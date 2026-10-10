@@ -1,0 +1,129 @@
+{
+ "id": "18-022-001",
+ "title": "Eliphaz: Can a Man Be of Use to God?",
+ "refs": [
+  "Job 22:1-30"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18022023,
+   "end": 18022023,
+   "ref": "Job 22:23",
+   "ranges": [
+    [
+     18022023,
+     18022023
+    ]
+   ],
+   "title": "\"Return to the Almighty\"",
+   "key_verse": [
+    18022023,
+    18022023
+   ],
+   "reflect": [
+    {
+     "text": "When sin pulls us down, our lives can feel like broken buildings or ruins. Eliphaz spoke to Job with harsh accusations, but his words hold a true promise for anyone who has wandered away from God. The first step is to turn back to the Lord with sincere sorrow for sin and honest faith. As Charles Spurgeon reminds us, none but the Almighty can \"set up the fallen pillars\" of our lives.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Returning to God means making real changes in how we live. We are called to turn away from our wandering paths, clean out dishonest habits from our homes and work, and let go of our tight grip on worldly wealth. When we place our cherished treasures in the dust before God, we discover something far better. He Himself becomes our true treasure and our deepest joy.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "A wonderful rebuilding follows when we return to the Lord. Our prayers find fresh delight and real answers, and God's light brightens the path before us. Even when hard troubles crash over us like ocean waves, they will not sweep us away, because God firmly restores and supports us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any area of your daily life or work where you need to turn away from wrong habits and return to God?",
+    "What worldly treasures are you holding onto that keep you from enjoying God as your greatest treasure?"
+   ],
+   "prayer": "Lord, when we wander and our lives feel broken, help us to return to You with humble hearts. Cleanse our homes and habits from anything that displeases You. Be our greatest treasure, hear our prayers, and let Your light shine on our path today. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 7",
+     "on": "Job 22:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 22:23",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 18022001,
+   "end": 18022030,
+   "ref": "Job 22:1-30",
+   "ranges": [
+    [
+     18022001,
+     18022030
+    ]
+   ],
+   "title": "Knowing God and Finding Peace",
+   "key_verse": [
+    18022021,
+    18022021
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, Eliphaz urges Job to get to know God and find peace. While Eliphaz misunderstood Job's suffering, his call to know God points to the greatest need of every human heart. True peace comes when we know God as He has revealed Himself to us: one God in three persons, Father, Son, and Holy Spirit.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We come to know the Father by turning to Him with honest repentance. Like the prodigal son, we come humbly, confessing that we do not deserve to be called His children. Yet He welcomes us warmly with His loving embrace, giving us a place at His table to rejoice in His grace, God's kindness that we do not deserve.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We also seek to know Jesus the Son, who displays the Father's glory. He is fully God and yet became a suffering man for our sake, walking on water in divine power and resting weary by a well. He is our closest friend and brother. Finally, we come to know the Holy Spirit, who brings holy order to the confusion of our souls as our Teacher and Comforter. Knowing God in this complete way brings true peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can reflecting on God as Father, Son, and Holy Spirit bring deeper peace to your heart today?",
+    "In what ways can you draw near to Jesus as both your Lord and your personal friend?"
+   ],
+   "prayer": "Heavenly Father, thank You for welcoming us with Your grace and calling us Your children. Lord Jesus, thank You for coming near to us in our weakness to be our Brother and Friend. Holy Spirit, bring Your calm order to our hearts and fill us with true peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 8",
+     "on": "Job 22:21",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

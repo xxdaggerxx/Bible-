@@ -1,0 +1,66 @@
+{
+ "id": "11-002-001",
+ "title": "David Instructs Solomon",
+ "refs": [
+  "1 Kings 2:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11002001,
+   "end": 11002009,
+   "ref": "1 Kings 2:1-9",
+   "ranges": [
+    [
+     11002001,
+     11002009
+    ]
+   ],
+   "title": "Walking in God's Ways",
+   "key_verse": [
+    11002003,
+    11002003
+   ],
+   "reflect": [
+    {
+     "text": "As David neared the end of his life, he gave his final instructions to his son Solomon. He urged the new king to show courage and decisiveness so he could lead the nation and secure his throne. Yet David knew that earthly strength and political skill are completely useless on their own. A leader can have great authority, but real success only comes from wholehearted obedience to the law of God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God had promised that David's royal line would continue if his sons walked faithfully before Him. However, human kings would continually fail to obey God with their whole heart. This enduring promise pointed forward to Jesus Christ. Jesus is the King whose perfect obedience fulfilled God's law for us, and our ultimate blessing rests entirely on His righteousness, which is His perfect goodness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though our salvation rests on what Christ has done, faithful daily obedience remains vital for believers. Knowing we are loved by God does not mean we ignore His commands. Instead, we are called to trust His Word each day, walking in His ways with courageous hearts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to rely on your own strength or cleverness instead of obeying God?",
+    "How does knowing that Christ obeyed perfectly for you give you joy in following God's commands today?"
+   ],
+   "prayer": "Lord God, thank You for Jesus Christ, who offered the perfect obedience that we could never achieve on our own. Forgive us when we trust in our own strength rather than Your Word. Grant us courage to follow You faithfully and walk in Your ways each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Guidance to Solomon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/guidance-to-solomon"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "16-013-023",
+ "title": "Intermarriage Forbidden",
+ "refs": [
+  "Nehemiah 13:23-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16013023,
+   "end": 16013031,
+   "ref": "Nehemiah 13:23-31",
+   "ranges": [
+    [
+     16013023,
+     16013031
+    ]
+   ],
+   "title": "Guarding the Heart Against Compromise",
+   "key_verse": [
+    16013026,
+    16013026
+   ],
+   "reflect": [
+    {
+     "text": "When Nehemiah looked at Jerusalem, he found that God's people, including the priests and leaders, had married neighbors who worshipped idols. Choosing personal preferences over obedience to God opened the door to spiritual compromise. Nehemiah warned them by recalling King Solomon. Even though Solomon was loved by God and blessed with great wisdom, foreign wives still drew his heart into sin.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "City walls and outward religious rules cannot take the place of real repentance inside the heart. Human efforts at reform always lose strength unless they are rooted in genuine, saving faith. Nehemiah had to step in and purify the priesthood from everything foreign. His actions point ahead to Jesus Christ, who cleanses believers from all sin and makes us truly clean before God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We make a real difference in the world when we know the Scriptures and refuse to compromise our faith. Because our hearts can easily drift away from God, we need to hear the good news of the gospel continually in every generation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where personal desires are leading you to compromise your obedience to God?",
+    "How can regularly hearing and reading God's word protect you from spiritual drift?"
+   ],
+   "prayer": "Lord, forgive us when we choose our own wishes over your truth and drift into compromise. Thank you for Jesus, who cleanses us from all sin and renews our hearts from the inside out. Help us to know your Scriptures and remain faithful to you each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Always Reforming",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/always-reforming"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - June 11, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-june-11-2010-11633002.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

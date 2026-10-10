@@ -1,0 +1,73 @@
+{
+ "id": "23-001-010",
+ "title": "Meaningless Offerings",
+ "refs": [
+  "Isaiah 1:10-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23001018,
+   "end": 23001018,
+   "ref": "Isaiah 1:18",
+   "ranges": [
+    [
+     23001018,
+     23001018
+    ]
+   ],
+   "title": "\"Though Your Sins Are Like Scarlet\"",
+   "key_verse": [
+    23001018,
+    23001018
+   ],
+   "reflect": [
+    {
+     "text": "We often find ourselves surrounded by sin and confusion, much like people caught in a dangerous firestorm with no clear exit. From where we stand, it can seem impossible to find a path out of spiritual danger. But God sees the whole picture from above. Just as firefighters trapped on the ground must listen to guidance from a plane flying overhead, we need to trust God's clear directions rather than doubting His rescue plan.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God calls us to reason with Him and face our real condition. Our sins may look like deep scarlet stains that we could never scrub away on our own. Yet God promises that even the darkest stains can become as white as snow. This promise points forward to justification, which means God declaring us right with Himself. He takes away our guilt by placing our sins on Jesus and crediting Jesus' goodness to us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If you are weighed down by guilt, you do not need to stay trapped in fear. Jesus bore the full penalty of sin on the cross to set us free. By placing our faith in Him and following His guidance, we receive complete forgiveness and clean hearts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas of guilt or confusion where you have struggled to see a way out?",
+    "How does the promise that Jesus washes your sins white as snow bring you comfort today?"
+   ],
+   "prayer": "Lord God, thank You for seeing our danger and giving us a sure way of escape. We praise You that through Jesus on the cross, our deepest stains are washed completely clean. Please help us to trust Your guidance and rest in the full forgiveness You provide. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Remission of Sins",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/remission-of-sins"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "When You Can’t See Your Way Out",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-december-19-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

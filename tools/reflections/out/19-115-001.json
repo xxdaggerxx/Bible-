@@ -1,0 +1,149 @@
+{
+ "id": "19-115-001",
+ "title": "To Your Name Be the Glory",
+ "refs": [
+  "Psalms 115:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19115008,
+   "end": 19115008,
+   "ref": "Psalms 115:8",
+   "ranges": [
+    [
+     19115008,
+     19115008
+    ]
+   ],
+   "title": "\"Those Who Make Them Become Like Them\"",
+   "key_verse": [
+    19115008,
+    19115008
+   ],
+   "reflect": [
+    {
+     "text": "Whatever we value most shapes who we are. When we look to good things like our family, achievements, or work to give us our deepest sense of worth, we turn them into idols. Rick Warren points out that people often make idols out of a desire to manage and control their lives rather than submitting to God. Yet relying on helpless things always ends in disappointment and spiritual bondage.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "We naturally take on the qualities of whatever we worship. If we center our lives on dead things, our own hearts grow dull. But when we fix our attention on Jesus and trust Him completely, God changes us into His likeness. As F. B. Meyer observed, a quiet and holy life can show Christ to the world far more clearly than words alone. Giving up control and putting Jesus first brings true spiritual freedom.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What achievements or earthly comforts are you tempted to rely on for your sense of worth?",
+    "How can you focus on Jesus today so that your daily actions reflect His character?"
+   ],
+   "prayer": "Lord Jesus, forgive us when we look to created things to give us worth and security. Help us let go of our desire to control our lives, and teach us to trust You with all our hearts. Transform our daily thoughts and actions so that our lives reflect Your goodness to the people around us. Amen.",
+   "sources": {
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 115:8",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D5": {
+     "author": "Rick Warren",
+     "work": "When You Make Idols, You End Up Like Them",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-june-10-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19115001,
+   "end": 19115018,
+   "ref": "Psalms 115:1-18",
+   "ranges": [
+    [
+     19115001,
+     19115018
+    ]
+   ],
+   "title": "To Your Name Be the Glory",
+   "key_verse": [
+    19115001,
+    19115001
+   ],
+   "reflect": [
+    {
+     "text": "All honor belongs to God alone. Like the donkey that carried Jesus into Jerusalem, our job is simply to carry Christ to others without seeking personal praise. We must also beware of placing Christian leaders or famous people on pedestals. Whenever we treat human beings as heroes to admire obsessively, we set ourselves up for disappointment. Our worship and trust belong solely to the Lord.",
+     "sources": [
+      "D4",
+      "D6"
+     ]
+    },
+    {
+     "text": "The Lord is always mindful of us, which means His thoughts are full of our care and guidance. Because God does not change, we can be confident that He will continue to bless us in the days ahead. He does not reserve His goodness only for people with great talent or influence. The Lord promises to bless the small alongside the great, tenderly caring for weak faith just as a mother cares for a young child.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God made the heavens, and He has entrusted the earth to our care. He did not give us this physical world to treat like a disposable toy or abuse for our own selfish gain. Instead, we honor our Creator by acting as faithful stewards who treat His handiwork with the same care and value that He shows toward it.",
+     "sources": [
+      "D7"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you redirect attention and praise back to God in your daily life?",
+    "How does knowing that God notices and blesses even the smallest faith bring you comfort?"
+   ],
+   "prayer": "Father in heaven, not to us, but to Your name be all the glory. Thank You for always remembering us and caring for us, even when our faith feels small and weak. Teach us to live humbly before You, to trust You alone, and to care wisely for the world You have placed in our hands. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 15",
+     "on": "Psalms 115:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 21",
+     "on": "Psalms 115:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Izabella McMillon",
+     "work": "Carrying Jesus Into the World",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-october-15-2019.html"
+    },
+    "D6": {
+     "author": "Greg Laurie",
+     "work": "The Surprising Truth about Idols",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/the-surprising-truth-about-idols-greg-laurie-daily-devotion-april-15-2016.html"
+    },
+    "D7": {
+     "author": "Wisdom from the Psalms",
+     "work": "Wisdom from the Psalms 9/14",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-9-or-14-552570.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

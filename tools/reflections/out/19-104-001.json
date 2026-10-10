@@ -1,0 +1,121 @@
+{
+ "id": "19-104-001",
+ "title": "How Many Are Your Works, O LORD!",
+ "refs": [
+  "Psalms 104:1-35"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19104016,
+   "end": 19104016,
+   "ref": "Psalms 104:16",
+   "ranges": [
+    [
+     19104016,
+     19104016
+    ]
+   ],
+   "title": "\"The Trees of the LORD\"",
+   "key_verse": [
+    19104016,
+    19104016
+   ],
+   "reflect": [
+    {
+     "text": "The great cedar trees on the mountains of Lebanon were not planted or tended by human hands. God put them there Himself, watered them with rain from heaven, and sheltered them through severe storms. In the same way, every true believer is planted and cared for by God alone. We do not make ourselves Christians, nor can any human power keep our faith alive. From our first beginnings to our daily growth, we depend entirely on our heavenly Father.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just as a tree cannot live without sap, we cannot truly live without the Holy Spirit inside us. This spiritual life is a quiet mystery working deep in our hearts, rooted in Jesus Christ. Even when we do not notice it, God's life within us is constantly active, keeping our souls alive. As Charles Spurgeon wrote, this inward life \"must fill his conduct and conversation with life.\" When God sustains us from within, our words and everyday actions begin to show His presence to those around us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily life are you relying on your own strength rather than trusting God to sustain you?",
+    "How can you let the quiet life God has given you show in the way you speak and act today?"
+   ],
+   "prayer": "Lord, thank You for planting faith in our hearts and keeping us alive by Your Spirit. Help us to depend on You each day instead of leaning on our own power. May our words and actions show others the life You have given us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 13",
+     "on": "Psalms 104:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 24",
+     "on": "Psalms 104:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 19104024,
+   "end": 19104024,
+   "ref": "Psalms 104:24",
+   "ranges": [
+    [
+     19104024,
+     19104024
+    ]
+   ],
+   "title": "\"How Many Are Your Works\"",
+   "key_verse": [
+    19104024,
+    19104024
+   ],
+   "reflect": [
+    {
+     "text": "Our busy days and personal worries can easily keep us from noticing the world around us. Yet God gave us senses like sight and hearing so we could perceive His goodness in the things He made. When we look at nature, we see a loving Creator who has complete authority over the earth and provides food and shelter for every creature. Stepping outside to observe His faithful care for the wild things helps quiet our hearts and assures us that He will take care of us too.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "The whole earth is like a rich storehouse full of God's thoughtful skill and beauty. Even the common, everyday parts of nature can fill us with wonder when we slow down to look closely at them. Taking time to study and enjoy what God made keeps our souls from growing dull or empty. When we turn these moments into prayer, thanking God for what we see, our hearts stay fresh with praise for His ongoing miracles.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What part of God's creation have you walked past recently without pausing to notice His goodness?",
+    "How might taking a quiet moment outdoors today help you remember God's daily care for your needs?"
+   ],
+   "prayer": "Creator God, forgive us for rushing through our days without noticing Your wonderful works. Open our eyes to see Your wisdom and care in the world around us. As we remember how You feed and protect every creature, give us peace to trust You with our own lives. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Susanne Scheppmann",
+     "work": "A Reflection of God’s Glory",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-sept-26-2008-11582200.html"
+    },
+    "D4": {
+     "author": "Wisdom from the Psalms",
+     "work": "Wisdom from the Psalms 8/19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-8-or-19-552518.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

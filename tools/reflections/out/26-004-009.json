@@ -1,0 +1,74 @@
+{
+ "id": "26-004-009",
+ "title": "The Defiled Bread",
+ "refs": [
+  "Ezekiel 4:9-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26004009,
+   "end": 26004017,
+   "ref": "Ezekiel 4:9-17",
+   "ranges": [
+    [
+     26004009,
+     26004017
+    ]
+   ],
+   "title": "A Holy Warning and a Gracious Hearer",
+   "key_verse": [
+    26004014,
+    26004014
+   ],
+   "reflect": [
+    {
+     "text": "God gave Ezekiel difficult tasks to act out before the people. By weighing out tiny amounts of food and water, the prophet pictured the severe famine coming upon Jerusalem. These actions showed that judgment was certain because the people refused to turn from their sins. A holy God was bringing the covenant curses He had warned about, reminding us that God takes sin seriously and calls His people to holiness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet when God commanded Ezekiel to bake his bread over human waste, the prophet cried out in distress. He had kept himself pure from his youth, and this command felt unbearable. God heard his honest plea and showed kindness by letting him use cow dung instead. As F. B. Meyer observed, God allows us to bring our complaints to Him and offers \"gracious mitigations of our griefs.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We serve a God who is completely holy, but He is also a tender Father. When duties feel too heavy or trials seem more than we can bear, we do not have to hide our struggles. We can go to Him in prayer, tell Him honestly what hurts, and trust Him either to lighten our load or give us the strength we need.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there sins you have been tolerating instead of taking God's call to holiness seriously?",
+    "What heavy burden or difficult duty do you need to bring honestly to God today?"
+   ],
+   "prayer": "Holy Father, You are completely pure and just in all Your ways. Help us to turn from sin and honor You with clean hearts. When life feels too hard or our duties become heavy, teach us to bring our cries directly to You, trusting Your great mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 4:14",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Siege of Jerusalem Symbolized",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/siege-jerusalem-symbolized"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

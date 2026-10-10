@@ -1,0 +1,66 @@
+{
+ "id": "12-004-008",
+ "title": "The Shunammite Woman",
+ "refs": [
+  "2 Kings 4:8-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12004008,
+   "end": 12004017,
+   "ref": "2 Kings 4:8-17",
+   "ranges": [
+    [
+     12004008,
+     12004017
+    ]
+   ],
+   "title": "Welcoming Others with God's Love",
+   "key_verse": [
+    12004010,
+    12004010
+   ],
+   "reflect": [
+    {
+     "text": "In this story, a woman from Shunem noticed that Elisha frequently traveled past her town. She invited him to share a meal, but she did not stop there. She and her husband decided to build a quiet upper room and furnish it with a bed, a table, a chair, and a lamp. By preparing a peaceful resting place, she showed intentional care and hospitality toward the prophet.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our homes can serve as practical places of ministry to show God's care to people who visit us. We do not need a grand house to be thoughtful hosts. We can look ahead and anticipate the needs of our guests through small comforts, snacks, and welcoming touches that make them feel valued.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Practicing Christian hospitality is about more than being polite. It is a simple way to care for people in their everyday lives. When we make room for others and welcome them with warmth, we share the love of God and help draw them closer to him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you use your living space to make someone feel welcome and cared for this week?",
+    "What are some practical comforts you can offer to guests to show them God's love?"
+   ],
+   "prayer": "Lord, thank you for the home and resources you have given us. Help us to notice the needs of people around us and welcome them with warmth. May our hospitality share your love and bring comfort to everyone who visits. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Glynnis Whitwer",
+     "work": "Creating a Welcoming Guest Room",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-10-20-04-1290839.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

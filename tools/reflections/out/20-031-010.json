@@ -1,0 +1,89 @@
+{
+ "id": "20-031-010",
+ "title": "The Virtues of a Noble Woman",
+ "refs": [
+  "Proverbs 31:10-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20031010,
+   "end": 20031031,
+   "ref": "Proverbs 31:10-31",
+   "ranges": [
+    [
+     20031010,
+     20031031
+    ]
+   ],
+   "title": "A Life of Trust and Reverence",
+   "key_verse": [
+    20031030,
+    20031030
+   ],
+   "reflect": [
+    {
+     "text": "Proverbs 31 was never written to make us feel guilty or burdened by impossible standards. Instead, it is a joyful celebration of a courageous person who faces daily life with dignity. This woman approaches ordinary tasks with a willing heart, choosing an eager attitude that turns simple routines into an offering of worship to God. By preparing wisely for what she can manage, she is able to face the future without panic, calmly trusting God with the things outside her control.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Her home and community flourish because of her steady integrity. As F. B. Meyer observes, her character is marked by 'absolute trustworthiness,' so that those who love her can confide in her with total peace of mind. Outward charm and physical beauty fade with time, but a life rooted in reverence and trust toward God has enduring value. When family and friends celebrate this faithful character, their gratitude brings honor and glory to God.",
+     "sources": [
+      "D1",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How can viewing your daily chores and work as worship change your attitude toward them?",
+    "In what ways can you show trustworthiness and quiet confidence about the future this week?"
+   ],
+   "prayer": "Lord, help us to serve You and our families with willing and joyful hearts each day. Teach us to be trustworthy companions and to place our worries about tomorrow into Your care. May our lives be shaped not by things that quickly fade, but by a deep and lasting reverence for You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 31:11",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Kathi Lipp",
+     "work": "How to Be Ready for Anything and Laugh at Days to Come",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-june-10-2020.html"
+    },
+    "D3": {
+     "author": "Mary Southerland",
+     "work": "Who Really Signs Your Check?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-september-17-2019.html"
+    },
+    "D4": {
+     "author": "Lysa TerKeurst",
+     "work": "You Are Worth Celebrating",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-9-2026.html"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "The Wife Who Is to Be Praised",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/wife-who-be-praised"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

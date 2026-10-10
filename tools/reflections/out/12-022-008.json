@@ -1,0 +1,66 @@
+{
+ "id": "12-022-008",
+ "title": "Hilkiah Finds the Book of the Law",
+ "refs": [
+  "2 Kings 22:8-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12022008,
+   "end": 12022013,
+   "ref": "2 Kings 22:8-13",
+   "ranges": [
+    [
+     12022008,
+     12022013
+    ]
+   ],
+   "title": "Rediscovering God's Word",
+   "key_verse": [
+    12022013,
+    12022013
+   ],
+   "reflect": [
+    {
+     "text": "Judah had suffered years of deep spiritual decline under previous kings like Manasseh and Amon. This dark period began to turn around when young King Josiah decided to do what was right before God. As workers were repairing the temple, the priests made a crucial discovery: they recovered the long-neglected Book of the Law.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When the book was read aloud to Josiah, God's Word exposed just how far the nation had drifted into unfaithfulness. Hearing God's truth moved Josiah deeply. He tore his clothes in grief and repentance, recognizing that Judah stood under God's righteous anger because generations had ignored His commands.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Josiah sent his trusted leaders to inquire of the Lord about the judgment threatened against their disobedience. Because Josiah met the message with a humble and faithful heart, God showed mercy by holding back the covenant curse of exile during his lifetime.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually respond when God's Word points out an area where your life needs to change?",
+    "What can help you keep a soft, humble heart whenever you read Scripture?"
+   ],
+   "prayer": "Lord, thank You for giving us Your Word to guide us and show us the truth. Please give us humble hearts like Josiah to listen carefully, turn from our wrongs, and seek Your will. We thank You for Your faithful mercy toward those who turn to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Law of God Recovered",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/law-of-god-recovered"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

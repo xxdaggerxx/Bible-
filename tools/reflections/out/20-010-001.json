@@ -1,0 +1,96 @@
+{
+ "id": "20-010-001",
+ "title": "Solomon’s Proverbs: The Wise Son",
+ "refs": [
+  "Proverbs 10:1-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20010001,
+   "end": 20010032,
+   "ref": "Proverbs 10:1-32",
+   "ranges": [
+    [
+     20010001,
+     20010032
+    ]
+   ],
+   "title": "Walking in God's Wisdom and Peace",
+   "key_verse": [
+    20010009,
+    20010009
+   ],
+   "reflect": [
+    {
+     "text": "Walking in honesty and obedience gives us firm ground under our feet. When we choose integrity, we do not have to live in fear of being found out. We enjoy a quiet conscience and inner peace that money can never buy. Trusting the Lord also guards our hearts from anxious worry. Knowing that Christ is with us whether we live or die gives us rest, helping us live our days with purpose and calm confidence.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Staying on this good path requires humility and authentic love. God often corrects us through His Word, through caring friends, or through painful trials. When we accept His correction meekly instead of complaining, we grow in holiness. At the same time, as Charles R. Swindoll notes, genuine love shows \"tough resilience\" in hard times. Instead of stirring up conflict, true love pardons offenses and stands firm for the good of others.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "As we walk closely with the Lord, our desires begin to match His. We start asking for things that truly matter, like growing more like Jesus and being useful to Him. God delights to grant these holy requests. Even when He says no or makes us wait, we can still thank Him, trusting that He always knows what is best for our lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually respond when God or a friend corrects you, and what helps you receive it with humility?",
+    "Are your deepest desires focused on growing more like Christ and loving those around you?"
+   ],
+   "prayer": "Lord, grant us grace to walk with honest hearts and quiet trust in You. Teach us to welcome Your loving correction and to love others with patient strength. Align our desires with Your will so that our lives honor You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 15",
+     "on": "Proverbs 10:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 22",
+     "on": "Proverbs 10:27",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 1",
+     "on": "Proverbs 10:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 10:17",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D5": {
+     "author": "Charles R. Swindoll",
+     "work": "Today's Insight - July 9, 2012: The ABCs of Love",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-july-9-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

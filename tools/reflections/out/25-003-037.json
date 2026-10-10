@@ -1,0 +1,81 @@
+{
+ "id": "25-003-037",
+ "title": "God’s Justice",
+ "refs": [
+  "Lamentations 3:37-66"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 25003037,
+   "end": 25003066,
+   "ref": "Lamentations 3:37-66",
+   "ranges": [
+    [
+     25003037,
+     25003066
+    ]
+   ],
+   "title": "Turning Back to the Lord",
+   "key_verse": [
+    25003040,
+    25003040
+   ],
+   "reflect": [
+    {
+     "text": "When we face trouble or feel distant from God, we should look closely at our lives and return to Him. We cannot afford to be content living without close fellowship with our Savior. If our sins have created a distance, we should not just feel sorrow or stay away. We must turn back and run straight to the cross of Christ, where we first found mercy and new life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Lifting our hearts and hands in prayer reminds us of how needy we truly are. True prayer shows our hidden poverty and confesses our complete emptiness before God's wealth. While prayer humbles us, it also builds us up for the race of life. It wraps our human weakness in God's divine strength and gives troubled hearts His peace.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even from the depths of grief, we can be confident that the Lord acts for us. As Charles Spurgeon observes, the prophet speaks not with doubt, but \"as a matter of fact not to be disputed\" that God has defended his soul. He takes no credit for his rescue, giving all glory to God alone. When the Lord saves us, we can lay aside our fears and thank Him with joyful hearts.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you grown comfortable feeling distant from God, or are you eager to return to the cross in prayer?",
+    "When God carries you through hard times, do you give all the credit and thanks to Him?"
+   ],
+   "prayer": "Lord God, show us where we have drifted away and lead us back to the cross of Jesus. Teach us our deep need for You, and fill our weakness with Your divine strength as we pray. Thank You for defending our souls and redeeming our lives, and give us joyful confidence to praise You alone.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 30",
+     "on": "Lamentations 3:40",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 11",
+     "on": "Lamentations 3:41",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 20",
+     "on": "Lamentations 3:58",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

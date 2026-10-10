@@ -1,0 +1,74 @@
+{
+ "id": "14-017-001",
+ "title": "Jehoshaphat Reigns in Judah",
+ "refs": [
+  "2 Chronicles 17:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 14017005,
+   "end": 14017006,
+   "ref": "2 Chronicles 17:5-6",
+   "ranges": [
+    [
+     14017005,
+     14017006
+    ]
+   ],
+   "title": "\"His Heart Took Delight\"",
+   "key_verse": [
+    14017006,
+    14017006
+   ],
+   "reflect": [
+    {
+     "text": "King Jehoshaphat chose to walk in God's commandments and clear false idols out of the land. His heart found real joy in living God's way rather than copying the sinful practices around him. In response to his faithful obedience, the Lord established his kingdom and blessed him with security, honor, and peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "As F. B. Meyer wrote, we are called to \"lift up our hearts\" to God just as a child lifts a face to be kissed. When daily duties and worries press on us, we can turn away from sinful habits and enter the quiet presence of our Father. Real spiritual joy grows when we remove anything that takes God's place and set our minds on Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jehoshaphat shows us the blessing of staying devoted to the Lord with an undivided heart. Today, we are called to hold fast to biblical truth with that same courage. Rather than compromising what is right to fit in with the world, we can trust God to establish and guard our lives as we follow Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What distractions or wrong desires do you need to clear away so you can draw closer to God?",
+    "How can you find delight in obeying God's Word instead of treating it like a heavy burden?"
+   ],
+   "prayer": "Lord, help us to find our deepest joy in your ways and to walk faithfully in your truth. Clear away any idols or distractions in our lives that pull our affection from you. Grant us courage to stay true to your Word and rest in your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 17:6",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Jehoshaphat’s Successes",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jehoshaphats-successes"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

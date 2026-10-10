@@ -1,0 +1,66 @@
+{
+ "id": "19-150-001",
+ "title": "Let Everything That Has Breath Praise the LORD",
+ "refs": [
+  "Psalms 150:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19150001,
+   "end": 19150006,
+   "ref": "Psalms 150:1-6",
+   "ranges": [
+    [
+     19150001,
+     19150006
+    ]
+   ],
+   "title": "Let Everything with Breath Praise the Lord",
+   "key_verse": [
+    19150006,
+    19150006
+   ],
+   "reflect": [
+    {
+     "text": "The book of Psalms finishes by urging every living creature to offer unceasing praise to our Creator. We might sometimes think following God's commands is the finish line, but obedience is meant to lead us into heartfelt worship. In Jesus Christ, this call unites people from every nation across the world. When our desire to praise God grows, it shows that our obedience is real and genuine. God welcomes all kinds of musical instruments to celebrate His greatness and the mighty things He has done.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "It is easy to open the Bible merely as a self-help guide to fix our troubles. While God gives us room to grieve and express our sorrow, Scripture always guides us back to praise. True peace comes when we fix our attention on who God is rather than simply searching for personal solutions. His endless qualities and strength are the true answer to our human weakness and pain.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you read the Bible, do you look mostly for quick answers or for who God is?",
+    "How can your everyday obedience to God lead you to praise Him more warmly?"
+   ],
+   "prayer": "Lord God, thank You for revealing Your greatness and mighty works to us. Turn our hearts away from self-centered thinking so we may rest in who You are. Teach us to obey You with joy and join with all creation to praise Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Heidi Vegh",
+     "work": "A Prayer of Praise for Who God Is",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-praise-god.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "A Call to Praise the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/call-praise-lord"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

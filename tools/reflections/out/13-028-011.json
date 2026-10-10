@@ -1,0 +1,66 @@
+{
+ "id": "13-028-011",
+ "title": "The Plans for the Temple",
+ "refs": [
+  "1 Chronicles 28:11-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13028011,
+   "end": 13028021,
+   "ref": "1 Chronicles 28:11-21",
+   "ranges": [
+    [
+     13028011,
+     13028021
+    ]
+   ],
+   "title": "God Is with You in the Work",
+   "key_verse": [
+    13028020,
+    13028020
+   ],
+   "reflect": [
+    {
+     "text": "David gave his son Solomon the detailed plans for building the temple. This house of God had an essential place in God's story of redemption, His plan to rescue and restore His people. Building it was a massive task, but David told Solomon to be strong and courageous. Solomon did not need to be afraid, because the Lord God would stay right with him until the work was complete.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David's charge gives courage to believers today as well. Just as God was with Solomon to construct the temple, God is actively present with us as Jesus Christ builds His church. We can step forward with confidence, knowing the Lord will never fail us or leave us on our own.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God is faithful to build His kingdom, we are invited to take part. We are called to support this work by giving our resources and our lives with willing hearts. When we offer what we have to serve God's people, we can trust that He remains with us every step of the way.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you show courage this week, knowing that God is with you as He builds His church?",
+    "How can you use your time or resources to help support the work of God's kingdom?"
+   ],
+   "prayer": "Lord God, thank You for the promise that You will never fail or leave Your people. Give us courage as we see Christ building His church in the world today. Help us to offer our time, gifts, and lives willingly for Your kingdom work. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "David’s Final Temple Guidance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/davids-final-temple-guidance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

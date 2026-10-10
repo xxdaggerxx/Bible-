@@ -1,0 +1,67 @@
+{
+ "id": "26-039-021",
+ "title": "Israel to Be Restored",
+ "refs": [
+  "Ezekiel 39:21-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26039021,
+   "end": 26039029,
+   "ref": "Ezekiel 39:21-29",
+   "ranges": [
+    [
+     26039021,
+     26039029
+    ]
+   ],
+   "title": "God Restores the Captive",
+   "key_verse": [
+    26039025,
+    26039025
+   ],
+   "reflect": [
+    {
+     "text": "God promised to bring Israel back from exile and show them deep mercy, keeping His ancient covenant. Left to ourselves, our natural path is always to wander away from God, like a lost sheep wandering deeper into the dark hills. A sheep cannot find its own way back to the fold. As F. B. Meyer notes, all bringing again must originate in God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our own hearts easily drift into disorder and sin. If God left us to ourselves, we would only wander further into ruin. But the Lord is rich in mercy. He does not wait for us to fix ourselves; He steps in and comes after us to rescue us for the sake of His holy name.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "You may feel trapped today by bad habits, broken relationships, or difficult circumstances that feel like iron bars. The more we struggle in our own strength, the more tangled we become. Real freedom begins when you stop relying on yourself, look to the Lord, and ask Him to fulfill His promises in your life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life have you been trying to free yourself through your own strength instead of turning to God?",
+    "How does knowing that the Shepherd comes after His wandering sheep give you comfort today?"
+   ],
+   "prayer": "Lord God, thank You for Your mercy that pursues us when we wander away. Forgive us for trying to fix our lives in our own power, which only leaves us more tangled. Please remember Your promises, break our chains, and restore our hearts for the honor of Your holy name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 39:25",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

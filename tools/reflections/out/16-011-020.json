@@ -1,0 +1,67 @@
+{
+ "id": "16-011-020",
+ "title": "Residents Outside Jerusalem",
+ "refs": [
+  "Nehemiah 11:20-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16011020,
+   "end": 16011036,
+   "ref": "Nehemiah 11:20-36",
+   "ranges": [
+    [
+     16011020,
+     16011036
+    ]
+   ],
+   "title": "Singing Praise and Cheering the Weary",
+   "key_verse": [
+    16011023,
+    16011023
+   ],
+   "reflect": [
+    {
+     "text": "In this record of towns and duties, a royal order guaranteed daily support for the temple singers. Some people might have thought that singing was not practical work compared to farming fields or making crafts. Yet F. B. Meyer noted that their songs brought life and cheer to the whole community. Giving praise to God and lifting the spirits of others was a vital task that deserved steady care.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "You might sometimes feel that your own contribution is small or not very useful. Perhaps you cannot do heavy labor or run big projects, and all you can offer is a kind word or a song of hope to tired workers. Even those who are sick or confined to bed can become a steady source of comfort and wise counsel that strengthens an entire household.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God deeply values those who bring His praise into the world and lighten heavy hearts. Offering encouragement or praising God in quiet hours is genuine service that makes a lasting difference. You are needed in God's world, and the heavenly King will make sure you receive the care you need each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt that your quiet acts of kindness or praise were not very important?",
+    "How can you bring cheer and hope to someone who is weary today?"
+   ],
+   "prayer": "Lord, thank You for showing us that offering praise and kindness is meaningful work in Your sight. Help us to encourage those around us who are tired and need hope. We trust that You will provide for us day by day as we seek to honor You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Nehemiah 11:23",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

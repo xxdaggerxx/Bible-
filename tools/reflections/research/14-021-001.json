@@ -1,0 +1,15 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/",
+  "https://www.biblegateway.com/",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+21&version=NIV",
+  "https://www.biblegateway.com/passage/?search=2+Samuel+7%3A25%2C1+Kings+2%3A4%2C1+Kings+6%3A12%2C1+Kings+8%3A25%2C1+Kings+9%3A5%2C1+Kings+11%3A13%2C1+Kings+11%3A32%2C2+Kings+19%3A34%2C2+Chronicles+6%3A16%2C2+Chronicles+7%3A18%2C2+Chronicles+21%3A7%2CPsalm+89%3A24%2CPsalm+89%3A33%2CJeremiah+33%3A17&version=NIV",
+  "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Jehoram-Joram",
+  "https://www.biblegateway.com/verse/en/2%20Chronicles%2021%3A7",
+  "https://www.ligonier.org/"
+ ],
+ "cost": 0.0307538,
+ "model": "google/gemini-3.8-flash"
+}

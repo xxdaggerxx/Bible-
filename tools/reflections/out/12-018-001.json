@@ -1,0 +1,66 @@
+{
+ "id": "12-018-001",
+ "title": "Hezekiah Destroys Idolatry in Judah",
+ "refs": [
+  "2 Kings 18:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12018001,
+   "end": 12018012,
+   "ref": "2 Kings 18:1-12",
+   "ranges": [
+    [
+     12018001,
+     12018012
+    ]
+   ],
+   "title": "Hope and Trust in the Lord",
+   "key_verse": [
+    12018005,
+    12018005
+   ],
+   "reflect": [
+    {
+     "text": "Hezekiah became king after his father Ahaz, who had led the nation into deep wrongdoing. Even though he came from such a dark background, Hezekiah brought a bright ray of hope. He chose to do what was right before God. Scripture shows us that Hezekiah trusted the Lord with an extraordinary devotion, standing out above all the other kings of Judah.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Hezekiah boldly removed idols from the land. He tore down the false places of worship and cut down the sacred poles. He even destroyed the bronze snake that Moses had made centuries earlier, because the people had turned it into an idol and were burning incense to it. Because Hezekiah stayed faithful to God's covenant, the Lord was with him and gave him success.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This history shows us the kindness of God. No matter how far people wander into spiritual compromise, God is eager to forgive and bless anyone who turns away from sin and returns to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there anything good in your life that has begun to take the place of God?",
+    "How does knowing that God is eager to forgive help you return to Him when you fail?"
+   ],
+   "prayer": "Lord God, thank You for Your readiness to forgive and bless us whenever we turn back to You. Help us to trust You completely and remove anything that takes Your rightful place in our hearts. Keep us faithful to You every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Hope in the Southern Kingdom",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/hope-in-southern-kingdom"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

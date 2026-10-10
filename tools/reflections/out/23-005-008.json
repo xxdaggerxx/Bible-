@@ -1,0 +1,68 @@
+{
+ "id": "23-005-008",
+ "title": "Woes to the Wicked",
+ "refs": [
+  "Isaiah 5:8-30"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23005020,
+   "end": 23005020,
+   "ref": "Isaiah 5:20",
+   "ranges": [
+    [
+     23005020,
+     23005020
+    ]
+   ],
+   "title": "\"Call Evil Good and Good Evil\"",
+   "key_verse": [
+    23005020,
+    23005020
+   ],
+   "reflect": [
+    {
+     "text": "In Judah, people turned God's moral order upside down by calling evil good and good evil. Many people today still resist God's commands because they want to decide right and wrong on their own terms. Our culture often chases whatever is new and assumes that God's ancient standards are out of date. Yet God's words are not harsh rules made to steal our happiness. They are reliable guides that lead to true flourishing, while societies that celebrate wrongdoing invite God's judgment and cannot last.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Greed and the constant chase for pleasure can easily blind people to God's presence and His work in the world. As believers, we are called to stand up for what is right and encourage others to turn back to God. When we follow His clear commands, our lives show real peace, joy, and satisfaction. That quiet faithfulness shines brightly in a confused world that has lost its way.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to follow culture's ideas of right and wrong instead of trusting God's Word?",
+    "How can your daily obedience show God's peace and joy to those around you?"
+   ],
+   "prayer": "Lord, help us to love Your truth and trust Your wise commands. Guard our hearts from following the world when it confuses right with wrong. Give us courage to stand for what is good and show Your peace to those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "When Good and Evil are Confused",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/when-good-and-evil-are-confused"
+    },
+    "D2": {
+     "author": "Jack Graham",
+     "work": "Power Point - Dec. 12, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-dec-12-2006-1456921.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

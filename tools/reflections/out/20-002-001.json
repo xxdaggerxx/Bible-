@@ -1,0 +1,60 @@
+{
+ "id": "20-002-001",
+ "title": "The Benefits of Wisdom",
+ "refs": [
+  "Proverbs 2:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20002001,
+   "end": 20002022,
+   "ref": "Proverbs 2:1-22",
+   "ranges": [
+    [
+     20002001,
+     20002022
+    ]
+   ],
+   "title": "Discovering the Knowledge of God",
+   "key_verse": [
+    20002005,
+    20002005
+   ],
+   "reflect": [
+    {
+     "text": "The greatest goal of Christian faith is knowing God in a close, personal way. Proverbs shows us that this kind of knowledge does not happen by accident. It calls for our deep attention and earnest effort. Just as a miner digs for hidden treasure, we are called to value God's words, treasure His commands, and ask Him eagerly for understanding. God has revealed Himself to us in creation, in the Bible, and most clearly in Jesus Christ. To know Him, we must actively look to what He has shown us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we truly discover God's knowledge, it changes how we see Him and how we live. We gain a holy, reverent fear of His majesty, honoring Him as God. This real relationship does not stay hidden inside our thoughts. It reshapes our daily life, leading us toward honest living, fairness, and justice. God guards our steps, protecting us from crooked ways and guiding us to live upright lives that honor Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How actively are you seeking to know God through His Word each day?",
+    "In what areas of your daily life can you show the justice and honesty that come from knowing Him?"
+   ],
+   "prayer": "Lord, give us hearts that eagerly seek You as our greatest treasure. Teach us to revere Your holiness as we listen to Your Word. Guide our steps today so that our lives reflect Your justice, truth, and love.",
+   "sources": {
+    "D1": {
+     "author": "T.M. Moore",
+     "work": "Knowing God: Conditions and Consequences",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/church/pastors-or-leadership/knowing-god-conditions-and-consequences-11575961.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

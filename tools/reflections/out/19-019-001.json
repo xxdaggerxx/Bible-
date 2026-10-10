@@ -1,0 +1,101 @@
+{
+ "id": "19-019-001",
+ "title": "The Heavens Declare the Glory of God",
+ "refs": [
+  "Psalms 19:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19019001,
+   "end": 19019014,
+   "ref": "Psalms 19:1-14",
+   "ranges": [
+    [
+     19019001,
+     19019014
+    ]
+   ],
+   "title": "God's Glory in Sky, Word, and Heart",
+   "key_verse": [
+    19019014,
+    19019014
+   ],
+   "reflect": [
+    {
+     "text": "God speaks clearly through the world He made. The vast skies and the steady circuit of the sun quietly show His majesty day and night. Looking up at the heavens can quiet our restless minds and pause our daily stress, reminding us of the Creator's power, His personal care, and our accountability to Him.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "God also speaks to us through His written Word. His law is not a heavy burden, but a trustworthy guide that restores our souls, brings deep joy, and gives wisdom to the simple. When we follow His commands out of love, we discover true spiritual freedom and great reward.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "As Scripture shines into our lives, it reveals our need for inner cleansing. Small, hidden faults can quietly grow into deliberate, willful sins if we trust in our own strength. We need God to forgive our secret errors and hold us back from pride. Our daily aim is not human praise, but words and thoughts that please the Lord, our sheltering rock and redeemer.",
+     "sources": [
+      "D1",
+      "D2",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "How can pausing to look at creation or reading God's Word help you refocus your mind today?",
+    "What hidden attitudes or careless words do you need to bring to the Lord for cleansing?"
+   ],
+   "prayer": "Lord God, thank You for displaying Your majesty in the skies and revealing Your wisdom in Your Word. Cleanse us from hidden faults and keep us back from willful sins. May the words of our mouths and the thoughts of our hearts honor You, our Rock and our Redeemer. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 16",
+     "on": "Psalms 19:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 19:12",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Whitney Hopler",
+     "work": "As I Look Up to the Heavens",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/as-i-look-up-to-the-heavens.html"
+    },
+    "D4": {
+     "author": "Charles R. Swindoll",
+     "work": "God Speaks through His Creation",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-may-21-2018.html"
+    },
+    "D5": {
+     "author": "Alistair Begg",
+     "work": "The Paradox of Freedom in Christ",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-10-2023.html"
+    },
+    "D6": {
+     "author": "Trevin Wax",
+     "work": "May the Words",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/trevin-wax/may-the-words/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

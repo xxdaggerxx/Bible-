@@ -1,0 +1,74 @@
+{
+ "id": "24-032-036",
+ "title": "A Promise of Restoration",
+ "refs": [
+  "Jeremiah 32:36-44"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24032040,
+   "end": 24032041,
+   "ref": "Jeremiah 32:40-41",
+   "ranges": [
+    [
+     24032040,
+     24032041
+    ]
+   ],
+   "title": "\"I Will Rejoice in Doing Them Good\"",
+   "key_verse": [
+    24032041,
+    24032041
+   ],
+   "reflect": [
+    {
+     "text": "God makes an everlasting promise to never stop doing good to His people. When we walk through dark trials or feel hopeless, it is easy to wonder if God has grown tired of helping us. But He does not care for us out of bare duty or reluctance. God actively delights in blessing His people, and His promise to do you good comes from a heart full of genuine joy.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we look at ourselves, we often see our sins, mistakes, and weaknesses. We might struggle to see why the Lord would take any pleasure in us at all. Yet Charles Spurgeon reminds us that God takes delight in His people like a bridegroom over his bride. The Creator of the mountains and the angels chooses to set His affection on ordinary people saved by His grace, which is God's kindness that we do not deserve.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing that God truly loves to do you good gives your faith a solid place to rest. Even when your life feels broken or impossible, God remains completely committed to your good with all His heart and soul. Leaning on His delight guards your heart against fear and fills you with steady confidence in Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Why is it comforting to know that God blesses you with joy rather than out of duty?",
+    "When you face hard times, how can remembering God's delight help you trust Him?"
+   ],
+   "prayer": "Heavenly Father, thank You for taking real joy in doing good to us. When we feel weighed down by our weaknesses, help us remember Your unending love and grace. Teach us to rest our confidence in Your glad commitment to care for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 21",
+     "on": "Jeremiah 32:41",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "John Piper",
+     "work": "God Rejoices to Do You Good",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/god-rejoices-to-do-you-good"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

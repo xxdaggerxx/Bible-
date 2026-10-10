@@ -1,0 +1,75 @@
+{
+ "id": "15-009-001",
+ "title": "Intermarriage with Neighboring Peoples",
+ "refs": [
+  "Ezra 9:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15009001,
+   "end": 15009004,
+   "ref": "Ezra 9:1-4",
+   "ranges": [
+    [
+     15009001,
+     15009004
+    ]
+   ],
+   "title": "Grieving Over Spiritual Compromise",
+   "key_verse": [
+    15009003,
+    15009003
+   ],
+   "reflect": [
+    {
+     "text": "Ezra was deeply shocked to learn that the people and their leaders had compromised their faith by marrying into neighboring pagan nations. The issue was not about race or culture, since Scripture celebrates people like Ruth who turned to worship the true God. The real danger was spiritual unfaithfulness. Simply returning home from exile had not changed their hearts, and the people quickly drifted back into the very practices that had led to their past judgment.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When Ezra heard the news, he tore his clothes and sat in stunned grief. His brokenness offers a clear picture of true repentance. As F. B. Meyer noted, walking closely with God dries our tears but also \"starts many more\" because we begin to feel the sorrow that God feels over sin. God had sent His people through captivity to cleanse them from worldly alliances, yet they soon forgot that painful lesson.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Today, Christians are still warned against spiritual compromise and urged to marry within the faith. It is easy for worldly habits to shape our homes, entertainment, and choices without us even noticing. Instead of blending in, we are called to follow Jesus, who lived among people in the world while keeping His heart and words entirely devoted to the Father.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily life is it tempting to blend in with the culture around you?",
+    "How can you keep your heart centered on God while caring for people who do not know Him?"
+   ],
+   "prayer": "Lord, help us to see sin with the same sorrow that You feel. Guard our hearts against spiritual compromise in our relationships and daily choices. Teach us to live in the world with grace while keeping our devotion entirely fixed on You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezra 9:1",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Problem of Intermarriage",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/problem-of-intermarriage"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

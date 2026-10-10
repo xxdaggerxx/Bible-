@@ -1,0 +1,144 @@
+{
+ "id": "19-111-001",
+ "title": "Majestic Is His Work",
+ "refs": [
+  "Psalms 111:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19111002,
+   "end": 19111002,
+   "ref": "Psalms 111:2",
+   "ranges": [
+    [
+     19111002,
+     19111002
+    ]
+   ],
+   "title": "\"Great Are the Works of the LORD\"",
+   "key_verse": [
+    19111002,
+    19111002
+   ],
+   "reflect": [
+    {
+     "text": "When we truly love something, we naturally take joy in studying it. Like a merchant searching for fine pearls, believers are invited to explore the great things God has done. We can search the Scriptures with patience and reverence, asking the Holy Spirit to help us see more of our Savior's beauty and majesty.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "The Bible shows us God's power across history, from creating the universe to rescuing Israel out of Egypt and bringing them into the Promised Land. As F. B. Meyer suggests, we can find joy in discovering \"fresh jewels in thy Saviour's character.\" Tracing these events leads us straight to Jesus Christ, whose death, resurrection, and gathering of people from every nation fulfill all these ancient wonders.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "The repeated word \"forever\" in the psalm points to future salvation that will never fade. In fact, learning more about God's wonderful deeds is not just an assignment for today. It will likely be our joyful work for all eternity, filling our hearts with endless praise.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What work of God in Scripture brings you the greatest delight when you study it?",
+    "How can you make time this week to search God's Word for fresh glimpses of Christ?"
+   ],
+   "prayer": "Lord God, thank You for the wonderful works You have displayed throughout Scripture and in Jesus Christ. Give us patient, reverent hearts to study what You have done. Teach us to delight in Your deeds today and forever. Amen.",
+   "sources": {
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 111:2",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D5": {
+     "author": "Joe Rigney",
+     "work": "Psalm 111: Delighting in the Works of God",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/psalm-111-delighting-in-the-works-of-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19111001,
+   "end": 19111010,
+   "ref": "Psalms 111:1-10",
+   "ranges": [
+    [
+     19111001,
+     19111010
+    ]
+   ],
+   "title": "A Covenant Kept Forever",
+   "key_verse": [
+    19111009,
+    19111009
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 111 shows that God's works reveal His true character, His enduring mercy, and His unbreakable covenant, which is His sacred promise to His people. When we pause each day to remember what He has done, we are guarded against forgetfulness and spiritual ruin. Remembering His power leads us to honor Him, because true wisdom begins with reverence for the Lord.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "God's care touches both our daily lives and our eternal hope. Because He always remembers His covenant, those who fear Him do not need to fear lack. Through all generations, whether in the wilderness or in famine, the Lord has faithfully fed His children with daily bread. Even when we are forgetful or unfaithful, God remains mindful of us and keeps every word He has spoken.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Believers find their deepest rest in knowing this covenant cannot fail. It was planned before the world began and rests entirely on God's grace, His kindness that we could never earn. Through Christ, our inheritance is secure, and God provides everything we need. He is our portion, our peace, and our eternal home.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God never forgets His promises help you when you worry about daily needs?",
+    "In what ways does remembering God's mercy help you grow in wise reverence for Him?"
+   ],
+   "prayer": "Faithful Lord, thank You for providing our daily food and keeping every promise of Your covenant. Forgive us for how easily we forget Your goodness. Help us walk in the fear of the Lord and trust Your grace each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 26",
+     "on": "Psalms 111:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 1",
+     "on": "Psalms 111:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The Great Works of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/great-works-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

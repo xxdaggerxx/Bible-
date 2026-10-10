@@ -1,0 +1,88 @@
+{
+ "id": "18-028-001",
+ "title": "Where Can Wisdom Be Found?",
+ "refs": [
+  "Job 28:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18028001,
+   "end": 18028028,
+   "ref": "Job 28:1-28",
+   "ranges": [
+    [
+     18028001,
+     18028028
+    ]
+   ],
+   "title": "Where Can True Wisdom Be Found?",
+   "key_verse": [
+    18028028,
+    18028028
+   ],
+   "reflect": [
+    {
+     "text": "Job describes how miners dig deep into dark tunnels to search for precious metals and jewels. Uncovering buried riches takes hard, intentional effort. In our own lives, difficult seasons often feel like those dark tunnels. Yet it is during those painful times that God shapes spiritual virtues like patience in us, and we discover that His loving presence is our greatest treasure.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even the most skilled miners cannot dig up wisdom, and human intellect alone cannot produce it. As F. B. Meyer noted, God alone holds the secret of wisdom. True wisdom is learning to see our lives from God's perspective. It means facing trials with quiet trust instead of panic or compromise.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God sees the ends of the earth and governs the wind and the rain. Our finite minds are far too small to comprehend all that He is, and He chooses to keep certain mysteries hidden. Real wisdom does not come from empty worldly sources. It begins when we live in reverent awe of the Lord and turn away from evil.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you look for God's presence and care when you are walking through a difficult season?",
+    "How does seeing your current circumstances from God's point of view change how you respond to them?"
+   ],
+   "prayer": "Lord God, we know that our minds are too small to understand all Your ways, but we praise You because You hold all things in Your hands. Help us look to You rather than empty worldly wisdom when life is confusing. Teach us to walk in reverent awe of You and to turn away from what is evil. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 28:14",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Whitney Hopler",
+     "work": "Find Hidden Treasures from God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/find-hidden-treasures-from-god-the-crosswalk-devotional.html"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "God and God Alone",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-nov-4-2008-11590381.html"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "The God Who Can't Be Figured Out",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-august-31-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

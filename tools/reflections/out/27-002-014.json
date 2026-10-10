@@ -1,0 +1,73 @@
+{
+ "id": "27-002-014",
+ "title": "The Dream Revealed to Daniel",
+ "refs": [
+  "Daniel 2:14-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27002014,
+   "end": 27002023,
+   "ref": "Daniel 2:14-23",
+   "ranges": [
+    [
+     27002014,
+     27002023
+    ]
+   ],
+   "title": "Seeking God's Wisdom Under Pressure",
+   "key_verse": [
+    27002021,
+    27002021
+   ],
+   "reflect": [
+    {
+     "text": "When we face stressful situations, it is easy to make quick choices driven by panic or emotion. Daniel showed another way when his life was in danger. Instead of rushing into a hasty reaction, he paused and asked for more time. Taking a moment to step back helps us calm down so we can seek what is right rather than what is simply fast.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "In moments of pressure, we can turn to prayer and God's Word rather than giving in to worldly urgency. Daniel shared the burden with his friends and asked the Lord for mercy. When we seek divine direction, God gives us the discernment we need to make sound decisions.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "After God gave him the answer, Daniel praised the Lord for having ultimate authority over everything. God directs all the seasons of history, and no earthly leader rises or falls outside His control. Because God is sovereign, we do not need to let political tensions or sudden changes make us anxious or distract us from serving Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When unexpected pressure arrives, do you tend to react in haste, or do you pause to pray first?",
+    "How can trusting that God rules over every leader and season bring peace to your mind today?"
+   ],
+   "prayer": "Lord God, thank You for holding all wisdom, power, and history in Your hands. Help us to pause and seek Your guidance whenever life feels urgent or uncertain. Keep our hearts calm in times of change so we can stay focused on honoring You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Emma Danzey",
+     "work": "God Removes and Sets Up Leaders (A Study of Daniel 2:21)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-god-over-rulers-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Rick Warren",
+     "work": "Make the Right Decision, Not Just a Fast One",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-october-19-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

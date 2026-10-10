@@ -1,0 +1,135 @@
+{
+ "id": "19-072-001",
+ "title": "Endow the King with Your Justice",
+ "refs": [
+  "Psalms 72:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19072006,
+   "end": 19072006,
+   "ref": "Psalms 72:6",
+   "ranges": [
+    [
+     19072006,
+     19072006
+    ]
+   ],
+   "title": "\"Like Rain on Freshly Cut Grass\"",
+   "key_verse": [
+    19072006,
+    19072006
+   ],
+   "reflect": [
+    {
+     "text": "Life often cuts us down. Through pain, loss, or disappointment, our self-reliance and pride are mown away like field flowers. While that cutting hurts, it prepares us to grow in tenderness and sympathy. F. B. Meyer reminds us, \"Do not dread the scythe — it is sure to be followed by the shower.\"",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Just as a prolonged physical drought leaves the ground barren and dry, we also face seasons of spiritual drought. In these times, we may struggle with doubt or apathy, and God can feel quiet and distant. Our souls cannot survive on our own without the refreshing life that Jesus brings.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "When we feel cut down or dry inside, our King draws near with gentle grace. He comes down like warm spring rain on newly cut grass to restore what was bare. We can ask God to pour out His Holy Spirit upon us, trusting Him to revive our hearts and produce fresh, lasting beauty in our lives.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you going through a dry or painful season where your own strength feels cut short?",
+    "How can you invite the Lord to refresh your heart with His Spirit today?"
+   ],
+   "prayer": "Lord, when trials cut down our pride and our souls feel parched, send Your gentle rain. Pour out Your Spirit and revive our weary hearts with the living water of Jesus. Produce new tenderness and beauty in us as we trust in You.",
+   "sources": {
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 72:6",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Dan Dick",
+     "work": "Wisdom from the Psalms 6/6",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-6-or-6-552370.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19072001,
+   "end": 19072020,
+   "ref": "Psalms 72:1-20",
+   "ranges": [
+    [
+     19072001,
+     19072020
+    ]
+   ],
+   "title": "May All the Earth Be Filled",
+   "key_verse": [
+    19072019,
+    19072019
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 72 shows us a King who cares deeply for the poor and helpless. When we face trouble or lack what we need, the wisest thing we can do is cry directly to God. Turning to friends or human helpers first will leave us wanting, but the Lord welcomes us even when we come like empty-handed beggars. He provides for our daily physical necessities and delivers us from our heavy burden of sin. Because Jesus is King, He will not let us perish in our need.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Seeing the King's wonderful mercy to us moves us to pray an immense prayer: may the whole earth be filled with His glory. When we remember Calvary, where the Lord of life died on the cross to wash away our sins, our hearts cannot help but want everyone to know Him. This prayer leaves out no nation and no person, no matter how far away they seem.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If we genuinely long for Christ to be King over all the world, our lives will reflect that prayer. We cannot truly ask for His glory to spread while remaining idle. With God's help, we pair our prayers with active work, laboring to share His kindness and extend His kingdom wherever He has placed us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face a difficult need, do you run straight to God or look to human help first?",
+    "How can you take part in sharing the good news of Christ's kingdom with others?"
+   ],
+   "prayer": "Heavenly Father, thank You for hearing our cries and meeting our deepest needs through Jesus our King. Fill the entire earth with the knowledge of Your glorious grace. Use our hands and words today to help extend Your kingdom to those around us.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 6",
+     "on": "Psalms 72:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 23",
+     "on": "Psalms 72:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "18-042-001",
+ "title": "Job Submits Himself to the LORD",
+ "refs": [
+  "Job 42:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18042001,
+   "end": 18042006,
+   "ref": "Job 42:1-6",
+   "ranges": [
+    [
+     18042001,
+     18042006
+    ]
+   ],
+   "title": "Seeing God in Hard Times",
+   "key_verse": [
+    18042005,
+    18042005
+   ],
+   "reflect": [
+    {
+     "text": "Many Christians turn away from the book of Job because witnessing such terrible misery makes us uncomfortable. Yet the Bible shows us time and again that God uses our deepest trials and hardships to strengthen our faith. When we hurt, God wants to draw us closer to Himself. When Job honestly poured out his agony and questions, God met his grief with gentle patience and revealed His majestic sovereignty, His complete authority over the universe.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "After encountering the Lord, Job confessed that he had spoken about things he could not understand. He had heard about God before, but now his eyes truly saw Him. Job's greatest blessing was not getting back his wealth and health later on. His true treasure was having his eyes opened to know God personally. Our hardest seasons can become sacred spaces where we experience God deeply, instead of just times we beg for relief.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you go through hard trials, do you focus only on asking God to end the pain, or do you also look for ways to draw closer to Him?",
+    "How has a difficult season in your life helped you know God more deeply than before?"
+   ],
+   "prayer": "Lord, when trials come and life hurts, help us not to run away from You. Teach us to trust Your great power and to seek Your presence even in our deepest pain. Open our eyes so that we may know You truly and grow closer to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Megan J. Conner",
+     "work": "Unveiled Blessings",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/unveiled-blessings-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

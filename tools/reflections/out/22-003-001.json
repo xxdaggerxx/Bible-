@@ -1,0 +1,82 @@
+{
+ "id": "22-003-001",
+ "title": "The Bride’s Dream",
+ "refs": [
+  "Song of Solomon 3:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 22003001,
+   "end": 22003005,
+   "ref": "Song of Solomon 3:1-5",
+   "ranges": [
+    [
+     22003001,
+     22003005
+    ]
+   ],
+   "title": "Seeking the One My Soul Loves",
+   "key_verse": [
+    22003004,
+    22003004
+   ],
+   "reflect": [
+    {
+     "text": "When we feel distant from Christ, we need to seek Him with our whole heart. If we have wandered away through neglected prayer or sin, Charles Spurgeon reminds us to look where we dropped our fellowship with Him. Without Jesus, our souls are like thirsty trees without water at their roots. Yet when we turn back, Christ gladly receives us. He does not scold us for trying other comforts first, because He alone is our soul's true and satisfying resting place.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This passage also speaks to human relationships, warning us not to rush or force love before the proper time. Our culture often acts as though romantic love is needed to have a meaningful life, but our deepest worth is already secure in the Lord. For those who seek a partner, Scripture urges patience and clear discernment grounded in God's truth rather than changing feelings. Godly marriage is designed to serve Christ's kingdom, built on shared faith in Him, personal purity, and mature Christian character.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you let your close walk with Christ slip in prayer or scripture reading, and how can you return to Him today?",
+    "Are you tempted to look to romance for your sense of value instead of resting in God's love for you?"
+   ],
+   "prayer": "Lord Jesus, help us to seek You with our whole hearts and hold fast to You as our greatest treasure. Guard us from rushing into earthly relationships before the right time or expecting another person to satisfy what only You can. Teach us to trust Your timing and find our lasting peace in Your love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 19",
+     "on": "Song of Solomon 3:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 29",
+     "on": "Song of Solomon 3:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "A Time for Love",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/time-love"
+    },
+    "D4": {
+     "author": "Rhonda Stoppe",
+     "work": "How to Find the One Who Your Soul Loves",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/family/marriage/how-to-find-the-one-who-your-soul-loves.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

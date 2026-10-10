@@ -1,0 +1,68 @@
+{
+ "id": "14-032-020",
+ "title": "Jerusalem Delivered from the Assyrians",
+ "refs": [
+  "2 Chronicles 32:20-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14032020,
+   "end": 14032023,
+   "ref": "2 Chronicles 32:20-23",
+   "ranges": [
+    [
+     14032020,
+     14032023
+    ]
+   ],
+   "title": "Crying Out to God Together in Trouble",
+   "key_verse": [
+    14032020,
+    14032020
+   ],
+   "reflect": [
+    {
+     "text": "Even when we follow God with all our hearts, sudden troubles and spiritual battles still come our way. When King Sennacherib threatened Jerusalem, King Hezekiah did not try to face the crisis alone. He joined with the prophet Isaiah in unified prayer. In our hardest moments, we should not stay isolated. Inviting a trusted prayer partner into our struggles helps us bring our fears before God together with steady faith in His power to deliver.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "What moved Hezekiah and Isaiah most was not just their own safety, but the honor of God's name. The Assyrian king had insulted the living God, treating Him like a powerless idol made by human hands. As F. B. Meyer observed, they were stirred by the \"indignity done to Jehovah.\" When we pray, we can ask God to act for the sake of His own glory and truth. God heard their sincere cry, stepped in to fight their battle, and gave His people rest. He still listens to our cries today and defends those who rely on Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Who is a trusted friend in faith you can invite to pray with you when trials come?",
+    "How might your prayers change if you focus on God's honor as well as your personal needs?"
+   ],
+   "prayer": "Lord, thank You that You hear our cries and fight for us when sudden troubles come. Please help us to reach out to brothers and sisters in prayer rather than carrying our burdens alone. Give us hearts that care deeply for Your holy name, and grant us Your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 32:20",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Luann Prater",
+     "work": "Distress Signal",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-november-22-2005-1363734.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

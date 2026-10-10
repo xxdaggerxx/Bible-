@@ -1,0 +1,67 @@
+{
+ "id": "23-014-001",
+ "title": "Restoration for Israel",
+ "refs": [
+  "Isaiah 14:1-2"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23014001,
+   "end": 23014002,
+   "ref": "Isaiah 14:1-2",
+   "ranges": [
+    [
+     23014001,
+     23014002
+    ]
+   ],
+   "title": "God Never Forgets His People",
+   "key_verse": [
+    23014001,
+    23014001
+   ],
+   "reflect": [
+    {
+     "text": "God guides the rise and fall of world powers for the good of His people. When ancient Israel was unfaithful, God used the empire of Babylon to discipline them and spread His truth across the earth. When the right time came, God brought down that mighty empire so His people could be restored to their homeland.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As F. B. Meyer explains, the lesson for us is that \"God bears His people on His heart.\" The Lord directs world events to care for those He loves, and He always keeps the promises He made to us in Jesus. Even when the world feels chaotic, God is in control and working for our welfare.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This gives great hope if you have drifted away from God. Israel turned from God and broke His trust, yet the Lord still had compassion and chose them again. If you feel you have wandered, you can take heart. God does not cast you off, and He is ready to restore you to His love and favor when you return to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God directs human events give you peace today?",
+    "Is there any part of your life where you need to turn back and receive God's mercy?"
+   ],
+   "prayer": "Lord, thank you that you hold your people close to your heart and guide history for our good. When we wander away, thank you that your compassion never fails. Help us to trust your promises in Jesus and return to you each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 14:1",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,72 @@
+{
+ "id": "11-004-029",
+ "title": "Solomon’s Wisdom",
+ "refs": [
+  "1 Kings 4:29-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11004029,
+   "end": 11004034,
+   "ref": "1 Kings 4:29-34",
+   "ranges": [
+    [
+     11004029,
+     11004034
+    ]
+   ],
+   "title": "The Gift of Godly Wisdom",
+   "key_verse": [
+    11004029,
+    11004029
+   ],
+   "reflect": [
+    {
+     "text": "God blessed Solomon with extraordinary wisdom and deep understanding. Leaders and travelers from surrounding nations came to Jerusalem just to hear him speak. This great season in Israel's history showed God keeping His ancient promise to bless the nations through Abraham's family. Solomon paid close attention to God's creation, studying everything from giant cedar trees to small plants and animals. Through thousands of proverbs and songs, he shared thoughtful reflections on the world God made.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Solomon's rich store of knowledge also reminds us that our minds function much like muscles. If we do not use them, they quickly become sluggish and dull. We can exercise our minds by reading widely and thoughtfully, exploring ideas that stretch our understanding. We also sharpen our thinking when we take part in meaningful conversations with others, and when we write down our thoughts to clarify our personal convictions.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even with all his remarkable learning, Solomon had human weaknesses and limits. His earthly kingdom could not satisfy every need. Instead, Solomon points us forward to Jesus Christ. Jesus is the greater King who brings God's covenant blessings to the entire world, giving us perfect wisdom and life with God.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you exercise your mind this week through reading, writing, or meaningful conversation?",
+    "How does Solomon's limited wisdom help you see your need for Jesus Christ?"
+   ],
+   "prayer": "Lord God, thank You for the gift of a mind and for the wisdom You freely provide. Help us to keep our minds alert by learning, speaking thoughtfully, and reflecting on Your world. Lead our hearts to trust in Jesus, whose perfect wisdom guides our lives every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Staying Alert",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-jan-30-31-2010-11625612.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Glory of Solomon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/glory-of-solomon"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

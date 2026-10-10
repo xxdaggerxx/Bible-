@@ -1,0 +1,123 @@
+{
+ "id": "18-014-001",
+ "title": "Job Laments the Finality of Death",
+ "refs": [
+  "Job 14:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18014007,
+   "end": 18014007,
+   "ref": "Job 14:7",
+   "ranges": [
+    [
+     18014007,
+     18014007
+    ]
+   ],
+   "title": "\"There Is Hope for a Tree\"",
+   "key_verse": [
+    18014007,
+    18014007
+   ],
+   "reflect": [
+    {
+     "text": "Deep grief, sudden losses, or personal failures can leave us feeling completely cut down, like a dry tree stump left in the dirt. In those low moments, it is easy to wonder if our story is finished. Yet Job took his sorrow directly to God rather than walking away from Him. Even when we feel discarded or broken by our mistakes, failure does not have to be our final chapter.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Hard times often drive us to depend fully on God's strength instead of our own. Many believers in the Bible stumbled or suffered, yet those painful setbacks became the very soil where their faith matured. Holding on to God acts like refreshing water and sunlight on hidden roots. Because the Lord remains faithful, His grace can cause green shoots of healing and renewal to sprout where everything seemed lost.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you feel cut down or stuck in failure today?",
+    "How can turning honestly to God help you wait for His renewal and fresh growth?"
+   ],
+   "prayer": "Lord, when life cuts me down and I feel empty, help me not to run away from You. Thank You that failure and heartache are not the end of my story. Please send the water of Your grace to revive my spirit and bring forth new life. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Tracie Miles",
+     "work": "Dead Stumps Grow Back and Thrive, and so Can You - Encouragement for Today - January 5, 2021",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-january-5-2021.html"
+    },
+    "D4": {
+     "author": "Mary Southerland",
+     "work": "Failure is Not Final - Girlfriends in God - April 28, 2014",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/failure-is-not-final-girlfriends-in-god-april-28-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 18014001,
+   "end": 18014022,
+   "ref": "Job 14:1-22",
+   "ranges": [
+    [
+     18014001,
+     18014022
+    ]
+   ],
+   "title": "Short Days and Lasting Hope",
+   "key_verse": [
+    18014001,
+    18014001
+   ],
+   "reflect": [
+    {
+     "text": "Job knew that human life on earth is brief and filled with hardships. Remembering this mournful fact keeps us humble and reminds us not to hold earthly things too tightly. The comforts, health, and loved ones we enjoy are gifts on loan from God, not permanent fixtures in this world. Because everything here can fade quickly, Charles Spurgeon urged believers to \"set loose by earthly things\" and keep our eyes on the eternal joys waiting for us above.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet our stay on earth serves a loving purpose. Our trials here prepare us to enjoy heaven even more, just as a hard day's work makes rest sweet. Enduring troubles also deepens our fellowship with Christ, who suffered for us, and gives us opportunities to shine His light to others who are still lost. God has already appointed the length of our days, so we can patiently wait for our heavenly home while living to bring Him glory right now.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What earthly comforts or plans might you be holding too tightly right now?",
+    "How does knowing that our earthly trials will make heaven sweeter help you endure today?"
+   ],
+   "prayer": "Father, thank You for holding the exact number of my days in Your hands. Help me not to anchor my heart to the passing things of this world, but to fix my hope on heaven. Grant me patience to endure every hardship for Your glory until You call me home. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 10",
+     "on": "Job 14:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 6",
+     "on": "Job 14:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

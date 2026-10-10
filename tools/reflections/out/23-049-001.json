@@ -1,0 +1,153 @@
+{
+ "id": "23-049-001",
+ "title": "The Servant and Light to the Gentiles",
+ "refs": [
+  "Isaiah 49:1-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23049015,
+   "end": 23049016,
+   "ref": "Isaiah 49:15-16",
+   "ranges": [
+    [
+     23049015,
+     23049016
+    ]
+   ],
+   "title": "\"I Will Not Forget You\"",
+   "key_verse": [
+    23049016,
+    23049016
+   ],
+   "reflect": [
+    {
+     "text": "People often put name tags on their belongings so they do not get lost. In our human relationships, friends and family can let us down, forget their promises, or cause deep wounds. Yet the Lord tells us that He could never lose track of His children. He has written our very lives onto the palms of His hands. As Charles Spurgeon observed, God has carved our whole person and all our circumstances into His hands. Because of this permanent bond of love, you are never abandoned or separated from His grasp.",
+     "sources": [
+      "D2",
+      "D7",
+      "D8"
+     ]
+    },
+    {
+     "text": "When we know how completely God remembers us, we are freed to let go of bitterness and forgive others. God also reminds us that our broken walls are always before Him. Just as Jerusalem's physical walls fell into ruin, our own spiritual boundaries can slowly crumble through neglect, delay, and compromise. God sees every broken area clearly. His Spirit prompts us to inspect our lives honestly, turn away from harmful habits, and let Him rebuild what we have neglected.",
+     "sources": [
+      "D6",
+      "D7"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel forgotten by God, and how does His promise to hold you bring you comfort?",
+    "What spiritual boundaries or daily habits in your life need honest repair right now?"
+   ],
+   "prayer": "Father, thank You for holding us close and never losing track of our lives. Help us rest in Your unchanging love when human relationships fail, and give us hearts that forgive. Show us any areas in our character that have broken down, and rebuild us by Your grace. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 7",
+     "on": "Isaiah 49:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D6": {
+     "author": "Chuck Swindoll",
+     "work": "The Walls of Your Life",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/the-walls-of-your-life"
+    },
+    "D7": {
+     "author": "Glynnis Whitwer",
+     "work": "The Marks of Love",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-oct-3-2006-1431642.html"
+    },
+    "D8": {
+     "author": "Gwen Smith",
+     "work": "Never Lost",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-sept-22-2009-11608745.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23049001,
+   "end": 23049026,
+   "ref": "Isaiah 49:1-26",
+   "ranges": [
+    [
+     23049001,
+     23049026
+    ]
+   ],
+   "title": "A Light to the Nations",
+   "key_verse": [
+    23049006,
+    23049006
+   ],
+   "reflect": [
+    {
+     "text": "Serving God can sometimes feel heavy and discouraging. We may spend our energy caring for others, sharing truth, and doing good work, only to see little outward result. In those moments, we might feel our labor was wasted. Yet God does not judge our work by visible success, but by our faithful reliance on Him. He shapes His servants like polished arrows, often using the friction of daily trials to smooth away our rough edges. Even when He keeps us hidden in His quiver, waiting for His timing, we are completely safe under the shadow of His hand.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "God's plan of salvation reaches far beyond our small expectations. He sent Christ to be the covenant Himself, God's personal promise of grace to us. All the power, justice, and endless love of Jesus belong to every believer, along with His perfect goodness credited to us. When we see the comfort God gives to His afflicted people, even our mountains of hardship become reasons to worship. We do not need to sigh or live in doubt, because our Lord never fails and our true reward remains secure with Him.",
+     "sources": [
+      "D1",
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When your service feels unnoticed or fruitless, how does trusting God's evaluation give you peace?",
+    "How does knowing that all of Christ's love and strength belong to you change your view of hard times?"
+   ],
+   "prayer": "Lord God, thank You for sending Christ as our covenant and the light for all peoples. When our work feels fruitless, keep us from despair and remind us that our reward is in Your hands. Help us praise You with joy, knowing that Your mercy will carry us through every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 3",
+     "on": "Isaiah 49:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 7",
+     "on": "Isaiah 49:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 49:2",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D5": {
+     "author": "John Piper",
+     "work": "Even If You Labor “for Nought”",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/even-if-you-labor-for-nought"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

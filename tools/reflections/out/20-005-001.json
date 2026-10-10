@@ -1,0 +1,113 @@
+{
+ "id": "20-005-001",
+ "title": "Avoiding Immorality",
+ "refs": [
+  "Proverbs 5:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20005021,
+   "end": 20005021,
+   "ref": "Proverbs 5:21",
+   "ranges": [
+    [
+     20005021,
+     20005021
+    ]
+   ],
+   "title": "\"Before the Eyes of the Lord\"",
+   "key_verse": [
+    20005021,
+    20005021
+   ],
+   "reflect": [
+    {
+     "text": "God sees everything we do and wherever we go. People often try to hide their sinful choices in secret, but nothing is hidden from the Lord. He actively and carefully examines all our paths. He knows our outward actions and our inward motives. For those who trust in Christ, this truth brings great comfort. God sees your quiet, unseen acts of faithful service, and He will reward them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord also has complete knowledge of every detail in our lives. Even when we are walking faithfully in His will, sudden trials and hard times can still catch us by surprise. God uses these unsettling moments to test us and build up our faithfulness. When life feels confusing or heavy, we do not need to pull away from Him. Instead, we can run straight toward our heavenly Father.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God sees both your private thoughts and your unseen service change how you live today?",
+    "When unexpected trials arrive, do you tend to pull away from God or run toward Him?"
+   ],
+   "prayer": "Lord, thank You for watching over every step of my journey. Help me remember that nothing is hidden from Your sight, and give me integrity in secret. When hard times confuse me, teach me to run straight into Your care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Our Ways Before the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-ways-lord"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Look Heavenward",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-may-17-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 20005001,
+   "end": 20005023,
+   "ref": "Proverbs 5:1-23",
+   "ranges": [
+    [
+     20005001,
+     20005023
+    ]
+   ],
+   "title": "Delighting in God's Path for Marriage",
+   "key_verse": [
+    20005018,
+    20005018
+   ],
+   "reflect": [
+    {
+     "text": "Proverbs points us away from harmful paths and directs us toward true joy in God's good design. In marriage, God invites husbands and wives to delight in one another and remain captivated by each other's love. Genuine devotion brings practical strength to daily life. Believers like Richard and Margaret Baxter showed how deep spousal care can lighten everyday work and make life's shared burdens much easier to carry.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "No partner is perfect, and lasting relationships are not built by pointing out every flaw. Instead, an enduring union grows through intentional appreciation each day. Most of all, a strong Christian marriage finds its anchor when both partners align their lives around Christ, serve His Church, and fix their shared hope on eternity.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can choosing intentional appreciation over fault-finding bring peace and joy to your relationships?",
+    "What is one practical way you can center your home and daily burdens on Christ and His Church?"
+   ],
+   "prayer": "Lord, thank You for Your wise and protective guidance for our relationships. Help us to show intentional appreciation rather than dwelling on the shortcomings of others. Keep our hearts anchored together in Christ, serving Your Church with our eyes fixed on eternity. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Michael Haykin",
+     "work": "A Puritan Wife",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/puritan-wife"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

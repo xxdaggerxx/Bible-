@@ -1,0 +1,67 @@
+{
+ "id": "24-004-001",
+ "title": "A Plea to Return",
+ "refs": [
+  "Jeremiah 4:1-4"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24004001,
+   "end": 24004004,
+   "ref": "Jeremiah 4:1-4",
+   "ranges": [
+    [
+     24004001,
+     24004004
+    ]
+   ],
+   "title": "Breaking Up the Hard Ground",
+   "key_verse": [
+    24004003,
+    24004003
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to turn back to him and break up our unplowed ground. Over time, our hearts can become hard and packed down. The rush of passing years, missed opportunities to obey, and worldly company can cake over our souls like hard dirt. When that happens, the good seed of God's word cannot sink in or produce fruit.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God desires our hearts to be opened and receptive. This softening work can come gently through the Holy Spirit. But if we stay stubborn, it may require what F. B. Meyer called the \"ploughshare of pain\" to break the hard crust. God can use difficult trials like a plow to prepare our hearts to receive his truth again.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We are also told not to plant among thorns. These thorns are the daily worries, riches, and pleasures of life. Being weighed down by everyday cares can choke our spiritual life just as easily as chasing wealth or entertainment. Our hearts only have room for one main pursuit. When we are devoted completely to the glory of Christ, there is no room left for thorns to take over.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly worries or pleasures are currently threatening to choke out God's word in your life?",
+    "How can you invite the Holy Spirit to soften any hard places in your heart today?"
+   ],
+   "prayer": "Lord, please soften our hearts by your Holy Spirit so your truth can take deep root. Guard us from letting the cares, riches, and pleasures of this world crowd you out. Help us keep our devotion centered on Christ above everything else. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 4:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

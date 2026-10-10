@@ -1,0 +1,67 @@
+{
+ "id": "18-034-001",
+ "title": "Elihu Confirms God’s Justice",
+ "refs": [
+  "Job 34:1-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18034001,
+   "end": 18034037,
+   "ref": "Job 34:1-37",
+   "ranges": [
+    [
+     18034001,
+     18034037
+    ]
+   ],
+   "title": "The Quietness God Gives",
+   "key_verse": [
+    18034029,
+    18034029
+   ],
+   "reflect": [
+    {
+     "text": "In life, we often face storms that threaten to overwhelm us. We might feel battered by trouble on every side, like disciples caught on a dark lake when a sudden tempest sweeps down. In those moments, our hearts can become noisy with fear. Yet the Lord can speak into the loudest gale, calming the winds and the waves. As F. B. Meyer reminds us, \"He giveth quietness.\" He brings a deep stillness that no earthly trouble can disturb.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Other times, the noise comes from our own guilt and the accusations of the enemy. The devil tries to point out our past sins and remind us of every failure, telling us that we will never change. But our Savior stands up as our Intercessor, the one who speaks to God on our behalf. He answers that our ransom has already been paid in full and that His love never ends. In Him, our troubled conscience finds resting peace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when we lose our warm spiritual feelings, God is still at work. Sometimes He gently allows those happy feelings to fade so we learn to trust Him rather than our own good moods. He comes near and whispers that He is still with us. In all these trials, true calm comes not from our circumstances, but from the quietness God gives to our souls.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life do you need God to speak peace to a storm of worry or guilt?",
+    "How can remembering that Christ paid for your sins give you quietness when past mistakes trouble you?"
+   ],
+   "prayer": "Lord, thank You that You give quietness to our hearts when life feels overwhelming. When our past mistakes or sudden troubles threaten our peace, remind us that Christ has paid our ransom. Help us to rest in Your calm presence rather than trusting in our changing feelings. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 34:29",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

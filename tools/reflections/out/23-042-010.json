@@ -1,0 +1,75 @@
+{
+ "id": "23-042-010",
+ "title": "A New Song of Praise",
+ "refs": [
+  "Isaiah 42:10-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23042016,
+   "end": 23042016,
+   "ref": "Isaiah 42:16",
+   "ranges": [
+    [
+     23042016,
+     23042016
+    ]
+   ],
+   "title": "\"I Will Lead the Blind\"",
+   "key_verse": [
+    23042016,
+    23042016
+   ],
+   "reflect": [
+    {
+     "text": "None of us can see the future. As Charles Spurgeon observed, we \"cannot see an hour before us,\" and by ourselves we do not know the way of salvation. Yet God stoops down to guide the blind. Following Him often requires stepping into the unknown without a visible map. Obeying God can look risky to the world around us. But as pilgrims on earth, we are called to stay unburdened and ready to follow, always checking that our steps match Scripture and pure motives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Unplanned disruptions and painful life crises often stir up frustration and fear in us. Yet these difficult detours work like reconstruction projects where God reshapes our lives. We cannot guess how deliverance will come through the rough terrain, but the Lord already knows the way. We can place our hand in His with confidence. He promises to guide us through unfamiliar paths and never abandon us until we reach home.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What unfamiliar path or sudden detour in your life is God asking you to trust Him with today?",
+    "How can remembering that God never abandons you help you follow Him even when the way ahead looks risky?"
+   ],
+   "prayer": "Lord, we confess that we cannot see what lies ahead, and we often feel frustrated when our plans change. Take our hand and lead us through the unknown paths of life. Help us to trust Your guidance and remember that You will never forsake us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 23",
+     "on": "Isaiah 42:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Going . . . Not Knowing, Part Two",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-december-4-2017.html"
+    },
+    "D3": {
+     "author": "Van Walton",
+     "work": "Re-routed",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-3-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "24-023-001",
+ "title": "David’s Righteous Branch",
+ "refs": [
+  "Jeremiah 23:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24023005,
+   "end": 24023006,
+   "ref": "Jeremiah 23:5-6",
+   "ranges": [
+    [
+     24023005,
+     24023006
+    ]
+   ],
+   "title": "\"The LORD Our Righteousness\"",
+   "key_verse": [
+    24023006,
+    24023006
+   ],
+   "reflect": [
+    {
+     "text": "The prophets in the Old Testament pointed ahead to a coming King from David's family who would defeat our spiritual enemies. Jeremiah gives Him the name \"The LORD Our Righteousness.\" This title explains how God welcomes sinners without setting aside His justice. Jesus fulfilled this promise through His death on the cross, satisfying God's justice on our behalf.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we look only at our own sins and weaknesses, we easily become downcast. Yet Charles Spurgeon notes that \"Christ is made unto us righteousness,\" which brings quiet rest to our hearts. We do not stand before God on our own merits. Christ finished the work for us, so we can be at peace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing that Christ has done it all changes how we live. We do not try to earn God's love; instead, we are moved by gratitude. Believing that we are saved by Jesus alone makes us want to love and serve Him with our whole lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel discouraged by your own failures, how does knowing that Christ is your righteousness bring you calm?",
+    "How can gratitude for what Jesus finished on the cross motivate you to serve Him today?"
+   ],
+   "prayer": "Lord God, thank You for sending Jesus to satisfy Your justice and rescue us. When our own faults make us sad, help us rest in the righteousness He won for us. Let our gratitude to Him shape how we love and live each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 31",
+     "on": "Jeremiah 23:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Proclaimed by the Prophets",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/proclaimed-by-the-prophets"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,84 @@
+{
+ "id": "24-007-001",
+ "title": "Jeremiah’s Message at the Temple Gate",
+ "refs": [
+  "Jeremiah 7:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24007001,
+   "end": 24007015,
+   "ref": "Jeremiah 7:1-15",
+   "ranges": [
+    [
+     24007001,
+     24007015
+    ]
+   ],
+   "title": "True Faith Beyond the Temple Gate",
+   "key_verse": [
+    24007003,
+    24007003
+   ],
+   "reflect": [
+    {
+     "text": "The people of Judah thought they were completely safe simply because God's temple stood in Jerusalem. They repeated sacred phrases like a protective chant, believing the holy building would guard them no matter how they lived. Yet God warned them through Jeremiah that holy places and outward religious privileges offer no protection to people living in disobedience. We can make the same mistake today if we imagine that attending church or relying on past religious heritage makes us immune to God's correction.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God told the people that their worship was empty without genuine moral change. They were breaking His covenant by stealing, lying, and worshipping false gods, yet they ran to the temple and claimed they were safe. Outward religious activity cannot replace a heart surrendered to God's commands. True faith must always show itself in daily life, through turning away from sin and practicing active justice and kindness toward the needy.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jeremiah reminded the people that God once brought ruin to Shiloh, His earlier sanctuary, because of the people's rebellion. As D. A. Carson notes, external religion cannot \"shield unrepentant sinners from divine judgment.\" If we ignore God's repeated calls to repent, we face spiritual ruin. Real assurance does not come from hollow rituals or buildings, but from a present, active trust in Christ.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying on outward church habits rather than daily obedience to God?",
+    "How can your faith show itself in active justice and care for vulnerable people around you?"
+   ],
+   "prayer": "Lord, forgive us when we depend on outward religious routines instead of surrendering our whole lives to You. Guard our hearts from presumption and cleanse us from hidden sin. Give us grace to listen to Your voice and walk in daily, active obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Misplaced Confidence",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/misplaced-confidence"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Joshua 14–15, Psalms 146–147, Jer. 7, and Matthew 21",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/josh-14-15-psalms-146-147-jeremiah-7-matt-21/"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - Aug. 16, 2007",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-aug-16-2007-11549870.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

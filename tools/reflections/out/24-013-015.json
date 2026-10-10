@@ -1,0 +1,66 @@
+{
+ "id": "24-013-015",
+ "title": "Captivity Threatened",
+ "refs": [
+  "Jeremiah 13:15-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24013015,
+   "end": 24013027,
+   "ref": "Jeremiah 13:15-27",
+   "ranges": [
+    [
+     24013015,
+     24013027
+    ]
+   ],
+   "title": "The Daily Work of Real Change",
+   "key_verse": [
+    24013023,
+    24013023
+   ],
+   "reflect": [
+    {
+     "text": "Jeremiah warned God's people about how dangerous repeated disobedience can be. When we keep practicing wrong ways, those sinful habits become deeply ingrained in us. Over time, they start to feel like second nature, as hard to change as a leopard's spots. We often make up excuses to defend our comfort and protect our familiar faults.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Confronting our sinful nature and putting it to death is never easy. It takes painful, deliberate effort to face where we have gone wrong. True spiritual growth does not happen as an overnight fix. Instead, God works in us gradually through patient, daily discipline.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God did not give us the Bible merely to satisfy our curiosity or give us facts. His Word is meant to transform our everyday lives. When we hear His truth, we are called to stop making excuses and let Him reshape how we think, speak, and act.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What old habit have you made excuses for rather than bringing it to God?",
+    "What is one daily choice of discipline you can make this week to help you grow?"
+   ],
+   "prayer": "Lord, forgive us for making excuses for our familiar sins. Please give us the courage to do the hard, deliberate work of putting off our old nature. Teach us through Your Word each day, and steadily change our lives to please You.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "The Name of the Game Is Change",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/article-library/individual/the-name-of-the-game-is-change"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

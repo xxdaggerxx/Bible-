@@ -1,0 +1,68 @@
+{
+ "id": "12-025-008",
+ "title": "The Temple Destroyed",
+ "refs": [
+  "2 Kings 25:8-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12025008,
+   "end": 12025017,
+   "ref": "2 Kings 25:8-17",
+   "ranges": [
+    [
+     12025008,
+     12025017
+    ]
+   ],
+   "title": "The Fall of the Temple",
+   "key_verse": [
+    12025009,
+    12025009
+   ],
+   "reflect": [
+    {
+     "text": "The Babylonian army marched into Jerusalem and brought ruin to the entire city. They burned down the temple of the Lord, the royal palace, and every significant home, tearing down the protective city walls. Prophets like Jeremiah and Ezekiel had warned that God decided Jerusalem would fall because the nation abandoned Him. King Zedekiah had trusted earthly alliances rather than the Lord. Even though God is exceedingly patient, His judgment and discipline against persistent sin do not delay forever.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The conquerors also stripped the temple bare. They smashed the massive bronze pillars and stands, carting away piles of bronze that were too heavy to weigh. They packed up all the sacred items made of gold and silver and carried them off to Babylon. Most of the citizens were dragged into exile, leaving only the poorest and least influential people behind to work the soil. The place once filled with God's presence was left empty and broken.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the destruction of Jerusalem show both God's patience and the seriousness of turning away from Him?",
+    "What can we learn from the warning that God's discipline against persistent sin will not delay forever?"
+   ],
+   "prayer": "Lord, thank You for being patient with us when we fail. Help us not to ignore Your warnings or trust in earthly things instead of You. Teach us to turn away from sin and remain faithful to You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jerusalem Captured",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jerusalem-captured"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: 2 Kings 25",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/2-kings-25-hebrews-7-amos-1-psalm-144/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

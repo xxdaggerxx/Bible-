@@ -1,0 +1,14 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://www.biblegateway.com/passage/?search=Ezekiel%2042-45&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+42%3A1-14&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+42%3A12-14&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+42%3A13-15&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+42&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+42&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Ezekiel+42&version=NKJV"
+ ],
+ "cost": 0.033423499999999995,
+ "model": "google/gemini-3.8-flash"
+}

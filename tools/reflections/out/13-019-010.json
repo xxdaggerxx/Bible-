@@ -1,0 +1,67 @@
+{
+ "id": "13-019-010",
+ "title": "David Defeats Ammon and Aram",
+ "refs": [
+  "1 Chronicles 19:10-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13019010,
+   "end": 13019019,
+   "ref": "1 Chronicles 19:10-19",
+   "ranges": [
+    [
+     13019010,
+     13019019
+    ]
+   ],
+   "title": "Doing Our Part and Trusting God",
+   "key_verse": [
+    13019013,
+    13019013
+   ],
+   "reflect": [
+    {
+     "text": "When facing enemies on two sides, Joab made wise battle plans with his brother Abishai. He chose his best soldiers, placed his troops carefully, and agreed to help one another. Yet even as he planned, Joab openly spoke of God and urged the army to fight bravely for their people, leaving the final outcome in the hands of the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Joab shows us a healthy balance in how we live our faith. As writer F. B. Meyer observed, we need a balance between God's work and ours. It is wrong to think God will do everything while we sit back and do nothing. It is just as wrong to act like everything depends only on our own human strength.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead, we are called to work together with God. We prepare carefully, give our very best effort, and do all we can in every duty before us. At the same time, we trust completely in the Holy Spirit and know that God holds the final decision in all things.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life are you tempted either to give up trying or to rely only on your own strength?",
+    "How can you both prepare carefully and trust God with the results today?"
+   ],
+   "prayer": "Lord God, help us to be diligent and faithful in every task you give us. Keep us from being lazy, and protect us from trusting in our own strength alone. We place our plans in your hands and pray that you will do what is good in your sight. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 19:13",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,19 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://billygraham.org/devotions",
+  "https://insight.org/",
+  "https://utmost.org/",
+  "https://www.biblegateway.com/passage/?search=Isaiah+65%3A1-16&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+65%3A1-16&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+65&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+65&version=KJV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+65&version=NASB",
+  "https://www.biblegateway.com/passage/?search=Isaiah+65&version=NIV",
+  "https://www.davidjeremiah.org/",
+  "https://www.intouch.org/",
+  "https://www.ligonier.org/"
+ ],
+ "cost": 0.043827275,
+ "model": "google/gemini-3.8-flash"
+}

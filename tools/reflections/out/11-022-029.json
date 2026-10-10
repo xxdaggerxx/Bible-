@@ -1,0 +1,67 @@
+{
+ "id": "11-022-029",
+ "title": "Ahab’s Defeat and Death",
+ "refs": [
+  "1 Kings 22:29-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11022029,
+   "end": 11022040,
+   "ref": "1 Kings 22:29-40",
+   "ranges": [
+    [
+     11022029,
+     11022040
+    ]
+   ],
+   "title": "Reaching Past the Armor",
+   "key_verse": [
+    11022034,
+    11022034
+   ],
+   "reflect": [
+    {
+     "text": "King Ahab went into battle in disguise, yet an arrow struck him right between the joints of his armor. Like Ahab, every person we meet wears a kind of armor to protect against conviction. We make excuses such as saying that everyone else does it, or that we simply cannot help our behavior. Often, our efforts to share God's truth fail because we only hit these hard plates instead of reaching where a person is vulnerable.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "People may agree in general with what God requires, yet fail to realize how they have fallen short. To help others understand their need for God's grace, we need what F. B. Meyer calls an \"anointing of the Holy Ghost.\" Only the Holy Spirit gives the true discernment needed to show how our lives fall under God's sentence.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If we want to reach hearts, we must first study our own hearts carefully. We must also learn from the people described in Scripture and invite the Holy Spirit to guide us, because only He can search the deepest thoughts within us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What excuses do you sometimes use to defend yourself from seeing your own sin?",
+    "How can you ask the Holy Spirit to guide your words when talking to others about God?"
+   ],
+   "prayer": "Lord, search our hearts and show us where we make excuses. Give us your Holy Spirit so we may understand your truth and share it with gentle wisdom. Help us lead others to the grace found only in you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 22:34",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

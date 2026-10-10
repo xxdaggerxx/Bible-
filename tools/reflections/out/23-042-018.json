@@ -1,0 +1,72 @@
+{
+ "id": "23-042-018",
+ "title": "Israel Is Deaf and Blind",
+ "refs": [
+  "Isaiah 42:18-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23042018,
+   "end": 23042025,
+   "ref": "Isaiah 42:18-25",
+   "ranges": [
+    [
+     23042018,
+     23042025
+    ]
+   ],
+   "title": "Grace for the Blind Servant",
+   "key_verse": [
+    23042021,
+    23042021
+   ],
+   "reflect": [
+    {
+     "text": "God called the people of Israel to be His servant, but they acted blind and deaf. When foreign nations attacked and carried them away because of their sins, the people still did not understand their guilt. They suffered plundering and defeat, yet they remained blind to their own deep wrongdoing.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even amid this failure, the Lord was pleased to honor and lift up His instruction. Because God has infinite worth, it is entirely right for Him to magnify His word. God acts in true freedom because He genuinely delights in doing what is right. In Christ, God transforms us so we can also find joy and freedom in following His ways.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord made a sovereign promise not to leave His people forever in their spiritual blindness. Rescue does not depend on our own merit or good works, but on God's pure grace, His undeserved kindness. God chooses an unworthy people to restore them, and this gracious promise is fulfilled in Jesus Christ.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life might you be ignoring God's instruction or blind to your own sin?",
+    "How does knowing God delights in what is right help you obey Him with a joyful heart?"
+   ],
+   "prayer": "Lord, open our eyes and ears so we do not ignore your word. Thank you for showing us pure grace in Jesus Christ when we were trapped by our own wrongdoing. Give us new hearts that find joy and true freedom in walking in your ways. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "Meditate with Me on Isaiah 42:21",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/meditate-with-me-on-isaiah-42-21"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Savior of God's Blind Servant",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/savior-gods-blind-servant"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

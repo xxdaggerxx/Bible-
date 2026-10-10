@@ -1,0 +1,18 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://www.biblegateway.com/passage/?search=Isaiah+21%3A5-9&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+21%3A6&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+21%3A6-8&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+21%3A8&version=NABRE",
+  "https://www.biblegateway.com/passage/?search=Isaiah+21%3A9&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+21&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+21&version=GW",
+  "https://www.biblegateway.com/passage/?search=Isaiah+21&version=NASB",
+  "https://www.biblegateway.com/passage/?search=Isaiah+21&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+21&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Isaiah+21&version=NLT"
+ ],
+ "cost": 0.029674700000000002,
+ "model": "google/gemini-3.8-flash"
+}

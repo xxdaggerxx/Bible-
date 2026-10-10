@@ -1,0 +1,84 @@
+{
+ "id": "19-088-001",
+ "title": "I Cry Out before You",
+ "refs": [
+  "Psalms 88:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19088001,
+   "end": 19088018,
+   "ref": "Psalms 88:1-18",
+   "ranges": [
+    [
+     19088001,
+     19088018
+    ]
+   ],
+   "title": "Crying Out to God in the Dark",
+   "key_verse": [
+    19088001,
+    19088001
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 88 is unusual because it ends in heavy darkness without an easy resolution. Heman, the leader who wrote it, walked through long seasons of deep sorrow and despair. Yet God chose to place this song in Scripture. This reminds us that God deeply cares about our emotional distress, and he does not offer quick fixes for real, lingering pain in a broken world.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God does not require tidy, cheerful prayers from us. Instead, he invites our raw honesty. Even when the psalmist felt completely overwhelmed, he continued to pour out his cries to God day and night. We do not have to hide our anguish or pretend to be fine, because God is never intimidated by our darkest moments.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This honest cry points us forward to Jesus. Because Jesus lived a real human life, he personally understands our deepest grief. He suffered total abandonment and the grave so that we would never have to walk through suffering alone. Because he rose, we can approach his throne of grace with confidence and find strength to worship even in the shadows.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you walk through sadness or pain, do you feel free to bring your raw honesty to God?",
+    "How does knowing that Jesus experienced deep sorrow comfort you when life feels dark?"
+   ],
+   "prayer": "Lord God, thank you that you welcome our honest cries and care about our deep pain. Thank you that Jesus bore our grief and entered our darkest moments so we are never left alone. Give us grace and strength to keep praying and trusting you, even when sorrow surrounds us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jonathan Parnell",
+     "work": "Worship in the Dark",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/worship-in-the-dark"
+    },
+    "D2": {
+     "author": "Christina Fox",
+     "work": "How I Gleaned Hope from the Darkest Psalm",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/how-i-gleaned-hope-from-the-darkest-psalm/"
+    },
+    "D3": {
+     "author": "Craig Groeschel",
+     "work": "Yes, God Does Care: Praying Through Despair With Psalm 88",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/learn/biblical-living/comfort/praying-depair-psalm-88/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

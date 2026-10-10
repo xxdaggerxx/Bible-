@@ -1,0 +1,74 @@
+{
+ "id": "14-023-016",
+ "title": "Jehoiada Restores the Worship of the LORD",
+ "refs": [
+  "2 Chronicles 23:16-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14023016,
+   "end": 14023021,
+   "ref": "2 Chronicles 23:16-21",
+   "ranges": [
+    [
+     14023016,
+     14023021
+    ]
+   ],
+   "title": "Standing Firm for the Lord",
+   "key_verse": [
+    14023016,
+    14023016
+   ],
+   "reflect": [
+    {
+     "text": "When God's people made close ties with idolaters in the past, it brought deep ruin across generations. Turning away from the Lord always leads to spiritual decay and moral breakdown. Yet even when evil rulers tried to destroy the royal line, God faithfully guarded His covenant promise to David. He preserved the young king and brought His people back into a covenant to belong to Him alone.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jehoiada showed great courage and wisdom in leading this change. The easiest choice would have been for him to stay safely inside the temple and let events take their course. Instead, he came out and dealt with the corruption directly. As F. B. Meyer noted, \"no half measures would have availed\" to root out the evil that had taken over the land.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We are also called to take a stand against sin rather than simply tolerating it. It can be tempting to keep quiet and leave public life to ungodly ways, but God asks His people to work for what is right. In our own lives, honoring God means staying clear of ungodly partnerships and taking firm steps to follow Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area in your life where you have quietly tolerated compromise instead of dealing with it firmly?",
+    "How can you show courage this week in standing up for what honors God?"
+   ],
+   "prayer": "Lord God, thank You for keeping Your promises even when times are dark. Give us the courage not to tolerate sin or compromise our faith. Help us to stand firm for what is right and serve You with all our heart. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 23:21",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 05/27/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-27-or-2002-1133458.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

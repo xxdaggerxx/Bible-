@@ -1,0 +1,79 @@
+{
+ "id": "12-008-007",
+ "title": "Hazael Murders Ben-hadad",
+ "refs": [
+  "2 Kings 8:7-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12008007,
+   "end": 12008015,
+   "ref": "2 Kings 8:7-15",
+   "ranges": [
+    [
+     12008007,
+     12008015
+    ]
+   ],
+   "title": "The Lord of Nations and Broken Hearts",
+   "key_verse": [
+    12008011,
+    12008011
+   ],
+   "reflect": [
+    {
+     "text": "God holds sovereign authority over every nation and leader, not just His own people. Even the king of Aram turned to God's prophet in his time of crisis. The Lord directs the course of history and the rise and fall of earthly powers for His ultimate purposes, yet He never condones wicked actions. God holds every ruler responsible for their cruelty, even when He uses them to discipline others.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When Elisha looked at Hazael and foresaw the violence he would bring upon Israel, the prophet broke down in tears. Elisha was strong enough to speak to kings, but he kept a tender heart. When we walk closely with God, we share His sorrow over human suffering and sin. As F. B. Meyer noted, we need compassion to see the world from \"God's standpoint.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Hazael protested that he was too lowly to commit such monstrous acts, yet unchecked ambition quickly blinded him. Unlike David, who refused to murder King Saul to gain the throne, Hazael seized the opportunity and smothered his master the next day. We easily deceive ourselves about our own hearts. We stay safe from destructive sin only when we surrender our desires to God's Word.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there selfish ambitions in your heart that you need to surrender to God's Word today?",
+    "When you see suffering and sin in the world, do you respond with God's compassion and sorrow?"
+   ],
+   "prayer": "Lord, help us to see the world through Your eyes and give us tender hearts that weep over suffering. Guard us against selfish ambition and the deceitfulness of sin. We trust that You rule over all kings and nations, and we yield our desires to Your Word. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 8:11",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Lord of the Nations",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-of-nations"
+    },
+    "D3": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways - May 3, 2008",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-may-3-2008-11574746.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

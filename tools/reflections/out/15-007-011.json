@@ -1,0 +1,67 @@
+{
+ "id": "15-007-011",
+ "title": "Artaxerxes’ Letter for Ezra",
+ "refs": [
+  "Ezra 7:11-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15007011,
+   "end": 15007026,
+   "ref": "Ezra 7:11-26",
+   "ranges": [
+    [
+     15007011,
+     15007026
+    ]
+   ],
+   "title": "Salt Without Limit",
+   "key_verse": [
+    15007022,
+    15007022
+   ],
+   "reflect": [
+    {
+     "text": "When King Artaxerxes sent Ezra to Jerusalem, he ordered the royal treasurers to supply everything Ezra needed for worship. The silver, wheat, wine, and oil all had set limits, but the king ordered salt to be given without any limit at all. In the temple, salt was used in offerings to purify and preserve. As Charles Spurgeon pointed out, salt is an emblem of divine grace, which is God's free and unearned kindness to our souls. Just as the earthly king set no limit on salt, the King of kings never cuts short His supply of grace for us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often feel empty or troubled, but that shortage is inside us, never in God. Our trials and hard times are measured out with exact care so that we never receive a single drop too much. Yet God sets no limit on the grace He provides. A person can have too much money or honor, which brings extra worry, but no one can ever have too much grace. Receiving more of the Spirit of God only brings fullness of joy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This heavenly gift protects our hearts from turning corrupt, weakens our sins, and brings peace to our hardest trials. Because we need so much help each day, we should not hesitate to come before God's throne. He invites us to ask freely, knowing that He has an endless supply ready for everyone who seeks Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your life do you feel weak and in need of God's grace today?",
+    "How does knowing that God never limits His kindness encourage you to pray boldly?"
+   ],
+   "prayer": "Lord God, thank You that Your supply of grace has no limit. Please preserve our hearts from sin and give us strength to endure our trials with joy. Help us to come to You freely every day to receive the help we so deeply need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 13",
+     "on": "Ezra 7:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

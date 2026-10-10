@@ -1,0 +1,123 @@
+{
+ "id": "19-041-001",
+ "title": "Victory over Betrayal",
+ "refs": [
+  "Psalms 41:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19041001,
+   "end": 19041001,
+   "ref": "Psalms 41:1",
+   "ranges": [
+    [
+     19041001,
+     19041001
+    ]
+   ],
+   "title": "\"Blessed Is the One Who Cares\"",
+   "key_verse": [
+    19041001,
+    19041001
+   ],
+   "reflect": [
+    {
+     "text": "True happiness does not depend on having lots of money or an easy life. God invites us into a blessed life when we take time to think about people in need. To consider the poor means far more than quickly handing out spare change. It means letting people weigh on our hearts, listening patiently to their stories without rushing them, and treating them with genuine respect. Even if we have little money to offer, we can give our time, kindness, and understanding to those who feel empty of hope.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we look into people's struggles and plan how to help them, we share God's heart. As Charles Spurgeon noted, \"We can do more by care than by cash, and most with the two together.\" Generosity is not just for wealthy people. God sees every quiet act of love. He promises that when hard times fall on us, He will remember our care for others and come to our rescue.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who in your life needs your patient listening and attention today, not just quick help?",
+    "How does God's promise to deliver you in hard times encourage you to be generous?"
+   ],
+   "prayer": "Lord, teach us to notice those who are hurting and to listen to them with patience. Help us to share both our resources and our kindness with those who need hope. Thank You for promising to remember us and protect us whenever trouble comes our way. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 22",
+     "on": "Psalms 41:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 41:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19041001,
+   "end": 19041013,
+   "ref": "Psalms 41:1-13",
+   "ranges": [
+    [
+     19041001,
+     19041013
+    ]
+   ],
+   "title": "Sustained by God on the Sickbed",
+   "key_verse": [
+    19041003,
+    19041003
+   ],
+   "reflect": [
+    {
+     "text": "In Psalm 41, David finds himself weak on a sickbed while enemies whisper against him and even a close friend turns away. Yet through all this distress, he rests in God's tender promise. When our bodies fail and illness leaves us helpless, the Lord draws near as a gentle caregiver. He does not stay distant from our weakness. Instead, He supports our souls like soft pillows supporting a weary patient.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "No earthly doctor can provide the deep comfort that God offers. His grace, which is His unearned favor and kindness, revives our spirits when our physical strength is gone. Even when sorrow and weakness press down hard on us, the Lord holds us up with His everlasting arms. His love acts like a steady medicine that restores courage to a fainting heart.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "This promise of divine care belongs especially to those who have shown mercy to the poor. If we have neglected those in need, we are called to turn around and become their helpers without delay. When we walk in love toward others, we can trust that the Lord will sustain us through every sickness, betrayal, and trial.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel weak or lonely in suffering, how does it comfort you to know that God tenderly watches over you?",
+    "How does the promise of God's sustaining love encourage you to care for others in their weakness?"
+   ],
+   "prayer": "Lord, thank You for drawing close to us when we are sick, weak, or hurt by others. Uphold our hearts with Your gentle grace and remind us that Your love never fails. Make us faithful helpers to those who are hurting, trusting that You will always sustain us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 26",
+     "on": "Psalms 41:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

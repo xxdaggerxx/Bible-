@@ -1,0 +1,79 @@
+{
+ "id": "18-024-001",
+ "title": "Job: Judgment for the Wicked",
+ "refs": [
+  "Job 24:1-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18024001,
+   "end": 18024025,
+   "ref": "Job 24:1-25",
+   "ranges": [
+    [
+     18024001,
+     18024025
+    ]
+   ],
+   "title": "Trusting God Through Pain and Injustice",
+   "key_verse": [
+    18024023,
+    18024023
+   ],
+   "reflect": [
+    {
+     "text": "In our daily lives, many people carry deep, unspoken pain beneath the surface. Life in this broken world brings unfair treatment, harsh words from people we trusted, and lingering guilt from past failures. These painful wounds can make us feel forgotten, but they also remind us how deeply we need one another and how much we need God. Christ meets us in our sorrow as the caring physician who can heal our inner hurts and turn painful wounds into scars of beauty.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Hard times can also tempt us to pull away from God. Pride, self-reliance, and fear can push us to rebel against His light and hide our hearts. When we hold back from Him, we lose our inner peace and damage our friendships. Instead of giving in to impatience or fear, we need to bring our hidden struggles into the light of Christ, waiting patiently for His timing as He heals our divided hearts.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "While the wicked may seem powerful and secure for a season, their earthly strength will quickly fade. As F. B. Meyer reminds us, those who honor God receive \"a kingdom that cannot be moved.\" Rather than building our security on shifting worldly things that can easily fall, we can anchor our lives in God's unchanging love. We can look away from our past fears and look forward to the secure future He promises us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What hidden hurts or fears do you need to bring into God's healing light today?",
+    "Are you building your life on shifting earthly things, or on God's unchanging love?"
+   ],
+   "prayer": "Lord, You see the silent wounds and unfair burdens we carry each day. Forgive us when we try to rely on ourselves or pull away from You in fear. Please heal our hearts, give us patience while we wait on Your timing, and anchor our trust in Your unshakeable kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 24:23-24",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Wounds and Scars",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-oct-17-2007-11556960.html"
+    },
+    "D3": {
+     "author": "Margaret D. Mitchell",
+     "work": "Rebellion to Restoration",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/a-womans-walk/rebellion-to-restoration-god-s-love-at-work-week-of-august-31.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "26-025-008",
+ "title": "A Prophecy against Moab",
+ "refs": [
+  "Ezekiel 25:8-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26025008,
+   "end": 26025011,
+   "ref": "Ezekiel 25:8-11",
+   "ranges": [
+    [
+     26025008,
+     26025011
+    ]
+   ],
+   "title": "Not Like All the Other Nations",
+   "key_verse": [
+    26025008,
+    26025008
+   ],
+   "reflect": [
+    {
+     "text": "The Hebrew prophets were keen observers of world events, always looking to see what God was doing in history. In Ezekiel's day, the people of Moab looked at Judah and claimed God's people were just like everyone else. Outside observers cannot see the quiet presence of God that surrounds His children. Because of this, enemies often think God's people are defenseless and can be easily harmed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "However, those who attack God's people soon learn that they have God Himself to reckon with. He rises to defend His people and brings judgment on those who treat them cruelly. God may at times use neighboring nations to discipline and refine His own family, but He lays those tools aside and holds them accountable when they act with malice.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Belonging to God brings both immense privilege and real responsibility. We must never take His care for granted or assume we can live carelessly. God will defend us from outside harm, but He also loves us too much to leave our own wrongs uncorrected.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When others treat you unfairly, how does knowing God is your defender bring you peace?",
+    "How can you honor the responsibility of belonging to God in your daily life?"
+   ],
+   "prayer": "Heavenly Father, thank You for surrounding us with Your unseen protection and defending us in times of trouble. Please keep us from taking Your grace for granted or living like those who do not know You. Teach us to trust Your refining work in our lives and walk faithfully before You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 25:8",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

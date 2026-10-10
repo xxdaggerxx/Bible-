@@ -1,0 +1,129 @@
+{
+ "id": "12-007-003",
+ "title": "The Syrians Flee",
+ "refs": [
+  "2 Kings 7:3-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 12007009,
+   "end": 12007009,
+   "ref": "2 Kings 7:9",
+   "ranges": [
+    [
+     12007009,
+     12007009
+    ]
+   ],
+   "title": "\"Today Is a Day of Good News\"",
+   "key_verse": [
+    12007009,
+    12007009
+   ],
+   "reflect": [
+    {
+     "text": "Four starving men with leprosy stumbled upon an abandoned camp filled with food and riches. At first, they simply ate, drank, and hid gold and silver for themselves. Soon, however, their conscience stirred. They realized it was wrong to keep silent while an entire city nearby was wasting away in famine. As F. B. Meyer wrote, \"Common humanity bade them give information of what had happened.\"",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We have tasted the good news of Jesus Christ, who died, rose again, and defeated our spiritual enemies. His unsearchable riches are offered freely to everyone. If we feast on God's Word but keep it locked within church walls, we are acting selfishly. Sharing our faith does not require complicated debates. It can be as simple and natural as telling a friend about a wonderful restaurant. Pointing people to Jesus is the greatest act of love we can offer to a hurting world.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "A simple personal testimony has quiet power. When we speak honestly of the grace God has given us, it overcomes doubt and objection far better than long arguments. We are called to be witnesses of what the Lord has done.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Who in your daily life needs to hear the good news of God's kindness?",
+    "What is one simple way you can share what Jesus has done for you this week?"
+   ],
+   "prayer": "Lord, thank you for the wonderful gift of life in Jesus. Forgive us for the times we have kept your good news to ourselves. Give us loving hearts and the courage to share your grace with those who are hungry for hope. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 7:9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "Feasting in a Famine",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/feasting-in-a-famine-greg-laurie-daily-devotion-january-29-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 12007003,
+   "end": 12007015,
+   "ref": "2 Kings 7:3-15",
+   "ranges": [
+    [
+     12007003,
+     12007015
+    ]
+   ],
+   "title": "Why Sit Here Until We Die?",
+   "key_verse": [
+    12007003,
+    12007003
+   ],
+   "reflect": [
+    {
+     "text": "The four men outside the gate faced a grim reality. If they stayed where they were, starvation was certain. If they entered the besieged city, they would die of hunger there as well. Their only hope was to risk approaching the enemy camp. If the soldiers killed them, they lost nothing they were not already losing; but if the soldiers spared them, they would live.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Charles Spurgeon pointed out that anyone living without Christ faces the very same choice. Remaining in our sin and sitting in sullen despair leads only to ruin. Our only true hope is to turn to Jesus. Yet seeking Him is never a blind gamble. As Spurgeon assured his readers, \"Jesus casts out none who come unto him.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Everyone who turns to Christ in faith finds mercy. Instead of meeting judgment, those who seek Him discover spiritual riches far greater than the food and treasure left in the Syrian tents. We need not hesitate in fear. We can step forward today and trust His promise to receive us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or doubts keep you from coming openly to Jesus with your needs?",
+    "How does the promise that Jesus never turns anyone away bring you comfort today?"
+   ],
+   "prayer": "Lord Jesus, thank you that you welcome all who come to you seeking mercy. When we feel weak or helpless, give us faith to step forward and trust your open arms. Thank you for giving us life, forgiveness, and true spiritual treasure. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, March 13",
+     "on": "2 Kings 7:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

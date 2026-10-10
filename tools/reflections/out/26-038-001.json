@@ -1,0 +1,75 @@
+{
+ "id": "26-038-001",
+ "title": "A Prophecy against Gog",
+ "refs": [
+  "Ezekiel 38:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26038001,
+   "end": 26038023,
+   "ref": "Ezekiel 38:1-23",
+   "ranges": [
+    [
+     26038001,
+     26038023
+    ]
+   ],
+   "title": "The Lord Shows His Holiness",
+   "key_verse": [
+    26038023,
+    26038023
+   ],
+   "reflect": [
+    {
+     "text": "In Ezekiel's vision, a ruler named Gog gathers a massive army from many nations to attack God's people. Israel lives peacefully in villages without walls, bars, or gates. They look completely defenseless and easy to plunder. Yet their real safety never came from stone fortifications. Their true security rests entirely in the Lord's protection.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When Gog attacks, God Himself steps in to defeat the invading horde. Through this great victory, the Lord reveals His holiness and makes His power known to all the nations. We cannot peer through the mist to predict every world event that lies ahead. But as F. B. Meyer observed, God gives us prophecy like a railway timetable, showing the stations along the way so we can trust where the journey ends.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In this world, believers may often seem weak and exposed to danger. Even so, the Lord guards His people and preserves them for eternal life. Seeing His Word come to pass encourages us to stay watchful, keep our lamps burning, and wait with confidence for our Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you tend to look for your safety when life feels uncertain or defenseless?",
+    "How does knowing God controls the final outcome of history give you peace today?"
+   ],
+   "prayer": "Lord, thank You for being our true security when we feel vulnerable in this world. Help us to place our full confidence in Your Word and Your protection. Keep our faith watchful and bright as we wait for the day You make Your great holiness known. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 38:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "God Shows His Holiness",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-shows-his-holiness"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "23-016-001",
+ "title": "Moab’s Destruction",
+ "refs": [
+  "Isaiah 16:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23016001,
+   "end": 23016014,
+   "ref": "Isaiah 16:1-14",
+   "ranges": [
+    [
+     23016001,
+     23016014
+    ]
+   ],
+   "title": "A Throne Established in Mercy",
+   "key_verse": [
+    23016005,
+    23016005
+   ],
+   "reflect": [
+    {
+     "text": "In the ancient world, rulers usually built their power on force, cruelty, and violence. But God revealed a very different kind of king. When disaster fell upon the land of Moab, their fleeing people were like frightened birds driven out of their nests. In their misery, they were urged to turn to Jerusalem for help. Even though Moab and Israel had been enemies for generations, the throne of David offered genuine hope, because this ruler governs with faithfulness, justice, and mercy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As F. B. Meyer points out, this ruler is none other than \"the Prince of the House of David,\" whose kingdom has no end. Earthly rulers often hold onto old grudges and discard the weak. Yet our Lord is ready to set aside past hostility when people turn to Him. He welcomes outcasts and shields the helpless like a cool, dark shadow in the scorching heat of midday.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "You might feel like a scared bird today, driven from your comfort or facing troubles you cannot escape. You may even wonder if past mistakes keep you from God's help. Yet His invitation remains open. You can come to this King, ask for His forgiveness, and find safety under His care. Because His throne is built on mercy, He will never turn away or betray anyone who seeks refuge in Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life do you feel helpless or in need of shelter today?",
+    "How does knowing that God's throne is built on mercy change how you approach Him in prayer?"
+   ],
+   "prayer": "Lord God, thank You that Your power is guided by mercy and faithful love. When we feel scattered, weak, or afraid of what lies ahead, please be our safe shelter. Forgive our sins, heal old divisions, and keep us secure under Your righteous care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 16:5",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

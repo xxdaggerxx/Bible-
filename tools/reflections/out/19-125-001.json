@@ -1,0 +1,73 @@
+{
+ "id": "19-125-001",
+ "title": "The LORD Surrounds His People",
+ "refs": [
+  "Psalms 125:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19125001,
+   "end": 19125005,
+   "ref": "Psalms 125:1-5",
+   "ranges": [
+    [
+     19125001,
+     19125005
+    ]
+   ],
+   "title": "The Lord Surrounds His People",
+   "key_verse": [
+    19125002,
+    19125002
+   ],
+   "reflect": [
+    {
+     "text": "As pilgrims traveled uphill toward Jerusalem, the ring of mountains around the city reminded them of God's care. Just as those peaks stood firm around Jerusalem, the Lord surrounds and protects His people. This divine protection does not mean we are spared from every trial or pain. Instead, it assures us that God presides over us while we walk through our difficulties.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Facing seasons of pain tests our reliance on God's promises. Trusting Him is a conscious choice to hold on to His truth rather than our fear or human reasoning. When we surrender our own self-righteous solutions, God uses our hardships to bring spiritual growth, wisdom, and peace.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The psalmist assures us that evil will not permanently rule over the righteous. Those who turn to crooked ways face banishment, but those who rest in God stand as firm as Mount Zion. We can have quiet confidence and lasting peace knowing our ultimate safety is in the Lord.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When hardship comes, do you tend to rely on your own reasoning or make the choice to trust God's promises?",
+    "How can the picture of God surrounding you like mountains bring you quiet peace today?"
+   ],
+   "prayer": "Lord, thank You for surrounding us like mountains and watching over us in every trial. Teach us to choose Your truth above our fears and human solutions. Give us lasting peace and keep our hearts walking uprightly before You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe (One Year Devotions for Men)",
+     "work": "The Surrounding Lord",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/the-surrounding-lord-one-year-devotions-for-men-august-6.html"
+    },
+    "D2": {
+     "author": "Margaret D. Mitchell",
+     "work": "Trust God to Endure",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/a-womans-walk/trust-god-to-endure-god-s-love-at-work-week-of-october-19.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,144 @@
+{
+ "id": "19-118-001",
+ "title": "The LORD Is on My Side",
+ "refs": [
+  "Psalms 118:1-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19118024,
+   "end": 19118024,
+   "ref": "Psalms 118:24",
+   "ranges": [
+    [
+     19118024,
+     19118024
+    ]
+   ],
+   "title": "\"This Is the Day\"",
+   "key_verse": [
+    19118024,
+    19118024
+   ],
+   "reflect": [
+    {
+     "text": "God gives each of us the exact same gift of time every morning: 86,400 seconds filled with fresh mercies. We often rush ahead or fear what is coming, but God invites us to rejoice in this very day. Because His steadfast love never ends and our rescue in Him is completely certain, we can give thanks even before our troubles are resolved. Taking refuge in His faithful presence frees us from fear and fills our ordinary moments with true joy.",
+     "sources": [
+      "D4",
+      "D7"
+     ]
+    },
+    {
+     "text": "It is easy to dread normal workdays and live only for the weekend, as if those middle days do not belong to God. When we resent our daily duties, we forget that our time is not our own to hoard. God gives us enough time today to work, learn, laugh, love, and quietly do His will. Seeing each day as a sacred trust from the Lord helps us turn every task into a steady offering of praise.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you treat today as a gift from God to serve Him, or are you just waiting for the weekend?",
+    "How does knowing God's love is certain help you rejoice in your daily routine?"
+   ],
+   "prayer": "Lord, thank You for the gift of this day and for Your mercies that are new every morning. Help us not to waste our hours or complain about our work, but to trust Your care and serve You with glad hearts. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "Yes…You Have the Time",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-december-13-2016.html"
+    },
+    "D5": {
+     "author": "Katherine Britton",
+     "work": "A Hump Day Meditation",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-nov-11-2009-11616658.html"
+    },
+    "D7": {
+     "author": "Aaron D'Anthony Brown",
+     "work": "Why Christians Should Rejoice in the Day the Lord Has Made (Psalm 118)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/why-should-we-rejoice-at-what-the-lord-did-in-psalm-118.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19118001,
+   "end": 19118029,
+   "ref": "Psalms 118:1-29",
+   "ranges": [
+    [
+     19118001,
+     19118029
+    ]
+   ],
+   "title": "Taking Refuge in the Chief Cornerstone",
+   "key_verse": [
+    19118022,
+    19118022
+   ],
+   "reflect": [
+    {
+     "text": "When troubles press in around us, our natural habit is to look to human power for help or build our own secure lives. Yet human pride and worldly leaders rejected the very cornerstone God chose: Jesus Christ. Through the cross, God took the worst human opposition and turned it into marvelous saving grace. Because God redeemed our souls with such power, we can take refuge in Him alone instead of leaning on frail human strength for our daily needs.",
+     "sources": [
+      "D1",
+      "D6"
+     ]
+    },
+    {
+     "text": "Since Christ bought us wholly by His death, sin has no right to rule any part of our thoughts, bodies, or desires. We cannot defeat our spiritual foes in our own strength, but we overcome them through Jesus as we look to Him for help. Even when severe discipline or heavy trials make us feel defeated, God holds our lives secure. In Spurgeon's words, \"I am immortal till my work is done.\" The Lord sustains us through every battle so we may live to proclaim what He has done.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to trust human support instead of resting in God?",
+    "How does knowing Christ owns you completely give you courage to fight against daily sin?"
+   ],
+   "prayer": "Father, thank You for making Jesus the secure cornerstone of our salvation. Teach us to rest entirely in Your strength, to turn away from sin, and to speak boldly of Your faithfulness all the days You give us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 7",
+     "on": "Psalms 118:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 6",
+     "on": "Psalms 118:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 31",
+     "on": "Psalms 118:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D6": {
+     "author": "Erik Raymond",
+     "work": "Sovereign Grace (Psalm 118)",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/sovereign-grace-psalm-118/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

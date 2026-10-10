@@ -1,0 +1,82 @@
+{
+ "id": "20-027-001",
+ "title": "Do Not Boast about Tomorrow",
+ "refs": [
+  "Proverbs 27:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20027001,
+   "end": 20027027,
+   "ref": "Proverbs 27:1-27",
+   "ranges": [
+    [
+     20027001,
+     20027027
+    ]
+   ],
+   "title": "Wisdom for Daily Life and Tomorrow",
+   "key_verse": [
+    20027001,
+    20027001
+   ],
+   "reflect": [
+    {
+     "text": "We often try to map out our lives, but God alone knows what tomorrow will bring. Because our future rests in His hands, we are called to walk in humility rather than boasting about our own plans. Thoughtful preparation is good, yet our success depends entirely on God's sovereign will, His supreme rule over all things. Just as a careful farmer looks closely after the state of his herds, we also need regular moments of honest self-examination before the Lord, asking Him to search our hearts and keep our faith sincere.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Living wisely also means cherishing the people God places around us. Meaningful friendships offer sweet counsel that enriches our daily lives, helping us grow through every season. If we desire caring companions, we must intentionally be that kind of friend to others. Above all, Jesus remains our steadfast friend and the best master we could ever follow. As Charles Spurgeon wrote, \"to serve my Lord Jesus is to keep a fig tree of the sweetest figs.\" When we patiently attend to His service, He promises to honor us in His time.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that God holds tomorrow change the way you handle unexpected delays or disappointments?",
+    "In what ways can you be a more thoughtful, encouraging friend to someone in your church or family this week?"
+   ],
+   "prayer": "Lord God, search our hearts today and show us where our faith needs to be renewed. Help us hold our future plans with humble hands, trusting that tomorrow is in Your care. Make us kind and faithful friends to the people around us. Teach us to serve Jesus gladly and wait patiently for the honor that comes from You alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 18",
+     "on": "Proverbs 27:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 12",
+     "on": "Proverbs 27:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Boasting About the Future",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/boasting-about-future"
+    },
+    "D4": {
+     "author": "Jennifer Rothschild",
+     "work": "I Got My First Stone",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-june-7-2010-11632755.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,103 @@
+{
+ "id": "18-038-001",
+ "title": "The LORD Challenges Job",
+ "refs": [
+  "Job 38:1-41"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18038001,
+   "end": 18038041,
+   "ref": "Job 38:1-41",
+   "ranges": [
+    [
+     18038001,
+     18038041
+    ]
+   ],
+   "title": "Trusting the God of Creation",
+   "key_verse": [
+    18038004,
+    18038004
+   ],
+   "reflect": [
+    {
+     "text": "When God speaks to Job out of the whirlwind, He does not give a list of reasons for Job's suffering. Instead, the Lord points to the wonders of creation. He laid the earth's foundations while angels sang, and He set firm boundaries for the stormy sea. Looking at the majesty of the Almighty reminds us that our world is not ruled by random luck, but by God's providence, His wise and faithful care. When our troubles feel crushing, seeing how big God is brings peace and quiet awe.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "The Lord also asks questions that show how small human power really is. None of us can walk through the deep springs of the ocean or guide the stars across the night sky. In nature and in our own spiritual lives, our strength has strict limits. We cannot turn winter into spring by ourselves, nor can we cure the coldness in our own hearts. Only God can break our spiritual winter and revive our souls with His grace, the kindness He freely gives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because our understanding is limited, we do not need to untangle every mystery of God's plans. As Charles Spurgeon wrote, \"the simplest act of obedience to him\" is better than trying to master things beyond our reach. We are not qualified to judge how the Lord runs His universe. Even when our grief cannot be fully explained, we can put aside our fears and rest in our heavenly Father's wisdom.",
+     "sources": [
+      "D2",
+      "D5",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you trying to figure out all of God's reasons instead of simply trusting Him?",
+    "How can remembering God's power over creation bring you peace in your troubles today?"
+   ],
+   "prayer": "Lord, Your power and wisdom are far greater than our minds can grasp. Forgive us when we question Your ways or let our troubles make us forget how great You are. Please bring warmth to our souls, give us willing hearts to obey, and help us rest in Your loving care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 21",
+     "on": "Job 38:31",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 5",
+     "on": "Job 38:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "How Big Is Your God? - Today's Insight - May 23, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-may-23-2024.html"
+    },
+    "D4": {
+     "author": "Leslie Snyder",
+     "work": "Coincidence or Providence? - HomeWord - March 30, 2017",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-march-30-2017.html"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "The Testimony of Creation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/testimony-creation"
+    },
+    "D6": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways - June 24, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-june-24-2009-11605130.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

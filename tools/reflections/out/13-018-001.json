@@ -1,0 +1,73 @@
+{
+ "id": "13-018-001",
+ "title": "David’s Triumphs",
+ "refs": [
+  "1 Chronicles 18:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 13018013,
+   "end": 13018014,
+   "ref": "1 Chronicles 18:13-14",
+   "ranges": [
+    [
+     13018013,
+     13018014
+    ]
+   ],
+   "title": "\"The Lord Made David Victorious\"",
+   "key_verse": [
+    13018013,
+    13018013
+   ],
+   "reflect": [
+    {
+     "text": "David won many battles and secured Israel's borders, but the Bible makes it clear that the Lord was the true source of his success. God gave David victory wherever he went, keeping His ancient promises to His people. Because David knew his strength came entirely from God's favor, he governed the nation with fairness, equity, and justice. His example reminds us that leaders among God's people are called to care for others justly.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "David's struggle against Edom also reminds us of our own daily battles. In Scripture, Edom often points to our sinful nature—our selfish desires that are willing to trade spiritual gifts for temporary pleasures. We often try to defeat these sins by ourselves. We make strict resolutions, fill our schedules so we have no time to be tempted, or rely on our own willpower, but these human efforts always fail.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our real victory is found only in Christ. On the cross, Jesus conquered sin and evil, proving He is \"mighty to save,\" as F. B. Meyer writes. Instead of fighting in our own limited power, we can hand our struggles completely over to Jesus. We can be quiet and trust Him to stand between us and temptation.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you trying to overcome temptation through your own willpower instead of turning to Jesus?",
+    "How can remembering that God gives every victory help you treat others with fairness and kindness?"
+   ],
+   "prayer": "Lord God, thank You that our victories come from Your grace and not from our own strength. Forgive us for trying to fight our sinful habits with our own weak efforts. Teach us to be still, hand our battles over to Christ, and lead lives marked by Your justice and truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 18:13",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Justice and Equity of David",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/justice-and-equity-of-david"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

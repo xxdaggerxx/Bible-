@@ -1,0 +1,75 @@
+{
+ "id": "20-009-001",
+ "title": "The Way of Wisdom",
+ "refs": [
+  "Proverbs 9:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20009001,
+   "end": 20009012,
+   "ref": "Proverbs 9:1-12",
+   "ranges": [
+    [
+     20009001,
+     20009012
+    ]
+   ],
+   "title": "Choosing the Feast of Wisdom",
+   "key_verse": [
+    20009010,
+    20009010
+   ],
+   "reflect": [
+    {
+     "text": "Every day presents us with clear choices. As F. B. Meyer reminds us, our lives are filled with competing voices, where wise counsel mingles with the enticements of the world. Proverbs simplifies these daily decisions into one basic choice: we can either embrace godly wisdom or follow the path of folly. Wisdom has built a firm, stable home and prepared a rich feast. She calls out to anyone who is willing to listen, inviting us to leave foolish ways behind so that we might truly live.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Wisdom in the Bible is not about how clever someone is or how much book learning they possess. True wisdom means wholehearted devotion to God. It begins with the fear of the Lord, which is deep reverent awe and respect for who God is. When we build our lives on knowing the Holy One, He grants us genuine insight, spiritual stability, and lasting blessings.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our response to correction reveals where our hearts truly stand. An arrogant scorner hates being corrected and rejects instruction, while a wise person welcomes guidance and grows even wiser. Wisdom appeals directly to our conscience, calling us to choose what is pure and right. When we humbly accept God's correction, we receive His peace and the assurance of His favor.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually react when someone offers you godly correction?",
+    "What is one choice you face today where you need to choose God's wisdom over worldly foolishness?"
+   ],
+   "prayer": "Lord God, give us humble hearts to hear Your voice and accept Your correction. Help us to revere You with holy awe and to walk in true understanding each day. Keep us from the traps of folly and draw us to Your table of lasting peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 9:4",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Exodus 33, John 12, Proverbs 9, Ephesians 2",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/exodus-33-john-12-proverbs-9-ephesians-2/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,115 @@
+{
+ "id": "22-008-001",
+ "title": "Longing for Her Beloved",
+ "refs": [
+  "Song of Solomon 8:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 22008006,
+   "end": 22008007,
+   "ref": "Song of Solomon 8:6-7",
+   "ranges": [
+    [
+     22008006,
+     22008007
+    ]
+   ],
+   "title": "\"Love Is as Strong as Death\"",
+   "key_verse": [
+    22008006,
+    22008006
+   ],
+   "reflect": [
+    {
+     "text": "In the ancient world, a wax seal marked something as real and showed who owned it. When the bride asks to be set as a seal on her beloved's heart and arm, she is asking for complete, mutual devotion. This seal covers inner thoughts and desires, as well as outward actions. In marriage, jealousy is not bitter envy, but a good and protective care that guards a sacred covenant. This fierce, unquenchable flame mirrors God's own deep and enduring love for His people.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When we read that love is as strong as death, we look first to Jesus. Our own love can feel frail and easily shaken by small trials. Yet as Charles Spurgeon noted, Jesus proved to be the \"matchless lover of souls\" whose love conquered the cross. His love endured pain, shame, and our sin. By His grace, which is God's undeserved kindness, that same steadfast love can be poured into our hearts, giving us strength to love Him faithfully in return.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Christ's death-conquering love bring you peace when your own love feels weak?",
+    "In what ways can your daily actions show that you belong completely to the Lord?"
+   ],
+   "prayer": "Lord Jesus, thank You for loving us with an unquenchable love that endured the cross and conquered death. Place Your seal upon our hearts and our deeds so that we may belong entirely to You. Pour Your grace into our spirits so our love for You burns brightly each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 13",
+     "on": "Song of Solomon 8:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "A Seal on the Heart and Arm",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/seal-heart-and-arm"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 22008001,
+   "end": 22008014,
+   "ref": "Song of Solomon 8:1-14",
+   "ranges": [
+    [
+     22008001,
+     22008014
+    ]
+   ],
+   "title": "Let Me Hear Your Voice",
+   "key_verse": [
+    22008013,
+    22008013
+   ],
+   "reflect": [
+    {
+     "text": "In the Song of Solomon, the bride calls out to her beloved who dwells among the gardens, longing to hear his voice. Christ, who once suffered in the garden of Gethsemane, now dwells among the garden of His church. There He shares close fellowship with His people. His voice of love brings more comfort and sweetness than any earthly sound, filling believers with deep joy even when they face illness, poverty, or approaching death.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Sometimes our hearts grow dull or we wander, and we lose the sweet awareness of our Savior speaking to us. When that happens, nothing else can truly satisfy our souls. We need the Lord to open our ears to hear Him again. We must welcome whatever He has to say, whether He gives tender comfort or a loving correction that stings. Because Jesus bought us with His blood, our greatest desire should be to walk closely with Him and listen to His voice.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When was the last time you slowed down to listen for Christ speaking through His Word?",
+    "Are you ready to welcome the Lord's voice even when He gently corrects you?"
+   ],
+   "prayer": "Lord Jesus, You dwell among Your people and speak words of life to our souls. Cleanse our dull ears and soften our hearts so that we do not miss Your voice. Whether You bring comfort or correction, teach us to listen gladly because we belong to You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 30",
+     "on": "Song of Solomon 8:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

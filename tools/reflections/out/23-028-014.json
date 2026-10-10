@@ -1,0 +1,68 @@
+{
+ "id": "23-028-014",
+ "title": "A Cornerstone in Zion",
+ "refs": [
+  "Isaiah 28:14-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23028014,
+   "end": 23028022,
+   "ref": "Isaiah 28:14-22",
+   "ranges": [
+    [
+     23028014,
+     23028022
+    ]
+   ],
+   "title": "A Sure Foundation in the Storm",
+   "key_verse": [
+    23028016,
+    23028016
+   ],
+   "reflect": [
+    {
+     "text": "In times of trouble, people often try to protect themselves with clever schemes and false securities. The leaders in Jerusalem thought their secret deals and lies would keep them safe from disaster. Yet God warned that every false hiding place will be swept away when His righteous judgment comes. Real safety cannot be built on human plans. God has provided the only true shelter by laying a tested cornerstone in Zion, which points directly to Jesus Christ and His righteousness.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because Jesus is our secure foundation, we do not have to panic when life feels overwhelming. As Charles Spurgeon notes, \"believers know how to wait.\" When fear tempts others to scramble in panic, those who trust in God can remain calm, quiet, and deliberate. Unbelief rushes into hurried and questionable choices, but genuine faith keeps God's pace. Relying wholly on Christ guards our hearts from panic and anchors us in true peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What false securities or human plans are you tempted to lean on when facing difficult times?",
+    "How can resting on Jesus as your foundation help you wait patiently instead of rushing into panic?"
+   ],
+   "prayer": "Lord God, thank You for giving us Jesus as our sure and precious cornerstone. Forgive us when we look for safety in our own schemes or foolish hiding places. Help our anxious hearts to rest in Your righteousness and wait calmly for Your good timing.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 29",
+     "on": "Isaiah 28:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Only Foundation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-only-foundation"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

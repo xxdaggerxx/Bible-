@@ -1,0 +1,67 @@
+{
+ "id": "14-029-020",
+ "title": "Hezekiah Restores Temple Worship",
+ "refs": [
+  "2 Chronicles 29:20-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14029020,
+   "end": 14029036,
+   "ref": "2 Chronicles 29:20-36",
+   "ranges": [
+    [
+     14029020,
+     14029036
+    ]
+   ],
+   "title": "When the Song Begins Again",
+   "key_verse": [
+    14029027,
+    14029027
+   ],
+   "reflect": [
+    {
+     "text": "King Hezekiah cleansed the temple so God's people could worship Him again. F. B. Meyer reminds us that our hearts are also meant to be temples for God. Sometimes, through months of neglect, we stop praying and our testimony fades. When we slide away from God, the courts of our hearts grow silent, and we find we can no longer sing the Lord's song with gladness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To restore that song, our inner lives need a thorough cleansing. This happens when we examine ourselves, confess our sins, and turn away from what is wrong. We need God's forgiveness for our past, and we need to dedicate ourselves completely to Him for the future. Like laying an offering on the altar, we place our lives and interests at the feet of Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When the burnt offering began on the altar, the trumpets sounded and the people sang praises. Meyer explains that our life's music stops when we live out of tune with God's will. When we surrender everything to Him, the harmony returns. Full devotion fills our hearts with praise once again.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Has your heart grown quiet toward God through neglect or unconfessed sin?",
+    "What part of your life do you need to surrender to Jesus today so your praise can return?"
+   ],
+   "prayer": "Lord, search my heart and show me where I have neglected You. Forgive my sins and cleanse the inner rooms of my life. I place myself completely in Your hands today, so that my life may sing Your praise again. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 29:27",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

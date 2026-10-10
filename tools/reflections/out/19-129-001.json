@@ -1,0 +1,66 @@
+{
+ "id": "19-129-001",
+ "title": "The Cords of the Wicked",
+ "refs": [
+  "Psalms 129:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19129001,
+   "end": 19129008,
+   "ref": "Psalms 129:1-8",
+   "ranges": [
+    [
+     19129001,
+     19129008
+    ]
+   ],
+   "title": "God Gives Strength to Overcome",
+   "key_verse": [
+    19129002,
+    19129002
+   ],
+   "reflect": [
+    {
+     "text": "Going through hard times, physical pain, or cruel mocking can deeply hurt how we see ourselves. These painful experiences can wear down our confidence and damage our sense of self-worth. In this psalm, God's people look back on many years of suffering and mistreatment, yet they know their troubles did not win.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finding Christ brings fresh hope into our lives. His presence gives us the motivation we need to rise above the painful things in our past. Harsh critics and difficult trials do not get the final word over our lives when we put our trust in God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we lean on the Lord, He gives us the strength and resilience to keep going. He helps us push past the heavy obstacles that try to hold us back. With God beside us, our past suffering will never have the power to define our future.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What past hurts or harsh words have made it difficult for you to feel confident?",
+    "How can relying on Christ help you look beyond painful memories and find fresh hope?"
+   ],
+   "prayer": "Lord, thank you that our past struggles and critics do not have the final say over our lives. When our confidence is shaken by hardship, restore our hope through Christ. Give us your strength and resilience to overcome every obstacle before us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Crosswalk.com",
+     "work": "Wisdom from the Psalms 10/27",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-10-or-27-552656.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

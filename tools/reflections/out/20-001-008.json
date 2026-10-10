@@ -1,0 +1,66 @@
+{
+ "id": "20-001-008",
+ "title": "The Enticement of Sin",
+ "refs": [
+  "Proverbs 1:8-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20001008,
+   "end": 20001019,
+   "ref": "Proverbs 1:8-19",
+   "ranges": [
+    [
+     20001008,
+     20001019
+    ]
+   ],
+   "title": "Guarding Hearts Against Temptation",
+   "key_verse": [
+    20001010,
+    20001010
+   ],
+   "reflect": [
+    {
+     "text": "In Proverbs, a father warns his child to listen closely to godly instruction and refuse to follow when wrongdoers try to lure them away. In our world today, temptation often enters our homes through screens, media, and technology. Sin tries to make harmful choices look harmless or rewarding, but it quietly pulls hearts away from God. This is why guidance at home remains such an important gift.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Parents serve as a vital defense system to safeguard their children's spiritual purity. Staying alert against spiritual dangers requires active care. One key way parents do this is by setting clear, reasonable boundaries. Guarding entertainment choices, internet access, and friendships helps shield young hearts from harmful influences that are easy to overlook.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living within these limits is not always easy, and setting rules can sometimes cause friction in the home. Yet just as Proverbs warns that sin's traps lead to ruin, wise boundaries keep our feet from walking into danger. Staying vigilant protects our hearts and helps us stand firm whenever enticing voices try to pull us off course.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What boundaries around technology, entertainment, or friendships help protect your heart today?",
+    "How can you respond with trust when wise guidance or rules feel difficult to follow?"
+   ],
+   "prayer": "Lord, help us to listen to the wise guidance of those who watch over our spiritual growth. Give families vigilance to protect their homes from worldly impurity. Grant us strength and discernment to turn away whenever temptation invites us down the wrong path. Amen.",
+   "sources": {
+    "D1": {
+     "author": "PowerPoint Ministries",
+     "work": "Power Point - Aug. 2, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-aug-2-2006-1411699.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

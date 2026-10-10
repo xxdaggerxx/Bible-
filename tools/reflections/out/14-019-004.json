@@ -1,0 +1,66 @@
+{
+ "id": "14-019-004",
+ "title": "Jehoshaphat’s Reforms",
+ "refs": [
+  "2 Chronicles 19:4-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14019004,
+   "end": 14019011,
+   "ref": "2 Chronicles 19:4-11",
+   "ranges": [
+    [
+     14019004,
+     14019011
+    ]
+   ],
+   "title": "Leading in the Fear of the Lord",
+   "key_verse": [
+    14019007,
+    14019007
+   ],
+   "reflect": [
+    {
+     "text": "When King Jehoshaphat appointed judges across Judah, he reminded them that they were serving the Lord, not merely seeking human approval. Leaders who hold authority must recognize that they answer directly to God. To lead with upright hearts, they need to maintain a close relationship with Him through personal spiritual habits and regular prayer.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The king also urged them to live in the fear of the Lord, which means having deep reverence for Him. Reverence gives leaders true wisdom and guards them against making sinful choices. Because God shows no favoritism and accepts no bribes, those who govern must reflect His justice by rejecting partiality, dishonesty, and selfish ambition.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We also have an important role as citizens. When public officials take solemn oaths before God, we should view those promises as meaningful commitments. We can support our communities by actively holding our leaders accountable to govern with honesty, fairness, and genuine faithfulness to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering God's justice shape the choices you make in your daily responsibilities?",
+    "How can we encourage and pray for our leaders to seek God's approval rather than human praise?"
+   ],
+   "prayer": "Lord God, help our leaders remember that they serve You above all else. Give them the wisdom to reject favoritism, dishonesty, and selfish ambition. Help us to act justly in our own lives and faithfully seek Your truth each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "T. M. Moore",
+     "work": "So Help Me, God: The Expectation of Leadership",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/church/pastors-or-leadership/so-help-me-god-the-expectation-of-leadership-11606923.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

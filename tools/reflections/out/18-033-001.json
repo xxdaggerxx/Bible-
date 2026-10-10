@@ -1,0 +1,75 @@
+{
+ "id": "18-033-001",
+ "title": "Elihu Rebukes Job",
+ "refs": [
+  "Job 33:1-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18033001,
+   "end": 18033033,
+   "ref": "Job 33:1-33",
+   "ranges": [
+    [
+     18033001,
+     18033033
+    ]
+   ],
+   "title": "Rescued from the Pit",
+   "key_verse": [
+    18033028,
+    18033028
+   ],
+   "reflect": [
+    {
+     "text": "God is far greater than we are, and in His love He works to keep us back from ruin. Sometimes He speaks through deep thoughts in the night or through times of sickness and weakness. Yet we are often too dull to see what God is doing in our hard seasons. We need help to understand His purpose and to find the right path forward. God gives us wise friends, but best of all, the Holy Spirit acts as our guide to explain God's ways to our hearts.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When God shows us our condition, He is watching for an honest heart. He does not ask us to hide our faults or pretend we are righteous. Instead, as Charles Spurgeon writes, the Lord is \"on the look-out to discover any that are in trouble because of their faults.\" When we plainly admit to God that we have done wrong and that sin brought us no good, He meets us with mercy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's goal in all His discipline is rescue, not destruction. He provides a ransom to keep our souls from going down into the dark pit. When we turn to Him through Jesus with simple confession, He takes away our guilt and gives us free pardon. We are brought out of danger and given new life to walk in His light.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face illness or hardship, do you ask the Holy Spirit to help you understand what God might be teaching you?",
+    "Is there any wrongdoing you need to confess honestly to God today, knowing He is ready to forgive?"
+   ],
+   "prayer": "Lord God, thank You for watching over us and keeping our feet from ruin. Forgive us for the sins we have committed, and cleanse our hearts with Your free pardon. By Your Holy Spirit, give us humble and teachable minds to understand Your ways and walk in Your light. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 25",
+     "on": "Job 33:27-28",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 33:23",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

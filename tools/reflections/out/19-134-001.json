@@ -1,0 +1,67 @@
+{
+ "id": "19-134-001",
+ "title": "Bless the LORD, All You Servants",
+ "refs": [
+  "Psalms 134:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19134001,
+   "end": 19134003,
+   "ref": "Psalms 134:1-3",
+   "ranges": [
+    [
+     19134001,
+     19134003
+    ]
+   ],
+   "title": "Blessing the Lord Through the Night",
+   "key_verse": [
+    19134001,
+    19134001
+   ],
+   "reflect": [
+    {
+     "text": "This psalm was written for the workers who took up the night shift in God's temple. When everyone else had gone to rest, these servants took their place to watch and pray. F. B. Meyer notes that \"the sleepless sufferers among us are God's night-watch.\" When pain or sorrow keeps you awake while the world sleeps, God still calls you to serve Him by lifting your heart to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It feels easy to praise God when the sun is shining and life feels peaceful. But when darkness falls and we face hard questions about life and suffering, words of praise can catch in our throats. Still, when we make the quiet choice to speak words of blessing even in the dark, God meets us in our need.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The God who made heaven and earth has not forgotten you in the shadows. He not only made you, but He also saved you. When you choose to bless Him through your difficult night, you can be certain that this mighty Creator will pour His blessing back upon your life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When quiet nights or difficult times make it hard to praise God, what simple words of thanks can you still offer Him?",
+    "How does remembering that the Lord made heaven and earth give you peace in the dark?"
+   ],
+   "prayer": "Lord, even when darkness surrounds me and sleep will not come, help me to lift my hands and honor You. Remind me that You made heaven and earth, and You will never fail to care for my soul. Fill my heart with Your peace as I look to You tonight.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 134:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

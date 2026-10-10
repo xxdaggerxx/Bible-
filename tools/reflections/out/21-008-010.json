@@ -1,0 +1,66 @@
+{
+ "id": "21-008-010",
+ "title": "Fear God",
+ "refs": [
+  "Ecclesiastes 8:10-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 21008010,
+   "end": 21008013,
+   "ref": "Ecclesiastes 8:10-13",
+   "ranges": [
+    [
+     21008010,
+     21008013
+    ]
+   ],
+   "title": "Trusting God's Perfect Justice",
+   "key_verse": [
+    21008012,
+    21008012
+   ],
+   "reflect": [
+    {
+     "text": "In our world, consequences for evil deeds often seem slow to arrive. When people do not face immediate punishment, their hearts are emboldened to keep doing wrong. Society often makes things worse by praising corrupt leaders and dishonest people who appear to escape accountability. Watching this can leave us wondering why evil seems to go unchecked.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We must remember that delayed judgment does not mean God is indifferent or unconcerned. Rather, His delay is an act of merciful patience, offering people time to repent and turn back to Him. Yet when people take this kindness for granted, they harden their own hearts and store up even greater judgment for the end.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As believers, we can rest assured that God's justice will never fail. It may seem slow to us, but it will arrive at just the right time. Even if wrongdoers live long and comfortable lives, we can remain confident that it will ultimately go well with those who revere God and live in His presence.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt frustrated when dishonest people seemed to get away with bad choices?",
+    "How does remembering God's patience and ultimate justice help you keep trusting Him today?"
+   ],
+   "prayer": "Lord, thank You for Your patient mercy and kindness toward us. Help us not to grow bitter or discouraged when evil seems to go unpunished in the world. Give us reverent hearts that fear You, and grant us peace as we trust Your perfect timing. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Presuming upon God's Kindness",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/presuming-upon-gods-kindness-2"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

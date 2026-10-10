@@ -1,0 +1,142 @@
+{
+ "id": "24-029-001",
+ "title": "Jeremiah’s Letter to the Exiles",
+ "refs": [
+  "Jeremiah 29:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24029011,
+   "end": 24029011,
+   "ref": "Jeremiah 29:11",
+   "ranges": [
+    [
+     24029011,
+     24029011
+    ]
+   ],
+   "title": "\"I Know the Plans I Have for You\"",
+   "key_verse": [
+    24029011,
+    24029011
+   ],
+   "reflect": [
+    {
+     "text": "Life often brings sudden detours, loss, and trials that upset our carefully organized schedules. In seasons of disappointment, it is easy to become discouraged and wonder if God has forgotten us. Yet Jeremiah reminded the exiles that God never abandons His throne. His overarching purpose for His children is always redemptive, meant for our welfare rather than our destruction.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "When we read this promise, we often want God to give us a detailed map of our entire future. Instead of satisfying our curiosity with a complete itinerary, God usually guides us just one step at a time. He does this to grow our daily reliance on Him and mature our souls. Unplanned delays invite us to thank God rather than complain.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "True peace does not come from knowing every upcoming detail of our lives. It comes from resting in God's trustworthy character and walking humbly before Him each day. As we follow the clear teachings of Scripture in the present moment, we can be confident that our future is secure in His caring hands.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you respond with trust rather than worry when your daily plans are disrupted?",
+    "What is one clear step of obedience God is asking you to take today?"
+   ],
+   "prayer": "Heavenly Father, thank You that Your plans for us are good, even when our own plans fall apart. Help us to trust Your character instead of demanding a full roadmap of our lives. Teach us to walk humbly with You today, relying on Your guidance step by step. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Overcoming Discouragement",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-february-27-2021.html"
+    },
+    "D4": {
+     "author": "Kirstyn Mayden",
+     "work": "Are Your Trusting God’s Plan",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/beloved-women/beloved-women-january-26-2021.html"
+    },
+    "D5": {
+     "author": "Katie Harmon",
+     "work": "So What’s the Plan?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/encouragement-caf-may-24-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 24029001,
+   "end": 24029023,
+   "ref": "Jeremiah 29:1-23",
+   "ranges": [
+    [
+     24029001,
+     24029023
+    ]
+   ],
+   "title": "Seek the Peace of the City",
+   "key_verse": [
+    24029007,
+    24029007
+   ],
+   "reflect": [
+    {
+     "text": "God sometimes places us in circumstances or locations we would not choose for ourselves. It is tempting to live with packed bags, holding back our energy until our surroundings improve. Yet God told the exiles in Babylon to build homes, plant gardens, and raise families. He calls us to invest where He has placed us, seeing our current neighborhood as an opportunity to love others and share the gospel.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of pulling inward or resenting our community, we are commanded to seek its welfare. As people whose true home is in heaven, we have the freedom and security to generously serve the people around us. God calls His people to be diligent intercessors who pray for the prosperity and well-being of their neighbors.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Believers should pray earnestly for peace both at home and across the nations. When our cities enjoy safety and quiet, we can raise our families to honor God and share the good news without hindrance. We ought to lift up our nation regularly, confessing its sins and asking the Lord to bless our society with peace and reconciliation.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you actively invest in the well-being of your current community instead of waiting for your situation to change?",
+    "What specific prayers can you offer this week for the peace and spiritual good of your city?"
+   ],
+   "prayer": "Lord, thank You for placing us where we are today to serve You and love our neighbors. Please give our city and nation true peace so that Your people may live quietly and share the gospel freely. Forgive our corporate sins and help us bring blessing to the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 9",
+     "on": "Jeremiah 29:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Scott Hubbard",
+     "work": "Love the Place You Want to Leave",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/love-the-place-you-want-to-leave"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

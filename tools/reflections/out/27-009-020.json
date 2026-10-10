@@ -1,0 +1,89 @@
+{
+ "id": "27-009-020",
+ "title": "Gabriel’s Prophecy of the Seventy Weeks",
+ "refs": [
+  "Daniel 9:20-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27009020,
+   "end": 27009027,
+   "ref": "Daniel 9:20-27",
+   "ranges": [
+    [
+     27009020,
+     27009027
+    ]
+   ],
+   "title": "God's Decreed Plan to End Sin",
+   "key_verse": [
+    27009024,
+    27009024
+   ],
+   "reflect": [
+    {
+     "text": "While Daniel was still confessing his sins and praying, God's answer had already gone out. As F. B. Meyer notes, as soon as a God-given prayer begins, God's decree goes forth. Even when we cannot see the outcome right away, we can pray with bold trust because we are deeply precious to our Heavenly Father.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Gabriel revealed that history moves under God's sovereign control to fulfill every promise He has made. In the Old Testament, repeated animal sacrifices showed that a permanent solution for sin was still needed. God promised a set time when transgression would end and everlasting righteousness—being made fully right with God forever—would be brought in.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "This great rescue took place when the Messiah was cut off. Jesus had done no wrong, but as Charles Spurgeon wrote, \"one sins and another suffers.\" Christ willingly gave His life in our place to take away the guilt of our sins. By trusting in Him, we receive complete forgiveness and can live in holy peace and gratitude.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God listens to your prayer the moment you speak change how you pray?",
+    "Are you trusting in Jesus' sacrifice as the only way your sins are put away forever?"
+   ],
+   "prayer": "Father, thank You for hearing our prayers and holding us precious in Your sight. We thank You that Jesus died in our place to pay for our sins and give us lasting righteousness. Help us to trust Your finished work and rest in Your faithful promises every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 16",
+     "on": "Daniel 9:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Daniel 9:23",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Adrian Rogers",
+     "work": "Nothing Left Unfinished",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-october-9-2025.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Atoning for Iniquity",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/atoning-iniquity"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

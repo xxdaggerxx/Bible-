@@ -1,0 +1,75 @@
+{
+ "id": "27-003-008",
+ "title": "Shadrach, Meshach, and Abednego Accused",
+ "refs": [
+  "Daniel 3:8-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27003008,
+   "end": 27003018,
+   "ref": "Daniel 3:8-18",
+   "ranges": [
+    [
+     27003008,
+     27003018
+    ]
+   ],
+   "title": "Standing Firm in the Fire",
+   "key_verse": [
+    27003018,
+    27003018
+   ],
+   "reflect": [
+    {
+     "text": "When Shadrach, Meshach, and Abednego were ordered to bow to King Nebuchadnezzar's golden statue, they faced the threat of a blazing furnace. It is easy to settle for a soft, comfortable faith when life is pleasant. Yet these three men showed an unmovable faith in the face of death. They refused to bend their convictions or give up their integrity, showing us how to stand firm when worldly pressure demands that we compromise.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Their trust in God did not depend on an easy outcome. They knew God was able to save them, but they were determined to serve Him even if He did not rescue them from the flames. God uses our everyday trials and obedience to build this kind of enduring strength before bigger tests come. As Charles Spurgeon urged, believers must \"never to sacrifice their consciences,\" choosing to lose everything rather than give up their integrity before God.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Standing for what is right may sometimes cost us earthly comfort or approval. Even so, walking by faith rather than sight brings the deep reward of God's favor and peace. When we honor God by refusing to compromise, He fills our hearts with spiritual joy that far outweighs anything this world can take away.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you facing any pressure right now where you feel tempted to compromise your conscience?",
+    "How can you practice trusting God in daily decisions so your faith stays strong when hard trials come?"
+   ],
+   "prayer": "Lord God, give us courage to remain true to You even when we face pressure to compromise. Help us to obey You faithfully each day and to value a clear conscience above worldly approval. May our trust in You stay firm, no matter what difficulties we meet. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 24",
+     "on": "Daniel 3:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Jack Graham",
+     "work": "Do You Have Unmovable Faith?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-apr-28-2010-11629524.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

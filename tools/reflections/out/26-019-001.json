@@ -1,0 +1,75 @@
+{
+ "id": "26-019-001",
+ "title": "A Lament for the Princes of Israel",
+ "refs": [
+  "Ezekiel 19:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26019001,
+   "end": 26019014,
+   "ref": "Ezekiel 19:1-14",
+   "ranges": [
+    [
+     26019001,
+     26019014
+    ]
+   ],
+   "title": "A Lament for Fallen Rulers",
+   "key_verse": [
+    26019014,
+    26019014
+   ],
+   "reflect": [
+    {
+     "text": "Ezekiel sings a sad song of mourning over the kings of Judah. Using pictures of trapped lions and a dried-up vine, he shows the collapse of the royal family. While foreign powers like Egypt and Babylon physically dragged these leaders away, the real downfall came from within. The nation's own rebellion and moral decay destroyed them, showing that human systems always break down because of human sin.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Earthly governments and human rulers can never solve our deepest problems. The sorrow over Israel's lost rulers points us to our need for a much greater rescue. As F. B. Meyer reminds us, we too may lament for the sorrows of our true King, Jesus, who was pierced for our sins and bore our punishment out of pure love.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Remembering what Christ endured brings both sorrow and comfort. We are grieved that our own rebellion nailed Him to the cross, yet we find great peace knowing that His wounds bring us healing. Through His suffering, we are set free from the crushing weight of sin.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do you put your hope in earthly leaders or systems instead of Christ?",
+    "How does thinking about the suffering Jesus endured for your sins bring you peace today?"
+   ],
+   "prayer": "Lord God, forgive us for looking to earthly rulers and our own strength for security. We thank You for King Jesus, who bore the pain and punishment of our sins on the cross. Heal our hearts by His wounds and grant us the peace that only He can give. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 19:1",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Ezekiel 19",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/2-samuel-12-2-corinthians-5-ezekiel-19-psalms-64-65/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

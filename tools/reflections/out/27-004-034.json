@@ -1,0 +1,76 @@
+{
+ "id": "27-004-034",
+ "title": "Nebuchadnezzar Restored",
+ "refs": [
+  "Daniel 4:34-37"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27004034,
+   "end": 27004037,
+   "ref": "Daniel 4:34-37",
+   "ranges": [
+    [
+     27004034,
+     27004037
+    ]
+   ],
+   "title": "Honoring the King of Heaven",
+   "key_verse": [
+    27004037,
+    27004037
+   ],
+   "reflect": [
+    {
+     "text": "King Nebuchadnezzar learned that God hates human pride. When we enjoy success or wealth, we are often tempted to credit ourselves, forgetting that everything we have is entrusted to us by God as His caretakers. When trials come, such as sickness or sudden loss, God reminds us that He alone rules. Nebuchadnezzar only received his sound mind back when he looked up toward heaven and praised the Most High God, whose kingdom never ends.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Our frequent worries often show our stubborn desire to rely on ourselves and control our own lives. We do not need full explanations for every event because God directs history and does as He pleases. No earthly trouble, from money stress to broken relationships, exceeds His authority. As F. B. Meyer notes, God's ways are righteous \"in the tiny circle of our little life.\" We find genuine peace by letting go of control, turning to God in prayer and repentance, and resting our trust securely in Christ.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what parts of your life are you tempted to rely on your own strength instead of trusting God?",
+    "How can remembering that God rules over your daily circumstances bring you peace today?"
+   ],
+   "prayer": "Lord God, You rule over heaven and earth, and everything we have comes from Your hand. Forgive us for our pride and our anxious attempts to stay in control of our lives. Help us to rest in Your care, trusting that all Your ways are good and true. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Daniel 4:37",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Honoring God's Sovereignty - Today's Insight - August 5, 2021",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-august-5-2021.html"
+    },
+    "D3": {
+     "author": "Ann Spangler",
+     "work": "Praying the Names of God - November 29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/prayingnamesgod/praying-the-names-of-god-december-9.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,65 @@
+{
+ "id": "24-052-031",
+ "title": "Jehoiachin Released from Prison",
+ "refs": [
+  "Jeremiah 52:31-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24052031,
+   "end": 24052034,
+   "ref": "Jeremiah 52:31-34",
+   "ranges": [
+    [
+     24052031,
+     24052034
+    ]
+   ],
+   "title": "God Keeps His Promise",
+   "key_verse": [
+    24052031,
+    24052031
+   ],
+   "reflect": [
+    {
+     "text": "The book of Jeremiah does not end with the ruins of Jerusalem. Instead, it closes with a surprising story of mercy. King Jehoiachin of Judah had been locked away in Babylon for decades. But a new king came to power, showed kindness to Jehoiachin, and freed him from prison. Jehoiachin was even given a seat higher than all the other captive kings and ate at the royal table for the rest of his life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This unexpected release was more than just good news for one man. It was a clear sign that God had not forgotten His covenant promises to David's family line. Even when everything looked dark and hope seemed small, God was still at work protecting His people and keeping His word.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "That small sign of mercy in Babylon pointed ahead to something far greater. Today, we know the full guarantee of God's promise to David is found in Jesus Christ, who rose from the dead and rules forever. When our own circumstances feel bleak, we can trust that God is always faithful.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When your circumstances look bleak, how does God's past faithfulness encourage you to keep trusting Him?"
+   ],
+   "prayer": "Lord God, thank You for always keeping Your promises, even when hope seems far away. Help us to fix our eyes on Jesus, our risen King. Give us patience and peace to trust You in every dark season. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "David's Throne Endures",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/davids-throne-endures"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,82 @@
+{
+ "id": "18-010-001",
+ "title": "Job’s Plea to God",
+ "refs": [
+  "Job 10:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18010001,
+   "end": 18010022,
+   "ref": "Job 10:1-22",
+   "ranges": [
+    [
+     18010001,
+     18010022
+    ]
+   ],
+   "title": "Finding Hope in Deep Darkness",
+   "key_verse": [
+    18010002,
+    18010002
+   ],
+   "reflect": [
+    {
+     "text": "Job felt crushed by grief and confusion. He asked God why he was being treated this way, and he even wished he had died at birth. In times of severe suffering, philosophy and clever theories offer no real comfort. Yet, as Charles Spurgeon observed, God often uses hard seasons to uncover and grow our graces. Just as stars cannot be seen during the day, our faith and hope often shine brightest in the darkness of adversity.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "In his deep distress, Job felt entirely alone, searching for answers without anyone to plead his case. We have what Job longed for. We have Jesus Christ as our living mediator, an advocate who speaks for us and meets our deepest misery with abundant mercy.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Job looked ahead and saw only gloom and shadow in the grave. But because of Christ, death is no longer the final night. Jesus has brought life and immortality to light, turning our future into day. While we walk through hard times, we can live in waiting hope, resting between the memory of Christ's cross and the promise of his return.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When difficult trials test your life, how does knowing Jesus is your advocate bring you peace?",
+    "How can remembering Christ's promise to return help you through dark seasons today?"
+   ],
+   "prayer": "Lord Jesus, thank you for being our loving advocate who meets our deepest pain with mercy. When trials come, use them to strengthen our faith, hope, and love. Keep our hearts anchored on the cross and looking forward to your glorious return. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 18",
+     "on": "Job 10:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 10:21",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Futile Searches",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-oct-10-2008-11582786.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

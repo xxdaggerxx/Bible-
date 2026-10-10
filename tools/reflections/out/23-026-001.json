@@ -1,0 +1,141 @@
+{
+ "id": "23-026-001",
+ "title": "A Song of Salvation",
+ "refs": [
+  "Isaiah 26:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23026002,
+   "end": 23026004,
+   "ref": "Isaiah 26:2-4",
+   "ranges": [
+    [
+     23026002,
+     23026004
+    ]
+   ],
+   "title": "\"You Will Keep in Perfect Peace\"",
+   "key_verse": [
+    23026003,
+    23026003
+   ],
+   "reflect": [
+    {
+     "text": "Real peace begins when we stop focusing so much on ourselves. If we hide secret wrongs in our lives or refuse to make peace with others, we miss the quiet rest God desires for us. Constantly worrying about ourselves and feeding our own self-centered desires crowds out God. But when we choose to turn away from selfishness and let God put things right, His true calm enters our hearts.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Life often disrupts our daily plans, bringing sudden worry and sleepless nights. When troubles strike, we tend to think we must fix everything in our own strength. Yet genuine calm comes when we surrender our need for control. A steadfast mind means leaning our whole weight upon God instead of relying on fragile human crutches. When we shift our focus from changing circumstances to God's unchanging goodness, He guards us with deep wholeness.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Because the Lord is our eternal Rock, we have no reason to live in fear. As Charles Spurgeon wrote, \"let us rest upon him with all our weight.\" Our heavenly Father has never failed us, and He never will. We can drive away our doubts and rest safely in His everlasting strength.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries or hidden wrongs do you need to surrender to God today?",
+    "How can leaning fully on God change how you react when your plans are suddenly disrupted?"
+   ],
+   "prayer": "Heavenly Father, forgive us for turning inward and trying to fix everything in our own strength. Teach us to lean our full weight on You, our eternal Rock. Keep our minds steady on Your goodness so that Your deep peace may guard our hearts today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 5",
+     "on": "Isaiah 26:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 26:2-3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Chuck Swindoll",
+     "work": "Peace . . . in Spite of Panic",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/peace-.-.-.-in-spite-of-panic"
+    },
+    "D4": {
+     "author": "Billy Graham",
+     "work": "God, the Peacekeeper",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/devotions/god-the-peacekeeper"
+    },
+    "D5": {
+     "author": "Lyli Dunbar",
+     "work": "Finding Peace When Your Plans Suddenly Change",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/finding-peace-when-your-plans-suddenly-change.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23026001,
+   "end": 23026021,
+   "ref": "Isaiah 26:1-21",
+   "ranges": [
+    [
+     23026001,
+     23026021
+    ]
+   ],
+   "title": "Resting Secure in the Lord",
+   "key_verse": [
+    23026001,
+    23026001
+   ],
+   "reflect": [
+    {
+     "text": "In Isaiah's song, the people of God celebrate a city that is strong and safe. Yet our true security never comes from earthly walls or human defenses. It rests entirely on the sovereign power of the Lord. Believers often struggle with persistent fear when they assume that keeping themselves saved depends on their own performance. Trying to carry the burden of our spiritual safety in our own strength only brings anxiety, because our efforts can never be strong enough.",
+     "sources": [
+      "D6"
+     ]
+    },
+    {
+     "text": "Scripture reminds us that deliverance from sin and ongoing preservation are gifts of God alone. Both our daily growth in holiness and our final keeping are secured by His faithfulness and grace—His unearned kindness toward us. We do not need to live under the dread of failing to keep ourselves secure. Enduring peace comes when we set aside our own striving and lean wholly on Jesus Christ, trusting Him to hold us fast.",
+     "sources": [
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to believe that staying saved depends on your own good deeds?",
+    "How does knowing that Jesus preserves you by His grace bring relief to your soul?"
+   ],
+   "prayer": "Lord God, thank You that our ultimate safety rests in Your sovereign hands rather than our own weak efforts. Forgive us for the times we try to preserve ourselves through human striving. Help us to rest completely in the grace of Jesus Christ and trust You to keep us secure to the end. Amen.",
+   "sources": {
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "Resting Secure in the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/resting-secure-in-the-lord"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

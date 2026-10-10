@@ -1,0 +1,135 @@
+{
+ "id": "26-015-001",
+ "title": "Jerusalem the Useless Vine",
+ "refs": [
+  "Ezekiel 15:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26015002,
+   "end": 26015002,
+   "ref": "Ezekiel 15:2",
+   "ranges": [
+    [
+     26015002,
+     26015002
+    ]
+   ],
+   "title": "\"What Is the Vine Tree?\"",
+   "key_verse": [
+    26015002,
+    26015002
+   ],
+   "reflect": [
+    {
+     "text": "Any good fruit in our lives comes entirely from God's grace, His kindness that we do not deserve. If God had not changed our hearts and planted us in good soil, we would still be trapped in our sins. We should never look down on others or presume on God's patience while holding onto wrongdoing. Everything good we have is a borrowed gift from our Lord.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Because we have no strength of our own, we must depend completely on Jesus. Just as a branch lives only when the sap flows through it, we produce gentle attitudes and holy lives only through God's Spirit. Remembering our weakness keeps us humble and eager to turn away from sin, leaning on Christ each day.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you are tempted to feel proud of your spiritual growth, what helps you remember that it is all a gift of God's grace?",
+    "How does knowing that you depend on Christ's Spirit change the way you respond to your own weaknesses?"
+   ],
+   "prayer": "Lord, please keep our hearts humble before You. Remind us that on our own we have nothing to boast about, and that every good thing in our lives comes from Your grace. Help us to stay connected to Jesus so His Spirit can produce good fruit in us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 22",
+     "on": "Ezekiel 15:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 15:2",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - September 4",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-sept-4-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "A vine branch looks quite ordinary compared to the great trees of the forest. Forest wood can be cut into sturdy boards or carved into furniture, but vine wood is soft and twisted. As F. B. Meyer noted, \"they will not make even a pin\" from vine wood to hang pots. Its only real value is in bearing fruit. In the same way, we have no special worth in ourselves that should make us proud.",
+     "problem": "The description of vine wood as 'soft and twisted' (and contrasted with cutting forest wood into 'sturdy boards') comes from devotional D4, which is not cited for this paragraph, and is not found in D1, D2, or the scripture passage."
+    }
+   ],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 26015001,
+   "end": 26015008,
+   "ref": "Ezekiel 15:1-8",
+   "ranges": [
+    [
+     26015001,
+     26015008
+    ]
+   ],
+   "title": "Jerusalem the Useless Vine",
+   "key_verse": [
+    26015006,
+    26015006
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God describes the people of Jerusalem through the picture of a fruitless grapevine. A vine branch is too weak and soft to make furniture, utensils, or even pegs. It is also inferior as firewood. When a vine produces no grapes, it serves no useful purpose and is thrown into the fire. The people of Jerusalem were shocked to realize that, because of their spiritual fruitlessness, they faced God's judgment just like discarded wood.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Even though ancient Jerusalem failed to fulfill its purpose, God did not abandon His plan. He provided Jesus Christ as the true, fruit-bearing vine. Jesus accomplished everything that God had originally intended for His people, perfectly honoring the Father where Israel had failed.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Today, God calls us to live united to Jesus. As we abide in Him through the Holy Spirit, His life works within us. Instead of facing destruction like dried wood, we are given the ability to produce the lasting fruit of love for God and love for our neighbors.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus is the true vine give you peace when you think about human failure?",
+    "What is one practical way you can show the fruit of love to someone around you today?"
+   ],
+   "prayer": "Heavenly Father, thank You for sending Jesus to be the true and fruitful vine. Forgive us for the times we fail to live as we should. Keep us close to Christ through Your Holy Spirit so that our lives overflow with love for You and our neighbors. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Fruitless Vine of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/fruitless-vine-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

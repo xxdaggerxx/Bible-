@@ -1,0 +1,66 @@
+{
+ "id": "17-005-009",
+ "title": "Haman’s Plot against Mordecai",
+ "refs": [
+  "Esther 5:9-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 17005009,
+   "end": 17005014,
+   "ref": "Esther 5:9-14",
+   "ranges": [
+    [
+     17005009,
+     17005014
+    ]
+   ],
+   "title": "The Danger of a Proud Heart",
+   "key_verse": [
+    17005013,
+    17005013
+   ],
+   "reflect": [
+    {
+     "text": "Haman seemed to have everything anyone could want. He had great wealth, a large family, and the highest honors from the king. Yet Haman lived like the center of the universe and constantly craved praise. Because of this self-centered pride, a single slight from Mordecai ruined all his happiness. Seeing one man refuse to bow down filled him with bitter, destructive anger.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Pride makes us blind to the blessings right in front of us. It breeds a restless discontentment, where having almost everything still feels like nothing if our ego is hurt. When we insist on being honored above others, small offenses can quickly turn into deep bitterness and harmful plans.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jesus showed us a completely different way to live. Instead of demanding praise and exalting Himself, He showed true greatness by humbling Himself to serve others. When we notice subtle pride creeping into our own hearts, it should prompt us to ask God for mercy and seek Christlike humility.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Has pride ever kept you from enjoying the good blessings God has given you?",
+    "In what areas of your life can you turn away from demanding praise and choose humble service like Jesus instead?"
+   ],
+   "prayer": "Lord, forgive us when pride creeps into our hearts and steals our peace. Keep us from letting small slights make us bitter and ungrateful for all You have given us. Help us follow Jesus by choosing humility and finding our joy in serving others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Alistair Begg",
+     "work": "Consumed by Pride",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-september-14-2025.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

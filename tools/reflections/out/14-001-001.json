@@ -1,0 +1,133 @@
+{
+ "id": "14-001-001",
+ "title": "Solomon’s Prayer for Wisdom",
+ "refs": [
+  "2 Chronicles 1:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 14001011,
+   "end": 14001012,
+   "ref": "2 Chronicles 1:11-12",
+   "ranges": [
+    [
+     14001011,
+     14001012
+    ]
+   ],
+   "title": "\"Since This Was in Your Heart\"",
+   "key_verse": [
+    14001012,
+    14001012
+   ],
+   "reflect": [
+    {
+     "text": "When God invited Solomon to ask for anything, the young king did not ask for money or the death of his enemies. He had already inherited peace and great wealth from his father David without having to fight for them. Receiving a great gift without personal struggle can easily make a person take its cost for granted. In a similar way, we have received the gift of eternal life through the sacrifice of Jesus on the cross. We must watch out for spiritual laziness and live with daily thankfulness for what Christ purchased for us.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Solomon asked for wisdom because his heart wanted to honor God and care for His people. As F. B. Meyer noted, God will add what we need when we make His service our main purpose. Earning a living and caring for our families are good duties, but our supreme calling is to show God's character and serve His kingdom. When we make honoring the Lord the main aim of our lives, we can trust that He will faithfully care for our earthly needs.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How might you be taking the costly gift of your salvation for granted in your daily routine?",
+    "What would it look like for you to put God's kingdom ahead of earthly worries this week?"
+   ],
+   "prayer": "Lord, thank You for the gift of salvation that Jesus won for us at such a great cost. Keep our hearts from growing uncaring or self-centered. Help us to seek Your kingdom first and trust You to provide for all our daily needs. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 1:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D4": {
+     "author": "Kristina Seymour",
+     "work": "A New Perspective on King Solomon - Warrior Mom Wisdom - Week of July 2",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/warrior-mom-wisdom/warrior-mom-wisdom-week-of-february-6.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 14001001,
+   "end": 14001013,
+   "ref": "2 Chronicles 1:1-13",
+   "ranges": [
+    [
+     14001001,
+     14001013
+    ]
+   ],
+   "title": "Leading with a Humble Heart",
+   "key_verse": [
+    14001010,
+    14001010
+   ],
+   "reflect": [
+    {
+     "text": "Solomon did not start his rule by enjoying royal privileges. Instead, he gathered the leaders of Israel and traveled to Gibeon to worship the Lord at the Tent of Meeting. He recognized that he could not govern in his own strength. When God offered to give him whatever he asked, Solomon showed true humility by admitting his inadequacy and seeking divine help to guide God's people.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Solomon asked for knowledge and wisdom so he could serve the people well. Real knowledge means looking at life from God's heavenly perspective rather than our own limited point of view. It grows as we study Scripture and listen to the Holy Spirit. Wisdom is the practical outworking of that knowledge, showing up in honest living and love for God and our neighbors. God gives us understanding so we can help and build up others.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Solomon's story also brings a serious reminder. Although he started with complete devotion to God, later in life he allowed worldly alliances and personal ambition to push aside God's commands. Earthly success and fame cannot replace simple, daily faithfulness. We are called not only to start our walk with humble worship, but to keep obeying God's Word throughout our entire lives.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life right now do you need to admit your own limits and seek God's guidance?",
+    "How can you use the wisdom God has given you to serve someone else today?"
+   ],
+   "prayer": "Lord, help us to humble ourselves and put worship at the center of our lives. Give us Your perspective through Your Word so we can love and serve the people around us. Guard our hearts from worldly distractions, and grant us grace to obey You faithfully all our days. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Will Graham",
+     "work": "Will Graham Devotion: Solomon's Secret Weapon",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/articles/will-graham-devotion-what-does-true-wisdom-look-like?ri=wc"
+    },
+    "D3": {
+     "author": "T.M. Moore",
+     "work": "Wisdom, Knowledge, Service: Take Your Place in the Kingdom of God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/wisdom-knowledge-service-take-your-place-in-the-kingdom-of-god-11559624.html"
+    },
+    "D5": {
+     "author": "Bible Pathways Ministries",
+     "work": "Bible Pathways 05/21/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-21-or-2002-1133446.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

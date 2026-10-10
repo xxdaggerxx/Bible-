@@ -1,0 +1,136 @@
+{
+ "id": "22-007-001",
+ "title": "Admiration by the Bridegroom",
+ "refs": [
+  "Song of Solomon 7:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 22007010,
+   "end": 22007010,
+   "ref": "Song of Solomon 7:10",
+   "ranges": [
+    [
+     22007010,
+     22007010
+    ]
+   ],
+   "title": "\"I Belong to My Beloved\"",
+   "key_verse": [
+    22007010,
+    22007010
+   ],
+   "reflect": [
+    {
+     "text": "The bride declares with joy that she belongs to her beloved and that his desire is for her. F. B. Meyer reminds us that Christ loves us even more than we could ever love Him. His desire for us is greater than sunlight compared to moonlight. He wants all our affection, time, and devotion, inviting us to step back from the rush of life to enjoy sweet fellowship with Him.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "This passage also reminds us of God's beautiful design for marriage. Genuine romantic connection requires both healthy physical attraction and shared spiritual priorities. God designed physical closeness to be honored and enjoyed within marriage, alongside deep conversation and emotional bonding, countering the shallow ways of the surrounding world.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "When we rest in the knowledge that we are deeply loved, our hearts respond. Spouses can build strong marriages by balancing inner character with mutual care. Above all, every believer can rest in the Saviour's great longing for us, offering Him our full devotion and trust each day.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you slow down today to spend quiet time with Christ, who desires your fellowship?",
+    "If you are married, what is one way you can nurture both spiritual and emotional closeness with your spouse?"
+   ],
+   "prayer": "Lord, thank you for loving us with a desire far greater than our own love for you. Teach us to step away from worldly busyness to enjoy your presence. Help us honor you in our marriages and walk in your truth every day. Amen.",
+   "sources": {
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Song of Solomon 7:10",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Peyton Garland",
+     "work": "Restoring the Richness of Marriage in Today's Hook-Up Culture",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-couples-devotional/restoring-the-richness-of-marriage-in-todays-hook-up-culture.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 22007001,
+   "end": 22007013,
+   "ref": "Song of Solomon 7:1-13",
+   "ranges": [
+    [
+     22007001,
+     22007013
+    ]
+   ],
+   "title": "Working Beside Our Beloved",
+   "key_verse": [
+    22007012,
+    22007012
+   ],
+   "reflect": [
+    {
+     "text": "The bride invites her beloved to go with her into the fields to care for the vines. She does not say I will go, but let us go. As Charles Spurgeon pointed out, working is sweet when Jesus is at our side. Christian activity is not an enemy of spiritual life, but a true blessing when we labor hand in hand with our Lord instead of working alone.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As we walk and work with Christ, our hearts produce pleasant fruit, both new and old. Our old fruits include our first love for Christ, our early simple faith, and memories of how God sustained us in sickness and deep waters. Our new fruits are fresh prayers, renewed thankfulness, and new choices to serve Him each day.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The most important thing about these fruits is that they are stored up only for our Beloved. Charles Spurgeon observed that the best service is where Jesus is \"the solitary aim of the soul.\" We do not do good works to win praise from others, but to bring honor and delight to Jesus, who gave everything for us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What memories of God's faithfulness in the past can you thank Him for today?",
+    "How can you keep Jesus close to your heart while doing your daily work?"
+   ],
+   "prayer": "Lord Jesus, walk beside us in all our work and keep our hearts close to you. We bring you our memories of your past faithfulness and our fresh desire to serve you today. May everything we do be done for your joy and your glory alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 9",
+     "on": "Song of Solomon 7:11-12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 1",
+     "on": "Song of Solomon 7:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "15-004-001",
+ "title": "Adversaries Hinder the Work",
+ "refs": [
+  "Ezra 4:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15004001,
+   "end": 15004005,
+   "ref": "Ezra 4:1-5",
+   "ranges": [
+    [
+     15004001,
+     15004005
+    ]
+   ],
+   "title": "Standing Firm Through Opposition",
+   "key_verse": [
+    15004004,
+    15004004
+   ],
+   "reflect": [
+    {
+     "text": "When God's people began rebuilding the temple, nearby neighbours offered to help. This can seem like a generous offer at first. Yet, as F. B. Meyer observed, joining hands with those who do not truly submit to God brings great danger. Accepting their help would compromise the holiness of the work. The leaders chose to say no, knowing that God's people must not tie themselves to partnerships that pull them away from Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As soon as their offer was turned down, these neighbours showed what was really in their hearts. They began to frighten the builders and cause trouble. Laura Bailey reminds us that we should expect opposition and discouragement when we seek to follow God. Facing pushback or closed doors does not mean God has walked away from us or given up on His calling.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When fear threatens to stop us, we do not need human approval to keep going. God's approval is already enough. Instead of letting weariness take over, we are called to persevere. No human scheme can overturn God's sovereign plans, and He will give us the strength we need to do His will.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you currently facing pushback or discouragement as you try to obey God?",
+    "How can remembering that God's approval is enough help you choose perseverance over fear today?"
+   ],
+   "prayer": "Lord God, thank You that Your plans can never be ruined by human opposition. Give us discernment to avoid harmful compromises, and keep our hearts set on pleasing You alone. When we feel afraid or worn out by difficulties, grant us the strength to stand firm and finish the work You have given us to do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezra 4:2",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Laura Bailey",
+     "work": "Staying Encouraged When We Face Opposition - The Crosswalk Devotional - September 29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/staying-encouraged-when-we-face-opposition-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

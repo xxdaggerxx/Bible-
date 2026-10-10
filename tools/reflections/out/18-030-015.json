@@ -1,0 +1,74 @@
+{
+ "id": "18-030-015",
+ "title": "Job’s Prosperity Becomes Calamity",
+ "refs": [
+  "Job 30:15-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18030020,
+   "end": 18030021,
+   "ref": "Job 30:20-21",
+   "ranges": [
+    [
+     18030020,
+     18030021
+    ]
+   ],
+   "title": "\"You Do Not Answer\"",
+   "key_verse": [
+    18030020,
+    18030020
+   ],
+   "reflect": [
+    {
+     "text": "When Job cried out to God in his deep pain, it felt as though heaven was silent. The Bible does not hide the honest, raw feelings of believers when hard times drag on. In the middle of long suffering, God can seem distant, uncaring, or even harsh. When our prayers appear to go unanswered, we may be tempted to think God has completely turned His back on us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet God's apparent silence does not mean He is absent. Every sorrowful prayer reaches the heart of God, who understands our weakness. Just as a mother quickly notices the soft whimper of her sick child above all the loud noise around her, God listens closely to our quietest cries. He never ignores His children, and He is always attentive to our pain.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God is constantly working out good purposes that we cannot yet see. His answer may come through an unexpected door, or at a later time when our hearts are ready. Just as God brought eternal life out of the suffering of Jesus on the cross, He uses our painful trials to prepare us for glory. We can keep holding on in hope, knowing He will strengthen and restore us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When has God seemed quiet during your trials, and what helped you keep praying?",
+    "How does knowing that God hears your quietest cry comfort you today?"
+   ],
+   "prayer": "Lord, thank You that You hear us even when we cannot see what You are doing. When troubles feel heavy and You seem far away, give us the faith to keep trusting You. Help us wait with patience for Your help, knowing Your love never fails. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 30:20",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "I Cry to You and You Do Not Answer Me",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/i-cry-to-you-and-you-do-not-answer-me"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

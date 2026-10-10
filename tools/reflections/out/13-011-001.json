@@ -1,0 +1,66 @@
+{
+ "id": "13-011-001",
+ "title": "David Anointed King of All Israel",
+ "refs": [
+  "1 Chronicles 11:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13011001,
+   "end": 13011003,
+   "ref": "1 Chronicles 11:1-3",
+   "ranges": [
+    [
+     13011001,
+     13011003
+    ]
+   ],
+   "title": "God's Perfect Timing for David",
+   "key_verse": [
+    13011003,
+    13011003
+   ],
+   "reflect": [
+    {
+     "text": "When the elders of Israel gathered at Hebron to crown David king, many years of hardship finally came to an end. Long before this day, God had promised that David would shepherd His people. Yet between that promise and this coronation, David spent years in exile, running from King Saul and fighting discouragement. During those dark days, he wondered how God's word could ever be fulfilled.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Still, in God's perfect timing, every barrier was cleared away. The tribes came together to recognize David's God-given leadership, just as the Lord had spoken through Samuel. When we meet hard times or face circumstances that seem impossible, David's story reminds us that God is dependable. We can trust that He is faithfully directing our steps even when the wait is long.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David being anointed as shepherd and ruler also points us to something bigger. His reign looks ahead to Jesus Christ, who is our ultimate Shepherd and supreme King.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you facing a delay or hardship that makes it difficult to see how God is working?",
+    "How can David's story encourage you to trust God's timing in your own life?"
+   ],
+   "prayer": "Lord, thank You that Your promises never fail and that Your timing is always perfect. When we face trials and cannot see the way ahead, help us trust that You are guiding our steps. We put our hope in Jesus, our true King and Shepherd. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 05/15/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-15-or-2002-1133432.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

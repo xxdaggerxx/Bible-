@@ -1,0 +1,128 @@
+{
+ "id": "19-128-001",
+ "title": "The Blessed Fear of the LORD",
+ "refs": [
+  "Psalms 128:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19128001,
+   "end": 19128001,
+   "ref": "Psalms 128:1",
+   "ranges": [
+    [
+     19128001,
+     19128001
+    ]
+   ],
+   "title": "\"Blessed Are All Who Fear the LORD\"",
+   "key_verse": [
+    19128001,
+    19128001
+   ],
+   "reflect": [
+    {
+     "text": "Fearing the Lord and walking in His ways transforms how we live together at home. When our faith is real, it brings the peace of heaven into daily family life. Instead of carrying our work worries, irritability, and dark moods through the front door, we are called to treat our families with gentle courtesy and gladness. As F. B. Meyer explains, the foundation of such a home is learning to avoid whatever grieves the Spirit of God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Walking in God's ways also means understanding His justice alongside His love. We distort the truth of Scripture when we speak only of grace and ignore God's righteous anger toward wrongdoing. Even after God forgives us, sinful actions can still leave painful, lasting consequences in our lives. Teaching our children that every person is accountable before God helps guide them toward wise and moral choices. We cultivate true reverence when we respect both His mercy and His holy standard.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you set aside daily worries and show more patience and courtesy in your home today?",
+    "Are you helping others, especially the young, understand both God's loving grace and His holy justice?"
+   ],
+   "prayer": "Lord, help us to honor You with reverent hearts in our daily lives. Teach us to treat our families with kindness and patience instead of bringing our stress home. Keep us mindful of Your holy justice, and help us make choices that please You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 128:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Dr. James Dobson",
+     "work": "God’s Justice",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobsons-parenting-devotional-july-24.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 19128004,
+   "end": 19128006,
+   "ref": "Psalms 128:4-6",
+   "ranges": [
+    [
+     19128004,
+     19128006
+    ]
+   ],
+   "title": "\"May the LORD Bless You from Zion\"",
+   "key_verse": [
+    19128005,
+    19128005
+   ],
+   "reflect": [
+    {
+     "text": "When we fear the Lord, His blessing shapes both our personal happiness and our families. Parents have only a short season to guide their children in God's ways and build godly character. Raising children to honor God produces adults who strengthen their communities. In this way, the peace and stability of an entire nation ultimately depend on the spiritual health of its homes.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "God's blessings also stretch beyond our own walls into the gathered church. A person who walks with God cares just as much about the Lord's house as their own home. When we gather with God's people to pray, sing praise, and hear the gospel, the Lord enlivens, comforts, and teaches us. Our gifts and earthly goods find their true purpose when we use them to build up the church and support its work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God desires this blessing to reach across generations. As strong families support the wider community and faithfully serve the church, God causes His work to flourish for years to come. We are invited to pray not only for peace in our own living rooms, but for lasting spiritual good in God's people and throughout our land.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can you use your time and resources to help your church family flourish?",
+    "How are you using the present season to pass along godly character to the next generation?"
+   ],
+   "prayer": "Lord, bless our homes and teach us to raise the next generation in Your truth. Strengthen our local churches as we gather to worship and learn from You. Use our families and our church communities to bring lasting peace and good to the world around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 15",
+     "on": "Psalms 128:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Toward a Healthy Nation",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/toward-a-healthy-nation?ga=testimonial-resources"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

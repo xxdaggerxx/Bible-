@@ -1,0 +1,67 @@
+{
+ "id": "24-050-017",
+ "title": "Redemption for God’s People",
+ "refs": [
+  "Jeremiah 50:17-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24050017,
+   "end": 24050020,
+   "ref": "Jeremiah 50:17-20",
+   "ranges": [
+    [
+     24050017,
+     24050020
+    ]
+   ],
+   "title": "A Full and Perfect Pardon",
+   "key_verse": [
+    24050020,
+    24050020
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God promises to bring His scattered people home and give them complete forgiveness. When the Lord forgives, He does not merely overlook our wrongdoing. He removes it so thoroughly that even if someone searches for our guilt, nothing can be found. As Charles Spurgeon wrote, \"Sin is to be so removed that it shall not be found.\" It is completely blotted out by God's mercy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often feel accused. The devil wants to remind us of our past failures, others may bring up our mistakes, and our own conscience can constantly search for our faults. Yet when God cleanses us through the sacrifice of Jesus, there is nothing left for anyone to discover. Christ took away our sins so completely that they have ceased to exist.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This freedom does not come from our own goodness, but from God Himself. Because the Lord speaks the word of forgiveness, His people no longer need to live under the fear of judgment. We can rest in peace, knowing our record has been entirely cleared by the God of grace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When your conscience reminds you of past sins, how does knowing God has completely erased them bring you comfort?",
+    "How does trusting in God's full pardon change the way you live each day?"
+   ],
+   "prayer": "Lord God, thank You for forgiving our sins and washing them away completely through Jesus. When our conscience or the enemy tries to accuse us, help us remember that You have cleared our record. Give us deep peace and joy as we rest in Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 22",
+     "on": "Jeremiah 50:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

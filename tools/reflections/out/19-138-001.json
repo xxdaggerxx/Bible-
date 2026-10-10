@@ -1,0 +1,150 @@
+{
+ "id": "19-138-001",
+ "title": "A Thankful Heart",
+ "refs": [
+  "Psalms 138:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19138008,
+   "end": 19138008,
+   "ref": "Psalms 138:8",
+   "ranges": [
+    [
+     19138008,
+     19138008
+    ]
+   ],
+   "title": "\"The LORD Will Fulfill His Purpose\"",
+   "key_verse": [
+    19138008,
+    19138008
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to worry that we will stumble or fail to become the people God wants us to be. But the psalmist did not put his hope in his own willpower, steady faith, or good resolutions. As Charles Spurgeon wrote, \"He has done it all, must do it all, and will do it all.\" God began His good work in you, and He will not leave it unfinished.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God cares about every part of your life, from your faith and character to your daily duties. Walking in His calling is not about reaching a single finish line all at once. Instead, it is an ongoing journey of following Jesus, often lived out in quiet, ordinary tasks. Even when life feels hard or routine, trusting God brings deep joy.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "You do not need to rely on your own weak strength to make it to the end. On our own, our daily mistakes would defeat us. But the Lord promises to guide you, supply His power, and bring His purpose for you to completion.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What ordinary tasks in your daily routine can you offer to God today?",
+    "Are you trying to live for God in your own strength, or are you resting in His promise to finish what He began?"
+   ],
+   "prayer": "Lord, thank You that my future does not depend on my own weak efforts. Help me to trust that You are working in my everyday life and shaping my character. Lead me step by step, and bring Your good work in me to completion. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 23",
+     "on": "Psalms 138:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 27",
+     "on": "Psalms 138:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Heather Caliri",
+     "work": "A Prayer for Clarity about Your God-Given Purpose",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-clarity-about-your-god-given-purpose-your-daily-prayer-august-24-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19138001,
+   "end": 19138008,
+   "ref": "Psalms 138:1-8",
+   "ranges": [
+    [
+     19138001,
+     19138008
+    ]
+   ],
+   "title": "A Song of Deliverance and Strength",
+   "key_verse": [
+    19138003,
+    19138003
+   ],
+   "reflect": [
+    {
+     "text": "Many people carry heavy burdens and painful struggles behind closed doors that nobody else can see. When life feels overwhelming, God invites us to cry out to Him. As we meet Him daily in prayer, He answers by pouring courage and quiet strength directly into our weary souls.",
+     "sources": [
+      "D6"
+     ]
+    },
+    {
+     "text": "Walking through hard times can feel exhausting, but God gives us fresh life and energy right in the middle of trouble. When others oppose us, we do not have to fight back or seek revenge. We can keep our hands busy serving the Lord, knowing His strong hand will protect and deliver us.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "This rescue leads us into lasting praise. Our song begins when Jesus lifts the heavy burden of sin at the cross, filling us with wonderful relief. Because God continues to show us mercy every single day, our gratitude never has to stop.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What hidden struggle can you bring to God in prayer right now for His strength?",
+    "How can you choose to serve the Lord instead of reacting in anger when trouble surrounds you?"
+   ],
+   "prayer": "Father, thank You for hearing my quiet cries and strengthening my heart when I feel weak. Help me to walk through trouble without fear or bitterness while resting in Your protection. Keep my eyes on the cross, and fill my mouth with praise for Your daily mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 1",
+     "on": "Psalms 138:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 22",
+     "on": "Psalms 138:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D6": {
+     "author": "Sharon Glasgow",
+     "work": "Hidden Hardships Behind Closed Doors",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/hidden-hardships-behind-closed-doors-encouragement-for-today-august-28-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

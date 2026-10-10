@@ -1,0 +1,66 @@
+{
+ "id": "11-021-025",
+ "title": "Ahab’s Repentance",
+ "refs": [
+  "1 Kings 21:25-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11021025,
+   "end": 11021029,
+   "ref": "1 Kings 21:25-29",
+   "ranges": [
+    [
+     11021025,
+     11021029
+    ]
+   ],
+   "title": "God’s Sure Justice",
+   "key_verse": [
+    11021029,
+    11021029
+   ],
+   "reflect": [
+    {
+     "text": "King Ahab and Queen Jezebel showed ruthless evil when they arranged the murder of Naboth just to steal his family land. This painful account reminds us that righteous people are not spared hardship in this life. Sometimes faithful believers face harsh treatment and persecution, even from leaders within the visible religious community.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When Ahab heard God's warning, he tore his clothes and humbled himself. Because of this, God chose to delay the punishment until Ahab's son reigned. In our fallen world, full justice is often delayed like this. Still, God's word of judgment is completely certain. The Lord promised the downfall of Ahab's family line, guaranteeing that He will ultimately vindicate and defend His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing that God sees every evil deed should shape how we live. We are called to stand against unfairness, refusing to commit injustice or quietly tolerate it. Instead, we can hold on to hope, looking forward to the day when Christ will set all things right forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that God guarantees ultimate justice help you endure unfair treatment?",
+    "In what ways can you stand against unfairness and refuse to tolerate injustice around you?"
+   ],
+   "prayer": "Lord, thank You that You see all things and that Your justice never fails. Help us to stand firm when we face unfair treatment or see others suffering wrongly. Give us courage to resist injustice and to wait patiently for Jesus to set all things right. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Naboth’s Vineyard",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/naboths-vineyard"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

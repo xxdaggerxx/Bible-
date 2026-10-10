@@ -1,0 +1,74 @@
+{
+ "id": "19-015-001",
+ "title": "Who May Dwell on Your Holy Mountain?",
+ "refs": [
+  "Psalms 15:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19015001,
+   "end": 19015005,
+   "ref": "Psalms 15:1-5",
+   "ranges": [
+    [
+     19015001,
+     19015005
+    ]
+   ],
+   "title": "Dwelling in God's Holy Presence",
+   "key_verse": [
+    19015001,
+    19015001
+   ],
+   "reflect": [
+    {
+     "text": "David longed to live close to God, not merely stand outside the sacred tent. In his day, only the high priest could enter the innermost place, and only for a brief moment. Through the blood of Jesus, our experience is far different. We are invited to enter boldly and spend our whole lives aware of God's presence and favor, ready either to run His errands or to rest quietly before Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living in God's presence must shape how we treat the people around us. Our church activities and outward good deeds lose their value if we indulge in gossip or critical talk. True devotion always shows itself in how we speak to and about our neighbors. God cares about our inward attitudes and daily words just as much as our public actions.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Real spiritual growth happens when we honestly examine our own hearts instead of judging others. If we feel far from God, this psalm invites us to check whether we have been truthful, guarded our speech, and acted honorably. Whenever we find something wrong, we can turn with confidence to Jesus, asking Him, as F. B. Meyer wrote, \"to adjust it, to bring us into the presence of God.\"",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How do the words you speak about your neighbors reflect your heart before God?",
+    "What attitude or habit of speech do you need to ask Jesus to adjust today?"
+   ],
+   "prayer": "Lord Jesus, thank You for opening the way for us to live each day in God's presence. Forgive us for the times our words and attitudes have harmed others or contradicted our faith. Examine our hearts, cleanse us from our faults, and keep us walking in Your truth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 15:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Crosswalk.com",
+     "work": "Wisdom from the Psalms 2/4",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-2-or-4-552126.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

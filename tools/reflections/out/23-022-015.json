@@ -1,0 +1,68 @@
+{
+ "id": "23-022-015",
+ "title": "A Message for Shebna",
+ "refs": [
+  "Isaiah 22:15-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23022015,
+   "end": 23022025,
+   "ref": "Isaiah 22:15-25",
+   "ranges": [
+    [
+     23022015,
+     23022025
+    ]
+   ],
+   "title": "Placing Our Trust in God Alone",
+   "key_verse": [
+    23022022,
+    23022022
+   ],
+   "reflect": [
+    {
+     "text": "Shebna was a high palace official who used his power to seek personal prestige rather than serve others. He acted as though his position was completely secure, even chiseling out an elaborate tomb in the rock to honor his own name. God hates pride, deceit, and self-promotion. In judgment, the Lord dismantled Shebna's pride by removing him from office and handing his authority over to a servant named Eliakim. God actively opposes corrupt leaders who exploit their positions for selfish ambition.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This passage reassures us that God is in sovereign control and will ultimately humble corrupt leaders. At the same time, we see that even good leaders like Eliakim have human limits. When people load all their hopes onto human shoulders, leaders eventually bend and fail under unrealistic expectations. Because every earthly leader has flaws and limits, we must look past them and put our ultimate trust in Christ alone.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might you be tempted to seek personal credit instead of quietly serving others?",
+    "How can remembering Christ help you avoid placing unrealistic expectations on human leaders?"
+   ],
+   "prayer": "Lord God, thank you for being in complete control over every earthly power. Guard our hearts from pride, deceit, and selfish ambition. Help us to serve others faithfully and to place our ultimate trust in Jesus Christ alone. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Judgment on Shebna",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/judgment-on-shebna"
+    },
+    "D2": {
+     "author": "Darryl Dash",
+     "work": "The Problem with Leaders",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/straight-paths/the-problem-with-leaders/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

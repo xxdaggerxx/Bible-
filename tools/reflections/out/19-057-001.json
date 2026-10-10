@@ -1,0 +1,83 @@
+{
+ "id": "19-057-001",
+ "title": "In You My Soul Takes Refuge",
+ "refs": [
+  "Psalms 57:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19057001,
+   "end": 19057011,
+   "ref": "Psalms 57:1-11",
+   "ranges": [
+    [
+     19057001,
+     19057011
+    ]
+   ],
+   "title": "In the Shadow of God's Wings",
+   "key_verse": [
+    19057001,
+    19057001
+   ],
+   "reflect": [
+    {
+     "text": "Life can bring sudden, painful trials that make us feel like David surrounded by fierce lions. In hard times, we are often tempted to solve every problem with our own strength and resolve. Yet self-reliance only leads to deeper harm. Instead of trying to fix everything ourselves, we need to take shelter under God's care, remembering that difficult seasons are temporary and will eventually pass.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God uses our hardships to carry out His purposes and shape our character. Before He delivers us, He often uses trials to show us our weakness so we learn complete dependence on Him. He is ready to act on our behalf when we stop shutting Him out and surrender the outcome of our lives into His hands.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Even inside a dark cave, David kept a steadfast heart by keeping his eyes on the Lord rather than his frightening surroundings. God delights to use ordinary people who stay faithful and content right where they are. When our hearts are firmly fixed on God, we can wake the dawn with heartfelt praise, trusting His unfailing love and truth to sustain us.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to rely on your own power instead of turning to God as your shelter?",
+    "How can focusing on God's character help you praise Him during a hard season?"
+   ],
+   "prayer": "Lord God, thank You for being our safe refuge whenever trouble comes. Forgive us for leaning on our own strength, and teach us to depend fully on Your help. Give us steadfast hearts that trust Your good purposes and sing Your praise in every season. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 57:2",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Sarah Frazer",
+     "work": "Storms Only Last a Season",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/storms-only-last-a-season-the-crosswalk-devotional.html"
+    },
+    "D3": {
+     "author": "Greg Laurie",
+     "work": "The Kind of Person God Uses",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-august-14-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

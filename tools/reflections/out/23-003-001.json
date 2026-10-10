@@ -1,0 +1,67 @@
+{
+ "id": "23-003-001",
+ "title": "Judgment on Jerusalem and Judah",
+ "refs": [
+  "Isaiah 3:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23003001,
+   "end": 23003015,
+   "ref": "Isaiah 3:1-15",
+   "ranges": [
+    [
+     23003001,
+     23003015
+    ]
+   ],
+   "title": "It Shall Be Well",
+   "key_verse": [
+    23003010,
+    23003010
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Jerusalem and Judah face deep distress and the loss of food, water, and wise leadership. Society begins to crumble around them because people have turned away from the Lord. Yet right in the middle of this dark picture of judgment, God gives a steady promise to His people. He tells Isaiah to speak comfort directly to the righteous and assure them that it will be well with them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon notes, \"when no time is mentioned, all time is included.\" God does not say it will be well only when life is peaceful, nor only after trouble has cleared away. His word covers every season, from the start of the year to the end. Even when earthly leaders fail and times grow lean, those who trust the Lord are truly cared for. God Himself is our dwelling place and our shepherd, and our future is secure with Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our feelings and outward hardships may try to convince us that all is lost. But God's voice carries greater authority than what our eyes see. When God declares that it is well with His people, we can rely on His truth and rest with quiet confidence in His care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When troubled times surround you, what helps you remember that God still watches over His people?",
+    "How can you rely on God's steady promises today rather than letting your fears lead you?"
+   ],
+   "prayer": "Lord, thank You that Your promises stand firm even when the world around us shakes. When our feelings or circumstances tell us to fear, teach us to trust Your word instead. Help us to rest peacefully in Your care, knowing that our lives are secure in You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 14",
+     "on": "Isaiah 3:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

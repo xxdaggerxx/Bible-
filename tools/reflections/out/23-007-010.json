@@ -1,0 +1,75 @@
+{
+ "id": "23-007-010",
+ "title": "The Sign of Immanuel",
+ "refs": [
+  "Isaiah 7:10-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23007014,
+   "end": 23007014,
+   "ref": "Isaiah 7:14",
+   "ranges": [
+    [
+     23007014,
+     23007014
+    ]
+   ],
+   "title": "\"Call Him Immanuel\"",
+   "key_verse": [
+    23007014,
+    23007014
+   ],
+   "reflect": [
+    {
+     "text": "When King Ahaz pretended to be humble and refused to ask for a sign, God promised a sign Himself. Human beings descended from Adam are broken by sin and cannot rescue one another. We needed a sinless Savior who is both truly God and truly human. God answered that need by stepping directly into human history through a miraculous virgin birth.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Rejecting the Lord's promise brings judgment, but receiving Christ brings life. Because Jesus is Immanuel, God is never distant from His people. He calls us to respond to this great gift with thankful obedience.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what daily struggles do you most need to remember that Jesus is truly with you?",
+    "How can you show grateful obedience to Christ in your life today?"
+   ],
+   "prayer": "Lord God, thank You for the gift of Your Son, Jesus. We praise You that He stepped into our world to share our sorrow and rescue us from sin. Please help us to walk closely with Him today and follow Him with joyful and obedient hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 25",
+     "on": "Isaiah 7:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "More Than a Creature",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/more-than-a-creature"
+    },
+    "D3": {
+     "author": "Truth For Life",
+     "work": "A Miraculous Conception",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-december-25-2019.html"
+    }
+   },
+   "dropped": 1,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

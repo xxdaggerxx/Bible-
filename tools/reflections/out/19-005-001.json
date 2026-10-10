@@ -1,0 +1,121 @@
+{
+ "id": "19-005-001",
+ "title": "Give Ear to My Words",
+ "refs": [
+  "Psalms 5:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19005003,
+   "end": 19005003,
+   "ref": "Psalms 5:3",
+   "ranges": [
+    [
+     19005003,
+     19005003
+    ]
+   ],
+   "title": "\"In the morning, You hear my voice\"",
+   "key_verse": [
+    19005003,
+    19005003
+   ],
+   "reflect": [
+    {
+     "text": "The rush of daily life often leaves our souls exhausted and disconnected from God. When demands pile up, our inner spiritual life can easily become neglected. David learned deep devotion not on a grand stage, but in the quiet obscurity of caring for sheep. God values the hidden posture of our hearts far more than human applause or outward achievements. We find real spiritual strength when we meet the Lord at daybreak and quietly wait on Him.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Taking time to order our prayers brings focus to our time with God. No one would walk into a royal court without thinking about what they need to say. Yet, as F. B. Meyer reminds us, we often pray at random instead of preparing our thoughts. We can honor our great King by arranging our petitions with reverent hearts, offering praise and submitting to His will before asking for our needs, confident in our Father's tender love.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you set aside a few quiet moments at the start of your day to wait on God?",
+    "In what ways can you prepare your thoughts and praise before bringing your requests to the Lord?"
+   ],
+   "prayer": "Lord, thank You for hearing my voice each new morning. Help me slow down amid life's busyness to wait quietly before You. Teach me to bring my requests with a thoughtful and reverent heart, trusting in Your faithful care. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 5:3",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Debbie Przybylski",
+     "work": "A Devoted Heart",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/prayer/a-devoted-heart.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19005001,
+   "end": 19005012,
+   "ref": "Psalms 5:1-12",
+   "ranges": [
+    [
+     19005001,
+     19005012
+    ]
+   ],
+   "title": "Walking Carefully Under God's Shield",
+   "key_verse": [
+    19005008,
+    19005008
+   ],
+   "reflect": [
+    {
+     "text": "Serving God and living faithfully can often bring heavy discouragement and painful criticism from others. David understood this pain well and poured out his honest groaning before the Lord. Rather than carrying hurt and worry throughout the entire day, we can release our burdens to God. When we shift our eyes from our personal hardships to His unfailing love, He replaces our despair with quiet peace and shields us with His favor.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Living faithfully in a critical world also means walking with great care. Those who dislike God's people often look for any mistake to mock our faith. As Charles Spurgeon observes, the world will readily forgive others while magnifying any small fault in a Christian. Because critics watch for our stumbling, we must ask the Lord to guide our steps in His righteousness. Living blamelessly protects the honor of Christ's name and keeps our enemies from finding an excuse to slander the gospel.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burdens or criticisms do you need to hand over to God today instead of carrying them yourself?",
+    "How can you live more carefully this week so your actions point others to Christ?"
+   ],
+   "prayer": "Father, I bring my honest burdens and struggles to You today. Guide my steps in Your righteousness so my life honors Your name before a watching world. Shield me with Your favor and fill my heart with Your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 11",
+     "on": "Psalms 5:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Pastoral Discouragement",
+     "site": "Insight for Living",
+     "url": "https://insight.org/newsletters/individual/pastoral-discouragement"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "18-042-007",
+ "title": "The LORD Rebukes Job’s Friends",
+ "refs": [
+  "Job 42:7-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18042007,
+   "end": 18042009,
+   "ref": "Job 42:7-9",
+   "ranges": [
+    [
+     18042007,
+     18042009
+    ]
+   ],
+   "title": "God Clears Job and Shows Mercy",
+   "key_verse": [
+    18042008,
+    18042008
+   ],
+   "reflect": [
+    {
+     "text": "Job's friends believed that earthly comfort always meant God's blessing, while suffering proved God was angry. But human thinking cannot measure God's higher plans. The Lord rebuked the friends because they spoke wrongly about Him. Even during deep pain, when Job could not see it, God was pleased with his faithful servant and was working out a good purpose through his hardship.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God publicly cleared Job's name by calling him His servant. Then He told the three friends to humble themselves, bring animal offerings, and ask Job to pray for them. Job chose not to hold on to any bitterness against these critical men. Instead, he graciously prayed for their forgiveness. True restoration happened as God's justice and mercy worked together to remove guilt. In this way, Job's prayer pointed forward to Jesus Christ, who offered Himself on the cross to intercede for sinners.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever wrongly judged someone's standing with God based only on their outward success or trouble?",
+    "Is there someone who has spoken harshly about you whom God is asking you to forgive and pray for?"
+   ],
+   "prayer": "Lord God, forgive us when we rely on our own limited thinking to judge Your ways. Give us humble hearts to admit when we are wrong, and give us grace to pray for those who hurt us. Thank You for Jesus, who offered Himself on the cross to bring us mercy and true peace with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "SET FREE",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-nov-13-2008-11595665.html"
+    },
+    "D2": {
+     "author": "Bible Pathway",
+     "work": "Bible Pathway - June 25, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-june-25-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

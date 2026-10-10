@@ -1,0 +1,67 @@
+{
+ "id": "11-016-029",
+ "title": "Ahab Reigns in Israel, Marries Jezebel",
+ "refs": [
+  "1 Kings 16:29-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11016029,
+   "end": 11016034,
+   "ref": "1 Kings 16:29-34",
+   "ranges": [
+    [
+     11016029,
+     11016034
+    ]
+   ],
+   "title": "Guarding Your Heart Against Idolatry",
+   "key_verse": [
+    11016033,
+    11016033
+   ],
+   "reflect": [
+    {
+     "text": "Ahab became king of Israel and did more evil than any king before him. Earlier kings broke God's law by worshiping the true God through golden calves, but Ahab went much further. Influenced by his wife Jezebel, he broke the first commandment completely by serving false gods like Baal and Asherah. When religious life is poisoned at its source, the whole land quickly becomes corrupt.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer points out that worshiping these idols was closely tied to impure living. Giving in to wrong desires quickly damages our spiritual walk. When we allow sinful passions to direct us, we lose the clear sense of Christ's truth and closeness. For this reason, Meyer urges us to \"wear the white flower of a blameless life\" by turning away from evil and choosing purity.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot keep our lives clean in our own strength. We need the living Christ to come into our hearts. When we hand ourselves over to Him completely, He drives out what is evil and takes control of every part of our lives. Living in obedience to Him allows us to see God and walk in His peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there wrong habits or influences in your life that are pulling you away from God?",
+    "What does it look like for you to give Christ control of your life today?"
+   ],
+   "prayer": "Lord, protect our hearts from turning to false gods and giving in to impure desires. Come into our lives, clear away every evil thing, and take full control of who we are. Help us to walk blamelessly and stay close to You today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 16:33",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

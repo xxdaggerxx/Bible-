@@ -1,0 +1,15 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://www.biblegateway.com/passage/?search=Psalm+95%3A1-9&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Psalm+95%3A6-9&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Psalm+95&version=ESV%3BERV%3BNIV",
+  "https://www.biblegateway.com/passage/?search=Psalm+95&version=NASB",
+  "https://www.biblegateway.com/passage/?search=Psalm+95&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Psalm+95&version=NIV%3BNKJV%3BKJV",
+  "https://www.biblegateway.com/passage/?search=Psalm+95&version=NRSVACE",
+  "https://www.biblegateway.com/verse/en/Psalms%2095:8"
+ ],
+ "cost": 0.03892595,
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,90 @@
+{
+ "id": "18-029-001",
+ "title": "Job’s Former Blessings",
+ "refs": [
+  "Job 29:1-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18029002,
+   "end": 18029002,
+   "ref": "Job 29:2",
+   "ranges": [
+    [
+     18029002,
+     18029002
+    ]
+   ],
+   "title": "\"The Months Gone By\"",
+   "key_verse": [
+    18029002,
+    18029002
+   ],
+   "reflect": [
+    {
+     "text": "Many believers look back on past days with sweet memories while feeling present dryness and gloom. Like Job, we may long for times when God's favor felt close, our families were near, and our service to others flourished. Yet we must also remember that a quiet, maturing faith can be deeper than early excitement, and God's sustaining presence remains with us even in painful seasons.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Sometimes, though, our sadness comes because our hearts have truly drifted away from the Lord. Spiritual decline often begins when we neglect private prayer, let worldly things take first place, or lean on our own pride. These dry periods can expose where we have relied on ourselves or turned good blessings into subtle idols.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "If you feel distant from God today, do not stop at wishing for the past. Merely sighing over lost joy changes nothing. As Charles Spurgeon urges, \"do not rest satisfied with wishing for a return of former happiness,\" but go directly to Jesus. Humble yourself before Him, speak honestly about your state, and trust His grace to restore your fellowship with Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you looking back on the past with regret, or are you bringing your present dryness to God in prayer?",
+    "Has neglected prayer or self-reliance quietly pulled your heart away from the Lord?"
+   ],
+   "prayer": "Lord, help us when we miss the joy and closeness we used to know. Forgive us for the times we have neglected private prayer or leaned on our own strength. Draw our hearts back to You today, and grant us Your grace to walk closely with You in every season.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 11",
+     "on": "Job 29:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 29:2",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Alistair Begg",
+     "work": "Don't Idolize the Past",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-august-11-2017.html"
+    },
+    "D4": {
+     "author": "Benjamin Vrbicek",
+     "work": "When My Church Was Washed with Butter",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/when-church-washed-butter/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

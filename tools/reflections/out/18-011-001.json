@@ -1,0 +1,69 @@
+{
+ "id": "18-011-001",
+ "title": "Zophar Rebukes Job",
+ "refs": [
+  "Job 11:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18011007,
+   "end": 18011008,
+   "ref": "Job 11:7-8",
+   "ranges": [
+    [
+     18011007,
+     18011008
+    ]
+   ],
+   "title": "\"Can You Fathom the Deep Things of God?\"",
+   "key_verse": [
+    18011007,
+    18011007
+   ],
+   "reflect": [
+    {
+     "text": "God's greatness is far beyond what our human minds can fully grasp. Too often, we settle for busy religious routines or seek an easy life of outward success, skimming along the surface instead of truly seeking God. Yet Zophar's question reminds us that God is higher than the heavens and deeper than the grave. We should not be surprised when His ways or the hard things in our lives baffle our understanding.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Real spiritual change happens when we stay steadfast through afflictions rather than running away from them. While our intellect alone cannot discover every mystery of God, we can truly know Him through heart-level trust. As F. B. Meyer wrote, \"we cannot find out God by searching, but we can by loving.\" Like young children who cannot understand everything their parents do, we can still know God closely by loving Him, obeying Him, and looking to Jesus.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you settling for surface-level religious habits, or are you seeking to know God deeply through love and trust?",
+    "How can you remain steadfast in faith when God's ways feel beyond your understanding?"
+   ],
+   "prayer": "Lord, your wisdom is higher than the heavens, and we cannot grasp all your ways. Forgive us when we merely glide through religious routines instead of seeking your glory. Teach us to trust you like little children and to know you more deeply through our love and obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 11:7",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Skimming the Surface",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-oct-11-12-2008-11582820.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

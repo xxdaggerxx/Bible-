@@ -1,0 +1,66 @@
+{
+ "id": "17-008-001",
+ "title": "Esther Appeals for the Jews",
+ "refs": [
+  "Esther 8:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 17008001,
+   "end": 17008006,
+   "ref": "Esther 8:1-6",
+   "ranges": [
+    [
+     17008001,
+     17008006
+    ]
+   ],
+   "title": "Standing Boldly for God's People",
+   "key_verse": [
+    17008003,
+    17008003
+   ],
+   "reflect": [
+    {
+     "text": "God is in complete control of worldly events, and He has the power to overturn the most harmful plans formed against His people. In this passage, God worked through Esther and Mordecai. Even though they lived under a secular ruler, God used their faithful obedience to influence the king and carry out His saving work.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When life is peaceful and comfortable, we can easily become spiritually careless. Hard times and crises wake us up and remind us how much we need God every single day. When we live in a culture that opposes our beliefs, God calls us to stand firm and speak up boldly in faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We also see Mordecai raised up from a humble servant to a ruler beside the king. Mordecai's honor points us ahead to Jesus Christ, who humbled Himself and was later raised to the highest place of authority.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Has a season of comfort made you careless, and how can you return to depending on God each day?",
+    "Where is God calling you to take a bold, faithful stand in the middle of a worldly culture?"
+   ],
+   "prayer": "Lord, thank You that You rule over all human rulers and can overturn every harmful plan. Forgive us for the times we forget our daily need for You when life is comfortable. Give us courage to stand faithfully for You and trust in Christ, our exalted King. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways - June 14, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-june-14-2005-1335235.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

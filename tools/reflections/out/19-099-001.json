@@ -1,0 +1,74 @@
+{
+ "id": "19-099-001",
+ "title": "The LORD Reigns!",
+ "refs": [
+  "Psalms 99:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19099001,
+   "end": 19099009,
+   "ref": "Psalms 99:1-9",
+   "ranges": [
+    [
+     19099001,
+     19099009
+    ]
+   ],
+   "title": "Calling on the Name of Our Holy King",
+   "key_verse": [
+    19099009,
+    19099009
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 99 repeats three times that our Lord is holy. He is the great King who rules over all the earth, full of justice and majesty. Yet it is easy to slip into spiritual apathy and treat Him like anyone else. When we neglect prayer, skip meeting with other believers, or overlook chances to share our faith, we show that we have lost our sense of reverence. God wants us to honor His supreme holiness in every part of our daily lives.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The psalm also reminds us of leaders like Moses, Aaron, and Samuel, who called on God and were answered. As F. B. Meyer notes, those who call on God form a special class of \"mighty wrestlers with God.\" Samuel was not famous for brilliant gifts, but his devoted prayers protected his people and defeated enemies. Even if you do not feel qualified in other ways, you may have a quiet calling to pray faithfully for others.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because the Lord is holy, approaching Him in prayer requires clean hearts. We cannot expect to prevail in prayer if we cling to sin. When we pause to remember how awesome He is and let Him cleanse us, our prayers become powerful. God invites us into His presence to worship Him and lift up the needs of the world.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your daily routine have you begun to treat God as ordinary?",
+    "Who is one person you can commit to praying for faithfully this week?"
+   ],
+   "prayer": "Holy God, You reign over all the earth, and Your name is awesome. Forgive me for the times I have treated You as ordinary and neglected time with You in prayer. Cleanse my heart from sin and teach me to honor Your holiness every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 99:6",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Crosswalk.com",
+     "work": "Wisdom from the Psalms 8/4",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-8-or-4-552488.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

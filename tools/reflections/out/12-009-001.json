@@ -1,0 +1,73 @@
+{
+ "id": "12-009-001",
+ "title": "Jehu Anointed King of Israel",
+ "refs": [
+  "2 Kings 9:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12009001,
+   "end": 12009013,
+   "ref": "2 Kings 9:1-13",
+   "ranges": [
+    [
+     12009001,
+     12009013
+    ]
+   ],
+   "title": "God Anoints Jehu to Bring Justice",
+   "key_verse": [
+    12009006,
+    12009006
+   ],
+   "reflect": [
+    {
+     "text": "Waiting for God to deal with evil can be very hard. The faithful people in Israel had waited through several kings to see justice for Naboth and the murdered prophets. God had not forgotten His word spoken long ago to Elijah. In His perfect timing, Elisha sent a young prophet to anoint Jehu to bring an end to Ahab's wicked dynasty. What looks like a delay from God is never a denial of His promises.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Obeying God in this moment took courage. The young prophet stepped into great danger to deliver God's message to the commanders, and Jehu faced the risk of death for treason. Yet this judgment was not about personal revenge. It was God's righteous response to the shedding of innocent blood.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God's justice always comes in the end, but His heart is to give mercy before judgment falls. Because His kingdom will certainly triumph, we are urged to turn away from our sins and seek His forgiveness today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When it feels like evil is winning, how does God's faithfulness encourage you to keep waiting on Him?",
+    "Is there any sin in your life that you need to confess to receive God's mercy today?"
+   ],
+   "prayer": "Lord God, thank You that Your promises never fail and that You see all injustice. Give us patience to trust Your timing when we must wait. Help us turn from our sins and rest in Your mercy today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jehu Anointed King-of Israel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jehu-anointed-king-of-israel"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - May 4",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-may-4-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

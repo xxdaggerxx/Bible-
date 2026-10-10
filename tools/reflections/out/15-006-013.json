@@ -1,0 +1,73 @@
+{
+ "id": "15-006-013",
+ "title": "The Temple Completed",
+ "refs": [
+  "Ezra 6:13-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15006013,
+   "end": 15006015,
+   "ref": "Ezra 6:13-15",
+   "ranges": [
+    [
+     15006013,
+     15006015
+    ]
+   ],
+   "title": "Finishing the Work God Began",
+   "key_verse": [
+    15006014,
+    15006014
+   ],
+   "reflect": [
+    {
+     "text": "Rebuilding God's temple was not easy. The builders faced opposition in different forms, from deceptive offers of cooperation to open intimidation meant to halt the work. To protect true worship, the leaders had to discern these traps and turn away false help. God protected them by using ordinary civic order, keeping governor Tattenai within legal bounds, and by sending the prophets Haggai and Zechariah to revive the people with godly preaching.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The project also succeeded across many years because God moved the hearts of foreign rulers. God often works through surprising and seemingly unworthy people to fulfill His plans. Our standing before Him does not depend on our own good deeds, but on His loving choice and gracious calling.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing that God Himself commanded the work gave the people strength to press through hardships. When we remember that God appoints our path, we can trust His help, seek wise counsel, and persevere until our work for Him is complete.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can listening to God's word help you spot things that might pull you away from pure worship?",
+    "What task has God set before you that requires patience and perseverance to finish?"
+   ],
+   "prayer": "Lord God, thank You for guiding our steps and watching over the work You give us to do. Help us to see past deceptive distractions and listen closely to Your truth. Give us the endurance we need to keep serving You faithfully through every challenge. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "The Faces of Evil",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/the-faces-of-evil-one-year-devotions-for-men-november-4.html"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - June 3",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-june-3-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

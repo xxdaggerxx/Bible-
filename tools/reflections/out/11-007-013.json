@@ -1,0 +1,67 @@
+{
+ "id": "11-007-013",
+ "title": "The Pillars and Capitals",
+ "refs": [
+  "1 Kings 7:13-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11007013,
+   "end": 11007022,
+   "ref": "1 Kings 7:13-22",
+   "ranges": [
+    [
+     11007013,
+     11007022
+    ]
+   ],
+   "title": "Everyday Work Done for the King",
+   "key_verse": [
+    11007014,
+    11007014
+   ],
+   "reflect": [
+    {
+     "text": "Huram was a craftsman working with bronze to build pillars for the temple. His skilled labor reminds us that God gives dignity to ordinary daily jobs. Long ago, builders carved exquisite patterns high up in cathedral roofs where no passerby would ever notice them. Those craftsmen worked with care because they knew they were doing their work for the King. In the same way, any honest task can become sacred service when we offer it to God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can bring this same purpose into our daily routines. As F. B. Meyer wrote, \"everything may be done for Jesus which may be done at all.\" When we eat or rest, we are refreshing our bodies to carry out his purposes. When we make things, buy, sell, or advise, we can aim for his kingdom of peace and righteousness to grow. Even the smallest duty matters when it is done to please him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living like this is only possible when our hearts stay in touch with the love of Christ. We cannot produce that kind of devotion on our own. As we take quiet time to think about his goodness, his love warms our hearts and overflows into our everyday actions.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How might viewing your ordinary daily tasks as service to Jesus change how you approach them today?",
+    "How can you make time today to quietly reflect on Christ so your love for him stays warm?"
+   ],
+   "prayer": "Lord Jesus, thank you that no honest work is too small to be offered to you. Keep our hearts close to your great love each day. Help us do all our work, rest, and service for your honor. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 7:14",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,135 @@
+{
+ "id": "19-149-001",
+ "title": "Sing to the LORD a New Song",
+ "refs": [
+  "Psalms 149:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19149001,
+   "end": 19149003,
+   "ref": "Psalms 149:1-3",
+   "ranges": [
+    [
+     19149001,
+     19149003
+    ]
+   ],
+   "title": "\"Rejoice in Their Maker\"",
+   "key_verse": [
+    19149002,
+    19149002
+   ],
+   "reflect": [
+    {
+     "text": "When God gives us times of peace, health, or good gifts, we can celebrate with spontaneous and heartfelt praise. We do not need to feel guilty about receiving earthly blessings from His hand. Coming together with other Christians to sing a new song keeps our worship fresh and lively rather than a tired routine.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "True gladness finds its deepest spring in the Lord Himself. We rejoice because God sits on the throne as our King, ruling over all things. His character brings us steady comfort. He is wise when we feel foolish, mighty when we feel weak, and unchanging when our lives shift every hour. As Charles Spurgeon writes, God's grace is ours to \"cleanse us, ours to keep us.\"",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our praise also grows as we look back on what God has done. Remembering His mighty acts in the past and noticing His daily mercies gives us reasons for thanksgiving that never run dry.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What fresh blessings from God can you thank Him for today?",
+    "How does knowing that God never changes give you joy when your circumstances feel uncertain?"
+   ],
+   "prayer": "Lord God, thank You for the blessings You give us and for ruling over our lives as King. Help us worship You with fresh, genuine joy alongside Your people. Teach our hearts to rest in Your wisdom, strength, and unchanging grace. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 22",
+     "on": "Psalms 149:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Chuck Swindoll",
+     "work": "In Times of Blessing",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/in-times-of-blessing1"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19149001,
+   "end": 19149009,
+   "ref": "Psalms 149:1-9",
+   "ranges": [
+    [
+     19149001,
+     19149009
+    ]
+   ],
+   "title": "The Lord Delights in His People",
+   "key_verse": [
+    19149004,
+    19149004
+   ],
+   "reflect": [
+    {
+     "text": "God calls us to rejoice in Him, but He does not leave our worship as a heavy chore. He graciously turns our duty into delight by showing us His great kindness. Even when our feelings lag behind, meditating on His grace helps us offer willing and sincere praise. God even honors His people by giving them a part in the King's victorious work.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "The ground for this deep joy is that the Lord takes pleasure in His people. Jesus cares for every part of our lives, including our daily needs and physical bodies. In all our troubles, He sympathizes with us like a loving father. Through His love, we have received forgiveness, adoption into God's family, and life that never ends.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "Knowing how deeply we are loved changes how we live and rest. As Spurgeon writes, the believer is \"no desolate wanderer,\" but a cherished child who is watched over, defended, and supplied. Because our Lord holds every detail of our lives in His care, we can lay down to sleep with quiet confidence.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God takes pleasure in you help when worship feels like a duty?",
+    "Which of your everyday cares can you hand over to Jesus today, knowing He cares about them?"
+   ],
+   "prayer": "Father, thank You for taking pleasure in us and caring about every small detail of our lives. When our hearts feel slow to praise, remind us of the great salvation You have given us in Christ. Help us rest in Your protection and serve Your kingdom with gladness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 29",
+     "on": "Psalms 149:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Our Duty to Rejoice in Our King",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-duty-rejoice-our-king"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

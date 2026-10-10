@@ -1,0 +1,116 @@
+{
+ "id": "23-066-001",
+ "title": "Heaven Is My Throne",
+ "refs": [
+  "Isaiah 66:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23066002,
+   "end": 23066002,
+   "ref": "Isaiah 66:2",
+   "ranges": [
+    [
+     23066002,
+     23066002
+    ]
+   ],
+   "title": "\"This is the One I Will Esteem\"",
+   "key_verse": [
+    23066002,
+    23066002
+   ],
+   "reflect": [
+    {
+     "text": "We naturally crave status, recognition, and standing on our own two feet. People often try to impress God and others with human talent, intelligence, or outward religious routines. Yet God redirected ancient Israel away from empty rituals and pride. His eyes look for something entirely different. He values a broken, contrite heart—one that is deeply sorrowful over sin—far more than any outward capability.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "True humility begins when we see ourselves honestly in the light of God's perfect holiness and our own sin. As C. J. Mahaney writes, true humility captures the gaze of God and attracts His grace, which is kindness we do not deserve. When we protect our pride, we show it through touchiness, defending ourselves, and criticizing others. But when we surrender our stubborn self-will, God revives us with His presence. Walking humbly gives our everyday work and our families lasting spiritual value.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what situations do you notice yourself becoming defensive or critical toward others?",
+    "How can an honest view of God's holiness help you let go of your self-will today?"
+   ],
+   "prayer": "Lord, forgive us for seeking our own importance and trusting in our own abilities. Break our stubborn pride and teach us to listen to Your word with reverent hearts. Please give us the grace to walk humbly before You and receive Your help every day.",
+   "sources": {
+    "D2": {
+     "author": "C.J. Mahaney",
+     "work": "The Promise of Humility",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/the-promise-of-humility-1383596.html"
+    },
+    "D3": {
+     "author": "K.P. Yohannan",
+     "work": "What Does it Take to be Esteemed by God?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/what-does-it-take-to-be-esteemed-by-god-1357942.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23066001,
+   "end": 23066006,
+   "ref": "Isaiah 66:1-6",
+   "ranges": [
+    [
+     23066001,
+     23066006
+    ]
+   ],
+   "title": "Joy for the Cast-Out",
+   "key_verse": [
+    23066005,
+    23066005
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes people who love and respect God face painful rejection from those close to them, even from within their own religious community. In this passage, God speaks directly to those who tremble at His word but find themselves hated and pushed out by their peers. This kind of suffering is especially bitter because others claim to do it for God's glory. People often use religion as an excuse to mistreat those who are simply trying to follow the Lord with a sincere heart.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "For believers who are cast out and mocked, the Lord offers deep comfort. Charles Spurgeon wrote that the Lord comes as the \"advocate and defender of His elect,\" bringing rescue to those who fear Him. While their oppressors may boast and speak piously, God promises that the story is not over. He will step in to deliver His people and give them joy, while those who mistreated them will face shame. We can take heart knowing God defends the rejected.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt misunderstood or pushed aside by other religious people for trying to follow God faithfully?",
+    "How does knowing that the Lord is your defender bring you peace when others treat you unfairly?"
+   ],
+   "prayer": "Lord, comfort all who are wrongfully pushed aside and mocked for their faithfulness to You. Be their defender and bring them joy when others reject them. Help us to trust that You see our trials and will always stand with those who revere Your word.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 1",
+     "on": "Isaiah 66:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

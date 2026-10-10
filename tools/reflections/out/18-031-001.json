@@ -1,0 +1,67 @@
+{
+ "id": "18-031-001",
+ "title": "Job’s Final Appeal",
+ "refs": [
+  "Job 31:1-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18031001,
+   "end": 18031040,
+   "ref": "Job 31:1-40",
+   "ranges": [
+    [
+     18031001,
+     18031040
+    ]
+   ],
+   "title": "A Life of True Integrity",
+   "key_verse": [
+    18031006,
+    18031006
+   ],
+   "reflect": [
+    {
+     "text": "Job looks back over his life and asks God to weigh him with honest scales. As F. B. Meyer explains, integrity means wholeness or whole-heartedness. In this chapter, Job shows what that wholeness looked like in practice. It meant guarding his eyes from lust, keeping his hands clean from dishonesty, and treating his servants with fairness and dignity.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Job's integrity also reached out to others in practical mercy. He shared his food with orphans, clothed the poor, and welcomed travelers into his home. He refused to place his trust in gold, worship idols, or rejoice when his enemies fell into ruin. Instead of hiding his faults like Adam, he was ready to confess his wrongs openly. Meyer suggests we can use Job's list to examine our own walk with God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If Job kept such a high standard long before Christ came, our standard should be no less. Yet trying to live this way by our own willpower is impossible. We need the Holy Spirit living within us. He alone gives us the genuine love for God and other people that enables us to follow God's will.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Which areas of Job's life—such as caring for the poor, watching your eyes, or rejecting greed—stand out as a challenge to you today?",
+    "Are you trying to live a good life in your own strength, or are you relying on the Holy Spirit to fill you with love?"
+   ],
+   "prayer": "Lord God, search our hearts and help us see where we fall short of true wholeness. Fill us with Your Holy Spirit so that genuine love guides how we treat those around us. Keep us from trusting in wealth or hiding our sins, and lead us to walk faithfully before You every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 31:6",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

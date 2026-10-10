@@ -1,0 +1,67 @@
+{
+ "id": "24-022-013",
+ "title": "A Warning about Jehoiakim",
+ "refs": [
+  "Jeremiah 22:13-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24022013,
+   "end": 24022023,
+   "ref": "Jeremiah 22:13-23",
+   "ranges": [
+    [
+     24022013,
+     24022023
+    ]
+   ],
+   "title": "Knowing God and Listening to Him",
+   "key_verse": [
+    24022016,
+    24022016
+   ],
+   "reflect": [
+    {
+     "text": "King Jehoiakim chose a very different path from his godly father. His father defended the poor and treated people with justice, which the Lord said is what it truly means to know Him. In contrast, Jehoiakim built a grand palace through oppression, forcing people to work without pay. God sees when the vulnerable are wronged, and He acts as their defender. Because our Heavenly Father provides generously for us, we can afford to be honest, fair, and kind to those who work for or depend on us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord also reminded the king that he had ignored warnings whenever life felt secure and comfortable. When we practice wrong attitudes for a long time, they begin to feel natural, and we easily invent excuses instead of listening. This stubborn resistance keeps us from making necessary changes. God calls us to look honestly into His Word to spot where we need to adjust. Through Jesus, we are given a new nature and the daily power to turn away from old habits and follow Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there comfortable areas in your life where you have resisted God's voice or made excuses for old habits?",
+    "How can you reflect God's character by treating others with fairness and generosity this week?"
+   ],
+   "prayer": "Lord, forgive us for the times we ignore Your voice when life feels secure. Help us examine our lives honestly in Your Word, and give us strength through Christ to change. Teach us to honor You by caring for the needy and treating others with fairness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 22:13",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Open to Change",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-january-30-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

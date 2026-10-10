@@ -1,0 +1,73 @@
+{
+ "id": "22-006-001",
+ "title": "Together in the Garden",
+ "refs": [
+  "Song of Solomon 6:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 22006001,
+   "end": 22006013,
+   "ref": "Song of Solomon 6:1-13",
+   "ranges": [
+    [
+     22006001,
+     22006013
+    ]
+   ],
+   "title": "The Beauty of Marital Love",
+   "key_verse": [
+    22006003,
+    22006003
+   ],
+   "reflect": [
+    {
+     "text": "Song of Solomon shows us that physical attraction and intimacy in marriage are good gifts from God. These are not things we need to feel embarrassed about or treat as forbidden topics. Instead, Scripture shows the beauty and holiness of marital love, giving the church a healthy and godly way to view desire.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When a husband and wife grow close, they are free to praise one another openly. The vivid poetry in this passage reminds spouses to build each other up with intentional words of affection, celebrating each other's appearance and worth. Taking time to understand differing emotional and physical longings helps couples care for each other's needs.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can married couples use kind and thoughtful words of praise to encourage one another?",
+    "In what ways does remembering mutual commitment help protect a marriage?"
+   ],
+   "prayer": "Heavenly Father, thank you for the gift of marriage and the goodness of faithful love. Help married couples to speak words of honor, warmth, and care to one another each day. Guide us to cherish your design for deep commitment and lifelong devotion. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jennifer Waddle",
+     "work": "Lessons on Intimacy from the Song of Solomon",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-couples-devotional/lessons-on-intimacy-from-song-of-solomon-crosswalk-couples-devotional-march-20.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Beauty of Love",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/beauty-love"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "Declaring that we belong to one another serves as a steady reminder of commitment. Celebrating this mutual belonging brings joy and protects the special union God designed for marriage.",
+     "problem": "Neither the devotional nor the Scripture passage states that celebrating mutual belonging protects the marriage union."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

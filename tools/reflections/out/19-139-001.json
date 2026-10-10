@@ -1,0 +1,94 @@
+{
+ "id": "19-139-001",
+ "title": "You Have Searched Me and Known Me",
+ "refs": [
+  "Psalms 139:1-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19139001,
+   "end": 19139024,
+   "ref": "Psalms 139:1-24",
+   "ranges": [
+    [
+     19139001,
+     19139024
+    ]
+   ],
+   "title": "Surrounded by God's Loving Knowledge",
+   "key_verse": [
+    19139017,
+    19139017
+   ],
+   "reflect": [
+    {
+     "text": "In a massive world, we can easily feel small and overlooked. Yet the Lord knows every detail of our daily lives. He is completely present everywhere, meaning we cannot wander beyond His sight. God understands our quiet motives, our unspoken thoughts, and the words on our tongues before we even say them. His infinite knowledge is deeply personal, giving us reverence and real comfort in His care.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "God does not just watch us from a distance; He surrounds us with His love. Like a faithful shepherd hedging in his sheep, God hems us in to protect us from harm and guide our steps safely. As Charles Spurgeon wrote, \"the Lord liveth and thinketh upon us.\" God never turns His mind away from us. Every small part of our lives and every physical detail of our bodies matters to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even in our hardest seasons, such as sickness, pain, or grief, God stays near. He fashioned all our days before one ever began, and He notices all our tears and weariness. Knowing that His thoughts toward us are full of mercy helps quiet our fears and bitterness. God also uses these trials to search our hearts and cleanse us from sin, tenderly leading us in His everlasting way.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God constantly thinks about you bring comfort when you feel overlooked or alone?",
+    "In what area of your life today do you need to rest in God's protective, guiding presence?"
+   ],
+   "prayer": "Heavenly Father, thank You for knowing everything about us and keeping us constantly in Your thoughts. Remind us that Your hand surrounds us with protection and guidance wherever we go. In times of pain and fear, search our hearts and lead us safely in Your everlasting way. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 30",
+     "on": "Psalms 139:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Jennifer Slattery",
+     "work": "Encased by the Father’s Love",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/encased-by-the-fathers-love-the-crosswalk-devotional.html"
+    },
+    "D3": {
+     "author": "Chuck Swindoll",
+     "work": "God’s Intimate Knowledge",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/god-s-intimate-knowledge-today-s-insight-august-1-2018.html"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Our All-Knowing, All-Seeing Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-all-knowing-all-seeing-lord"
+    },
+    "D5": {
+     "author": "David Ayers",
+     "work": "How Psalm 139 Pointed Me to Christ in My Suffering",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/cancer-gave-me-joy/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

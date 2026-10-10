@@ -1,0 +1,82 @@
+{
+ "id": "11-010-001",
+ "title": "The Queen of Sheba",
+ "refs": [
+  "1 Kings 10:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11010001,
+   "end": 11010013,
+   "ref": "1 Kings 10:1-13",
+   "ranges": [
+    [
+     11010001,
+     11010013
+    ]
+   ],
+   "title": "Seeing the Glory of the King",
+   "key_verse": [
+    11010009,
+    11010009
+   ],
+   "reflect": [
+    {
+     "text": "The queen of Sheba traveled far to test Solomon's wisdom and see his kingdom for herself. When we see great order, success, or wisdom in others, it is easy to feel skeptical or jealous. Yet the queen responded by giving glory to the Lord, the true giver of every good gift. Solomon was placed on the throne because of God's love, to act with fairness and righteousness. In the same way, whenever we witness good things, our hearts should look past the person to praise God, whose real generosity far exceeds anything we have heard.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "The queen was especially amazed by the genuine happiness of Solomon's servants. A worldly ruler can force people to obey, but no one can force people to be truly glad. The greatest honor for a king is when the people under his care truly flourish and find satisfaction. Solomon's kingdom gave a small glimpse of how good leadership brings real peace and gladness to everyday life.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Solomon's earthly splendor did not last, but his reign points us to Jesus Christ. Jesus is the ultimate King who answers our deepest questions and gives us eternal spiritual riches that never fade. As F. B. Meyer reminds us, we should not be content with a \"transient visit,\" but stay close and share our whole hearts with Him. Christ is most honored when we find our deepest, lasting joy in living under His gentle rule each day.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you see God bless someone else with gifts or success, does it lead you to praise God or compare yourself to them?",
+    "How can you spend time communing with Christ today rather than just making a quick visit to Him in prayer?"
+   ],
+   "prayer": "Lord God, thank You for placing King Jesus over us in perfect love and righteousness. Forgive us when we look at the gifts of others with envy instead of praising You as the source of all wisdom. Help us find our daily joy and satisfaction in serving Christ and standing continually in His presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 10:9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "David Mathis",
+     "work": "Happiness Honors the King",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/happiness-honors-the-king"
+    },
+    "D3": {
+     "author": "Jennifer Heeren",
+     "work": "3 Important Lessons from the Queen of Sheba and Solomon",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/important-lessons-from-the-queen-of-sheba-and-solomon.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

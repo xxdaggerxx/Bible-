@@ -1,0 +1,82 @@
+{
+ "id": "18-007-001",
+ "title": "Job Continues: Life Seems Futile",
+ "refs": [
+  "Job 7:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18007001,
+   "end": 18007021,
+   "ref": "Job 7:1-21",
+   "ranges": [
+    [
+     18007001,
+     18007021
+    ]
+   ],
+   "title": "God's Loving Watch Over Us",
+   "key_verse": [
+    18007017,
+    18007017
+   ],
+   "reflect": [
+    {
+     "text": "When deep grief or loss strikes, life can feel like a blur of useless pain. Like Job, we may watch our days slip away and wonder why God keeps such close watch over our struggles. Job asked if he was like the wild ocean that needed guarding. Yet while the sea stays within its shores and obeys its Maker, our hearts are restless and unruly. We truly need God to watch over our fickle lives.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Job wondered why God pays so much attention to frail human beings. The answer is that God cares deeply for us. Every morning He visits His world, and He never overlooks those who are hurting. God does not watch us to detect our faults. Instead, as F. B. Meyer explained, God would never take such \"time and pains\" with us unless we had great value to Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Painful trials do not mean God is angry with us. God uses barren and difficult seasons to reshape our desires and teach us quiet patience. When our earthly strength fails, we learn to stop trusting in ourselves and lean entirely on Him. Even in our darkest moments, God is awake for us, working to bring purpose out of our pain.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When hard times make you feel useless or weary, how does knowing that God values you bring hope?",
+    "In what ways might God be using your current struggles to teach you to rely on Him instead of yourself?"
+   ],
+   "prayer": "Lord, thank You for visiting us with mercy every morning. Forgive us when our hearts are restless and rebellious, and remind us of our value in Your eyes. Teach us to trust in You alone through every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 16",
+     "on": "Job 7:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 7:17-18",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Katie Brazelton",
+     "work": "Pathway to Purpose: Is Your Life Out of Sync?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/pathway-to-purpose-is-your-life-out-of-sync-1332032.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

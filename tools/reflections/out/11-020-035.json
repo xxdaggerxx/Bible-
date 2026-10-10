@@ -1,0 +1,67 @@
+{
+ "id": "11-020-035",
+ "title": "A Prophet Reproves Ahab",
+ "refs": [
+  "1 Kings 20:35-43"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11020035,
+   "end": 11020043,
+   "ref": "1 Kings 20:35-43",
+   "ranges": [
+    [
+     11020035,
+     11020043
+    ]
+   ],
+   "title": "Busy Here and There",
+   "key_verse": [
+    11020040,
+    11020040
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, a prophet disguised himself to tell King Ahab a parable. In the story, a soldier had been ordered to guard a captive with his very life, but the prisoner escaped while the guard was busy here and there. Ahab judged the soldier guilty, only to discover that the parable was about his own failure before God. As F. B. Meyer points out, it was foolish for the soldier to chase after trifles when so much depended on guarding his prisoner.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Meyer warns that we can easily fall into the same trap with our own lives. We often fill our days with light amusements, social visits, and everyday distractions. Like children playing in the sand, we can spend our hours on things that quickly fade. If we are not careful, our days flash by, and we reach the end of life with nothing of lasting value to show for it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we are caught up in superficial matters, we also lose sight of our highest callings. Our daily routines and hobbies can easily crowd out our concern for the spiritual well-being of our friends. At the same time, worldly cares and riches can choke out our own knowledge of God. We need to stay watchful so we do not lose what is truly important while busying ourselves with little things.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What small distractions tend to pull your focus away from what matters most to God?",
+    "How can you be more attentive to the spiritual needs of the people around you?"
+   ],
+   "prayer": "Lord, help us not to waste our time on things that do not last. Keep our hearts focused on your truth rather than the distractions of this world. Give us wisdom to care for the people you place in our lives each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 20:40",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

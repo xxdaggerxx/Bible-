@@ -1,0 +1,139 @@
+{
+ "id": "19-102-001",
+ "title": "The Prayer of the Afflicted",
+ "refs": [
+  "Psalms 102:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19102013,
+   "end": 19102014,
+   "ref": "Psalms 102:13-14",
+   "ranges": [
+    [
+     19102013,
+     19102014
+    ]
+   ],
+   "title": "\"Have Mercy Upon Zion\"",
+   "key_verse": [
+    19102013,
+    19102013
+   ],
+   "reflect": [
+    {
+     "text": "When we walk through deep sorrow, looking only at our own pain leaves us dry and empty. If we rely only on ourselves for relief, we soon run out of hope. The psalmist felt lonely and broken, yet he found relief by turning his eyes to what God was doing for his people. Even when our own path feels dark, we can take heart knowing God's truth continues to spread and his purpose cannot be stopped.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We find genuine comfort when we take our minds off our own small concerns and care for the church, God's gathered people. God calls us to treasure his work and love every believer, even those who seem weak or overlooked. As Charles Spurgeon wrote, \"When we favor Zion, God is about to favor her.\" Praying for the good of God's people brings fresh life and peace back into our own weary souls.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How might turning your attention to praying for your church help you when personal troubles feel heavy?",
+    "What is one practical way you can show care this week for a fellow believer who feels overlooked?"
+   ],
+   "prayer": "Lord, when my troubles overwhelm me, lift my eyes beyond myself. Give me a deep love for your church and your people. Teach me to pray faithfully for your work, and refresh my heart with the joy of your kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 16",
+     "on": "Psalms 102:13-14",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 10",
+     "on": "Psalms 102:13-14",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19102001,
+   "end": 19102028,
+   "ref": "Psalms 102:1-28",
+   "ranges": [
+    [
+     19102001,
+     19102028
+    ]
+   ],
+   "title": "Anchored in the Unchanging God",
+   "key_verse": [
+    19102027,
+    19102027
+   ],
+   "reflect": [
+    {
+     "text": "Our days on earth can feel fragile and short. In times of sickness or distress, we quickly realize that our human strength fades like smoke in the breeze or a shadow in the evening. Looking for lasting peace in changing circumstances, money, or other people will always leave us disappointed, because created things cannot offer permanent security.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Even the earth and the sky will eventually wear out like an old coat, but the Lord never changes. When trouble presses in, our sight clears as we look away from earthly mists to our Maker. F. B. Meyer reminds us that our Lord is \"the unchanging Rock of Ages in whom we may shelter.\" He has no beginning and no end, and he remains faithful through every age.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "Because God never alters, his goodness, mercy, and covenant promises stay rock solid. He hears the cries of the needy and never despises their prayers. We do not have to live in fear of life's changes, because our safety rests entirely in our eternal Creator, whose steadfast love will never fail.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "In what temporary things are you tempted to place your security instead of trusting God?",
+    "How does knowing that God never changes give you peace when life feels unstable?"
+   ],
+   "prayer": "Heavenly Father, you made the heavens and the earth, yet you remain the same while all else fades. Forgive me for leaning on frail things that cannot save me. Anchor my heart in your unchanging love and keep me secure in your presence. Amen.",
+   "sources": {
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 102:27",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Seth Porch",
+     "work": "In Every Change, God Stays the Same",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/in-every-change-god-stays-the-same"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "God Unchanging",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-unchanging-3"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

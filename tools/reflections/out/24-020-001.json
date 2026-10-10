@@ -1,0 +1,60 @@
+{
+ "id": "24-020-001",
+ "title": "Pashhur Persecutes Jeremiah",
+ "refs": [
+  "Jeremiah 20:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24020001,
+   "end": 24020006,
+   "ref": "Jeremiah 20:1-6",
+   "ranges": [
+    [
+     24020001,
+     24020006
+    ]
+   ],
+   "title": "Standing Firm When Serving God Is Hard",
+   "key_verse": [
+    24020006,
+    24020006
+   ],
+   "reflect": [
+    {
+     "text": "Pashhur was a priest and a chief official in the house of the Lord. Yet having an official religious title or a high position in the temple does not make someone truly godly. When Pashhur heard God's message, he became angry. He had Jeremiah beaten and locked in painful wooden stocks. Even after enduring this cruel punishment, Jeremiah did not back down. The moment he was set free, he boldly announced God's coming judgment against Pashhur and the nation.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Speaking up for God can bring real hardship. When people reject the truth and oppose us, it is easy to experience deep discouragement. God's messengers often feel like complete failures when their words are ignored or attacked. However, God measures success differently than people do. Staying faithful and obedient to his word is never a failure in the eyes of the Lord, no matter how people respond.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt like a failure when trying to do what is right?",
+    "How does knowing that God values obedience encourage you when others reject his truth?"
+   ],
+   "prayer": "Lord, give us courage to remain faithful to your word even when we face opposition. Comfort our hearts when we feel discouraged or rejected by others. Help us remember that our obedience is never wasted in your sight. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 8/19/2001",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-8-or-19-or-2001-719400.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "15-006-019",
+ "title": "The Returned Exiles Keep the Passover",
+ "refs": [
+  "Ezra 6:19-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15006019,
+   "end": 15006022,
+   "ref": "Ezra 6:19-22",
+   "ranges": [
+    [
+     15006019,
+     15006022
+    ]
+   ],
+   "title": "Joy in Humble Beginnings",
+   "key_verse": [
+    15006022,
+    15006022
+   ],
+   "reflect": [
+    {
+     "text": "When the returned exiles gathered to celebrate the Passover, their worship looked much smaller than in the days of Solomon's grand temple. They had far fewer animal sacrifices to offer. Even so, the people did not lose heart. They offered what they had, faithfully obeying God's word and celebrating with genuine joy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The people could rejoice because God had done something wonderful for them. God showed His supreme rule, His sovereignty, by moving the heart of an unexpected, pagan king to help and strengthen them. God ordained the finished temple and brought it to pass through real human decisions and actions.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This reminds us how to live when our own efforts seem small. In seasons of humble beginnings, God does not ask us to have vast resources or grand displays. He simply calls us to faithful obedience. We can trust Him with the final results, knowing He is always working out His good plans.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When your circumstances feel small or humble, how can you practice simple obedience to God?",
+    "How does knowing that God works through unexpected people and ordinary actions bring you peace?"
+   ],
+   "prayer": "Lord God, thank you that you rule over all things and can use anyone to accomplish your purposes. Help us to obey you faithfully, even in seasons when our lives and work seem small. Fill our hearts with your joy as we trust you with the results. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Jews Complete the Temple",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jews-complete-the-temple"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

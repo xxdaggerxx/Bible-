@@ -1,0 +1,76 @@
+{
+ "id": "11-022-041",
+ "title": "Jehoshaphat Reigns in Judah",
+ "refs": [
+  "1 Kings 22:41-50"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 11022048,
+   "end": 11022048,
+   "ref": "1 Kings 22:48",
+   "ranges": [
+    [
+     11022048,
+     11022048
+    ]
+   ],
+   "title": "\"The Ships Were Broken at Ezion-geber\"",
+   "key_verse": [
+    11022048,
+    11022048
+   ],
+   "reflect": [
+    {
+     "text": "King Jehoshaphat built a fleet of trading ships to bring back gold, but they were wrecked before they could even sail. Years earlier, King Solomon had sent ships to the very same place with great success. God in His wisdom sometimes allows one person's plans to prosper while another person's plans fall apart in the exact same effort. Even when we are deeply loved by the Lord, our hopes and projects can end in painful disappointment.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "It is easy to thank God when our work succeeds, but we are called to praise Him even when our plans are ruined. As Charles Spurgeon wrote, we need grace to \"bless the Lord for ships broken.\" Setbacks do not mean God has stopped being good or wise. Sometimes our losses are actually God's loving correction. Jehoshaphat suffered defeat because he allied himself with a sinful royal household, and God broke his ships to turn him away from that partnership.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This story warns us against entering close, worldly partnerships with unbelievers. When we join ourselves to what is contrary to God's will, we invite hardship. Yet God's discipline worked for good in Jehoshaphat's heart, because he soon refused to let the wicked king join him again. God can use our broken plans to protect us and guide our steps back to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When your plans fall apart, do you still trust that God is wise and good?",
+    "Are there any partnerships or close ties in your life that God might be warning you to step away from?"
+   ],
+   "prayer": "Lord, help us to trust Your goodness even when our hopes and plans are wrecked. Give us grace to thank You in times of loss just as we do in times of success. Teach us to choose our partnerships wisely so that our lives honor You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 13",
+     "on": "1 Kings 22:48",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth For Life",
+     "work": "Lessons in Defeat",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-january-13.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,129 @@
+{
+ "id": "20-004-001",
+ "title": "A Father’s Instruction",
+ "refs": [
+  "Proverbs 4:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20004018,
+   "end": 20004018,
+   "ref": "Proverbs 4:18",
+   "ranges": [
+    [
+     20004018,
+     20004018
+    ]
+   ],
+   "title": "\"The Path of the Righteous\"",
+   "key_verse": [
+    20004018,
+    20004018
+   ],
+   "reflect": [
+    {
+     "text": "When God begins his work in our lives, it often feels like the very first ray of morning light. That quiet light steadily grows as we follow Jesus day by day. He shows us more of himself and turns our hearts away from living only for ourselves. When we face big crossroads and choose his path, that decision shapes our future and leaves a lasting legacy for those who come after us. We do not walk this road alone, because God's Word and Holy Spirit guide our steps.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "As God's light increases within us, it naturally spreads to the people around us. F. B. Meyer observed that \"a holy life gently and irresistibly influences and blesses the world.\" Our influence often begins with quiet, small acts of kindness to those in need. Like the warm morning sun, a gentle and faithful life blesses others without making loud noise. When we steadily obey God in ordinary moments, he widens our opportunities to share his goodness with others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where have you noticed God's light growing in your thoughts and actions recently?",
+    "How might choosing God's path today bring blessing to the people who come after you?"
+   ],
+   "prayer": "Lord, thank you for shining your light into our hearts and guiding our steps. Help us to follow your Word faithfully at every crossroad we face. May our quiet obedience bring warmth and blessing to those around us today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 4:18",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D5": {
+     "author": "Lynette Kittle",
+     "work": "Navigating Crossroads in Life - The Crosswalk Devotional - March 18",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/navigating-crossroads-in-life-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 20004023,
+   "end": 20004025,
+   "ref": "Proverbs 4:23-25",
+   "ranges": [
+    [
+     20004023,
+     20004025
+    ]
+   ],
+   "title": "\"Guard Your Heart with All Diligence\"",
+   "key_verse": [
+    20004023,
+    20004023
+   ],
+   "reflect": [
+    {
+     "text": "In the Bible, your heart means your entire inner person, including your thoughts, desires, and mind. It functions like a deep wellspring that feeds everything you do and say. Because it is so central, wrong attitudes and sinful ideas can easily sneak in like quiet intruders. When we tolerate bad thoughts in our minds, they soon take root and grow into damaging actions. For this reason, we need to pay close attention to the entertainment we watch and the conversations we share.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Protecting our inner life keeps our faith from becoming an empty show. It leads to healthy daily habits like reading Scripture, praying, and turning from wrong choices. While we cannot go back and erase past mistakes or careless words, God offers us real forgiveness and a fresh start today. Guarding what we treasure on the inside helps us speak with honesty and keeps our gaze fixed straight ahead on what is right.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What influences or media might you need to filter out to protect your inner thoughts today?",
+    "How does receiving God's forgiveness give you a fresh focus for your speech and choices right now?"
+   ],
+   "prayer": "Heavenly Father, thank you for your forgiveness that wipes away our past regrets. Please guard our inner thoughts and desires so that our words and actions honor you. Help us fix our eyes on your truth and walk forward with an undivided heart. Amen.",
+   "sources": {
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Exodus 28, John 7, Proverbs 4, Galatians 3",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/exodus-28-john-7-proverbs-4-galatians-3/"
+    },
+    "D3": {
+     "author": "Susanne Scheppmann",
+     "work": "Encouragement for Today - Jan. 27, 2009",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-jan-27-2009-11598626.html"
+    },
+    "D4": {
+     "author": "Charles R. Swindoll",
+     "work": "Beginning Again - Today's Insight - May 31, 2021",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-may-31-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

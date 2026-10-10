@@ -1,0 +1,67 @@
+{
+ "id": "14-027-001",
+ "title": "Jotham Reigns in Judah",
+ "refs": [
+  "2 Chronicles 27:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14027001,
+   "end": 14027009,
+   "ref": "2 Chronicles 27:1-9",
+   "ranges": [
+    [
+     14027001,
+     14027009
+    ]
+   ],
+   "title": "Ordering Our Ways Before God",
+   "key_verse": [
+    14027006,
+    14027006
+   ],
+   "reflect": [
+    {
+     "text": "King Jotham grew strong because he ordered his ways before the Lord. As F. B. Meyer writes, \"method is the law of success,\" and a person who walks with God will naturally value order. Even the Lord Jesus showed this kind of care in small details. He had the crowds sit down in rows before He fed them, and He carefully folded His burial clothes before leaving the tomb.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This godly order touches our regular, everyday habits. It shows up in keeping our rooms tidy, putting away our papers, and cleaning up our trash. It means writing clearly so the mail carrier is not confused, or folding our clothes so others do not have extra work to do. Taking care of these small tasks is a practical way to show kindness and bring peace into our homes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living in an orderly way also shapes how we pray and think through our plans. When we remember that God watches our ways and sees what we do in secret, every small duty matters. As we stay faithful in these little things, God prepares us and trusts us with greater strength.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what small daily habits, like caring for your room or organizing your time, can you bring more order?",
+    "How can being neat and tidy in your daily chores become a way to show love to those around you?"
+   ],
+   "prayer": "Lord God, help us to order our ways before You every day. Teach us to be faithful, neat, and considerate in our smallest tasks so that we can bring peace to those around us. Strengthen our hearts to walk before You with care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 27:6",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

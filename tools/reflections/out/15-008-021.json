@@ -1,0 +1,84 @@
+{
+ "id": "15-008-021",
+ "title": "Fasting for Protection",
+ "refs": [
+  "Ezra 8:21-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15008021,
+   "end": 15008023,
+   "ref": "Ezra 8:21-23",
+   "ranges": [
+    [
+     15008021,
+     15008023
+    ]
+   ],
+   "title": "Relying on the Hand of God",
+   "key_verse": [
+    15008022,
+    15008022
+   ],
+   "reflect": [
+    {
+     "text": "Ezra and the travelers faced a dangerous journey without any soldiers or guards to defend them from thieves along the way. Ezra had already told the king that God cares for those who seek Him. Because of this, he felt a holy shame at the thought of asking the king for an armed escort, which might make his faith look empty or make God appear weak. Instead of leaning on human help, Ezra wanted God alone to receive the honor of protecting them.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "To prepare for the road, Ezra called for a fast beside the canal. Going without food brought the people into physical weakness. This intentional act humbled them before the Lord and showed their complete helplessness as creatures before their Creator. Giving up food proved that their desire for God was greater than their physical hunger, openly displaying their desperate need for His unmerited kindness and spiritual power.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Fasting did not force God to answer, but it glorified Him by showing true reliance on His hand rather than on human strength. Charles Spurgeon noted that the Lord is honored when we place our trust in \"his solitary arm.\" When God's people set aside self-reliance and sought Him with sincere humility, the Lord heard their cries and safely guarded them on their way.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face difficult circumstances, do you turn first to human support or do you lean completely on God?",
+    "How can setting aside physical comforts help you show honest humility and trust before the Lord?"
+   ],
+   "prayer": "Lord God, forgive us for the times we rush to depend on human strength instead of trusting in Your power. Teach us to humble ourselves before You and to admit our daily helplessness. Help us to rely solely on Your gracious hand, so that our lives bring honor to Your name.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 24",
+     "on": "Ezra 8:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Role of Fasting",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/role-fasting"
+    },
+    "D3": {
+     "author": "John Piper",
+     "work": "A Call to Fast for Humility and Power",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/a-call-to-fast-for-humility-and-power"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

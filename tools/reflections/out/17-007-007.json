@@ -1,0 +1,66 @@
+{
+ "id": "17-007-007",
+ "title": "The Hanging of Haman",
+ "refs": [
+  "Esther 7:7-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 17007007,
+   "end": 17007010,
+   "ref": "Esther 7:7-10",
+   "ranges": [
+    [
+     17007007,
+     17007010
+    ]
+   ],
+   "title": "The Enemy's Plot Overturned",
+   "key_verse": [
+    17007010,
+    17007010
+   ],
+   "reflect": [
+    {
+     "text": "Haman built a tall wooden gallows to destroy Mordecai. Yet in a sudden turn of events, the king commanded that Haman himself be hanged on it. What the enemy designed to bring death, God sovereignly turned around for the good and safety of his people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This dramatic reversal reminds us of God's ancient promise to crush the evil serpent. It points ahead to what happened at the cross. Satan thought putting Jesus to death was his greatest victory. In reality, that very cross became the instrument that broke the devil's power forever.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The passage also tells us that the Persian king's fury died down after justice was done. In a far deeper way, the wrath of the true King against our sin was satisfied at Calvary. Through Jesus, God turned judgment away and gave us peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God turns the enemy's evil plans into good give you hope today?",
+    "How does Jesus taking God's anger against sin on the cross bring you peace?"
+   ],
+   "prayer": "Lord God, thank you that no evil plot can defeat your good purposes. Thank you for the cross, where Jesus conquered the enemy and bore your anger in our place. Please help us trust in your loving protection whenever we face difficult days. Amen.",
+   "sources": {
+    "D1": {
+     "author": "The Gospel Coalition",
+     "work": "The Backfire of the Enemy's Plotting is the Lord's Plotting",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/the-backfire-of-the-enemys-plotting-is-the-lords-plotting/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

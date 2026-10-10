@@ -1,0 +1,88 @@
+{
+ "id": "23-036-001",
+ "title": "Sennacherib Threatens Jerusalem",
+ "refs": [
+  "Isaiah 36:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23036001,
+   "end": 23036022,
+   "ref": "Isaiah 36:1-22",
+   "ranges": [
+    [
+     23036001,
+     23036022
+    ]
+   ],
+   "title": "In Whom Do You Trust?",
+   "key_verse": [
+    23036005,
+    23036005
+   ],
+   "reflect": [
+    {
+     "text": "The Assyrian army stood outside Jerusalem with overwhelming force. Their commander used clever threats and half-truths to shake the people's courage. He mocked their weakness, showed that relying on human allies like Egypt is useless, and promised an easy life if they would only surrender. Our spiritual enemies still use frightening circumstances and boastful intimidation to try to tear down our confidence in God.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Instead of arguing or shouting back, the people stayed quiet because King Hezekiah told them not to answer. When facing cruel mockery, silence is often our wisest choice. Rather than defending ourselves, we are called to be still and hand our worries over to God. When our hearts are right with Him, we can confidently bring our distress into His presence.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Through all the noise, the enemy commander posed the essential question: in whom are you trusting? Our answer is the living, Triune God. We trust the Father to provide and guide, the Son to take away our sins and intercede for us, and the Holy Spirit to comfort and strengthen our weakness. Earthly rulers boast, but God's power never runs out and His faithfulness never fails.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When frightening situations tempt you to panic, how can choosing silence help you turn your heart toward God?",
+    "How does remembering the care of the Father, Son, and Holy Spirit strengthen your trust when you feel helpless?"
+   ],
+   "prayer": "Lord God, when threatening voices tempt us to doubt your power, help us to be still and trust in you. Forgive us for leaning on human strength, and remind us that our lives rest securely in your hands. Thank you for your unchanging kindness, wisdom, and faithful care.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 7",
+     "on": "Isaiah 36:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 36:21",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Isaiah 36",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/deut-8-psalm-91-isaiah-36-revelation-6/"
+    },
+    "D4": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 08/07/04",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-08-or-07-or-04-1277088.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

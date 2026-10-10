@@ -1,0 +1,73 @@
+{
+ "id": "14-015-008",
+ "title": "Asa’s Reforms",
+ "refs": [
+  "2 Chronicles 15:8-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14015008,
+   "end": 14015019,
+   "ref": "2 Chronicles 15:8-19",
+   "ranges": [
+    [
+     14015008,
+     14015019
+    ]
+   ],
+   "title": "Seeking the Lord with All Your Heart",
+   "key_verse": [
+    14015012,
+    14015012
+   ],
+   "reflect": [
+    {
+     "text": "When King Asa heard God's truth through the prophet, he took courage. He cleared away terrible idols, repaired the altar, and called the people together to seek the Lord. Asa showed that God blesses those who seek Him and corrects those who wander. He even removed his own grandmother from her royal position because of her idolatry. His actions remind us that we must never let family ties get in the way of our first love and loyalty to God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The people joined together and made a serious covenant, a sacred promise, to seek God with all their heart and soul. Yet human promises to God are fragile. As F. B. Meyer notes, human covenants rest on our own efforts and can fail, but God's covenant is founded on His own oath and promise. We often fall short when we try to keep our vows in our own strength.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Thankfully, through the new covenant, Jesus has fulfilled every requirement of obedience for us. Instead of relying on our own weak resolutions, we can trust Christ our representative. Through the Holy Spirit, He works in our hearts so that we can genuinely love and follow God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any relationship or habit in your life that competes with your loyalty to God?",
+    "How does knowing that Jesus fulfilled God's covenant give you peace when your own efforts fail?"
+   ],
+   "prayer": "Lord God, thank You that Your blessing rests on those who seek You. Please give us courage to remove anything in our lives that takes Your place. Thank You for Jesus, who fulfilled the covenant on our behalf and gives us the Holy Spirit to love and obey You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 15:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Asa’s Religious Reforms",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/asas-religious-reforms"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

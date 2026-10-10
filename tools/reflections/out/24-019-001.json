@@ -1,0 +1,73 @@
+{
+ "id": "24-019-001",
+ "title": "The Broken Jar",
+ "refs": [
+  "Jeremiah 19:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24019001,
+   "end": 24019015,
+   "ref": "Jeremiah 19:1-15",
+   "ranges": [
+    [
+     24019001,
+     24019015
+    ]
+   ],
+   "title": "The Lesson of the Broken Jar",
+   "key_verse": [
+    24019011,
+    24019011
+   ],
+   "reflect": [
+    {
+     "text": "God told Jeremiah to shatter a baked clay jar in front of the leaders of Jerusalem. While clay is still soft, a potter can easily mold and reshape it. But once clay has hardened, it cannot be reformed. If it resists the potter, it can only be smashed. In the same way, when we stubbornly refuse to submit to God and insist on our own way, we place ourselves in serious spiritual danger.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "An earthen jar also shows how frail we are. Our own human efforts to be holy often crack and fail. Even worse is our pride, when our self-will fights against God. F. B. Meyer wrote that a good prayer for us is, \"Take me — break me — make me.\" When God breaks our proud self-will, He empties us so He can use us. Like a cracked vessel holding light, our brokenness allows His heavenly treasure to shine out to others.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God still offers renewal to those who humbly turn back to Him. To receive His grace, we must stay soft, responsive, and pliable in His hands instead of hardening our hearts against His voice.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where your heart has grown stiff and stubborn toward God?",
+    "What helps you stay soft and yield to God when He corrects you?"
+   ],
+   "prayer": "Lord, forgive us for the times we have hardened our hearts and insisted on our own way. Break our stubborn pride so that we do not bring ruin upon ourselves. Keep us soft and yielding in Your hands, and let Your light shine through our weak lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 19:11",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Adrian Rogers (Love Worth Finding)",
+     "work": "Are You Willing to Yield to God?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-january-12-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

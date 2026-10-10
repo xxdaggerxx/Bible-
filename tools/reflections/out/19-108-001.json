@@ -1,0 +1,127 @@
+{
+ "id": "19-108-001",
+ "title": "Israel’s Kingdom Blessing",
+ "refs": [
+  "Psalms 108:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19108013,
+   "end": 19108013,
+   "ref": "Psalms 108:13",
+   "ranges": [
+    [
+     19108013,
+     19108013
+    ]
+   ],
+   "title": "\"With God We Will Perform with Valor\"",
+   "key_verse": [
+    19108013,
+    19108013
+   ],
+   "reflect": [
+    {
+     "text": "The best way to face our battles is to stay close to God. As F. B. Meyer writes, we must \"keep quietly in fellowship with God\" and look to Him whenever trouble approaches. We prepare for the day by setting our hearts on Him each morning and praising His name. God promises to stand with us, leading the way so we can live in the spiritual blessings He has provided.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In our own strength, personal challenges quickly become overwhelming. Yet relying on the Lord changes how we meet each struggle. His power reaches into our hearts and minds, helping us conquer deep fears, shyness, and quiet doubts. When we lean on Him rather than our own ability, ordinary people can do truly brave things they never thought possible.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We do not need to let inner fears or spiritual struggles rob us of our joy. God does not ask us to win these battles alone. When we walk alongside Him in trust, He treads down our adversaries and gives us strength to stand firm.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or inner struggles feel too heavy for you to handle on your own today?",
+    "How can you quiet your heart and look to God before stepping into your daily battles?"
+   ],
+   "prayer": "Lord, we confess that our own strength is not enough for the battles we face. Calm our fears and help us walk closely with You each day. Give us courage to trust in Your power to lead us forward. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 108:13",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Wisdom from the Psalms",
+     "work": "Wisdom from the Psalms 8/30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-8-or-30-552540.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19108001,
+   "end": 19108013,
+   "ref": "Psalms 108:1-13",
+   "ranges": [
+    [
+     19108001,
+     19108013
+    ]
+   ],
+   "title": "Anchored for New Ventures",
+   "key_verse": [
+    19108005,
+    19108005
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 108 brings together parts of earlier songs to create a fresh expression of praise and confidence. God does not share His truth through detached, abstract rules. Instead, He reveals Himself through the real events and shifting seasons of life. Seeing how these pieces fit together shows us that God has a steady, unified plan for His people.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "This psalm serves as a strong anchor when we prepare to begin new ventures. Stepping into the unknown can bring worry, but seeing how God has guided His people in the past renews our faith. His faithfulness gives us solid ground to stand on whenever we face new starts.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Remembering God's constant care across history moves our hearts to worship Him. When we recognize the harmony of Scripture, we are drawn to lift our voices and honor Him above all creation. We can move forward into the future with quiet trust in His greatness.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What new venture or unfamiliar season are you preparing to step into right now?",
+    "How does seeing God's faithfulness in Scripture help anchor your trust today?"
+   ],
+   "prayer": "Heavenly Father, thank You for speaking to us through real lives and guiding us through every season. Anchor our hearts in Your truth as we step into new beginnings. May Your glory be lifted high across all the earth. Amen.",
+   "sources": {
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Deuteronomy 21, Psalms 108-109, Isaiah 48, Revelation 18",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/deut-21-psalms-108-109-isaiah-48-revelation-18/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

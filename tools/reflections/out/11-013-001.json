@@ -1,0 +1,66 @@
+{
+ "id": "11-013-001",
+ "title": "Jeroboam’s Hand Withers",
+ "refs": [
+  "1 Kings 13:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11013001,
+   "end": 11013010,
+   "ref": "1 Kings 13:1-10",
+   "ranges": [
+    [
+     11013001,
+     11013010
+    ]
+   ],
+   "title": "The God Who Restores",
+   "key_verse": [
+    11013006,
+    11013006
+   ],
+   "reflect": [
+    {
+     "text": "When King Jeroboam pointed his hand to arrest the prophet, God caused his hand to wither. This showed God's judgment against the king's disobedience. Yet when the king asked for prayer, God healed his hand right away. This miraculous reversal showed that the Lord still wanted to restore someone who had turned far away from Him, calling the king back to obedience.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we fall into sin, we often pull away from God in shame. We might mistakenly assume that He has rejected us or that we are beyond His help. But God does not cast us aside after our mistakes. Instead, He continues to pursue us and offers us wholeness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "If you have wandered away, you do not need to shrink back in fear. God invites you to turn toward Him rather than hiding. Just as He showed mercy to Jeroboam, He invites you to come back to Him for healing today.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt like pulling away from God after making a mistake?",
+    "What broken or hardened part of your life do you need to bring to God for healing today?"
+   ],
+   "prayer": "Lord God, thank You that You do not push me away when I fail. Forgive me for hiding in shame instead of running to You for help. Please restore my heart and help me walk with You in obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Deidre Braley",
+     "work": "The God Who Restores Withered Things - The Crosswalk Devotional - April 3",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/the-god-who-restores-withered-things-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,82 @@
+{
+ "id": "20-007-001",
+ "title": "Warnings about the Adulteress",
+ "refs": [
+  "Proverbs 7:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20007001,
+   "end": 20007027,
+   "ref": "Proverbs 7:1-27",
+   "ranges": [
+    [
+     20007001,
+     20007027
+    ]
+   ],
+   "title": "The Greater Pull of Christ",
+   "key_verse": [
+    20007004,
+    20007004
+   ],
+   "reflect": [
+    {
+     "text": "Proverbs warns us about the dangerous pull of temptation. Sin makes shiny promises and offers real, short-lived pleasure, but it blinds people to the destruction waiting at the end. Even godly leaders like David have fallen into this trap. To stand firm, we cannot wait until temptation arrives. We need to store God's Word deep inside our hearts beforehand, just as Jesus answered temptation in the wilderness with Scripture.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Our hearts cannot simply decide to stop desiring things. Worldly cravings must be driven out by a stronger, better love. As F. B. Meyer reminds us, divine wisdom was \"incarnated in Jesus Christ.\" Jesus is completely pure, strong, and tender. He understands our weaknesses and satisfies the deepest thirst of our souls.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we fix our attention on the beauty of Jesus, His love overpowers the smooth lies of temptation. We turn away from sin not only to avoid ruin, but to protect our precious union with our Savior. Treasuring Him keeps our feet safely on the path of life.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can storing God's Word in your heart help protect you before temptation appears?",
+    "In what ways does the love of Jesus satisfy you more than temporary earthly pleasures?"
+   ],
+   "prayer": "Lord Jesus, thank You for Your pure and faithful love. Help us to hide Your truth in our hearts so we will not be tricked by false promises. Draw our desires away from sin, and keep us walking closely with You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 7:4",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Nicholas Batzig",
+     "work": "The Allurement of Christ",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/allurement-of-christ"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Wisdom and the Forbidden Woman",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/wisdom-and-forbidden-woman"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

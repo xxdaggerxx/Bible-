@@ -1,0 +1,137 @@
+{
+ "id": "18-023-001",
+ "title": "Job Longs for God",
+ "refs": [
+  "Job 23:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18023010,
+   "end": 18023010,
+   "ref": "Job 23:10",
+   "ranges": [
+    [
+     18023010,
+     18023010
+    ]
+   ],
+   "title": "\"I Will Come Forth as Gold\"",
+   "key_verse": [
+    18023010,
+    18023010
+   ],
+   "reflect": [
+    {
+     "text": "Job believed that God knew his path and was walking him through a test. Hard times are not wasted moments. Just as a craftsman uses fire to purify precious metals, God uses hard trials to clean out what does not belong in us and shape our character. As Adrian Rogers noted, a craftsman heats metal until the impurities burn off and his own face is reflected in it. God stays in full charge of the heat, burning away only what we do not really need.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Every person faces tests fitted to their own life and spiritual growth. The journey can feel long and overwhelming when distractions, busyness, or spiritual battles try to pull us off course. Yet God gives us markers to keep us on the way, including the Bible and the Holy Spirit. We can stay steady on the road knowing that God remembers our struggles and will reward faithful endurance.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What impurities might God be clearing away in your current trials?",
+    "What guideposts from Scripture can help keep you on the right path today?"
+   ],
+   "prayer": "Lord God, thank You for watching over my life and keeping control of every trial I face. Refine my heart and remove anything that keeps me from reflecting You. Help me follow Your guidance patiently until You finish Your good work in me. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "God Will Reward",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-august-12-2020.html"
+    },
+    "D3": {
+     "author": "Adrian Rogers",
+     "work": "Coming Through as Pure Gold",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-january-10-2012.html"
+    },
+    "D4": {
+     "author": "Marybeth Whalen",
+     "work": "Exit Numbers",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-oct-3-2008-11582526.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 18023001,
+   "end": 18023017,
+   "ref": "Job 23:1-17",
+   "ranges": [
+    [
+     18023001,
+     18023017
+    ]
+   ],
+   "title": "Seeking God in the Silence",
+   "key_verse": [
+    18023003,
+    18023003
+   ],
+   "reflect": [
+    {
+     "text": "When pain became unbearable, Job stopped arguing with his friends and poured out his heart directly toward heaven. His friends offered no real comfort, so he turned away from them to look for God. When life falls apart, God's true children do not run away from Him in bitterness. Instead, their deepest instinct is to run home to their heavenly Father and seek shelter beneath His care.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "Job's deepest longing was not merely to have his health, family, or wealth restored. More than anything, he wanted to find God's presence and hear His voice. Job's greatest terror was not the pain he carried, but the painful silence of feeling unable to reach God when searching for Him everywhere.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    },
+    {
+     "text": "Earthly comforts often prove empty, showing us that nothing satisfies us apart from God Himself. Even when the Lord seems hidden and we cannot grasp what He is doing, we can remain confident that He knows our steps. We must hold on to the bigger story of His faithfulness, trusting that the silence will not have the final word.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When trouble comes, do you run to God first or to other comforts?",
+    "How can trusting God's larger story comfort you when He seems silent?"
+   ],
+   "prayer": "Father, when life hurts and You seem quiet, teach me to run straight to You instead of hiding. Help me prize Your presence more than any earthly relief. Give me faith to trust Your love and wait for You even in the dark. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 19",
+     "on": "Job 23:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Job 23",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/exodus-6-luke-9-job-23-1-corinthians-10/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

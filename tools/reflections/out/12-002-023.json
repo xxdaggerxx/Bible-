@@ -1,0 +1,66 @@
+{
+ "id": "12-002-023",
+ "title": "Elisha Mocked",
+ "refs": [
+  "2 Kings 2:23-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12002023,
+   "end": 12002025,
+   "ref": "2 Kings 2:23-25",
+   "ranges": [
+    [
+     12002023,
+     12002025
+    ]
+   ],
+   "title": "Think Twice Before Making Fun of Someone",
+   "key_verse": [
+    12002023,
+    12002023
+   ],
+   "reflect": [
+    {
+     "text": "When Elisha walked along the road to Bethel, a crowd of boys came out to mock him about being bald. Words that make fun of someone can cut very deep. Teasing people about their appearance or personal flaws causes emotional hurt and tears down their self-esteem. Belittling others in this way is unkind, petty, and sinful.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This difficult passage shows that God takes cruelty seriously. A large crowd gathered to jeer at Elisha, and many may have simply gone along with the group. Yet even bystanders who join in with bullies share responsibility for the harm they cause. God sees how we treat one another, and our hurtful behavior carries real weight before him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "As believers, we are called to live differently from the crowd. Instead of joining in on harsh or abusive speech, we are called to counter it. We show Christ's love by treating every person with genuine empathy and care.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever joined in when others were making fun of someone, or stood by while it happened?",
+    "How can you use your words today to show love and empathy rather than tearing others down?"
+   ],
+   "prayer": "Lord, help us to watch our tongues and never mock or belittle other people. Forgive us for the times we have joined in with hurtful crowds or ignored the pain of others. Teach us to treat everyone we meet with your empathy, kindness, and love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Vivian Bricker",
+     "work": "Think Twice Before You Make Fun of Someone",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/think-twice-before-you-make-fun-of-someone.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

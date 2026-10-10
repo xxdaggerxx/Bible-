@@ -1,0 +1,139 @@
+{
+ "id": "24-006-001",
+ "title": "Jerusalem’s Final Warning",
+ "refs": [
+  "Jeremiah 6:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24006014,
+   "end": 24006014,
+   "ref": "Jeremiah 6:14",
+   "ranges": [
+    [
+     24006014,
+     24006014
+    ]
+   ],
+   "title": "\"'Peace, Peace,' When There Is No Peace\"",
+   "key_verse": [
+    24006014,
+    24006014
+   ],
+   "reflect": [
+    {
+     "text": "When times feel comfortable and calm, it is easy to assume everything is fine. Leaders in Jeremiah's day offered superficial reassurances, promising peace when serious danger was right at the door. A relaxed, business-as-usual attitude can blind us to our real spiritual condition. Deep moral and spiritual wounds cannot be cured by empty words.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "We often treat our own sins the same way. We prefer gentle messages that do not cut too deep or expose our hidden faults. Like covering an infected wound with a clean cloth, superficial comfort makes us look presentable on the outside while the decay remains within. Outward religious habits and church attendance cannot take the place of genuine heart repentance.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer urges us to ask that God \"will not spare us,\" so that His truth reaches the bottom of the wound. That process of cleansing can feel painful, but it is the only way to experience lasting healing. Instead of being lulled to sleep by false security, we must remain spiritually vigilant and allow the Lord to make our hearts truly right with Him.",
+     "sources": [
+      "D1",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you settling for comfortable reassurances instead of letting God address hidden sin in your heart?",
+    "How can you stay spiritually alert when daily life feels calm and secure?"
+   ],
+   "prayer": "Lord, help us not to hide our sins behind shallow excuses or outward religious habits. Search our hearts deeply and remove anything that does not honor You. Give us genuine healing and true peace through honest repentance. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 6:14",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D5": {
+     "author": "Charles R. Swindoll",
+     "work": "Nostalgic Musings",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/nostalgic-musings-day-by-day-mar-24-2010-11627909.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 24006016,
+   "end": 24006016,
+   "ref": "Jeremiah 6:16",
+   "ranges": [
+    [
+     24006016,
+     24006016
+    ]
+   ],
+   "title": "\"'Ask for the Ancient Paths'\"",
+   "key_verse": [
+    24006016,
+    24006016
+   ],
+   "reflect": [
+    {
+     "text": "Life brings us to many crossroads where important choices must be made. When we rely only on personal feelings or gut instincts without consulting God, we can easily take costly wrong turns. God invites us to pause before rushing ahead. When we seek Him through prayer and Scripture, His Word serves as a dependable roadmap to guide and protect our steps.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Our culture constantly chases after the excitement of new trends and novel ideas. Yet God points us back to His ancient, unchanging paths. The good way of obedience and biblical truth has remained the same across all generations. Instead of running after passing fads, we find steady direction when we remain anchored in the established truth of God's Word.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Walking this path also requires us to slow down. Human pride tempts us to push past our God-given limits, resulting in persistent spiritual and physical weariness. God established rest as a holy rhythm of life, not a sign of weakness. When we cease striving in our own strength and walk in His ways, our souls find true and lasting rest.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What decisions are you currently facing where you need to stop and consult God's Word instead of your own instincts?",
+    "In what areas of your daily routine do you need to slow down and practice God's holy rhythm of rest?"
+   ],
+   "prayer": "Father, teach us to pause at life's crossroads and look to Your Word for guidance. Keep us from chasing after new fads or exhausting ourselves through stubborn pride. Lead our steps along Your ancient paths, and grant our souls the true rest found only in You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Amanda Idleman",
+     "work": "Rest for a Midyear-Weary Heart",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/rest-for-a-midyear-weary-heart.html"
+    },
+    "D3": {
+     "author": "Erik Raymond",
+     "work": "Ancient Paths",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/ancient-paths/"
+    },
+    "D4": {
+     "author": "Susanne Scheppmann",
+     "work": "Crossroads",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-sept-6-2006-1420800.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

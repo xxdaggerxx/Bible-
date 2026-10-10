@@ -1,0 +1,81 @@
+{
+ "id": "24-045-001",
+ "title": "Jeremiah’s Message to Baruch",
+ "refs": [
+  "Jeremiah 45:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24045001,
+   "end": 24045005,
+   "ref": "Jeremiah 45:1-5",
+   "ranges": [
+    [
+     24045001,
+     24045005
+    ]
+   ],
+   "title": "Letting Go of Selfish Ambition",
+   "key_verse": [
+    24045005,
+    24045005
+   ],
+   "reflect": [
+    {
+     "text": "Baruch served God during a dark and painful chapter of Judah's history. Instead of weeping over the coming destruction of his nation, Baruch focused on his own struggles. He felt worn out and complained that his quiet work as Jeremiah's scribe was beneath him. Trouble is a normal part of life, and serving God often brings special sorrow. Yet Baruch was caught up in discontentment, craving personal recognition instead of trusting where God had put him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "God gently but firmly corrected Baruch for this attitude. The Lord told him to stop seeking great things for himself. Baruch faced the temptation to pursue personal honor rather than simply being a faithful servant. God called him to turn away from selfish ambition and stay true to his calling, even when the message was rejected by the culture. True fulfillment does not come from status or praise, but from accepting God's placement and serving Him with contentment.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Our own seasons of sorrow and disappointment can do good work in us. Pain strips away our love for earthly success and points us back to the God of all comfort. As F. B. Meyer observed, out of our sorrow \"comes the more abundant life.\" When God exposes our selfish desires, it can sting. Yet when we trust Him, He uses these trials to burn away our pride and give us enduring spiritual strength.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to chase personal recognition instead of serving God faithfully where He has placed you?",
+    "How can remembering God's eternal comfort help you let go of selfish ambition during difficult times?"
+   ],
+   "prayer": "Lord, forgive us when we complain about our circumstances and chase after our own importance. Help us to be content in the place where You have called us to serve. Teach us to trust You through our pain, knowing that You are shaping our hearts for Your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 45:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Jill Briscoe",
+     "work": "Telling the Truth - One Year Devotions for Women",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/telling-the-truth-one-year-devotions-for-women-june-4.html"
+    },
+    "D3": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - August 27, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-august-27-2005-1347066.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

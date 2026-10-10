@@ -1,0 +1,133 @@
+{
+ "id": "19-081-001",
+ "title": "Sing for Joy to God Our Strength",
+ "refs": [
+  "Psalms 81:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19081010,
+   "end": 19081010,
+   "ref": "Psalms 81:10",
+   "ranges": [
+    [
+     19081010,
+     19081010
+    ]
+   ],
+   "title": "\"Open Wide Your Mouth\"",
+   "key_verse": [
+    19081010,
+    19081010
+   ],
+   "reflect": [
+    {
+     "text": "God invites us to come to him with large requests. Because we know we do not deserve much, we often ask for only small things. Yet the Lord reminds us of how he rescued his people from Egypt. Because he has already given so much, he invites us to expect even more. Prayer can be as simple and unforced as opening our mouths, like hungry baby birds waiting in a nest to be fed.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God desires to satisfy our deepest longings with real spiritual help. Sadly, our tragedy is that we often refuse what he offers. We let daily pleasures and ordinary gifts take God's place in our hearts, becoming quiet idols that ruin our appetite for him. Turning away from him leaves our souls empty, but he remains completely ready to fill anyone who turns to him with an open heart.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What keeps you from asking God boldly for the spiritual help you need?",
+    "Are ordinary comforts and gifts dulling your appetite for God himself?"
+   ],
+   "prayer": "Lord, thank you for inviting us to come to you with all our needs. Forgive us when we let everyday things crowd you out of our hearts. Please fill our empty lives with your goodness, and teach us to depend on you every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 30",
+     "on": "Psalms 81:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Psalms 81-82",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/deuteronomy-1-psalms-81-82-isaiah-29-3-john/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19081001,
+   "end": 19081016,
+   "ref": "Psalms 81:1-16",
+   "ranges": [
+    [
+     19081001,
+     19081016
+    ]
+   ],
+   "title": "Sing for Joy to God Our Strength",
+   "key_verse": [
+    19081001,
+    19081001
+   ],
+   "reflect": [
+    {
+     "text": "The psalm begins with a call to make music and sing to God with all our hearts. Life brings heavy pressures, but lifting songs of praise helps lift that weight from our shoulders. When we sing together, music unites us and makes God's presence feel close and real. God does not look for polished musical talent; he cares about our sincere devotion and honest love for him.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "God also reminds his people of how they cried out when they were trapped and suffering in Egypt. When we call upon the Lord in difficult times, he hears and rescues us. Sometimes God answers in ways that seem frightening, like rolling thunder over the sea or on a mountain. Even when his answers come with overwhelming power, believers can trust that it is their loving Father speaking to protect them.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet God calls us not only to sing and ask for help, but also to listen. A true relationship with God requires two-way conversation, not just a list of our own requests. When we quietly attend to Scripture, we gain spiritual wisdom to know his voice. Ignoring his gentle guidance causes us to miss the rich blessings he longs to give to those who humbly obey him.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can taking time to listen quietly to God change the way you pray each day?",
+    "When life feels heavy, how does joining with others in praise help you remember God's care?"
+   ],
+   "prayer": "Father, thank you for hearing our cries and answering us in your great strength. Help us to lift our voices in sincere praise when we are weighed down. Teach us to be quiet and listen to your Word, so we do not miss the good path you have prepared for us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 81:7",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Charles F. Stanley",
+     "work": "Learning to Listen to God",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/learning-to-listen-to-god"
+    },
+    "D5": {
+     "author": "Barbour Publishing",
+     "work": "Wisdom from the Psalms 6/30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-6-or-30-552418.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

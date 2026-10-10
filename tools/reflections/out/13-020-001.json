@@ -1,0 +1,67 @@
+{
+ "id": "13-020-001",
+ "title": "The Capture of Rabbah",
+ "refs": [
+  "1 Chronicles 20:1-3"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13020001,
+   "end": 13020003,
+   "ref": "1 Chronicles 20:1-3",
+   "ranges": [
+    [
+     13020001,
+     13020003
+    ]
+   ],
+   "title": "Guarded by Purpose, Covered by Grace",
+   "key_verse": [
+    13020001,
+    13020001
+   ],
+   "reflect": [
+    {
+     "text": "Spring was the season when kings marched out to battle, yet David remained behind in Jerusalem. As F. B. Meyer observed, we must \"beware of moments and hours of ease.\" When life is comfortable and we neglect the duties God places before us, we become far more vulnerable to temptation. One of the best guards against falling into sin is staying faithfully occupied in the Lord's work. Even if our daily tasks seem small, we can always pray for others who are laboring, worship God, or comfort people who are hurting.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Readers familiar with Scripture may notice that this chapter leaves out David's terrible moral failure with Bathsheba, which happened during this time. Because David truly repented and was pardoned, the writer chose not to dwell on his sin. David still experienced painful earthly consequences, but God's grace removed his guilt completely. The enemy often tries to bring back past failures that have already been forgiven, but through Christ, our past does not define us or our future.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there moments of ease in your schedule where you need to be more watchful against temptation?",
+    "Do you ever struggle with guilt over past sins that God has already forgiven and washed away?"
+   ],
+   "prayer": "Lord God, keep us watchful and guard our hearts during seasons of ease. Show us how to use our time and gifts to serve others and honor you. Thank you that through Christ, our confessed sins are completely forgiven and remembered no more. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 20:1",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Remembered No More",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-october-17-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

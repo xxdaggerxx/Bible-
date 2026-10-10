@@ -1,0 +1,138 @@
+{
+ "id": "19-055-001",
+ "title": "Cast Your Burden upon the LORD",
+ "refs": [
+  "Psalms 55:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19055022,
+   "end": 19055022,
+   "ref": "Psalms 55:22",
+   "ranges": [
+    [
+     19055022,
+     19055022
+    ]
+   ],
+   "title": "\"Cast Your Burden upon the LORD\"",
+   "key_verse": [
+    19055022,
+    19055022
+   ],
+   "reflect": [
+    {
+     "text": "When life feels overwhelming, we often try to carry our heavy loads by ourselves. Yet trying to handle our duties without continual fellowship with Christ leads to exhaustion and defeat. Casting our burden onto God means making a deliberate choice to shift that weight onto His strong shoulders. As Charles Spurgeon urges, do not pick your troubles back up, but \"roll it on the Lord, and leave it there.\"",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "Carrying excessive worry suggests that we are wiser than God or that He will forget to care for us. When we rely on our own wisdom instead of turning to Him, our hearts grow distant and fearful. But God knows our human struggles, including loneliness and worry, and He offers His comfort and grace for every need. True rest of mind comes when we stop relying on ourselves and lean completely on His faithfulness.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "God may not always take away the difficult situation, but He promises to uphold us through it. Bringing our trials to Him keeps us close to His side and replaces anxious panic with an awareness of His presence. Because He sustains us, our troubles will never shake our secure standing in Him.",
+     "sources": [
+      "D1",
+      "D2",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burden have you been trying to carry on your own shoulders today?",
+    "How can turning to God's grace help you let go of anxious thoughts?"
+   ],
+   "prayer": "Lord, we confess that we often hold onto our worries instead of leaving them with You. Please sustain us under the pressures we face, and keep our feet from slipping. Teach us to rest quietly in Your love and strength today.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 26",
+     "on": "Psalms 55:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 14",
+     "on": "Psalms 55:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Charles R. Swindoll",
+     "work": "Hearts to Trust, Minds to Rest",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-june-5-2013.html"
+    },
+    "D5": {
+     "author": "Oswald Chambers",
+     "work": "What To Do When Your Burden Is Overwhelming",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/updated/what-to-do-when-your-burden-is-overwhelming/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19055001,
+   "end": 19055023,
+   "ref": "Psalms 55:1-23",
+   "ranges": [
+    [
+     19055001,
+     19055023
+    ]
+   ],
+   "title": "The Lord Shall Save Me",
+   "key_verse": [
+    19055016,
+    19055016
+   ],
+   "reflect": [
+    {
+     "text": "When we face betrayal, grief, or deep opposition, prayer is our greatest and most necessary refuge. In hard seasons when life feels ruined around us, we can encourage our hearts by remembering how the Lord has carried us through past trials. We do not need to lean on human strength or look for help in worldly wisdom. The Lord alone is completely sufficient, and He will guide us safely through our distress.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God hears our voice, we can call upon Him steadily throughout the day, morning, noon, and night. We may not understand how He will rescue us, but we know He will do it in the best, surest, and fullest way. His promise of salvation covers our present hardships, all future troubles, and even our final journey through death. Holding to this truth brings sweet joy to our souls and fills us with lasting peace.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does remembering God's past help give you confidence in your current trial?",
+    "What difference would it make to bring your needs to God morning, noon, and night?"
+   ],
+   "prayer": "Father, when grief or trouble surrounds us, remind us to call only upon You. We do not know how You will deliver us, but we trust that Your way is always best. Keep our hearts steady as we wait for Your saving help.",
+   "sources": {
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 28",
+     "on": "Psalms 55:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

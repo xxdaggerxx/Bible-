@@ -1,0 +1,66 @@
+{
+ "id": "15-002-001",
+ "title": "The List of Returning Exiles",
+ "refs": [
+  "Ezra 2:1-67"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15002001,
+   "end": 15002067,
+   "ref": "Ezra 2:1-67",
+   "ranges": [
+    [
+     15002001,
+     15002067
+    ]
+   ],
+   "title": "Counted and Honored by God",
+   "key_verse": [
+    15002001,
+    15002001
+   ],
+   "reflect": [
+    {
+     "text": "Long lists of names and numbers can seem easy to skip when we read the Bible. Yet Ezra 2 records exact families, towns, and even livestock. As D. A. Carson notes, this shows how God values factual precision and truth rather than vague emotionalism. These detailed records give real eyewitness authority and historical authenticity to the return from exile.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Listing these names also gave divine honor to the people who returned. Many of these families had settled into comfortable lives in Babylon. Leaving that ease behind to travel to a ruined city was a heavy sacrifice. God saw each family who was willing to rebuild Jerusalem, and He made sure their service was recorded.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This careful list also helped the community obey God's instructions. When several men could not find their family records, they were excluded from serving as priests. This decision showed their serious commitment to covenant purity, making sure they honored God's holy standards for worship.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God notices and remembers your quiet obedience encourage you today?",
+    "Are there comfortable things you need to hold lightly in order to follow God's call?"
+   ],
+   "prayer": "Lord God, thank You for knowing each of us by name and caring about the truth of our lives. Give us willing hearts to leave our comfort behind whenever You call us to serve. Help us to honor Your holy standards and follow Your Word faithfully. Amen.",
+   "sources": {
+    "D1": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Ezra 2",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/genesis-2-matthew-2-ezra-2-acts-2/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

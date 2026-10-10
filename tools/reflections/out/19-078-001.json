@@ -1,0 +1,73 @@
+{
+ "id": "19-078-001",
+ "title": "I Will Open My Mouth in Parables",
+ "refs": [
+  "Psalms 78:1-72"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19078001,
+   "end": 19078072,
+   "ref": "Psalms 78:1-72",
+   "ranges": [
+    [
+     19078001,
+     19078072
+    ]
+   ],
+   "title": "Declaring God's Praises to the Next Generation",
+   "key_verse": [
+    19078004,
+    19078004
+   ],
+   "reflect": [
+    {
+     "text": "We have an important calling to pass on God's unchanging truth to children and future generations. Telling the stories of what God has done throughout history is not just about sharing facts. It is meant to shape our hearts and lead us into genuine godliness. God preserves His people through the faithful teaching and guidance of parents and church leaders.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Psalm 78 also records the failures and ingratitude of the wilderness generation as a warning for us. Even though they saw God's amazing miracles and experienced His daily provision, the people repeatedly fell into doubt and discontent. When hard times came, they turned to God with shallow repentance, speaking the right words without offering Him true heart loyalty.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Their mistakes caution us against spiritual forgetfulness and self-centered living. We are called to turn away from selfishness and depend fully on God's sufficient grace and promises every day, not just when trouble strikes.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways can we faithfully share God's truth and works with the next generation?",
+    "Do we trust and seek God every day, or do we tend to call on Him only when hardship arrives?"
+   ],
+   "prayer": "Lord God, thank You for Your patient grace and unchanging promises toward us. Guard our hearts against forgetfulness, and keep us from seeking You only when trouble comes. Help us to share Your wonderful deeds faithfully so the next generation may know You and follow You with sincere hearts.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "For the Coming Generation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/coming-generation"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - July 8, 2011",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-july-8-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

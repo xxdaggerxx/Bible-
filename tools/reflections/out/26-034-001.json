@@ -1,0 +1,75 @@
+{
+ "id": "26-034-001",
+ "title": "A Prophecy against Israel’s Shepherds",
+ "refs": [
+  "Ezekiel 34:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26034001,
+   "end": 26034010,
+   "ref": "Ezekiel 34:1-10",
+   "ranges": [
+    [
+     26034001,
+     26034010
+    ]
+   ],
+   "title": "God's Standard for True Shepherds",
+   "key_verse": [
+    26034002,
+    26034002
+   ],
+   "reflect": [
+    {
+     "text": "God gave a serious warning to the leaders of Israel because they looked after only themselves. Instead of protecting and guiding the people, they took the best food and clothing while letting the flock wander, starve, and face danger. God declares Himself an enemy to selfish leaders who abuse their power, and He holds them accountable for the harm they cause.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God shows us what real leadership should look like. Faithful shepherds are called to do the hard work of strengthening the weak, healing the sick, and searching for those who have gone astray. This clear standard helps churches identify genuine servant-leaders. It also challenges anyone placed in authority, such as a husband leading his family, to care selflessly for those around them.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Caring for the Lord's people is a heavy and sacred responsibility, not an easy position to use for our own comfort. Because this work is so demanding, we need to uphold our leaders with dedicated prayer and encourage them to serve with humble hearts.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you practice selfless care toward the people God has placed in your life?",
+    "How can you faithfully pray for and encourage the leaders in your church this week?"
+   ],
+   "prayer": "Lord, thank You for being the true Shepherd who cares for us. Please strengthen our church leaders to protect the weak, seek the lost, and serve without selfishness. Help us to support them with faithful prayers and to treat others with gentle kindness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Stuart Briscoe",
+     "work": "When Leadership Is Lacking",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/when-leadership-is-lacking-one-year-devotions-for-men-april-21.html"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - September 10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-sept-10-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

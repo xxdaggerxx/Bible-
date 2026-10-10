@@ -1,0 +1,76 @@
+{
+ "id": "19-124-001",
+ "title": "Our Help Is in the Name of the LORD",
+ "refs": [
+  "Psalms 124:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19124001,
+   "end": 19124008,
+   "ref": "Psalms 124:1-8",
+   "ranges": [
+    [
+     19124001,
+     19124008
+    ]
+   ],
+   "title": "Our Help Is in the Lord",
+   "key_verse": [
+    19124008,
+    19124008
+   ],
+   "reflect": [
+    {
+     "text": "Throughout history, God's people have often felt like a small, weak group facing great perils. The psalm pictures these dangers as devouring monsters and raging flash floods. In our own lives, moments of heavy worry can make it feel impossible to carry on. Yet, as F. B. Meyer writes, the Lord is beside you, \"sharing your anxieties, and affording you His inviolable protection.\" Even when our physical eyes cannot see Him, He never leaves us to face danger alone.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we look back on our lives, we notice many rescues that we missed while going through difficult times. God delivers His people just as a bird slips free when a hunter's net breaks. This sudden rescue points forward to the resurrection, proving that neither destruction nor the grave can hold believers. We share these truths with one another so that our confidence in the Lord's superior saving strength can grow.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Overwhelming odds do not limit God; they simply give the Maker of heaven and earth an opportunity to reveal His saving power. In His life and death, Jesus came to stand beside us as our defender forever. Because our help rests in His strong name, we do not need to live in fear of any trouble that comes against us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you look back on past trials, where can you now see God's protection even when you felt weak at the time?",
+    "How does knowing that your helper is the Maker of heaven and earth give you peace in overwhelming moments?"
+   ],
+   "prayer": "Lord God, Maker of heaven and earth, thank You for standing beside us when troubles threaten to sweep us away. Forgive us for the times fear makes us forget Your constant presence and care. Help us to rest in Your great power and to encourage others with the hope of Your deliverance. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 124:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Robert VanDoodewaard",
+     "work": "Our Help Is in the Name of the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/our-help-is-in-the-name-of-the-lord"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

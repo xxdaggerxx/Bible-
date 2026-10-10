@@ -1,0 +1,86 @@
+{
+ "id": "21-007-001",
+ "title": "The Value of Wisdom",
+ "refs": [
+  "Ecclesiastes 7:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 21007001,
+   "end": 21007014,
+   "ref": "Ecclesiastes 7:1-14",
+   "ranges": [
+    [
+     21007001,
+     21007014
+    ]
+   ],
+   "title": "Living Wisely Through Joy and Grief",
+   "key_verse": [
+    21007014,
+    21007014
+   ],
+   "reflect": [
+    {
+     "text": "Facing hard realities, like sorrow and death, teaches us what really matters. Instead of escaping into shallow distractions, taking time to mourn reminds us how short and fragile life is. Loss strips away false pretenses and urges us to order our days with eternity in view, anchoring our hope in Christ who conquered the grave.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This perspective helps us see why the end of a matter is better than its beginning. Like a rough diamond being cut, our trials are shaping us for future glory. As Charles Spurgeon reminds us, \"You must bear the cross, or you shall never wear the crown.\" Jesus endured suffering before entering His rest, and we can trust Him through our own hardships.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True wisdom also teaches us to accept God's sovereignty over every season. God weaves both prosperity and adversity into our lives so that we learn to walk by faith rather than sight. We can freely enjoy good days with gratitude, and we can meet difficult days with relief knowing that God is in complete control.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that earthly life is short help you focus on what matters most today?",
+    "Whether you are in a season of joy or hardship, how can you rest in God's control today?"
+   ],
+   "prayer": "Lord God, thank You for holding both our joyful days and our difficult seasons in Your hands. Teach us to face hard realities with patience and to keep our eyes fixed on eternity. Give us wisdom to trust Your good purposes in all things through Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 30",
+     "on": "Ecclesiastes 7:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Scott Devor",
+     "work": "Day of Death",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/day-death"
+    },
+    "D3": {
+     "author": "Jon Bloom",
+     "work": "Sit at the Feet of Loss: What Endings Teach the Living",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/sit-at-the-feet-of-loss"
+    },
+    "D4": {
+     "author": "Chuck Swindoll",
+     "work": "Why Is Wisdom So Special?",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/why-is-wisdom-so-special"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

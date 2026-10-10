@@ -1,0 +1,68 @@
+{
+ "id": "16-002-011",
+ "title": "Nehemiah Inspects the Walls",
+ "refs": [
+  "Nehemiah 2:11-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 16002018,
+   "end": 16002019,
+   "ref": "Nehemiah 2:18-19",
+   "ranges": [
+    [
+     16002018,
+     16002019
+    ]
+   ],
+   "title": "\"Let Us Start Rebuilding\"",
+   "key_verse": [
+    16002018,
+    16002018
+   ],
+   "reflect": [
+    {
+     "text": "God often calls us to step out on His agenda instead of staying in our personal comfort. He frequently connects the deepest burdens we carry with the specific work He wants us to do. When Nehemiah shared how God's gracious hand was with him, his clear dedication inspired the whole community to unite in the work. When we step into what God asks of us, we do not rely on our own power. True strength comes from the Lord, and He promises to complete what He begins.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Taking action and leading helpful change will always stir up criticism. The moment God's people set their hands to rebuild, opponents arrive to mock and question their motives. Wise believers learn to evaluate critics by checking whether their words line up with God's voice. When opposition comes from people outside God's work, we should not let fear stop our progress. Remaining close to the Lord gives us steady resolve to face ridicule and keep moving forward in His service.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What work or burden has God laid on your heart that requires you to step outside your comfort?",
+    "When you face criticism or doubts from others, how can staying close to God help you keep going?"
+   ],
+   "prayer": "Lord, thank You for giving us strength to do the work You call us to do. Please unite our hearts with others to serve Your kingdom rather than our own comfort. When criticism and doubts arise, keep us close to You so we can stand firm and finish what You have started. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "The Leader and Criticism",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/the-leader-and-criticism"
+    },
+    "D2": {
+     "author": "Chelsey DeMatteis",
+     "work": "Where Is God Calling You to Rise Up and Build?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/ibelieve-truth-a-devotional-for-women-september-14.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

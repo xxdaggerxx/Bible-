@@ -1,0 +1,66 @@
+{
+ "id": "23-052-001",
+ "title": "Deliverance for Jerusalem",
+ "refs": [
+  "Isaiah 52:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23052001,
+   "end": 23052012,
+   "ref": "Isaiah 52:1-12",
+   "ranges": [
+    [
+     23052001,
+     23052012
+    ]
+   ],
+   "title": "God Goes Before and Behind Us",
+   "key_verse": [
+    23052012,
+    23052012
+   ],
+   "reflect": [
+    {
+     "text": "When we look back at our past failures, it is easy to feel anxious. We worry about the things we did wrong and fear that our old mistakes will keep hurting us. But God can redeem our blunders. He can take the very things we regret and turn them into lessons that help us serve others later on.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also protects our steps today. He goes before us into the places where we usually stumble, guarding us against making the same missteps again. Since the Lord walks both ahead of us and behind us as our guard, we do not have to move forward in sudden panic or frantic haste.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot undo what has already happened, but we can leave our past with Christ. When we hand our unchangeable yesterday to Him, we no longer need to be trapped by regret. We can step peacefully into tomorrow, knowing that God is with us on every side.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What past mistakes or regrets make you feel anxious today?",
+    "How does knowing that God guards both your past and your future give you peace?"
+   ],
+   "prayer": "Lord, we give our past mistakes to you, knowing that we cannot change what has already happened. Thank you for walking ahead of us to guard our steps and staying behind us to protect our back. Help us to walk steadily with you today without fear or panic. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Oswald Chambers",
+     "work": "Yesterday",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/modern-classic/yesterday/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

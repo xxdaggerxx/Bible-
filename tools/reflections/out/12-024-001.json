@@ -1,0 +1,68 @@
+{
+ "id": "12-024-001",
+ "title": "Babylon Controls Jehoiakim",
+ "refs": [
+  "2 Kings 24:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12024001,
+   "end": 12024005,
+   "ref": "2 Kings 24:1-5",
+   "ranges": [
+    [
+     12024001,
+     12024005
+    ]
+   ],
+   "title": "God Keeps His Word in Judgment",
+   "key_verse": [
+    12024003,
+    12024003
+   ],
+   "reflect": [
+    {
+     "text": "After good King Josiah died, the kingdom of Judah quickly spiraled into wickedness under leaders who practiced evil. King Jehoiakim led the nation into spiritual corruption and widespread violence. Jehoiakim served King Nebuchadnezzar of Babylon for three years, but then he rebelled. This rebellion brought devastating raids and invasions against Judah. Yet the Bible makes clear that this unraveling was not an accident. It happened explicitly at the Lord's command, removing an unrepentant people from His presence.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This disaster fulfilled the divine warnings God had spoken through His prophets. The nation had piled up terrible guilt, especially through the shedding of innocent blood. God's judgment showed His righteous justice against sin. While Judah's downfall is sobering, it also shows that the Lord is entirely trustworthy. His word never fails. Because God reliably carries out His discipline, believers can take comfort knowing that He faithfully keeps all of His good promises.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God's word never fails give you comfort when you face difficult times?",
+    "Why is it important to remember that God's discipline and justice are completely fair and never accidental?"
+   ],
+   "prayer": "Lord, help us to take Your word seriously and remember that You are completely just. Teach us to turn away from sin and seek Your face. Thank You that Your word never fails and that we can depend on every promise You have made.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Beginning of the End for Judah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/beginning-of-end-for-judah"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: 2 Kings 24, Hebrew 6, Joel 3, and Psalm 143",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/2-kings-24-hebrew-6-joel-3-psalm-143/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

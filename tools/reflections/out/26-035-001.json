@@ -1,0 +1,76 @@
+{
+ "id": "26-035-001",
+ "title": "A Prophecy against Mount Seir",
+ "refs": [
+  "Ezekiel 35:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26035010,
+   "end": 26035010,
+   "ref": "Ezekiel 35:10",
+   "ranges": [
+    [
+     26035010,
+     26035010
+    ]
+   ],
+   "title": "\"The LORD Was There\"",
+   "key_verse": [
+    26035010,
+    26035010
+   ],
+   "reflect": [
+    {
+     "text": "The rulers of Edom looked across the borders at the desolate land of Israel and thought it would be an easy prize to seize. The people were far away in exile, and no human army stood in their way. Yet the enemies forgot one decisive reality: the Lord was still there. God remained in possession of His inheritance, and His unseen presence formed an unbreakable defense against their plans.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We often face spiritual battles and heavy troubles that make us feel like easy prey. The enemy shoots arrows against our faith, our love, and our patience, while sickness or sadness may crowd into our homes. Yet as Charles Spurgeon noted, the only reason our faith survives is because \"the Lord is there.\" God lives within the hearts He has redeemed, holding us securely against every assault.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This truth gives us calm confidence through all of life and even in death. When our days draw to an end and earthly things pass away, our feet will still stand firm on the Rock of Ages. The church and its people cannot be destroyed, because the faithful God never abandons the place where He dwells.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what difficult trial right now do you need to remember that the Lord is present with you?",
+    "How does knowing that God holds you securely help you when your faith feels under attack?"
+   ],
+   "prayer": "Lord God, thank You that You never abandon Your people. When trouble surrounds us and we feel weak, remind us that You are present to defend and preserve us. Keep our faith firm and guide our steps until we stand safely in Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 17",
+     "on": "Ezekiel 35:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 35:10",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

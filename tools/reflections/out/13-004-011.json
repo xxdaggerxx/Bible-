@@ -1,0 +1,74 @@
+{
+ "id": "13-004-011",
+ "title": "More Descendants of Judah",
+ "refs": [
+  "1 Chronicles 4:11-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13004011,
+   "end": 13004023,
+   "ref": "1 Chronicles 4:11-23",
+   "ranges": [
+    [
+     13004011,
+     13004023
+    ]
+   ],
+   "title": "Serving the King in Lowly Places",
+   "key_verse": [
+    13004023,
+    13004023
+   ],
+   "reflect": [
+    {
+     "text": "This passage mentions ancient records from long ago. Yet there are things far older than these family lists. Before the earth was made, the Father chose us and set His heart upon us in everlasting love. Long before time began, God formed an eternal purpose to rescue, cleanse, and bring us home through Jesus Christ.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The chapter ends by naming simple potters and workers living among hedges and fields. Shaping clay was not a fancy job, yet they carried it out in royal service. We too may have humble tasks or ordinary callings. As Charles Spurgeon noted, \"it is a great privilege to do anything for 'the king.'\"",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "No matter how lowly our daily duties might seem, we are never separated from our Lord. When we stay where He has placed us and serve those around us, we enjoy His royal company. Jesus walks with us in quiet places, and He never overlooks our faithful work.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God loved you before the world began bring peace to your heart today?",
+    "Where has God placed you to do quiet, faithful work for Him right now?"
+   ],
+   "prayer": "Lord, thank You for loving us from before time began and planning our salvation through Jesus. Help us to serve You gladly, even in the smallest and most ordinary tasks. Remind us that You are always near as we do Your work. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, February 2",
+     "on": "1 Chronicles 4:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 3",
+     "on": "1 Chronicles 4:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

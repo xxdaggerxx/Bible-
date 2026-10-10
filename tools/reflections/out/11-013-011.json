@@ -1,0 +1,84 @@
+{
+ "id": "11-013-011",
+ "title": "The Old Prophet and the Man of God",
+ "refs": [
+  "1 Kings 13:11-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11013011,
+   "end": 11013034,
+   "ref": "1 Kings 13:11-34",
+   "ranges": [
+    [
+     11013011,
+     11013034
+    ]
+   ],
+   "title": "Holding Fast to God's Word",
+   "key_verse": [
+    11013026,
+    11013026
+   ],
+   "reflect": [
+    {
+     "text": "The man of God began his task with courage. God told him not to eat, drink, or return home the same way. Yet right after standing firm before the king, he sat under an oak tree and let down his guard. Believers need careful obedience, especially in quiet moments after great spiritual victories. When an older prophet lied and claimed an angel had given a new message, the man of God believed him and turned back.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This story brings a sobering warning. God demands full and exact obedience. He does not contradict Himself, so any new voice or human authority that goes against what God has already spoken must be turned away. Even receiving divine revelation does not place anyone above God's judgment. Both men handled God's word wrongly, one by lying and the other by accepting human words over the Lord's clear command.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Throughout the story, God's word directs everything, ruling over kings, prophets, and even a lion on the road. Despite seeing these clear signs, King Jeroboam refused to repent and kept worshiping idols. The failure of this prophet from Judah points us forward to our need for Jesus Christ, the true and faithful Man from Judah who obeyed God perfectly in all things.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas in your life where you are tempted to obey God only halfway rather than completely?",
+    "How can you test what other people say against the clear truth of God's written Word?"
+   ],
+   "prayer": "Lord God, Your word is true and never changes. Help us to obey You with our whole hearts, even after times of great success when our guard is down. Keep us faithful to Your written truth rather than human opinions, and thank You for Jesus, who obeyed You perfectly for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Disobedient Prophet",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/disobedient-prophet"
+    },
+    "D2": {
+     "author": "Jeremy Kimble",
+     "work": "Lies and a Lion: Making Sense of 1 Kings 13",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/lies-lion-kings/"
+    },
+    "D3": {
+     "author": "Kathleen Nielson",
+     "work": "Lions and Levels of Narrative",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/lions-and-levels-of-narrative/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

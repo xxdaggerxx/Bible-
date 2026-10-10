@@ -1,0 +1,82 @@
+{
+ "id": "14-034-014",
+ "title": "Hilkiah Finds the Book of the Law",
+ "refs": [
+  "2 Chronicles 34:14-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14034014,
+   "end": 14034021,
+   "ref": "2 Chronicles 34:14-21",
+   "ranges": [
+    [
+     14034014,
+     14034021
+    ]
+   ],
+   "title": "Rediscovering the Living Word of God",
+   "key_verse": [
+    14034019,
+    14034019
+   ],
+   "reflect": [
+    {
+     "text": "For years, God's written law sat forgotten in the temple. This neglect did not happen overnight. Instead, God's people drifted away slowly over generations, letting other things crowd out His truth. Yet even through all that spiritual decay, God faithfully kept His written Word safe until the priest Hilkiah discovered it again.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When Shaphan read the scroll out loud, King Josiah did not ignore the message. He tore his clothes in deep sorrow and humility. The Scriptures acted like a bright lantern, showing how far the nation had drifted from God's commands. God's Word exposed their disobedience and directed them toward repentance, which means turning away from sin and turning back to God.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "As F. B. Meyer reminds us about the Bible, \"What it said, it says.\" Scripture is not just an ancient historical record; it is our Father's living message for our daily lives. When we regularly make time to read it, God clears away our spiritual clutter, renews our hearts, and guides how we should live today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What daily distractions or clutter might be crowding out your time in God's Word?",
+    "When Scripture shows you an area where you have strayed, how can you respond with humility?"
+   ],
+   "prayer": "Lord, thank You for preserving Your living Word to guide us. Please give us humble hearts like Josiah to listen whenever Your truth points out our sin. Clear away the distractions in our lives, and help us follow Your commands every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 34:14",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Brent Rinehart",
+     "work": "The Lost Word (2 Chronicles 34:15) - Your Daily Bible Verse - July 6",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-july-6.html"
+    },
+    "D3": {
+     "author": "Andy Rau",
+     "work": "Josiah and the Re-Discovery of God’s Law",
+     "site": "BibleGateway",
+     "url": "https://www.biblegateway.com/blog/2011/07/josiah-and-the-re-discovery-of-gods-law/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

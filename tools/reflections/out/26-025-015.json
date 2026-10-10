@@ -1,0 +1,66 @@
+{
+ "id": "26-025-015",
+ "title": "A Prophecy against the Philistines",
+ "refs": [
+  "Ezekiel 25:15-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26025015,
+   "end": 26025017,
+   "ref": "Ezekiel 25:15-17",
+   "ranges": [
+    [
+     26025015,
+     26025017
+    ]
+   ],
+   "title": "Leaving Vengeance to the Lord",
+   "key_verse": [
+    26025017,
+    26025017
+   ],
+   "reflect": [
+    {
+     "text": "Movies and popular culture sometimes misuse Ezekiel 25:17 to make personal revenge look justified. But in the Bible, this passage is not an excuse for human violence. God was speaking judgment against the Philistines, who had held a bitter, ancient hatred against Judah and tried to destroy them out of malice.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when God disciplines His own people, He still acts to defend and protect them from their enemies. Ezekiel makes it clear that vengeance belongs strictly to the Lord. Human beings are not meant to take judgment into their own hands.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God is the only righteous Judge, we do not need to settle scores or carry grudges. When others hurt us, we can let go of the desire to strike back and trust God to make things right in His own way.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding a grudge or wishing to get even with someone who wronged you?",
+    "How does trusting God as the true Judge help you let go of anger?"
+   ],
+   "prayer": "Lord God, thank You for being our protector who sees every wrong. Please forgive us when we want to take revenge into our own hands. Help us let go of bitterness and trust Your justice. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Joel Ryan",
+     "work": "What Does Ezekiel 25:17 Really Mean for Us?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-the-bible-verse-ezekiel-2517-really-means.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

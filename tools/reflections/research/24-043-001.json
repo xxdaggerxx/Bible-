@@ -1,0 +1,17 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/devotions",
+  "https://utmost.org/",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+43%3A8-13&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+43&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+43&version=NLT%3BNET",
+  "https://www.biblegateway.com/passage/?search=Jeremiah+43-45&version=ESV",
+  "https://www.davidjeremiah.org/",
+  "https://www.ligonier.org/",
+  "https://www.thegospelcoalition.org/devotionals/read-the-bible/1-samuel-9-romans-7-jeremiah-46-psalm-22/"
+ ],
+ "cost": 0.033200525,
+ "model": "google/gemini-3.8-flash"
+}

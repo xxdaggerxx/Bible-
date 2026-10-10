@@ -1,0 +1,66 @@
+{
+ "id": "11-014-025",
+ "title": "Shishak Raids Jerusalem",
+ "refs": [
+  "1 Kings 14:25-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11014025,
+   "end": 11014031,
+   "ref": "1 Kings 14:25-31",
+   "ranges": [
+    [
+     11014025,
+     11014031
+    ]
+   ],
+   "title": "Replacing Gold with Bronze",
+   "key_verse": [
+    11014027,
+    11014027
+   ],
+   "reflect": [
+    {
+     "text": "When the people of Judah abandoned God's law and turned to idols, they gave up His divine blessing and protection. Because of their unfaithfulness, King Shishak of Egypt came up and attacked Jerusalem. He stripped both the temple of the Lord and the royal palace, taking away every treasure, including all the fine gold shields that Solomon had crafted.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead of turning back to God, King Rehoboam made bronze shields to replace the missing gold ones. Whenever he entered the house of the Lord, guards carried these bronze shields to maintain an illusion of royal grandeur. Rehoboam wanted to keep up appearances and act as though the kingdom was as glorious as before.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Bronze may look like gold from a distance, but it was only a cheap substitute. Rehoboam used outward religious ceremony to mask a deeper spiritual loss. In the same way, going through religious motions cannot hide an unfaithful heart. God does not look for outward shows or shallow replacements, but for genuine obedience.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas where you try to maintain outward religious habits instead of walking in true obedience?",
+    "What cheap substitutes might you be relying on rather than having a faithful heart before God?"
+   ],
+   "prayer": "Lord, help us to be honest before You rather than just keeping up appearances. Forgive us when we rely on empty religious routines instead of real obedience. Give us faithful hearts that love Your law and seek Your true presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Apr. 27, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-apr-27-2010-11629431.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

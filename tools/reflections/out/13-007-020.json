@@ -1,0 +1,67 @@
+{
+ "id": "13-007-020",
+ "title": "The Descendants of Ephraim",
+ "refs": [
+  "1 Chronicles 7:20-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13007020,
+   "end": 13007029,
+   "ref": "1 Chronicles 7:20-29",
+   "ranges": [
+    [
+     13007020,
+     13007029
+    ]
+   ],
+   "title": "Victory Over Inherited Struggles",
+   "key_verse": [
+    13007023,
+    13007023
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Ephraim suffered a sudden and heartbreaking loss. His sons were struck down by the native men of Gath during a raid, bringing tragedy upon his entire household. Ephraim was left in deep grief, mourning for many days over the bitter disaster that had taken his children.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer points out that the men of Gath, who were born in the land, remind us of the sinful impulses born inside each of us. We all carry inherited tendencies and strong cravings that can easily overcome us if we are not on guard. Giving in to these natural desires brings deep sorrow and regret that many days of weeping cannot undo.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We do not have to fight these inner struggles alone. As Meyer explains, \"faith is the victory.\" The Lord Jesus lives in us by the Holy Spirit, and He is far stronger than our sinful habits. When we trust Him and walk by His Spirit, He protects us from falling and gives us true freedom.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What inner cravings or family tendencies do you need to guard against with the Lord's help?",
+    "How can trusting the Holy Spirit give you victory when old impulses feel strong?"
+   ],
+   "prayer": "Lord Jesus, thank You that Your Holy Spirit is stronger than any sinful impulse born within me. Please guard my heart from inherited weaknesses that lead to harm and grief. Teach me to walk by Your Spirit every day and rest in Your victory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 7:23",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "11-007-048",
+ "title": "Completion of the Gold Furnishings",
+ "refs": [
+  "1 Kings 7:48-51"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11007048,
+   "end": 11007051,
+   "ref": "1 Kings 7:48-51",
+   "ranges": [
+    [
+     11007048,
+     11007051
+    ]
+   ],
+   "title": "Treasures Dedicated to the Lord",
+   "key_verse": [
+    11007051,
+    11007051
+   ],
+   "reflect": [
+    {
+     "text": "King Solomon oversaw the careful making of golden tables, lamps, and tools for worship in the temple. God blessed the artisans with special skill and understanding to shape each holy object. In the same way today, the Holy Spirit gives different gifts to every Christian to serve the church. Practical tasks like building maintenance, caring for babies, or helping with sound systems are vital ways to support public worship.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Once the building was finished, Solomon brought in the gold, silver, and furnishings his father David had dedicated to God. Even though these treasures were in Solomon's possession, he knew they belonged entirely to the Lord. As believers, we are often tempted to hold back our time, money, or personal plans. Following Jesus as true disciples means placing everything we have into His hands and submitting all of life to Him as our Lord.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What gifts or practical tasks has God given you to help your church family worship?",
+    "Is there any part of your time, money, or personal plans that you are holding back from the Lord?"
+   ],
+   "prayer": "Lord, thank You for giving each of us gifts to serve Your people in everyday ways. Help us to gladly use our skills to build up the church. Show us where we hold back our time or plans, and teach us to surrender all of life to Jesus as our Lord. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - April 23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-april-23-2013.html"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Furnishings for the Temple",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/furnishings-for-the-temple"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

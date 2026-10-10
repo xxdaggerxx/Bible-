@@ -1,0 +1,17 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/devotions",
+  "https://www.biblegateway.com/passage/?search=1+Chronicles+4%3A39-40&version=NIV",
+  "https://www.biblegateway.com/passage/?search=1+Chronicles+4&version=CEV",
+  "https://www.biblegateway.com/passage/?search=1+Chronicles+4&version=NIV",
+  "https://www.biblegateway.com/passage/?search=1+Chronicles+4&version=NLT",
+  "https://www.biblegateway.com/verse/en/1%20Chronicles%204%3A39",
+  "https://www.biblegateway.com/verse/en/1%20Chronicles%204:40",
+  "https://www.desiringgod.org/",
+  "https://www.ligonier.org/"
+ ],
+ "cost": 0.0315137,
+ "model": "google/gemini-3.8-flash"
+}

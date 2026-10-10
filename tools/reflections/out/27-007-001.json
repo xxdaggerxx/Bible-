@@ -1,0 +1,75 @@
+{
+ "id": "27-007-001",
+ "title": "Daniel’s Vision of the Four Beasts",
+ "refs": [
+  "Daniel 7:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27007001,
+   "end": 27007008,
+   "ref": "Daniel 7:1-8",
+   "ranges": [
+    [
+     27007001,
+     27007008
+    ]
+   ],
+   "title": "God Rules Over Earth's Fierce Kingdoms",
+   "key_verse": [
+    27007007,
+    27007007
+   ],
+   "reflect": [
+    {
+     "text": "Daniel received a night vision of four great beasts rising from a churning sea. The wild waters stirred up by the wind show a fallen world unsettled by human pride and godless fighting. God shows Daniel what earthly empires look like from heaven's point of view. Instead of being majestic, worldly powers are like dangerous beasts driven by selfish ambition and cruelty.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Each creature Daniel saw brought terror and destruction. There was a winged lion, a fierce bear, a four-headed leopard, and a terrifying beast with iron teeth. Then an arrogant horn arose, speaking boastful words against God. When we see the frightening hostility and strength of worldly rulers, it is very easy for believers to feel troubled and afraid.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet this vision reminds us to look past the frightening powers of this world. Earthly empires may devour and trample for a time, but they do not hold ultimate power. God remains completely sovereign, meaning He rules over everything. Jesus Christ will overthrow every proud and cruel ruler, defeat every wicked force, and safely keep His people in His eternal kingdom.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When powerful or hostile events in the world frighten you, what helps you remember that God is still in control?",
+    "How does the promise of Christ's eternal kingdom give you peace today?"
+   ],
+   "prayer": "Lord God, earthly powers can seem terrifying and strong to us. Please protect our hearts from fear when we see pride and cruelty in this world. Comfort us with the truth that You reign supreme and that Christ will keep us safe in His everlasting kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jon Payne",
+     "work": "Fear and the Reign of God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/fear-and-reign-god"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Sept. 17, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-sept-17-2010-11638178.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

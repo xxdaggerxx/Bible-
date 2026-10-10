@@ -1,0 +1,138 @@
+{
+ "id": "19-086-001",
+ "title": "Tried but Trusting",
+ "refs": [
+  "Psalms 86:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19086011,
+   "end": 19086011,
+   "ref": "Psalms 86:11",
+   "ranges": [
+    [
+     19086011,
+     19086011
+    ]
+   ],
+   "title": "\"Give Me an Undivided Heart\"",
+   "key_verse": [
+    19086011,
+    19086011
+   ],
+   "reflect": [
+    {
+     "text": "Our minds often race with demanding schedules and long to-do lists. It is easy for our attention to feel scattered, leaving us drained and anxious. Yet God did not design us mainly for endless productivity. He created us first of all to enjoy friendship with Him and to worship Him. Jesus invites us to lay down our heavy burdens and rely on His gentle care instead of our own striving.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "When we begin the day by praying and quietly reading the Bible, God's peace silences our worldly worries. Our emotions tend to change from one moment to the next, but asking God for an undivided heart anchors us in His steady truth. His deep love for us is unconditional and does not depend on whether we perform flawlessly. When unexpected interruptions upset our plans, His strength helps us see them as moments to trust Him.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Entrusting our busy days and responsibilities to God gives our souls room to settle. We can rest peacefully at night, confident that our lives are securely held in His hands.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What tasks or worries are scattering your attention today?",
+    "How can pausing to reflect on God's truth keep your heart steady when your feelings change?"
+   ],
+   "prayer": "Lord, give me an undivided heart so I can walk in Your truth. Quiet my racing thoughts, and help me remember that my worth is found in Your love rather than my endless work. Teach me to trust You through every interruption today. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Lysa TerKeurst",
+     "work": "God Wants to Prepare You for Today",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-october-8-2026.html"
+    },
+    "D4": {
+     "author": "Amanda Idleman",
+     "work": "An Undivided Heart for Busy Days",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/an-undivided-heart-for-busy-days.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19086001,
+   "end": 19086017,
+   "ref": "Psalms 86:1-17",
+   "ranges": [
+    [
+     19086001,
+     19086017
+    ]
+   ],
+   "title": "Crying Out to a Compassionate God",
+   "key_verse": [
+    19086005,
+    19086005
+   ],
+   "reflect": [
+    {
+     "text": "When we fail, we often think we must convince God to forgive us through tears, promises to do better, or religious acts. But as F. B. Meyer explains, our Father is always \"ready to forgive.\" Even if we have fallen many times or knew better, we do not need to wait for time to pass before returning to Him. He is eager to show mercy the very moment we call on His name.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God is patient, gracious, and rich in faithful love. True compassion does not stay far away; it enters into our pain and moves forward to help. Yet, like the prophet Jonah, we often welcome God's kindness for ourselves while hesitating to offer it to others. Remembering how much we constantly need His forgiveness keeps us humble and softens our anger toward those who wrong us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When God comforts us and helps us turn away from old wrongs, our changed lives give clear evidence of His goodness. Observers see His grace at work in us, and their hearts can be softened toward Him too. Living under His guidance allows our healing to become a quiet witness of His mercy to those around us.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any failure you have been hiding from God, doubting that He is ready to forgive you right now?",
+    "How does remembering God's mercy toward you help you show patience to someone who has upset you?"
+   ],
+   "prayer": "Father, thank You for being patient and always ready to forgive when I call on You. Soften my heart so that I extend the same grace to others that You have generously given to me. Let my life be a clear sign of Your goodness to everyone around me. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 86:5",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Jessica Van Roekel",
+     "work": "Lean into God's Compassion",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/lean-into-gods-compassion-the-crosswalk-devotional.html"
+    },
+    "D5": {
+     "author": "Crosswalk.com",
+     "work": "Wisdom from the Psalms 7/11",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-7-or-11-552440.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

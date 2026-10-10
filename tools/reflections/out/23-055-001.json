@@ -1,0 +1,67 @@
+{
+ "id": "23-055-001",
+ "title": "Invitation to the Needy",
+ "refs": [
+  "Isaiah 55:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23055001,
+   "end": 23055013,
+   "ref": "Isaiah 55:1-13",
+   "ranges": [
+    [
+     23055001,
+     23055013
+    ]
+   ],
+   "title": "Free Water for the Thirsty Soul",
+   "key_verse": [
+    23055001,
+    23055001
+   ],
+   "reflect": [
+    {
+     "text": "God gives an open invitation to everyone who feels empty and in need. We often spend our hard-earned energy chasing worldly things that can never truly satisfy our deepest hunger. Yet God invites us to receive what we could never afford on our own. In His grace, God's unearned kindness, Jesus paid the ultimate cost so that we could be forgiven. Along with salvation, He gives us eternal life, true purpose, and close fellowship with His Holy Spirit.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we turn to God and receive His pardon, our deepest grief is gone and true joy begins. As Charles Spurgeon wrote, \"When sin is pardoned, our greatest sorrow is ended, and our truest pleasure begins.\" This peace changes how we see the whole world. When God's word takes root in us and saves people, everything feels alive with praise, as if the hills and trees were singing along with our gladness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life have you been chasing things that do not truly satisfy?",
+    "How does knowing that God has completely pardoned you bring joy to your daily walk?"
+   ],
+   "prayer": "Lord, thank You for inviting us to come to You freely when we are empty and tired. Forgive us for running after worldly things that never satisfy our souls. Fill our hearts with the joy of Your forgiveness, and help us walk in Your peace every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 1",
+     "on": "Isaiah 55:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Time with God",
+     "work": "Time with God - Feb. 16, 2011",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-feb-16-2011-11645798.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

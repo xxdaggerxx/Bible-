@@ -1,0 +1,73 @@
+{
+ "id": "21-003-016",
+ "title": "From Dust to Dust",
+ "refs": [
+  "Ecclesiastes 3:16-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 21003016,
+   "end": 21003022,
+   "ref": "Ecclesiastes 3:16-22",
+   "ranges": [
+    [
+     21003016,
+     21003022
+    ]
+   ],
+   "title": "Accepting Our Lot with Humble Hearts",
+   "key_verse": [
+    21003020,
+    21003020
+   ],
+   "reflect": [
+    {
+     "text": "When we look around, we see injustice and death. God often delays His final judgment to remind us who we really are. Like animals, our physical bodies are made from dust, and one day we will return to dust. We are not the sovereign Judge of the universe. We are fragile, dependent creatures. Remembering that our physical lives are brief keeps us humble and gives us a healthy perspective on both our successes and our failures.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Living in an imperfect world also means facing painful events and unfair treatment that we cannot undo. When these troubles come, we might be tempted to feel sorry for ourselves, hold onto grudges, or try to strike back. Wisdom teaches us to turn away from resentment, retaliation, and self-pity. Seeing our disadvantages from God's point of view helps us respond well, which can encourage and help others who are watching us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because earthly life is short and we cannot control the future, God calls us to accept our portion in life. Instead of being bitter, we can choose contentment in our daily activities. We can gratefully receive God's good gifts and enjoy the work He gives us to do today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can remembering that you are made of dust keep you from pride or self-pity?",
+    "What is one daily duty or simple gift from God you can choose to enjoy with gratitude today?"
+   ],
+   "prayer": "Lord God, thank You for reminding us that our lives are short and held safely in Your hands. Help us put away all bitterness and pride when life seems unfair. Give us humble hearts to enjoy our daily work and gratefully receive the good gifts You provide today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Look for an Advantage",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/look-for-an-advantage"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Common End of Man and Beast",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/common-end-man-and-beast"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

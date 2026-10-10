@@ -1,0 +1,130 @@
+{
+ "id": "16-006-001",
+ "title": "Sanballat’s Conspiracy",
+ "refs": [
+  "Nehemiah 6:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 16006003,
+   "end": 16006003,
+   "ref": "Nehemiah 6:3",
+   "ranges": [
+    [
+     16006003,
+     16006003
+    ]
+   ],
+   "title": "\"I Am Doing a Great Work\"",
+   "key_verse": [
+    16006003,
+    16006003
+   ],
+   "reflect": [
+    {
+     "text": "When God's work is almost done, distractions and false peace offerings often increase. The enemy tries to pull us away from what God gave us to do. Nehemiah understood that even sweaty, dusty construction work was truly a great work for God. Any task God gives you has lasting value. Everyday faithfulness, such as parenting or quiet service, is never wasted effort. When we do our regular duties for God's glory, ordinary work becomes worship.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Nehemiah also saw the danger beneath his enemies' friendly invitations. Spiritual maturity gives us the courage to say no to distractions without offering apologies. As F. B. Meyer taught, when our hearts and hands are engaged in God's work, we are protected from worldly traps. Remembering our high position as God's children keeps us from going down to lower things. Staying loyal to God's calling keeps us from becoming puppets of other people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What everyday tasks has God given you that carry lasting value for his kingdom?",
+    "What distracting invitations or demands do you need the courage to say no to?"
+   ],
+   "prayer": "Lord God, thank you for giving us meaningful work to do for your glory. Help us to see eternal worth in our daily duties and quiet service. Give us discernment to spot distractions and the courage to stay faithful to your calling. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Nehemiah 6:3",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Doing a Great Work",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/doing-a-great-work"
+    },
+    "D3": {
+     "author": "Pastor Jeff Schreve",
+     "work": "Are You Doing a Great Work?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-june-25-11633797.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 16006009,
+   "end": 16006009,
+   "ref": "Nehemiah 6:9",
+   "ranges": [
+    [
+     16006009,
+     16006009
+    ]
+   ],
+   "title": "\"Strengthen My Hands\"",
+   "key_verse": [
+    16006009,
+    16006009
+   ],
+   "reflect": [
+    {
+     "text": "When we stand firm in serving the Lord, we often face personal slander and hostile attacks. Fierce opposition frequently signals that the work we are doing is spiritually important. Nehemiah's enemies spread false rumors to make the builders afraid so their hands would drop the work. These hostile attacks are meant to drain our spiritual energy and resolve.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Instead of giving in to fear, Nehemiah stayed honest, stayed on task, and prayed for God to strengthen his hands. He was also tested by a hired prophet who urged him to hide inside the temple. Because Nehemiah knew God's law, he recognized the trap and refused to sin or ruin his testimony. We need wisdom about whom to trust without becoming suspicious of everyone. Clothed in God's armor and guided by his Word, we can persevere until his purpose is finished.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face criticism or fear while serving God, how quickly do you turn to him for strength?",
+    "How does knowing Scripture help you recognize advice that might lead you into sin?"
+   ],
+   "prayer": "Heavenly Father, when opposition and rumors threaten to drain our energy, strengthen our hands. Give us wisdom to see through false claims and keep us obedient to your Word. Protect our testimony and help us finish the work you have given us to do. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "Escaping a Conspiracy",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/escaping-a-conspiracy"
+    },
+    "D5": {
+     "author": "Jack Graham",
+     "work": "Power Point - December 9, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-december-9-2005-1367645.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

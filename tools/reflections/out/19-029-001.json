@@ -1,0 +1,133 @@
+{
+ "id": "19-029-001",
+ "title": "Ascribe Glory to the LORD",
+ "refs": [
+  "Psalms 29:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19029011,
+   "end": 19029011,
+   "ref": "Psalms 29:11",
+   "ranges": [
+    [
+     19029011,
+     19029011
+    ]
+   ],
+   "title": "\"The Lord Blesses His People with Peace\"",
+   "key_verse": [
+    19029011,
+    19029011
+   ],
+   "reflect": [
+    {
+     "text": "David watched a fierce storm shatter trees and shake the wilderness, but the psalm ends in a quiet calm. The very God who commands the lightning and rides the tempest promises to give His mighty power to His own people. Because Jesus is our strength, we do not need to remain weak or fearful. He rules every trouble we face, giving us strength in the middle of our storms and bringing us safely into days of peace.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God's peace is not an abstract theory; it is a tangible, daily reality for those who trust Him. To find this peace, we must end our resistance and surrender our lives to God. As we follow Him in humble service motivated by faith and love, Christ Himself fills us with a steadfast peace. This calm does not depend on smooth circumstances, but rests firmly in Him.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When worries begin to press in, we can turn away from dark thoughts and rest in the Lord. Charles Spurgeon reminds us, \"Jesus, our blessed Lord, is also our peace; let us repose in Him.\" Knowing He is near turns our fear into steady confidence.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need to stop resisting God and surrender to Him?",
+    "How can remembering that Jesus is your strength bring you calm in your present troubles?"
+   ],
+   "prayer": "Lord, thank You for offering us Your mighty strength and lasting peace. Help us to stop fighting Your will and to rest our hearts quietly in Christ. When troubles surround us, teach us to trust Your power and walk with You in steady faith. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 7",
+     "on": "Psalms 29:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Billy Graham",
+     "work": "Find Peace With God",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/devotions/find-peace-with-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19029001,
+   "end": 19029011,
+   "ref": "Psalms 29:1-11",
+   "ranges": [
+    [
+     19029001,
+     19029011
+    ]
+   ],
+   "title": "Ascribe Glory to the Lord",
+   "key_verse": [
+    19029002,
+    19029002
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 29 calls us to look at the power of God displayed across creation. The thunder over the waters and the shaking of the wilderness show us the majesty of the Lord's voice. When we see the vast strength of our Creator, it should not fill us with terror. Instead, knowing that God holds absolute authority gives us deep comfort, because nothing can ever defeat Him or overcome His loving protection.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Because God is perfectly holy, good, and loving, all honor belongs rightly to Him alone. Everything good in our lives is a gift received from His grace, so there is no room for us to boast. As Charles Spurgeon wrote, \"there is room for one glory only in the universe.\" When we try to praise ourselves, we set ourselves up as foolish rivals to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What gifts or blessings have you received recently that you need to thank God for rather than taking credit yourself?",
+    "How does seeing the unstoppable power of God in creation help you trust His care today?"
+   ],
+   "prayer": "Heavenly Father, all majesty, honor, and strength belong to You alone. Forgive us when we boast in ourselves or forget that every good thing comes from Your hand. Help us to rest securely in Your mighty protection and live each day to bring glory to Your holy name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 16",
+     "on": "Psalms 29:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Crosswalk.com",
+     "work": "Wisdom from the Psalms 3/19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-3-or-19-552214.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "God often uses gentle lessons and painful discipline to teach us humility. If we try to rely on our own power, we soon discover how weak we truly are. Recognizing the Lord's supreme greatness leads us to lay our pride down at His feet. Our only proper response to His majesty is to worship Him and give His name all the glory.",
+     "problem": "Neither the devotional nor the passage teaches that God often uses gentle lessons to teach humility; Spurgeon only states that God teaches this lesson, sometimes through painful discipline."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

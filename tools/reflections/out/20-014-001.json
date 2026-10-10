@@ -1,0 +1,78 @@
+{
+ "id": "20-014-001",
+ "title": "The Wise Woman",
+ "refs": [
+  "Proverbs 14:1-35"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20014012,
+   "end": 20014012,
+   "ref": "Proverbs 14:12",
+   "ranges": [
+    [
+     20014012,
+     20014012
+    ]
+   ],
+   "title": "\"A Way That Seems Right\"",
+   "key_verse": [
+    20014012,
+    20014012
+   ],
+   "reflect": [
+    {
+     "text": "We often think that if a path feels good or earns praise from others, it must be safe. Yet our sincerity and confidence do not guarantee that we are heading in the right direction. Relying on our inner emotions rather than objective truth leads to spiritual disaster. God gives us His Word to serve as a reliable navigational guide, and Jesus Christ delivers us when we lose our way.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Insisting on our own direction causes serious harm. Refusing to adjust our course builds walls that can break human relationships. When we demand our own path, we also reduce God to a tool for our own desires instead of honoring Him as Lord. Real wisdom requires the humility to change our minds, seek forgiveness, and turn around.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Letting God redirect our lives can feel like an uncomfortable detour or a frustrating delay. Quick surface patches and outward religious activities cannot replace deep inner renewal. Lasting spiritual health requires honest self-examination and patient discipline. When we yield to God's restructuring work in our hearts, He brings genuine healing and freedom.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding onto a path simply because it feels right, even if God's Word says otherwise?",
+    "Where do you need the humility to admit you were mistaken and let God redirect you?"
+   ],
+   "prayer": "Lord, protect us from relying merely on our own feelings and opinions. Give us humble hearts willing to admit when we are wrong, to seek forgiveness, and to turn around. Please do Your deep work in our souls and guide our steps through Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jim Liebelt",
+     "work": "Are You Willing to Change Course?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/homeword-may-16-2014.html"
+    },
+    "D2": {
+     "author": "Leslie Snyder",
+     "work": "Orange Cone Alert",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/homeword/orange-cone-alert-homeword-april-.html"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Are You Lost?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-june-17-2014.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

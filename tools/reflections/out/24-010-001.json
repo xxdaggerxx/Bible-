@@ -1,0 +1,59 @@
+{
+ "id": "24-010-001",
+ "title": "The Sovereignty of God",
+ "refs": [
+  "Jeremiah 10:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24010001,
+   "end": 24010016,
+   "ref": "Jeremiah 10:1-16",
+   "ranges": [
+    [
+     24010001,
+     24010016
+    ]
+   ],
+   "title": "The Living God and Lifeless Idols",
+   "key_verse": [
+    24010006,
+    24010006
+   ],
+   "reflect": [
+    {
+     "text": "The nations around Israel looked to the sky with dread and bowed down to statues carved from wood. God tells His people not to follow those customs or be terrified by astrological signs. Things made by human hands have no breath in them and no power at all. They cannot walk, speak, hurt anyone, or bring any help. Chasing after false gods comes from our own foolish vanity and traps people in empty fears that lead to spiritual ruin.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What empty things or groundless fears do you sometimes focus on instead of trusting the Lord?",
+    "How does remembering that God created everything help you rely on His wisdom today?"
+   ],
+   "prayer": "Lord, You are the only living God and the Maker of heaven and earth. Forgive us when we chase after worthless things or let false fears control our hearts. Teach us to rest in Your great power and wisdom, knowing there is no one like You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God Versus the Idols",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-versus-idols"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "God does not just order us to obey blindly. He kindly explains why serving Him is for our good. Yahweh is the only living God and everlasting King. By His mighty power and deep wisdom, He made the whole universe and holds it together. Because He is the Maker of all things, no created object can compare to Him. Honoring Him frees us from fear and puts our trust where it truly belongs.",
+     "problem": "Neither Jeremiah 10:1-16 nor the devotional teaches that God 'holds it together' (referencing cosmic preservation/holding the universe together, an idea found in passages like Colossians 1:17 rather than this text)."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

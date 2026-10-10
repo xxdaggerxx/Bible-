@@ -1,0 +1,16 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://www.biblegateway.com/passage/?search=1%20Kings%2010%3A14-28&version=ESV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+10%3A14-23&version=NIV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+10%3A14-29&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+10%3A23-24&version=ESV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+10&version=CSB",
+  "https://www.biblegateway.com/passage/?search=1+Kings+10&version=NIV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+10&version=NIVUK",
+  "https://www.biblegateway.com/passage/?search=1+Kings+10&version=NKJV",
+  "https://www.biblegateway.com/resources/matthew-henry/1Kgs.10.14-1Kgs.10.29"
+ ],
+ "cost": 0.03794375,
+ "model": "google/gemini-3.8-flash"
+}

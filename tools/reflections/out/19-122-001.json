@@ -1,0 +1,81 @@
+{
+ "id": "19-122-001",
+ "title": "Pray for the Peace of Jerusalem",
+ "refs": [
+  "Psalms 122:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19122001,
+   "end": 19122009,
+   "ref": "Psalms 122:1-9",
+   "ranges": [
+    [
+     19122001,
+     19122009
+    ]
+   ],
+   "title": "Praying for Peace in God's House",
+   "key_verse": [
+    19122006,
+    19122006
+   ],
+   "reflect": [
+    {
+     "text": "Gathering with other believers brings true joy. In this psalm, David celebrated the unity and shared worship of God's people after seasons of strife. When we lose the chance to meet together, we realize just how precious corporate worship is. Even if illness or distance keeps us apart, we still belong to God's wider church and can join our hearts in praise.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "We are also commanded to pray for Jerusalem. World history and biblical prophecy are closely connected to this city, and Christians share a deep spiritual heritage through the Jewish people and the Scriptures. Praying for Jerusalem's peace honors God's word and points our eyes toward the promised return of Christ.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Genuine followers of God have a heart to build up his house and protect its harmony. As F. B. Meyer wrote, \"When the Church is at peace within herself, she flourishes best.\" When we pursue righteousness and peace together, the church grows strong. Our ultimate security and peace rest in Jesus Christ alone.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show greater appreciation for the blessing of gathering with your church family?",
+    "What is one practical way you can promote peace and unity among your fellow believers this week?"
+   ],
+   "prayer": "Lord God, thank you for the gift of worship and the church family you have placed us in. We ask for peace in Jerusalem and pray that your people may walk together in truth and love. Build up your church in unity, and anchor our hearts in Jesus as our only source of lasting peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 122:8",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Jack Graham",
+     "work": "Pray for Jerusalem!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-june-17-2010-11633350.html"
+    },
+    "D3": {
+     "author": "Robert VanDoodewaard",
+     "work": "The Joy of Going to the Lord’s House",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/the-joy-of-going-to-the-lords-house"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

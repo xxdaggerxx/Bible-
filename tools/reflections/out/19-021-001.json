@@ -1,0 +1,65 @@
+{
+ "id": "19-021-001",
+ "title": "After the Battle",
+ "refs": [
+  "Psalms 21:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19021001,
+   "end": 19021013,
+   "ref": "Psalms 21:1-13",
+   "ranges": [
+    [
+     19021001,
+     19021013
+    ]
+   ],
+   "title": "The King Who Trusts the Lord",
+   "key_verse": [
+    19021001,
+    19021001
+   ],
+   "reflect": [
+    {
+     "text": "David also spoke of a king receiving blessings forever and living in God's presence. These promises look beyond David to Jesus Christ. When God raised Jesus from the dead and brought Him to heaven, He gave Jesus the highest honor and majesty. Jesus is the true King who enjoys everlasting life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing Jesus is on the throne gives us great peace. The psalm reminds us that no enemy scheme can defeat God. We can be confident that King Jesus will overcome every opposing power in the end. As we look to Him, our faith can stand firm and unshaken.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When good things happen in your life, do you take the credit or thank God for His strength?",
+    "How does knowing Jesus has won the final victory give you courage today?"
+   ],
+   "prayer": "Lord God, thank You for the strength and victories You give us each day. We praise You for raising Jesus and crowning Him as our eternal King. Help us to trust in His power so that our faith will never be shaken. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God and King",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/god-and-king"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "David wrote this psalm to give thanks after battle. Instead of boasting about his own strength or skills, a true ruler of God's people rejoices in God's power. David knew that every military victory and royal blessing came straight from the Lord. He rested his heart on God's faithful love.",
+     "problem": "Neither the passage nor the devotional states that David wrote this psalm specifically to give thanks after a battle."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

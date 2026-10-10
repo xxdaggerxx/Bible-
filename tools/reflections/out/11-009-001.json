@@ -1,0 +1,74 @@
+{
+ "id": "11-009-001",
+ "title": "The LORD’s Response to Solomon",
+ "refs": [
+  "1 Kings 9:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 11009003,
+   "end": 11009005,
+   "ref": "1 Kings 9:3-5",
+   "ranges": [
+    [
+     11009003,
+     11009005
+    ]
+   ],
+   "title": "\"Walk Before Me with Integrity\"",
+   "key_verse": [
+    11009004,
+    11009004
+   ],
+   "reflect": [
+    {
+     "text": "Solomon built a magnificent temple, but human effort alone is not enough. As F. B. Meyer observed, \"Man builds; God hallows.\" We do the outward, daily work, but only God can make it sacred by filling it with His presence. Whether we are raising a child, serving others, or simply living each day, our greatest desire should be for God to set His eyes, heart, and name upon our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Along with God's presence, the Lord called Solomon to walk with uprightness of heart. When life goes well and we experience success, it is often harder to keep our spiritual balance than during hard times. Great accomplishments never give us an excuse to lower our standards or compromise. True integrity means being honest with our words, reliable with our money, and pure in our moral choices.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Building something lasting requires both God's blessing and personal obedience. We must offer our best efforts to God in humble reverence, trusting Him to do the work inside our hearts that we cannot do ourselves. Staying faithful in times of prosperity protects what God has given us and honors His holy name.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you guard your integrity in your words, finances, and daily choices when things are going well?",
+    "Are you relying on your own hard work, or are you asking God to hallow and fill your daily life?"
+   ],
+   "prayer": "Lord, thank You for dwelling with us and setting Your heart upon our lives. Keep us honest, faithful, and morally pure, especially when we enjoy success and ease. Hallow the work of our hands and help us to walk before You with integrity each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 9:3",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Balance, Part Two",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-january-17-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

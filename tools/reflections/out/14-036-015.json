@@ -1,0 +1,60 @@
+{
+ "id": "14-036-015",
+ "title": "The Fall of Jerusalem",
+ "refs": [
+  "2 Chronicles 36:15-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14036015,
+   "end": 14036021,
+   "ref": "2 Chronicles 36:15-21",
+   "ranges": [
+    [
+     14036015,
+     14036021
+    ]
+   ],
+   "title": "God's Compassion and Faithful Warnings",
+   "key_verse": [
+    14036015,
+    14036015
+   ],
+   "reflect": [
+    {
+     "text": "God did not rush to judge His people. Instead, He patiently sent messengers again and again to warn Judah. He did this because He felt deep compassion for them and for His dwelling place in Jerusalem. Even as judgment drew near, God graciously offered opportunities to lessen the destruction and preserve life. His warnings and discipline were not meant to be harsh for no reason; they reflected His mercy and His true desire that sinners turn back to Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Tragically, the people refused to listen. They mocked God's messengers, looked down on His words, and laughed at His prophets. Their rebellion continued until the Lord's anger rose against them beyond remedy. Jerusalem fell, the holy temple was burned, and the survivors were taken into exile in Babylon. This terrible loss proved that God is completely faithful to His word, keeping every covenant warning He had given to His people.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you respond when God uses His word or other believers to warn you about sin?",
+    "In what ways can you see God's patience and mercy in your own life today?"
+   ],
+   "prayer": "Lord God, thank You for Your great patience and compassion toward us. Forgive us for the times we ignore Your word or turn away from Your loving warnings. Help us to hear Your voice with humble hearts and quickly return to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God’s Appeal to His People",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-appeal-to-his-people"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

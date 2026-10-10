@@ -1,0 +1,130 @@
+{
+ "id": "19-036-001",
+ "title": "The Transgression of the Wicked",
+ "refs": [
+  "Psalms 36:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19036009,
+   "end": 19036009,
+   "ref": "Psalms 36:9",
+   "ranges": [
+    [
+     19036009,
+     19036009
+    ]
+   ],
+   "title": "\"In Your Light We See Light\"",
+   "key_verse": [
+    19036009,
+    19036009
+   ],
+   "reflect": [
+    {
+     "text": "We often try to find satisfaction in human advice, good feelings, or our own efforts. Sometimes God allows those earthly props to fail so that we run back to Him. Left to ourselves, human wickedness deceives us and leaves us blind to our real spiritual condition. True spiritual life flows only from God's grace, which is His unearned kindness. When our own resources run dry, He invites us to drink directly from His fountain and rest entirely in what Jesus has done for us.",
+     "sources": [
+      "D2",
+      "D5"
+     ]
+    },
+    {
+     "text": "In the same way, we cannot discover spiritual truth through human intellect alone. Just as the sun can be seen only by its own light, Christ must show Himself to us. As Charles Spurgeon observed, \"only by its own blaze can that mighty lamp be seen.\" By the Holy Spirit, God opens our eyes to understand Jesus and His love. His light cuts through our moral darkness, warns us of danger, and directs our steps in true spiritual vitality.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Where have you been looking for spiritual satisfaction or guidance instead of coming straight to God?",
+    "How has the Holy Spirit helped you see the truth and beauty of Jesus more clearly than human wisdom could?"
+   ],
+   "prayer": "Lord, thank You for being the fountain of living water when all our earthly comforts fail. Open our eyes by Your Holy Spirit so we may see the light of Christ clearly. Lead us out of spiritual blindness and guide our steps in Your truth today. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 16",
+     "on": "Psalms 36:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 4",
+     "on": "Psalms 36:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Jon Bloom",
+     "work": "The Light We Need to See: How Christ Dispels Spiritual Darkness",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/the-light-we-need-to-see"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19036001,
+   "end": 19036012,
+   "ref": "Psalms 36:1-12",
+   "ranges": [
+    [
+     19036001,
+     19036012
+    ]
+   ],
+   "title": "The Boundless Faithfulness of God",
+   "key_verse": [
+    19036005,
+    19036005
+   ],
+   "reflect": [
+    {
+     "text": "Life transitions and uncertain seasons often stir up anxiety and grief in our hearts. In Psalm 36, David looks at the chaos of human wickedness and turns his eyes upward to God's boundless character. God's loving devotion reaches higher than the heavens, and His faithfulness stretches into the clouds. Even when we cannot see the road ahead, we can rest quietly. Remembering how faithfully the Lord provided for us through past trials calms our fears, because His steady character never shifts.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Under the shelter of God's wings, believers find safety and an overflowing feast. The world offers scraps, but God welcomes His people to the royal table. As Charles Spurgeon noted, \"no child of God is ever served with scraps and leavings.\" Instead, the Lord abundantly satisfies us from His own house, giving us far more grace than we could ever ask for. Generation after generation comes to Him hungry, and His limitless love provides for every single one.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What past moments of God's faithfulness can you recall to help steady your heart during times of uncertainty?",
+    "How does knowing that God seats you at His own table change how you approach Him in prayer?"
+   ],
+   "prayer": "Faithful Father, Your steadfast love reaches higher than the heavens and gives us peace in changing times. Thank You for gathering us under Your wings and welcoming us to feast at Your table. Help us trust Your unending goodness and walk confidently in Your care today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 4",
+     "on": "Psalms 36:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Whitney Hopler",
+     "work": "Remembering God's Faithfulness Through Every Life Transition",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/remembering-gods-faithfulness-through-every-life-transition.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,99 @@
+{
+ "id": "17-004-001",
+ "title": "Mordecai Appeals to Esther",
+ "refs": [
+  "Esther 4:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 17004014,
+   "end": 17004014,
+   "ref": "Esther 4:14",
+   "ranges": [
+    [
+     17004014,
+     17004014
+    ]
+   ],
+   "title": "\"For Such a Time as This\"",
+   "key_verse": [
+    17004014,
+    17004014
+   ],
+   "reflect": [
+    {
+     "text": "Mordecai knew that God would rescue His people, even if help had to come from somewhere else. Yet he urged Esther not to stay quiet. When we face difficult or frightening moments, we may feel tempted to hide and keep silent to protect ourselves. Keeping quiet does not bring true safety, and it causes us to miss the chance to be used by God. If we refuse God's call, He will still fulfill His plans through someone else, but we will lose the blessing of serving Him.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "God intentionally places each of us into our specific time, family, and circumstances. You may feel small, weak, or flawed, just as Esther was an exiled orphan in a foreign palace. Yet God works through imperfect people and complex situations. We rarely know how things will turn out in advance, because God's guidance is often hidden from our sight. Still, as F. B. Meyer wrote, \"All these are parts of the Divine plan.\"",
+     "sources": [
+      "D1",
+      "D2",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Every believer faces a choice. We can cling to our own comfort, or we can surrender control to God and step forward in obedience. Even when results are uncertain, faith calls us to do what is right and take risks for God's kingdom. When we offer our lives to serve God rather than ourselves, He uses our trials for a greater purpose.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "Where has God placed you right now that gives you a chance to speak or act for Him?",
+    "What fear is tempting you to stay silent instead of obeying God?"
+   ],
+   "prayer": "Lord, thank You for placing us right where we are for Your good purposes. Forgive us when fear makes us want to hide or keep quiet. Give us faith to surrender our comfort, trust Your hidden hand, and follow You in obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Esther 4:14",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Emma Danzey",
+     "work": "For Such a Time as This",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/for-such-a-time-as-this-the-crosswalk-devotional.html"
+    },
+    "D3": {
+     "author": "Debbie McDaniel",
+     "work": "For Such a Time as This",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-january-17.html"
+    },
+    "D4": {
+     "author": "Jana Kelley",
+     "work": "Such a Time as This",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wholly-loved/wholly-loved-feb-28.html"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "For Such a Time as This",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/such-time"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

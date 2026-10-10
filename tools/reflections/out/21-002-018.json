@@ -1,0 +1,128 @@
+{
+ "id": "21-002-018",
+ "title": "The Futility of Work",
+ "refs": [
+  "Ecclesiastes 2:18-26"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21002024,
+   "end": 21002026,
+   "ref": "Ecclesiastes 2:24-26",
+   "ranges": [
+    [
+     21002024,
+     21002026
+    ]
+   ],
+   "title": "\"From the Hand of God\"",
+   "key_verse": [
+    21002024,
+    21002024
+   ],
+   "reflect": [
+    {
+     "text": "Many people spend their days working hard, hoping that achievements or money will bring deep happiness. Yet we cannot produce true, lasting peace on our own. Earthly labor and material wealth simply cannot buy authentic joy.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "God does not call us to refuse the good things in this life. The Bible does not ask us to turn away from every comfort. Instead, the ability to enjoy everyday gifts like simple meals, clean water, and daily work is an active blessing from God. True delight is impossible unless we have a relationship with Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we feel frustrated because earthly success does not last, we can look at the blessings God gives us right now. Instead of envying what others have, we can ask God for grace, His unearned kindness, to grant us contentment with our work and our daily portion.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to seek lasting satisfaction in your accomplishments rather than in God?",
+    "What simple gifts from God can you thank Him for and enjoy today?"
+   ],
+   "prayer": "Father, thank You for the daily blessings of food, drink, and meaningful work. Please give us hearts that find true joy in You rather than in worldly success. Teach us to be content with what You provide each day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "A Flash of Insight",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/a-flash-of-insight"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Joy in the Present",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/joy-present"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 21002018,
+   "end": 21002026,
+   "ref": "Ecclesiastes 2:18-26",
+   "ranges": [
+    [
+     21002018,
+     21002026
+    ]
+   ],
+   "title": "Rest for the Weary Heart",
+   "key_verse": [
+    21002023,
+    21002023
+   ],
+   "reflect": [
+    {
+     "text": "When Solomon turned his heart away from God, he threw himself into pleasure, laughter, building, and study. Yet none of those things could fill the emptiness within him. Without the Lord, human work ends in grief, sorrow, and restless nights.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Nothing can truly satisfy us except God. He created us for Himself, and our souls will remain restless until they find their rest in Him. Meyer compares this longing to a seashell on a shelf that still sighs for the ocean it came from.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We do not need to envy people who gain worldly wealth while living without God. Instead of falling into their quiet despair, we are invited to bring God into all of our living. He gives us innocent comforts along the road to refresh us, and then calls us forward to life's serious duties with our hearts anchored in Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you been looking to human achievements to give you peace that only God can provide?",
+    "How can you bring God into your daily routines so your heart finds rest?"
+   ],
+   "prayer": "Lord God, You made us for Yourself, and our hearts are restless without You. Help us not to look for complete satisfaction in the things of this world. Refresh our spirits and grant us peaceful rest in Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ecclesiastes 2:23",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

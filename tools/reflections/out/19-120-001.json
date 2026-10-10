@@ -1,0 +1,115 @@
+{
+ "id": "19-120-001",
+ "title": "In My Distress I Cried to the LORD",
+ "refs": [
+  "Psalms 120:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19120005,
+   "end": 19120005,
+   "ref": "Psalms 120:5",
+   "ranges": [
+    [
+     19120005,
+     19120005
+    ]
+   ],
+   "title": "\"Woe to Me That I Dwell in Meshech\"",
+   "key_verse": [
+    19120005,
+    19120005
+   ],
+   "reflect": [
+    {
+     "text": "It is hard when you must live or work alongside people who do not love God. You might feel like crying out in misery, wishing you could escape. Yet Charles Spurgeon reminds us that Jesus did not pray for you to \"be taken out of the world.\" God has placed you where you are for a purpose. Just as a doctor is needed most where people are sick, your life can shine God's truth among people who need help. Seek to live with such goodness and honesty that critics can find no real fault in you.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living among constant criticism and unkind words can feel lonely, but you are never truly on your own. Jesus walked this difficult road before you, so He understands your pain. Being surrounded by opposition can actually help your faith grow. It makes you more careful in your actions and draws you closer to God in prayer. The heavy trials you endure can become like wind in a ship's sails, carrying you toward the peace of God's presence.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can living among difficult people prompt you to pray more often?",
+    "In what ways can your everyday conduct point those around you to God's truth?"
+   ],
+   "prayer": "Lord, help us to stand firm when we must live and work among those who oppose You. Guard our conduct so that our lives honor You and give no reason for blame. Draw us close to You in prayer, and use us to show Your truth to others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 5",
+     "on": "Psalms 120:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 120:5",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19120001,
+   "end": 19120007,
+   "ref": "Psalms 120:1-7",
+   "ranges": [
+    [
+     19120001,
+     19120007
+    ]
+   ],
+   "title": "Crying to God in Our Distress",
+   "key_verse": [
+    19120001,
+    19120001
+   ],
+   "reflect": [
+    {
+     "text": "Life can bring seasons of deep grief that leave us feeling completely overwhelmed. Parents who face the serious illness or loss of a child carry a sorrow that words cannot easily describe. In times of profound trouble, we cry out to God from the depths of our pain. Even when our world seems shattered and we carry difficult questions that have no easy answers, God remains present. He knows our circumstances and never stops caring for us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When distress strikes, we can choose to hold fast to our faith and the truth of God's Word. Trusting the Lord brings a quiet peace that steady our hearts through the storm. We can rest in the comforting promise that our earthly sorrows are not the end of the story. God gives us the sure hope of an eternal reunion in heaven, where all pain and separation will finally be wiped away.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What promises from Scripture help you hold on to faith when life feels overwhelming?",
+    "How does the hope of an eternal reunion in heaven bring you comfort during seasons of grief?"
+   ],
+   "prayer": "Father, when deep sorrow and distress press upon us, remind us that You are present and attentive to our cries. Give us strength to cling to Your Word even when we carry unanswered questions. Grant us Your peace, and comfort our souls with the hope of heaven. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Dr. James Dobson",
+     "work": "He Is Still There",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobson-s-parenting-devotional-aug-3.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

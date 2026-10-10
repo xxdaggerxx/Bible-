@@ -1,0 +1,66 @@
+{
+ "id": "24-026-001",
+ "title": "A Warning to the Cities of Judah",
+ "refs": [
+  "Jeremiah 26:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24026001,
+   "end": 24026006,
+   "ref": "Jeremiah 26:1-6",
+   "ranges": [
+    [
+     24026001,
+     24026006
+    ]
+   ],
+   "title": "Choosing to Hear God's Voice",
+   "key_verse": [
+    24026003,
+    24026003
+   ],
+   "reflect": [
+    {
+     "text": "In Jeremiah 26, the Lord told the prophet Jeremiah to stand in the temple courtyard and speak His warning. God hoped the people of Judah would listen and turn away from their evil deeds. Judah's spiritual downfall began when they turned away from God's voice to follow false idols. They stopped caring about what their Creator wanted.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just like the people in Judah, we face a daily choice about who we will follow. Many different voices in the world compete for our attention every day. We need to examine which voices we actively listen to and obey. When we ignore God's Word, it shows that something else has gained the greatest influence in our hearts and lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To stay faithful, we must tune our spiritual ears to discern God's voice above all the noise. We show our love for God by intentionally matching our daily choices to the teachings of Scripture. When we follow His guidance, we keep Him first in our lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Which voices in your everyday life compete the most with God's Word?",
+    "What is one choice you can make today that matches the guidance of Scripture?"
+   ],
+   "prayer": "Lord, help us tune our ears to hear Your voice amid all the noise of this world. Forgive us for the times we let other influences lead us away from Your truth. Teach us to show our love for You through simple, daily obedience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - August 21",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-aug-21-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

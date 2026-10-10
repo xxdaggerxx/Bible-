@@ -1,0 +1,96 @@
+{
+ "id": "19-100-001",
+ "title": "Make a Joyful Noise",
+ "refs": [
+  "Psalms 100:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19100001,
+   "end": 19100005,
+   "ref": "Psalms 100:1-5",
+   "ranges": [
+    [
+     19100001,
+     19100005
+    ]
+   ],
+   "title": "Serving Our Good Shepherd with Gladness",
+   "key_verse": [
+    19100002,
+    19100002
+   ],
+   "reflect": [
+    {
+     "text": "The whole earth is summoned to worship the one true God with joyful songs. God made us, and we belong entirely to Him as sheep of His pasture. Just as a builder rightly lives in the house he made, God has every claim on our lives. Knowing that our Shepherd owns us and cares for us turns Christian obedience from an oppressive chore into an honorable and happy calling.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "True service to God must come from a cheerful heart. As Charles Spurgeon wrote, God \"would have his servants dressed in the livery of joy.\" When we work only out of forced duty or with complaints, our worship loses its life. Gladness keeps our spirits from growing tired, and living with visible joy shows those around us that our Master is good.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "We enter His presence with vocal thanksgiving rather than keeping silent. When gratitude feels hard, stepping forward in obedience helps joy return. Thinking highly of Christ's beauty and redeeming love stirs our affection for Him, leading us to praise Him boldly and give Him our whole hearts.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Does your daily service for God look like joyful freedom or a forced duty?",
+    "What helps you remember that you belong entirely to the Lord when you feel weary?"
+   ],
+   "prayer": "Lord God, You made us and we are Yours, the sheep of Your flock. Please forgive us for the times we serve You with grumbling or cold hearts instead of joyful praise. Fill our minds with high thoughts of Christ so that we may follow and honor You with gladness every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 9",
+     "on": "Psalms 100:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 5",
+     "on": "Psalms 100:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 100:3",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Choose Joy",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/choose-joy"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "Rejoicing Unto the Lord",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/rejoicing-unto-lord"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

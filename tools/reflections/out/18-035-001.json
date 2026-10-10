@@ -1,0 +1,82 @@
+{
+ "id": "18-035-001",
+ "title": "Elihu Recalls God’s Justice",
+ "refs": [
+  "Job 35:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18035010,
+   "end": 18035010,
+   "ref": "Job 35:10",
+   "ranges": [
+    [
+     18035010,
+     18035010
+    ]
+   ],
+   "title": "\"Songs in the Night\"",
+   "key_verse": [
+    18035010,
+    18035010
+   ],
+   "reflect": [
+    {
+     "text": "It is easy to praise God when life is bright and comfortable. When we enjoy good health, plenty of food, and peaceful days, praise comes naturally. But when trouble comes, when we face illness, or when we walk through a barren desert where nothing grows, we cannot create true joy by our own strength. Singing in the dark requires help that only God can supply.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Our darkness might be sleepless hours tossing on a pillow, grief over losing a loved one, or the chill of doubt and failure. In those lonely times, when friends fail to understand us and discouragement settles in, our Maker draws near. He lifts our eyes back to Himself and gives us a song of quiet hope, reminding us that He still cares for us.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even when every earthly comfort is taken away, hardship does not have to silence us. Like the prophet Habakkuk, who chose to rejoice in the Lord even when the fields produced no food and the stalls had no cattle, we can look to our Maker. We can wait on Him to give us songs of thanksgiving, even in our deepest night.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What kind of trial or darkness makes it hard for you to praise God right now?",
+    "How can you turn to your Maker today and ask Him for a song of hope?"
+   ],
+   "prayer": "Lord God, our Maker, thank you that you draw near to us in our darkest hours. When we are weighed down by sorrow, doubt, or weakness, help us fix our thoughts on you. Please fill our hearts with your peace and give us a song of thanksgiving, even when our earthly comforts fail.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 19",
+     "on": "Job 35:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 35:10",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Truth For Life",
+     "work": "Songs from God - Truth For Life - October 19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-october-19-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

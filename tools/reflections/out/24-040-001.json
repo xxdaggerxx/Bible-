@@ -1,0 +1,66 @@
+{
+ "id": "24-040-001",
+ "title": "Jeremiah Remains in Judah",
+ "refs": [
+  "Jeremiah 40:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24040001,
+   "end": 24040006,
+   "ref": "Jeremiah 40:1-6",
+   "ranges": [
+    [
+     24040001,
+     24040006
+    ]
+   ],
+   "title": "Choosing Faithfulness Over Comfort",
+   "key_verse": [
+    24040004,
+    24040004
+   ],
+   "reflect": [
+    {
+     "text": "The Babylonian commander gave Jeremiah a remarkable choice. He could travel to Babylon under royal protection and live in comfort, or he could stay behind in his ruined homeland. Even though the foreign commander recognized that God had brought judgment on the land, he allowed the prophet to decide his own future. Jeremiah chose to stay in Judah with the poor remnant who were left behind, turning away from worldly privilege to remain where God had called him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often face a similar crossroad in our own lives. The world invites us to pursue ease, safety, and personal comfort. Yet God may call us to stay in hard places or to serve people who are struggling. Choosing a path marked by difficulty does not come naturally to any of us. But when we look at our lives in the light of eternity, staying faithful to God is always what is best.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Following Christ requires a deliberate, daily decision. We cannot simply drift into obedience. We must decide on purpose to stand with God and His people, trusting Him even when our circumstances are painful.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you currently tempted to choose personal comfort over where God has called you to serve?",
+    "What intentional choice can you make today to follow the Lord through a difficult situation?"
+   ],
+   "prayer": "Lord, help us to choose obedience over our own comfort. Give us the courage to stay faithful in difficult places and to care for those in need. Teach us to trust that walking with You through affliction is far better than chasing worldly ease. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Daily Disciples Ministries",
+     "work": "What Is Your Choice?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-nov-7-2010-11640627.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

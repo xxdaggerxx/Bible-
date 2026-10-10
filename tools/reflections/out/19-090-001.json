@@ -1,0 +1,142 @@
+{
+ "id": "19-090-001",
+ "title": "From Everlasting to Everlasting",
+ "refs": [
+  "Psalms 90:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19090012,
+   "end": 19090012,
+   "ref": "Psalms 90:12",
+   "ranges": [
+    [
+     19090012,
+     19090012
+    ]
+   ],
+   "title": "\"Teach Us to Number Our Days\"",
+   "key_verse": [
+    19090012,
+    19090012
+   ],
+   "reflect": [
+    {
+     "text": "Our earthly life passes by far faster than we realize. God lives outside of time, but He has given each of us a limited number of days. When we face how brief our lives really are, we learn not to drift along. We stop squandering our fleeting time on empty distractions and laziness.",
+     "sources": [
+      "D2",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Gaining a heart of wisdom means seeing that our everyday choices carry eternal weight. God does not treat our short lives as unimportant. Because we have real limits in our time and energy, we cannot do everything. We need heavenly wisdom to say no to exhausting, lesser demands so we can say yes to what truly honors God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Each day is a gift from God, who is in control of all our time. God does not demand abilities we lack, but He expects us to invest our lives faithfully for Him, like the servants in the parable of the talents. When we number our days, we treat today as an opportunity to follow Jesus and bear spiritual fruit.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What distractions or lesser tasks might you need to say no to this week so you can focus on what truly matters to God?",
+    "How can you use the time and opportunities God has given you today to serve Him faithfully?"
+   ],
+   "prayer": "Lord, thank You for the gift of this day and for watching over the span of our lives. Teach us how brief our time on earth is so that we do not waste it on things that do not last. Give us wise hearts to make choices that honor You and bear fruit for Your kingdom. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "Life Is Too Brief to Waste: Learning to Number Our Days",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/life-is-too-brief-to-waste"
+    },
+    "D3": {
+     "author": "Ashley Moore",
+     "work": "A Prayer for the Best Use of Our Time - Your Daily Prayer - February 6",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-for-the-best-use-of-our-time.html"
+    },
+    "D4": {
+     "author": "Emily Rose Massey",
+     "work": "A Prayer to Use Your Time Wisely - Your Daily Prayer - July 25",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-to-use-your-time-wisely.html"
+    },
+    "D5": {
+     "author": "Greg Laurie",
+     "work": "Numbering Our Days: The Value of Today - Your Daily Bible Verse - December 28",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/numbering-our-days-the-value-of-today-bible-study-minute-december-31-2018.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19090001,
+   "end": 19090017,
+   "ref": "Psalms 90:1-17",
+   "ranges": [
+    [
+     19090001,
+     19090017
+    ]
+   ],
+   "title": "Satisfied in the Morning",
+   "key_verse": [
+    19090014,
+    19090014
+   ],
+   "reflect": [
+    {
+     "text": "Moses wrote this psalm near the end of the long wilderness journey. He drew on memories of desert life: the night watch by the campfire, the sudden mountain flood, the desert grass that sprouts after rain only to quickly wither in the heat, and the tired sigh of weary travelers. Looking back over his long life, Moses knew where true rest is found: the Lord alone is our dwelling place and refuge.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Moses prayed to be satisfied with God's mercy, His loving forgiveness, in the morning so he could rejoice throughout all his days. When we spend our early morning hours in fellowship with God, His presence fills us and spills over into every other part of the day. Choosing to wait quietly before Him brings a lasting brightness and peace that touches all we do.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This prayer also speaks to the morning of life, inviting children and young people to seek God's kindness in Christ. Starting early with the Lord leads to a life drinking from wells that never run dry. As F. B. Meyer noted of the saint Columba, a holy joy beamed on his face from the Holy Spirit, showing that a life anchored in God's mercy remains full of gladness even to the very end.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you set aside unhurried time with the Lord at the start of your day to seek His mercy?",
+    "In what ways can giving your life to God in your youth or early years bring lasting joy?"
+   ],
+   "prayer": "Lord, satisfy our hearts each morning with Your tender mercy and love. Fill us with Your Holy Spirit so that our joy may overflow through all of life's weary seasons. Help us to find our quiet refuge in You from our earliest days to our final years. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 90:14",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

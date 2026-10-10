@@ -1,0 +1,89 @@
+{
+ "id": "19-061-001",
+ "title": "You Have Heard My Vows",
+ "refs": [
+  "Psalms 61:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19061002,
+   "end": 19061003,
+   "ref": "Psalms 61:2-3",
+   "ranges": [
+    [
+     19061002,
+     19061003
+    ]
+   ],
+   "title": "\"Lead Me to the Rock\"",
+   "key_verse": [
+    19061002,
+    19061002
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes life overwhelms us. Heartbreak, grief, or our own weaknesses can roll over us like crashing ocean waves, leaving us completely drained. In those moments, we quickly discover that our human strength is not enough to carry such massive burdens. We cannot pull ourselves together or steer our own way through the storm.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "That is why we need to call out for a rock higher than ourselves. Charles Spurgeon called our unchanging God \"the harbour of weather-beaten sails.\" Imagine a traveler fainting under the scorching desert heat who discovers cool, lifesaving shade under a giant cliff. Christ is that shelter for us. His mercy is higher than our failures, and He rules over every storm. Because we are too weak to climb this high place on our own, God Himself gently leads us into His rest.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Jesus does not ask you to fix everything alone. Even during severe illness, deep grief, or heavy trials, the Lord stands as an unshakeable, strong tower. When you run straight to Him instead of turning inward in despair, you will find true peace and safety under His care.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy burden or storm in your life makes you feel faint or overwhelmed right now?",
+    "How can you let God lead you into His shelter instead of trying to carry everything in your own strength?"
+   ],
+   "prayer": "Lord God, lead me to the safety of Your presence whenever my heart feels faint. I admit that I cannot steer through these storms or carry these burdens by myself. Please be my strong tower and shelter my soul in Your peace today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 22",
+     "on": "Psalms 61:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 61:2",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Sarah Frazer",
+     "work": "When You Can’t Pull Yourself Together",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/when-you-cant-pull-yourself-together-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "Margaret D. Mitchell",
+     "work": "Strong Tower",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/a-womans-walk/strong-tower-god-s-love-at-work-week-of-march-2.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

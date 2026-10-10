@@ -1,0 +1,68 @@
+{
+ "id": "13-017-016",
+ "title": "David’s Prayer of Thanksgiving",
+ "refs": [
+  "1 Chronicles 17:16-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13017016,
+   "end": 13017027,
+   "ref": "1 Chronicles 17:16-27",
+   "ranges": [
+    [
+     13017016,
+     13017027
+    ]
+   ],
+   "title": "Do as You Have Promised",
+   "key_verse": [
+    13017023,
+    13017023
+   ],
+   "reflect": [
+    {
+     "text": "When God told David that he would not build the temple, David did not complain. God promised to build David an enduring family line instead, a promise fulfilled in Jesus Christ. David responded with quiet wonder and thanks. He asked who he was that God would bring him this far. Believers honor God by praising Him even when His answers change our personal plans. Like David, we can stand in awe of God's grace, the unearned kindness that gives us eternal life.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Seeing God's unmatched greatness quiets our pride and fills us with deep respect. David prayed with confidence because he rested on what God had already spoken. As F. B. Meyer wrote, in confident faith we can ask God to \"do as Thou hast said.\" David brought God's promise back to Him. He did not pray just for his own family, but asked that God's name would be lifted up and honored above all else.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually react when God's plans turn out differently from your own hopes?",
+    "When you pray, how can you focus more on God's glory than on your own wishes?"
+   ],
+   "prayer": "Lord God, thank You for Your great grace and the eternal life You have given us in Christ. Help us to accept Your will with humble hearts, even when it changes our personal plans. Teach us to stand on Your promises and pray that Your name will be honored in everything we do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 17:23-24",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 05/17/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-17-or-2002-1133436.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

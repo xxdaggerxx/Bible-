@@ -1,0 +1,93 @@
+{
+ "id": "14-025-005",
+ "title": "Amaziah’s Victories",
+ "refs": [
+  "2 Chronicles 25:5-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 14025009,
+   "end": 14025009,
+   "ref": "2 Chronicles 25:9",
+   "ranges": [
+    [
+     14025009,
+     14025009
+    ]
+   ],
+   "title": "\"The Lord Is Able to Give You Much More\"",
+   "key_verse": [
+    14025009,
+    14025009
+   ],
+   "reflect": [
+    {
+     "text": "King Amaziah had already paid a large sum of silver to hire soldiers from Israel, but God told him to send them away. Amaziah worried about the money he was about to lose. When obeying God threatens our income, our comforts, or our plans, we easily become anxious. It is hard to walk away from what we have already invested, but we cannot rely on ungodly partnerships or compromise our conscience just to protect our wallet.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The prophet gave a wonderful answer: God can give far more than whatever we give up. As Charles Spurgeon wrote, \"the Lord will be no man's debtor at the last.\" When we do God's work His way, we will never lack what we truly need. While this is not a promise of endless material wealth, God gives us peace of heart, heavenly treasure, and His faithful daily care.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "If you have made a mistake, it is far better to bear the loss than to act against God's will. What we surrender for Christ's sake is never truly lost. God loves to show His great power by carrying us through difficult moments when we let go of worldly supports and lean entirely on Him.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area of your life where you fear the cost of obeying God?",
+    "How does remembering that God provides for us give you peace to do what is right?"
+   ],
+   "prayer": "Lord, teach us to value walking with You far more than money or earthly security. Give us courage to let go of wrong compromises and to bear any loss that obedience requires. We trust that You are able to provide everything we need as we seek to follow You with a clear conscience. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 30",
+     "on": "2 Chronicles 25:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 24",
+     "on": "2 Chronicles 25:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 25:9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D4": {
+     "author": "Kevin DeYoung",
+     "work": "Kings of Judah: Amaziah’s God of Plenty",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/kevin-deyoung/kings-of-judah-amaziahs-god-of-plenty/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

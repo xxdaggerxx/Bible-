@@ -1,0 +1,75 @@
+{
+ "id": "23-028-023",
+ "title": "Listen and Hear",
+ "refs": [
+  "Isaiah 28:23-29"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23028023,
+   "end": 23028029,
+   "ref": "Isaiah 28:23-29",
+   "ranges": [
+    [
+     23028023,
+     23028029
+    ]
+   ],
+   "title": "Trusting the Wise Farmer",
+   "key_verse": [
+    23028029,
+    23028029
+   ],
+   "reflect": [
+    {
+     "text": "When life gets hard, it is easy to wonder why other people seem to have an easier path. We might question God's guiding care when we see unequal suffering in the world. To help us understand His ways, Isaiah points us to a farmer. A wise farmer does not treat every field or seed the exact same way. He plows only as long as needed, planting each seed in its proper place.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When harvest comes, the farmer uses different tools for different crops. Delicate cumin is beaten gently with a small stick, while heavier grain requires a cart wheel. Yet grain is never threshed forever. The farmer crushes the wheat not to destroy it, but to produce bread. In the same way, God knows each of us intimately. He carefully shapes our trials to train us and help us grow in holiness, never to ruin us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because God acts with perfect wisdom, we do not need to compare our hardships with anyone else's. We can trust our heavenly Farmer with how He tends our lives. Most of all, we know His loving purpose because Jesus Himself was crushed on the cross for us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you tempted to compare your hardships with the lives of other people?",
+    "How does knowing that God uses trials to produce good fruit help you trust Him today?"
+   ],
+   "prayer": "Lord, thank You for Your wise and gentle care over my life. Forgive me when I compare my struggles to others instead of trusting Your good purpose. Help me rest in Your wisdom, remembering that Christ was crushed in love for me. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Acts of Providence",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/acts-of-providence"
+    },
+    "D2": {
+     "author": "Brandon Cooper",
+     "work": "Isaiah 28 Teaches Us to Trust the Farmer",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/trust-farmer/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

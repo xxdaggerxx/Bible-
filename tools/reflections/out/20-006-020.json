@@ -1,0 +1,66 @@
+{
+ "id": "20-006-020",
+ "title": "Warnings against Adultery",
+ "refs": [
+  "Proverbs 6:20-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20006020,
+   "end": 20006035,
+   "ref": "Proverbs 6:20-35",
+   "ranges": [
+    [
+     20006020,
+     20006035
+    ]
+   ],
+   "title": "Guarding Your Heart Against Temptation",
+   "key_verse": [
+    20006023,
+    20006023
+   ],
+   "reflect": [
+    {
+     "text": "God gives us strong warnings about adultery because unfaithfulness shatters marriages and destroys family life. Scripture urges us to listen closely to these truths so we can protect our homes. Often, temptation begins when we neglect our everyday responsibilities and become idle. Having too much empty time leaves us bored and vulnerable to wrong desires.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Spiritual wandering and rebellion frequently begin in seasons of loneliness and isolation. When we cut ourselves off from others, we leave ourselves without any accountability. Without trusted people to answer to, it becomes much easier to make small moral compromises that quickly lead to deeper harm.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To stand strong, we must not walk through life alone. We need faithful Christian friends who love us enough to speak up and question questionable behavior. Welcoming this kind of honest accountability keeps us grounded in God's truth and protects us from walking toward ruin.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas of boredom or loneliness in your life where temptation might find an opening?",
+    "Do you have trusted Christian friends who are welcome to ask you hard questions about your choices?"
+   ],
+   "prayer": "Lord, thank you for your protective warnings in Scripture. Help us stay faithful in our daily duties and guard our hearts against idle boredom and isolation. Give us trusted friends who will ask honest questions, and give us humble hearts to receive their help. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 92: Proverbs 6:20–35",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-92-proverbs-6-2035.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

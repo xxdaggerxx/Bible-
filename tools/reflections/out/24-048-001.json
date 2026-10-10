@@ -1,0 +1,67 @@
+{
+ "id": "24-048-001",
+ "title": "Judgment on Moab",
+ "refs": [
+  "Jeremiah 48:1-47"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24048001,
+   "end": 24048047,
+   "ref": "Jeremiah 48:1-47",
+   "ranges": [
+    [
+     24048001,
+     24048047
+    ]
+   ],
+   "title": "Poured Out and Kept Humble",
+   "key_verse": [
+    24048011,
+    24048011
+   ],
+   "reflect": [
+    {
+     "text": "Moab lived in ease for many years, like wine left undisturbed on its bitter dregs. In wine-making, wine was poured from jar to jar so it would become sweet and clear. Because Moab was never shaken or poured out, its proud, harsh character stayed the same. God sometimes uses unexpected changes, trying situations, and shifted plans in our lives for the very same purpose. He moves us so we do not settle into proud self-complacency. When life changes, we do not need to fear, because God tenderly watches over the process so nothing precious is lost.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Pride brought destruction upon Moab. Arrogance blinds people to God's truth and pulls our focus away from the Lord toward ourselves. It is good to feel satisfaction when a task is finished, but we must give all the credit to God rather than taking praise for ourselves. The Lord does not need our help to accomplish His purposes, yet He kindly invites us to take part in His work. Starting each morning with humble prayer and closing each evening with gratitude helps keep our hearts from Moab's mistake.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When unexpected changes upset your comfortable routine, how can you trust God to use them to refine your character?",
+    "Do you remember to give God the credit at the end of the day for the work He has enabled you to do?"
+   ],
+   "prayer": "Lord, help us trust Your gentle care when You allow our plans to change and our lives to be poured out. Forgive us when we grow proud and focus on ourselves instead of You. Teach us to start our days in humble prayer and to thank You for every good thing You accomplish through us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 48:11",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - August 27",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-aug-27-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

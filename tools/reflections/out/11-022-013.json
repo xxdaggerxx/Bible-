@@ -1,0 +1,60 @@
+{
+ "id": "11-022-013",
+ "title": "Micaiah Prophesies against Ahab",
+ "refs": [
+  "1 Kings 22:13-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11022013,
+   "end": 11022028,
+   "ref": "1 Kings 22:13-28",
+   "ranges": [
+    [
+     11022013,
+     11022028
+    ]
+   ],
+   "title": "Speaking God's Truth with Courage",
+   "key_verse": [
+    11022014,
+    11022014
+   ],
+   "reflect": [
+    {
+     "text": "Many of us naturally lean toward polite agreeableness in our daily lives. We often avoid sharing hard truths simply because we do not want to displease others or cause friction. Micaiah felt intense pressure from the royal messenger to conform to the popular consensus of the day. All the other prophets were giving the king pleasant news, and Micaiah was urged to say the very same thing. Yet he refused to repeat popular opinions just to keep the peace.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Instead, Micaiah committed himself to speaking only what the Lord commanded, regardless of the personal cost. Speaking God's honest word led him straight into conflict, an unfair blow to the face, and a prison cell. We often worry that being disliked means we have failed, but facing disapproval from the world can actually be a sign of faithful allegiance to God. True Christlikeness requires real courage to hold to God's truth even when it provokes hostility.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When are you tempted to stay silent or agree with the crowd just to avoid conflict?",
+    "How can knowing God is with you give you courage to stand by the truth even when it is unpopular?"
+   ],
+   "prayer": "Lord, give us courage when we are tempted to choose easy agreement over your truth. Help us to stay faithful to you, even if doing what is right brings disapproval from others. Grant us the strength to follow you with honest boldness.",
+   "sources": {
+    "D1": {
+     "author": "Greg Morse",
+     "work": "Confrontational Christlikeness",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/confrontational-christlikeness"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

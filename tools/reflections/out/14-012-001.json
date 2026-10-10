@@ -1,0 +1,66 @@
+{
+ "id": "14-012-001",
+ "title": "Shishak Raids Jerusalem",
+ "refs": [
+  "2 Chronicles 12:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14012001,
+   "end": 14012012,
+   "ref": "2 Chronicles 12:1-12",
+   "ranges": [
+    [
+     14012001,
+     14012012
+    ]
+   ],
+   "title": "The Difference in Serving God",
+   "key_verse": [
+    14012008,
+    14012008
+   ],
+   "reflect": [
+    {
+     "text": "After King Rehoboam established his power, he and the people of Judah turned away from the Law of the Lord. Because of their unfaithfulness, God permitted King Shishak of Egypt to invade the land. When the king and his leaders humbled themselves, God chose not to destroy them completely. However, God allowed them to become Shishak's servants so they would learn the real difference between serving Him and serving earthly rulers.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Serving the Lord is completely different from serving the masters of this world. Human kings and worldly powers take your wealth, demand your strength, and leave you exhausted. But God has no needs of His own, and He never needs us to supply anything for Him. When we serve God, we are actually receiving His grace, which is His undeserved love and kindness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Obeying God is not a crushing chore. Earthly rulers drain their people, but our Heavenly Father blesses us and gives us everything we truly need. True worship and obedience are about joyfully receiving God's continual gifts day by day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do worldly things leave you feeling tired or drained?",
+    "How does knowing that God gives rather than takes change the way you worship Him?"
+   ],
+   "prayer": "Lord God, thank You that serving You is not an exhausting burden, but a joy. Forgive us when we turn toward worldly things that only drain our lives. Please help us to rest in Your grace and joyfully receive all the good things You provide. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John Piper",
+     "work": "The Gain of Serving God",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/the-gain-of-serving-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

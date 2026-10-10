@@ -1,0 +1,95 @@
+{
+ "id": "23-051-001",
+ "title": "Salvation for Zion",
+ "refs": [
+  "Isaiah 51:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23051001,
+   "end": 23051016,
+   "ref": "Isaiah 51:1-16",
+   "ranges": [
+    [
+     23051001,
+     23051016
+    ]
+   ],
+   "title": "Everlasting Comfort from Our Maker",
+   "key_verse": [
+    23051012,
+    23051012
+   ],
+   "reflect": [
+    {
+     "text": "When God calls us to remember our beginnings, it deflates our pride. Remembering the pit we were taken from reminds us that we are simply people saved by grace, God's kindness we do not deserve. The ancient exiles felt small and helpless, but God pointed them back to Abraham and Sarah. God multiplied one solitary man into an entire nation, showing that He has the power to do the impossible when we feel weak.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "God can transform a terrible desert into a fruitful garden. In our own lives, we were once like abandoned orphans, but He washed us and welcomed us into His family. In times of severe trouble, earthly supports may fail until we have only God left. Yet those trials can be a gift because they drive us directly into our Father's arms.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Knowing who God is frees us from fear. Human oppressors are frail and will wither away, but the Lord who comforts us laid the foundations of the earth. As Charles Spurgeon urged, we should \"treat men as men, and God as God.\" When we trust His everlasting strength, we can walk in peace without dreading the anger of others.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel weak or afraid of others, how does remembering what God has done in the past give you courage?",
+    "In what areas of your life do you need to stop fearing people and rest in God's strong arms?"
+   ],
+   "prayer": "Lord, thank You for taking us from our broken past and making us Your children. When troubles strip away our earthly props, help us run straight to Your arms. Forgive us when we fear mortal people and forget that You are our Creator. Teach us to rest quietly in Your comfort and strength today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 1",
+     "on": "Isaiah 51:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 31",
+     "on": "Isaiah 51:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 20",
+     "on": "Isaiah 51:12-13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Charles R. Swindoll",
+     "work": "Deflating Pride",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-february-25-2013.html"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "Power for the Impossible",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/power-impossible"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

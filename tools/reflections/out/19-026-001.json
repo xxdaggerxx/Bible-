@@ -1,0 +1,75 @@
+{
+ "id": "19-026-001",
+ "title": "Vindicate Me, O LORD",
+ "refs": [
+  "Psalms 26:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19026001,
+   "end": 19026012,
+   "ref": "Psalms 26:1-12",
+   "ranges": [
+    [
+     19026001,
+     19026012
+    ]
+   ],
+   "title": "Finding Our Home in God's Presence",
+   "key_verse": [
+    19026008,
+    19026008
+   ],
+   "reflect": [
+    {
+     "text": "We all carry a deep longing for a true home, a safe refuge that this world can never offer. When David suffered mistreatment, he did not pull away into bitterness. Instead, he turned toward God's house. Meeting with God where His glory lived gave David real life, not just an empty ritual. We also need worship with other believers to gain strength during our trials. If we neglect gathering together, our spiritual sharpness slowly fades away.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Drawing near to God also brings peace to our anxious thoughts. When we remember our past sins or see how weak our faith feels today, we might fear being swept away with evildoers in the end. Yet God welcomes weary believers into His presence solely by grace, His kindness that we could never earn. As Charles Spurgeon wrote, believers \"cannot be gathered with the wicked, for you are too dearly bought.\" Because Christ has redeemed us by His sacrifice, we belong securely to Him forever.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When hard times come, do you lean on the encouragement of gathered worship, or are you tempted to pull away?",
+    "How does knowing you are redeemed by Christ help quiet your worries about past failures?"
+   ],
+   "prayer": "Lord, thank You for providing a safe dwelling place in Your presence by Your grace. When difficulties tempt us to grow bitter or isolated, give us the desire to worship together and encourage one another. Please help us rest peacefully in the complete redemption Christ has won for us.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 21",
+     "on": "Psalms 26:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Staying Faithful Together",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/staying-faithful-together"
+    },
+    "D3": {
+     "author": "Dr. Michael A. Milton",
+     "work": "No Place Like Home",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/no-place-like-home-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

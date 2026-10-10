@@ -1,0 +1,135 @@
+{
+ "id": "23-046-001",
+ "title": "Babylon’s Idols",
+ "refs": [
+  "Isaiah 46:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23046003,
+   "end": 23046004,
+   "ref": "Isaiah 46:3-4",
+   "ranges": [
+    [
+     23046003,
+     23046004
+    ]
+   ],
+   "title": "\"I Have Made You, and I Will Carry You\"",
+   "key_verse": [
+    23046004,
+    23046004
+   ],
+   "reflect": [
+    {
+     "text": "Human parents raise their children to grow up and become independent. God works in the opposite way. He wants us to stay entirely dependent on Him from our first breath to our last. Self-reliance and human pride will always fail, but the tireless Creator never grows weak. Instead of lifting us only when our own strength runs out, the Father carries us across our whole lifetime.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because God made us, He understands the quiet weariness of our hearts. Seasons of heavy responsibility, such as caring for others, can easily drain our energy. Much of our exhaustion comes from trying to shoulder outcomes that only God can bear. True peace begins when we stop our anxious striving, let go of self-sufficiency, and quietly rest in His arms.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "As Charles Spurgeon noted, \"Hoar hairs tell of our decay, but He decayeth not.\" Even when age or infirmity makes us feel like a burden to others or to ourselves, the Lord will not cast us aside. He who carried us when we were young will bear us to the very end. God placed us in our circumstances, and in His great patience, He carries our weaknesses and sustains our souls.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries or heavy loads are you trying to carry in your own strength today?",
+    "How can trusting that God carries you help you face the limits of your age and energy?"
+   ],
+   "prayer": "Father, thank You for making me and promising to carry me throughout my entire life. Forgive me for trying to be self-sufficient and for carrying worries that belong to You. Teach me to rest quietly in Your arms, trusting that Your strength will sustain me to the end. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 29",
+     "on": "Isaiah 46:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 46:4",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Annie Yorty",
+     "work": "God Carries You",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/god-carries-you-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "Angie Grant",
+     "work": "A Prayer for the Weary Caregiver",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/a-prayer-for-the-weary-caregiver.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23046001,
+   "end": 23046013,
+   "ref": "Isaiah 46:1-13",
+   "ranges": [
+    [
+     23046001,
+     23046013
+    ]
+   ],
+   "title": "God's Purpose Will Stand",
+   "key_verse": [
+    23046010,
+    23046010
+   ],
+   "reflect": [
+    {
+     "text": "Life can suddenly confront us with deep grief, fear, or a painful trial like an incurable illness. In such hard times, it is easy to wonder if our purpose is broken or gone. Yet earthly sickness and difficult seasons can never derail God's sovereign plans for our lives. Our troubles do not have the final say.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "Our God declares the end from the very beginning. His eternal purpose will stand firm, and nothing in this world can overturn what He has planned. While suffering on earth hurts, we have the sure hope of a future completely free from pain. Remembering God's unchanging love and absolute control gives us daily strength to keep going.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What unexpected trouble or fear is making you question your future right now?",
+    "How does knowing that God declares the end from the beginning give you peace today?"
+   ],
+   "prayer": "Lord God, You know the end from the beginning, and nothing can stop Your good purpose. When pain and fear make my path feel uncertain, help me hold fast to Your sovereign power. Comfort my heart with the promise of Your unchanging love and eternal hope. Amen.",
+   "sources": {
+    "D5": {
+     "author": "Vivian Bricker",
+     "work": "A Prayer When You Are Faced with an Incurable Diagnosis",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-when-you-are-faced-with-an-incurable-diagnosis.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

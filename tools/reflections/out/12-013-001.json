@@ -1,0 +1,66 @@
+{
+ "id": "12-013-001",
+ "title": "Jehoahaz Reigns in Israel",
+ "refs": [
+  "2 Kings 13:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12013001,
+   "end": 12013009,
+   "ref": "2 Kings 13:1-9",
+   "ranges": [
+    [
+     12013001,
+     12013009
+    ]
+   ],
+   "title": "God's Mercy to an Unfaithful People",
+   "key_verse": [
+    12013005,
+    12013005
+   ],
+   "reflect": [
+    {
+     "text": "King Jehoahaz did what was evil and led Israel into sin. Because of this, God allowed the king of Aram to oppress them and crush their army. Yet when Jehoahaz pleaded for help, the Lord listened to his cry. God gave Israel a deliverer to rescue them from their enemies. This history shows us that God does not delight in destruction. Instead, He genuinely prefers to show mercy rather than anger.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though God showed great kindness that they did not deserve, Israel did not truly change. As soon as the danger passed and people were safe in their homes, they kept following the same old sins. They left their false idol pole standing in Samaria. They enjoyed God's relief, but they failed to show real gratitude by turning away from their wrongdoing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing that God is compassionate through Jesus Christ encourages us to turn to Him when we fail. Believers are called to actively show gratitude for God's mercy. We do this by turning away from the idols and selfish habits in our own lives, choosing to love and follow Him with all our heart.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How has God shown you kindness and relief when you did not deserve it?",
+    "What habits or false idols is God asking you to turn away from out of gratitude for His mercy?"
+   ],
+   "prayer": "Lord, thank You for Your patience and for hearing our cries even when we fail You. Forgive us for enjoying Your blessings while clinging to our sins. Help us to show true gratitude by turning away from our idols and following Jesus with our whole heart. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Mark Johnston",
+     "work": "God’s Mercy to Israel",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/Gods-Mercy-to-Israel"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

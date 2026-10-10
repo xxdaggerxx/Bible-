@@ -1,0 +1,128 @@
+{
+ "id": "14-020-014",
+ "title": "The Prophecy of Jahaziel",
+ "refs": [
+  "2 Chronicles 20:14-19"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 14020015,
+   "end": 14020015,
+   "ref": "2 Chronicles 20:15",
+   "ranges": [
+    [
+     14020015,
+     14020015
+    ]
+   ],
+   "title": "\"The Battle Does Not Belong to You\"",
+   "key_verse": [
+    14020015,
+    14020015
+   ],
+   "reflect": [
+    {
+     "text": "King Jehoshaphat faced impossible odds when an enormous coalition of invading armies marched toward Jerusalem. Instead of looking to human alliances for protection, the king led the nation in prayer, openly admitting that they were completely helpless. In our own lives, exhausting hardships and painful seasons often push us to the absolute end of our strength. When we feel trapped by overwhelming circumstances, our first step should always be turning entirely to God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God allows severe crises into our days to expose our hidden self-reliance and deepen our faith in Him. In our weakness, He speaks with authority and comfort, telling us not to fear or lose heart. He reminds us that the battle does not belong to us, but to Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Because the struggle is in God's hands, we do not have to run away from trouble. True peace comes from a quiet confidence that God will deliver us. We can stand firm and even praise Him before victory arrives, honoring His faithful care.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal trial is currently pushing you to the end of your own strength?",
+    "How can you hand that struggle over to God instead of relying on yourself?"
+   ],
+   "prayer": "Lord, we admit that we are weak and cannot win our battles alone. Thank You for reminding us that the outcome belongs to You. Help us to stand firm without fear, trusting Your faithful care in every trial. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "Do Not Be Afraid",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/do-not-be-afraid"
+    },
+    "D3": {
+     "author": "Sarah Freymuth",
+     "work": "The God Who Fights Our Battles",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-12-2003.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 14020014,
+   "end": 14020019,
+   "ref": "2 Chronicles 20:14-19",
+   "ranges": [
+    [
+     14020014,
+     14020019
+    ]
+   ],
+   "title": "The Lord Will Be with You",
+   "key_verse": [
+    14020017,
+    14020017
+   ],
+   "reflect": [
+    {
+     "text": "We can be certain God is with us when we walk with Him. We stay close to Him by trusting His faithfulness, believing His promises, and obeying His commands. If our daily aim is to honor God, we can be confident that He will honor us and stay by our side.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Most of all, we know the Lord is with us if Jesus is our only Saviour. When we place our souls into the hands of God's Son, the Father will use all His mighty power to preserve us. We can trust Him to walk with us everywhere, whether we are at home, at work, in a crowd, or all alone.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you relying solely on Jesus to save and keep your soul?",
+    "How does knowing God is with you in everyday places change how you face loneliness or fear?"
+   ],
+   "prayer": "Heavenly Father, thank You for promising to be with Your people wherever we go. We trust Jesus as our only Saviour and put our lives completely into His hands. Please stay close to us at home, at work, and in every quiet moment today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 5",
+     "on": "2 Chronicles 20:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [
+    {
+     "text": "When Jahaziel spoke to Judah, God gave them the comforting promise that He would be with them. King Jehoshaphat needed this mercy because he had no personal might or wisdom against the enemy. In the same way, we have great daily need of God's presence. If the Lord is truly with us, it matters very little who deserts us, and our greatest trials will lead to a glorious victory.",
+     "problem": "D1 states that this was a great mercy for Jehoshaphat because a great multitude had come out against him, whereas having 'no might or wisdom' was Spurgeon's description of his own condition, not Jehoshaphat's. Neither D1 nor 2 Chronicles 20:14–19 states that Jehoshaphat lacked personal might or wisdom."
+    }
+   ],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

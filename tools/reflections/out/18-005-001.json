@@ -1,0 +1,83 @@
+{
+ "id": "18-005-001",
+ "title": "Eliphaz Continues: God Blesses those Who Seek Him",
+ "refs": [
+  "Job 5:1-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18005001,
+   "end": 18005027,
+   "ref": "Job 5:1-27",
+   "ranges": [
+    [
+     18005001,
+     18005027
+    ]
+   ],
+   "title": "God Wounds and Binds Up",
+   "key_verse": [
+    18005018,
+    18005018
+   ],
+   "reflect": [
+    {
+     "text": "Eliphaz speaks words that hold deep biblical truth. He reminds Job that God's discipline can show His loving care, and that the God who wounds also binds up and heals our broken hearts. When hard times strike one after another like heavy blows, God sets a limit on our trials and promises to see us through every trouble.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Yet Eliphaz makes a painful mistake in how he uses these truths. He wrongly assumes that all suffering is God's punishment for some secret wrongdoing. True biblical wisdom means knowing what is true and applying it with care to each person's life. When we wrongly tell hurting people that their pain must be God's anger, we burden them with false guilt and cause needless distress.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Scripture shows that God also allows trials to build our patience and teach us that He is enough for us. Second causes and difficult people may bring us pain, but our loving Father is still in control of what touches our lives. The very hands that permit our sorrows are the tender hands that will restore and heal us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard times, do you quickly assume God is angry with you, or do you remember His loving desire to heal you?",
+    "How can you make sure you comfort suffering friends with gentle understanding instead of harsh assumptions?"
+   ],
+   "prayer": "Heavenly Father, help us trust Your good and wise care even when sorrows fall upon us. Guard our words so that we comfort those who hurt rather than adding to their burdens with false blame. Lay Your healing hands upon our wounds, and give us peace in Your unchanging love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 20",
+     "on": "Job 5:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 5:18",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Understanding God's Discipline",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/understanding-gods-discipline"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

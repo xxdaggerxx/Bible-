@@ -1,0 +1,67 @@
+{
+ "id": "24-035-012",
+ "title": "Judah Rebuked",
+ "refs": [
+  "Jeremiah 35:12-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24035012,
+   "end": 24035019,
+   "ref": "Jeremiah 35:12-19",
+   "ranges": [
+    [
+     24035012,
+     24035019
+    ]
+   ],
+   "title": "Standing Before God in Faithful Obedience",
+   "key_verse": [
+    24035019,
+    24035019
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God points out a striking contrast. The family of the Rechabites stayed completely faithful to the instructions given by their ancestor Jonadab. Yet God's own people repeatedly turned away from His voice, even though He sent His prophets to warn them again and again. It is common to see people hold tightly to family customs while ignoring the far higher claims of the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because the Rechabites were loyal to their forefather's command, God promised that they would never lack someone to stand before Him. If honoring a human ancestor brought such a lasting blessing, following the promptings of God's Holy Spirit brings an even greater hope. Through His mercy, God offers us and our children a place to stand before His face forever.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This gives believers great confidence to come to God in prayer. We can ask Him for grace, which is His undeserved help, to obey His words and walk in His ways. When we seek to follow Him faithfully, we can trust Him to guide our households so that future generations will know and honor Him as well.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there family traditions or personal habits that you find easier to keep than God's commands?",
+    "What steps can you take today to help your family learn to walk closely with the Lord?"
+   ],
+   "prayer": "Lord, give us grace to listen to Your voice and keep Your commands. Guard our hearts from ignoring You, and draw our children and families into Your presence. Teach us to honor You above all else each day.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 35:19",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

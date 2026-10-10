@@ -1,0 +1,66 @@
+{
+ "id": "24-035-001",
+ "title": "The Obedience of the Rechabites",
+ "refs": [
+  "Jeremiah 35:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24035001,
+   "end": 24035011,
+   "ref": "Jeremiah 35:1-11",
+   "ranges": [
+    [
+     24035001,
+     24035011
+    ]
+   ],
+   "title": "Holding Firm to What Is Right",
+   "key_verse": [
+    24035006,
+    24035006
+   ],
+   "reflect": [
+    {
+     "text": "When the prophet Jeremiah offered wine to the Rechabites, they politely refused. Their ancestor had told them never to drink wine or settle down in houses, and they had kept that rule for generations. As the devotional explains, this story is about much more than what people drink. It shows what it looks like to hold firmly to core convictions, even when an important leader invites you to do something else.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Rechabites showed steadfast faithfulness by keeping their family's command. In our lives, trials and hard moments test what our faith is really made of. Difficult situations reveal whether we will compromise under pressure or stand firm for what is true.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just as this family listened to their forefather, we are called to use God's Word as our unchanging standard for daily living. When we anchor our decisions in scripture, God gives us the strength to remain obedient and loyal to Him every day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face pressure to compromise your beliefs, how do you usually respond?",
+    "How can God's Word serve as your daily guide when making tough decisions?"
+   ],
+   "prayer": "Lord, help us to stand firm in our faith just as the Rechabites held to their convictions. When we face trials or pressure to compromise, give us the courage to obey your truth. Teach us to use your Word as our guide every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - August 24",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-aug-24-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

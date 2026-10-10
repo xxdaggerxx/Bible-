@@ -1,0 +1,74 @@
+{
+ "id": "15-003-001",
+ "title": "Sacrifices Restored",
+ "refs": [
+  "Ezra 3:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15003001,
+   "end": 15003007,
+   "ref": "Ezra 3:1-7",
+   "ranges": [
+    [
+     15003001,
+     15003007
+    ]
+   ],
+   "title": "Putting God First Despite Our Fears",
+   "key_verse": [
+    15003003,
+    15003003
+   ],
+   "reflect": [
+    {
+     "text": "When the exiles returned to Jerusalem, they knew they were vulnerable among hostile neighbors. Even though fear surrounded them, they gathered as one and rebuilt the altar of God first. They chose to make worship their top priority, even before they built their own homes or began laying the temple foundation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "These sacrifices were not just an empty habit or outward ritual. The people had a sincere desire to restore true fellowship with God. In obedience to the Law of Moses, they brought their daily offerings. Rather than depending on material self-reliance, they placed their confidence entirely in the Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Whenever we commit to God's work, we may meet opposition meant to divert our attention from prayer and Scripture. Yet each of us has a personal responsibility to fulfill the tasks God has ordained. Real obedience means stepping forward in trust, putting God first even when we feel afraid.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or distractions tempt you to put off spending time with God in prayer and Scripture?",
+    "How can you make worship and trust in the Lord your first priority today?"
+   ],
+   "prayer": "Lord, help us to seek you first even when we feel afraid or vulnerable. Teach us not to rely on our own strength, but to trust you completely. Keep our hearts sincere as we pray, read your Word, and carry out the work you have given us to do. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - June 2, 2011",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-june-2-2011.html"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Genesis 3, Matthew 3, Ezra 3, and Acts 3",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/genesis-3-matthew-3-ezra-3-acts-3/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

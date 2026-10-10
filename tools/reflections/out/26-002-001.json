@@ -1,0 +1,74 @@
+{
+ "id": "26-002-001",
+ "title": "Ezekiel’s Call",
+ "refs": [
+  "Ezekiel 2:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26002001,
+   "end": 26002010,
+   "ref": "Ezekiel 2:1-10",
+   "ranges": [
+    [
+     26002001,
+     26002010
+    ]
+   ],
+   "title": "Speaking God's Word in Hard Times",
+   "key_verse": [
+    26002007,
+    26002007
+   ],
+   "reflect": [
+    {
+     "text": "God called Ezekiel while the prophet was bowing humbly before His glory. The task God gave him seemed humanly impossible: to speak to a people who were stubborn and refused to listen. Yet God did not leave Ezekiel to rely on himself. The Lord's voice provided both the command and the spiritual power Ezekiel needed to stand up and obey. Even when people resist, God remains entirely in control of His purpose.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Ezekiel's calling was placed in very difficult times. God warned him that the people would feel like sharp thorns and scorpions because people often dislike anyone who challenges their wrong choices. When we must point out what is wrong, we need to do it with love, tenderness, and genuine sorrow, never acting superior. Before we can share God's message with others, we must also feed on His word ourselves so that our own hearts are nourished and shaped by it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Whether people choose to listen or walk away, our responsibility is simply to remain faithful. When we share God's truth without fear, people will recognize that God placed a true witness among them. Even in tough moments, we can stay close to Christ and find courage in His reassuring voice.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you feeding on God's word for your own heart before trying to guide or teach others?",
+    "When you face people who resist God's truth, do you rely on His strength and respond with gentle love?"
+   ],
+   "prayer": "Lord, give us the spiritual strength to stand and obey when following you feels difficult. Teach us to feed on your word each day so that our own lives are changed by your truth. When we must speak up for what is right, help us do so with humble love and gentle hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 2:6",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Crosswalk.com",
+     "work": "Mission: Impossible - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/mission-impossible-one-year-devotions-for-men-april-19.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

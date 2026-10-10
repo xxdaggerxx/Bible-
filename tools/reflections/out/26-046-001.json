@@ -1,0 +1,73 @@
+{
+ "id": "26-046-001",
+ "title": "The Prince’s Offerings",
+ "refs": [
+  "Ezekiel 46:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26046001,
+   "end": 26046018,
+   "ref": "Ezekiel 46:1-18",
+   "ranges": [
+    [
+     26046001,
+     26046018
+    ]
+   ],
+   "title": "Our Prince Who Goes With Us",
+   "key_verse": [
+    26046010,
+    26046010
+   ],
+   "reflect": [
+    {
+     "text": "In Ezekiel's vision, the prince has a special place near God's presence, yet he also identifies with the worshippers by entering alongside them and providing their offerings. These careful details look forward to Jesus Christ. Jesus is both fully God and fully man. Through His once-for-all sacrifice on the cross, He permanently fulfilled the need for animal offerings and led us into God's presence.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The passage also tells us that the prince enters when the people enter and leaves when they leave. When we come together to worship, we receive refreshment, strength, and spiritual food. Yet our worship is only sweet because our Prince, Jesus, is with us. His living presence is what makes the gathering a true feast.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot stay in worship forever; we must also go out into daily life with its duties, struggles, and trials. Yet we never walk out alone. As F. B. Meyer wrote, Christ \"never puts His sheep forth without going before them.\" No path of obedience or suffering is too steep, because our Savior has already walked it ahead of us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing Jesus is present with you change how you approach worship with other believers?",
+    "What difficult task or trial are you facing right now where you need to remember that Christ goes before you?"
+   ],
+   "prayer": "Lord Jesus, thank You for giving Yourself once for all to bring us safely into God's presence. Thank You for being with us whenever we gather to worship and praise You. As we step out into the work and trials of daily life, help us trust that You are always walking before us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 46:10",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Sacrifices of the Prince",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/sacrifices-prince"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

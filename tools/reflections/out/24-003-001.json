@@ -1,0 +1,66 @@
+{
+ "id": "24-003-001",
+ "title": "The Wages of the Harlot",
+ "refs": [
+  "Jeremiah 3:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24003001,
+   "end": 24003005,
+   "ref": "Jeremiah 3:1-5",
+   "ranges": [
+    [
+     24003001,
+     24003005
+    ]
+   ],
+   "title": "Keeping a Sensitive Conscience",
+   "key_verse": [
+    24003003,
+    24003003
+   ],
+   "reflect": [
+    {
+     "text": "In Jeremiah 3, the prophet uses startling and painful imagery to describe the unfaithfulness of God's people. Judah had turned away from the Lord to worship idols, yet they refused to feel any shame for their actions. Even when God withheld the rain as a discipline, they carried on boldly without showing any regret.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This passage warns us about what happens when people continually ignore God's truth and warnings. Over time, persistent rebellion leads to a hardened, seared conscience that no longer feels conviction over evil. Our subjective feelings do not always match moral reality before the Lord. It is entirely possible to feel untroubled inside while still being guilty of serious sin in God's sight.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because our feelings can easily mislead us, we must not rely on our emotions alone to judge right and wrong. We need the Word of God to constantly train and recalibrate our consciences. By reading and listening to Scripture, we allow the Lord to keep our hearts sensitive to sin so we can quickly turn back to Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas of your life where you have become numb to things God calls sin?",
+    "How can spending time in Scripture each day help keep your conscience tender toward God?"
+   ],
+   "prayer": "Lord, forgive us for the times we ignore your warnings and make excuses for our wrongdoing. Please use your Word to shape our thoughts and keep our consciences clear and tender. Teach us to see our actions through your truth rather than our own feelings. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A Guilty Conscience",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/a-guilty-conscience"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

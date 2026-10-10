@@ -1,0 +1,148 @@
+{
+ "id": "20-030-001",
+ "title": "The Words of Agur",
+ "refs": [
+  "Proverbs 30:1-33"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20030008,
+   "end": 20030008,
+   "ref": "Proverbs 30:8",
+   "ranges": [
+    [
+     20030008,
+     20030008
+    ]
+   ],
+   "title": "\"Give Me Neither Poverty Nor Riches\"",
+   "key_verse": [
+    20030008,
+    20030008
+   ],
+   "reflect": [
+    {
+     "text": "In this prayer, Agur asks to be kept far away from empty lies. We often think satisfaction comes from what this world offers, but true peace is found only near the Lord. As Charles Spurgeon wrote, \"The happiest state of a Christian is the holiest state.\" When we drift from God and try to fill our souls with worldly trifles, we leave ourselves exposed to spiritual danger. Walking closely with God is where our true safety and joy remain.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Agur also asks for the bread that belongs to him, wanting neither crushing poverty nor excessive riches. Our heavenly Father knows exactly what our bodies need to survive and do His work. He also knows the deeper hunger of our hearts for love, peace, and fellowship with Him. In God's storehouse, our daily portion is already prepared. We do not need to hoard or worry, because God is faithful to supply what each day requires.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to look for satisfaction instead of seeking Christ?",
+    "How does trusting God for your daily bread help keep you from worry or greed?"
+   ],
+   "prayer": "Lord, keep our hearts away from hollow lies and draw us close to You. Give us each day the food and comfort that we truly need. Teach us to be content with our portion and to rest in Your faithful care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 13",
+     "on": "Proverbs 30:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 30:8",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 20030001,
+   "end": 20030033,
+   "ref": "Proverbs 30:1-33",
+   "ranges": [
+    [
+     20030001,
+     20030033
+    ]
+   ],
+   "title": "Finding True Wisdom and Shelter",
+   "key_verse": [
+    20030005,
+    20030005
+   ],
+   "reflect": [
+    {
+     "text": "Agur begins by recognizing human limits, showing that our understanding is small compared to the Creator. In a world that often treats truth as personal opinion, God's word stands out as completely pure, reliable, and solid. The structured lists in Proverbs 30 invite us to study the created world and see God's hand at work. Everything from human thought to the wonder of love is a divine gift, leaving no room for proud self-reliance.",
+     "sources": [
+      "D4",
+      "D7"
+     ]
+    },
+    {
+     "text": "God has placed practical wisdom even within tiny creatures. Ants have little strength, yet they thrive by working together and preparing ahead, showing how believers should unite their different gifts in the church. In the same way, the fragile lizard quietly enters royal palaces through simple, practical helpfulness. Even when we feel small or limited, we can honor God by being quietly useful to others wherever He places us.",
+     "sources": [
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "We also see the rock badger, a defenseless creature that makes its home deep within rocky crags. Spurgeon noted that the rock badger hides in shelter it did not build: \"In Jesus the weak are strong, and the defenceless safe.\" We cannot build our own salvation, but Christ has already provided a shelter for our weak souls. When life feels dangerous, faith leads us straight into His strong, unchanging care.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you use your God-given abilities to serve others in the church this week?",
+    "In what areas of weakness do you need to take refuge in Christ rather than trusting in yourself?"
+   ],
+   "prayer": "Heavenly Father, thank You for the truth and purity of Your holy word. We admit our weakness and turn to Christ as our safe, eternal refuge. Help us to live with quiet humility, working together and serving others with the gifts You have given us. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 20",
+     "on": "Proverbs 30:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Adrian Rogers",
+     "work": "Is 'Truth' Up for Grabs?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-april-24-2020.html"
+    },
+    "D5": {
+     "author": "Ligonier Ministries",
+     "work": "Small but Wise",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/small-wise"
+    },
+    "D6": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Helpfulness",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/helpfulness"
+    },
+    "D7": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Proverbs 30",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/leviticus-16-psalm-19-proverbs-30-1-timothy-1/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

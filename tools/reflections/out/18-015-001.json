@@ -1,0 +1,82 @@
+{
+ "id": "18-015-001",
+ "title": "Eliphaz: Job Does Not Fear God",
+ "refs": [
+  "Job 15:1-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18015001,
+   "end": 18015035,
+   "ref": "Job 15:1-35",
+   "ranges": [
+    [
+     18015001,
+     18015035
+    ]
+   ],
+   "title": "Offering Grace Instead of Harsh Words",
+   "key_verse": [
+    18015004,
+    18015004
+   ],
+   "reflect": [
+    {
+     "text": "Eliphaz opens this second round of speeches by attacking Job. Instead of listening to Job's honest pain, Eliphaz leans on the tradition of the elders to claim that Job is ruining reverence for God. Job was already mourning the sudden loss of his children, yet his friend kicked him while he was down. Eliphaz insisted that because God is holy, suffering is always divine punishment, wrongly concluding that Job's pain proved hidden wickedness.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Eliphaz made these stinging charges without knowing the truth about Job. He did not know about Job's faithful habit of intercession—praying on behalf of others—before these trials began. Graceless people often jump to conclusions and write off those who are hurting. Because we rarely know the deep, personal grief someone else is fighting, Charles Swindoll reminds us that \"demonstrating grace is always appropriate and needed.\"",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even though Eliphaz was wrong about Job, his warning about restraining prayer can serve as a helpful check for us. It is easy to let our private prayer time slip away when we are busy. We can also neglect praying with our church family or in our homes. Instead of judging others like Eliphaz did, we need to bring our own hearts to God in prayer and speak words that comfort the weary.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone around you is hurting, how can you offer them grace rather than unhelpful judgment?",
+    "In what ways can you protect your daily time of private prayer with the Lord?"
+   ],
+   "prayer": "Lord, teach us to speak with grace and kindness toward people who are hurting. Forgive us for the times we judge others without knowing their quiet struggles. Draw us into honest, daily prayer with You, and help us encourage those in need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 15:4",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Needed Grace",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-oct-15-2008-11582941.html"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Job 15",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/genesis-49-luke-2-job-15-1-corinthians-3/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

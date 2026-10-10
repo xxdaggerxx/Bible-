@@ -1,0 +1,61 @@
+{
+ "id": "12-016-010",
+ "title": "The Idolatry of Ahaz",
+ "refs": [
+  "2 Kings 16:10-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12016010,
+   "end": 12016020,
+   "ref": "2 Kings 16:10-20",
+   "ranges": [
+    [
+     12016010,
+     12016020
+    ]
+   ],
+   "title": "Looking to Heaven for Our Pattern",
+   "key_verse": [
+    12016010,
+    12016010
+   ],
+   "reflect": [
+    {
+     "text": "When King Ahaz visited Damascus, he was impressed by a heathen altar. He quickly sent the plans home so his priest could copy it for the temple of the Lord. As humans, we naturally tend to imitate what we see around us. Yet worldly styles and trends quickly fade away, just like clouds at sunset. We can easily fall into the same trap as Ahaz, copying the latest fashions of the world and bringing them into our worship and walk with God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God calls us to follow His heavenly design rather than copying the culture around us. The church has no need to borrow methods, principles, or ideas from the world to do God's work. As F. B. Meyer explains, \"the best cure for worldliness is not unworldliness, but other-worldliness.\" We are traveling toward a heavenly home, so we should shape our thoughts, words, and daily habits by God's pattern rather than by worldly standards.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to copy the habits or values of the world around you?",
+    "How can focusing on your heavenly home help you choose God's ways instead of passing trends?"
+   ],
+   "prayer": "Heavenly Father, forgive us when we look to the world for our patterns instead of looking to You. Help us to fix our eyes on our true home in heaven and to shape our words and actions by Your truth. Guide our church to follow Your ways rather than chasing the trends of this world. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 16:10",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

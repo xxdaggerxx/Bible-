@@ -1,0 +1,66 @@
+{
+ "id": "17-003-001",
+ "title": "Haman’s Plot against the Jews",
+ "refs": [
+  "Esther 3:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 17003001,
+   "end": 17003015,
+   "ref": "Esther 3:1-15",
+   "ranges": [
+    [
+     17003001,
+     17003015
+    ]
+   ],
+   "title": "God at Work in Dark Times",
+   "key_verse": [
+    17003015,
+    17003015
+   ],
+   "reflect": [
+    {
+     "text": "In Esther 3, Haman manipulated the Persian king into issuing a cruel decree. This law commanded that all Jewish people across the empire be completely wiped out. Because Persian royal laws could not be changed, this seemed like a final death sentence with no way of escape. The sudden news threw the capital city of Susa into confusion, plunging the entire Jewish community into deep sorrow and despair.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "From an earthly point of view, the situation was completely helpless. Yet even in the darkest moments, God is never asleep. He remains sovereign over all rulers and world events, meaning He still holds the ultimate control. History is never out of His hands, even when evil decrees seem to have the final say.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God orchestrates history by preparing individuals who are willing to take risks and stand in the gap for others. When we face times of uncertainty or fear, we can remember that God is quietly at work behind the scenes. He sees what is happening and invites us to trust Him and step forward in faith.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When bad news or hard times make you feel helpless, what helps you remember that God is still in control?",
+    "How might God be calling you to take a risk and stand up for someone in need today?"
+   ],
+   "prayer": "Lord God, help us to trust You when life feels confusing and out of our control. Remind us that You are never asleep and that You rule over every circumstance. Give us courage to stand in the gap and care for others when times are dark. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Make a Difference - Today's Insight - March 11, 2024",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-march-11-2024.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,140 @@
+{
+ "id": "19-018-001",
+ "title": "The LORD Is My Rock",
+ "refs": [
+  "Psalms 18:1-50"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19018001,
+   "end": 19018003,
+   "ref": "Psalms 18:1-3",
+   "ranges": [
+    [
+     19018001,
+     19018003
+    ]
+   ],
+   "title": "\"The LORD Is My Rock\"",
+   "key_verse": [
+    19018002,
+    19018002
+   ],
+   "reflect": [
+    {
+     "text": "When someone is deeply in love, they naturally reach for rich pictures to express what their heart feels. David loved the Lord and poured out description after description, calling Him his rock, fortress, shield, and deliverer. Our obedience to God is not meant to be just keeping a list of rules. It grows out of genuine love for who He is and what He has done for us. Thinking about how God protects and provides for us stirs our hearts to love Him more.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Life often shifts around us, and a person can look calm on the outside while struggling deeply underneath. Trusting God as our solid foundation brings lasting peace that does not depend on changing circumstances. Daily habits of prayer and reading Scripture help us focus on His presence and hear His voice. Difficult times will come, but they will not destroy a life rooted in God. Instead, those trials show just how strong our foundation truly is.",
+     "sources": [
+      "D5",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face changing circumstances, how can remembering God as your rock bring you peace?",
+    "What daily habit, like quiet prayer or reading Scripture, can help you rest more securely in His care?"
+   ],
+   "prayer": "Lord God, thank You for being our rock, our fortress, and our safe refuge. Help our obedience to grow out of sincere love and gratitude for all You are. When storms shake our world, keep our hearts calm and firmly anchored in Your unchanging strength. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Metaphors of Love",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/metaphors-of-love"
+    },
+    "D5": {
+     "author": "Angie Grant",
+     "work": "God Is Your Strong Foundation",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/god-is-your-strong-foundation.html"
+    },
+    "D6": {
+     "author": "Whitney Hopler",
+     "work": "God Is Our Rock",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/god-is-our-rock.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19018001,
+   "end": 19018050,
+   "ref": "Psalms 18:1-50",
+   "ranges": [
+    [
+     19018001,
+     19018050
+    ]
+   ],
+   "title": "God's Light and Gentle Strength",
+   "key_verse": [
+    19018035,
+    19018035
+   ],
+   "reflect": [
+    {
+     "text": "At times, deep gloom settles over our souls, and no human effort can chase the shadows away. Yet the Lord promises to bring light into our gloom. As Charles Spurgeon wrote, \"He can enlighten my darkness, and at once light my candle.\" The flame God kindles cannot be blown out by trouble, nor will it run out of fuel. Because He is our light, we can have quiet hope and praise Him even in the dark.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When daunting challenges stand in front of us, we often defeat ourselves by thinking we cannot manage. Real faith is not just trying to think positive thoughts. It is trusting God's power to keep His promises. With His help, we can face giant obstacles and scale walls that seemed impossible, because our eyes are fixed on His strength rather than the storm.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Even with all His mighty power, God treats us with great tenderness. If He showed His majesty without stooping down to our level, we would be crushed. Instead, His gentle guidance, patience, and fatherly care lift us up. Any true strength or growth we have comes not from our own goodness, but from God's loving goodness to us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What dark situation or difficult obstacle in your life do you need God to brighten and help you face today?",
+    "How have you experienced the Lord's gentle patience and correction in your life?"
+   ],
+   "prayer": "Heavenly Father, thank You for lighting our path when life feels dark and uncertain. Give us faith to look past our fears and trust in Your mighty promises. Thank You for Your gentle care and patience that lift us up and keep us standing every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 9",
+     "on": "Psalms 18:35",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 27",
+     "on": "Psalms 18:28",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Jeff Schreve",
+     "work": "Can't Never Could Do Anything",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-august-18.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

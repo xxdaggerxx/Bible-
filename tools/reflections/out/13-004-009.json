@@ -1,0 +1,85 @@
+{
+ "id": "13-004-009",
+ "title": "The Prayer of Jabez",
+ "refs": [
+  "1 Chronicles 4:9-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13004009,
+   "end": 13004010,
+   "ref": "1 Chronicles 4:9-10",
+   "ranges": [
+    [
+     13004009,
+     13004010
+    ]
+   ],
+   "title": "A Bold Prayer in Pain",
+   "key_verse": [
+    13004010,
+    13004010
+   ],
+   "reflect": [
+    {
+     "text": "Jabez was given a name that meant pain, yet he did not let that painful label define his life. Often, the greatest comforts and blessings in the world are born out of deep sorrow. God can use our distress and difficult times to stretch us, not to harm us, but to fill us with more of Himself.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Instead of staying trapped in his past, Jabez prayed boldly to a big God. His heart was honorable, seeking God's grace rather than selfish gain. He asked for true spiritual blessings and a wider sphere of influence to serve God. As F. B. Meyer wrote, God supports us just as a father \"puts his hand on the boy's hand\" to help him pull back a bow.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jabez also asked God to keep him safe from harm and evil. When temptation or worry presses against us, God's peace and grace stand guard over our hearts. God heard Jabez and answered his request, breaking the hold of his painful beginning. We can bring our own hurts to God, trusting Him to enlarge our lives and keep us secure.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there painful labels or memories from your past that you need God to lift from you?",
+    "What bold prayer can you pray today to ask God to widen your influence for Him?"
+   ],
+   "prayer": "Lord God, thank You that our past pain does not limit what You can do in our lives. Please bless us with Your spiritual gifts and enlarge our influence for Your kingdom. Place Your strong hand on ours to guide us, and guard our hearts against every evil. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 4:9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Adrian Rogers",
+     "work": "God May Use Distress to Expand Your Influence",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-october-30-2020.html"
+    },
+    "D3": {
+     "author": "Sharon Jaynes",
+     "work": "What's in a Name?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-12-30-04-1301396.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "14-032-024",
+ "title": "Hezekiah’s Illness and Recovery",
+ "refs": [
+  "2 Chronicles 32:24-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 14032031,
+   "end": 14032031,
+   "ref": "2 Chronicles 32:31",
+   "ranges": [
+    [
+     14032031,
+     14032031
+    ]
+   ],
+   "title": "\"God Left Him to Test Him\"",
+   "key_verse": [
+    14032031,
+    14032031
+   ],
+   "reflect": [
+    {
+     "text": "Hezekiah had received great blessings from the Lord, but quiet pride and self-reliance began to grow in his heart. When messengers arrived from Babylon, God stepped back and withdrew His active help to test what was truly inside the king. As Charles Spurgeon reminds us, \"like the moon, we borrow our light.\" We have no spiritual brightness of our own. Without the Lord shining upon us, we are completely in the dark.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This test shows us how fragile our own strength really is. Even the most faithful and devoted believer would fall into deep sin if left entirely alone. Without God's grace, which is His undeserved kindness and power at work in us, our love would quickly grow cold and our steps would wander into evil. We cannot rely on past victories or our own good intentions to keep us standing.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because we depend completely on God, we must continually ask Him to hold us safe. We need His preserving hand in successful times so we do not become proud, and in hard times so we do not complain. Through every stage of life, from our youth to our old age, we need the Lord to uphold us in all that we do.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to depend on your own strength rather than on God's help?",
+    "How can you remind yourself daily that any good fruit in your life comes entirely from the Lord?"
+   ],
+   "prayer": "Lord, please do not leave us to our own strength, for we cannot stand without You. Protect our hearts from pride when life goes well, and sustain us through every trial. Keep us close to You in every season of life until our journey is complete. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 29",
+     "on": "2 Chronicles 32:31",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth For Life",
+     "work": "Trust in God Alone - Truth For Life - June 29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-june-29-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "26-033-021",
+ "title": "Word of Jerusalem’s Fall",
+ "refs": [
+  "Ezekiel 33:21-33"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26033021,
+   "end": 26033033,
+   "ref": "Ezekiel 33:21-33",
+   "ranges": [
+    [
+     26033021,
+     26033033
+    ]
+   ],
+   "title": "Hearing and Doing God's Word",
+   "key_verse": [
+    26033032,
+    26033032
+   ],
+   "reflect": [
+    {
+     "text": "God laid His hand on Ezekiel to strengthen him and open his mouth before the news arrived. The touch of the Lord can come as a loving correction or as a lifting up of our inner life. When God's hand rests on us, it calms our troubled thoughts, subdues our sins, and draws our attention away from earthly cares toward eternal things. We need His healing and strengthening touch each day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet the people who listened to Ezekiel treated God's message merely as entertainment. They enjoyed listening to him as if he were singing pleasant songs, but their hearts stayed attached to selfish gain. As F. B. Meyer observed, they admired the prophet's speech \"without penetrating to the spiritual depth\" of the message. They were content to listen, but they did not put God's truth into practice.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "It is dangerously easy to listen to God's word with our ears while keeping our hearts far from Him. We can miss the true worth of God's messengers and warnings by focusing only on the surface. Instead of treating Scripture as pleasant background noise, we need the Lord's hand to touch our inner life so that we truly obey what He speaks to us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you listen to God's word merely to be encouraged, or do you actively put it into practice?",
+    "Where do you need the Lord's hand to quiet your heart and turn your attention toward eternal things?"
+   ],
+   "prayer": "Lord, lay Your strengthening hand upon us and calm our restless hearts. Forgive us when we treat Your truth as casual entertainment instead of obeying what You say. Help us not only to hear Your voice, but to walk faithfully in Your ways.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 6",
+     "on": "Ezekiel 33:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 33:33",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

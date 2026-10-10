@@ -1,0 +1,60 @@
+{
+ "id": "14-032-001",
+ "title": "Sennacherib Invades Judah",
+ "refs": [
+  "2 Chronicles 32:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14032001,
+   "end": 14032008,
+   "ref": "2 Chronicles 32:1-8",
+   "ranges": [
+    [
+     14032001,
+     14032008
+    ]
+   ],
+   "title": "A Greater One With Us",
+   "key_verse": [
+    14032008,
+    14032008
+   ],
+   "reflect": [
+    {
+     "text": "Even when we follow God faithfully, we can still face sudden and frightening attacks from powerful adversaries. King Hezekiah had honored the Lord with his life, yet a massive enemy army invaded Judah to conquer it. Hezekiah did not freeze or surrender to fear. Instead, he took practical defensive steps. He worked with his leaders to block the water springs outside Jerusalem, rebuilt the broken city walls, and made shields and weapons.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At the same time, Hezekiah knew that walls and weapons could never save them on their own. Worldly strength is always limited because it relies only on an arm of flesh, meaning weak human power. Real and lasting courage comes from trusting that God is present with us. The Lord is greater than any threat we meet, and He fights our battles for us. When trials press in, our greatest weapon is a tender heart that turns to God in earnest prayer.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When unexpected troubles arrive, do you tend to rely only on human strength or do you turn to God first?",
+    "How can remembering that God is present and fights your battles give you peace today?"
+   ],
+   "prayer": "Lord God, thank You for being with us whenever hard trials come. Help us to take wise steps without placing our trust in human strength alone. Give us tender hearts that turn quickly to You in prayer. We rest in Your promise to fight our battles for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Daily Disciples Ministries",
+     "work": "Daily Disciples - June 9, 2011 (The Arm of Flesh)",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-disciples/daily-disciples-june-9-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

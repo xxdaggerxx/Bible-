@@ -1,0 +1,75 @@
+{
+ "id": "14-033-010",
+ "title": "Manasseh’s Repentance and Restoration",
+ "refs": [
+  "2 Chronicles 33:10-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14033010,
+   "end": 14033020,
+   "ref": "2 Chronicles 33:10-20",
+   "ranges": [
+    [
+     14033010,
+     14033020
+    ]
+   ],
+   "title": "Never Despair of God's Mercy",
+   "key_verse": [
+    14033013,
+    14033013
+   ],
+   "reflect": [
+    {
+     "text": "King Manasseh was guilty of terrible sins and led his people far away from God. When he was captured and carried off to Babylon in chains, he found himself in deep distress. In that dark dungeon, Manasseh humbled himself and cried out to God for help. The Lord heard his plea, showed him mercy, and restored him to his kingdom. If God could pardon such a wicked king, we know He truly desires to show us grace, His undeserved kindness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This story reminds us that no one is beyond hope. As F. B. Meyer wrote, \"no sinner need despair of mercy.\" While it is important to confess our sins honestly, we must not stay trapped in hopeless guilt. God does not want us to dwell on our past failures until we lose heart. Instead, we must look to His compassionate character and to Christ, trusting that God eagerly welcomes everyone who turns back to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When God forgave Manasseh, He also gave him an opportunity to tear down idols and repair what was broken. God can help us undo past harms as well. Still, we do not need to wait for suffering to drive us to our knees. We can seek the Lord today simply out of love for Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there past sins that make you feel hopeless about receiving God's mercy?",
+    "How can you turn to the Lord today out of love rather than waiting for hard times to come?"
+   ],
+   "prayer": "Lord, thank You for Your abundant grace and ready forgiveness. Please help us never to lose hope in Your mercy, even when we have failed You. Give us humble hearts to turn to You each day and to walk gladly in Your ways. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 33:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Manasseh’s Repentance",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/manassehs-repentance"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

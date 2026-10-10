@@ -1,0 +1,67 @@
+{
+ "id": "12-019-020",
+ "title": "Sennacherib’s Fall Prophesied",
+ "refs": [
+  "2 Kings 19:20-34"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12019020,
+   "end": 12019034,
+   "ref": "2 Kings 19:20-34",
+   "ranges": [
+    [
+     12019020,
+     12019034
+    ]
+   ],
+   "title": "God Stops the Boasting Enemy",
+   "key_verse": [
+    12019032,
+    12019032
+   ],
+   "reflect": [
+    {
+     "text": "King Sennacherib boasted loudly about his mighty army and threatened to crush Jerusalem. Yet the Lord heard King Hezekiah's prayer and promised that this proud foe would not even reach the gates. Sennacherib would not shoot an arrow over the walls or build dirt ramps to attack the city. As Charles Spurgeon noted, God is able to stop our enemies \"in the very act.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we reach the end of our own strength, God has room to display His great wisdom and power. Just like a shepherd who snatches a helpless lamb right out of a hungry lion's mouth, God can rescue His people from danger. He can easily ruin the plans of those who want to harm us or change their minds completely so they walk away.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God is in control, we do not have to live in fear of trouble before it even arrives. Our calling is to trust the Lord, follow His paths, and leave the outcome in His hands. When we watch how He defends and cares for us, our hearts will be filled with wonder and praise.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or threats are making you anxious about what might happen next?",
+    "How can trusting God's power help you remain calm before trouble even touches you?"
+   ],
+   "prayer": "Lord God, thank You that no enemy or trial is too strong for You to turn away. When we feel weak and helpless, help us remember Your great power to protect us. Give us quiet hearts that trust in You rather than our fears. Teach us to follow Your way faithfully today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "June 23",
+     "on": "2 Kings 19:32",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "18-025-001",
+ "title": "Bildad: Man Cannot Be Righteous",
+ "refs": [
+  "Job 25:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18025001,
+   "end": 18025006,
+   "ref": "Job 25:1-6",
+   "ranges": [
+    [
+     18025001,
+     18025006
+    ]
+   ],
+   "title": "How Can We Be Right Before God?",
+   "key_verse": [
+    18025004,
+    18025004
+   ],
+   "reflect": [
+    {
+     "text": "Bildad asks how any human being can ever be pure or right before the majestic God who rules the heavens. F. B. Meyer calls this \"the question of the ages.\" Deep down, we know we fall far short of God. Unlike simple animals, we have knowingly broken God's laws and harmed our own nature. Our first instinct is often to try to fix this by our own good deeds. Yet failing again and again only leaves us feeling helpless, guilty, and afraid of God's holy standard.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because we cannot save ourselves, God came to our rescue in the person of Jesus. Christ met every demand of God's broken law and worked out a lasting righteousness for us. We can never be justified, or declared right before God, by our own works. Instead, God acts as the one who makes the ungodly right. He freely takes away our dirty clothes of sin and dresses us in clean garments through His grace, His wonderful kindness that we could never earn.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God gives us this gift through faith. We are not saved merely by knowing facts about Jesus, but by trusting in Jesus Himself and turning our hearts toward Him. When we place our trust in Him, we receive true peace with God, and His Spirit begins to shape a holy life within us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever caught yourself trying to earn God's acceptance through your own efforts instead of resting in Jesus?",
+    "How does knowing that God clothes you in Christ's righteousness give you peace today?"
+   ],
+   "prayer": "Lord God, we confess that our own good works could never make us right in Your holy sight. Thank You for sending Jesus to fulfill the law and give us His perfect righteousness as a free gift. Please deepen our trust in Him so that we may live in Your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 25:4",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

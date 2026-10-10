@@ -1,0 +1,129 @@
+{
+ "id": "19-106-001",
+ "title": "Give Thanks to the LORD, for He Is Good",
+ "refs": [
+  "Psalms 106:1-48"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19106013,
+   "end": 19106013,
+   "ref": "Psalms 106:13",
+   "ranges": [
+    [
+     19106013,
+     19106013
+    ]
+   ],
+   "title": "\"They Soon Forgot His Works\"",
+   "key_verse": [
+    19106013,
+    19106013
+   ],
+   "reflect": [
+    {
+     "text": "We all experience everyday forgetfulness, like misplacing our keys or missing an appointment. Yet our tendency to forget can run much deeper when it comes to our walk with God. As Pastor Jeff Schreve explains, believers can suffer from \"spiritual amnesia\" when we lose sight of what God has done. The people of Israel saw God part the Red Sea in an astonishing miracle, but only days later they began to grumble and test Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we forget God's past kindness, we quickly become impatient with His timing and give in to unhealthy cravings. Forgetting His faithfulness steals our peace during hard times. That is why we need intentional ways to protect our spiritual memory. Writing down answered prayers in a journal is a helpful practice to record what God has done. Looking back at His past track record helps us stay grateful and gives us strong confidence that He will carry us through today's trials.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways have you recently forgotten God's past help when facing a new difficulty?",
+    "What practical habit, such as keeping a prayer journal, could help you remember His faithfulness each day?"
+   ],
+   "prayer": "Lord, forgive us for how quickly we forget Your wonderful deeds in our lives. Help us to keep a clear record of Your answers to prayer so our gratitude remains fresh. Give us patience to wait on Your perfect timing instead of giving in to complaint. In all our present trials, teach us to trust Your proven faithfulness.",
+   "sources": {
+    "D2": {
+     "author": "Pastor Jeff Schreve",
+     "work": "Spiritual Amnesia",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-july-8-2016.html"
+    },
+    "D3": {
+     "author": "Gwen Smith",
+     "work": "Sometimes I Forget",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-june-9-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19106001,
+   "end": 19106048,
+   "ref": "Psalms 106:1-48",
+   "ranges": [
+    [
+     19106001,
+     19106048
+    ]
+   ],
+   "title": "Give Thanks to the Lord",
+   "key_verse": [
+    19106001,
+    19106001
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 106 gives us a clear pattern for prayer by pairing joyful praise with honest confession. The psalm opens by thanking God for His eternal goodness and asking for His favor. This plea does not rely on our own good deeds, but rests completely on God's grace, His unearned kindness that finds its ultimate fulfillment in Jesus Christ. Alongside praise, Scripture invites us to be completely honest about painful human failures. Confessing our shared sins, such as Israel's worship of the golden calf, protects us from feeling superior or self-righteous, while reminding us of God's readiness to show mercy when someone steps forward to intercede.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "The psalm also warns us about insisting on our own desires rather than trusting God's choices. When Israel demanded meat in the desert, God granted their request, but their pampered appetites led to starved, sick souls. As F. B. Meyer notes, \"do not seek to impose your will on God.\" When we demand our own way, our bodies may get what they crave while our spirits wither. Over time, looking back on our lives reveals God's loving-kindness even in His denials and delays. We can safely ask Him to grant our desires only when they are truly for our best.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you pray, do you honestly confess your shortcomings or are you tempted to feel self-righteous?",
+    "Are you currently insisting on a personal desire that you need to surrender to God's wiser choice?"
+   ],
+   "prayer": "Lord, we praise You for Your unending goodness and Your covenant grace in Jesus Christ. Forgive us for the times we stubbornly demand our own way and put our physical cravings ahead of our spiritual health. Give us hearts that intercede for others and trust Your mercy. Teach us to accept Your guidance, knowing that even Your denials flow from Your loving-kindness.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 106:15",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "A Call for God to Remember",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/call-god-remember"
+    },
+    "D5": {
+     "author": "Victoria Loorz",
+     "work": "Holding Both Beautiful and Brutal",
+     "site": "The Upper Room",
+     "url": "https://www.upperroom.org/disciplines/en-2026-10-07"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

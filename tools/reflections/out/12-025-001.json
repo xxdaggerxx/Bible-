@@ -1,0 +1,66 @@
+{
+ "id": "12-025-001",
+ "title": "Nebuchadnezzar Besieges Jerusalem",
+ "refs": [
+  "2 Kings 25:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12025001,
+   "end": 12025007,
+   "ref": "2 Kings 25:1-7",
+   "ranges": [
+    [
+     12025001,
+     12025007
+    ]
+   ],
+   "title": "Do Not Presume on God's Patience",
+   "key_verse": [
+    12025001,
+    12025001
+   ],
+   "reflect": [
+    {
+     "text": "King Zedekiah chose to rely on worldly alliances rather than putting his faith in the Lord. His rebellion against Babylon brought a brutal two-year siege upon Jerusalem. As Babylonian forces camped outside, a terrible famine spread through the city until the people had no food left. When the city wall was finally breached, the king and his soldiers tried to slip away under the cover of night.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Their escape did not last. Babylonian troops chased Zedekiah, overtook him near Jericho, and carried him to the king of Babylon for judgment. There, Zedekiah was forced to watch his own sons put to death before his eyes were put out. Bound in bronze shackles, he was led away as a captive to Babylon.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The tragic destruction of Jerusalem shows us that while God is remarkably patient, He will not tolerate stubborn rebellion indefinitely. We must never treat God's patience as an excuse to keep wandering. Instead of presuming on His mercy, we should turn away from our sin quickly to avoid His painful discipline.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there any areas in your life where you have been testing God's patience instead of obeying Him?",
+    "What is one step you can take today to turn away from sin and trust God more fully?"
+   ],
+   "prayer": "Lord God, thank You for being patient with us when we fail. Forgive us for the times we depend on worldly things instead of trusting in You. Give us humble hearts that turn away from sin quickly so that we may walk in Your ways. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Jerusalem Captured",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/jerusalem-captured"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

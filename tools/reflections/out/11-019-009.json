@@ -1,0 +1,75 @@
+{
+ "id": "11-019-009",
+ "title": "The LORD Speaks to Elijah at Horeb",
+ "refs": [
+  "1 Kings 19:9-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 11019012,
+   "end": 11019013,
+   "ref": "1 Kings 19:12-13",
+   "ranges": [
+    [
+     11019012,
+     11019013
+    ]
+   ],
+   "title": "\"A Still, Small Voice\"",
+   "key_verse": [
+    11019012,
+    11019012
+   ],
+   "reflect": [
+    {
+     "text": "Even after experiencing great victories with God, we can quickly feel exhausted, fearful, and defeated. Elijah had seen powerful wonders, but sitting alone on the mountain, he felt worn out and empty. When God passed by, there was a violent wind, an earthquake, and a fire, but the Lord was not in any of those noisy events.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of using loud, dramatic displays, God chose to speak in a gentle whisper. When we are overwhelmed, God often speaks quietly to invite us to lean in close and listen carefully. Believers sometimes look for God only in big, spectacular moments, but He often assures us of His loving presence in the quiet.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we bring our weariness to the Lord in stillness, He refreshes our hearts and gives us clear direction for the next step. God often carries out His great plans through ordinary, quiet choices rather than visible wonders.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life do you need to pause and listen for God's gentle voice rather than looking for dramatic signs?",
+    "How can setting aside time for quiet stillness help you bring your fatigue to the Lord today?"
+   ],
+   "prayer": "Lord, thank You that You meet us with gentleness when we feel tired and afraid. Teach us to be still and draw close enough to hear Your quiet voice. Guide our ordinary daily steps and refresh our hearts with the peace of Your presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God's Silent Presence",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-silent-presence"
+    },
+    "D2": {
+     "author": "Joan Walker Hahn",
+     "work": "Lean In A Little Closer",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/encouragement-caf-february-14-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

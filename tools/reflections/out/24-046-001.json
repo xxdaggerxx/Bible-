@@ -1,0 +1,83 @@
+{
+ "id": "24-046-001",
+ "title": "Judgment on Egypt",
+ "refs": [
+  "Jeremiah 46:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24046001,
+   "end": 24046028,
+   "ref": "Jeremiah 46:1-28",
+   "ranges": [
+    [
+     24046001,
+     24046028
+    ]
+   ],
+   "title": "God Rules the Nations and Saves His People",
+   "key_verse": [
+    24046028,
+    24046028
+   ],
+   "reflect": [
+    {
+     "text": "In the ancient world, people believed that wars were battles between local gods. Jeremiah makes it clear that the Lord alone rules the entire universe. God brought judgment on mighty Egypt and its false gods, showing that all earthly rulers must answer to Him. Even when foreign nations rise in power and clash in battle, the Lord remains in control of history.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Seeing great kingdoms fall could easily make God's people panic. The Israelites were already suffering in captivity because of their sins, and they might have feared they would be wiped out too. Yet the Lord spoke words of comfort to them. While other nations would face ruin, God promised not to destroy His people completely. He would discipline them with justice, but He would preserve them. As F. B. Meyer writes, \"though we are pruned, we shall not be cut down to the ground.\"",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This truth gives us peace when the world feels shaken. The Lord holds proud powers accountable, yet He remains faithful to His covenant with His children. Even our past failures cannot stop God from restoring us and using us for His glory when we turn to Him in repentance.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When world events feel frightening or uncertain, how does knowing that God rules over every nation bring you peace?",
+    "How does knowing that God corrects His children out of love encourage you when you face difficult times?"
+   ],
+   "prayer": "Lord God, you rule over every king and nation in the world. Thank you that you never abandon your people, even when you must discipline us for our good. Help us to trust your loving care and walk faithfully with you each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 46:28",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Egypt's Judgment and Israel's Salvation",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/egypts-judgment-and-israels-salvation"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Jeremiah 46",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/1-samuel-9-romans-7-jeremiah-46-psalm-22/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

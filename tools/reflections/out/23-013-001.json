@@ -1,0 +1,66 @@
+{
+ "id": "23-013-001",
+ "title": "The Burden against Babylon",
+ "refs": [
+  "Isaiah 13:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23013001,
+   "end": 23013022,
+   "ref": "Isaiah 13:1-22",
+   "ranges": [
+    [
+     23013001,
+     23013022
+    ]
+   ],
+   "title": "Hope Beyond Babylon's Pride",
+   "key_verse": [
+    23013009,
+    23013009
+   ],
+   "reflect": [
+    {
+     "text": "In Isaiah's day, Babylon was rising as a terrifying power. Yet long before God's people were taken away into exile, the Lord announced Babylon's future ruin. God revealed this outcome ahead of time to give His people lasting hope during their darkest trials. He wanted them to know that no earthly empire is beyond His control or able to undo His plans.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Isaiah uses dramatic cosmic imagery to describe Babylon's fall, picturing the sun, moon, and stars turning dark. Babylon looked to the heavenly bodies as pagan gods, but God showed that these false deities were powerless before Him. This vivid language of shaking heavens also looks beyond Babylon to the final Day of the Lord, when God will bring an end to all human pride and cruelty.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Worldly kingdoms and spiritual enemies still rage against God's people today. Their influence can seem overwhelming, but their final defeat is already guaranteed by God. We do not need to live in fear of proud rulers or dark times, because the one true God will triumph over all evil at the end of history.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When powerful forces or difficult circumstances seem overwhelming, how does the promise of God's final victory give you peace?",
+    "How does Babylon's downfall remind you to place your confidence in God rather than human strength?"
+   ],
+   "prayer": "Almighty God, You are sovereign over every nation and power on earth. Forgive us for the times we are intimidated by the strength of this world instead of trusting in Your promises. Strengthen our hearts with the certain hope of Your coming kingdom and Your final victory over all evil. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Day of the Lord for Babylon",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/day-lord-babylon"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

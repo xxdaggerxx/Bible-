@@ -1,0 +1,66 @@
+{
+ "id": "12-008-001",
+ "title": "The Shunammite’s Land Restored",
+ "refs": [
+  "2 Kings 8:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12008001,
+   "end": 12008006,
+   "ref": "2 Kings 8:1-6",
+   "ranges": [
+    [
+     12008001,
+     12008006
+    ]
+   ],
+   "title": "Restored by the King's Favor",
+   "key_verse": [
+    12008006,
+    12008006
+   ],
+   "reflect": [
+    {
+     "text": "The Shunammite woman returned home with nothing. She needed help, so she came before the king to ask for her house and fields. God arranged the timing in a remarkable way. At the exact moment she entered, the king was listening to a servant tell the story of how Elisha had brought her own son back to life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Moved by the prophet's work on her behalf, the king granted her full mercy. He did not simply restore her land, but he also gave her all the money it had produced while she was gone. Her story shows us a picture of the gospel. Like this woman, we come before God empty-handed and helpless, with no claim of our own.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet because of the finished work of Christ on our behalf, God welcomes us with grace, which is His kindness that we do not deserve. He counts us as righteous and gives us an eternal reward we did not earn. When we realize how much mercy we have received, our hearts are filled with gratitude and praise.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does this woman's story remind you of how you stand before God?",
+    "What is one way you can express gratitude today for the undeserved grace God has given you in Christ?"
+   ],
+   "prayer": "Lord, we come before You with empty hands, knowing we cannot earn Your favor. Thank You for welcoming us and giving us life through the work of Jesus Christ. Help us to walk each day with grateful hearts that bring You praise. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Erik Raymond",
+     "work": "This Shunammite Leaves Gospel Footprints",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/this-shunammite-leaves-gospel-footprints/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

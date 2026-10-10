@@ -1,0 +1,74 @@
+{
+ "id": "14-018-001",
+ "title": "Jehoshaphat Allies with Ahab",
+ "refs": [
+  "2 Chronicles 18:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14018001,
+   "end": 14018011,
+   "ref": "2 Chronicles 18:1-11",
+   "ranges": [
+    [
+     14018001,
+     14018011
+    ]
+   ],
+   "title": "The Danger of Foolish Alliances",
+   "key_verse": [
+    14018007,
+    14018007
+   ],
+   "reflect": [
+    {
+     "text": "Even faithful and mature believers can show poor judgment. Jehoshaphat was a godly king who loved the Lord, yet he formed a dangerous family alliance with wicked King Ahab. He did not mean to turn away from God in open rebellion, but he made a naive compromise. Partnering with ungodly influences carries serious dangers, and such ties can bring lasting damage to a family and a faithful legacy.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Jehoshaphat still wanted to hear God's voice, but Ahab had surrounded himself with hundreds of prophets who only said what he wanted to hear. When Jehoshaphat asked for a true prophet of the Lord, Ahab admitted that he hated Micaiah because he never spoke good news for him. As F. B. Meyer noted, Micaiah had no personal grudge against Ahab. He simply spoke the truth God showed him. Ahab hated the warning because his heart was set on his own wild ways, and that anger was really aimed at God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we make unholy partnerships with the world, we find ourselves torn between pleasing people and hearing God's truth. The world often dislikes God's word because it warns against evil paths instead of promising easy success. We must be watchful guards in our homes and churches, turning away from compromise and standing by God's truth even when it is unpopular.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas where you have made compromises or close partnerships with worldly ways?",
+    "How do you respond when God's truth warns you against a path you want to take?"
+   ],
+   "prayer": "Lord, give us wisdom to choose our partnerships carefully. Guard our hearts from naive compromise that could harm our walk with you and hurt future generations. Help us to love your true word, even when it warns us or challenges our plans. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 18:7",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Grace to You",
+     "work": "Jehoshaphat and Dangerous Naiveté",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B160708/jehoshaphat-and-dangerous-naivete"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

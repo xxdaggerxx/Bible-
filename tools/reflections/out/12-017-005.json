@@ -1,0 +1,80 @@
+{
+ "id": "12-017-005",
+ "title": "Israel Carried Captive to Assyria",
+ "refs": [
+  "2 Kings 17:5-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12017005,
+   "end": 12017023,
+   "ref": "2 Kings 17:5-23",
+   "ranges": [
+    [
+     12017005,
+     12017023
+    ]
+   ],
+   "title": "The Cost of Turning from God",
+   "key_verse": [
+    12017013,
+    12017013
+   ],
+   "reflect": [
+    {
+     "text": "When Israel was taken away to Assyria, it was not merely a military defeat. The real reason was their spiritual unfaithfulness. Israel even tried to practice secret idolatry, forgetting that God sees everything. Through His prophets, God patiently warned them to turn from their evil ways and obey His commands. But they stubbornly hardened their hearts and refused to listen. When we chase after empty idols, we become empty ourselves, because an idol is anything that takes God's rightful place in our hearts.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This exile was the result of turning away from God's covenant. Outward religious acts and family heritage cannot save anyone without true repentance and faith. When God disciplines a community, even faithful people can feel the painful results. Yet God's judgment has a purpose, showing our deep need for a greater rescue. It points forward to Christ, who will bring full renewal to His people and perfectly separate true believers from those who only claim to follow Him.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "To keep from drifting away from God, we must stay rooted in His Word. God calls us to resist the pressures around us to copy the world's ways or compromise what is right.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly pressures or empty things are currently tempting you to compromise your devotion to God?",
+    "How does keeping yourself anchored in God's Word guard your heart against spiritual drift?"
+   ],
+   "prayer": "Lord God, help us to listen humbly to Your Word and turn away from every empty idol. Forgive us for the ways we are tempted to follow the world around us. Anchor our hearts in Your truth and renew us each day through Jesus Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Israel's Sons in Exile",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/israels-sons-exile"
+    },
+    "D2": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 05/07/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-07-or-2002-1133416.html"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: 2 Kings 17, Titus 3, Hosea 10, and Psalms 129–131",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/2-kings-17-titus-3-hosea-10-psalms-129-131/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,80 @@
+{
+ "id": "23-057-014",
+ "title": "Healing for the Repentant",
+ "refs": [
+  "Isaiah 57:14-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23057014,
+   "end": 23057021,
+   "ref": "Isaiah 57:14-21",
+   "ranges": [
+    [
+     23057014,
+     23057021
+    ]
+   ],
+   "title": "The High God Dwells with the Lowly",
+   "key_verse": [
+    23057015,
+    23057015
+   ],
+   "reflect": [
+    {
+     "text": "God is exalted, eternal, and completely holy, far above all created things. Yet, in His great mercy, this majestic God chooses to dwell intimately with those who are humble and contrite, meaning truly sorry for their sins. In Christ, God's holiness is satisfied and condemnation is removed so we can enjoy a close walk with Him through prayer, worship, and Scripture.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When God corrects us, He does not intend to ruin us. As Charles Spurgeon wrote, \"Our heavenly Father seeks our instruction, not our destruction.\" God knows how frail we are and will not remain angry forever. Even when we face painful seasons, His anger is only for a brief moment, but His compassion lasts forever. He tenderly cares for those He made and promises to heal and comfort us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God brings us healing, He also places true peace upon our lips. Like fruit on a healthy tree, our words can bring blessing and share eternal hope with people near and far. Even when we struggle to find the right words in prayer, we can quietly rest in God and trust Him to shape our requests and our praise.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that the holy God dwells with the humble change the way you come to Him today?",
+    "In what conversations could you ask God to give you words of peace for others?"
+   ],
+   "prayer": "Lord, thank You for dwelling with those who are humble and brokenhearted. When we face trials or correction, remind us that Your compassion lasts forever. Please guide our words each day so that we may share Your peace with those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 5",
+     "on": "Isaiah 57:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 57:19",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The High and Holy Place",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/high-and-holy-place"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

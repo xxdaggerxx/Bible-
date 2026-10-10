@@ -1,0 +1,67 @@
+{
+ "id": "12-011-004",
+ "title": "Joash Anointed King of Judah",
+ "refs": [
+  "2 Kings 11:4-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12011004,
+   "end": 12011012,
+   "ref": "2 Kings 11:4-12",
+   "ranges": [
+    [
+     12011004,
+     12011012
+    ]
+   ],
+   "title": "Crowning the True King Within",
+   "key_verse": [
+    12011012,
+    12011012
+   ],
+   "reflect": [
+    {
+     "text": "For years, young Joash lived hidden inside a room of the temple. He was the rightful king, yet a cruel ruler held the throne outside, and most people did not even know the boy was there. F. B. Meyer points out that our own lives can often look like this temple. Jesus lives within us if we belong to Him, but we sometimes keep Him tucked away in a small corner, giving Him little say over how we live each day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Jehoiada brought Joash out into the light, crowned him, and anointed him before all the people. In the same way, we need to crown Jesus as Lord over our whole being. That means inviting Him to rule not just a quiet room in our heart, but our entire spirit, soul, and body.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "True holiness does not come from our own strength. It comes from the Holy One living inside us and filling us completely. When we stop limiting His control and remove every barrier, His light can shine freely through every part of our lives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas of your daily life where you have kept Jesus confined to a small corner?",
+    "What would it look like today to surrender full control of your thoughts and actions to Him?"
+   ],
+   "prayer": "Lord Jesus, you are the rightful King of our lives. Forgive us for the times we have kept you confined to a hidden corner of our hearts. Take your place on the throne of our entire being, and fill us with your holy presence today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 11:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

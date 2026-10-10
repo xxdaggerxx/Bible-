@@ -1,0 +1,67 @@
+{
+ "id": "24-032-001",
+ "title": "Jeremiah Buys Hanamel’s Field",
+ "refs": [
+  "Jeremiah 32:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24032001,
+   "end": 24032015,
+   "ref": "Jeremiah 32:1-15",
+   "ranges": [
+    [
+     24032001,
+     24032015
+    ]
+   ],
+   "title": "Buying a Field in Faith",
+   "key_verse": [
+    24032009,
+    24032009
+   ],
+   "reflect": [
+    {
+     "text": "Jerusalem was surrounded by an enemy army, and Jeremiah was locked in prison. Yet God told him to buy a family field. Buying land that was already in enemy hands seemed completely pointless to ordinary sight. Still, Jeremiah obeyed with full legal care, weighing the silver and signing deeds before witnesses. As F. B. Meyer noted, this showed the \"heroic audacity of faith.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Most people base their choices only on what they can see with their eyes. A person of faith acts on facts given by God that others cannot see. Faith makes the distant future feel near and real. Jeremiah knew that the Creator of the heavens and earth has the power to do anything, including bringing His people back to buy and sell land once more.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The field belonged to Jeremiah even while the enemy occupied it. In the same way, Christ has purchased this world and our lives, even while evil and decay still seem to rule. We can rely on God's unseen promises as solid facts and let them guide our choices every day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you make your daily plans based only on what you can see, or on what God has promised?",
+    "How does remembering God's power as Creator help you trust Him with the future?"
+   ],
+   "prayer": "Lord God, You made the heavens and the earth, and nothing is too hard for You. Give us faith to look past our present troubles and trust Your promises. Teach us to act with confidence because we belong to Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 32:9",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

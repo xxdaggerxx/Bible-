@@ -1,0 +1,130 @@
+{
+ "id": "18-016-001",
+ "title": "Job Decries His Comforters",
+ "refs": [
+  "Job 16:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18016002,
+   "end": 18016002,
+   "ref": "Job 16:2",
+   "ranges": [
+    [
+     18016002,
+     18016002
+    ]
+   ],
+   "title": "\"Miserable comforters are you all\"",
+   "key_verse": [
+    18016002,
+    18016002
+   ],
+   "reflect": [
+    {
+     "text": "Job was already carrying an unbearable load of grief, but his companions only made his suffering worse. Instead of offering gentle support, they gave long speeches and treated him like a puzzle to solve. True words can cause deep hurt when they are spoken at the wrong time or with a proud spirit. Counsel often fails when we rush to diagnose why someone is hurting rather than showing patient love.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5"
+     ]
+    },
+    {
+     "text": "When people walk through dark trials, their sharp words are often honest cries for relief rather than rebellion against God. Believers can express deep sorrow and confusion while still holding on to faith. Instead of rushing to explain everything or using the Bible to correct someone who is weeping, we help them far more by staying quiet, sharing their tears, and trusting God to comfort their hearts.",
+     "sources": [
+      "D2",
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone shares their pain with me, do I listen patiently or do I rush to give advice?",
+    "How can I make sure I share God's truth with humility rather than using it to wound others?"
+   ],
+   "prayer": "Lord, give us humble and gentle hearts when our friends are hurting. Teach us to be slow to speak and quick to listen with love. Help us to sit quietly with those who weep, trusting You to sustain them. Amen.",
+   "sources": {
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Read the Bible: Genesis 50, Luke 3, Job 16–17, 1 Corinthians 4",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/genesis-50-luke-3-job-16-17-1-corinthians-4/"
+    },
+    "D3": {
+     "author": "Jon Bloom",
+     "work": "How to Be a Miserable Comforter: Two Ways We Fail the Hurting",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/how-to-be-a-miserable-comforter"
+    },
+    "D5": {
+     "author": "Trillia Newbell",
+     "work": "Mourning Without Words",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/mourning-without-words/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 18016001,
+   "end": 18016022,
+   "ref": "Job 16:1-22",
+   "ranges": [
+    [
+     18016001,
+     18016022
+    ]
+   ],
+   "title": "Breaking the Nest",
+   "key_verse": [
+    18016012,
+    18016012
+   ],
+   "reflect": [
+    {
+     "text": "Job felt completely shattered by his losses, as if God had turned against him. F. B. Meyer compared this kind of trial to two birds trapped in a church room. To rescue them, the workers kept chasing them away from every place they tried to rest until they fell exhausted and could be set free into the sky. In a similar way, God sometimes breaks up our comfortable nests because He loves us too much to let us settle for anything less than His true freedom.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When life feels overwhelming, we do not need to hide our grief or pretend that everything is fine. Job did not hide his weeping or his sorrow. Hurting people are not helped by quick sermons or tidy answers that brush away their tears. What we need most is friends who are willing to sit quietly beside us in our pain, gently pointing us to grace, God's kindness that we do not have to earn.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When unexpected changes shake my life, can I trust that God is guiding me toward something better?",
+    "How can I walk beside a grieving friend without expecting them to hide their sadness?"
+   ],
+   "prayer": "Father, thank You that even when our lives feel shattered, You are still working for our good. Help us to be honest about our sorrow and not hide our tears. Give us the patience to sit quietly with others in their grief, pointing them gently to Your kindness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 16:12",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D4": {
+     "author": "Vaneetha Rendall Risner",
+     "work": "How to Discourage a Grieving Friend",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/how-to-discourage-a-grieving-friend"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

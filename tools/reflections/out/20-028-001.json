@@ -1,0 +1,134 @@
+{
+ "id": "20-028-001",
+ "title": "The Boldness of the Righteous",
+ "refs": [
+  "Proverbs 28:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20028013,
+   "end": 20028013,
+   "ref": "Proverbs 28:13",
+   "ranges": [
+    [
+     20028013,
+     20028013
+    ]
+   ],
+   "title": "\"Whoever Confesses and Renounces Them\"",
+   "key_verse": [
+    20028013,
+    20028013
+   ],
+   "reflect": [
+    {
+     "text": "When we do wrong, our first instinct is often to hide it. We may point fingers at other people, complain about our circumstances, or even grow bitter toward God. Other times we fall into self-pity, replaying our past failures and letting lingering guilt wear us down. Blaming others breaks relationships, and blaming God drains our spiritual strength. None of these excuses solve the problem or bring true peace.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "God calls us to take a completely different path by bringing our sins into the light. Charles Spurgeon wrote, \"We must make a clean breast of it, and plead guilty.\" Confession means honestly admitting our faults before the Lord without making excuses. Along with confessing our sin, we must also forsake it, walking away from the habits, places, or companions that lead us into temptation. When we admit our guilt and trust in the blood of Jesus, God meets us with full and ready mercy.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to excuse a wrong choice or blame someone else instead of owning it?",
+    "What do you need to confess to God today so that you can experience His mercy and turn away from it?"
+   ],
+   "prayer": "Lord, forgive me for trying to hide my wrongs or blame others for my mistakes. Give me an honest heart to confess my sins openly before You. Help me turn away from evil habits and rest in the forgiving mercy You give through Jesus. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 16",
+     "on": "Proverbs 28:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Charles R. Swindoll",
+     "work": "Stop the Blame Game",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-march-20-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 20028001,
+   "end": 20028028,
+   "ref": "Proverbs 28:1-28",
+   "ranges": [
+    [
+     20028001,
+     20028028
+    ]
+   ],
+   "title": "The Boldness of the Righteous",
+   "key_verse": [
+    20028001,
+    20028001
+   ],
+   "reflect": [
+    {
+     "text": "Guilt makes people timid, causing them to run away in fear even when no one is chasing them. But when we walk uprightly with God, He gives us boldness like a lion. Holy living removes cowardice and panic from our lives. Spending time in God's Word every day sharpens our understanding and helps us spot the subtle traps of temptation before we compromise.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "This courage goes hand in hand with a reverent fear of God, which means having deep awe and respect for Him. Far from making life miserable, holy reverence protects our happiness. It acts like a watchful guard, keeping us away from bad company, reckless talk, and questionable choices. Reverence for the Lord keeps our lives clean and leads us down a safe path.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Because the righteous belong to God, their good inheritance is completely secure. We do not have to wait for heaven to experience His goodness, because we already hold rich blessings today. Through Jesus, we have a quiet conscience, power in prayer, God's watchful care, and the Holy Spirit living inside us. Instead of worrying or striving in our own power, we can live each day with gladness and bold trust in our God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does a healthy reverence for God give you confidence instead of fear?",
+    "Which of God's present spiritual blessings can you thank Him for enjoying today?"
+   ],
+   "prayer": "Father, thank You for the bold confidence that comes from walking with a clean conscience. Teach me to revere Your name and stay watchful against subtle spiritual traps. Help me enjoy the rich spiritual blessings You have already placed in my hands through Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "May 17",
+     "on": "Proverbs 28:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 9",
+     "on": "Proverbs 28:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "PowerPoint Ministries",
+     "work": "Power Point - Sept. 22, 2006",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-sept-22-2006-1427381.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

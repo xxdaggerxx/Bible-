@@ -1,0 +1,67 @@
+{
+ "id": "23-008-011",
+ "title": "A Call to Fear God",
+ "refs": [
+  "Isaiah 8:11-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23008011,
+   "end": 23008018,
+   "ref": "Isaiah 8:11-18",
+   "ranges": [
+    [
+     23008011,
+     23008018
+    ]
+   ],
+   "title": "Fearing God Alone",
+   "key_verse": [
+    23008013,
+    23008013
+   ],
+   "reflect": [
+    {
+     "text": "In Isaiah's day, panic swept through the land because of threatening enemy armies. Political leaders rushed to make human alliances, while others turned to superstition and spirits for answers. But God warned Isaiah not to follow the crowd. Instead of sharing their terror, Isaiah was told to honor the Lord as holy and make God alone his fear and dread.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer compares this to prairie travelers who fight fire with fire. They burn away the grass in front of them so the oncoming wall of flame finds no fuel left to consume. In the human heart, a deep reverence for God works the same way. When our awe of God fills our hearts, it burns away our terror of other people and difficult events.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Fearing God means we respect Him so deeply that we hate the thought of grieving Him or turning toward sin. This holy fear actually brings deep peace. Like Jacob, whose heart was calmed before an angry relative because he trusted God, we can stand strong in any trial. We are freed to say quietly, in Meyer's words, \"I fear God, and have no other fear.\"",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What fears or worries about people are troubling you today?",
+    "How can focusing on God's holiness help drive those lesser fears out of your heart?"
+   ],
+   "prayer": "Lord God, forgive us when we get swept away by the panics and worries of the world around us. Teach our hearts to revere You above all else and to dread turning away from Your ways. Help us to find true peace in Your presence so that no fear of people can control us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 8:13",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "12-020-012",
+ "title": "Hezekiah Shows His Treasures",
+ "refs": [
+  "2 Kings 20:12-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12020012,
+   "end": 12020019,
+   "ref": "2 Kings 20:12-19",
+   "ranges": [
+    [
+     12020012,
+     12020019
+    ]
+   ],
+   "title": "Pride and the Trap of Selfish Comfort",
+   "key_verse": [
+    12020017,
+    12020017
+   ],
+   "reflect": [
+    {
+     "text": "King Hezekiah had walked faithfully with God for many years, but even godly leaders are fallen people who fail to obey God perfectly. When messengers arrived from Babylon, Hezekiah gave in to pride. Instead of walking humbly and trusting solely in the Lord, he showed off his treasures and weapons. He wanted to impress these visitors and court a military alliance, which directly disobeyed God's commands.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The prophet Isaiah brought serious news from God. The very nation Hezekiah tried to impress would one day conquer Judah, carry away its riches, and take his own descendants into exile. Yet Hezekiah offered no repentance and did not plead for his people. Instead, he felt relieved simply because the disaster would not happen during his own lifetime.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Hezekiah showed a self-centered attitude in his later years, caring only about his personal peace. His story cautions us against relying on worldly security and growing complacent. When we care only about our own comfort, we risk ruining the godly legacy of our earlier years.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to show off your achievements to gain security rather than trusting in God?",
+    "Do you care about the spiritual future of the next generation, or do you focus mainly on your own comfort?"
+   ],
+   "prayer": "Lord, forgive us when pride makes us look to worldly strength instead of resting in you. Guard us from self-absorption and complacency as the years go by. Give us faithful hearts that care deeply about your kingdom and the generations to come. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Hezekiah's Foolish Decision",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/hezekiahs-foolish-decision"
+    },
+    "D2": {
+     "author": "D. A. Carson",
+     "work": "Devotional: 2 Kings 20",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/2-kings-20-hebrews-2-hosea-13-psalms-137-138/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

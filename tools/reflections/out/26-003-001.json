@@ -1,0 +1,83 @@
+{
+ "id": "26-003-001",
+ "title": "Ezekiel Eats the Scroll",
+ "refs": [
+  "Ezekiel 3:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26003001,
+   "end": 26003015,
+   "ref": "Ezekiel 3:1-15",
+   "ranges": [
+    [
+     26003001,
+     26003015
+    ]
+   ],
+   "title": "Sweet Words for Hard Hearts",
+   "key_verse": [
+    26003003,
+    26003003
+   ],
+   "reflect": [
+    {
+     "text": "God told Ezekiel to eat the scroll and take His words deeply into his heart before going out to speak. Even though the scroll contained warnings of judgment against sin, it tasted sweet as honey to the prophet. Taking in God's truth gave Ezekiel the strength he needed to face intense opposition. God equips the people He calls, providing everything required to carry out His work.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Ezekiel was sent to his own people, but they refused to listen. Their problem was not a language barrier, but hard and rebellious hearts. We must see our own reflection in this warning. We can easily become stubborn and cold toward God. Even as believers, we sometimes pray carelessly, doubt the Lord, or fail to feel sorrow over our wrongdoing.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Still, God called Ezekiel to deliver His message faithfully, whether the people listened or refused. Hearing God's honest verdict on sin prepares our hearts to welcome His grace, which is His undeserved kindness. Even when our hearts feel as cold and hard as stone, the blood of Jesus has the power to soften us and make us tender toward God again.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways has your heart grown stubborn or careless toward God lately?",
+    "How can spending time feeding on God's Word give you courage to obey Him today?"
+   ],
+   "prayer": "Lord, thank You for Your Word, which feeds our souls and gives us strength. Please forgive us for the times our hearts have been stubborn and slow to listen to You. Soften us through the precious blood of Jesus, and help us faithfully share Your truth with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 28",
+     "on": "Ezekiel 3:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Scroll and the Watchman",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/scroll-and-watchman"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - September 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-sept-1-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

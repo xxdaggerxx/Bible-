@@ -1,0 +1,66 @@
+{
+ "id": "10-024-015",
+ "title": "A Plague on Israel",
+ "refs": [
+  "2 Samuel 24:15-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10024015,
+   "end": 10024017,
+   "ref": "2 Samuel 24:15-17",
+   "ranges": [
+    [
+     10024015,
+     10024017
+    ]
+   ],
+   "title": "Taking Responsibility for the Sheep",
+   "key_verse": [
+    10024017,
+    10024017
+   ],
+   "reflect": [
+    {
+     "text": "David had fallen into the trap of pride and self-reliance. Instead of trusting God to fight his battles, he counted his fighting men to measure his own strength. God had proven faithful throughout David's entire life, yet the king still chose human numbers over faith. The terrible plague that followed was a severe judgment, reflecting not just David's personal failure, but also Israel's own disobedience under their covenant agreement with God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Earlier in this crisis, David had failed to step forward and pray on behalf of the nation, unlike Moses who had stood in the gap for his people. It was only when David saw the angel striking down the people that his heart truly broke. Seeing their suffering jolted him out of his self-focus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "David finally accepted personal responsibility for what he had done. He admitted his wickedness and asked the Lord to punish him and his family instead of the innocent sheep. When we face our own failures, God calls us to look past our pride, own up to our wrongs, and care deeply about how our actions affect others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face difficulties, do you tend to trust in your own strength or rely on God's proven faithfulness?",
+    "Are you quick to admit your mistakes and care for the people your choices affect?"
+   ],
+   "prayer": "Lord, forgive us when pride leads us to rely on our own strength rather than your faithfulness. Help us to take responsibility when we make mistakes and to think of others before ourselves. Teach us to pray with a caring heart for those around us. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 77: 2 Samuel 24:11–17",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-77-2-samuel-24-1117.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

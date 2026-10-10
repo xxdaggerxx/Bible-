@@ -1,0 +1,88 @@
+{
+ "id": "19-010-001",
+ "title": "The Perils of the Pilgrim",
+ "refs": [
+  "Psalms 10:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19010001,
+   "end": 19010018,
+   "ref": "Psalms 10:1-18",
+   "ranges": [
+    [
+     19010001,
+     19010018
+    ]
+   ],
+   "title": "The Lord Is King Forever",
+   "key_verse": [
+    19010016,
+    19010016
+   ],
+   "reflect": [
+    {
+     "text": "When proud people harm the weak, we might wonder why God seems far away. The wicked act like practical atheists, assuming God never notices their cruelty. Yet God does not abandon us in trouble. He allows hardships so that we come to the end of our own strength, but as F. B. Meyer writes, \"He who permits the suffering is with us in it.\" We must walk by faith rather than feelings, trusting that He sees every hidden grief.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "It is easy to read about the deceit and malice of the wicked and point our fingers only at others. But the Bible teaches that this same corrupt nature belongs to all of us apart from God's grace, His unearned kindness. We all share this fallen condition, and we would remain trapped in it if Jesus had not endured the curse and judgment of the cross to redeem us.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Our ultimate hope rests in God's eternal kingship and His promise to defend the oppressed. Jesus has conquered our sins and cruel spiritual enemies by His own blood, freeing us from heavy bondage. Believers gladly crown Him as Lord, resting secure in His everlasting justice and His gentle rule over our hearts.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When trouble makes God seem distant, what helps you trust that He is still present with you?",
+    "How does remembering that Jesus died to redeem your own sinful heart keep you humble before Him?"
+   ],
+   "prayer": "Lord God, when life is painful and You seem far away, remind us that You see our tears and never leave our side. We thank You that King Jesus died to forgive our sins and rescue us from darkness. Please guard those who are weak, and rule peacefully in our hearts each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, April 27",
+     "on": "Psalms 10:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 10:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Joe Holland",
+     "work": "Dear Sir, I Am",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/dear-sir-i-am"
+    },
+    "D4": {
+     "author": "D. A. Carson",
+     "work": "Devotional: Psalm 10",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/leviticus-9-psalm-10-proverbs-24-1-thess-3/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

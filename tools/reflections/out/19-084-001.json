@@ -1,0 +1,157 @@
+{
+ "id": "19-084-001",
+ "title": "Better Is One Day in Your Courts",
+ "refs": [
+  "Psalms 84:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19084011,
+   "end": 19084011,
+   "ref": "Psalms 84:11",
+   "ranges": [
+    [
+     19084011,
+     19084011
+    ]
+   ],
+   "title": "\"The Lord Gives Grace and Glory\"",
+   "key_verse": [
+    19084011,
+    19084011
+   ],
+   "reflect": [
+    {
+     "text": "God delights in giving generously to His people, and grace is His free gift for our daily journey. Grace means God's kindness and help that we do not deserve. He gives us strength to obey, comfort in sorrow, and help in every duty. God may not give us wealth or an easy road, but whenever trials come, He always provides the exact grace we need to bear them.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "God joins grace together with glory. We do not need glory yet, but Charles Spurgeon reminds us that \"grace and glory always go together.\" Glory is simply grace in full bloom. God never begins a work of grace in a believer's heart only to leave them behind. Everyone who receives His grace today is guaranteed to share the joy of His heavenly presence in eternity.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Along the way, God promises to withhold no good thing from those who walk uprightly. He is the wisest judge of what is genuinely good for our souls. When we walk honestly before Him without deceit or secret sin, He gladly pours out true spiritual treasures, including holiness, patience, peace, and close friendship with Himself.",
+     "sources": [
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific grace do you need to ask God for today?",
+    "How does the promise of future glory bring you hope in your present difficulties?"
+   ],
+   "prayer": "Father, thank You for freely giving us the daily grace we need to follow You. Help us to walk with sincere and honest hearts, trusting Your wise care. We rest in the joyful assurance that You will bring us home to Your glory. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, October 1",
+     "on": "Psalms 84:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "March 19",
+     "on": "Psalms 84:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D5": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 2",
+     "on": "Psalms 84:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19084001,
+   "end": 19084012,
+   "ref": "Psalms 84:1-12",
+   "ranges": [
+    [
+     19084001,
+     19084012
+    ]
+   ],
+   "title": "Better Is One Day",
+   "key_verse": [
+    19084010,
+    19084010
+   ],
+   "reflect": [
+    {
+     "text": "To be near God is the deepest longing of a believer's heart. The ancient temple was lovely because the holy God chose to dwell there, welcoming even the lowliest worshipper just as tiny sparrows found a home beside His altar. Serving God in the humblest task is far better than enjoying the comforts of sin, because time in God's presence re-centers our hearts and frees us from envy.",
+     "sources": [
+      "D6",
+      "D7"
+     ]
+    },
+    {
+     "text": "As we journey through life, we often pass through dry valleys of sorrow. When we seek God during these hard seasons, our obedience is like digging wells that catch the rain of heaven's blessing. The comfort God gives to us does not end with us; it becomes a refreshing spring that helps other pilgrims who walk the same difficult path.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "On an ordinary road, travellers grow tired and lose their strength. Yet those whose strength is in the Lord go from strength to strength as they move forward. God renews our inner energy step by step, giving us sufficient power for every burden until we safely arrive before Him.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How can serving God in quiet, ordinary ways bring you more peace than chasing worldly success?",
+    "How might the comfort God gave you during a past trial encourage someone else today?"
+   ],
+   "prayer": "Lord God, teach our hearts to treasure Your presence above all the pleasures of this world. Renew our strength as we travel through dry and weary places. Use the comforts You give us to bring help and refreshment to others along the way. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 13",
+     "on": "Psalms 84:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 14",
+     "on": "Psalms 84:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D6": {
+     "author": "Ligonier Ministries",
+     "work": "God's Lovely Dwelling Place",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-lovely-dwelling-place"
+    },
+    "D7": {
+     "author": "G. Connor Salter",
+     "work": "Can We Experience \"Better is One Day in Your Courts\" Today or Only in Heaven?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/better-is-one-day-in-your-courts-meaning.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,143 @@
+{
+ "id": "19-094-001",
+ "title": "The LORD Will Not Forget His People",
+ "refs": [
+  "Psalms 94:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19094019,
+   "end": 19094019,
+   "ref": "Psalms 94:19",
+   "ranges": [
+    [
+     19094019,
+     19094019
+    ]
+   ],
+   "title": "\"Your Consolation Delights My Soul\"",
+   "key_verse": [
+    19094019,
+    19094019
+   ],
+   "reflect": [
+    {
+     "text": "Many of us wrestle in secret with quiet, heavy worries that nobody else sees. Troubles around us and frightening news in the world can easily spark fear, keeping our thoughts spinning late into the night. Anxious burdens weigh us down, and the enemy loves to use that fear to silence our faith and rob us of peace.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "In those dark and restless hours, we need to remember who holds the world. God is the sovereign Creator and Potter, perfectly in control. Catastrophes and unexpected troubles never surprise Him. Even though He does not owe finite people an explanation for every hardship, He remains completely trustworthy.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "Recalling that God alone is our safe refuge brings genuine calm to our minds. When we invite Him into our hidden vulnerabilities, His comforting presence breaks the grip of panic. Instead of drowning in worry, we find our hearts refreshed and delighted by His gentle peace.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "What quiet worries have been troubling your heart lately?",
+    "How can remembering God's sovereign care bring peace to your mind today?"
+   ],
+   "prayer": "Lord, You see the secret anxieties that weigh down our minds when the world feels scary. Please enter our deepest fears and remind us that You are our safe refuge. Fill our troubled souls with Your comforting presence and joy. Amen.",
+   "sources": {
+    "D4": {
+     "author": "Chelsey DeMatteis",
+     "work": "When You're Carrying Quiet Anxiety",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/when-youre-carrying-quiet-anxiety.html"
+    },
+    "D5": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "No Fear! Part One",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/no-fear!-part-one"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19094001,
+   "end": 19094023,
+   "ref": "Psalms 94:1-23",
+   "ranges": [
+    [
+     19094001,
+     19094023
+    ]
+   ],
+   "title": "The Lord Will Not Forsake His People",
+   "key_verse": [
+    19094014,
+    19094014
+   ],
+   "reflect": [
+    {
+     "text": "Our walk with God often takes us through confusing and difficult places. We may feel unsteady and afraid, as if our feet are slipping out from under us. Feeling shaky does not mean God has left us or that our faith has failed. In those very moments, God speaks His steadfast love to hold us up, giving us the solid promises of His Word to stand on.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "While the wicked seem to prosper for a time, God has not forgotten His people. He may guide us through discipline and hard lessons, but as Charles Spurgeon noted, this correction \"means not anger, but love.\" God places us in His school of grace. Pain and trials become tools in His hands to teach us wisdom, drawing us to humble submission under His law.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The purpose of God's gentle correction is to give our souls true rest. The Lord will never abandon or cast away a single one of His children. Even when life feels hard, we can trust His wise heart and rest in His good will, knowing He is preparing us for a bright future with Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel your footing slipping, what promises from God's Word can you lean on?",
+    "How does knowing that God's correction comes from love change the way you view your trials?"
+   ],
+   "prayer": "Heavenly Father, thank You for holding us up whenever our feet begin to slip. Help us to welcome Your loving discipline and find quiet rest in Your wise care. We praise You that You will never leave or abandon Your people. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 17",
+     "on": "Psalms 94:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 94:12-13",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Rev. Kyle Norman",
+     "work": "When Your Heart Feels Unsteady",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/when-your-heart-feels-unsteady.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

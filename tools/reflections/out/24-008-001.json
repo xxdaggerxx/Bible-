@@ -1,0 +1,66 @@
+{
+ "id": "24-008-001",
+ "title": "Judah’s Sin and Punishment",
+ "refs": [
+  "Jeremiah 8:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24008001,
+   "end": 24008013,
+   "ref": "Jeremiah 8:1-13",
+   "ranges": [
+    [
+     24008001,
+     24008013
+    ]
+   ],
+   "title": "Facing God's Truth for True Healing",
+   "key_verse": [
+    24008011,
+    24008011
+   ],
+   "reflect": [
+    {
+     "text": "In Jeremiah's day, the leaders of Judah gave the people a false sense of security. They told everyone that all was well, promising peace when there was no peace. Instead of speaking God's reality, they treated deep spiritual wounds as if they were minor scratches. Unwelcome truth can be hard to hear, but we must face it honestly before any real healing can take place in our lives.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God spoke through Jeremiah with severe warnings so that His people would see their danger. He warns us about judgment because He wants sinners to turn back to Him before judgment falls. If we never acknowledge the bad news about our sin and judgment, we will never seek genuine repentance. Repentance means being truly sorry for our wrong choices and turning back to God in faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is easy to assume that we are safe and immune to God's discipline, just as the people in Judah did. Yet Scripture calls believers to listen carefully to biblical warnings. When we heed God's word rather than trusting in deceptive promises of comfort, we find the real restoration that only He provides.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there hard truths from God's word that you have been tempted to ignore rather than face honestly?",
+    "How can listening to God's warnings help lead you to genuine repentance and lasting peace?"
+   ],
+   "prayer": "Lord, help us not to hide from the hard truths of Your word or seek false comfort in empty promises. Give us humble hearts to hear Your warnings, confess our sins, and turn back to You. Thank You for offering us genuine healing and peace through Your mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "A False Promise of Peace",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/false-promise-peace"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

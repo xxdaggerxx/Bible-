@@ -1,0 +1,129 @@
+{
+ "id": "23-009-001",
+ "title": "Unto Us a Child Is Born",
+ "refs": [
+  "Isaiah 9:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23009006,
+   "end": 23009006,
+   "ref": "Isaiah 9:6",
+   "ranges": [
+    [
+     23009006,
+     23009006
+    ]
+   ],
+   "title": "\"Unto Us a Child Is Born\"",
+   "key_verse": [
+    23009006,
+    23009006
+   ],
+   "reflect": [
+    {
+     "text": "When God decided to rescue a world trapped in darkness and distress, He did not send an earthly army. Instead, He gave us a baby boy. This promised child was truly human, born into our world, yet fully God with supreme authority. He came to govern with lasting righteousness and bring true light to our lives.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Earthly kings always need human advisers to guide them, but Jesus needs no outside wisdom. As our Wonderful Counselor, He gives clear direction that cuts through our confusion whenever we face hard decisions. As our Mighty God and Everlasting Father, He surrounds us with unfailing strength and unchanging care.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jesus is also our Prince of Peace, offering us friendship with God and quiet calm in times of earthly stress. When we surrender our own plans and trust His counsel in all circumstances, we find rest under His perfect care.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What hard decision or confusing situation do you need to bring to Jesus for His wise counsel today?",
+    "How does knowing that Jesus is both a gentle child and the Mighty God bring you calm in stressful moments?"
+   ],
+   "prayer": "Lord Jesus, thank You for coming to us not with worldly power, but as a child who is also our Mighty God. Please guide us through our confusion with Your perfect wisdom and grant us calm amid life's stresses. Help us to let go of our own plans and trust Your loving rule in every part of our lives. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Alistair Begg",
+     "work": "Wonderful Counselor, Wonderful Child",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-december-3-2023.html"
+    },
+    "D3": {
+     "author": "Whitney Hopler",
+     "work": "How to Worship Through the Wonder of Christ’s Birth",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/how-to-worship-through-the-wonder-of-christs-birth-the-crosswalk-devotional.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 23009001,
+   "end": 23009007,
+   "ref": "Isaiah 9:1-7",
+   "ranges": [
+    [
+     23009001,
+     23009007
+    ]
+   ],
+   "title": "The Increase of His Government",
+   "key_verse": [
+    23009007,
+    23009007
+   ],
+   "reflect": [
+    {
+     "text": "The prophet speaks of a ruler who carries government upon His shoulder, which is a biblical symbol of strength. F. B. Meyer reminds us that our peace grows \"just in proportion to the increase of His government\" in our daily lives. Handing control of our lives over to Christ marks the beginning of a long journey. As our life expands and new responsibilities open up before us, we are invited to yield each new area to His rule.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Deep peace comes when our hearts have one single aim: resting in our King and His limitless resources. When Jesus carries the weight of our lives on His strong shoulders, we do not have to carry it all by ourselves.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Remembering that Christ is in charge also protects us from pride and despair. Like tools in a builder's hand, we are simply instruments through which God carries out His own work. When we succeed, the credit belongs entirely to God's grace. When we feel weak or discouraged, we can rest knowing that God is completely sufficient, leaving every outcome safely in His hands.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What area of your life or daily routine do you need to place under Christ's rule today?",
+    "How does knowing you are an instrument in God's hands free you from pride when you succeed and worry when you feel weak?"
+   ],
+   "prayer": "Lord Jesus, we place the government of our lives upon Your strong shoulders today. Forgive us for trying to carry our own burdens or taking credit for what Your grace accomplishes. Teach us to rest as willing tools in Your hands, and fill our hearts with Your lasting peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 9:7",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,80 @@
+{
+ "id": "20-008-001",
+ "title": "The Excellence of Wisdom",
+ "refs": [
+  "Proverbs 8:1-36"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20008001,
+   "end": 20008036,
+   "ref": "Proverbs 8:1-36",
+   "ranges": [
+    [
+     20008001,
+     20008036
+    ]
+   ],
+   "title": "Seeking the True Wisdom of God",
+   "key_verse": [
+    20008035,
+    20008035
+   ],
+   "reflect": [
+    {
+     "text": "Unlike sinful foolishness that hides in the dark, God's wisdom calls out in the open. She stands at the crossroads and the city gates where ordinary work and business happen. Wisdom is not merely for scholars, and formal education alone cannot produce it unless it rests on God's truth. Because wisdom speaks openly in public, God gives us clear direction for every part of our daily lives, training us in upright character and keeping us from crooked speech.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "This wisdom is far more than practical advice; as F. B. Meyer explains, wisdom is \"both the Power and the Wisdom of God\" revealed in Jesus Christ. Jesus was with the Father before the world began, yet He takes deep joy in dwelling with people. When we read the Bible, we are not just searching for abstract ideas. We are seeking Jesus Himself, who gladly welcomes us and shares His life when we quiet our souls before Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Because real wisdom is found in Christ, we are called to seek Him diligently and put Him first. Those who seek Him with their whole hearts are sure to find Him. When we love Jesus above all else, He gives Himself to us and stays with us forever. In Him we find the true wealth of righteousness, guidance, and eternal life.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your daily routine do you most need God's guidance right now?",
+    "How can you set aside time each day to seek Jesus before other tasks crowd in?"
+   ],
+   "prayer": "Lord Jesus, thank You for calling out to us and offering us the gift of true life. Quiet our hearts so that we may listen to Your Word and walk along Your righteous paths. Help us to seek You first each day and find our lasting treasure in knowing You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 23",
+     "on": "Proverbs 8:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 8:22",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Lady Wisdom",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lady-wisdom"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "26-020-033",
+ "title": "Judgment and Restoration",
+ "refs": [
+  "Ezekiel 20:33-44"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26020033,
+   "end": 26020044,
+   "ref": "Ezekiel 20:33-44",
+   "ranges": [
+    [
+     26020033,
+     26020044
+    ]
+   ],
+   "title": "Accepted and Led to Repentance",
+   "key_verse": [
+    26020041,
+    26020041
+   ],
+   "reflect": [
+    {
+     "text": "God promises to gather his scattered people and accept them as a pleasing aroma. On our own, our sins make us unacceptable to a holy God. Yet the perfect life and death of Jesus are like sweet incense before the Father. Jesus honoured God's law in his life and bore our punishment on the cross. Because of his sacrifice, God welcomes us with unchanging favor. As Charles Spurgeon wrote, \"when you have received his merit, you cannot be unaccepted.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Standing safe in God's acceptance does not make us careless about sin; instead, it leads us to true repentance. Realizing how much mercy we have received melts a hard heart. God graciously gives us this holy sorrow as a gift to help us turn away from what is wrong. When we reflect on his steadfast covenant love, we hate the sins that hurt our relationship with him and gladly return to his care.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that you are fully accepted through Jesus change the way you look at your own sins?",
+    "In what areas of your life is God calling you to turn away from wrong and receive his gift of repentance?"
+   ],
+   "prayer": "Lord God, thank you for accepting us through the perfect obedience and sacrifice of Jesus Christ. Soften our hard hearts with your undeserved love and mercy. Help us to hate our sin, turn back to you in true repentance, and bring you praise every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, March 28",
+     "on": "Ezekiel 20:41",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Jan. 27",
+     "on": "Ezekiel 20:43",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

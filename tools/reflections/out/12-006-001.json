@@ -1,0 +1,129 @@
+{
+ "id": "12-006-001",
+ "title": "The Axe Head Floats",
+ "refs": [
+  "2 Kings 6:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 12006006,
+   "end": 12006006,
+   "ref": "2 Kings 6:6",
+   "ranges": [
+    [
+     12006006,
+     12006006
+    ]
+   ],
+   "title": "\"Made the Iron Float\"",
+   "key_verse": [
+    12006006,
+    12006006
+   ],
+   "reflect": [
+    {
+     "text": "When the borrowed iron axe head sank into the Jordan, it seemed lost for good. Losing it brought great distress to the worker and threatened the honor of the prophets and their God. Yet God did what human strength could never do. He made heavy iron rise from the deep water and float. What is completely impossible for people remains entirely possible for the Lord.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We often face situations that feel just as hopeless. You might be asked to take on a task that far exceeds your strength. You might face sudden financial pressure or carry a burden for someone whose hard heart refuses to turn to God. In every struggle, faith looks to the God who helps when all human means fail. He can provide unexpected relief in our deepest trials.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Whatever desperate case you carry today, you can bring it to God in prayer. The living God who answered Elisha still delights to work wonders for His people. As Charles Spurgeon wrote, \"the God of the prophets lives, and lives to help his saints.\" We can trust Him with our hardest troubles, knowing His power can reach where we cannot.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy or impossible situation are you facing that feels completely beyond your own strength?",
+    "How does remembering God's power to do the impossible help you trust Him with that burden?"
+   ],
+   "prayer": "Lord God, nothing is too hard for You to do. We bring our heaviest burdens and impossible problems to You today. Please strengthen our faith when we feel helpless, and help us trust Your power to make a way where we see none. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 13",
+     "on": "2 Kings 6:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth For Life",
+     "work": "God Makes Impossible Things Possible - Truth For Life - January 13",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-january-13-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 12006001,
+   "end": 12006007,
+   "ref": "2 Kings 6:1-7",
+   "ranges": [
+    [
+     12006001,
+     12006007
+    ]
+   ],
+   "title": "No Problem Is Too Small",
+   "key_verse": [
+    12006005,
+    12006005
+   ],
+   "reflect": [
+    {
+     "text": "This story reminds us that God pays close attention to ordinary people and everyday life. The man who lost the axe head is never even named in Scripture. He was simply doing honest physical work alongside his friends to build a larger place to live. Yet when an accident happened, God showed that ordinary daily concerns matter to Him.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God also meets our needs in different ways. In this passage, the young prophets took ordinary human initiative. They noticed they needed more space, made a sensible plan, and went to cut logs together. At the same time, when human ability fell short, God stepped in with supernatural help to recover what was lost. God works through our everyday efforts as well as through His direct intervention.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "A lost tool or a personal inconvenience might seem minor on a grand scale, but God does not dismiss it. Because God cares about every part of our lives, no problem is too small to bring to Him. We can freely turn to Him with small daily annoyances, work problems, and personal losses, confident that our heavenly Father listens.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever hesitate to pray about small, everyday troubles because they seem unimportant?",
+    "How does knowing God cares about ordinary details encourage you to invite Him into your daily work?"
+   ],
+   "prayer": "Father, thank You for caring about the small details of our daily lives. Forgive us when we think our ordinary troubles are too minor to bring to You. Teach us to pray about every burden and to trust Your care in both our daily work and our unexpected losses. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Stephen Witmer",
+     "work": "No Problem Is Too Small for Prayer",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/no-problem-is-too-small-for-prayer"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

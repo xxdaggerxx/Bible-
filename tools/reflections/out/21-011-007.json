@@ -1,0 +1,74 @@
+{
+ "id": "21-011-007",
+ "title": "Enjoy Your Years",
+ "refs": [
+  "Ecclesiastes 11:7-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 21011007,
+   "end": 21011010,
+   "ref": "Ecclesiastes 11:7-10",
+   "ranges": [
+    [
+     21011007,
+     21011010
+    ]
+   ],
+   "title": "Enjoying the Gift of Today",
+   "key_verse": [
+    21011008,
+    21011008
+   ],
+   "reflect": [
+    {
+     "text": "We often spend our days waiting for something better to arrive. We tell ourselves we will finally be happy when we purchase a new item, find the right relationship, or reach an important goal. Other times, we lose our joy by staying focused on the past. Yet God did not design our lives to be merely endured while we wait for tomorrow. He wants us to receive each day as a gift right now.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Things we own and future accomplishments cannot give us true or lasting peace. When we look to created things for our happiness, they will always leave us wanting more. Real joy is found in the living Lord, not in perfect circumstances. Because God holds both our present and our future in His hands, we can rest and rejoice today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Even when duties feel heavy or trials come our way, experiencing each day remains a true privilege. Ordinary moments shared with the people around us are meaningful blessings worth savoring. When we trust God with what lies ahead, we are free to live today with thankful hearts.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What future goal or circumstance are you tempted to wait for before letting yourself experience joy?",
+    "What simple, everyday blessing can you pause to enjoy with gratitude today?"
+   ],
+   "prayer": "Lord God, thank You for the gift of this day. Help us not to miss today's blessings by dwelling on the past or constantly looking ahead to tomorrow. Teach us to find our joy in You and to receive each moment with a thankful heart. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Enjoy Life Now, Not Later: Part One",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/enjoy-life-now-not-later-part-one"
+    },
+    "D2": {
+     "author": "Luann Prater",
+     "work": "We GET To",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/we-get-to-encouragement-cafe-december-16-2019.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

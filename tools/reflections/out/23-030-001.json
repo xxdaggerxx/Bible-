@@ -1,0 +1,67 @@
+{
+ "id": "23-030-001",
+ "title": "The Worthless Treaty with Egypt",
+ "refs": [
+  "Isaiah 30:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23030015,
+   "end": 23030015,
+   "ref": "Isaiah 30:15",
+   "ranges": [
+    [
+     23030015,
+     23030015
+    ]
+   ],
+   "title": "\"In Quietness and in Confidence\"",
+   "key_verse": [
+    23030015,
+    23030015
+   ],
+   "reflect": [
+    {
+     "text": "When trouble comes, our natural reaction is often to worry, fret, and panic. Yet worrying never solves our problems. It only wears us out and clouds our minds so we cannot make wise decisions. As Charles Spurgeon observed, \"we are sinking by our struggles when we might float by faith.\" True strength does not come from running around in fear or constantly retelling our troubles. Real strength begins when our hearts grow quiet, trusting completely in the God who never breaks His promises.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To experience this quiet trust, we must intentionally set aside time to be alone with God away from our busy routines. The Holy Spirit often carries out His deepest work in private solitude rather than in crowded places. Spending quiet moments outdoors in nature can help clear away mental exhaustion and daily distractions. When we deliberately quiet the noise around us, we give ourselves the room to truly listen to God and rest in His presence.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What worries are you carrying right now that you need to stop fretting over and surrender to God?",
+    "When can you plan some quiet time alone with the Lord this week to rest and listen to Him?"
+   ],
+   "prayer": "Lord God, forgive us for trying to solve everything through frantic worry instead of resting in Your promises. Teach our hearts to be still and trust in Your unfailing help. Give us the discipline to step away from life's noise so we can hear Your voice and find our strength in You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Dec. 12",
+     "on": "Isaiah 30:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Alone with God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-july-27-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "26-005-001",
+ "title": "The Razor of Judgment",
+ "refs": [
+  "Ezekiel 5:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26005001,
+   "end": 26005010,
+   "ref": "Ezekiel 5:1-10",
+   "ranges": [
+    [
+     26005001,
+     26005010
+    ]
+   ],
+   "title": "Privilege and Discipline",
+   "key_verse": [
+    26005005,
+    26005005
+   ],
+   "reflect": [
+    {
+     "text": "God placed Jerusalem right in the center of the nations so she could bear witness to true religion. Yet she turned away from His good laws and acted worse than the people around her. F. B. Meyer reminds us that it is a serious thing to turn away from God after receiving such great privileges. When someone knows God's will and chooses to disobey, the correction is far heavier than for those who never knew Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God cannot treat the sins of His own family lightly. If He overlooked our disobedience, people might think He plays favorites, and we might take His grace for granted. A small dark mark stands out clearly on clean white cloth. In the same way, wrong choices in a believer's life are very noticeable, and our heavenly Father cares too much about our holiness to leave us in our sin.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this, we need to look honestly into our own hearts. We should ask whether we are resisting God's commands or ignoring His will in any part of our lives. God trains us firmly because He wants our lives to produce good fruit. When His correction comes, our calling is to humble ourselves under His hand so that He can lift us up in His time.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What privileges or spiritual gifts has God given you that call for greater obedience?",
+    "Is there an area in your life where you have ignored God's clear direction and need to turn back to Him?"
+   ],
+   "prayer": "Lord, thank You for teaching us Your will and inviting us into Your family. Forgive us for the times we have known what is right yet chose to turn away. Help us to accept Your loving discipline with humble hearts, so that our lives may honor You before others.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 5:9",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

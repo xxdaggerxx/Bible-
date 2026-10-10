@@ -1,0 +1,75 @@
+{
+ "id": "13-028-001",
+ "title": "David Commissions Solomon",
+ "refs": [
+  "1 Chronicles 28:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 13028009,
+   "end": 13028010,
+   "ref": "1 Chronicles 28:9-10",
+   "ranges": [
+    [
+     13028009,
+     13028010
+    ]
+   ],
+   "title": "\"If You Seek Him, He Will Be Found\"",
+   "key_verse": [
+    13028009,
+    13028009
+   ],
+   "reflect": [
+    {
+     "text": "David urges his son Solomon to know God and serve Him with a whole heart and a willing mind. Faithful service does not come from forced duty, but from genuine delight in God. When we begin our days by recognizing God's authority, we protect ourselves from relying on our own strength. David reminds us that if we seek God, He will let us find Him. We do not have to purchase His favor or earn His love; we simply need to turn to Him in prayer and honest gratitude.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Living with a whole heart also means accepting God's guidance when our plans change. David had to let go of his deep desire to build the temple because God said no. Instead of holding on to bitterness or regret, David remembered God's past faithfulness and focused on what God did permit him to do. When our own desires are divided or our ambitions are set aside, we can ask God to renew our hearts. We find peace when we do our best with what He provides and trust Him with the results.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there a personal plan or ambition you need to place peacefully in God's hands?",
+    "What helps you seek the Lord with a willing and undivided heart each day?"
+   ],
+   "prayer": "Lord, thank You for the promise that when we seek You, You will be found. Please renew our desires so we can serve You with willing hearts rather than mere duty. Teach us to let go of our own plans and trust Your good purpose for our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 18",
+     "on": "1 Chronicles 28:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "The Best I Can",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-january-24-2024.html"
+    },
+    "D3": {
+     "author": "Beth Moore",
+     "work": "Day 83: 1 Chronicles 28:1–10",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-83-1-chronicles-28-110.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

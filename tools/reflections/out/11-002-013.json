@@ -1,0 +1,66 @@
+{
+ "id": "11-002-013",
+ "title": "The Execution of Adonijah",
+ "refs": [
+  "1 Kings 2:13-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11002013,
+   "end": 11002027,
+   "ref": "1 Kings 2:13-27",
+   "ranges": [
+    [
+     11002013,
+     11002027
+    ]
+   ],
+   "title": "Solomon Secures the Kingdom",
+   "key_verse": [
+    11002024,
+    11002024
+   ],
+   "reflect": [
+    {
+     "text": "After King David died, Solomon acted firmly to deal with threats inside his kingdom. His older brother Adonijah still wanted the throne for himself. Adonijah came to Bathsheba asking to marry Abishag, David's former nurse. In that ancient culture, claiming a dead king's concubine was understood as making a real bid for royal power.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Solomon recognized this hidden plan right away. He knew it was treason, so he ordered Adonijah to be put to death to guard the peace of the realm. Solomon then banished the priest Abiathar to his own fields. This action fulfilled a long-delayed prophetic judgment that the Lord had spoken years earlier against the house of Eli.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This story shows us that God's plans cannot be stopped by human scheming. No one can overturn what the Lord has established. We can rest in the truth that God is faithful, and His promised justice will always come to pass against anyone who opposes His righteous rule.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas of your life where you try to push your own ambitions instead of submitting to God's will?",
+    "How does knowing that God's promised justice will never fail give you peace today?"
+   ],
+   "prayer": "Lord, You are in control and Your word never fails. Help us to accept Your plans with humble hearts and turn away from selfish ambition. Teach us to trust in Your perfect justice and righteous rule every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Adonijah’s Treachery",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/adonijahs-treachery"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

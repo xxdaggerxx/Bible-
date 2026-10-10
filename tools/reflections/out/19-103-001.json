@@ -1,0 +1,149 @@
+{
+ "id": "19-103-001",
+ "title": "Bless the LORD, O My Soul",
+ "refs": [
+  "Psalms 103:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19103001,
+   "end": 19103002,
+   "ref": "Psalms 103:1-2",
+   "ranges": [
+    [
+     19103001,
+     19103002
+    ]
+   ],
+   "title": "\"Forget Not All His Benefits\"",
+   "key_verse": [
+    19103002,
+    19103002
+   ],
+   "reflect": [
+    {
+     "text": "Praise does not always rise easily from our hearts. Like David facing lonely or frightening trials, we have to deliberately tell our souls to bless the Lord. True praise grows when we actively choose to recall how good God has been. Reflecting on His grace—kindness we do not deserve—helps steady our hearts and calms our daily worries.",
+     "sources": [
+      "D5"
+     ]
+    },
+    {
+     "text": "It is easy to look at the saints of the Bible and assume God showed His greatest wonders only in the past. But God has been just as faithful in our own days. As Charles Spurgeon wrote, \"Let us review our own lives.\" God has stood with us through hard trials, answered our specific requests, and provided for us richly. When we gather up these personal memories of His kindness, we can weave His mercies into heartfelt songs of thanks.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What specific moments in your life show God's personal goodness and help?",
+    "How can you intentionally remind yourself of God's kindness when fear or anxiety creeps in?"
+   ],
+   "prayer": "Lord, forgive us for quickly forgetting the many blessings You give us each day. Help us to train our hearts to remember Your faithfulness through every season of life. May our grateful memories turn our fear into quiet trust and joyful praise. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, July 9",
+     "on": "Psalms 103:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "Joan Walker Hahn",
+     "work": "Forget Not His Benefits",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement-cafe/forget-not-his-benefits-encouragement-cafe-may-12.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19103001,
+   "end": 19103022,
+   "ref": "Psalms 103:1-22",
+   "ranges": [
+    [
+     19103001,
+     19103022
+    ]
+   ],
+   "title": "The Steadfast Compassion of the Lord",
+   "key_verse": [
+    19103008,
+    19103008
+   ],
+   "reflect": [
+    {
+     "text": "God made us with the high purpose of knowing and glorifying Him, yet the rush of daily life often crowds out our worship. During seasons when our spiritual feelings run dry, we cannot simply wait for good emotions to return. Like the psalmist, we must preach the truth of God's character to our own hearts until our gaze lifts above our earthly struggles.",
+     "sources": [
+      "D6",
+      "D7"
+     ]
+    },
+    {
+     "text": "When we look at our own weakness, we might fear that God will turn away in disgust. But Scripture assures us that God knows our fragile, dust-like frame and treats us with the tender compassion of a loving father. He may discipline or chide us when we wander, because a wise parent corrects his children. Yet as Charles Spurgeon observed, \"Not always will He chide.\" God takes no pleasure in frowning at His children, and His anger gives way to mercy the moment we repent.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Our deepest trouble is the sickness of sin, but in Jesus we have a universal Physician. He does not offer a temporary patch; He heals to the core and washes our guilt completely away, removing our sins as far as the east is from the west. Knowing that His love is secured forever transforms our cold hearts into living praise for our heavenly King.",
+     "sources": [
+      "D1",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "When your spiritual feelings feel flat, what truths about God's character can you preach to your heart?",
+    "How does knowing that Jesus completely removes your sin help you approach God with confidence?"
+   ],
+   "prayer": "Heavenly Father, thank You for understanding our weakness and treating us with gentle patience. When we fail and face Your loving correction, draw us back quickly to Your welcoming arms. Thank You for Jesus, our great Physician, who heals our sin and frees us to worship You forever. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 31",
+     "on": "Psalms 103:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 24",
+     "on": "Psalms 103:9",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Jennifer Slattery",
+     "work": "God’s Unchanging Heart for His Profoundly Imperfect People",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/gods-unchanging-heart-for-his-profoundly-imperfect-people-the-crosswalk-devotional.html"
+    },
+    "D6": {
+     "author": "Ryan Griffith",
+     "work": "Psalm 103: Learning How to Talk (to Yourself)",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/psalm-103-learning-how-to-talk-to-yourself"
+    },
+    "D7": {
+     "author": "In Touch Ministries",
+     "work": "Created to Praise",
+     "site": "In Touch Ministries",
+     "url": "https://www.intouch.org/read/daily-devotions/created-to-praise"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

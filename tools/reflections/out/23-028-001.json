@@ -1,0 +1,89 @@
+{
+ "id": "23-028-001",
+ "title": "The Captivity of Ephraim",
+ "refs": [
+  "Isaiah 28:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23028001,
+   "end": 23028013,
+   "ref": "Isaiah 28:1-13",
+   "ranges": [
+    [
+     23028001,
+     23028013
+    ]
+   ],
+   "title": "True Rest and Lasting Glory",
+   "key_verse": [
+    23028005,
+    23028005
+   ],
+   "reflect": [
+    {
+     "text": "The leaders of Ephraim took pride in their wealth and comfort, but their splendor was only a fading flower. They turned to wine and worldly ease instead of seeking the Lord. Yet for those who trust Him, God Himself becomes our lasting beauty, wisdom, and defense. As F. B. Meyer reminds us, what the world seeks in worldly thrills, \"God's people seek and find in Himself.\"",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "God offered His people genuine peace, inviting the weary to rest. When the demands of life wear us down, He calls us to quiet refreshing in His presence. But the proud leaders refused to listen. They mocked God's words as if they were simple baby babble and repetitive rules. When we treat Scripture like a mechanical checklist, we also risk missing God's voice and His gift of rest.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God warns us not to become complacent or proud. True learning requires listening with an open heart so that His truth leads to active obedience. When we submit our minds to Him, He gives us grace, which is God's kindness we do not deserve. He will guide our decisions, roll back our struggles, and sustain us in every battle.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you turning to temporary worldly comforts for relief, or are you coming to God for true rest?",
+    "Do you read the Bible as a routine checklist, or are you listening closely to obey what God says?"
+   ],
+   "prayer": "Lord, forgive us when we trust in our own pride and seek comfort in things that quickly fade. Grant us true rest in Your presence when we are weary and drained. Teach us to listen humbly to Your Word and let Your grace guide our thoughts and actions today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 28:5",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Abigail Dodds",
+     "work": "Precept Upon Precept: A Common (and Serious) Problem in Bible Study",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/precept-upon-precept"
+    },
+    "D3": {
+     "author": "Shirley Dobson and Dr. James Dobson",
+     "work": "Taking Care of Mom",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobsons-parenting-devotional-nov-1.html"
+    },
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 08/06/2003",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-08-or-06-or-2003-1212796.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

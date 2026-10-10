@@ -1,0 +1,80 @@
+{
+ "id": "20-017-001",
+ "title": "Better a Dry Morsel in Quietness",
+ "refs": [
+  "Proverbs 17:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20017001,
+   "end": 20017028,
+   "ref": "Proverbs 17:1-28",
+   "ranges": [
+    [
+     20017001,
+     20017028
+    ]
+   ],
+   "title": "Walking in Wisdom, Friendship, and Joy",
+   "key_verse": [
+    20017017,
+    20017017
+   ],
+   "reflect": [
+    {
+     "text": "Faithful friends act like chosen family who stand firm beside us when troubles hit. Staying close through shifting priorities and life changes takes intentional effort, patience, and ongoing grace, which is God's undeserved kindness. Our spoken words have immense power to build up or break down those around us. Genuine love chooses to let go of minor personal offenses rather than repeatedly dredging them up and fracturing friendships.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Wisdom also shows in how we handle correction. A discerning person readily listens to thoughtful rebuke and learns from it, while a stubborn fool refuses to hear. Attracting dependable companions begins when we seek to be loving and reliable ourselves, while also knowing when to set healthy boundaries.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Unavoidable trials can easily wear down the human spirit. Dwelling in ongoing despair depletes our vitality and harms our health. God offers us laughter as a gift that eases tension and restores our perspective. Cultivating a joyful heart builds spiritual and physical resilience, honoring God's goodness and bringing hope to others.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you show patience and grace to a friend when past misunderstandings arise?",
+    "In what area of your life today can you choose joy and laughter instead of dwelling on discouragement?"
+   ],
+   "prayer": "Lord, thank you for the gift of faithful friends who stand with us through every hardship. Help us to speak words of love, forgive small offenses, and gladly learn from wise correction. Grant us joyful hearts and the gift of laughter so we can honor your goodness and encourage those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Whitney Hopler",
+     "work": "Laughter Is Good Medicine",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/laughter-is-good-medicine-the-crosswalk-devotional.html"
+    },
+    "D2": {
+     "author": "Amanda Idleman",
+     "work": "Trusting God with Your Friendships",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/trusting-god-with-your-friendships.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Discerning Rebuke",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/discerning-rebuke"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,80 @@
+{
+ "id": "21-012-009",
+ "title": "The Whole Duty of Man",
+ "refs": [
+  "Ecclesiastes 12:9-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 21012009,
+   "end": 21012014,
+   "ref": "Ecclesiastes 12:9-14",
+   "ranges": [
+    [
+     21012009,
+     21012014
+    ]
+   ],
+   "title": "The Whole Duty of Man",
+   "key_verse": [
+    21012013,
+    21012013
+   ],
+   "reflect": [
+    {
+     "text": "The Teacher in Ecclesiastes took time to find truthful and delightful words. He arranged proverbs to help people learn divine wisdom. As F. B. Meyer observed, wise words must also have points like goads or nails, \"to stir the conscience and lacerate the heart\" rather than merely pleasing the ear. These wise sayings come from the one Shepherd, who gives His people the exact truth they need to hear.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "It is easy to get lost in endless reading and research. Searching through human books without seeking real answers only leaves the body tired. Instead, the Scriptures are our final authority. Like a sharp prod used to direct livestock, God's inspired word is meant to guide our steps toward righteousness and show us how to live.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "At the close of his journal, the Teacher gives a plain conclusion. Our main calling in life is to revere God and obey His commands. One day God will judge every action and hidden thought. Because this reckoning is coming, we need Christ to guide our lives and make us ready to stand before Him.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you letting God's word guide and correct your daily choices like a shepherd's staff?",
+    "How does knowing God sees every hidden thought shape how you follow Him today?"
+   ],
+   "prayer": "Lord God, thank you for giving us your true words through the one Shepherd. Forgive us for when we chase endless human ideas and forget your simple commands. Help us to revere you and walk in obedience every day through Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ecclesiastes 12:10",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Wrapping Up a Ragged-Edge Journey",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/wrapping-up-a-ragged-edge-journey"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "To Study or Not to Study",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/study-or-not-study"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

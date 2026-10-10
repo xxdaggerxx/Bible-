@@ -1,0 +1,163 @@
+{
+ "id": "24-031-001",
+ "title": "Mourning Turned to Joy",
+ "refs": [
+  "Jeremiah 31:1-25"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24031003,
+   "end": 24031003,
+   "ref": "Jeremiah 31:3",
+   "ranges": [
+    [
+     24031003,
+     24031003
+    ]
+   ],
+   "title": "\"Loved You with an Everlasting Love\"",
+   "key_verse": [
+    24031003,
+    24031003
+   ],
+   "reflect": [
+    {
+     "text": "God loved us long before time began, knowing our worst faults before choosing us. His love is not based on how well we perform, nor can human weakness break it. Even when we wander away like distracted children, God does not give up on us or force our obedience like machines. Instead, He patiently stretches out His hands to welcome us home.",
+     "sources": [
+      "D5",
+      "D6",
+      "D7"
+     ]
+    },
+    {
+     "text": "While the fear of judgment can show us our need, it is God's gentle kindness that truly wins our hearts. As Charles Spurgeon wrote, \"lovingkindness wins the day.\" Christ gently knocks on the door of our lives, drawing us with tender mercy rather than harsh threats.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Holy Spirit makes this deep affection real inside our hearts. Through quiet seasons of prayer and walking closely with Him, God dispels our doubts and gives us solid assurance. Resting in His eternal love anchors our souls and brings deep peace.",
+     "sources": [
+      "D2",
+      "D8"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways have you felt God gently drawing you back when you were tempted to wander?",
+    "How does knowing that God loved you before you were born help calm your fears today?"
+   ],
+   "prayer": "Lord, thank You for loving us before the world began and for choosing us despite our weaknesses. Melt our hard hearts with Your gentle mercy, and let Your Spirit quiet every doubt within us. Help us to rest securely in Your unfailing kindness each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 29",
+     "on": "Jeremiah 31:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 20",
+     "on": "Jeremiah 31:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D5": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 31:3",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D6": {
+     "author": "Meg Bucher",
+     "work": "Still Lost, Despite Handheld Directions",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/ibelieve-truth-a-devotional-for-women-march-9.html"
+    },
+    "D7": {
+     "author": "Adrian Rogers",
+     "work": "How God Reacts to Rebellion",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/loveworthfinding/love-worth-finding-february-18-2024.html"
+    },
+    "D8": {
+     "author": "Truth For Life",
+     "work": "Love Beyond Doubt",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-december-20-2021.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 24031001,
+   "end": 24031025,
+   "ref": "Jeremiah 31:1-25",
+   "ranges": [
+    [
+     24031001,
+     24031025
+    ]
+   ],
+   "title": "Mourning Turned to Joy",
+   "key_verse": [
+    24031012,
+    24031012
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, the Lord promises to restore His scattered people and care for their inner lives. Without God, our souls quickly dry up like an untended desert where nothing good can grow. But under His heavenly care, we are like a well-watered garden. He encloses us with grace, cleans out the weeds through gentle discipline, and guards us with His power.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "A garden cannot survive the burning heat unless it receives water continually. In the same way, the Holy Spirit supplies our souls with steady spiritual refreshment. He provides exactly what each part of our life needs, keeping us fruitful and alive through every dry season.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God also promises that His people will be fully satisfied with His goodness. The world constantly cries out for more, but those whom God cleanses find true contentment in Him alone. He delights in taking us as His own, and His pure, unchanging bounty is more than enough to fill our weary hearts.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas does your soul feel dry, and how can you ask the Holy Spirit to refresh you?",
+    "What keeps you from finding complete contentment in God's goodness rather than worldly things?"
+   ],
+   "prayer": "Lord, water our dry souls today with the presence of Your Holy Spirit. Prune away what is harmful, protect us by Your power, and make our lives bear good fruit. Fill us with Your rich goodness so that our hearts are completely satisfied in You alone. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 29",
+     "on": "Jeremiah 31:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D4": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Nov. 12",
+     "on": "Jeremiah 31:14",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

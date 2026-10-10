@@ -1,0 +1,66 @@
+{
+ "id": "19-075-001",
+ "title": "God’s Righteous Judgment",
+ "refs": [
+  "Psalms 75:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19075001,
+   "end": 19075010,
+   "ref": "Psalms 75:1-10",
+   "ranges": [
+    [
+     19075001,
+     19075010
+    ]
+   ],
+   "title": "God Is the Righteous Judge",
+   "key_verse": [
+    19075007,
+    19075007
+   ],
+   "reflect": [
+    {
+     "text": "We often look to the world around us for success, recognition, or security. But this psalm reminds us that true promotion does not come from any earthly direction or human effort. God alone rules over all human affairs. He holds the world steady, and no power on earth can ever stop Him from protecting and blessing those who obey His Word.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God is the supreme Judge, He sees everything clearly and judges fairly. People who boast in their own strength or rebel against Him will eventually be brought down. In contrast, God promises that the humble and righteous will be lifted up in His right time. We do not have to fight for our own honor or live in fear of proud people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When you walk through hard times or face unfair treatment, you can turn directly to God in persistent prayer. You can rest in His covenant faithfulness, knowing He never forgets His people. Trusting God means letting Him guide your path and leaving the final outcome in His hands.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to look for approval or success instead of trusting God?",
+    "How does knowing that God judges fairly help you stay patient in prayer when life feels unfair?"
+   ],
+   "prayer": "Lord God, thank You that You rule over all things and judge with perfect fairness. Help us not to boast or chase worldly honor, but to trust You with humble hearts. When we are distressed, teach us to pray faithfully and rest in Your loving care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways - July 7, 2007",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-july-7-2007-11545767.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

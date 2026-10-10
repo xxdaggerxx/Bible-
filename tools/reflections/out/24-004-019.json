@@ -1,0 +1,66 @@
+{
+ "id": "24-004-019",
+ "title": "Lamentation for Judah",
+ "refs": [
+  "Jeremiah 4:19-31"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24004019,
+   "end": 24004031,
+   "ref": "Jeremiah 4:19-31",
+   "ranges": [
+    [
+     24004019,
+     24004031
+    ]
+   ],
+   "title": "Mercy in the Midst of Ruin",
+   "key_verse": [
+    24004027,
+    24004027
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Jeremiah moves suddenly from offers of pardon to a vision of unavoidable ruin. The prophet sees terrible destruction falling upon the land, leaving cities torn down and fields empty. God knew ahead of time that most of the people of Judah would refuse to turn away from their sins and repent.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet right in the middle of this dark picture of complete disaster, the Lord gives a word of hope. He declares that although the land will become desolate, he will not bring a total end to it. God does not excuse everyone from judgment, but he promises to preserve a faithful remnant, keeping a small group alive through his mercy.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We share in this same rescue today through grace alone, which is God's free kindness that we could never earn. When we turn from our wrong ways and put our faith in him, he protects us and holds us secure. Even when judgment is certain, his mercy still makes a way for those who trust him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does God's promise to spare a remnant show his mercy even when judgment is deserved?",
+    "What does it mean for your daily life that your rescue comes by God's grace alone?"
+   ],
+   "prayer": "Lord God, thank you that your mercy endures even when judgment is near. Help us to turn from our sins and rely wholly on your grace. Keep our hearts faithful, trusting in the salvation you have promised. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Mercy Amidst Judgment",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/mercy-amidst-judgment"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

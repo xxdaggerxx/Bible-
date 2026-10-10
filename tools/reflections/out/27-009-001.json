@@ -1,0 +1,67 @@
+{
+ "id": "27-009-001",
+ "title": "Daniel’s Prayer for His People",
+ "refs": [
+  "Daniel 9:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27009001,
+   "end": 27009019,
+   "ref": "Daniel 9:1-19",
+   "ranges": [
+    [
+     27009001,
+     27009019
+    ]
+   ],
+   "title": "Confessing Our Sins Before God",
+   "key_verse": [
+    27009008,
+    27009008
+   ],
+   "reflect": [
+    {
+     "text": "When Daniel prayed for his people, he did not make excuses. He came before God with honest confession, admitting that shame belonged to them because of their sins. Seeing our sin clearly, and realizing what it deserves, brings us low before God. Even as believers who have received God's kindness and known His truth, we often fall short and act ungratefully.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Like David and Peter in Scripture, we need a heart that truly grieves over our wrongdoing. Peter wept bitterly after turning away from his Master, and we also have times when we have failed Him. Remembering how much light and love God has given us makes our unfaithfulness feel even heavier.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet seeing our guilt should not lead us to run away from God. Daniel knew that compassion and forgiveness belong to the Lord alone. Our sins would leave us condemned, but God in His mercy rescues us. As Charles Spurgeon wrote, we can \"admire the grace which saves\" us and praise the God who pardons.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you look back at your walk with God, how does remembering His love help you confess your sins honestly?",
+    "How does knowing God's deep mercy keep you from despair when you fall short?"
+   ],
+   "prayer": "Lord God, we come before You knowing that we have failed You and turned away from Your ways. Forgive our ungrateful hearts and grant us a spirit of true repentance. Thank You for Your great compassion that pardons our sins and rescues us by Your grace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, June 14",
+     "on": "Daniel 9:8",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

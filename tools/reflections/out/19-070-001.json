@@ -1,0 +1,73 @@
+{
+ "id": "19-070-001",
+ "title": "Hurry, O LORD, to Help Me!",
+ "refs": [
+  "Psalms 70:1-5"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19070001,
+   "end": 19070005,
+   "ref": "Psalms 70:1-5",
+   "ranges": [
+    [
+     19070001,
+     19070005
+    ]
+   ],
+   "title": "Finding Joy While Waiting for Help",
+   "key_verse": [
+    19070004,
+    19070004
+   ],
+   "reflect": [
+    {
+     "text": "Life can bring deep pain, weakness, and heavy trials, even to faithful believers. Psalm 70 begins and ends with urgent cries for God to hurry and rescue David. He feels poor and needy, surrounded by people who wish him harm. He does not hide his weakness, but honestly brings his desperate need straight to God.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Right in the middle of this dark season, David prays a wide prayer for others. He does not only ask for his own rescue, but asks that all who seek God will be glad. We do not have to wait until every hardship is solved before praising the Lord. We can seek God and treasure his salvation right in the middle of our troubles.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "True gladness comes from God himself. As Charles Spurgeon noted, the heart of our delight is to be glad \"in thee.\" When life is bitter, the Lord is our comfort and present portion. Instead of letting sorrow silence us, we can lift our eyes to God and declare how great he is today.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficulty makes you feel weak and in need of God's urgent help today?",
+    "How can you choose to rejoice in God even before your hard situation is resolved?"
+   ],
+   "prayer": "Lord, you know our struggles and how much we need your help every day. Please teach us not to wait for easy times before we praise your name. Help us seek you, delight in your salvation, and make much of you in every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 1",
+     "on": "Psalms 70:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Stephen Witmer",
+     "work": "Finding Joy in the Dark: The Bold Prayer of Psalm 70",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/finding-joy-in-the-dark"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

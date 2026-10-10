@@ -1,0 +1,91 @@
+{
+ "id": "19-074-001",
+ "title": "Why Have You Rejected Us Forever?",
+ "refs": [
+  "Psalms 74:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19074001,
+   "end": 19074023,
+   "ref": "Psalms 74:1-23",
+   "ranges": [
+    [
+     19074001,
+     19074023
+    ]
+   ],
+   "title": "Remember Your Covenant in the Dark",
+   "key_verse": [
+    19074020,
+    19074020
+   ],
+   "reflect": [
+    {
+     "text": "When enemies ruined the temple, God's people felt forgotten in a dark and broken land. They had no prophets to tell them how long their trouble would last, and they struggled with the fear that God had abandoned them for good. Yet instead of merely mourning the ruin around them, they poured out their grief to God. They remembered His ancient deeds of rescue and boldly asked Him to rise up and defend His own name.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Even the darkest seasons remain under God's loving rule. The same Lord who established the sun and the day also owns the night of our affliction. Just as He created winter with a wise purpose to break up the hard ground and sweeten the soil, He governs our cold, painful trials. Darkness and sorrow never mean that God has left His throne. What looks like defeat to our eyes is still being guided by His hand.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Because of this, we can turn to God with confident prayers in our hardest days. The psalmist reached the heart of God by pleading His covenant, the sacred bond of agreement He made with His people. As F. B. Meyer noted, God cannot \"run back from the terms of the covenant\" to which He has pledged Himself. We can hold fast to His promises sealed in Christ, trusting that our faithful King will revive and restore the humble who call on Him.",
+     "sources": [
+      "D1",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you walk through a dark or wintry season, how does knowing God rules the night bring you comfort?",
+    "What promises in Christ can you bring to God today as you pray for help and renewal?"
+   ],
+   "prayer": "Lord God, even when life feels cold and dark, we know that the day and the night belong to You. Remember Your covenant of grace sealed in Christ, and look kindly upon our troubles. Please bring warmth to our souls, revive Your people, and help us trust Your wise care through every storm.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 1",
+     "on": "Psalms 74:17",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, December 23",
+     "on": "Psalms 74:16",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 74:20",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Stuart Briscoe",
+     "work": "Prayer for a Dark Land",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/prayer-for-a-dark-land-one-year-devotions-for-men-october-15.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

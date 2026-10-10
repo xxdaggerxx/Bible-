@@ -1,0 +1,67 @@
+{
+ "id": "16-007-004",
+ "title": "The List of Returning Exiles",
+ "refs": [
+  "Nehemiah 7:4-69"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16007004,
+   "end": 16007069,
+   "ref": "Nehemiah 7:4-69",
+   "ranges": [
+    [
+     16007004,
+     16007069
+    ]
+   ],
+   "title": "Restored to Serve God",
+   "key_verse": [
+    16007064,
+    16007064
+   ],
+   "reflect": [
+    {
+     "text": "As Nehemiah recorded the families returning to Jerusalem, a serious problem arose among the priests. Some men searched for their names in the family registers, but their records could not be found. Their ancestors had formed worldly ties and taken another family's name. Because their heritage could not be proved, they were set aside from priestly service and could not share in the holy food.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "A similar thing can happen to believers today. F. B. Meyer warns that we can lose \"the assurance of sonship\" when we make compromises with the world. When we drift into worldly ways, we begin to feel far from God, and our hearts grow cold toward others. Without that quiet certainty of belonging to God, we lose our strength and fall away from serving Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet our failure is not the end of the story. Jesus is our merciful and faithful High Priest who understands our weakness. He waits to welcome us, restore our fellowship with God, and give us fresh spiritual nourishment. The joy He gives does not depend on our circumstances, and it gives us real strength to serve Him with a glad heart.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have worldly habits or compromises caused you to feel distant from God?",
+    "How can you come to Jesus today to have your joy and assurance restored?"
+   ],
+   "prayer": "Lord Jesus, thank You for being our faithful High Priest who welcomes and restores us when we fail. Forgive us for the times we have drifted toward the world and lost our joy. Fill our hearts with the certainty of Your love, and give us strength to serve You gladly today.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Nehemiah 7:64",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

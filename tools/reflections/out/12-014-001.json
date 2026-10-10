@@ -1,0 +1,67 @@
+{
+ "id": "12-014-001",
+ "title": "Amaziah Reigns in Judah",
+ "refs": [
+  "2 Kings 14:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12014001,
+   "end": 12014007,
+   "ref": "2 Kings 14:1-7",
+   "ranges": [
+    [
+     12014001,
+     12014007
+    ]
+   ],
+   "title": "Following God with an Undivided Heart",
+   "key_verse": [
+    12014003,
+    12014003
+   ],
+   "reflect": [
+    {
+     "text": "King Amaziah started his rule by doing what was right and following God's commands. Yet his obedience was only partial. Rather than seeking the wholehearted devotion of King David, he copied the flawed pattern of his father Joash. Amaziah left the high places standing, allowing the people to keep making sacrifices there. Giving God only half of our obedience means accepting compromises that can lead to deeper spiritual trouble. We need careful faithfulness in every small matter to guard against future falls.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Amaziah did show care for God's law when he judged his father's murderers, sparing their children. As the law taught, each person must answer for their own sin. On our own, we were spiritually dead in our wrongdoing. Yet in God's kindness, Jesus died in our place, satisfying the law completely for all who believe. Because we died with Him, we are invited to die to sin each day. As F. B. Meyer wrote, we should \"place the grave of Jesus between\" ourselves and temptation.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas where you offer God half-hearted obedience rather than following Him completely?",
+    "How can remembering that you died with Christ help you turn away from daily temptations?"
+   ],
+   "prayer": "Lord, forgive us when we hold back parts of our lives and settle for partial obedience. Thank You that Jesus died in our place and satisfied the demands of Your law. Help us to walk faithfully in the small details of life and put away every compromise today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 14:6",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Amaziah Reigns in Judah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/amaziah-reigns-judah"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,88 @@
+{
+ "id": "19-066-001",
+ "title": "Make a Joyful Noise",
+ "refs": [
+  "Psalms 66:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19066001,
+   "end": 19066020,
+   "ref": "Psalms 66:1-20",
+   "ranges": [
+    [
+     19066001,
+     19066020
+    ]
+   ],
+   "title": "Praising God Through Every Season",
+   "key_verse": [
+    19066020,
+    19066020
+   ],
+   "reflect": [
+    {
+     "text": "Praising God is not just an optional extra for our lives. As Charles Spurgeon reminds us, \"it is the Christian's duty to praise God.\" We often wait to thank Him until our prayers are answered the exact way we want. Yet the psalmist cried out for help and praised God at the same time. God's good character never changes, so we are invited to bring Him honor and thanks every single day.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "God also leads us through hard trials, refining us like silver in a furnace. These painful times are not wasted. The Refiner stays right beside the heat, clearing away impurities so that our character begins to reflect Him. We can rest safely in His will, knowing nothing reaches us that has not first been permitted in heaven.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "When we look back on our prayers, we may see how weak and patchy they have been. Often we run to God only when trouble hits, but forget Him when life feels smooth. Even so, God does not turn away from our cold or inconsistent cries. In His mercy, He still listens, cares for us, and answers.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What helps you remember to praise God even before you see the answers to your prayers?",
+    "How does knowing that God patiently hears your weak prayers encourage you to talk to Him today?"
+   ],
+   "prayer": "Lord God, thank You for listening to our prayers even when our words are weak and our faith falters. Help us to praise You faithfully each day, both in seasons of comfort and in times of testing. Shape our hearts through every trial so that our lives reflect Your goodness. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, May 24",
+     "on": "Psalms 66:20",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 30",
+     "on": "Psalms 66:2",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 66:10",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Anne Peterson",
+     "work": "When Should We Praise God? (Psalm 66:17) - Your Daily Bible Verse - October 26",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/your-daily-bible-verse-october-26.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

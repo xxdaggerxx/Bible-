@@ -1,0 +1,128 @@
+{
+ "id": "24-031-026",
+ "title": "The New Covenant",
+ "refs": [
+  "Jeremiah 31:26-40"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 24031034,
+   "end": 24031034,
+   "ref": "Jeremiah 31:34",
+   "ranges": [
+    [
+     24031034,
+     24031034
+    ]
+   ],
+   "title": "\"They Shall All Know Me\"",
+   "key_verse": [
+    24031034,
+    24031034
+   ],
+   "reflect": [
+    {
+     "text": "In the new covenant, God gives every believer a personal relationship with himself. We do not just learn facts or teachings about him from other people. Through Jesus Christ, the least believer knows God directly as a loving Father and a Friend. We are no longer strangers to him, but we are brought into close fellowship and share quiet time in his holy company.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "With this true knowledge of God comes the wonder of complete forgiveness. When God forgives our wrongs, he promises to remember them no more. This means he will never bring them up to punish us, nor will he love us even a tiny bit less. As Charles Spurgeon wrote, \"the Lord makes a complete obliteration\" of the sins of his people.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Our guilt has been wiped away like a debt that is completely paid. Knowing that our sins are gone does not make us careless about how we live. Instead, experiencing God's free pardon makes us hate sin and desire never to hurt him again by our disobedience.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing God as a personal Friend change the way you talk to him each day?",
+    "How does the promise that God will never bring up your past sins give you peace when you feel guilty?"
+   ],
+   "prayer": "Lord God, thank you for making yourself known to us through Jesus Christ and calling us your friends. Thank you for completely forgiving our sins and choosing to remember them no more. Help us to walk in your peace and love you with obedient hearts today. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 11",
+     "on": "Jeremiah 31:34",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 12",
+     "on": "Jeremiah 31:34",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 24031026,
+   "end": 24031040,
+   "ref": "Jeremiah 31:26-40",
+   "ranges": [
+    [
+     24031026,
+     24031040
+    ]
+   ],
+   "title": "God as Our Full Delight",
+   "key_verse": [
+    24031033,
+    24031033
+   ],
+   "reflect": [
+    {
+     "text": "In the new covenant, God makes a pledge that holds everything we could ever need: he says, I will be their God. Our human desires are huge and can never be satisfied by the things of this world. Yet God's own wealth has no limit. When God gives himself to be our portion, our cup overflows, and our deepest longings find complete rest in him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This promise offers far more than just quiet contentment; it brings rich and overflowing joy. Charles Spurgeon called this promise \"a deep sea of bliss, a shoreless ocean of delight\" for the soul. No earthly music can compare to the sweet comfort of having the Maker of heaven as our very own. If we possess God himself, we have all things, even if everything else should fail.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Having God as our God is the foundation of our hope both for today and for the future. It gives us a taste of heaven right now and points us toward the unending joy ahead. We are invited to live in the light of his love each day and rejoice in the great privilege of belonging to him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel dissatisfied or empty, how does remembering that God is your God bring you comfort?",
+    "What are some practical ways you can enjoy God's presence and rest in his love today?"
+   ],
+   "prayer": "Gracious God, thank you for giving yourself to us and promising to be our God. When our hearts look for satisfaction in things that fade, remind us that you are all we truly need. Fill our souls with your quiet joy and help us rest in your endless love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 9",
+     "on": "Jeremiah 31:33",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

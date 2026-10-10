@@ -1,0 +1,75 @@
+{
+ "id": "12-016-001",
+ "title": "Ahaz Reigns in Judah",
+ "refs": [
+  "2 Kings 16:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12016001,
+   "end": 12016009,
+   "ref": "2 Kings 16:1-9",
+   "ranges": [
+    [
+     12016001,
+     12016009
+    ]
+   ],
+   "title": "Where to Turn in Trouble",
+   "key_verse": [
+    12016007,
+    12016007
+   ],
+   "reflect": [
+    {
+     "text": "King Ahaz did not follow the Lord. He embraced pagan practices and ignored God's commands, bringing instability to his kingdom. When the kings of Aram and Israel united to attack Jerusalem, Ahaz panicked. He faced a serious military threat, but he did not turn to God for help.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of repenting and trusting the Lord, Ahaz looked to a pagan empire. He sent messengers to the king of Assyria and pledged his allegiance to him. Ahaz even emptied the temple treasuries, taking sacred gold and silver to buy protection. Choosing worldly security over God led Judah into dangerous spiritual compromise and set them on a path toward future judgment.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "When we face difficult trials, we might feel tempted to lean on worldly solutions. Yet human help cannot take the place of trusting in the Lord. In times of crisis, believers are called to confess their sins, turn back to God, and rely on His promises with greater faith.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When trouble comes your way, do you turn first to worldly help or to the Lord in prayer?",
+    "What promise of God can you recall today to help you trust Him more?"
+   ],
+   "prayer": "Lord, forgive us for the times we turn to the world for rescue instead of trusting You. Remind us of Your faithfulness whenever we feel afraid. Please give us greater faith to follow You and rely on Your promises in every trial. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Ahaz Appeals to Syria",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ahaz-appeals-to-syria"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - May 7",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-may-7-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

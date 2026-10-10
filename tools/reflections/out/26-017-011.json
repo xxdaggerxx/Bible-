@@ -1,0 +1,67 @@
+{
+ "id": "26-017-011",
+ "title": "The Parable Explained",
+ "refs": [
+  "Ezekiel 17:11-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26017011,
+   "end": 26017024,
+   "ref": "Ezekiel 17:11-24",
+   "ranges": [
+    [
+     26017011,
+     26017024
+    ]
+   ],
+   "title": "Shelter in the Royal Cedar",
+   "key_verse": [
+    26017023,
+    26017023
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God promises to plant a tender shoot on a high mountain, where it grows into a majestic cedar tree. As F. B. Meyer explains, this royal tree pictures Christ. A cedar can live for thousands of years, with deep roots and sheltering branches. By contrast, little birds come to nest safely in its shade.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "People of all backgrounds find rest in Jesus. As Meyer notes, we come as \"birds of every wing.\" Some of us are young and just starting out, while others are old and tired. Some people are bold like eagles, while others are gentle like doves. Some have kept God's rules from childhood, and others have broken them all. What matters is that we come to Jesus.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord understands how each of us is made. He does not expect a sparrow to fly like a seagull, and He does not want you to copy someone else. You are not useless just because your gifts look different from another person's. Instead of comparing yourself to others, you can fly out of the storm and rest peacefully under Christ's shelter.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel useless because you compare yourself to other people?",
+    "What worries or storms do you need to bring to Jesus for shelter today?"
+   ],
+   "prayer": "Lord Jesus, thank you for welcoming each of us into your care, no matter our weaknesses. Help us not to compare ourselves to others, but to be content with how you made us. Please be our peaceful shelter in the storms of life. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 17:23",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

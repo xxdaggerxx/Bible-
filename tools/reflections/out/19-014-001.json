@@ -1,0 +1,122 @@
+{
+ "id": "19-014-001",
+ "title": "The Fool Says There Is No God",
+ "refs": [
+  "Psalms 14:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19014001,
+   "end": 19014001,
+   "ref": "Psalms 14:1",
+   "ranges": [
+    [
+     19014001,
+     19014001
+    ]
+   ],
+   "title": "\"There is no God\"",
+   "key_verse": [
+    19014001,
+    19014001
+   ],
+   "reflect": [
+    {
+     "text": "The Bible does not argue to prove that God exists. Instead, it shows that denying him is a deep mistake. Everything around us is full of order and life. It is not reasonable to think that the whole universe came from blind chance, or that it created itself. Something cannot bring itself into being. Because the universe exists, there must be an eternal, uncaused Maker who made all things. God does not depend on anything else to exist; he is entirely self-sufficient.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Furthermore, because we are persons with minds and hearts, the Creator behind it all is not an impersonal force. He is personal. Scripture explains that people usually push God away not because of a lack of proof, but because of a rebellious heart that wants to avoid moral accountability. Yet through faith in Jesus Christ, we are invited to know this eternal Creator personally.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When you look at the design of the world around you, how does it remind you of God's wisdom?",
+    "Are there areas of your life where you are tempted to ignore God so you can go your own way?"
+   ],
+   "prayer": "Lord God, you are the eternal Creator of all things, needing nothing outside yourself. Forgive us when our hearts want to live as if you were not there. Thank you for making yourself known to us personally through Jesus Christ. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Jack Graham",
+     "work": "The Truth Behind Atheism",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-january-7-2014.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "God's Self-Existence",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-self-existence"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19014001,
+   "end": 19014007,
+   "ref": "Psalms 14:1-7",
+   "ranges": [
+    [
+     19014001,
+     19014007
+    ]
+   ],
+   "title": "Longing for Deliverance and Home",
+   "key_verse": [
+    19014007,
+    19014007
+   ],
+   "reflect": [
+    {
+     "text": "When we live in a world marked by sin and trouble, waiting for God to set things right can make us feel tired and impatient. Yet David ends this psalm by looking ahead. Like a captive person dreaming of release, he looks forward to the great day when God restores his people and fills their hearts with gladness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "It is good for our hearts to keep an eye on the future. As F. B. Meyer notes, it helps to \"look on and up\" toward our true home with Christ. When we feel the heavy weight of our present earthly troubles, thinking about heaven gives us comfort and strength. Remembering the glorious inheritance God has promised lifts our spirits in dark times.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Looking forward to God's final rescue does not make us lazy today. Throughout history, believers who eagerly longed for Christ's return were often the most faithful workers in caring for others, preaching, and serving. Having our hearts set on heaven gives us joy and courage to keep doing God's work until that bright day arrives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can keeping your eyes on heaven help you through your present troubles?",
+    "Does your hope in God's future deliverance inspire you to serve others more faithfully today?"
+   ],
+   "prayer": "Father, we sometimes grow weary of waiting while living in a broken world. Fix our eyes on the hope of your salvation and our eternal home with Christ. Help us to serve you and love our neighbors with joy until the day our deliverance comes. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 14:7",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "26-029-008",
+ "title": "The Desolation of Egypt",
+ "refs": [
+  "Ezekiel 29:8-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26029008,
+   "end": 26029016,
+   "ref": "Ezekiel 29:8-16",
+   "ranges": [
+    [
+     26029008,
+     26029016
+    ]
+   ],
+   "title": "Trusting God Through Changing Seasons",
+   "key_verse": [
+    26029015,
+    26029015
+   ],
+   "reflect": [
+    {
+     "text": "Long ago, Egypt stood as an unrivaled global superpower. It seemed impossible that such a mighty nation could ever fall, yet God brought an end to its dominance according to His own timeline. Unlike other ancient empires that were wiped out completely, Egypt remained, but only as a lowly nation. That is exactly what the Lord said would happen through the prophet Ezekiel.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The exact fulfillment of these words shows us something important about Scripture. Every promise and warning in the Bible is reliable because God's Word is inspired by the Holy Spirit. We can fully trust what God says, even when world events seem confusing or uncertain.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Just as God guided the history of nations, He also guides the chapters of our personal lives. The Lord sometimes brings certain seasons to a close so He can direct us toward something new. We do not need to fear big transitions or unexpected changes. We can rest, knowing that God works through every shift in life for our ultimate good.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What life transition are you facing right now that you need to place in God's hands?",
+    "How does seeing God's promises come true in history help you trust Him with your future?"
+   ],
+   "prayer": "Lord, thank You that Your Word is completely trustworthy and that You guide all of history. When seasons in our lives come to an end, please help us not to be afraid of the changes ahead. Give us peace as we trust that You are leading us toward what is good for us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Sept. 9, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-sept-9-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

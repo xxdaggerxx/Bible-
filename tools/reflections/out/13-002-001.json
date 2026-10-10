@@ -1,0 +1,66 @@
+{
+ "id": "13-002-001",
+ "title": "The Sons of Israel",
+ "refs": [
+  "1 Chronicles 2:1-55"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13002001,
+   "end": 13002055,
+   "ref": "1 Chronicles 2:1-55",
+   "ranges": [
+    [
+     13002001,
+     13002055
+    ]
+   ],
+   "title": "A Door of Hope in Trouble",
+   "key_verse": [
+    13002007,
+    13002007
+   ],
+   "reflect": [
+    {
+     "text": "In the middle of this long list of family names, Scripture pauses on a sobering story. We read about Achar, who brought disaster on himself, his family, and all of Israel by greedily taking forbidden plunder. Bad choices and secret disobedience often leave people feeling trapped in hardship and deep regret.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We may imagine that private mistakes stay harmless, but nothing is hidden from God. Sins kept in secret cannot remain hidden forever, and they almost always bring pain to others around us. Rather than ignoring our failures or trying to conceal them, believers must bring their sins into the open before God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even when our foolish choices bring painful consequences, God offers real grace, his undeserved kindness. He graciously promises to turn our valley of trouble into an open doorway of hope and forgiveness. When we are honest with him about our wrongs, he welcomes us and restores our hearts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there any hidden disobedience or failure you need to bring honestly before God today?",
+    "How does knowing that God offers a doorway of hope encourage you to confess your mistakes?"
+   ],
+   "prayer": "Lord, forgive us for the times we have tried to hide our sins instead of confessing them. Thank you that you see all things and still offer us your mercy and grace. Please turn our troubles into an open door of hope as we trust you today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Jill Briscoe",
+     "work": "A Door of Hope in the Valley of Trouble",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/a-door-of-hope-in-the-valley-of-trouble-one-year-devotions-for-women-february-21.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

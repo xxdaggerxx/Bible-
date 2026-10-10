@@ -1,0 +1,67 @@
+{
+ "id": "24-041-001",
+ "title": "The Murder of Gedaliah",
+ "refs": [
+  "Jeremiah 41:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24041001,
+   "end": 24041010,
+   "ref": "Jeremiah 41:1-10",
+   "ranges": [
+    [
+     24041001,
+     24041010
+    ]
+   ],
+   "title": "God's Care in Dark Times",
+   "key_verse": [
+    24041002,
+    24041002
+   ],
+   "reflect": [
+    {
+     "text": "This chapter is filled with heartbreaking violence. A small group of survivors had stayed behind in the land, hoping for peace and a fresh start. Yet Ishmael arrived with treachery, striking down Gedaliah and murdering innocent travelers. It looked like ruthless cruelty that completely ruined any chance of recovery for God's wounded people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In terrible moments like this, it is hard to see what God is doing. We need a deep faith that looks past the confusion and trusts His unseen purpose. Even when wicked people carry out evil schemes, our heavenly Father remains in complete control. As F. B. Meyer notes, they \"cannot hurt us beyond His permission.\" God can take even tragic events and use them to train and help His children.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God is Lord over all, we do not need to live in fear of human threats or sudden disasters. We are never just at the mercy of outside events; we are always dealing first-hand with God Himself. When hardships come, true believers can respond with patient hope, knowing our Father watches over our lives every moment.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When tragic or confusing events happen, what helps you remember that God is still in control?",
+    "How can trusting that nothing touches your life without God's permission give you peace today?"
+   ],
+   "prayer": "Heavenly Father, help us to trust You when terrible and confusing things happen around us. Remind us that even the darkest events cannot go beyond what You allow. Give us quiet patience and deep faith to rest securely in Your loving care. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 41:2",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

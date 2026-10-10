@@ -1,0 +1,131 @@
+{
+ "id": "18-019-001",
+ "title": "Job: My Redeemer Lives",
+ "refs": [
+  "Job 19:1-29"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18019025,
+   "end": 18019025,
+   "ref": "Job 19:25",
+   "ranges": [
+    [
+     18019025,
+     18019025
+    ]
+   ],
+   "title": "\"My Redeemer Lives\"",
+   "key_verse": [
+    18019025,
+    18019025
+   ],
+   "reflect": [
+    {
+     "text": "In the middle of crushing grief and harsh words from his companions, Job held on to an astonishing hope. Long before his health or wealth was restored, he looked up in faith. In the ancient world, a redeemer was a close family member who stepped in to defend you and right your wrongs. When everyone else turned away, Job trusted that he had a living Kinsman in heaven who saw his pain and would stand up for him on the earth. This points directly to Jesus, who conquered death and lives forever to rescue us.",
+     "sources": [
+      "D3",
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "Charles Spurgeon noted that the sweetness of this promise rests in the little word \"My.\" Having gold locked away in a distant mine does not feed a hungry person; you need that gold in your own pocket to buy bread. In the same way, it is not enough to know that a Savior exists somewhere far off. Real peace comes when we know by faith that He belongs to us. Even in our deepest heartbreak, doubts lose their sting when we know our living Lord holds our future.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard times or feel alone, how does knowing Jesus is your living Redeemer bring you comfort?",
+    "Are you resting in the quiet assurance that Christ is your own personal Savior today?"
+   ],
+   "prayer": "Lord Jesus, thank you that you conquered the grave and live right now as our Redeemer. When sorrow surrounds us or friends fail us, help us hold fast to you with steady trust. Give us lasting peace in knowing that our lives and our future are safe in your hands. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 21",
+     "on": "Job 19:25",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 19:25",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D4": {
+     "author": "Betty Dunn",
+     "work": "What Did Job Mean When He Said \"My Redeemer Lives\"?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-job-mean-my-redeemer-lives.html"
+    },
+    "D5": {
+     "author": "Bible Pathway",
+     "work": "Bible Pathway - June 19, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-june-19-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 18019001,
+   "end": 18019029,
+   "ref": "Job 19:1-29",
+   "ranges": [
+    [
+     18019001,
+     18019029
+    ]
+   ],
+   "title": "Seeing God Face to Face",
+   "key_verse": [
+    18019026,
+    18019026
+   ],
+   "reflect": [
+    {
+     "text": "While Job suffered terrible pain and felt abandoned by everyone around him, his heart reached toward a breathtaking future. He looked past his decaying body to the day he would see God with his own eyes. As Charles Spurgeon observed, seeing God is \"the sum and substance of heaven.\" The hope of believers is not simply walking through pearly gates or gazing at crowns of gold. The deepest joy of eternity is being in the direct presence of our Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Right now, we see God only by faith when we pray and worship together. In eternity, however, every cloud will be cleared away, and we will see Jesus openly as He is. Looking upon Christ will never grow dull or run dry. His infinite love, His wisdom, and His wonderful deeds will give us endless joy to explore. Earthly pleasures always fade and lose their shine, but the glory of seeing our God will stay bright forever.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What parts of God's character and love do you look forward to understanding more when you see Him face to face?",
+    "How does the hope of seeing Jesus openly change the way you look at your present hardships?"
+   ],
+   "prayer": "Father, thank you for the wonderful promise that one day our eyes will behold you in glory. Teach us to seek your presence now through daily prayer and faith. Keep our eyes fixed on Jesus, knowing that the joy of seeing Him will far outshine any trouble we face on earth. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, January 10",
+     "on": "Job 19:26",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

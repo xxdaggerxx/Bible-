@@ -1,0 +1,61 @@
+{
+ "id": "24-013-001",
+ "title": "The Linen Loincloth",
+ "refs": [
+  "Jeremiah 13:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24013001,
+   "end": 24013011,
+   "ref": "Jeremiah 13:1-11",
+   "ranges": [
+    [
+     24013001,
+     24013011
+    ]
+   ],
+   "title": "Clinging Closely to the Lord",
+   "key_verse": [
+    24013011,
+    24013011
+   ],
+   "reflect": [
+    {
+     "text": "God gave Jeremiah a hands-on object lesson to help His people understand an important spiritual truth. A clean linen sash showed readiness to serve the Lord, picturing how closely God had bound Israel and Judah to Himself. But when Jeremiah buried the cloth until it rotted away, God warned what happens when people follow stubborn hearts and chase idols. Their pride made them useless as witnesses, and God warned that exile would expose and ruin that pride.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life might stubborn pride keep you from listening to God's word?",
+    "How does knowing that God holds you close give you confidence to serve Him?"
+   ],
+   "prayer": "Lord, thank You for drawing us close to Yourself and inviting us to belong to You. Please strip away our pride and teach us to listen humbly to Your voice. Cause us to cling to You each day so that we are ready to serve You. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Loincloth and Jars of Wine",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/loincloth-and-jars-wine"
+    },
+    "D3": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - Aug. 17, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-aug-17-2012.html"
+    }
+   },
+   "dropped": 1,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

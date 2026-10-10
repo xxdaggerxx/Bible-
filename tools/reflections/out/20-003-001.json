@@ -1,0 +1,73 @@
+{
+ "id": "20-003-001",
+ "title": "Trust in the LORD with All Your Heart",
+ "refs": [
+  "Proverbs 3:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 20003005,
+   "end": 20003006,
+   "ref": "Proverbs 3:5-6",
+   "ranges": [
+    [
+     20003005,
+     20003006
+    ]
+   ],
+   "title": "\"Trust in the LORD with All Your Heart\"",
+   "key_verse": [
+    20003005,
+    20003005
+   ],
+   "reflect": [
+    {
+     "text": "When life hurts or feels confusing, we often spend all our energy asking why things happened. Our human understanding is weak, guided by emotions, and never sees the whole picture. In contrast, God possesses complete knowledge. When we obsess over getting answers to every painful event, our faith can easily be weakened. Lasting peace does not come from knowing all the reasons, but from knowing the faithful God who is in control.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "At other times, our impatience leads us astray. We assume our personal plan is better than God's plan, so we ignore His clear guidance. Taking our own shortcuts only leads us into dead ends and painful detours. Learning to trust the Lord with all our heart happens step by step through daily prayer and choosing to obey Him when He sets boundaries.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When circumstances seem completely senseless, God invites us to surrender our limited perspective. Instead of leaning on our own logic, we find rest by placing our full confidence in Him and letting Him guide our steps.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you wearing yourself out trying to understand a painful situation instead of trusting God?",
+    "Where are you tempted to take a shortcut rather than patiently obeying God's direction?"
+   ],
+   "prayer": "Lord, my understanding is limited and easily swayed by feelings, but You know all things. Forgive me for the times I become impatient and try to follow my own path. Help me to surrender my need for every answer and to trust You with all my heart each day.",
+   "sources": {
+    "D1": {
+     "author": "Glynnis Whitwer",
+     "work": "God, I Don't Understand",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/god-i-don-t-understand-encouragement-for-today-jan-4-2013.html"
+    },
+    "D2": {
+     "author": "Wendy Pope",
+     "work": "Duh?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-nov-26-2007-11559845.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,127 @@
+{
+ "id": "16-004-009",
+ "title": "Discouragement Overcome",
+ "refs": [
+  "Nehemiah 4:9-23"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 16004014,
+   "end": 16004014,
+   "ref": "Nehemiah 4:14",
+   "ranges": [
+    [
+     16004014,
+     16004014
+    ]
+   ],
+   "title": "\"Remember the Lord\"",
+   "key_verse": [
+    16004014,
+    16004014
+   ],
+   "reflect": [
+    {
+     "text": "Many important tasks start with great energy, but as obstacles pile up, our strength can quickly drain away midway through. Discouragement is heavy and painful, yet it does not have to be the end of the story. Nehemiah knew his people needed far more than empty cheer. He helped them look away from their fears and turn their eyes back to the Lord, who gives real strength to finish the work.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God sometimes allows disruptions and delays that seem to slow down kingdom work. Nehemiah's builders had to hold a weapon in one hand while working with the other. This looked inefficient, but God used those hindrances to build humble trust rather than self-reliant pride. He wanted their faith to grow, which is worth far more than any wall.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Nehemiah also gave the people a shared purpose by calling them to protect their families. He balanced active trust in God with practical care for one another. When we stand together in mutual service, we no longer feel isolated, and we find the endurance needed to keep going.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life are you tempted to quit because progress feels too slow?",
+    "How can fixing your eyes on the Lord help you keep serving the people around you today?"
+   ],
+   "prayer": "Lord, when our energy runs out and our work feels too hard, remind us of Your greatness. Keep us from relying on our own strength, and teach us to depend on You in every trial. Help us stand together with our brothers and sisters in loving service. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Chuck Swindoll",
+     "work": "Cures for Discouragement",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/cures-for-discouragement"
+    },
+    "D2": {
+     "author": "Stuart Briscoe",
+     "work": "Finishing the Job - One Year Devotions for Men",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/finishing-the-job-one-year-devotions-for-men-november-7.html"
+    },
+    "D4": {
+     "author": "Jon Bloom",
+     "work": "What God Is Building Through All the \"Inefficiencies\" of Life",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/what-god-is-building-through-all-the-inefficiencies-of-life"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 16004009,
+   "end": 16004023,
+   "ref": "Nehemiah 4:9-23",
+   "ranges": [
+    [
+     16004009,
+     16004023
+    ]
+   ],
+   "title": "Standing Firm Against Discouragement",
+   "key_verse": [
+    16004009,
+    16004009
+   ],
+   "reflect": [
+    {
+     "text": "When we face difficult seasons, the hardest battle is often fought inside our own hearts. As the people worked among the heavy piles of rubble, outward pressure gave way to an inner flood of fatigue, frustration, and fear. We often assume faithful believers never struggle, but even great biblical heroes experienced deep bouts of discouragement. Feeling overwhelmed does not mean your faith has failed; it simply shows that you are human.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Nehemiah met this widespread despair with honest prayer and practical care. Moving through low seasons cannot be rushed with quick answers. It requires bringing our pain to God, taking time for physical rest, and leaning on the encouragement of fellow believers. When we share our struggles openly instead of suffering in secret, God uses our Christian community to lift our spirits.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What feelings of fatigue or frustration do you need to bring honestly to God today?",
+    "Who is a trusted believer you can reach out to this week for prayer and mutual support?"
+   ],
+   "prayer": "Father, You see how easily our bodies grow tired and how quickly fear can creep into our thoughts. Grant us the wisdom to rest when we are weary and the humility to pray with honest hearts. Surround us with faithful friends who point us back to Your goodness. In Jesus' name, Amen.",
+   "sources": {
+    "D3": {
+     "author": "Jack Graham (PowerPoint Ministries)",
+     "work": "Power Point - December 6, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-december-6-2005-1366959.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

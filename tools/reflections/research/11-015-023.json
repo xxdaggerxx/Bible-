@@ -1,0 +1,14 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/",
+  "https://www.biblegateway.com/blog/2014/08/reading-the-bibles-historical-books-an-interview-with-patricia-dutcher-walls/",
+  "https://www.biblegateway.com/passage/?search=1+Kings+15%3A23&version=ESV",
+  "https://www.biblegateway.com/passage/?search=1+Kings+15&version=EXB%3BNASB",
+  "https://www.biblegateway.com/verse/en/1%20Kings%2015%3A23",
+  "https://www.intouch.org/"
+ ],
+ "cost": 0.0344255,
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "14-030-013",
+ "title": "Hezekiah Celebrates the Passover",
+ "refs": [
+  "2 Chronicles 30:13-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14030013,
+   "end": 14030027,
+   "ref": "2 Chronicles 30:13-27",
+   "ranges": [
+    [
+     14030013,
+     14030027
+    ]
+   ],
+   "title": "Prayer That Reaches Heaven",
+   "key_verse": [
+    14030027,
+    14030027
+   ],
+   "reflect": [
+    {
+     "text": "In this great gathering, God's people celebrated and turned their hearts to Him. When the priests stood to bless the people, Scripture tells us that God heard their voice and their prayer reached His holy dwelling place in heaven. Prayer is a never-failing refuge for us in any situation. Even when difficulties press in on every side, the way upward to God is an open door that no enemy can shut.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this open way to God, prayer is never out of season. We can bring our needs to God in the middle of a busy day, in the quiet of the night, or during times of sickness, sadness, and doubt. In every condition, our God welcomes our voice. Charles Spurgeon reminds us that \"true prayer is evermore true power.\"",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When we pray, our words are never useless. God may not always answer our requests in the exact way we expect, but He always supplies our real needs. If we ask for something small, He may give us something far better for our souls. We can always bring our requests to the Lord, trusting that He is ready to hear and answer.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What difficulty or worry do you need to bring through the open door of prayer today?",
+    "How can trusting that God provides for your real needs change the way you pray?"
+   ],
+   "prayer": "Lord, thank You that the way to Your throne is always open and that You hear our prayers. Help us to bring every need to You, whether in joy or in trouble. Give us faith to trust that You know what is best for us and will supply all our true needs. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, November 3",
+     "on": "2 Chronicles 30:27",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

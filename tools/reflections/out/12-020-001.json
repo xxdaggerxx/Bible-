@@ -1,0 +1,83 @@
+{
+ "id": "12-020-001",
+ "title": "Hezekiah’s Illness and Recovery",
+ "refs": [
+  "2 Kings 20:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12020001,
+   "end": 12020011,
+   "ref": "2 Kings 20:1-11",
+   "ranges": [
+    [
+     12020001,
+     12020011
+    ]
+   ],
+   "title": "The God Who Hears Our Cries",
+   "key_verse": [
+    12020005,
+    12020005
+   ],
+   "reflect": [
+    {
+     "text": "When King Hezekiah faced a deadly illness, he did not give up in despair. The warning of death prompted him to turn his face to the wall and weep bitterly before the Lord. Deep suffering naturally leads us to cry out for mercy. God does not ignore our distress, and He uses our earnest prayers as genuine ways to carry out His loving plans.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The Lord showed tender compassion to the king. He heard Hezekiah's prayer, saw his tears, and promised to add fifteen years to his life. God even moved the shadow backward on the stairway as a miraculous sign. Just as He turned back that shadow, the Lord can bring restoration to our lives when we turn to Him, renewing our peace and joy after seasons of deep loss.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We are invited to bring our heaviest troubles to God with honesty and boldness. As we pray, we learn to look beyond our own immediate wants and yield to God's wise will. Even when God answers differently than we expect, we can rest safely in His mercy and trust that He works for our good.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "When sudden trouble or sorrow touches your life, do you turn first to God with your tears?",
+    "How can you practice trusting God's wisdom when your personal desires differ from His will?"
+   ],
+   "prayer": "Lord, thank You that You see our pain and listen to our prayers. Give us the courage to bring our needs honestly before You in times of sorrow. Help us to align our hearts with Your will and rest peacefully in Your mercy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Kings 20:10",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Wendy Pope",
+     "work": "Our Wants, God’s Will",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/our-wants-god-s-will-encouragement-for-today-march-14-2016.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Lord Heals Hezekiah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lord-heals-hezekiah"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

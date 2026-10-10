@@ -1,0 +1,74 @@
+{
+ "id": "16-002-001",
+ "title": "Nehemiah Sent to Jerusalem",
+ "refs": [
+  "Nehemiah 2:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 16002004,
+   "end": 16002005,
+   "ref": "Nehemiah 2:4-5",
+   "ranges": [
+    [
+     16002004,
+     16002005
+    ]
+   ],
+   "title": "\"I Prayed to the God of Heaven\"",
+   "key_verse": [
+    16002004,
+    16002004
+   ],
+   "reflect": [
+    {
+     "text": "When Nehemiah learned that Jerusalem lay in ruins, the grief brought him to his knees in tears and earnest prayer. Ongoing challenges and repeated setbacks can leave us emotionally drained and feeling too tired to pray. Yet Nehemiah consistently responded to every obstacle by turning to the Lord, making prayer his very first response rather than an exhausted last resort.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Calling on the God of heaven renewed Nehemiah's spirit and gave him the strength he needed to carry out his mission. As Wendy Pope encourages, we are invited to \"stop and pray\" in every circumstance. In that quiet dependence on God, the Lord planted a bold vision in Nehemiah's heart to rebuild the city and restore the people, helping him look past the current ruins to see what God could do.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Seeing God's work accomplished requires more than just wishing things were better. Like Nehemiah, we are called to pray, think through a clear plan, and actively pursue it with daily perseverance. When we bring our brokenness to God first, He provides the courage and direction to step forward.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When challenges wear you out, do you turn to God first or do you wait until you have run out of options?",
+    "What broken situation in your life or community is God calling you to pray about and help restore?"
+   ],
+   "prayer": "Lord God of heaven, when difficulties leave us feeling drained, renew our strength so we turn to You first. Give us eyes of faith to see how You can rebuild what is broken. Teach us to pray faithfully, plan wisely, and follow You with daily perseverance. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Wendy Pope",
+     "work": "Too Tired to Pray",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-jan-6-2012.html"
+    },
+    "D2": {
+     "author": "Jack Graham (PowerPoint Ministries)",
+     "work": "Power Point - May 10, 2005",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/power-point-may-10-2005-1329213.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

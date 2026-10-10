@@ -1,0 +1,116 @@
+{
+ "id": "13-009-001",
+ "title": "The People of Jerusalem",
+ "refs": [
+  "1 Chronicles 9:1-34"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 13009033,
+   "end": 13009033,
+   "ref": "1 Chronicles 9:33",
+   "ranges": [
+    [
+     13009033,
+     13009033
+    ]
+   ],
+   "title": "\"Employed in That Work Day and Night\"",
+   "key_verse": [
+    13009033,
+    13009033
+   ],
+   "reflect": [
+    {
+     "text": "In the ancient temple, the musicians were set apart so they could sing praise day and night without stopping. Their song never paused because God's mercy never pauses. Since the Lord pours out kindness to us at every hour, we always have a reason to thank Him. As the sun rises across different lands, God's people wake up to sing, joining together in an unbroken circle of worship around the earth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Lord is always worthy of praise because of who He is, the world He created, and His daily care for our lives. Above all, He deserves our thanks for redemption, which is His great work of saving us from our sins. Praising God also brings real help to our daily walk. As Charles Spurgeon wrote, praise \"lightens toil and softens sorrow.\" When we lift our hearts to God, heavy work feels easier, sadness is comforted, and our joyful moments remain humble and bright.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What is one specific mercy from God that you can thank Him for right now?",
+    "How might praising God help lighten a heavy chore or sadness you are facing today?"
+   ],
+   "prayer": "Lord, Your kindness never stops, and You deserve my praise day and night. Thank You for creating the world, caring for my daily needs, and saving my soul. Help me to turn my heart toward You in worship so that my work is lightened and my sorrows are comforted. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 31",
+     "on": "1 Chronicles 9:33",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Truth For Life",
+     "work": "Praise the Lord",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-july-31-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 13009001,
+   "end": 13009034,
+   "ref": "1 Chronicles 9:1-34",
+   "ranges": [
+    [
+     13009001,
+     13009034
+    ]
+   ],
+   "title": "Faithful in Every Small Duty",
+   "key_verse": [
+    13009013,
+    13009013
+   ],
+   "reflect": [
+    {
+     "text": "After years in exile, a faithful group of people chose to leave their comfortable lives in Babylon and return to Jerusalem. They came back to restore the proper worship of God. In this chapter, God makes sure their names and assignments are remembered in Scripture. He did not look only at the leaders; He cared about every single person who stepped forward to help rebuild God's house.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Many of the duties listed seem very ordinary. Some people were assigned to guard gates, others counted bowls used in worship, and others baked the holy bread or mixed spices. Yet every one of these jobs was needed for worship to take place. God values the quiet, everyday tasks we do for His honor just as much as visible roles. In God's eyes, our heavenly reward does not depend on how famous our role is, but on our personal faithfulness with what the Holy Spirit has given us to do.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What quiet or ordinary task has God placed before you to do for Him?",
+    "How does knowing God values faithfulness over human fame change how you serve?"
+   ],
+   "prayer": "Lord, thank You for noticing the small and quiet things I do each day. Teach me to be faithful with whatever gifts and tasks You place in my hands. Help me to serve You cheerfully, knowing that true honor comes from doing Your will with a loyal heart. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Bible Pathways",
+     "work": "Bible Pathways 05/14/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-14-or-2002-1133430.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

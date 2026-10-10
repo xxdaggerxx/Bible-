@@ -1,0 +1,82 @@
+{
+ "id": "23-059-001",
+ "title": "Sin Separates Us from God",
+ "refs": [
+  "Isaiah 59:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23059001,
+   "end": 23059017,
+   "ref": "Isaiah 59:1-17",
+   "ranges": [
+    [
+     23059001,
+     23059017
+    ]
+   ],
+   "title": "God Reaches Across Our Brokenness",
+   "key_verse": [
+    23059001,
+    23059001
+   ],
+   "reflect": [
+    {
+     "text": "God's arm is never too short to save us. No matter what mistakes or scandals lie in your past, you have not sunk into a pit so deep that His hand cannot reach you. Yet unconfessed sin creates a heavy barrier between us and God. Hidden guilt acts like piled-up garbage that cuts off our close walk with Him, leaving us drained, anxious, and unhappy.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "When we feel this distance, we often try to hide our faults or keep busy to feel better. Charles Spurgeon wrote that a hypocrite's religion is like a spider's web, spun only from inside oneself. Our own good deeds are just as fragile as cobwebs. They can never cover our guilt or protect us when God sweeps away false pretenses.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The Lord came to seek out the weak and undeserving. We find peace not by spinning our own righteousness, but by confessing our sins honestly every day. When we bring our failures into the light, grace, God's kindness we do not deserve, clears away the barrier and restores our connection with Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to cover up your mistakes with busy routines instead of bringing them to God?",
+    "What unconfessed wrong do you need to bring into the light today?"
+   ],
+   "prayer": "Lord, thank You that Your arm is always strong enough to reach me in my weakness. Forgive me for trying to hide my faults or relying on my own fragile efforts to feel good enough. Cleanse my heart as I confess my sins, and keep me walking closely with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 8",
+     "on": "Isaiah 59:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Rick Warren",
+     "work": "Confession Leads to Connection",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-january-2-2025.html"
+    },
+    "D3": {
+     "author": "Sharon Jaynes",
+     "work": "The Women of Christmas",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-dec-7-2007-11561285.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

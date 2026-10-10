@@ -1,0 +1,75 @@
+{
+ "id": "19-001-001",
+ "title": "The Two Paths",
+ "refs": [
+  "Psalms 1:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19001001,
+   "end": 19001003,
+   "ref": "Psalms 1:1-3",
+   "ranges": [
+    [
+     19001001,
+     19001003
+    ]
+   ],
+   "title": "\"His Delight Is in the Law\"",
+   "key_verse": [
+    19001002,
+    19001002
+   ],
+   "reflect": [
+    {
+     "text": "True godliness is more than just staying away from wrong choices. It means actively chasing after what is good and healthy. We face a clear choice between following the ways of the world or living by God's truth. While some chase after an empty independence, the righteous are like strong trees planted beside streams of water. They flourish because they stay connected to a lasting source of life.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "We grow when we welcome God's Word with real joy, rather than treating it like a chore or opening it only once in a while. Delight is an affection that starts in the heart, while meditation is focused work in the mind. When we approach the Bible like an expectant treasure hunt, we discover practical guidance that transforms how we live each day.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our world is full of noise that easily pulls our attention away, but regular meditation protects our joy. We can build steady habits by reading Scripture out loud, writing down notes, and memorizing verses. As we fill our thoughts with God's truth day and night, it anchors our lives and helps us move forward with purpose.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to approach Scripture as a duty, or as an exciting treasure hunt for guidance?",
+    "Which daily habit, like memorizing verses or writing notes, could help you meditate on God's Word today?"
+   ],
+   "prayer": "Lord, help us find our deepest joy in your Word instead of the empty distractions around us. Teach us to meditate on your truth each day with disciplined minds and willing hearts. Plant us firmly in your wisdom so our lives may bear good fruit.",
+   "sources": {
+    "D1": {
+     "author": "Brian Tabb",
+     "work": "Psalm 1: When Delight Overcomes Distraction",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/psalm-1-when-delight-overcomes-distraction"
+    },
+    "D2": {
+     "author": "Greg Laurie",
+     "work": "Delighting in the Law of the Lord",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/greg-laurie-devotion-august-3-2026.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "23-063-001",
+ "title": "God’s Vengeance on the Nations",
+ "refs": [
+  "Isaiah 63:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23063001,
+   "end": 23063006,
+   "ref": "Isaiah 63:1-6",
+   "ranges": [
+    [
+     23063001,
+     23063006
+    ]
+   ],
+   "title": "Mighty to Save",
+   "key_verse": [
+    23063001,
+    23063001
+   ],
+   "reflect": [
+    {
+     "text": "When the Lord speaks in this passage, He reveals that He is mighty to save. This salvation covers the entire journey of faith, from our very first desire for God until we are made completely holy in heaven. Christ does not merely rescue those who have already decided to turn to Him. He is powerful enough to soften stubborn hearts, give faith to those who lack it, and lead people who once disliked holiness to love it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "His strength also sustains us after we come to faith. Jesus does not begin a good work in us and then leave us to manage on our own. As Charles Spurgeon wrote, \"the life of a believer is a series of miracles.\" The Lord keeps us safe in His love, preserves our faith, and breaks the power of sin until our lives are completed in glory.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This truth gives us deep comfort. If you are praying for a loved one who seems far from God, do not stop praying, because Christ can change any rebel heart. If you are troubled by your own weakness, you can rest in the knowledge that His power is fully sufficient to carry you through.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Who in your life seems far from God, and how does Christ's power to give new hearts encourage you to keep praying for them?",
+    "Where do you most need to trust that Jesus has the power to keep and strengthen your faith today?"
+   ],
+   "prayer": "Lord Jesus, thank You for being mighty to save us completely. We ask You to work in the hearts of those we love who do not yet trust in You. Strengthen our faith when we feel weak, and carry on the good work You have begun in our lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, January 14",
+     "on": "Isaiah 63:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

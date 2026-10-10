@@ -1,0 +1,123 @@
+{
+ "id": "21-009-007",
+ "title": "Enjoy Your Portion in This Life",
+ "refs": [
+  "Ecclesiastes 9:7-12"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21009010,
+   "end": 21009010,
+   "ref": "Ecclesiastes 9:10",
+   "ranges": [
+    [
+     21009010,
+     21009010
+    ]
+   ],
+   "title": "\"Do It With All Your Might\"",
+   "key_verse": [
+    21009010,
+    21009010
+   ],
+   "reflect": [
+    {
+     "text": "We often dream about great things we hope to do for God someday, but Scripture calls us to act on the tasks right in front of us. Our time on earth is brief, and physical death will eventually end our earthly labors and our chances to serve others or share the gospel. Because our window of opportunity is limited, we must not put off our obedience or wait for some ideal future time to begin serving.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Serving God with all our might means putting genuine, wholehearted effort into whatever calling we have received today. As Charles Spurgeon observed, \"One good deed is more worth than a thousand brilliant theories.\" This does not mean driving ourselves into exhausting workaholism. Instead, we faithfully commit our energy to kingdom work today, relying not on our own weak power, but asking the Lord in prayer to give us his strength and blessing.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What practical task has God placed before you today that you have been putting off?",
+    "How can you depend on the Lord's strength rather than your own as you serve him today?"
+   ],
+   "prayer": "Lord, thank you for the life and work you have given us today. Forgive us for wasting time with empty intentions instead of serving you now. Please give us your strength to do our daily tasks wholeheartedly for your glory. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 26",
+     "on": "Ecclesiastes 9:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "Working While We Can",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/working-while-we-can"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 21009007,
+   "end": 21009012,
+   "ref": "Ecclesiastes 9:7-12",
+   "ranges": [
+    [
+     21009007,
+     21009012
+    ]
+   ],
+   "title": "Enjoying God's Gifts and Grace",
+   "key_verse": [
+    21009007,
+    21009007
+   ],
+   "reflect": [
+    {
+     "text": "Daily life includes simple gifts like eating food and sharing meals, which mark important moments throughout our lives and across Scripture. Because we spend so much of our time eating, we can honor God by forming healthy and thoughtful habits around the table. Pausing to pray before a meal turns our focus toward thankfulness to God. Taking the time to slow down, talk with the people eating with us, and rest afterward helps nurture both our bodies and our relationships.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "As we live out our days, we also realize that life is not simply won by the fastest runners or the strongest fighters. In fact, God often meets those who feel weak, tired, or helpless, giving them the victory they could never win on their own. As F. B. Meyer explained, the gift of God is ours by \"receiving and taking\" rather than running. When we stop trying to rely on our own power and instead cling to God, his strength is made complete in our weakness.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can pausing for prayer and conversation during meals help you notice God's goodness each day?",
+    "In what area of your life do you need to stop relying on your own strength and receive God's help instead?"
+   ],
+   "prayer": "Father, thank you for the simple gifts of daily food, rest, and fellowship. Help us to pause with thankful hearts and care well for the people around our tables. When we feel weak and unable to win on our own, teach us to cling to your grace and rest in your strength. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ecclesiastes 9:11",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Charles R. Swindoll",
+     "work": "A Simple Project with Food",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-mar-13-2009-11600508.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

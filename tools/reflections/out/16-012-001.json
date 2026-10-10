@@ -1,0 +1,67 @@
+{
+ "id": "16-012-001",
+ "title": "The Priests and Levites Who Returned",
+ "refs": [
+  "Nehemiah 12:1-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16012001,
+   "end": 16012026,
+   "ref": "Nehemiah 12:1-26",
+   "ranges": [
+    [
+     16012001,
+     16012026
+    ]
+   ],
+   "title": "A Lasting Life for God",
+   "key_verse": [
+    16012024,
+    16012024
+   ],
+   "reflect": [
+    {
+     "text": "Centuries after King David lived, the priests and Levites in Jerusalem still sang praises just as David had ordered. David left behind an influence like the warm glow of a sunset long after the sun goes down. Even though he failed at times, his people remembered him as a man of God whose whole life pointed toward the Lord.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "F. B. Meyer explains that being a person of God begins when we give our whole lives to Him. We should not live with what Meyer calls \"piecemeal consecration, giving a bit here and a bit there\" while holding back the rest. When we surrender fully, God delights in using us. But walking with God is also about receiving. God has placed all the spiritual riches and help we need in Jesus, and we must learn to draw our daily strength from Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Finally, we are called to use everything we receive for God. We do not yield our lives to Him simply to make our days comfortable or easy. Our true goal is to see His will done and His name honored. Like the temple leaders who carried on David's pattern of praise, our faithful service can guide others toward God long after our work is finished.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you holding back any part of your life from God, or are you ready to surrender everything to Him?",
+    "How can you actively take and receive the strength that Jesus offers you today?"
+   ],
+   "prayer": "Lord, help us to be people who belong completely to You. Teach us not to hold anything back, but to receive all the strength and grace we need from Jesus each day. May our lives be used to do Your will and bring You honor. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Nehemiah 12:24",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

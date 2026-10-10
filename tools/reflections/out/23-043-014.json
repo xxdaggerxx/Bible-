@@ -1,0 +1,68 @@
+{
+ "id": "23-043-014",
+ "title": "A Way in the Wilderness",
+ "refs": [
+  "Isaiah 43:14-21"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23043019,
+   "end": 23043019,
+   "ref": "Isaiah 43:19",
+   "ranges": [
+    [
+     23043019,
+     23043019
+    ]
+   ],
+   "title": "\"I Am About to Do Something New\"",
+   "key_verse": [
+    23043019,
+    23043019
+   ],
+   "reflect": [
+    {
+     "text": "God loves to surprise His people with unexpected fresh starts. Even when our circumstances look barren and hopeless like a dry desert, God's promise to make a path remains dependable. Stepping out in faith does not mean we will avoid obstacles or delays. Obedience rarely fits our personal expectations or timelines, but encountering detours does not mean God is absent. He sees the whole road ahead and takes care of deep needs that we easily overlook.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "The new work God begins often looks very different from what we predict. In the Bible, people like Moses, Jacob, and Peter faced sudden turns that redirected their lives. When our hearts are hurried or restless, we risk missing the quiet promptings of the Holy Spirit. God invites us to stay watchful, calm, and open, trusting that He has already started clearing a trail through our times of uncertainty and waiting.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your life are you facing unexpected detours or delays right now?",
+    "How can you quiet a hurried heart today to watch for what God is doing?"
+   ],
+   "prayer": "Lord God, thank You for making a path for us even when our lives feel dry and uncertain. Help us to be patient when our circumstances do not match our plans or timelines. Teach us to stay watchful and trust the work You have already begun. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "A New Thing",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/individual/a-new-thing"
+    },
+    "D2": {
+     "author": "Abby McDonald",
+     "work": "Why Did You Lead Me Here, God?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-april-22-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

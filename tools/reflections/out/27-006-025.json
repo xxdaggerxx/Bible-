@@ -1,0 +1,66 @@
+{
+ "id": "27-006-025",
+ "title": "Darius Honors God",
+ "refs": [
+  "Daniel 6:25-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27006025,
+   "end": 27006028,
+   "ref": "Daniel 6:25-28",
+   "ranges": [
+    [
+     27006025,
+     27006028
+    ]
+   ],
+   "title": "Courage That Points to God",
+   "key_verse": [
+    27006026,
+    27006026
+   ],
+   "reflect": [
+    {
+     "text": "Doing what God expects can be very hard, especially when we are surrounded by skeptics and people who mock our faith. Daniel faced this kind of pressure in a powerful kingdom. Even though a decree meant he could be thrown to hungry lions, he chose to keep praying openly to the one true God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God honored Daniel's trust and shut the mouths of the lions. This rescue caught the full attention of King Darius. Seeing God's power prompted the king to send a message to every nation in his empire, calling everyone to honor the living God who delivers His people.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our daily life gives us chances to show that same kind of God-honoring courage. When you quietly stand firm in what is right, others notice your faith. Your courage in difficult settings can influence people who do not know God and draw them to trust Him too.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where in your daily life is it hardest to stand up for your faith?",
+    "How might your courage in a difficult situation help an unbeliever notice God?"
+   ],
+   "prayer": "Lord, give us courage to follow You even when people around us doubt or scoff. Help our everyday choices to show Your goodness and power to those who do not know You. May our faith point others toward Your eternal kingdom. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "Your Courage Draws Unbelievers to God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-november-6-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

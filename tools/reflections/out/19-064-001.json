@@ -1,0 +1,67 @@
+{
+ "id": "19-064-001",
+ "title": "The Hurtful Tongue",
+ "refs": [
+  "Psalms 64:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19064001,
+   "end": 19064010,
+   "ref": "Psalms 64:1-10",
+   "ranges": [
+    [
+     19064001,
+     19064010
+    ]
+   ],
+   "title": "Gladness in the Lord",
+   "key_verse": [
+    19064010,
+    19064010
+   ],
+   "reflect": [
+    {
+     "text": "Even when facing hurtful words and secret schemes, believers are invited to find genuine joy in the Lord. True Christian gladness is not something the world can fake. It comes from knowing God's love and knowing we are reconciled to Him through the cross of Jesus. When we rest in Christ's righteousness, nothing stands between our souls and the warmth of the Father's smile.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This gladness does not depend on having an easy life. When troubles surround us like hidden rocks in the water, we can trust that God is at the helm of our vessel, steering us safely through the deepest currents. As F. B. Meyer wrote, we should \"cultivate the habit of considering what has been given rather than what has been withheld.\" Looking at God's generous gifts lifts our spirits and keeps our hearts from growing weary.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also invites us to draw near and dwell in His presence every day. Christ, our great High Priest, opens the way for us to come close to the Father and stay there. When we make the Lord our refuge and walk in His light, He turns our fears into quiet peace and fills our hearts with lasting joy.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What gifts from God can you focus on today instead of dwelling on what feels missing or hard?",
+    "How does remembering that God is steering your life bring you peace when others cause trouble?"
+   ],
+   "prayer": "Lord, thank You for reconciling us to Yourself through Jesus and bringing us into Your presence. Help us remember that You are steering our lives through every difficult trial. Teach us to count our blessings and rejoice in Your sheltering love each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 64:10",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

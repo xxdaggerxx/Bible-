@@ -1,0 +1,75 @@
+{
+ "id": "23-024-001",
+ "title": "God’s Judgment on the Earth",
+ "refs": [
+  "Isaiah 24:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23024001,
+   "end": 23024023,
+   "ref": "Isaiah 24:1-23",
+   "ranges": [
+    [
+     23024001,
+     23024023
+    ]
+   ],
+   "title": "The Lord Reigns in Glory",
+   "key_verse": [
+    23024023,
+    23024023
+   ],
+   "reflect": [
+    {
+     "text": "Human rebellion brings terrible ruin to the entire world. Isaiah describes how the earth withers and nature itself groans under the weight of human sin. Neither money, power, nor high social standing can shield anyone from God's righteous judgment when all worldly joy fades away.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet judgment is not the final word for those who belong to the Lord. God keeps a faithful people for Himself, and the passage turns our eyes toward the day when He will reign in majesty over all earthly rulers and spiritual powers. Even when we pass through difficult trials, we can have peace because we know His love is over all. As F. B. Meyer observed, \"it is well with His people who are under such a King.\"",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In the end, our only true safety on the day of judgment is found in the righteousness of Christ rather than our own strength. When earthly comforts fail, those who trust in Him can still rejoice in God's certain triumph over all evil.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you tempted to look for safety instead of resting in Christ alone?",
+    "How does knowing that the Lord will reign over all evil bring you peace during hard times?"
+   ],
+   "prayer": "Lord God, teach us not to put our trust in the fading things of this world. Thank You that our only true refuge is found in the righteousness of Christ. Keep our hearts peaceful as we rest in Your loving care and look forward to Your glorious kingdom.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 24:16",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Little Apocalypse",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/little-apocalypse"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

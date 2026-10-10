@@ -1,0 +1,81 @@
+{
+ "id": "20-020-001",
+ "title": "Wine Is a Mocker",
+ "refs": [
+  "Proverbs 20:1-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20020001,
+   "end": 20020030,
+   "ref": "Proverbs 20:1-30",
+   "ranges": [
+    [
+     20020001,
+     20020030
+    ]
+   ],
+   "title": "Walking in God's Light and Truth",
+   "key_verse": [
+    20020027,
+    20020027
+   ],
+   "reflect": [
+    {
+     "text": "By nature, our souls are like unlit candles. We might have natural gifts or skills, but we have no true spiritual light until God touches our inner life. When God ignites our spirit, we begin to shine for Him and bring warmth to the world. Yet giving light requires real sacrifice. As F. B. Meyer reminds us, \"we must suffer in order to serve,\" because a candle dwindles as it burns to bless others.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "That light of God is seen in a life of quiet integrity. Caring about our personal character is far better than worrying over wealth. An honest parent leaves children a rich legacy through an upright example, a trustworthy name, and steady prayers. When our families see genuine faith lived out each day, it helps lead them to trust Jesus for themselves.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Integrity also shows in how we respond when others mistreat us. Our first reaction may be anger and a desire to strike back, but taking revenge only keeps wounds open. God invites us to calm down, forgive the offense, and lay our grievance before Him. When we wait on the Lord instead of fighting petty battles, He promises to deliver us in His own way.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where is God asking you to let go of revenge and trust Him to handle an unfair situation?",
+    "How can your daily example and prayers be a blessing to those who follow in your footsteps?"
+   ],
+   "prayer": "Lord, ignite our hearts with Your light and help us walk in true integrity. Teach us to cool our anger, forgive those who harm us, and wait on You for help. Let our lives and prayers be a lasting gift to the people around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 25",
+     "on": "Proverbs 20:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "April 29",
+     "on": "Proverbs 20:22",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 20:27",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

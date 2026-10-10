@@ -1,0 +1,129 @@
+{
+ "id": "19-058-001",
+ "title": "God Judges the Earth",
+ "refs": [
+  "Psalms 58:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19058011,
+   "end": 19058011,
+   "ref": "Psalms 58:11",
+   "ranges": [
+    [
+     19058011,
+     19058011
+    ]
+   ],
+   "title": "\"There Is Surely a Reward\"",
+   "key_verse": [
+    19058011,
+    19058011
+   ],
+   "reflect": [
+    {
+     "text": "When we look at the world, evil people often seem to prosper. It can make us wonder if God sees or cares about injustice. The psalmist cried out because he cared deeply about God's name and honor. He wanted everyone to know that God is never blind to wrong, and that the Lord truly governs the earth.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God does not always settle every account immediately. This life is a time of testing, but history shows that God eventually brings down cruel rulers and defends what is right. We do not need to live in fear of evil forces, because the Judge of all the earth will always do what is just.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also promises that living for Him is never in vain. Our reward may not come in earthly wealth or human praise, which soon fade away. Instead, God gives us His own peace, joy, and what Charles Spurgeon called \"a quiet conscience,\" while our greatest reward waits safely with Him in eternity.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When evil seems to go unchecked, what helps you remember that God is still the true Judge?",
+    "How does knowing that God gives lasting peace change what you look to for your reward?"
+   ],
+   "prayer": "Lord God, thank You that You see all things and rule the earth with perfect justice. When the world seems unfair, give us peace and keep our consciences clear before You. Help us to rest in Your presence and wait patiently for the eternal joy You have promised. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 19",
+     "on": "Psalms 58:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 58:11",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19058001,
+   "end": 19058011,
+   "ref": "Psalms 58:1-11",
+   "ranges": [
+    [
+     19058001,
+     19058011
+    ]
+   ],
+   "title": "Entrusting Justice to God",
+   "key_verse": [
+    19058006,
+    19058006
+   ],
+   "reflect": [
+    {
+     "text": "The fierce prayers in this psalm can startle us when David asks God to break the teeth of the wicked. Yet these words remind us that David did not take revenge into his own hands. Instead of striking back himself, he handed the wrongdoers over to God, leaving all judgment entirely in the Lord's hands.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Reading such severe language protects us from shrinking God down to our own liking. It forces us to face His absolute holiness and hatred of sin. When our lives are safe and comfortable, these harsh cries also help us stand with brothers and sisters around the world who face real violence and persecution every day.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Seeing the terrible judgment that wickedness deserves should never make us proud. Instead, it shows us what our own sin deserved and deepens our thankfulness for the cross of Jesus. Knowing that God's judgment is real also moves us to go out and share the good news of grace with others before it is too late.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does leaving judgment in God's hands keep you from seeking your own revenge?",
+    "How does remembering God's holiness and justice deepen your thankfulness for the cross?"
+   ],
+   "prayer": "Holy Father, teach us to trust Your perfect justice instead of holding onto anger or revenge. We pray for our persecuted brothers and sisters who face violence today, asking You to protect and deliver them. Thank You for saving us through the cross, and give us courage to share Your gospel with those who are lost. Amen.",
+   "sources": {
+    "D3": {
+     "author": "Paul Carter",
+     "work": "Should Christians “Unhitch” from the Imprecatory Psalms?",
+     "site": "The Gospel Coalition",
+     "url": "https://ca.thegospelcoalition.org/columns/ad-fontes/christians-unhitch-imprecatory-psalms/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

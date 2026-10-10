@@ -1,0 +1,134 @@
+{
+ "id": "12-001-001",
+ "title": "Elijah Denounces Ahaziah",
+ "refs": [
+  "2 Kings 1:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 12001002,
+   "end": 12001004,
+   "ref": "2 Kings 1:2-4",
+   "ranges": [
+    [
+     12001002,
+     12001004
+    ]
+   ],
+   "title": "'Is There No God in Israel?'",
+   "key_verse": [
+    12001003,
+    12001003
+   ],
+   "reflect": [
+    {
+     "text": "When an unexpected crisis hits, it quickly reveals where our faith and reliance truly lie. King Ahaziah was severely injured, and his first instinct was to seek help from a foreign idol rather than the living Lord. Placing our trust in cultural idols or human solutions will always crumble when difficult trials strike our lives.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "In contrast to the fearful king, the prophet Elijah showed steady spiritual courage. Even though delivering God's warning was dangerous, he put obedience ahead of his own safety. He knew that the Lord protects, sustains, and strengthens His chosen servants, so he spoke divine truth plainly without making any compromises.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "As followers of God, we are called to hold fast to the Lord rather than shallow ideas or popular opinions. Elijah's example shows us that choosing to listen to and obey God's Word builds a secure life on an unshakable foundation, giving us peace and calm resolve in every threatening circumstance.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When sudden troubles or emergencies happen, where do you naturally turn first for help?",
+    "In what ways can you rely on God's strength to stand firmly for truth when others compromise?"
+   ],
+   "prayer": "Lord God, help us to turn straight to You whenever difficult trials shake our world. Give us the courage to obey Your voice and speak Your truth faithfully without fear. Anchor our lives upon the solid foundation of Your Word. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "Consistent Heroism",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-february-28-2024.html"
+    },
+    "D3": {
+     "author": "Stuart Briscoe",
+     "work": "Hairy and Scary",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/hairy-and-scary-one-year-devotions-for-men-october-27.html"
+    },
+    "D4": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - May 1",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-may-1-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 12001001,
+   "end": 12001016,
+   "ref": "2 Kings 1:1-16",
+   "ranges": [
+    [
+     12001001,
+     12001016
+    ]
+   ],
+   "title": "Seeking the Living God",
+   "key_verse": [
+    12001016,
+    12001016
+   ],
+   "reflect": [
+    {
+     "text": "King Ahaziah suffered a severe injury after falling through the lattice of his upper room in Samaria. Instead of turning to the Lord for mercy and help, he foolishly sent his messengers to inquire of an idol named Baal-zebub. By seeking guidance and healing from a pagan god, the king lived and acted as if Israel had no true God at all.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord sent Elijah to intercept the messengers and deliver a solemn message. Rejecting the living God in favor of empty idols is not a minor slip; it brings inescapable divine judgment that no royal wealth or military guard can turn aside. Ahaziah could not outrun God's righteous verdict.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This passage reminds all believers to treat idolatry—relying on anything more than God—with absolute seriousness. Whenever we face sickness, hardship, or difficult questions, we must refuse the temptation to run after worldly substitutes. Instead, we are called to seek the Lord alone and listen to what He speaks in His Word.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly substitutes are you tempted to turn to when you feel anxious about the future?",
+    "How can you make sure that you are seeking God's Word first rather than human advice?"
+   ],
+   "prayer": "Heavenly Father, forgive us for the times we treat worldly things as our source of security. Teach us to take Your holiness seriously and to turn away from every idol. Lead us to seek You and Your Word with all our hearts. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Seeking the Wrong God",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/seeking-the-wrong-god"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

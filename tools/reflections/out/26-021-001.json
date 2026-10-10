@@ -1,0 +1,66 @@
+{
+ "id": "26-021-001",
+ "title": "God’s Sword of Judgment",
+ "refs": [
+  "Ezekiel 21:1-32"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26021001,
+   "end": 26021032,
+   "ref": "Ezekiel 21:1-32",
+   "ranges": [
+    [
+     26021001,
+     26021032
+    ]
+   ],
+   "title": "God's Sword and the Rightful King",
+   "key_verse": [
+    26021027,
+    26021027
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, God revealed that His sword of judgment was sharpened and ready. He placed this sword into the hand of the Babylonian king to bring judgment on an unfaithful people. When the foreign king stood at a fork in the road using pagan omens to decide his direction, God was the one in control. The Lord sovereignly guided the king's choice straight toward Jerusalem.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "King Zedekiah and the nation faced certain ruin because they repeatedly ignored God's warnings. For a long time, the Lord sent prophets to call them back, but they continued in their rebellion. As a result, the time came for their punishment, and their earthly authority was taken away.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The crown of Judah was cast down and was to remain vacant. God promised that the throne would not be restored until the arrival of the One to whom it truly belongs. Though human rulers failed, God had a plan to bring Jesus Christ, the rightful King, who will return to rule in true righteousness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God is in sovereign control of all things comfort you when earthly leaders fail?",
+    "Are there areas in your life where you have been slow to listen to God's warnings?"
+   ],
+   "prayer": "Lord God, thank You for being in control over the nations and guiding history according to Your purpose. Forgive us for the times we ignore Your word and go our own way. We place our hope in Jesus Christ, our rightful King, and look forward to His righteous rule. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 9/6/2001",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-9-or-6-or-2001-722664.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

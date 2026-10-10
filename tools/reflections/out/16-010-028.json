@@ -1,0 +1,79 @@
+{
+ "id": "16-010-028",
+ "title": "The Vows of the Covenant",
+ "refs": [
+  "Nehemiah 10:28-39"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 16010039,
+   "end": 16010039,
+   "ref": "Nehemiah 10:39",
+   "ranges": [
+    [
+     16010039,
+     16010039
+    ]
+   ],
+   "title": "\"We Will Not Neglect the House of Our God\"",
+   "key_verse": [
+    16010039,
+    16010039
+   ],
+   "reflect": [
+    {
+     "text": "After finishing the hard work of rebuilding Jerusalem's walls, the people did not stop and become lazy. They knew that following God means constant growth and fresh beginnings, not resting on past success. Instead of slipping into complacency, they chose to recommit their lives to the Lord and promised never to abandon His house.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Separating ourselves to God means setting aside our resources for His work. The way we give from what we earn shows the real depth of our faith. God gives us what we have so we can manage it for Him. Yet it is easy to keep almost everything for our own comfort and only give God spare change. Instead, Scripture calls us to set apart a faithful, regular portion of our income to provide for His worship and His ministers.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Israel made a strong promise to care for the temple and its workers, but later on they failed to keep their word. When the people stopped giving, the temple servants had to leave their duties and work the fields just to eat. Those of us with everyday jobs have a duty to support the people who teach and care for us spiritually. We must make sure our actions match our words by giving faithfully so God's house is never neglected.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your spiritual life have you become comfortable instead of seeking God's next step?",
+    "Are you faithfully setting aside a regular portion of your income to support your church and its workers?"
+   ],
+   "prayer": "Lord, help us not to grow lazy or satisfied with where we are in our walk with You. Teach us to manage our money faithfully and to support those who feed us spiritually. Give us willing hearts to back up our promises with generous giving, so that Your house is never neglected. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Nehemiah 10:39",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Jill Briscoe",
+     "work": "Falling Short of Our Promises - One Year Devotions for Women",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-women/falling-short-of-our-promises-one-year-devotions-for-women-february-28.html"
+    },
+    "D3": {
+     "author": "Jack Graham",
+     "work": "PowerPoint - Oct. 9, 2007",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/powerpoint/powerpoint-oct-9-2007-1434554.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

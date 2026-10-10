@@ -1,0 +1,61 @@
+{
+ "id": "24-028-001",
+ "title": "Hananiah’s False Prophecy",
+ "refs": [
+  "Jeremiah 28:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24028001,
+   "end": 24028017,
+   "ref": "Jeremiah 28:1-17",
+   "ranges": [
+    [
+     24028001,
+     24028017
+    ]
+   ],
+   "title": "Speaking Truth Instead of Smooth Lies",
+   "key_verse": [
+    24028015,
+    24028015
+   ],
+   "reflect": [
+    {
+     "text": "Hananiah wanted to win the favour of the people around him, so he promised that God would break Babylon's yoke within two years. He might have even thought his message came from God, but his mind was filled with human reasonings rather than God's quiet truth. Jeremiah wished with all his heart that Hananiah were right. He even said \"Amen\" to the hope of relief. Yet because Jeremiah stood in the counsel of God, he knew that wishing for peace does not make it real.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We face a similar danger today when we listen to comfortable ideas instead of God's Word. It is easy to welcome voices that tell us our selfish ways do not matter and that God will never judge wrong choices. Meyer warned that some people \"paint roseate views of the future\" to make others feel safe in their sin. But promising peace where there is rebellion against God only leads people into a lie. True life comes from facing what God actually says, even when his truth is hard to accept.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you ever tempted to prefer comforting words over the clear truth of God's Word?",
+    "How can you guard your heart against false ideas that make light of sin?"
+   ],
+   "prayer": "Lord, give us ears to listen to your voice rather than the popular opinions of the world. Help us to receive your Word honestly, even when it challenges the way we live. Keep us from trusting in empty promises, and guide us in your true and lasting peace.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 28:6-7",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

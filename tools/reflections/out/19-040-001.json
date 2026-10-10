@@ -1,0 +1,81 @@
+{
+ "id": "19-040-001",
+ "title": "I Waited Patiently for the LORD",
+ "refs": [
+  "Psalms 40:1-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19040001,
+   "end": 19040017,
+   "ref": "Psalms 40:1-17",
+   "ranges": [
+    [
+     19040001,
+     19040017
+    ]
+   ],
+   "title": "A New Song of Surrendered Trust",
+   "key_verse": [
+    19040001,
+    19040001
+   ],
+   "reflect": [
+    {
+     "text": "Unplanned delays and disruptions test our patience and expose how tightly we hold on to control. Yet when we wait on the Lord, He lifts us from the mud and puts a new song of praise in our mouths. Even though we still meet recurring troubles, hardships, and sorrow over our sins, rehearsing God's past mercies gives us a firm rock to stand on. Sharing our story of His rescue encourages the whole church family to trust Him too.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Turning to worldly comforts or relying on our own strength always leads to empty disappointment. True peace comes when we turn away from human pride to gaze at God's countless wonders and sovereign plans. Like Jesus, who perfectly surrendered His will on the cross, we are invited to lay down self-reliance. Cleansed by Christ's blood, we can enter God's presence with confidence and gladly choose to obey His will each day.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are delays or hardships currently challenging your desire to be in control?",
+    "How can remembering God's past faithfulness help you surrender your plans to Him today?"
+   ],
+   "prayer": "Lord, thank You for hearing our cries and lifting us out of deep trouble. Forgive us when we look to worldly comforts or rely on our own pride. Fill our hearts with awe at Your wonders, and give us grace to surrender our will to Yours just as Jesus did.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 40:8",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Katherine Britton",
+     "work": "A Song for the Snow",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/crosswalk-the-devotional-feb-3-2010-11625772.html"
+    },
+    "D3": {
+     "author": "Whitney Hopler",
+     "work": "None Can Compare with God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/crosswalk-devo/none-can-compare-with-god-the-crosswalk-devotional.html"
+    },
+    "D4": {
+     "author": "Mark Ross",
+     "work": "A New Song",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/new-song"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

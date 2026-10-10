@@ -1,0 +1,75 @@
+{
+ "id": "11-020-026",
+ "title": "Another War with Ben-hadad",
+ "refs": [
+  "1 Kings 20:26-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11020026,
+   "end": 11020030,
+   "ref": "1 Kings 20:26-30",
+   "ranges": [
+    [
+     11020026,
+     11020030
+    ]
+   ],
+   "title": "God of the Hills and Valleys",
+   "key_verse": [
+    11020028,
+    11020028
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, Israel's enemies mistakenly thought the Lord was only powerful in the mountains. Facing an army that covered the land, Israel looked like two tiny flocks of goats. But God stepped in to prove that His authority is not confined by geography or any difficult circumstance.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our lives also shift between joyful highs and painful lows. The hills represent seasons of blessing and praise, while the valleys bring trouble, sorrow, and sudden hardship. When trials come, we often find it much harder to recognize God's work than when life is going well.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet God's nature never changes. Because He rules over the low places just as completely as the heights, His presence stays with us in every situation. He invites us to seek Him and rest in His constant peace, even through our darkest days.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you in a valley season right now where it feels hard to see God at work?",
+    "How does knowing that God rules every circumstance help you find peace today?"
+   ],
+   "prayer": "Lord, thank You that Your presence and power are not limited by our circumstances. When we face painful valleys, remind us that You are right there with us. Help us trust Your unchanging nature and rest in Your peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Dr. Avril Occilien-Similien",
+     "work": "God of the Hills and Valleys",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-september-7-2026.html"
+    },
+    "D2": {
+     "author": "Whitney Hopler",
+     "work": "How to Rest Knowing We Serve a God of the Hills and Valleys",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/how-to-rest-knowing-we-serve-a-god-of-the-hills-and-valleys.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

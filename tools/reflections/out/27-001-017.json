@@ -1,0 +1,67 @@
+{
+ "id": "27-001-017",
+ "title": "Daniel’s Wisdom",
+ "refs": [
+  "Daniel 1:17-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 27001017,
+   "end": 27001021,
+   "ref": "Daniel 1:17-21",
+   "ranges": [
+    [
+     27001017,
+     27001021
+    ]
+   ],
+   "title": "Wisdom and the Secret of Continuance",
+   "key_verse": [
+    27001017,
+    27001017
+   ],
+   "reflect": [
+    {
+     "text": "God granted Daniel and his friends remarkable skill, learning, and wisdom. Being uneducated or staying in the dark is never a sign of true spiritual humility. Instead, ignorance breeds fear and prejudice. God has given us truth to understand, and He expects us to use our minds for His kingdom. He equips us with intellect and wants us to grow in knowledge so we can serve Him well in our daily callings.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Serving in a foreign palace was dangerous and unstable. Kings changed quickly, and rivals were often jealous. Yet Daniel remained in his position for decades, lasting all the way until King Cyrus. What kept him steady through such shifting times was his habit of daily communion with God. As F. B. Meyer wrote, \"prayer is the secret of continuance.\" Turning to God in prayer brings deep quietness and helps us hold our ground when life feels unpredictable.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How can you honor God by learning and developing your mind this week?",
+    "When life feels uncertain or demanding, how can regular prayer help you stay grounded?"
+   ],
+   "prayer": "Lord, thank You for the mind You have given me and for the wisdom found in Your truth. Help me to learn faithfully and use my knowledge to honor You. When circumstances change around me, keep me steady through daily prayer. Teach me to rest in Your peace each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Daniel 1:21",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Charles R. Swindoll",
+     "work": "The Legacy of Learning, Part One",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/day-by-day-july-9-2009-11605740.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "18-004-001",
+ "title": "Eliphaz: The Innocent Prosper",
+ "refs": [
+  "Job 4:1-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18004001,
+   "end": 18004021,
+   "ref": "Job 4:1-21",
+   "ranges": [
+    [
+     18004001,
+     18004021
+    ]
+   ],
+   "title": "When Trouble Does Not Mean Sin",
+   "key_verse": [
+    18004007,
+    18004007
+   ],
+   "reflect": [
+    {
+     "text": "Eliphaz begins to speak to his suffering friend with a certain view of the world. He believes that God is completely fair, but he assumes this must mean upright people never face ruin or disaster. Because Job is suffering such deep loss and pain, Eliphaz quickly decides that Job must be hiding some personal sin that brought down God's punishment.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Job's friend spoke foolishly because he did not know the whole story. He had no idea what had happened in heaven before Job's troubles began. Scripture teaches us that in this fallen world, suffering does not always happen because a person did something specifically wrong.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When painful seasons come into our lives, we should not automatically believe that God is angry with us. We often do not know why hard things happen, but we know God remains just and loving. Instead of judging ourselves or others when trials strike, we can bring our grief to God in honest faith.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you face hard times, do you tend to assume that God is angry with you?",
+    "How can knowing that trials are not always punishments help you comfort hurting friends?"
+   ],
+   "prayer": "Lord, help us to trust your goodness even when life hurts and we do not understand why. Keep us from judging others or assuming that every trial is a sign of your anger. Teach our hearts to rest in your love and mercy through every storm. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Response of Eliphaz",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/response-eliphaz"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

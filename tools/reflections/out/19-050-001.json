@@ -1,0 +1,75 @@
+{
+ "id": "19-050-001",
+ "title": "The Mighty One Calls",
+ "refs": [
+  "Psalms 50:1-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19050001,
+   "end": 19050023,
+   "ref": "Psalms 50:1-23",
+   "ranges": [
+    [
+     19050001,
+     19050023
+    ]
+   ],
+   "title": "God Speaks and Delivers",
+   "key_verse": [
+    19050003,
+    19050003
+   ],
+   "reflect": [
+    {
+     "text": "In a world full of unrest and human failure, Scripture reminds us that God will come and will not stay silent. The years move past quickly, and earthly leaders cannot solve our deepest problems. Yet believers do not need to live in fear or despair. Instead, we can watch with calm and steady hope for the day when God breaks the silence and gathers His people.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "While we wait for that day, we often walk through seasons that feel dark and heavy. God graciously invites us to bring our needs directly to Him whenever trouble comes. It is foolish to run only to other people for rescue when the Lord Himself invites us to pray. He promises full deliverance by His own hand for those who put their faith in Him.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When the Lord rescues us, our natural response is to honor and praise Him. Because His promise to deliver us is certain, we do not have to wait until our troubles disappear to begin thanking Him. We can keep our hearts alert and filled with thanksgiving right now, trusting that He hears our cries and will show us His salvation.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When trouble comes, do you usually turn to other people first or bring your needs straight to God?",
+    "How can remembering that God will surely act help you remain calm and thankful today?"
+   ],
+   "prayer": "Lord God, thank You that You are not silent and that You care for us in our weakness. When trouble presses in, help us turn directly to You rather than placing our hope in human answers. Grant us patient and watchful hearts as we look for Your coming, and teach us to honor You with joyful thanks every day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "July 31",
+     "on": "Psalms 50:15",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 50:3",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

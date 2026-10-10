@@ -1,0 +1,73 @@
+{
+ "id": "14-035-020",
+ "title": "The Death of Josiah",
+ "refs": [
+  "2 Chronicles 35:20-24"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14035020,
+   "end": 14035024,
+   "ref": "2 Chronicles 35:20-24",
+   "ranges": [
+    [
+     14035020,
+     14035024
+    ]
+   ],
+   "title": "Listening to God and Choosing Battles Wisely",
+   "key_verse": [
+    14035022,
+    14035022
+   ],
+   "reflect": [
+    {
+     "text": "Josiah spent his life serving the Lord and restoring true worship in Judah. Yet when Pharaoh Neco marched toward a foreign conflict, Josiah stepped into a fight that was not his. God warned Josiah through the Egyptian king to turn back. Instead of listening to this warning from God, Josiah disguised himself and went out to battle on the plain of Megiddo.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This reckless choice brought a sudden and tragic end to Josiah's life at age thirty-nine. An arrow struck him, leaving his family and nation unprotected. We learn from his mistake that not every conflict is ours to fight. Driven by impulse or pride, we can easily pick the wrong battles and drift from our primary callings.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Even with this sad end, Scripture remembers Josiah as a faithful, godly king. His failure shows us that even the best human leaders fall short. We need Jesus Christ, the only perfectly obedient King. Through faith, we rest in His perfect righteousness—His moral perfection counted as our own—while we seek to obey Him each day.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there conflicts or distractions right now that you should step away from?",
+    "How does knowing Jesus is your perfectly faithful King give you comfort when you fail?"
+   ],
+   "prayer": "Lord God, give us humble hearts that listen carefully to Your warnings. Protect us from foolish pride, and help us avoid picking fights that are not ours. Thank You for Jesus, our true and perfect King, who never failed. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Josiah’s Final Battle",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/josiahs-final-battle"
+    },
+    "D2": {
+     "author": "Grace to You",
+     "work": "Josiah and Picking the Wrong Fight",
+     "site": "Grace to You",
+     "url": "https://www.gty.org/blogs/B160701/josiah-and-picking-the-wrong-fight"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

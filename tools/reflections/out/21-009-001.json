@@ -1,0 +1,122 @@
+{
+ "id": "21-009-001",
+ "title": "Death Comes to Good and Bad",
+ "refs": [
+  "Ecclesiastes 9:1-6"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 21009004,
+   "end": 21009004,
+   "ref": "Ecclesiastes 9:4",
+   "ranges": [
+    [
+     21009004,
+     21009004
+    ]
+   ],
+   "title": "\"A Live Dog Is Better than a Dead Lion\"",
+   "key_verse": [
+    21009004,
+    21009004
+   ],
+   "reflect": [
+    {
+     "text": "Even the humblest life is far better than death. This truth is especially important in our spiritual walk. Having even the smallest amount of true spiritual life given by the Holy Spirit is worth far more than the greatest achievements, education, or honors this world can offer. As Charles Spurgeon wrote, \"Life is the badge of nobility in the realm of spiritual things.\" It is better to be the least person in God's kingdom than the greatest person outside of it.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "This reality changes how we view our faith and worship. A simple, plain message about the good news of Jesus carries far more value when it has spiritual power than a polished speech made of empty words. In the same way, the Lord welcomes our honest sighs, quiet cries, and humble prayers. He takes no pleasure in grand religious performances that lack genuine heart. A struggling faith that is truly alive is infinitely better than dead, empty religion.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you ever feel that your prayers or faith are too small or simple to matter to God?",
+    "How does knowing that God values honest, living faith encourage you when you feel spiritually weak?"
+   ],
+   "prayer": "Lord, thank you for giving us true spiritual life through your Spirit. Please keep our faith sincere and real, even when we feel weak and small. Help us bring our honest hearts to you rather than settling for empty religious words. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 30",
+     "on": "Ecclesiastes 9:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Truth For Life",
+     "work": "Least Within or Greatest Without - Truth For Life - September 30",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-september-30-2020.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 21009001,
+   "end": 21009006,
+   "ref": "Ecclesiastes 9:1-6",
+   "ranges": [
+    [
+     21009001,
+     21009006
+    ]
+   ],
+   "title": "Resting in the Hand of God",
+   "key_verse": [
+    21009001,
+    21009001
+   ],
+   "reflect": [
+    {
+     "text": "Life can often seem confusing, but Scripture points us to foundational truths that give our days real meaning. The most vital truth is that the sovereign hand of God, the Lord who rules over all things, rests over everyone. It does not matter what our background is, how much status we hold, or how clever we are. Our lives and our deeds are completely in his care.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Resting in God's hands does not promise us wealth, physical health, or an easy path free from pain. Unpredictable seasons can bring either love or hardship into our lives. Even when our circumstances change without warning, we can find steady comfort in knowing that God never loses control of our world.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We also face one common reality with every person on earth: physical death will eventually come to both the righteous and the wicked. Because this earthly life is temporary for everyone, we do not need to look to worldly success for security. Instead, we can quietly trust the God who holds all things together.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When unexpected troubles arise, how does remembering God's control help you remain calm?",
+    "How does the certainty of death encourage you to depend on God rather than earthly security?"
+   ],
+   "prayer": "Father, thank you that our lives and futures are held securely in your hands. When our circumstances change or life brings hardship, help us remember that you never lose control. Teach us to rest in your care each day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "Major Realities of Life, Part One",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/major-realities-of-life-part-one"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "24-017-019",
+ "title": "Restoring the Sabbath",
+ "refs": [
+  "Jeremiah 17:19-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24017019,
+   "end": 24017027,
+   "ref": "Jeremiah 17:19-27",
+   "ranges": [
+    [
+     24017019,
+     24017027
+    ]
+   ],
+   "title": "Honoring God's Day of Rest",
+   "key_verse": [
+    24017024,
+    24017024
+   ],
+   "reflect": [
+    {
+     "text": "God told Jeremiah to stand at the city gates and speak to everyone coming through, from the king to ordinary citizens. He placed before them a clear choice between blessing and ruin. God called them to stop carrying heavy loads and doing regular trade on the Sabbath day. By ignoring this day of rest, the people revealed a deeper spiritual problem in their relationship with God. They were turning away from a command that God established at the very creation of the world.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Beginning to obey God's command for rest again would serve as a clear sign of real repentance, showing they were turning back to Him with their whole lives. Honoring the Lord's Day is not about following empty rules or keeping up outward appearances. Instead, it is given to help us protect and nurture a living, personal relationship with our Creator. God always desires sincere devotion from our hearts rather than mere religious rituals.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How does setting apart time for God show the true condition of our hearts?",
+    "In what ways can we seek a deeper relationship with our Creator rather than just going through outward motions?"
+   ],
+   "prayer": "Lord God, thank You for the gift of rest and the time You give us to focus on You. Guard our hearts from turning our worship into an empty habit. Help us to honor You with sincere devotion and delight in drawing close to our Creator. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Keeping the Sabbath",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/keeping-sabbath"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

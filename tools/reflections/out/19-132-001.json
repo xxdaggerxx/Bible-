@@ -1,0 +1,132 @@
+{
+ "id": "19-132-001",
+ "title": "The LORD Has Chosen Zion",
+ "refs": [
+  "Psalms 132:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19132017,
+   "end": 19132018,
+   "ref": "Psalms 132:17-18",
+   "ranges": [
+    [
+     19132017,
+     19132018
+    ]
+   ],
+   "title": "\"A Horn Grow for David\"",
+   "key_verse": [
+    19132017,
+    19132017
+   ],
+   "reflect": [
+    {
+     "text": "God promised that a horn of strength would grow for David and a lamp would be prepared for His anointed king. In ancient times, a horn stood for power and rule. While David was an earthly king, this promise pointed ahead to something much greater. Jonathan Parnell notes that God brought together His dwelling place and His kingly rule in Jesus Christ. When Jesus was born as a man, God's true King arrived with divine power to save His people.",
+     "sources": [
+      "D4"
+     ]
+    },
+    {
+     "text": "Through faith, we are united to Jesus, the great Son of David. That means His promises belong to us as well. His strength fights for us and defends us from harm. His bright lamp shines in our lives to drive away fear and defeat spiritual darkness. Even more, because Jesus has won the final victory over all His enemies, believers will share in His eternal glory and rule beside Him forever.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The story does not stop with Jesus' first coming in humility. As we look at the shining crown promised to God's King, our hearts are drawn forward. We wait with hope for the day when Christ returns in triumph to make all things new.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that Jesus uses His power to defend you change how you face fear or hardship today?",
+    "In what ways can you fix your eyes on Jesus' promised return when daily life feels dark?"
+   ],
+   "prayer": "Lord Jesus, thank You for coming as our King and shining Your light into our darkness. We praise You for fighting for us and giving us a share in Your victory. Help us to trust Your strength and look forward with joy to the day You return.",
+   "sources": {
+    "D2": {
+     "author": "John Piper",
+     "work": "Included in the Covenant",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/included-in-the-covenant"
+    },
+    "D4": {
+     "author": "Jonathan Parnell",
+     "work": "A Promise, a Manger, and a City with No Need for the Sun",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/a-promise-a-manger-and-a-city-with-no-need-for-the-sun"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19132001,
+   "end": 19132018,
+   "ref": "Psalms 132:1-18",
+   "ranges": [
+    [
+     19132001,
+     19132018
+    ]
+   ],
+   "title": "A Dwelling for the Lord",
+   "key_verse": [
+    19132005,
+    19132005
+   ],
+   "reflect": [
+    {
+     "text": "David cared deeply about the presence of God. He refused to rest or settle into his own comforts until he prepared a proper resting place for the ark of the Lord. Seeking God's presence was David's highest priority. That kind of wholehearted commitment shows what it looks like to pursue God's own heart and put worship above our own ease.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "Years later, when Solomon finally finished the temple, the people remembered David's trials and prayers. God remembered them too. As F. B. Meyer reminds us, God never forgets the quiet sacrifices of His people: \"there can never be one lost good.\" Every prayer, tear, and act of love you offer to God is seen and remembered by Him, even when you do not see the results right away.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Today, God does not live in a building made of stone. Under the new covenant, believers themselves are the temple where the Holy Spirit dwells. We honor God's holy presence not with a physical structure, but by offering our lives in humble repentance, clean hearts, and joyful worship.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Are your daily routines shaped more by seeking comfort or by seeking God's presence?",
+    "How does the promise that God remembers every prayer encourage you when your service feels unnoticed?"
+   ],
+   "prayer": "Heavenly Father, thank You for choosing to make Your home in us by Your Holy Spirit. Give us hearts like David, eager to honor You above all earthly comforts. Teach us to live in humility and holiness, knowing that no prayer or labor of love is ever forgotten by You.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 132:1",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "A Commitment to Worship",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/commitment-worship"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

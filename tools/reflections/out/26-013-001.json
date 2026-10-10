@@ -1,0 +1,76 @@
+{
+ "id": "26-013-001",
+ "title": "Reproof of False Prophets",
+ "refs": [
+  "Ezekiel 13:1-16"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26013001,
+   "end": 26013016,
+   "ref": "Ezekiel 13:1-16",
+   "ranges": [
+    [
+     26013001,
+     26013016
+    ]
+   ],
+   "title": "Speaking Truth Instead of False Peace",
+   "key_verse": [
+    26013010,
+    26013010
+   ],
+   "reflect": [
+    {
+     "text": "In Ezekiel's day, false teachers spoke out of their own imaginations rather than from God. They told the people only what they wanted to hear, acting like scavengers seeking their own gain during a time of crisis. Their made-up visions proved they had no real relationship with the Lord. Instead of warning people about their moral compromise, they soothed guilty consciences by promising peace when there was no peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God compared these comforting lies to putting bright whitewash over a flimsy, broken wall. The paint made the wall look sound, but it could never protect anyone from the violent storm of God's judgment. By downplaying sin and its serious penalty, these teachers led people astray and strengthened the hands of the wicked. In the end, both the weak wall and the people who painted it would be swept away.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "This passage reminds us how important it is to love God's true word. F. B. Meyer warned against giving people \"license to sin\" through watered-down views of God's truth. Rather than seeking flattery or popularity, church leaders today must faithfully guard their congregations by confronting false ideas and preserving the true gospel.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you sometimes prefer hearing easy comfort rather than God's honest truth about sin?",
+    "How can we support Christian leaders who faithfully teach God's word even when it is unpopular?"
+   ],
+   "prayer": "Lord God, protect our hearts from empty promises that hide our need for you. Give our church leaders the courage to confront error and preach your truth clearly. Help us build our lives on the solid foundation of your gospel rather than flimsy human words. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 13:2",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Ezekiel Condemns the False Prophets",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ezekiel-condemns-false-prophets"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

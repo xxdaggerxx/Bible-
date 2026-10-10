@@ -1,0 +1,19 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/",
+  "https://www.biblegateway.com/passage/?search=1+Chronicles+3%3A10-16&version=KJV",
+  "https://www.biblegateway.com/passage/?search=1+Chronicles+3&version=ESV",
+  "https://www.biblegateway.com/passage/?search=1+Chronicles+3&version=NIV",
+  "https://www.biblegateway.com/passage/?search=1+Chronicles+3&version=NLT%3BNIV",
+  "https://www.biblegateway.com/resources/matthew-henry/1Chr.3.1-1Chr.3.24",
+  "https://www.biblegateway.com/resources/matthew-henry/1Chr.3.10-1Chr.3.24",
+  "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-may-12-2010-11631480.html",
+  "https://www.davidjeremiah.org/",
+  "https://www.gty.org/",
+  "https://www.intouch.org/"
+ ],
+ "cost": 0.029358425,
+ "model": "google/gemini-3.8-flash"
+}

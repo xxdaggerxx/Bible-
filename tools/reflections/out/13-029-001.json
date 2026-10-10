@@ -1,0 +1,72 @@
+{
+ "id": "13-029-001",
+ "title": "Offerings for the Temple",
+ "refs": [
+  "1 Chronicles 29:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13029001,
+   "end": 13029009,
+   "ref": "1 Chronicles 29:1-9",
+   "ranges": [
+    [
+     13029001,
+     13029009
+    ]
+   ],
+   "title": "Giving Freely from the Heart",
+   "key_verse": [
+    13029009,
+    13029009
+   ],
+   "reflect": [
+    {
+     "text": "David knew that his young son Solomon would need strong support and godly examples to build the temple. Instead of forcing the leaders to give through a royal command, David chose to lead by his own actions. He gave sacrificially from his own private wealth, far beyond the official supplies he had already gathered for the holy temple.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "David gave generously even though he would never personally worship in the finished building. His offering came from a deep love for God's house and a desire to bless the generations coming after him. In the same way, we are challenged to reject a consumer attitude that treats church merely as a place to receive personal benefits. Instead, we can gladly give our time, energy, and money to build up the church.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When leaders demonstrate true surrender and generosity toward God, their example spreads. Seeing David's dedication, the other leaders gave willingly and wholeheartedly, filling the entire community with great joy.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you sometimes treat church like a consumer, focusing mainly on what you get out of it?",
+    "How can your own cheerful giving and service encourage others in your church family?"
+   ],
+   "prayer": "Lord God, thank you for the example of wholehearted giving. Free us from a consumer mindset, and fill us with love for your people. Help us to invest our time, energy, and resources joyfully so that future generations may know and worship you. Amen.",
+   "sources": {
+    "D1": {
+     "author": "John North",
+     "work": "Time with God - September 23",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/timewithgod/time-with-god-september-23-2021.html"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 84: 1 Chronicles 29:1–9",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-84-1-chronicles-29-19.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "14-005-001",
+ "title": "The Ark Enters the Temple",
+ "refs": [
+  "2 Chronicles 5:1-14"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14005001,
+   "end": 14005014,
+   "ref": "2 Chronicles 5:1-14",
+   "ranges": [
+    [
+     14005001,
+     14005014
+    ]
+   ],
+   "title": "The Glory of the Lord Fills the Temple",
+   "key_verse": [
+    14005013,
+    14005013
+   ],
+   "reflect": [
+    {
+     "text": "After the temple was finished, King Solomon gathered Israel's leaders to bring the ark of the covenant into the Most Holy Place. Priests and elders brought up the sacred items while the assembly offered countless sacrifices before the Lord. When the priests came out of the sanctuary, musicians and singers joined together as one voice, lifting sincere praise with trumpets and cymbals because the Lord is good and His mercy endures forever.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "As the people praised God in unity and fervor, a cloud filled the temple. This was the same bright cloud of God's presence that had guided Moses and the people through the desert. The glory of the Lord filled the house of God so powerfully that the priests could not even stand to carry out their service. As F. B. Meyer observed, it was as though God said, \"This is my rest forever.\" God had come to abide among His people.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Although no physical building can hold the Creator of the universe, God graciously chose to dwell with His people. Our own spirits are meant to be a resting place for Him. When we put away strife, love one another, and bring honest praise and thanksgiving to God, we can be certain of His presence whenever we gather to worship Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How can putting away division and hard feelings help us worship God more sincerely together?",
+    "What reasons do you have to thank God for His goodness and enduring mercy today?"
+   ],
+   "prayer": "Lord God, thank You for Your faithful goodness and mercy that never ends. Help us to put away all conflict and join together in true unity to praise Your name. Come and make Your home in our hearts, and remind us of Your presence whenever we gather in worship. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 5:13",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Ark Comes to the Temple",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/ark-comes-to-the-temple"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

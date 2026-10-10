@@ -1,0 +1,67 @@
+{
+ "id": "18-039-001",
+ "title": "The LORD Speaks of His Creation",
+ "refs": [
+  "Job 39:1-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18039001,
+   "end": 18039030,
+   "ref": "Job 39:1-30",
+   "ranges": [
+    [
+     18039001,
+     18039030
+    ]
+   ],
+   "title": "Knowing the God of Creation",
+   "key_verse": [
+    18039001,
+    18039001
+   ],
+   "reflect": [
+    {
+     "text": "In this chapter, God asks Job many questions about the wild creatures of the earth. He speaks of mountain goats, wild donkeys, ostriches, war horses, and soaring birds. This list of questions reminds us of our own limits. Even after centuries of study, the natural world still baffles us. If we understand so little about what God has made, we know even less about God Himself and how He acts.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Knowing God is not just about human cleverness or research. As F. B. Meyer points out, \"The knowledge of God is not intellectual, but moral and spiritual.\" When God's love fills our hearts and we seek to obey Him, He gives us an understanding that study alone could never discover. Through His Spirit, God reveals the wonderful gifts He has freely given to us.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this gift, we can know the mighty power of Christ's resurrection at work for us today. We can know the wealth of His presence living within us and the great depth of His love. Creation reminds us of our humble place, yet God invites us into a real and loving walk with Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways do the wonders of the natural world remind you of how much greater God is than your understanding?",
+    "How can focusing on love and obedience toward God help you know Him better than head knowledge alone?"
+   ],
+   "prayer": "Lord God, thank You for the mystery and beauty of the world You created. Help us to see our own limits and to trust Your great wisdom. Fill our hearts with Your love and Your Spirit, so that we may truly know You and walk closely with Christ each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 39:1",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

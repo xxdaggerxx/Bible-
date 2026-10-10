@@ -1,0 +1,138 @@
+{
+ "id": "19-012-001",
+ "title": "The Godly Are No More",
+ "refs": [
+  "Psalms 12:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19012001,
+   "end": 19012001,
+   "ref": "Psalms 12:1",
+   "ranges": [
+    [
+     19012001,
+     19012001
+    ]
+   ],
+   "title": "\"Help, O LORD\"",
+   "key_verse": [
+    19012001,
+    19012001
+   ],
+   "reflect": [
+    {
+     "text": "Living around deceit and faithlessness is painful, and God's people are not shielded from that reality. When surrounded by lies and boasting, David did not sink into despair, rage, or complaining. Instead, he made urgent prayer his first response, turning to God when human helpers failed.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "David's plea was simple and direct. As Charles Spurgeon pointed out, \"when the creature failed, he flew to the Creator.\" Crying out for help admits our own weakness, but it also shows we desire to keep standing for God's truth. Rather than using long, rambling words, we can bring our honest needs straight to Him in any trial.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Calling on the Lord in times of trouble demonstrates our ongoing trust in Him. We can pray with quiet assurance, knowing our Heavenly Father hears us. As we pray and obey, we can rest confident that the Lord will preserve us and keep His promises.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel worn down by dishonesty or unfaithfulness around you, is prayer your first reaction?",
+    "How does knowing God is your reliable helper change how you face daily troubles?"
+   ],
+   "prayer": "Lord, when human helpers fail and ungodliness surrounds us, teach us to run straight to You. Give us humble hearts to ask for Your help and the resolve to stand for Your truth. Thank You for promising never to leave us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 17",
+     "on": "Psalms 12:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Alistair Begg",
+     "work": "Save, O Lord",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-june-24-2023.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 19012006,
+   "end": 19012006,
+   "ref": "Psalms 12:6",
+   "ranges": [
+    [
+     19012006,
+     19012006
+    ]
+   ],
+   "title": "\"The Words of the LORD Are Flawless\"",
+   "key_verse": [
+    19012006,
+    19012006
+   ],
+   "reflect": [
+    {
+     "text": "It can be exhausting and lonely when people around us speak with flattering lips and deceitful motives. David honestly shared his pain over human dishonesty, but he did not stay focused on human failure. He turned his eyes away from empty talk to praise the righteousness of God.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Human promises easily shift and break, but God never flatters or deceives. His words are compared to silver refined in a furnace until every trace of dirt is gone. As F. B. Meyer observed, God's words are \"absolutely reliable and trustworthy.\" Because Scripture is entirely pure, it clears our judgment, enriches our minds, and cleanses our hearts.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God's tested truth gives us a secure foundation in a confused culture. When we take His promises into our lives, they steady our thoughts and teach us to love what is good. Trusting in Christ as our cornerstone keeps our footing firm, no matter how much the world around us wavers.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you tempted to trust human opinions instead of God's Word?",
+    "How can meditating on the pure promises of Scripture help cleanse and steady your mind today?"
+   ],
+   "prayer": "Heavenly Father, thank You that Your words are completely pure and free from deceit. Anchor our hearts in Your truth when we feel unsettled by the brokenness around us. Help us to feed on Your promises and stand firm in Christ. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 12:6",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Gwen Smith",
+     "work": "A Firm and Flawless Foundation",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-may-10-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

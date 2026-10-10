@@ -1,0 +1,74 @@
+{
+ "id": "11-014-001",
+ "title": "Ahijah’s Prophecy against Jeroboam",
+ "refs": [
+  "1 Kings 14:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11014001,
+   "end": 11014018,
+   "ref": "1 Kings 14:1-18",
+   "ranges": [
+    [
+     11014001,
+     11014018
+    ]
+   ],
+   "title": "Nothing Is Hidden from God",
+   "key_verse": [
+    11014006,
+    11014006
+   ],
+   "reflect": [
+    {
+     "text": "Jeroboam thought he could fool the aged, blind prophet by sending his wife in disguise. But as F. B. Meyer reminds us, \"from God no secrets are hid.\" The Lord told Ahijah who was arriving before she even reached the threshold. We may try to conceal our true motives from people around us, or even fool ourselves, but we can never deceive God. He sees every corner of our lives and knows our hearts completely.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Ahijah had heavy news to share. Jeroboam and the people of Israel had turned away from the Lord to worship visible idols because they failed to trust the invisible God. Sin is not just an unfortunate mistake; it is rebellion against a holy God. Persistent disobedience carries painful consequences, and Ahijah warned that Jeroboam's family would face ruin and that Israel would one day be uprooted and scattered.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "These hard warnings show us why faithful obedience matters. Chasing after false gods separates us from the Lord and invites destruction. Instead of running from God or making excuses for wrong choices, we are invited to walk closely with Christ. Staying near to Him guards our hearts and protects us from the damaging fallout of sin.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas of your life where you are tempted to hide the truth from God instead of bringing them into His light?",
+    "How can walking closely with Christ each day protect you from turning to false comforts and modern idols?"
+   ],
+   "prayer": "Lord, You see all things and know everything in our hearts. Forgive us for the times we have tried to hide our sins or trusted in things other than You. Teach us to walk in simple obedience and to stay close to Christ each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Kings 14:6",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - April 27",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-april-27-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

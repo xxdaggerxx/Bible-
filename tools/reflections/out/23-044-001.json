@@ -1,0 +1,89 @@
+{
+ "id": "23-044-001",
+ "title": "The LORD Has Chosen Israel",
+ "refs": [
+  "Isaiah 44:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23044003,
+   "end": 23044003,
+   "ref": "Isaiah 44:3",
+   "ranges": [
+    [
+     23044003,
+     23044003
+    ]
+   ],
+   "title": "\"I Will Pour Water on the Thirsty\"",
+   "key_verse": [
+    23044003,
+    23044003
+   ],
+   "reflect": [
+    {
+     "text": "Sometimes our spiritual life feels dry and barren. When we feel low or useless, we often try to fix things by scolding ourselves or dwelling on dark fears. But harsh guilt cannot lift us up. As Charles Spurgeon wrote, \"It is not the law, but the gospel which saves the seeking soul.\" God does not drive us away; He invites us back with love and promises to pour His grace like water on dry ground, reviving our joy and making us fruitful again.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "This promise also reaches the next generation. Our children do not possess God's Spirit by nature, and we can easily become anxious about their lives. Yet we do not need to live in fear. While we cannot change their hearts on our own, God promises to pour His Spirit and His blessing directly upon our offspring.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "God welcomes our faithful prayers for our children. We can make it a steady practice to pray distinctly for them and speak God's blessing over their lives. Children long to know they are loved, and our spoken prayers give them deep confidence while trusting God to draw them to Himself.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel spiritually dry or weary, do you turn to self-blame, or do you ask God for His refreshing grace?",
+    "How can you intentionally speak God's blessing and pray for the children or young people in your life this week?"
+   ],
+   "prayer": "Lord, when our hearts feel dry and barren, pour out Your refreshing grace to revive our love and joy. We trust You to give Your Holy Spirit to our children and guide their steps. Teach us to pray faithfully for them and speak Your loving blessing over their lives. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, November 6",
+     "on": "Isaiah 44:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 11",
+     "on": "Isaiah 44:3",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "Truth For Life",
+     "work": "The Longing of the Thirsty - Truth For Life - November 6",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/truth-for-life/truth-for-life-november-6-2019.html"
+    },
+    "D4": {
+     "author": "Dr. James Dobson",
+     "work": "The Blessing",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobsons-parenting-devotional-dec-27.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

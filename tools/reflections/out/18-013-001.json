@@ -1,0 +1,129 @@
+{
+ "id": "18-013-001",
+ "title": "Job Prepares His Case",
+ "refs": [
+  "Job 13:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 18013015,
+   "end": 18013015,
+   "ref": "Job 13:15",
+   "ranges": [
+    [
+     18013015,
+     18013015
+    ]
+   ],
+   "title": "\"Though He Slay Me\"",
+   "key_verse": [
+    18013015,
+    18013015
+   ],
+   "reflect": [
+    {
+     "text": "When painful trouble strikes, we often measure God by our feelings or our hard circumstances. We can slip into focusing only on ourselves and forgetting God's true character. Yet God's goodness does not change when our lives fall apart. His love is proven forever at the cross and resurrection of Jesus Christ. As F. B. Meyer wrote, we must look at God's ways \"from the standpoint of His heart.\" As we spend years in prayer and communion with Him, we learn that He is always loving and wise.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Deep suffering and loss can easily confuse us. Even so, Job made a clear choice to place his hope in the Lord, even if his trial led to death. Faithful believers throughout history have shown this same enduring trust in the darkest places. Affliction shows us our human weakness and helps shape us into the likeness of Jesus. True wisdom means submitting to God's sovereign authority and resting peacefully in His mysterious purposes.",
+     "sources": [
+      "D3",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "When hard circumstances tempt you to doubt God's goodness, how does looking at the cross help you trust Him?",
+    "What does it look like for you to rest quietly in God's wisdom during a confusing season of life?"
+   ],
+   "prayer": "Lord God, help us to trust Your loving heart even when our lives are filled with pain and confusion. Keep our eyes fixed on Jesus and His resurrection when we are tempted to doubt. Teach us to rest peacefully in Your perfect wisdom, knowing that You do all things well. Amen.",
+   "sources": {
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Job 13:15",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "God's Faithfulness amidst Our Confusion",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-may-7-2014.html"
+    },
+    "D4": {
+     "author": "Jeff Schreve",
+     "work": "Me-Ology or Theology?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-week-of-november-2.html"
+    },
+    "D5": {
+     "author": "Derek Thomas",
+     "work": "Trusting in God Through Suffering",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/trusting-in-god-through-suffering"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 18013001,
+   "end": 18013028,
+   "ref": "Job 13:1-28",
+   "ranges": [
+    [
+     18013001,
+     18013028
+    ]
+   ],
+   "title": "Our Sins and Christ's Greater Mercy",
+   "key_verse": [
+    18013023,
+    18013023
+   ],
+   "reflect": [
+    {
+     "text": "In the middle of his grief, Job asked God to show him the number of his sins. When we stop and honestly examine our lives before a holy God, our transgressions are heavy and vast. Even in the lives of faithful believers, wrong choices pile up like mountains. When we think of our own guilt and add it to the sins of all God's people, the sheer weight of our debt is staggering.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Yet we discover the true weight of our sin when we look at the cost to heal it. God gave His only and beloved Son, Jesus Christ, to be pierced, bruised, and slain on the cross for our sins. Charles Spurgeon observed that \"the atonement which takes it away is immeasurably greater\" than all our guilt combined. Because Jesus died and rose again, we can stand before God in peace. Our deep sin simply becomes the dark backdrop that shows off the radiant star of God's forgiving love.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you think about your sins and weaknesses, how does the sacrifice of Jesus give you peace rather than despair?",
+    "How can remembering the greatness of God's forgiveness help you love Him more today?"
+   ],
+   "prayer": "Gracious Father, we confess that our sins are many and greater than we can count. Thank You for sending Your beloved Son to wash away all our guilt through His blood. Help us to live with joy and gratitude, confident that Your mercy is far greater than all our sin. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, July 6",
+     "on": "Job 13:23",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

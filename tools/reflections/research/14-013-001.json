@@ -1,0 +1,19 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://billygraham.org/devotions",
+  "https://insight.org/",
+  "https://learn.ligonier.org/devotionals/folly-of-fighting-the-lord",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+13%3A1-3&version=NIV",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+13%3A1-5&version=NIV",
+  "https://www.biblegateway.com/resources/asbury-bible-commentary/2-abijah-13-1-14-1",
+  "https://www.biblegateway.com/resources/matthew-henry/2Chr.13.1-2Chr.13.12",
+  "https://www.biblegateway.com/resources/matthew-henry/2Chr.13.1-2Chr.13.22",
+  "https://www.biblegateway.com/verse/en/2%20Chronicles%2013%3A3",
+  "https://www.desiringgod.org/",
+  "https://www.ligonier.org/"
+ ],
+ "cost": 0.040953500000000004,
+ "model": "google/gemini-3.8-flash"
+}

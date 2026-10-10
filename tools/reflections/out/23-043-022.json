@@ -1,0 +1,73 @@
+{
+ "id": "23-043-022",
+ "title": "Israel’s Unfaithfulness",
+ "refs": [
+  "Isaiah 43:22-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23043022,
+   "end": 23043028,
+   "ref": "Isaiah 43:22-28",
+   "ranges": [
+    [
+     23043022,
+     23043028
+    ]
+   ],
+   "title": "Wiping Out Sins for His Own Sake",
+   "key_verse": [
+    23043025,
+    23043025
+   ],
+   "reflect": [
+    {
+     "text": "In this passage, God spoke to people whose hearts had grown cold. They stopped bringing gifts to God and grew weary of serving Him. Spurgeon notes that withholding our gifts shows a coldness of heart toward God. When we hold back what we have, we forget that Christ bought us with His own blood, so everything we own already belongs to Him. Yet the Lord still welcomes even the smallest sincere token of love, treating it like a bunch of wild flowers brought by a child.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though we have burdened God with our sins, He offers astonishing mercy. He promises to blot out our wrongdoing for His own sake and remember our sins no more. As Matt Fuller explains, God choosing not to remember our transgressions means He has decisively dealt with their guilt and penalty. Looking back on our past will not leave us in painful shame, but will stir deep gratitude for His grace.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "One day, God will bring us into a life where the inward struggle against sin is permanently gone. Our devotion to Christ will be wholehearted and free from dryness, and we will worship Him with joyful harmony.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you grown cold or held back in your giving and devotion to God?",
+    "How does knowing God has wiped away the penalty of your sins fill you with gratitude instead of shame?"
+   ],
+   "prayer": "Lord Jesus, forgive us for the times our hearts grow cold and we hold back our love from You. Thank You for wiping out our sins for Your own sake and taking away our guilt. Help us bring our lives gladly to You today in humble thanksgiving. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, May 23",
+     "on": "Isaiah 43:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Matt Fuller",
+     "work": "Will We Remember Our Sin in Heaven? (Isaiah 43:25) - Your Daily Bible Verse - June 29",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-bible-verse/will-we-remember-our-sin-in-heaven-bible-study-minute-september-11-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,122 @@
+{
+ "id": "19-105-001",
+ "title": "Tell of His Wonders",
+ "refs": [
+  "Psalms 105:1-45"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19105003,
+   "end": 19105004,
+   "ref": "Psalms 105:3-4",
+   "ranges": [
+    [
+     19105003,
+     19105004
+    ]
+   ],
+   "title": "\"Seek His Face Always\"",
+   "key_verse": [
+    19105004,
+    19105004
+   ],
+   "reflect": [
+    {
+     "text": "Seeking the Lord begins when we step away from life's hurry to spend quiet time alone with Him each day. In that stillness, reading the Bible feeds our souls so we do not become dry and empty like a desert. Life can be very loud, but we can train our ears to listen for His gentle whisper. We can pray with confidence because God never loses sight of us, and He listens closely whenever we call. Our sincere worship brings joy to Him like a pleasing fragrance.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Seeking His strength also means relying on Him when we face an unknown future. Because our human view is small, what lies ahead can easily make us feel afraid. Following God's will often asks us to leave behind comfortable habits and risk what is unfamiliar. Even so, taking hold of God's hand calms our inner worries, because the center of His plan is the safest place we could ever be. When we wait on Him, He gives us fresh strength to keep running without growing weary.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What keeps you from setting aside quiet time each day to listen for God's voice?",
+    "Where is God asking you to let go of the familiar and trust His guidance?"
+   ],
+   "prayer": "Lord, help us slow down each day to seek Your presence and feed on Your Word. When the road ahead feels uncertain and frightening, quiet our fears and help us hold onto Your hand. Renew our strength as we wait on You, and let our prayers and praise bring joy to Your heart. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Billy Graham",
+     "work": "Wait Upon the Lord",
+     "site": "Billy Graham Evangelistic Association",
+     "url": "https://billygraham.org/devotions/wait-upon-the-lord"
+    },
+    "D3": {
+     "author": "Marybeth Whalen",
+     "work": "The Face of God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-june-14-2006-1402354.html"
+    },
+    "D4": {
+     "author": "Charles R. Swindoll",
+     "work": "Hold On to God’s Hand",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-march-2-3-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19105001,
+   "end": 19105045,
+   "ref": "Psalms 105:1-45",
+   "ranges": [
+    [
+     19105001,
+     19105045
+    ]
+   ],
+   "title": "Strengthened for Special Service",
+   "key_verse": [
+    19105018,
+    19105018
+   ],
+   "reflect": [
+    {
+     "text": "Psalm 105 remembers how God cared for His people across history, including the difficult road He led Joseph to walk. As a young man, Joseph had big dreams of leadership, but he did not yet have the inner power needed to guide a nation. In prison, his feet were hurt by chains, and as writer F. B. Meyer observed, \"the iron entered into his soul.\" The long wait and painful circumstances acted like a strengthening medicine, building firm moral character into his life.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God often uses high heat and sudden changes in life to turn raw iron into tempered steel. Hard times, sorrow, and lonely seasons are never easy to endure, and our lives can feel very mysterious while we are in the middle of them. Yet God does not waste our suffering. He uses these trials to remove our weakness and make us strong, preparing us for valuable service in His kingdom that we cannot yet imagine.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How might God be using a current struggle or delay to build endurance in your soul?",
+    "How does knowing that God prepares you for future service help you face hard times today?"
+   ],
+   "prayer": "Father, thank You for guiding our lives even when our circumstances feel confusing and heavy. When we face trials or long delays, help us remember that You are refining our faith and building strength within us. Give us patience to endure hard seasons as You prepare us to serve You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 105:18",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,66 @@
+{
+ "id": "20-009-013",
+ "title": "The Way of Folly",
+ "refs": [
+  "Proverbs 9:13-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20009013,
+   "end": 20009018,
+   "ref": "Proverbs 9:13-18",
+   "ranges": [
+    [
+     20009013,
+     20009018
+    ]
+   ],
+   "title": "Resisting the Call of Folly",
+   "key_verse": [
+    20009018,
+    20009018
+   ],
+   "reflect": [
+    {
+     "text": "In Proverbs, foolishness is shown as a loud woman trying to draw us off course. She acts like a true guide, but she is a fake rival to God's wisdom. In our world today, things that are loud and popular often grab our attention. Yet making a lot of noise does not mean something is true. Foolish ideas can shout loudly while offering nothing of real value.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Folly tries to take control of our lives by offering secret and forbidden pleasures. She whispers that doing what is wrong will taste sweet and bring happiness. But this is a deadly trap. What promises delight actually ends in spiritual ruin and death. Folly tries to rule us, but only Christ can rescue us and set us free from her grip.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "To stay safe, we need to protect our hearts. We do this by spending regular time in God's Word. When the Scriptures fill our minds, we can see through the empty promises of sin. God's truth gives us the wisdom we need to turn away from folly's call and walk with Jesus instead.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Where do you hear the loud calls of foolishness in your life today?",
+    "How can spending time in God's Word help you see through the false promises of sin?"
+   ],
+   "prayer": "Lord Jesus, thank You for freeing us from the trap of foolishness and sin. Guard our hearts when forbidden things look sweet and attractive. Help us to know Your Word deeply so we can walk in Your true life and peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Meet Woman Folly",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/meet-woman-folly"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

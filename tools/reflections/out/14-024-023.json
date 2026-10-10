@@ -1,0 +1,66 @@
+{
+ "id": "14-024-023",
+ "title": "The Death of Joash",
+ "refs": [
+  "2 Chronicles 24:23-27"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14024023,
+   "end": 14024027,
+   "ref": "2 Chronicles 24:23-27",
+   "ranges": [
+    [
+     14024023,
+     14024027
+    ]
+   ],
+   "title": "A Faith of Your Own",
+   "key_verse": [
+    14024024,
+    14024024
+   ],
+   "reflect": [
+    {
+     "text": "King Joash started his reign looking very devoted to God. He worked hard to restore the temple. But his faith was never truly rooted in his own heart. When his mentor, the priest Jehoiada, passed away, Joash quickly turned to idols. He even showed terrible ingratitude by having Jehoiada's son Zechariah murdered.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because Judah abandoned the Lord, God sent judgment. A small Aramean army arrived, and God handed Judah's much larger army over to them. Joash was left severely wounded from the battle. Soon after, his own officials plotted against him and killed him in his bed. In the end, he was not even given an honorable burial among the kings.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Joash's sad end reminds us that we cannot rely on the faith of our parents, pastors, or mentors. Godly examples are a gift, but they cannot believe for us. Real salvation requires personal, lasting trust in the Lord for ourselves.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is your faith truly your own, or are you leaning on the faith of family or friends?",
+    "What helps you stay close to God when mentors or teachers are no longer around to guide you?"
+   ],
+   "prayer": "Lord, help us to build our own deep and lasting trust in You. Thank You for the godly people who guide us, but keep our hearts fixed on You alone. Protect us from turning away, and preserve our faith to the end. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "God’s Judgment on Joash",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/gods-judgment-on-joash"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

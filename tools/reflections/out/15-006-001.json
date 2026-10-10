@@ -1,0 +1,66 @@
+{
+ "id": "15-006-001",
+ "title": "The Decree of Darius",
+ "refs": [
+  "Ezra 6:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 15006001,
+   "end": 15006012,
+   "ref": "Ezra 6:1-12",
+   "ranges": [
+    [
+     15006001,
+     15006012
+    ]
+   ],
+   "title": "God Turns Opposition into Blessing",
+   "key_verse": [
+    15006008,
+    15006008
+   ],
+   "reflect": [
+    {
+     "text": "When we try to do God's work, we often run into suspicion and pushback from people in authority. The Jewish builders faced this kind of trouble when their enemies questioned their right to rebuild the temple. Yet God watched over them. He preserved the old record of King Cyrus safe in the archives so the builders would be cleared of any wrongdoing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God even works through unlikely rulers who have their own motives, such as King Darius, to move His kingdom forward. Darius not only protected the builders, but he also commanded that local taxes collected by their opponents be used to pay for the temple. God turned what looked like a roadblock into a great blessing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We can have real hope when we face hard times or resistance. God has the power to redeem difficult situations and bring good out of schemes meant to hinder His work. We can trust that no obstacle is too big for Him to use for our good.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When have you seen God bring good out of a situation that seemed discouraging?",
+    "How does knowing that God directs even worldly rulers give you peace when you face opposition?"
+   ],
+   "prayer": "Lord God, thank You that You rule over all things and care for Your people. Give us courage when we face doubt or pushback while trying to serve You. Help us trust that You can redeem our hard circumstances and turn trials into blessings. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Darius Supports the Jews",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/darius-supports-the-jews"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

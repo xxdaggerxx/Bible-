@@ -1,0 +1,73 @@
+{
+ "id": "21-009-013",
+ "title": "Wisdom Is Better than Strength",
+ "refs": [
+  "Ecclesiastes 9:13-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 21009013,
+   "end": 21009018,
+   "ref": "Ecclesiastes 9:13-18",
+   "ranges": [
+    [
+     21009013,
+     21009018
+    ]
+   ],
+   "title": "Wisdom Is Better than Strength",
+   "key_verse": [
+    21009017,
+    21009017
+   ],
+   "reflect": [
+    {
+     "text": "In the story Solomon tells, a mighty king attacked a small city. A poor man saved the town through his quiet wisdom, yet people soon forgot all about him. Worldly power looks very impressive, but wisdom is far more effective. Even so, human nature often ignores and despises good counsel when it comes from humble people.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Our world loves loud noise. Fools easily rush after the shouting of powerful leaders, which can drown out the truth for a time. Yet God's Spirit speaks softly to our hearts. He invites us to listen to the calm wisdom of Scripture rather than following the loud culture around us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Sinners can cause severe damage and ruin much good in the near term. But those victories do not last. God's wisdom is guaranteed to win in the end through Christ. When doing what is right brings trouble instead of quick success, we must keep an eternal perspective and trust God's lasting plan.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When loud voices surround you, how can you make space to listen to God's quiet truth?",
+    "How does knowing that God's wisdom will win in the end help you endure hardship today?"
+   ],
+   "prayer": "Lord, help us listen to your quiet wisdom rather than the noisy shouts of the world. Give us patience when doing what is right goes unnoticed or brings hardship. Keep our eyes on your eternal promise that your truth will win in the end through Christ. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Short-Term Setbacks, Long-Term Gain",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/short-term-setbacks-long-term-gain"
+    },
+    "D2": {
+     "author": "Chuck Swindoll",
+     "work": "Some “Above-the-Sun” Wisdom",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/some-above-the-sun-wisdom"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

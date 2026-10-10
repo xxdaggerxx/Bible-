@@ -1,0 +1,67 @@
+{
+ "id": "26-001-015",
+ "title": "The Four Wheels",
+ "refs": [
+  "Ezekiel 1:15-21"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26001015,
+   "end": 26001021,
+   "ref": "Ezekiel 1:15-21",
+   "ranges": [
+    [
+     26001015,
+     26001021
+    ]
+   ],
+   "title": "Moving in Harmony with the Spirit",
+   "key_verse": [
+    26001019,
+    26001019
+   ],
+   "reflect": [
+    {
+     "text": "Ezekiel saw wheels that moved in perfect harmony with the living creatures and the Spirit. As F. B. Meyer explains, these wheels represent God's providence—the way He actively guides the events and details of our world. When the Spirit moved, the creatures and the wheels moved together without any struggle or delay. This shows the wonderful order that exists when everything answers to God's directing Spirit.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This picture brings comfort to our daily lives. When we live gladly in the center of God's will, we can trust that His providence works alongside us. We do not need to fight to have our own way in this world. Instead, when we turn away from selfish ambition and dedicate ourselves to serving Christ, we begin to notice the quiet leading of the Spirit.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Hearing God's guidance requires a steady habit of surrender. God speaks deeper than our changing feelings or passing impressions, and He makes His will known to hearts that are set on obeying Him. As we keep our treasure in Christ alone, He gently directs our steps.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you trying to control your own circumstances, or are you resting in the center of God's will?",
+    "What personal desires might you need to surrender so that you can hear the Spirit's guidance more clearly?"
+   ],
+   "prayer": "Lord, help us to let go of our selfish desires and live completely in Your will. Teach us not to depend on our changing feelings, but to listen for Your quiet voice deep within us. Thank You that as we walk with You, You guide our steps and care for all our needs. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 1:19",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

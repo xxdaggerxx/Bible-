@@ -1,0 +1,105 @@
+{
+ "id": "19-092-001",
+ "title": "How Great Are Your Works!",
+ "refs": [
+  "Psalms 92:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19092001,
+   "end": 19092015,
+   "ref": "Psalms 92:1-15",
+   "ranges": [
+    [
+     19092001,
+     19092015
+    ]
+   ],
+   "title": "Praising the Lord for His Great Works",
+   "key_verse": [
+    19092004,
+    19092004
+   ],
+   "reflect": [
+    {
+     "text": "When we praise God, worship reorients our hearts around His rule. Setting our attention on Him drives away our inner anxieties and calms our troubled hearts. Heartfelt praise, whether spoken or sung with music, reflects the beauty of creation and brings our lives into harmony with God's good purposes.",
+     "sources": [
+      "D4",
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "God's deeds give us deep reason to rejoice. Because Christ has forgiven our sins and given us true rest, we can live with gladness above our daily trials. To keep serving Him, we need God's Spirit to renew us every day. As Charles Spurgeon wrote, believers need not \"be afraid of being too glad\" in the Lord's work. Daily prayer brings fresh grace so our faith does not grow cold.",
+     "sources": [
+      "D1",
+      "D3",
+      "D6"
+     ]
+    },
+    {
+     "text": "While evil will not last, those who trust God are like evergreen palms and strong cedars. God cares for His people directly, keeping them upright and giving them strength to face every storm. Even in old age, His sustaining presence enables us to stay healthy and bear fruit, showing the world that the Lord is faithful.",
+     "sources": [
+      "D2",
+      "D3",
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "How does turning your attention to God's deeds help quiet your daily worries?",
+    "In what practical ways can you seek the Holy Spirit's fresh strength today?"
+   ],
+   "prayer": "Lord, thank You for forgiving our sins and giving us true rest in Christ. Fill us daily with the fresh grace of Your Holy Spirit so we may stand firm through every storm. Teach us to rejoice in Your works and bear fruit for You all our days. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 14",
+     "on": "Psalms 92:4",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Sept. 17",
+     "on": "Psalms 92:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 92:10",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D4": {
+     "author": "Pastor Chuck Swindoll",
+     "work": "The Fruit of Worship",
+     "site": "Insight for Living",
+     "url": "https://insight.org/resources/daily-devotional/the-fruit-of-worship"
+    },
+    "D5": {
+     "author": "Wisdom from the Psalms",
+     "work": "Wisdom from the Psalms 7/24",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/wisdom/wisdom-from-the-psalms-7-or-24-552466.html"
+    },
+    "D6": {
+     "author": "W. Robert Godfrey",
+     "work": "Psalm 92: A Song for the Sabbath",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/articles/psalm-92-song-sabbath"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

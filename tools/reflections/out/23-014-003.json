@@ -1,0 +1,67 @@
+{
+ "id": "23-014-003",
+ "title": "The Fall of the King of Babylon",
+ "refs": [
+  "Isaiah 14:3-23"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23014003,
+   "end": 23014023,
+   "ref": "Isaiah 14:3-23",
+   "ranges": [
+    [
+     23014003,
+     23014023
+    ]
+   ],
+   "title": "Examine Your Heart Before God",
+   "key_verse": [
+    23014010,
+    23014010
+   ],
+   "reflect": [
+    {
+     "text": "In Isaiah 14, the proud ruler of Babylon falls from his high place. When he arrives among the dead, others look at him in astonishment because he has ended up just as weak and ruined as they are. Charles Spurgeon explains that this scene gives a solemn warning to anyone who merely claims to follow God without genuine faith. An outward show of religion cannot hide the truth from God when everything is brought into the light.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Spurgeon points out how terrible it will be for hypocrites when their true state is uncovered. Those who never pretended to be religious will see them and say that they have become just like everyone else. It is dangerous to boast of eternal life or correct others while our own hearts remain unchanged. A false profession will bring only shame when we stand before God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because of this danger, we are urged to test our own lives carefully. Spurgeon reminds us that it is easy to give ourselves a gentle verdict, yet we must be honest and rigorous with our hearts. We need to heed Scripture's call to \"examine yourselves, whether ye be in the faith.\" We should ask the Lord for sincerity and lasting firmness, making sure our trust rests firmly on the true Rock.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Am I genuinely trusting in Christ, or am I relying on an outward appearance of faith?",
+    "In what areas do I need to be more honest with myself about my walk with God?"
+   ],
+   "prayer": "Lord, search our hearts and help us see if our faith is true and sincere. Keep us from pretending to follow you while holding on to hidden sin. Grant us grace to build our lives firmly on Christ, so that we remain faithful to the end.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, June 26",
+     "on": "Isaiah 14:10",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

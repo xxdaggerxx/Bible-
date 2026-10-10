@@ -1,0 +1,66 @@
+{
+ "id": "24-050-004",
+ "title": "Hope for Israel and Judah",
+ "refs": [
+  "Jeremiah 50:4-10"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24050004,
+   "end": 24050010,
+   "ref": "Jeremiah 50:4-10",
+   "ranges": [
+    [
+     24050004,
+     24050010
+    ]
+   ],
+   "title": "Finding Your True Resting Place",
+   "key_verse": [
+    24050006,
+    24050006
+   ],
+   "reflect": [
+    {
+     "text": "When people are hurt or upset, it is easy to run away from home and safety. Like a young runaway, we can find ourselves wandering far from where we belong. The prophet Jeremiah compares God's people to lost sheep who have roamed across hills and mountains, completely forgetting their resting place. Even while running, wanderers often carry a quiet hope that someone will find them and rescue them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Trying to run from painful problems or relationships never brings true freedom. Instead, wandering leaves our souls feeling deeply exhausted, lonely, and weighed down by heavy burdens. We wear ourselves out looking for peace in places that cannot provide it.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's enduring love never gives up on those who have strayed. He reaches out to us and invites us to stop running. When we turn back to Him, we rediscover our true resting place and find the safety our hearts have been looking for all along.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you been running away from a problem or from God, and has it left your soul feeling tired?",
+    "What is one step you can take today to stop running and turn back to God as your resting place?"
+   ],
+   "prayer": "Lord, forgive us when we wander away because we are hurt or upset. We are tired of running and carry heavy burdens. Thank you for your faithful love that calls us home. Please guide our hearts back to you, our true resting place. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Holly Good",
+     "work": "Encouragement for Today: I Picked Up a Runaway",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-mar-10-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

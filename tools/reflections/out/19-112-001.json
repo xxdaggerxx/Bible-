@@ -1,0 +1,83 @@
+{
+ "id": "19-112-001",
+ "title": "The Blessed Fear of the LORD",
+ "refs": [
+  "Psalms 112:1-10"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19112007,
+   "end": 19112007,
+   "ref": "Psalms 112:7",
+   "ranges": [
+    [
+     19112007,
+     19112007
+    ]
+   ],
+   "title": "\"He does not fear bad news\"",
+   "key_verse": [
+    19112007,
+    19112007
+   ],
+   "reflect": [
+    {
+     "text": "Bad news can reach us at any moment through a message, a letter, or a knock at the door. Suspense and waiting often make us anxious about what tomorrow holds. Yet we can have peace because our God rules over both what is known and what is unknown. As Charles Spurgeon wrote, we can rest in an \"unstaggering trustfulness in our God.\" Because our heavenly Father permits and guides all things, nothing can truly ruin those who belong to Him.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This does not mean we never feel pain or deep sorrow. Believers still weep under heavy trials, but we do not judge life only by outward appearances. When people without God hear painful reports, they often panic, grumble against Him, or choose sinful ways to escape trouble. We are called to be different by standing steady, trusting that God works all things for our good.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Facing trouble with quiet confidence brings honor to God. When we refuse to give in to dread, we show the world that our Lord is truly dependable. Relying on His unchanging care keeps our hearts settled and brave, no matter what news arrives.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When unexpected bad news arrives, what helps you remember that God is already in control of the unknown?",
+    "How can meeting trouble with quiet trust show God's faithfulness to those around you?"
+   ],
+   "prayer": "Lord, help us to fix our hearts firmly on You when frightening news comes our way. Guard our minds from panic and keep us from turning to wrong paths for relief. Grant us quiet trust so that our lives bring honor to Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, September 15",
+     "on": "Psalms 112:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Feb. 27",
+     "on": "Psalms 112:7",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 112:7",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,152 @@
+{
+ "id": "23-030-018",
+ "title": "God Will Be Gracious",
+ "refs": [
+  "Isaiah 30:18-33"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23030018,
+   "end": 23030018,
+   "ref": "Isaiah 30:18",
+   "ranges": [
+    [
+     23030018,
+     23030018
+    ]
+   ],
+   "title": "\"The LORD Longs to Be Gracious\"",
+   "key_verse": [
+    23030018,
+    23030018
+   ],
+   "reflect": [
+    {
+     "text": "When troubles arrive or guilt weighs on our hearts, we often panic and try to fix everything ourselves. We run about looking for our own solutions, fearing that God is angry with us or that we must work hard to earn His favor. Yet God is not looking to turn us away. He waits with eager expectation to give us grace, which is His generous kindness that we could never earn.",
+     "sources": [
+      "D2",
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "Sometimes it feels like heaven is silent, but God's delay is not a sign of distance or neglect. As F. B. Meyer noted, God often waits until we come \"to the end of yourself\" and stop our frantic striving. God uses these quiet seasons of waiting for our good. Waiting helps our prayers grow more earnest and strips away self-reliance, teaching us to rest completely in His care.",
+     "sources": [
+      "D1",
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Our prayers are never forgotten before the Lord. Because He is both just and loving, He knows the perfect time to step in and answer. Instead of giving up in despair, we can remain steady in prayer, trusting that everyone who waits on Him will discover His rich mercy and peace.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "Where are you currently relying on your own frantic efforts instead of waiting on the Lord?",
+    "How does knowing that God desires to show you compassion change the way you pray?"
+   ],
+   "prayer": "Father, forgive us for running ahead and trying to rescue ourselves in our own strength. Teach us to rest quietly in Your love when answers seem slow in coming. Help us to wait with patient hope, knowing that You long to be gracious to us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 9",
+     "on": "Isaiah 30:18",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 30:18",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "A Reflection of Christ - Today's Insight - June 4-5, 2016",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-june-4-5-2016.html"
+    },
+    "D4": {
+     "author": "Rachel Wojo",
+     "work": "A Prayer Because the Silence Is the Hardest Part - Your Daily Prayer - September 12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-daily-prayer/a-prayer-because-the-silence-is-the-hardest-part.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "saying",
+   "start": 23030021,
+   "end": 23030021,
+   "ref": "Isaiah 30:21",
+   "ranges": [
+    [
+     23030021,
+     23030021
+    ]
+   ],
+   "title": "\"This Is the Way\"",
+   "key_verse": [
+    23030021,
+    23030021
+   ],
+   "reflect": [
+    {
+     "text": "Most of us follow directions from a phone map without hesitation, yet we frequently second-guess God when He guides our lives. When we lean on our own limited wisdom, we make poor choices and end up frustrated. Daily distractions and worldly noise easily drown out the Lord's gentle leading, causing us to take confusing detours.",
+     "sources": [
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "Even when we lose our way, God does not abandon us. He is our patient Teacher who is always ready to guide us back. As Shala W. Graham wrote, \"His grace is always available to redirect us\" whenever we call out for help. When we spend time in Scripture and worship, the clutter of the world fades away, helping our hearts hear the quiet voice of the Holy Spirit telling us which path to take.",
+     "sources": [
+      "D5",
+      "D6"
+     ]
+    },
+    {
+     "text": "God understands every bend in the road ahead. When we put aside our own pride and listen to His voice, He will safely guide us through every high and low until we reach our eternal home.",
+     "sources": [
+      "D6"
+     ]
+    }
+   ],
+   "questions": [
+    "What distractions are currently making it difficult for you to hear God's guidance?",
+    "In what part of your life do you need to stop leaning on your own wisdom and follow God's direction instead?"
+   ],
+   "prayer": "Lord, thank You for being our faithful Teacher who guides us back whenever we wander. Quiet the noise around us through Your Word so we can hear the leading of Your Spirit. Give us the humility to follow Your voice and walk in Your way every day. Amen.",
+   "sources": {
+    "D5": {
+     "author": "Shala W. Graham",
+     "work": "Missed Exits: Turning Up the Voice of God - Encouragement for Today - July 18, 2022",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-july-18-2022.html"
+    },
+    "D6": {
+     "author": "Alexis A. Goring",
+     "work": "Following God as Our Guide - iBelieve Truth - November 15, 2023",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/ibelieve-truth-a-devotional-for-women/following-god-as-our-guide.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,81 @@
+{
+ "id": "12-025-027",
+ "title": "Jehoiachin Released from Prison",
+ "refs": [
+  "2 Kings 25:27-30"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12025027,
+   "end": 12025030,
+   "ref": "2 Kings 25:27-30",
+   "ranges": [
+    [
+     12025027,
+     12025030
+    ]
+   ],
+   "title": "Hope Kept Alive in Babylon",
+   "key_verse": [
+    12025030,
+    12025030
+   ],
+   "reflect": [
+    {
+     "text": "The book of 2 Kings ends not with the ruins of Jerusalem, but with an unexpected picture of mercy. After decades in a dark prison, King Jehoiachin was released and given a seat of honor. Even after crushing judgment came upon the nation for its sin, God had not forgotten His covenant promises. By preserving this king from David's family, the Lord quietly kept His story of redemption alive in the darkest season.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "Jehoiachin was not given a vast stockpile of food to take away, but a regular allowance for each day. As Charles Spurgeon wrote, \"a daily portion is all that a man really wants.\" We do not need tomorrow's supplies today, because tomorrow's troubles have not arrived yet. Having just enough for today frees us from anxiety and invites us to be truly thankful.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This daily provision also reminds us of how God gives us grace, His kindness that we do not deserve. We cannot store up spiritual strength for weeks ahead; we must come to God each day in prayer and through His Word. When earthly circumstances seem hopeless, we can trust our covenant-keeping God to supply all the help we need for today.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are you worrying about supplies or problems for tomorrow instead of trusting God for today?",
+    "How can seeing God keep His promises in dark times give you peace right now?"
+   ],
+   "prayer": "Father, thank You that Your kindness never fails, even in hard and dark times. Forgive us when we worry about tomorrow instead of trusting Your care today. Please give us our daily bread and the fresh strength we need to follow You faithfully. In Jesus' name, Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, February 14",
+     "on": "2 Kings 25:30",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "A Glimmer of Hope for Judah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/glimmer-of-hope-for-judah"
+    },
+    "D3": {
+     "author": "D. A. Carson",
+     "work": "Devotional: 2 Kings 25",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/2-kings-25-hebrews-7-amos-1-psalm-144/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

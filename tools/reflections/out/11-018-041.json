@@ -1,0 +1,67 @@
+{
+ "id": "11-018-041",
+ "title": "The LORD Sends Rain",
+ "refs": [
+  "1 Kings 18:41-46"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11018041,
+   "end": 11018046,
+   "ref": "1 Kings 18:41-46",
+   "ranges": [
+    [
+     11018041,
+     11018046
+    ]
+   ],
+   "title": "Praying Until the Rain Comes",
+   "key_verse": [
+    11018043,
+    11018043
+   ],
+   "reflect": [
+    {
+     "text": "Elijah bowed low on the mountain to pray for rain, sending his servant to look toward the sea. Six times the servant returned with the same discouraging report that nothing was there. Yet Elijah did not give in to doubt. As Charles Spurgeon writes, \"Success is certain when the Lord has promised it.\" Elijah knew God hears sincere prayers that seek His glory, so he kept sending his servant back to watch.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We often prefer immediate answers, but waiting on God can be good for our souls. A delay can cause us to search our hearts, turn away from hidden sins, and humble ourselves before the Lord. Instead of being crushed by disappointment, true faith is stirred to pray even more deeply. Our greatest danger during dry seasons is giving up too soon and missing the blessing God has prepared.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "On the seventh visit, a cloud no bigger than a human hand appeared over the sea, quickly turning into a downpour of rain. Elijah was an ordinary man with feelings just like ours, and God heard him not because of Elijah's own merit, but because of God's mercy. When we bring our needs to God, we can hold on with that same steady hope and keep watching for His answer.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you pray and do not see an immediate answer, what helps you keep trusting God?",
+    "How can a season of waiting help you examine your own heart and draw closer to the Lord?"
+   ],
+   "prayer": "Lord, teach us to keep praying with steady faith even when we see no signs of change. When answers are delayed, search our hearts and help us turn away from our sins. Strengthen our hope so that we do not grow weary, trusting that You always keep Your promises. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, September 28",
+     "on": "1 Kings 18:43",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

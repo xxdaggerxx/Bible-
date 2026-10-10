@@ -1,0 +1,67 @@
+{
+ "id": "23-015-001",
+ "title": "The Burden against Moab",
+ "refs": [
+  "Isaiah 15:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23015001,
+   "end": 23015009,
+   "ref": "Isaiah 15:1-9",
+   "ranges": [
+    [
+     23015001,
+     23015009
+    ]
+   ],
+   "title": "A Broken Heart for the Lost",
+   "key_verse": [
+    23015005,
+    23015005
+   ],
+   "reflect": [
+    {
+     "text": "Moab was once a fertile land full of people and life. When Isaiah spoke of its sudden ruin, it must have seemed impossible to believe. Yet God's words came true down to the very detail, leaving behind broken stones and empty ruins. In the same way, everything God has said about the future will surely come to pass in His time.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Even though Moab had long been an enemy of God's people, Isaiah took no joy in seeing them fall. Instead, he carried a heavy grief inside. His own heart cried out with deep sorrow as he pictured the people running in terror and weeping over their destroyed homes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This shows us how we should view those who face God's judgment. As F. B. Meyer writes, we ought to speak \"with wet eyes\" rather than a cold or uncaring voice. A harsh attitude only turns people away, but genuine sorrow can touch hardened hearts. We need Jesus to give us His own tender mercy for those who are far from Him.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you feel when you think about people who do not know God facing His judgment?",
+    "How can you show more of Christ's tenderness when you share the truth with others?"
+   ],
+   "prayer": "Lord, give us tender hearts like Yours for people who are far from You. Keep us from ever feeling proud or glad over the ruin of others. Fill us with Christ's compassion, and help us share Your truth with genuine love. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 15:5",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "23-007-001",
+ "title": "A Message to Ahaz",
+ "refs": [
+  "Isaiah 7:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 23007009,
+   "end": 23007009,
+   "ref": "Isaiah 7:9",
+   "ranges": [
+    [
+     23007009,
+     23007009
+    ]
+   ],
+   "title": "\"Stand Firm in Your Faith\"",
+   "key_verse": [
+    23007009,
+    23007009
+   ],
+   "reflect": [
+    {
+     "text": "King Ahaz and his people were terrified when enemy armies joined together to attack them. God sent Isaiah to reassure the king that these dangerous rulers were only smoldering embers. Ahaz faced a clear choice. He could turn to human political treaties for safety, or he could trust God to step in and save them. Standing firm requires living faith rather than leaning on human ideas of success.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Difficult times test what we really rely on. God allows trials and hard circumstances into our lives to stretch and deepen our faith. When we feel overwhelmed, our doubts can make us forget God's mighty power, even when He has helped us in the past. Real faith means resting quietly in God's good character, with the simple confidence of a child.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When you face tough decisions, do not panic. Instead, find what the Lord has said and obey Him. Trusting God to protect you and act for your good is always safe and sure.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life are you tempted to rely on human solutions rather than trusting God?",
+    "How can remembering God's character help you rest like a trusting child during hard times?"
+   ],
+   "prayer": "Lord, when frightening problems surround us, help us not to panic or search for human shortcuts. Give us a simple, childlike faith that rests completely in Your power and character. Teach us to listen to Your word, obey You, and stand firm in our trust.",
+   "sources": {
+    "D1": {
+     "author": "One Year Devotions for Men",
+     "work": "Don't Panic, Keep Calm",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/don-t-panic-keep-calm-one-year-devotions-for-men-january-7.html"
+    },
+    "D2": {
+     "author": "Mary Southerland",
+     "work": "Girlfriends in God - July 26, 2010",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/girlfriends-in-god-july-26-2010-11635157.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,126 @@
+{
+ "id": "19-130-001",
+ "title": "Out of the Depths",
+ "refs": [
+  "Psalms 130:1-8"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19130004,
+   "end": 19130004,
+   "ref": "Psalms 130:4",
+   "ranges": [
+    [
+     19130004,
+     19130004
+    ]
+   ],
+   "title": "\"With You there is forgiveness\"",
+   "key_verse": [
+    19130004,
+    19130004
+   ],
+   "reflect": [
+    {
+     "text": "When we look closely at our hearts, we often see our own failures and battle with wrong desires. This can make us wonder if we truly belong to God. Yet feeling deep sorrow over our sins is actually a sign of spiritual life, not death. Our confidence does not rest on our own perfect track record, but on turning away from our self-reliance to look at God's rich pardon. Jesus takes our clumsy, imperfect efforts and makes them clean before the Father.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "God's pardon is ready the moment we confess our sins. It is steady and sure. As F. B. Meyer notes, \"when God once speaks forgiveness, it can never be unspoken.\" Even if you do not feel an instant wave of emotion, you can trust that God has heard your prayer and washed away your guilt. His fountain of mercy never dries up.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Because God is so generous with His mercy, our hearts change toward Him. We no longer run from Him in terror of punishment. Instead, love fills us with a gentle, holy fear. We want to honor our Father, and we dread causing pain to the One who has shown us such great kindness.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do you tend to measure God's love by your own good performance or by His promise to forgive?",
+    "How does knowing God has completely pardoned you make you want to avoid grieving Him?"
+   ],
+   "prayer": "Father, thank You for forgiving my sins whenever I come to You in honest confession. Help me look to Jesus instead of trusting my own goodness. Fill my heart with such love for You that I truly desire to walk in Your ways and bring You joy. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 130:4",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Scott Hubbard",
+     "work": "Am I Really a Christian? Lessons from John Owen on Assurance",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/am-i-really-a-christian"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 19130001,
+   "end": 19130008,
+   "ref": "Psalms 130:1-8",
+   "ranges": [
+    [
+     19130001,
+     19130008
+    ]
+   ],
+   "title": "Waiting in the Depths",
+   "key_verse": [
+    19130005,
+    19130005
+   ],
+   "reflect": [
+    {
+     "text": "The psalmist begins in deep distress, crying out to God from the lowest place. When we face difficult problems and wait for guidance or relief, our hearts often grow restless and anxious. Long seasons of waiting can wear us down and test our faith.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet even in the quiet, God is working. We should never mistake God's silence for His absence. The writer made a conscious choice to wait for the Lord with his whole being, like a night guard watching steadily for the dawn.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "We can wait with calm hearts when our hope rests on God's unchanging nature and the promises of the Bible. Peace comes not from solving every problem right away, but from placing all our unanswered questions into His loving and capable hands.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what area of your life are you currently waiting for God to answer or guide you?",
+    "What promises from Scripture can help you stay peaceful while you wait for Him?"
+   ],
+   "prayer": "Lord, when I am in low places and prayers seem unanswered, remind me that You are still near. Take away my anxious thoughts and help me rest in Your word. I put my life and my timing into Your hands today. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Rachel Britton",
+     "work": "Patience for Slow Answers",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/your-nightly-prayer/patience-for-gods-slow-answers.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

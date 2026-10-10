@@ -1,0 +1,66 @@
+{
+ "id": "24-012-005",
+ "title": "God’s Answer to Jeremiah",
+ "refs": [
+  "Jeremiah 12:5-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24012005,
+   "end": 24012013,
+   "ref": "Jeremiah 12:5-13",
+   "ranges": [
+    [
+     24012005,
+     24012013
+    ]
+   ],
+   "title": "Running with Horses",
+   "key_verse": [
+    24012005,
+    24012005
+   ],
+   "reflect": [
+    {
+     "text": "Gathering with other Christians on Sunday is a comfortable gift. It does not require a heavy sacrifice from us. The genuine test of our faith happens after Sunday ends, when we return to the routine pressures and friction of the workweek.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In this passage, God asks Jeremiah a tough question. If racing against men on foot leaves us worn out, how will we ever run alongside horses? Everyday life brings small struggles. If these ordinary challenges exhaust us, we will not be prepared when far harder trials arrive.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our faith cannot remain safely sheltered like polished statues inside a church. God wants our trust in him to be put into active use out in the world. Facing spiritual pressure in ordinary places takes grit and discipline. We need to stand strong and refuse to give up.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How do you usually respond to the routine pressures and annoyances of your everyday week?",
+    "Where in your daily life is God calling you to show grit and keep running for him?"
+   ],
+   "prayer": "Lord, help us when ordinary troubles begin to wear us down. Give us discipline and strength to live out our faith amid the pressures of daily life. Teach us not to give up when things become difficult. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Stay in Circulation - Today's Insight - August 11, 2022",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/todays-insight-august-11-2022.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

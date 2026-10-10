@@ -1,0 +1,66 @@
+{
+ "id": "11-002-028",
+ "title": "The Execution of Joab",
+ "refs": [
+  "1 Kings 2:28-35"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11002028,
+   "end": 11002035,
+   "ref": "1 Kings 2:28-35",
+   "ranges": [
+    [
+     11002028,
+     11002035
+    ]
+   ],
+   "title": "Remaining Faithful to the True King",
+   "key_verse": [
+    11002028,
+    11002028
+   ],
+   "reflect": [
+    {
+     "text": "Joab had stood firm and remained loyal during Absalom's massive rebellion years earlier. Yet later in life, he stumbled by supporting Adonijah's attempt to take the throne. Just because we have made it through a major spiritual trial does not mean we are safe from smaller, subtle temptations. Our unguarded personal strengths can quickly become weak spots if we drop our guard. We need continuous reliance on God's sustaining power every single day.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "When his plot failed, Joab ran to the altar seeking safety from punishment. For years, King David had overlooked Joab's violent crimes because Joab was useful to the army. In the end, Solomon had Joab struck down right at the altar, showing the moral compromises of human rulers. The failures of both David and Solomon point to our need for a truly righteous king. God's kingdom does not endure through our own moral perfection, but entirely by His grace, which is His undeserved kindness to us.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there areas where you feel strong and might be forgetting to depend on God?",
+    "How does knowing God's kingdom rests on His grace help you trust Him?"
+   ],
+   "prayer": "Lord, protect us from quiet temptations and keep us relying on Your strength instead of our own. Thank You that Your kingdom rests on Your grace and not on our perfection. Help us to fix our eyes on Jesus, our only righteous King. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Oswald Chambers",
+     "work": "Beware of the Least Likely Temptation",
+     "site": "My Utmost for His Highest",
+     "url": "https://utmost.org/updated/beware-of-the-least-likely-temptation/"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "Joab and Shimei Eliminated",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/joab-and-shimei-eliminated"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

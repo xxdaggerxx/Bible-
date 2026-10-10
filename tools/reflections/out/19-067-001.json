@@ -1,0 +1,88 @@
+{
+ "id": "19-067-001",
+ "title": "May God Cause His Face to Shine upon Us",
+ "refs": [
+  "Psalms 67:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19067001,
+   "end": 19067007,
+   "ref": "Psalms 67:1-7",
+   "ranges": [
+    [
+     19067001,
+     19067007
+    ]
+   ],
+   "title": "Blessed to Bless the Nations",
+   "key_verse": [
+    19067001,
+    19067001
+   ],
+   "reflect": [
+    {
+     "text": "When we ask God to bless us and shine His face upon us, we remember His deep generosity to His people. He is our own God, yet we often try to carry our heavy burdens alone instead of asking for His help. Charles Spurgeon urges us to go to God often and find in Him everything we need, from daily guidance to true peace. Recognizing His goodness turns our thoughts toward thankful worship.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "God never gives us His gifts so that we can keep them selfishly to ourselves. The psalmist asks for God's favor so that His saving power will be made known across the entire earth. As F. B. Meyer explains, we receive God's grace so that it can pass through us to all mankind. When we experience His kindness, our hearts expand to care about people of every land.",
+     "sources": [
+      "D2",
+      "D4"
+     ]
+    },
+    {
+     "text": "Telling all nations to praise God is an invitation to their greatest possible happiness. God does not ask for worship because He is lacking anything in Himself. Instead, our delight in what is good is only complete when it overflows into praise. In calling the nations to worship Him, God lovingly points the world to the only one who can truly satisfy the human heart.",
+     "sources": [
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "In what areas of your life are you still trying to carry your troubles alone instead of turning to God?",
+    "How can you share the blessings God has given you so that people around you learn about His goodness?"
+   ],
+   "prayer": "Lord God, thank You for Your rich blessings and for letting Your face shine on us. Teach us to come to You freely with all our needs instead of bearing our burdens alone. Expand our hearts so that Your grace overflows through us, leading people from every nation to find their joy in praising You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, April 27",
+     "on": "Psalms 67:6",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 67:7",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "John Piper",
+     "work": "Pleased to Praise",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/solid-joys/pleased-to-praise"
+    },
+    "D4": {
+     "author": "Stuart Briscoe (One Year Devotions for Men)",
+     "work": "God Bless Us!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/one-year-devotions-for-men/god-bless-us-one-year-devotions-for-men-july-2.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

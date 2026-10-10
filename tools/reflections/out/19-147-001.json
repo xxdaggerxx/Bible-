@@ -1,0 +1,66 @@
+{
+ "id": "19-147-001",
+ "title": "It Is Good to Sing Praises",
+ "refs": [
+  "Psalms 147:1-20"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19147001,
+   "end": 19147020,
+   "ref": "Psalms 147:1-20",
+   "ranges": [
+    [
+     19147001,
+     19147020
+    ]
+   ],
+   "title": "The God Who Heals the Broken",
+   "key_verse": [
+    19147003,
+    19147003
+   ],
+   "reflect": [
+    {
+     "text": "When deep troubles come, suffering often makes us feel cut off and alone. In our sadness, we may wonder if God truly hears our cries or sees what we are going through. Yet Psalm 147 reminds us that the mighty Lord who rules the earth is also tender toward us. He cares for the humble, heals the brokenhearted, and gently binds up their wounds.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Believers can take deep comfort in knowing that God never misses our heartache. He understands our grief, and He never wastes our pain. Instead of leaving us to struggle on our own, Christ meets hurting people right in the middle of their brokenness. He steps into our sorrow to offer His own peace, comfort, and healing.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This truth also guides how we care for others. Walking alongside friends who are in distress gives us vital opportunities to help. We do not have to fix everything ourselves; we simply stand with them in love and point them back to Christ, the true healer of our souls.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When you feel lonely or overwhelmed by pain, what helps you remember that God sees your heartache?",
+    "How can you walk alongside a hurting friend this week and point them to Christ?"
+   ],
+   "prayer": "Lord God, thank You for seeing our deepest hurts and meeting us right in our brokenness. Help us trust that You hear our cries and will never waste our sorrow. Give us tender hearts to walk with hurting friends and point them to Your healing peace. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Gwen Smith",
+     "work": "Healer of the Broken",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/girlfriends/healer-of-the-broken-girlfriends-in-god-july-19-2013.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

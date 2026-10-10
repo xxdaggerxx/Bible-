@@ -1,0 +1,66 @@
+{
+ "id": "13-012-023",
+ "title": "David’s Army Grows at Hebron",
+ "refs": [
+  "1 Chronicles 12:23-40"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13012023,
+   "end": 13012040,
+   "ref": "1 Chronicles 12:23-40",
+   "ranges": [
+    [
+     13012023,
+     13012040
+    ]
+   ],
+   "title": "Understanding the Times",
+   "key_verse": [
+    13012032,
+    13012032
+   ],
+   "reflect": [
+    {
+     "text": "When the tribes of Israel gathered at Hebron to unite under King David, different groups brought their own strengths. Among them were the leaders of Issachar, who understood the times and knew what God's people needed to do. In our own lives, we need spiritual discernment—the God-given ability to see clearly—rather than leaning only on our own human thinking to navigate difficult seasons.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Whenever a society turns away from God's revealed truth, it falls into moral decay, idolatry, and confusion. Like the men of Issachar, we need to recognize the moral climate around us so we can respond with faithful obedience. We gain this wisdom by regularly reading and absorbing the Scriptures, evaluating culture through the lens of God's Word.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Recognizing what is happening in the world is not meant to leave us passive. Discerning the times calls us to take action, serving as preserving salt and shining light in a confused world.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "How often do you measure the ideas in our culture against the teachings of the Bible?",
+    "What is one practical way you can act as salt and light where God has placed you today?"
+   ],
+   "prayer": "Lord God, grant us spiritual wisdom to understand the times we live in. Teach us to immerse our hearts in Scripture so we can see the world clearly through Your truth. Guide our daily choices so we may live faithfully as salt and light. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Pastor Jeff Schreve",
+     "work": "Do You Understand the Times?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/fromhisheart/from-his-heart-april-12.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "23-001-001",
+ "title": "Judah’s Rebellion",
+ "refs": [
+  "Isaiah 1:1-9"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23001001,
+   "end": 23001009,
+   "ref": "Isaiah 1:1-9",
+   "ranges": [
+    [
+     23001001,
+     23001009
+    ]
+   ],
+   "title": "Remembering the God Who Cares for Us",
+   "key_verse": [
+    23001002,
+    23001002
+   ],
+   "reflect": [
+    {
+     "text": "When times are prosperous, it is very easy for God's people to forget their Provider. We often start to take credit for our own success. This is what happened to Judah. They turned away from the Lord, falling into idolatry, social injustice, and ungodly alliances instead of depending on Him. Because God cared, He sent the prophet Isaiah to confront their rebellion and call them to repent.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "The Lord spoke with the deep grief of a loving parent whose children have rebelled. Even ordinary farm animals like oxen and donkeys recognize the masters who feed them, yet God's people failed to know and honor Him. Believing parents who carry the heartbreak of a wayward child can catch a glimpse of the sorrow God feels when His people wander away.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "To keep our hearts soft, we need to actively practice gratitude so that God's good gifts never take His place. Even when we wander, the Lord graciously reaches out to us through His Word. He does not leave us without hope, but offers forgiveness and restoration to anyone willing to turn back to Him.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you allowed comfortable circumstances or your own success to make you forget your need for God?",
+    "How can you practice active gratitude today to keep the Lord first in your heart?"
+   ],
+   "prayer": "Lord, forgive us for taking credit for our blessings and forgetting that every good thing comes from You. Help us to recognize Your daily care and keep our hearts thankful. Thank You for reaching out to us through Your Word with the promise of forgiveness whenever we turn back to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "The Vision of Isaiah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/vision-isaiah"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 08/01/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-08-or-01-or-2002-1147162.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

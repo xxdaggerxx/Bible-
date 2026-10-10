@@ -1,0 +1,74 @@
+{
+ "id": "15-010-006",
+ "title": "The People’s Confession of Sin",
+ "refs": [
+  "Ezra 10:6-17"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 15010010,
+   "end": 15010011,
+   "ref": "Ezra 10:10-11",
+   "ranges": [
+    [
+     15010010,
+     15010011
+    ]
+   ],
+   "title": "\"Make a Confession to the Lord\"",
+   "key_verse": [
+    15010011,
+    15010011
+   ],
+   "reflect": [
+    {
+     "text": "Ezra stood before the returned exiles and called them to confess their sin and do God's will. The people had compromised by marrying pagan wives, slipping back into the idolatrous practices that had caused their nation's exile. When Ezra spoke, the power of God's Word brought deep conviction, leading the community to tremble in repentance.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "In that historical setting, Ezra sought to faithfully apply the law of Moses. The community had no civil authority to punish or exile violators, so turning away God's judgment demanded an agonizing and costly separation from sinful practices. True spiritual renewal always requires us to turn decisively away from worldly compromises. Even though self-denial and repentance can be deeply painful, faithful obedience brings true peace.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Bible stories do not mean every action is a direct command for us today. Under the New Covenant, scripture instructs believers to stay with an unbelieving spouse who is willing to remain married. Still, Ezra's call reminds us to take sin seriously and give our whole hearts to God.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What worldly compromises might God's Word be asking you to turn away from today?",
+    "How can trusting God help you choose obedience, even when repentance feels painful?"
+   ],
+   "prayer": "Lord God, help us to hear Your Word with humble hearts and turn away from any compromises that pull us from You. Give us the courage to confess our wrongs and choose the path of obedience. Grant us the quiet peace that comes from doing Your will. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Putting Away the Foreign Wives",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/putting-away-the-foreign-wives"
+    },
+    "D2": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathway - June 5, 2012",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-june-5-2012.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

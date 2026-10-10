@@ -1,0 +1,17 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://www.biblegateway.com/",
+  "https://www.biblegateway.com/passage/?search=2%20Chronicles%2023&version=MSG",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+23%3A1-3&version=ESV",
+  "https://www.biblegateway.com/passage/?search=2+Chronicles+23&version=GW",
+  "https://www.biblegateway.com/resources/smiths-bible-names-dictionary/Adaiah",
+  "https://www.biblegateway.com/resources/smiths-bible-names-dictionary/Zichri",
+  "https://www.biblegateway.com/verse/en/2%20Chronicles%2023%3A1",
+  "https://www.biblegateway.com/verse/en/2%20Chronicles%2023%3A2",
+  "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-27-or-2002-1133458.html"
+ ],
+ "cost": 0.03884255,
+ "model": "google/gemini-3.8-flash"
+}

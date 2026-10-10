@@ -1,0 +1,83 @@
+{
+ "id": "13-022-006",
+ "title": "Solomon Anointed to Build the Temple",
+ "refs": [
+  "1 Chronicles 22:6-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 13022006,
+   "end": 13022019,
+   "ref": "1 Chronicles 22:6-19",
+   "ranges": [
+    [
+     13022006,
+     13022019
+    ]
+   ],
+   "title": "Building in God's Peace",
+   "key_verse": [
+    13022019,
+    13022019
+   ],
+   "reflect": [
+    {
+     "text": "David longed to build the temple, but God chose Solomon for the task instead. David had spent his life waging wars, and God wanted a man of rest to build His house. This was not because David's battles were wrong, but because Solomon's peaceful reign pointed ahead to the everlasting peace of God's coming kingdom. As F. B. Meyer noted, \"the men of rest are the builders of the most lasting structures.\"",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Even though David could not build the temple himself, he did not sulk or step aside. He spent his final years gathering stone, cedar, precious metals, and skilled workers so Solomon would succeed. David shows us that God faithfully provides everything needed to carry out His will. Instead of hesitating or complaining about our limits, we are called to get busy with the duties God puts before us.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "God's work must always begin from within. David urged Solomon and the leaders to firmly fasten their hearts and souls on seeking the Lord. We do not have to hurry or struggle in our own strength. When we surrender to God's will, live peacefully with others, and trust Him to work through us, He establishes our efforts for His glory.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What task has God placed before you that you need to begin without hesitating?",
+    "How can trusting that God is already at work bring peace to your daily service for Him?"
+   ],
+   "prayer": "Lord God, thank You for giving us everything we need to do Your will. Still our hurried hearts so we can rest in Your strength rather than our own. Teach us to seek You with our whole soul and to live in peace with those around us. Guide our hands to build faithfully for Your name. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "1 Chronicles 22:8-9",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    },
+    "D2": {
+     "author": "Beth Moore",
+     "work": "Day 82: 1 Chronicles 22:11–19",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-82-1-chronicles-22-1119.html"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Temple Builder",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/temple-builder"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

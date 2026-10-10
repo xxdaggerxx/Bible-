@@ -1,0 +1,19 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "https://billygraham.org/devotions",
+  "https://insight.org/",
+  "https://utmost.org/",
+  "https://www.biblegateway.com/passage/?search=Psalm+89%3A1-29&version=NIV",
+  "https://www.biblegateway.com/passage/?search=Psalm+89%3A1-30&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=Psalm+89&version=ESV",
+  "https://www.biblegateway.com/passage/?search=Psalm+89&version=KJV",
+  "https://www.biblegateway.com/passage/?search=Psalm+89&version=NASB",
+  "https://www.biblegateway.com/passage/?search=Psalm+89&version=NIV%3BKJV",
+  "https://www.crosswalk.com/devotionals/daily-devotions-for-parents-by-dr-james-dobson/dr-dobson-s-parenting-devotional-aug-20.html",
+  "https://www.intouch.org/",
+  "https://www.ligonier.org/"
+ ],
+ "cost": 0.038666225,
+ "model": "google/gemini-3.8-flash"
+}

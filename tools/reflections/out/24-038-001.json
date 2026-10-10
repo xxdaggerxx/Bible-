@@ -1,0 +1,74 @@
+{
+ "id": "24-038-001",
+ "title": "Jeremiah Cast into the Cistern",
+ "refs": [
+  "Jeremiah 38:1-28"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 24038001,
+   "end": 24038028,
+   "ref": "Jeremiah 38:1-28",
+   "ranges": [
+    [
+     24038001,
+     24038028
+    ]
+   ],
+   "title": "Trusting God More Than Human Opinion",
+   "key_verse": [
+    24038020,
+    24038020
+   ],
+   "reflect": [
+    {
+     "text": "King Zedekiah knew that Jeremiah was speaking the truth from God. He even helped rescue the prophet from the muddy cistern. Yet when Jeremiah urged him to surrender to Babylon to save his life and preserve Jerusalem, Zedekiah froze. He admitted that he was terrified of what other people would do to him. He feared the mistreatment of fellow Judeans more than he revered God. This dread of human opinion trapped him and paralyzed his obedience.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "When we care too much about the approval of others, we find it hard to obey the Lord. God's directions can sometimes seem to go against our ordinary sense of prudence. Yet as F. B. Meyer wrote, it is far better to be with God \"in a minority of one\" than to seek the favor of the crowd. Reverence for God gives us the freedom to serve Him faithfully, even when we feel alone.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Our spiritual lives cannot thrive unless we put God's Word into practice. Obeying His voice is like food that nourishes our souls. When we choose to listen to Him rather than our fears, it goes well with us and our faith grows strong.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Is there an area in your life where the fear of what others think is keeping you from obeying God?",
+    "How can trusting God's Word help you stand firm even when you feel like you are in the minority?"
+   ],
+   "prayer": "Lord, forgive us when we worry more about human opinions than about honoring You. Give us courage to revere You and follow Your Word, even when it feels difficult. Feed our souls with Your truth and help us walk in faithful obedience today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Jeremiah 38:20",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Ligonier Ministries",
+     "work": "The Fear of Men",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/fear-men"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

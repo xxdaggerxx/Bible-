@@ -1,0 +1,82 @@
+{
+ "id": "25-001-001",
+ "title": "How Lonely Lies the City!",
+ "refs": [
+  "Lamentations 1:1-22"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 25001001,
+   "end": 25001022,
+   "ref": "Lamentations 1:1-22",
+   "ranges": [
+    [
+     25001001,
+     25001022
+    ]
+   ],
+   "title": "Grief, Justice, and the Hope of Restoration",
+   "key_verse": [
+    25001018,
+    25001018
+   ],
+   "reflect": [
+    {
+     "text": "Jerusalem was once full of life, but it was reduced to silence and ashes when Babylon destroyed the city. This tragedy was the fulfillment of God's clear covenant warnings against persistent rebellion. Looking over the ruins, the prophet cried out in deep grief, not polite confusion. Even as Jeremiah wept bitterly over the terrible horrors his people suffered, he still acknowledged that God was completely righteous in His judgments.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "True love does both things together: it upholds God's justice while maintaining genuine, tender grief over those who go astray. We must never take pleasure in the suffering of others, even when it is deserved. Instead, grief reminds us of the dreadful wages of sin and helps break our stubborn pride. F. B. Meyer noted that sorrow can be \"the mother of all joy\" when it leads us to honest self-examination and confession.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Rather than dreaming up easy escapes from distress, we are called to ask God to show us our sins so they can be dealt with and cleared away. Honest lament does not leave us trapped in darkness. By facing our mortality and the ruin that sin brings, our hearts are pointed forward beyond death to the sure hope of resurrection in Christ.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When others experience the painful consequences of their choices, do we weep for them or secretly feel pleased?",
+    "How can times of sadness or loss prompt you to search your heart and turn more fully to God?"
+   ],
+   "prayer": "Lord God, You are completely righteous in all Your ways, yet full of mercy. Teach us to grieve sincerely over the ruin that sin causes in our world, rather than looking down on those who fall. Search our hearts, strip away our pride, and lead us through our sorrow into the joyful hope of resurrection in Jesus. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Lamentations 1:18",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Robin Ham",
+     "work": "A Day of Ash in the City of Ashes",
+     "site": "The Gospel Coalition",
+     "url": "https://store.thegospelcoalition.org/assets/product_downloads/4813/RByspfCRcQUJttPjEnsMd3F200a2NKCgpWrWhVS3.pdf"
+    },
+    "D3": {
+     "author": "Ligonier Ministries",
+     "work": "The Lamentations of Jeremiah",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/lamentations-jeremiah"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

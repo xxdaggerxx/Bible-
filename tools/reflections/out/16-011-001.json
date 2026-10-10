@@ -1,0 +1,66 @@
+{
+ "id": "16-011-001",
+ "title": "Jerusalem’s New Settlers",
+ "refs": [
+  "Nehemiah 11:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 16011001,
+   "end": 16011019,
+   "ref": "Nehemiah 11:1-19",
+   "ranges": [
+    [
+     16011001,
+     16011019
+    ]
+   ],
+   "title": "Willing Hearts in God's Holy City",
+   "key_verse": [
+    16011002,
+    16011002
+   ],
+   "reflect": [
+    {
+     "text": "The walls of Jerusalem were rebuilt, but the holy city still lacked enough residents to defend and care for it. To solve this, the leaders took up residence in Jerusalem, one out of ten people was chosen by lot to move there, and others willingly stepped forward to volunteer. Moving meant giving up personal comfort and familiar family farms in their home towns to serve where God needed them.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Living in Jerusalem required sacrifice for the sake of God's work. In our own lives, we are challenged to examine whether everyday pursuits have weakened our spiritual zeal and let our devotion break down. Even good and normal activities can pull our hearts away from the Lord if we are not careful.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God calls us to watch over our spiritual lives and offer our time and resources faithfully to Him. Just as those volunteers gave up their comfort to build up Jerusalem, we can choose to put God's kingdom ahead of our own convenience.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have ordinary, daily interests begun to crowd out your devotion to the Lord?",
+    "What personal comfort or time might God be calling you to offer willingly for His work?"
+   ],
+   "prayer": "Lord God, help us not to let worldly pursuits crowd out our love for You. Give us willing hearts to offer our time, gifts, and comforts for Your work. Strengthen our devotion so that we may serve You faithfully each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Bible Pathway Ministries",
+     "work": "Bible Pathways 06/10/2002",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-06-or-10-or-2002-1140948.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

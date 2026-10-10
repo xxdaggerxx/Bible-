@@ -1,0 +1,68 @@
+{
+ "id": "26-014-001",
+ "title": "Idolatrous Elders Condemned",
+ "refs": [
+  "Ezekiel 14:1-11"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26014003,
+   "end": 26014003,
+   "ref": "Ezekiel 14:3",
+   "ranges": [
+    [
+     26014003,
+     26014003
+    ]
+   ],
+   "title": "\"Idols in Their Hearts\"",
+   "key_verse": [
+    26014003,
+    26014003
+   ],
+   "reflect": [
+    {
+     "text": "In Ezekiel's day, leaders carried hidden false gods inside them. Today, we might not bow down to statues carved from stone or wood, but we can still harbor secret idols of the heart. As the first two commandments teach us, nothing and no one should ever take God's place. An idol is simply anything or anyone we value more than the Lord. Even good gifts, such as our careers, relationships, entertainment, possessions, or food, can turn into idols when they take first place in our affections.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Holding onto these inward idols causes quiet but serious harm. When we cherish them, our communion with God is hindered, and He will not listen to our prayers. Staying passive or putting off change only lets these hidden traps continue to damage our walk with Him. By God's grace, His loving power that we do not deserve, we need to take intentional steps to tear down every rival love. Removing these false gods restores the Lord alone to the throne of our lives.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "What good things in your life might be quietly competing with God for first place?",
+    "What is one intentional step you can take today, with God's help, to remove a hidden idol?"
+   ],
+   "prayer": "Lord, search our hearts and reveal anything we have placed ahead of You. Give us the strength and grace to tear down every hidden idol we have held onto. Please restore our closeness with You and reign alone as the true Lord of our lives.",
+   "sources": {
+    "D1": {
+     "author": "Greg Laurie",
+     "work": "Idols in Our Hearts",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/harvestdaily/idols-in-our-hearts-greg-laurie-daily-devotion-february-24-2016.html"
+    },
+    "D2": {
+     "author": "Karen Ehman",
+     "work": "American Idle",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-may-27-2008-11576212.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

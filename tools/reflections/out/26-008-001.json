@@ -1,0 +1,67 @@
+{
+ "id": "26-008-001",
+ "title": "The Vision of Idolatry in the Temple",
+ "refs": [
+  "Ezekiel 8:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26008001,
+   "end": 26008018,
+   "ref": "Ezekiel 8:1-18",
+   "ranges": [
+    [
+     26008001,
+     26008018
+    ]
+   ],
+   "title": "Cleansing the Chambers of the Heart",
+   "key_verse": [
+    26008012,
+    26008012
+   ],
+   "reflect": [
+    {
+     "text": "God gave Ezekiel a startling look into the hidden sins of His people. Inside the temple walls, the elders bowed before crawling creatures in dark rooms, women wept for a false idol, and leaders turned their backs on God. These people thought the Lord could not see what they did in secret, but nothing was hidden from His holy eyes.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Our own inner lives were meant to be a dwelling place for God, yet we face a similar danger. On the outside, our lives can look clean and respectable to others, while we quietly let selfish thoughts and sinful desires wander through the secret corners of our minds. God sees straight through what is merely outward and notices everything we hide.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "We cannot fix our own hearts, but we do not have to remain trapped in the dark. Through the grace and blood of Jesus, God washes our thoughts clean and fills us with His Holy Spirit. When His presence fills our hearts, He makes us sensitive to evil so we can turn to Him for safety before temptation grows strong.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Are there hidden thoughts or secret habits in your life that you need to bring into God's light?",
+    "How can relying on the presence of Jesus help you turn away from sin before it takes hold?"
+   ],
+   "prayer": "Lord, search our hearts and cleanse our inner thoughts by Your Holy Spirit. Forgive us for the sins we try to hide in the dark, and wash us clean through Jesus. Fill our lives so completely with Your presence that we quickly turn to You whenever temptation comes near. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 8:12",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

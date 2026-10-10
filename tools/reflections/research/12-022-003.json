@@ -1,0 +1,19 @@
+{
+ "notes": "NONE",
+ "urls": [
+  "http://bible.crosswalk.com/",
+  "https://insight.org/",
+  "https://learn.ligonier.org/devotionals/book-grieved-josiah",
+  "https://learn.ligonier.org/devotionals/josiahs-covenant-faithfulness",
+  "https://learn.ligonier.org/devotionals/law-of-god-recovered",
+  "https://www.biblegateway.com/passage/?search=2+Kings+22%3A3-14&version=NKJV",
+  "https://www.biblegateway.com/passage/?search=2+Kings+22-23&version=NKJV",
+  "https://www.biblegateway.com/verse/en/2%20Kings%2022%3A7",
+  "https://www.crosswalk.com/devotionals/biblepathways/bible-pathway-may-9-2011.html",
+  "https://www.crosswalk.com/devotionals/biblepathways/bible-pathways-05-or-09-or-2002-1133420.html",
+  "https://www.gty.org/",
+  "https://www.intouch.org/"
+ ],
+ "cost": 0.0628544,
+ "model": "google/gemini-3.8-flash"
+}

@@ -1,0 +1,84 @@
+{
+ "id": "11-003-001",
+ "title": "Solomon’s Prayer for Wisdom",
+ "refs": [
+  "1 Kings 3:1-15"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 11003001,
+   "end": 11003015,
+   "ref": "1 Kings 3:1-15",
+   "ranges": [
+    [
+     11003001,
+     11003015
+    ]
+   ],
+   "title": "Asking God for a Wise Heart",
+   "key_verse": [
+    11003009,
+    11003009
+   ],
+   "reflect": [
+    {
+     "text": "When God invited Solomon to ask for anything he wanted, Solomon did not ask for money, long life, or victory over his enemies. Instead, he admitted that he felt like a little child who could not rule well on his own. He humbly asked God for an understanding heart so he could tell right from wrong and care for God's people fairly. True wisdom is much more than knowing facts; it is the gift to make righteous choices according to God's ways.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "The Lord was pleased with Solomon's unselfish request. Because Solomon sought spiritual understanding instead of selfish gain, God granted him unmatched discernment and added wealth and honor as well. Seeking God's guidance first reflects what Jesus taught about seeking God's kingdom before all else. Believers can come boldly to God and ask for this same direction, trusting that He loves to answer humble prayers.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "We cannot rely on our own strength to live rightly. To grow in wisdom each day, we need to spend time in God's Word, pray continually, and listen to godly counsel. As we see God's faithful work in our lives, our reverence for Him grows, and our hearts stay open to His gentle leading.",
+     "sources": [
+      "D1",
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What are you usually most quick to ask God for when you pray?",
+    "In what area of your life do you need to ask God for wisdom instead of relying on yourself?"
+   ],
+   "prayer": "Lord God, thank You that You delight to give us wisdom when we ask. Please give me an understanding heart to know what is right and to honor You in every choice. Help me to seek Your kingdom first and trust You to provide all that I need. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Solomon's Wise Request",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/solomons-wise-request"
+    },
+    "D2": {
+     "author": "Emma Danzey",
+     "work": "Why We Should Ask for Wisdom",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/spiritual-life/why-we-should-ask-for-wisdom.html"
+    },
+    "D3": {
+     "author": "Whitney Hopler",
+     "work": "3 Lessons from Solomon's Prayer That Can Give Us Spiritual Wisdom",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/prayer/lessons-from-solomons-prayer-for-wisdom.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

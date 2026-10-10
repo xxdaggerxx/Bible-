@@ -1,0 +1,61 @@
+{
+ "id": "26-030-020",
+ "title": "Pharaoh’s Power Broken",
+ "refs": [
+  "Ezekiel 30:20-26"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26030020,
+   "end": 26030026,
+   "ref": "Ezekiel 30:20-26",
+   "ranges": [
+    [
+     26030020,
+     26030026
+    ]
+   ],
+   "title": "God's Hand Behind Earthly Events",
+   "key_verse": [
+    26030025,
+    26030025
+   ],
+   "reflect": [
+    {
+     "text": "When Babylon went to war against Egypt, observers saw only the normal rivalry between two mighty nations. Yet the prophet Ezekiel saw the hidden truth: the weapon in the king of Babylon's hand was really God's sword. In our own lives, hard events and difficult people often look like pure chance or human cruelty. Even so, God is quietly at work behind earthly events to carry out His purpose.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God also uses difficult circumstances to guide His children away from wrong paths. F. B. Meyer reminds us to separate God's discipline from His punishment. Punishment belongs to the rebel, but Jesus Christ took all our punishment on the cross. Discipline is for a child. When God corrects us through tough times, we do not need to fight the people who hurt us. Instead, Meyer encourages us to \"lie still at the feet of God\" and trust that His loving care will produce good fruit in us.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When hard circumstances come your way, how does knowing God is in control change how you treat the people involved?",
+    "How does remembering that Jesus took your punishment give you peace when God disciplines you?"
+   ],
+   "prayer": "Lord, help us to see Your guiding hand when life feels confusing and painful. Thank You that Jesus bore the punishment for our sins and that You correct us only out of love. Teach us to rest quietly before You and learn whatever You want to show us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Ezekiel 30:25",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

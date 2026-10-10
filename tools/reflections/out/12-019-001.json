@@ -1,0 +1,66 @@
+{
+ "id": "12-019-001",
+ "title": "Isaiah’s Message of Deliverance",
+ "refs": [
+  "2 Kings 19:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 12019001,
+   "end": 12019007,
+   "ref": "2 Kings 19:1-7",
+   "ranges": [
+    [
+     12019001,
+     12019007
+    ]
+   ],
+   "title": "Bringing Our Troubles to God",
+   "key_verse": [
+    12019003,
+    12019003
+   ],
+   "reflect": [
+    {
+     "text": "King Hezekiah faced a terrifying crisis when enemies threatened to destroy his city. Hard situations that pile up on us can quickly drain away our physical and emotional energy. When intimidation and distress pressed in, Hezekiah openly admitted his complete lack of strength. He knew he had no power of his own to handle the danger.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "In his deep trouble, the king entered the house of the Lord and sent messengers to ask the prophet Isaiah for prayer. Faithful, godly friends can give us much comfort and support when life feels heavy. Even so, our first step in any crisis should be taking our anxieties directly to God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God answered Hezekiah with a promise of rescue and told him not to be afraid. Laying out all our troubles before the Lord lifts the burden of fear. When we honestly bring Him our worries, He removes our panic and replaces it with His divine peace.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "When difficult news drains your energy, do you turn to God first or try to fix things on your own?",
+    "What specific anxiety can you lay before the Lord today to receive His peace?"
+   ],
+   "prayer": "Lord, when troubles pile up and drain my strength, help me bring my fears to You first. Thank You for godly friends who support and pray for me. Take away my panic as I lay my burdens in Your hands. Fill my heart with Your peace today. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Wendy Pope",
+     "work": "Showing Our Troubles to God",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/showing-our-troubles-to-god-encouragement-for-today-november-19-2015.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

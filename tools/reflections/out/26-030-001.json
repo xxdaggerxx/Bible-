@@ -1,0 +1,66 @@
+{
+ "id": "26-030-001",
+ "title": "A Lament for Egypt",
+ "refs": [
+  "Ezekiel 30:1-19"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 26030001,
+   "end": 26030019,
+   "ref": "Ezekiel 30:1-19",
+   "ranges": [
+    [
+     26030001,
+     26030019
+    ]
+   ],
+   "title": "The Lord Judges Egypt's Pride",
+   "key_verse": [
+    26030019,
+    26030019
+   ],
+   "reflect": [
+    {
+     "text": "Long ago, God showed His power in Egypt during the time of Moses and the Exodus. He performed mighty acts so that people would recognize Him as the one true Lord. But as time passed, Egypt forgot those powerful lessons. Its leaders stayed hardened in their pride and kept worshiping empty idols instead of the living God.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Egypt's pride led it to resist God's plans. When God sent Babylon to bring judgment on Judah, Egypt stepped in to help Judah fight back. Because Egypt opposed what God had ordained, the Lord decided to bring down Egypt's own power. He raised up King Nebuchadnezzar of Babylon to break their strength and show that God's authority cannot be stopped.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "This passage warns us about how dangerous pride can be. Human pride blinds us to what God has done in the past. When we rely on our own strength or think we know better than God, we risk working against His good will. Remembering God's greatness teaches us to bow before Him with humble hearts.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever let pride blind you to how God has worked in your life in the past?",
+    "How can you choose humility today and submit to God's will instead of your own?"
+   ],
+   "prayer": "Lord God, forgive us when we become proud and forget what You have done. Help us to remember Your great power and to trust Your plans instead of resisting them. Keep our hearts humble before You each day. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Ligonier Ministries",
+     "work": "Egypt Falls to Babylon",
+     "site": "Ligonier Ministries",
+     "url": "https://www.ligonier.org/learn/devotionals/egypt-falls-babylon"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "19-065-001",
+ "title": "Praise Awaits God in Zion",
+ "refs": [
+  "Psalms 65:1-13"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 19065011,
+   "end": 19065011,
+   "ref": "Psalms 65:11",
+   "ranges": [
+    [
+     19065011,
+     19065011
+    ]
+   ],
+   "title": "\"You Crown the Year with Your Bounty\"",
+   "key_verse": [
+    19065011,
+    19065011
+   ],
+   "reflect": [
+    {
+     "text": "God pours out His kindness all through the year, day and night. His care surrounds us constantly, like the very air we breathe. Yet harvest time is a special season when His gifts ripen and overflow. As Charles Spurgeon wrote, \"the harvest is the crowning of the year.\" Seeing fields full of grain shows us God's generosity made real, turning our hopes into joyful praise and thankfulness.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "God's paths also drop rich blessings into our spiritual lives. Spurgeon points to private prayer as one of these fruitful paths. When we spend quiet time talking to God, our souls are refreshed instead of feeling dry like parched ground. Even the weakest Christian is welcome to come to Him in prayer to find quiet strength and assurance.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Another path filled with plenty is close fellowship with Jesus. When we step away from life's rush and rest in His presence, He gives us peace that satisfies deep inside. Tasting God's goodness leads us to thank Him with our lips, warm our hearts with gratitude, and willingly share our gifts for His work.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "In what ways have you experienced God's generous care during this season of your life?",
+    "How might taking time for quiet prayer and fellowship with Jesus refresh your heart today?"
+   ],
+   "prayer": "Lord, thank You for crowning our days with Your goodness and meeting all our daily needs. Keep us close to You in private prayer so our souls do not grow dry. Warm our hearts with deep gratitude and help us generously share our blessings with others. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Evening, August 1",
+     "on": "Psalms 65:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, October 18",
+     "on": "Psalms 65:11",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

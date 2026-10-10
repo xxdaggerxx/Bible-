@@ -1,0 +1,82 @@
+{
+ "id": "19-142-001",
+ "title": "I Lift My Voice to the LORD",
+ "refs": [
+  "Psalms 142:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 19142001,
+   "end": 19142007,
+   "ref": "Psalms 142:1-7",
+   "ranges": [
+    [
+     19142001,
+     19142007
+    ]
+   ],
+   "title": "Pouring Out Our Hearts to God",
+   "key_verse": [
+    19142005,
+    19142005
+   ],
+   "reflect": [
+    {
+     "text": "David hid in a dark cave at one of the lowest, most lonely points of his life. Yet instead of giving up, he poured out all his grief and trouble straight to God. Hard times and deep sorrow are normal parts of life in a broken world. God welcomes our honest cries. In the psalms of lament, He gives us words to voice our pain, anchoring our hearts in His promises even when everything seems lost.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "You might feel trapped right now, as if no one cares or understands your trouble. But an apparent dead end is often God's way to reroute your life rather than end it. As F. B. Meyer wrote, \"There is no step in your path which has not been anticipated.\" Jesus understands the silent fears and heavy burdens you cannot even explain to your closest friends. He knows your path and gives you the exact strength you need for today.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Even in the cave, David knew God was his true refuge and portion. When you feel weak and tempted to pull away from everyone, remember that God does not abandon you. He hears your prayer in your lowest place. In His goodness, He will lead you forward and surround you with the care and support of His people once again.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "What heavy struggle or sorrow do you need to bring honestly to God today?",
+    "How does knowing that Jesus understands your path give you peace right now?"
+   ],
+   "prayer": "Lord, thank You that You hear my honest cries when life feels overwhelming. You know every step of my path, even the dark places where I feel alone. Please give me Your strength for today and remind me that You are my safe refuge. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Psalms 142:3",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D2": {
+     "author": "Jon Bloom",
+     "work": "God Wants You to Complain",
+     "site": "Desiring God",
+     "url": "https://www.desiringgod.org/articles/god-wants-you-to-complain"
+    },
+    "D3": {
+     "author": "Charles R. Swindoll",
+     "work": "Never Alone",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-september-13-2016.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

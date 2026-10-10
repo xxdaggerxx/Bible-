@@ -1,0 +1,139 @@
+{
+ "id": "10-023-001",
+ "title": "David’s Last Song",
+ "refs": [
+  "2 Samuel 23:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 10023005,
+   "end": 10023005,
+   "ref": "2 Samuel 23:5",
+   "ranges": [
+    [
+     10023005,
+     10023005
+    ]
+   ],
+   "title": "\"An Everlasting Covenant\"",
+   "key_verse": [
+    10023005,
+    10023005
+   ],
+   "reflect": [
+    {
+     "text": "David was nearing the end of his life when he spoke these words. His earthly family had faced many troubles, heartbreaks, and sins, but his hope did not rest on his circumstances. Instead, David found deep comfort in God's covenant, which is God's binding promise of grace. The almighty God who created the world stoops down in wonder to take hold of our hands. He does not simply offer a broad promise to the world; He binds Himself personally to each believer.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "text": "This promise gives us lasting solace and complete rest. It is well ordered, dependable, and everlasting, meaning it has no end and cannot fail. As Charles Spurgeon wrote, this covenant is \"a rocky foundation to build on for life or for death.\" When our days feel uncertain or things in our homes are not as we desire, we do not need to fear. God has secured everything for our salvation, giving us all the peace our souls could ever want.",
+     "sources": [
+      "D2",
+      "D3"
+     ]
+    }
+   ],
+   "questions": [
+    "How does knowing that God's covenant is everlasting bring you comfort when your life feels unsteady?",
+    "What difference does it make to your daily peace that God has bound Himself to you personally?"
+   ],
+   "prayer": "Lord God, thank You for making an everlasting promise to save and hold us. Even when our earthly lives are filled with cares and sorrow, help us rest on Your unchanging word. May Your faithful love satisfy our hearts each day. Amen.",
+   "sources": {
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, December 21",
+     "on": "2 Samuel 23:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D3": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 30",
+     "on": "2 Samuel 23:5",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  },
+  {
+   "kind": "passage",
+   "start": 10023001,
+   "end": 10023007,
+   "ref": "2 Samuel 23:1-7",
+   "ranges": [
+    [
+     10023001,
+     10023007
+    ]
+   ],
+   "title": "The Blessing of the Righteous King",
+   "key_verse": [
+    10023003,
+    10023003
+   ],
+   "reflect": [
+    {
+     "text": "In his final public words, David spoke as a prophet guided by the Holy Spirit. David's long life had been full of varied trials and lessons. He had carried a shepherd's staff in fields, hidden from enemies in caves, and worn a royal crown. He experienced the pain of betrayed friendships and deep family sorrow, as well as great victory. Through all these real hardships, God shaped David's heart so his songs could comfort believers in every circumstance.",
+     "sources": [
+      "D1",
+      "D4"
+     ]
+    },
+    {
+     "text": "David describes a godly ruler as being like the clear light of dawn at sunrise, or like gentle rain that makes tender grass spring from the ground. In a fallen world, human authority is often abused, which can make us cynical and fearful of leaders. Yet God designed authority to protect, encourage, and help people flourish. Because no earthly king governs with perfect justice, David's oracle directs our eyes forward to the Messiah.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    },
+    {
+     "text": "While those who reject God's good rule are like prickly thorns cleared away by fire, Jesus Christ uses His authority to bring true, lasting life. He is the righteous King whose rule nurtures His people. Knowing that Jesus reigns grounds our expectations in this world and encourages us to use whatever influence we have to serve and build up others.",
+     "sources": [
+      "D4",
+      "D5"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the picture of Jesus as a refreshing, life-giving ruler comfort you when earthly leaders let you down?",
+    "In what ways can you use your daily influence at home, church, or work to help others flourish?"
+   ],
+   "prayer": "Lord Jesus, You are the true and righteous King whose rule brings light and life like a clear dawn. When human authority fails or brings hurt, remind us of Your gentle and just reign. Help us reflect Your goodness by using our influence to care for and build up those around us. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 20",
+     "on": "2 Samuel 23:1",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "David’s Last Words",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/davids-last-words"
+    },
+    "D5": {
+     "author": "Jonathan Leeman",
+     "work": "The Blessing of (Good) Authority",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/article/king-david-final-words-godly-authority-2-samuel-23/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

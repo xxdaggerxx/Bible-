@@ -1,0 +1,68 @@
+{
+ "id": "18-002-011",
+ "title": "Job’s Three Friends",
+ "refs": [
+  "Job 2:11-13"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 18002011,
+   "end": 18002013,
+   "ref": "Job 2:11-13",
+   "ranges": [
+    [
+     18002011,
+     18002013
+    ]
+   ],
+   "title": "The Comfort of Silent Presence",
+   "key_verse": [
+    18002013,
+    18002013
+   ],
+   "reflect": [
+    {
+     "text": "When someone we care about goes through a severe crisis, we often do not know what to do. We might be tempted to stay away because we think we must have the right answers or solve their problems. But you cannot talk people out of deep pain. In moments of heavy sorrow, fewer words are usually better. Showing up and simply being there physically has far more power than any speech we could prepare.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Job's friends gave a great gift at first by just being present. They traveled to meet him, shared his tears, and sat on the ground beside him for seven full days. They did not try to explain away his hurt or hurry him along. Instead, they gave an unhurried gift of time and waited silently until he was ready to speak. When someone is brokenhearted, quietly sitting with them and listening offers the deepest kind of comfort.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Have you ever felt pressured to fix someone's pain with words instead of just being with them?",
+    "Who in your life might need your quiet, patient presence today rather than advice?"
+   ],
+   "prayer": "Lord, help us to be true friends when people around us are walking through deep pain. Teach us to sit quietly, listen well, and share their grief without trying to fix everything with our words. Give us the patience to show up and offer our loving presence. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Rick Warren",
+     "work": "You Can’t Talk People Out of Their Pain",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/daily-hope-with-rick-warren/daily-hope-with-rick-warren-september-30-2020.html"
+    },
+    "D2": {
+     "author": "Chrystal Evans Hurst",
+     "work": "When Words Don’t Work",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-april-21-2017.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

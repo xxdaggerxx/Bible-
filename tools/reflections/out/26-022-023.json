@@ -1,0 +1,66 @@
+{
+ "id": "26-022-023",
+ "title": "Israel’s Wicked Leaders",
+ "refs": [
+  "Ezekiel 22:23-31"
+ ],
+ "reflections": [
+  {
+   "kind": "saying",
+   "start": 26022030,
+   "end": 26022030,
+   "ref": "Ezekiel 22:30",
+   "ranges": [
+    [
+     26022030,
+     26022030
+    ]
+   ],
+   "title": "\"Stand in the Gap\"",
+   "key_verse": [
+    26022030,
+    26022030
+   ],
+   "reflect": [
+    {
+     "text": "In spiritually dark seasons, God searches for courageous people who are willing to stand up for truth, even if they must stand alone. Standing in the gap means keeping a tender heart toward God while resisting the heavy pressures of the culture around us. Whatever work or station in life God has given you, He calls you to examine your own integrity. You are invited to honor Him as Lord and refuse to give up your moral standards just to gain success or fit in with others.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Standing in the gap also means reaching out when a loved one begins to wander into sin. We often stay quiet out of personal fear, but real love is willing to start difficult conversations. Covered in prayer and gentleness, we can listen well, offer encouragement, and point people toward God's mercy. We cannot control the choices others make, yet God asks us to share His truth faithfully without being ruled by the outcome.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "Where might fear be keeping you from having an honest, loving conversation with someone who is wandering?",
+    "How can you guard your integrity today so that you do not compromise your morals to fit in?"
+   ],
+   "prayer": "Lord, give us courage to stand firm in Your truth even when we feel alone. Help us protect our integrity and resist the pressure to compromise just to please others. Fill us with love to reach out gently to those who are drifting, pointing them to Your mercy while trusting the outcome to You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles R. Swindoll",
+     "work": "Special People for Special Times",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/todays-insight-chuck-swindoll/today-s-insight-october-8-9-2016.html"
+    },
+    "D2": {
+     "author": "T. Suzanne Eller",
+     "work": "Is God Looking for You?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-september-22-2011.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

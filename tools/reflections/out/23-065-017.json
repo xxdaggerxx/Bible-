@@ -1,0 +1,89 @@
+{
+ "id": "23-065-017",
+ "title": "A New Heaven and a New Earth",
+ "refs": [
+  "Isaiah 65:17-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23065017,
+   "end": 23065025,
+   "ref": "Isaiah 65:17-25",
+   "ranges": [
+    [
+     23065017,
+     23065025
+    ]
+   ],
+   "title": "All Things Made New",
+   "key_verse": [
+    23065017,
+    23065017
+   ],
+   "reflect": [
+    {
+     "text": "God promises to renew the entire world, creating new heavens and a new earth. Underneath all the struggles and changes of history, the Lord is already preparing this coming home. This great renewal began when Jesus rose from the dead, and it will reach completion when He returns. Knowing that God will surely put everything right gives us strength to endure our trials today.",
+     "sources": [
+      "D3",
+      "D4"
+     ]
+    },
+    {
+     "text": "In this new creation, all outward causes of grief will be gone forever. There will be no poverty, sickness, parting, or death to sadden us. Best of all, sin will be shut out, and God's people will be made completely whole. Our former sorrows will be so overtaken by joy that we will not even remember them. Every longing of our hearts will be fully satisfied in God's presence.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "Even now, as we wait for that day, God is deeply near to His people. He foresees what we need before we even ask, and He swiftly answers our prayers through Christ our Mediator. When we bring our requests to our Heavenly Father, we can pray with quiet confidence, knowing that the King of kings hears our every word.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "How does the promise of a renewed world without sorrow help you endure your hardships today?",
+    "How does knowing God hears you before you call change the way you pray?"
+   ],
+   "prayer": "Lord God, thank You for the promised new creation where all pain, sin, and grief will end. Help us to endure our present trials with patient faith and hope in Christ. Teach us to pray with confidence each day, trusting that You hear and supply our needs even before we speak. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Morning and Evening",
+     "date": "Morning, August 23",
+     "on": "Isaiah 65:19",
+     "url": "https://www.ccel.org/ccel/spurgeon/morneve"
+    },
+    "D2": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 13",
+     "on": "Isaiah 65:24",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D3": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 65:17",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D4": {
+     "author": "Ligonier Ministries",
+     "work": "The New Heavens and Earth",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/new-heavens-and-earth"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

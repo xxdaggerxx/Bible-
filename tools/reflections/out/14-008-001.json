@@ -1,0 +1,67 @@
+{
+ "id": "14-008-001",
+ "title": "Solomon’s Additional Achievements",
+ "refs": [
+  "2 Chronicles 8:1-18"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 14008001,
+   "end": 14008018,
+   "ref": "2 Chronicles 8:1-18",
+   "ranges": [
+    [
+     14008001,
+     14008018
+    ]
+   ],
+   "title": "Walking Together in Holy Things",
+   "key_verse": [
+    14008011,
+    14008011
+   ],
+   "reflect": [
+    {
+     "text": "Solomon achieved great things, building cities and organizing worship before the Lord. Yet right in the middle of these triumphs, he made a painful choice. He moved his wife, the daughter of Pharaoh, away from the City of David. Solomon recognized that the places touched by the ark of the Lord were holy, and he felt she could not dwell there. F. B. Meyer calls this step \"a fatal admission.\" While this marriage may have looked like a grand success to the world, it brought a spiritual divide into Solomon's life right from the start.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "From the very beginning, there was a split between Solomon's home and the holy things of God. When people do not share the same foundation in the Lord, their hearts can easily be pulled in different directions. Later in life, Solomon's heart was led astray. True closeness in marriage, as well as in our deepest friendships, depends on sharing the same love for God. We need companions who can walk with us in the deepest matters of faith.",
+     "sources": [
+      "D1"
+     ]
+    },
+    {
+     "text": "Every close relationship should be able to accompany us into God's presence. Meyer reminds us that love can safely go wherever the Lord's presence goes, but any bond that cannot join us there lacks lasting peace. When we build our lives and our closest partnerships around God, we find true strength and unity.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "Do your closest relationships encourage you to draw near to God's presence?",
+    "In what ways can you make sure your walk with the Lord stays at the center of your friendships?"
+   ],
+   "prayer": "Lord, guide us in all our relationships and friendships. Help us to walk with people who love You and seek Your presence. Teach us to keep You first in our hearts, so that our lives and our homes honor You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "2 Chronicles 8:11",
+     "url": "https://archive.org/details/ourdailyhomily02meye"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

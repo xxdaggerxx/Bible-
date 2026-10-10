@@ -1,0 +1,87 @@
+{
+ "id": "20-013-001",
+ "title": "A Father’s Discipline",
+ "refs": [
+  "Proverbs 13:1-25"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 20013001,
+   "end": 20013025,
+   "ref": "Proverbs 13:1-25",
+   "ranges": [
+    [
+     20013001,
+     20013025
+    ]
+   ],
+   "title": "Walking in the Way of Wisdom",
+   "key_verse": [
+    20013014,
+    20013014
+   ],
+   "reflect": [
+    {
+     "text": "Wisdom begins when we honor God's Word and practice quiet obedience each day. As Charles Spurgeon wrote, reverence for God's command brings \"the restfulness of humility.\" Walking closely with wise friends and practicing good daily habits guide our growth. Before we look at the faults of others, God calls us to check our own hearts and set healthy boundaries that guard our peace.",
+     "sources": [
+      "D1",
+      "D3"
+     ]
+    },
+    {
+     "text": "What we say also shapes our lives. Speaking careless or unkind words feeds wrong desires within us, but choosing not to voice evil thoughts helps choke them out. Since we cannot tame our own tongues by human strength alone, we need the Lord to guard our mouths and direct our speech each day.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "Godly wisdom also shows itself when we must wait for our desires to be met. Long delays can expose our doubts and tempt us to take matters into our own hands. Yet extended seasons of waiting can refine our character and draw us into deeper dependence on God as we surrender our timing to him.",
+     "sources": [
+      "D4"
+     ]
+    }
+   ],
+   "questions": [
+    "What is one daily habit or conversation where you need God's help to guard your words?",
+    "How can you bring your delayed hopes to God in prayer rather than becoming impatient or bitter?"
+   ],
+   "prayer": "Lord, help us to revere your Word and walk alongside wise companions. Set a watch over our lips so that our speech does not cause harm or feed sin. When we face long seasons of waiting, keep our hearts from bitterness and teach us to rest in your care.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Oct. 17",
+     "on": "Proverbs 13:13",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Proverbs 13:3",
+     "url": "https://archive.org/details/ourdailyhomily03meye"
+    },
+    "D3": {
+     "author": "Lysa TerKeurst",
+     "work": "An Unexpected Way To Set Your Life on the Path of Godly Wisdom This Year",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/encouragement-for-today-january-5-2023.html"
+    },
+    "D4": {
+     "author": "Jennifer Heeren",
+     "work": "What Is the Meaning of the Proverb, 'Hope Deferred Makes the Heart Sick'?",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/faith/bible-study/what-is-the-meaning-of-the-proverb-hope-deferred-makes-the-heart-sick.html"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

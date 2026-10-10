@@ -1,0 +1,75 @@
+{
+ "id": "23-005-001",
+ "title": "The Song of the Vineyard",
+ "refs": [
+  "Isaiah 5:1-7"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 23005001,
+   "end": 23005007,
+   "ref": "Isaiah 5:1-7",
+   "ranges": [
+    [
+     23005001,
+     23005007
+    ]
+   ],
+   "title": "God's Care for His Vineyard",
+   "key_verse": [
+    23005004,
+    23005004
+   ],
+   "reflect": [
+    {
+     "text": "In this song, God shows His great love and tender care for His people. He compares Israel to a vineyard planted on a fertile hill. He cleared out the stones, built a protective tower, and gave them every advantage to grow well. As F. B. Meyer writes, \"for each God has done the best possible.\" God gave them everything they needed to flourish, expecting to find good grapes of justice and righteousness.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Instead of sweet fruit, the vineyard produced wild, sour grapes. The people chose rebellion and wrongdoing instead of caring for others. Because God is truly good and holy, He cannot simply ignore evil and pretend nothing is wrong. His justice means judgment must come when His loving care is rejected. We cannot blame God for our lack of fruit, because His wisdom and grace have never failed us.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "Yet God did not abandon His desire for a fruitful people. Jesus came as the true vine to rescue us from our failure. When we are joined to Him, He forgives us and gives us the strength to bear the good fruit of love and obedience that God desires to see in our lives.",
+     "sources": [
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When you look back on God's kindness in your life, how does it encourage you to turn away from sin?",
+    "How can you stay closely connected to Jesus today so that your life produces good fruit?"
+   ],
+   "prayer": "Lord, thank You for Your loving patience and for giving us every good gift we need. Forgive us for the times we have produced bitter fruit instead of living in Your ways. Help us to stay united to Jesus, our true vine, so that our lives show Your love and justice to the world. Amen.",
+   "sources": {
+    "D1": {
+     "author": "F. B. Meyer",
+     "work": "Our Daily Homily",
+     "date": null,
+     "on": "Isaiah 5:4",
+     "url": "https://archive.org/details/ourdailyhomily04meye"
+    },
+    "D2": {
+     "author": "Erik Raymond",
+     "work": "God’s Goodness in the Vineyard",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/blogs/erik-raymond/gods-goodness-in-the-vineyard/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}
