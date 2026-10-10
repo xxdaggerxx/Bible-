@@ -74,6 +74,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.TextButton
@@ -149,10 +150,11 @@ internal fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
 }
 
 @Composable
-internal fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composable () -> Unit)? = null) {
+internal fun DialogTitle(title: String, onClose: () -> Unit, leading: (@Composable () -> Unit)? = null, actions: (@Composable () -> Unit)? = null) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         leading?.invoke()
         Text(title, style = MaterialTheme.typography.headlineSmall, modifier = Modifier.weight(1f))
+        actions?.invoke()
         IconButton(onClick = onClose) { Icon(Icons.Filled.Close, contentDescription = "Close") }
     }
 }
@@ -642,9 +644,41 @@ fun VerseDialog(vm: StudyViewModel, t: VerseTarget, onDismiss: () -> Unit) {
     val version = vm.activeVersion
     BigDialog(onDismiss) {
         Column {
-            DialogTitle("${vm.refLabel(id)} ($version)", onDismiss)
+            DialogTitle("${vm.refLabel(id)} ($version)", onDismiss, actions = { CopyVerseButton(vm, id, version) })
             // The note is saved when the window closes (the details leave the screen).
             VerseDetails(vm, t, version, inPanel = false, onDone = onDismiss, modifier = Modifier.weight(1f))
+        }
+    }
+}
+
+/**
+ * Copies a verse (NOTE-7): its reference ("Hebrews 13:21"), or its words with the reference and
+ * version after them, from a menu under a copy button.
+ */
+@Composable
+internal fun CopyVerseButton(vm: StudyViewModel, id: Int, version: String) {
+    val clipboard = androidx.compose.ui.platform.LocalClipboardManager.current
+    var open by remember { mutableStateOf(false) }
+    Box {
+        IconButton(onClick = { open = true }) { Icon(Icons.Filled.ContentCopy, contentDescription = "Copy verse") }
+        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            DropdownMenuItem(
+                text = { Text("Copy reference") },
+                onClick = {
+                    open = false
+                    clipboard.setText(AnnotatedString(vm.refLabel(id)))
+                    vm.message = "Copied ${vm.refLabel(id)}."
+                },
+            )
+            DropdownMenuItem(
+                text = { Text("Copy verse") },
+                onClick = {
+                    open = false
+                    val quote = vm.verseQuote(version, id)
+                    if (quote == null) vm.message = "The verse is still loading. Try again in a moment."
+                    else { clipboard.setText(AnnotatedString(quote)); vm.message = "Copied ${vm.refLabel(id)}." }
+                },
+            )
         }
     }
 }
@@ -696,6 +730,38 @@ private fun AidCards(vm: StudyViewModel, version: String, verseId: Int, verseTex
         }
     }
     return true
+}
+
+/**
+ * Points to Christ (AID-13): for a verse that points to Jesus, whether it's a prophecy or a picture
+ * of Christ, what it says of him, and the New Testament passages as links ([onPassage]).
+ */
+@Composable
+private fun ChristCard(vm: StudyViewModel, id: Int, onPassage: (com.biblestudy.app.data.Passage) -> Unit) {
+    val e by produceState<com.biblestudy.app.data.ChristEntry?>(null, id) {
+        value = background { com.biblestudy.app.data.Christ.at(vm.getApplication(), id) }
+    }
+    val entry = e ?: return
+    Surface(
+        color = CHRIST_LINE.copy(alpha = 0.16f),
+        shape = MaterialTheme.shapes.medium,
+        modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp).testTag("christCard"),
+    ) {
+        Column(Modifier.padding(horizontal = 12.dp, vertical = 10.dp)) {
+            Text(
+                "Points to Christ \u00b7 ${entry.kindLabel} \u00b7 ${entry.ref}",
+                style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Text(entry.title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, modifier = Modifier.padding(top = 2.dp))
+            Text(entry.note, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.padding(top = 4.dp))
+            StudyText(
+                (if (entry.prophecy) "Fulfilled in " else "See ") + entry.fulfilled,
+                onPassage = onPassage,
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.padding(top = 6.dp),
+            )
+        }
+    }
 }
 
 /**
@@ -836,6 +902,8 @@ fun VerseDetails(vm: StudyViewModel, t: VerseTarget, version: String, inPanel: B
 
     @Composable
     fun Top() {
+        // A verse that points to Christ (AID-13): how, and where the New Testament fulfils it.
+        if (vm.aidChrist && t.book < 40) ChristCard(vm, id) { notePassage = it }
         // A Bible aid tapped on the page (AID-9), or a hard word (STD-23): explained first.
         if (!AidCards(vm, version, id, verseText, t.word, onOpen = ::done)) HardWordCard(vm, version, verseText, t.word, onOpen = ::done)
         if (vm.compareVersions) {
@@ -1251,10 +1319,10 @@ private fun SketchList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Uni
     val missing = SketchTemplates.all.size > ready.size
     Column(modifier) {
         LazyColumn(Modifier.weight(1f)) {
-            item { Text("My sketch pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 8.dp)) }
+            item { MySketchesHeader(vm, Modifier.padding(top = 8.dp)) { made -> vm.openSketch(made, panelIndex); onDismiss() } }
             if (mine.isEmpty()) item {
                 Text(
-                    "None yet. Make one from Insert \u2192 Sketch page, linked to a verse or on its own.",
+                    "None yet. Tap New sketch page to make one, linked to a verse or on its own.",
                     style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(vertical = 8.dp),
                 )
             }
@@ -1266,6 +1334,24 @@ private fun SketchList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Uni
             }
         }
     }
+}
+
+/**
+ * "My sketch pages" with a button to make a new one (SKT-2), at the top of both lists of sketch pages.
+ * [open] shows the new page the way tapping a page in that list would.
+ */
+@Composable
+internal fun MySketchesHeader(vm: StudyViewModel, modifier: Modifier = Modifier, open: (com.biblestudy.app.model.Sketch) -> Unit) {
+    var making by remember { mutableStateOf(false) }
+    Row(modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        Text("My sketch pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.weight(1f))
+        FilledTonalButton(onClick = { making = true }, modifier = Modifier.testTag("newSketchPage")) {
+            Icon(Icons.Filled.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+            Spacer(Modifier.width(6.dp))
+            Text("New sketch page")
+        }
+    }
+    if (making) NewSketchDialog(vm, onDismiss = { making = false }, open = open)
 }
 
 /** A sketch page in a list: its name, the verse it's on (or "On its own"), paper and date. */

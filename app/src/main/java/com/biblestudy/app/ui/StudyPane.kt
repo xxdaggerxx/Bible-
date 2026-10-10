@@ -95,6 +95,7 @@ fun StudyPane(vm: StudyViewModel, slot: Slot.Study, modifier: Modifier) {
             PaneKind.NAMES -> NamesPane(vm, inner)
             PaneKind.CUSTOMS -> AidsPane(vm, symbols = false, inner)
             PaneKind.SYMBOLS -> AidsPane(vm, symbols = true, inner)
+            PaneKind.CHRIST -> ChristPane(vm, inner)
             PaneKind.SKETCHES -> SketchesPane(vm, inner)
             PaneKind.COMPARE -> VersePane(vm, inner) { id, version, text ->
                 CompareVersions(vm, id, version, text, Modifier.fillMaxWidth()) { code ->
@@ -247,6 +248,66 @@ private fun NotesPane(vm: StudyViewModel, modifier: Modifier) {
 }
 
 /**
+ * Points to Christ (AID-13): every Old Testament passage that points to Jesus, in Bible order, by
+ * book, with all, prophecies or pictures. Tap one to read it; its New Testament links open the passage.
+ */
+@Composable
+private fun ChristPane(vm: StudyViewModel, modifier: Modifier) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val all by produceState(emptyList<com.biblestudy.app.data.ChristEntry>()) {
+        value = background { com.biblestudy.app.data.Christ.all(context) }
+    }
+    var only by remember { mutableStateOf<Boolean?>(null) } // null: all; true: prophecies; false: pictures
+    var shown by remember { mutableStateOf<Passage?>(null) }
+    val panel = vm.studyPanel()
+    val index = vm.activePanel.coerceIn(0, vm.panels.lastIndex)
+    val list = all.filter { only == null || it.prophecy == only }
+    LazyColumn(modifier.testTag("christPane")) {
+        item {
+            Text(
+                "Old Testament verses that point to Jesus: prophecies he fulfilled, and pictures of him. " +
+                    "In the Bible they have a dotted gold line under them. Tap one to read it.",
+                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+                modifier = Modifier.padding(vertical = 8.dp),
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                FilterChip(selected = only == null, onClick = { only = null }, label = { Text("All ${all.size}") })
+                FilterChip(selected = only == true, onClick = { only = true }, label = { Text("Prophecies") })
+                FilterChip(selected = only == false, onClick = { only = false }, label = { Text("Pictures of Christ") })
+            }
+        }
+        var lastBook = 0
+        for (e in list) {
+            val book = e.first / 1_000_000
+            if (book != lastBook) {
+                lastBook = book
+                item(key = "b$book") {
+                    Text(vm.bible.book(book).name, style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 14.dp, bottom = 2.dp))
+                }
+            }
+            item(key = e.first) {
+                Column(
+                    Modifier.fillMaxWidth().clickable {
+                        vm.showBible(); vm.goTo(index, book, (e.first / 1000) % 1000, e.first % 1000)
+                    }.padding(vertical = 8.dp)
+                ) {
+                    Text("${e.ref} \u00b7 ${e.kindLabel}", style = MaterialTheme.typography.labelMedium, color = CHRIST_LINE)
+                    Text(e.title, style = MaterialTheme.typography.titleMedium)
+                    Text(e.note, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    StudyText(
+                        (if (e.prophecy) "Fulfilled in " else "See ") + e.fulfilled,
+                        onPassage = { shown = it }, style = MaterialTheme.typography.bodySmall,
+                        modifier = Modifier.padding(top = 2.dp),
+                    )
+                }
+                HorizontalDivider()
+            }
+        }
+    }
+    PassagePopupHost(vm, shown, panel.version, onDismiss = { shown = null })
+}
+
+/**
  * Every sketch page (SKT-2): tap one to show it in a panel beside the Bible text, to read and write
  * side by side.
  */
@@ -262,9 +323,9 @@ private fun SketchesPane(vm: StudyViewModel, modifier: Modifier) {
                 modifier = Modifier.padding(vertical = 8.dp),
             )
         }
-        item { Text("My sketch pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary) }
+        item { MySketchesHeader(vm) { made -> vm.openSketchBeside(made) } }
         if (mine.isEmpty()) item {
-            Text("None yet. Make one from Insert \u2192 Sketch page.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(vertical = 8.dp))
+            Text("None yet. Tap New sketch page to make one.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.outline, modifier = Modifier.padding(vertical = 8.dp))
         }
         items(mine, key = { it.id }) { s -> SketchRow(vm, s) { vm.openSketchBeside(s) } }
         item { Text("Ready-made pages", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 16.dp)) }
@@ -291,6 +352,7 @@ private fun VersePane(vm: StudyViewModel, modifier: Modifier, content: @Composab
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Previous verse")
             }
             Text("${vm.refLabel(id)} ($version)", style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
+            CopyVerseButton(vm, id, version)
             IconButton(onClick = { vm.paneVerse = t.copy(verse = t.verse + 1, word = -1) }, enabled = t.verse < lastVerse) {
                 Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Next verse")
             }

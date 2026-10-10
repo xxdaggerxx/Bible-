@@ -47,7 +47,7 @@ const val NAME_CARD_BG = 0x4090CAF9
  * already in My notes, so new pages start blank.
  */
 @Composable
-fun NewSketchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
+fun NewSketchDialog(vm: StudyViewModel, onDismiss: () -> Unit, open: (com.biblestudy.app.model.Sketch) -> Unit = { vm.openSketch(it) }) {
     var name by remember { mutableStateOf("") }
     var paper by remember { mutableStateOf(Paper.BLANK) }
     val here = remember { vm.sketchLinkHere() }
@@ -91,8 +91,9 @@ fun NewSketchDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
         },
         confirmButton = {
             TextButton(onClick = {
-                vm.createSketch(name, paper, link = if (linked) here else null)
+                val made = vm.createSketch(name, paper, link = if (linked) here else null, open = false)
                 onDismiss()
+                open(made)
             }) { Text("Create") }
         },
         dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel") } },

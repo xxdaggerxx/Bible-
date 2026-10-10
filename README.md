@@ -72,6 +72,47 @@ keytool -genkeypair -storetype PKCS12 -keystore signing/biblestudy-release.jks \
 
 Then update `keystore.properties` with the new password, add `keystore.properties`, `signing/` and `*.jks` back to `.gitignore`, and remove the old key from git. Because this changes the signing key, you must back up, uninstall and reinstall once. Keep a copy of the new key and its password somewhere safe; if you lose them you can't update the app without uninstalling it.
 
+## New in version 2.8.2
+
+- **Points to Christ is a dotted gold line** now, round gold dots under the verse instead of a solid line, so a whole chapter like Isaiah 53 reads more lightly. The dots are wider apart than the grey dashes under hard words, so the two can't be mistaken.
+
+## New in version 2.8.1
+
+- **Ink shows on the dark page.** The default black pen was nearly invisible on the dark page (it's the default page since 2.1). Now any ink too close to the page is shown so it stands out: black (or white) ink takes the page's text colour, and dark colours like navy, purple and brown are lightened, keeping their hue, until they're clear (contrast 4:1). On light pages white ink shows dark. The colour picker and the toolbar's colour dot show the colours as they'll look. Strokes are saved in the colour picked, so ink written on one page colour looks right on the other and on synced devices; ink already written on the dark page now shows.
+
+## New in version 2.8.0
+
+- **Points to Christ** (a new Bible aid): a soft gold line under every Old Testament verse that points to Jesus, about 380 verses in 145 passages, in every version.
+  - Two kinds: *prophecies* he fulfilled or that are traditionally read of the Messiah (Genesis 3:15, Psalm 22, Psalm 110, Isaiah 7:14, Isaiah 53, Micah 5:2, Zechariah 9:9...), and *pictures of Christ* (the Passover lamb, the bronze serpent, Melchizedek, the manna, the tabernacle, the Day of Atonement, Jonah...).
+  - Tapping such a verse puts a gold card at the top of the verse pop-up: the kind, the passage, a short title, what it shows of Christ, and the New Testament passages that fulfil or explain it, as links.
+  - *Points to Christ* is also a panel view (under *Study*): every passage in Bible order, filtered by kind; tap one to go there. Switch the line and card off in *Settings → Bible aids → Points to Christ*.
+  - Written by AI in the traditional view, in `tools/christ/*.txt`; `tools/build_christ.py` checks every reference (Old Testament verses only, New Testament references that exist, no verse in two entries) and writes `assets/study/christ.tsv`.
+- Known gaps: verses are chosen by KJV verse numbers, as with symbols; a version that numbers a verse differently marks it by its number. It's a chosen list, not every verse a commentator has linked to Christ.
+
+## New in version 2.7.0
+
+- **Copy a verse** from the verse pop-up or the *Verse details* panel: a copy button by the × opens *Copy reference* ("Hebrews 13:21") and *Copy verse* (the words, then "— Hebrews 13:21 (NLT)"). Long-pressing words on the page still copies any part of the text.
+- Known gaps: one verse at a time. To copy several verses, long-press on the page and drag the selection across them.
+
+## New in version 2.6.1
+
+- **New sketch page button** at the top of both lists of sketch pages (*My notes → Sketch pages* and the *Sketch pages* panel). It opens the same *New sketch page* window as *Insert → Sketch page…*; the new page opens where tapping a page in that list would (in the panel from My notes, beside the text from the Sketch pages panel).
+
+## New in version 2.6.0
+
+- **Reading stats, redesigned** for phones and tablets, as cards (one column on a phone, two on a tablet):
+  - *Through the Bible*: a progress ring for the whole Bible and a bar for each Testament.
+  - *Daily reading*: days in a row with a flame, the best run, and this week's seven days lit when read.
+  - Time tiles: today, this week, the last 30 days, in all.
+  - **Milestones** (new): eleven to earn, from *First step* and *A week in the Word* to *A whole book*, *The Gospels*, the Testaments and *The whole Bible*. Locked ones show a ring of how far along they are; the card names the next one, and tapping one shows what it takes.
+  - The 30-day chart with how many days were read and the daily average; most-read chapters and books as ranked bars (top 5 on a phone, 10 on a tablet).
+  - The every-chapter grid: on a phone the books flow along each line (names above their squares) instead of a narrow name column, so it's about a third as long; finished books get a ✓. On a dark page the greens go from dim to bright, so more reading always stands out more.
+- Known gaps: milestones are worked out from the reading stats, so clearing the stats clears them too. There's no reminder or notification to keep a run going.
+
+## New in version 2.5.3
+
+- **Fixed:** an NLT chapter could stay blank for good (Hebrews 4, for one). Tyndale's NLT API sends back an empty page, marked OK, for any problem: busy for a moment, a key it doesn't accept or a book name it doesn't know. The app took that as "this chapter has no verses" and kept it empty. Now an empty page is tried twice more, a second or two apart, and otherwise shows as a download error to be tried again next time, like having no internet. NLT chapters already kept empty download again the next time they're read.
+
 ## New in version 2.5.2
 
 - **Fixed:** in a book's introduction (*About this book*, from the book list or the chapter header), tapping a key verse or a reference in the text showed nothing. The verse card was opened on the screen behind the introduction window, out of sight; it now opens on top of it. The introduction shown as a panel wasn't affected.

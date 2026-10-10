@@ -21,13 +21,14 @@ Ink & Word (called *Bible Study* before version 1.1.3) is its home-screen name; 
   - **People & places:** who someone was, or where a place is and why it matters (*Nicodemus: Pharisee who visited Jesus*). The right person is meant, even when two share a name. *More* opens *Names & places* with the family tree and map. In long family lists only the best-known names are marked.
   - **Customs & feasts:** about 130 Jewish customs, feasts and holy days, from the Sabbath, Passover and the Day of Atonement to betrothal, the kinsman-redeemer, the city gate, the Pharisees and Samaritans, and Roman crucifixion. Each is marked in the words each version uses (*Feast of Tabernacles*, *Feast of Booths*), and where a custom is described without being named (the sandal in Ruth 4:7).
   - **Symbols & numbers:** about 120 symbols (the Lamb, the lampstand, horns, water, bread, leaven, oil, colours and more) and the Bible's numbers (seven, twelve, forty, 666, 144,000, a thousand years). They're marked only where the Bible uses them as symbols, mostly in prophecy, Revelation, parables and poetry, not every time the word comes. Where the Bible explains a symbol itself, that comes first; otherwise the traditional reading.
+  - **Points to Christ:** a dotted gold line (round dots, unlike the grey dashes under hard words) goes under the whole of each Old Testament verse that points to Jesus, about 380 verses in 145 passages. There are two kinds: **prophecies** he fulfilled (Isaiah 7:14, Micah 5:2, Psalm 22, Isaiah 53, Zechariah 9:9 and many more), and **pictures of Christ**, people, events and things that foreshadow him (the Passover lamb, the bronze serpent, Melchizedek, the manna, Jonah's three days). Tap the verse: a gold card at the top of the pop-up says which it is, what it shows of Christ, and where the New Testament fulfils or explains it, as links you can tap. To see them all in Bible order, choose *Points to Christ* in a panel's menu (under *Study*), filter by *Prophecies* or *Pictures of Christ*, and tap one to go there. They follow the traditional reading.
   - Each kind has its own switch in *Settings → Bible aids*. All are on at first.
 
 ## The pen, fingers and the toolbar
 
 - **The S Pen writes; fingers scroll, pinch and tap.** To draw with a finger too, turn on *Settings → Pen & ink → Draw with finger*. Then one finger draws and two fingers scroll and zoom. A quick tap with one finger still makes a dot.
 - **Your palm is ignored** while you write.
-- **Tools** along the toolbar: pen, highlighter, eraser, lasso and select. Tap the round colour button for colours and sizes.
+- **Tools** along the toolbar: pen, highlighter, eraser, lasso and select. Tap the round colour button for colours and sizes. Ink always shows on the page: on the dark page the black pen writes in light ink, like the print, and dark colours (navy, purple, brown) show as lighter shades. Your ink keeps its colour, so it looks right again on a light page and on your other devices.
 - **S Pen button.** Hold the side button while the pen touches the page to erase, whatever tool is picked. *Settings → Pen & ink → S Pen button* can make it the lasso instead.
 - **Read mode.** The lock at the far left stops the pen marking the page; the pen then scrolls like a finger. Tap it again to write.
 - **Undo and redo** are the curved arrows.
@@ -118,6 +119,7 @@ Layers are like clear sheets over the page. Tap the layers button (it shows the 
 
 Tap any verse with your finger. Its details open in a pop-up window. Tap outside it, or ×, to close it.
 
+- **Copy a verse:** tap the copy button at the top, by ×. *Copy reference* copies just the reference ("Hebrews 13:21"); *Copy verse* copies the verse's words with the reference and version after them ("… — Hebrews 13:21 (NLT)"), ready to paste into a message or a note. The *Verse details* panel has the same button.
 - **Prefer them beside the text?** Turn on *Settings → Verse details → Verse details in a panel*. Then the details open in a panel called *Verse details* next to the Bible, and move to each verse you tap. The arrows at its top go to the verse before and after. If both panels are already in use, the pop-up opens instead.
 - You can also choose *Verse details* from a panel's menu at any time.
 - In the panel, a word study shows in the same panel. *Back to the verse* returns.
@@ -171,7 +173,7 @@ Turn on *Settings → Reading → Words of Jesus in red*. Works in every version
 ## Panels and tabs
 
 - **One or two panels.** Each tab shows one panel, or two side by side or one above the other. Drag the divider between them to resize; double-tap it to make them equal.
-- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. They're listed under four headings: **Reading** (the Bible, Sketch pages); **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references); **Study** (Commentary, Reflections, Dictionary, Topics, Names & places, Customs & feasts, Symbols & numbers, About the book, the introduction to the book you're reading); and **Notes, search and AI** (My notes, Search, AI chat). The panels button in the toolbar lists them under the same headings. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
+- **What a panel shows.** Tap the panel button at the top left of a panel (on a study view, tap its name). Choose *Bible* or any study view. They're listed under four headings: **Reading** (the Bible, Sketch pages); **This verse** (Verse details, Compare versions, Hebrew/Greek, Word study, Cross-references); **Study** (Commentary, Reflections, Dictionary, Topics, Names & places, Customs & feasts, Symbols & numbers, Points to Christ, About the book, the introduction to the book you're reading); and **Notes, search and AI** (My notes, Search, AI chat). The panels button in the toolbar lists them under the same headings. The same menu has *Add a panel beside*, *Top and bottom* (or *Side by side*), *Open in new tab* and *Close panel*.
 - **Study views follow your reading.** Cross-references, the dictionary's suggestions, topics and the commentary follow the Bible panel next to them. Choose *Keep on this passage* in a study view's menu to keep it where it is; tap the pin to follow again.
 - **Two study views at once,** e.g. the dictionary above topics: they stay on the passage you were reading. Choose *Bible* in either one to bring the text back.
 - **Link panels** with the link button in a Bible panel's header (it shows when two or more Bible panels are open): they scroll together verse by verse, even in different versions. The button is coloured while they're linked; tap it again to unlink.
@@ -274,7 +276,7 @@ A sketch page is a whole page for timelines, diagrams, maps and sketch notes. Al
   - *Solomon's and Herod's temples*: labelled plans of both.
   They're ordinary ink, text boxes and verse cards, so you can write on them, move things, change them or delete them. If you delete one, *Put back deleted ready-made pages* at the bottom of the list brings it back.
 - **Beside the text:** to see a sketch page next to the Bible, choose *Sketch pages* from the panels button and tap the page.
-- **Make your own:** *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
+- **Make your own:** tap **New sketch page** at the top of *My notes → Sketch pages* (or of the *Sketch pages* panel, where it opens beside the text), or use *Insert (+) → Sketch page…*. Give it a name, choose blank, lined, grid or dotted paper, and *Create*.
 - **Linked or on its own.** In the same window, *Link to …* ties the page to the verse you're reading: a small badge in that verse's margin opens it. Turn the switch off for a page that stands on its own, such as a topic study; open it from *My notes*.
 - **No edges.** A sketch page grows as you use it: there's always at least a page's width of room to the right and a page's height below whatever you've drawn. Drag with a finger to move around, and pinch out to see the whole page at once.
 - **Every pen tool works** on a sketch page, plus shapes, the lasso, layers, pictures and text boxes.
@@ -292,7 +294,17 @@ The notes button (a page with a pencil) lists your **Notes**, **Highlights** and
 
 ## Reading stats
 
-*⋮ → Reading stats* shows how much of the Bible you've read, time spent, days in a row, your last 30 days, your most-read chapters and a grid of every chapter. A chapter counts as read after a minute in it, scrolled through most of the way. It's kept on this device, and with *Sync with Google Drive* on, your devices' times are added together. Turn counting off or clear it in *Settings → Reading* (with sync on, clearing clears it on every device).
+*⋮ → Reading stats* shows your reading as cards, one under another on a phone and two side by side on a tablet:
+
+- **Through the Bible:** a ring with how much of the Bible you've read, and a bar each for the Old and New Testament.
+- **Daily reading:** how many days in a row you've read (a day counts with a minute of reading), your best run, and this week's days, each with a flame if you read that day.
+- **Time:** today, this week, the last 30 days and in all.
+- **Milestones:** eleven to reach, from *First step* (your first chapter) and *A week in the Word* (7 days in a row) to *A whole book*, *The Gospels*, the New and Old Testament and *The whole Bible*. Earned ones light up; the others show a ring with how far along you are. The card names your next one. Tap any milestone to see what it takes and how close you are.
+- **The last 30 days:** a bar for each day. Tap a bar for that day's time.
+- **Most read chapters** and **Books you've read in**, with a bar for each (on a phone the top five, on a tablet the top ten).
+- **Every chapter:** a square for each chapter, shaded by how often you've read it, with a ✓ by each book you've finished.
+
+A chapter counts as read after a minute in it, scrolled through most of the way. It's kept on this device, and with *Sync with Google Drive* on, your devices' times are added together. Turn counting off or clear it in *Settings → Reading* (with sync on, clearing clears it on every device).
 
 ## Reading layout and page look
 

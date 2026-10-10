@@ -189,7 +189,7 @@ fun StudyToolbar(
             var insertMenu by remember { mutableStateOf(false) }
             var insertDialog by remember { mutableStateOf<String?>(null) }
             when (insertDialog) {
-                "sketch" -> NewSketchDialog(vm) { insertDialog = null }
+                "sketch" -> NewSketchDialog(vm, onDismiss = { insertDialog = null })
                 "verse" -> VerseCardDialog(vm) { insertDialog = null }
                 "name" -> NameCardDialog(vm) { insertDialog = null }
             }
@@ -346,7 +346,7 @@ private fun ToolOptions(vm: StudyViewModel) {
     if (tool == Tool.LASSO || tool == Tool.SELECT) return
     Box {
         val color = when (tool) {
-            Tool.PEN -> Color(vm.penColor)
+            Tool.PEN -> Color(inkOn(vm.theme, vm.penColor))
             Tool.HIGHLIGHTER -> Color(vm.highlightColor)
             else -> MaterialTheme.colorScheme.surfaceVariant
         }
@@ -365,7 +365,8 @@ private fun ToolOptions(vm: StudyViewModel) {
                 when (tool) {
                     Tool.PEN -> {
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                            for (c in PEN_COLORS) Swatch(c, vm.penColor == c) { vm.penColor = c }
+                            // Shown as they'll look on this page (INK-17): black ink is light on the dark page.
+                            for (c in PEN_COLORS) Swatch(inkOn(vm.theme, c), vm.penColor == c) { vm.penColor = c }
                         }
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) { SizePicker(vm.penSize) { vm.penSize = it } }
                     }

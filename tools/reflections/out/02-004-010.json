@@ -1,0 +1,79 @@
+{
+ "id": "02-004-010",
+ "title": "The Appointment of Aaron",
+ "refs": [
+  "Exodus 4:10-17"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 2004010,
+   "end": 2004017,
+   "ref": "Exodus 4:10-17",
+   "ranges": [
+    [
+     2004010,
+     2004017
+    ]
+   ],
+   "title": "Trusting God When We Feel Weak",
+   "key_verse": [
+    2004012,
+    2004012
+   ],
+   "reflect": [
+    {
+     "text": "When God calls us to a task, our own insecurities often hold us back. Moses looked at his slow speech and felt unfit to lead. Yet when we question whether we have what it takes, we are really doubting God's careful design and creative ability. We must choose to let God's perfection override our feelings of inadequacy and simply obey Him.",
+     "sources": [
+      "D2"
+     ]
+    },
+    {
+     "text": "The Lord reminded Moses that He makes the mouth, hearing, and sight. Physical impairments serve as visible reminders of the deeper spiritual brokenness shared by all humanity after the Fall. Even so, God's image and grace shine brightly through individuals with disabilities, and Jesus showed deep compassion toward them. The patient love shown by caregivers also honors God and reflects humanity at its best.",
+     "sources": [
+      "D3"
+     ]
+    },
+    {
+     "text": "We do not need clever human rhetoric to serve the Lord, because real saving power never comes from grand speaking. As Charles Spurgeon noted, \"God's teaching is wisdom; His presence is power.\" When the Lord is with us in our weakness, He supplies supernatural strength so we can speak and act for Him with courage.",
+     "sources": [
+      "D1"
+     ]
+    }
+   ],
+   "questions": [
+    "What personal insecurity or fear tempts you to hold back from obeying God?",
+    "How does knowing that God designed you change how you view your weaknesses?"
+   ],
+   "prayer": "Lord God, thank You for making us and being patient with our doubts. When we feel weak or unfit to serve, help us to trust Your wisdom rather than our own feelings. Be with our mouths and our actions, and give us courage to do what You ask. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Charles Spurgeon",
+     "work": "Faith's Checkbook",
+     "date": "Aug. 2",
+     "on": "Exodus 4:12",
+     "url": "https://www.ccel.org/ccel/spurgeon/checkbook"
+    },
+    "D2": {
+     "author": "Lysa TerKeurst",
+     "work": "But Lord, I Can't DO That!",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/devotionals/encouragement/but-lord-i-can-t-do-that-encouragement-for-today-march-3-2016.html"
+    },
+    "D3": {
+     "author": "David Murray",
+     "work": "Why Disabilities?",
+     "site": "Ligonier Ministries",
+     "url": "https://learn.ligonier.org/devotionals/why-disabilities"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}

@@ -169,6 +169,7 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         val headingsOn = vm.showHeadings
         val redOn = vm.redLetters
         val aidsOn = vm.aidSwitches()
+        val christOn = vm.aidChrist
         val other = vm.diffVersionFor(panel)
         val (data, paras, red) = background {
             val d = ChapterData(v, b, c, vm.text(v).chapter(b, c), if (headingsOn) vm.headings(b, c) else emptyList())
@@ -180,6 +181,8 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             com.biblestudy.app.data.Aids.marks(vm.getApplication(), vm.study, v, b, c, data.verses.map { it.verse to it.text }, aidsOn)
                 .mapValues { (_, l) -> l.map { it.range } }
         }
+        // Verses that point to Christ (AID-13), in the Old Testament.
+        val christ = if (!christOn || b >= 40) emptySet() else background { com.biblestudy.app.data.Christ.verses(vm.getApplication(), b, c) }
         // Side by side with another version of this book: mark where the wording differs (SPLIT-5).
         val diffs = if (other == null) emptyMap() else withContext(Dispatchers.Default) {
             val theirs = vm.text(other).chapter(b, c).associate { it.verse to it.text }
@@ -188,18 +191,18 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         buildChapterLayout(
             measurer, style.font.family(), vm.bible.book(b).name, data, vm.lineSpacing,
             paragraphs = paras, numbers = style.numbers, spacers = spacers, red = red, diffs = diffs, hard = hard,
-            scale = style.scale,
+            christ = christ, scale = style.scale,
         ) { RefLinks.parseList(it, vm.bible.books) }
     }
 
     // Load the current chapter first, then its neighbours so scrolling past either end is seamless.
-    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.textSize, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.aidSwitches(), vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name, vm.onlineArrivals) {
+    LaunchedEffect(panel.version, panel.book, panel.chapter, vm.dataGeneration, vm.showHeadings, vm.lineSpacing, vm.textFont, vm.textSize, vm.paragraphMode, vm.verseNumbers, vm.redLetters, vm.aidSwitches(), vm.aidChrist, vm.diffVersionFor(panel), vm.sketchOf(panel.book)?.name, vm.onlineArrivals) {
         val v = panel.version
         val spacing = vm.lineSpacing
         val headingsOn = vm.showHeadings
         val font = vm.textFont
         val style = vm.styleKey()
-        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.aidSwitches()}|${vm.diffVersionFor(panel)}"
+        val spec = "$headingsOn|$spacing|${style.encode()}|${vm.redLetters}|${vm.aidSwitches()}|${vm.aidChrist}|${vm.diffVersionFor(panel)}"
         if (ctl.layoutSpec != spec) {
             // Headings, spacing or font changed: re-lay out every chapter, staying on the same verse.
             if (ctl.layoutSpec != null) panel.pendingVerse = panel.topVerse
@@ -841,8 +844,21 @@ private fun onlineCredit(version: String, measurer: TextMeasurer): androidx.comp
     }
 }
 
-/** A faint dotted line under each hard word and Bible aid (STD-23, AID-8); tapping one explains it. */
+/** The soft gold of a verse that points to Christ (AID-13), on every page colour. */
+val CHRIST_LINE = Color(0xFFC9A23A)
+
+/**
+ * A faint dotted line under each hard word and Bible aid (STD-23, AID-8), and a dotted gold line
+ * under each verse that points to Christ (AID-13), a little lower so both show; tapping explains them.
+ */
 private fun DrawScope.drawHardWords(layout: ChapterLayout, theme: PageTheme) {
+    // Round gold dots, spaced wider than the hard words' grey dashes so the two can't be confused.
+    val christDots = PathEffect.dashPathEffect(floatArrayOf(0.1f, 9f))
+    for (r in layout.christVerses) {
+        for ((x0, x1, y) in layout.underlines(r.first, r.last + 1)) {
+            drawLine(CHRIST_LINE.copy(alpha = 0.85f), Offset(x0, y + 7f), Offset(x1, y + 7f), strokeWidth = 4f, cap = StrokeCap.Round, pathEffect = christDots)
+        }
+    }
     if (layout.hardWords.isEmpty()) return
     val dots = PathEffect.dashPathEffect(floatArrayOf(2f, 6f))
     val color = theme.text.copy(alpha = 0.45f)
@@ -1082,7 +1098,7 @@ private fun DrawScope.drawStrokes(
         val oy = Page.TEXT_TOP + d.y
         val r = g.layout.render(s)
         if (!ReaderController.overlaps(r.bounds.translate(ox, oy), view)) continue
-        drawStrokeRender(r, strokeColor(s.color, highlighter), ox, oy)
+        drawStrokeRender(r, strokeColor(vm.theme, s.color, highlighter), ox, oy)
     }
     for (s in marginStrokes) {
         if (s.layerId != layerId || s.highlighter != highlighter || !g.visible(s.region)) continue
@@ -1091,12 +1107,13 @@ private fun DrawScope.drawStrokes(
         val oy = g.originY(s.region, s.verse) + d.y
         val r = vm.render(s)
         if (!ReaderController.overlaps(r.bounds.translate(ox, oy), view)) continue
-        drawStrokeRender(r, strokeColor(s.color, highlighter), ox, oy)
+        drawStrokeRender(r, strokeColor(vm.theme, s.color, highlighter), ox, oy)
     }
 }
 
-private fun strokeColor(c: Int, highlighter: Boolean) =
-    Color(c).let { if (highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
+/** A stroke's colour on the page: pen ink made to show on it (INK-17); highlighters see-through. */
+private fun strokeColor(theme: PageTheme, c: Int, highlighter: Boolean) =
+    if (highlighter) Color(c).copy(alpha = HIGHLIGHT_ALPHA) else Color(inkOn(theme, c))
 
 private val SELECT_BLUE = Color(0xFF1E88E5)
 private val NOTE_COLOR = Color(0xFFA07B45)
@@ -1113,7 +1130,7 @@ private fun DrawScope.drawLiveLayer(vm: StudyViewModel, ctl: ReaderController, t
         ctl.live?.takeIf { !ctl.fastStroke }?.let { ink ->
             ink.tick // redraw on every new point
             val r = buildRender(ink.toArray(), ink.width, ink.highlighter)
-            val c = Color(ink.color).let { if (ink.highlighter) it.copy(alpha = HIGHLIGHT_ALPHA) else it }
+            val c = strokeColor(theme, ink.color, ink.highlighter)
             drawStrokeRender(r, c, ink.ox, ink.page.top + ink.oy)
         }
 
@@ -1444,7 +1461,7 @@ private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawHover(vm: Study
     when (tool) {
         Tool.PEN -> {
             val r = (vm.currentWidth(false) * z / 2f).coerceAtLeast(2.5f)
-            drawCircle(Color(vm.penColor).copy(alpha = 0.55f), r, at)
+            drawCircle(Color(inkOn(vm.theme, vm.penColor)).copy(alpha = 0.55f), r, at)
             drawCircle(Color.White.copy(alpha = 0.8f), r + 1.5f, at, style = androidx.compose.ui.graphics.drawscope.Stroke(1.5f))
         }
         Tool.HIGHLIGHTER -> {
@@ -1478,7 +1495,7 @@ private fun DrawScope.drawNotePreview(vm: StudyViewModel, measurer: TextMeasurer
                         for (i in 3 until p.size step 3) lineTo(p[i], p[i + 1])
                     }
                     drawPath(
-                        path, Color(st.color).copy(alpha = if (st.highlighter) HIGHLIGHT_ALPHA else 1f),
+                        path, strokeColor(vm.theme, st.color, st.highlighter),
                         style = androidx.compose.ui.graphics.drawscope.Stroke(st.width, cap = androidx.compose.ui.graphics.StrokeCap.Round, join = androidx.compose.ui.graphics.StrokeJoin.Round),
                     )
                 }

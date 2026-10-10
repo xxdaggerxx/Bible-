@@ -186,7 +186,7 @@ data class ExportRequest(val uri: Uri, val pdf: Boolean, val layer: Long? = null
 enum class PaneKind(val label: String) {
     SEARCH("Search"), CROSSREFS("Cross-references"), NOTES("My notes"),
     DICTIONARY("Dictionary"), TOPICS("Topics"), COMMENTARY("Commentary"), REFLECTIONS("Reflections"), NAMES("Names & places"),
-    CUSTOMS("Customs & feasts"), SYMBOLS("Symbols & numbers"),
+    CUSTOMS("Customs & feasts"), SYMBOLS("Symbols & numbers"), CHRIST("Points to Christ"),
     SKETCHES("Sketch pages"),
     VERSE("Verse details"), COMPARE("Compare versions"), ORIGINAL("Hebrew/Greek"), WORDSTUDY("Word study"), INTRO("About the book"),
     CHAT("AI chat"),
@@ -197,7 +197,7 @@ enum class PaneKind(val label: String) {
         val groups: List<Pair<String, List<PaneKind>>> = listOf(
             "Reading" to listOf(SKETCHES),
             "This verse" to listOf(VERSE, COMPARE, ORIGINAL, WORDSTUDY, CROSSREFS),
-            "Study" to listOf(COMMENTARY, REFLECTIONS, DICTIONARY, TOPICS, NAMES, CUSTOMS, SYMBOLS, INTRO),
+            "Study" to listOf(COMMENTARY, REFLECTIONS, DICTIONARY, TOPICS, NAMES, CUSTOMS, SYMBOLS, CHRIST, INTRO),
             "Notes, search and AI" to listOf(NOTES, SEARCH, CHAT),
         )
     }
@@ -241,6 +241,16 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
      * A verse's text for the screen, without waiting: an online Bible's verse not downloaded yet
      * shows "Loading…" (and comes in the background); else the KJV's when a version lacks it.
      */
+    /**
+     * A verse to paste elsewhere (NOTE-7): its words, then the reference and version, e.g.
+     * "Jesus wept. — John 11:35 (KJV)". Null while an online Bible's verse is still downloading.
+     */
+    fun verseQuote(version: String, id: Int): String? {
+        val words = (text(version).verseText(id) ?: if (isOnline(version)) null else bible.verseText(id))?.trim()
+        if (words.isNullOrEmpty()) return null
+        return "$words \u2014 ${refLabel(id)} ($version)"
+    }
+
     fun verseTextNow(version: String, id: Int): String =
         text(version).verseText(id) ?: if (isOnline(version)) "Loading\u2026" else bible.verseText(id) ?: ""
 
@@ -567,7 +577,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
         highlightsAllVersions = true
         marginLeft = false; marginRight = true
         linkPanels = false
-        compareVersions = false; originalView = false; redLetters = false; verseInPanel = false; verseCommentary = true; showGlance = true; hardWords = true; aidNames = true; aidCustoms = true; aidSymbols = true
+        compareVersions = false; originalView = false; redLetters = false; verseInPanel = false; verseCommentary = true; showGlance = true; hardWords = true; aidNames = true; aidCustoms = true; aidSymbols = true; aidChrist = true
         changeWritingSounds(true); changeSoundVolume(0.6f)
         savePrefs()
         message = "Settings reset to their defaults."
@@ -673,6 +683,8 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     var aidNames by mutableStateOf(prefs.getBoolean("aidNames", true))
     var aidCustoms by mutableStateOf(prefs.getBoolean("aidCustoms", true))
     var aidSymbols by mutableStateOf(prefs.getBoolean("aidSymbols", true))
+    /** Points to Christ (AID-13): a dotted gold line under Old Testament verses that point to Jesus. */
+    var aidChrist by mutableStateOf(prefs.getBoolean("aidChrist", true))
 
     /** What's marked in the text (STD-23, AID-10). */
     fun aidSwitches() = com.biblestudy.app.data.AidSwitches(hardWords, aidNames, aidCustoms, aidSymbols)
@@ -838,7 +850,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
             putBoolean("snap", snapHighlights); putBoolean("fingerDraw", fingerDraw)
             putString("sideButton", sideButton.name)
             putBoolean("headings", showHeadings); putString("lineSpacing", lineSpacing.name)
-            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putInt("textSize", textSize.percent); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary); putBoolean("glance", showGlance); putString("lastBibleVersion", lastBibleVersion); putBoolean("hardWords", hardWords); putBoolean("aidNames", aidNames); putBoolean("aidCustoms", aidCustoms); putBoolean("aidSymbols", aidSymbols)
+            putBoolean("partialEraser", partialEraser); putBoolean("fastInk", fastInk); putBoolean("trackReading", trackReading); putString("autoBackup", autoBackup.name); putString("backupFolder", backupFolder); putBoolean("underline", underlineMode); putBoolean("readMode", readMode); putString("newPanelVersion", newPanelVersion); putString("textFont", textFont.name); putInt("textSize", textSize.percent); putBoolean("paragraphs", paragraphMode); putBoolean("expandToFit", expandToFit); putBoolean("marginsAllPanels", marginsAllPanels); putBoolean("verseNumbers", verseNumbers); putBoolean("redLetters", redLetters); putBoolean("writingSounds", writingSounds); putFloat("soundVolume", soundVolume); putBoolean("markDifferences", markDifferences); putBoolean("hlAllVersions", highlightsAllVersions); putBoolean("compareVersions", compareVersions); putBoolean("originalView", originalView); putBoolean("versePanel", verseInPanel); putBoolean("verseCommentary2", verseCommentary); putBoolean("glance", showGlance); putString("lastBibleVersion", lastBibleVersion); putBoolean("hardWords", hardWords); putBoolean("aidNames", aidNames); putBoolean("aidCustoms", aidCustoms); putBoolean("aidSymbols", aidSymbols); putBoolean("aidChrist", aidChrist)
             putBoolean("marginLeft", marginLeft); putBoolean("marginRight", marginRight)
             putString("theme", theme.name); putLong("activeLayer", activeLayerId)
             marginWidths.forEach { (k, v) -> putFloat(k, v) }

@@ -1,0 +1,75 @@
+{
+ "id": "10-012-001",
+ "title": "Nathan Rebukes David",
+ "refs": [
+  "2 Samuel 12:1-12"
+ ],
+ "reflections": [
+  {
+   "kind": "passage",
+   "start": 10012001,
+   "end": 10012012,
+   "ref": "2 Samuel 12:1-12",
+   "ranges": [
+    [
+     10012001,
+     10012012
+    ]
+   ],
+   "title": "Confronted by the Truth",
+   "key_verse": [
+    10012007,
+    10012007
+   ],
+   "reflect": [
+    {
+     "text": "Nathan needed real courage and God's direction to confront King David. Rulers held absolute power, but Nathan spoke because sin had to be addressed. To break through David's defenses, the prophet shared a story about a rich man who took a poor man's only pet lamb. David burned with anger and condemned the greedy man, unaware that he was passing judgment on himself. The story forced the king to look at his own actions with complete honesty.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "God reminded David of his deep ingratitude. The Lord had poured out rich blessings on David and was willing to give him even more. Sincere believers can stumble into terrible wrongdoing, but true faith shows itself in real sorrow and repentance rather than making excuses. God in His mercy forgives the repentant sinner, yet painful earthly consequences and discipline still remain.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    },
+    {
+     "text": "David understood that God is not a distant, unfeeling force, but a personal Lord whom we can approach in prayer. When God uncovers our hidden faults, He humbles us so that we can grasp how great His undeserved mercy truly is.",
+     "sources": [
+      "D1",
+      "D2"
+     ]
+    }
+   ],
+   "questions": [
+    "When someone points out a wrong choice you made, do you tend to make excuses or admit your fault?",
+    "How can remembering God's generous blessings protect your heart from discontent and sin?"
+   ],
+   "prayer": "Lord, give us humble hearts to listen when Your word exposes our sins. Thank You for Your kindness that leads us to repentance and for Your ready forgiveness. Help us to trust Your loving correction and walk faithfully with You. Amen.",
+   "sources": {
+    "D1": {
+     "author": "Beth Moore",
+     "work": "Day 58: 2 Samuel 12:1-12",
+     "site": "Crosswalk",
+     "url": "https://www.crosswalk.com/plus/books/portraits-of-devotion/portraits-of-devotion-day-58-2-samuel-12-1-12.html"
+    },
+    "D2": {
+     "author": "D.A. Carson",
+     "work": "Devotional: 2 Samuel 12",
+     "site": "The Gospel Coalition",
+     "url": "https://www.thegospelcoalition.org/devotionals/read-the-bible/2-samuel-12-2-corinthians-5-ezekiel-19-psalms-64-65/"
+    }
+   },
+   "dropped": 0,
+   "unsupported": [],
+   "checked": true
+  }
+ ],
+ "model": "google/gemini-3.8-flash",
+ "research_model": "google/gemini-3.8-flash",
+ "prompt": "reflections-1",
+ "date": "2026-10-10"
+}
