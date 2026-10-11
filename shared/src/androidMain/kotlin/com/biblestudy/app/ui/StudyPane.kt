@@ -253,7 +253,6 @@ private fun NotesPane(vm: StudyViewModel, modifier: Modifier) {
  */
 @Composable
 private fun ChristPane(vm: StudyViewModel, modifier: Modifier) {
-    val context = androidx.compose.ui.platform.LocalContext.current
     val all by produceState(emptyList<com.biblestudy.app.data.ChristEntry>()) {
         value = background { com.biblestudy.app.data.Christ.all(vm.ctx) }
     }

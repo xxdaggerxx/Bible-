@@ -10,6 +10,7 @@ import androidx.activity.viewModels
 import com.biblestudy.app.ui.StudyApp
 import com.biblestudy.app.ui.StudyViewModel
 import com.biblestudy.app.ui.StylusState
+import com.biblestudy.app.ui.record
 import com.biblestudy.app.platform.AndroidHost
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.initializer

@@ -137,7 +137,7 @@ import kotlinx.coroutines.withContext
 @Composable
 fun BigDialog(onDismiss: () -> Unit, content: @Composable () -> Unit) {
     // On a phone the window fills the screen (PH-7).
-    val phone = androidx.compose.ui.platform.LocalConfiguration.current.smallestScreenWidthDp in 1 until 600
+    val phone = smallestScreenWidthDp() in 1 until 600
     Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
         Surface(
             shape = RoundedCornerShape(if (phone) 0.dp else 20.dp),
@@ -323,9 +323,9 @@ private fun PlaceRow(vm: StudyViewModel, version: String, book: Int, chapter: In
 
 /** "Just now", "5 minutes ago", "Yesterday", "3 Oct". */
 private fun whenText(at: Long): String {
-    val now = System.currentTimeMillis()
+    val now = com.biblestudy.app.platform.nowMillis()
     if (now - at < 60_000) return "Just now"
-    return android.text.format.DateUtils.getRelativeTimeSpanString(at, now, android.text.format.DateUtils.MINUTE_IN_MILLIS).toString()
+    return com.biblestudy.app.platform.relativeTime(at, now)
 }
 
 /** What a picker cell has: colours of layers with ink, highlights or images; a typed note. */
@@ -1365,7 +1365,7 @@ fun SketchRow(vm: StudyViewModel, s: com.biblestudy.app.model.Sketch, onOpen: ()
         val where = if (s.linked) "On " + vm.refLabel(VerseId.of(s.linkBook, s.linkChapter, s.linkVerse)) else "On its own"
         val detail = listOfNotNull(
             where, s.paper.label,
-            if (s.readyMade) null else java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM).format(java.util.Date(s.created)),
+            if (s.readyMade) null else com.biblestudy.app.platform.formatDate(s.created),
         )
         Text(detail.joinToString(" \u00b7 "), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
     }
@@ -1430,7 +1430,6 @@ private fun NotesList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit
         (book == null || i.book == book) && (layer == null || i.layer == layer) &&
             (tagFilter == null || tagFilter in vm.tags[i.key].orEmpty())
     }.let { l -> if (newest) l.sortedByDescending { it.time } else l.sortedWith(compareBy({ it.book }, { it.chapter }, { it.verse })) }
-    val dateFormat = remember { java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM) }
     Text(
         "${shown.size} note" + (if (shown.size == 1) "" else "s"),
         style = MaterialTheme.typography.bodySmall,
@@ -1446,7 +1445,7 @@ private fun NotesList(vm: StudyViewModel, panelIndex: Int, onDismiss: () -> Unit
                     val where = if (i.layer != null) "margin" else "note"
                     Text(
                         vm.refLabel(VerseId.of(i.book, i.chapter, i.verse), VerseId.of(i.book, i.chapter, i.endVerse)) +
-                            "  \u00b7  $where  \u00b7  ${dateFormat.format(java.util.Date(i.time))}",
+                            "  \u00b7  $where  \u00b7  ${com.biblestudy.app.platform.formatDate(i.time)}",
                         style = MaterialTheme.typography.labelLarge,
                         color = MaterialTheme.colorScheme.primary,
                     )

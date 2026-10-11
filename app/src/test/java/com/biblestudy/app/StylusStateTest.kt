@@ -2,6 +2,7 @@ package com.biblestudy.app
 
 import android.view.MotionEvent
 import com.biblestudy.app.ui.StylusState
+import com.biblestudy.app.ui.record
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test

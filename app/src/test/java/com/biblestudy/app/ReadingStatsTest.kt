@@ -6,11 +6,12 @@ import com.biblestudy.app.ui.ReadingStats
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
-import java.time.LocalDate
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.minus
 
 class ReadingStatsTest {
     private val books = listOf(BookInfo(1, "Genesis", "Gen", 50), BookInfo(43, "John", "John", 21))
-    private val today = LocalDate.of(2026, 10, 10)
+    private val today = LocalDate(2026, 10, 10)
 
     @Test
     fun streaksCountDaysWithAMinuteOrMore() {
@@ -62,7 +63,7 @@ class ReadingStatsTest {
     @Test
     fun milestonesAreEarnedAndTheNearestIsNext() {
         val chapters = (1..21).map { ChapterReading(43, it, 600, 1, 1, 0) }
-        val days = (0..7).map { Triple(today.minusDays(it.toLong()).toString(), 900, 0) }
+        val days = (0..7).map { Triple(today.minus(it, kotlinx.datetime.DateTimeUnit.DAY).toString(), 900, 0) }
         val s = ReadingStats.compute(days, chapters, books, today)
         val got = s.achievements.associate { it.id to it.earned }
         assertEquals(true, got["first"])

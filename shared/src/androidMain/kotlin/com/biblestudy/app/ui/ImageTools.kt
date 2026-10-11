@@ -1,5 +1,7 @@
 package com.biblestudy.app.ui
 
+import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.detectDragGestures
@@ -30,7 +32,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
@@ -65,9 +66,7 @@ fun CropDialog(vm: StudyViewModel, img: MarginImage, onDismiss: () -> Unit) {
     // Shown the way it's turned on the page; the crop is stored on the unturned picture.
     val bmp = remember(stored, turns) {
         if (turns == 0) stored else {
-            val m = android.graphics.Matrix().apply { postRotate(turns * 90f) }
-            val a = stored.asAndroidBitmap()
-            android.graphics.Bitmap.createBitmap(a, 0, 0, a.width, a.height, m, true).asImageBitmap()
+            stored.rotated(turns)
         }
     }
     // The frame as fractions of the picture as shown.
@@ -146,4 +145,23 @@ fun turnFrame(f: Rect, turns: Int): Rect {
         r = Rect(1f - r.bottom, r.left, 1f - r.top, r.right)
     }
     return r
+}
+
+/** The picture turned [turns] quarter turns clockwise. */
+fun androidx.compose.ui.graphics.ImageBitmap.rotated(turns: Int): androidx.compose.ui.graphics.ImageBitmap {
+    val src = this
+    val w = if (turns % 2 == 1) height else width
+    val h = if (turns % 2 == 1) width else height
+    val out = androidx.compose.ui.graphics.ImageBitmap(w, h)
+    androidx.compose.ui.graphics.drawscope.CanvasDrawScope().draw(
+        androidx.compose.ui.unit.Density(1f), androidx.compose.ui.unit.LayoutDirection.Ltr,
+        androidx.compose.ui.graphics.Canvas(out), androidx.compose.ui.geometry.Size(w.toFloat(), h.toFloat()),
+    ) {
+        translate(w / 2f, h / 2f) {
+            rotate(turns * 90f, pivot = androidx.compose.ui.geometry.Offset.Zero) {
+                translate(-src.width / 2f, -src.height / 2f) { drawImage(src) }
+            }
+        }
+    }
+    return out
 }

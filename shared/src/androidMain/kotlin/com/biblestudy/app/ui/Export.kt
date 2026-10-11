@@ -9,24 +9,20 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 import java.io.OutputStream
+import okio.buffer
 import kotlin.math.ceil
 import kotlin.math.min
 import kotlin.math.sqrt
 
-/**
- * Exports one chapter page, with its ink, highlights, pictures and text boxes, as a PDF (cut into
- * A4-shaped pages) or a single PNG picture (DATA-5). [draw] paints the page at its own size.
- */
-object ChapterExport {
-    /** PDF page width in points; pages are A4-shaped. */
-    private const val PDF_W = 595f
-    private const val PDF_H = 842f
-    /** Keeps a picture export's memory reasonable for very long chapters. */
-    private const val MAX_PIXELS = 16_000_000f
+/** Android's PDF and PNG writers for [ChapterExport]. */
+actual object ExportWriter {
+    private const val PDF_W = ChapterExport.PDF_W
+    private const val PDF_H = ChapterExport.PDF_H
+    private const val MAX_PIXELS = ChapterExport.MAX_PIXELS
+    private const val FOOTER_PT = ChapterExport.FOOTER_PT
+    private const val FOOTER_PX = ChapterExport.FOOTER_PX
 
-    /** Space kept at the foot of each PDF page, and under a picture, for the copyright line (BIB-10). */
-    private const val FOOTER_PT = 28f
-    private const val FOOTER_PX = 44f
+    actual fun pdf(out: okio.Sink, w: Float, h: Float, footer: String, draw: DrawScope.() -> Unit) = out.buffer().outputStream().use { pdf(it, w, h, footer, draw) }
 
     fun pdf(out: OutputStream, w: Float, h: Float, footer: String, draw: DrawScope.() -> Unit) {
         val k = PDF_W / w
@@ -52,6 +48,8 @@ object ChapterExport {
         }
     }
 
+    actual fun png(out: okio.Sink, w: Float, h: Float, footer: String, draw: DrawScope.() -> Unit) = out.buffer().outputStream().use { png(it, w, h, footer, draw) }
+
     fun png(out: OutputStream, w: Float, h: Float, footer: String, draw: DrawScope.() -> Unit) {
         val total = h + FOOTER_PX
         val k = min(2f, sqrt(MAX_PIXELS / (w * total)))
@@ -75,10 +73,6 @@ object ChapterExport {
         }
         c.drawText(text, x, y, p)
     }
-
-    /** The line printed on every export: the version's copyright and where it came from (BIB-10). */
-    fun footerFor(version: com.biblestudy.app.data.BibleVersion, reference: String): String =
-        "$reference (${version.code}) \u00b7 ${version.copyright.trimEnd('.')} \u00b7 Exported from Ink & Word"
 
     private fun paint(c: android.graphics.Canvas, w: Float, h: Float, draw: DrawScope.() -> Unit) {
         CanvasDrawScope().draw(Density(1f, 1f), LayoutDirection.Ltr, Canvas(c), Size(w, h), draw)

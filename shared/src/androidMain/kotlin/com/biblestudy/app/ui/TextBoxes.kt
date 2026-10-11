@@ -188,7 +188,7 @@ fun TextBoxBar(vm: StudyViewModel, ctl: ReaderController, t: MarginText, modifie
             val spec = vm.cardSpecCached(t)
             if (spec != null) {
                 // A verse card (SKT-6): choose its version; its words come from the Bible.
-                val context = androidx.compose.ui.platform.LocalContext.current
+                val share = rememberShareText()
                 val clipboard = androidx.compose.ui.platform.LocalClipboardManager.current
                 for (v in com.biblestudy.app.data.BibleRepository.ALL) {
                     androidx.compose.material3.FilterChip(
@@ -199,8 +199,7 @@ fun TextBoxBar(vm: StudyViewModel, ctl: ReaderController, t: MarginText, modifie
                 }
                 TextButton(onClick = { clipboard.setText(AnnotatedString(t.text)); vm.message = "Copied." }) { Text("Copy") }
                 TextButton(onClick = {
-                    val send = android.content.Intent(android.content.Intent.ACTION_SEND).setType("text/plain").putExtra(android.content.Intent.EXTRA_TEXT, t.text)
-                    runCatching { context.startActivity(android.content.Intent.createChooser(send, null)) }
+                    share(t.text)
                 }) { Text("Share") }
             } else if (editing) {
                 TextButton(onClick = { vm.editingText = null }) { Text("Done") }

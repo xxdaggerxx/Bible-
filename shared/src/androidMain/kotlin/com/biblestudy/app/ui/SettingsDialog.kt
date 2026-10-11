@@ -71,18 +71,12 @@ fun SettingsDialog(
     var confirmClearStats by remember { mutableStateOf(false) }
     var removing by remember { mutableStateOf<String?>(null) }
     var addingOnline by remember { mutableStateOf(false) }
-    var picked by remember { mutableStateOf<List<android.net.Uri>>(emptyList()) }
-    val pickBible = rememberLauncherForActivityResult(ActivityResultContracts.OpenMultipleDocuments()) { uris -> picked = uris }
-    val context = LocalContext.current
+    var picked by remember { mutableStateOf<List<com.biblestudy.app.platform.PickedFile>>(emptyList()) }
+    val pickBible = rememberOpenFiles(multiple = true) { files -> picked = files }
     // A folder for automatic backups, e.g. one synced to the cloud (DATA-6).
-    val pickFolder = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri ->
-        if (uri != null) {
-            runCatching {
-                context.contentResolver.takePersistableUriPermission(
-                    uri, Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION,
-                )
-            }
-            vm.backupFolder = uri.toString()
+    val pickFolder = rememberPickFolder { folder ->
+        if (folder != null) {
+            vm.backupFolder = folder.id
             vm.savePrefs()
         }
     }
@@ -201,7 +195,7 @@ fun SettingsDialog(
                                 )
                             }
                             Text(
-                                (if (size > 0) "%.1f MB \u00b7 ".format(size / 1e6) else "") + v.copyright,
+                                (if (size > 0) com.biblestudy.app.platform.formatDecimal(size / 1e6, 1) + " MB \u00b7 " else "") + v.copyright,
                                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                                 maxLines = 3, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                             )
@@ -262,7 +256,7 @@ fun SettingsDialog(
                         modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
                     )
                 }
-                OutlinedButton(onClick = { runCatching { pickBible.launch(arrayOf("*/*")) } }, enabled = !vm.importing) {
+                OutlinedButton(onClick = { runCatching { pickBible(listOf("*/*")) } }, enabled = !vm.importing) {
                     Text(if (vm.importing) vm.importStatus ?: "Importing\u2026" else "Import a Bible\u2026")
                 }
                 Text(
@@ -273,12 +267,7 @@ fun SettingsDialog(
 
                 Group("Sync")
                 // Notes on all the user's devices, through their own Google Drive (SYNC-1).
-                val signIn = rememberLauncherForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { r ->
-                    if (r.resultCode == android.app.Activity.RESULT_OK) vm.onSyncSignIn(r.data) else vm.onSyncSignIn(null)
-                }
-                val launchSignIn: (android.content.IntentSender) -> Unit = { sender ->
-                    signIn.launch(androidx.activity.result.IntentSenderRequest.Builder(sender).build())
-                }
+                val launchSignIn = rememberDriveSignIn { data -> vm.onSyncSignIn(data) }
                 Toggle(
                     "Sync with Google Drive",
                     when {
@@ -287,14 +276,14 @@ fun SettingsDialog(
                         vm.syncing -> "Syncing\u2026"
                         else -> listOfNotNull(
                             vm.syncAccount,
-                            if (vm.lastSync > 0) "last synced " + java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT).format(java.util.Date(vm.lastSync)) else null,
+                            if (vm.lastSync > 0) "last synced " + com.biblestudy.app.platform.formatTime(vm.lastSync) else null,
                         ).joinToString(" \u00b7 ").ifEmpty { "On" }
                     },
                     vm.syncOn,
-                ) { on -> if (on) vm.turnOnSync { launchSignIn(it as android.content.IntentSender) } else vm.turnOffSync() }
+                ) { on -> if (on) vm.turnOnSync(launchSignIn) else vm.turnOffSync() }
                 if (vm.syncOn) Matches("Sync now", "Google Drive", "sign in") {
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(vertical = 4.dp)) {
-                        if (vm.syncNeedsSignIn) Button(onClick = { vm.turnOnSync { launchSignIn(it as android.content.IntentSender) } }) { Text("Sign in again") }
+                        if (vm.syncNeedsSignIn) Button(onClick = { vm.turnOnSync(launchSignIn) }) { Text("Sign in again") }
                         OutlinedButton(onClick = { vm.syncNow(announce = true) }, enabled = !vm.syncing, modifier = Modifier.testTag("syncNow")) { Text("Sync now") }
                     }
                 }
@@ -310,14 +299,14 @@ fun SettingsDialog(
                             Text("Backup folder")
                             Text(
                                 vm.backupFolderName() + (
-                                    if (vm.lastAutoBackup > 0) " \u00b7 last " + java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM).format(java.util.Date(vm.lastAutoBackup))
+                                    if (vm.lastAutoBackup > 0) " \u00b7 last " + com.biblestudy.app.platform.formatDate(vm.lastAutoBackup)
                                     else ""
                                     ) + " \u00b7 keeps the newest 5",
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.outline,
                             )
                         }
-                        OutlinedButton(onClick = { runCatching { pickFolder.launch(null) } }) { Text("Choose\u2026") }
+                        OutlinedButton(onClick = { runCatching { pickFolder() } }) { Text("Choose\u2026") }
                     }
                 }
                 Matches("Back up my notes", "Restore from backup") {
@@ -383,7 +372,7 @@ fun SettingsDialog(
         )
     }
     if (picked.isNotEmpty()) {
-        val names = remember(picked) { picked.map { u -> displayName(context, u) } }
+        val names = remember(picked) { picked.map { u -> vm.host.displayName(u) ?: "file" } }
         var code by remember(picked) { mutableStateOf(names.first().substringBefore('.').take(6).uppercase().filter { it.isLetterOrDigit() }) }
         var name by remember(picked) { mutableStateOf("") }
         var copyright by remember(picked) { mutableStateOf("") }
@@ -401,7 +390,7 @@ fun SettingsDialog(
             confirmButton = {
                 TextButton(onClick = {
                     val uris = picked
-                    vm.importBible(names, { i -> vm.host.open(com.biblestudy.app.platform.PickedFile(uris[i].toString())) }, code, name, copyright)
+                    vm.importBible(names, { i -> vm.host.open(uris[i]) }, code, name, copyright)
                     picked = emptyList()
                 }) { Text("Import") }
             },
@@ -478,14 +467,6 @@ private fun <T> Choices(title: String, options: List<T>, selected: T, label: (T)
         }
     }
 }
-
-/** A picked file's name, e.g. "niv.zip". */
-private fun displayName(context: android.content.Context, uri: android.net.Uri): String =
-    runCatching {
-        context.contentResolver.query(uri, arrayOf(android.provider.OpenableColumns.DISPLAY_NAME), null, null, null)?.use { c ->
-            if (c.moveToFirst()) c.getString(0) else null
-        }
-    }.getOrNull() ?: uri.lastPathSegment?.substringAfterLast('/') ?: "file"
 
 /** The AI chat's key and the sites it may search (AI-4, AI-5). */
 @Composable

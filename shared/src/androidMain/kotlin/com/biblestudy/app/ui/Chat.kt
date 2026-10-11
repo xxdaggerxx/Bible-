@@ -1,7 +1,5 @@
 package com.biblestudy.app.ui
 
-import android.content.Intent
-import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -232,7 +230,7 @@ private fun KeyCard(vm: StudyViewModel) {
 @OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
 @Composable
 private fun ChatBubble(vm: StudyViewModel, e: ChatEntry, onPassage: (Passage) -> Unit, onEdit: () -> Unit, onRetry: (() -> Unit)? = null) {
-    val context = LocalContext.current
+    val uriHandler = androidx.compose.ui.platform.LocalUriHandler.current
     val clipboard = LocalClipboardManager.current
     Column(
         Modifier.fillMaxWidth().padding(vertical = 6.dp),
@@ -273,7 +271,7 @@ private fun ChatBubble(vm: StudyViewModel, e: ChatEntry, onPassage: (Passage) ->
                     Text("Sources", style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 8.dp))
                     e.sources.forEachIndexed { i, s ->
                         SourceRow(i + 1, s) {
-                            runCatching { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(s.url))) }
+                            runCatching { uriHandler.openUri(s.url) }
                                 .onFailure { vm.message = "No browser is available." }
                         }
                     }

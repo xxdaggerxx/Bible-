@@ -70,7 +70,7 @@ fun inkOn(theme: PageTheme, color: Int): Int {
 
 /** How clearly ink must stand out from the page (WCAG contrast). */
 private const val INK_MIN_CONTRAST = 4f
-private val INK_SHOWN = java.util.concurrent.ConcurrentHashMap<Long, Int>()
+private val INK_SHOWN = com.biblestudy.app.platform.SyncMap<Long, Int>()
 
 private fun contrast(a: Color, b: Color): Float {
     val x = a.luminance(); val y = b.luminance()

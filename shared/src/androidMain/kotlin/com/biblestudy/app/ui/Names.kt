@@ -1,6 +1,5 @@
 package com.biblestudy.app.ui
 
-import android.content.Context
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTransformGestures
@@ -48,7 +47,6 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -93,7 +91,6 @@ private val PIN = Color(0xFFC62828)
  */
 @Composable
 fun PlaceMap(vm: StudyViewModel, place: NameEntry, modifier: Modifier = Modifier) {
-    val context = LocalContext.current
     val map by produceState<LandsMap?>(null) { value = background { LandsMap.load(vm.ctx) } }
     val landmarks by produceState(emptyList<NameEntry>()) { value = background { vm.study.landmarks() } }
     val lat0 = place.lat ?: return

@@ -68,9 +68,14 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.biblestudy.app.data.ChapterReading
 import com.biblestudy.app.model.BookInfo
-import java.time.LocalDate
-import java.time.format.TextStyle
-import java.util.Locale
+import kotlinx.datetime.DatePeriod
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.minus
+import kotlinx.datetime.plus
+import kotlinx.datetime.todayIn
+import com.biblestudy.app.platform.dayAndMonth
+import com.biblestudy.app.platform.fullName
+import com.biblestudy.app.platform.narrowName
 
 /** One book's reading (ANL-2, ANL-4). */
 data class BookReading(val book: Int, val name: String, val chaptersRead: Int, val chapters: Int, val seconds: Int)
@@ -117,18 +122,18 @@ data class ReadingStats(
             val byDay = days.associate { LocalDate.parse(it.first) to it.second }
             val read = chapters.filter { it.timesRead > 0 }
             val readSet = read.mapTo(HashSet()) { it.book * 1000 + it.chapter }
-            fun secondsSince(from: LocalDate) = byDay.filterKeys { !it.isBefore(from) && !it.isAfter(today) }.values.sum()
+            fun secondsSince(from: LocalDate) = byDay.filterKeys { it >= from && it <= today }.values.sum()
             val readingDays = byDay.filterValues { it >= DAY_MIN_S }.keys.sorted()
             var longest = 0; var run = 0; var prev: LocalDate? = null
             for (d in readingDays) {
-                run = if (prev != null && prev.plusDays(1) == d) run + 1 else 1
+                run = if (prev != null && prev.plus(DatePeriod(days = 1)) == d) run + 1 else 1
                 longest = maxOf(longest, run); prev = d
             }
             // The current run counts today if read today, else carries from yesterday.
             var current = 0
-            var d = if (today in readingDays) today else today.minusDays(1)
+            var d = if (today in readingDays) today else today.minus(DatePeriod(days = 1))
             val set = readingDays.toHashSet()
-            while (d in set) { current++; d = d.minusDays(1) }
+            while (d in set) { current++; d = d.minus(DatePeriod(days = 1)) }
             val secondsByBook = chapters.groupBy { it.book }.mapValues { (_, l) -> l.sumOf { it.seconds } }
             val bookStats = books.map { b ->
                 BookReading(b.id, b.name, (1..b.chapters).count { b.id * 1000 + it in readSet }, b.chapters, secondsByBook[b.id] ?: 0)
@@ -157,14 +162,14 @@ data class ReadingStats(
                 otRead = ot.sumOf { it.chaptersRead }, otChapters = ot.sumOf { it.chapters },
                 ntRead = nt.sumOf { it.chaptersRead }, ntChapters = nt.sumOf { it.chapters },
                 todaySeconds = byDay[today] ?: 0,
-                weekSeconds = secondsSince(today.minusDays(6)),
-                monthSeconds = secondsSince(today.minusDays(29)),
+                weekSeconds = secondsSince(today.minus(DatePeriod(days = 6))),
+                monthSeconds = secondsSince(today.minus(DatePeriod(days = 29))),
                 totalSeconds = total,
                 studySeconds = days.sumOf { it.third },
                 daysRead = readingDays.size,
                 currentStreak = current,
                 longestStreak = longest,
-                last30 = (29 downTo 0).map { today.minusDays(it.toLong()) }.map { it to (byDay[it] ?: 0) },
+                last30 = (29 downTo 0).map { today.minus(DatePeriod(days = it)) }.map { it to (byDay[it] ?: 0) },
                 books = bookStats,
                 topChapters = chapters.filter { it.seconds > 0 }.sortedByDescending { it.seconds }.take(10),
                 timesRead = read.associate { it.book * 1000 + it.chapter to it.timesRead },
@@ -203,7 +208,7 @@ private fun readShades(): List<Color> = if (MaterialTheme.colorScheme.surface.lu
 fun ReadingStatsDialog(vm: StudyViewModel, onDismiss: () -> Unit) {
     val stats by produceState<ReadingStats?>(null, vm.readingGeneration) {
         value = background {
-            ReadingStats.compute(vm.user.readingDays(), vm.user.readingChapters(), vm.bible.books, LocalDate.now())
+            ReadingStats.compute(vm.user.readingDays(), vm.user.readingChapters(), vm.bible.books, kotlinx.datetime.Clock.System.todayIn(kotlinx.datetime.TimeZone.currentSystemDefault()))
         }
     }
     BigDialog(onDismiss) {
@@ -352,13 +357,13 @@ private fun StreakCard(s: ReadingStats) {
                         Modifier.size(30.dp).clip(CircleShape)
                             .background(if (read) shades[2] else MaterialTheme.colorScheme.surfaceContainerHighest)
                             .then(if (today) Modifier.border(2.dp, MaterialTheme.colorScheme.primary, CircleShape) else Modifier)
-                            .semantics { contentDescription = "${day.first.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.getDefault())}: " + if (read) "read" else "not read" },
+                            .semantics { contentDescription = "${day.first.dayOfWeek.fullName()}: " + if (read) "read" else "not read" },
                         contentAlignment = Alignment.Center,
                     ) {
                         if (read) Icon(Icons.Filled.LocalFireDepartment, null, tint = Color.White, modifier = Modifier.size(16.dp))
                     }
                     Text(
-                        day.first.dayOfWeek.getDisplayName(TextStyle.NARROW, Locale.getDefault()),
+                        day.first.dayOfWeek.narrowName(),
                         style = MaterialTheme.typography.labelSmall,
                         color = if (today) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.padding(top = 4.dp),
@@ -477,12 +482,11 @@ private fun DaysCard(days: List<Pair<LocalDate, Int>>) {
     var picked by remember(days) { mutableStateOf<Int?>(days.indexOfLast { it.second > 0 }.takeIf { it >= 0 }) }
     val max = (days.maxOfOrNull { it.second } ?: 0).coerceAtLeast(60)
     val axis = MaterialTheme.colorScheme.outlineVariant
-    val fmt = java.time.format.DateTimeFormatter.ofPattern("EEE d MMM")
     val active = days.count { it.second >= 60 }
     StatCard {
         CardTitle("The last 30 days", Icons.Filled.CalendarMonth)
         Text(
-            picked?.let { i -> "${days[i].first.format(fmt)}: ${ReadingStats.duration(days[i].second)}" } ?: "Tap a day to see its time.",
+            picked?.let { i -> "${days[i].first.dayAndMonth()}: ${ReadingStats.duration(days[i].second)}" } ?: "Tap a day to see its time.",
             style = MaterialTheme.typography.bodyMedium,
         )
         Text(
@@ -511,7 +515,7 @@ private fun DaysCard(days: List<Pair<LocalDate, Int>>) {
             }
         }
         Row(Modifier.fillMaxWidth().padding(top = 4.dp)) {
-            Text(days.first().first.format(java.time.format.DateTimeFormatter.ofPattern("d MMM")), style = MaterialTheme.typography.labelSmall, modifier = Modifier.weight(1f))
+            Text(days.first().first.dayAndMonth(withWeekday = false), style = MaterialTheme.typography.labelSmall, modifier = Modifier.weight(1f))
             Text("Most: ${ReadingStats.duration(days.maxOf { it.second })}", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             Spacer(Modifier.weight(1f))
             Text("Today", style = MaterialTheme.typography.labelSmall)

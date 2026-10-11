@@ -71,7 +71,7 @@ private val DarkColors = darkColorScheme(
 fun StudyApp(vm: StudyViewModel) {
     // Help, over whatever is open: "" for all topics, or a section's heading (DOC-2).
     var help by remember { mutableStateOf<String?>(null) }
-    CompositionLocalProvider(LocalHelp provides { t: String -> help = t }) {
+    CompositionLocalProvider(LocalHelp provides { t: String -> help = t }, LocalAppContext provides vm.ctx) {
         MaterialTheme(colorScheme = if (vm.theme.dark) DarkColors else LightColors) {
             var dialog by remember { mutableStateOf<DialogKind?>(null) }
             val snackbar = remember { SnackbarHostState() }
@@ -82,32 +82,20 @@ fun StudyApp(vm: StudyViewModel) {
                 snackbar.showSnackbar(m)
             }
 
-            val pickImage = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
-                if (uri != null) vm.insertImage(com.biblestudy.app.platform.PickedFile(uri.toString()))
-            }
-            val openImageFile = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-                if (uri != null) vm.insertImage(com.biblestudy.app.platform.PickedFile(uri.toString()))
-            }
-            var cameraUri by rememberSaveable { mutableStateOf<String?>(null) }
-            val takePhoto = rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()) { ok ->
-                cameraUri?.takeIf { ok }?.let { vm.insertImage(com.biblestudy.app.platform.PickedFile(it)) }
-            }
-            val backupLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/zip")) { uri ->
-                if (uri != null) vm.backup(com.biblestudy.app.platform.PickedFile(uri.toString()))
-            }
+            val pickImage = rememberPickImage { f -> if (f != null) vm.insertImage(f) }
+            val openImageFile = rememberOpenFiles { files -> files.firstOrNull()?.let { vm.insertImage(it) } }
+            var cameraFile by rememberSaveable { mutableStateOf<String?>(null) }
+            val takePhoto = rememberTakePhoto { ok -> cameraFile?.takeIf { ok }?.let { vm.insertImage(com.biblestudy.app.platform.PickedFile(it)) } }
+            val backupLauncher = rememberSaveFile("application/zip") { f -> if (f != null) vm.backup(f) }
             // Chapter export (DATA-5): pick where to save, then the active panel draws it.
             // Set when exporting one layer from the Layers window (LAY-11).
             var exportLayer by remember { mutableStateOf<Long?>(null) }
-            val exportPdf = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/pdf")) { uri ->
-                if (uri != null) vm.exportRequest = ExportRequest(com.biblestudy.app.platform.PickedFile(uri.toString()), pdf = true, layer = exportLayer)
+            val exportPdf = rememberSaveFile("application/pdf") { f ->
+                if (f != null) vm.exportRequest = ExportRequest(f, pdf = true, layer = exportLayer)
                 exportLayer = null
             }
-            val exportPng = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("image/png")) { uri ->
-                if (uri != null) vm.exportRequest = ExportRequest(com.biblestudy.app.platform.PickedFile(uri.toString()), pdf = false)
-            }
-            val restoreLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-                if (uri != null) vm.restore(com.biblestudy.app.platform.PickedFile(uri.toString()))
-            }
+            val exportPng = rememberSaveFile("image/png") { f -> if (f != null) vm.exportRequest = ExportRequest(f, pdf = false) }
+            val restoreLauncher = rememberOpenFiles { files -> files.firstOrNull()?.let { vm.restore(it) } }
 
             Scaffold(
                 snackbarHost = { SnackbarHost(snackbar) },
@@ -119,24 +107,23 @@ fun StudyApp(vm: StudyViewModel) {
                         onNotes = { dialog = DialogKind.NOTES },
                         onInsertImage = { src ->
                             when (src) {
-                                ImageSource.GALLERY ->
-                                    pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+                                ImageSource.GALLERY -> pickImage()
                                 ImageSource.CAMERA -> {
-                                    val uri = vm.newCameraUri()
-                                    cameraUri = uri.id
-                                    runCatching { takePhoto.launch(android.net.Uri.parse(uri.id)) }.onFailure { vm.message = "No camera app is available." }
+                                    val file = vm.newCameraUri()
+                                    cameraFile = file.id
+                                    runCatching { takePhoto(file) }.onFailure { vm.message = "No camera app is available." }
                                 }
-                                ImageSource.FILES -> openImageFile.launch(arrayOf("image/*"))
+                                ImageSource.FILES -> openImageFile(listOf("image/*"))
                                 ImageSource.CLIPBOARD -> vm.pasteImage()
                             }
                         },
                         onBackup = {
-                            val stamp = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
-                            backupLauncher.launch("ink-and-word-backup-$stamp.zip")
+                            val stamp = com.biblestudy.app.platform.today()
+                            backupLauncher("ink-and-word-backup-$stamp.zip")
                         },
                         onExport = { pdf ->
                             val name = vm.exportName() + if (pdf) ".pdf" else ".png"
-                            runCatching { (if (pdf) exportPdf else exportPng).launch(name) }.onFailure { vm.message = "No file app is available." }
+                            runCatching { (if (pdf) exportPdf else exportPng)(name) }.onFailure { vm.message = "No file app is available." }
                         },
                         onSettings = { dialog = DialogKind.SETTINGS },
                         onStats = { dialog = DialogKind.STATS },
@@ -155,7 +142,7 @@ fun StudyApp(vm: StudyViewModel) {
                         val widthClass = WidthClass.of(maxWidth.value)
                         SideEffect { vm.widthClass = widthClass }
                         // A phone, or a foldable opened into a tablet (PH-1, PH-11).
-                        val phone = androidx.compose.ui.platform.LocalConfiguration.current.smallestScreenWidthDp in 1 until 600
+                        val phone = smallestScreenWidthDp() in 1 until 600
                         SideEffect { vm.phone = phone }
                         val tab = vm.tab
                         // One or two panels (SPLIT-8), side by side or one above the other.
@@ -213,7 +200,7 @@ fun StudyApp(vm: StudyViewModel) {
                             }
                         }
                         // The tablet's Back gesture is the toolbar's Back (NAV-1).
-                        androidx.activity.compose.BackHandler(enabled = vm.backSteps.isNotEmpty()) { vm.back() }
+                        SystemBackHandler(enabled = vm.backSteps.isNotEmpty()) { vm.back() }
                         // The AI chat bubble (AI-1) and its little window (AI-10), over the text so you can keep reading.
                         if (vm.chat.enabled && PaneKind.CHAT !in tab.studies) {
                             if (vm.chatWindow) ChatWindow(
@@ -242,7 +229,7 @@ fun StudyApp(vm: StudyViewModel) {
                     dialog = null
                     exportLayer = id
                     val layer = vm.layers.firstOrNull { it.id == id }?.name ?: "layer"
-                    runCatching { exportPdf.launch("${vm.exportName()} - $layer.pdf") }.onFailure { vm.message = "No file app is available." }
+                    runCatching { exportPdf("${vm.exportName()} - $layer.pdf") }.onFailure { vm.message = "No file app is available." }
                 }) { dialog = null }
                 DialogKind.NOTES -> MyNotesDialog(vm) { dialog = null }
                 DialogKind.ABOUT -> AboutDialog { dialog = null }
@@ -250,8 +237,8 @@ fun StudyApp(vm: StudyViewModel) {
                 DialogKind.SETTINGS -> SettingsDialog(
                     vm,
                     onBackup = {
-                        val stamp = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
-                        backupLauncher.launch("ink-and-word-backup-$stamp.zip")
+                        val stamp = com.biblestudy.app.platform.today()
+                        backupLauncher("ink-and-word-backup-$stamp.zip")
                     },
                     onRestore = { dialog = DialogKind.RESTORE },
                     onAbout = { dialog = DialogKind.ABOUT },
@@ -264,7 +251,7 @@ fun StudyApp(vm: StudyViewModel) {
                     confirmButton = {
                         TextButton(onClick = {
                             dialog = null
-                            restoreLauncher.launch(arrayOf("application/zip", "application/octet-stream", "*/*"))
+                            restoreLauncher(listOf("application/zip", "application/octet-stream", "*/*"))
                         }) { Text("Choose backup file") }
                     },
                     dismissButton = { TextButton(onClick = { dialog = null }) { Text("Cancel") } },

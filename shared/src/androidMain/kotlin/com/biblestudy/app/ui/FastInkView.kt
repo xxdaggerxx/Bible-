@@ -11,9 +11,6 @@ import android.view.Choreographer
 import android.view.SurfaceView
 import androidx.graphics.lowlatency.CanvasFrontBufferedRenderer
 
-/** One piece of a pen stroke, in this view's pixels. */
-class InkSegment(val x0: Float, val y0: Float, val x1: Float, val y1: Float, val width: Float, val color: Int)
-
 /**
  * Draws the pen stroke being written straight to the screen's front buffer (INK-4), as Samsung
  * Notes does, so ink appears under the pen tip without waiting for the next frame. Only the stroke
@@ -22,7 +19,7 @@ class InkSegment(val x0: Float, val y0: Float, val x1: Float, val y1: Float, val
  * The surface sits above the page (it is transparent everywhere else) but takes no touches: the
  * page beneath it still receives the pen.
  */
-class FastInkView(context: Context) : SurfaceView(context) {
+class FastInkView(context: Context) : SurfaceView(context), FastInk {
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.STROKE
         strokeCap = Paint.Cap.ROUND
@@ -65,15 +62,15 @@ class FastInkView(context: Context) : SurfaceView(context) {
 
     override fun onTouchEvent(event: android.view.MotionEvent?): Boolean = false
 
-    val ready: Boolean get() = renderer?.isValid() == true
+    override val ready: Boolean get() = renderer?.isValid() == true
 
-    fun startStroke() { strokes++ }
+    override fun startStroke() { strokes++ }
 
-    fun draw(segment: InkSegment) {
+    override fun draw(segment: InkSegment) {
         renderer?.renderFrontBufferedLayer(segment)
     }
 
-    fun clearNow() {
+    override fun clearNow() {
         strokes++
         renderer?.clear()
     }
@@ -81,7 +78,7 @@ class FastInkView(context: Context) : SurfaceView(context) {
     /**
      * Clears the stroke once the page has had time to draw the saved one, so it never blinks out.
      */
-    fun clearSoon() {
+    override fun clearSoon() {
         val r = renderer ?: return
         val stroke = strokes
         val chor = Choreographer.getInstance()
@@ -92,4 +89,16 @@ class FastInkView(context: Context) : SurfaceView(context) {
         /** Front-buffered rendering needs a real display; it is off under Robolectric. */
         val supported: Boolean get() = Build.FINGERPRINT != "robolectric"
     }
+}
+
+actual val fastInkSupported: Boolean get() = FastInkView.supported
+
+@androidx.compose.runtime.Composable
+actual fun FastInkLayer(modifier: androidx.compose.ui.Modifier, onChange: (FastInk?) -> Unit) {
+    androidx.compose.ui.viewinterop.AndroidView(
+        factory = { ctx -> FastInkView(ctx) },
+        modifier = modifier,
+        update = { v -> onChange(v) },
+        onRelease = { onChange(null) },
+    )
 }

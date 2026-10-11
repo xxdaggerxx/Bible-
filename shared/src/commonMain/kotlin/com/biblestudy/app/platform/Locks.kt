@@ -26,3 +26,13 @@ class SyncSet<T> : MutableSet<T> {
     /** Iterates over a copy, so other threads can change the set meanwhile. */
     override fun iterator(): MutableIterator<T> = locked(lock) { set.toMutableList() }.iterator()
 }
+
+/** A map safe to use from several threads at once (like ConcurrentHashMap, for caches). */
+class SyncMap<K, V> {
+    private val lock = Lock()
+    private val map = HashMap<K, V>()
+    operator fun get(key: K): V? = locked(lock) { map[key] }
+    operator fun set(key: K, value: V) { locked(lock) { map[key] = value } }
+    fun remove(key: K): V? = locked(lock) { map.remove(key) }
+    fun clear() = locked(lock) { map.clear() }
+}

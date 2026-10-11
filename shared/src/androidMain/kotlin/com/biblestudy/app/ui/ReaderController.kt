@@ -1,6 +1,5 @@
 package com.biblestudy.app.ui
 
-import android.os.SystemClock
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateMapOf
@@ -235,7 +234,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     fun touched() { vm.activePanel = panelIndex }
 
-    fun recentlyPenned() = SystemClock.uptimeMillis() - lastPenUp < 600
+    fun recentlyPenned() = com.biblestudy.app.platform.uptimeMillis() - lastPenUp < 600
 
     fun toStrip(p: Offset): Offset {
         val x = (p.x - panel.panX) / panel.zoom
@@ -631,7 +630,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     /** [override] replaces the selected tool for this stroke (eraser end or side button). */
     /** The front-buffered layer for fast pen ink (INK-4), when the device supports it. */
-    var fastInk: FastInkView? = null
+    var fastInk: FastInk? = null
     /** Whether the stroke being written is drawn on [fastInk] (and so not by the live layer). */
     var fastStroke = false
         private set
@@ -740,7 +739,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
             Tool.ERASER -> WritingSound.Texture.ERASER
             else -> null
         }
-        if (texture != null) vm.sound.start(texture, pos.x, pos.y, android.os.SystemClock.uptimeMillis())
+        if (texture != null) vm.sound.start(texture, pos.x, pos.y, com.biblestudy.app.platform.uptimeMillis())
     }
 
     /** The pen moved at [timeMs]: the writing sound follows its speed and pressure (INK-15). */
@@ -799,7 +798,7 @@ class ReaderController(private val vm: StudyViewModel, val panel: PanelState) {
 
     fun penEnd() {
         vm.sound.stop()
-        lastPenUp = SystemClock.uptimeMillis()
+        lastPenUp = com.biblestudy.app.platform.uptimeMillis()
         when (mode) {
             Tool.PEN, Tool.HIGHLIGHTER -> finishStroke()
             Tool.ERASER -> {

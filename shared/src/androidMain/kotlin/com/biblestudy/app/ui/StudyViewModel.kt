@@ -2414,13 +2414,14 @@ class StudyViewModel(val host: Host) : ViewModel() {
 
     /** Verse start offsets and numbers of a chapter in [version] (cached). */
     private val verseStartCache = HashMap<String, Pair<IntArray, IntArray>>()
+    private val verseStartLock = Lock()
 
     private fun verseStarts(version: String, book: Int, chapter: Int): Pair<IntArray, IntArray> {
         val key = tk(version, book, chapter)
-        synchronized(verseStartCache) { verseStartCache[key]?.let { return it } }
+        locked(verseStartLock) { verseStartCache[key] }?.let { return it }
         val verses = text(version).chapter(book, chapter)
         val v = verseStartOffsets(verses) to IntArray(verses.size) { verses[it].verse }
-        synchronized(verseStartCache) { verseStartCache[key] = v }
+        locked(verseStartLock) { verseStartCache[key] = v }
         return v
     }
 

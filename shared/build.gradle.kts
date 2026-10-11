@@ -48,7 +48,7 @@ kotlin {
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
             api("com.squareup.okio:okio:3.10.2")
             implementation("org.jetbrains.kotlinx:atomicfu:0.26.1")
-            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.1")
+            api("org.jetbrains.kotlinx:kotlinx-datetime:0.6.1")
         }
         // Android and desktop both run on the JVM and share code that needs it (the Claude Java SDK).
         androidMain.get().kotlin.srcDir("src/jvmSharedMain/kotlin")
@@ -78,6 +78,8 @@ kotlin {
                 implementation("com.anthropic:anthropic-java:2.68.0")
             }
             kotlin.srcDir("src/jvmSharedMain/kotlin")
+            // The Bible text's typeface, from the Android resources (font/...).
+            resources.srcDir("src/androidMain/res")
         }
     }
 }

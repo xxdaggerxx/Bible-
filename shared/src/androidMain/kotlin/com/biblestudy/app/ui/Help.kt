@@ -1,7 +1,5 @@
 package com.biblestudy.app.ui
 
-import android.content.Context
-import android.graphics.BitmapFactory
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.aspectRatio
@@ -35,7 +33,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import com.biblestudy.app.platform.readText
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -62,8 +60,8 @@ class HelpSection(val title: String, val lines: List<String>) {
  * written to be read on the tablet. Kept up to date with every release.
  */
 object HelpGuide {
-    fun load(context: Context): Pair<String, List<HelpSection>> {
-        val text = context.assets.open("help/guide.md").bufferedReader().use { it.readText() }
+    fun load(context: com.biblestudy.app.platform.AppContext): Pair<String, List<HelpSection>> {
+        val text = context.assets.readText("help/guide.md")
         return parse(text)
     }
 
@@ -184,7 +182,7 @@ fun HelpButton(topic: String) {
  */
 @Composable
 fun HelpDialog(topic: String? = null, onDismiss: () -> Unit) {
-    val context = LocalContext.current
+    val context = LocalAppContext.current
     val (intro, sections) = remember { HelpGuide.load(context) }
     var query by remember { mutableStateOf("") }
     var open by remember(topic) { mutableStateOf(sections.firstOrNull { it.title == topic }) }
@@ -262,9 +260,12 @@ private fun HelpLine(line: String) {
 /** A screenshot in the guide, as wide as the page allows (up to a comfortable size), with its caption. */
 @Composable
 private fun HelpPicture(file: String, caption: String) {
-    val context = LocalContext.current
+    val context = LocalAppContext.current
     val image = remember(file) {
-        runCatching { context.assets.open("help/img/$file").use { BitmapFactory.decodeStream(it) }?.asImageBitmap() }.getOrNull()
+        runCatching {
+            val bytes = okio.Buffer().apply { context.assets.open("help/img/$file").use { writeAll(it) } }.readByteArray()
+            com.biblestudy.app.platform.Pictures.decode(bytes, 4096)
+        }.getOrNull()
     } ?: return
     val shape = RoundedCornerShape(10.dp)
     Column(Modifier.fillMaxWidth().padding(vertical = 10.dp), horizontalAlignment = Alignment.CenterHorizontally) {

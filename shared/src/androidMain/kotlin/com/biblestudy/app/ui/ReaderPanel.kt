@@ -133,11 +133,6 @@ import kotlinx.coroutines.withContext
 import kotlin.math.abs
 import kotlin.math.roundToInt
 
-private val bibleFont = FontFamily(
-    Font(R.font.gentium_book_plus_regular),
-    Font(R.font.gentium_book_plus_bold, FontWeight.Bold),
-)
-
 /** The typeface for each text font choice (READ-3). */
 fun TextFont.family(): FontFamily = when (this) {
     TextFont.BOOK -> bibleFont
@@ -342,11 +337,10 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
         }
         // Drawn on the main thread, like the screen, since drawing fills the view model's caches.
         val ok = runCatching {
-            vm.host.create(req.uri).buffer().outputStream()?.use {
-                val v = com.biblestudy.app.data.BibleRepository.ALL.firstOrNull { b -> b.code == panel.version } ?: vm.bible.version
-                val footer = ChapterExport.footerFor(v, "${vm.bible.book(panel.book).name} ${panel.chapter}")
-                if (req.pdf) ChapterExport.pdf(it, g.width, g.height, footer, draw) else ChapterExport.png(it, g.width, g.height, footer, draw)
-            } ?: error("Couldn't write the file")
+            val v = com.biblestudy.app.data.BibleRepository.ALL.firstOrNull { b -> b.code == panel.version } ?: vm.bible.version
+            val footer = ChapterExport.footerFor(v, "${vm.bible.book(panel.book).name} ${panel.chapter}")
+            val out = vm.host.create(req.uri) // closed by the export
+            if (req.pdf) ChapterExport.pdf(out, g.width, g.height, footer, draw) else ChapterExport.png(out, g.width, g.height, footer, draw)
         }.isSuccess
         vm.message = if (ok) "Chapter exported." else "Export failed."
     }
@@ -423,13 +417,8 @@ fun ReaderPanel(vm: StudyViewModel, index: Int, onOpenPicker: () -> Unit, modifi
             }
             // Fast pen ink (INK-4): a front-buffered surface drawn above the page. It is placed here,
             // under the live layer, so it never takes touches; its surface still shows on top.
-            if (vm.fastInk && FastInkView.supported) {
-                AndroidView(
-                    factory = { ctx -> FastInkView(ctx) },
-                    modifier = Modifier.fillMaxSize(),
-                    update = { v -> ctl.fastInk = v },
-                    onRelease = { if (ctl.fastInk === it) ctl.fastInk = null },
-                )
+            if (vm.fastInk && fastInkSupported) {
+                FastInkLayer(Modifier.fillMaxSize()) { v -> if (v != null || ctl.fastInk != null) ctl.fastInk = v }
             }
             // Live layer: the stroke or lasso being drawn, selection outlines and margin grips.
             // Kept separate so each new pen point redraws only this, not the whole chapter.
@@ -708,7 +697,7 @@ private fun VersionPicker(vm: StudyViewModel, index: Int) {
 @Composable
 private fun TextSelectionBar(vm: StudyViewModel, ctl: ReaderController, ts: TextSel, modifier: Modifier = Modifier) {
     val clipboard = LocalClipboardManager.current
-    val context = LocalContext.current
+    val share = rememberShareText()
     Surface(modifier, shape = RoundedCornerShape(28.dp), tonalElevation = 6.dp, shadowElevation = 6.dp) {
         Row(
             Modifier.horizontalScroll(rememberScrollState()).padding(horizontal = 12.dp, vertical = 2.dp),
@@ -718,8 +707,7 @@ private fun TextSelectionBar(vm: StudyViewModel, ctl: ReaderController, ts: Text
             Text(ctl.selectionLabel(ts), style = MaterialTheme.typography.labelLarge)
             TextButton(onClick = { clipboard.setText(AnnotatedString(ctl.selectionText(ts))); ctl.clearTextSelect() }) { Text("Copy") }
             TextButton(onClick = {
-                val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, ctl.selectionText(ts))
-                context.startActivity(Intent.createChooser(send, null))
+                share(ctl.selectionText(ts))
                 ctl.clearTextSelect()
             }) { Text("Share") }
             val h = ts.highlight
