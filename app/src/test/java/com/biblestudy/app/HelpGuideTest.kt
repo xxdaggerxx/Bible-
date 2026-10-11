@@ -14,6 +14,21 @@ class HelpGuideTest {
     private val sections = HelpGuide.parse(text).second
 
     @Test
+    fun everyPictureIsThereAndUsed() {
+        val named = sections.flatMap { it.lines }.mapNotNull { HelpGuide.picture(it) }
+        assertTrue("Help should have pictures", named.size >= 20)
+        val files = File("src/main/assets/help/img").list()!!.toSet()
+        for ((file, caption) in named) {
+            assertTrue("No picture $file", file in files)
+            assertTrue("$file has no caption", caption.isNotBlank())
+        }
+        assertEquals("Pictures not in the guide", emptySet<String>(), files - named.map { it.first }.toSet())
+        // Search finds a picture by its caption, not its file name.
+        assertTrue(sections.any { "Paul's missionary journeys" in it.text })
+        assertTrue(sections.none { ".webp" in it.text })
+    }
+
+    @Test
     fun parsesIntoSections() {
         assertTrue(sections.size > 20)
         assertTrue(sections.all { it.lines.isNotEmpty() })
@@ -22,9 +37,9 @@ class HelpGuideTest {
 
     @Test
     fun explainsEveryStudyPaneChoiceAndReadyMadePage() {
-        for (k in PaneKind.entries) assertTrue("Help doesn't mention ${k.label}", text.contains(k.label))
+        for (k in PaneKind.entries - PaneKind.offMenu) assertTrue("Help doesn't mention ${k.label}", text.contains(k.label))
         // Every view is in exactly one of the panel menu's groups.
-        assertEquals(PaneKind.entries.sorted(), (PaneKind.main + PaneKind.folders.flatMap { it.second }).sorted())
+        assertEquals(PaneKind.entries.sorted(), (PaneKind.main + PaneKind.folders.flatMap { it.second } + PaneKind.offMenu).sorted())
         for (t in SketchTemplates.all) assertTrue("Help doesn't mention ${t.name}", text.contains(t.name))
     }
 
@@ -37,7 +52,7 @@ class HelpGuideTest {
             "Ready-made pages", "Unlink", "Put back deleted ready-made pages", "Writing sounds",
             "Write full screen", "Hover",
             "New tab", "Open in new tab", "Add a panel beside", "Top and bottom", "Keep on this passage", "Close panel",
-            "Writing on study views", "About the book", "New tab", "Verse details in a panel", "Back to the verse", "Ask AI", "Save key", "Save sites", "Use the suggested sites", "New chat", "Edit", "Verses", "Copy", "Only search my sites", "This verse", "Beside the text", "tap a heading to open it", "Whole chapter beside the text", "little window", "Try again", "Recently read", "Bookmarked", "Clear this list", "Tabs remember where you were", "Start fresh", "Add a note", "Jump back several steps", "AI Commentary", "Where Christians differ", "Other views", "Chapter at a glance", "Key verse", "Where it fits", "Hard words explained", "Read more", "About this book", "Margin or words?", "Add an online Bible", "The ESV", "The NLT", "Save for offline", "Online Bibles", "Ink & Word AI Commentary", "Reflections", "Ask yourself", "See also", "Also in", "Bible aids", "People & places", "Customs & feasts", "Symbols & numbers", "More", "On a phone", "The toolbar slides", "Two panels, top and bottom", "Margins fold away", "Online Bibles · tap to add", "Text size", "Sync with Google Drive", "Sync now", "Sign in again", "arrow at the toolbar", "times are added together", "Milestones", "New sketch page", "Copy reference", "Copy verse", "Points to Christ", "Pictures of Christ", "Prophecies", "Ink always shows on the page", "Through the Bible", "Daily reading", "Every chapter",
+            "Writing on study views", "New tab", "Verse details in a panel", "Back to the verse", "Ask AI", "Save key", "Save sites", "Use the suggested sites", "New chat", "Edit", "Verses", "Copy", "Only search my sites", "Beside the text", "tap it to open it", "Whole chapter beside the text", "little window", "Try again", "Recently read", "Bookmarked", "Clear this list", "Tabs remember where you were", "Start fresh", "Add a note", "Jump back several steps", "AI Commentary", "Where Christians differ", "Other views", "Chapter at a glance", "Key verse", "Where it fits", "Hard words explained", "Read more", "About this book", "Margin or words?", "Add an online Bible", "The ESV", "The NLT", "Online Bibles", "Ink & Word AI Commentary", "Reflections", "Ask yourself", "See also", "Also in", "Bible aids", "People & places", "Customs & feasts", "Symbols & numbers", "More", "On a phone", "The toolbar slides", "Two panels, top and bottom", "Margins fold away", "Online Bibles · tap to add", "Text size", "Sync with Google Drive", "Sync now", "Sign in again", "arrow at the toolbar", "times are added together", "Milestones", "New sketch page", "Copy reference", "Copy verse", "Points to Christ", "Ink always shows on the page", "Through the Bible", "Daily reading", "Every chapter",
         )) assertTrue("Help doesn't mention $s", text.contains(s, ignoreCase = true))
     }
 

@@ -26,7 +26,6 @@ import androidx.compose.material.icons.filled.Draw
 import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
-import androidx.compose.material.icons.filled.FormatQuote
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Search
@@ -96,8 +95,8 @@ fun PanelViewMenu(vm: StudyViewModel, slot: Slot, expanded: Boolean, onDismiss: 
 
 /**
  * The views to choose from in a menu (SPLIT-7): the Bible, Sketch pages, My notes, Search and AI
- * chat each on a line with an icon, then *This verse* and *Study*, which fold open to their views.
- * The heading holding [current] starts open; opening one closes the other, so the menu stays short.
+ * chat each on a line with an icon, then *Study*, which folds open to its views and starts open
+ * when it holds [current]. A view no longer in the menu ([PaneKind.offMenu]) is listed while shown.
  */
 @Composable
 internal fun ViewChoices(
@@ -114,7 +113,8 @@ internal fun ViewChoices(
         leadingIcon = { Icon(Icons.Filled.MenuBook, contentDescription = null) },
         trailingIcon = if (current == null) check else null,
     )
-    for (k in PaneKind.main) {
+    val kinds = if (current != null && current in PaneKind.offMenu) listOf(current) + PaneKind.main else PaneKind.main
+    for (k in kinds) {
         if (k == PaneKind.CHAT && !vm.chat.enabled && current != k) continue
         DropdownMenuItem(
             text = { Text(k.label) }, enabled = !disabled(k), onClick = { onPick(k) },
@@ -135,7 +135,7 @@ internal fun ViewChoices(
             },
             onClick = { open = if (open == i) -1 else i },
             modifier = Modifier.testTag("folder:$heading"),
-            leadingIcon = { Icon(if (i == 0) Icons.Filled.FormatQuote else Icons.Filled.School, contentDescription = null) },
+            leadingIcon = { Icon(Icons.Filled.School, contentDescription = null) },
             trailingIcon = { Icon(if (open == i) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore, contentDescription = if (open == i) "Fold" else "Open") },
         )
         if (open == i) for (k in kinds) DropdownMenuItem(
@@ -150,7 +150,8 @@ private fun viewIcon(k: PaneKind): ImageVector = when (k) {
     PaneKind.SKETCHES -> Icons.Filled.Draw
     PaneKind.NOTES -> Icons.Filled.EditNote
     PaneKind.SEARCH -> Icons.Filled.Search
-    else -> Icons.AutoMirrored.Filled.Chat
+    PaneKind.CHAT -> Icons.AutoMirrored.Filled.Chat
+    else -> Icons.Filled.MenuBook
 }
 
 /** The button that opens [PanelViewMenu]. */

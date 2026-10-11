@@ -1904,8 +1904,13 @@ class FeatureTest {
         snap("130-panel-menu")
         // Short: the study views fold under This verse and Study.
         compose.onNodeWithText("Dictionary").assertDoesNotExist()
+        compose.onNodeWithTag("folder:This verse").assertDoesNotExist()
+        compose.onNodeWithText("Points to Christ").assertDoesNotExist()
         compose.onNodeWithTag("folder:Study").performClick()
         snap("130b-panel-menu-study")
+        // The verse's own views are in the pop-up, not the menu.
+        for (gone in listOf("Verse details", "Compare versions", "Hebrew/Greek", "Word study", "Cross-references", "About the book", "Points to Christ"))
+            compose.onNodeWithText(gone).assertDoesNotExist()
         compose.onNodeWithText("Dictionary").performClick()
         waitForLoaded()
         assertEquals(listOf<Slot>(Slot.Study(PaneKind.DICTIONARY)), vm.tab.slots())
@@ -2210,9 +2215,8 @@ class FeatureTest {
 
         // Greek word by word, and a word study in the panel beside it.
         compose.runOnUiThread { vm.sidePane = PaneKind.ORIGINAL }
-        compose.onNodeWithContentDescription("Panel view").performClick()
-        compose.onNodeWithTag("folder:This verse").performClick()
-        compose.onNodeWithText("Word study").performScrollTo().performClick()
+        // (No longer in the panel menu since 2.10; a panel can still show it.)
+        compose.runOnUiThread { vm.setSlotView(vm.tab.slots().first { it is Slot.Bible }, PaneKind.WORDSTUDY) }
         waitForLoaded()
         assertEquals(listOf(PaneKind.WORDSTUDY, PaneKind.ORIGINAL), vm.tab.studies.toList())
         compose.onNodeWithText("Tap a word in the Bible", substring = true).assertExists()
@@ -2334,6 +2338,25 @@ class FeatureTest {
             }
         }
         assertEquals("John 3 (KJV)", vm.exportName())
+    }
+
+    @Test
+    fun theDictionaryFromAWordStudyClosesThePopUps() {
+        compose.runOnUiThread { vm.goTo(0, 43, 3, remember = false) }
+        waitForLoaded()
+        // "Pharisees" in John 3:1: the verse pop-up, then its word study over it.
+        compose.runOnUiThread { vm.openVerse(43, 3, 1, word = 6) }
+        waitFor(10_000) { compose.onAllNodesWithText("Word study: \u201cPharisees\u201d").fetchSemanticsNodes().isNotEmpty() }
+        compose.onNodeWithText("Word study: \u201cPharisees\u201d").performClick()
+        waitFor(10_000) { compose.onAllNodesWithText("in Easton's Bible Dictionary", substring = true).fetchSemanticsNodes().isNotEmpty() }
+        assertNotNull(vm.verseSheet)
+        compose.onNodeWithText("in Easton's Bible Dictionary", substring = true).performClick()
+        waitForLoaded()
+        // The article shows beside the text, and both windows over it have closed.
+        assertEquals(PaneKind.DICTIONARY, vm.sidePane)
+        assertNull(vm.wordStudy)
+        assertNull(vm.verseSheet)
+        compose.onNodeWithText("Word study: \u201cPharisees\u201d").assertDoesNotExist()
     }
 
     @Test
@@ -2912,6 +2935,9 @@ class FeatureTest {
         compose.onNodeWithText("Hebrew and Greek word by word").performClick()
         compose.onNodeWithTag("helpSection").assertExists()
         compose.onNodeWithText("Hebrew reads right to left", substring = true).assertExists()
+        // With a picture of it (DOC-1).
+        compose.onNodeWithContentDescription("John 3:16 in Greek, word by word").assertExists()
+        compose.onNodeWithTag("helpPicture").assertExists()
         snap("114-help-topic")
         compose.onNodeWithContentDescription("Close").performClick()
 

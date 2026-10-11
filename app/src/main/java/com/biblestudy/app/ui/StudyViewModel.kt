@@ -195,13 +195,19 @@ enum class PaneKind(val label: String) {
     companion object {
         /**
          * How the panel menus list the views (SPLIT-7): the Bible and these few first, each on its
-         * own line, then the rest folded under two headings so the menu stays short.
+         * own line, then the study views folded under a heading so the menu stays short.
          */
         val main: List<PaneKind> = listOf(SKETCHES, NOTES, SEARCH, CHAT)
         val folders: List<Pair<String, List<PaneKind>>> = listOf(
-            "This verse" to listOf(VERSE, COMPARE, ORIGINAL, WORDSTUDY, CROSSREFS),
-            "Study" to listOf(COMMENTARY, REFLECTIONS, INTRO, DICTIONARY, TOPICS, NAMES, CUSTOMS, SYMBOLS, CHRIST),
+            "Study" to listOf(COMMENTARY, REFLECTIONS, DICTIONARY, TOPICS, NAMES, CUSTOMS, SYMBOLS),
         )
+
+        /**
+         * Not in the menus (2.10): the verse's own details are in the pop-up a tap on the verse
+         * opens. They still show in a panel already showing them, and Verse details still opens
+         * there with Settings → Verse details in a panel.
+         */
+        val offMenu: Set<PaneKind> = setOf(VERSE, COMPARE, ORIGINAL, WORDSTUDY, CROSSREFS, INTRO, CHRIST)
     }
 }
 
@@ -360,7 +366,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Removes every online Bible's downloaded text (Settings → Bibles → Clear downloaded text). */
     fun clearOnlineCache() {
-        for (code in downloadJobs.keys.toList()) stopSavingForOffline(code)
         viewModelScope.launch {
             val all = BibleRepository.ALL.filter { it.online > 0 }.mapNotNull { text(it.code).online }
             withContext(Dispatchers.IO) { all.forEach { runCatching { it.clear() } } }
@@ -451,47 +456,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
                 { "Couldn't add ${info.code}: ${it.message}" },
             )
         }
-    }
-
-    /** Save for offline: every chapter of an online Bible, downloading; [code] → done (0–1). */
-    val onlineDownloads = mutableStateMapOf<String, Float>()
-    private val downloadJobs = HashMap<String, kotlinx.coroutines.Job>()
-
-    fun saveForOffline(code: String) {
-        if (code in onlineDownloads) return
-        val repo = text(code)
-        val o = repo.online ?: return
-        viewModelScope.launch(Dispatchers.IO) { o.savedForOffline = true } // kept however long ago it was read
-        val chapters = bible.books.filter { it.id in o.books }.flatMap { b -> (1..b.chapters).map { b.id to it } }
-        onlineDownloads[code] = o.savedChapters().toFloat() / chapters.size
-        downloadJobs[code] = viewModelScope.launch {
-            var failed: Throwable? = null
-            withContext(Dispatchers.IO) {
-                var done = 0
-                for ((b, c) in chapters) {
-                    if (!isActive) break
-                    // Paced to the service's limits (Crossway: 60 a minute); chapters already here cost nothing.
-                    if (o.pace > 0 && !o.isSaved(b, c)) kotlinx.coroutines.delay(o.pace)
-                    val r = runCatching { o.fetch(b, c) }
-                    if (r.isFailure) { failed = r.exceptionOrNull(); break }
-                    if (++done % 10 == 0) withContext(Dispatchers.Main) { onlineDownloads[code] = done.toFloat() / chapters.size }
-                }
-            }
-            onlineDownloads.remove(code)
-            downloadJobs.remove(code)
-            onlineArrivals++
-            message = when {
-                failed != null -> "Saving $code stopped: ${failed?.message ?: "no internet"}. Tap Save for offline to carry on."
-                o.savedChapters() >= chapters.size -> "$code is saved on this tablet and works offline."
-                else -> null
-            }
-        }
-    }
-
-    fun stopSavingForOffline(code: String) {
-        downloadJobs.remove(code)?.cancel()
-        onlineDownloads.remove(code)
-        text(code).online?.let { o -> viewModelScope.launch(Dispatchers.IO) { o.savedForOffline = false } }
     }
 
     /** How much of online Bible [code] is on the tablet: saved chapters, out of all. */
@@ -1570,7 +1534,6 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Removes an imported version; panels reading it go back to the KJV. */
     fun removeBible(code: String) {
-        stopSavingForOffline(code)
         panels.forEachIndexed { i, p -> if (p.version == code) setVersion(i, "KJV") }
         if (newPanelVersion == code) newPanelVersion = null
         synchronized(this) { texts.remove(code) }
@@ -2055,6 +2018,16 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun openDictionary(id: Long) {
         dictionaryOpen = id
         sidePane = PaneKind.DICTIONARY
+        closePopUps()
+    }
+
+    /**
+     * A study view opened from the verse pop-up, or from a word study opened over it, shows in the
+     * panel beside the text: the windows over it close, so it can be seen.
+     */
+    private fun closePopUps() {
+        wordStudy = null
+        verseSheet = null
     }
 
     /** The person or place open in the study pane (STD-10, STD-11). */
@@ -2063,6 +2036,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun openName(id: Long) {
         nameOpen = id
         sidePane = PaneKind.NAMES
+        closePopUps()
     }
 
     /** The custom, feast, symbol or number open in its study view (AID-11), by its key. */
@@ -2071,6 +2045,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun openAid(entry: com.biblestudy.app.data.AidEntry) {
         aidOpen = entry.key
         sidePane = if (entry.kind == com.biblestudy.app.data.AidKind.CUSTOM) PaneKind.CUSTOMS else PaneKind.SYMBOLS
+        closePopUps()
     }
 
     /** Opens a person or place by its TIPNR id, e.g. a parent or child in a family list. */
@@ -2084,6 +2059,7 @@ class StudyViewModel(app: Application) : AndroidViewModel(app) {
     fun openTopic(id: Long) {
         topicOpen = id
         sidePane = PaneKind.TOPICS
+        closePopUps()
     }
 
     // ---------- commentaries (STD-17 to STD-19) ----------

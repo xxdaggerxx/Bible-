@@ -1,6 +1,16 @@
 package com.biblestudy.app.ui
 
 import android.content.Context
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -35,9 +45,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 
-/** One section of the Help guide: its heading and its lines (paragraphs and "- " bullets). */
+/**
+ * One section of the Help guide: its heading and its lines (paragraphs, "- " bullets and
+ * "![caption](file)" pictures from assets/help/img).
+ */
 class HelpSection(val title: String, val lines: List<String>) {
-    val text: String by lazy { (listOf(title) + lines).joinToString("\n") }
+    /** What search looks in: a picture by its caption. */
+    val text: String by lazy { (listOf(title) + lines.map { HelpGuide.picture(it)?.second ?: it }).joinToString("\n") }
 }
 
 /**
@@ -72,6 +86,12 @@ object HelpGuide {
         title?.let { sections += HelpSection(it, lines) }
         return intro.toString().trim() to sections
     }
+
+    private val PICTURE = Regex("""^!\[(.*)]\((.+)\)$""")
+
+    /** A picture line, "![caption](file)": its file (in assets/help/img) and caption. */
+    fun picture(line: String): Pair<String, String>? =
+        PICTURE.matchEntire(line.trim())?.let { it.groupValues[2] to it.groupValues[1] }
 
     /** **bold** and *italic*; a backslash keeps the next character as it is. */
     fun inline(s: String): AnnotatedString = buildAnnotatedString {
@@ -144,7 +164,7 @@ fun HelpDialog(onDismiss: () -> Unit) {
                             Text(s.title, style = MaterialTheme.typography.titleMedium)
                             // While searching, the first matching line shows what was found.
                             if (q.isNotEmpty()) {
-                                val hit = s.lines.firstOrNull { l -> q.split(' ').any { it.isNotBlank() && l.contains(it, ignoreCase = true) } }
+                                val hit = s.lines.filter { HelpGuide.picture(it) == null }.firstOrNull { l -> q.split(' ').any { it.isNotBlank() && l.contains(it, ignoreCase = true) } }
                                 if (hit != null) Text(
                                     HelpGuide.inline(hit.removePrefix("- ")), maxLines = 2,
                                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
@@ -162,6 +182,7 @@ fun HelpDialog(onDismiss: () -> Unit) {
 
 @Composable
 private fun HelpLine(line: String) {
+    HelpGuide.picture(line)?.let { (file, caption) -> HelpPicture(file, caption); return }
     val bullet = line.trimStart().startsWith("- ")
     val indent = (line.length - line.trimStart().length) / 2
     val body = line.trimStart().removePrefix("- ")
@@ -172,5 +193,26 @@ private fun HelpLine(line: String) {
         }
     } else {
         Text(HelpGuide.inline(body), style = MaterialTheme.typography.bodyLarge, modifier = Modifier.padding(vertical = 6.dp))
+    }
+}
+
+/** A screenshot in the guide, as wide as the page allows (up to a comfortable size), with its caption. */
+@Composable
+private fun HelpPicture(file: String, caption: String) {
+    val context = LocalContext.current
+    val image = remember(file) {
+        runCatching { context.assets.open("help/img/$file").use { BitmapFactory.decodeStream(it) }?.asImageBitmap() }.getOrNull()
+    } ?: return
+    val shape = RoundedCornerShape(10.dp)
+    Column(Modifier.fillMaxWidth().padding(vertical = 10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+        Image(
+            image, contentDescription = caption, contentScale = ContentScale.Fit,
+            modifier = Modifier.widthIn(max = 520.dp).fillMaxWidth().aspectRatio(image.width.toFloat() / image.height)
+                .clip(shape).border(1.dp, MaterialTheme.colorScheme.outlineVariant, shape).testTag("helpPicture"),
+        )
+        if (caption.isNotBlank()) Text(
+            caption, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
+            textAlign = TextAlign.Center, modifier = Modifier.padding(top = 6.dp),
+        )
     }
 }

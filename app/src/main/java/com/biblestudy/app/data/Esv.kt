@@ -13,7 +13,7 @@ import java.net.URLEncoder
  * and the ESV copyright notice shown. They also allow an app to store at most 500 verses (or half a
  * book); the app kept to that until 1.20, and now keeps the ESV like the others at the owner's
  * request, users bringing their own keys. Requests are limited to 60 a minute and 1,000 an hour,
- * so saving it all for offline is paced ([OnlineBible.pace]).
+ * so chapters are downloaded only as they're read (Save for offline was removed in 2.10).
  */
 object Esv {
     /** The ESV's id among online Bibles (not a YouVersion id). */

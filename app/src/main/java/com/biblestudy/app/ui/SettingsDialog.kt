@@ -187,30 +187,23 @@ fun SettingsDialog(
                         Column(Modifier.weight(1f)) {
                             Text("${v.code} \u2014 ${v.name}")
                             if (v.online > 0) {
-                                // An online Bible (BIB-12): how much is on the tablet, and saving it all.
+                                // An online Bible (BIB-12): how much is on the tablet.
                                 val saved = remember(v.code, vm.onlineArrivals) { vm.onlineSaved(v.code) }
-                                val progress = vm.onlineDownloads[v.code]
                                 val source = when (v.online) { com.biblestudy.app.data.Esv.ID -> "Crossway"; com.biblestudy.app.data.Nlt.ID -> "Tyndale"; else -> "YouVersion" }
                                 Text(
                                     when {
-                                        progress != null -> "Saving for offline\u2026 ${(progress * 100).toInt()}%"
                                         saved != null && saved.first >= saved.second -> "Online, from $source \u00b7 saved on this tablet, works offline"
                                         saved != null -> "Online, from $source \u00b7 ${saved.first} of ${saved.second} chapters on this tablet"
                                         else -> "Online, from $source"
                                     },
                                     style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary,
                                 )
-                                if (progress != null) androidx.compose.material3.LinearProgressIndicator(progress = { progress }, modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp))
                             }
                             Text(
                                 (if (size > 0) "%.1f MB \u00b7 ".format(size / 1e6) else "") + v.copyright,
                                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                                 maxLines = 3, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                             )
-                        }
-                        if (v.online > 0) {
-                            if (v.code in vm.onlineDownloads) TextButton(onClick = { vm.stopSavingForOffline(v.code) }) { Text("Stop") }
-                            else if (vm.onlineSaved(v.code)?.let { it.first < it.second } == true) TextButton(onClick = { vm.saveForOffline(v.code) }) { Text("Save for offline") }
                         }
                         if (v.imported) TextButton(onClick = { removing = v.code }) { Text("Remove") }
                         else Text("Built in", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.outline)
@@ -228,7 +221,7 @@ fun SettingsDialog(
                 if (BibleRepository.ALL.any { it.online > 0 }) {
                     Choices("Keep downloaded chapters", CACHE_DAYS, vm.cacheDays, { if (it == 0) "Always" else "$it days" }) { vm.changeCacheDays(it) }
                     Text(
-                        "Chapters you haven't read for this long are removed and download again when you read them. Bibles saved for offline always stay.",
+                        "Chapters you haven't read for this long are removed and download again when you read them. A Bible with every chapter on this tablet stays.",
                         style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline,
                     )
                     var clearing by remember { mutableStateOf(false) }
@@ -236,7 +229,7 @@ fun SettingsDialog(
                     if (clearing) AlertDialog(
                         onDismissRequest = { clearing = false },
                         title = { Text("Clear downloaded text?") },
-                        text = { Text("The text of every online Bible is removed from this tablet, including Bibles saved for offline. Your notes, highlights and ink stay. Chapters download again when you read them, so you'll need the internet.") },
+                        text = { Text("The text of every online Bible is removed from this tablet. Your notes, highlights and ink stay. Chapters download again when you read them, so you'll need the internet.") },
                         confirmButton = { TextButton(onClick = { clearing = false; vm.clearOnlineCache() }) { Text("Clear") } },
                         dismissButton = { TextButton(onClick = { clearing = false }) { Text("Cancel") } },
                     )

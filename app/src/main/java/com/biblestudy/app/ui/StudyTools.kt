@@ -281,7 +281,7 @@ private fun androidx.compose.foundation.layout.ColumnScope.WordStudyBody(
                 // A name: who or where it is (STD-10, STD-11).
                 person?.let { n ->
                     OutlinedButton(
-                        onClick = { vm.openName(n.id); vm.verseSheet = null; onDismiss() },
+                        onClick = { vm.openName(n.id); onDismiss() },
                         modifier = Modifier.padding(top = 8.dp),
                     ) { Text("About ${n.name} (${if (n.place) "place" else "person"})") }
                 }

@@ -23,13 +23,6 @@ class OnlineBible(val code: String, val id: Int, private val db: SQLiteDatabase)
     /** Book ids this Bible has. */
     val books: Set<Int> = meta("books")?.split(',')?.mapNotNullTo(HashSet()) { it.toIntOrNull() } ?: (1..66).toSet()
 
-    /** The least time between downloads when saving the whole Bible, in ms: the service's rate limits. */
-    val pace: Long get() = when (id) {
-        Esv.ID -> 3_700L // Crossway: 60 requests a minute and 1,000 an hour
-        Nlt.ID -> 500L
-        else -> 0L
-    }
-
     init {
         // Searches already asked (1.19).
         db.execSQL("CREATE TABLE IF NOT EXISTS searches(q TEXT PRIMARY KEY, at INTEGER NOT NULL, ids TEXT NOT NULL)")
